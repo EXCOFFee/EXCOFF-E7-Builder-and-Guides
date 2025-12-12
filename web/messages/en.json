@@ -1,0 +1,94 @@
+{
+    "common": {
+        "appName": "E7 EXCOFF",
+        "appSubtitle": "Builder & Guides",
+        "loading": "Loading...",
+        "error": "Error",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "edit": "Edit",
+        "create": "Create",
+        "search": "Search",
+        "filter": "Filter",
+        "back": "Back",
+        "next": "Next",
+        "submit": "Submit"
+    },
+    "nav": {
+        "home": "Home",
+        "heroes": "Heroes",
+        "guides": "Guides",
+        "builds": "Builds",
+        "login": "Login",
+        "register": "Register"
+    },
+    "home": {
+        "title": "E7 EXCOFF",
+        "subtitle": "Builder & Guides",
+        "description": "Discover and publish your character builds and create game guides for the community",
+        "exploreHeroes": "Explore Heroes",
+        "viewGuides": "View Guides",
+        "featuresTitle": "What you'll find",
+        "heroWiki": {
+            "title": "🗡️ Hero Wiki",
+            "description": "Explore all game heroes, their info and community-made builds.",
+            "content": "Complete database with stats, skills, multipliers and popular builds."
+        },
+        "communityBuilds": {
+            "title": "📊 Community Builds",
+            "description": "Create and share your builds with recommended stats, sets and artifacts.",
+            "content": "Build system with synergies, counters and detailed descriptions."
+        },
+        "gameGuides": {
+            "title": "⚔️ Game Guides",
+            "description": "Guides for PVE, RTA, Arena, Guild War and more game content.",
+            "content": "Videos, images and strategies to master each game mode."
+        },
+        "ctaTitle": "Ready to share your knowledge?",
+        "ctaDescription": "Create your account and start contributing guides and builds for your favorite heroes.",
+        "ctaButton": "Join the Community"
+    },
+    "heroes": {
+        "title": "Hero Database",
+        "description": "Explore all Epic Seven heroes, their stats and builds",
+        "searchPlaceholder": "Search heroes...",
+        "filterElement": "Element:",
+        "filterClass": "Class:",
+        "noResults": "No heroes found. Run `php artisan data:sync` to populate the database.",
+        "loadingHeroes": "Loading heroes..."
+    },
+    "elements": {
+        "fire": "Fire",
+        "ice": "Ice",
+        "earth": "Earth",
+        "light": "Light",
+        "dark": "Dark"
+    },
+    "classes": {
+        "knight": "Knight",
+        "warrior": "Warrior",
+        "thief": "Thief",
+        "ranger": "Ranger",
+        "mage": "Mage",
+        "soul_weaver": "Soul Weaver"
+    },
+    "guides": {
+        "title": "Game Guides",
+        "description": "Learn strategies and tips from the community",
+        "categories": {
+            "all": "All",
+            "general": "General",
+            "pve": "PVE",
+            "rta": "RTA",
+            "guild_war": "Guild War",
+            "arena": "Arena"
+        },
+        "createGuide": "Create Guide",
+        "noGuides": "No guides available yet."
+    },
+    "footer": {
+        "disclaimer": "E7 EXCOFF is not affiliated with Smilegate or Super Creative.",
+        "copyright": "Epic Seven and all its content are property of their respective owners."
+    }
+}

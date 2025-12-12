@@ -1,0 +1,94 @@
+{
+    "common": {
+        "appName": "E7 EXCOFF",
+        "appSubtitle": "ビルダー＆ガイド",
+        "loading": "読み込み中...",
+        "error": "エラー",
+        "save": "保存",
+        "cancel": "キャンセル",
+        "delete": "削除",
+        "edit": "編集",
+        "create": "作成",
+        "search": "検索",
+        "filter": "フィルター",
+        "back": "戻る",
+        "next": "次へ",
+        "submit": "送信"
+    },
+    "nav": {
+        "home": "ホーム",
+        "heroes": "英雄",
+        "guides": "ガイド",
+        "builds": "ビルド",
+        "login": "ログイン",
+        "register": "登録"
+    },
+    "home": {
+        "title": "E7 EXCOFF",
+        "subtitle": "ビルダー＆ガイド",
+        "description": "キャラクタービルドを発見・公開し、コミュニティのためのゲームガイドを作成しよう",
+        "exploreHeroes": "英雄を探索",
+        "viewGuides": "ガイドを見る",
+        "featuresTitle": "何が見つかる？",
+        "heroWiki": {
+            "title": "🗡️ 英雄Wiki",
+            "description": "すべてのゲーム英雄、情報、コミュニティビルドを探索。",
+            "content": "ステータス、スキル、倍率、人気ビルドを含む完全なデータベース。"
+        },
+        "communityBuilds": {
+            "title": "📊 コミュニティビルド",
+            "description": "推奨ステータス、セット、アーティファクトでビルドを作成・共有。",
+            "content": "シナジー、カウンター、詳細説明付きのビルドシステム。"
+        },
+        "gameGuides": {
+            "title": "⚔️ ゲームガイド",
+            "description": "PVE、RTA、アリーナ、ギルド戦などのガイド。",
+            "content": "各ゲームモードをマスターするための動画、画像、戦略。"
+        },
+        "ctaTitle": "知識を共有する準備はできましたか？",
+        "ctaDescription": "アカウントを作成して、お気に入りの英雄のガイドとビルドに貢献しよう。",
+        "ctaButton": "コミュニティに参加"
+    },
+    "heroes": {
+        "title": "英雄データベース",
+        "description": "すべてのエピックセブン英雄、ステータス、ビルドを探索",
+        "searchPlaceholder": "英雄を検索...",
+        "filterElement": "属性:",
+        "filterClass": "職業:",
+        "noResults": "英雄が見つかりません。",
+        "loadingHeroes": "英雄を読み込み中..."
+    },
+    "elements": {
+        "fire": "火",
+        "ice": "氷",
+        "earth": "地",
+        "light": "光",
+        "dark": "闇"
+    },
+    "classes": {
+        "knight": "騎士",
+        "warrior": "戦士",
+        "thief": "盗賊",
+        "ranger": "射手",
+        "mage": "魔導士",
+        "soul_weaver": "ソウルウィーバー"
+    },
+    "guides": {
+        "title": "ゲームガイド",
+        "description": "コミュニティから戦略とヒントを学ぶ",
+        "categories": {
+            "all": "すべて",
+            "general": "一般",
+            "pve": "PVE",
+            "rta": "RTA",
+            "guild_war": "ギルド戦",
+            "arena": "アリーナ"
+        },
+        "createGuide": "ガイドを作成",
+        "noGuides": "まだガイドがありません。"
+    },
+    "footer": {
+        "disclaimer": "E7 EXCOFFはSmilegate社またはSuper Creative社とは関係ありません。",
+        "copyright": "エピックセブンとすべてのコンテンツはそれぞれの所有者の財産です。"
+    }
+}
