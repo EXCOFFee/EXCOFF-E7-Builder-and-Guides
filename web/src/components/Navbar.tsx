@@ -13,6 +13,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 const getNavLinks = (t: (key: string, fallback: string) => string) => [
     { href: '/', label: t('nav.home', 'Home') },
     { href: '/heroes', label: t('nav.heroes', 'Heroes') },
+    { href: '/builds', label: t('nav.builds', 'Builds') },
     { href: '/guides', label: t('nav.guides', 'Guides') },
     { href: '/guilds', label: t('nav.guilds', 'Guilds') },
 ];
@@ -148,15 +149,15 @@ export function Navbar() {
                                 <button
                                     onClick={handleLogout}
                                     className="text-xs text-gray-500 hover:text-red-400 transition-colors"
-                                    title="Cerrar sesión"
+                                    title={t('nav.logout', 'Logout')}
                                 >
-                                    Salir
+                                    {t('nav.logout', 'Logout')}
                                 </button>
                             </div>
                         ) : (
                             <Link href="/login">
                                 <Button size="sm" className="bg-e7-gold text-black hover:bg-e7-text-gold">
-                                    Iniciar Sesión
+                                    {t('nav.login', 'Login')}
                                 </Button>
                             </Link>
                         )
