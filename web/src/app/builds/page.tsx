@@ -30,6 +30,15 @@ const ELEMENT_NAMES: Record<string, string> = {
     dark: 'Dark',
 };
 
+// Element colors for indicator dots
+const ELEMENT_COLORS: Record<string, string> = {
+    fire: 'bg-red-500',
+    ice: 'bg-blue-500',
+    earth: 'bg-green-500',
+    light: 'bg-yellow-400',
+    dark: 'bg-purple-600',
+};
+
 // Class to image mapping
 const CLASS_IMAGES: Record<string, string> = {
     knight: '/images/classes/ClassKnight.png',
