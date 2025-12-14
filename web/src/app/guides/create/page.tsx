@@ -38,6 +38,7 @@ export default function CreateGuidePage() {
     const [description, setDescription] = useState('');
     const [content, setContent] = useState('');
     const [videoUrl, setVideoUrl] = useState('');
+    const [images, setImages] = useState<File[]>([]);
 
     // Get search params for pre-selection
     const searchParams = useSearchParams();
@@ -86,20 +87,26 @@ export default function CreateGuidePage() {
         }
 
         try {
+            // Use FormData for image uploads
+            const formData = new FormData();
+            formData.append('title', title);
+            formData.append('category', category);
+            if (heroId) formData.append('hero_id', heroId.toString());
+            if (description) formData.append('description', description);
+            if (content) formData.append('gameplay_content', content);
+            if (videoUrl) formData.append('video_url', videoUrl);
+
+            // Append images
+            images.forEach((image, index) => {
+                formData.append(`images[${index}]`, image);
+            });
+
             const response = await fetch(`${API_URL}/guides`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`,
                 },
-                body: JSON.stringify({
-                    title,
-                    category,
-                    hero_id: heroId,
-                    description,
-                    gameplay_content: content,
-                    video_url: videoUrl || null,
-                }),
+                body: formData,
             });
 
             if (!response.ok) {
@@ -213,6 +220,55 @@ export default function CreateGuidePage() {
                                 <p className="text-xs text-gray-500 mt-1">
                                     Soportamos YouTube, Twitch y Bilibili
                                 </p>
+                            </div>
+
+                            {/* Image Upload */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    Imágenes (opcional)
+                                </label>
+                                <div
+                                    className="border-2 border-dashed border-e7-gold/30 rounded-lg p-4 text-center hover:border-e7-gold/50 transition-colors cursor-pointer"
+                                    onClick={() => document.getElementById('image-upload')?.click()}
+                                >
+                                    <input
+                                        id="image-upload"
+                                        type="file"
+                                        accept="image/jpeg,image/png,image/gif,image/webp"
+                                        multiple
+                                        className="hidden"
+                                        onChange={(e) => {
+                                            const files = Array.from(e.target.files || []);
+                                            setImages(prev => [...prev, ...files].slice(0, 5));
+                                        }}
+                                    />
+                                    <div className="text-gray-400">
+                                        📷 Click para subir imágenes
+                                    </div>
+                                    <p className="text-xs text-gray-500 mt-1">
+                                        Máximo 5 imágenes (JPEG, PNG, GIF, WebP)
+                                    </p>
+                                </div>
+                                {images.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 mt-3">
+                                        {images.map((file, index) => (
+                                            <div key={index} className="relative">
+                                                <img
+                                                    src={URL.createObjectURL(file)}
+                                                    alt=""
+                                                    className="w-20 h-20 object-cover rounded border border-e7-gold/30"
+                                                />
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setImages(prev => prev.filter((_, i) => i !== index))}
+                                                    className="absolute -top-2 -right-2 w-5 h-5 bg-red-600 text-white rounded-full text-xs flex items-center justify-center hover:bg-red-500"
+                                                >
+                                                    ✕
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
 
                             {/* Description */}
