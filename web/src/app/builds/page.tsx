@@ -13,12 +13,40 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 const ELEMENTS = ['fire', 'ice', 'earth', 'light', 'dark'];
 const CLASSES = ['knight', 'warrior', 'thief', 'ranger', 'mage', 'soul_weaver'];
 
-const ELEMENT_COLORS: Record<string, string> = {
-    fire: 'bg-red-500',
-    ice: 'bg-blue-500',
-    earth: 'bg-green-500',
-    light: 'bg-yellow-400',
-    dark: 'bg-purple-600',
+// Element to image mapping
+const ELEMENT_IMAGES: Record<string, string> = {
+    fire: '/images/elements/ElementFire.png',
+    ice: '/images/elements/ElementWater.png',
+    earth: '/images/elements/ElementEarth.png',
+    light: '/images/elements/ElementLight.png',
+    dark: '/images/elements/ElementDark.png',
+};
+
+const ELEMENT_NAMES: Record<string, string> = {
+    fire: 'Fire',
+    ice: 'Ice',
+    earth: 'Earth',
+    light: 'Light',
+    dark: 'Dark',
+};
+
+// Class to image mapping
+const CLASS_IMAGES: Record<string, string> = {
+    knight: '/images/classes/ClassKnight.png',
+    warrior: '/images/classes/ClassWarrior.png',
+    thief: '/images/classes/ClassThief.png',
+    ranger: '/images/classes/ClassRanger.png',
+    mage: '/images/classes/ClassMage.png',
+    soul_weaver: '/images/classes/ClassSoul_Waver.png',
+};
+
+const CLASS_NAMES: Record<string, string> = {
+    knight: 'Knight',
+    warrior: 'Warrior',
+    thief: 'Thief',
+    ranger: 'Ranger',
+    mage: 'Mage',
+    soul_weaver: 'Soul Weaver',
 };
 
 interface Build {
@@ -95,51 +123,61 @@ export default function BuildsPage() {
                 </div>
 
                 {/* Search & Filters */}
-                <div className="flex flex-wrap gap-4 mb-6">
+                <div className="mb-8 space-y-4">
                     <Input
                         placeholder={t('builds.searchPlaceholder', 'Search builds...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-xs bg-e7-void border-e7-gold/30 text-white"
+                        className="max-w-xs bg-e7-panel border-e7-gold/30 text-white placeholder:text-gray-500"
                     />
 
                     {/* Element Filter */}
-                    <div className="flex gap-2">
-                        <Button
-                            variant={selectedElement === null ? 'default' : 'outline'}
-                            onClick={() => setSelectedElement(null)}
-                            className={selectedElement === null ? 'bg-e7-gold text-black' : 'border-e7-gold/30'}
-                            size="sm"
-                        >
-                            {t('common.all', 'All')}
-                        </Button>
-                        {ELEMENTS.map((el) => (
-                            <Button
+                    <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-gray-400 text-sm mr-2">{t('heroes.filterElement', 'Element')}:</span>
+                        {Object.entries(ELEMENT_IMAGES).map(([el, img]) => (
+                            <button
                                 key={el}
-                                variant={selectedElement === el ? 'default' : 'outline'}
-                                onClick={() => setSelectedElement(el)}
-                                className={`capitalize ${selectedElement === el ? ELEMENT_COLORS[el] + ' text-white' : 'border-e7-gold/30'}`}
-                                size="sm"
+                                onClick={() => setSelectedElement(selectedElement === el ? null : el)}
+                                className={`relative w-10 h-10 rounded-lg transition-all ${selectedElement === el
+                                    ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
+                                    : 'hover:bg-e7-panel hover:scale-105 opacity-70 hover:opacity-100'
+                                    }`}
+                                title={ELEMENT_NAMES[el]}
                             >
-                                {t(`elements.${el}`, el)}
-                            </Button>
+                                <Image
+                                    src={img}
+                                    alt={ELEMENT_NAMES[el]}
+                                    width={40}
+                                    height={40}
+                                    className="w-full h-full object-contain"
+                                />
+                            </button>
                         ))}
                     </div>
-                </div>
 
-                {/* Class Filter */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                    {CLASSES.map((cls) => (
-                        <Button
-                            key={cls}
-                            variant={selectedClass === cls ? 'default' : 'outline'}
-                            onClick={() => setSelectedClass(selectedClass === cls ? null : cls)}
-                            className={selectedClass === cls ? 'bg-e7-gold text-black' : 'border-e7-gold/30'}
-                            size="sm"
-                        >
-                            {t(`classes.${cls}`, cls.replace('_', ' '))}
-                        </Button>
-                    ))}
+                    {/* Class Filter */}
+                    <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-gray-400 text-sm mr-2">{t('heroes.filterClass', 'Class')}:</span>
+                        {Object.entries(CLASS_IMAGES).map(([cls, img]) => (
+                            <button
+                                key={cls}
+                                onClick={() => setSelectedClass(selectedClass === cls ? null : cls)}
+                                className={`relative w-10 h-10 rounded-lg transition-all ${selectedClass === cls
+                                    ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
+                                    : 'hover:bg-e7-panel hover:scale-105 opacity-70 hover:opacity-100'
+                                    }`}
+                                title={CLASS_NAMES[cls]}
+                            >
+                                <Image
+                                    src={img}
+                                    alt={CLASS_NAMES[cls]}
+                                    width={40}
+                                    height={40}
+                                    className="w-full h-full object-contain"
+                                />
+                            </button>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Builds Grid */}
