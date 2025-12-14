@@ -1,105 +1,203 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export default function Home() {
   const { t } = useTranslations();
 
+  const features = [
+    {
+      icon: "🗡️",
+      href: "/heroes",
+      title: t('home.heroWiki', 'Hero Wiki'),
+      desc: t('home.heroWikiDesc', 'Explore all the heroes in the game, their information and builds created by the community.'),
+      details: t('home.heroWikiDetails', 'Complete database with stats, skills, multipliers and popular builds.'),
+      gradient: "from-red-500/20 to-orange-500/20",
+      borderColor: "hover:border-red-500/50",
+    },
+    {
+      icon: "📊",
+      href: "/builds",
+      title: t('home.communityBuilds', 'Community Builds'),
+      desc: t('home.communityBuildsDesc', 'Create and share your builds with recommended stats, sets and artifacts.'),
+      details: t('home.communityBuildsDetails', 'Build system with synergies, counters and detailed descriptions.'),
+      gradient: "from-blue-500/20 to-cyan-500/20",
+      borderColor: "hover:border-blue-500/50",
+    },
+    {
+      icon: "⚔️",
+      href: "/guides",
+      title: t('home.gameGuides', 'Game Guides'),
+      desc: t('home.gameGuidesDesc', 'Guides for PVE, RTA, Arena, Guild War and more game content.'),
+      details: t('home.gameGuidesDetails', 'Videos, images and strategies to master each game mode.'),
+      gradient: "from-purple-500/20 to-violet-500/20",
+      borderColor: "hover:border-purple-500/50",
+    },
+    {
+      icon: "🏰",
+      href: "/guilds",
+      title: t('nav.guilds', 'Guilds'),
+      desc: t('guilds.subtitle', 'Find your perfect guild or recruit new members'),
+      details: t('guilds.noPosts', 'Connect with active players worldwide'),
+      gradient: "from-green-500/20 to-emerald-500/20",
+      borderColor: "hover:border-green-500/50",
+    },
+  ];
+
   return (
-    <main className="min-h-screen bg-e7-void">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="font-display text-5xl md:text-7xl font-bold text-e7-text-gold mb-6 tracking-wide">
+    <main className="min-h-screen bg-e7-void overflow-hidden">
+      {/* Hero Section with Animated Background */}
+      <section className="relative py-16 md:py-24 px-4">
+        {/* Animated Background Gradient */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-e7-gold/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+          <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-500" />
+        </div>
+
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          {/* Logo */}
+          <div className="mb-6 flex justify-center">
+            <div className="relative w-32 h-32 md:w-40 md:h-40 animate-float">
+              <Image
+                src="/images/LogoEXCOFF.jpg"
+                alt="E7 EXCOFF"
+                fill
+                className="object-contain rounded-2xl shadow-2xl shadow-e7-gold/30"
+                priority
+                unoptimized
+              />
+            </div>
+          </div>
+
+          {/* Title with Gradient */}
+          <h1 className="font-display text-5xl md:text-7xl font-bold mb-4 tracking-wide bg-gradient-to-r from-e7-gold via-yellow-300 to-e7-gold bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
             E7 EXCOFF
           </h1>
+
           <p className="text-lg md:text-xl text-gray-300 mb-2 font-medium">
             Builder & Guides
           </p>
-          <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto">
+
+          <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
             {t('home.subtitle', 'Discover and publish your character builds and create game guides for the community')}
           </p>
+
+          {/* CTA Buttons */}
           <div className="flex gap-4 justify-center flex-wrap">
             <Link href="/heroes">
-              <Button size="lg" className="bg-e7-gold text-black hover:bg-e7-text-gold font-semibold px-8">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-e7-gold to-yellow-500 text-black hover:from-yellow-500 hover:to-e7-gold font-semibold px-8 shadow-lg shadow-e7-gold/30 hover:shadow-e7-gold/50 transition-all duration-300 hover:scale-105"
+              >
                 {t('home.exploreHeroes', 'Explore Heroes')}
               </Button>
             </Link>
             <Link href="/guides">
-              <Button size="lg" variant="outline" className="border-e7-gold text-e7-gold hover:bg-e7-gold/10 px-8">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-e7-gold text-e7-gold hover:bg-e7-gold/10 px-8 hover:scale-105 transition-all duration-300"
+              >
                 {t('home.viewGuides', 'View Guides')}
               </Button>
             </Link>
           </div>
-        </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-16 px-4 bg-e7-panel/50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-display text-3xl text-center text-e7-gold mb-12">
-            {t('home.whatYouFind', 'What will you find?')}
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="bg-e7-panel border-e7-gold/30 hover:border-e7-gold transition-colors">
-              <CardHeader>
-                <CardTitle className="text-e7-text-gold font-display">🗡️ {t('home.heroWiki', 'Hero Wiki')}</CardTitle>
-                <CardDescription className="text-gray-400">
-                  {t('home.heroWikiDesc', 'Explore all the heroes in the game, their information and builds created by the community.')}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 text-sm">
-                  {t('home.heroWikiDetails', 'Complete database with stats, skills, multipliers and popular builds.')}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-e7-panel border-e7-gold/30 hover:border-e7-gold transition-colors">
-              <CardHeader>
-                <CardTitle className="text-e7-text-gold font-display">📊 {t('home.communityBuilds', 'Community Builds')}</CardTitle>
-                <CardDescription className="text-gray-400">
-                  {t('home.communityBuildsDesc', 'Create and share your builds with recommended stats, sets and artifacts.')}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 text-sm">
-                  {t('home.communityBuildsDetails', 'Build system with synergies, counters and detailed descriptions.')}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-e7-panel border-e7-gold/30 hover:border-e7-gold transition-colors">
-              <CardHeader>
-                <CardTitle className="text-e7-text-gold font-display">⚔️ {t('home.gameGuides', 'Game Guides')}</CardTitle>
-                <CardDescription className="text-gray-400">
-                  {t('home.gameGuidesDesc', 'Guides for PVE, RTA, Arena, Guild War and more game content.')}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 text-sm">
-                  {t('home.gameGuidesDetails', 'Videos, images and strategies to master each game mode.')}
-                </p>
-              </CardContent>
-            </Card>
+          {/* Ras Animation */}
+          <div className="mt-8 flex justify-center">
+            <Image
+              src="/ras-epic-seven-epic-seven.gif"
+              alt="Ras"
+              width={80}
+              height={80}
+              className="opacity-60 hover:opacity-100 transition-opacity"
+              unoptimized
+            />
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-display text-3xl text-e7-text-gold mb-4">
+      {/* Features Section with Glassmorphism Cards */}
+      <section className="py-16 px-4 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-e7-panel/30 to-transparent" />
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <h2 className="font-display text-3xl md:text-4xl text-center text-e7-gold mb-4">
+            {t('home.whatYouFind', 'What will you find?')}
+          </h2>
+          <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+            Everything you need to master Epic Seven
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index) => (
+              <Link key={index} href={feature.href}>
+                <div
+                  className={`group relative bg-e7-panel/80 backdrop-blur-sm border border-e7-gold/20 rounded-xl overflow-hidden hover:border-e7-gold/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-e7-gold/10 h-full ${feature.borderColor}`}
+                >
+                  {/* Gradient Background on Hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+
+                  <div className="relative p-6">
+                    <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-e7-gold transition-colors">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm mb-3">
+                      {feature.desc}
+                    </p>
+                    <p className="text-gray-500 text-xs">
+                      {feature.details}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { value: "300+", label: t('nav.heroes', 'Heroes') },
+              { value: "500+", label: "Artifacts" },
+              { value: "∞", label: t('nav.builds', 'Builds') },
+              { value: "6", label: "Languages" },
+            ].map((stat, i) => (
+              <div key={i} className="p-4 rounded-xl bg-e7-panel/50 border border-e7-gold/10 hover:border-e7-gold/30 transition-colors">
+                <div className="text-3xl md:text-4xl font-bold text-e7-gold mb-1">{stat.value}</div>
+                <div className="text-sm text-gray-400">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section with Gradient Background */}
+      <section className="py-16 px-4 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-e7-gold/10 to-blue-900/20" />
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
             {t('home.readyToShare', 'Ready to share your knowledge?')}
           </h2>
-          <p className="text-gray-400 mb-8">
+          <p className="text-gray-400 mb-8 text-lg">
             {t('home.createAccount', 'Create your account and start contributing guides and builds for your favorite heroes.')}
           </p>
-          <Link href="/register">
-            <Button className="bg-e7-gold text-black hover:bg-e7-text-gold font-semibold px-8">
+          <Link href="/login">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-semibold px-10 py-6 text-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
+            >
               {t('home.joinCommunity', 'Join the Community')}
             </Button>
           </Link>
@@ -107,10 +205,60 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-e7-gold/20 py-8 px-4 text-center text-gray-500 text-sm">
-        <p>{t('footer.notAffiliated', 'E7 EXCOFF is not affiliated with Smilegate or Super Creative.')}</p>
-        <p>{t('footer.copyright', 'Epic Seven and all its content are property of their respective owners.')}</p>
+      <footer className="border-t border-e7-gold/20 py-8 px-4">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/images/LogoEXCOFF.jpg"
+              alt="E7 EXCOFF"
+              width={32}
+              height={32}
+              className="rounded-lg"
+              unoptimized
+            />
+            <span className="text-e7-gold font-bold">E7 EXCOFF</span>
+          </div>
+          <div className="text-center text-gray-500 text-sm">
+            <p>{t('footer.notAffiliated', 'E7 EXCOFF is not affiliated with Smilegate or Super Creative.')}</p>
+            <p>{t('footer.copyright', 'Epic Seven and all its content are property of their respective owners.')}</p>
+          </div>
+          <div className="flex gap-4">
+            <Link href="/heroes" className="text-gray-400 hover:text-e7-gold transition-colors text-sm">
+              {t('nav.heroes', 'Heroes')}
+            </Link>
+            <Link href="/guides" className="text-gray-400 hover:text-e7-gold transition-colors text-sm">
+              {t('nav.guides', 'Guides')}
+            </Link>
+            <Link href="/guilds" className="text-gray-400 hover:text-e7-gold transition-colors text-sm">
+              {t('nav.guilds', 'Guilds')}
+            </Link>
+          </div>
+        </div>
       </footer>
+
+      {/* Custom Animations */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-10px); }
+        }
+        @keyframes shimmer {
+          0% { background-position: 200% 0; }
+          100% { background-position: -200% 0; }
+        }
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+        .animate-shimmer {
+          animation: shimmer 3s linear infinite;
+        }
+        .delay-500 {
+          animation-delay: 500ms;
+        }
+        .delay-1000 {
+          animation-delay: 1000ms;
+        }
+      `}</style>
     </main>
   );
 }
