@@ -32,29 +32,22 @@
     },
     "home": {
         "title": "E7 EXCOFF",
-        "subtitle": "Builder & Guides",
-        "description": "Descubre y publica tus builds de personajes y crea guías del juego para la comunidad",
+        "subtitle": "Descubre y publica tus builds de personajes y crea guías del juego para la comunidad",
         "exploreHeroes": "Explorar Héroes",
         "viewGuides": "Ver Guías",
-        "featuresTitle": "Lo que encontrarás",
-        "heroWiki": {
-            "title": "🗡️ Wiki de Héroes",
-            "description": "Explora todos los héroes del juego, su información y builds de la comunidad.",
-            "content": "Base de datos completa con estadísticas, habilidades, multiplicadores y builds populares."
-        },
-        "communityBuilds": {
-            "title": "📊 Builds de la Comunidad",
-            "description": "Crea y comparte tus builds con estadísticas, sets y artefactos recomendados.",
-            "content": "Sistema de builds con sinergias, counters y descripciones detalladas."
-        },
-        "gameGuides": {
-            "title": "⚔️ Guías del Juego",
-            "description": "Guías para PVE, RTA, Arena, Guerra de Gremios y más contenido del juego.",
-            "content": "Videos, imágenes y estrategias para dominar cada modo de juego."
-        },
-        "ctaTitle": "¿Listo para compartir tu conocimiento?",
-        "ctaDescription": "Crea tu cuenta y empieza a contribuir guías y builds para tus héroes favoritos.",
-        "ctaButton": "Únete a la Comunidad"
+        "whatYouFind": "¿Qué encontrarás?",
+        "heroWiki": "Wiki de Héroes",
+        "heroWikiDesc": "Explora todos los héroes del juego, su información y builds de la comunidad.",
+        "heroWikiDetails": "Base de datos completa con estadísticas, habilidades, multiplicadores y builds populares.",
+        "communityBuilds": "Builds de la Comunidad",
+        "communityBuildsDesc": "Crea y comparte tus builds con estadísticas, sets y artefactos recomendados.",
+        "communityBuildsDetails": "Sistema de builds con sinergias, counters y descripciones detalladas.",
+        "gameGuides": "Guías del Juego",
+        "gameGuidesDesc": "Guías para PVE, RTA, Arena, Guerra de Gremios y más contenido del juego.",
+        "gameGuidesDetails": "Videos, imágenes y estrategias para dominar cada modo de juego.",
+        "readyToShare": "¿Listo para compartir tu conocimiento?",
+        "createAccount": "Crea tu cuenta y empieza a contribuir guías y builds para tus héroes favoritos.",
+        "joinCommunity": "Únete a la Comunidad"
     },
     "heroes": {
         "title": "Base de Datos de Héroes",
