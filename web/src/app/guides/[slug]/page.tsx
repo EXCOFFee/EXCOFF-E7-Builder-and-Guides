@@ -118,7 +118,7 @@ export default function GuideDetailPage() {
     const likeMutation = useMutation({
         mutationFn: async () => {
             const token = localStorage.getItem('auth_token');
-            const response = await fetch(`${API_URL}/guides/${slug}/like`, {
+            const response = await fetch(`${API_URL}/guides/${slug}/vote`, {
                 method: 'POST',
                 headers: { 'Authorization': `Bearer ${token}` },
             });

@@ -142,7 +142,8 @@
         "maxImages": "Máximo 5 imágenes en total",
         "createError": "Error al crear la publicación",
         "createSubtitle": "Recluta miembros para tu gremio",
-        "publishPost": "Publicar"
+        "publishPost": "Publicar",
+        "allLanguages": "Todos los Idiomas"
     },
     "guilds.tags": {
         "casual": "Casual",

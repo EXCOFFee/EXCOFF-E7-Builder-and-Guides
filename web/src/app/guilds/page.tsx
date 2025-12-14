@@ -12,6 +12,26 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 const SERVERS = ['global', 'europe', 'asia', 'japan', 'korea', 'china'];
 
+const LANGUAGES = ['en', 'es', 'ko', 'ja', 'zh', 'pt'];
+
+const LANGUAGE_NAMES: Record<string, string> = {
+    en: 'English',
+    es: 'Español',
+    ko: '한국어',
+    ja: '日本語',
+    zh: '中文',
+    pt: 'Português',
+};
+
+const LANGUAGE_FLAGS: Record<string, string> = {
+    en: '🇺🇸',
+    es: '🇪🇸',
+    ko: '🇰🇷',
+    ja: '🇯🇵',
+    zh: '🇨🇳',
+    pt: '🇧🇷',
+};
+
 const SERVER_FLAGS: Record<string, string> = {
     global: '🌍',
     europe: '🇪🇺',
@@ -42,13 +62,15 @@ export default function GuildsPage() {
     const { t } = useTranslations();
     const [search, setSearch] = useState('');
     const [selectedServer, setSelectedServer] = useState<string | null>(null);
+    const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
 
     const { data, isLoading } = useQuery({
-        queryKey: ['guilds', search, selectedServer],
+        queryKey: ['guilds', search, selectedServer, selectedLanguage],
         queryFn: async () => {
             const params = new URLSearchParams();
             if (search) params.append('search', search);
             if (selectedServer) params.append('server', selectedServer);
+            if (selectedLanguage) params.append('language', selectedLanguage);
 
             const response = await fetch(`${API_URL}/guilds?${params}`);
             if (!response.ok) throw new Error('Failed to fetch guilds');
@@ -102,6 +124,28 @@ export default function GuildsPage() {
                                 className={selectedServer === server ? 'bg-e7-gold text-black' : 'border-e7-gold/30'}
                             >
                                 {SERVER_FLAGS[server]} {server}
+                            </Button>
+                        ))}
+                    </div>
+                    {/* Language Filter */}
+                    <div className="flex gap-2 flex-wrap">
+                        <Button
+                            variant={selectedLanguage === null ? 'default' : 'outline'}
+                            onClick={() => setSelectedLanguage(null)}
+                            className={selectedLanguage === null ? 'bg-purple-600 text-white' : 'border-e7-gold/30'}
+                            size="sm"
+                        >
+                            {t('guilds.allLanguages', 'All Languages')}
+                        </Button>
+                        {LANGUAGES.map((lang) => (
+                            <Button
+                                key={lang}
+                                variant={selectedLanguage === lang ? 'default' : 'outline'}
+                                onClick={() => setSelectedLanguage(lang)}
+                                className={selectedLanguage === lang ? 'bg-purple-600 text-white' : 'border-e7-gold/30'}
+                                size="sm"
+                            >
+                                {LANGUAGE_FLAGS[lang]} {LANGUAGE_NAMES[lang]}
                             </Button>
                         ))}
                     </div>

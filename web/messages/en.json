@@ -155,7 +155,8 @@
         "maxImages": "Maximum 5 images total",
         "createError": "Error creating post",
         "createSubtitle": "Recruit members for your guild",
-        "publishPost": "Publish"
+        "publishPost": "Publish",
+        "allLanguages": "All Languages"
     },
     "guilds.tags": {
         "casual": "Casual",
