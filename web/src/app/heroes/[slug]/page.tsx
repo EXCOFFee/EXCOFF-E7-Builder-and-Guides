@@ -142,6 +142,21 @@ const getArtifactImageUrl = (artifactCode: string): string => {
     return `https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/data/cachedimages/${artifactCode}.png`;
 };
 
+// StatItem component for displaying stats
+const StatItem = ({ label, value, suffix = '', color = 'text-gray-300', large = false }: {
+    label: string;
+    value: number | undefined;
+    suffix?: string;
+    color?: string;
+    large?: boolean;
+}) => (
+    <div className={`text-center p-2 bg-e7-void/50 rounded-lg border border-e7-gold/10 ${large ? 'py-3' : ''}`}>
+        <p className="text-gray-500 text-xs mb-1">{label}</p>
+        <p className={`${color} font-bold ${large ? 'text-lg' : 'text-sm'}`}>
+            {value?.toLocaleString() || '0'}{suffix}
+        </p>
+    </div>
+);
 export default function HeroDetailPage() {
     const params = useParams();
     const slug = params.slug as string;
@@ -294,7 +309,7 @@ export default function HeroDetailPage() {
                 </div>
 
                 {/* Usage Statistics */}
-                {hasUsageStats ? (
+                {hasUsageStats && (
                     <div className="grid md:grid-cols-2 gap-6 mb-8">
                         {/* Popular Sets */}
                         <Card className="bg-gradient-to-br from-e7-panel to-e7-void border-e7-gold/30">
@@ -370,14 +385,6 @@ export default function HeroDetailPage() {
                             </CardContent>
                         </Card>
                     </div>
-                ) : (
-                    <Card className="bg-e7-panel border-e7-gold/30 mb-8">
-                        <CardContent className="py-8 text-center text-gray-400">
-                            <p className="text-2xl mb-2">📊</p>
-                            <p>Usage statistics coming soon.</p>
-                            <p className="text-sm mt-2">Data syncs periodically from Fribbels Hero Library.</p>
-                        </CardContent>
-                    </Card>
                 )}
 
                 {/* Average Stats Recommendation */}
@@ -569,21 +576,3 @@ export default function HeroDetailPage() {
     );
 }
 
-interface StatItemProps {
-    label: string;
-    value: number;
-    suffix?: string;
-    color?: string;
-    large?: boolean;
-}
-
-function StatItem({ label, value, suffix = '', color = 'text-white', large = false }: StatItemProps) {
-    return (
-        <div className="text-center">
-            <p className="text-gray-400 text-xs uppercase mb-1">{label}</p>
-            <p className={`font-bold ${color} ${large ? 'text-xl' : 'text-lg'}`}>
-                {value.toLocaleString()}{suffix}
-            </p>
-        </div>
-    );
-}

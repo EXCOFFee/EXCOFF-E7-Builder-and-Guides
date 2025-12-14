@@ -96,7 +96,8 @@ export default function GuideDetailPage() {
         queryKey: ['guide', slug],
         queryFn: async () => {
             const response = await guideApi.get(slug);
-            return response.data.data;
+            // API returns guide directly or wrapped in data
+            return response.data.data || response.data;
         },
     });
 
