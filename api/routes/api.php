@@ -54,8 +54,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Guides CRUD
     Route::post('/guides', [GuideController::class, 'store']);
-    Route::put('/guides/{guide}', [GuideController::class, 'update']);
-    Route::delete('/guides/{guide}', [GuideController::class, 'destroy']);
+    Route::put('/guides/{guide:slug}', [GuideController::class, 'update']);
+    Route::delete('/guides/{guide:slug}', [GuideController::class, 'destroy']);
 
     // Guild Posts CRUD
     Route::post('/guilds', [GuildPostController::class, 'store']);

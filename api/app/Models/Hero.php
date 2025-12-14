@@ -47,6 +47,19 @@ class Hero extends Model
     ];
 
     /**
+     * Attributes to append to JSON
+     */
+    protected $appends = ['portrait'];
+
+    /**
+     * Get the portrait attribute (alias for image_url)
+     */
+    public function getPortraitAttribute(): ?string
+    {
+        return $this->image_url;
+    }
+
+    /**
      * Get all guides for this hero.
      */
     public function guides(): HasMany

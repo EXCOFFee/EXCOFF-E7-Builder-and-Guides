@@ -18,6 +18,28 @@ const ELEMENT_COLORS: Record<string, string> = {
     dark: 'bg-purple-600',
 };
 
+// Set to image mapping
+const SET_IMAGES: Record<string, string> = {
+    speed: '/images/sets/SET_Speed.png',
+    attack: '/images/sets/SET_Attack.png',
+    health: '/images/sets/SET_Health.png',
+    defense: '/images/sets/SET_Defense.png',
+    critical: '/images/sets/SET_Critical.png',
+    destruction: '/images/sets/SET_Destruction.png',
+    counter: '/images/sets/SET_Counter.png',
+    lifesteal: '/images/sets/SET_Lifesteal.png',
+    immunity: '/images/sets/SET_Immunity.png',
+    rage: '/images/sets/SET_Revenge.png',
+    revenge: '/images/sets/SET_Revenge.png',
+    injury: '/images/sets/SET_Injury.png',
+    penetration: '/images/sets/SET_Penetration.png',
+    protection: '/images/sets/SET_Barrier.png',
+    unity: '/images/sets/SET_Unity.png',
+    hit: '/images/sets/SET_Hit.png',
+    resist: '/images/sets/SET_Resist.png',
+    torrent: '/images/sets/SET_Torrent.png',
+};
+
 interface Build {
     id: number;
     title: string;
@@ -269,12 +291,30 @@ export default function BuildDetailPage() {
                         {/* Sets */}
                         <div className="flex gap-3 mb-4">
                             {build.primary_set && (
-                                <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full">
+                                <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full flex items-center gap-2">
+                                    {SET_IMAGES[build.primary_set] && (
+                                        <Image
+                                            src={SET_IMAGES[build.primary_set]}
+                                            alt={build.primary_set}
+                                            width={20}
+                                            height={20}
+                                            unoptimized
+                                        />
+                                    )}
                                     {build.primary_set}
                                 </span>
                             )}
                             {build.secondary_set && (
-                                <span className="px-3 py-1 text-sm bg-blue-500/20 text-blue-300 rounded-full">
+                                <span className="px-3 py-1 text-sm bg-blue-500/20 text-blue-300 rounded-full flex items-center gap-2">
+                                    {SET_IMAGES[build.secondary_set] && (
+                                        <Image
+                                            src={SET_IMAGES[build.secondary_set]}
+                                            alt={build.secondary_set}
+                                            width={20}
+                                            height={20}
+                                            unoptimized
+                                        />
+                                    )}
                                     {build.secondary_set}
                                 </span>
                             )}

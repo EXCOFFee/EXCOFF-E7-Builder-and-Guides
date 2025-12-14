@@ -51,27 +51,33 @@ class CommentController extends Controller
      */
     public function store(Request $request): JsonResponse
     {
-        $validated = $request->validate([
-            'type' => 'required|in:build,guide',
-            'id' => 'required|integer',
-            'content' => 'required|string|max:2000',
-            'is_anonymous' => 'nullable|boolean',
-            'parent_id' => 'nullable|exists:comments,id',
-        ]);
+        // Support both parameter naming conventions
+        $type = $request->input('type') ?? $request->input('commentable_type');
+        $id = $request->input('id') ?? $request->input('commentable_id');
 
-        // Validate content is text only (strip HTML)
-        $content = strip_tags($validated['content']);
-        if (empty(trim($content))) {
+        if (!$type || !$id) {
+            return response()->json(['error' => 'Type and ID are required'], 422);
+        }
+
+        if (!in_array($type, ['build', 'guide'])) {
+            return response()->json(['error' => 'Invalid type'], 422);
+        }
+
+        $content = $request->input('content');
+        if (!$content || empty(trim(strip_tags($content)))) {
             return response()->json(['error' => 'Comment content cannot be empty'], 422);
         }
 
+        // Validate content is text only (strip HTML)
+        $cleanContent = strip_tags($content);
+
         $comment = Comment::create([
             'user_id' => $request->user()->id,
-            'build_id' => $validated['type'] === 'build' ? $validated['id'] : null,
-            'guide_id' => $validated['type'] === 'guide' ? $validated['id'] : null,
-            'content' => $content,
-            'is_anonymous' => $validated['is_anonymous'] ?? false,
-            'parent_id' => $validated['parent_id'] ?? null,
+            'build_id' => $type === 'build' ? $id : null,
+            'guide_id' => $type === 'guide' ? $id : null,
+            'content' => $cleanContent,
+            'is_anonymous' => $request->boolean('is_anonymous', false),
+            'parent_id' => $request->input('parent_id'),
         ]);
 
         $comment->load('user');
