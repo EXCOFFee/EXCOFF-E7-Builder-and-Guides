@@ -88,15 +88,15 @@ export function Navbar() {
             <div className="container mx-auto flex h-16 items-center justify-between px-4">
                 {/* Logo & App Name */}
                 <Link href="/" className="flex items-center gap-3 group">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-e7-gold to-blue-600 flex items-center justify-center">
-                        <span className="text-white font-bold text-xl">E7</span>
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-e7-gold to-purple-600 flex items-center justify-center overflow-hidden">
+                        <Image src="/images/LogoEXCOFF.jpg" alt="ORBIS" width={40} height={40} className="object-cover" unoptimized />
                     </div>
                     <div className="hidden sm:block">
                         <h1 className="text-lg font-bold text-e7-gold group-hover:text-e7-text-gold transition-colors">
-                            E7 EXCOFF
+                            ORBIS HELPER
                         </h1>
                         <p className="text-xs text-gray-400 -mt-1">
-                            Builder & Guides
+                            by EXCOFF
                         </p>
                     </div>
                 </Link>

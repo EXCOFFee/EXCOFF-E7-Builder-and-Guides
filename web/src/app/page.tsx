@@ -75,11 +75,11 @@ export default function Home() {
 
           {/* Title with Gradient */}
           <h1 className="font-display text-5xl md:text-7xl font-bold mb-4 tracking-wide bg-gradient-to-r from-e7-gold via-yellow-300 to-e7-gold bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
-            E7 EXCOFF
+            ORBIS HELPER
           </h1>
 
           <p className="text-lg md:text-xl text-gray-300 mb-2 font-medium">
-            Builder & Guides
+            by EXCOFF
           </p>
 
           <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
