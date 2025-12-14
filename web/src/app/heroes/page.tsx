@@ -122,7 +122,7 @@ export default function HeroesPage() {
 
                     {/* Class Filter */}
                     <div className="flex items-center gap-2 flex-wrap">
-                        <span className="text-gray-400 text-sm mr-2">Clase:</span>
+                        <span className="text-gray-400 text-sm mr-2">{t('heroes.filterClass', 'Class')}:</span>
                         {Object.entries(CLASS_IMAGES).map(([cls, img]) => (
                             <button
                                 key={cls}
@@ -148,16 +148,16 @@ export default function HeroesPage() {
                 {/* Loading State */}
                 {isLoading && (
                     <div className="flex justify-center py-20">
-                        <LoadingSpinner size="lg" text="Cargando héroes..." />
+                        <LoadingSpinner size="lg" text={t('heroes.loadingHeroes', 'Loading heroes...')} />
                     </div>
                 )}
 
                 {/* Error State */}
                 {error && (
                     <div className="text-center text-red-400 py-20">
-                        <p>Error al cargar héroes. Asegúrate de que la API esté corriendo.</p>
+                        <p>{t('heroes.loadError', 'Error loading heroes. Make sure the API is running.')}</p>
                         <p className="text-sm text-gray-500 mt-2">
-                            API URL: {process.env.NEXT_PUBLIC_API_URL || 'No configurada'}
+                            API URL: {process.env.NEXT_PUBLIC_API_URL || t('common.notConfigured', 'Not configured')}
                         </p>
                     </div>
                 )}
@@ -167,7 +167,7 @@ export default function HeroesPage() {
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
                         {heroes.length === 0 ? (
                             <p className="text-gray-400 col-span-full text-center py-10">
-                                No se encontraron héroes. Ejecuta `php artisan data:sync` para poblar la base de datos.
+                                {t('heroes.noResults', 'No heroes found.')}
                             </p>
                         ) : (
                             heroes.map((hero) => (

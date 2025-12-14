@@ -17,7 +17,9 @@
         "all": "Todos",
         "add": "Añadir",
         "saving": "Guardando...",
-        "unknownError": "Error desconocido"
+        "unknownError": "Error desconocido",
+        "notConfigured": "No configurada",
+        "anonymous": "Anónimo"
     },
     "nav": {
         "home": "Inicio",
@@ -58,10 +60,11 @@
         "title": "Base de Datos de Héroes",
         "description": "Explora todos los héroes de Epic Seven, sus estadísticas y builds",
         "searchPlaceholder": "Buscar héroes...",
-        "filterElement": "Elemento:",
-        "filterClass": "Clase:",
+        "filterElement": "Elemento",
+        "filterClass": "Clase",
         "noResults": "No se encontraron héroes.",
         "loadingHeroes": "Cargando héroes...",
+        "loadError": "Error al cargar héroes. Asegúrate de que la API esté corriendo.",
         "baseStats": "Estadísticas Base (Nv.60 Despertado)",
         "skills": "Habilidades y Escalado de Daño",
         "createBuild": "Crear Build",

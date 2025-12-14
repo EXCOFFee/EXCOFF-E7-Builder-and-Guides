@@ -17,7 +17,9 @@
         "all": "All",
         "add": "Add",
         "saving": "Saving...",
-        "unknownError": "Unknown error"
+        "unknownError": "Unknown error",
+        "notConfigured": "Not configured",
+        "anonymous": "Anonymous"
     },
     "nav": {
         "home": "Home",
@@ -51,10 +53,11 @@
         "title": "Hero Database",
         "description": "Explore all Epic Seven heroes, their stats and builds",
         "searchPlaceholder": "Search heroes...",
-        "filterElement": "Element:",
-        "filterClass": "Class:",
+        "filterElement": "Element",
+        "filterClass": "Class",
         "noResults": "No heroes found.",
         "loadingHeroes": "Loading heroes...",
+        "loadError": "Error loading heroes. Make sure the API is running.",
         "baseStats": "Base Stats (Lv.60 Fully Awakened)",
         "skills": "Skills & Damage Scaling",
         "createBuild": "Create Build",
@@ -78,6 +81,15 @@
     "guides": {
         "title": "Game Guides",
         "description": "Learn strategies and tips from the community",
+        "searchPlaceholder": "Search guides...",
+        "loadingGuides": "Loading guides...",
+        "loadError": "Error loading guides. Make sure the API is running.",
+        "allCategories": "All",
+        "general": "General",
+        "guildWar": "Guild War",
+        "arena": "Arena",
+        "for": "For",
+        "beFirstToCreate": "Be the first to create a guide!",
         "categories": {
             "all": "All",
             "general": "General",
@@ -92,9 +104,13 @@
         "by": "by",
         "comments": "Comments",
         "writeComment": "Write a comment...",
-        "postComment": "Post",
+        "postComment": "Post Comment",
         "noComments": "No comments yet.",
-        "loginToComment": "Login to comment"
+        "loginToComment": "Login to comment",
+        "relatedHero": "Related Hero",
+        "images": "Images",
+        "confirmDelete": "Are you sure you want to delete this guide?",
+        "confirmDeleteComment": "Delete this comment?"
     },
     "guidesCreate": {
         "title": "Title",

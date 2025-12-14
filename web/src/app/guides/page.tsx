@@ -100,7 +100,7 @@ export default function GuidesPage() {
                 {/* Search */}
                 <div className="mb-8">
                     <Input
-                        placeholder="Buscar guías..."
+                        placeholder={t('guides.searchPlaceholder', 'Search guides...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         className="max-w-md bg-e7-panel border-e7-gold/30 text-white placeholder:text-gray-500"
@@ -110,14 +110,14 @@ export default function GuidesPage() {
                 {/* Loading */}
                 {isLoading && (
                     <div className="flex justify-center py-20">
-                        <LoadingSpinner size="lg" text="Cargando guías..." />
+                        <LoadingSpinner size="lg" text={t('guides.loadingGuides', 'Loading guides...')} />
                     </div>
                 )}
 
                 {/* Error */}
                 {error && (
                     <div className="text-center text-red-400 py-20">
-                        <p>Error al cargar guías. Asegúrate de que la API esté corriendo.</p>
+                        <p>{t('guides.loadError', 'Error loading guides. Make sure the API is running.')}</p>
                     </div>
                 )}
 
@@ -129,8 +129,8 @@ export default function GuidesPage() {
                                 <Card className="bg-e7-panel border-e7-gold/30">
                                     <CardContent className="py-12 text-center text-gray-400">
                                         <p className="text-2xl mb-4">📝</p>
-                                        <p className="text-xl mb-2">No hay guías disponibles</p>
-                                        <p>¡Sé el primero en crear una guía!</p>
+                                        <p className="text-xl mb-2">{t('guides.noGuides', 'No guides available yet.')}</p>
+                                        <p>{t('guides.beFirstToCreate', 'Be the first to create a guide!')}</p>
                                     </CardContent>
                                 </Card>
                             </div>
@@ -178,12 +178,12 @@ export default function GuidesPage() {
 
                                             {guide.hero && (
                                                 <p className="text-sm text-gray-400 mt-1">
-                                                    Para: <span className="text-e7-gold">{guide.hero.name}</span>
+                                                    {t('guides.for', 'For')}: <span className="text-e7-gold">{guide.hero.name}</span>
                                                 </p>
                                             )}
 
                                             <div className="flex justify-between items-center mt-3 text-xs text-gray-500">
-                                                <span>{guide.user?.name || 'Anónimo'}</span>
+                                                <span>{guide.user?.name || t('common.anonymous', 'Anonymous')}</span>
                                                 <span>👁 {guide.views || 0}</span>
                                             </div>
                                         </CardContent>
