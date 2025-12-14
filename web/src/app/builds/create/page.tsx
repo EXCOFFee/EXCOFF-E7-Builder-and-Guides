@@ -19,10 +19,61 @@ const SETS = [
     'unity', 'hit', 'resist', 'torrent'
 ];
 
+// Set to image mapping
+const SET_IMAGES: Record<string, string> = {
+    speed: '/images/sets/SET_Speed.png',
+    attack: '/images/sets/SET_Atk.png',
+    health: '/images/sets/SET_HP.png',
+    defense: '/images/sets/SET_Def.png',
+    critical: '/images/sets/SET_Cri.png',
+    destruction: '/images/sets/SET_CriDmg.png',
+    counter: '/images/sets/SET_Counter.png',
+    lifesteal: '/images/sets/SET_Lifesteal.png',
+    immunity: '/images/sets/SET_Immunity.png',
+    rage: '/images/sets/SET_Rage.png',
+    revenge: '/images/sets/SET_Revenge.png',
+    injury: '/images/sets/SET_Injury.png',
+    penetration: '/images/sets/SET_Penetration.png',
+    protection: '/images/sets/SET_Protection.png',
+    unity: '/images/sets/SET_Unity.png',
+    hit: '/images/sets/SET_Hit.png',
+    resist: '/images/sets/SET_Res.png',
+    torrent: '/images/sets/SET_Torrent.png',
+};
+
+const SET_NAMES: Record<string, string> = {
+    speed: 'Speed',
+    attack: 'Attack',
+    health: 'Health',
+    defense: 'Defense',
+    critical: 'Critical',
+    destruction: 'Destruction',
+    counter: 'Counter',
+    lifesteal: 'Lifesteal',
+    immunity: 'Immunity',
+    rage: 'Rage',
+    revenge: 'Revenge',
+    injury: 'Injury',
+    penetration: 'Penetration',
+    protection: 'Protection',
+    unity: 'Unity',
+    hit: 'Hit',
+    resist: 'Resist',
+    torrent: 'Torrent',
+};
+
 interface Hero {
     id: number;
     name: string;
     slug: string;
+    image_url?: string;
+}
+
+interface Artifact {
+    id: number;
+    name: string;
+    code: string;
+    icon?: string;
 }
 
 export default function CreateBuildPage() {
@@ -37,10 +88,17 @@ export default function CreateBuildPage() {
 
     // Form state
     const [heroId, setHeroId] = useState<number | null>(preselectedHeroId ? parseInt(preselectedHeroId) : null);
+    const [artifactId, setArtifactId] = useState<number | null>(null);
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [primarySet, setPrimarySet] = useState('');
     const [secondarySet, setSecondarySet] = useState('');
+
+    // Search states for dropdowns
+    const [heroSearch, setHeroSearch] = useState('');
+    const [artifactSearch, setArtifactSearch] = useState('');
+    const [showHeroDropdown, setShowHeroDropdown] = useState(false);
+    const [showArtifactDropdown, setShowArtifactDropdown] = useState(false);
 
     // Stats
     const [stats, setStats] = useState({
@@ -87,6 +145,26 @@ export default function CreateBuildPage() {
     });
 
     const heroes: Hero[] = heroesData?.data || [];
+    const filteredHeroes = heroes.filter(h =>
+        h.name.toLowerCase().includes(heroSearch.toLowerCase())
+    );
+    const selectedHero = heroes.find(h => h.id === heroId);
+
+    // Fetch artifacts for selector
+    const { data: artifactsData } = useQuery({
+        queryKey: ['artifacts-list'],
+        queryFn: async () => {
+            const response = await fetch(`${API_URL}/artifacts`);
+            return response.json();
+        },
+        enabled: isAuthenticated,
+    });
+
+    const artifacts: Artifact[] = artifactsData?.data || [];
+    const filteredArtifacts = artifacts.filter(a =>
+        a.name.toLowerCase().includes(artifactSearch.toLowerCase())
+    );
+    const selectedArtifact = artifacts.find(a => a.id === artifactId);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -169,24 +247,96 @@ export default function CreateBuildPage() {
                             <CardTitle className="text-e7-gold">Información de la Build</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-6">
-                            {/* Hero selector */}
-                            <div>
+                            {/* Hero selector with search */}
+                            <div className="relative">
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
                                     Héroe *
                                 </label>
-                                <select
-                                    value={heroId || ''}
-                                    onChange={(e) => setHeroId(e.target.value ? parseInt(e.target.value) : null)}
-                                    className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
-                                    required
+                                <div
+                                    className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white cursor-pointer flex items-center gap-2"
+                                    onClick={() => setShowHeroDropdown(!showHeroDropdown)}
                                 >
-                                    <option value="">Selecciona un héroe</option>
-                                    {heroes.map((hero) => (
-                                        <option key={hero.id} value={hero.id}>
-                                            {hero.name}
-                                        </option>
-                                    ))}
-                                </select>
+                                    {selectedHero ? (
+                                        <>
+                                            <span>{selectedHero.name}</span>
+                                        </>
+                                    ) : (
+                                        <span className="text-gray-400">Buscar héroe...</span>
+                                    )}
+                                </div>
+                                {showHeroDropdown && (
+                                    <div className="absolute z-50 w-full mt-1 bg-e7-panel border border-e7-gold/30 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                        <Input
+                                            value={heroSearch}
+                                            onChange={(e) => setHeroSearch(e.target.value)}
+                                            placeholder="Escribe para buscar..."
+                                            className="m-2 w-[calc(100%-16px)] bg-e7-void border-e7-gold/30 text-white"
+                                            autoFocus
+                                        />
+                                        {filteredHeroes.slice(0, 20).map((hero) => (
+                                            <div
+                                                key={hero.id}
+                                                className="px-4 py-2 hover:bg-e7-gold/20 cursor-pointer text-white"
+                                                onClick={() => {
+                                                    setHeroId(hero.id);
+                                                    setShowHeroDropdown(false);
+                                                    setHeroSearch('');
+                                                }}
+                                            >
+                                                {hero.name}
+                                            </div>
+                                        ))}
+                                        {filteredHeroes.length === 0 && (
+                                            <div className="px-4 py-2 text-gray-400">No se encontraron héroes</div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Artifact selector with search */}
+                            <div className="relative">
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    Artefacto (opcional)
+                                </label>
+                                <div
+                                    className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white cursor-pointer flex items-center gap-2"
+                                    onClick={() => setShowArtifactDropdown(!showArtifactDropdown)}
+                                >
+                                    {selectedArtifact ? (
+                                        <>
+                                            <span>{selectedArtifact.name}</span>
+                                        </>
+                                    ) : (
+                                        <span className="text-gray-400">Buscar artefacto...</span>
+                                    )}
+                                </div>
+                                {showArtifactDropdown && (
+                                    <div className="absolute z-50 w-full mt-1 bg-e7-panel border border-e7-gold/30 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                        <Input
+                                            value={artifactSearch}
+                                            onChange={(e) => setArtifactSearch(e.target.value)}
+                                            placeholder="Escribe para buscar..."
+                                            className="m-2 w-[calc(100%-16px)] bg-e7-void border-e7-gold/30 text-white"
+                                            autoFocus
+                                        />
+                                        {filteredArtifacts.slice(0, 20).map((artifact) => (
+                                            <div
+                                                key={artifact.id}
+                                                className="px-4 py-2 hover:bg-e7-gold/20 cursor-pointer text-white"
+                                                onClick={() => {
+                                                    setArtifactId(artifact.id);
+                                                    setShowArtifactDropdown(false);
+                                                    setArtifactSearch('');
+                                                }}
+                                            >
+                                                {artifact.name}
+                                            </div>
+                                        ))}
+                                        {filteredArtifacts.length === 0 && (
+                                            <div className="px-4 py-2 text-gray-400">No se encontraron artefactos</div>
+                                        )}
+                                    </div>
+                                )}
                             </div>
 
                             {/* Title */}
@@ -223,35 +373,63 @@ export default function CreateBuildPage() {
                                     <label className="block text-sm font-medium text-gray-300 mb-2">
                                         Set Principal
                                     </label>
-                                    <select
-                                        value={primarySet}
-                                        onChange={(e) => setPrimarySet(e.target.value)}
-                                        className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none capitalize"
-                                    >
-                                        <option value="">Ninguno</option>
+                                    <div className="grid grid-cols-6 gap-2 p-3 bg-e7-void rounded-lg border border-e7-gold/30">
                                         {SETS.map((set) => (
-                                            <option key={set} value={set} className="capitalize">
-                                                {set}
-                                            </option>
+                                            <button
+                                                key={set}
+                                                type="button"
+                                                onClick={() => setPrimarySet(primarySet === set ? '' : set)}
+                                                className={`relative w-10 h-10 rounded-lg transition-all ${primarySet === set
+                                                    ? 'ring-2 ring-e7-gold bg-e7-gold/30 scale-110'
+                                                    : 'hover:bg-e7-panel hover:scale-105 opacity-70 hover:opacity-100'
+                                                    }`}
+                                                title={SET_NAMES[set]}
+                                            >
+                                                <Image
+                                                    src={SET_IMAGES[set]}
+                                                    alt={SET_NAMES[set]}
+                                                    width={40}
+                                                    height={40}
+                                                    className="w-full h-full object-contain"
+                                                    unoptimized
+                                                />
+                                            </button>
                                         ))}
-                                    </select>
+                                    </div>
+                                    {primarySet && (
+                                        <p className="text-sm text-e7-gold mt-1 capitalize">{SET_NAMES[primarySet]}</p>
+                                    )}
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-gray-300 mb-2">
                                         Set Secundario
                                     </label>
-                                    <select
-                                        value={secondarySet}
-                                        onChange={(e) => setSecondarySet(e.target.value)}
-                                        className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none capitalize"
-                                    >
-                                        <option value="">Ninguno</option>
+                                    <div className="grid grid-cols-6 gap-2 p-3 bg-e7-void rounded-lg border border-e7-gold/30">
                                         {SETS.map((set) => (
-                                            <option key={set} value={set} className="capitalize">
-                                                {set}
-                                            </option>
+                                            <button
+                                                key={set}
+                                                type="button"
+                                                onClick={() => setSecondarySet(secondarySet === set ? '' : set)}
+                                                className={`relative w-10 h-10 rounded-lg transition-all ${secondarySet === set
+                                                    ? 'ring-2 ring-e7-gold bg-e7-gold/30 scale-110'
+                                                    : 'hover:bg-e7-panel hover:scale-105 opacity-70 hover:opacity-100'
+                                                    }`}
+                                                title={SET_NAMES[set]}
+                                            >
+                                                <Image
+                                                    src={SET_IMAGES[set]}
+                                                    alt={SET_NAMES[set]}
+                                                    width={40}
+                                                    height={40}
+                                                    className="w-full h-full object-contain"
+                                                    unoptimized
+                                                />
+                                            </button>
                                         ))}
-                                    </select>
+                                    </div>
+                                    {secondarySet && (
+                                        <p className="text-sm text-e7-gold mt-1 capitalize">{SET_NAMES[secondarySet]}</p>
+                                    )}
                                 </div>
                             </div>
 
