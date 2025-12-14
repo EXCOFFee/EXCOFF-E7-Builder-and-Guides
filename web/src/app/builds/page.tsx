@@ -234,7 +234,7 @@ export default function BuildsPage() {
                                                 <span>{build.is_anonymous ? 'Anonymous' : build.user?.name}</span>
                                             </div>
                                             <div className="flex items-center gap-3 text-xs text-gray-500">
-                                                <span>❤️ {build.likes}</span>
+                                                <span className="flex items-center gap-1"><Image src="/images/ras-like.gif" alt="likes" width={16} height={16} unoptimized /> {build.likes}</span>
                                                 <span>👁️ {build.views}</span>
                                             </div>
                                         </div>

@@ -289,11 +289,12 @@ export default function GuideDetailPage() {
                                 {/* Like Button */}
                                 <Button
                                     variant="outline"
-                                    className={`border-e7-gold/30 ${hasLiked ? 'text-red-400' : 'text-e7-gold'}`}
+                                    className={`border-e7-gold/30 flex items-center gap-2 ${hasLiked ? 'text-red-400 border-red-400/50' : 'text-e7-gold'}`}
                                     onClick={() => likeMutation.mutate()}
                                     disabled={likeMutation.isPending || !currentUser}
                                 >
-                                    ❤️ {guide.likes_count}
+                                    <Image src="/images/ras-like.gif" alt="like" width={24} height={24} className="inline-block" unoptimized />
+                                    {guide.likes_count}
                                 </Button>
 
                                 {/* Edit/Delete Buttons */}
