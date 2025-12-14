@@ -13,12 +13,14 @@ return new class extends Migration {
         Schema::create('votes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('guide_id')->constrained()->onDelete('cascade');
-            $table->tinyInteger('value'); // 1 = upvote, -1 = downvote
+            $table->string('votable_type'); // App\Models\Guide, App\Models\UserBuild
+            $table->unsignedBigInteger('votable_id');
+            $table->tinyInteger('value')->default(1); // 1 = like
             $table->timestamps();
 
-            // Prevent duplicate votes from same user (RF-11)
-            $table->unique(['user_id', 'guide_id']);
+            // Prevent duplicate votes from same user on same item
+            $table->unique(['user_id', 'votable_type', 'votable_id']);
+            $table->index(['votable_type', 'votable_id']);
         });
     }
 

@@ -19,10 +19,18 @@ class HeroResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
+        // Get the localized name based on ?lang parameter
+        $lang = $request->query('lang', 'en');
+        $localizedName = $this->getLocalizedName($lang);
+
         return [
             'id' => $this->id,
             'code' => $this->code,
-            'name' => $this->name,
+            'name' => $this->name, // Always include English name
+            'display_name' => $localizedName, // Localized name for display
+            'name_ko' => $this->name_ko,
+            'name_ja' => $this->name_ja,
+            'name_zh' => $this->name_zh,
             'slug' => $this->slug,
             'element' => $this->element,
             'class' => $this->class,
@@ -39,5 +47,18 @@ class HeroResource extends JsonResource
             // Relationships
             'guides' => GuideResource::collection($this->whenLoaded('guides')),
         ];
+    }
+
+    /**
+     * Get the localized name based on language code.
+     */
+    private function getLocalizedName(string $lang): string
+    {
+        return match ($lang) {
+            'ko' => $this->name_ko ?? $this->name,
+            'ja' => $this->name_ja ?? $this->name,
+            'zh' => $this->name_zh ?? $this->name,
+            default => $this->name,
+        };
     }
 }

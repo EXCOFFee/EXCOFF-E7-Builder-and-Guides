@@ -7,17 +7,27 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 /**
- * Comment model supporting 1-level nested replies (RF-12).
+ * Comment model supporting guides, builds, and 1-level nested replies.
  */
 class Comment extends Model
 {
     protected $fillable = [
         'user_id',
-        'guide_id',
+        'commentable_type',
+        'commentable_id',
+        'guide_id', // Keep for backward compatibility
+        'build_id',
         'parent_id',
         'content',
+        'is_anonymous',
+    ];
+
+    protected $casts = [
+        'is_anonymous' => 'boolean',
     ];
 
     /**
@@ -29,11 +39,27 @@ class Comment extends Model
     }
 
     /**
-     * Get the guide this comment belongs to.
+     * Get the commentable model (Guide or Build)
+     */
+    public function commentable(): MorphTo
+    {
+        return $this->morphTo();
+    }
+
+    /**
+     * Get the guide this comment belongs to (backward compatibility).
      */
     public function guide(): BelongsTo
     {
         return $this->belongsTo(Guide::class);
+    }
+
+    /**
+     * Get the build this comment belongs to.
+     */
+    public function build(): BelongsTo
+    {
+        return $this->belongsTo(UserBuild::class, 'build_id');
     }
 
     /**
@@ -51,4 +77,13 @@ class Comment extends Model
     {
         return $this->hasMany(Comment::class, 'parent_id');
     }
+
+    /**
+     * Get reports for this comment.
+     */
+    public function reports(): MorphMany
+    {
+        return $this->morphMany(Report::class, 'reportable');
+    }
 }
+

@@ -15,6 +15,9 @@ class Artifact extends Model
     protected $fillable = [
         'code',
         'name',
+        'name_ko', // Korean
+        'name_ja', // Japanese
+        'name_zh', // Chinese
         'slug',
         'class',
         'rarity',

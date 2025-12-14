@@ -1,7 +1,7 @@
 {
     "common": {
         "appName": "E7 EXCOFF",
-        "appSubtitle": "ビルダー＆ガイド",
+        "appSubtitle": "ビルド＆ガイド",
         "loading": "読み込み中...",
         "error": "エラー",
         "save": "保存",
@@ -13,27 +13,32 @@
         "filter": "フィルター",
         "back": "戻る",
         "next": "次へ",
-        "submit": "送信"
+        "submit": "送信",
+        "all": "すべて",
+        "add": "追加",
+        "saving": "保存中...",
+        "unknownError": "不明なエラー"
     },
     "nav": {
         "home": "ホーム",
         "heroes": "英雄",
         "guides": "ガイド",
+        "guilds": "ギルド",
         "builds": "ビルド",
         "login": "ログイン",
         "register": "登録"
     },
     "home": {
         "title": "E7 EXCOFF",
-        "subtitle": "ビルダー＆ガイド",
-        "description": "キャラクタービルドを発見・公開し、コミュニティのためのゲームガイドを作成しよう",
+        "subtitle": "ビルド＆ガイド",
+        "description": "キャラクタービルドを発見・共有し、コミュニティのためのゲームガイドを作成しましょう",
         "exploreHeroes": "英雄を探索",
         "viewGuides": "ガイドを見る",
-        "featuresTitle": "何が見つかる？",
+        "featuresTitle": "見つけられるもの",
         "heroWiki": {
             "title": "🗡️ 英雄Wiki",
             "description": "すべてのゲーム英雄、情報、コミュニティビルドを探索。",
-            "content": "ステータス、スキル、倍率、人気ビルドを含む完全なデータベース。"
+            "content": "ステータス、スキル、倍率、人気ビルドの完全データベース。"
         },
         "communityBuilds": {
             "title": "📊 コミュニティビルド",
@@ -42,25 +47,29 @@
         },
         "gameGuides": {
             "title": "⚔️ ゲームガイド",
-            "description": "PVE、RTA、アリーナ、ギルド戦などのガイド。",
+            "description": "PVE、RTA、アリーナ、ギルド戦などのゲームコンテンツガイド。",
             "content": "各ゲームモードをマスターするための動画、画像、戦略。"
         },
         "ctaTitle": "知識を共有する準備はできましたか？",
-        "ctaDescription": "アカウントを作成して、お気に入りの英雄のガイドとビルドに貢献しよう。",
+        "ctaDescription": "アカウントを作成し、お気に入りの英雄のガイドとビルドに貢献しましょう。",
         "ctaButton": "コミュニティに参加"
     },
     "heroes": {
         "title": "英雄データベース",
-        "description": "すべてのエピックセブン英雄、ステータス、ビルドを探索",
+        "description": "エピックセブンのすべての英雄、ステータス、ビルドを探索",
         "searchPlaceholder": "英雄を検索...",
         "filterElement": "属性:",
-        "filterClass": "職業:",
+        "filterClass": "クラス:",
         "noResults": "英雄が見つかりません。",
-        "loadingHeroes": "英雄を読み込み中..."
+        "loadingHeroes": "英雄を読み込み中...",
+        "baseStats": "基本ステータス (Lv.60 覚醒)",
+        "skills": "スキル＆ダメージ倍率",
+        "createBuild": "ビルドを作成",
+        "viewBuilds": "ビルドを見る"
     },
     "elements": {
         "fire": "火",
-        "ice": "氷",
+        "ice": "水",
         "earth": "地",
         "light": "光",
         "dark": "闇"
@@ -70,12 +79,12 @@
         "warrior": "戦士",
         "thief": "盗賊",
         "ranger": "射手",
-        "mage": "魔導士",
-        "soul_weaver": "ソウルウィーバー"
+        "mage": "魔道士",
+        "soul_weaver": "精霊師"
     },
     "guides": {
         "title": "ゲームガイド",
-        "description": "コミュニティから戦略とヒントを学ぶ",
+        "description": "コミュニティの戦略とヒントを学ぶ",
         "categories": {
             "all": "すべて",
             "general": "一般",
@@ -85,10 +94,97 @@
             "arena": "アリーナ"
         },
         "createGuide": "ガイドを作成",
-        "noGuides": "まだガイドがありません。"
+        "noGuides": "まだガイドがありません。",
+        "backToGuides": "ガイドに戻る",
+        "by": "作成者",
+        "comments": "コメント",
+        "writeComment": "コメントを書く...",
+        "postComment": "投稿",
+        "noComments": "まだコメントがありません。",
+        "loginToComment": "コメントするにはログインしてください"
+    },
+    "guidesCreate": {
+        "title": "タイトル",
+        "titlePlaceholder": "ガイドのタイトル...",
+        "category": "カテゴリー",
+        "relatedHero": "関連英雄（任意）",
+        "noSpecificHero": "特定の英雄なし",
+        "videoUrl": "動画URL（任意）",
+        "videoSupport": "YouTube、Twitch、Bilibiliに対応",
+        "images": "画像（任意）",
+        "clickToUpload": "クリックして画像をアップロード",
+        "maxImages": "最大5枚の画像（JPEG、PNG、GIF、WebP）",
+        "description": "簡単な説明",
+        "descriptionPlaceholder": "このガイドの簡単な説明...",
+        "content": "ガイド内容",
+        "contentPlaceholder": "ここにガイドの内容を書いてください。マークダウン形式が使えます...",
+        "markdownSupport": "マークダウン対応: **太字**, *斜体*, ## 見出し, - リスト",
+        "publishing": "公開中...",
+        "publishGuide": "ガイドを公開"
+    },
+    "guilds": {
+        "title": "ギルド募集",
+        "subtitle": "理想のギルドを見つける、または新メンバーを募集",
+        "createPost": "投稿を作成",
+        "searchPlaceholder": "ギルドを検索...",
+        "noPosts": "ギルド投稿が見つかりません",
+        "backToList": "投稿一覧に戻る",
+        "confirmDelete": "この投稿を削除しますか？",
+        "postDetails": "投稿の詳細",
+        "titleLabel": "タイトル",
+        "titlePlaceholder": "例: アクティブなギルドがメンバー募集中！",
+        "server": "サーバー",
+        "selectServer": "サーバーを選択...",
+        "language": "言語",
+        "selectLanguage": "言語を選択...",
+        "tags": "タグ",
+        "description": "説明",
+        "descriptionPlaceholder": "ギルド、要件、特典を説明...",
+        "images": "画像（任意）",
+        "clickToUpload": "クリックして画像をアップロード",
+        "imageUrlPlaceholder": "または画像URLを貼り付け...",
+        "maxImages": "最大5枚の画像",
+        "createError": "投稿作成エラー",
+        "createSubtitle": "ギルドメンバーを募集",
+        "publishPost": "投稿"
+    },
+    "guilds.tags": {
+        "casual": "カジュアル",
+        "chill": "まったり",
+        "semiCompetitive": "セミ競技",
+        "competitiveAll": "競技（全て）",
+        "competitiveGW": "競技（GW）",
+        "competitiveRTA": "競技（RTA）",
+        "whatsapp": "WhatsAppグループ",
+        "discord": "Discordサーバー",
+        "otherSocial": "その他SNS",
+        "beginner": "初心者向け",
+        "helpImprove": "成長サポート",
+        "active": "アクティブ必須"
+    },
+    "builds": {
+        "title": "コミュニティビルド",
+        "description": "コミュニティが作成した英雄ビルドを探索・共有",
+        "searchPlaceholder": "ビルドを検索...",
+        "createBuild": "ビルドを作成",
+        "noBuilds": "まだビルドがありません。",
+        "stats": "ステータス",
+        "sets": "セット",
+        "artifact": "アーティファクト",
+        "synergies": "シナジー",
+        "counters": "カウンター",
+        "searchArtifact": "アーティファクトを検索...",
+        "selectHero": "英雄を選択",
+        "buildFor": "ビルド対象",
+        "minStats": "最低ステータス",
+        "primarySet": "メインセット",
+        "secondarySet": "サブセット",
+        "anonymous": "匿名で投稿",
+        "publishing": "公開中...",
+        "publishBuild": "ビルドを公開"
     },
     "footer": {
-        "disclaimer": "E7 EXCOFFはSmilegate社またはSuper Creative社とは関係ありません。",
-        "copyright": "エピックセブンとすべてのコンテンツはそれぞれの所有者の財産です。"
+        "disclaimer": "E7 EXCOFFはSmilegate または Super Creativeとは提携していません。",
+        "copyright": "エピックセブンおよびすべてのコンテンツはそれぞれの所有者の財産です。"
     }
 }

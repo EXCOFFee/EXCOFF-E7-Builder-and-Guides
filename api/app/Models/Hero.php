@@ -16,6 +16,9 @@ class Hero extends Model
     protected $fillable = [
         'code',
         'name',
+        'name_ko', // Korean
+        'name_ja', // Japanese
+        'name_zh', // Chinese
         'slug',
         'element',
         'class',

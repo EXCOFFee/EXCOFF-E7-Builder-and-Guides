@@ -36,6 +36,7 @@ class Guide extends Model
         'vote_score',
         'views',
         'likes',
+        'language',
     ];
 
     protected $casts = [

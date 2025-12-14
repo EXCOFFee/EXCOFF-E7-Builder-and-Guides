@@ -25,7 +25,10 @@ class UserBuild extends Model
         'images',
         'views',
         'likes',
+        'dislikes',
         'status',
+        'language',
+        'is_anonymous',
     ];
 
     protected $casts = [
@@ -33,6 +36,7 @@ class UserBuild extends Model
         'synergy_heroes' => 'array',
         'counter_heroes' => 'array',
         'images' => 'array',
+        'is_anonymous' => 'boolean',
     ];
 
     /**

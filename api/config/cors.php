@@ -7,7 +7,7 @@ return [
     | Cross-Origin Resource Sharing (CORS) Configuration
     |--------------------------------------------------------------------------
     |
-    | Configured for E7-Hub (epiccodex.com) - Headless Architecture
+    | E7 EXCOFF Builder & Guides - Headless Architecture
     | Frontend: Vercel | Backend: Hostinger
     |
     */
@@ -17,14 +17,12 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
-        'https://epiccodex.com',
-        'https://www.epiccodex.com',
-        'https://epiccodex.vercel.app',
+        'https://excoff-e7-builder-and-guides-q9y8.vercel.app',
         'http://localhost:3000',  // Next.js dev
     ],
 
     'allowed_origins_patterns' => [
-        '/^https:\/\/epiccodex-.*\.vercel\.app$/',  // Vercel preview deployments
+        '/^https:\/\/excoff-e7-builder-and-guides.*\.vercel\.app$/',  // Vercel preview deployments
     ],
 
     'allowed_headers' => ['*'],

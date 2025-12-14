@@ -26,12 +26,32 @@ class ArtifactController extends Controller
             $query->where('rarity', $request->rarity);
         }
 
-        // Search by name
-        if ($request->has('search')) {
-            $query->where('name', 'like', '%' . $request->search . '%');
+        // Filter by class
+        if ($request->has('class')) {
+            $query->where('class', $request->class);
         }
 
-        $artifacts = $query->orderBy('name')->paginate(50);
+        // Search by name (supports multiple languages)
+        if ($request->has('search')) {
+            $search = $request->search;
+            $query->where(function ($q) use ($search) {
+                $q->where('name', 'like', '%' . $search . '%')
+                    ->orWhere('name_ko', 'like', '%' . $search . '%')
+                    ->orWhere('name_ja', 'like', '%' . $search . '%')
+                    ->orWhere('name_zh', 'like', '%' . $search . '%');
+            });
+        }
+
+        $artifacts = $query->orderBy('name')->paginate(500);
+
+        // Get language preference
+        $lang = $request->query('lang', 'en');
+
+        // Transform to add display_name
+        $artifacts->getCollection()->transform(function ($artifact) use ($lang) {
+            $artifact->display_name = $this->getLocalizedName($artifact, $lang);
+            return $artifact;
+        });
 
         return response()->json($artifacts);
     }
@@ -39,8 +59,24 @@ class ArtifactController extends Controller
     /**
      * Get a specific artifact.
      */
-    public function show(Artifact $artifact): JsonResponse
+    public function show(Request $request, Artifact $artifact): JsonResponse
     {
+        $lang = $request->query('lang', 'en');
+        $artifact->display_name = $this->getLocalizedName($artifact, $lang);
+
         return response()->json($artifact);
+    }
+
+    /**
+     * Get localized name based on language code.
+     */
+    private function getLocalizedName(Artifact $artifact, string $lang): string
+    {
+        return match ($lang) {
+            'ko' => $artifact->name_ko ?? $artifact->name,
+            'ja' => $artifact->name_ja ?? $artifact->name,
+            'zh' => $artifact->name_zh ?? $artifact->name,
+            default => $artifact->name,
+        };
     }
 }

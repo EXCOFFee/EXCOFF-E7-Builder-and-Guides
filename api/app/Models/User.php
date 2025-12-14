@@ -19,6 +19,7 @@ class User extends Authenticatable
         'password',
         'avatar',
         'role',
+        'is_admin',
         'provider',
         'provider_id',
         'provider_token',
@@ -35,6 +36,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+        'is_admin' => 'boolean',
     ];
 
     /**
@@ -58,7 +60,7 @@ class User extends Authenticatable
      */
     public function isAdmin(): bool
     {
-        return $this->role === 'admin';
+        return $this->is_admin || $this->role === 'admin';
     }
 
     /**

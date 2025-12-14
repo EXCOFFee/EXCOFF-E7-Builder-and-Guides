@@ -46,7 +46,7 @@ class HeroController extends Controller
             $query->where('name', 'like', '%' . $request->search . '%');
         }
 
-        $heroes = $query->orderBy('name')->paginate(50);
+        $heroes = $query->orderBy('name')->paginate(500);
 
         return HeroResource::collection($heroes);
     }

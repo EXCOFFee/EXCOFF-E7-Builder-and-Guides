@@ -1,7 +1,7 @@
 {
     "common": {
         "appName": "E7 EXCOFF",
-        "appSubtitle": "Builder & Guias",
+        "appSubtitle": "Builds & Guias",
         "loading": "Carregando...",
         "error": "Erro",
         "save": "Salvar",
@@ -9,40 +9,45 @@
         "delete": "Excluir",
         "edit": "Editar",
         "create": "Criar",
-        "search": "Pesquisar",
+        "search": "Buscar",
         "filter": "Filtrar",
         "back": "Voltar",
         "next": "Próximo",
-        "submit": "Enviar"
+        "submit": "Enviar",
+        "all": "Todos",
+        "add": "Adicionar",
+        "saving": "Salvando...",
+        "unknownError": "Erro desconhecido"
     },
     "nav": {
         "home": "Início",
         "heroes": "Heróis",
         "guides": "Guias",
+        "guilds": "Guildas",
         "builds": "Builds",
         "login": "Entrar",
         "register": "Registrar"
     },
     "home": {
         "title": "E7 EXCOFF",
-        "subtitle": "Builder & Guias",
-        "description": "Descubra e publique suas builds de personagens e crie guias do jogo para a comunidade",
+        "subtitle": "Builds & Guias",
+        "description": "Descubra e publique builds de personagens e crie guias do jogo para a comunidade",
         "exploreHeroes": "Explorar Heróis",
         "viewGuides": "Ver Guias",
         "featuresTitle": "O que você encontrará",
         "heroWiki": {
             "title": "🗡️ Wiki de Heróis",
             "description": "Explore todos os heróis do jogo, informações e builds da comunidade.",
-            "content": "Banco de dados completo com stats, habilidades, multiplicadores e builds populares."
+            "content": "Banco de dados completo com estatísticas, habilidades, multiplicadores e builds populares."
         },
         "communityBuilds": {
             "title": "📊 Builds da Comunidade",
-            "description": "Crie e compartilhe suas builds com stats recomendados, sets e artefatos.",
+            "description": "Crie e compartilhe builds com estatísticas, sets e artefatos recomendados.",
             "content": "Sistema de builds com sinergias, counters e descrições detalhadas."
         },
         "gameGuides": {
             "title": "⚔️ Guias do Jogo",
-            "description": "Guias para PVE, RTA, Arena, Guild War e mais conteúdo.",
+            "description": "Guias para PVE, RTA, Arena, Guerra de Guilda e mais conteúdo do jogo.",
             "content": "Vídeos, imagens e estratégias para dominar cada modo de jogo."
         },
         "ctaTitle": "Pronto para compartilhar seu conhecimento?",
@@ -51,12 +56,16 @@
     },
     "heroes": {
         "title": "Banco de Dados de Heróis",
-        "description": "Explore todos os heróis de Epic Seven, seus stats e builds",
-        "searchPlaceholder": "Pesquisar heróis...",
+        "description": "Explore todos os heróis de Epic Seven, suas estatísticas e builds",
+        "searchPlaceholder": "Buscar heróis...",
         "filterElement": "Elemento:",
         "filterClass": "Classe:",
         "noResults": "Nenhum herói encontrado.",
-        "loadingHeroes": "Carregando heróis..."
+        "loadingHeroes": "Carregando heróis...",
+        "baseStats": "Estatísticas Base (Nv.60 Despertar)",
+        "skills": "Habilidades & Escalagem de Dano",
+        "createBuild": "Criar Build",
+        "viewBuilds": "Ver Builds"
     },
     "elements": {
         "fire": "Fogo",
@@ -71,7 +80,7 @@
         "thief": "Ladrão",
         "ranger": "Arqueiro",
         "mage": "Mago",
-        "soul_weaver": "Curandeiro"
+        "soul_weaver": "Tecelão de Almas"
     },
     "guides": {
         "title": "Guias do Jogo",
@@ -85,7 +94,94 @@
             "arena": "Arena"
         },
         "createGuide": "Criar Guia",
-        "noGuides": "Nenhum guia disponível ainda."
+        "noGuides": "Nenhum guia disponível ainda.",
+        "backToGuides": "Voltar para Guias",
+        "by": "por",
+        "comments": "Comentários",
+        "writeComment": "Escreva um comentário...",
+        "postComment": "Publicar",
+        "noComments": "Nenhum comentário ainda.",
+        "loginToComment": "Entre para comentar"
+    },
+    "guidesCreate": {
+        "title": "Título",
+        "titlePlaceholder": "Título do seu guia...",
+        "category": "Categoria",
+        "relatedHero": "Herói relacionado (opcional)",
+        "noSpecificHero": "Sem herói específico",
+        "videoUrl": "URL do Vídeo (opcional)",
+        "videoSupport": "Suportamos YouTube, Twitch e Bilibili",
+        "images": "Imagens (opcional)",
+        "clickToUpload": "Clique para enviar imagens",
+        "maxImages": "Máximo 5 imagens (JPEG, PNG, GIF, WebP)",
+        "description": "Descrição breve",
+        "descriptionPlaceholder": "Uma breve descrição do que este guia cobre...",
+        "content": "Conteúdo do Guia",
+        "contentPlaceholder": "Escreva o conteúdo do seu guia aqui. Você pode usar formatação Markdown...",
+        "markdownSupport": "Suporta Markdown: **negrito**, *itálico*, ## Cabeçalhos, - Listas",
+        "publishing": "Publicando...",
+        "publishGuide": "Publicar Guia"
+    },
+    "guilds": {
+        "title": "Recrutamento de Guildas",
+        "subtitle": "Encontre sua guilda perfeita ou recrute novos membros",
+        "createPost": "Criar Publicação",
+        "searchPlaceholder": "Buscar guildas...",
+        "noPosts": "Nenhuma publicação de guilda encontrada",
+        "backToList": "Voltar para Publicações",
+        "confirmDelete": "Tem certeza que deseja excluir esta publicação?",
+        "postDetails": "Detalhes da Publicação",
+        "titleLabel": "Título",
+        "titlePlaceholder": "ex: Guilda Ativa Procurando Membros!",
+        "server": "Servidor",
+        "selectServer": "Selecione o servidor...",
+        "language": "Idioma",
+        "selectLanguage": "Selecione o idioma...",
+        "tags": "Tags",
+        "description": "Descrição",
+        "descriptionPlaceholder": "Descreva sua guilda, requisitos, benefícios...",
+        "images": "Imagens (opcional)",
+        "clickToUpload": "Clique para enviar imagens",
+        "imageUrlPlaceholder": "Ou cole uma URL de imagem...",
+        "maxImages": "Máximo de 5 imagens no total",
+        "createError": "Erro ao criar publicação",
+        "createSubtitle": "Recrute membros para sua guilda",
+        "publishPost": "Publicar"
+    },
+    "guilds.tags": {
+        "casual": "Casual",
+        "chill": "Tranquilo",
+        "semiCompetitive": "Semi Competitivo",
+        "competitiveAll": "Competitivo (Tudo)",
+        "competitiveGW": "Competitivo (GW)",
+        "competitiveRTA": "Competitivo (RTA)",
+        "whatsapp": "Grupo WhatsApp",
+        "discord": "Servidor Discord",
+        "otherSocial": "Outra Rede Social",
+        "beginner": "Para Iniciantes",
+        "helpImprove": "Ajuda a Melhorar",
+        "active": "Seja Ativo"
+    },
+    "builds": {
+        "title": "Builds da Comunidade",
+        "description": "Explore e compartilhe builds de heróis criados pela comunidade",
+        "searchPlaceholder": "Buscar builds...",
+        "createBuild": "Criar Build",
+        "noBuilds": "Nenhum build disponível ainda.",
+        "stats": "Estatísticas",
+        "sets": "Sets",
+        "artifact": "Artefato",
+        "synergies": "Sinergias",
+        "counters": "Counters",
+        "searchArtifact": "Buscar artefato...",
+        "selectHero": "Selecione um herói",
+        "buildFor": "Build para",
+        "minStats": "Estatísticas Mínimas",
+        "primarySet": "Set Principal",
+        "secondarySet": "Set Secundário",
+        "anonymous": "Publicar anonimamente",
+        "publishing": "Publicando...",
+        "publishBuild": "Publicar Build"
     },
     "footer": {
         "disclaimer": "E7 EXCOFF não é afiliado à Smilegate ou Super Creative.",
