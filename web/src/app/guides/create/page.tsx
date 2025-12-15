@@ -8,15 +8,17 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useQuery } from '@tanstack/react-query';
 import { heroApi } from '@/lib/api';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 const CATEGORIES = [
-    { id: 'general', label: 'General', emoji: '📖' },
-    { id: 'pve', label: 'PVE', emoji: '🐉' },
-    { id: 'rta', label: 'RTA', emoji: '⚔️' },
-    { id: 'guild_war', label: 'Guerra de Gremios', emoji: '🏰' },
-    { id: 'arena', label: 'Arena', emoji: '🏆' },
+    { id: 'general', label: 'General', emoji: '📖', key: 'general' },
+    { id: 'pve', label: 'PVE', emoji: '🐉', key: 'pve' },
+    { id: 'rta', label: 'RTA', emoji: '⚔️', key: 'rta' },
+    { id: 'guild_war', label: 'Guild War', emoji: '🏰', key: 'guild_war' },
+    { id: 'arena', label: 'Arena', emoji: '🏆', key: 'arena' },
+    { id: 'heroes', label: 'Heroes', emoji: '🧙', key: 'heroes' },
 ];
 
 interface Hero {
@@ -27,6 +29,7 @@ interface Hero {
 
 export default function CreateGuidePage() {
     const router = useRouter();
+    const { t } = useTranslations();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -133,13 +136,13 @@ export default function CreateGuidePage() {
                 {/* Header */}
                 <div className="mb-8">
                     <Link href="/guides" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-block">
-                        ← Volver a Guías
+                        ← {t('guides.backToGuides', 'Back to Guides')}
                     </Link>
-                    <h1 className="font-display text-4xl text-e7-text-gold mb-2">Crear Nueva Guía</h1>
+                    <h1 className="font-display text-4xl text-e7-text-gold mb-2">{t('guidesCreate.createGuide', 'Create New Guide')}</h1>
                     <p className="text-gray-400">
                         {preselectedHeroName
-                            ? `Creando guía para ${decodeURIComponent(preselectedHeroName)}`
-                            : 'Comparte tu conocimiento con la comunidad'
+                            ? `${t('guidesCreate.creatingFor', 'Creating guide for')} ${decodeURIComponent(preselectedHeroName)}`
+                            : t('guidesCreate.shareKnowledge', 'Share your knowledge with the community')
                         }
                     </p>
                 </div>
@@ -147,18 +150,18 @@ export default function CreateGuidePage() {
                 <form onSubmit={handleSubmit}>
                     <Card className="bg-e7-panel border-e7-gold/30">
                         <CardHeader>
-                            <CardTitle className="text-e7-gold">Información de la Guía</CardTitle>
+                            <CardTitle className="text-e7-gold">{t('guides.guideInfo', 'Guide Information')}</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-6">
                             {/* Title */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Título *
+                                    {t('guides.titleLabel', 'Title')} *
                                 </label>
                                 <Input
                                     value={title}
                                     onChange={(e) => setTitle(e.target.value)}
-                                    placeholder="Ej: Guía completa de Arbiter Vildred para RTA"
+                                    placeholder={t('guides.titlePlaceholder', 'E.g., Complete Arbiter Vildred Guide for RTA')}
                                     className="bg-e7-void border-e7-gold/30 text-white"
                                     required
                                 />
@@ -167,7 +170,7 @@ export default function CreateGuidePage() {
                             {/* Category */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Categoría *
+                                    {t('guides.category', 'Category')} *
                                 </label>
                                 <div className="flex flex-wrap gap-2">
                                     {CATEGORIES.map((cat) => (
@@ -181,7 +184,7 @@ export default function CreateGuidePage() {
                                                 }`}
                                         >
                                             <span className="mr-2">{cat.emoji}</span>
-                                            {cat.label}
+                                            {t(`guides.categories.${cat.key}`, cat.label)}
                                         </button>
                                     ))}
                                 </div>
@@ -190,14 +193,14 @@ export default function CreateGuidePage() {
                             {/* Hero selector */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Héroe relacionado (opcional)
+                                    {t('guides.relatedHero', 'Related Hero (optional)')}
                                 </label>
                                 <select
                                     value={heroId || ''}
                                     onChange={(e) => setHeroId(e.target.value ? parseInt(e.target.value) : null)}
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
                                 >
-                                    <option value="">Sin héroe específico</option>
+                                    <option value="">{t('guides.noSpecificHero', 'No specific hero')}</option>
                                     {heroes.map((hero) => (
                                         <option key={hero.id} value={hero.id}>
                                             {hero.name}
@@ -209,7 +212,7 @@ export default function CreateGuidePage() {
                             {/* Video URL */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    URL de Video (opcional)
+                                    {t('guides.videoUrl', 'Video URL (optional)')}
                                 </label>
                                 <Input
                                     value={videoUrl}
@@ -218,14 +221,14 @@ export default function CreateGuidePage() {
                                     className="bg-e7-void border-e7-gold/30 text-white"
                                 />
                                 <p className="text-xs text-gray-500 mt-1">
-                                    Soportamos YouTube, Twitch y Bilibili
+                                    {t('guidesCreate.videoSupport', 'We support YouTube, Twitch and Bilibili')}
                                 </p>
                             </div>
 
                             {/* Image Upload */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Imágenes (opcional)
+                                    {t('guides.imagesOptional', 'Images (optional)')}
                                 </label>
                                 <div
                                     className="border-2 border-dashed border-e7-gold/30 rounded-lg p-4 text-center hover:border-e7-gold/50 transition-colors cursor-pointer"
@@ -243,10 +246,10 @@ export default function CreateGuidePage() {
                                         }}
                                     />
                                     <div className="text-gray-400">
-                                        📷 Click para subir imágenes
+                                        📷 {t('guidesCreate.clickToUpload', 'Click to upload images')}
                                     </div>
                                     <p className="text-xs text-gray-500 mt-1">
-                                        Máximo 5 imágenes (JPEG, PNG, GIF, WebP)
+                                        {t('guidesCreate.maxImages', 'Maximum 5 images (JPEG, PNG, GIF, WebP)')}
                                     </p>
                                 </div>
                                 {images.length > 0 && (
@@ -274,12 +277,12 @@ export default function CreateGuidePage() {
                             {/* Description */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Descripción breve
+                                    {t('guides.descriptionLabel', 'Brief Description')}
                                 </label>
                                 <textarea
                                     value={description}
                                     onChange={(e) => setDescription(e.target.value)}
-                                    placeholder="Una breve descripción de lo que cubre esta guía..."
+                                    placeholder={t('guides.descriptionPlaceholder', 'A brief description of what this guide covers...')}
                                     rows={3}
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none resize-none"
                                 />
@@ -288,18 +291,18 @@ export default function CreateGuidePage() {
                             {/* Content */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Contenido de la Guía *
+                                    {t('guides.content', 'Guide Content')} *
                                 </label>
                                 <textarea
                                     value={content}
                                     onChange={(e) => setContent(e.target.value)}
-                                    placeholder="Escribe el contenido de tu guía aquí. Puedes usar formato Markdown..."
+                                    placeholder={t('guides.contentPlaceholder', 'Write your guide content here...')}
                                     rows={15}
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none resize-none font-mono text-sm"
                                     required
                                 />
                                 <p className="text-xs text-gray-500 mt-1">
-                                    Soporta formato Markdown: **negrita**, *cursiva*, ## Títulos, - Listas
+                                    {t('guidesCreate.markdownSupport', 'Supports Markdown: **bold**, *italic*, ## Headers, - Lists')}
                                 </p>
                             </div>
 
@@ -314,7 +317,7 @@ export default function CreateGuidePage() {
                             <div className="flex gap-4 justify-end pt-4">
                                 <Link href="/guides">
                                     <Button type="button" variant="outline" className="border-e7-gold/30 text-gray-400">
-                                        Cancelar
+                                        {t('common.cancel', 'Cancel')}
                                     </Button>
                                 </Link>
                                 <Button
@@ -322,7 +325,7 @@ export default function CreateGuidePage() {
                                     disabled={isSubmitting || !title || !content}
                                     className="bg-e7-gold text-black hover:bg-e7-text-gold"
                                 >
-                                    {isSubmitting ? 'Publicando...' : 'Publicar Guía'}
+                                    {isSubmitting ? t('guidesCreate.publishing', 'Publishing...') : t('guidesCreate.publishGuide', 'Publish Guide')}
                                 </Button>
                             </div>
                         </CardContent>

@@ -130,6 +130,17 @@
         "pasteImageUrl": "画像URLを貼り付け...",
         "maxImages": "最大5枚"
     },
+    "guidesCreate": {
+        "createGuide": "新しいガイドを作成",
+        "creatingFor": "ガイド作成対象:",
+        "shareKnowledge": "コミュニティと知識を共有しましょう",
+        "videoSupport": "YouTube、Twitch、Bilibiliに対応",
+        "clickToUpload": "クリックして画像をアップロード",
+        "maxImages": "最大5枚 (JPEG, PNG, GIF, WebP)",
+        "markdownSupport": "Markdown対応: **太字**, *斜体*, ## 見出し, - リスト",
+        "publishing": "投稿中...",
+        "publishGuide": "ガイドを投稿"
+    },
     "guilds": {
         "title": "ギルド募集",
         "subtitle": "理想のギルドを見つけるか、新しいメンバーを募集しましょう",

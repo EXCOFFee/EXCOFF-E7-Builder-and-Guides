@@ -130,6 +130,17 @@
         "pasteImageUrl": "이미지 URL 붙여넣기...",
         "maxImages": "최대 5장"
     },
+    "guidesCreate": {
+        "createGuide": "새 가이드 만들기",
+        "creatingFor": "가이드 작성 대상:",
+        "shareKnowledge": "커뮤니티와 지식을 공유하세요",
+        "videoSupport": "YouTube, Twitch, Bilibili를 지원합니다",
+        "clickToUpload": "클릭하여 이미지 업로드",
+        "maxImages": "최대 5장 (JPEG, PNG, GIF, WebP)",
+        "markdownSupport": "마크다운 지원: **굵게**, *기울임*, ## 제목, - 목록",
+        "publishing": "게시 중...",
+        "publishGuide": "가이드 게시"
+    },
     "guilds": {
         "title": "길드 모집",
         "subtitle": "완벽한 길드를 찾거나 새 멤버를 모집하세요",

@@ -124,6 +124,9 @@
         "maxImages": "Máximo 5 imágenes"
     },
     "guidesCreate": {
+        "createGuide": "Crear Nueva Guía",
+        "creatingFor": "Creando guía para",
+        "shareKnowledge": "Comparte tu conocimiento con la comunidad",
         "title": "Título",
         "titlePlaceholder": "Título de tu guía...",
         "category": "Categoría",

@@ -133,6 +133,9 @@
         "maxImages": "Maximum 5 images"
     },
     "guidesCreate": {
+        "createGuide": "Create New Guide",
+        "creatingFor": "Creating guide for",
+        "shareKnowledge": "Share your knowledge with the community",
         "title": "Title",
         "titlePlaceholder": "Your guide title...",
         "category": "Category",

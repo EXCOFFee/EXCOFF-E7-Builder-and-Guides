@@ -130,6 +130,17 @@
         "pasteImageUrl": "粘贴图片链接...",
         "maxImages": "最多5张图片"
     },
+    "guidesCreate": {
+        "createGuide": "创建新攻略",
+        "creatingFor": "正在为以下英雄创建攻略:",
+        "shareKnowledge": "与社区分享你的知识",
+        "videoSupport": "支持 YouTube、Twitch 和 Bilibili",
+        "clickToUpload": "点击上传图片",
+        "maxImages": "最多5张图片 (JPEG, PNG, GIF, WebP)",
+        "markdownSupport": "支持 Markdown: **粗体**, *斜体*, ## 标题, - 列表",
+        "publishing": "发布中...",
+        "publishGuide": "发布攻略"
+    },
     "guilds": {
         "title": "公会招募",
         "subtitle": "找到理想的公会或招募新成员",

@@ -130,6 +130,17 @@
         "pasteImageUrl": "Colar URL da imagem...",
         "maxImages": "Máximo 5 imagens"
     },
+    "guidesCreate": {
+        "createGuide": "Criar Novo Guia",
+        "creatingFor": "Criando guia para",
+        "shareKnowledge": "Compartilhe seu conhecimento com a comunidade",
+        "videoSupport": "Suportamos YouTube, Twitch e Bilibili",
+        "clickToUpload": "Clique para enviar imagens",
+        "maxImages": "Máximo 5 imagens (JPEG, PNG, GIF, WebP)",
+        "markdownSupport": "Suporta Markdown: **negrito**, *itálico*, ## Títulos, - Listas",
+        "publishing": "Publicando...",
+        "publishGuide": "Publicar Guia"
+    },
     "guilds": {
         "title": "Recrutamento de Guildas",
         "subtitle": "Encontre a guilda perfeita ou recrute novos membros",
