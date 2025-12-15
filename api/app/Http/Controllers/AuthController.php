@@ -21,8 +21,14 @@ class AuthController extends Controller
         }
 
         /** @var \Laravel\Socialite\Two\AbstractProvider $driver */
-        $driver = Socialite::driver($provider);
-        return $driver->stateless()->redirect();
+        $driver = Socialite::driver($provider)->stateless();
+
+        // Force Google to show account picker every time
+        if ($provider === 'google') {
+            $driver = $driver->with(['prompt' => 'select_account']);
+        }
+
+        return $driver->redirect();
     }
 
     /**
