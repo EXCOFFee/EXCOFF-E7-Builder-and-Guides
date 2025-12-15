@@ -50,7 +50,7 @@ interface Guide {
     category: string;
     video_url: string | null;
     images: string[];
-    likes_count: number;
+    likes: number;
     user: {
         id: number;
         name: string;
@@ -331,7 +331,7 @@ export default function GuideDetailPage() {
                                     disabled={likeMutation.isPending || !currentUser}
                                 >
                                     <Image src="/images/ras-like.gif" alt="like" width={24} height={24} className="inline-block" unoptimized />
-                                    {guide.likes_count}
+                                    {guide.likes || 0}
                                 </Button>
 
                                 {/* Edit/Delete Buttons */}
@@ -447,10 +447,10 @@ export default function GuideDetailPage() {
                         ) : (
                             comments.map((comment) => (
                                 <div key={comment.id} className="flex gap-3 p-4 bg-e7-void/50 rounded-lg">
-                                    {comment.user.avatar && (
+                                    {!comment.is_anonymous && comment.user?.avatar && (
                                         <Image
                                             src={comment.user.avatar}
-                                            alt={comment.user.name}
+                                            alt={comment.user?.name || ''}
                                             width={36}
                                             height={36}
                                             className="rounded-full"
@@ -459,7 +459,9 @@ export default function GuideDetailPage() {
                                     )}
                                     <div className="flex-1">
                                         <div className="flex items-center justify-between mb-1">
-                                            <span className="text-white font-medium text-sm">{comment.user.name}</span>
+                                            <span className="text-white font-medium text-sm">
+                                                {comment.is_anonymous ? t('common.anonymous', 'Anonymous') : comment.user?.name}
+                                            </span>
                                             <div className="flex items-center gap-2">
                                                 <span className="text-xs text-gray-500">
                                                     {new Date(comment.created_at).toLocaleDateString()}
