@@ -235,7 +235,7 @@ export default function GuideDetailPage() {
         return currentUser.is_admin || comment.user?.id === currentUser.id;
     };
 
-    const canModify = currentUser && guide && (currentUser.id === guide.user.id || currentUser.is_admin);
+    const canModify = currentUser && guide && (currentUser.id === guide.user?.id || currentUser.is_admin);
 
     if (isLoading) {
         return (
