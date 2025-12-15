@@ -115,12 +115,12 @@ class GuildPostController extends Controller
 
         $post = GuildPost::create([
             'user_id' => $request->user()->id,
-            'title' => $request->title,
-            'description' => $request->description,
-            'server' => $request->server,
-            'language' => $request->language,
-            'tags' => $request->tags ?? [],
-            'images' => $request->images ?? [],
+            'title' => $request->input('title'),
+            'description' => $request->input('description'),
+            'server' => $request->input('server'),
+            'language' => $request->input('language'),
+            'tags' => $request->input('tags', []),
+            'images' => $request->input('images', []),
             'is_active' => true,
             'likes' => 0,
             'dislikes' => 0,
