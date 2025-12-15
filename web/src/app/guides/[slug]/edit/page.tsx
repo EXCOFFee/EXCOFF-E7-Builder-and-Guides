@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -8,15 +8,17 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useQuery } from '@tanstack/react-query';
 import { heroApi, guideApi } from '@/lib/api';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 const CATEGORIES = [
-    { id: 'general', label: 'General', emoji: '📖' },
-    { id: 'pve', label: 'PVE', emoji: '🐉' },
-    { id: 'rta', label: 'RTA', emoji: '⚔️' },
-    { id: 'guild_war', label: 'Guerra de Gremios', emoji: '🏰' },
-    { id: 'arena', label: 'Arena', emoji: '🏆' },
+    { id: 'general', label: 'General', emoji: '📖', key: 'general' },
+    { id: 'pve', label: 'PVE', emoji: '🐉', key: 'pve' },
+    { id: 'rta', label: 'RTA', emoji: '⚔️', key: 'rta' },
+    { id: 'guild_war', label: 'Guild War', emoji: '🏰', key: 'guild_war' },
+    { id: 'arena', label: 'Arena', emoji: '🏆', key: 'arena' },
+    { id: 'heroes', label: 'Heroes', emoji: '🧙', key: 'heroes' },
 ];
 
 interface Hero {
@@ -42,6 +44,8 @@ export default function EditGuidePage() {
     const router = useRouter();
     const params = useParams();
     const slug = params.slug as string;
+    const { t } = useTranslations();
+    const fileInputRef = useRef<HTMLInputElement>(null);
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -154,7 +158,7 @@ export default function EditGuidePage() {
     if (loadingGuide) {
         return (
             <div className="min-h-screen bg-e7-void py-8 px-4 flex items-center justify-center">
-                <div className="text-e7-gold">Cargando...</div>
+                <div className="text-e7-gold">{t('common.loading', 'Loading...')}</div>
             </div>
         );
     }
@@ -165,27 +169,27 @@ export default function EditGuidePage() {
                 {/* Header */}
                 <div className="mb-8">
                     <Link href={`/guides/${slug}`} className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-block">
-                        ← Volver a la Guía
+                        ← {t('guides.backToGuides', 'Back to Guide')}
                     </Link>
-                    <h1 className="font-display text-4xl text-e7-text-gold mb-2">Editar Guía</h1>
-                    <p className="text-gray-400">Actualiza el contenido de tu guía</p>
+                    <h1 className="font-display text-4xl text-e7-text-gold mb-2">{t('guides.editGuide', 'Edit Guide')}</h1>
+                    <p className="text-gray-400">{t('guides.editSubtitle', 'Update your guide content')}</p>
                 </div>
 
                 <form onSubmit={handleSubmit}>
                     <Card className="bg-e7-panel border-e7-gold/30">
                         <CardHeader>
-                            <CardTitle className="text-e7-gold">Información de la Guía</CardTitle>
+                            <CardTitle className="text-e7-gold">{t('guides.guideInfo', 'Guide Information')}</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-6">
                             {/* Title */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Título *
+                                    {t('guides.titleLabel', 'Title')} *
                                 </label>
                                 <Input
                                     value={title}
                                     onChange={(e) => setTitle(e.target.value)}
-                                    placeholder="Ej: Guía completa de Arbiter Vildred para RTA"
+                                    placeholder={t('guides.titlePlaceholder', 'E.g., Complete Arbiter Vildred Guide for RTA')}
                                     className="bg-e7-void border-e7-gold/30 text-white"
                                     required
                                 />
@@ -194,7 +198,7 @@ export default function EditGuidePage() {
                             {/* Category */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Categoría *
+                                    {t('guides.category', 'Category')} *
                                 </label>
                                 <div className="flex flex-wrap gap-2">
                                     {CATEGORIES.map((cat) => (
@@ -208,7 +212,7 @@ export default function EditGuidePage() {
                                                 }`}
                                         >
                                             <span className="mr-2">{cat.emoji}</span>
-                                            {cat.label}
+                                            {t(`guides.categories.${cat.key}`, cat.label)}
                                         </button>
                                     ))}
                                 </div>
@@ -217,14 +221,14 @@ export default function EditGuidePage() {
                             {/* Hero selector */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Héroe relacionado (opcional)
+                                    {t('guides.relatedHero', 'Related Hero (optional)')}
                                 </label>
                                 <select
                                     value={heroId || ''}
                                     onChange={(e) => setHeroId(e.target.value ? parseInt(e.target.value) : null)}
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
                                 >
-                                    <option value="">Sin héroe específico</option>
+                                    <option value="">{t('guides.noSpecificHero', 'No specific hero')}</option>
                                     {heroes.map((hero) => (
                                         <option key={hero.id} value={hero.id}>
                                             {hero.name}
@@ -236,7 +240,7 @@ export default function EditGuidePage() {
                             {/* Video URL */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    URL de Video (opcional)
+                                    {t('guides.videoUrl', 'Video URL (optional)')}
                                 </label>
                                 <Input
                                     value={videoUrl}
@@ -249,12 +253,12 @@ export default function EditGuidePage() {
                             {/* Description */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Descripción breve
+                                    {t('guides.descriptionLabel', 'Brief Description')}
                                 </label>
                                 <textarea
                                     value={description}
                                     onChange={(e) => setDescription(e.target.value)}
-                                    placeholder="Una breve descripción de lo que cubre esta guía..."
+                                    placeholder={t('guides.descriptionPlaceholder', 'A brief description of what this guide covers...')}
                                     rows={3}
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none resize-none"
                                 />
@@ -263,12 +267,12 @@ export default function EditGuidePage() {
                             {/* Content */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Contenido de la Guía *
+                                    {t('guides.content', 'Guide Content')} *
                                 </label>
                                 <textarea
                                     value={content}
                                     onChange={(e) => setContent(e.target.value)}
-                                    placeholder="Escribe el contenido de tu guía aquí..."
+                                    placeholder={t('guides.contentPlaceholder', 'Write your guide content here...')}
                                     rows={15}
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none resize-none font-mono text-sm"
                                     required
@@ -278,7 +282,7 @@ export default function EditGuidePage() {
                             {/* Images */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Imágenes (opcional)
+                                    {t('guides.imagesOptional', 'Images (optional)')}
                                 </label>
                                 {/* Current Images */}
                                 {images.length > 0 && (
@@ -301,12 +305,50 @@ export default function EditGuidePage() {
                                         ))}
                                     </div>
                                 )}
+
+                                {/* File Upload */}
+                                <div className="mb-3">
+                                    <input
+                                        ref={fileInputRef}
+                                        type="file"
+                                        accept="image/*"
+                                        multiple
+                                        onChange={(e) => {
+                                            const files = e.target.files;
+                                            if (files) {
+                                                Array.from(files).forEach(file => {
+                                                    if (images.length < 5) {
+                                                        const reader = new FileReader();
+                                                        reader.onloadend = () => {
+                                                            if (reader.result && typeof reader.result === 'string') {
+                                                                setImages(prev => [...prev, reader.result as string]);
+                                                            }
+                                                        };
+                                                        reader.readAsDataURL(file);
+                                                    }
+                                                });
+                                            }
+                                            e.target.value = '';
+                                        }}
+                                        className="hidden"
+                                    />
+                                    <Button
+                                        type="button"
+                                        variant="outline"
+                                        onClick={() => fileInputRef.current?.click()}
+                                        disabled={images.length >= 5}
+                                        className="border-e7-gold/30 w-full"
+                                    >
+                                        📁 {t('guides.uploadFromDevice', 'Upload from device')}
+                                    </Button>
+                                </div>
+
                                 {/* Add Image URL */}
                                 <div className="flex gap-2">
                                     <Input
                                         value={imageUrl}
                                         onChange={(e) => setImageUrl(e.target.value)}
-                                        placeholder="Pega URL de imagen..."
+                                        placeholder={t('guides.pasteImageUrl', 'Paste image URL...')}
                                         className="flex-1 bg-e7-void border-e7-gold/30 text-white"
                                     />
                                     <Button
@@ -321,10 +363,10 @@ export default function EditGuidePage() {
                                         disabled={!imageUrl || images.length >= 5}
                                         className="border-e7-gold/30"
                                     >
-                                        Añadir
+                                        {t('common.add', 'Add')}
                                     </Button>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-1">Máximo 5 imágenes</p>
+                                <p className="text-xs text-gray-500 mt-1">{t('guides.maxImages', 'Maximum 5 images')}</p>
                             </div>
 
                             {/* Error message */}
@@ -338,7 +380,7 @@ export default function EditGuidePage() {
                             <div className="flex gap-4 justify-end pt-4">
                                 <Link href={`/guides/${slug}`}>
                                     <Button type="button" variant="outline" className="border-e7-gold/30 text-gray-400">
-                                        Cancelar
+                                        {t('common.cancel', 'Cancel')}
                                     </Button>
                                 </Link>
                                 <Button
@@ -346,7 +388,7 @@ export default function EditGuidePage() {
                                     disabled={isSubmitting || !title || !content}
                                     className="bg-e7-gold text-black hover:bg-e7-text-gold"
                                 >
-                                    {isSubmitting ? 'Guardando...' : 'Guardar Cambios'}
+                                    {isSubmitting ? t('common.saving', 'Saving...') : t('common.saveChanges', 'Save Changes')}
                                 </Button>
                             </div>
                         </CardContent>
