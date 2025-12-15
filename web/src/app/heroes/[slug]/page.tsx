@@ -137,6 +137,28 @@ const SET_IMAGE_URLS: Record<string, string> = {
     set_protection: '/images/sets/SET_Barrier.png',
 };
 
+// Lowercase set names mapping (for user builds)
+const SET_IMAGES_LOWERCASE: Record<string, string> = {
+    speed: '/images/sets/SET_Speed.png',
+    attack: '/images/sets/SET_Attack.png',
+    health: '/images/sets/SET_Health.png',
+    defense: '/images/sets/SET_Defense.png',
+    critical: '/images/sets/SET_Critical.png',
+    destruction: '/images/sets/SET_Destruction.png',
+    counter: '/images/sets/SET_Counter.png',
+    lifesteal: '/images/sets/SET_Lifesteal.png',
+    immunity: '/images/sets/SET_Immunity.png',
+    rage: '/images/sets/SET_Revenge.png',
+    revenge: '/images/sets/SET_Revenge.png',
+    injury: '/images/sets/SET_Injury.png',
+    penetration: '/images/sets/SET_Penetration.png',
+    protection: '/images/sets/SET_Barrier.png',
+    unity: '/images/sets/SET_Unity.png',
+    hit: '/images/sets/SET_Hit.png',
+    resist: '/images/sets/SET_Resist.png',
+    torrent: '/images/sets/SET_Torrent.png',
+};
+
 // Get artifact image URL from Fribbels/SmileGate
 const getArtifactImageUrl = (artifactCode: string): string => {
     return `https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/data/cachedimages/${artifactCode}.png`;
@@ -543,19 +565,40 @@ export default function HeroDetailPage() {
                                                     <p className="text-gray-400 text-sm mt-1 line-clamp-2">{build.description}</p>
                                                     <div className="flex flex-wrap gap-2 mt-2">
                                                         {build.primary_set && (
-                                                            <span className="px-2 py-0.5 rounded bg-e7-panel text-xs text-gray-300">
+                                                            <span className="px-2 py-0.5 rounded bg-e7-panel text-xs text-gray-300 flex items-center gap-1">
+                                                                {SET_IMAGES_LOWERCASE[build.primary_set] && (
+                                                                    <Image
+                                                                        src={SET_IMAGES_LOWERCASE[build.primary_set]}
+                                                                        alt={build.primary_set}
+                                                                        width={14}
+                                                                        height={14}
+                                                                        unoptimized
+                                                                    />
+                                                                )}
                                                                 {build.primary_set}
                                                             </span>
                                                         )}
                                                         {build.secondary_set && (
-                                                            <span className="px-2 py-0.5 rounded bg-e7-panel text-xs text-gray-300">
+                                                            <span className="px-2 py-0.5 rounded bg-e7-panel text-xs text-gray-300 flex items-center gap-1">
+                                                                {SET_IMAGES_LOWERCASE[build.secondary_set] && (
+                                                                    <Image
+                                                                        src={SET_IMAGES_LOWERCASE[build.secondary_set]}
+                                                                        alt={build.secondary_set}
+                                                                        width={14}
+                                                                        height={14}
+                                                                        unoptimized
+                                                                    />
+                                                                )}
                                                                 {build.secondary_set}
                                                             </span>
                                                         )}
                                                     </div>
                                                 </div>
                                                 <div className="text-right">
-                                                    <div className="text-e7-gold font-bold">👍 {build.likes || 0}</div>
+                                                    <div className="text-e7-gold font-bold flex items-center gap-1 justify-end">
+                                                        <Image src="/images/ras-like.gif" alt="like" width={18} height={18} unoptimized />
+                                                        {build.likes || 0}
+                                                    </div>
                                                     <div className="text-gray-500 text-xs">{build.user?.name || 'Anónimo'}</div>
                                                 </div>
                                             </div>

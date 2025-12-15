@@ -11,6 +11,36 @@ import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
+// Convert YouTube watch URLs to embed URLs
+const getYouTubeEmbedUrl = (url: string): string | null => {
+    if (!url) return null;
+
+    // Already an embed URL
+    if (url.includes('youtube.com/embed/')) {
+        return url;
+    }
+
+    // Handle youtube.com/watch?v=VIDEO_ID format
+    const watchMatch = url.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/);
+    if (watchMatch) {
+        return `https://www.youtube.com/embed/${watchMatch[1]}`;
+    }
+
+    // Handle youtu.be/VIDEO_ID format
+    const shortMatch = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+    if (shortMatch) {
+        return `https://www.youtube.com/embed/${shortMatch[1]}`;
+    }
+
+    // Handle youtube.com/v/VIDEO_ID format
+    const vMatch = url.match(/youtube\.com\/v\/([a-zA-Z0-9_-]+)/);
+    if (vMatch) {
+        return `https://www.youtube.com/embed/${vMatch[1]}`;
+    }
+
+    return url;
+};
+
 interface Guide {
     id: number;
     slug: string;
@@ -69,6 +99,7 @@ export default function GuideDetailPage() {
     const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
     const [newComment, setNewComment] = useState('');
     const [hasLiked, setHasLiked] = useState(false);
+    const [isAnonymous, setIsAnonymous] = useState(false);
 
     // Fetch current user
     useEffect(() => {
@@ -141,15 +172,17 @@ export default function GuideDetailPage() {
                     'Authorization': `Bearer ${token}`,
                 },
                 body: JSON.stringify({
+                    type: 'guide',
+                    id: guide?.id,
                     content,
-                    commentable_type: 'guide',
-                    commentable_id: guide?.id,
+                    is_anonymous: isAnonymous,
                 }),
             });
             return response.json();
         },
         onSuccess: () => {
             setNewComment('');
+            setIsAnonymous(false);
             queryClient.invalidateQueries({ queryKey: ['guide-comments', slug] });
         },
     });
@@ -322,13 +355,14 @@ export default function GuideDetailPage() {
                 </div>
 
                 {/* Video Embed */}
-                {guide.video_url && (
+                {guide.video_url && getYouTubeEmbedUrl(guide.video_url) && (
                     <div className="bg-e7-panel border border-e7-gold/20 rounded-lg overflow-hidden mb-6 p-6">
                         <h2 className="text-xl font-bold text-e7-gold mb-4">📺 Video</h2>
                         <div className="aspect-video">
                             <iframe
-                                src={guide.video_url.replace('watch?v=', 'embed/')}
+                                src={getYouTubeEmbedUrl(guide.video_url)!}
                                 className="w-full h-full rounded"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen
                             />
                         </div>
@@ -380,13 +414,24 @@ export default function GuideDetailPage() {
                                 className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none resize-none"
                                 rows={3}
                             />
-                            <Button
-                                type="submit"
-                                className="mt-2 bg-e7-gold text-black hover:bg-e7-text-gold"
-                                disabled={commentMutation.isPending}
-                            >
-                                {t('guides.postComment', 'Post Comment')}
-                            </Button>
+                            <div className="flex items-center justify-between mt-2">
+                                <label className="flex items-center gap-2 text-gray-400 text-sm cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        checked={isAnonymous}
+                                        onChange={(e) => setIsAnonymous(e.target.checked)}
+                                        className="w-4 h-4 rounded border-e7-gold/30 bg-e7-void accent-e7-gold"
+                                    />
+                                    {t('common.anonymous', 'Post anonymously')}
+                                </label>
+                                <Button
+                                    type="submit"
+                                    className="bg-e7-gold text-black hover:bg-e7-text-gold"
+                                    disabled={commentMutation.isPending}
+                                >
+                                    {t('guides.postComment', 'Post Comment')}
+                                </Button>
+                            </div>
                         </form>
                     ) : (
                         <p className="text-gray-400 mb-6">{t('guides.loginToComment', 'Login to comment')}</p>

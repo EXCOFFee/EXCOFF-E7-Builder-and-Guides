@@ -102,6 +102,7 @@ export default function BuildDetailPage() {
     const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
     const [newComment, setNewComment] = useState('');
     const [hasLiked, setHasLiked] = useState(false);
+    const [isAnonymous, setIsAnonymous] = useState(false);
 
     // Fetch current user
     useEffect(() => {
@@ -196,12 +197,14 @@ export default function BuildDetailPage() {
                     type: 'build',
                     id: build?.id,
                     content,
+                    is_anonymous: isAnonymous,
                 }),
             });
             return response.json();
         },
         onSuccess: () => {
             setNewComment('');
+            setIsAnonymous(false);
             queryClient.invalidateQueries({ queryKey: ['build-comments', buildId] });
         },
     });
@@ -454,13 +457,24 @@ export default function BuildDetailPage() {
                                 className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none resize-none"
                                 rows={3}
                             />
-                            <Button
-                                type="submit"
-                                className="mt-2 bg-e7-gold text-black hover:bg-e7-text-gold"
-                                disabled={commentMutation.isPending}
-                            >
-                                {t('guides.postComment', 'Post Comment')}
-                            </Button>
+                            <div className="flex items-center justify-between mt-2">
+                                <label className="flex items-center gap-2 text-gray-400 text-sm cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        checked={isAnonymous}
+                                        onChange={(e) => setIsAnonymous(e.target.checked)}
+                                        className="w-4 h-4 rounded border-e7-gold/30 bg-e7-void accent-e7-gold"
+                                    />
+                                    {t('common.anonymous', 'Post anonymously')}
+                                </label>
+                                <Button
+                                    type="submit"
+                                    className="bg-e7-gold text-black hover:bg-e7-text-gold"
+                                    disabled={commentMutation.isPending}
+                                >
+                                    {t('guides.postComment', 'Post Comment')}
+                                </Button>
+                            </div>
                         </form>
                     ) : (
                         <p className="text-gray-400 mb-6">{t('guides.loginToComment', 'Login to comment')}</p>
