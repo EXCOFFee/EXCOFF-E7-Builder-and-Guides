@@ -304,10 +304,10 @@ export default function GuideDetailPage() {
                         {/* Author & Actions */}
                         <div className="flex items-center justify-between pt-4 border-t border-e7-gold/20">
                             <div className="flex items-center gap-3">
-                                {guide.user.avatar && (
+                                {guide.user?.avatar && (
                                     <Image
                                         src={guide.user.avatar}
-                                        alt={guide.user.name}
+                                        alt={guide.user?.name || 'User'}
                                         width={40}
                                         height={40}
                                         className="rounded-full"
@@ -315,7 +315,7 @@ export default function GuideDetailPage() {
                                     />
                                 )}
                                 <div>
-                                    <p className="text-white font-medium">{guide.user.name}</p>
+                                    <p className="text-white font-medium">{guide.user?.name || t('common.anonymous', 'Anonymous')}</p>
                                     <p className="text-xs text-gray-400">
                                         {new Date(guide.created_at).toLocaleDateString()}
                                     </p>
