@@ -17,6 +17,7 @@
         "all": "すべて",
         "add": "追加",
         "saving": "保存中...",
+        "saveChanges": "変更を保存",
         "unknownError": "不明なエラー",
         "notConfigured": "未設定",
         "anonymous": "匿名"
@@ -96,7 +97,8 @@
             "pve": "PVE",
             "rta": "RTA",
             "guild_war": "ギルド戦",
-            "arena": "アリーナ"
+            "arena": "アリーナ",
+            "heroes": "ヒーロー"
         },
         "createGuide": "ガイド作成",
         "noGuides": "まだガイドがありません。",
@@ -107,10 +109,26 @@
         "postComment": "コメント投稿",
         "noComments": "まだコメントがありません。",
         "loginToComment": "コメントするにはログインしてください",
-        "relatedHero": "関連ヒーロー",
+        "relatedHero": "関連ヒーロー (任意)",
+        "noSpecificHero": "特定のヒーローなし",
         "images": "画像",
         "confirmDelete": "このガイドを削除しますか？",
-        "confirmDeleteComment": "このコメントを削除しますか？"
+        "confirmDeleteComment": "このコメントを削除しますか？",
+        "editGuide": "ガイド編集",
+        "editSubtitle": "ガイドの内容を更新",
+        "guideInfo": "ガイド情報",
+        "titleLabel": "タイトル",
+        "titlePlaceholder": "例: RTA向けアービター・ビルドレッド完全ガイド",
+        "category": "カテゴリー",
+        "videoUrl": "動画URL (任意)",
+        "descriptionLabel": "簡単な説明",
+        "descriptionPlaceholder": "このガイドの内容についての簡単な説明...",
+        "content": "ガイド内容",
+        "contentPlaceholder": "ここにガイドの内容を書いてください...",
+        "imagesOptional": "画像 (任意)",
+        "uploadFromDevice": "端末からアップロード",
+        "pasteImageUrl": "画像URLを貼り付け...",
+        "maxImages": "最大5枚"
     },
     "guilds": {
         "title": "ギルド募集",

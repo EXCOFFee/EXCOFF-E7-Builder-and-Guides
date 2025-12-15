@@ -17,6 +17,7 @@
         "all": "Todos",
         "add": "Adicionar",
         "saving": "Salvando...",
+        "saveChanges": "Salvar Alterações",
         "unknownError": "Erro desconhecido",
         "notConfigured": "Não configurado",
         "anonymous": "Anônimo"
@@ -96,7 +97,8 @@
             "pve": "PVE",
             "rta": "RTA",
             "guild_war": "Guerra de Guilda",
-            "arena": "Arena"
+            "arena": "Arena",
+            "heroes": "Heróis"
         },
         "createGuide": "Criar Guia",
         "noGuides": "Ainda não há guias.",
@@ -107,10 +109,26 @@
         "postComment": "Publicar Comentário",
         "noComments": "Ainda não há comentários.",
         "loginToComment": "Faça login para comentar",
-        "relatedHero": "Herói Relacionado",
+        "relatedHero": "Herói Relacionado (opcional)",
+        "noSpecificHero": "Nenhum herói específico",
         "images": "Imagens",
         "confirmDelete": "Tem certeza que deseja excluir este guia?",
-        "confirmDeleteComment": "Excluir este comentário?"
+        "confirmDeleteComment": "Excluir este comentário?",
+        "editGuide": "Editar Guia",
+        "editSubtitle": "Atualize o conteúdo do seu guia",
+        "guideInfo": "Informações do Guia",
+        "titleLabel": "Título",
+        "titlePlaceholder": "Ex: Guia Completo de Arbiter Vildred para RTA",
+        "category": "Categoria",
+        "videoUrl": "URL do Vídeo (opcional)",
+        "descriptionLabel": "Descrição Breve",
+        "descriptionPlaceholder": "Uma breve descrição do que este guia cobre...",
+        "content": "Conteúdo do Guia",
+        "contentPlaceholder": "Escreva o conteúdo do seu guia aqui...",
+        "imagesOptional": "Imagens (opcional)",
+        "uploadFromDevice": "Carregar do dispositivo",
+        "pasteImageUrl": "Colar URL da imagem...",
+        "maxImages": "Máximo 5 imagens"
     },
     "guilds": {
         "title": "Recrutamento de Guildas",

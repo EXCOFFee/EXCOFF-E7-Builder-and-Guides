@@ -17,6 +17,7 @@
         "all": "전체",
         "add": "추가",
         "saving": "저장 중...",
+        "saveChanges": "변경사항 저장",
         "unknownError": "알 수 없는 오류",
         "notConfigured": "설정되지 않음",
         "anonymous": "익명"
@@ -96,7 +97,8 @@
             "pve": "PVE",
             "rta": "RTA",
             "guild_war": "길드전",
-            "arena": "아레나"
+            "arena": "아레나",
+            "heroes": "영웅"
         },
         "createGuide": "가이드 만들기",
         "noGuides": "아직 가이드가 없습니다.",
@@ -107,10 +109,26 @@
         "postComment": "댓글 게시",
         "noComments": "아직 댓글이 없습니다.",
         "loginToComment": "댓글을 작성하려면 로그인하세요",
-        "relatedHero": "관련 영웅",
+        "relatedHero": "관련 영웅 (선택사항)",
+        "noSpecificHero": "특정 영웅 없음",
         "images": "이미지",
         "confirmDelete": "이 가이드를 삭제하시겠습니까?",
-        "confirmDeleteComment": "이 댓글을 삭제하시겠습니까?"
+        "confirmDeleteComment": "이 댓글을 삭제하시겠습니까?",
+        "editGuide": "가이드 편집",
+        "editSubtitle": "가이드 내용 업데이트",
+        "guideInfo": "가이드 정보",
+        "titleLabel": "제목",
+        "titlePlaceholder": "예: RTA를 위한 심판자 빌드레드 완벽 가이드",
+        "category": "카테고리",
+        "videoUrl": "영상 URL (선택사항)",
+        "descriptionLabel": "간단한 설명",
+        "descriptionPlaceholder": "이 가이드에서 다루는 내용에 대한 간단한 설명...",
+        "content": "가이드 내용",
+        "contentPlaceholder": "여기에 가이드 내용을 작성하세요...",
+        "imagesOptional": "이미지 (선택사항)",
+        "uploadFromDevice": "기기에서 업로드",
+        "pasteImageUrl": "이미지 URL 붙여넣기...",
+        "maxImages": "최대 5장"
     },
     "guilds": {
         "title": "길드 모집",

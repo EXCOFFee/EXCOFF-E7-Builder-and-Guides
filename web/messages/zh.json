@@ -17,6 +17,7 @@
         "all": "全部",
         "add": "添加",
         "saving": "保存中...",
+        "saveChanges": "保存更改",
         "unknownError": "未知错误",
         "notConfigured": "未配置",
         "anonymous": "匿名"
@@ -96,7 +97,8 @@
             "pve": "PVE",
             "rta": "RTA",
             "guild_war": "公会战",
-            "arena": "竞技场"
+            "arena": "竞技场",
+            "heroes": "英雄"
         },
         "createGuide": "创建攻略",
         "noGuides": "暂无攻略。",
@@ -107,10 +109,26 @@
         "postComment": "发表评论",
         "noComments": "暂无评论。",
         "loginToComment": "登录后评论",
-        "relatedHero": "相关英雄",
+        "relatedHero": "相关英雄 (可选)",
+        "noSpecificHero": "无特定英雄",
         "images": "图片",
         "confirmDelete": "确定要删除这个攻略吗？",
-        "confirmDeleteComment": "确定要删除这条评论吗？"
+        "confirmDeleteComment": "确定要删除这条评论吗？",
+        "editGuide": "编辑攻略",
+        "editSubtitle": "更新攻略内容",
+        "guideInfo": "攻略信息",
+        "titleLabel": "标题",
+        "titlePlaceholder": "例：RTA裁决者维尔德雷德完整攻略",
+        "category": "分类",
+        "videoUrl": "视频链接 (可选)",
+        "descriptionLabel": "简短描述",
+        "descriptionPlaceholder": "简要描述这篇攻略的内容...",
+        "content": "攻略内容",
+        "contentPlaceholder": "在这里编写攻略内容...",
+        "imagesOptional": "图片 (可选)",
+        "uploadFromDevice": "从设备上传",
+        "pasteImageUrl": "粘贴图片链接...",
+        "maxImages": "最多5张图片"
     },
     "guilds": {
         "title": "公会招募",
