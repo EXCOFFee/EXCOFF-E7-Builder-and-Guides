@@ -153,13 +153,37 @@
         "selectServer": "Selecione o servidor...",
         "language": "Idioma",
         "selectLanguage": "Selecione o idioma...",
-        "tags": "Tags",
+        "tagsLabel": "Tags",
+        "filterByTags": "Tags",
+        "allLanguages": "Todos os Idiomas",
         "description": "Descrição",
         "descriptionPlaceholder": "Descreva sua guilda, requisitos, benefícios...",
         "images": "Imagens (opcional)",
         "clickToUpload": "Clique para enviar imagens",
         "maxImages": "Máximo de 5 imagens",
-        "publishPost": "Publicar"
+        "publishPost": "Publicar",
+        "tags": {
+            "casual": "Casual",
+            "chill": "Relaxado",
+            "semi_competitive": "Semi Competitivo",
+            "competitive_all": "Competitivo (Geral)",
+            "competitive_gw": "Competitivo (GW)",
+            "competitive_rta": "Competitivo (RTA)",
+            "whatsapp": "Grupo WhatsApp",
+            "discord": "Servidor Discord",
+            "other_social": "Outra Rede Social",
+            "beginner": "Para Iniciantes",
+            "help_improve": "Ajuda a Evoluir",
+            "active": "Seja Ativo"
+        },
+        "servers": {
+            "global": "Global",
+            "europe": "Europa",
+            "asia": "Ásia",
+            "japan": "Japão",
+            "korea": "Coreia",
+            "china": "China"
+        }
     },
     "builds": {
         "title": "Builds da Comunidade",

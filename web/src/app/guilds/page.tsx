@@ -148,7 +148,7 @@ export default function GuildsPage() {
                                 onClick={() => setSelectedServer(server)}
                                 className={selectedServer === server ? 'bg-e7-gold text-black' : 'border-e7-gold/30'}
                             >
-                                {SERVER_FLAGS[server]} {server}
+                                {SERVER_FLAGS[server]} {t(`guilds.servers.${server}`, server.charAt(0).toUpperCase() + server.slice(1))}
                             </Button>
                         ))}
                     </div>

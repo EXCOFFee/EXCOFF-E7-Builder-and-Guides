@@ -153,13 +153,37 @@
         "selectServer": "选择服务器...",
         "language": "语言",
         "selectLanguage": "选择语言...",
-        "tags": "标签",
+        "tagsLabel": "标签",
+        "filterByTags": "标签",
+        "allLanguages": "所有语言",
         "description": "描述",
         "descriptionPlaceholder": "描述你的公会、要求、福利...",
         "images": "图片（可选）",
         "clickToUpload": "点击上传图片",
         "maxImages": "最多5张图片",
-        "publishPost": "发布"
+        "publishPost": "发布",
+        "tags": {
+            "casual": "休闲",
+            "chill": "轻松",
+            "semi_competitive": "半竞技",
+            "competitive_all": "竞技（全部）",
+            "competitive_gw": "竞技（公会战）",
+            "competitive_rta": "竞技（RTA）",
+            "whatsapp": "WhatsApp群",
+            "discord": "Discord服务器",
+            "other_social": "其他社交",
+            "beginner": "欢迎新手",
+            "help_improve": "帮助成长",
+            "active": "保持活跃"
+        },
+        "servers": {
+            "global": "全球",
+            "europe": "欧洲",
+            "asia": "亚洲",
+            "japan": "日本",
+            "korea": "韩国",
+            "china": "中国"
+        }
     },
     "builds": {
         "title": "社区构建",

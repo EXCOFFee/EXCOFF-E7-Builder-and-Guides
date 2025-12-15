@@ -153,13 +153,37 @@
         "selectServer": "서버 선택...",
         "language": "언어",
         "selectLanguage": "언어 선택...",
-        "tags": "태그",
+        "tagsLabel": "태그",
+        "filterByTags": "태그",
+        "allLanguages": "모든 언어",
         "description": "설명",
         "descriptionPlaceholder": "길드, 요구사항, 혜택을 설명하세요...",
         "images": "이미지 (선택사항)",
         "clickToUpload": "이미지를 업로드하려면 클릭",
         "maxImages": "최대 5개 이미지",
-        "publishPost": "게시"
+        "publishPost": "게시",
+        "tags": {
+            "casual": "캐주얼",
+            "chill": "여유로운",
+            "semi_competitive": "반 경쟁",
+            "competitive_all": "경쟁 (전체)",
+            "competitive_gw": "경쟁 (길드전)",
+            "competitive_rta": "경쟁 (RTA)",
+            "whatsapp": "WhatsApp 그룹",
+            "discord": "Discord 서버",
+            "other_social": "기타 소셜",
+            "beginner": "초보자 환영",
+            "help_improve": "성장 도움",
+            "active": "활발히 활동"
+        },
+        "servers": {
+            "global": "글로벌",
+            "europe": "유럽",
+            "asia": "아시아",
+            "japan": "일본",
+            "korea": "한국",
+            "china": "중국"
+        }
     },
     "builds": {
         "title": "커뮤니티 빌드",

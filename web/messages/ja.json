@@ -153,13 +153,37 @@
         "selectServer": "サーバーを選択...",
         "language": "言語",
         "selectLanguage": "言語を選択...",
-        "tags": "タグ",
+        "tagsLabel": "タグ",
+        "filterByTags": "タグ",
+        "allLanguages": "すべての言語",
         "description": "説明",
         "descriptionPlaceholder": "ギルド、要件、特典を説明してください...",
         "images": "画像（任意）",
         "clickToUpload": "クリックして画像をアップロード",
         "maxImages": "最大5枚の画像",
-        "publishPost": "投稿"
+        "publishPost": "投稿",
+        "tags": {
+            "casual": "カジュアル",
+            "chill": "のんびり",
+            "semi_competitive": "セミ競技",
+            "competitive_all": "競技（全般）",
+            "competitive_gw": "競技（ギルド戦）",
+            "competitive_rta": "競技（RTA）",
+            "whatsapp": "WhatsAppグループ",
+            "discord": "Discordサーバー",
+            "other_social": "その他SNS",
+            "beginner": "初心者歓迎",
+            "help_improve": "成長サポート",
+            "active": "アクティブ"
+        },
+        "servers": {
+            "global": "グローバル",
+            "europe": "ヨーロッパ",
+            "asia": "アジア",
+            "japan": "日本",
+            "korea": "韓国",
+            "china": "中国"
+        }
     },
     "builds": {
         "title": "コミュニティビルド",

@@ -194,6 +194,14 @@
             "beginner": "For Beginners",
             "help_improve": "Help Improve",
             "active": "Be Active"
+        },
+        "servers": {
+            "global": "Global",
+            "europe": "Europe",
+            "asia": "Asia",
+            "japan": "Japan",
+            "korea": "Korea",
+            "china": "China"
         }
     },
     "builds": {
