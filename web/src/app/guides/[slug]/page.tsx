@@ -55,7 +55,7 @@ interface Guide {
         id: number;
         name: string;
         avatar: string | null;
-    };
+    } | null;
     hero: {
         id: number;
         name: string;
@@ -68,11 +68,12 @@ interface Guide {
 interface Comment {
     id: number;
     content: string;
+    is_anonymous?: boolean;
     user: {
         id: number;
         name: string;
         avatar: string | null;
-    };
+    } | null;
     created_at: string;
 }
 
