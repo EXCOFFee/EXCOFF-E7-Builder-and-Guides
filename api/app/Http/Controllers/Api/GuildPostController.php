@@ -121,6 +121,9 @@ class GuildPostController extends Controller
             'language' => $request->language,
             'tags' => $request->tags ?? [],
             'images' => $request->images ?? [],
+            'is_active' => true,
+            'likes' => 0,
+            'dislikes' => 0,
         ]);
 
         return response()->json([
