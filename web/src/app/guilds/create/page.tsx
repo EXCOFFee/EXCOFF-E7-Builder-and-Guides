@@ -244,7 +244,7 @@ export default function CreateGuildPostPage() {
                             {/* Tags */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    {t('guilds.tags', 'Tags')}
+                                    {t('guilds.tagsLabel', 'Tags')}
                                 </label>
                                 <div className="flex flex-wrap gap-2">
                                     {TAGS.map((tag) => (
