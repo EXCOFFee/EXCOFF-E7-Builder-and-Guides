@@ -54,6 +54,8 @@ export default function EditGuidePage() {
     const [description, setDescription] = useState('');
     const [content, setContent] = useState('');
     const [videoUrl, setVideoUrl] = useState('');
+    const [images, setImages] = useState<string[]>([]);
+    const [imageUrl, setImageUrl] = useState('');
 
     // Check authentication
     useEffect(() => {
@@ -86,6 +88,7 @@ export default function EditGuidePage() {
             setDescription(guide.description || '');
             setContent(guide.gameplay_content || '');
             setVideoUrl(guide.video_url || '');
+            setImages(guide.images || []);
         }
     }, [guideData]);
 
@@ -126,6 +129,7 @@ export default function EditGuidePage() {
                     description,
                     gameplay_content: content,
                     video_url: videoUrl || null,
+                    images,
                 }),
             });
 
@@ -269,6 +273,58 @@ export default function EditGuidePage() {
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none resize-none font-mono text-sm"
                                     required
                                 />
+                            </div>
+
+                            {/* Images */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    Imágenes (opcional)
+                                </label>
+                                {/* Current Images */}
+                                {images.length > 0 && (
+                                    <div className="grid grid-cols-3 gap-2 mb-4">
+                                        {images.map((img, idx) => (
+                                            <div key={idx} className="relative group">
+                                                <img
+                                                    src={img}
+                                                    alt={`Image ${idx + 1}`}
+                                                    className="w-full h-24 object-cover rounded border border-e7-gold/20"
+                                                />
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setImages(images.filter((_, i) => i !== idx))}
+                                                    className="absolute top-1 right-1 bg-red-500 text-white rounded-full w-5 h-5 text-xs opacity-0 group-hover:opacity-100 transition-opacity"
+                                                >
+                                                    ×
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                                {/* Add Image URL */}
+                                <div className="flex gap-2">
+                                    <Input
+                                        value={imageUrl}
+                                        onChange={(e) => setImageUrl(e.target.value)}
+                                        placeholder="Pega URL de imagen..."
+                                        className="flex-1 bg-e7-void border-e7-gold/30 text-white"
+                                    />
+                                    <Button
+                                        type="button"
+                                        variant="outline"
+                                        onClick={() => {
+                                            if (imageUrl && images.length < 5) {
+                                                setImages([...images, imageUrl]);
+                                                setImageUrl('');
+                                            }
+                                        }}
+                                        disabled={!imageUrl || images.length >= 5}
+                                        className="border-e7-gold/30"
+                                    >
+                                        Añadir
+                                    </Button>
+                                </div>
+                                <p className="text-xs text-gray-500 mt-1">Máximo 5 imágenes</p>
                             </div>
 
                             {/* Error message */}

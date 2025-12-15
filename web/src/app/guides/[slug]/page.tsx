@@ -136,27 +136,26 @@ export default function GuideDetailPage() {
     const { data: commentsData } = useQuery({
         queryKey: ['guide-comments', slug],
         queryFn: async () => {
-            const response = await fetch(`${API_URL}/guides/${slug}/comments`);
-            if (!response.ok) return { data: [] };
+            const response = await fetch(`${API_URL}/guides/${guide?.id}/comments`);
+            if (!response.ok) return [];
             return response.json();
         },
-        enabled: !!guide,
+        enabled: !!guide?.id,
     });
-
-    const comments: Comment[] = commentsData?.data || [];
+    const comments: Comment[] = Array.isArray(commentsData) ? commentsData : (commentsData?.data || []);
 
     // Like mutation
     const likeMutation = useMutation({
         mutationFn: async () => {
             const token = localStorage.getItem('auth_token');
-            const response = await fetch(`${API_URL}/guides/${slug}/vote`, {
+            const response = await fetch(`${API_URL}/guides/${guide?.id}/vote`, {
                 method: 'POST',
                 headers: { 'Authorization': `Bearer ${token}` },
             });
             return response.json();
         },
-        onSuccess: () => {
-            setHasLiked(true);
+        onSuccess: (data) => {
+            setHasLiked(data.liked);
             queryClient.invalidateQueries({ queryKey: ['guide', slug] });
         },
     });
@@ -230,8 +229,12 @@ export default function GuideDetailPage() {
         }
     };
 
+    const canDeleteComment = (comment: Comment) => {
+        if (!currentUser) return false;
+        return currentUser.is_admin || comment.user?.id === currentUser.id;
+    };
+
     const canModify = currentUser && guide && (currentUser.id === guide.user.id || currentUser.is_admin);
-    const canDeleteComment = (comment: Comment) => currentUser && (currentUser.id === comment.user.id || currentUser.is_admin);
 
     if (isLoading) {
         return (

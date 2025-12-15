@@ -19,7 +19,9 @@
         "saving": "Saving...",
         "unknownError": "Unknown error",
         "notConfigured": "Not configured",
-        "anonymous": "Anonymous"
+        "anonymous": "Post anonymously",
+        "clearFilters": "Clear",
+        "confirmDelete": "Are you sure you want to delete this?"
     },
     "nav": {
         "home": "Home",
@@ -156,20 +158,21 @@
         "createError": "Error creating post",
         "createSubtitle": "Recruit members for your guild",
         "publishPost": "Publish",
-        "allLanguages": "All Languages"
+        "allLanguages": "All Languages",
+        "filterByTags": "Tags"
     },
     "guilds.tags": {
         "casual": "Casual",
         "chill": "Chill",
-        "semiCompetitive": "Semi Competitive",
-        "competitiveAll": "Competitive (All)",
-        "competitiveGW": "Competitive (GW)",
-        "competitiveRTA": "Competitive (RTA)",
+        "semi_competitive": "Semi Competitive",
+        "competitive_all": "Competitive (All)",
+        "competitive_gw": "Competitive (GW)",
+        "competitive_rta": "Competitive (RTA)",
         "whatsapp": "WhatsApp Group",
         "discord": "Discord Server",
-        "otherSocial": "Other Social",
+        "other_social": "Other Social",
         "beginner": "For Beginners",
-        "helpImprove": "Help Improve",
+        "help_improve": "Help Improve",
         "active": "Be Active"
     },
     "builds": {

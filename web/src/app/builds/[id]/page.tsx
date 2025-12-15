@@ -209,6 +209,21 @@ export default function BuildDetailPage() {
         },
     });
 
+    // Delete comment mutation
+    const deleteCommentMutation = useMutation({
+        mutationFn: async (commentId: number) => {
+            const token = localStorage.getItem('auth_token');
+            const response = await fetch(`${API_URL}/comments/${commentId}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${token}` },
+            });
+            if (!response.ok) throw new Error('Failed to delete comment');
+        },
+        onSuccess: () => {
+            queryClient.invalidateQueries({ queryKey: ['build-comments', buildId] });
+        },
+    });
+
     // Delete build mutation
     const deleteMutation = useMutation({
         mutationFn: async () => {
@@ -498,13 +513,28 @@ export default function BuildDetailPage() {
                                         />
                                     )}
                                     <div className="flex-1">
-                                        <div className="flex items-center gap-2 mb-1">
-                                            <span className="text-white font-medium text-sm">
-                                                {comment.is_anonymous ? 'Anonymous' : comment.user?.name}
-                                            </span>
-                                            <span className="text-xs text-gray-500">
-                                                {new Date(comment.created_at).toLocaleDateString()}
-                                            </span>
+                                        <div className="flex items-center justify-between mb-1">
+                                            <div className="flex items-center gap-2">
+                                                <span className="text-white font-medium text-sm">
+                                                    {comment.is_anonymous ? 'Anonymous' : comment.user?.name}
+                                                </span>
+                                                <span className="text-xs text-gray-500">
+                                                    {new Date(comment.created_at).toLocaleDateString()}
+                                                </span>
+                                            </div>
+                                            {currentUser && (currentUser.is_admin || comment.user?.id === currentUser.id) && (
+                                                <button
+                                                    onClick={() => {
+                                                        if (confirm(t('common.confirmDelete', 'Are you sure you want to delete this?'))) {
+                                                            deleteCommentMutation.mutate(comment.id);
+                                                        }
+                                                    }}
+                                                    className="text-red-400 hover:text-red-300 text-xs"
+                                                    disabled={deleteCommentMutation.isPending}
+                                                >
+                                                    {t('common.delete', 'Delete')}
+                                                </button>
+                                            )}
                                         </div>
                                         <p className="text-gray-300 text-sm">{comment.content}</p>
                                     </div>

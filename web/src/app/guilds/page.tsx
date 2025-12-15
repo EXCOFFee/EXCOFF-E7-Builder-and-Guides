@@ -14,6 +14,21 @@ const SERVERS = ['global', 'europe', 'asia', 'japan', 'korea', 'china'];
 
 const LANGUAGES = ['en', 'es', 'ko', 'ja', 'zh', 'pt'];
 
+const TAGS = [
+    { id: 'casual', emoji: '😎' },
+    { id: 'chill', emoji: '🌴' },
+    { id: 'semi_competitive', emoji: '⚔️' },
+    { id: 'competitive_all', emoji: '🏆' },
+    { id: 'competitive_gw', emoji: '🏰' },
+    { id: 'competitive_rta', emoji: '🎮' },
+    { id: 'whatsapp', emoji: '📱' },
+    { id: 'discord', emoji: '💬' },
+    { id: 'other_social', emoji: '🌐' },
+    { id: 'beginner', emoji: '🌱' },
+    { id: 'help_improve', emoji: '📈' },
+    { id: 'active', emoji: '🔥' },
+];
+
 const LANGUAGE_NAMES: Record<string, string> = {
     en: 'English',
     es: 'Español',
@@ -63,20 +78,30 @@ export default function GuildsPage() {
     const [search, setSearch] = useState('');
     const [selectedServer, setSelectedServer] = useState<string | null>(null);
     const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
+    const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
     const { data, isLoading } = useQuery({
-        queryKey: ['guilds', search, selectedServer, selectedLanguage],
+        queryKey: ['guilds', search, selectedServer, selectedLanguage, selectedTags],
         queryFn: async () => {
             const params = new URLSearchParams();
             if (search) params.append('search', search);
             if (selectedServer) params.append('server', selectedServer);
             if (selectedLanguage) params.append('language', selectedLanguage);
+            if (selectedTags.length > 0) params.append('tags', selectedTags.join(','));
 
             const response = await fetch(`${API_URL}/guilds?${params}`);
             if (!response.ok) throw new Error('Failed to fetch guilds');
             return response.json();
         },
     });
+
+    const toggleTag = (tagId: string) => {
+        setSelectedTags(prev =>
+            prev.includes(tagId)
+                ? prev.filter(t => t !== tagId)
+                : [...prev, tagId]
+        );
+    };
 
     const posts: GuildPost[] = data?.data || [];
 
@@ -148,6 +173,31 @@ export default function GuildsPage() {
                                 {LANGUAGE_FLAGS[lang]} {LANGUAGE_NAMES[lang]}
                             </Button>
                         ))}
+                    </div>
+                    {/* Tags Filter */}
+                    <div className="flex gap-2 flex-wrap">
+                        <span className="text-gray-400 text-sm self-center">{t('guilds.filterByTags', 'Tags')}:</span>
+                        {TAGS.map((tag) => (
+                            <Button
+                                key={tag.id}
+                                variant={selectedTags.includes(tag.id) ? 'default' : 'outline'}
+                                onClick={() => toggleTag(tag.id)}
+                                className={selectedTags.includes(tag.id) ? 'bg-green-600 text-white' : 'border-e7-gold/30'}
+                                size="sm"
+                            >
+                                {tag.emoji} {t(`guilds.tags.${tag.id}`, tag.id.replace('_', ' '))}
+                            </Button>
+                        ))}
+                        {selectedTags.length > 0 && (
+                            <Button
+                                variant="ghost"
+                                onClick={() => setSelectedTags([])}
+                                className="text-red-400 hover:text-red-300"
+                                size="sm"
+                            >
+                                {t('common.clearFilters', 'Clear')}
+                            </Button>
+                        )}
                     </div>
                 </div>
 

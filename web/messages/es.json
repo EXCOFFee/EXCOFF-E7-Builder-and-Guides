@@ -19,7 +19,9 @@
         "saving": "Guardando...",
         "unknownError": "Error desconocido",
         "notConfigured": "No configurada",
-        "anonymous": "Anónimo"
+        "anonymous": "Publicar anónimamente",
+        "clearFilters": "Limpiar",
+        "confirmDelete": "¿Estás seguro de que deseas eliminar esto?"
     },
     "nav": {
         "home": "Inicio",
@@ -143,20 +145,21 @@
         "createError": "Error al crear la publicación",
         "createSubtitle": "Recluta miembros para tu gremio",
         "publishPost": "Publicar",
-        "allLanguages": "Todos los Idiomas"
+        "allLanguages": "Todos los Idiomas",
+        "filterByTags": "Etiquetas"
     },
     "guilds.tags": {
         "casual": "Casual",
         "chill": "Relajado",
-        "semiCompetitive": "Semi Competitivo",
-        "competitiveAll": "Competitivo (Todo)",
-        "competitiveGW": "Competitivo (GW)",
-        "competitiveRTA": "Competitivo (RTA)",
+        "semi_competitive": "Semi Competitivo",
+        "competitive_all": "Competitivo (Todo)",
+        "competitive_gw": "Competitivo (GW)",
+        "competitive_rta": "Competitivo (RTA)",
         "whatsapp": "Grupo de WhatsApp",
         "discord": "Servidor de Discord",
-        "otherSocial": "Otra Red Social",
+        "other_social": "Otra Red Social",
         "beginner": "Para Principiantes",
-        "helpImprove": "Ayuda a Mejorar",
+        "help_improve": "Ayuda a Mejorar",
         "active": "Sé Activo"
     },
     "builds": {
