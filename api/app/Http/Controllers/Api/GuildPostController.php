@@ -166,27 +166,57 @@ class GuildPostController extends Controller
             ], 404);
         }
 
+        // Parse JSON strings that come from FormData
+        $tags = $request->input('tags');
+        if (is_string($tags)) {
+            $tags = json_decode($tags, true) ?? [];
+        }
+
+        // Handle image URLs from form
+        $imageUrls = $request->input('image_urls');
+        if (is_string($imageUrls)) {
+            $imageUrls = json_decode($imageUrls, true) ?? [];
+        }
+
         $request->validate([
             'title' => 'sometimes|string|max:255',
             'description' => 'sometimes|string|max:5000',
             'server' => 'sometimes|in:' . implode(',', GuildPost::SERVERS),
             'language' => 'sometimes|in:' . implode(',', GuildPost::LANGUAGES),
-            'tags' => 'nullable|array',
-            'tags.*' => 'in:' . implode(',', GuildPost::TAGS),
-            'images' => 'nullable|array|max:5',
-            'images.*' => 'string|url',
-            'is_active' => 'sometimes|boolean',
         ]);
 
-        $post->update($request->only([
-            'title',
-            'description',
-            'server',
-            'language',
-            'tags',
-            'images',
-            'is_active'
-        ]));
+        // Process images - handle file uploads
+        $imagePaths = [];
+        $baseUrl = rtrim(config('app.url'), '/');
+        
+        // Handle uploaded files
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                if ($image->isValid()) {
+                    $path = $image->store('guilds', 'public');
+                    $imagePaths[] = $baseUrl . '/storage/' . $path;
+                }
+            }
+        }
+        
+        // Also add any image URLs provided
+        if (!empty($imageUrls) && is_array($imageUrls)) {
+            $imagePaths = array_merge($imagePaths, array_slice($imageUrls, 0, 5 - count($imagePaths)));
+        }
+
+        // Limit to 5 images max
+        $imagePaths = array_slice($imagePaths, 0, 5);
+
+        // Update fields
+        $updateData = [];
+        if ($request->has('title')) $updateData['title'] = $request->input('title');
+        if ($request->has('description')) $updateData['description'] = $request->input('description');
+        if ($request->has('server')) $updateData['server'] = $request->input('server');
+        if ($request->has('language')) $updateData['language'] = $request->input('language');
+        if ($tags !== null) $updateData['tags'] = $tags;
+        if (!empty($imagePaths)) $updateData['images'] = $imagePaths;
+
+        $post->update($updateData);
 
         return response()->json([
             'success' => true,

@@ -64,6 +64,7 @@ export default function EditGuildPostPage() {
     const [selectedTags, setSelectedTags] = useState<string[]>([]);
     const [imageUrls, setImageUrls] = useState<string[]>([]);
     const [newImageUrl, setNewImageUrl] = useState('');
+    const [imageFiles, setImageFiles] = useState<File[]>([]);
 
     const TAG_LABELS: Record<string, string> = {
         casual: t('guilds.tags.casual', 'Casual'),
@@ -139,20 +140,31 @@ export default function EditGuildPostPage() {
         }
 
         try {
+            // Use FormData to support file uploads
+            const formData = new FormData();
+            formData.append('title', title);
+            formData.append('description', description);
+            formData.append('server', server);
+            formData.append('language', language);
+            formData.append('tags', JSON.stringify(selectedTags));
+            formData.append('_method', 'PUT'); // Laravel method spoofing for FormData
+
+            // Add existing image URLs
+            if (imageUrls.length > 0) {
+                formData.append('image_urls', JSON.stringify(imageUrls));
+            }
+
+            // Add new image files
+            imageFiles.forEach((file, index) => {
+                formData.append(`images[${index}]`, file);
+            });
+
             const response = await fetch(`${API_URL}/guilds/${slug}`, {
-                method: 'PUT',
+                method: 'POST', // Use POST with _method=PUT for FormData
                 headers: {
                     'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    title,
-                    description,
-                    server,
-                    language,
-                    tags: selectedTags,
-                    images: imageUrls,
-                }),
+                body: formData,
             });
 
             if (!response.ok) {
@@ -295,17 +307,39 @@ export default function EditGuildPostPage() {
                                     {t('guilds.images', 'Images (optional)')}
                                 </label>
 
+                                {/* File Upload */}
+                                <div
+                                    className="border-2 border-dashed border-e7-gold/30 rounded-lg p-4 text-center hover:border-e7-gold/50 transition-colors cursor-pointer mb-3"
+                                    onClick={() => document.getElementById('guild-image-upload')?.click()}
+                                >
+                                    <input
+                                        id="guild-image-upload"
+                                        type="file"
+                                        accept="image/jpeg,image/png,image/gif,image/webp"
+                                        multiple
+                                        className="hidden"
+                                        onChange={(e) => {
+                                            const files = Array.from(e.target.files || []);
+                                            setImageFiles(prev => [...prev, ...files].slice(0, 5));
+                                        }}
+                                    />
+                                    <div className="text-gray-400">
+                                        📷 {t('guilds.clickToUpload', 'Click to upload images')}
+                                    </div>
+                                </div>
+
+                                {/* Or add via URL */}
                                 <div className="flex gap-2 mb-2">
                                     <Input
                                         value={newImageUrl}
                                         onChange={(e) => setNewImageUrl(e.target.value)}
-                                        placeholder={t('guilds.imageUrlPlaceholder', 'Paste image URL...')}
+                                        placeholder={t('guilds.imageUrlPlaceholder', 'Or paste image URL...')}
                                         className="bg-e7-void border-e7-gold/30 text-white"
                                     />
                                     <Button
                                         type="button"
                                         onClick={addImageUrl}
-                                        disabled={!newImageUrl || imageUrls.length >= 5}
+                                        disabled={!newImageUrl || (imageUrls.length + imageFiles.length) >= 5}
                                         variant="outline"
                                         className="border-e7-gold/30"
                                     >
@@ -313,8 +347,30 @@ export default function EditGuildPostPage() {
                                     </Button>
                                 </div>
                                 <p className="text-xs text-gray-500 mb-2">
-                                    {t('guilds.maxImages', 'Maximum 5 images')}
+                                    {t('guilds.maxImages', 'Maximum 5 images total')}
                                 </p>
+
+                                {/* File previews */}
+                                {imageFiles.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 mb-2">
+                                        {imageFiles.map((file, index) => (
+                                            <div key={`file-${index}`} className="relative">
+                                                <img
+                                                    src={URL.createObjectURL(file)}
+                                                    alt=""
+                                                    className="w-16 h-16 object-cover rounded border border-e7-gold/30"
+                                                />
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setImageFiles(prev => prev.filter((_, i) => i !== index))}
+                                                    className="absolute -top-2 -right-2 w-5 h-5 bg-red-600 text-white rounded-full text-xs flex items-center justify-center hover:bg-red-500"
+                                                >
+                                                    ✕
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
 
                                 {/* URL previews */}
                                 {imageUrls.length > 0 && (
