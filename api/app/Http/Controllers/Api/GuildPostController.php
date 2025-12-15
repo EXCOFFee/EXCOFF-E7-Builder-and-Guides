@@ -108,13 +108,15 @@ class GuildPostController extends Controller
 
         // Process images - handle file uploads
         $imagePaths = [];
+        $baseUrl = rtrim(config('app.url'), '/');
         
         // Handle uploaded files
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
                 if ($image->isValid()) {
                     $path = $image->store('guilds', 'public');
-                    $imagePaths[] = '/storage/' . $path;
+                    // Use absolute URL so images work from Vercel frontend
+                    $imagePaths[] = $baseUrl . '/storage/' . $path;
                 }
             }
         }
