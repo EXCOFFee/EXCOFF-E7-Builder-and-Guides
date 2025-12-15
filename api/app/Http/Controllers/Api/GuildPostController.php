@@ -135,18 +135,17 @@ class GuildPostController extends Controller
     /**
      * Update a guild post.
      */
-    public function update(Request $request, int $id): JsonResponse
+    public function update(Request $request, string $slug): JsonResponse
     {
-        $post = GuildPost::where('id', $id)
-            ->where('user_id', $request->user()->id)
-            ->first();
+        $post = GuildPost::where('slug', $slug)->first();
 
-        if (!$post) {
+        // Check if user owns the post or is admin
+        if (!$post || ($post->user_id !== $request->user()->id && !$request->user()->is_admin)) {
             return response()->json([
                 'success' => false,
                 'error' => [
                     'code' => 'POST_NOT_FOUND',
-                    'message' => 'Guild post not found or you are not the owner',
+                    'message' => 'Guild post not found or you are not authorized',
                 ],
             ], 404);
         }
@@ -182,18 +181,17 @@ class GuildPostController extends Controller
     /**
      * Delete a guild post.
      */
-    public function destroy(Request $request, int $id): JsonResponse
+    public function destroy(Request $request, string $slug): JsonResponse
     {
-        $post = GuildPost::where('id', $id)
-            ->where('user_id', $request->user()->id)
-            ->first();
+        $post = GuildPost::where('slug', $slug)->first();
 
-        if (!$post) {
+        // Check if user owns the post or is admin
+        if (!$post || ($post->user_id !== $request->user()->id && !$request->user()->is_admin)) {
             return response()->json([
                 'success' => false,
                 'error' => [
                     'code' => 'POST_NOT_FOUND',
-                    'message' => 'Guild post not found or you are not the owner',
+                    'message' => 'Guild post not found or you are not authorized',
                 ],
             ], 404);
         }

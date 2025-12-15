@@ -1,0 +1,372 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { useParams, useRouter } from 'next/navigation';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useTranslations } from '@/hooks/useTranslations';
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
+
+const SERVERS = ['global', 'europe', 'asia', 'japan', 'korea', 'china'];
+const LANGUAGES = ['en', 'es', 'ko', 'ja', 'zh', 'pt'];
+const TAGS = [
+    'casual', 'chill', 'semi_competitive', 'competitive_all',
+    'competitive_gw', 'competitive_rta', 'whatsapp', 'discord',
+    'other_social', 'beginner', 'help_improve', 'active'
+];
+
+const SERVER_LABELS: Record<string, string> = {
+    global: 'Global',
+    europe: 'Europe',
+    asia: 'Asia',
+    japan: 'Japan',
+    korea: 'Korea',
+    china: 'China',
+};
+
+const SERVER_FLAGS: Record<string, string> = {
+    global: '🌍',
+    europe: '🇪🇺',
+    asia: '🌏',
+    japan: '🇯🇵',
+    korea: '🇰🇷',
+    china: '🇨🇳',
+};
+
+const LANGUAGE_LABELS: Record<string, string> = {
+    en: 'English',
+    es: 'Español',
+    ko: '한국어',
+    ja: '日本語',
+    zh: '中文',
+    pt: 'Português',
+};
+
+export default function EditGuildPostPage() {
+    const params = useParams();
+    const router = useRouter();
+    const { t } = useTranslations();
+    const slug = params.slug as string;
+
+    const [isLoading, setIsLoading] = useState(true);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState<string | null>(null);
+
+    // Form state
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [server, setServer] = useState('');
+    const [language, setLanguage] = useState('');
+    const [selectedTags, setSelectedTags] = useState<string[]>([]);
+    const [imageUrls, setImageUrls] = useState<string[]>([]);
+    const [newImageUrl, setNewImageUrl] = useState('');
+
+    const TAG_LABELS: Record<string, string> = {
+        casual: t('guilds.tags.casual', 'Casual'),
+        chill: t('guilds.tags.chill', 'Chill'),
+        semi_competitive: t('guilds.tags.semi_competitive', 'Semi Competitive'),
+        competitive_all: t('guilds.tags.competitive_all', 'Competitive (All)'),
+        competitive_gw: t('guilds.tags.competitive_gw', 'Competitive (GW)'),
+        competitive_rta: t('guilds.tags.competitive_rta', 'Competitive (RTA)'),
+        whatsapp: t('guilds.tags.whatsapp', 'WhatsApp Group'),
+        discord: t('guilds.tags.discord', 'Discord Server'),
+        other_social: t('guilds.tags.other_social', 'Other Social'),
+        beginner: t('guilds.tags.beginner', 'For Beginners'),
+        help_improve: t('guilds.tags.help_improve', 'Help Improve'),
+        active: t('guilds.tags.active', 'Be Active'),
+    };
+
+    // Load existing post data
+    useEffect(() => {
+        const fetchPost = async () => {
+            const token = localStorage.getItem('auth_token');
+            if (!token) {
+                router.push('/login');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_URL}/guilds/${slug}`);
+                if (!response.ok) throw new Error('Post not found');
+                const data = await response.json();
+                const post = data.data;
+
+                setTitle(post.title);
+                setDescription(post.description);
+                setServer(post.server);
+                setLanguage(post.language);
+                setSelectedTags(post.tags || []);
+                setImageUrls(post.images || []);
+            } catch (err) {
+                setError(err instanceof Error ? err.message : 'Failed to load post');
+            } finally {
+                setIsLoading(false);
+            }
+        };
+        fetchPost();
+    }, [slug, router]);
+
+    const toggleTag = (tag: string) => {
+        setSelectedTags(prev =>
+            prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
+        );
+    };
+
+    const addImageUrl = () => {
+        if (newImageUrl && imageUrls.length < 5) {
+            setImageUrls([...imageUrls, newImageUrl]);
+            setNewImageUrl('');
+        }
+    };
+
+    const removeImageUrl = (index: number) => {
+        setImageUrls(imageUrls.filter((_, i) => i !== index));
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setError(null);
+        setIsSubmitting(true);
+
+        const token = localStorage.getItem('auth_token');
+        if (!token) {
+            router.push('/login');
+            return;
+        }
+
+        try {
+            const response = await fetch(`${API_URL}/guilds/${slug}`, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    title,
+                    description,
+                    server,
+                    language,
+                    tags: selectedTags,
+                    images: imageUrls,
+                }),
+            });
+
+            if (!response.ok) {
+                const data = await response.json();
+                throw new Error(data.error?.message || t('guilds.updateError', 'Error updating post'));
+            }
+
+            const result = await response.json();
+            router.push(`/guilds/${result.data.slug}`);
+        } catch (err) {
+            setError(err instanceof Error ? err.message : t('common.unknownError', 'Unknown error'));
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    if (isLoading) {
+        return (
+            <div className="min-h-screen bg-e7-void flex items-center justify-center">
+                <div className="text-gray-400">{t('common.loading', 'Loading...')}</div>
+            </div>
+        );
+    }
+
+    return (
+        <div className="min-h-screen bg-e7-void py-8 px-4">
+            <div className="max-w-4xl mx-auto">
+                {/* Header */}
+                <div className="mb-8">
+                    <Link href={`/guilds/${slug}`} className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-block">
+                        ← {t('common.back', 'Back')}
+                    </Link>
+                    <h1 className="text-3xl font-bold text-e7-gold">
+                        {t('guilds.editPost', 'Edit Guild Post')}
+                    </h1>
+                </div>
+
+                <form onSubmit={handleSubmit}>
+                    <Card className="bg-e7-panel border-e7-gold/20">
+                        <CardHeader>
+                            <CardTitle className="text-e7-gold">
+                                {t('guilds.postDetails', 'Post Details')}
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent className="space-y-6">
+                            {/* Title */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    {t('guilds.title', 'Title')} *
+                                </label>
+                                <Input
+                                    value={title}
+                                    onChange={(e) => setTitle(e.target.value)}
+                                    placeholder={t('guilds.titlePlaceholder', 'e.g., Active Guild Looking for Members!')}
+                                    className="bg-e7-void border-e7-gold/30 text-white"
+                                    required
+                                />
+                            </div>
+
+                            {/* Server & Language */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                                        {t('guilds.server', 'Server')} *
+                                    </label>
+                                    <select
+                                        value={server}
+                                        onChange={(e) => setServer(e.target.value)}
+                                        className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
+                                        required
+                                    >
+                                        <option value="">{t('guilds.selectServer', 'Select server...')}</option>
+                                        {SERVERS.map((s) => (
+                                            <option key={s} value={s}>
+                                                {SERVER_FLAGS[s]} {SERVER_LABELS[s]}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                                        {t('guilds.language', 'Language')} *
+                                    </label>
+                                    <select
+                                        value={language}
+                                        onChange={(e) => setLanguage(e.target.value)}
+                                        className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
+                                        required
+                                    >
+                                        <option value="">{t('guilds.selectLanguage', 'Select language...')}</option>
+                                        {LANGUAGES.map((l) => (
+                                            <option key={l} value={l}>
+                                                {LANGUAGE_LABELS[l]}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                            </div>
+
+                            {/* Tags */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    {t('guilds.tagsLabel', 'Tags')}
+                                </label>
+                                <div className="flex flex-wrap gap-2">
+                                    {TAGS.map((tag) => (
+                                        <button
+                                            key={tag}
+                                            type="button"
+                                            onClick={() => toggleTag(tag)}
+                                            className={`px-3 py-1.5 rounded-full text-sm transition-colors ${selectedTags.includes(tag)
+                                                ? 'bg-purple-600 text-white'
+                                                : 'bg-e7-void border border-e7-gold/30 text-gray-400 hover:border-purple-500'
+                                                }`}
+                                        >
+                                            {TAG_LABELS[tag]}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Description */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    {t('guilds.description', 'Description')} *
+                                </label>
+                                <textarea
+                                    value={description}
+                                    onChange={(e) => setDescription(e.target.value)}
+                                    placeholder={t('guilds.descriptionPlaceholder', 'Describe your guild, requirements, benefits...')}
+                                    rows={6}
+                                    className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none resize-none"
+                                    required
+                                />
+                            </div>
+
+                            {/* Image URLs */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    {t('guilds.images', 'Images (optional)')}
+                                </label>
+
+                                <div className="flex gap-2 mb-2">
+                                    <Input
+                                        value={newImageUrl}
+                                        onChange={(e) => setNewImageUrl(e.target.value)}
+                                        placeholder={t('guilds.imageUrlPlaceholder', 'Paste image URL...')}
+                                        className="bg-e7-void border-e7-gold/30 text-white"
+                                    />
+                                    <Button
+                                        type="button"
+                                        onClick={addImageUrl}
+                                        disabled={!newImageUrl || imageUrls.length >= 5}
+                                        variant="outline"
+                                        className="border-e7-gold/30"
+                                    >
+                                        {t('common.add', 'Add')}
+                                    </Button>
+                                </div>
+                                <p className="text-xs text-gray-500 mb-2">
+                                    {t('guilds.maxImages', 'Maximum 5 images')}
+                                </p>
+
+                                {/* URL previews */}
+                                {imageUrls.length > 0 && (
+                                    <div className="grid grid-cols-5 gap-2">
+                                        {imageUrls.map((url, index) => (
+                                            <div key={index} className="relative aspect-square rounded-lg overflow-hidden bg-e7-void border border-e7-gold/20">
+                                                <Image
+                                                    src={url}
+                                                    alt={`Image ${index + 1}`}
+                                                    fill
+                                                    className="object-cover"
+                                                    unoptimized
+                                                />
+                                                <button
+                                                    type="button"
+                                                    onClick={() => removeImageUrl(index)}
+                                                    className="absolute top-1 right-1 w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center hover:bg-red-600"
+                                                >
+                                                    ×
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Error message */}
+                            {error && (
+                                <div className="p-4 rounded-lg bg-red-900/30 border border-red-500/50 text-red-400">
+                                    {error}
+                                </div>
+                            )}
+
+                            {/* Submit buttons */}
+                            <div className="flex gap-4 justify-end pt-4">
+                                <Link href={`/guilds/${slug}`}>
+                                    <Button type="button" variant="outline" className="border-e7-gold/30 text-gray-400">
+                                        {t('common.cancel', 'Cancel')}
+                                    </Button>
+                                </Link>
+                                <Button
+                                    type="submit"
+                                    disabled={isSubmitting || !title || !description || !server || !language}
+                                    className="bg-purple-600 text-white hover:bg-purple-700"
+                                >
+                                    {isSubmitting ? t('common.saving', 'Saving...') : t('common.save', 'Save Changes')}
+                                </Button>
+                            </div>
+                        </CardContent>
+                    </Card>
+                </form>
+            </div>
+        </div>
+    );
+}
