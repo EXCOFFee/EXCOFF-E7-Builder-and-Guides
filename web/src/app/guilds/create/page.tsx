@@ -78,15 +78,15 @@ export default function CreateGuildPostPage() {
     const TAG_LABELS: Record<string, string> = {
         casual: t('guilds.tags.casual', 'Casual'),
         chill: t('guilds.tags.chill', 'Chill'),
-        semi_competitive: t('guilds.tags.semiCompetitive', 'Semi Competitive'),
-        competitive_all: t('guilds.tags.competitiveAll', 'Competitive (All)'),
-        competitive_gw: t('guilds.tags.competitiveGW', 'Competitive (GW)'),
-        competitive_rta: t('guilds.tags.competitiveRTA', 'Competitive (RTA)'),
+        semi_competitive: t('guilds.tags.semi_competitive', 'Semi Competitive'),
+        competitive_all: t('guilds.tags.competitive_all', 'Competitive (All)'),
+        competitive_gw: t('guilds.tags.competitive_gw', 'Competitive (GW)'),
+        competitive_rta: t('guilds.tags.competitive_rta', 'Competitive (RTA)'),
         whatsapp: t('guilds.tags.whatsapp', 'WhatsApp Group'),
         discord: t('guilds.tags.discord', 'Discord Server'),
-        other_social: t('guilds.tags.otherSocial', 'Other Social'),
+        other_social: t('guilds.tags.other_social', 'Other Social'),
         beginner: t('guilds.tags.beginner', 'For Beginners'),
-        help_improve: t('guilds.tags.helpImprove', 'Help Improve'),
+        help_improve: t('guilds.tags.help_improve', 'Help Improve'),
         active: t('guilds.tags.active', 'Be Active'),
     };
 
@@ -253,8 +253,8 @@ export default function CreateGuildPostPage() {
                                             type="button"
                                             onClick={() => toggleTag(tag)}
                                             className={`px-3 py-1.5 rounded-full text-sm transition-colors ${selectedTags.includes(tag)
-                                                    ? 'bg-purple-600 text-white'
-                                                    : 'bg-e7-void border border-e7-gold/30 text-gray-400 hover:border-purple-500'
+                                                ? 'bg-purple-600 text-white'
+                                                : 'bg-e7-void border border-e7-gold/30 text-gray-400 hover:border-purple-500'
                                                 }`}
                                         >
                                             {TAG_LABELS[tag]}

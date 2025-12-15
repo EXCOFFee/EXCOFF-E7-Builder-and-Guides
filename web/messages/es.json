@@ -135,7 +135,7 @@
         "selectServer": "Selecciona servidor...",
         "language": "Idioma",
         "selectLanguage": "Selecciona idioma...",
-        "tags": "Etiquetas",
+        "tagsLabel": "Etiquetas",
         "description": "Descripción",
         "descriptionPlaceholder": "Describe tu gremio, requisitos, beneficios...",
         "images": "Imágenes (opcional)",
@@ -146,21 +146,21 @@
         "createSubtitle": "Recluta miembros para tu gremio",
         "publishPost": "Publicar",
         "allLanguages": "Todos los Idiomas",
-        "filterByTags": "Etiquetas"
-    },
-    "guilds.tags": {
-        "casual": "Casual",
-        "chill": "Relajado",
-        "semi_competitive": "Semi Competitivo",
-        "competitive_all": "Competitivo (Todo)",
-        "competitive_gw": "Competitivo (GW)",
-        "competitive_rta": "Competitivo (RTA)",
-        "whatsapp": "Grupo de WhatsApp",
-        "discord": "Servidor de Discord",
-        "other_social": "Otra Red Social",
-        "beginner": "Para Principiantes",
-        "help_improve": "Ayuda a Mejorar",
-        "active": "Sé Activo"
+        "filterByTags": "Etiquetas",
+        "tags": {
+            "casual": "Casual",
+            "chill": "Relajado",
+            "semi_competitive": "Semi Competitivo",
+            "competitive_all": "Competitivo (Todo)",
+            "competitive_gw": "Competitivo (GW)",
+            "competitive_rta": "Competitivo (RTA)",
+            "whatsapp": "Grupo de WhatsApp",
+            "discord": "Servidor de Discord",
+            "other_social": "Otra Red Social",
+            "beginner": "Para Principiantes",
+            "help_improve": "Ayuda a Mejorar",
+            "active": "Sé Activo"
+        }
     },
     "builds": {
         "title": "Builds de la Comunidad",

@@ -148,7 +148,7 @@
         "selectServer": "Select server...",
         "language": "Language",
         "selectLanguage": "Select language...",
-        "tags": "Tags",
+        "tagsLabel": "Tags",
         "description": "Description",
         "descriptionPlaceholder": "Describe your guild, requirements, benefits...",
         "images": "Images (optional)",
@@ -159,21 +159,21 @@
         "createSubtitle": "Recruit members for your guild",
         "publishPost": "Publish",
         "allLanguages": "All Languages",
-        "filterByTags": "Tags"
-    },
-    "guilds.tags": {
-        "casual": "Casual",
-        "chill": "Chill",
-        "semi_competitive": "Semi Competitive",
-        "competitive_all": "Competitive (All)",
-        "competitive_gw": "Competitive (GW)",
-        "competitive_rta": "Competitive (RTA)",
-        "whatsapp": "WhatsApp Group",
-        "discord": "Discord Server",
-        "other_social": "Other Social",
-        "beginner": "For Beginners",
-        "help_improve": "Help Improve",
-        "active": "Be Active"
+        "filterByTags": "Tags",
+        "tags": {
+            "casual": "Casual",
+            "chill": "Chill",
+            "semi_competitive": "Semi Competitive",
+            "competitive_all": "Competitive (All)",
+            "competitive_gw": "Competitive (GW)",
+            "competitive_rta": "Competitive (RTA)",
+            "whatsapp": "WhatsApp Group",
+            "discord": "Discord Server",
+            "other_social": "Other Social",
+            "beginner": "For Beginners",
+            "help_improve": "Help Improve",
+            "active": "Be Active"
+        }
     },
     "builds": {
         "title": "Community Builds",

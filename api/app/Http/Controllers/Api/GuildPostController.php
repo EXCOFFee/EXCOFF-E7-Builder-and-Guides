@@ -85,6 +85,23 @@ class GuildPostController extends Controller
      */
     public function store(Request $request): JsonResponse
     {
+        // Parse JSON strings that come from FormData
+        $tags = $request->input('tags');
+        if (is_string($tags)) {
+            $tags = json_decode($tags, true) ?? [];
+        }
+
+        $images = $request->input('images') ?? $request->input('image_urls');
+        if (is_string($images)) {
+            $images = json_decode($images, true) ?? [];
+        }
+
+        // Merge parsed values back into request for validation
+        $request->merge([
+            'tags' => $tags,
+            'images' => $images ?? [],
+        ]);
+
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string|max:5000',
@@ -93,7 +110,7 @@ class GuildPostController extends Controller
             'tags' => 'nullable|array',
             'tags.*' => 'in:' . implode(',', GuildPost::TAGS),
             'images' => 'nullable|array|max:5',
-            'images.*' => 'string|url',
+            'images.*' => 'string',
         ]);
 
         $post = GuildPost::create([
