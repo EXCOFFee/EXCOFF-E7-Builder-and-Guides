@@ -73,7 +73,7 @@ interface Artifact {
     id: number;
     name: string;
     code: string;
-    icon?: string;
+    icon: string;
 }
 
 export default function CreateBuildPage() {
@@ -317,6 +317,14 @@ export default function CreateBuildPage() {
                                 >
                                     {selectedArtifact ? (
                                         <>
+                                            <Image
+                                                src={selectedArtifact.icon}
+                                                alt={selectedArtifact.name}
+                                                width={24}
+                                                height={24}
+                                                className="rounded"
+                                                unoptimized
+                                            />
                                             <span>{selectedArtifact.name}</span>
                                         </>
                                     ) : (
@@ -335,13 +343,21 @@ export default function CreateBuildPage() {
                                         {filteredArtifacts.slice(0, 20).map((artifact) => (
                                             <div
                                                 key={artifact.id}
-                                                className="px-4 py-2 hover:bg-e7-gold/20 cursor-pointer text-white"
+                                                className="px-4 py-2 hover:bg-e7-gold/20 cursor-pointer text-white flex items-center gap-2"
                                                 onClick={() => {
                                                     setArtifactId(artifact.id);
                                                     setShowArtifactDropdown(false);
                                                     setArtifactSearch('');
                                                 }}
                                             >
+                                                <Image
+                                                    src={artifact.icon}
+                                                    alt={artifact.name}
+                                                    width={24}
+                                                    height={24}
+                                                    className="rounded"
+                                                    unoptimized
+                                                />
                                                 {artifact.name}
                                             </div>
                                         ))}

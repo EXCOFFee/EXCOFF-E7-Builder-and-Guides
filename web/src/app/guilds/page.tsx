@@ -230,6 +230,8 @@ export default function GuildsPage() {
                                         <div className="flex items-center gap-2 mb-2">
                                             <span className="text-lg">{SERVER_FLAGS[post.server]}</span>
                                             <span className="text-xs text-gray-400 uppercase">{post.server}</span>
+                                            <span className="text-xs text-gray-500">•</span>
+                                            <span className="text-xs text-gray-400">{LANGUAGE_FLAGS[post.language]} {LANGUAGE_NAMES[post.language] || post.language}</span>
                                         </div>
                                         <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2">
                                             {post.title}

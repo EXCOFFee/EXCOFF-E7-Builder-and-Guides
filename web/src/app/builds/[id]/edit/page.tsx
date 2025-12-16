@@ -58,6 +58,13 @@ interface Build {
     };
 }
 
+interface Artifact {
+    id: number;
+    name: string;
+    code: string;
+    icon: string;
+}
+
 export default function EditBuildPage() {
     const router = useRouter();
     const params = useParams();
@@ -77,6 +84,12 @@ export default function EditBuildPage() {
     });
     const [imageFiles, setImageFiles] = useState<File[]>([]);
     const [existingImages, setExistingImages] = useState<string[]>([]);
+
+    // Artifact state
+    const [artifactId, setArtifactId] = useState<number | null>(null);
+    const [artifactSearch, setArtifactSearch] = useState('');
+    const [showArtifactDropdown, setShowArtifactDropdown] = useState(false);
+
 
     // Check authentication
     useEffect(() => {
@@ -100,6 +113,22 @@ export default function EditBuildPage() {
         enabled: isAuthenticated && !!buildId,
     });
 
+    // Fetch artifacts for selector
+    const { data: artifactsData } = useQuery({
+        queryKey: ['artifacts-list'],
+        queryFn: async () => {
+            const response = await fetch(`${API_URL}/artifacts`);
+            return response.json();
+        },
+        enabled: isAuthenticated,
+    });
+
+    const artifacts: Artifact[] = artifactsData?.data || [];
+    const filteredArtifacts = artifacts.filter(a =>
+        a.name.toLowerCase().includes(artifactSearch.toLowerCase())
+    );
+    const selectedArtifact = artifacts.find(a => a.id === artifactId);
+
     // Pre-fill form when build loads
     useEffect(() => {
         if (buildData) {
@@ -113,6 +142,9 @@ export default function EditBuildPage() {
             }
             if (build.images && build.images.length > 0) {
                 setExistingImages(build.images);
+            }
+            if (build.artifact) {
+                setArtifactId(build.artifact.id);
             }
         }
     }, [buildData]);
@@ -137,6 +169,11 @@ export default function EditBuildPage() {
             if (primarySet) formData.append('primary_set', primarySet);
             if (secondarySet) formData.append('secondary_set', secondarySet);
             formData.append('min_stats', JSON.stringify(minStats));
+
+            // Add artifact
+            if (artifactId) {
+                formData.append('artifact_id', artifactId.toString());
+            }
 
             // Add existing image URLs
             if (existingImages.length > 0) {
@@ -303,6 +340,68 @@ export default function EditBuildPage() {
                                         <p className="text-sm text-blue-400 mt-2 capitalize">{secondarySet}</p>
                                     )}
                                 </div>
+                            </div>
+
+                            {/* Artifact Selector */}
+                            <div className="relative">
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    Artefacto (opcional)
+                                </label>
+                                <div
+                                    className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white cursor-pointer flex items-center gap-2"
+                                    onClick={() => setShowArtifactDropdown(!showArtifactDropdown)}
+                                >
+                                    {selectedArtifact ? (
+                                        <>
+                                            <Image
+                                                src={selectedArtifact.icon}
+                                                alt={selectedArtifact.name}
+                                                width={24}
+                                                height={24}
+                                                className="rounded"
+                                                unoptimized
+                                            />
+                                            <span>{selectedArtifact.name}</span>
+                                        </>
+                                    ) : (
+                                        <span className="text-gray-400">Buscar artefacto...</span>
+                                    )}
+                                </div>
+                                {showArtifactDropdown && (
+                                    <div className="absolute z-50 w-full mt-1 bg-e7-panel border border-e7-gold/30 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                        <Input
+                                            value={artifactSearch}
+                                            onChange={(e) => setArtifactSearch(e.target.value)}
+                                            placeholder="Escribe para buscar..."
+                                            className="m-2 w-[calc(100%-16px)] bg-e7-void border-e7-gold/30 text-white"
+                                            autoFocus
+                                        />
+                                        {filteredArtifacts.slice(0, 20).map((artifact) => (
+                                            <div
+                                                key={artifact.id}
+                                                className="px-4 py-2 hover:bg-e7-gold/20 cursor-pointer text-white flex items-center gap-2"
+                                                onClick={() => {
+                                                    setArtifactId(artifact.id);
+                                                    setShowArtifactDropdown(false);
+                                                    setArtifactSearch('');
+                                                }}
+                                            >
+                                                <Image
+                                                    src={artifact.icon}
+                                                    alt={artifact.name}
+                                                    width={24}
+                                                    height={24}
+                                                    className="rounded"
+                                                    unoptimized
+                                                />
+                                                {artifact.name}
+                                            </div>
+                                        ))}
+                                        {filteredArtifacts.length === 0 && (
+                                            <div className="px-4 py-2 text-gray-400">No se encontraron artefactos</div>
+                                        )}
+                                    </div>
+                                )}
                             </div>
 
                             {/* Min Stats */}
