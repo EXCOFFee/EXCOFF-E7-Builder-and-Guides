@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -69,6 +70,7 @@ export default function EditBuildPage() {
     const router = useRouter();
     const params = useParams();
     const buildId = params.id as string;
+    const { t } = useTranslations();
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -226,7 +228,7 @@ export default function EditBuildPage() {
     if (isLoading) {
         return (
             <div className="min-h-screen bg-e7-void py-8 px-4 flex items-center justify-center">
-                <div className="text-e7-gold">Cargando...</div>
+                <div className="text-e7-gold">{t('common.loading', 'Loading...')}</div>
             </div>
         );
     }
@@ -239,29 +241,29 @@ export default function EditBuildPage() {
                 {/* Header */}
                 <div className="mb-8">
                     <Link href={`/builds/${buildId}`} className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-block">
-                        ← Volver a la Build
+                        ← {t('common.back', 'Back')}
                     </Link>
-                    <h1 className="font-display text-4xl text-e7-text-gold mb-2">Editar Build</h1>
+                    <h1 className="font-display text-4xl text-e7-text-gold mb-2">{t('builds.editBuild', 'Edit Build')}</h1>
                     <p className="text-gray-400">
-                        {build?.hero?.name && `Build para ${build.hero.name}`}
+                        {build?.hero?.name && `${t('builds.buildFor', 'Build for')} ${build.hero.name}`}
                     </p>
                 </div>
 
                 <form onSubmit={handleSubmit}>
                     <Card className="bg-e7-panel border-e7-gold/30 mb-6">
                         <CardHeader>
-                            <CardTitle className="text-e7-gold">Información de la Build</CardTitle>
+                            <CardTitle className="text-e7-gold">{t('builds.buildInfo', 'Build Information')}</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-6">
                             {/* Title */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Título *
+                                    {t('builds.titleLabel', 'Title')} *
                                 </label>
                                 <Input
                                     value={title}
                                     onChange={(e) => setTitle(e.target.value)}
-                                    placeholder="Ej: Build de Speed para RTA"
+                                    placeholder={t('builds.titlePlaceholder', 'E.g., Fast Cleave, RTA Counter, etc.')}
                                     className="bg-e7-void border-e7-gold/30 text-white"
                                     required
                                 />
@@ -270,12 +272,12 @@ export default function EditBuildPage() {
                             {/* Description */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Descripción
+                                    {t('builds.descriptionLabel', 'Description (optional)')}
                                 </label>
                                 <textarea
                                     value={description}
                                     onChange={(e) => setDescription(e.target.value)}
-                                    placeholder="Describe para qué es esta build..."
+                                    placeholder={t('builds.descriptionPlaceholder', 'Explain how to use this build...')}
                                     rows={4}
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none resize-none"
                                 />
@@ -285,7 +287,7 @@ export default function EditBuildPage() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                                        Set Primario
+                                        {t('builds.primarySet', 'Primary Set')}
                                     </label>
                                     <div className="grid grid-cols-6 gap-2">
                                         {SETS.map((set) => (
@@ -317,7 +319,7 @@ export default function EditBuildPage() {
 
                                 <div>
                                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                                        Set Secundario
+                                        {t('builds.secondarySet', 'Secondary Set')}
                                     </label>
                                     <div className="grid grid-cols-6 gap-2">
                                         {SETS.map((set) => (
@@ -351,7 +353,7 @@ export default function EditBuildPage() {
                             {/* Artifact Selector */}
                             <div className="relative">
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Artefacto (opcional)
+                                    {t('builds.artifact', 'Artifact')} ({t('common.optional', 'optional')})
                                 </label>
                                 <div
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white cursor-pointer flex items-center gap-2"
@@ -370,7 +372,7 @@ export default function EditBuildPage() {
                                             <span>{selectedArtifact.name}</span>
                                         </>
                                     ) : (
-                                        <span className="text-gray-400">Buscar artefacto...</span>
+                                        <span className="text-gray-400">{t('builds.searchArtifact', 'Search artifact...')}</span>
                                     )}
                                 </div>
                                 {showArtifactDropdown && (
@@ -378,7 +380,7 @@ export default function EditBuildPage() {
                                         <Input
                                             value={artifactSearch}
                                             onChange={(e) => setArtifactSearch(e.target.value)}
-                                            placeholder="Escribe para buscar..."
+                                            placeholder={t('builds.searchArtifact', 'Search artifact...')}
                                             className="m-2 w-[calc(100%-16px)] bg-e7-void border-e7-gold/30 text-white"
                                             autoFocus
                                         />
@@ -404,7 +406,7 @@ export default function EditBuildPage() {
                                             </div>
                                         ))}
                                         {filteredArtifacts.length === 0 && (
-                                            <div className="px-4 py-2 text-gray-400">No se encontraron artefactos</div>
+                                            <div className="px-4 py-2 text-gray-400">{t('builds.noArtifactsFound', 'No artifacts found')}</div>
                                         )}
                                     </div>
                                 )}
@@ -413,7 +415,7 @@ export default function EditBuildPage() {
                             {/* Min Stats */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Estadísticas Mínimas
+                                    {t('builds.minStats', 'Minimum Recommended Stats')}
                                 </label>
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                     {[
@@ -442,7 +444,7 @@ export default function EditBuildPage() {
                             {/* Image Upload */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Imágenes (opcional, máx. 5)
+                                    {t('builds.images', 'Build Images (Screenshots)')}
                                 </label>
                                 <div
                                     className="border-2 border-dashed border-e7-gold/30 rounded-lg p-4 text-center hover:border-e7-gold/50 transition-colors cursor-pointer mb-3"
@@ -460,7 +462,7 @@ export default function EditBuildPage() {
                                         }}
                                     />
                                     <div className="text-gray-400">
-                                        📷 Click para subir imágenes
+                                        📷 {t('builds.clickToUpload', 'Click to upload images')}
                                     </div>
                                 </div>
 
@@ -520,7 +522,7 @@ export default function EditBuildPage() {
                             <div className="flex gap-4 justify-end pt-4">
                                 <Link href={`/builds/${buildId}`}>
                                     <Button type="button" variant="outline" className="border-e7-gold/30 text-gray-400">
-                                        Cancelar
+                                        {t('common.cancel', 'Cancel')}
                                     </Button>
                                 </Link>
                                 <Button
@@ -528,7 +530,7 @@ export default function EditBuildPage() {
                                     disabled={isSubmitting || !title}
                                     className="bg-e7-gold text-black hover:bg-e7-text-gold"
                                 >
-                                    {isSubmitting ? 'Guardando...' : 'Guardar Cambios'}
+                                    {isSubmitting ? t('builds.updating', 'Updating...') : t('builds.updateBuild', 'Update Build')}
                                 </Button>
                             </div>
                         </CardContent>
