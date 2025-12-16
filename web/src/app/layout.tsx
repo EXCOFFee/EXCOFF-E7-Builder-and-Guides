@@ -45,6 +45,24 @@ export default function RootLayout({
           <main className="min-h-[calc(100vh-4rem)]">
             {children}
           </main>
+          <footer className="border-t border-white/10 bg-e7-dark/50 py-6 mt-8">
+            <div className="container mx-auto px-4 text-center text-sm text-gray-400">
+              <p className="mb-2">
+                Hero &amp; Artifact data powered by{' '}
+                <a
+                  href="https://github.com/fribbels/Fribbels-Epic-7-Optimizer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-e7-gold hover:text-e7-gold/80 underline"
+                >
+                  Fribbels Epic 7 Optimizer
+                </a>
+              </p>
+              <p className="text-xs text-gray-500">
+                Epic Seven © Smilegate &amp; Super Creative. This site is not affiliated with the game developers.
+              </p>
+            </div>
+          </footer>
         </Providers>
       </body>
     </html>
