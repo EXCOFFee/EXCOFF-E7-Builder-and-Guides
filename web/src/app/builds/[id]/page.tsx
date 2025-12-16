@@ -229,15 +229,28 @@ export default function BuildDetailPage() {
     const deleteMutation = useMutation({
         mutationFn: async () => {
             const token = localStorage.getItem('auth_token');
+            if (!token) {
+                throw new Error('You must be logged in to delete');
+            }
             const response = await fetch(`${API_URL}/builds/${buildId}`, {
                 method: 'DELETE',
-                headers: { 'Authorization': `Bearer ${token}` },
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
             });
-            if (!response.ok) throw new Error('Failed to delete');
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.message || errorData.error || `Error: ${response.status}`);
+            }
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['builds'] });
             router.push('/builds');
+        },
+        onError: (error: Error) => {
+            alert(`Error deleting: ${error.message}`);
         },
     });
 
