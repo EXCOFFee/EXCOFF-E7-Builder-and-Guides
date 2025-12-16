@@ -150,12 +150,18 @@ export default function EditGuidePage() {
             });
 
             if (!response.ok) {
-                const data = await response.json();
-                throw new Error(data.message || 'Error al actualizar la guía');
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const data = await response.json();
+                    throw new Error(data.message || 'Error al actualizar la guía');
+                } else {
+                    throw new Error(`Error del servidor (${response.status}). Por favor intenta de nuevo.`);
+                }
             }
 
             const updated = await response.json();
-            router.push(`/guides/${updated.slug || slug}`);
+            // Use window.location for full page refresh
+            window.location.href = `/guides/${updated.slug || slug}`;
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Error desconocido');
         } finally {

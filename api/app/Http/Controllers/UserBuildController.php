@@ -128,10 +128,14 @@ class UserBuildController extends Controller
         $baseUrl = rtrim(config('app.url'), '/');
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
-                $path = $image->store('builds', 'public');
-                $imagePaths[] = $baseUrl . '/storage/' . $path;
+                if ($image->isValid()) {
+                    $path = $image->store('builds', 'public');
+                    $imagePaths[] = $baseUrl . '/storage/' . $path;
+                }
             }
         }
+        // Limit to 5 images max
+        $imagePaths = array_slice($imagePaths, 0, 5);
         $validated['images'] = $imagePaths;
 
         $build = $request->user()->builds()->create($validated);
@@ -173,8 +177,10 @@ class UserBuildController extends Controller
         // Handle new file uploads
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
-                $path = $image->store('builds', 'public');
-                $imagePaths[] = $baseUrl . '/storage/' . $path;
+                if ($image->isValid()) {
+                    $path = $image->store('builds', 'public');
+                    $imagePaths[] = $baseUrl . '/storage/' . $path;
+                }
             }
         }
         

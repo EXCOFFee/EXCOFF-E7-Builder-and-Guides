@@ -194,11 +194,17 @@ export default function EditBuildPage() {
             });
 
             if (!response.ok) {
-                const data = await response.json();
-                throw new Error(data.message || 'Error al actualizar la build');
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const data = await response.json();
+                    throw new Error(data.message || 'Error al actualizar la build');
+                } else {
+                    throw new Error(`Error del servidor (${response.status}). Por favor intenta de nuevo.`);
+                }
             }
 
-            router.push(`/builds/${buildId}`);
+            // Use window.location for full page refresh
+            window.location.href = `/builds/${buildId}`;
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Error desconocido');
         } finally {

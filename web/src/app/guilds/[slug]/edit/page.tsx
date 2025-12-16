@@ -168,12 +168,18 @@ export default function EditGuildPostPage() {
             });
 
             if (!response.ok) {
-                const data = await response.json();
-                throw new Error(data.error?.message || t('guilds.updateError', 'Error updating post'));
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const data = await response.json();
+                    throw new Error(data.error?.message || t('guilds.updateError', 'Error updating post'));
+                } else {
+                    throw new Error(`Error del servidor (${response.status}). Por favor intenta de nuevo.`);
+                }
             }
 
             const result = await response.json();
-            router.push(`/guilds/${result.data.slug}`);
+            // Use window.location for full page refresh
+            window.location.href = `/guilds/${result.data.slug}`;
         } catch (err) {
             setError(err instanceof Error ? err.message : t('common.unknownError', 'Unknown error'));
         } finally {
