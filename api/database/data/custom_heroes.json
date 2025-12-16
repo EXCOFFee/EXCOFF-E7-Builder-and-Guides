@@ -8,8 +8,8 @@
         "role": "assassin",
         "zodiac": "scorpion",
         "assets": {
-            "icon": "https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/data/cachedimages/c5038_s.png",
-            "thumbnail": "https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/data/cachedimages/c5038_l.png"
+            "icon": "https://www.epic7x.com/wp-content/uploads/2024/11/swift-flagbearer-sigret-icon.png",
+            "thumbnail": "https://www.epic7x.com/wp-content/uploads/2024/11/swift-flagbearer-sigret-icon.png"
         },
         "calculatedStatus": {
             "lv60SixStarFullyAwakened": {
@@ -61,7 +61,7 @@
                 "SSS": 0.27
             }
         },
-        "source": "epic7db",
-        "source_url": "https://epic7db.com/hero/swift-flagbearer-sigret"
+        "source": "epic7x",
+        "source_url": "https://www.epic7x.com/character/swift-flagbearer-sigret/"
     }
 }
