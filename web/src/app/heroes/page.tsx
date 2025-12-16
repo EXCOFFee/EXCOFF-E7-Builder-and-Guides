@@ -65,6 +65,10 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
     'bask': '85% center',
     'chaos-sect-axe': '85% center',
     'chaos-inquisitor': '85% center',
+    'falconer-kluri': '85% center',
+    'furious': '85% center',
+    'kayron': '85% center',
+    'kikirat-v2': '85% center',
 };
 
 export default function HeroesPage() {
