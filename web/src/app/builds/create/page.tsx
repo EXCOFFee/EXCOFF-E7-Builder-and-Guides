@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useQuery } from '@tanstack/react-query';
 import { heroApi, buildApi } from '@/lib/api';
 import Image from 'next/image';
+import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -79,6 +80,7 @@ interface Artifact {
 export default function CreateBuildPage() {
     const router = useRouter();
     const searchParams = useSearchParams();
+    const { t } = useTranslations();
     const preselectedHeroId = searchParams.get('hero_id');
     const preselectedHeroName = searchParams.get('hero_name');
 
@@ -249,13 +251,13 @@ export default function CreateBuildPage() {
                 {/* Header */}
                 <div className="mb-8">
                     <Link href="/heroes" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-block">
-                        ← Volver a Héroes
+                        ← {t('builds.backToHeroes', 'Back to Heroes')}
                     </Link>
-                    <h1 className="font-display text-4xl text-e7-text-gold mb-2">Crear Nueva Build</h1>
+                    <h1 className="font-display text-4xl text-e7-text-gold mb-2">{t('builds.createNewBuild', 'Create New Build')}</h1>
                     <p className="text-gray-400">
                         {preselectedHeroName
-                            ? `Creando build para ${decodeURIComponent(preselectedHeroName)}`
-                            : 'Comparte tu configuración de equipo con la comunidad'
+                            ? `${t('builds.creatingFor', 'Creating build for')} ${decodeURIComponent(preselectedHeroName)}`
+                            : t('builds.shareConfig', 'Share your equipment configuration with the community')
                         }
                     </p>
                 </div>
@@ -263,13 +265,13 @@ export default function CreateBuildPage() {
                 <form onSubmit={handleSubmit}>
                     <Card className="bg-e7-panel border-e7-gold/30">
                         <CardHeader>
-                            <CardTitle className="text-e7-gold">Información de la Build</CardTitle>
+                            <CardTitle className="text-e7-gold">{t('builds.buildInfo', 'Build Information')}</CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-6">
                             {/* Hero selector with search */}
                             <div className="relative">
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Héroe *
+                                    {t('builds.hero', 'Hero')} *
                                 </label>
                                 <div
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white cursor-pointer flex items-center gap-2"
@@ -280,7 +282,7 @@ export default function CreateBuildPage() {
                                             <span>{selectedHero.name}</span>
                                         </>
                                     ) : (
-                                        <span className="text-gray-400">Buscar héroe...</span>
+                                        <span className="text-gray-400">{t('builds.searchHero', 'Search hero...')}</span>
                                     )}
                                 </div>
                                 {showHeroDropdown && (
@@ -288,7 +290,7 @@ export default function CreateBuildPage() {
                                         <Input
                                             value={heroSearch}
                                             onChange={(e) => setHeroSearch(e.target.value)}
-                                            placeholder="Escribe para buscar..."
+                                            placeholder={t('builds.searchHero', 'Search hero...')}
                                             className="m-2 w-[calc(100%-16px)] bg-e7-void border-e7-gold/30 text-white"
                                             autoFocus
                                         />
@@ -306,7 +308,7 @@ export default function CreateBuildPage() {
                                             </div>
                                         ))}
                                         {filteredHeroes.length === 0 && (
-                                            <div className="px-4 py-2 text-gray-400">No se encontraron héroes</div>
+                                            <div className="px-4 py-2 text-gray-400">{t('heroes.noResults', 'No heroes found')}</div>
                                         )}
                                     </div>
                                 )}
@@ -315,7 +317,7 @@ export default function CreateBuildPage() {
                             {/* Artifact selector with search */}
                             <div className="relative">
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Artefacto (opcional)
+                                    {t('builds.artifact', 'Artifact')} ({t('common.optional', 'optional')})
                                 </label>
                                 <div
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white cursor-pointer flex items-center gap-2"
@@ -334,7 +336,7 @@ export default function CreateBuildPage() {
                                             <span>{selectedArtifact.name}</span>
                                         </>
                                     ) : (
-                                        <span className="text-gray-400">Buscar artefacto...</span>
+                                        <span className="text-gray-400">{t('builds.searchArtifact', 'Search artifact...')}</span>
                                     )}
                                 </div>
                                 {showArtifactDropdown && (
@@ -342,7 +344,7 @@ export default function CreateBuildPage() {
                                         <Input
                                             value={artifactSearch}
                                             onChange={(e) => setArtifactSearch(e.target.value)}
-                                            placeholder="Escribe para buscar..."
+                                            placeholder={t('builds.searchArtifact', 'Search artifact...')}
                                             className="m-2 w-[calc(100%-16px)] bg-e7-void border-e7-gold/30 text-white"
                                             autoFocus
                                         />
@@ -368,7 +370,7 @@ export default function CreateBuildPage() {
                                             </div>
                                         ))}
                                         {filteredArtifacts.length === 0 && (
-                                            <div className="px-4 py-2 text-gray-400">No se encontraron artefactos</div>
+                                            <div className="px-4 py-2 text-gray-400">{t('builds.noArtifactsFound', 'No artifacts found')}</div>
                                         )}
                                     </div>
                                 )}
@@ -377,12 +379,12 @@ export default function CreateBuildPage() {
                             {/* Title */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Título de la Build *
+                                    {t('builds.titleLabel', 'Title')} *
                                 </label>
                                 <Input
                                     value={title}
                                     onChange={(e) => setTitle(e.target.value)}
-                                    placeholder="Ej: Build Speed DPS para RTA"
+                                    placeholder={t('builds.titlePlaceholder', 'E.g., Fast Cleave, RTA Counter, etc.')}
                                     className="bg-e7-void border-e7-gold/30 text-white"
                                     required
                                 />
@@ -391,12 +393,12 @@ export default function CreateBuildPage() {
                             {/* Description */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Descripción
+                                    {t('builds.descriptionLabel', 'Description (optional)')}
                                 </label>
                                 <textarea
                                     value={description}
                                     onChange={(e) => setDescription(e.target.value)}
-                                    placeholder="Explica cuándo usar esta build, contra qué equipos funciona bien, etc."
+                                    placeholder={t('builds.descriptionPlaceholder', 'Explain how to use this build...')}
                                     rows={3}
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none resize-none"
                                 />
@@ -406,7 +408,7 @@ export default function CreateBuildPage() {
                             <div className="grid md:grid-cols-2 gap-4">
                                 <div>
                                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                                        Set Principal
+                                        {t('builds.primarySet', 'Primary Set')}
                                     </label>
                                     <div className="grid grid-cols-6 gap-2 p-3 bg-e7-void rounded-lg border border-e7-gold/30">
                                         {SETS.map((set) => (
@@ -437,7 +439,7 @@ export default function CreateBuildPage() {
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                                        Set Secundario
+                                        {t('builds.secondarySet', 'Secondary Set')}
                                     </label>
                                     <div className="grid grid-cols-6 gap-2 p-3 bg-e7-void rounded-lg border border-e7-gold/30">
                                         {SETS.map((set) => (
@@ -471,7 +473,7 @@ export default function CreateBuildPage() {
                             {/* Minimum Stats */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-3">
-                                    Stats Mínimos Recomendados
+                                    {t('builds.minStats', 'Minimum Recommended Stats')}
                                 </label>
                                 <div className="grid grid-cols-4 gap-3">
                                     <div>
@@ -560,7 +562,7 @@ export default function CreateBuildPage() {
                             {/* Images */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    Imágenes de la Build (Screenshots)
+                                    {t('builds.images', 'Build Images (Screenshots)')}
                                 </label>
                                 <div className="border-2 border-dashed border-e7-gold/30 rounded-lg p-4 hover:border-e7-gold/50 transition-colors">
                                     <input
@@ -572,7 +574,7 @@ export default function CreateBuildPage() {
                                         onChange={(e) => {
                                             const files = Array.from(e.target.files || []);
                                             if (files.length + images.length > 5) {
-                                                alert('Máximo 5 imágenes');
+                                                alert(t('builds.maxImages', 'Maximum 5 images'));
                                                 return;
                                             }
                                             setImages([...images, ...files]);
@@ -588,8 +590,8 @@ export default function CreateBuildPage() {
                                     />
                                     <label htmlFor="build-images" className="cursor-pointer flex flex-col items-center">
                                         <span className="text-3xl mb-2">📷</span>
-                                        <span className="text-gray-400 text-sm">Click para subir imágenes</span>
-                                        <span className="text-gray-500 text-xs mt-1">Máximo 5 imágenes (PNG, JPG)</span>
+                                        <span className="text-gray-400 text-sm">{t('builds.clickToUpload', 'Click to upload images')}</span>
+                                        <span className="text-gray-500 text-xs mt-1">{t('builds.maxImages', 'Maximum 5 images (PNG, JPG)')}</span>
                                     </label>
                                 </div>
                                 {/* Image previews */}
@@ -630,7 +632,7 @@ export default function CreateBuildPage() {
                             <div className="flex gap-4 justify-end pt-4">
                                 <Link href="/heroes">
                                     <Button type="button" variant="outline" className="border-e7-gold/30 text-gray-400">
-                                        Cancelar
+                                        {t('common.cancel', 'Cancel')}
                                     </Button>
                                 </Link>
                                 <Button
@@ -638,7 +640,7 @@ export default function CreateBuildPage() {
                                     disabled={isSubmitting || !heroId || !title}
                                     className="bg-purple-600 text-white hover:bg-purple-700"
                                 >
-                                    {isSubmitting ? 'Guardando...' : 'Publicar Build'}
+                                    {isSubmitting ? t('builds.publishing', 'Publishing...') : t('builds.publishBuild', 'Publish Build')}
                                 </Button>
                             </div>
                         </CardContent>
