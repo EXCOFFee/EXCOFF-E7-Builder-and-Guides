@@ -69,6 +69,11 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
     'furious': '85% center',
     'kayron': '85% center',
     'kikirat-v2': '85% center',
+    'luna': '85% center',
+    'mascot-hazel': '85% center',
+    'righteous-thief-roozid': '85% center',
+    'roaming-warrior-leo': '85% center',
+    'seaside-bellona': '85% center',
 };
 
 export default function HeroesPage() {
