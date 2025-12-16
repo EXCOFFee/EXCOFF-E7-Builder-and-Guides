@@ -49,6 +49,33 @@ const CLASS_IMAGES: Record<string, string> = {
     soul_weaver: '/images/classes/ClassSoul_Waver.png',
 };
 
+// Set to image mapping
+const SET_IMAGES: Record<string, string> = {
+    speed: '/images/sets/SET_Speed.png',
+    attack: '/images/sets/SET_Attack.png',
+    health: '/images/sets/SET_Health.png',
+    defense: '/images/sets/SET_Defense.png',
+    critical: '/images/sets/SET_Critical.png',
+    destruction: '/images/sets/SET_Destruction.png',
+    counter: '/images/sets/SET_Counter.png',
+    lifesteal: '/images/sets/SET_Lifesteal.png',
+    immunity: '/images/sets/SET_Immunity.png',
+    rage: '/images/sets/SET_Rage.png',
+    revenge: '/images/sets/SET_Revenge.png',
+    injury: '/images/sets/SET_Injury.png',
+    penetration: '/images/sets/SET_Penetration.png',
+    protection: '/images/sets/SET_Barrier.png',
+    unity: '/images/sets/SET_Unity.png',
+    hit: '/images/sets/SET_Hit.png',
+    resist: '/images/sets/SET_Resist.png',
+    torrent: '/images/sets/SET_Torrent.png',
+};
+
+// Formatting function for set names
+const formatSetName = (set: string) => {
+    return set.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+};
+
 const CLASS_NAMES: Record<string, string> = {
     knight: 'Knight',
     warrior: 'Warrior',
@@ -228,15 +255,33 @@ export default function BuildsPage() {
                                         </h4>
 
                                         {/* Sets */}
-                                        <div className="flex gap-2 mb-3">
+                                        <div className="flex gap-2 mb-3 flex-wrap">
                                             {build.primary_set && (
-                                                <span className="px-2 py-0.5 text-xs bg-purple-500/20 text-purple-300 rounded">
-                                                    {build.primary_set}
+                                                <span className="px-2 py-0.5 text-xs bg-purple-500/20 text-purple-300 rounded flex items-center gap-1">
+                                                    {SET_IMAGES[build.primary_set] && (
+                                                        <Image
+                                                            src={SET_IMAGES[build.primary_set]}
+                                                            alt={build.primary_set}
+                                                            width={16}
+                                                            height={16}
+                                                            unoptimized
+                                                        />
+                                                    )}
+                                                    {formatSetName(build.primary_set)}
                                                 </span>
                                             )}
                                             {build.secondary_set && (
-                                                <span className="px-2 py-0.5 text-xs bg-blue-500/20 text-blue-300 rounded">
-                                                    {build.secondary_set}
+                                                <span className="px-2 py-0.5 text-xs bg-blue-500/20 text-blue-300 rounded flex items-center gap-1">
+                                                    {SET_IMAGES[build.secondary_set] && (
+                                                        <Image
+                                                            src={SET_IMAGES[build.secondary_set]}
+                                                            alt={build.secondary_set}
+                                                            width={16}
+                                                            height={16}
+                                                            unoptimized
+                                                        />
+                                                    )}
+                                                    {formatSetName(build.secondary_set)}
                                                 </span>
                                             )}
                                         </div>

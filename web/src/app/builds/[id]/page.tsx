@@ -376,6 +376,26 @@ export default function BuildDetailPage() {
                             </div>
                         )}
 
+                        {/* Images */}
+                        {build.images && build.images.length > 0 && (
+                            <div className="mb-6">
+                                <h3 className="text-e7-gold font-semibold mb-3">{t('builds.screenshots', 'Screenshots')}</h3>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {build.images.map((img, idx) => (
+                                        <div key={idx} className="relative aspect-video rounded-lg overflow-hidden bg-e7-void">
+                                            <Image
+                                                src={img}
+                                                alt={`Screenshot ${idx + 1}`}
+                                                fill
+                                                className="object-contain"
+                                                unoptimized
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
                         {/* Author & Actions */}
                         <div className="flex items-center justify-between pt-4 border-t border-e7-gold/20">
                             <div className="flex items-center gap-3">

@@ -21,6 +21,7 @@ interface Guide {
     video_url: string | null;
     video_thumbnail: string | null;
     video_platform: string | null;
+    images: string[];
     vote_score: number;
     views: number;
     hero: { name: string; slug: string } | null;
@@ -138,7 +139,7 @@ export default function GuidesPage() {
                             guides.map((guide) => (
                                 <Link key={guide.id} href={`/guides/${guide.slug}`}>
                                     <Card className="bg-e7-panel border-e7-gold/20 hover:border-e7-gold transition-all cursor-pointer h-full group">
-                                        {/* Video Thumbnail */}
+                                        {/* Video or Image Thumbnail */}
                                         {guide.video_thumbnail ? (
                                             <div className="relative aspect-video overflow-hidden rounded-t-lg">
                                                 <Image
@@ -155,6 +156,16 @@ export default function GuidesPage() {
                                                         </svg>
                                                     </div>
                                                 </div>
+                                            </div>
+                                        ) : guide.images?.[0] ? (
+                                            <div className="relative aspect-video overflow-hidden rounded-t-lg">
+                                                <Image
+                                                    src={guide.images[0]}
+                                                    alt={guide.title}
+                                                    fill
+                                                    className="object-cover group-hover:scale-105 transition-transform"
+                                                    unoptimized
+                                                />
                                             </div>
                                         ) : (
                                             <div className="aspect-video bg-e7-void/50 rounded-t-lg flex items-center justify-center">

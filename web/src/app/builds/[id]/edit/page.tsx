@@ -46,6 +46,7 @@ interface Build {
     min_stats: Record<string, number>;
     primary_set: string;
     secondary_set: string;
+    images: string[];
     hero: {
         id: number;
         name: string;
@@ -53,6 +54,7 @@ interface Build {
     artifact?: {
         id: number;
         name: string;
+        icon: string;
     };
 }
 
@@ -108,6 +110,9 @@ export default function EditBuildPage() {
             setSecondarySet(build.secondary_set || '');
             if (build.min_stats) {
                 setMinStats(build.min_stats);
+            }
+            if (build.images && build.images.length > 0) {
+                setExistingImages(build.images);
             }
         }
     }, [buildData]);

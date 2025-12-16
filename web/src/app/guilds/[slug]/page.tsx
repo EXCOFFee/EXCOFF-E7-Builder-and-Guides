@@ -34,6 +34,15 @@ const TAG_LABELS: Record<string, string> = {
     active: 'Be Active',
 };
 
+const LANGUAGE_NAMES: Record<string, string> = {
+    en: 'English',
+    es: 'Español',
+    pt: 'Português',
+    ko: '한국어',
+    zh: '中文',
+    ja: '日本語',
+};
+
 interface GuildPost {
     id: number;
     slug: string;
@@ -174,7 +183,7 @@ export default function GuildPostDetailPage() {
                                 {SERVER_FLAGS[post.server]} {post.server.charAt(0).toUpperCase() + post.server.slice(1)}
                             </span>
                             <span className="text-gray-400 text-sm">
-                                {post.language.toUpperCase()}
+                                {LANGUAGE_NAMES[post.language] || post.language.toUpperCase()}
                             </span>
                         </div>
 
@@ -190,7 +199,7 @@ export default function GuildPostDetailPage() {
                                     key={tag}
                                     className="px-3 py-1 text-sm bg-e7-gold/10 text-e7-gold rounded-full"
                                 >
-                                    {TAG_LABELS[tag] || tag}
+                                    {t(`guilds.tags.${tag}`, TAG_LABELS[tag] || tag.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()))}
                                 </span>
                             ))}
                         </div>
