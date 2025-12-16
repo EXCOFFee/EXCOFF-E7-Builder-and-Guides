@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
+import { ImageGallery } from '@/components/ui/image-gallery';
 import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
@@ -160,21 +161,9 @@ export default function GuildPostDetailPage() {
                 {/* Post Header */}
                 <div className="bg-e7-panel border border-e7-gold/20 rounded-lg overflow-hidden">
                     {/* Images */}
-                    {post.images && post.images.length > 0 && (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-4">
-                            {post.images.map((img, idx) => (
-                                <div key={idx} className="aspect-video relative rounded overflow-hidden">
-                                    <Image
-                                        src={img}
-                                        alt={`Image ${idx + 1}`}
-                                        fill
-                                        className="object-cover"
-                                        unoptimized
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    )}
+                    <div className="p-4">
+                        <ImageGallery images={post.images || []} title={t('guilds.images', 'Images')} />
+                    </div>
 
                     <div className="p-6">
                         {/* Server & Language */}

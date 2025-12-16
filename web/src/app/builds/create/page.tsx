@@ -73,7 +73,7 @@ interface Artifact {
     id: number;
     name: string;
     code: string;
-    icon: string;
+    image_url: string;
 }
 
 export default function CreateBuildPage() {
@@ -318,7 +318,7 @@ export default function CreateBuildPage() {
                                     {selectedArtifact ? (
                                         <>
                                             <Image
-                                                src={selectedArtifact.icon}
+                                                src={selectedArtifact.image_url}
                                                 alt={selectedArtifact.name}
                                                 width={24}
                                                 height={24}
@@ -340,7 +340,7 @@ export default function CreateBuildPage() {
                                             className="m-2 w-[calc(100%-16px)] bg-e7-void border-e7-gold/30 text-white"
                                             autoFocus
                                         />
-                                        {filteredArtifacts.slice(0, 20).map((artifact) => (
+                                        {filteredArtifacts.map((artifact) => (
                                             <div
                                                 key={artifact.id}
                                                 className="px-4 py-2 hover:bg-e7-gold/20 cursor-pointer text-white flex items-center gap-2"
@@ -351,7 +351,7 @@ export default function CreateBuildPage() {
                                                 }}
                                             >
                                                 <Image
-                                                    src={artifact.icon}
+                                                    src={artifact.image_url}
                                                     alt={artifact.name}
                                                     width={24}
                                                     height={24}

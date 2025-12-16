@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
+import { ImageGallery } from '@/components/ui/image-gallery';
 import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
@@ -377,24 +378,7 @@ export default function BuildDetailPage() {
                         )}
 
                         {/* Images */}
-                        {build.images && build.images.length > 0 && (
-                            <div className="mb-6">
-                                <h3 className="text-e7-gold font-semibold mb-3">{t('builds.screenshots', 'Screenshots')}</h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {build.images.map((img, idx) => (
-                                        <div key={idx} className="relative aspect-video rounded-lg overflow-hidden bg-e7-void">
-                                            <Image
-                                                src={img}
-                                                alt={`Screenshot ${idx + 1}`}
-                                                fill
-                                                className="object-contain"
-                                                unoptimized
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                        <ImageGallery images={build.images || []} title={t('builds.images', 'Images')} />
 
                         {/* Author & Actions */}
                         <div className="flex items-center justify-between pt-4 border-t border-e7-gold/20">
