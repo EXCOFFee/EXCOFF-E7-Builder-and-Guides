@@ -74,6 +74,10 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
     'righteous-thief-roozid': '85% center',
     'roaming-warrior-leo': '85% center',
     'seaside-bellona': '85% center',
+    'specimen-sez': '85% center',
+    'violet': '85% center',
+    'watcher-schuri': '85% center',
+    'zeno': '85% center',
 };
 
 export default function HeroesPage() {
