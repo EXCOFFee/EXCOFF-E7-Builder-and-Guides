@@ -195,6 +195,11 @@ export default function CreateBuildPage() {
                 formData.append('min_stats', JSON.stringify(minStats));
             }
 
+            // Add artifact
+            if (artifactId) {
+                formData.append('artifact_id', artifactId.toString());
+            }
+
             // Add images
             images.forEach((image, index) => {
                 formData.append(`images[${index}]`, image);
