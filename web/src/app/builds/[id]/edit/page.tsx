@@ -73,6 +73,8 @@ export default function EditBuildPage() {
     const [minStats, setMinStats] = useState<Record<string, number>>({
         atk: 0, def: 0, hp: 0, spd: 0, chc: 0, chd: 0, eff: 0, efr: 0
     });
+    const [imageFiles, setImageFiles] = useState<File[]>([]);
+    const [existingImages, setExistingImages] = useState<string[]>([]);
 
     // Check authentication
     useEffect(() => {
@@ -122,19 +124,31 @@ export default function EditBuildPage() {
         }
 
         try {
+            // Use FormData to support image uploads
+            const formData = new FormData();
+            formData.append('_method', 'PUT'); // Laravel method spoofing
+            formData.append('title', title);
+            if (description) formData.append('description', description);
+            if (primarySet) formData.append('primary_set', primarySet);
+            if (secondarySet) formData.append('secondary_set', secondarySet);
+            formData.append('min_stats', JSON.stringify(minStats));
+
+            // Add existing image URLs
+            if (existingImages.length > 0) {
+                formData.append('image_urls', JSON.stringify(existingImages));
+            }
+
+            // Add new image files
+            imageFiles.forEach((file, index) => {
+                formData.append(`images[${index}]`, file);
+            });
+
             const response = await fetch(`${API_URL}/builds/${buildId}`, {
-                method: 'PUT',
+                method: 'POST', // Use POST with _method=PUT for FormData
                 headers: {
-                    'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`,
                 },
-                body: JSON.stringify({
-                    title,
-                    description,
-                    primary_set: primarySet,
-                    secondary_set: secondarySet,
-                    min_stats: minStats,
-                }),
+                body: formData,
             });
 
             if (!response.ok) {
@@ -232,8 +246,8 @@ export default function EditBuildPage() {
                                                 type="button"
                                                 onClick={() => setPrimarySet(set)}
                                                 className={`p-2 rounded-lg border transition-all ${primarySet === set
-                                                        ? 'border-purple-500 bg-purple-500/20'
-                                                        : 'border-e7-gold/20 hover:border-e7-gold/50'
+                                                    ? 'border-purple-500 bg-purple-500/20'
+                                                    : 'border-e7-gold/20 hover:border-e7-gold/50'
                                                     }`}
                                                 title={set}
                                             >
@@ -264,8 +278,8 @@ export default function EditBuildPage() {
                                                 type="button"
                                                 onClick={() => setSecondarySet(set)}
                                                 className={`p-2 rounded-lg border transition-all ${secondarySet === set
-                                                        ? 'border-blue-500 bg-blue-500/20'
-                                                        : 'border-e7-gold/20 hover:border-e7-gold/50'
+                                                    ? 'border-blue-500 bg-blue-500/20'
+                                                    : 'border-e7-gold/20 hover:border-e7-gold/50'
                                                     }`}
                                                 title={set}
                                             >
@@ -313,6 +327,76 @@ export default function EditBuildPage() {
                                         </div>
                                     ))}
                                 </div>
+                            </div>
+
+                            {/* Image Upload */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    Imágenes (opcional, máx. 5)
+                                </label>
+                                <div
+                                    className="border-2 border-dashed border-e7-gold/30 rounded-lg p-4 text-center hover:border-e7-gold/50 transition-colors cursor-pointer mb-3"
+                                    onClick={() => document.getElementById('build-image-upload')?.click()}
+                                >
+                                    <input
+                                        id="build-image-upload"
+                                        type="file"
+                                        accept="image/jpeg,image/png,image/gif,image/webp"
+                                        multiple
+                                        className="hidden"
+                                        onChange={(e) => {
+                                            const files = Array.from(e.target.files || []);
+                                            setImageFiles(prev => [...prev, ...files].slice(0, 5 - existingImages.length));
+                                        }}
+                                    />
+                                    <div className="text-gray-400">
+                                        📷 Click para subir imágenes
+                                    </div>
+                                </div>
+
+                                {/* File previews */}
+                                {imageFiles.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 mb-2">
+                                        {imageFiles.map((file, index) => (
+                                            <div key={`file-${index}`} className="relative">
+                                                <img
+                                                    src={URL.createObjectURL(file)}
+                                                    alt=""
+                                                    className="w-16 h-16 object-cover rounded border border-e7-gold/30"
+                                                />
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setImageFiles(prev => prev.filter((_, i) => i !== index))}
+                                                    className="absolute -top-2 -right-2 w-5 h-5 bg-red-600 text-white rounded-full text-xs flex items-center justify-center hover:bg-red-500"
+                                                >
+                                                    ✕
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+
+                                {/* Existing images */}
+                                {existingImages.length > 0 && (
+                                    <div className="flex flex-wrap gap-2">
+                                        {existingImages.map((url, index) => (
+                                            <div key={`existing-${index}`} className="relative">
+                                                <img
+                                                    src={url}
+                                                    alt=""
+                                                    className="w-16 h-16 object-cover rounded border border-purple-500/50"
+                                                />
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setExistingImages(prev => prev.filter((_, i) => i !== index))}
+                                                    className="absolute -top-2 -right-2 w-5 h-5 bg-red-600 text-white rounded-full text-xs flex items-center justify-center hover:bg-red-500"
+                                                >
+                                                    ✕
+                                                </button>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
 
                             {/* Error message */}

@@ -59,6 +59,7 @@ export default function EditGuidePage() {
     const [content, setContent] = useState('');
     const [videoUrl, setVideoUrl] = useState('');
     const [images, setImages] = useState<string[]>([]);
+    const [imageFiles, setImageFiles] = useState<File[]>([]);
     const [imageUrl, setImageUrl] = useState('');
 
     // Check authentication
@@ -120,21 +121,32 @@ export default function EditGuidePage() {
         }
 
         try {
+            // Use FormData to support file uploads
+            const formData = new FormData();
+            formData.append('_method', 'PUT'); // Laravel method spoofing
+            formData.append('title', title);
+            formData.append('category', category);
+            if (heroId) formData.append('hero_id', heroId.toString());
+            if (description) formData.append('description', description);
+            if (content) formData.append('gameplay_content', content);
+            if (videoUrl) formData.append('video_url', videoUrl);
+
+            // Add existing image URLs
+            if (images.length > 0) {
+                formData.append('image_urls', JSON.stringify(images));
+            }
+
+            // Add new image files
+            imageFiles.forEach((file, index) => {
+                formData.append(`images[${index}]`, file);
+            });
+
             const response = await fetch(`${API_URL}/guides/${slug}`, {
-                method: 'PUT',
+                method: 'POST', // Use POST with _method=PUT for FormData
                 headers: {
-                    'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`,
                 },
-                body: JSON.stringify({
-                    title,
-                    category,
-                    hero_id: heroId,
-                    description,
-                    gameplay_content: content,
-                    video_url: videoUrl || null,
-                    images,
-                }),
+                body: formData,
             });
 
             if (!response.ok) {
@@ -314,20 +326,8 @@ export default function EditGuidePage() {
                                         accept="image/*"
                                         multiple
                                         onChange={(e) => {
-                                            const files = e.target.files;
-                                            if (files) {
-                                                Array.from(files).forEach(file => {
-                                                    if (images.length < 5) {
-                                                        const reader = new FileReader();
-                                                        reader.onloadend = () => {
-                                                            if (reader.result && typeof reader.result === 'string') {
-                                                                setImages(prev => [...prev, reader.result as string]);
-                                                            }
-                                                        };
-                                                        reader.readAsDataURL(file);
-                                                    }
-                                                });
-                                            }
+                                            const files = Array.from(e.target.files || []);
+                                            setImageFiles(prev => [...prev, ...files].slice(0, 5 - images.length));
                                             e.target.value = '';
                                         }}
                                         className="hidden"
@@ -336,12 +336,35 @@ export default function EditGuidePage() {
                                         type="button"
                                         variant="outline"
                                         onClick={() => fileInputRef.current?.click()}
-                                        disabled={images.length >= 5}
+                                        disabled={(images.length + imageFiles.length) >= 5}
                                         className="border-e7-gold/30 w-full"
                                     >
                                         📁 {t('guides.uploadFromDevice', 'Upload from device')}
                                     </Button>
                                 </div>
+
+                                {/* New file previews */}
+                                {imageFiles.length > 0 && (
+                                    <div className="grid grid-cols-3 gap-2 mb-4">
+                                        {imageFiles.map((file, idx) => (
+                                            <div key={`new-${idx}`} className="relative group">
+                                                <img
+                                                    src={URL.createObjectURL(file)}
+                                                    alt=""
+                                                    className="w-full h-24 object-cover rounded border border-green-500/50"
+                                                />
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setImageFiles(prev => prev.filter((_, i) => i !== idx))}
+                                                    className="absolute top-1 right-1 bg-red-500 text-white rounded-full w-5 h-5 text-xs opacity-0 group-hover:opacity-100 transition-opacity"
+                                                >
+                                                    ×
+                                                </button>
+                                                <span className="absolute bottom-1 left-1 text-xs bg-green-600 text-white px-1 rounded">New</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
 
                                 {/* Add Image URL */}
                                 <div className="flex gap-2">
@@ -394,7 +417,7 @@ export default function EditGuidePage() {
                         </CardContent>
                     </Card>
                 </form>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }

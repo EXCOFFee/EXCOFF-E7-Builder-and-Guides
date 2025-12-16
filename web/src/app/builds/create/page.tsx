@@ -184,20 +184,28 @@ export default function CreateBuildPage() {
         });
 
         try {
+            // Use FormData to support image uploads
+            const formData = new FormData();
+            if (heroId) formData.append('hero_id', heroId.toString());
+            formData.append('title', title);
+            if (description) formData.append('description', description);
+            if (primarySet) formData.append('primary_set', primarySet);
+            if (secondarySet) formData.append('secondary_set', secondarySet);
+            if (Object.keys(minStats).length > 0) {
+                formData.append('min_stats', JSON.stringify(minStats));
+            }
+
+            // Add images
+            images.forEach((image, index) => {
+                formData.append(`images[${index}]`, image);
+            });
+
             const response = await fetch(`${API_URL}/builds`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`,
                 },
-                body: JSON.stringify({
-                    hero_id: heroId,
-                    title,
-                    description,
-                    primary_set: primarySet || null,
-                    secondary_set: secondarySet || null,
-                    min_stats: Object.keys(minStats).length > 0 ? minStats : null,
-                }),
+                body: formData,
             });
 
             if (!response.ok) {
