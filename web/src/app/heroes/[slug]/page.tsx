@@ -32,6 +32,17 @@ interface PopularArtifact {
     percentage: number;
 }
 
+interface SelfDevotion {
+    type: string;
+    grades: {
+        B?: number;
+        A?: number;
+        S?: number;
+        SS?: number;
+        SSS?: number;
+    };
+}
+
 interface Hero {
     id: number;
     code: string;
@@ -42,6 +53,7 @@ interface Hero {
     rarity: number;
     base_stats: HeroStats;
     skills: Record<string, unknown>;
+    self_devotion?: SelfDevotion;
     image_url: string;
     popular_sets: PopularSet[];
     popular_artifacts: PopularArtifact[];
@@ -158,6 +170,23 @@ const SET_IMAGES_LOWERCASE: Record<string, string> = {
     resist: '/images/sets/SET_Resist.png',
     torrent: '/images/sets/SET_Torrent.png',
 };
+
+// Memory Imprint type names mapping
+const IMPRINT_TYPES: Record<string, { name: string; color: string }> = {
+    att: { name: 'Attack', color: 'text-red-400' },
+    att_rate: { name: 'Attack%', color: 'text-red-400' },
+    def: { name: 'Defense', color: 'text-blue-400' },
+    def_rate: { name: 'Defense%', color: 'text-blue-400' },
+    max_hp: { name: 'Health', color: 'text-green-400' },
+    max_hp_rate: { name: 'Health%', color: 'text-green-400' },
+    speed: { name: 'Speed', color: 'text-yellow-400' },
+    cri: { name: 'Crit Chance', color: 'text-orange-400' },
+    cri_damage: { name: 'Crit Damage', color: 'text-purple-400' },
+    acc: { name: 'Effectiveness', color: 'text-cyan-400' },
+    res: { name: 'Effect Resistance', color: 'text-pink-400' },
+};
+
+const IMPRINT_GRADES = ['B', 'A', 'S', 'SS', 'SSS'] as const;
 
 // Get artifact image URL from Fribbels/SmileGate
 const getArtifactImageUrl = (artifactCode: string): string => {
@@ -430,6 +459,48 @@ export default function HeroDetailPage() {
                                 <StatItem label="C.Dmg" value={hero.avg_stats.crit_dmg} suffix="%" color="text-purple-400" large />
                                 <StatItem label="EFF" value={hero.avg_stats.eff} suffix="%" color="text-cyan-400" large />
                                 <StatItem label="RES" value={hero.avg_stats.res} suffix="%" color="text-pink-400" large />
+                            </div>
+                        </CardContent>
+                    </Card>
+                )}
+
+                {/* Memory Imprint Section */}
+                {hero.self_devotion && (
+                    <Card className="bg-gradient-to-br from-e7-panel to-e7-void border-e7-gold/30 mb-8">
+                        <CardHeader>
+                            <CardTitle className="text-e7-gold flex items-center gap-2">
+                                <span>💫</span> Memory Imprint
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="space-y-4">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <span className="text-gray-400">Type:</span>
+                                    <Badge className={`${IMPRINT_TYPES[hero.self_devotion.type]?.color || 'text-white'} bg-e7-void border border-e7-gold/30`}>
+                                        {IMPRINT_TYPES[hero.self_devotion.type]?.name || hero.self_devotion.type}
+                                    </Badge>
+                                </div>
+                                <div className="grid grid-cols-5 gap-2">
+                                    {IMPRINT_GRADES.map((grade) => {
+                                        const value = hero.self_devotion?.grades?.[grade];
+                                        const isPercentage = hero.self_devotion?.type?.includes('rate') ||
+                                            ['cri', 'cri_damage', 'acc', 'res'].includes(hero.self_devotion?.type || '');
+
+                                        return (
+                                            <div key={grade} className="text-center p-3 bg-e7-void/50 rounded-lg border border-e7-gold/10">
+                                                <p className="text-e7-gold font-bold text-lg mb-1">{grade}</p>
+                                                <p className={`${IMPRINT_TYPES[hero.self_devotion?.type || '']?.color || 'text-gray-300'} font-semibold`}>
+                                                    {value !== undefined
+                                                        ? isPercentage
+                                                            ? `${(value * 100).toFixed(1)}%`
+                                                            : `+${Math.round(value)}`
+                                                        : '-'
+                                                    }
+                                                </p>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </CardContent>
                     </Card>

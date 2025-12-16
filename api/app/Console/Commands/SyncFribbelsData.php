@@ -187,6 +187,9 @@ class SyncFribbelsData extends Command
         // Extract skills if available
         $skills = $data['skills'] ?? null;
 
+        // Extract self_devotion (Memory Imprint) if available
+        $selfDevotion = $data['self_devotion'] ?? null;
+
         // Get image from assets or fallback
         $imageUrl = $data['assets']['thumbnail']
             ?? $data['assets']['icon']
@@ -201,6 +204,7 @@ class SyncFribbelsData extends Command
             'rarity' => (int) ($data['rarity'] ?? 5),
             'base_stats' => $baseStats,
             'skills' => $skills,
+            'self_devotion' => $selfDevotion,
             'image_url' => $imageUrl,
             'data_hash' => $dataHash,
         ];

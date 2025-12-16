@@ -25,6 +25,7 @@ class Hero extends Model
         'rarity',
         'base_stats',
         'skills',
+        'self_devotion', // Memory Imprint data
         'image_url',
         'data_hash',
         // Usage stats (calculated from community guides)
@@ -38,6 +39,7 @@ class Hero extends Model
     protected $casts = [
         'base_stats' => 'array',
         'skills' => 'array',
+        'self_devotion' => 'array',
         'rarity' => 'integer',
         'popular_sets' => 'array',
         'popular_artifacts' => 'array',
