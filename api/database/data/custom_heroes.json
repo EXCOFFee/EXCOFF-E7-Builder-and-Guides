@@ -8,8 +8,8 @@
         "role": "assassin",
         "zodiac": "scorpion",
         "assets": {
-            "icon": "https://epic7db.com/images/hero/icon/swift-flagbearer-sigret.webp",
-            "thumbnail": "https://epic7db.com/images/hero/full/swift-flagbearer-sigret.webp"
+            "icon": "https://static.smilegatemegaport.com/event/live/epic7/guide/wearelive/images/hero/c5038_s.png",
+            "thumbnail": "https://static.smilegatemegaport.com/event/live/epic7/guide/wearelive/images/hero/c5038_l.png"
         },
         "calculatedStatus": {
             "lv60SixStarFullyAwakened": {
@@ -26,18 +26,35 @@
         "skills": {
             "S1": {
                 "name": "Strike of Flagbearer",
-                "description": "Attacks with a flag. 75% chance to inflict Silence for 1 turn. If target is silenced, decreases CR by 25%."
+                "description": "Attacks with a flag. 75% chance to inflict Silence for 1 turn. If target is silenced, decreases CR by 25%.",
+                "rate": 1.0,
+                "pow": 1.0
             },
             "S2": {
                 "name": "Target Lock",
-                "description": "Dispels all buffs from enemy, 100% chance to inflict Target for 2 turns. All allies attack with basic skill. Increases caster CR by 30%."
+                "description": "Dispels all buffs from enemy, 100% chance to inflict Target for 2 turns. All allies attack with basic skill. Increases caster CR by 30%.",
+                "rate": 0,
+                "pow": 0
             },
             "S3": {
                 "name": "Flag of Victory",
-                "description": "Dispels 2 buffs from all enemies. 100% chance to inflict Fear for 2 turns and decrease CR by 20%. Grants Speed buff to allies for 2 turns."
+                "description": "Dispels 2 buffs from all enemies. 100% chance to inflict Fear for 2 turns and decrease CR by 20%. Grants Speed buff to allies for 2 turns.",
+                "rate": 1.0,
+                "pow": 1.0,
+                "targets": 3
             }
         },
-        "source": "manual",
+        "self_devotion": {
+            "type": "acc",
+            "grades": {
+                "B": 0.09,
+                "A": 0.135,
+                "S": 0.18,
+                "SS": 0.225,
+                "SSS": 0.27
+            }
+        },
+        "source": "epic7db",
         "source_url": "https://epic7db.com/hero/swift-flagbearer-sigret"
     }
 }

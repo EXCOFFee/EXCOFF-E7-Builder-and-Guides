@@ -7,7 +7,7 @@
         "role": "assassin",
         "exclusive": true,
         "skill": {
-            "description": "Increases Evasion by 20%. After an ally uses a basic skill, increases Combat Readiness of the caster by 10%. This effect can only apply to one hero."
+            "description": "Increases Evasion by 20%. After an ally uses a basic skill, increases Combat Readiness of the caster by 10% (100% chance at max). This effect can only apply to one hero."
         },
         "stats": {
             "atk_base": 15,
@@ -15,7 +15,10 @@
             "hp_base": 54,
             "hp_max": 702
         },
-        "source": "manual",
+        "assets": {
+            "icon": "https://static.smilegatemegaport.com/event/live/epic7/guide/wearelive/images/artifact/glorious-flag.png"
+        },
+        "source": "epic7db",
         "source_url": "https://epic7db.com/artifact/glorious-flag"
     }
 }
