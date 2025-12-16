@@ -8,8 +8,8 @@
         "role": "assassin",
         "zodiac": "scorpion",
         "assets": {
-            "icon": "https://static.smilegatemegaport.com/event/live/epic7/guide/wearelive/images/hero/c5038_s.png",
-            "thumbnail": "https://static.smilegatemegaport.com/event/live/epic7/guide/wearelive/images/hero/c5038_l.png"
+            "icon": "https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/data/cachedimages/c5038_s.png",
+            "thumbnail": "https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/data/cachedimages/c5038_l.png"
         },
         "calculatedStatus": {
             "lv60SixStarFullyAwakened": {
@@ -26,22 +26,29 @@
         "skills": {
             "S1": {
                 "name": "Strike of Flagbearer",
-                "description": "Attacks with a flag. 75% chance to inflict Silence for 1 turn. If target is silenced, decreases CR by 25%.",
+                "description": "Attacks the enemy with a flag, with a 75% chance to silence for 1 turn. If the enemy is silenced after the attack, decreases Combat Readiness by 25%.",
                 "rate": 1.0,
-                "pow": 1.0
+                "pow": 1.0,
+                "soulburn": false
             },
             "S2": {
                 "name": "Target Lock",
-                "description": "Dispels all buffs from enemy, 100% chance to inflict Target for 2 turns. All allies attack with basic skill. Increases caster CR by 30%.",
+                "description": "After dispelling all buffs from a single enemy, has a 100% chance to inflict Target for 2 turns, and all allies except the caster attack the enemy with a basic skill. Increases Combat Readiness of the caster by 30%.",
                 "rate": 0,
-                "pow": 0
+                "pow": 0,
+                "cooldown": 4,
+                "soulburn": true,
+                "soulburn_effect": "Ignores Effect Resistance",
+                "soulburn_souls": 10
             },
             "S3": {
                 "name": "Flag of Victory",
-                "description": "Dispels 2 buffs from all enemies. 100% chance to inflict Fear for 2 turns and decrease CR by 20%. Grants Speed buff to allies for 2 turns.",
+                "description": "Dispels two buffs from all enemies before a 100% chance to inflict Fear for 2 turns and decrease Combat Readiness by 20%. Grants increased Speed to all allies for 2 turns. At the start of the first battle, grants increased Evasion to the caster for 2 turns.",
                 "rate": 1.0,
                 "pow": 1.0,
-                "targets": 3
+                "cooldown": 5,
+                "targets": 3,
+                "soulburn": false
             }
         },
         "self_devotion": {

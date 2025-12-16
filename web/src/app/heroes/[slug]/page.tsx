@@ -522,6 +522,10 @@ export default function HeroDetailPage() {
                                     rate?: number;
                                     pow?: number;
                                     targets?: number;
+                                    cooldown?: number;
+                                    soulburn?: boolean;
+                                    soulburn_effect?: string;
+                                    soulburn_souls?: number;
                                     selfHpScaling?: number;
                                     selfAtkScaling?: number;
                                     selfDefScaling?: number;
@@ -534,7 +538,7 @@ export default function HeroDetailPage() {
 
                                 return (
                                     <div key={skillKey} className="bg-e7-void/50 rounded-lg p-4 border border-e7-gold/10">
-                                        <div className="flex items-center gap-3 mb-3">
+                                        <div className="flex items-center gap-3 mb-3 flex-wrap">
                                             <Badge className="bg-e7-gold text-black font-bold px-3">{skillKey}</Badge>
                                             <h3 className="text-white font-semibold">{s.name || `Skill ${skillKey}`}</h3>
                                             {s.targets && (
@@ -542,7 +546,25 @@ export default function HeroDetailPage() {
                                                     {s.targets === 1 ? 'Single Target' : `${s.targets} Targets`}
                                                 </Badge>
                                             )}
+                                            {s.cooldown && (
+                                                <Badge className="bg-blue-600 text-white">
+                                                    {s.cooldown} Turns
+                                                </Badge>
+                                            )}
+                                            {s.soulburn && (
+                                                <Badge className="bg-purple-600 text-white">
+                                                    🔥 {s.soulburn_souls || 10} Souls
+                                                </Badge>
+                                            )}
                                         </div>
+
+                                        {/* Soulburn Effect */}
+                                        {s.soulburn && s.soulburn_effect && (
+                                            <div className="bg-purple-900/30 rounded px-3 py-2 mb-3 text-sm">
+                                                <span className="text-purple-300 font-semibold">Soulburn:</span>{' '}
+                                                <span className="text-purple-200">{s.soulburn_effect}</span>
+                                            </div>
+                                        )}
 
                                         {hasScaling && (
                                             <div className="flex flex-wrap gap-2 mb-3">
@@ -585,7 +607,7 @@ export default function HeroDetailPage() {
                                         )}
 
                                         {s.description && (
-                                            <p className="text-gray-400 text-sm">{s.description}</p>
+                                            <p className="text-gray-300 text-sm leading-relaxed">{s.description}</p>
                                         )}
 
                                         {!hasScaling && !s.description && (
