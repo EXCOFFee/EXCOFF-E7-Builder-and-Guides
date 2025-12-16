@@ -66,6 +66,7 @@ class SyncFribbelsData extends Command
 
         if ($syncHeroes) {
             $this->syncHeroes($force);
+            $this->syncCustomHeroes($force);
         }
 
         if ($syncArtifacts) {
@@ -306,5 +307,49 @@ class SyncFribbelsData extends Command
     private function getArtifactImageUrl(string $code): string
     {
         return "https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/images/artifact/{$code}.png";
+    }
+
+    /**
+     * Sync custom heroes from local JSON file.
+     * Used for heroes not yet available in Fribbels API.
+     */
+    private function syncCustomHeroes(bool $force): void
+    {
+        $customHeroesPath = database_path('data/custom_heroes.json');
+
+        if (!file_exists($customHeroesPath)) {
+            $this->info('📁 No custom heroes file found, skipping...');
+            return;
+        }
+
+        $this->info('📥 Loading custom heroes...');
+
+        try {
+            $customHeroes = json_decode(file_get_contents($customHeroesPath), true);
+
+            if (!$customHeroes) {
+                $this->warn('Custom heroes file is empty or invalid');
+                return;
+            }
+
+            $created = 0;
+            $updated = 0;
+            $skipped = 0;
+
+            foreach ($customHeroes as $heroData) {
+                $result = $this->upsertHero($heroData, $force);
+
+                match ($result) {
+                    'created' => $created++,
+                    'updated' => $updated++,
+                    'skipped' => $skipped++,
+                };
+            }
+
+            $this->info("Custom Heroes: {$created} created, {$updated} updated, {$skipped} skipped");
+
+        } catch (\Exception $e) {
+            $this->error('Error syncing custom heroes: ' . $e->getMessage());
+        }
     }
 }

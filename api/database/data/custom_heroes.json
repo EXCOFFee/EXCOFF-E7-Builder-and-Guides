@@ -1,0 +1,43 @@
+{
+    "swift-flagbearer-sigret": {
+        "code": "c5038",
+        "_id": "swift-flagbearer-sigret",
+        "name": "Swift Flagbearer Sigret",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "assassin",
+        "zodiac": "scorpion",
+        "assets": {
+            "icon": "https://epic7db.com/images/hero/icon/swift-flagbearer-sigret.webp",
+            "thumbnail": "https://epic7db.com/images/hero/full/swift-flagbearer-sigret.webp"
+        },
+        "calculatedStatus": {
+            "lv60SixStarFullyAwakened": {
+                "atk": 1057,
+                "hp": 5542,
+                "def": 532,
+                "spd": 118,
+                "chc": 0.15,
+                "chd": 1.5,
+                "eff": 0.30,
+                "efr": 0
+            }
+        },
+        "skills": {
+            "S1": {
+                "name": "Strike of Flagbearer",
+                "description": "Attacks with a flag. 75% chance to inflict Silence for 1 turn. If target is silenced, decreases CR by 25%."
+            },
+            "S2": {
+                "name": "Target Lock",
+                "description": "Dispels all buffs from enemy, 100% chance to inflict Target for 2 turns. All allies attack with basic skill. Increases caster CR by 30%."
+            },
+            "S3": {
+                "name": "Flag of Victory",
+                "description": "Dispels 2 buffs from all enemies. 100% chance to inflict Fear for 2 turns and decrease CR by 20%. Grants Speed buff to allies for 2 turns."
+            }
+        },
+        "source": "manual",
+        "source_url": "https://epic7db.com/hero/swift-flagbearer-sigret"
+    }
+}
