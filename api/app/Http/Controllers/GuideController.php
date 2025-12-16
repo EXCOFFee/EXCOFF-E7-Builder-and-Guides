@@ -64,12 +64,11 @@ class GuideController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'category' => 'required|in:general,pve,rta,guild_war,arena',
+            'category' => 'required|in:general,pve,rta,guild_war,arena,heroes',
             'hero_id' => 'nullable|exists:heroes,id',
             'description' => 'nullable|string',
             'gameplay_content' => 'required|string',
             'video_url' => 'nullable|url',
-            'images' => 'nullable|array',
             'language' => 'nullable|string|max:5',
         ]);
 
@@ -77,6 +76,19 @@ class GuideController extends Controller
         $validated['user_id'] = $request->user()->id;
         $validated['is_published'] = true;
         $validated['language'] = $validated['language'] ?? 'en';
+
+        // Handle image uploads with absolute URLs
+        $imagePaths = [];
+        $baseUrl = rtrim(config('app.url'), '/');
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                if ($image->isValid()) {
+                    $path = $image->store('guides', 'public');
+                    $imagePaths[] = $baseUrl . '/storage/' . $path;
+                }
+            }
+        }
+        $validated['images'] = $imagePaths;
 
         // Extract video thumbnail if YouTube URL provided
         if (!empty($validated['video_url'])) {
@@ -95,22 +107,49 @@ class GuideController extends Controller
     public function update(Request $request, Guide $guide): JsonResponse
     {
         // Check ownership
-        if ($guide->user_id !== $request->user()->id && !$request->user()->isModerator()) {
+        if ($guide->user_id !== $request->user()->id && !$request->user()->is_admin) {
             return response()->json(['error' => 'Unauthorized'], 403);
         }
 
         $validated = $request->validate([
             'title' => 'sometimes|string|max:255',
-            'category' => 'sometimes|in:general,pve,rta,guild_war,arena',
+            'category' => 'sometimes|in:general,pve,rta,guild_war,arena,heroes',
             'description' => 'nullable|string',
             'gameplay_content' => 'sometimes|string',
             'video_url' => 'nullable|url',
-            'images' => 'nullable|array',
             'is_published' => 'sometimes|boolean',
         ]);
 
         if (isset($validated['title']) && $validated['title'] !== $guide->title) {
             $validated['slug'] = Str::slug($validated['title']) . '-' . Str::random(6);
+        }
+
+        // Handle image uploads
+        $imagePaths = [];
+        $baseUrl = rtrim(config('app.url'), '/');
+        
+        // Handle new file uploads
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                if ($image->isValid()) {
+                    $path = $image->store('guides', 'public');
+                    $imagePaths[] = $baseUrl . '/storage/' . $path;
+                }
+            }
+        }
+        
+        // Add existing image URLs
+        $imageUrls = $request->input('image_urls');
+        if (is_string($imageUrls)) {
+            $imageUrls = json_decode($imageUrls, true) ?? [];
+        }
+        if (!empty($imageUrls) && is_array($imageUrls)) {
+            $imagePaths = array_merge($imagePaths, $imageUrls);
+        }
+        
+        // Limit to 5 and update if any images
+        if (!empty($imagePaths)) {
+            $validated['images'] = array_slice($imagePaths, 0, 5);
         }
 
         if (!empty($validated['video_url']) && $validated['video_url'] !== $guide->video_url) {
@@ -129,7 +168,7 @@ class GuideController extends Controller
     public function destroy(Request $request, Guide $guide): JsonResponse
     {
         // Check ownership
-        if ($guide->user_id !== $request->user()->id && !$request->user()->isModerator()) {
+        if ($guide->user_id !== $request->user()->id && !$request->user()->is_admin) {
             return response()->json(['error' => 'Unauthorized'], 403);
         }
 

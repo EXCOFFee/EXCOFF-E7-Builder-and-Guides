@@ -243,7 +243,7 @@ export default function GuildsPage() {
                                                     key={tag}
                                                     className="px-2 py-0.5 text-xs bg-purple-500/20 text-purple-300 rounded"
                                                 >
-                                                    {tag}
+                                                    {t(`guilds.tags.${tag}`, tag.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()))}
                                                 </span>
                                             ))}
                                         </div>

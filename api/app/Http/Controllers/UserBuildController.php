@@ -103,7 +103,7 @@ class UserBuildController extends Controller
             'hero_id' => 'required|exists:heroes,id',
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
-            'min_stats' => 'nullable|array',
+            'min_stats' => 'nullable',
             'primary_set' => 'nullable|string|max:50',
             'secondary_set' => 'nullable|string|max:50',
             'artifact_id' => 'nullable|exists:artifacts,id',
@@ -115,15 +115,21 @@ class UserBuildController extends Controller
             'is_anonymous' => 'nullable|boolean',
         ]);
 
+        // Parse min_stats if JSON string
+        if (isset($validated['min_stats']) && is_string($validated['min_stats'])) {
+            $validated['min_stats'] = json_decode($validated['min_stats'], true);
+        }
+
         $validated['language'] = $validated['language'] ?? 'en';
         $validated['is_anonymous'] = $validated['is_anonymous'] ?? false;
 
-        // Handle image uploads
+        // Handle image uploads with absolute URLs
         $imagePaths = [];
+        $baseUrl = rtrim(config('app.url'), '/');
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
                 $path = $image->store('builds', 'public');
-                $imagePaths[] = '/storage/' . $path;
+                $imagePaths[] = $baseUrl . '/storage/' . $path;
             }
         }
         $validated['images'] = $imagePaths;
@@ -139,22 +145,56 @@ class UserBuildController extends Controller
     public function update(Request $request, UserBuild $build): JsonResponse
     {
         // Check ownership
-        if ($build->user_id !== $request->user()->id && !$request->user()->isModerator()) {
+        if ($build->user_id !== $request->user()->id && !$request->user()->is_admin) {
             return response()->json(['error' => 'Unauthorized'], 403);
+        }
+
+        // Parse min_stats if JSON string
+        $minStats = $request->input('min_stats');
+        if (is_string($minStats)) {
+            $minStats = json_decode($minStats, true);
         }
 
         $validated = $request->validate([
             'title' => 'sometimes|string|max:255',
             'description' => 'nullable|string',
-            'min_stats' => 'nullable|array',
             'primary_set' => 'nullable|string|max:50',
             'secondary_set' => 'nullable|string|max:50',
             'artifact_id' => 'nullable|exists:artifacts,id',
             'synergy_heroes' => 'nullable|array',
             'counter_heroes' => 'nullable|array',
-            'images' => 'nullable|array',
             'status' => 'sometimes|in:draft,published,archived',
         ]);
+
+        // Handle image uploads
+        $imagePaths = [];
+        $baseUrl = rtrim(config('app.url'), '/');
+        
+        // Handle new file uploads
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('builds', 'public');
+                $imagePaths[] = $baseUrl . '/storage/' . $path;
+            }
+        }
+        
+        // Add existing image URLs
+        $imageUrls = $request->input('image_urls');
+        if (is_string($imageUrls)) {
+            $imageUrls = json_decode($imageUrls, true) ?? [];
+        }
+        if (!empty($imageUrls) && is_array($imageUrls)) {
+            $imagePaths = array_merge($imagePaths, $imageUrls);
+        }
+        
+        // Limit to 5 and update if any images
+        if (!empty($imagePaths)) {
+            $validated['images'] = array_slice($imagePaths, 0, 5);
+        }
+        
+        if ($minStats !== null) {
+            $validated['min_stats'] = $minStats;
+        }
 
         $build->update($validated);
 
@@ -167,7 +207,7 @@ class UserBuildController extends Controller
     public function destroy(Request $request, UserBuild $build): JsonResponse
     {
         // Check ownership
-        if ($build->user_id !== $request->user()->id && !$request->user()->isModerator()) {
+        if ($build->user_id !== $request->user()->id && !$request->user()->is_admin) {
             return response()->json(['error' => 'Unauthorized'], 403);
         }
 
