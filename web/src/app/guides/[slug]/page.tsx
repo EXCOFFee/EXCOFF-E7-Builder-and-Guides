@@ -193,7 +193,7 @@ export default function GuideDetailPage() {
         mutationFn: async () => {
             const token = localStorage.getItem('auth_token');
             if (!token) {
-                throw new Error('You must be logged in to delete');
+                throw new Error('Debes iniciar sesión para eliminar');
             }
             const response = await fetch(`${API_URL}/guides/${slug}`, {
                 method: 'DELETE',
@@ -204,16 +204,21 @@ export default function GuideDetailPage() {
                 },
             });
             if (!response.ok) {
-                const errorData = await response.json().catch(() => ({}));
-                throw new Error(errorData.message || errorData.error || `Error: ${response.status}`);
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.message || errorData.error || `Error: ${response.status}`);
+                } else {
+                    throw new Error(`Error del servidor (${response.status}). Por favor intenta de nuevo.`);
+                }
             }
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['guides'] });
-            router.push('/guides');
+            window.location.href = '/guides';
         },
         onError: (error: Error) => {
-            alert(`Error deleting: ${error.message}`);
+            alert(`Error al eliminar: ${error.message}`);
         },
     });
 

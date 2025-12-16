@@ -110,7 +110,7 @@ export default function GuildPostDetailPage() {
         mutationFn: async () => {
             const token = localStorage.getItem('auth_token');
             if (!token) {
-                throw new Error('You must be logged in to delete');
+                throw new Error('Debes iniciar sesión para eliminar');
             }
             const response = await fetch(`${API_URL}/guilds/${slug}`, {
                 method: 'DELETE',
@@ -121,16 +121,21 @@ export default function GuildPostDetailPage() {
                 },
             });
             if (!response.ok) {
-                const errorData = await response.json().catch(() => ({}));
-                throw new Error(errorData.message || errorData.error?.message || `Error: ${response.status}`);
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.message || errorData.error?.message || `Error: ${response.status}`);
+                } else {
+                    throw new Error(`Error del servidor (${response.status}). Por favor intenta de nuevo.`);
+                }
             }
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['guilds'] });
-            router.push('/guilds');
+            window.location.href = '/guilds';
         },
         onError: (error: Error) => {
-            alert(`Error deleting: ${error.message}`);
+            alert(`Error al eliminar: ${error.message}`);
         },
     });
 
