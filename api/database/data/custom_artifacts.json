@@ -1,0 +1,21 @@
+{
+    "glorious-flag": {
+        "code": "a0151",
+        "_id": "glorious-flag",
+        "name": "Glorious Flag",
+        "rarity": 5,
+        "role": "assassin",
+        "exclusive": true,
+        "skill": {
+            "description": "Increases Evasion by 20%. After an ally uses a basic skill, increases Combat Readiness of the caster by 10%. This effect can only apply to one hero."
+        },
+        "stats": {
+            "atk_base": 15,
+            "atk_max": 195,
+            "hp_base": 54,
+            "hp_max": 702
+        },
+        "source": "manual",
+        "source_url": "https://epic7db.com/artifact/glorious-flag"
+    }
+}

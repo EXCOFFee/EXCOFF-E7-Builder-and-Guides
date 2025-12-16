@@ -71,6 +71,7 @@ class SyncFribbelsData extends Command
 
         if ($syncArtifacts) {
             $this->syncArtifacts($force);
+            $this->syncCustomArtifacts();
         }
 
         $this->newLine();
@@ -350,6 +351,67 @@ class SyncFribbelsData extends Command
 
         } catch (\Exception $e) {
             $this->error('Error syncing custom heroes: ' . $e->getMessage());
+        }
+    }
+
+    /**
+     * Sync custom artifacts from local JSON file.
+     * Used for artifacts not yet available in Fribbels API.
+     */
+    private function syncCustomArtifacts(): void
+    {
+        $customArtifactsPath = database_path('data/custom_artifacts.json');
+
+        if (!file_exists($customArtifactsPath)) {
+            $this->info('📁 No custom artifacts file found, skipping...');
+            return;
+        }
+
+        $this->info('📥 Loading custom artifacts...');
+
+        try {
+            $customArtifacts = json_decode(file_get_contents($customArtifactsPath), true);
+
+            if (!$customArtifacts) {
+                $this->warn('Custom artifacts file is empty or invalid');
+                return;
+            }
+
+            $created = 0;
+            $updated = 0;
+
+            foreach ($customArtifacts as $artifactData) {
+                $code = $artifactData['code'] ?? $artifactData['_id'] ?? null;
+                if (!$code) continue;
+
+                $artifactClass = strtolower($artifactData['role'] ?? 'warrior');
+                $artifactClass = self::CLASS_MAP[$artifactClass] ?? 'warrior';
+
+                $data = [
+                    'code' => $code,
+                    'name' => $artifactData['name'] ?? 'Unknown',
+                    'slug' => Str::slug($artifactData['name'] ?? $code),
+                    'class' => $artifactClass,
+                    'rarity' => (int) ($artifactData['rarity'] ?? 5),
+                    'description' => $artifactData['skill']['description'] ?? null,
+                    'image_url' => $artifactData['image_url'] ?? "https://epic7db.com/images/artifact/icon/{$artifactData['_id']}.webp",
+                ];
+
+                $existing = Artifact::where('code', $code)->first();
+
+                if ($existing) {
+                    $existing->update($data);
+                    $updated++;
+                } else {
+                    Artifact::create($data);
+                    $created++;
+                }
+            }
+
+            $this->info("Custom Artifacts: {$created} created, {$updated} updated");
+
+        } catch (\Exception $e) {
+            $this->error('Error syncing custom artifacts: ' . $e->getMessage());
         }
     }
 }
