@@ -58,12 +58,13 @@ const CLASS_NAMES: Record<string, string> = {
 };
 
 // Hero portraits that need custom positioning (faces cut off with center)
+// Values: CSS object-position (e.g., "30% center" moves image slightly left)
 const HERO_POSITION_OVERRIDE: Record<string, string> = {
-    'apocalypse-ravi': 'object-left',
-    'assassin-cidd': 'object-left',
-    'bask': 'object-left',
-    'chaos-sect-axe': 'object-left',
-    'chaos-inquisitor': 'object-left',
+    'apocalypse-ravi': '30% center',
+    'assassin-cidd': '30% center',
+    'bask': '30% center',
+    'chaos-sect-axe': '30% center',
+    'chaos-inquisitor': '30% center',
 };
 
 export default function HeroesPage() {
@@ -190,7 +191,8 @@ export default function HeroesPage() {
                                                         alt={hero.name}
                                                         width={200}
                                                         height={200}
-                                                        className={`w-full h-full object-cover ${HERO_POSITION_OVERRIDE[hero.slug] || ''}`}
+                                                        className="w-full h-full object-cover"
+                                                        style={HERO_POSITION_OVERRIDE[hero.slug] ? { objectPosition: HERO_POSITION_OVERRIDE[hero.slug] } : undefined}
                                                         unoptimized
                                                     />
                                                 ) : (
