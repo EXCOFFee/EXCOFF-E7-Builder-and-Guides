@@ -109,28 +109,15 @@ export default function GuildPostDetailPage() {
     const deleteMutation = useMutation({
         mutationFn: async () => {
             const token = localStorage.getItem('auth_token');
-            if (!token) {
-                throw new Error('You must be logged in to delete');
-            }
             const response = await fetch(`${API_URL}/guilds/${slug}`, {
                 method: 'DELETE',
-                headers: {
-                    'Authorization': `Bearer ${token}`,
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json',
-                },
+                headers: { 'Authorization': `Bearer ${token}` },
             });
-            if (!response.ok) {
-                const errorData = await response.json().catch(() => ({}));
-                throw new Error(errorData.message || errorData.error?.message || `Error: ${response.status}`);
-            }
+            if (!response.ok) throw new Error('Failed to delete');
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['guilds'] });
             router.push('/guilds');
-        },
-        onError: (error: Error) => {
-            alert(`Error deleting: ${error.message}`);
         },
     });
 
