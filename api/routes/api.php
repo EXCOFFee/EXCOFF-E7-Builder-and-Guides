@@ -77,6 +77,13 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::middleware('admin')->group(function () {
         Route::get('/admin/reports', [ReportController::class, 'index']);
         Route::put('/admin/reports/{report}', [ReportController::class, 'update']);
+        
+        // Data sync routes
+        Route::post('/admin/sync', [\App\Http\Controllers\Api\AdminController::class, 'syncAll']);
+        Route::post('/admin/sync/heroes', [\App\Http\Controllers\Api\AdminController::class, 'syncHeroesEndpoint']);
+        Route::post('/admin/sync/artifacts', [\App\Http\Controllers\Api\AdminController::class, 'syncArtifactsEndpoint']);
+        Route::get('/admin/sync/status', [\App\Http\Controllers\Api\AdminController::class, 'status']);
+        Route::get('/admin/sync/check-new', [\App\Http\Controllers\Api\AdminController::class, 'checkNewHeroes']);
     });
 });
 
