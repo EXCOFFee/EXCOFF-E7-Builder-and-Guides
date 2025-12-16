@@ -57,6 +57,15 @@ const CLASS_NAMES: Record<string, string> = {
     soul_weaver: 'Soul Weaver',
 };
 
+// Hero portraits that need custom positioning (faces cut off with center)
+const HERO_POSITION_OVERRIDE: Record<string, string> = {
+    'apocalypse-ravi': 'object-left',
+    'assassin-cidd': 'object-left',
+    'bask': 'object-left',
+    'chaos-sect-axe': 'object-left',
+    'chaos-inquisitor': 'object-left',
+};
+
 export default function HeroesPage() {
     const { t } = useTranslations();
     const [search, setSearch] = useState('');
@@ -181,7 +190,7 @@ export default function HeroesPage() {
                                                         alt={hero.name}
                                                         width={200}
                                                         height={200}
-                                                        className="w-full h-full object-cover"
+                                                        className={`w-full h-full object-cover ${HERO_POSITION_OVERRIDE[hero.slug] || ''}`}
                                                         unoptimized
                                                     />
                                                 ) : (

@@ -85,6 +85,15 @@ const CLASS_NAMES: Record<string, string> = {
     soul_weaver: 'Soul Weaver',
 };
 
+// Hero portraits that need custom positioning (faces cut off with center)
+const HERO_POSITION_OVERRIDE: Record<string, string> = {
+    'apocalypse-ravi': 'object-left',
+    'assassin-cidd': 'object-left',
+    'bask': 'object-left',
+    'chaos-sect-axe': 'object-left',
+    'chaos-inquisitor': 'object-left',
+};
+
 interface Build {
     id: number;
     title: string;
