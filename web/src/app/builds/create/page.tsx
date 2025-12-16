@@ -214,17 +214,23 @@ export default function CreateBuildPage() {
             });
 
             if (!response.ok) {
-                const data = await response.json();
-                throw new Error(data.message || 'Error al crear la build');
+                // Check if response is JSON before parsing
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const data = await response.json();
+                    throw new Error(data.message || 'Error al crear la build');
+                } else {
+                    // Server returned HTML error page
+                    throw new Error(`Error del servidor (${response.status}). Por favor intenta de nuevo.`);
+                }
             }
 
-            const build = await response.json();
-            // Redirect to hero page
+            // Use window.location for full page refresh to ensure data is reloaded
             const selectedHero = heroes.find(h => h.id === heroId);
             if (selectedHero) {
-                router.push(`/heroes/${selectedHero.slug}`);
+                window.location.href = `/heroes/${selectedHero.slug}`;
             } else {
-                router.push('/heroes');
+                window.location.href = '/heroes';
             }
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Error desconocido');

@@ -146,12 +146,19 @@ export default function CreateGuildPostPage() {
             });
 
             if (!response.ok) {
-                const data = await response.json();
-                throw new Error(data.error?.message || t('guilds.createError', 'Error creating post'));
+                // Check if response is JSON before parsing
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const data = await response.json();
+                    throw new Error(data.error?.message || t('guilds.createError', 'Error creating post'));
+                } else {
+                    throw new Error(`Error del servidor (${response.status}). Por favor intenta de nuevo.`);
+                }
             }
 
             const result = await response.json();
-            router.push(`/guilds/${result.data.slug}`);
+            // Use window.location for full page refresh
+            window.location.href = `/guilds/${result.data.slug}`;
         } catch (err) {
             setError(err instanceof Error ? err.message : t('common.unknownError', 'Unknown error'));
         } finally {

@@ -113,12 +113,19 @@ export default function CreateGuidePage() {
             });
 
             if (!response.ok) {
-                const data = await response.json();
-                throw new Error(data.message || 'Error al crear la guía');
+                // Check if response is JSON before parsing
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const data = await response.json();
+                    throw new Error(data.message || 'Error al crear la guía');
+                } else {
+                    throw new Error(`Error del servidor (${response.status}). Por favor intenta de nuevo.`);
+                }
             }
 
             const guide = await response.json();
-            router.push(`/guides/${guide.slug}`);
+            // Use window.location for full page refresh
+            window.location.href = `/guides/${guide.slug}`;
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Error desconocido');
         } finally {
