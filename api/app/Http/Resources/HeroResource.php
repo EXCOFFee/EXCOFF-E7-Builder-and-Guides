@@ -26,6 +26,7 @@ class HeroResource extends JsonResource
         return [
             'id' => $this->id,
             'code' => $this->code,
+            'hero_code' => $this->hero_code, // Numeric code for skill icons
             'name' => $this->name, // Always include English name
             'display_name' => $localizedName, // Localized name for display
             'name_ko' => $this->name_ko,
@@ -37,6 +38,7 @@ class HeroResource extends JsonResource
             'rarity' => $this->rarity,
             'base_stats' => $this->base_stats,
             'skills' => $this->skills,
+            'self_devotion' => $this->self_devotion,
             'image_url' => $this->image_url,
             // Usage statistics (from community guides)
             'popular_sets' => $this->popular_sets,
