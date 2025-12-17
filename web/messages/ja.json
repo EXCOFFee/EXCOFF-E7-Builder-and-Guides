@@ -122,7 +122,9 @@
             "rta": "RTA",
             "guild_war": "ギルド戦",
             "arena": "アリーナ",
-            "heroes": "ヒーロー"
+            "heroes": "ヒーロー",
+            "tier_list": "ティアリスト",
+            "character_guide": "キャラガイド"
         },
         "createGuide": "ガイド作成",
         "noGuides": "まだガイドがありません。",

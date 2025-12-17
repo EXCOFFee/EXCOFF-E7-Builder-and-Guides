@@ -124,7 +124,9 @@
             "rta": "RTA",
             "guild_war": "Guild War",
             "arena": "Arena",
-            "heroes": "Heroes"
+            "heroes": "Heroes",
+            "tier_list": "Tier List",
+            "character_guide": "Character Guide"
         },
         "createGuide": "Create Guide",
         "noGuides": "No guides available yet.",

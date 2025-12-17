@@ -122,7 +122,9 @@
             "rta": "RTA",
             "guild_war": "Guerra de Guilda",
             "arena": "Arena",
-            "heroes": "Heróis"
+            "heroes": "Heróis",
+            "tier_list": "Tier List",
+            "character_guide": "Guia de Personagem"
         },
         "createGuide": "Criar Guia",
         "noGuides": "Ainda não há guias.",

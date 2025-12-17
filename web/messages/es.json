@@ -115,7 +115,9 @@
             "rta": "RTA",
             "guild_war": "Guerra de Gremios",
             "arena": "Arena",
-            "heroes": "Héroes"
+            "heroes": "Héroes",
+            "tier_list": "Tier List",
+            "character_guide": "Guía de Personaje"
         },
         "createGuide": "Crear Guía",
         "noGuides": "No hay guías disponibles todavía.",

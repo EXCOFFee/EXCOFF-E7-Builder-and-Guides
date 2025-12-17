@@ -19,6 +19,8 @@ const CATEGORIES = [
     { id: 'guild_war', label: 'Guild War', emoji: '🏰', key: 'guild_war' },
     { id: 'arena', label: 'Arena', emoji: '🏆', key: 'arena' },
     { id: 'heroes', label: 'Heroes', emoji: '🧙', key: 'heroes' },
+    { id: 'tier_list', label: 'Tier List', emoji: '📊', key: 'tier_list' },
+    { id: 'character_guide', label: 'Character Guide', emoji: '📋', key: 'character_guide' },
 ];
 
 interface Hero {

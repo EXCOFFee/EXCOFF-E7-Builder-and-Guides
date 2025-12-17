@@ -35,6 +35,8 @@ const CATEGORY_COLORS: Record<string, string> = {
     rta: 'bg-red-600',
     guild_war: 'bg-blue-600',
     arena: 'bg-purple-600',
+    tier_list: 'bg-yellow-600',
+    character_guide: 'bg-teal-600',
 };
 
 export default function GuidesPage() {
@@ -49,6 +51,8 @@ export default function GuidesPage() {
         { id: 'rta', label: 'RTA', emoji: '⚔️' },
         { id: 'guild_war', label: t('guides.guildWar', 'Guild War'), emoji: '🏰' },
         { id: 'arena', label: t('guides.arena', 'Arena'), emoji: '🏆' },
+        { id: 'tier_list', label: t('guides.categories.tier_list', 'Tier List'), emoji: '📊' },
+        { id: 'character_guide', label: t('guides.categories.character_guide', 'Character Guide'), emoji: '🧙' },
     ];
 
     const { data, isLoading, error } = useQuery({

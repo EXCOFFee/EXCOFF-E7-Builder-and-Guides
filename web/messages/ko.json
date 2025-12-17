@@ -122,7 +122,9 @@
             "rta": "RTA",
             "guild_war": "길드전",
             "arena": "아레나",
-            "heroes": "영웅"
+            "heroes": "영웅",
+            "tier_list": "티어 리스트",
+            "character_guide": "캐릭터 가이드"
         },
         "createGuide": "가이드 만들기",
         "noGuides": "아직 가이드가 없습니다.",

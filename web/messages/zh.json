@@ -122,7 +122,9 @@
             "rta": "RTA",
             "guild_war": "公会战",
             "arena": "竞技场",
-            "heroes": "英雄"
+            "heroes": "英雄",
+            "tier_list": "强度榜",
+            "character_guide": "角色攻略"
         },
         "createGuide": "创建攻略",
         "noGuides": "暂无攻略。",
