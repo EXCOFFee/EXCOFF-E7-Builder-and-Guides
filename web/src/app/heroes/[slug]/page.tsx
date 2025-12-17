@@ -202,9 +202,9 @@ const StatItem = ({ label, value, suffix = '', color = 'text-gray-300', large = 
     color?: string;
     large?: boolean;
 }) => (
-    <div className={`text-center p-2 bg-e7-void/50 rounded-lg border border-e7-gold/10 ${large ? 'py-3' : ''}`}>
-        <p className="text-gray-500 text-xs mb-1">{label}</p>
-        <p className={`${color} font-bold ${large ? 'text-lg' : 'text-sm'}`}>
+    <div className={`text-center p-3 bg-e7-void/50 rounded-lg border border-e7-gold/10 ${large ? 'py-4' : ''}`}>
+        <p className="text-gray-500 text-sm mb-1">{label}</p>
+        <p className={`${color} font-bold ${large ? 'text-xl' : 'text-lg'}`}>
             {value?.toLocaleString() || '0'}{suffix}
         </p>
     </div>
@@ -484,9 +484,9 @@ export default function HeroDetailPage() {
                         </CardHeader>
                         <CardContent>
                             <div className="space-y-4">
-                                <div className="flex items-center gap-3 mb-4">
-                                    <span className="text-gray-400">Type:</span>
-                                    <Badge className={`${IMPRINT_TYPES[hero.self_devotion.type]?.color || 'text-white'} bg-e7-void border border-e7-gold/30`}>
+                                <div className="flex items-center gap-4 mb-6">
+                                    <span className="text-gray-400 text-lg">Type:</span>
+                                    <Badge className={`${IMPRINT_TYPES[hero.self_devotion.type]?.color || 'text-white'} bg-e7-void border border-e7-gold/30 text-base px-4 py-2`}>
                                         {IMPRINT_TYPES[hero.self_devotion.type]?.name || hero.self_devotion.type}
                                     </Badge>
                                 </div>
@@ -497,17 +497,18 @@ export default function HeroDetailPage() {
                                             ['cri', 'cri_damage', 'acc', 'res'].includes(hero.self_devotion?.type || '');
 
                                         return (
-                                            <div key={grade} className="text-center p-3 bg-e7-void/50 rounded-lg border border-e7-gold/10">
-                                                <div className="flex justify-center mb-2">
+                                            <div key={grade} className="text-center p-4 bg-e7-void/50 rounded-lg border border-e7-gold/10">
+                                                <div className="flex justify-center items-center h-12 mb-3">
                                                     <Image
                                                         src={`${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/imprints/hero_dedi_a_${grade.toLowerCase()}.png`}
                                                         alt={grade}
-                                                        width={32}
-                                                        height={32}
+                                                        width={40}
+                                                        height={40}
+                                                        className="object-contain"
                                                         unoptimized
                                                     />
                                                 </div>
-                                                <p className={`${IMPRINT_TYPES[hero.self_devotion?.type || '']?.color || 'text-gray-300'} font-semibold`}>
+                                                <p className={`${IMPRINT_TYPES[hero.self_devotion?.type || '']?.color || 'text-gray-300'} font-bold text-lg`}>
                                                     {value !== undefined
                                                         ? isPercentage
                                                             ? `${(value * 100).toFixed(1)}%`
