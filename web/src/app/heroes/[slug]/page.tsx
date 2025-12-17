@@ -331,7 +331,7 @@ export default function HeroDetailPage() {
                                 </Badge>
                                 {hasUsageStats && (
                                     <Badge className="glass-panel text-e7-gold border border-e7-gold/30 px-4 py-2">
-                                        📊 {hero.guides_count.toLocaleString()} builds
+                                        {hero.guides_count.toLocaleString()} builds
                                     </Badge>
                                 )}
                             </div>
@@ -350,7 +350,7 @@ export default function HeroDetailPage() {
                         <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
                             <CardHeader className="pb-2 border-b border-e7-gold/10">
                                 <CardTitle className="text-e7-gold text-lg flex items-center gap-2">
-                                    <span>📈</span> Base Stats (Lv.60 Fully Awakened)
+                                    <span>Base Stats (Lv.60 Fully Awakened)</span>
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="pt-4">
@@ -416,7 +416,7 @@ export default function HeroDetailPage() {
                         <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
                             <CardHeader className="border-b border-e7-gold/10">
                                 <CardTitle className="text-e7-gold flex items-center gap-2">
-                                    <span>💎</span> Popular Artifacts
+                                    <span>Popular Artifacts</span>
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="space-y-3 pt-4">
@@ -453,7 +453,7 @@ export default function HeroDetailPage() {
                     <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-8">
                         <CardHeader className="border-b border-e7-gold/10">
                             <CardTitle className="text-e7-gold flex items-center gap-2">
-                                <span>🎯</span> Average Build Stats
+                                <span>Average Build Stats</span>
                                 <span className="text-slate-500 text-sm font-normal ml-2">
                                     (from {hero.guides_count.toLocaleString()} builds)
                                 </span>
@@ -479,7 +479,7 @@ export default function HeroDetailPage() {
                     <Card className="bg-gradient-to-br from-e7-panel to-e7-void border-e7-gold/30 mb-8">
                         <CardHeader>
                             <CardTitle className="text-e7-gold flex items-center gap-2">
-                                <span>💫</span> Memory Imprint
+                                <span>Memory Imprint</span>
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
@@ -521,7 +521,7 @@ export default function HeroDetailPage() {
                     <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
                         <CardHeader className="border-b border-e7-gold/10">
                             <CardTitle className="text-e7-gold flex items-center gap-2">
-                                <span>⚡</span> Skills & Damage Scaling
+                                <span>Skills & Damage Scaling</span>
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4 pt-4">
@@ -556,7 +556,7 @@ export default function HeroDetailPage() {
                                                     alt={`${skillKey} icon`}
                                                     width={56}
                                                     height={56}
-                                                    className="rounded-lg border border-e7-gold/30"
+                                                    className="rounded-lg"
                                                     unoptimized
                                                     onError={(e) => {
                                                         (e.target as HTMLImageElement).style.display = 'none';
@@ -577,7 +577,7 @@ export default function HeroDetailPage() {
                                             )}
                                             {s.soulburn && (
                                                 <Badge className="bg-purple-600 text-white">
-                                                    🔥 {s.soulburn_souls || 10} Souls
+                                                    {s.soulburn_souls || 10} Souls
                                                 </Badge>
                                             )}
                                         </div>
@@ -656,7 +656,7 @@ export default function HeroDetailPage() {
                     <CardHeader className="border-b border-e7-gold/10">
                         <div className="flex justify-between items-center">
                             <CardTitle className="text-e7-gold flex items-center gap-2">
-                                <span>⚙️</span> Builds de la Comunidad
+                                <span>Builds de la Comunidad</span>
                             </CardTitle>
                             <Link href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}>
                                 <button className="btn-gold px-4 py-1.5 text-sm rounded-lg shadow-lg shadow-e7-gold/10 hover:shadow-e7-gold/30 transition-all">
