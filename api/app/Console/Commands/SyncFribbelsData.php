@@ -131,11 +131,14 @@ class SyncFribbelsData extends Command
      */
     private function upsertHero(array $data, bool $force): string
     {
-        // Get the hero code - prefer 'code' field for datamined heroes, fallback to '_id'
-        $code = $data['code'] ?? $data['_id'] ?? $data['id'] ?? null;
+        // Use _id for DB lookup (maintains compatibility with existing records)
+        $code = $data['_id'] ?? $data['id'] ?? null;
         if (!$code) {
             return 'skipped';
         }
+        
+        // For image URL, prefer the actual hero code (e.g., 'c5072') over the slug
+        $imageCode = $data['code'] ?? $code;
 
         // Calculate hash for change detection
         $dataHash = hash('sha256', json_encode($data));
@@ -191,10 +194,10 @@ class SyncFribbelsData extends Command
         // Extract self_devotion (Memory Imprint) if available
         $selfDevotion = $data['self_devotion'] ?? null;
 
-        // Get image from assets or fallback
+        // Get image from assets or fallback - use imageCode for local images
         $imageUrl = $data['assets']['thumbnail']
             ?? $data['assets']['icon']
-            ?? $this->getHeroImageUrl($code);
+            ?? $this->getHeroImageUrl($imageCode);
 
         $heroData = [
             'code' => $code,
