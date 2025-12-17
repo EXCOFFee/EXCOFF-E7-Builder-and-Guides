@@ -70,7 +70,7 @@ interface Build {
     artifact: {
         id: number;
         name: string;
-        icon: string;
+        image_url: string;
     } | null;
     created_at: string;
 }
@@ -363,7 +363,7 @@ export default function BuildDetailPage() {
                         {build.artifact && (
                             <div className="flex items-center gap-3 mb-4 p-3 bg-e7-void/50 rounded-lg">
                                 <Image
-                                    src={build.artifact.icon}
+                                    src={build.artifact.image_url}
                                     alt={build.artifact.name}
                                     width={40}
                                     height={40}
