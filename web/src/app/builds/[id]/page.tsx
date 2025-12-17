@@ -431,7 +431,7 @@ export default function BuildDetailPage() {
                                     onClick={() => likeMutation.mutate()}
                                     disabled={likeMutation.isPending || !currentUser}
                                 >
-                                    <Image src="/images/GenesisRas.png" alt="like" width={24} height={24} className="inline-block" unoptimized />
+                                    <Image src="/images/ras-like.gif" alt="like" width={24} height={24} className="inline-block" unoptimized />
                                     {build.likes}
                                 </Button>
 
