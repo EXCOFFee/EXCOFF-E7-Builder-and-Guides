@@ -554,9 +554,9 @@ export default function HeroDetailPage() {
                                                 <Image
                                                     src={`${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/skills/sk_${hero.hero_code}_${skillKey.replace('S', '')}.png`}
                                                     alt={`${skillKey} icon`}
-                                                    width={40}
-                                                    height={40}
-                                                    className="rounded-md border border-e7-gold/30"
+                                                    width={56}
+                                                    height={56}
+                                                    className="rounded-lg border border-e7-gold/30"
                                                     unoptimized
                                                     onError={(e) => {
                                                         (e.target as HTMLImageElement).style.display = 'none';
