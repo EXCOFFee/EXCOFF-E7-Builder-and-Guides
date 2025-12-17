@@ -551,7 +551,7 @@ export default function HeroDetailPage() {
                                             {/* Skill Icon from datamine */}
                                             {hero.code && (
                                                 <Image
-                                                    src={`${process.env.NEXT_PUBLIC_API_URL}/images/skills/sk_${hero.code}_${skillKey.replace('S', '')}.png`}
+                                                    src={`${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/skills/sk_${hero.code}_${skillKey.replace('S', '')}.png`}
                                                     alt={`${skillKey} icon`}
                                                     width={40}
                                                     height={40}
