@@ -300,10 +300,14 @@ class SyncFribbelsData extends Command
 
     /**
      * Get hero portrait image URL.
+     * Uses local datamined images from DBE7/face folder.
+     * Images should be copied to public/images/heroes/ on the server.
      */
     private function getHeroImageUrl(string $code): string
     {
-        return "https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/images/hero/{$code}_portrait.png";
+        // Use app URL + local path for datamined images
+        $baseUrl = config('app.url');
+        return "{$baseUrl}/images/heroes/{$code}_l.png";
     }
 
     /**

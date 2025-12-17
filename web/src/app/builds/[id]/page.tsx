@@ -271,19 +271,19 @@ export default function BuildDetailPage() {
 
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-e7-void flex items-center justify-center">
-                <div className="text-gray-400">{t('common.loading', 'Loading...')}</div>
+            <div className="min-h-screen bg-void-glow flex items-center justify-center">
+                <div className="text-slate-400">{t('common.loading', 'Loading...')}</div>
             </div>
         );
     }
 
     if (error || !build) {
         return (
-            <div className="min-h-screen bg-e7-void flex items-center justify-center">
+            <div className="min-h-screen bg-void-glow flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-2xl font-bold text-red-500 mb-4">Build not found</h1>
                     <Link href="/builds">
-                        <Button className="bg-e7-gold text-black">Back to Builds</Button>
+                        <Button className="btn-gold">Back to Builds</Button>
                     </Link>
                 </div>
             </div>
@@ -291,15 +291,15 @@ export default function BuildDetailPage() {
     }
 
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
+        <div className="min-h-screen bg-void-glow py-8 px-4">
             <div className="max-w-4xl mx-auto">
                 {/* Back link */}
-                <Link href="/builds" className="text-e7-gold hover:text-e7-text-gold text-sm mb-4 inline-block">
-                    ← {t('builds.backToBuilds', 'Back to Builds')}
+                <Link href="/builds" className="text-e7-gold hover:text-e7-text-gold text-sm mb-4 inline-flex items-center gap-2 group transition-colors">
+                    <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('builds.backToBuilds', 'Back to Builds')}
                 </Link>
 
                 {/* Build Header */}
-                <div className="bg-e7-panel border border-e7-gold/20 rounded-lg overflow-hidden mb-6">
+                <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6">
                     {/* Hero Section */}
                     <div className="flex items-center gap-4 p-6 border-b border-e7-gold/20">
                         <div className="relative">
@@ -460,7 +460,7 @@ export default function BuildDetailPage() {
 
                 {/* Images */}
                 {build.images && build.images.length > 0 && (
-                    <div className="bg-e7-panel border border-e7-gold/20 rounded-lg overflow-hidden mb-6 p-6">
+                    <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
                         <h2 className="text-xl font-bold text-e7-gold mb-4">📷 Images</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {build.images.map((img, idx) => (
@@ -473,7 +473,7 @@ export default function BuildDetailPage() {
                 )}
 
                 {/* Comments */}
-                <div className="bg-e7-panel border border-e7-gold/20 rounded-lg overflow-hidden p-6">
+                <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden p-6">
                     <h2 className="text-xl font-bold text-e7-gold mb-4">
                         💬 {t('guides.comments', 'Comments')} ({comments.length})
                     </h2>

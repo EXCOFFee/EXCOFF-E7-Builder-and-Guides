@@ -149,19 +149,19 @@ export default function GuildPostDetailPage() {
 
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-e7-void flex items-center justify-center">
-                <div className="text-gray-400">{t('common.loading', 'Loading...')}</div>
+            <div className="min-h-screen bg-void-glow flex items-center justify-center">
+                <div className="text-slate-400">{t('common.loading', 'Loading...')}</div>
             </div>
         );
     }
 
     if (error || !post) {
         return (
-            <div className="min-h-screen bg-e7-void flex items-center justify-center">
+            <div className="min-h-screen bg-void-glow flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-2xl font-bold text-red-500 mb-4">Post not found</h1>
                     <Link href="/guilds">
-                        <Button className="bg-e7-gold text-black">Back to Guilds</Button>
+                        <Button className="btn-gold">Back to Guilds</Button>
                     </Link>
                 </div>
             </div>
@@ -169,15 +169,15 @@ export default function GuildPostDetailPage() {
     }
 
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
+        <div className="min-h-screen bg-void-glow py-8 px-4">
             <div className="max-w-4xl mx-auto">
                 {/* Back link */}
-                <Link href="/guilds" className="text-e7-gold hover:text-e7-text-gold text-sm mb-4 inline-block">
-                    ← {t('guilds.backToList', 'Back to Guild Posts')}
+                <Link href="/guilds" className="text-e7-gold hover:text-e7-text-gold text-sm mb-4 inline-flex items-center gap-2 group transition-colors">
+                    <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('guilds.backToList', 'Back to Guild Posts')}
                 </Link>
 
                 {/* Post Header */}
-                <div className="bg-e7-panel border border-e7-gold/20 rounded-lg overflow-hidden">
+                <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
                     {/* Images */}
                     <div className="p-4">
                         <ImageGallery images={post.images || []} title={t('guilds.images', 'Images')} />

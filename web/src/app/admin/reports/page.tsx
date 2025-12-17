@@ -116,29 +116,29 @@ export default function AdminReportsPage() {
 
     if (!isAdmin) {
         return (
-            <div className="min-h-screen bg-e7-void flex items-center justify-center">
+            <div className="min-h-screen bg-void-glow flex items-center justify-center">
                 <div className="text-e7-gold">Verificando permisos...</div>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
+        <div className="min-h-screen bg-void-glow py-8 px-4">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-e7-gold">Panel de Administración</h1>
-                    <p className="text-gray-400 mt-1">Gestionar reportes de contenido</p>
+                    <h1 className="text-3xl font-display text-gold-gradient tracking-wide">Panel de Administración</h1>
+                    <p className="text-slate-400 mt-1">Gestionar reportes de contenido</p>
                 </div>
 
                 {/* Filter */}
-                <div className="flex gap-2 mb-6">
+                <div className="flex gap-2 mb-6 glass-panel p-4 rounded-xl w-fit">
                     {['pending', 'reviewed', 'resolved', 'dismissed', 'all'].map((status) => (
                         <Button
                             key={status}
                             variant={filterStatus === status ? 'default' : 'outline'}
                             onClick={() => setFilterStatus(status)}
-                            className={filterStatus === status ? 'bg-e7-gold text-black' : 'border-e7-gold/30'}
+                            className={filterStatus === status ? 'btn-gold' : 'border-e7-gold/30 text-slate-400 hover:text-slate-200'}
                             size="sm"
                         >
                             {status === 'all' ? 'Todos' : status.charAt(0).toUpperCase() + status.slice(1)}
@@ -150,18 +150,18 @@ export default function AdminReportsPage() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Reports List */}
                     <div className="space-y-4">
-                        <h2 className="text-xl font-semibold text-white">Reportes ({reports.length})</h2>
+                        <h2 className="text-xl font-semibold text-e7-gold">Reportes ({reports.length})</h2>
 
                         {isLoading ? (
-                            <div className="text-gray-400">Cargando...</div>
+                            <div className="text-slate-400">Cargando...</div>
                         ) : reports.length === 0 ? (
-                            <div className="text-gray-400">No hay reportes {filterStatus !== 'all' ? `con estado "${filterStatus}"` : ''}</div>
+                            <div className="text-slate-400">No hay reportes {filterStatus !== 'all' ? `con estado "${filterStatus}"` : ''}</div>
                         ) : (
                             <div className="space-y-3">
                                 {reports.map((report) => (
                                     <Card
                                         key={report.id}
-                                        className={`bg-e7-panel border-e7-gold/20 cursor-pointer hover:border-e7-gold/50 transition-colors ${selectedReport?.id === report.id ? 'border-e7-gold' : ''
+                                        className={`glass-panel border-e7-gold/20 cursor-pointer hover:border-e7-gold/50 transition-all hover:scale-[1.01] ${selectedReport?.id === report.id ? 'border-e7-gold ring-1 ring-e7-gold/50' : ''
                                             }`}
                                         onClick={() => {
                                             setSelectedReport(report);
@@ -194,18 +194,18 @@ export default function AdminReportsPage() {
 
                     {/* Report Detail */}
                     <div>
-                        <h2 className="text-xl font-semibold text-white mb-4">Detalle del Reporte</h2>
+                        <h2 className="text-xl font-semibold text-e7-gold mb-4">Detalle del Reporte</h2>
 
                         {selectedReport ? (
-                            <Card className="bg-e7-panel border-e7-gold/30">
-                                <CardHeader>
+                            <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
+                                <CardHeader className="border-b border-e7-gold/10">
                                     <CardTitle className="text-e7-gold">
                                         Reporte #{selectedReport.id}
                                     </CardTitle>
                                 </CardHeader>
-                                <CardContent className="space-y-4">
+                                <CardContent className="space-y-4 pt-6">
                                     <div>
-                                        <label className="text-sm text-gray-400">Tipo de contenido</label>
+                                        <label className="text-sm text-slate-400">Tipo de contenido</label>
                                         <p className="text-white">{selectedReport.reportable_type}</p>
                                     </div>
 
@@ -257,7 +257,7 @@ export default function AdminReportsPage() {
                                 </CardContent>
                             </Card>
                         ) : (
-                            <div className="text-gray-400 text-center py-12 bg-e7-panel rounded-lg border border-e7-gold/20">
+                            <div className="text-slate-400 text-center py-12 glass-panel rounded-xl border-e7-gold/20">
                                 Selecciona un reporte para ver los detalles
                             </div>
                         )}

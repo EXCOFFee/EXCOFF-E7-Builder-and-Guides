@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${cinzel.variable} font-sans antialiased bg-e7-void text-white min-h-screen`}
+        className={`${inter.variable} ${cinzel.variable} font-sans antialiased bg-void-glow text-slate-200 min-h-screen`}
         suppressHydrationWarning
       >
         <Providers>
@@ -45,20 +45,20 @@ export default function RootLayout({
           <main className="min-h-[calc(100vh-4rem)]">
             {children}
           </main>
-          <footer className="border-t border-white/10 bg-e7-dark/50 py-6 mt-8">
-            <div className="container mx-auto px-4 text-center text-sm text-gray-400">
-              <p className="mb-2">
+          <footer className="border-t border-e7-gold/10 glass-panel py-8 mt-12">
+            <div className="container mx-auto px-4 text-center">
+              <p className="mb-3 text-slate-400">
                 Hero &amp; Artifact data powered by{' '}
                 <a
                   href="https://github.com/fribbels/Fribbels-Epic-7-Optimizer"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-e7-gold hover:text-e7-gold/80 underline"
+                  className="text-e7-gold hover:text-e7-text-gold transition-colors underline decoration-e7-gold/30 hover:decoration-e7-gold"
                 >
                   Fribbels Epic 7 Optimizer
                 </a>
               </p>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-slate-500">
                 Epic Seven © Smilegate &amp; Super Creative. This site is not affiliated with the game developers.
               </p>
             </div>

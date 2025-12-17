@@ -258,19 +258,19 @@ export default function GuideDetailPage() {
 
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-e7-void flex items-center justify-center">
-                <div className="text-gray-400">{t('common.loading', 'Loading...')}</div>
+            <div className="min-h-screen bg-void-glow flex items-center justify-center">
+                <div className="text-slate-400">{t('common.loading', 'Loading...')}</div>
             </div>
         );
     }
 
     if (error || !guide) {
         return (
-            <div className="min-h-screen bg-e7-void flex items-center justify-center">
+            <div className="min-h-screen bg-void-glow flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-2xl font-bold text-red-500 mb-4">Guide not found</h1>
                     <Link href="/guides">
-                        <Button className="bg-e7-gold text-black">Back to Guides</Button>
+                        <Button className="btn-gold">Back to Guides</Button>
                     </Link>
                 </div>
             </div>
@@ -278,15 +278,15 @@ export default function GuideDetailPage() {
     }
 
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
+        <div className="min-h-screen bg-void-glow py-8 px-4">
             <div className="max-w-4xl mx-auto">
                 {/* Back link */}
-                <Link href="/guides" className="text-e7-gold hover:text-e7-text-gold text-sm mb-4 inline-block">
-                    ← {t('guides.backToGuides', 'Back to Guides')}
+                <Link href="/guides" className="text-e7-gold hover:text-e7-text-gold text-sm mb-4 inline-flex items-center gap-2 group transition-colors">
+                    <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('guides.backToGuides', 'Back to Guides')}
                 </Link>
 
                 {/* Guide Header */}
-                <div className="bg-e7-panel border border-e7-gold/20 rounded-lg overflow-hidden mb-6">
+                <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6">
                     {/* Hero Image */}
                     {guide.hero && (
                         <div className="flex items-center gap-4 p-6 border-b border-e7-gold/20">
@@ -379,7 +379,7 @@ export default function GuideDetailPage() {
 
                 {/* Video Embed */}
                 {guide.video_url && getYouTubeEmbedUrl(guide.video_url) && (
-                    <div className="bg-e7-panel border border-e7-gold/20 rounded-lg overflow-hidden mb-6 p-6">
+                    <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
                         <h2 className="text-xl font-bold text-e7-gold mb-4">📺 Video</h2>
                         <div className="aspect-video">
                             <iframe
@@ -394,7 +394,7 @@ export default function GuideDetailPage() {
 
                 {/* Images */}
                 {guide.images && Array.isArray(guide.images) && guide.images.length > 0 && (
-                    <div className="bg-e7-panel border border-e7-gold/20 rounded-lg overflow-hidden mb-6 p-6">
+                    <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
                         <ImageGallery
                             images={guide.images.filter(img => typeof img === 'string' && img && (img.startsWith('http') || img.startsWith('data:image')))}
                             title={t('guides.images', 'Images')}
@@ -403,14 +403,14 @@ export default function GuideDetailPage() {
                 )}
 
                 {/* Content */}
-                <div className="bg-e7-panel border border-e7-gold/20 rounded-lg overflow-hidden mb-6 p-6">
+                <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
                     <div className="prose prose-invert max-w-none">
                         <div className="text-gray-300 whitespace-pre-wrap">{guide.gameplay_content}</div>
                     </div>
                 </div>
 
                 {/* Comments */}
-                <div className="bg-e7-panel border border-e7-gold/20 rounded-lg overflow-hidden p-6">
+                <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden p-6">
                     <h2 className="text-xl font-bold text-e7-gold mb-4">
                         💬 {t('guides.comments', 'Comments')} ({comments.length})
                     </h2>

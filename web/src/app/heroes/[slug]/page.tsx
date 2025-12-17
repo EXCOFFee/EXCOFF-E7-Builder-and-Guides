@@ -270,66 +270,75 @@ export default function HeroDetailPage() {
     const hasUsageStats = hero.guides_count > 0;
 
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
+        <div className="min-h-screen bg-void-glow py-8 px-4">
             <div className="max-w-6xl mx-auto">
                 {/* Breadcrumb */}
                 <div className="mb-6">
-                    <Link href="/heroes" className="text-e7-gold hover:text-e7-text-gold text-sm">
-                        ← Back to Heroes
+                    <Link href="/heroes" className="text-e7-gold hover:text-e7-text-gold text-sm transition-colors inline-flex items-center gap-2 group">
+                        <span className="group-hover:-translate-x-1 transition-transform">←</span> Back to Heroes
                     </Link>
                 </div>
 
                 {/* Hero Header */}
                 <div className="flex flex-col md:flex-row gap-8 mb-8">
                     {/* Portrait */}
-                    <div className="w-full md:w-72 flex-shrink-0">
-                        <div className="aspect-square bg-gradient-to-br from-e7-panel to-e7-void rounded-xl border-2 border-e7-gold/40 flex items-center justify-center overflow-hidden shadow-2xl shadow-e7-gold/10">
-                            {hero.image_url ? (
-                                <Image
-                                    src={hero.image_url}
-                                    alt={hero.name}
-                                    width={288}
-                                    height={288}
-                                    className="w-full h-full object-cover"
-                                    unoptimized
-                                />
-                            ) : (
-                                <span className="text-8xl">{CLASS_ICONS[hero.class] || '⚔️'}</span>
-                            )}
+                    <div className="w-full md:w-80 flex-shrink-0">
+                        <div className="relative">
+                            {/* Animated glow border */}
+                            <div className="absolute -inset-1 bg-gradient-to-r from-e7-gold via-e7-purple to-e7-gold rounded-2xl opacity-50 blur-sm animate-border-glow" />
+                            <div className="relative aspect-square bg-gradient-to-br from-e7-panel to-e7-dark rounded-xl overflow-hidden border border-e7-gold/40 shadow-2xl shadow-e7-gold/20">
+                                {hero.image_url ? (
+                                    <Image
+                                        src={hero.image_url}
+                                        alt={hero.name}
+                                        width={320}
+                                        height={320}
+                                        className="w-full h-full object-cover"
+                                        unoptimized
+                                    />
+                                ) : (
+                                    <div className="w-full h-full flex items-center justify-center bg-e7-void">
+                                        <span className="text-8xl opacity-50">{CLASS_ICONS[hero.class] || '⚔️'}</span>
+                                    </div>
+                                )}
+                            </div>
                         </div>
-                        <div className="mt-3 text-center text-e7-text-gold text-2xl tracking-wider">
-                            {'★'.repeat(hero.rarity)}
+                        {/* Rarity Stars */}
+                        <div className="mt-4 text-center">
+                            <span className="text-2xl tracking-widest text-e7-gold drop-shadow-[0_0_10px_rgba(200,170,110,0.5)]">
+                                {'★'.repeat(hero.rarity)}
+                            </span>
                         </div>
                     </div>
 
                     {/* Info */}
                     <div className="flex-1 space-y-6">
                         <div>
-                            <h1 className="font-display text-4xl md:text-5xl text-e7-text-gold mb-4">{hero.name}</h1>
+                            <h1 className="font-display text-4xl md:text-5xl text-gold-gradient mb-4 tracking-wide">{hero.name}</h1>
                             <div className="flex flex-wrap gap-3">
-                                <Badge className={`${ELEMENT_COLORS[hero.element]} px-3 py-1.5 text-sm font-semibold flex items-center gap-2`}>
+                                <Badge className={`${ELEMENT_COLORS[hero.element]} px-4 py-2 text-sm font-semibold flex items-center gap-2 shadow-lg`}>
                                     {ELEMENT_IMAGES[hero.element] && (
                                         <Image src={ELEMENT_IMAGES[hero.element]} alt={hero.element} width={20} height={20} className="w-5 h-5" />
                                     )}
-                                    {hero.element}
+                                    <span className="capitalize">{hero.element}</span>
                                 </Badge>
-                                <Badge variant="outline" className="border-e7-gold/40 text-gray-200 px-3 py-1.5 flex items-center gap-2">
+                                <Badge variant="outline" className="glass-panel border-e7-gold/30 text-slate-200 px-4 py-2 flex items-center gap-2">
                                     {CLASS_IMAGES[hero.class] && (
                                         <Image src={CLASS_IMAGES[hero.class]} alt={hero.class} width={20} height={20} className="w-5 h-5" />
                                     )}
-                                    {hero.class.replace('_', ' ')}
+                                    <span className="capitalize">{hero.class.replace('_', ' ')}</span>
                                 </Badge>
                                 {hasUsageStats && (
-                                    <Badge className="bg-e7-gold/20 text-e7-gold border border-e7-gold/40 px-4 py-1.5">
+                                    <Badge className="glass-panel text-e7-gold border border-e7-gold/30 px-4 py-2">
                                         📊 {hero.guides_count.toLocaleString()} builds
                                     </Badge>
                                 )}
                             </div>
 
                             {/* Create Build Button */}
-                            <div className="flex flex-wrap gap-3 mt-4">
+                            <div className="flex flex-wrap gap-3 mt-6">
                                 <Link href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}>
-                                    <button className="px-4 py-2 rounded-lg bg-purple-600/20 text-purple-400 border border-purple-500 hover:bg-purple-600 hover:text-white transition-all flex items-center gap-2">
+                                    <button className="btn-gold px-6 py-2.5 rounded-lg flex items-center gap-2 shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 transition-all">
                                         ⚙️ Crear Build
                                     </button>
                                 </Link>
@@ -337,13 +346,13 @@ export default function HeroDetailPage() {
                         </div>
 
                         {/* Base Stats */}
-                        <Card className="bg-gradient-to-br from-e7-panel to-e7-void border-e7-gold/30">
-                            <CardHeader className="pb-2">
+                        <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
+                            <CardHeader className="pb-2 border-b border-e7-gold/10">
                                 <CardTitle className="text-e7-gold text-lg flex items-center gap-2">
                                     <span>📈</span> Base Stats (Lv.60 Fully Awakened)
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent>
+                            <CardContent className="pt-4">
                                 <div className="grid grid-cols-4 md:grid-cols-8 gap-3">
                                     <StatItem label="ATK" value={hero.base_stats?.atk || 0} color="text-red-400" />
                                     <StatItem label="DEF" value={hero.base_stats?.def || 0} color="text-blue-400" />
@@ -363,8 +372,8 @@ export default function HeroDetailPage() {
                 {hasUsageStats && (
                     <div className="grid md:grid-cols-2 gap-6 mb-8">
                         {/* Popular Sets */}
-                        <Card className="bg-gradient-to-br from-e7-panel to-e7-void border-e7-gold/30">
-                            <CardHeader>
+                        <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
+                            <CardHeader className="border-b border-e7-gold/10">
                                 <CardTitle className="text-e7-gold flex items-center gap-2">
                                     <span>🎮</span> Popular Set Combinations
                                 </CardTitle>
@@ -397,21 +406,21 @@ export default function HeroDetailPage() {
                                     </div>
                                 ))}
                                 {(!hero.popular_sets || hero.popular_sets.length === 0) && (
-                                    <p className="text-gray-500 text-center py-4">No set data available</p>
+                                    <p className="text-slate-500 text-center py-4">No set data available</p>
                                 )}
                             </CardContent>
                         </Card>
 
                         {/* Popular Artifacts */}
-                        <Card className="bg-gradient-to-br from-e7-panel to-e7-void border-e7-gold/30">
-                            <CardHeader>
+                        <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
+                            <CardHeader className="border-b border-e7-gold/10">
                                 <CardTitle className="text-e7-gold flex items-center gap-2">
                                     <span>💎</span> Popular Artifacts
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent className="space-y-3">
+                            <CardContent className="space-y-3 pt-4">
                                 {hero.popular_artifacts?.slice(0, 5).map((artifact, index) => (
-                                    <div key={index} className="flex items-center justify-between bg-e7-void/50 rounded-lg p-3 border border-e7-gold/10">
+                                    <div key={index} className="flex items-center justify-between bg-e7-void/30 rounded-lg p-3 border border-white/5 hover:border-e7-gold/30 transition-colors">
                                         <div className="flex items-center gap-3">
                                             <span className="text-e7-gold font-bold text-sm">#{index + 1}</span>
                                             <Image
@@ -422,16 +431,16 @@ export default function HeroDetailPage() {
                                                 className="rounded-md border border-e7-gold/20"
                                                 unoptimized
                                             />
-                                            <span className="text-gray-200 capitalize">{artifact.code.replace(/_/g, ' ')}</span>
+                                            <span className="text-slate-200 capitalize">{artifact.code.replace(/_/g, ' ')}</span>
                                         </div>
                                         <div className="text-right">
                                             <span className="text-e7-gold font-bold">{artifact.percentage}%</span>
-                                            <span className="text-gray-500 text-xs block">{artifact.count} uses</span>
+                                            <span className="text-slate-500 text-xs block">{artifact.count} uses</span>
                                         </div>
                                     </div>
                                 ))}
                                 {(!hero.popular_artifacts || hero.popular_artifacts.length === 0) && (
-                                    <p className="text-gray-500 text-center py-4">No artifact data available</p>
+                                    <p className="text-slate-500 text-center py-4">No artifact data available</p>
                                 )}
                             </CardContent>
                         </Card>
@@ -440,11 +449,11 @@ export default function HeroDetailPage() {
 
                 {/* Average Stats Recommendation */}
                 {hasUsageStats && hero.avg_stats && (
-                    <Card className="bg-gradient-to-br from-e7-panel to-e7-void border-e7-gold/30 mb-8">
-                        <CardHeader>
+                    <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-8">
+                        <CardHeader className="border-b border-e7-gold/10">
                             <CardTitle className="text-e7-gold flex items-center gap-2">
                                 <span>🎯</span> Average Build Stats
-                                <span className="text-gray-500 text-sm font-normal ml-2">
+                                <span className="text-slate-500 text-sm font-normal ml-2">
                                     (from {hero.guides_count.toLocaleString()} builds)
                                 </span>
                             </CardTitle>
@@ -508,13 +517,13 @@ export default function HeroDetailPage() {
 
                 {/* Skills Section */}
                 {hero.skills && Object.keys(hero.skills).length > 0 && (
-                    <Card className="bg-gradient-to-br from-e7-panel to-e7-void border-e7-gold/30">
-                        <CardHeader>
+                    <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
+                        <CardHeader className="border-b border-e7-gold/10">
                             <CardTitle className="text-e7-gold flex items-center gap-2">
                                 <span>⚡</span> Skills & Damage Scaling
                             </CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-4">
+                        <CardContent className="space-y-4 pt-4">
                             {Object.entries(hero.skills).map(([skillKey, skill]: [string, unknown]) => {
                                 const s = skill as {
                                     name?: string;
@@ -622,28 +631,28 @@ export default function HeroDetailPage() {
 
                 {/* Last Updated */}
                 {hero.stats_updated_at && (
-                    <p className="text-center text-gray-600 text-xs mt-8">
+                    <p className="text-center text-slate-600 text-xs mt-8">
                         Stats last updated: {new Date(hero.stats_updated_at).toLocaleDateString()}
                     </p>
                 )}
 
                 {/* Community Builds Section */}
-                <Card className="bg-gradient-to-br from-e7-panel to-e7-void border-e7-gold/30 mb-8">
-                    <CardHeader>
+                <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-8 mt-8">
+                    <CardHeader className="border-b border-e7-gold/10">
                         <div className="flex justify-between items-center">
                             <CardTitle className="text-e7-gold flex items-center gap-2">
                                 <span>⚙️</span> Builds de la Comunidad
                             </CardTitle>
                             <Link href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}>
-                                <button className="px-3 py-1 text-sm rounded-lg bg-purple-600/20 text-purple-400 border border-purple-500 hover:bg-purple-600 hover:text-white transition-all">
+                                <button className="btn-gold px-4 py-1.5 text-sm rounded-lg shadow-lg shadow-e7-gold/10 hover:shadow-e7-gold/30 transition-all">
                                     + Crear Build
                                 </button>
                             </Link>
                         </div>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="pt-4">
                         {builds.length === 0 ? (
-                            <div className="text-center py-8 text-gray-400">
+                            <div className="text-center py-8 text-slate-400">
                                 <p className="text-lg mb-2">💭 Aún no hay builds para este héroe</p>
                                 <p className="text-sm">¡Sé el primero en compartir tu build!</p>
                             </div>

@@ -140,44 +140,44 @@ export default function BuildsPage() {
     const builds: Build[] = data?.data || [];
 
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
+        <div className="min-h-screen bg-void-glow py-8 px-4">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-                    <div>
-                        <h1 className="text-3xl font-bold text-e7-gold">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
+                    <div className="text-center md:text-left">
+                        <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">
                             {t('builds.title', 'Community Builds')}
                         </h1>
-                        <p className="text-gray-400 mt-1">
+                        <p className="text-slate-400">
                             {t('builds.description', 'Explore and share hero builds created by the community')}
                         </p>
                     </div>
                     <Link href="/builds/create">
-                        <Button className="bg-purple-600 hover:bg-purple-700 text-white">
+                        <Button className="btn-gold px-6 py-2.5 rounded-lg shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 transition-all">
                             + {t('builds.createBuild', 'Create Build')}
                         </Button>
                     </Link>
                 </div>
 
                 {/* Search & Filters */}
-                <div className="mb-8 space-y-4">
+                <div className="mb-8 space-y-4 glass-panel p-4 rounded-xl">
                     <Input
                         placeholder={t('builds.searchPlaceholder', 'Search builds...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-xs bg-e7-panel border-e7-gold/30 text-white placeholder:text-gray-500"
+                        className="max-w-md bg-e7-void/50 border-e7-gold/20 text-slate-200 placeholder:text-slate-500 focus:border-e7-gold focus:ring-e7-gold/30 transition-all"
                     />
 
                     {/* Element Filter */}
                     <div className="flex items-center gap-2 flex-wrap">
-                        <span className="text-gray-400 text-sm mr-2">{t('heroes.filterElement', 'Element')}:</span>
+                        <span className="text-slate-400 text-sm mr-2">{t('heroes.filterElement', 'Element')}:</span>
                         {Object.entries(ELEMENT_IMAGES).map(([el, img]) => (
                             <button
                                 key={el}
                                 onClick={() => setSelectedElement(selectedElement === el ? null : el)}
                                 className={`relative w-10 h-10 rounded-lg transition-all ${selectedElement === el
                                     ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
-                                    : 'hover:bg-e7-panel hover:scale-105 opacity-70 hover:opacity-100'
+                                    : 'hover:bg-e7-panel/50 hover:scale-105 opacity-70 hover:opacity-100'
                                     }`}
                                 title={ELEMENT_NAMES[el]}
                             >
@@ -194,14 +194,14 @@ export default function BuildsPage() {
 
                     {/* Class Filter */}
                     <div className="flex items-center gap-2 flex-wrap">
-                        <span className="text-gray-400 text-sm mr-2">{t('heroes.filterClass', 'Class')}:</span>
+                        <span className="text-slate-400 text-sm mr-2">{t('heroes.filterClass', 'Class')}:</span>
                         {Object.entries(CLASS_IMAGES).map(([cls, img]) => (
                             <button
                                 key={cls}
                                 onClick={() => setSelectedClass(selectedClass === cls ? null : cls)}
                                 className={`relative w-10 h-10 rounded-lg transition-all ${selectedClass === cls
                                     ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
-                                    : 'hover:bg-e7-panel hover:scale-105 opacity-70 hover:opacity-100'
+                                    : 'hover:bg-e7-panel/50 hover:scale-105 opacity-70 hover:opacity-100'
                                     }`}
                                 title={CLASS_NAMES[cls]}
                             >
@@ -219,46 +219,46 @@ export default function BuildsPage() {
 
                 {/* Builds Grid */}
                 {isLoading ? (
-                    <div className="text-center py-12 text-gray-400">
+                    <div className="text-center py-12 text-slate-400">
                         {t('common.loading', 'Loading...')}
                     </div>
                 ) : builds.length === 0 ? (
-                    <div className="text-center py-12 text-gray-400">
+                    <div className="text-center py-12 text-slate-400">
                         {t('builds.noBuilds', 'No builds available yet.')}
                     </div>
                 ) : (
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {builds.map((build) => (
                             <Link key={build.id} href={`/builds/${build.id}`}>
-                                <div className="bg-e7-panel border border-e7-gold/20 rounded-lg overflow-hidden hover:border-e7-gold/50 transition-colors">
+                                <div className="card-fantasy bg-gradient-to-b from-e7-panel to-e7-void rounded-xl overflow-hidden h-full group">
                                     {/* Hero Header */}
-                                    <div className="flex items-center gap-3 p-4 border-b border-e7-gold/20">
+                                    <div className="flex items-center gap-3 p-4 border-b border-e7-gold/10 bg-e7-dark/30">
                                         <div className="relative">
                                             <Image
                                                 src={build.hero.portrait}
                                                 alt={build.hero.name}
                                                 width={60}
                                                 height={60}
-                                                className="rounded-lg"
+                                                className="rounded-lg ring-2 ring-e7-gold/20 group-hover:ring-e7-gold/50 transition-all"
                                                 unoptimized
                                             />
-                                            <span className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full ${ELEMENT_COLORS[build.hero.element]}`} />
+                                            <span className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full ring-2 ring-e7-dark ${ELEMENT_COLORS[build.hero.element]}`} />
                                         </div>
                                         <div>
-                                            <h3 className="text-white font-semibold">{build.hero.name}</h3>
-                                            <p className="text-xs text-gray-400">{CLASS_NAMES[build.hero.class] || build.hero.class}</p>
+                                            <h3 className="text-slate-100 font-semibold group-hover:text-e7-gold transition-colors">{build.hero.name}</h3>
+                                            <p className="text-xs text-slate-500">{CLASS_NAMES[build.hero.class] || build.hero.class}</p>
                                         </div>
                                     </div>
 
                                     <div className="p-4">
-                                        <h4 className="text-lg font-medium text-e7-gold mb-2 line-clamp-1">
+                                        <h4 className="text-lg font-medium text-e7-gold mb-3 line-clamp-1">
                                             {build.title}
                                         </h4>
 
                                         {/* Sets */}
                                         <div className="flex gap-2 mb-3 flex-wrap">
                                             {build.primary_set && (
-                                                <span className="px-2 py-0.5 text-xs bg-purple-500/20 text-purple-300 rounded flex items-center gap-1">
+                                                <span className="px-2 py-1 text-xs glass-panel text-purple-300 rounded-lg flex items-center gap-1.5 border border-purple-500/30">
                                                     {SET_IMAGES[build.primary_set] && (
                                                         <Image
                                                             src={SET_IMAGES[build.primary_set]}
@@ -272,7 +272,7 @@ export default function BuildsPage() {
                                                 </span>
                                             )}
                                             {build.secondary_set && (
-                                                <span className="px-2 py-0.5 text-xs bg-blue-500/20 text-blue-300 rounded flex items-center gap-1">
+                                                <span className="px-2 py-1 text-xs glass-panel text-blue-300 rounded-lg flex items-center gap-1.5 border border-blue-500/30">
                                                     {SET_IMAGES[build.secondary_set] && (
                                                         <Image
                                                             src={SET_IMAGES[build.secondary_set]}
@@ -295,16 +295,16 @@ export default function BuildsPage() {
                                                     alt={build.artifact.name}
                                                     width={24}
                                                     height={24}
-                                                    className="rounded"
+                                                    className="rounded ring-1 ring-e7-gold/20"
                                                     unoptimized
                                                 />
-                                                <span className="text-sm text-gray-400">{build.artifact.name}</span>
+                                                <span className="text-sm text-slate-400">{build.artifact.name}</span>
                                             </div>
                                         )}
 
                                         {/* Stats Preview */}
                                         {build.min_stats && Object.keys(build.min_stats).length > 0 && (
-                                            <div className="grid grid-cols-3 gap-1 text-xs text-gray-400 mb-3">
+                                            <div className="grid grid-cols-3 gap-1 text-xs text-slate-500 mb-3">
                                                 {Object.entries(build.min_stats).slice(0, 6).map(([stat, value]) => (
                                                     <span key={stat}>{stat}: {value}</span>
                                                 ))}
@@ -312,21 +312,21 @@ export default function BuildsPage() {
                                         )}
 
                                         {/* Footer */}
-                                        <div className="flex items-center justify-between pt-3 border-t border-e7-gold/20">
-                                            <div className="flex items-center gap-2 text-xs text-gray-500">
+                                        <div className="flex items-center justify-between pt-3 border-t border-e7-gold/10">
+                                            <div className="flex items-center gap-2 text-xs text-slate-500">
                                                 {!build.is_anonymous && build.user?.avatar && (
                                                     <Image
                                                         src={build.user.avatar}
                                                         alt={build.user.name}
                                                         width={20}
                                                         height={20}
-                                                        className="rounded-full"
+                                                        className="rounded-full ring-1 ring-e7-gold/20"
                                                         unoptimized
                                                     />
                                                 )}
                                                 <span>{build.is_anonymous ? 'Anonymous' : build.user?.name}</span>
                                             </div>
-                                            <div className="flex items-center gap-3 text-xs text-gray-500">
+                                            <div className="flex items-center gap-3 text-xs text-slate-500">
                                                 <span className="flex items-center gap-1"><Image src="/images/ras-like.gif" alt="likes" width={16} height={16} unoptimized /> {build.likes}</span>
                                                 <span>👁️ {build.views}</span>
                                             </div>

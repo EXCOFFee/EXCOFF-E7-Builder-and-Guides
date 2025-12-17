@@ -16,26 +16,26 @@ export default function LoginPage() {
     };
 
     return (
-        <div className="min-h-screen bg-e7-void flex items-center justify-center px-4">
-            <Card className="w-full max-w-md bg-e7-panel border-e7-gold/30">
-                <CardHeader className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-e7-gold to-blue-600 flex items-center justify-center">
-                        <span className="text-white font-bold text-2xl">E7</span>
+        <div className="min-h-screen bg-void-glow flex items-center justify-center px-4">
+            <Card className="w-full max-w-md glass-panel border-e7-gold/20 rounded-2xl overflow-hidden">
+                <CardHeader className="text-center pt-8">
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-e7-gold via-amber-500 to-purple-600 flex items-center justify-center shadow-lg shadow-e7-gold/30 animate-border-glow">
+                        <span className="text-white font-bold text-3xl font-display">E7</span>
                     </div>
-                    <CardTitle className="text-2xl font-display text-e7-text-gold">
+                    <CardTitle className="text-3xl font-display text-gold-gradient tracking-wide">
                         Iniciar Sesión
                     </CardTitle>
-                    <p className="text-gray-400 text-sm mt-2">
+                    <p className="text-slate-400 text-sm mt-2">
                         Accede para crear builds y guías
                     </p>
                 </CardHeader>
 
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4 pb-8">
                     {/* Google Button */}
                     <Button
                         onClick={() => handleOAuthLogin('google')}
                         disabled={isLoading !== null}
-                        className="w-full h-12 bg-white hover:bg-gray-100 text-gray-800 font-medium flex items-center justify-center gap-3"
+                        className="w-full h-14 bg-white hover:bg-gray-100 text-gray-800 font-medium flex items-center justify-center gap-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
                     >
                         {isLoading === 'google' ? (
                             <div className="w-5 h-5 border-2 border-gray-400 border-t-transparent rounded-full animate-spin" />
@@ -54,7 +54,7 @@ export default function LoginPage() {
                     <Button
                         onClick={() => handleOAuthLogin('discord')}
                         disabled={isLoading !== null}
-                        className="w-full h-12 bg-[#5865F2] hover:bg-[#4752C4] text-white font-medium flex items-center justify-center gap-3"
+                        className="w-full h-14 bg-[#5865F2] hover:bg-[#4752C4] text-white font-medium flex items-center justify-center gap-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
                     >
                         {isLoading === 'discord' ? (
                             <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -71,11 +71,11 @@ export default function LoginPage() {
                             <div className="w-full border-t border-e7-gold/20"></div>
                         </div>
                         <div className="relative flex justify-center text-sm">
-                            <span className="px-2 bg-e7-panel text-gray-500">o</span>
+                            <span className="px-4 bg-[#0a0a12] text-slate-500">o</span>
                         </div>
                     </div>
 
-                    <p className="text-center text-gray-500 text-sm">
+                    <p className="text-center text-slate-500 text-sm">
                         Al continuar, aceptas nuestros términos de servicio y política de privacidad.
                     </p>
                 </CardContent>
@@ -84,10 +84,11 @@ export default function LoginPage() {
             {/* Back to home */}
             <Link
                 href="/"
-                className="absolute top-4 left-4 text-e7-gold hover:text-e7-text-gold flex items-center gap-2"
+                className="absolute top-6 left-6 text-e7-gold hover:text-e7-text-gold flex items-center gap-2 group transition-colors"
             >
-                ← Volver al inicio
+                <span className="group-hover:-translate-x-1 transition-transform">←</span> Volver al inicio
             </Link>
         </div>
     );
 }
+

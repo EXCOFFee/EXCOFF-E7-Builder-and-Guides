@@ -66,30 +66,30 @@ export default function GuidesPage() {
     const guides: Guide[] = data?.data || [];
 
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
+        <div className="min-h-screen bg-void-glow py-8 px-4">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
-                <div className="flex justify-between items-start mb-8">
-                    <div>
-                        <h1 className="font-display text-4xl text-e7-text-gold mb-2">{t('guides.title', 'Game Guides')}</h1>
-                        <p className="text-gray-400">{t('guides.description', 'Learn strategies and tips from the community')}</p>
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
+                    <div className="text-center md:text-left">
+                        <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">{t('guides.title', 'Game Guides')}</h1>
+                        <p className="text-slate-400">{t('guides.description', 'Learn strategies and tips from the community')}</p>
                     </div>
                     <Link href="/guides/create">
-                        <Button className="bg-e7-gold text-black hover:bg-e7-text-gold">
+                        <Button className="btn-gold px-6 py-2.5 rounded-lg shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 transition-all">
                             + {t('guides.createGuide', 'Create Guide')}
                         </Button>
                     </Link>
                 </div>
 
                 {/* Category Tabs */}
-                <div className="mb-6 flex flex-wrap gap-2">
+                <div className="mb-6 flex flex-wrap gap-2 glass-panel p-3 rounded-xl">
                     {CATEGORIES.map((cat) => (
                         <button
                             key={cat.id}
                             onClick={() => setCategoryFilter(cat.id)}
                             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${categoryFilter === cat.id
-                                ? 'bg-e7-gold/20 text-e7-gold border border-e7-gold'
-                                : 'bg-e7-panel text-gray-400 border border-e7-gold/20 hover:border-e7-gold/50'
+                                ? 'bg-e7-gold/20 text-e7-gold border border-e7-gold shadow-lg shadow-e7-gold/10'
+                                : 'bg-e7-void/50 text-slate-400 border border-white/10 hover:border-e7-gold/40 hover:text-e7-gold'
                                 }`}
                         >
                             <span className="mr-2">{cat.emoji}</span>
@@ -104,7 +104,7 @@ export default function GuidesPage() {
                         placeholder={t('guides.searchPlaceholder', 'Search guides...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-md bg-e7-panel border-e7-gold/30 text-white placeholder:text-gray-500"
+                        className="max-w-md bg-e7-void/50 border-e7-gold/20 text-slate-200 placeholder:text-slate-500 focus:border-e7-gold focus:ring-e7-gold/30 transition-all"
                     />
                 </div>
 
@@ -127,8 +127,8 @@ export default function GuidesPage() {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {guides.length === 0 ? (
                             <div className="col-span-full">
-                                <Card className="bg-e7-panel border-e7-gold/30">
-                                    <CardContent className="py-12 text-center text-gray-400">
+                                <Card className="glass-panel border-e7-gold/20 rounded-xl">
+                                    <CardContent className="py-12 text-center text-slate-400">
                                         <p className="text-2xl mb-4">📝</p>
                                         <p className="text-xl mb-2">{t('guides.noGuides', 'No guides available yet.')}</p>
                                         <p>{t('guides.beFirstToCreate', 'Be the first to create a guide!')}</p>
@@ -138,7 +138,7 @@ export default function GuidesPage() {
                         ) : (
                             guides.map((guide) => (
                                 <Link key={guide.id} href={`/guides/${guide.slug}`}>
-                                    <Card className="bg-e7-panel border-e7-gold/20 hover:border-e7-gold transition-all cursor-pointer h-full group">
+                                    <div className="card-fantasy bg-gradient-to-b from-e7-panel to-e7-void rounded-xl overflow-hidden h-full group">
                                         {/* Video or Image Thumbnail */}
                                         {guide.video_thumbnail ? (
                                             <div className="relative aspect-video overflow-hidden rounded-t-lg">
@@ -173,9 +173,9 @@ export default function GuidesPage() {
                                             </div>
                                         )}
 
-                                        <CardContent className="py-4">
+                                        <div className="p-4">
                                             <div className="flex items-center gap-2 mb-2">
-                                                <span className={`px-2 py-0.5 rounded text-xs font-medium text-white ${CATEGORY_COLORS[guide.category] || 'bg-gray-600'}`}>
+                                                <span className={`px-2.5 py-1 rounded-lg text-xs font-medium text-white ${CATEGORY_COLORS[guide.category] || 'bg-gray-600'}`}>
                                                     {CATEGORIES.find(c => c.id === guide.category)?.label || guide.category}
                                                 </span>
                                                 {guide.video_platform === 'youtube' && (
@@ -183,22 +183,22 @@ export default function GuidesPage() {
                                                 )}
                                             </div>
 
-                                            <h3 className="text-white font-medium group-hover:text-e7-gold transition-colors line-clamp-2">
+                                            <h3 className="text-slate-100 font-medium group-hover:text-e7-gold transition-colors line-clamp-2">
                                                 {guide.title}
                                             </h3>
 
                                             {guide.hero && (
-                                                <p className="text-sm text-gray-400 mt-1">
+                                                <p className="text-sm text-slate-400 mt-1">
                                                     {t('guides.for', 'For')}: <span className="text-e7-gold">{guide.hero.name}</span>
                                                 </p>
                                             )}
 
-                                            <div className="flex justify-between items-center mt-3 text-xs text-gray-500">
+                                            <div className="flex justify-between items-center mt-3 pt-3 border-t border-e7-gold/10 text-xs text-slate-500">
                                                 <span>{guide.user?.name || t('common.anonymous', 'Anonymous')}</span>
                                                 <span>👁 {guide.views || 0}</span>
                                             </div>
-                                        </CardContent>
-                                    </Card>
+                                        </div>
+                                    </div>
                                 </Link>
                             ))
                         )}

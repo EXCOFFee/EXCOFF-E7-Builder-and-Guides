@@ -246,15 +246,15 @@ export default function CreateBuildPage() {
     }
 
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
+        <div className="min-h-screen bg-void-glow py-8 px-4">
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">
-                    <Link href="/heroes" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-block">
-                        ← {t('builds.backToHeroes', 'Back to Heroes')}
+                    <Link href="/heroes" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
+                        <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('builds.backToHeroes', 'Back to Heroes')}
                     </Link>
-                    <h1 className="font-display text-4xl text-e7-text-gold mb-2">{t('builds.createNewBuild', 'Create New Build')}</h1>
-                    <p className="text-gray-400">
+                    <h1 className="font-display text-4xl text-gold-gradient tracking-wide mb-2">{t('builds.createNewBuild', 'Create New Build')}</h1>
+                    <p className="text-slate-400">
                         {preselectedHeroName
                             ? `${t('builds.creatingFor', 'Creating build for')} ${decodeURIComponent(preselectedHeroName)}`
                             : t('builds.shareConfig', 'Share your equipment configuration with the community')
@@ -263,11 +263,11 @@ export default function CreateBuildPage() {
                 </div>
 
                 <form onSubmit={handleSubmit}>
-                    <Card className="bg-e7-panel border-e7-gold/30">
-                        <CardHeader>
+                    <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
+                        <CardHeader className="border-b border-e7-gold/10">
                             <CardTitle className="text-e7-gold">{t('builds.buildInfo', 'Build Information')}</CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-6">
+                        <CardContent className="space-y-6 pt-6">
                             {/* Hero selector with search */}
                             <div className="relative">
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -629,16 +629,16 @@ export default function CreateBuildPage() {
                             )}
 
                             {/* Submit buttons */}
-                            <div className="flex gap-4 justify-end pt-4">
+                            <div className="flex gap-4 justify-end pt-6 border-t border-e7-gold/10">
                                 <Link href="/heroes">
-                                    <Button type="button" variant="outline" className="border-e7-gold/30 text-gray-400">
+                                    <Button type="button" variant="outline" className="border-e7-gold/30 text-slate-400 hover:text-slate-200 hover:border-e7-gold/50">
                                         {t('common.cancel', 'Cancel')}
                                     </Button>
                                 </Link>
                                 <Button
                                     type="submit"
                                     disabled={isSubmitting || !heroId || !title}
-                                    className="bg-purple-600 text-white hover:bg-purple-700"
+                                    className="btn-gold shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 disabled:opacity-50"
                                 >
                                     {isSubmitting ? t('builds.publishing', 'Publishing...') : t('builds.publishBuild', 'Publish Build')}
                                 </Button>

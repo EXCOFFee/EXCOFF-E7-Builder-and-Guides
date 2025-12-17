@@ -227,7 +227,7 @@ export default function EditBuildPage() {
 
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-e7-void py-8 px-4 flex items-center justify-center">
+            <div className="min-h-screen bg-void-glow py-8 px-4 flex items-center justify-center">
                 <div className="text-e7-gold">{t('common.loading', 'Loading...')}</div>
             </div>
         );
@@ -236,25 +236,25 @@ export default function EditBuildPage() {
     const build = buildData as Build | undefined;
 
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
+        <div className="min-h-screen bg-void-glow py-8 px-4">
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">
-                    <Link href={`/builds/${buildId}`} className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-block">
-                        ← {t('common.back', 'Back')}
+                    <Link href={`/builds/${buildId}`} className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
+                        <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('common.back', 'Back')}
                     </Link>
-                    <h1 className="font-display text-4xl text-e7-text-gold mb-2">{t('builds.editBuild', 'Edit Build')}</h1>
-                    <p className="text-gray-400">
+                    <h1 className="font-display text-4xl text-gold-gradient tracking-wide mb-2">{t('builds.editBuild', 'Edit Build')}</h1>
+                    <p className="text-slate-400">
                         {build?.hero?.name && `${t('builds.buildFor', 'Build for')} ${build.hero.name}`}
                     </p>
                 </div>
 
                 <form onSubmit={handleSubmit}>
-                    <Card className="bg-e7-panel border-e7-gold/30 mb-6">
-                        <CardHeader>
+                    <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6">
+                        <CardHeader className="border-b border-e7-gold/10">
                             <CardTitle className="text-e7-gold">{t('builds.buildInfo', 'Build Information')}</CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-6">
+                        <CardContent className="space-y-6 pt-6">
                             {/* Title */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -519,16 +519,16 @@ export default function EditBuildPage() {
                             )}
 
                             {/* Submit buttons */}
-                            <div className="flex gap-4 justify-end pt-4">
+                            <div className="flex gap-4 justify-end pt-6 border-t border-e7-gold/10">
                                 <Link href={`/builds/${buildId}`}>
-                                    <Button type="button" variant="outline" className="border-e7-gold/30 text-gray-400">
+                                    <Button type="button" variant="outline" className="border-e7-gold/30 text-slate-400 hover:text-slate-200 hover:border-e7-gold/50">
                                         {t('common.cancel', 'Cancel')}
                                     </Button>
                                 </Link>
                                 <Button
                                     type="submit"
                                     disabled={isSubmitting || !title}
-                                    className="bg-e7-gold text-black hover:bg-e7-text-gold"
+                                    className="btn-gold shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 disabled:opacity-50"
                                 >
                                     {isSubmitting ? t('builds.updating', 'Updating...') : t('builds.updateBuild', 'Update Build')}
                                 </Button>

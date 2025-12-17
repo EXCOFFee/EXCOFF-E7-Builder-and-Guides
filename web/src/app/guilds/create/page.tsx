@@ -171,29 +171,29 @@ export default function CreateGuildPostPage() {
     }
 
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
+        <div className="min-h-screen bg-void-glow py-8 px-4">
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">
-                    <Link href="/guilds" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-block">
-                        ← {t('guilds.backToList', 'Back to Guild Posts')}
+                    <Link href="/guilds" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
+                        <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('guilds.backToList', 'Back to Guild Posts')}
                     </Link>
-                    <h1 className="text-3xl font-bold text-e7-gold">
+                    <h1 className="text-3xl font-display text-gold-gradient tracking-wide">
                         {t('guilds.createPost', 'Create Guild Post')}
                     </h1>
-                    <p className="text-gray-400 mt-1">
+                    <p className="text-slate-400 mt-1">
                         {t('guilds.createSubtitle', 'Recruit members for your guild')}
                     </p>
                 </div>
 
                 <form onSubmit={handleSubmit}>
-                    <Card className="bg-e7-panel border-e7-gold/20">
-                        <CardHeader>
+                    <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
+                        <CardHeader className="border-b border-e7-gold/10">
                             <CardTitle className="text-e7-gold">
                                 {t('guilds.postDetails', 'Post Details')}
                             </CardTitle>
                         </CardHeader>
-                        <CardContent className="space-y-6">
+                        <CardContent className="space-y-6 pt-6">
                             {/* Title */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -389,16 +389,16 @@ export default function CreateGuildPostPage() {
                             )}
 
                             {/* Submit buttons */}
-                            <div className="flex gap-4 justify-end pt-4">
+                            <div className="flex gap-4 justify-end pt-6 border-t border-e7-gold/10">
                                 <Link href="/guilds">
-                                    <Button type="button" variant="outline" className="border-e7-gold/30 text-gray-400">
+                                    <Button type="button" variant="outline" className="border-e7-gold/30 text-slate-400 hover:text-slate-200 hover:border-e7-gold/50">
                                         {t('common.cancel', 'Cancel')}
                                     </Button>
                                 </Link>
                                 <Button
                                     type="submit"
                                     disabled={isSubmitting || !title || !description || !server || !language}
-                                    className="bg-purple-600 text-white hover:bg-purple-700"
+                                    className="btn-gold shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 disabled:opacity-50"
                                 >
                                     {isSubmitting ? t('common.saving', 'Saving...') : t('guilds.publishPost', 'Publish Post')}
                                 </Button>

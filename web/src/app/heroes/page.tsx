@@ -105,21 +105,21 @@ export default function HeroesPage() {
     const heroes: Hero[] = data?.data || [];
 
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
+        <div className="min-h-screen bg-void-glow py-8 px-4">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="mb-8">
-                    <h1 className="font-display text-4xl text-e7-text-gold mb-2">{t('heroes.title', 'Hero Database')}</h1>
-                    <p className="text-gray-400">{t('heroes.description', 'Explore all Epic Seven heroes, their stats and builds')}</p>
+                <div className="mb-10 text-center">
+                    <h1 className="font-display text-4xl md:text-5xl text-gold-gradient mb-3 tracking-wide">{t('heroes.title', 'Hero Database')}</h1>
+                    <p className="text-slate-400 max-w-2xl mx-auto">{t('heroes.description', 'Explore all Epic Seven heroes, their stats and builds')}</p>
                 </div>
 
                 {/* Filters */}
-                <div className="mb-8 space-y-4">
+                <div className="mb-8 space-y-4 glass-panel p-4 rounded-xl">
                     <Input
                         placeholder={t('heroes.searchPlaceholder', 'Search heroes...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-xs bg-e7-panel border-e7-gold/30 text-white placeholder:text-gray-500"
+                        className="max-w-md bg-e7-void/50 border-e7-gold/20 text-slate-200 placeholder:text-slate-500 focus:border-e7-gold focus:ring-e7-gold/30 transition-all"
                     />
 
                     {/* Element Filter */}
@@ -190,78 +190,85 @@ export default function HeroesPage() {
 
                 {/* Heroes Grid */}
                 {!isLoading && !error && (
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
                         {heroes.length === 0 ? (
-                            <p className="text-gray-400 col-span-full text-center py-10">
+                            <p className="text-slate-400 col-span-full text-center py-10">
                                 {t('heroes.noResults', 'No heroes found.')}
                             </p>
                         ) : (
                             heroes.map((hero) => (
                                 <Link key={hero.id} href={`/heroes/${hero.slug}`}>
-                                    <Card className="bg-e7-panel border-e7-gold/20 hover:border-e7-gold transition-all hover:scale-105 cursor-pointer h-full group">
-                                        <CardHeader className="pb-2">
-                                            <div className="aspect-square bg-e7-void/50 rounded-lg mb-2 flex items-center justify-center overflow-hidden">
-                                                {hero.image_url ? (
-                                                    <Image
-                                                        src={hero.image_url}
-                                                        alt={hero.name}
-                                                        width={200}
-                                                        height={200}
-                                                        className="w-full h-full object-cover"
-                                                        style={HERO_POSITION_OVERRIDE[hero.slug] ? { objectPosition: HERO_POSITION_OVERRIDE[hero.slug] } : undefined}
-                                                        unoptimized
-                                                    />
-                                                ) : (
+                                    <div className="card-fantasy bg-gradient-to-b from-e7-panel to-e7-void rounded-xl overflow-hidden cursor-pointer h-full group relative">
+                                        {/* Rarity glow overlay */}
+                                        <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none ${hero.rarity === 5 ? 'bg-gradient-to-t from-e7-gold/20 via-transparent to-transparent' :
+                                            hero.rarity === 4 ? 'bg-gradient-to-t from-purple-500/20 via-transparent to-transparent' :
+                                                'bg-gradient-to-t from-blue-500/10 via-transparent to-transparent'
+                                            }`} />
+
+                                        {/* Hero Image Container */}
+                                        <div className="aspect-square bg-gradient-to-br from-e7-void to-e7-dark relative overflow-hidden">
+                                            {hero.image_url ? (
+                                                <Image
+                                                    src={hero.image_url}
+                                                    alt={hero.name}
+                                                    width={200}
+                                                    height={200}
+                                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                                    style={HERO_POSITION_OVERRIDE[hero.slug] ? { objectPosition: HERO_POSITION_OVERRIDE[hero.slug] } : undefined}
+                                                    unoptimized
+                                                />
+                                            ) : (
+                                                <div className="w-full h-full flex items-center justify-center">
                                                     <Image
                                                         src={CLASS_IMAGES[hero.class] || '/images/classes/ClassWarrior.png'}
                                                         alt={hero.class}
                                                         width={80}
                                                         height={80}
-                                                        className="opacity-50"
+                                                        className="opacity-30"
                                                     />
-                                                )}
-                                            </div>
-                                            <CardTitle className="text-white text-sm font-semibold truncate group-hover:text-e7-gold transition-colors">
-                                                {hero.name}
-                                            </CardTitle>
-                                        </CardHeader>
-                                        <CardContent className="pt-0">
-                                            <div className="flex gap-2 items-center">
-                                                {/* Element Icon */}
-                                                <div className="relative group/tooltip">
+                                                </div>
+                                            )}
+
+                                            {/* Element & Class floating badges */}
+                                            <div className="absolute top-2 left-2 flex gap-1">
+                                                <div className="w-7 h-7 rounded-lg glass-panel flex items-center justify-center">
                                                     <Image
                                                         src={ELEMENT_IMAGES[hero.element] || '/images/elements/ElementFire.png'}
                                                         alt={ELEMENT_NAMES[hero.element] || hero.element}
-                                                        width={24}
-                                                        height={24}
-                                                        className="w-6 h-6"
+                                                        width={20}
+                                                        height={20}
+                                                        className="w-5 h-5"
                                                     />
-                                                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 px-2 py-1 text-xs bg-e7-void border border-e7-gold/30 rounded opacity-0 group-hover/tooltip:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                                                        {ELEMENT_NAMES[hero.element]}
-                                                    </span>
                                                 </div>
-
-                                                {/* Class Icon */}
-                                                <div className="relative group/tooltip">
+                                                <div className="w-7 h-7 rounded-lg glass-panel flex items-center justify-center">
                                                     <Image
                                                         src={CLASS_IMAGES[hero.class] || '/images/classes/ClassWarrior.png'}
                                                         alt={CLASS_NAMES[hero.class] || hero.class}
-                                                        width={24}
-                                                        height={24}
-                                                        className="w-6 h-6"
+                                                        width={20}
+                                                        height={20}
+                                                        className="w-5 h-5"
                                                     />
-                                                    <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 px-2 py-1 text-xs bg-e7-void border border-e7-gold/30 rounded opacity-0 group-hover/tooltip:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                                                        {CLASS_NAMES[hero.class]}
-                                                    </span>
                                                 </div>
+                                            </div>
 
-                                                {/* Stars */}
-                                                <span className="text-e7-text-gold text-xs ml-auto">
+                                            {/* Rarity stars badge */}
+                                            <div className="absolute top-2 right-2 px-2 py-1 rounded-lg glass-panel">
+                                                <span className={`text-xs font-bold ${hero.rarity === 5 ? 'text-e7-gold' :
+                                                    hero.rarity === 4 ? 'text-purple-400' :
+                                                        'text-blue-400'
+                                                    }`}>
                                                     {'★'.repeat(hero.rarity)}
                                                 </span>
                                             </div>
-                                        </CardContent>
-                                    </Card>
+                                        </div>
+
+                                        {/* Hero Name Footer */}
+                                        <div className="p-3 bg-gradient-to-t from-e7-dark/80 to-transparent -mt-8 relative z-10 pt-10">
+                                            <h3 className="text-slate-100 text-sm font-semibold truncate group-hover:text-e7-gold transition-colors duration-300 text-center">
+                                                {hero.name}
+                                            </h3>
+                                        </div>
+                                    </div>
                                 </Link>
                             ))
                         )}

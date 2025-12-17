@@ -60,3 +60,6 @@ coverage/
 
 # Gemini/AI artifacts (personal notes)
 .gemini/
+
+# Datamined assets (large files, not for version control)
+DBE7/

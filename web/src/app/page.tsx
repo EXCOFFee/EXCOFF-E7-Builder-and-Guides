@@ -48,7 +48,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-e7-void overflow-hidden">
+    <main className="min-h-screen bg-void-glow overflow-hidden">
       {/* Hero Section with Animated Background */}
       <section className="relative py-16 md:py-24 px-4">
         {/* Animated Background Gradient */}
@@ -62,11 +62,12 @@ export default function Home() {
           {/* Logo */}
           <div className="mb-6 flex justify-center">
             <div className="relative w-32 h-32 md:w-40 md:h-40 animate-float">
+              <div className="absolute -inset-2 bg-gradient-to-r from-e7-gold via-e7-purple to-e7-gold rounded-3xl opacity-40 blur-md animate-border-glow" />
               <Image
                 src="/images/LogoEXCOFF.jpg"
                 alt="E7 EXCOFF"
                 fill
-                className="object-contain rounded-2xl shadow-2xl shadow-e7-gold/30"
+                className="object-contain rounded-2xl shadow-2xl shadow-e7-gold/30 relative"
                 priority
                 unoptimized
               />
@@ -78,11 +79,11 @@ export default function Home() {
             ORBIS HELPER
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-300 mb-2 font-medium">
+          <p className="text-lg md:text-xl text-slate-300 mb-2 font-medium">
             by EXCOFF
           </p>
 
-          <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
             {t('home.subtitle', 'Discover and publish your character builds and create game guides for the community')}
           </p>
 
@@ -91,7 +92,7 @@ export default function Home() {
             <Link href="/heroes">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-e7-gold to-yellow-500 text-black hover:from-yellow-500 hover:to-e7-gold font-semibold px-8 shadow-lg shadow-e7-gold/30 hover:shadow-e7-gold/50 transition-all duration-300 hover:scale-105"
+                className="btn-gold px-8 font-semibold shadow-lg shadow-e7-gold/30 hover:shadow-e7-gold/50 transition-all duration-300 hover:scale-105"
               >
                 {t('home.exploreHeroes', 'Explore Heroes')}
               </Button>
@@ -126,10 +127,10 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-e7-panel/30 to-transparent" />
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <h2 className="font-display text-3xl md:text-4xl text-center text-e7-gold mb-4">
+          <h2 className="font-display text-3xl md:text-4xl text-center text-gold-gradient mb-4">
             {t('home.whatYouFind', 'What will you find?')}
           </h2>
-          <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
             Everything you need to master Epic Seven
           </p>
 
@@ -137,7 +138,7 @@ export default function Home() {
             {features.map((feature, index) => (
               <Link key={index} href={feature.href}>
                 <div
-                  className={`group relative bg-e7-panel/80 backdrop-blur-sm border border-e7-gold/20 rounded-xl overflow-hidden hover:border-e7-gold/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-e7-gold/10 h-full ${feature.borderColor}`}
+                  className={`group card-fantasy relative glass-panel rounded-xl overflow-hidden h-full`}
                 >
                   {/* Gradient Background on Hover */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
@@ -146,13 +147,13 @@ export default function Home() {
                     <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                       {feature.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-e7-gold transition-colors">
+                    <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-e7-gold transition-colors">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-400 text-sm mb-3">
+                    <p className="text-slate-400 text-sm mb-3">
                       {feature.desc}
                     </p>
-                    <p className="text-gray-500 text-xs">
+                    <p className="text-slate-500 text-xs">
                       {feature.details}
                     </p>
                   </div>
@@ -173,9 +174,9 @@ export default function Home() {
               { value: "∞", label: t('nav.builds', 'Builds') },
               { value: "6", label: "Languages" },
             ].map((stat, i) => (
-              <div key={i} className="p-4 rounded-xl bg-e7-panel/50 border border-e7-gold/10 hover:border-e7-gold/30 transition-colors">
+              <div key={i} className="p-4 rounded-xl glass-panel hover:border-e7-gold/30 transition-all hover:shadow-lg hover:shadow-e7-gold/10">
                 <div className="text-3xl md:text-4xl font-bold text-e7-gold mb-1">{stat.value}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
+                <div className="text-sm text-slate-400">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -187,25 +188,27 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-e7-gold/10 to-blue-900/20" />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
-            {t('home.readyToShare', 'Ready to share your knowledge?')}
-          </h2>
-          <p className="text-gray-400 mb-8 text-lg">
-            {t('home.createAccount', 'Create your account and start contributing guides and builds for your favorite heroes.')}
-          </p>
-          <Link href="/login">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-semibold px-10 py-6 text-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
-            >
-              {t('home.joinCommunity', 'Join the Community')}
-            </Button>
-          </Link>
+          <div className="glass-panel rounded-2xl p-8 md:p-12">
+            <h2 className="font-display text-3xl md:text-4xl text-slate-100 mb-4">
+              {t('home.readyToShare', 'Ready to share your knowledge?')}
+            </h2>
+            <p className="text-slate-400 mb-8 text-lg">
+              {t('home.createAccount', 'Create your account and start contributing guides and builds for your favorite heroes.')}
+            </p>
+            <Link href="/login">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-semibold px-10 py-6 text-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
+              >
+                {t('home.joinCommunity', 'Join the Community')}
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-e7-gold/20 py-8 px-4">
+      <footer className="border-t border-e7-gold/20 py-8 px-4 glass-panel mt-8">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-3">
             <Image
@@ -213,23 +216,23 @@ export default function Home() {
               alt="E7 EXCOFF"
               width={32}
               height={32}
-              className="rounded-lg"
+              className="rounded-lg ring-1 ring-e7-gold/30"
               unoptimized
             />
             <span className="text-e7-gold font-bold">E7 EXCOFF</span>
           </div>
-          <div className="text-center text-gray-500 text-sm">
+          <div className="text-center text-slate-500 text-sm">
             <p>{t('footer.notAffiliated', 'E7 EXCOFF is not affiliated with Smilegate or Super Creative.')}</p>
             <p>{t('footer.copyright', 'Epic Seven and all its content are property of their respective owners.')}</p>
           </div>
           <div className="flex gap-4">
-            <Link href="/heroes" className="text-gray-400 hover:text-e7-gold transition-colors text-sm">
+            <Link href="/heroes" className="text-slate-400 hover:text-e7-gold transition-colors text-sm">
               {t('nav.heroes', 'Heroes')}
             </Link>
-            <Link href="/guides" className="text-gray-400 hover:text-e7-gold transition-colors text-sm">
+            <Link href="/guides" className="text-slate-400 hover:text-e7-gold transition-colors text-sm">
               {t('nav.guides', 'Guides')}
             </Link>
-            <Link href="/guilds" className="text-gray-400 hover:text-e7-gold transition-colors text-sm">
+            <Link href="/guilds" className="text-slate-400 hover:text-e7-gold transition-colors text-sm">
               {t('nav.guilds', 'Guilds')}
             </Link>
           </div>
