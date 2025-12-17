@@ -281,9 +281,9 @@ export default function HeroDetailPage() {
                 </div>
 
                 {/* Hero Header */}
-                <div className="flex flex-col md:flex-row gap-8 mb-8">
+                <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 mb-8">
                     {/* Portrait */}
-                    <div className="w-full md:w-80 flex-shrink-0">
+                    <div className="w-full max-w-xs mx-auto lg:mx-0 lg:w-80 flex-shrink-0">
                         <div className="relative">
                             {/* Animated glow border */}
                             <div className="absolute -inset-1 bg-gradient-to-r from-e7-gold via-e7-purple to-e7-gold rounded-2xl opacity-50 blur-sm animate-border-glow" />
@@ -315,8 +315,8 @@ export default function HeroDetailPage() {
                     {/* Info */}
                     <div className="flex-1 space-y-6">
                         <div>
-                            <h1 className="font-display text-4xl md:text-5xl text-gold-gradient mb-4 tracking-wide">{hero.name}</h1>
-                            <div className="flex flex-wrap gap-3">
+                            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-gold-gradient mb-4 tracking-wide text-center lg:text-left">{hero.name}</h1>
+                            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
                                 <Badge className={`${ELEMENT_COLORS[hero.element]} px-4 py-2 text-sm font-semibold flex items-center gap-2 shadow-lg`}>
                                     {ELEMENT_IMAGES[hero.element] && (
                                         <Image src={ELEMENT_IMAGES[hero.element]} alt={hero.element} width={20} height={20} className="w-5 h-5" />
@@ -337,7 +337,7 @@ export default function HeroDetailPage() {
                             </div>
 
                             {/* Create Build Button */}
-                            <div className="flex flex-wrap gap-3 mt-6">
+                            <div className="flex flex-wrap gap-3 mt-6 justify-center lg:justify-start">
                                 <Link href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}>
                                     <button className="btn-gold px-6 py-2.5 rounded-lg flex items-center gap-2 shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 transition-all">
                                         ⚙️ Crear Build
@@ -354,7 +354,7 @@ export default function HeroDetailPage() {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="pt-4">
-                                <div className="grid grid-cols-4 md:grid-cols-8 gap-3">
+                                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 sm:gap-3">
                                     <StatItem label="ATK" value={hero.base_stats?.atk || 0} color="text-red-400" />
                                     <StatItem label="DEF" value={hero.base_stats?.def || 0} color="text-blue-400" />
                                     <StatItem label="HP" value={hero.base_stats?.hp || 0} color="text-green-400" />
@@ -371,7 +371,7 @@ export default function HeroDetailPage() {
 
                 {/* Usage Statistics */}
                 {hasUsageStats && (
-                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mb-8">
                         {/* Popular Sets */}
                         <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
                             <CardHeader className="border-b border-e7-gold/10">
@@ -460,7 +460,7 @@ export default function HeroDetailPage() {
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
+                            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 sm:gap-4">
                                 <StatItem label="ATK" value={hero.avg_stats.atk} color="text-red-400" large />
                                 <StatItem label="DEF" value={hero.avg_stats.def} color="text-blue-400" large />
                                 <StatItem label="HP" value={hero.avg_stats.hp} color="text-green-400" large />
@@ -490,7 +490,7 @@ export default function HeroDetailPage() {
                                         {IMPRINT_TYPES[hero.self_devotion.type]?.name || hero.self_devotion.type}
                                     </Badge>
                                 </div>
-                                <div className="grid grid-cols-5 gap-2">
+                                <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3">
                                     {IMPRINT_GRADES.map((grade) => {
                                         const value = hero.self_devotion?.grades?.[grade];
                                         const isPercentage = hero.self_devotion?.type?.includes('rate') ||
@@ -663,7 +663,7 @@ export default function HeroDetailPage() {
                 {/* Community Builds Section */}
                 <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-8 mt-8">
                     <CardHeader className="border-b border-e7-gold/10">
-                        <div className="flex justify-between items-center">
+                        <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
                             <CardTitle className="text-e7-gold flex items-center gap-2">
                                 <span>Builds de la Comunidad</span>
                             </CardTitle>
