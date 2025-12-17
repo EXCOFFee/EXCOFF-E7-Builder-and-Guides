@@ -64,7 +64,7 @@ export default function Home() {
             <div className="relative w-32 h-32 md:w-40 md:h-40 animate-float">
               <div className="absolute -inset-2 bg-gradient-to-r from-e7-gold via-e7-purple to-e7-gold rounded-3xl opacity-40 blur-md animate-border-glow" />
               <Image
-                src="/images/LogoEXCOFF.jpg"
+                src="/images/icon_menu_orbis.png"
                 alt="E7 EXCOFF"
                 fill
                 className="object-contain rounded-2xl shadow-2xl shadow-e7-gold/30 relative"
@@ -212,7 +212,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/LogoEXCOFF.jpg"
+              src="/images/icon_menu_orbis.png"
               alt="E7 EXCOFF"
               width={32}
               height={32}

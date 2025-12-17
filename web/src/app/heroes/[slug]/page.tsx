@@ -722,7 +722,7 @@ export default function HeroDetailPage() {
                                                 </div>
                                                 <div className="text-right">
                                                     <div className="text-e7-gold font-bold flex items-center gap-1 justify-end">
-                                                        <Image src="/images/ras-like.gif" alt="like" width={18} height={18} unoptimized />
+                                                        <Image src="/images/GenesisRas.png" alt="like" width={18} height={18} unoptimized />
                                                         {build.likes || 0}
                                                     </div>
                                                     <div className="text-gray-500 text-xs">{build.user?.name || 'Anónimo'}</div>
