@@ -108,17 +108,6 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Ras Animation */}
-          <div className="mt-8 flex justify-center">
-            <Image
-              src="/images/GenesisRas.png"
-              alt="Ras"
-              width={80}
-              height={80}
-              className="opacity-80 hover:opacity-100 transition-opacity"
-              unoptimized
-            />
-          </div>
         </div>
       </section>
 
