@@ -498,7 +498,15 @@ export default function HeroDetailPage() {
 
                                         return (
                                             <div key={grade} className="text-center p-3 bg-e7-void/50 rounded-lg border border-e7-gold/10">
-                                                <p className="text-e7-gold font-bold text-lg mb-1">{grade}</p>
+                                                <div className="flex justify-center mb-2">
+                                                    <Image
+                                                        src={`${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/imprints/hero_dedi_a_${grade.toLowerCase()}.png`}
+                                                        alt={grade}
+                                                        width={32}
+                                                        height={32}
+                                                        unoptimized
+                                                    />
+                                                </div>
                                                 <p className={`${IMPRINT_TYPES[hero.self_devotion?.type || '']?.color || 'text-gray-300'} font-semibold`}>
                                                     {value !== undefined
                                                         ? isPercentage
