@@ -312,9 +312,20 @@ class SyncFribbelsData extends Command
 
     /**
      * Get artifact image URL.
+     * Uses local datamined images from DBE7/item_arti folder.
+     * Images should be copied to public/images/artifacts/ on the server.
+     * Fallback to Fribbels GitHub if local image not available.
      */
     private function getArtifactImageUrl(string $code): string
     {
+        // Datamine uses art{NNNN}_l.jpg format
+        // If code already matches (e.g., art0001), use it directly
+        if (preg_match('/^art\d+$/', $code)) {
+            $baseUrl = config('app.url');
+            return "{$baseUrl}/images/artifacts/{$code}_l.jpg";
+        }
+        
+        // Fallback to Fribbels GitHub for other codes
         return "https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/images/artifact/{$code}.png";
     }
 
