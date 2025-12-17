@@ -95,7 +95,7 @@ export function Navbar() {
                 {/* Logo & App Name */}
                 <Link href="/" className="flex items-center gap-3 group">
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-e7-gold to-e7-purple flex items-center justify-center overflow-hidden ring-2 ring-e7-gold/30 group-hover:ring-e7-gold/60 transition-all group-hover:shadow-lg group-hover:shadow-e7-gold/20">
-                        <Image src="/images/LogoEXCOFF.jpg" alt="ORBIS" width={40} height={40} className="object-cover" unoptimized />
+                        <Image src="/images/icon_menu_orbis.png" alt="ORBIS" width={40} height={40} className="object-cover" unoptimized />
                     </div>
                     <div className="hidden sm:block">
                         <h1 className="text-lg font-bold text-gold-gradient tracking-wide group-hover:opacity-90 transition-opacity">
