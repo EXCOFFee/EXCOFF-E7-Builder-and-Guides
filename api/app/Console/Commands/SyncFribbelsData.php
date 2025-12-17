@@ -131,7 +131,8 @@ class SyncFribbelsData extends Command
      */
     private function upsertHero(array $data, bool $force): string
     {
-        $code = $data['_id'] ?? $data['id'] ?? null;
+        // Get the hero code - prefer 'code' field for datamined heroes, fallback to '_id'
+        $code = $data['code'] ?? $data['_id'] ?? $data['id'] ?? null;
         if (!$code) {
             return 'skipped';
         }
