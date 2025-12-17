@@ -1,16 +1,12 @@
 {
     "swift-flagbearer-sigret": {
-        "code": "c5038",
+        "code": "c5072",
         "_id": "swift-flagbearer-sigret",
         "name": "Swift Flagbearer Sigret",
         "rarity": 5,
         "attribute": "fire",
         "role": "assassin",
         "zodiac": "scorpion",
-        "assets": {
-            "icon": "https://www.epic7x.com/wp-content/uploads/2024/11/swift-flagbearer-sigret-icon.png",
-            "thumbnail": "https://www.epic7x.com/wp-content/uploads/2024/11/swift-flagbearer-sigret-icon.png"
-        },
         "calculatedStatus": {
             "lv60SixStarFullyAwakened": {
                 "atk": 1057,

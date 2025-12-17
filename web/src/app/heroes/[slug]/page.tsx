@@ -548,6 +548,20 @@ export default function HeroDetailPage() {
                                 return (
                                     <div key={skillKey} className="bg-e7-void/50 rounded-lg p-4 border border-e7-gold/10">
                                         <div className="flex items-center gap-3 mb-3 flex-wrap">
+                                            {/* Skill Icon from datamine */}
+                                            {hero.code && (
+                                                <Image
+                                                    src={`${process.env.NEXT_PUBLIC_API_URL}/images/skills/sk_${hero.code}_${skillKey.replace('S', '')}.png`}
+                                                    alt={`${skillKey} icon`}
+                                                    width={40}
+                                                    height={40}
+                                                    className="rounded-md border border-e7-gold/30"
+                                                    unoptimized
+                                                    onError={(e) => {
+                                                        (e.target as HTMLImageElement).style.display = 'none';
+                                                    }}
+                                                />
+                                            )}
                                             <Badge className="bg-e7-gold text-black font-bold px-3">{skillKey}</Badge>
                                             <h3 className="text-white font-semibold">{s.name || `Skill ${skillKey}`}</h3>
                                             {s.targets && (
