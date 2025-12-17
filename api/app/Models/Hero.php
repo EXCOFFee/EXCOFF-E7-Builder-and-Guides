@@ -15,6 +15,7 @@ class Hero extends Model
 {
     protected $fillable = [
         'code',
+        'hero_code', // Numeric code for skill icons (e.g., 'c1144')
         'name',
         'name_ko', // Korean
         'name_ja', // Japanese

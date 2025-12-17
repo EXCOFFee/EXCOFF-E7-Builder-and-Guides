@@ -46,6 +46,7 @@ interface SelfDevotion {
 interface Hero {
     id: number;
     code: string;
+    hero_code?: string; // Numeric code for skill icons (e.g., 'c1144')
     name: string;
     slug: string;
     element: string;
@@ -549,9 +550,9 @@ export default function HeroDetailPage() {
                                     <div key={skillKey} className="bg-e7-void/50 rounded-lg p-4 border border-e7-gold/10">
                                         <div className="flex items-center gap-3 mb-3 flex-wrap">
                                             {/* Skill Icon from datamine */}
-                                            {hero.code && (
+                                            {hero.hero_code && (
                                                 <Image
-                                                    src={`${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/skills/sk_${hero.code}_${skillKey.replace('S', '')}.png`}
+                                                    src={`${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/skills/sk_${hero.hero_code}_${skillKey.replace('S', '')}.png`}
                                                     alt={`${skillKey} icon`}
                                                     width={40}
                                                     height={40}

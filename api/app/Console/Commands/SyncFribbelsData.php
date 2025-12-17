@@ -201,6 +201,7 @@ class SyncFribbelsData extends Command
 
         $heroData = [
             'code' => $code,
+            'hero_code' => $imageCode, // Numeric code for skill icons (e.g., 'c1144')
             'name' => $data['name'] ?? 'Unknown',
             'slug' => Str::slug($data['name'] ?? $code),
             'element' => $element,
