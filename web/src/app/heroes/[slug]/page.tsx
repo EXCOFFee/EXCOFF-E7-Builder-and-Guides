@@ -7,6 +7,7 @@ import { useParams } from 'next/navigation';
 import { heroApi, buildApi } from '@/lib/api';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface HeroStats {
     atk: number;
@@ -212,6 +213,7 @@ const StatItem = ({ label, value, suffix = '', color = 'text-gray-300', large = 
 export default function HeroDetailPage() {
     const params = useParams();
     const slug = params.slug as string;
+    const { t } = useTranslations();
 
     const { data, isLoading, error } = useQuery({
         queryKey: ['hero', slug],
@@ -276,7 +278,7 @@ export default function HeroDetailPage() {
                 {/* Breadcrumb */}
                 <div className="mb-6">
                     <Link href="/heroes" className="text-e7-gold hover:text-e7-text-gold text-sm transition-colors inline-flex items-center gap-2 group">
-                        <span className="group-hover:-translate-x-1 transition-transform">←</span> Back to Heroes
+                        <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('heroes.backToHeroes', 'Back to Heroes')}
                     </Link>
                 </div>
 
@@ -340,7 +342,7 @@ export default function HeroDetailPage() {
                             <div className="flex flex-wrap gap-3 mt-6 justify-center lg:justify-start">
                                 <Link href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}>
                                     <button className="btn-gold px-6 py-2.5 rounded-lg flex items-center gap-2 shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 transition-all">
-                                        ⚙️ Crear Build
+                                        {t('heroes.createBuild', 'Create Build')}
                                     </button>
                                 </Link>
                             </div>
@@ -350,7 +352,7 @@ export default function HeroDetailPage() {
                         <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
                             <CardHeader className="pb-2 border-b border-e7-gold/10">
                                 <CardTitle className="text-e7-gold text-lg flex items-center gap-2">
-                                    <span>Base Stats (Lv.60 Fully Awakened)</span>
+                                    <span>{t('heroes.baseStats', 'Base Stats (Lv.60 Fully Awakened)')}</span>
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="pt-4">
@@ -376,7 +378,7 @@ export default function HeroDetailPage() {
                         <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
                             <CardHeader className="border-b border-e7-gold/10">
                                 <CardTitle className="text-e7-gold flex items-center gap-2">
-                                    <span>🎮</span> Popular Set Combinations
+                                    <span>🎮</span> {t('heroes.popularSets', 'Popular Set Combinations')}
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="space-y-3">
@@ -416,7 +418,7 @@ export default function HeroDetailPage() {
                         <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
                             <CardHeader className="border-b border-e7-gold/10">
                                 <CardTitle className="text-e7-gold flex items-center gap-2">
-                                    <span>Popular Artifacts</span>
+                                    <span>{t('heroes.popularArtifacts', 'Popular Artifacts')}</span>
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="space-y-3 pt-4">
@@ -453,7 +455,7 @@ export default function HeroDetailPage() {
                     <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-8">
                         <CardHeader className="border-b border-e7-gold/10">
                             <CardTitle className="text-e7-gold flex items-center gap-2">
-                                <span>Average Build Stats</span>
+                                <span>{t('heroes.averageStats', 'Average Build Stats')}</span>
                                 <span className="text-slate-500 text-sm font-normal ml-2">
                                     (from {hero.guides_count.toLocaleString()} builds)
                                 </span>
@@ -479,13 +481,13 @@ export default function HeroDetailPage() {
                     <Card className="bg-gradient-to-br from-e7-panel to-e7-void border-e7-gold/30 mb-8">
                         <CardHeader>
                             <CardTitle className="text-e7-gold flex items-center gap-2">
-                                <span>Memory Imprint</span>
+                                <span>{t('heroes.memoryImprint', 'Memory Imprint')}</span>
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
                             <div className="space-y-4">
                                 <div className="flex items-center gap-4 mb-6">
-                                    <span className="text-gray-400 text-lg">Type:</span>
+                                    <span className="text-gray-400 text-lg">{t('heroes.type', 'Type')}:</span>
                                     <Badge className={`${IMPRINT_TYPES[hero.self_devotion.type]?.color || 'text-white'} bg-e7-void border border-e7-gold/30 text-base px-4 py-2`}>
                                         {IMPRINT_TYPES[hero.self_devotion.type]?.name || hero.self_devotion.type}
                                     </Badge>
@@ -530,7 +532,7 @@ export default function HeroDetailPage() {
                     <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
                         <CardHeader className="border-b border-e7-gold/10">
                             <CardTitle className="text-e7-gold flex items-center gap-2">
-                                <span>Skills & Damage Scaling</span>
+                                <span>{t('heroes.skills', 'Skills & Damage Scaling')}</span>
                             </CardTitle>
                         </CardHeader>
                         <CardContent className="space-y-4 pt-4">
@@ -665,11 +667,11 @@ export default function HeroDetailPage() {
                     <CardHeader className="border-b border-e7-gold/10">
                         <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
                             <CardTitle className="text-e7-gold flex items-center gap-2">
-                                <span>Builds de la Comunidad</span>
+                                <span>{t('heroes.communityBuilds', 'Community Builds')}</span>
                             </CardTitle>
                             <Link href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}>
                                 <button className="btn-gold px-4 py-1.5 text-sm rounded-lg shadow-lg shadow-e7-gold/10 hover:shadow-e7-gold/30 transition-all">
-                                    + Crear Build
+                                    + {t('heroes.createBuild', 'Create Build')}
                                 </button>
                             </Link>
                         </div>
@@ -677,8 +679,8 @@ export default function HeroDetailPage() {
                     <CardContent className="pt-4">
                         {builds.length === 0 ? (
                             <div className="text-center py-8 text-slate-400">
-                                <p className="text-lg mb-2">💭 Aún no hay builds para este héroe</p>
-                                <p className="text-sm">¡Sé el primero en compartir tu build!</p>
+                                <p className="text-lg mb-2">💭 {t('heroes.noBuildsYet', 'No builds for this hero yet')}</p>
+                                <p className="text-sm">{t('heroes.beFirst', 'Be the first to share your build!')}</p>
                             </div>
                         ) : (
                             <div className="space-y-4">
