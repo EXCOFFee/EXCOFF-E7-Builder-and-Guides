@@ -292,7 +292,7 @@ class SyncFribbelsData extends Command
             'class' => $artifactClass,
             'rarity' => (int) ($data['rarity'] ?? 5),
             'description' => $data['skill']['description'] ?? null,
-            'image_url' => $this->getArtifactImageUrl($fribbelsCode),
+            'image_url' => $this->getArtifactImageUrl(Str::slug($name)),
         ];
 
         $existing = Artifact::where('code', $fribbelsCode)->first();
@@ -320,13 +320,13 @@ class SyncFribbelsData extends Command
 
     /**
      * Get artifact image URL.
-     * Uses Fribbels GitHub repository images.
-     * Format: https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/images/artifact/{code}.png
+     * Uses epic7db.com artifact images with slug-based naming.
+     * Format: https://epic7db.com/images/artifact/icon/{slug}.webp
      */
-    private function getArtifactImageUrl(string $code): string
+    private function getArtifactImageUrl(string $slug): string
     {
-        // Fribbels GitHub has images named by the artifact code (e.g., ef317.png)
-        return "https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/images/artifact/{$code}.png";
+        // epic7db.com uses slug-based naming for artifact images
+        return "https://epic7db.com/images/artifact/icon/{$slug}.webp";
     }
 
     /**
