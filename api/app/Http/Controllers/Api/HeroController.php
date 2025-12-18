@@ -10,12 +10,18 @@ use App\Models\Hero;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Support\Facades\Cache;
 
 /**
  * Hero API Controller - Read-only endpoints for wiki data.
  */
 class HeroController extends Controller
 {
+    /**
+     * Cache duration in seconds (1 hour)
+     */
+    private const CACHE_TTL = 3600;
+
     /**
      * List all heroes with optional filters.
      * 
@@ -24,29 +30,34 @@ class HeroController extends Controller
      */
     public function index(Request $request): AnonymousResourceCollection
     {
-        $query = Hero::query();
+        // Build cache key from query parameters
+        $cacheKey = 'heroes:index:' . md5(json_encode($request->query()));
+        
+        $heroes = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($request) {
+            $query = Hero::query();
 
-        // Filter by element
-        if ($request->has('element')) {
-            $query->where('element', $request->element);
-        }
+            // Filter by element
+            if ($request->has('element')) {
+                $query->where('element', $request->element);
+            }
 
-        // Filter by class
-        if ($request->has('class')) {
-            $query->where('class', $request->class);
-        }
+            // Filter by class
+            if ($request->has('class')) {
+                $query->where('class', $request->class);
+            }
 
-        // Filter by rarity
-        if ($request->has('rarity')) {
-            $query->where('rarity', $request->rarity);
-        }
+            // Filter by rarity
+            if ($request->has('rarity')) {
+                $query->where('rarity', $request->rarity);
+            }
 
-        // Search by name
-        if ($request->has('search')) {
-            $query->where('name', 'like', '%' . $request->search . '%');
-        }
+            // Search by name
+            if ($request->has('search')) {
+                $query->where('name', 'like', '%' . $request->search . '%');
+            }
 
-        $heroes = $query->orderBy('name')->paginate(500);
+            return $query->orderBy('name')->paginate(500);
+        });
 
         return HeroResource::collection($heroes);
     }
@@ -58,15 +69,19 @@ class HeroController extends Controller
      */
     public function show(string $slug): HeroResource|JsonResponse
     {
-        $hero = Hero::where('slug', $slug)
-            ->with([
-                'guides' => function ($query) {
-                    $query->where('is_published', true)
-                        ->orderByDesc('vote_score')
-                        ->limit(10);
-                }
-            ])
-            ->first();
+        $cacheKey = "heroes:show:{$slug}";
+        
+        $hero = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($slug) {
+            return Hero::where('slug', $slug)
+                ->with([
+                    'guides' => function ($query) {
+                        $query->where('is_published', true)
+                            ->orderByDesc('vote_score')
+                            ->limit(10);
+                    }
+                ])
+                ->first();
+        });
 
         if (!$hero) {
             return response()->json([

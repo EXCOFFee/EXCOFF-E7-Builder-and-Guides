@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Artifact;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 /**
  * Artifact API Controller - Read-only endpoints for artifact data.
@@ -15,34 +16,44 @@ use Illuminate\Http\Request;
 class ArtifactController extends Controller
 {
     /**
+     * Cache duration in seconds (1 hour)
+     */
+    private const CACHE_TTL = 3600;
+
+    /**
      * List all artifacts with optional filters.
      */
     public function index(Request $request): JsonResponse
     {
-        $query = Artifact::query();
+        // Build cache key from query parameters
+        $cacheKey = 'artifacts:index:' . md5(json_encode($request->query()));
+        
+        $artifacts = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($request) {
+            $query = Artifact::query();
 
-        // Filter by rarity
-        if ($request->has('rarity')) {
-            $query->where('rarity', $request->rarity);
-        }
+            // Filter by rarity
+            if ($request->has('rarity')) {
+                $query->where('rarity', $request->rarity);
+            }
 
-        // Filter by class
-        if ($request->has('class')) {
-            $query->where('class', $request->class);
-        }
+            // Filter by class
+            if ($request->has('class')) {
+                $query->where('class', $request->class);
+            }
 
-        // Search by name (supports multiple languages)
-        if ($request->has('search')) {
-            $search = $request->search;
-            $query->where(function ($q) use ($search) {
-                $q->where('name', 'like', '%' . $search . '%')
-                    ->orWhere('name_ko', 'like', '%' . $search . '%')
-                    ->orWhere('name_ja', 'like', '%' . $search . '%')
-                    ->orWhere('name_zh', 'like', '%' . $search . '%');
-            });
-        }
+            // Search by name (supports multiple languages)
+            if ($request->has('search')) {
+                $search = $request->search;
+                $query->where(function ($q) use ($search) {
+                    $q->where('name', 'like', '%' . $search . '%')
+                        ->orWhere('name_ko', 'like', '%' . $search . '%')
+                        ->orWhere('name_ja', 'like', '%' . $search . '%')
+                        ->orWhere('name_zh', 'like', '%' . $search . '%');
+                });
+            }
 
-        $artifacts = $query->orderBy('name')->paginate(500);
+            return $query->orderBy('name')->paginate(500);
+        });
 
         // Get language preference
         $lang = $request->query('lang', 'en');
