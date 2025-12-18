@@ -273,8 +273,11 @@ class SyncFribbelsData extends Command
      */
     private function upsertArtifact(array $data): string
     {
-        $code = $data['_id'] ?? $data['id'] ?? null;
-        if (!$code) {
+        // Fribbels data uses artifact name as key, with 'code' field containing the ID (e.g., ef317)
+        $fribbelsCode = $data['code'] ?? null;
+        $name = $data['name'] ?? 'Unknown';
+        
+        if (!$fribbelsCode || !$name) {
             return 'skipped';
         }
 
@@ -283,16 +286,16 @@ class SyncFribbelsData extends Command
         $artifactClass = self::CLASS_MAP[$artifactClass] ?? 'warrior';
 
         $artifactData = [
-            'code' => $code,
-            'name' => $data['name'] ?? 'Unknown',
-            'slug' => Str::slug($data['name'] ?? $code),
+            'code' => $fribbelsCode,
+            'name' => $name,
+            'slug' => Str::slug($name),
             'class' => $artifactClass,
             'rarity' => (int) ($data['rarity'] ?? 5),
             'description' => $data['skill']['description'] ?? null,
-            'image_url' => $this->getArtifactImageUrl($code),
+            'image_url' => $this->getArtifactImageUrl($fribbelsCode),
         ];
 
-        $existing = Artifact::where('code', $code)->first();
+        $existing = Artifact::where('code', $fribbelsCode)->first();
 
         if ($existing) {
             $existing->update($artifactData);
@@ -317,20 +320,12 @@ class SyncFribbelsData extends Command
 
     /**
      * Get artifact image URL.
-     * Uses local datamined images from DBE7/item_arti folder.
-     * Images should be copied to public/images/artifacts/ on the server.
-     * Fallback to Fribbels GitHub if local image not available.
+     * Uses Fribbels GitHub repository images.
+     * Format: https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/images/artifact/{code}.png
      */
     private function getArtifactImageUrl(string $code): string
     {
-        // Datamine uses art{NNNN}_l.jpg format
-        // If code already matches (e.g., art0001), use it directly
-        if (preg_match('/^art\d+$/', $code)) {
-            $baseUrl = config('app.url');
-            return "{$baseUrl}/images/artifacts/{$code}_l.jpg";
-        }
-        
-        // Fallback to Fribbels GitHub for other codes
+        // Fribbels GitHub has images named by the artifact code (e.g., ef317.png)
         return "https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/images/artifact/{$code}.png";
     }
 
