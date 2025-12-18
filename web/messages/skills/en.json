@@ -1,0 +1,114 @@
+{
+    "swift-flagbearer-sigret": {
+        "S1": {
+            "name": "Strike of Flagbearer",
+            "description": "Attacks the enemy with a flag, with a 75% chance to silence for 1 turn. If the enemy is silenced after the attack, decreases Combat Readiness by 25%."
+        },
+        "S2": {
+            "name": "Target Lock",
+            "description": "After dispelling all buffs from a single enemy, has a 100% chance to inflict Target for 2 turns, and all allies except the caster attack the enemy with a basic skill. Increases Combat Readiness of the caster by 30%."
+        },
+        "S3": {
+            "name": "Flag of Victory",
+            "description": "Dispels two buffs from all enemies before a 100% chance to inflict Fear for 2 turns and decrease Combat Readiness by 20%. Grants increased Speed to all allies for 2 turns. At the start of the first battle, grants increased Evasion to the caster for 2 turns."
+        }
+    },
+    "hecate": {
+        "S1": {
+            "name": "Reaper's Scythe",
+            "description": "Attacks the enemy with Sigurd Scythe, before increasing Combat Readiness of the caster by 20%. When used on the caster's turn, activates Final Deliverance as an extra attack. Final Deliverance: Attacks all enemies, before granting stealth to the caster for 1 turn and decreasing skill cooldowns by 2 turns."
+        },
+        "S2": {
+            "name": "Death's Dominion",
+            "description": "Enemy Heroes cannot revive and cannot be granted immortality. When attacking, penetrates the target's Defense by 85%, and cannot trigger a critical hit or a heavy blow."
+        },
+        "S3": {
+            "name": "Inescapable Demise",
+            "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy by releasing the force of the netherworld. When the target is a Hero, ignores damage share. Begins the first battle with a full skill cooldown count."
+        }
+    },
+    "abigail": {
+        "S1": {
+            "name": "Ambush",
+            "description": "Attacks the enemy with bloodied wings, and increases Combat Readiness of the caster by 15%. When used on the caster's turn, has a 35% chance to activate Might as an extra effect. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Blood Banquet",
+            "description": "At the start of the turn, curses the enemy with the highest Attack for 1 turn. When the ally in the back row except for the caster receives lethal damage, consumes 30% of the caster's current Health, dispelling all debuffs from the target, before granting immortality and vampirism for 1 turn."
+        },
+        "S3": {
+            "name": "Scarlet Garden",
+            "description": "After dispelling all buffs from the enemy, attacks with a field of bloody thorns. Increases Effectiveness of this attack by 50% and damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "achates": {
+        "S1": {
+            "name": "Magic Design",
+            "description": "Attacks with a staff, with a 50% chance to decrease Attack for 2 turns."
+        },
+        "S2": {
+            "name": "Rapid Cure",
+            "description": "Recovers an ally's Health and grants a barrier for 1 turn, before decreasing skill cooldown by 1 turn. Amount recovered and barrier strength increases proportional to the caster's Max Health."
+        },
+        "S3": {
+            "name": "Curing Prayer",
+            "description": "Dispels debuffs from all allies before healing them. Healing increases proportional to the caster's max Health."
+        }
+    },
+    "adin": {
+        "S1": {
+            "name": "Ankle Cut",
+            "description": "Attacks the enemy with a sword, increasing Combat Readiness of the caster by 20%."
+        },
+        "S2": {
+            "name": "Blade Gust",
+            "description": "Attacks all enemies with a blade gust, with an 80% chance to make them unable to be buffed for 2 turns. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+        },
+        "S3": {
+            "name": "Lightning Bolt",
+            "description": "Attacks the enemy repeatedly, granting Weakness Shared to the caster for 2 turns. A critical hit has a 100% chance to decrease Defense for 2 turns."
+        }
+    },
+    "adlay": {
+        "S1": {
+            "name": "Mana Release",
+            "description": "Attacks with the power of a magical tome, with a 35% chance to stun for 1 turn."
+        },
+        "S2": {
+            "name": "Heroism",
+            "description": "Combat Readiness increases by 12% every time an ally except for the caster is attacked."
+        },
+        "S3": {
+            "name": "Mana Seal",
+            "description": "Deals huge damage to all enemies with a sealing spell, with a 170% chance to dispel one buff, before a 170% chance to increase skill cooldowns by 1 turn."
+        }
+    },
+    "adventurer-ras": {
+        "S1": {
+            "name": "X-Slash",
+            "description": "Attacks with a sword, dealing damage proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Command Strike",
+            "description": "Attacks the enemy repeatedly, before triggering a Dual Attack from the ally with the highest Attack."
+        },
+        "S3": {
+            "name": "Purifying Flame",
+            "description": "Strongly attacks all enemies with a swordstorm, before recovering the caster's Health and increasing Defense of all allies for 2 turns. Amount recovered and damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "ainos": {
+        "S1": {
+            "name": "Silent Fire",
+            "description": "Silently shoots the enemy, with a 75% chance to decrease Defense for 1 turn."
+        },
+        "S2": {
+            "name": "Maneuver Support",
+            "description": "At the end of the turn, increases Combat Readiness of the ally except for the caster with the highest Attack by 20%."
+        },
+        "S3": {
+            "name": "Firepower Cube",
+            "description": "Throws a firepower cube to attack all enemies, before healing all allies and granting increased Attack and Speed for 2 turns. Amount recovered increases proportional to the target's max Health."
+        }
+    }
+}

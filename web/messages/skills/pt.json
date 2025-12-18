@@ -1,0 +1,114 @@
+{
+    "swift-flagbearer-sigret": {
+        "S1": {
+            "name": "Golpe do Porta-Estandarte",
+            "description": "Ataca o inimigo com uma bandeira, com 75% de chance de silenciar por 1 turno. Se o inimigo estiver silenciado após o ataque, diminui a Prontidão de Combate em 25%."
+        },
+        "S2": {
+            "name": "Bloqueio de Alvo",
+            "description": "Após dissipar todos os bônus de um único inimigo, tem 100% de chance de infligir Alvo por 2 turnos, e todos os aliados exceto o conjurador atacam o inimigo com uma habilidade básica. Aumenta a Prontidão de Combate do conjurador em 30%."
+        },
+        "S3": {
+            "name": "Bandeira da Vitória",
+            "description": "Dissipa dois bônus de todos os inimigos antes de ter 100% de chance de infligir Medo por 2 turnos e diminuir a Prontidão de Combate em 20%. Concede aumento de Velocidade a todos os aliados por 2 turnos. No início da primeira batalha, concede aumento de Evasão ao conjurador por 2 turnos."
+        }
+    },
+    "hecate": {
+        "S1": {
+            "name": "Foice do Ceifador",
+            "description": "Ataca o inimigo com a Foice de Sigurd, antes de aumentar a Prontidão de Combate do conjurador em 20%. Quando usado no turno do conjurador, ativa Libertação Final como um ataque extra. Libertação Final: Ataca todos os inimigos, antes de conceder furtividade ao conjurador por 1 turno e diminuir os tempos de recarga das habilidades em 2 turnos."
+        },
+        "S2": {
+            "name": "Domínio da Morte",
+            "description": "Heróis inimigos não podem reviver e não podem receber imortalidade. Ao atacar, penetra 85% da Defesa do alvo e não pode ativar acerto crítico ou golpe pesado."
+        },
+        "S3": {
+            "name": "Morte Inevitável",
+            "description": "Após conceder aumento de Ataque ao conjurador por 3 turnos, ataca o inimigo liberando a força do submundo. Quando o alvo é um Herói, ignora o compartilhamento de dano. Começa a primeira batalha com a contagem de recarga de habilidade completa."
+        }
+    },
+    "abigail": {
+        "S1": {
+            "name": "Emboscada",
+            "description": "Ataca o inimigo com asas ensanguentadas e aumenta a Prontidão de Combate do conjurador em 15%. Quando usado no turno do conjurador, tem 35% de chance de ativar Poder como efeito extra. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Banquete de Sangue",
+            "description": "No início do turno, amaldiçoa o inimigo com maior Ataque por 1 turno. Quando o aliado na linha de trás, exceto o conjurador, recebe dano letal, consome 30% da Vida atual do conjurador, dissipando todos os debuffs do alvo, antes de conceder imortalidade e vampirismo por 1 turno."
+        },
+        "S3": {
+            "name": "Jardim Escarlate",
+            "description": "Após dissipar todos os bônus do inimigo, ataca com um campo de espinhos sangrentos. Aumenta a Efetividade deste ataque em 50% e o dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "achates": {
+        "S1": {
+            "name": "Design Mágico",
+            "description": "Ataca com um cajado, com 50% de chance de diminuir o Ataque por 2 turnos."
+        },
+        "S2": {
+            "name": "Cura Rápida",
+            "description": "Recupera a Vida de um aliado e concede uma barreira por 1 turno, antes de diminuir o tempo de recarga da habilidade em 1 turno. A quantidade recuperada e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Oração Curativa",
+            "description": "Dissipa os debuffs de todos os aliados antes de curá-los. A cura aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "adin": {
+        "S1": {
+            "name": "Corte de Tornozelo",
+            "description": "Ataca o inimigo com uma espada, aumentando a Prontidão de Combate do conjurador em 20%."
+        },
+        "S2": {
+            "name": "Rajada de Lâmina",
+            "description": "Ataca todos os inimigos com uma rajada de lâmina, com 80% de chance de impedi-los de receber bônus por 2 turnos. Quando há três ou menos inimigos, o dano causado aumenta com menos inimigos."
+        },
+        "S3": {
+            "name": "Raio",
+            "description": "Ataca o inimigo repetidamente, concedendo Fraqueza Compartilhada ao conjurador por 2 turnos. Um acerto crítico tem 100% de chance de diminuir a Defesa por 2 turnos."
+        }
+    },
+    "adlay": {
+        "S1": {
+            "name": "Liberação de Mana",
+            "description": "Ataca com o poder de um tomo mágico, com 35% de chance de atordoar por 1 turno."
+        },
+        "S2": {
+            "name": "Heroísmo",
+            "description": "A Prontidão de Combate aumenta em 12% toda vez que um aliado, exceto o conjurador, é atacado."
+        },
+        "S3": {
+            "name": "Selo de Mana",
+            "description": "Causa grande dano a todos os inimigos com um feitiço de selamento, com 170% de chance de dissipar um bônus, antes de 170% de chance de aumentar os tempos de recarga das habilidades em 1 turno."
+        }
+    },
+    "adventurer-ras": {
+        "S1": {
+            "name": "Corte em X",
+            "description": "Ataca com uma espada, causando dano proporcional à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Golpe de Comando",
+            "description": "Ataca o inimigo repetidamente, antes de acionar um Ataque Duplo do aliado com maior Ataque."
+        },
+        "S3": {
+            "name": "Chama Purificadora",
+            "description": "Ataca fortemente todos os inimigos com uma tempestade de espadas, antes de recuperar a Vida do conjurador e aumentar a Defesa de todos os aliados por 2 turnos. A quantidade recuperada e o dano causado aumentam proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "ainos": {
+        "S1": {
+            "name": "Tiro Silencioso",
+            "description": "Atira silenciosamente no inimigo, com 75% de chance de diminuir a Defesa por 1 turno."
+        },
+        "S2": {
+            "name": "Apoio de Manobra",
+            "description": "No final do turno, aumenta a Prontidão de Combate do aliado, exceto o conjurador, com maior Ataque em 20%."
+        },
+        "S3": {
+            "name": "Cubo de Poder de Fogo",
+            "description": "Lança um cubo de poder de fogo para atacar todos os inimigos, antes de curar todos os aliados e conceder aumento de Ataque e Velocidade por 2 turnos. A quantidade recuperada aumenta proporcionalmente à Vida máxima do alvo."
+        }
+    }
+}

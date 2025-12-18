@@ -1,0 +1,114 @@
+{
+    "swift-flagbearer-sigret": {
+        "S1": {
+            "name": "Golpe del Abanderado",
+            "description": "Ataca al enemigo con una bandera, con un 75% de probabilidad de silenciar durante 1 turno. Si el enemigo está silenciado después del ataque, disminuye la Preparación de Combate en un 25%."
+        },
+        "S2": {
+            "name": "Bloqueo de Objetivo",
+            "description": "Después de disipar todos los beneficios de un único enemigo, tiene un 100% de probabilidad de infligir Objetivo durante 2 turnos, y todos los aliados excepto el lanzador atacan al enemigo con una habilidad básica. Aumenta la Preparación de Combate del lanzador en un 30%."
+        },
+        "S3": {
+            "name": "Bandera de Victoria",
+            "description": "Disipa dos beneficios de todos los enemigos antes de tener un 100% de probabilidad de infligir Miedo durante 2 turnos y disminuir la Preparación de Combate en un 20%. Otorga aumento de Velocidad a todos los aliados durante 2 turnos. Al inicio de la primera batalla, otorga aumento de Evasión al lanzador durante 2 turnos."
+        }
+    },
+    "hecate": {
+        "S1": {
+            "name": "Guadaña del Segador",
+            "description": "Ataca al enemigo con la Guadaña de Sigurd, antes de aumentar la Preparación de Combate del lanzador en un 20%. Cuando se usa en el turno del lanzador, activa Liberación Final como un ataque extra. Liberación Final: Ataca a todos los enemigos, antes de otorgar sigilo al lanzador durante 1 turno y reducir los tiempos de reutilización de habilidades en 2 turnos."
+        },
+        "S2": {
+            "name": "Dominio de la Muerte",
+            "description": "Los Héroes enemigos no pueden revivir ni se les puede otorgar inmortalidad. Al atacar, penetra la Defensa del objetivo en un 85% y no puede activar golpe crítico ni golpe pesado."
+        },
+        "S3": {
+            "name": "Muerte Ineludible",
+            "description": "Después de otorgar aumento de Ataque al lanzador durante 3 turnos, ataca al enemigo liberando la fuerza del inframundo. Cuando el objetivo es un Héroe, ignora el reparto de daño. Comienza la primera batalla con el contador de reutilización de habilidad completo."
+        }
+    },
+    "abigail": {
+        "S1": {
+            "name": "Emboscada",
+            "description": "Ataca al enemigo con alas ensangrentadas, y aumenta la Preparación de Combate del lanzador en un 15%. Cuando se usa en el turno del lanzador, tiene un 35% de probabilidad de activar Poder como efecto extra. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Banquete de Sangre",
+            "description": "Al inicio del turno, maldice al enemigo con el Ataque más alto durante 1 turno. Cuando el aliado en la fila trasera, excepto el lanzador, recibe daño letal, consume el 30% de la Salud actual del lanzador, disipando todas las debilidades del objetivo, antes de otorgar inmortalidad y vampirismo durante 1 turno."
+        },
+        "S3": {
+            "name": "Jardín Escarlata",
+            "description": "Después de disipar todos los beneficios del enemigo, ataca con un campo de espinas sangrientas. Aumenta la Efectividad de este ataque en un 50% y el daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "achates": {
+        "S1": {
+            "name": "Diseño Mágico",
+            "description": "Ataca con un bastón, con un 50% de probabilidad de disminuir el Ataque durante 2 turnos."
+        },
+        "S2": {
+            "name": "Cura Rápida",
+            "description": "Recupera la Salud de un aliado y otorga una barrera durante 1 turno, antes de disminuir el tiempo de reutilización de habilidad en 1 turno. La cantidad recuperada y la fuerza de la barrera aumentan proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Oración Curativa",
+            "description": "Disipa las debilidades de todos los aliados antes de curarlos. La curación aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "adin": {
+        "S1": {
+            "name": "Corte de Tobillo",
+            "description": "Ataca al enemigo con una espada, aumentando la Preparación de Combate del lanzador en un 20%."
+        },
+        "S2": {
+            "name": "Ráfaga de Espada",
+            "description": "Ataca a todos los enemigos con una ráfaga de espada, con un 80% de probabilidad de hacer que no puedan recibir beneficios durante 2 turnos. Cuando hay tres o menos enemigos, el daño infligido aumenta con menos enemigos."
+        },
+        "S3": {
+            "name": "Rayo",
+            "description": "Ataca al enemigo repetidamente, otorgando Debilidad Compartida al lanzador durante 2 turnos. Un golpe crítico tiene un 100% de probabilidad de disminuir la Defensa durante 2 turnos."
+        }
+    },
+    "adlay": {
+        "S1": {
+            "name": "Liberación de Maná",
+            "description": "Ataca con el poder de un tomo mágico, con un 35% de probabilidad de aturdir durante 1 turno."
+        },
+        "S2": {
+            "name": "Heroísmo",
+            "description": "La Preparación de Combate aumenta en un 12% cada vez que un aliado excepto el lanzador es atacado."
+        },
+        "S3": {
+            "name": "Sello de Maná",
+            "description": "Inflige un gran daño a todos los enemigos con un hechizo de sellado, con un 170% de probabilidad de disipar un beneficio, antes de un 170% de probabilidad de aumentar los tiempos de reutilización de habilidades en 1 turno."
+        }
+    },
+    "adventurer-ras": {
+        "S1": {
+            "name": "Corte en X",
+            "description": "Ataca con una espada, infligiendo daño proporcional a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Golpe de Comando",
+            "description": "Ataca al enemigo repetidamente, antes de activar un Ataque Dual del aliado con el Ataque más alto."
+        },
+        "S3": {
+            "name": "Llama Purificadora",
+            "description": "Ataca fuertemente a todos los enemigos con una tormenta de espadas, antes de recuperar la Salud del lanzador y aumentar la Defensa de todos los aliados durante 2 turnos. La cantidad recuperada y el daño infligido aumentan proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "ainos": {
+        "S1": {
+            "name": "Fuego Silencioso",
+            "description": "Dispara silenciosamente al enemigo, con un 75% de probabilidad de disminuir la Defensa durante 1 turno."
+        },
+        "S2": {
+            "name": "Apoyo de Maniobra",
+            "description": "Al final del turno, aumenta la Preparación de Combate del aliado excepto el lanzador con el Ataque más alto en un 20%."
+        },
+        "S3": {
+            "name": "Cubo de Poder de Fuego",
+            "description": "Lanza un cubo de poder de fuego para atacar a todos los enemigos, antes de curar a todos los aliados y otorgar aumento de Ataque y Velocidad durante 2 turnos. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del objetivo."
+        }
+    }
+}

@@ -8,6 +8,7 @@ import { heroApi, buildApi } from '@/lib/api';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useTranslations } from '@/hooks/useTranslations';
+import { useSkillTranslations } from '@/hooks/useSkillTranslations';
 
 interface HeroStats {
     atk: number;
@@ -176,7 +177,7 @@ const StatItem = ({ label, value, suffix = '', color = 'text-gray-300', large = 
 export default function HeroDetailPage() {
     const params = useParams();
     const slug = params.slug as string;
-    const { t } = useTranslations();
+    const { t, locale } = useTranslations();
 
     const { data, isLoading, error } = useQuery({
         queryKey: ['hero', slug],
@@ -188,6 +189,9 @@ export default function HeroDetailPage() {
     });
 
     const hero: Hero | null = data?.data || data;
+
+    // Load skill translations based on hero slug and current locale
+    const { getSkillName, getSkillDescription } = useSkillTranslations(hero?.slug || '', locale);
 
     // Fetch builds for this hero
     const { data: buildsData } = useQuery({
@@ -538,7 +542,7 @@ export default function HeroDetailPage() {
                                                 />
                                             )}
                                             <Badge className="bg-e7-gold text-black font-bold px-3">{skillKey}</Badge>
-                                            <h3 className="text-white font-semibold">{s.name || `Skill ${skillKey}`}</h3>
+                                            <h3 className="text-white font-semibold">{getSkillName(skillKey as 'S1' | 'S2' | 'S3', s.name || `Skill ${skillKey}`)}</h3>
                                             {s.targets && (
                                                 <Badge variant="outline" className="border-gray-500 text-gray-400">
                                                     {s.targets === 1 ? 'Single Target' : `${s.targets} Targets`}
@@ -604,8 +608,8 @@ export default function HeroDetailPage() {
                                             </div>
                                         )}
 
-                                        {s.description && (
-                                            <p className="text-gray-300 text-sm leading-relaxed">{s.description}</p>
+                                        {(s.description || getSkillDescription(skillKey as 'S1' | 'S2' | 'S3', '')) && (
+                                            <p className="text-gray-300 text-sm leading-relaxed">{getSkillDescription(skillKey as 'S1' | 'S2' | 'S3', s.description || '')}</p>
                                         )}
 
                                         {!hasScaling && !s.description && (
