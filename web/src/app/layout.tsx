@@ -16,16 +16,54 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "E7 EXCOFF Builder & Guides",
-  description: "Descubre y publica tus builds de personajes y crea guías del juego para la comunidad de Epic Seven.",
-  keywords: ["Epic Seven", "E7", "builds", "guides", "wiki", "heroes", "artifacts", "EXCOFF"],
-  authors: [{ name: "E7 EXCOFF" }],
+  metadataBase: new URL('https://excoff-e7-orbis-helper.vercel.app'),
+  title: {
+    default: 'E7 EXCOFF Builder & Guides',
+    template: '%s | E7 EXCOFF',
+  },
+  description: 'Descubre y publica tus builds de personajes y crea guías del juego para la comunidad de Epic Seven. Encuentra las mejores builds, artefactos y equipos.',
+  keywords: [
+    'Epic Seven', 'E7', 'builds', 'guides', 'wiki', 'heroes', 'artifacts',
+    'EXCOFF', 'Epic 7', 'gacha', 'tier list', 'equipment', 'sets',
+    'PvP', 'PvE', 'RTA', 'Arena', 'Guild War'
+  ],
+  authors: [{ name: 'E7 EXCOFF Community' }],
+  creator: 'E7 EXCOFF',
+  publisher: 'E7 EXCOFF',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: "E7 EXCOFF Builder & Guides",
-    description: "Descubre y publica tus builds de personajes y crea guías para la comunidad.",
-    siteName: "E7 EXCOFF",
-    locale: "en_US",
-    type: "website",
+    title: 'E7 EXCOFF Builder & Guides',
+    description: 'Descubre y publica tus builds de personajes y crea guías para la comunidad de Epic Seven.',
+    siteName: 'E7 EXCOFF',
+    locale: 'es_ES',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'E7 EXCOFF Builder & Guides',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'E7 EXCOFF Builder & Guides',
+    description: 'Builds y guías para la comunidad de Epic Seven',
+    images: ['/images/og-image.png'],
+  },
+  verification: {
+    google: 'your-google-verification-code', // Replace with actual code when available
   },
 };
 
