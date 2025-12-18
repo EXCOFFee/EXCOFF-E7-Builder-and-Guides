@@ -11,42 +11,38 @@ use App\Http\Controllers\VoteController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ReportController;
 
-// Public routes with rate limiting (60 requests per minute)
-Route::middleware('throttle:60,1')->group(function () {
-    // Heroes & Artifacts
-    Route::get('/heroes', [HeroController::class, 'index']);
-    Route::get('/heroes/{hero:slug}', [HeroController::class, 'show']);
-    Route::get('/artifacts', [ArtifactController::class, 'index']);
-    Route::get('/artifacts/{artifact}', [ArtifactController::class, 'show']);
-    
-    // Guides
-    Route::get('/guides', [GuideController::class, 'index']);
-    Route::get('/guides/{guide:slug}', [GuideController::class, 'show']);
+// Public routes (temporarily without rate limiting for debugging)
+// Heroes & Artifacts
+Route::get('/heroes', [HeroController::class, 'index']);
+Route::get('/heroes/{hero:slug}', [HeroController::class, 'show']);
+Route::get('/artifacts', [ArtifactController::class, 'index']);
+Route::get('/artifacts/{artifact}', [ArtifactController::class, 'show']);
 
-    // Public user builds
-    Route::get('/heroes/{hero:slug}/builds', [UserBuildController::class, 'indexByHero']);
-    Route::get('/builds', [UserBuildController::class, 'index']);
-    Route::get('/builds/{build}', [UserBuildController::class, 'show']);
+// Guides
+Route::get('/guides', [GuideController::class, 'index']);
+Route::get('/guides/{guide:slug}', [GuideController::class, 'show']);
 
-    // Public guild posts
-    Route::get('/guilds', [GuildPostController::class, 'index']);
-    Route::get('/guilds/options', [GuildPostController::class, 'options']);
-    Route::get('/guilds/{slug}', [GuildPostController::class, 'show']);
+// Public user builds
+Route::get('/heroes/{hero:slug}/builds', [UserBuildController::class, 'indexByHero']);
+Route::get('/builds', [UserBuildController::class, 'index']);
+Route::get('/builds/{build}', [UserBuildController::class, 'show']);
 
-    // Public comments
-    Route::get('/builds/{build}/comments', [CommentController::class, 'getBuildComments']);
-    Route::get('/guides/{guide}/comments', [CommentController::class, 'getGuideComments']);
+// Public guild posts
+Route::get('/guilds', [GuildPostController::class, 'index']);
+Route::get('/guilds/options', [GuildPostController::class, 'options']);
+Route::get('/guilds/{slug}', [GuildPostController::class, 'show']);
 
-    // Like status (public, will return liked=false if not logged in)
-    Route::get('/guides/{guide}/like-status', [VoteController::class, 'checkGuideLike']);
-    Route::get('/builds/{build}/like-status', [VoteController::class, 'checkBuildLike']);
-});
+// Public comments
+Route::get('/builds/{build}/comments', [CommentController::class, 'getBuildComments']);
+Route::get('/guides/{guide}/comments', [CommentController::class, 'getGuideComments']);
 
-// OAuth routes (separate throttle - 10 per minute for security)
-Route::middleware('throttle:10,1')->group(function () {
-    Route::get('/auth/{provider}', [AuthController::class, 'redirectToProvider']);
-    Route::get('/auth/{provider}/callback', [AuthController::class, 'handleProviderCallback']);
-});
+// Like status
+Route::get('/guides/{guide}/like-status', [VoteController::class, 'checkGuideLike']);
+Route::get('/builds/{build}/like-status', [VoteController::class, 'checkBuildLike']);
+
+// OAuth routes
+Route::get('/auth/{provider}', [AuthController::class, 'redirectToProvider']);
+Route::get('/auth/{provider}/callback', [AuthController::class, 'handleProviderCallback']);
 
 // Protected routes
 Route::middleware('auth:sanctum')->group(function () {
