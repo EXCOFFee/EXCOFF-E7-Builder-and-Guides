@@ -127,51 +127,14 @@ const SET_ICONS: Record<string, string> = {
     Injury: '💀',
     Torrent: '🌊',
     Protection: '🛡️',
+    Warfare: '⚔️',
+    Pursuit: '🏃',
 };
 
-// Set code to local image URL mapping
-const SET_IMAGE_URLS: Record<string, string> = {
-    set_speed: '/images/sets/SET_Speed.png',
-    set_att: '/images/sets/SET_Attack.png',
-    set_cri: '/images/sets/SET_Critical.png',
-    set_cri_dmg: '/images/sets/SET_Destruction.png',
-    set_def: '/images/sets/SET_Defense.png',
-    set_max_hp: '/images/sets/SET_Health.png',
-    set_acc: '/images/sets/SET_Hit.png',
-    set_res: '/images/sets/SET_Resist.png',
-    set_lifesteal: '/images/sets/SET_Lifesteal.png',
-    set_counter: '/images/sets/SET_Counter.png',
-    set_immunity: '/images/sets/SET_Immunity.png',
-    set_rage: '/images/sets/SET_Destruction.png', // No Rage image, using Destruction
-    set_unity: '/images/sets/SET_Unity.png',
-    set_penetrate: '/images/sets/SET_Penetration.png',
-    set_revenge: '/images/sets/SET_Revenge.png',
-    set_injury: '/images/sets/SET_Injury.png',
-    set_torrent: '/images/sets/SET_Torrent.png',
-    set_protection: '/images/sets/SET_Barrier.png',
-};
+// Set code to local image URL mapping (for Fribbels data)
+import { SET_CODE_IMAGES as SET_IMAGE_URLS, SET_IMAGES as SET_IMAGES_LOWERCASE } from '@/lib/sets';
 
-// Lowercase set names mapping (for user builds)
-const SET_IMAGES_LOWERCASE: Record<string, string> = {
-    speed: '/images/sets/SET_Speed.png',
-    attack: '/images/sets/SET_Attack.png',
-    health: '/images/sets/SET_Health.png',
-    defense: '/images/sets/SET_Defense.png',
-    critical: '/images/sets/SET_Critical.png',
-    destruction: '/images/sets/SET_Destruction.png',
-    counter: '/images/sets/SET_Counter.png',
-    lifesteal: '/images/sets/SET_Lifesteal.png',
-    immunity: '/images/sets/SET_Immunity.png',
-    rage: '/images/sets/SET_Revenge.png',
-    revenge: '/images/sets/SET_Revenge.png',
-    injury: '/images/sets/SET_Injury.png',
-    penetration: '/images/sets/SET_Penetration.png',
-    protection: '/images/sets/SET_Barrier.png',
-    unity: '/images/sets/SET_Unity.png',
-    hit: '/images/sets/SET_Hit.png',
-    resist: '/images/sets/SET_Resist.png',
-    torrent: '/images/sets/SET_Torrent.png',
-};
+
 
 // Memory Imprint type names mapping
 const IMPRINT_TYPES: Record<string, { name: string; color: string }> = {

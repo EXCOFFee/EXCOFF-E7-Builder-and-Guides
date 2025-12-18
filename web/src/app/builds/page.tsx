@@ -49,32 +49,7 @@ const CLASS_IMAGES: Record<string, string> = {
     soul_weaver: '/images/classes/ClassSoul_Waver.png',
 };
 
-// Set to image mapping
-const SET_IMAGES: Record<string, string> = {
-    speed: '/images/sets/SET_Speed.png',
-    attack: '/images/sets/SET_Attack.png',
-    health: '/images/sets/SET_Health.png',
-    defense: '/images/sets/SET_Defense.png',
-    critical: '/images/sets/SET_Critical.png',
-    destruction: '/images/sets/SET_Destruction.png',
-    counter: '/images/sets/SET_Counter.png',
-    lifesteal: '/images/sets/SET_Lifesteal.png',
-    immunity: '/images/sets/SET_Immunity.png',
-    rage: '/images/sets/SET_Rage.png',
-    revenge: '/images/sets/SET_Revenge.png',
-    injury: '/images/sets/SET_Injury.png',
-    penetration: '/images/sets/SET_Penetration.png',
-    protection: '/images/sets/SET_Barrier.png',
-    unity: '/images/sets/SET_Unity.png',
-    hit: '/images/sets/SET_Hit.png',
-    resist: '/images/sets/SET_Resist.png',
-    torrent: '/images/sets/SET_Torrent.png',
-};
-
-// Formatting function for set names
-const formatSetName = (set: string) => {
-    return set.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-};
+import { SET_IMAGES, formatSetName } from '@/lib/sets';
 
 const CLASS_NAMES: Record<string, string> = {
     knight: 'Knight',
