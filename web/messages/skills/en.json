@@ -180,5 +180,75 @@
             "name": "Fire Pillar",
             "description": "Attacks all enemies with a massive fire pillar, with a 100% chance each to inflict two burn effects for 2 turns and a 100% chance to stun for 1 turn. Grants a barrier to the caster for 2 turns. Barrier strength increases proportional to the caster's Attack."
         }
+    },
+    "arbiter-vildred": {
+        "S1": {
+            "name": "Sweep",
+            "description": "Rapidly attacks two enemies with a swordstorm, with a 50% chance to decrease their Combat Readiness by 15%."
+        },
+        "S2": {
+            "name": "Dark Contract",
+            "description": "Upon receiving lethal damage, regenerates to 100% Health, increases Combat Readiness of the caster by 100%, fully recovers the caster's Focus, and resets skill cooldown of Dark Blade."
+        },
+        "S3": {
+            "name": "Dark Blade",
+            "description": "Attacks all enemies, decreasing Hit Chance for 2 turns. When Focus is full, consumes it all, increasing damage dealt. When the enemy is defeated with this skill, cooldown does not occur."
+        }
+    },
+    "aria": {
+        "S1": {
+            "name": "Shadow Call",
+            "description": "Attacks two enemies with shadows, with a 50% chance to decrease Hit Chance for 1 turn. When it is not the caster's turn, increases effect chance by 20%. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S2": {
+            "name": "Guide of Darkness",
+            "description": "Increases Critical Hit Chance by 30%. After using a skill, when Focus is full, consumes all Focus to activate Dark Shadow Phantom. Dark Shadow Phantom: Attacks all enemies, dispelling two buffs and decreasing Combat Readiness by 30%. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S3": {
+            "name": "The Umbral Hour",
+            "description": "Using the power of the shadows, increases Defense of the caster and adopts a counterattacking stance for 2 turns. Grants stealth and barrier to all allies except for the caster for 2 turns. Barrier strength increases proportional to the caster's Defense."
+        }
+    },
+    "arowell": {
+        "S1": {
+            "name": "Shield Thrust",
+            "description": "Attacks the enemy with a sword and shield, with a 75% chance each to dispel one buff twice. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Escort",
+            "description": "At the start of battle and at the end of the caster's turn, grants escort to the caster for 1 turn. After an ally except for the caster is attacked by a Single Attack, increases Combat Readiness of the caster by 10%."
+        },
+        "S3": {
+            "name": "Defensive Position",
+            "description": "Attacks the enemy, with a 100% chance to stun for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "baiken": {
+        "S1": {
+            "name": "Tatami Gaeshi",
+            "description": "Attacks the enemy repeatedly, with a 70% chance each to inflict two bleeding effects for 2 turns. A critical hit will reduce the caster's skill cooldowns by 1 turn."
+        },
+        "S2": {
+            "name": "Tsurane Sanzu-watashi",
+            "description": "Attacks the enemy with expert swordsmanship, with an 80% chance each of inflicting three bleeding effects for 2 turns. One bleeding effect ignores Effect Resistance. If a critical hit is made, grants an extra turn."
+        },
+        "S3": {
+            "name": "Garyo Tensei",
+            "description": "Delivers a deadly blow, detonating any bleeding effects inflicted on the enemy at the end of the turn. A critical hit increases the Combat Readiness of all allies by 25%."
+        }
+    },
+    "basar": {
+        "S1": {
+            "name": "Sand Wind",
+            "description": "Attacks with wind magic. When the caster is debuffed, has a 75% chance to transfer one debuff from the caster to the enemy and inflict a random debuff for 2 turns."
+        },
+        "S2": {
+            "name": "Hurricane",
+            "description": "Attacks all enemies by releasing a hot sand hurricane, with a 75% chance each to decrease Hit Chance and Attack for 2 turns."
+        },
+        "S3": {
+            "name": "Sandstorm",
+            "description": "Attacks all enemies with sand magic, dispelling all buffs and decreasing Combat Readiness by 30%, before making them unable to be buffed for 2 turns."
+        }
     }
 }

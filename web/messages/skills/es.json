@@ -180,5 +180,75 @@
             "name": "Pilar de Fuego",
             "description": "Ataca a todos los enemigos con un pilar de fuego masivo, con un 100% de probabilidad cada uno de infligir dos efectos de quemadura durante 2 turnos y un 100% de probabilidad de aturdir durante 1 turno. Otorga una barrera al lanzador durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente al Ataque del lanzador."
         }
+    },
+    "arbiter-vildred": {
+        "S1": {
+            "name": "Barrido",
+            "description": "Ataca rápidamente a dos enemigos con una tormenta de espadas, con un 50% de probabilidad de disminuir su Preparación de Combate en un 15%."
+        },
+        "S2": {
+            "name": "Contrato Oscuro",
+            "description": "Al recibir daño letal, regenera al 100% de Salud, aumenta la Preparación de Combate del lanzador en un 100%, recupera completamente el Focus del lanzador y reinicia el tiempo de reutilización de Espada Oscura."
+        },
+        "S3": {
+            "name": "Espada Oscura",
+            "description": "Ataca a todos los enemigos, disminuyendo la Precisión durante 2 turnos. Cuando el Focus está lleno, lo consume todo, aumentando el daño infligido. Cuando el enemigo es derrotado con esta habilidad, no ocurre tiempo de reutilización."
+        }
+    },
+    "aria": {
+        "S1": {
+            "name": "Llamada de Sombras",
+            "description": "Ataca a dos enemigos con sombras, con un 50% de probabilidad de disminuir la Precisión durante 1 turno. Cuando no es el turno del lanzador, aumenta la probabilidad de efecto en un 20%. El daño infligido aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S2": {
+            "name": "Guía de la Oscuridad",
+            "description": "Aumenta la Probabilidad de Golpe Crítico en un 30%. Después de usar una habilidad, cuando el Focus está lleno, consume todo el Focus para activar Fantasma de Sombra Oscura. Fantasma de Sombra Oscura: Ataca a todos los enemigos, disipando dos beneficios y disminuyendo la Preparación de Combate en un 30%. El daño infligido aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S3": {
+            "name": "La Hora Umbría",
+            "description": "Usando el poder de las sombras, aumenta la Defensa del lanzador y adopta una postura de contraataque durante 2 turnos. Otorga sigilo y barrera a todos los aliados excepto al lanzador durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente a la Defensa del lanzador."
+        }
+    },
+    "arowell": {
+        "S1": {
+            "name": "Embestida de Escudo",
+            "description": "Ataca al enemigo con espada y escudo, con un 75% de probabilidad cada uno de disipar un beneficio dos veces. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Escolta",
+            "description": "Al inicio de la batalla y al final del turno del lanzador, otorga escolta al lanzador durante 1 turno. Después de que un aliado excepto el lanzador sea atacado por un Ataque Simple, aumenta la Preparación de Combate del lanzador en un 10%."
+        },
+        "S3": {
+            "name": "Posición Defensiva",
+            "description": "Ataca al enemigo, con un 100% de probabilidad de aturdir durante 1 turno. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "baiken": {
+        "S1": {
+            "name": "Tatami Gaeshi",
+            "description": "Ataca al enemigo repetidamente, con un 70% de probabilidad cada uno de infligir dos efectos de sangrado durante 2 turnos. Un golpe crítico reducirá los tiempos de reutilización de habilidades del lanzador en 1 turno."
+        },
+        "S2": {
+            "name": "Tsurane Sanzu-watashi",
+            "description": "Ataca al enemigo con esgrima experta, con un 80% de probabilidad cada uno de infligir tres efectos de sangrado durante 2 turnos. Un efecto de sangrado ignora la Resistencia a Efectos. Si se produce un golpe crítico, otorga un turno extra."
+        },
+        "S3": {
+            "name": "Garyo Tensei",
+            "description": "Entrega un golpe mortal, detonando cualquier efecto de sangrado infligido al enemigo al final del turno. Un golpe crítico aumenta la Preparación de Combate de todos los aliados en un 25%."
+        }
+    },
+    "basar": {
+        "S1": {
+            "name": "Viento de Arena",
+            "description": "Ataca con magia de viento. Cuando el lanzador tiene debilidades, tiene un 75% de probabilidad de transferir una debilidad del lanzador al enemigo e infligir una debilidad aleatoria durante 2 turnos."
+        },
+        "S2": {
+            "name": "Huracán",
+            "description": "Ataca a todos los enemigos liberando un huracán de arena caliente, con un 75% de probabilidad cada uno de disminuir la Precisión y el Ataque durante 2 turnos."
+        },
+        "S3": {
+            "name": "Tormenta de Arena",
+            "description": "Ataca a todos los enemigos con magia de arena, disipando todos los beneficios y disminuyendo la Preparación de Combate en un 30%, antes de hacer que no puedan recibir beneficios durante 2 turnos."
+        }
     }
 }

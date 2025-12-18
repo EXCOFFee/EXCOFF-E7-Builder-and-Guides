@@ -180,5 +180,75 @@
             "name": "Pilar de Fogo",
             "description": "Ataca todos os inimigos com um pilar de fogo massivo, com 100% de chance cada de infligir dois efeitos de queimadura por 2 turnos e 100% de chance de atordoar por 1 turno. Concede uma barreira ao conjurador por 2 turnos. A força da barreira aumenta proporcionalmente ao Ataque do conjurador."
         }
+    },
+    "arbiter-vildred": {
+        "S1": {
+            "name": "Varredura",
+            "description": "Ataca rapidamente dois inimigos com uma tempestade de espadas, com 50% de chance de diminuir a Prontidão de Combate em 15%."
+        },
+        "S2": {
+            "name": "Contrato Sombrio",
+            "description": "Ao receber dano letal, regenera para 100% de Vida, aumenta a Prontidão de Combate do conjurador em 100%, recupera totalmente o Foco do conjurador e reinicia o tempo de recarga de Lâmina Sombria."
+        },
+        "S3": {
+            "name": "Lâmina Sombria",
+            "description": "Ataca todos os inimigos, diminuindo a Precisão por 2 turnos. Quando o Foco está cheio, consome tudo, aumentando o dano causado. Quando o inimigo é derrotado com esta habilidade, não há tempo de recarga."
+        }
+    },
+    "aria": {
+        "S1": {
+            "name": "Chamado das Sombras",
+            "description": "Ataca dois inimigos com sombras, com 50% de chance de diminuir a Precisão por 1 turno. Quando não é o turno do conjurador, aumenta a chance de efeito em 20%. O dano causado aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S2": {
+            "name": "Guia da Escuridão",
+            "description": "Aumenta a Chance de Acerto Crítico em 30%. Após usar uma habilidade, quando o Foco está cheio, consome todo o Foco para ativar Fantasma das Sombras. Fantasma das Sombras: Ataca todos os inimigos, dissipando dois bônus e diminuindo a Prontidão de Combate em 30%. O dano causado aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S3": {
+            "name": "A Hora Umbria",
+            "description": "Usando o poder das sombras, aumenta a Defesa do conjurador e adota uma postura de contra-ataque por 2 turnos. Concede furtividade e barreira a todos os aliados exceto o conjurador por 2 turnos. A força da barreira aumenta proporcionalmente à Defesa do conjurador."
+        }
+    },
+    "arowell": {
+        "S1": {
+            "name": "Investida de Escudo",
+            "description": "Ataca o inimigo com espada e escudo, com 75% de chance cada de dissipar um bônus duas vezes. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Escolta",
+            "description": "No início da batalha e no final do turno do conjurador, concede escolta ao conjurador por 1 turno. Depois que um aliado exceto o conjurador é atacado por um Ataque Simples, aumenta a Prontidão de Combate do conjurador em 10%."
+        },
+        "S3": {
+            "name": "Posição Defensiva",
+            "description": "Ataca o inimigo, com 100% de chance de atordoar por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "baiken": {
+        "S1": {
+            "name": "Tatami Gaeshi",
+            "description": "Ataca o inimigo repetidamente, com 70% de chance cada de infligir dois efeitos de sangramento por 2 turnos. Um acerto crítico reduzirá os tempos de recarga das habilidades do conjurador em 1 turno."
+        },
+        "S2": {
+            "name": "Tsurane Sanzu-watashi",
+            "description": "Ataca o inimigo com esgrima especializada, com 80% de chance cada de infligir três efeitos de sangramento por 2 turnos. Um efeito de sangramento ignora a Resistência a Efeitos. Se ocorrer um acerto crítico, concede um turno extra."
+        },
+        "S3": {
+            "name": "Garyo Tensei",
+            "description": "Desfere um golpe mortal, detonando quaisquer efeitos de sangramento infligidos no inimigo no final do turno. Um acerto crítico aumenta a Prontidão de Combate de todos os aliados em 25%."
+        }
+    },
+    "basar": {
+        "S1": {
+            "name": "Vento de Areia",
+            "description": "Ataca com magia de vento. Quando o conjurador tem debuffs, tem 75% de chance de transferir um debuff do conjurador para o inimigo e infligir um debuff aleatório por 2 turnos."
+        },
+        "S2": {
+            "name": "Furacão",
+            "description": "Ataca todos os inimigos liberando um furacão de areia quente, com 75% de chance cada de diminuir a Precisão e o Ataque por 2 turnos."
+        },
+        "S3": {
+            "name": "Tempestade de Areia",
+            "description": "Ataca todos os inimigos com magia de areia, dissipando todos os bônus e diminuindo a Prontidão de Combate em 30%, antes de impedi-los de receber bônus por 2 turnos."
+        }
     }
 }
