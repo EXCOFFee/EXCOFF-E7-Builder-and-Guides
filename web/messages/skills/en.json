@@ -110,5 +110,75 @@
             "name": "Firepower Cube",
             "description": "Throws a firepower cube to attack all enemies, before healing all allies and granting increased Attack and Speed for 2 turns. Amount recovered increases proportional to the target's max Health."
         }
+    },
+    "ambitious-tywin": {
+        "S1": {
+            "name": "Icy Sword Storm",
+            "description": "Attacks with a sword, with a 75% chance to provoke for 1 turn. Removes 4 Souls from the opponent. When the caster is enraged, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Battle Command",
+            "description": "After being attacked, when an ally has a debuff, has a 100% chance to dispel one debuff from all allies, and enrages the caster for 1 turn. Can only activate once per turn."
+        },
+        "S3": {
+            "name": "Flash",
+            "description": "Attacks all enemies with an instant swordstorm, with an 80% chance to stun for 1 turn. When the caster is enraged, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "angelic-montmorancy": {
+        "S1": {
+            "name": "Sleep Sorcery",
+            "description": "Attacks the enemy with water energy, with a 50% chance to put them to sleep for 1 turn."
+        },
+        "S2": {
+            "name": "Purification",
+            "description": "Dispels one debuff from all allies and heals debuffed allies. Amount recovered is proportional to the ally's max Health."
+        },
+        "S3": {
+            "name": "Earnest Prayer",
+            "description": "Dispels two debuffs from an ally before recovering Health and granting immunity for 2 turns. Amount recovered increases proportional to the ally's max Health."
+        }
+    },
+    "angelica": {
+        "S1": {
+            "name": "Holy Strike",
+            "description": "Attacks with a staff, with a 25% chance to stun for 1 turn."
+        },
+        "S2": {
+            "name": "Origin of Life",
+            "description": "Recovers ally's Health with healing power. Amount recovered is proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Guide of the Goddess",
+            "description": "Recovers the Health of all allies and grants a barrier and immunity for 2 turns. Amount recovered and barrier strength are proportional to the Caster's max Health."
+        }
+    },
+    "apocalypse-ravi": {
+        "S1": {
+            "name": "Spectral Axe",
+            "description": "Attacks the enemy with an axe, inflicting injuries before absorbing some of the damage as Health. Damage dealt increases proportional to the caster's max Health. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 10% every time this skill is used."
+        },
+        "S2": {
+            "name": "War God's Might",
+            "description": "Increases Critical Hit Chance by 30%. Starts the first battle with 50 Fighting Spirit. At the moment the caster is attacked, consumes 10 Fighting Spirit to increase Combat Readiness of the caster by 15% and recovers the caster's Health. Amount recovered increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Deliverance: Soul Exchange",
+            "description": "Delivers divine judgment down upon the enemy. When the enemy is defeated, revives one random dead ally with 15% Health and grants skill nullifier once. Damage dealt increases proportional to the caster's max Health. Damage dealt by this skill increases every time somebody dies. Effect can only stack up to 3 times."
+        }
+    },
+    "aramintha": {
+        "S1": {
+            "name": "Ignite",
+            "description": "Attacks the enemy with an explosion of flames, with a 50% chance to burn for 1 turn."
+        },
+        "S2": {
+            "name": "Catalyst",
+            "description": "Attacks all enemies with a catalytic explosion, dispelling two buffs and making them unhealable for 2 turns, before increasing Attack of all allies for 2 turns. For each unhealable inflicted, increases Combat Readiness of the caster by 30%."
+        },
+        "S3": {
+            "name": "Fire Pillar",
+            "description": "Attacks all enemies with a massive fire pillar, with a 100% chance each to inflict two burn effects for 2 turns and a 100% chance to stun for 1 turn. Grants a barrier to the caster for 2 turns. Barrier strength increases proportional to the caster's Attack."
+        }
     }
 }

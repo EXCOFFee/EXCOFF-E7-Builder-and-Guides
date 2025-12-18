@@ -110,5 +110,75 @@
             "name": "Cubo de Poder de Fogo",
             "description": "Lança um cubo de poder de fogo para atacar todos os inimigos, antes de curar todos os aliados e conceder aumento de Ataque e Velocidade por 2 turnos. A quantidade recuperada aumenta proporcionalmente à Vida máxima do alvo."
         }
+    },
+    "ambitious-tywin": {
+        "S1": {
+            "name": "Tempestade de Espada Gelada",
+            "description": "Ataca com uma espada, com 75% de chance de provocar por 1 turno. Remove 4 Almas do oponente. Quando o conjurador está enfurecido, ignora a Resistência a Efeitos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Comando de Batalha",
+            "description": "Após ser atacado, quando um aliado tem um debuff, tem 100% de chance de dissipar um debuff de todos os aliados e enfurecer o conjurador por 1 turno. Só pode ser ativado uma vez por turno."
+        },
+        "S3": {
+            "name": "Clarão",
+            "description": "Ataca todos os inimigos com uma tempestade de espadas instantânea, com 80% de chance de atordoar por 1 turno. Quando o conjurador está enfurecido, ignora a Resistência a Efeitos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "angelic-montmorancy": {
+        "S1": {
+            "name": "Feitiço de Sono",
+            "description": "Ataca o inimigo com energia de água, com 50% de chance de adormecê-lo por 1 turno."
+        },
+        "S2": {
+            "name": "Purificação",
+            "description": "Dissipa um debuff de todos os aliados e cura os aliados com debuffs. A quantidade recuperada é proporcional à Vida máxima do aliado."
+        },
+        "S3": {
+            "name": "Oração Sincera",
+            "description": "Dissipa dois debuffs de um aliado antes de recuperar Vida e conceder imunidade por 2 turnos. A quantidade recuperada aumenta proporcionalmente à Vida máxima do aliado."
+        }
+    },
+    "angelica": {
+        "S1": {
+            "name": "Golpe Sagrado",
+            "description": "Ataca com um cajado, com 25% de chance de atordoar por 1 turno."
+        },
+        "S2": {
+            "name": "Origem da Vida",
+            "description": "Recupera a Vida do aliado com poder curativo. A quantidade recuperada é proporcional à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Guia da Deusa",
+            "description": "Recupera a Vida de todos os aliados e concede uma barreira e imunidade por 2 turnos. A quantidade recuperada e a força da barreira são proporcionais à Vida máxima do conjurador."
+        }
+    },
+    "apocalypse-ravi": {
+        "S1": {
+            "name": "Machado Espectral",
+            "description": "Ataca o inimigo com um machado, causando ferimentos antes de absorver parte do dano como Vida. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. A gravidade dos ferimentos aumenta proporcionalmente ao dano causado. Os ferimentos diminuem a Vida máxima do alvo em até 10% cada vez que esta habilidade é usada."
+        },
+        "S2": {
+            "name": "Poder do Deus da Guerra",
+            "description": "Aumenta a Chance de Acerto Crítico em 30%. Começa a primeira batalha com 50 de Espírito de Luta. No momento em que o conjurador é atacado, consome 10 de Espírito de Luta para aumentar a Prontidão de Combate do conjurador em 15% e recuperar a Vida do conjurador. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Libertação: Troca de Almas",
+            "description": "Entrega julgamento divino sobre o inimigo. Quando o inimigo é derrotado, revive um aliado morto aleatório com 15% de Vida e concede anulação de habilidade uma vez. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. O dano causado por esta habilidade aumenta cada vez que alguém morre. O efeito só pode acumular até 3 vezes."
+        }
+    },
+    "aramintha": {
+        "S1": {
+            "name": "Ignição",
+            "description": "Ataca o inimigo com uma explosão de chamas, com 50% de chance de queimar por 1 turno."
+        },
+        "S2": {
+            "name": "Catalisador",
+            "description": "Ataca todos os inimigos com uma explosão catalítica, dissipando dois bônus e tornando-os incuráveis por 2 turnos, antes de aumentar o Ataque de todos os aliados por 2 turnos. Para cada incurável infligido, aumenta a Prontidão de Combate do conjurador em 30%."
+        },
+        "S3": {
+            "name": "Pilar de Fogo",
+            "description": "Ataca todos os inimigos com um pilar de fogo massivo, com 100% de chance cada de infligir dois efeitos de queimadura por 2 turnos e 100% de chance de atordoar por 1 turno. Concede uma barreira ao conjurador por 2 turnos. A força da barreira aumenta proporcionalmente ao Ataque do conjurador."
+        }
     }
 }

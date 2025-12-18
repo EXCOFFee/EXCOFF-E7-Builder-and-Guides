@@ -110,5 +110,75 @@
             "name": "Cubo de Poder de Fuego",
             "description": "Lanza un cubo de poder de fuego para atacar a todos los enemigos, antes de curar a todos los aliados y otorgar aumento de Ataque y Velocidad durante 2 turnos. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del objetivo."
         }
+    },
+    "ambitious-tywin": {
+        "S1": {
+            "name": "Tormenta de Espada Helada",
+            "description": "Ataca con una espada, con un 75% de probabilidad de provocar durante 1 turno. Elimina 4 Almas del oponente. Cuando el lanzador está enfurecido, ignora la Resistencia a Efectos. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Comando de Batalla",
+            "description": "Después de ser atacado, cuando un aliado tiene una debilidad, tiene un 100% de probabilidad de disipar una debilidad de todos los aliados, y enfurece al lanzador durante 1 turno. Solo puede activarse una vez por turno."
+        },
+        "S3": {
+            "name": "Destello",
+            "description": "Ataca a todos los enemigos con una tormenta de espadas instantánea, con un 80% de probabilidad de aturdir durante 1 turno. Cuando el lanzador está enfurecido, ignora la Resistencia a Efectos. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "angelic-montmorancy": {
+        "S1": {
+            "name": "Hechizo de Sueño",
+            "description": "Ataca al enemigo con energía de agua, con un 50% de probabilidad de dormirlo durante 1 turno."
+        },
+        "S2": {
+            "name": "Purificación",
+            "description": "Disipa una debilidad de todos los aliados y cura a los aliados debilitados. La cantidad recuperada es proporcional a la Salud máxima del aliado."
+        },
+        "S3": {
+            "name": "Oración Sincera",
+            "description": "Disipa dos debilidades de un aliado antes de recuperar Salud y otorgar inmunidad durante 2 turnos. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del aliado."
+        }
+    },
+    "angelica": {
+        "S1": {
+            "name": "Golpe Sagrado",
+            "description": "Ataca con un bastón, con un 25% de probabilidad de aturdir durante 1 turno."
+        },
+        "S2": {
+            "name": "Origen de Vida",
+            "description": "Recupera la Salud del aliado con poder curativo. La cantidad recuperada es proporcional a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Guía de la Diosa",
+            "description": "Recupera la Salud de todos los aliados y otorga una barrera e inmunidad durante 2 turnos. La cantidad recuperada y la fuerza de la barrera son proporcionales a la Salud máxima del lanzador."
+        }
+    },
+    "apocalypse-ravi": {
+        "S1": {
+            "name": "Hacha Espectral",
+            "description": "Ataca al enemigo con un hacha, infligiendo heridas antes de absorber parte del daño como Salud. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador. La gravedad de las heridas aumenta proporcionalmente al daño infligido. Las heridas disminuyen la Salud máxima del objetivo hasta un 10% cada vez que se usa esta habilidad."
+        },
+        "S2": {
+            "name": "Poder del Dios de la Guerra",
+            "description": "Aumenta la Probabilidad de Golpe Crítico en un 30%. Comienza la primera batalla con 50 de Espíritu de Lucha. En el momento en que el lanzador es atacado, consume 10 de Espíritu de Lucha para aumentar la Preparación de Combate del lanzador en un 15% y recuperar la Salud del lanzador. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Liberación: Intercambio de Almas",
+            "description": "Entrega juicio divino sobre el enemigo. Cuando el enemigo es derrotado, revive a un aliado muerto aleatorio con 15% de Salud y otorga anulación de habilidad una vez. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador. El daño infligido por esta habilidad aumenta cada vez que alguien muere. El efecto solo puede acumularse hasta 3 veces."
+        }
+    },
+    "aramintha": {
+        "S1": {
+            "name": "Ignición",
+            "description": "Ataca al enemigo con una explosión de llamas, con un 50% de probabilidad de quemar durante 1 turno."
+        },
+        "S2": {
+            "name": "Catalizador",
+            "description": "Ataca a todos los enemigos con una explosión catalítica, disipando dos beneficios y haciéndolos incurables durante 2 turnos, antes de aumentar el Ataque de todos los aliados durante 2 turnos. Por cada incurable infligido, aumenta la Preparación de Combate del lanzador en un 30%."
+        },
+        "S3": {
+            "name": "Pilar de Fuego",
+            "description": "Ataca a todos los enemigos con un pilar de fuego masivo, con un 100% de probabilidad cada uno de infligir dos efectos de quemadura durante 2 turnos y un 100% de probabilidad de aturdir durante 1 turno. Otorga una barrera al lanzador durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente al Ataque del lanzador."
+        }
     }
 }
