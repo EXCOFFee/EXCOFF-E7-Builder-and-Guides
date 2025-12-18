@@ -59,7 +59,7 @@ class HecateSeeder extends Seeder
                     ],
                 ],
                 'self_devotion' => [
-                    'type' => 'atk',
+                    'type' => 'att_rate',
                     'grades' => [
                         'B' => 0.054,
                         'A' => 0.072,
@@ -68,8 +68,8 @@ class HecateSeeder extends Seeder
                         'SSS' => 0.18,
                     ],
                 ],
-                'image_url' => null,
-                'data_hash' => md5('hecate-c1178-v3'),
+                'image_url' => '/images/face/c1178_l.png',
+                'data_hash' => md5('hecate-c1178-v4'),
             ]
         );
 
