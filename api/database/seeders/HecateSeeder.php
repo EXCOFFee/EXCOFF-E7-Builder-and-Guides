@@ -84,15 +84,13 @@ class HecateSeeder extends Seeder
                     ],
                 ],
                 'self_devotion' => [
-                    'type' => 'health',
+                    'type' => 'atk',
                     'grades' => [
-                        'D' => 3.6,
-                        'C' => 4.5,
-                        'B' => 5.4,
-                        'A' => 7.2,
-                        'S' => 9.0,
-                        'SS' => 10.8,
-                        'SSS' => 12.9,
+                        'B' => 0.048,
+                        'A' => 0.072,
+                        'S' => 0.096,
+                        'SS' => 0.12,
+                        'SSS' => 0.18,
                     ],
                 ],
                 'image_url' => null, // Will use datamined images from DBE7
