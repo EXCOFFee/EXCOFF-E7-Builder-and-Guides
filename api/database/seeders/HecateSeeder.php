@@ -93,6 +93,7 @@ class HecateSeeder extends Seeder
                         'SSS' => 0.18,
                     ],
                 ],
+                'data_hash' => md5('hecate-c1178'),
                 'image_url' => null, // Will use datamined images from DBE7
             ]
         );
