@@ -66,18 +66,6 @@ export default function LoginPage() {
                         Continuar con Discord
                     </Button>
 
-                    <div className="relative my-6">
-                        <div className="absolute inset-0 flex items-center">
-                            <div className="w-full border-t border-e7-gold/20"></div>
-                        </div>
-                        <div className="relative flex justify-center text-sm">
-                            <span className="px-4 bg-[#0a0a12] text-slate-500">o</span>
-                        </div>
-                    </div>
-
-                    <p className="text-center text-slate-500 text-sm">
-                        Al continuar, aceptas nuestros términos de servicio y política de privacidad.
-                    </p>
                 </CardContent>
             </Card>
 

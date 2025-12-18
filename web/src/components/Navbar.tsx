@@ -33,11 +33,12 @@ export function Navbar() {
 
     const navLinks = getNavLinks(t);
 
-    // Check authentication on mount
+    // Check authentication on mount and listen for storage changes
     useEffect(() => {
         const checkAuth = async () => {
             const token = localStorage.getItem('auth_token');
             if (!token) {
+                setUser(null);
                 setIsLoading(false);
                 return;
             }
@@ -54,6 +55,7 @@ export function Navbar() {
                     setUser(userData);
                 } else {
                     localStorage.removeItem('auth_token');
+                    setUser(null);
                 }
             } catch {
                 // Silent fail
@@ -63,6 +65,26 @@ export function Navbar() {
         };
 
         checkAuth();
+
+        // Listen for storage changes (login from another tab or callback page)
+        const handleStorageChange = (e: StorageEvent) => {
+            if (e.key === 'auth_token') {
+                checkAuth();
+            }
+        };
+
+        // Listen for custom auth change event (same tab)
+        const handleAuthChange = () => {
+            checkAuth();
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+        window.addEventListener('authChange', handleAuthChange);
+
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+            window.removeEventListener('authChange', handleAuthChange);
+        };
     }, []);
 
     // Close mobile menu on route change

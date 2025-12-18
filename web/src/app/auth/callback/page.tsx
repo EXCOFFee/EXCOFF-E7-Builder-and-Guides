@@ -23,6 +23,9 @@ export default function AuthCallbackPage() {
             // Save token to localStorage
             localStorage.setItem('auth_token', token);
 
+            // Dispatch custom event to notify Navbar
+            window.dispatchEvent(new Event('authChange'));
+
             // Redirect to home or previous page
             const returnUrl = localStorage.getItem('return_url') || '/';
             localStorage.removeItem('return_url');
