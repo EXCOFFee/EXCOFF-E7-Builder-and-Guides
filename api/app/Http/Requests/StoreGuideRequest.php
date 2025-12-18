@@ -34,7 +34,7 @@ class StoreGuideRequest extends FormRequest
 
             // Sets (RF-07: max 3 sets)
             'sets' => 'required|array|min:1|max:3',
-            'sets.*' => 'string|in:speed,health,defense,attack,destruction,lifesteal,counter,resist,unity,rage,immunity,penetration,revenge,injury,protection,torrent,warfare,pursuit',
+            'sets.*' => 'string|in:speed,health,defense,attack,destruction,lifesteal,counter,resist,unity,rage,immunity,penetration,revenge,injury,protection,torrent,warfare,pursuit,riposte,revival',
 
             // Stats (RF-06: 8 base stats, RF-03: validate ranges)
             'stats' => 'required|array',

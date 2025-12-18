@@ -8,7 +8,8 @@ export const SETS = [
     'speed', 'attack', 'health', 'defense', 'critical',
     'destruction', 'counter', 'lifesteal', 'immunity',
     'rage', 'revenge', 'injury', 'penetration', 'protection',
-    'unity', 'hit', 'resist', 'torrent', 'warfare', 'pursuit'
+    'unity', 'hit', 'resist', 'torrent', 'warfare', 'pursuit',
+    'riposte', 'revival'
 ] as const;
 
 export type SetType = typeof SETS[number];
@@ -35,6 +36,8 @@ export const SET_IMAGES: Record<string, string> = {
     torrent: '/images/sets/SET_Torrent.png',
     warfare: '/images/sets/SET_Warfare.png',
     pursuit: '/images/sets/SET_Pursuit.png',
+    riposte: '/images/sets/SET_Riposte.png',
+    revival: '/images/sets/SET_Revival.png',
 };
 
 // Set display names
@@ -59,6 +62,8 @@ export const SET_NAMES: Record<string, string> = {
     torrent: 'Torrent',
     warfare: 'Warfare',
     pursuit: 'Pursuit',
+    riposte: 'Riposte',
+    revival: 'Revival',
 };
 
 // Set codes mapping (for Fribbels data - snake_case)
@@ -83,6 +88,8 @@ export const SET_CODE_IMAGES: Record<string, string> = {
     set_protection: '/images/sets/SET_Barrier.png',
     set_warfare: '/images/sets/SET_Warfare.png',
     set_pursuit: '/images/sets/SET_Pursuit.png',
+    set_riposte: '/images/sets/SET_Riposte.png',
+    set_revival: '/images/sets/SET_Revival.png',
 };
 
 // Emoji icons for sets (fallback)
@@ -107,6 +114,8 @@ export const SET_ICONS: Record<string, string> = {
     Protection: '🛡️',
     Warfare: '⚔️',
     Pursuit: '🏃',
+    Riposte: '↩️',
+    Revival: '💫',
 };
 
 // Helper function to format set name
