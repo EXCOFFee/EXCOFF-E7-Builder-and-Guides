@@ -250,5 +250,2511 @@
             "name": "Tormenta de Arena",
             "description": "Ataca a todos los enemigos con magia de arena, disipando todos los beneficios y disminuyendo la Preparación de Combate en un 30%, antes de hacer que no puedan recibir beneficios durante 2 turnos."
         }
+    },
+    "belian": {
+        "S1": {
+            "name": "Luz de Destrucción",
+            "description": "Ataca a todos los enemigos con un rayo, con un 65% de probabilidad de disipar un beneficio. Cuando se usa en el turno del lanzador, tiene un 35% de probabilidad de activar Incursión como ataque extra. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador. Incursión: Ataca a todos los enemigos, disminuyendo la Velocidad y la Precisión durante 1 turno. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Cadenas de Supresión",
+            "description": "Disminuye la cantidad de Almas adquiridas por el enemigo en un 100%. Al inicio del turno, tiene un 100% de probabilidad de otorgar un beneficio aleatorio al lanzador durante 1 turno."
+        },
+        "S3": {
+            "name": "Apocalipsis",
+            "description": "Ataca a todos los enemigos con el poder de los deberes, disminuyendo la Preparación de Combate en una cantidad aleatoria entre 10% y 30% y provoca durante 1 turno. Aumenta la Defensa del lanzador durante 2 turnos. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "bellona": {
+        "S1": {
+            "name": "Abanico Cortavientos",
+            "description": "Ataca al enemigo con un abanico, infligiendo daño proporcional a la Salud máxima del enemigo. Cuando el Focus acumulado del lanzador es 5 o más, consume todo el Focus y activa Abanico de Viento Cortante."
+        },
+        "S2": {
+            "name": "Abanico Mariposa",
+            "description": "Ataca a todos los enemigos agitando un abanico."
+        },
+        "S3": {
+            "name": "Abanico de Viento Cortante",
+            "description": "Ataca a todos los enemigos creando una poderosa ráfaga de viento, con un 100% de probabilidad de disminuir la Defensa durante 2 turnos. Aumenta el daño infligido cuando Abanico de Viento Cortante es activado por Abanico Cortavientos."
+        }
+    },
+    "benimaru": {
+        "S1": {
+            "name": "Quítate del Camino",
+            "description": "Corta al enemigo para atacar. Cuando el lanzador tiene Barrera Multicapa, aumenta el daño infligido."
+        },
+        "S2": {
+            "name": "Percepción Universal",
+            "description": "Al inicio de la primera batalla, gana 50 de Espíritu de Lucha. Al inicio del turno extra de un enemigo, disipa todos los debuffs del lanzador y otorga Barrera Multicapa durante 2 turnos antes de aumentar la Preparación de Combate en un 40%. El efecto tras el turno extra de un enemigo solo puede activarse una vez cada 2 turnos. Después de atacar, cuando el Espíritu de Lucha está lleno, consume todo el Espíritu de Lucha para activar Llamarada Infernal. Llamarada Infernal: Ataca a todos los enemigos con una esfera de llama oscura. Penetra la Defensa del objetivo en un 30%, y cuando el lanzador tiene Barrera Multicapa, penetra la Defensa del objetivo en un 30% adicional."
+        },
+        "S3": {
+            "name": "Sin Piedad",
+            "description": "Ataca al enemigo cortando su alma, aumentando la Preparación de Combate del aliado con la mayor Preparación de Combate excepto el lanzador en un 15%. Cuando el lanzador tiene Barrera Multicapa, el Espíritu de Lucha adquirido se duplica."
+        }
+    },
+    "blood-blade-karin": {
+        "S1": {
+            "name": "Cortador Secuencial",
+            "description": "Golpea rápidamente al enemigo con una espada, recuperando Salud proporcional al daño infligido. Aumenta la Preparación de Combate del lanzador en un 15% y cuando el enemigo es derrotado, aumenta la Preparación de Combate del lanzador en un 35% adicional."
+        },
+        "S2": {
+            "name": "Espada Maldita",
+            "description": "A medida que la Salud disminuye, el Ataque, la Defensa y la Velocidad aumentan. Al inicio de la batalla, otorga inmortalidad al lanzador durante 1 turno."
+        },
+        "S3": {
+            "name": "Arte de la Espada: Dragón",
+            "description": "Ataca a todos los enemigos, sacrificando el 20% de la Salud actual del lanzador y aumenta el Ataque del lanzador durante 2 turnos. Aumenta la Preparación de Combate del lanzador en un 50% cuando un enemigo es derrotado. Esta habilidad no puede activar un contraataque."
+        }
+    },
+    "briar-witch-iseria": {
+        "S1": {
+            "name": "Flor Caída",
+            "description": "Lanza espadas al enemigo, con un 75% de probabilidad de disminuir la Defensa durante 1 turno. Un ataque exitoso inflige daño adicional proporcional al Ataque del lanzador."
+        },
+        "S2": {
+            "name": "Maldición de la Bruja",
+            "description": "Aumenta la Precisión en un 50%. Los aliados y enemigos no pueden revivir. Al recibir daño letal, otorga inmortalidad durante 1 turno. El efecto de inmortalidad solo puede activarse una vez cada 5 turnos."
+        },
+        "S3": {
+            "name": "Espina Maldita",
+            "description": "Ataca a todos los enemigos con un arbusto de espinas maldito, disipando todos los beneficios, con un 100% de probabilidad de hacer que no puedan recibir beneficios durante 2 turnos. Un ataque exitoso inflige daño adicional proporcional al Ataque del lanzador."
+        }
+    },
+    "celine": {
+        "S1": {
+            "name": "Uppercut",
+            "description": "Ataca al enemigo con una funda, y otorga sigilo al lanzador durante 1 turno."
+        },
+        "S2": {
+            "name": "Intuición",
+            "description": "Al inicio de la primera batalla, otorga sigilo durante 2 turnos. Después de que un enemigo usa una habilidad que no es de ataque, disipa todas las debilidades del lanzador y ataca a un enemigo aleatorio con Parpadeo. Solo puede activarse una vez cada 2 turnos. Parpadeo: Corta al enemigo en un abrir y cerrar de ojos y aumenta la Preparación de Combate del lanzador en un 30%. No se ve afectado por la desventaja elemental."
+        },
+        "S3": {
+            "name": "Trueno",
+            "description": "Ataca al enemigo repetidamente, y otorga aumento de Evasión y una barrera al lanzador durante 2 turnos. Cuando el enemigo no es un monstruo Élite o Jefe, se ignoran los efectos de distribución de daño. La fuerza de la barrera aumenta proporcionalmente al Ataque del lanzador."
+        }
+    },
+    "cermia": {
+        "S1": {
+            "name": "Jugando con Fuego",
+            "description": "Ataca con una espada en llamas, con un 75% de probabilidad de hacer que el objetivo no pueda curarse durante 1 turno."
+        },
+        "S2": {
+            "name": "¡Racha Ganadora!",
+            "description": "Dispara fuego, otorgando al lanzador Aumento de Ataque (Mayor), reiniciando el tiempo de reutilización de ¡Todo o Nada!, y otorgando un turno extra."
+        },
+        "S3": {
+            "name": "¡Todo o Nada!",
+            "description": "Ataca con un infierno ardiente, penetrando la Defensa en un 50%."
+        }
+    },
+    "cerise": {
+        "S1": {
+            "name": "Flecha Mística",
+            "description": "Invoca un arco místico para atacar al enemigo, antes de aumentar la Preparación de Combate del lanzador en un 15%. Desencadena un Ataque Dual de un aliado aleatorio cuando Tormenta de Escarcha no está disponible debido al tiempo de reutilización."
+        },
+        "S2": {
+            "name": "Explosión Luminosa",
+            "description": "Explota una esfera mágica, aturdiendo durante 1 turno y haciendo que no puedan recibir beneficios durante 2 turnos. Aumenta la Preparación de Combate del lanzador en un 50%."
+        },
+        "S3": {
+            "name": "Tormenta de Escarcha",
+            "description": "Ataca a todos los enemigos con una tormenta de escarcha furiosa, disminuyendo la duración de los beneficios en 1 turno, antes de tener un 100% de probabilidad cada uno de disminuir la Velocidad y restringir durante 2 turnos. Ataca usando un elemento ventajoso."
+        }
+    },
+    "challenger-dominiel": {
+        "S1": {
+            "name": "Electrocutar",
+            "description": "Ataca con electricidad. Un golpe crítico aumentará el daño infligido."
+        },
+        "S2": {
+            "name": "Carga Eléctrica",
+            "description": "Cuando un aliado realiza un golpe crítico, otorga aumento de Ataque acumulable al lanzador según el número de golpes críticos realizados. Este efecto se disipa después de atacar."
+        },
+        "S3": {
+            "name": "Supercarga",
+            "description": "Libera electricidad poderosa, aumentando la Probabilidad de Golpe Crítico de todos los aliados durante 3 turnos, y la Preparación de Combate en un 20%. El lanzador también recibe un turno extra."
+        }
+    },
+    "charles": {
+        "S1": {
+            "name": "Tajo",
+            "description": "Ataca con una espada gigante, con un 60% de probabilidad de disminuir el Ataque durante 1 turno. Después de usar esta habilidad, tiene un 25% de probabilidad de activar Aplastamiento como ataque extra. La probabilidad de activar Aplastamiento se duplica cuando el enemigo tiene beneficios."
+        },
+        "S2": {
+            "name": "Aplastamiento",
+            "description": "Ataca al enemigo repetidamente con una espada gigante, con un 100% de probabilidad de disipar todos los beneficios. El daño infligido aumenta proporcional al número de beneficios otorgados al lanzador."
+        },
+        "S3": {
+            "name": "Golpe Fiel",
+            "description": "Ataca a todos los enemigos con una tormenta de espadas, aumentando el Ataque y la Defensa de todos los aliados durante 2 turnos. Cuando hay tres o menos enemigos, el daño infligido aumenta a medida que hay menos enemigos."
+        }
+    },
+    "charlotte": {
+        "S1": {
+            "name": "Espadas Duales",
+            "description": "Ataca con espadas duales, con un 50% de probabilidad de disminuir el Ataque durante 1 turno. Cuando el lanzador tiene beneficios, Espadas Duales se convierte en un ataque que afecta a todos los enemigos cuando se usa en el turno del lanzador. Aumenta la Preparación de Combate del lanzador en un 20% después de atacar con este ataque modificado, y un ataque exitoso con este ataque modificado siempre resulta en golpe crítico. Este ataque modificado no activa un Ataque Dual."
+        },
+        "S2": {
+            "name": "Voluntad del Pantano",
+            "description": "Después de ser atacado, el lanzador gana 20 de Espíritu de Lucha y recibe aumento de Ataque y Defensa durante 1 turno. Cuando es atacado en el turno del lanzador, el Espíritu de Lucha adquirido se duplica. El aumento de Ataque y Defensa solo puede otorgarse una vez por turno."
+        },
+        "S3": {
+            "name": "Vórtice",
+            "description": "Corta a todos los enemigos mientras gira, haciéndolos incurables durante 2 turnos. Adquiere 100 de Espíritu de Lucha después de usar esta habilidad."
+        }
+    },
+    "choux": {
+        "S1": {
+            "name": "Corte",
+            "description": "Ataca al enemigo con una lanza antes de aumentar la Preparación de Combate del lanzador en un 20%. Un golpe crítico duplicará la cantidad de Focus ganado. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "¡Fwoooosh!",
+            "description": "Ataca al enemigo balanceando salvajemente una lanza, y absorbe parte del daño infligido como Salud. Penetra la Defensa del enemigo en un 70%. Cuando el Focus acumulado del lanzador es 5, consume todo el Focus, aumentando el daño infligido y reiniciando el tiempo de reutilización de ¡Fwoooosh!. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "¡Ayúdame, Cream!",
+            "description": "Congela a todos los enemigos antes de atacar con Cream. Aumenta la Resistencia a Golpe Crítico de todos los aliados durante 2 turnos. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador. Cuando esta habilidad no está disponible debido al tiempo de reutilización, después de que un aliado excepto el lanzador sea atacado, tiene un 20% de probabilidad de contraatacar."
+        }
+    },
+    "clarissa": {
+        "S1": {
+            "name": "Lección Dura",
+            "description": "Ataca con una estrella de la mañana, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos."
+        },
+        "S2": {
+            "name": "Rabia",
+            "description": "El lanzador se enfurece durante 3 turnos y activa Kya-jajaja cuando un enemigo es derrotado por Lección Dura o Histérica. Kya-jajaja: Ataca a todos los enemigos balanceando una maza de hierro."
+        },
+        "S3": {
+            "name": "Histérica",
+            "description": "Ataca a todos los enemigos girando. Cuando un enemigo es derrotado, reinicia el tiempo de reutilización de la habilidad. Cuando el lanzador está enfurecido, el daño infligido aumenta."
+        }
+    },
+    "closer-charles": {
+        "S1": {
+            "name": "Eliminación",
+            "description": "Corta bruscamente al enemigo para atacar. Cuando se usa en el turno del lanzador, si el lanzador tiene percepción, usa Demolición en lugar de Eliminación. Demolición: Ataca al enemigo con una espada, absorbiendo parte del daño infligido como Salud. El daño infligido aumenta proporcionalmente a la Salud perdida del objetivo. Cuando el enemigo es derrotado, disminuye el tiempo de reutilización de Descenso en 1 turno. Este ataque no activa un Ataque Dual."
+        },
+        "S2": {
+            "name": "Más Cerca",
+            "description": "Al inicio de la primera batalla, aumenta la Evasión durante 1 turno. Después de que un aliado excepto el lanzador ataca, cuando la Salud del enemigo es menor al 40%, aumenta la Preparación de Combate del lanzador en un 50% y otorga percepción durante 2 turnos. Solo puede activarse una vez cada 2 turnos."
+        },
+        "S3": {
+            "name": "Descenso",
+            "description": "Ataca a todos los enemigos después de descender, aumentando el Ataque de todos los aliados durante 2 turnos antes de aumentar la Preparación de Combate en un 20%. Esta habilidad no puede activar un contraataque."
+        }
+    },
+    "corvus": {
+        "S1": {
+            "name": "Golpe de Escudo",
+            "description": "Ataca al enemigo empujándolo con un escudo, con un 75% de probabilidad de transferir una debilidad del lanzador al enemigo. Cuando el lanzador tiene indomable, el daño infligido aumenta y el enemigo es aturdido durante 1 turno. El daño infligido aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S2": {
+            "name": "Macerar",
+            "description": "Ataca a todos los enemigos con una maza de hierro, disminuyendo la Preparación de Combate en un 30%. Cuando la Preparación de Combate del enemigo llega a 0, aturde durante 1 turno. Cuando el lanzador tiene indomable, duplica la cantidad de disminución de Preparación de Combate. El daño infligido aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S3": {
+            "name": "Advenimiento de la Furia",
+            "description": "Al descargar el Espíritu de Lucha, otorga indomable al lanzador durante 3 turnos y un turno extra. Comienza la primera batalla con 50 de Espíritu de Lucha. Gana 10 de Espíritu de Lucha cuando es atacado."
+        }
+    },
+    "crimson-armin": {
+        "S1": {
+            "name": "Derribo",
+            "description": "Ataca con un escudo grande, con un 100% de probabilidad de provocar durante 1 turno. El daño infligido aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S2": {
+            "name": "Estado de Seguridad",
+            "description": "Disminuye el daño recibido por los aliados en un 15%. Cuando se otorga más de un efecto de reducción de daño, solo se aplica el efecto más fuerte."
+        },
+        "S3": {
+            "name": "Escudo del Espíritu Santo",
+            "description": "Cubre a todos los aliados con un aura de espíritu santo, otorgando inmunidad durante 2 turnos e invencibilidad durante 1 turno."
+        }
+    },
+    "dark-corvus": {
+        "S1": {
+            "name": "Golpe de Escudo",
+            "description": "Ataca al enemigo con un escudo, con un 100% de probabilidad de provocar durante 1 turno, antes de recuperar la Salud del lanzador. El daño infligido y la cantidad recuperada aumentan proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Advenimiento de la Ruina",
+            "description": "Inmune al aturdimiento. En el momento en que el lanzador es atacado, el lanzador tiene un 100% de probabilidad de que su tiempo de reutilización de habilidades se reduzca en 1 turno, o 2 turnos en caso de golpe crítico."
+        },
+        "S3": {
+            "name": "Descenso del Diablo",
+            "description": "Ataca al enemigo con un golpe letal. Cuando el enemigo es derrotado, inflige extinción. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador y penetra la Defensa del objetivo. Este ataque no puede activar un golpe crítico. Comienza la batalla con el tiempo de reutilización de la habilidad al máximo."
+        }
+    },
+    "destina": {
+        "S1": {
+            "name": "Llave de un Juramento",
+            "description": "Ataca al enemigo con un bastón y cura al aliado con menor Salud. La curación aumenta proporcionalmente a la Salud máxima del objetivo."
+        },
+        "S2": {
+            "name": "Regeneración",
+            "description": "Bendice a un aliado, disipando dos debilidades y recuperando Salud antes de aumentar la Preparación de Combate en un 30%. La curación aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Gracia de Destina",
+            "description": "Otorga a todos los aliados la bendición de un Señor Espíritu, disipando todas las debilidades antes de recuperar Salud. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del lanzador. Al inicio de la primera batalla, otorga Bendición del Espíritu al lanzador durante 2 turnos."
+        }
+    },
+    "diene": {
+        "S1": {
+            "name": "Luz del Juicio",
+            "description": "Ataca al enemigo con un rayo de luz brillante, aumentando la Preparación de Combate del lanzador en un 15%. El efecto se duplica cuando el lanzador tiene beneficios."
+        },
+        "S2": {
+            "name": "Bendiciones de la Diosa",
+            "description": "Con las Bendiciones de la Diosa, disipa dos debilidades de todos los aliados y otorga barrera durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente a la Salud máxima del objetivo."
+        },
+        "S3": {
+            "name": "Oración del Santo",
+            "description": "Un milagro de la Diosa se manifiesta, aumentando el Ataque de todos los aliados durante 3 turnos, antes de aumentar la Preparación de Combate del lanzador en un 50%."
+        }
+    },
+    "dizzy": {
+        "S1": {
+            "name": "Usé Esto para Pescar",
+            "description": "Ataca a todos los enemigos con el poder de la magia, con un 25% de probabilidad cada uno de aturdir durante 1 turno. El daño infligido aumenta contra enemigos debilitados."
+        },
+        "S2": {
+            "name": "Rayo Gamma",
+            "description": "Ataca a todos los enemigos con un poderoso rayo, extendiendo la duración de las debilidades en 1 turno, excepto aquellas que impiden que el enemigo se mueva."
+        },
+        "S3": {
+            "name": "Rayo Gamma Emocional",
+            "description": "Desata una explosión gigante para atacar a todos los enemigos. El ataque falla, pero inflige disminución de Velocidad, Ataque y Probabilidad de Golpe durante 2 turnos de todos modos."
+        }
+    },
+    "elphelt": {
+        "S1": {
+            "name": "Descarga",
+            "description": "Dispara una descarga de balas al enemigo, con un 75% de probabilidad de hacer que no puedan recibir beneficios durante 1 turno."
+        },
+        "S2": {
+            "name": "Juzgar la Mejor Mitad",
+            "description": "Atrapa al enemigo en un pastel, antes de atacarlo con una espada cortadora de pastel y aumentar el Ataque de todos los aliados durante 2 turnos. Cuando el enemigo está dormido, disminuye la Defensa de todos los enemigos durante 2 turnos. El daño infligido aumenta proporcionalmente al número de debilidades infligidas al enemigo."
+        },
+        "S3": {
+            "name": "Boda Magnum",
+            "description": "Disipa dos beneficios del enemigo antes de disparar una bala de amor, con un 100% de probabilidad de dormirlos durante 2 turnos. Otorga al lanzador un turno extra."
+        }
+    },
+    "emilia": {
+        "S1": {
+            "name": "Huma",
+            "description": "Ataca al enemigo con hielo, antes de recuperar la Salud del aliado con menor Salud. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Bendición del Espíritu",
+            "description": "Otorga una bendición a un aliado excepto al lanzador, disipando dos debilidades y aumentando la Preparación de Combate en un 50%. Aumenta la Preparación de Combate del lanzador en un 25%."
+        },
+        "S3": {
+            "name": "Protección Divina del Gran Espíritu",
+            "description": "Usa artes espirituales para disipar dos debilidades de todos los aliados, antes de recuperar Salud y otorgar una barrera durante 2 turnos. La cantidad recuperada y la fuerza de la barrera aumentan proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "eda": {
+        "S1": {
+            "name": "Impacto Helado",
+            "description": "Ataca al enemigo con fragmentos de hielo, con un 75% de probabilidad de disminuir la Defensa durante 1 turno."
+        },
+        "S2": {
+            "name": "Ola de Frío",
+            "description": "Ataca a todos los enemigos con una explosión de hielo, disipando dos beneficios antes de disminuir la Preparación de Combate en una cantidad aleatoria entre 15% y 40%. Otorga al lanzador anulador de habilidad una vez."
+        },
+        "S3": {
+            "name": "Cero Absoluto",
+            "description": "Libera energía para atacar a todos los enemigos, con un 85% de probabilidad de aturdir durante 1 turno. Cuando un aliado usa una habilidad que no es de ataque y esta habilidad está disponible según el tiempo de reutilización, aumenta la Preparación de Combate del lanzador en un 20%."
+        }
+    },
+    "elena": {
+        "S1": {
+            "name": "Voluntad de la Luz Estelar",
+            "description": "Ataca con el poder de las estrellas, disipando una debilidad de cada uno de dos aliados."
+        },
+        "S2": {
+            "name": "Autoridad del Guardián",
+            "description": "Cuando un aliado sufre un ataque que afecta a todos los enemigos, disminuye el daño recibido en un 20% y activa Tierra Consagrada. Cuando se otorga más de un efecto de reducción de daño, solo se aplica el efecto más fuerte. Tierra Consagrada puede activarse una vez cada 2 turnos. Tierra Consagrada: Recupera la Salud de todos los aliados antes de aumentar la Preparación de Combate del lanzador en un 20%. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Cometa Eternamente Brillante",
+            "description": "Ataca a todos los enemigos con una lluvia de meteoros, y disipa una debilidad de todos los aliados antes de otorgar invencibilidad a todos los aliados durante 1 turno."
+        }
+    },
+    "elson": {
+        "S1": {
+            "name": "Golpe Pesado",
+            "description": "Ataca al enemigo, con un 75% de probabilidad de disminuir el Ataque durante 1 turno."
+        },
+        "S2": {
+            "name": "Lluvia de Meteoros",
+            "description": "Ataca a todos los enemigos con Lluvia de Meteoros de Luz y recupera la Salud de todos los aliados. La curación aumenta proporcionalmente a la Salud máxima del aliado."
+        },
+        "S3": {
+            "name": "Protección de la Luz",
+            "description": "Recupera Salud y aumenta el Ataque y la Defensa de todos los aliados durante 2 turnos con magia fortalecedora. La cantidad recuperada es proporcional a la Salud máxima del objetivo."
+        }
+    },
+    "ervalen": {
+        "S1": {
+            "name": "Venganza",
+            "description": "Ataca rápidamente al enemigo, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos."
+        },
+        "S2": {
+            "name": "Espada del Odio",
+            "description": "Ataca al enemigo repetidamente. Cuando la Salud máxima del enemigo es mayor que la del lanzador, la Preparación de Combate del lanzador aumenta proporcionalmente a la diferencia, hasta un máximo del 30%."
+        },
+        "S3": {
+            "name": "Heredero del Trono",
+            "description": "Ataca al enemigo con una espada, adoptando una postura de contraataque y otorgando una barrera al lanzador durante 2 turnos. Cuando el enemigo es derrotado, extiende la duración de los beneficios del lanzador en 1 turno y otorga un turno extra. Cuando la Salud máxima del enemigo es mayor que la del lanzador, el daño infligido aumenta proporcionalmente a la diferencia, hasta un máximo del 70%. La fuerza de la barrera aumenta proporcionalmente al Ataque del lanzador."
+        }
+    },
+    "fairytale-tenebria": {
+        "S1": {
+            "name": "Un Par",
+            "description": "Ataca al enemigo con poder místico, con un 75% de probabilidad de infligir provocación redirigida durante 1 turno."
+        },
+        "S2": {
+            "name": "Carta Salvaje",
+            "description": "Cuando un aliado es atacado por un enemigo con provocación o provocación redirigida, activa Barajar. Barajar solo puede activarse una vez por turno. Barajar: Ataca a todos los enemigos e inflige una debilidad aleatoria durante 1 turno. Un ataque exitoso contra un objetivo con provocación o provocación redirigida inflige daño adicional. El daño adicional aumenta proporcionalmente a la Salud máxima del objetivo."
+        },
+        "S3": {
+            "name": "Fiesta de Té",
+            "description": "Atrae a todos los enemigos con una fiesta de té y ataca, haciéndolos incapaces de recibir beneficios durante 2 turnos e infligiendo provocación redirigida durante 1 turno."
+        }
+    },
+    "fallen-cecilia": {
+        "S1": {
+            "name": "Error",
+            "description": "Ataca al enemigo con una lanza de venganza y tiene un 100% de probabilidad de provocar durante 1 turno. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Instinto Fuerte",
+            "description": "Disminuye el daño adicional y el daño fijo recibido por los aliados de los Héroes en un 50%. Cuando se otorga más de un efecto de reducción de daño, solo se aplica el efecto más fuerte. Al final del turno, otorga una barrera al aliado con menor Salud durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Lanza del Resentimiento",
+            "description": "Ataca a todos los enemigos en una explosión de emociones rencorosas y disipa todos los beneficios antes de transferir todas las debilidades infligidas al lanzador. Otorga anulador de habilidad una vez a todos los aliados. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "flan": {
+        "S1": {
+            "name": "Falla en la Comunicación",
+            "description": "Ataca al enemigo con una pistola, con un 75% de probabilidad de disipar un beneficio."
+        },
+        "S2": {
+            "name": "Monopolio de Datos",
+            "description": "Alienta a un aliado, aumentando el Ataque y el Daño Crítico durante 2 turnos antes de aumentar la Preparación de Combate en un 40%."
+        },
+        "S3": {
+            "name": "Trato Ventajoso",
+            "description": "Negocia duramente contra todos los enemigos, disminuyendo la Defensa durante 2 turnos antes de disminuir la Preparación de Combate en un 15%. Otorga un turno extra."
+        }
+    },
+    "free-spirit-tieria": {
+        "S1": {
+            "name": "Corte a la Mitad",
+            "description": "Ataca al enemigo con un hacha, con un 50% de probabilidad de disminuir el Ataque durante 2 turnos. El daño infligido aumenta proporcionalmente a la Salud máxima del objetivo."
+        },
+        "S2": {
+            "name": "Onda de Energía",
+            "description": "Ataca a todos los enemigos con energía condensada, y absorbe parte del daño infligido como Salud."
+        },
+        "S3": {
+            "name": "Corte de Persecución",
+            "description": "Se lanza hacia el enemigo para atacar, y disminuye la Defensa durante 2 turnos. Un golpe crítico otorgará inmunidad al lanzador durante 2 turnos. El daño infligido aumenta proporcionalmente a la Salud máxima del objetivo."
+        }
+    },
+    "furious": {
+        "S1": {
+            "name": "Desenfundar Rápido",
+            "description": "Dispara una pistola mientras se lanza hacia el enemigo, con un 35% de probabilidad de quemar durante 2 turnos."
+        },
+        "S2": {
+            "name": "Impulso de Moral",
+            "description": "Eleva la moral de todos los aliados, otorgando aumento de Probabilidad de Golpe Crítico durante 2 turnos."
+        },
+        "S3": {
+            "name": "Bala Fatal",
+            "description": "Ataca con un disparo fatal, con un 100% de probabilidad de disminuir la Defensa durante 2 turnos."
+        }
+    },
+    "general-purrgis": {
+        "S1": {
+            "name": "Golpe Heroico",
+            "description": "Derriba al enemigo con una espada grande, con un 75% de probabilidad de provocar durante 1 turno. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Punta de Lanza",
+            "description": "Después de ser atacado, aumenta la Preparación de Combate de todos los aliados en un 15%."
+        },
+        "S3": {
+            "name": "Orden de Cargar",
+            "description": "Da la orden de cargar, infligiendo daño a todos los enemigos, con un 100% de probabilidad de aturdir a dos enemigos aleatorios durante 1 turno. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "guider-aither": {
+        "S1": {
+            "name": "Espíritu Susurrante",
+            "description": "Ataca con poder espiritual, con un 50% de probabilidad de disminuir la Velocidad durante 2 turnos."
+        },
+        "S2": {
+            "name": "Protección del Espíritu",
+            "description": "Ataca con poder espiritual, antes de recuperar la Salud de todos los aliados y otorgar una barrera durante 2 turnos. La cantidad recuperada y la fuerza de la barrera aumentan proporcionalmente al Ataque del lanzador."
+        },
+        "S3": {
+            "name": "Ola de Fuerza",
+            "description": "Asesta un golpe al enemigo con poder espiritual y disipa todos los beneficios, antes de aumentar el Ataque del aliado con el Ataque más alto durante 2 turnos."
+        }
+    },
+    "hwayoung": {
+        "S1": {
+            "name": "Patada Supersónica",
+            "description": "Ataca al enemigo con una patada. Un ataque exitoso inflige daño adicional proporcional al Ataque del lanzador."
+        },
+        "S2": {
+            "name": "Halcón de la Pradera",
+            "description": "Al atacar, no puede activar un golpe crítico. El daño sufrido por un golpe crítico disminuye en un 30%. Cuando se otorga más de un efecto de reducción de daño, solo se aplica el efecto más fuerte. Al inicio del turno, cuando el lanzador no tiene debilidades, aumenta el Ataque durante 1 turno."
+        },
+        "S3": {
+            "name": "Golpe Ardiente del Monarca",
+            "description": "Ataca al enemigo con una técnica secreta y otorga inmunidad y una barrera al lanzador durante 2 turnos. Cuando el Ataque del lanzador es mayor que el del objetivo, penetra la Defensa del objetivo, con una tasa de penetración que aumenta proporcionalmente a la diferencia, hasta un máximo del 100%. La fuerza de la barrera aumenta proporcionalmente al Ataque del lanzador."
+        }
+    },
+    "ilynav": {
+        "S1": {
+            "name": "Embestida",
+            "description": "Ataca al enemigo con una lanza. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador. Cuando se usa esta habilidad, si no fue activada por un Ataque Dual, tiene un 50% de probabilidad de usar Castigar en lugar de Embestida. Esta habilidad no activa un Ataque Dual."
+        },
+        "S2": {
+            "name": "Castigar",
+            "description": "Ataca y atraviesa al enemigo, infligiendo heridas. Un ataque exitoso inflige daño adicional equivalente al 50% de las heridas infligidas al objetivo. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador. La gravedad de las heridas aumenta proporcionalmente al daño infligido. Las heridas disminuyen la Salud máxima del objetivo hasta en un 20% cada vez que se usa esta habilidad."
+        },
+        "S3": {
+            "name": "Repeler",
+            "description": "Ataca a todos los enemigos sin piedad, infligiendo heridas. Aumenta el Daño Crítico de todos los aliados durante 2 turnos. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador. La gravedad de las heridas aumenta proporcionalmente al daño infligido. Las heridas disminuyen la Salud máxima del objetivo hasta en un 20% cada vez que se usa esta habilidad."
+        }
+    },
+    "iseria": {
+        "S1": {
+            "name": "Flor Refinada",
+            "description": "Lanza espadas al enemigo, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos."
+        },
+        "S2": {
+            "name": "Guardián del Juramento",
+            "description": "Reinicia el tiempo de reutilización de habilidad de un aliado excepto el lanzador con energía de luz."
+        },
+        "S3": {
+            "name": "Floración Completa",
+            "description": "Ataca al enemigo con una Espada Mágica gigante, disipando todos los beneficios, antes de disminuir la Defensa y hacerlos incapaces de recibir beneficios durante 2 turnos."
+        }
+    },
+    "judge-kise": {
+        "S1": {
+            "name": "Cercenamiento",
+            "description": "Ataca al enemigo con una guadaña. Penetra la Defensa del objetivo en un 20%."
+        },
+        "S2": {
+            "name": "Fin del Mal",
+            "description": "Ataca a todos los enemigos con una guadaña, disipando todos los beneficios antes de aplicar un 175% de probabilidad de disminuir la Probabilidad de Golpe durante 2 turnos y un 175% de probabilidad de disminuir la Defensa durante 2 turnos, y aumentar la Preparación de Combate del lanzador en un 25% por objetivo. Esta habilidad no puede activar un contraataque."
+        },
+        "S3": {
+            "name": "Ola de Luz",
+            "description": "Ataca a todos los enemigos distorsionando el espacio y el tiempo antes de aumentar los tiempos de reutilización de habilidades en 1 turno."
+        }
+    },
+    "karin": {
+        "S1": {
+            "name": "Cortador Secuencial",
+            "description": "Golpea al enemigo con una espada. Un golpe crítico disminuirá el tiempo de reutilización de habilidad en 1 turno."
+        },
+        "S2": {
+            "name": "Arte de la Espada: Destello",
+            "description": "Corta al enemigo. Un golpe crítico disminuirá la Defensa durante 1 turno."
+        },
+        "S3": {
+            "name": "Arte de la Espada: Trueno",
+            "description": "Corta al enemigo a la velocidad del rayo. El daño infligido aumenta con un golpe crítico."
+        }
+    },
+    "kayron": {
+        "S1": {
+            "name": "Corte del Vacío",
+            "description": "Ataca con una espada, con un 50% de probabilidad de disminuir la Probabilidad de Golpe durante 1 turno, infligiendo daño proporcional a la Salud perdida del lanzador. Cuando se usa esta habilidad, si no fue activada por un Ataque Dual y el lanzador tiene un beneficio, esta habilidad se convierte en un ataque que afecta a todos los enemigos. El ataque cambiado no activa un Ataque Dual."
+        },
+        "S2": {
+            "name": "Voluntad Inmortal",
+            "description": "Cuando el lanzador recibe daño letal, otorga inmortalidad durante 1 turno y aumento de Evasión durante 2 turnos y reinicia el tiempo de reutilización de Apocalipsis. Solo puede activarse una vez cada 6 turnos."
+        },
+        "S3": {
+            "name": "Apocalipsis",
+            "description": "Ataca al enemigo explotando el Poder del Archidemonio contenido dentro de la espada, antes de absorber parte del daño infligido como Salud. Cuando el enemigo es derrotado, extiende la duración de los beneficios otorgados al lanzador en 1 turno. El daño infligido aumenta proporcionalmente a la Salud perdida del lanzador."
+        }
+    },
+    "ken": {
+        "S1": {
+            "name": "Nocaut",
+            "description": "Ataca con una ráfaga de golpes, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos. Quema al enemigo durante 2 turnos cuando el lanzador tiene vigor. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Patada Celestial",
+            "description": "Patea al enemigo con una serie de patadas, disminuyendo la Defensa durante 2 turnos antes de otorgar al lanzador aumento de Velocidad durante 2 turnos. Cuando el lanzador tiene vigor, ignora la Resistencia a Efectos. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Ráfaga del Fénix",
+            "description": "Ataca con una ráfaga de golpes antes de asestar un golpe poderoso, aturdiendo durante 1 turno. Otorga vigor al lanzador durante 3 turnos. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador. Al inicio de la primera batalla, gana 40 de Espíritu de Lucha."
+        }
+    },
+    "krau": {
+        "S1": {
+            "name": "Tormenta de Espadas",
+            "description": "Ataca al enemigo con una tormenta de espadas, con un 75% de probabilidad de provocar durante 1 turno. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Carga",
+            "description": "Empuja al enemigo con un escudo, disminuyendo la Preparación de Combate en un 50%, antes de otorgar aumento de Defensa a todos los aliados durante 2 turnos. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Invocar a Ziegfried",
+            "description": "Invoca al Guardián Ziegfried para atacar, infligiendo daño proporcional a la Salud perdida del lanzador, penetrando la Defensa. Este ataque no puede activar un golpe crítico."
+        }
+    },
+    "landy": {
+        "S1": {
+            "name": "Disparar",
+            "description": "Ataca al enemigo con disparos, y aumenta la Preparación de Combate del lanzador en un 15%. Cuando el objetivo tiene un beneficio, duplica los efectos del aumento de Preparación de Combate y el Espíritu de Lucha ganado."
+        },
+        "S2": {
+            "name": "La Jefa Está en Escena",
+            "description": "Al inicio de la primera batalla, gana 50 de Espíritu de Lucha y otorga sigilo durante 1 turno. Al inicio del turno, gana 10 de Espíritu de Lucha por cada beneficio otorgado a un enemigo, y cuando el Espíritu de Lucha está lleno, reinicia el tiempo de reutilización de habilidad. Después de atacar, aumenta el Ataque del lanzador en un 25%. Este efecto puede acumularse hasta 3 veces."
+        },
+        "S3": {
+            "name": "Ráfaga Completa",
+            "description": "Dispara a todos los enemigos y otorga a todos los aliados aumento de Velocidad durante 2 turnos, antes de aumentar su Preparación de Combate en un 15%. Cuando el Espíritu de Lucha está lleno, consume todo el Espíritu de Lucha para penetrar la Defensa del objetivo en un 50%. Este ataque no puede activar un contraataque."
+        }
+    },
+    "last-rider-krau": {
+        "S1": {
+            "name": "Castigo",
+            "description": "Ataca al enemigo con una tormenta de espadas, antes de aumentar la Velocidad del lanzador durante 1 turno. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Código Número 00",
+            "description": "Después de ser atacado, disminuye los tiempos de reutilización de habilidades en 1 turno. Después de sufrir un ataque que afecta a todos los aliados, disminuye los tiempos de reutilización de habilidades en 1 turno adicional, y otorga una barrera a todos los aliados durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente a la Salud máxima del lanzador. El efecto de barrera solo puede activarse una vez por turno."
+        },
+        "S3": {
+            "name": "Arma Móvil Ziegfried",
+            "description": "Invoca a Ziegfried para atacar a todos los enemigos y disminuye los tiempos de reutilización de habilidades de todos los aliados en 1 turno. Penetra la Defensa, y no puede activar un golpe crítico. El daño infligido aumenta proporcionalmente a la Salud máxima y la Velocidad del lanzador. El daño infligido aumenta cada vez que se usa esta habilidad y puede acumularse hasta 3 veces."
+        }
+    },
+    "lidica": {
+        "S1": {
+            "name": "Rosa Salvaje",
+            "description": "Ataca al enemigo con una espada y tiene un 80% de probabilidad de infligir dos efectos de sangrado durante 1 turno. Al final del turno, detona los efectos de sangrado infligidos al objetivo."
+        },
+        "S2": {
+            "name": "Espino",
+            "description": "Inflige reducción de recursos a todos los enemigos en un 60% antes de atacar, disminuyendo la duración de los beneficios en 1 turno e infligiendo atadura durante 2 turnos. Por cada objetivo, aumenta la Preparación de Combate del lanzador en un 25%."
+        },
+        "S3": {
+            "name": "Ejecución Pública",
+            "description": "Ataca al enemigo con una espada látigo, infligiendo disminución de Defensa durante 2 turnos antes de disminuir la Preparación de Combate en un 100%. Otorga anulador de habilidad una vez a todos los aliados. Cuando el objetivo tiene atadura, ignora la Resistencia a Efectos."
+        }
+    },
+    "lilias": {
+        "S1": {
+            "name": "¡Síganme! ¡Al Ataque!",
+            "description": "Lidera el ataque al enemigo, y activa un Ataque Dual de un aliado aleatorio. Aumenta la Probabilidad de Golpe Crítico en un 50% al atacar y el daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "¡Hasta Aquí!",
+            "description": "Después de que un enemigo usa una habilidad que no es de ataque, disipa una debilidad del lanzador, y activa Supresión contra el lanzador enemigo. Supresión solo puede activarse una vez cada 2 turnos. Supresión: Provoca al objetivo durante 1 turno, y otorga una barrera al lanzador durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "¡Listos, Carguen, Fuego!",
+            "description": "Ordena al Ejército de Perland atacar disparando a todos los enemigos, disminuyendo la Preparación de Combate en un 25%. Aumenta la Probabilidad de Golpe Crítico en un 50% al atacar, infligiendo daño según el Ataque del Héroe con el Ataque más alto."
+        }
+    },
+    "lilibet": {
+        "S1": {
+            "name": "Corta-Corta",
+            "description": "Golpea y corta al enemigo, con un 50% de probabilidad de hacerlo incapaz de recibir beneficios durante 2 turnos."
+        },
+        "S2": {
+            "name": "Taja-Taja",
+            "description": "Corta brutalmente al enemigo, con un 55% de probabilidad cada uno de infligir tres efectos de sangrado durante 2 turnos, antes de aumentar la Preparación de Combate del lanzador en un 50%."
+        },
+        "S3": {
+            "name": "Cortadora de Almas",
+            "description": "Corta al enemigo con Cho y Mal, antes de otorgar al lanzador anulador de habilidad una vez. Cuando el enemigo es derrotado, inflige extinción y disminuye el tiempo de reutilización del lanzador en 1 turno. La Probabilidad de Golpe aumenta en un 20% al usar esta habilidad."
+        }
+    },
+    "little-queen-charlotte": {
+        "S1": {
+            "name": "Juicio",
+            "description": "Ataca con una espada gigante antes de otorgar inmunidad al lanzador durante 1 turno."
+        },
+        "S2": {
+            "name": "Dignidad de una Reina",
+            "description": "Disminuye el daño sufrido por un golpe crítico en un 30%. Disminuye el daño sufrido por un golpe crítico para todos los aliados excepto el lanzador en un 15%. Cuando se otorga más de un efecto de reducción de daño, solo se aplica el efecto más fuerte. En el momento en que el lanzador sufre un golpe crítico, aumenta la Preparación de Combate del lanzador en un 15%."
+        },
+        "S3": {
+            "name": "La Voluntad de La Mare",
+            "description": "Aplasta al enemigo con una espada y ataca. Cuando el enemigo es derrotado, inflige extinción. Penetra la Defensa del objetivo en un 50%. Cuando el objetivo es un Héroe de elemento Oscuro, aumenta el daño infligido e inflige daño adicional proporcional al Ataque del lanzador a todos los enemigos excepto al objetivo."
+        }
+    },
+    "luluca": {
+        "S1": {
+            "name": "Ola Salvaje",
+            "description": "Ataca con intensa fuerza elemental, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos. El daño infligido aumenta proporcionalmente a la cantidad de Salud perdida del enemigo."
+        },
+        "S2": {
+            "name": "Bendición de Rekos",
+            "description": "Con la bendición de las estrellas, otorga aumento de Defensa y barrera a todos los aliados durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente al Ataque del lanzador."
+        },
+        "S3": {
+            "name": "Ola de Venganza",
+            "description": "Ataca a todos los enemigos con el poder de la ruina, con un 100% de probabilidad de disminuir la Defensa durante 2 turnos."
+        }
+    },
+    "luna": {
+        "S1": {
+            "name": "Corte Infinito",
+            "description": "Apuñala al objetivo un número aleatorio de veces. El tiempo de reutilización de habilidad disminuye entre 1-3 turnos y el daño infligido aumenta según el número de ataques."
+        },
+        "S2": {
+            "name": "Voluntad del Caballero Dragón",
+            "description": "Aumenta la Probabilidad de Golpe Crítico y la Resistencia a Golpe Crítico en un 90%. Aumenta el Ataque en un 90% cuando la Salud del lanzador es del 50% o más, y aumenta la Defensa en un 90% cuando la Salud del lanzador es menor al 50%."
+        },
+        "S3": {
+            "name": "Lanza Ragnar",
+            "description": "Se eleva en el aire y golpea al enemigo con una lanza, con un 100% de probabilidad de disminuir la Defensa durante 2 turnos. Penetra la Defensa del objetivo en un 50%. Adquiere 5 Almas adicionales cuando el enemigo es derrotado."
+        }
+    },
+    "martial-artist-ken": {
+        "S1": {
+            "name": "Nocaut",
+            "description": "Ataca al enemigo con una ráfaga de golpes, con un 100% de probabilidad de infligir provocación durante 1 turno. Un ataque exitoso siempre resulta en un golpe crítico."
+        },
+        "S2": {
+            "name": "Llama del Dragón",
+            "description": "Al inicio de la batalla, otorga vigor durante 3 turnos. Cuando un aliado excepto el lanzador sufre un golpe crítico, contraataca, y cuando el lanzador sufre un golpe crítico, contraataca con Llama del Dragón. Llama del Dragón (Adquiere 1 Alma): Ataca al enemigo con una patada y penetra la Defensa del objetivo en un 50%. Un ataque exitoso siempre resulta en un golpe crítico, infligiendo daño proporcional a la Salud perdida del lanzador."
+        },
+        "S3": {
+            "name": "La Llegada de Asura",
+            "description": "Ataca a todos los enemigos con un poderoso golpe al suelo, con un 80% de probabilidad de disminuir la Defensa durante 2 turnos. Un ataque exitoso siempre resulta en un golpe crítico."
+        }
+    },
+    "melissa": {
+        "S1": {
+            "name": "Poder",
+            "description": "Domina al enemigo, con un 75% de probabilidad de hacerlo incurable durante 1 turno. El daño infligido aumenta proporcionalmente a la Salud perdida del lanzador."
+        },
+        "S2": {
+            "name": "Manifestación",
+            "description": "Ataca desatando su rabia interior, antes de otorgar inmortalidad e inmunidad al lanzador durante 1 turno. El tiempo de reutilización de esta habilidad se reinicia cuando el enemigo es derrotado. El daño infligido aumenta proporcionalmente a la Salud perdida del lanzador."
+        },
+        "S3": {
+            "name": "Floración de Sangre",
+            "description": "Disipa todos los beneficios del enemigo antes de atacar liberando su agresión reprimida, maldiciendo durante 2 turnos sin importar si el ataque golpea. Esta habilidad no se ve afectada por la desventaja elemental. Los monstruos Élite o Jefe no pueden ser maldecidos."
+        }
+    },
+    "milim": {
+        "S1": {
+            "name": "Inmersión del Dragón",
+            "description": "Ataca al enemigo, recuperando Salud proporcional al daño infligido antes de aumentar el Ataque del lanzador durante 1 turno."
+        },
+        "S2": {
+            "name": "Ojo del Dragón (Ojo de Milim)",
+            "description": "Al inicio de la batalla y al final del turno, tiene un 100% de probabilidad de otorgar Ojo del Dragón (Ojo de Milim) al lanzador durante 1 turno. Cuando el lanzador tiene Ojo del Dragón (Ojo de Milim) al inicio del turno, disipa el sigilo de todos los enemigos. Ignora la Resistencia a Efectos. Cuando el Enfoque está lleno después de atacar, consume todo el Enfoque para activar Destructor de Dragón. Destructor de Dragón: Ataca a todos los enemigos con maná abrumador, eliminando 10 Almas."
+        },
+        "S3": {
+            "name": "Miedo del Dragón",
+            "description": "Libera maná para atacar al enemigo, infligiendo extinción cuando el enemigo es derrotado. Aumenta la Evasión del lanzador durante 3 turnos."
+        }
+    },
+    "maid-chloe": {
+        "S1": {
+            "name": "Golpe Pesado",
+            "description": "Ataca con un martillo, con un 40% de probabilidad de aturdir durante 1 turno. Cuando el objetivo está aturdido después del ataque, aumenta la Preparación de Combate de todos los aliados excepto el lanzador en un 15%."
+        },
+        "S2": {
+            "name": "Ánimo de la Doncella",
+            "description": "Aumenta la Resistencia a Efectos de todos los aliados en un 20%. Al inicio del turno, recupera la Salud de los dos aliados con la Salud más baja. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Trato VIP",
+            "description": "Entretiene a todos los aliados con Trato VIP, reviviendo a todos los aliados muertos al 20% de Salud. Disipa dos debilidades de todos los aliados vivos y otorga revivir durante 3 turnos."
+        }
+    },
+    "mort": {
+        "S1": {
+            "name": "Exterminación",
+            "description": "Ataca al enemigo atravesándolo, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos. Ignora la Resistencia a Efectos de cualquier objetivo con Salud Máxima menor que la Salud Máxima del lanzador."
+        },
+        "S2": {
+            "name": "Dignidad Absoluta",
+            "description": "Inmune a debilidades que impiden el movimiento. Todos los Héroes excepto el lanzador no pueden contraatacar. Cuando un aliado es atacado, tiene un 20% de probabilidad de contraatacar y al contraatacar, activa Bendición Sagrada. Bendición Sagrada puede activarse una vez cada 3 turnos. Bendición Sagrada: Otorga una barrera a todos los aliados durante 2 turnos, y aumenta la Velocidad del lanzador durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Advenimiento: Mortelix",
+            "description": "Desciende y ataca a todos los enemigos, infligiendo miedo durante 2 turnos, antes de recuperar la Salud del lanzador. Penetra la Defensa del enemigo con la Salud Máxima más alta en un 70%, e ignora la Resistencia a Efectos de cualquier objetivo con Salud Máxima menor que la Salud Máxima del lanzador. El daño infligido y la cantidad recuperada aumentan proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "pavel": {
+        "S1": {
+            "name": "Espada Huracán",
+            "description": "Golpea al enemigo con una pistola, con un 75% de probabilidad de disminuir la Probabilidad de Golpe durante 1 turno. El daño infligido aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S2": {
+            "name": "Bala de Tormenta",
+            "description": "Dispara una fuerte ráfaga de viento a todos los enemigos. El daño infligido aumenta proporcionalmente a la Velocidad del lanzador. Esta habilidad no puede activar un contraataque."
+        },
+        "S3": {
+            "name": "Persecución Destructiva",
+            "description": "Corta y dispara rápidamente al enemigo. Cuando el enemigo no es un monstruo Élite o Jefe, los efectos de daño compartido son ignorados. El daño infligido aumenta proporcionalmente a la Velocidad del lanzador."
+        }
+    },
+    "peira": {
+        "S1": {
+            "name": "Garra Lupina",
+            "description": "Corta al enemigo con garras afiladas, con un 40% de probabilidad de aturdir durante 1 turno. Cuando el lanzador tiene una barrera, la probabilidad del efecto aumenta en un 25%."
+        },
+        "S2": {
+            "name": "Hoja Castigadora",
+            "description": "Ataca a todos los enemigos con espíritus guardianes, disminuyendo la duración de los beneficios en 1 turno, antes de restringir y hacerlos incapaces de recibir beneficios durante 2 turnos."
+        },
+        "S3": {
+            "name": "Caza en Manada",
+            "description": "Usando el poder del Cáliz del Juramento, aumenta el Ataque de todos los aliados excepto el lanzador durante 2 turnos, antes de otorgar sigilo, escolta y una barrera al lanzador durante 3 turnos. La fuerza de la barrera aumenta proporcionalmente al nivel del lanzador."
+        }
+    },
+    "politis": {
+        "S1": {
+            "name": "Llamado de las Estrellas",
+            "description": "Invoca muñecas para atacar al enemigo, con un 40% de probabilidad de aturdir durante 1 turno."
+        },
+        "S2": {
+            "name": "Guía Astral",
+            "description": "Cuando el enemigo no es un monstruo Élite o Jefe, reduce el efecto de los aumentos de Preparación de Combate otorgados al enemigo en un 50%. Este efecto no se acumula con otros efectos pasivos del mismo nombre. Activa Tranquilidad cuando un enemigo usa una habilidad que no es de ataque. Tranquilidad solo puede activarse una vez cada 2 turnos. Tranquilidad: Ataca a todos los enemigos, disminuyendo la duración de los beneficios en 1 turno, antes de aumentar la Preparación de Combate del lanzador en un 30%."
+        },
+        "S3": {
+            "name": "Lluvia de Estrellas",
+            "description": "Ataca a todos los enemigos con tecnología alienígena, con un 100% de probabilidad de hacerlos incapaces de recibir beneficios durante 2 turnos."
+        }
+    },
+    "ran": {
+        "S1": {
+            "name": "Tempestad",
+            "description": "Ataca al enemigo con una tormenta de espadas. Penetra la Defensa del objetivo en un 20%. El daño infligido aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S2": {
+            "name": "Concentración Mental",
+            "description": "Otorga inmunidad a todos los aliados durante 2 turnos antes de aumentar el Ataque del lanzador durante 2 turnos. Otorga un turno extra al lanzador."
+        },
+        "S3": {
+            "name": "Hoja Instantánea",
+            "description": "Ataca a todos los enemigos con una espada, disipando dos beneficios antes de un 85% de probabilidad de infligir estigma durante 2 turnos, y un 85% de probabilidad de disminuir la Defensa durante 2 turnos. El daño infligido aumenta proporcionalmente a la Velocidad del lanzador y del objetivo."
+        }
+    },
+    "rem": {
+        "S1": {
+            "name": "Déjamelo a Mí.",
+            "description": "Ataca al enemigo con una estrella de la mañana, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos. Cuando el lanzador tiene Modo Demonio, otorga al lanzador un ataque extra con la misma habilidad."
+        },
+        "S2": {
+            "name": "Orgullo de Doncella",
+            "description": "Cuando alguien muere, disipa todas las debilidades del lanzador y otorga Modo Demonio durante 2 turnos. Solo puede activarse una vez cada 5 turnos. Cuando un aliado excepto el lanzador es atacado, tiene un 20% de probabilidad de contraatacar con Golpe de Hierro. Golpe de Hierro tiene prioridad sobre un contraataque con una habilidad básica. Golpe de Hierro: Ataca a todos los enemigos, disminuyendo la duración de los beneficios en 1 turno y haciéndolos incurables durante 1 turno."
+        },
+        "S3": {
+            "name": "¡Te Castigaré!",
+            "description": "Aumenta el Ataque del lanzador durante 3 turnos, antes de saltar para atacar a todos los enemigos y disminuir la Probabilidad de Golpe durante 2 turnos."
+        }
+    },
+    "rimuru": {
+        "S1": {
+            "name": "¿Bien, Empezamos?",
+            "description": "Corta al enemigo para atacar, otorgando un beneficio aleatorio al lanzador durante 1 turno."
+        },
+        "S2": {
+            "name": "Analizar y Evaluar",
+            "description": "Después de atacar con una habilidad que no es básica, copia dos beneficios cuando el objetivo tiene beneficios, sin importar si el ataque golpea y otorga sus efectos a todos los aliados. Este efecto no se aplica a beneficios que no se pueden disipar. Cuando un aliado es atacado por un enemigo con beneficios, activa ¡Prepárate! contra el atacante. ¡Prepárate! solo puede activarse una vez cada 3 turnos. ¡Prepárate!: Se acerca rápidamente al enemigo y ataca, aumentando la Preparación de Combate del lanzador en un 30%."
+        },
+        "S3": {
+            "name": "¡Devóralo, Llama Negra!",
+            "description": "Ataca al enemigo con llama negra, y un ataque exitoso infligirá 5,000 de daño fijo adicional al objetivo. El daño fijo aumenta proporcionalmente al número de beneficios otorgados a todos los aliados, hasta un máximo de 10,000 de daño fijo. No se ve afectado por la desventaja elemental."
+        }
+    },
+    "roana": {
+        "S1": {
+            "name": "Purificación del Alma",
+            "description": "Ataca al enemigo con un poder noble, otorgando una barrera al aliado con la Salud más baja durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente a la Salud máxima del lanzador. Otorga una barrera a todos los aliados durante 2 turnos después de atacar."
+        },
+        "S2": {
+            "name": "Ojo Vigilante",
+            "description": "Recupera la Salud de todos los aliados cuando un aliado es atacado por un ataque extra, contraataque o Ataque Dual, y aumenta la Preparación de Combate de todos los aliados en un 5% cada uno por aliado atacado. La cantidad recuperada es proporcional a la Salud máxima del lanzador y al número de aliados atacados."
+        },
+        "S3": {
+            "name": "Noble Rekos",
+            "description": "Con la gracia de Rekos, otorga una barrera y revivir a todos los aliados durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "remnant-violet": {
+        "S1": {
+            "name": "Destello de Espada",
+            "description": "Corta al enemigo, con un 75% de probabilidad de disminuir la Probabilidad de Golpe durante 1 turno. Otorga un turno extra."
+        },
+        "S2": {
+            "name": "Concentración",
+            "description": "Aumenta la Evasión en un 50%, y después de evadir exitosamente, gana 1 Enfoque. Cuando el Enfoque está en 5 después de atacar o ser atacado, consume todo y usa Masacre contra un enemigo aleatorio."
+        },
+        "S3": {
+            "name": "Masacre",
+            "description": "Ataca al enemigo con una espada. Penetra la Defensa del objetivo en un 50%."
+        }
+    },
+    "senya": {
+        "S1": {
+            "name": "Lanza de Venganza",
+            "description": "Ataca al enemigo con una lanza, con un 75% de probabilidad de provocar durante 1 turno. Cuando no es el turno del lanzador, la probabilidad del efecto aumenta en un 25%."
+        },
+        "S2": {
+            "name": "Espíritu Indomable",
+            "description": "El Ataque aumenta en un 30% y la Resistencia a Golpe Crítico aumenta en un 50%. Al atacar, no puede activar un golpe crítico. Al ser atacado, si el lanzador sufre un golpe no crítico, inflige daño al atacante proporcional al Ataque del lanzador antes de activar Gracia del Campo de Batalla. Gracia del Campo de Batalla solo puede activarse una vez cada 2 turnos. Gracia del Campo de Batalla: Otorga una barrera a todos los aliados durante 2 turnos, y aumenta la Velocidad del lanzador durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente al Ataque del lanzador."
+        },
+        "S3": {
+            "name": "Golpe del Cazador de Dragones",
+            "description": "Ataca a todos los enemigos golpeando hacia abajo con una lanza y tiene un 100% de probabilidad de disminuir la Probabilidad de Golpe durante 2 turnos y un 100% de probabilidad de provocar durante 1 turno. El tiempo de reutilización de la habilidad se reduce en 2 turnos."
+        }
+    },
+    "seaside-bellona": {
+        "S1": {
+            "name": "¡Cuidado!",
+            "description": "Ataca al enemigo con un abanico, con un 75% de probabilidad de marcar al enemigo durante 1 turno."
+        },
+        "S2": {
+            "name": "Estoy con Mis Amigos",
+            "description": "Por cada aliado superviviente, disminuye el daño sufrido en un 10%. Cuando se otorga más de un efecto de reducción de daño del mismo tipo, solo se aplica el efecto más fuerte. Cuando un aliado es atacado, gana 1 Enfoque, y cuando el Enfoque acumulado del lanzador es 5, consume todo el Enfoque y activa No Eres Lindo. No Eres Lindo: Ataca a todos los enemigos con un abanico, con un 75% de probabilidad de disminuir la Defensa durante 2 turnos."
+        },
+        "S3": {
+            "name": "¿No Te Advertí?",
+            "description": "Ataca a todos los enemigos con un chorro de agua, disipando todos los beneficios antes de un 100% de probabilidad cada uno de infligir incapacidad de recibir beneficios e incurable durante 2 turnos. Ignora la Resistencia a Efectos."
+        }
+    },
+    "sigret": {
+        "S1": {
+            "name": "Cortar",
+            "description": "Ataca con una guadaña, con un 50% de probabilidad cada uno de infligir dos efectos de sangrado durante 2 turnos."
+        },
+        "S2": {
+            "name": "Aplastar",
+            "description": "Golpea al enemigo con una guadaña, con un 100% de probabilidad cada uno de hacerlo incurable e infligir sangrado durante 2 turnos. Cuando la Salud del enemigo es del 50% o menos después del ataque, activa Cortar como un ataque extra con un 100% de probabilidad de infligir sangrado. Otorga un turno extra."
+        },
+        "S3": {
+            "name": "Guillotina",
+            "description": "Inflige daño letal al enemigo, atravesando su punto débil. Penetra la Defensa en un 30%, con un 5% adicional por cada debilidad infligida al enemigo. Inflige extinción cuando el enemigo es derrotado."
+        }
+    },
+    "straze": {
+        "S1": {
+            "name": "Golpe Poderoso",
+            "description": "Balancea una espada para atacar al enemigo y aumenta la Preparación de Combate del lanzador en un 20%."
+        },
+        "S2": {
+            "name": "Mirada Destructiva",
+            "description": "Ataca a todos los enemigos con una ola de fuerza y disipa dos beneficios. Ignora la Resistencia a Efectos de cualquier objetivo con Ataque menor que el Ataque del lanzador. Cuando hay tres o menos enemigos, el daño infligido aumenta con menos enemigos."
+        },
+        "S3": {
+            "name": "Extinción Estelar",
+            "description": "Ataca a todos los enemigos con una espada. Penetra la Defensa del objetivo con la Salud máxima más alta en un 30%. Cuando el Ataque del lanzador es mayor que el Ataque del objetivo de penetración, la tasa de penetración aumenta proporcionalmente a la diferencia, hasta un máximo del 100%. Esta habilidad no puede activar un contraataque."
+        }
+    },
+    "tamarinne": {
+        "S1": {
+            "name": "Melodía Serena",
+            "description": "(Tamarinne) Ataca a un enemigo con una melodía serena y cura al aliado con la Salud más baja. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del aliado. Disminuye el tiempo de reutilización de Estrella Brillante☆ en 1 turno. (Idol) Ataca a todos los enemigos con una hermosa voz, disipando todos los beneficios. Activa un Ataque Dual del aliado con el Ataque más alto."
+        },
+        "S2": {
+            "name": "Canción del Bosque",
+            "description": "(Tamarinne) Cura a todos los aliados con una melodía pacífica. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del lanzador. Disminuye el tiempo de reutilización de Estrella Brillante☆ en 1 turno. (Idol) Con una actuación poderosa, aumenta el Ataque de todos los aliados durante 2 turnos y aumenta la Preparación de Combate en un 50%, recuperando Salud. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Estrella Brillante☆",
+            "description": "Antes de actuar, disipa todas las debilidades infligidas a todos los aliados y recupera al lanzador a la Salud máxima. El lanzador se convierte en idol durante 3 turnos y realiza un concierto. Comienza la primera batalla con el tiempo de reutilización completo."
+        }
+    },
+    "tenebria": {
+        "S1": {
+            "name": "Explosión Oscura",
+            "description": "Ataca al enemigo con una explosión de energía oscura, con un 70% de probabilidad de dormirlo durante 1 turno. Esta habilidad no activa un Ataque Dual."
+        },
+        "S2": {
+            "name": "Trueno Ominoso",
+            "description": "Invoca un trueno ominoso para atacar a todos los enemigos, disminuyendo la Preparación de Combate en un 30% e infligiendo Velocidad reducida y restricción durante 2 turnos."
+        },
+        "S3": {
+            "name": "Pesadilla",
+            "description": "Deja caer la Luna de Pesadilla sobre todos los enemigos, con un 85% de probabilidad cada uno de disminuir la Defensa durante 2 turnos y dormirlos durante 1 turno, antes de aumentar el Ataque del lanzador durante 2 turnos."
+        }
+    },
+    "top-model-luluca": {
+        "S1": {
+            "name": "Explosión de Energía",
+            "description": "Usa la energía del traje para atacar al enemigo. Cuando se usa en el turno del lanzador, tiene un 40% de probabilidad de otorgar un ataque extra con la misma habilidad. Cuando el enemigo no es un monstruo Élite o Jefe, los efectos de daño compartido son ignorados."
+        },
+        "S2": {
+            "name": "Pose de Victoria",
+            "description": "Manifiesta la energía del traje, otorgando una barrera al lanzador durante 3 turnos. Otorga al lanzador un turno extra. La fuerza de la barrera aumenta proporcionalmente al nivel del lanzador."
+        },
+        "S3": {
+            "name": "Demolición",
+            "description": "Aumenta el Ataque del lanzador durante 3 turnos, antes de atacar al enemigo con energía dimensional y cuando el enemigo es derrotado, inflige extinción. Aumenta la Preparación de Combate de todos los aliados en un 20%, y otorga sigilo al lanzador durante 2 turnos. El daño infligido aumenta proporcionalmente a la Velocidad del lanzador."
+        }
+    },
+    "vildred": {
+        "S1": {
+            "name": "Barrido",
+            "description": "Ataca rápidamente a dos enemigos con una tormenta de espadas. El daño infligido aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S2": {
+            "name": "Espada Danzante",
+            "description": "Aumenta el Ataque del lanzador durante 2 turnos y activa Espada Danzante cuando un enemigo es derrotado por Barrido o Ascenso de Espada. Espada Danzante (Adquiere 1 Alma): Ataca a todos los enemigos con una tormenta de espadas."
+        },
+        "S3": {
+            "name": "Ascenso de Espada",
+            "description": "Ataca a todos los enemigos con una tormenta de espadas, infligiendo daño proporcional a la Velocidad del lanzador."
+        }
+    },
+    "violet": {
+        "S1": {
+            "name": "Corte Elegante",
+            "description": "Ataca con una espada, con un 75% de probabilidad de disminuir el Ataque durante 1 turno. Cuando no es el turno del lanzador, aumenta la Preparación de Combate en un 15% y gana el doble de Enfoque."
+        },
+        "S2": {
+            "name": "Duelo Aceptado",
+            "description": "Se prepara para un duelo disipando dos debilidades del lanzador y otorgando percepción durante 3 turnos antes de recuperar un 15% de Salud. Otorga un turno extra al lanzador."
+        },
+        "S3": {
+            "name": "Corte Mariposa",
+            "description": "Atraviesa al enemigo con una espada y consume todo el Enfoque. El daño infligido aumenta proporcionalmente a la cantidad de Enfoque consumido. Cuando Corte Mariposa está disponible según el tiempo de reutilización, aumenta la Evasión en un 35%, y después de evadir exitosamente, contraataca con Corte Elegante."
+        }
+    },
+    "vivian": {
+        "S1": {
+            "name": "Drenaje de Vitalidad",
+            "description": "Golpea al enemigo con una roca, aumentando la Preparación de Combate del lanzador en un 15%."
+        },
+        "S2": {
+            "name": "Grito del Dios del Trueno",
+            "description": "Ataca a todos los enemigos con una tormenta de truenos. Activa Grito del Dios del Trueno de nuevo cuando un enemigo es derrotado. Cada Grito del Dios del Trueno subsiguiente activado de esta manera inflige daño reducido, y puede activarse hasta 3 veces."
+        },
+        "S3": {
+            "name": "Amplificación de Maná",
+            "description": "Amplifica completamente el maná, otorgando inmunidad a todos los aliados durante 3 turnos antes de otorgar Ataque aumentado (Mayor) al lanzador durante 3 turnos mientras aumenta el Ataque de todos los aliados excepto el lanzador durante 3 turnos."
+        }
+    },
+    "watcher-schuri": {
+        "S1": {
+            "name": "Francotirador",
+            "description": "Dispara al enemigo con un rifle, con un 50% de probabilidad de marcarlo durante 2 turnos."
+        },
+        "S2": {
+            "name": "Disparo Rápido",
+            "description": "Dispara a todos los enemigos con un rifle, con un 100% de probabilidad de disipar un beneficio, y aumenta la Velocidad del lanzador durante 2 turnos."
+        },
+        "S3": {
+            "name": "Disparo Final",
+            "description": "Ataca al enemigo con una bala de maná. Penetra la Defensa del objetivo."
+        }
+    },
+    "yufine": {
+        "S1": {
+            "name": "Doble Corte",
+            "description": "Ataca balanceando su arma, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos."
+        },
+        "S2": {
+            "name": "Rugido del Dragón",
+            "description": "Ataca a todos los enemigos con un rugido de dragón, disipando un beneficio, antes de un 155% de probabilidad de disminuir la Defensa durante 2 turnos y un 155% de probabilidad de silenciar durante 1 turno. Ignora la Resistencia a Efectos."
+        },
+        "S3": {
+            "name": "Carga del Dragón",
+            "description": "Después de otorgar Ataque aumentado al lanzador durante 2 turnos, ataca al enemigo con una espada masiva. Cuando el enemigo es derrotado, otorga un turno extra. Cuando esta habilidad está disponible según el tiempo de reutilización, después de que un aliado excepto el lanzador usa una habilidad, si un enemigo tiene una debilidad, aumenta la Preparación de Combate del lanzador en un 20%."
+        }
+    },
+    "zahhak": {
+        "S1": {
+            "name": "Vulnerabilidad Expuesta",
+            "description": "Ataca al enemigo con una espada larga. Aumenta la Probabilidad de Golpe Crítico en un 50% al atacar. El daño infligido aumenta cuando el objetivo tiene beneficios."
+        },
+        "S2": {
+            "name": "Plan Elaborado",
+            "description": "Disipa dos debilidades de un aliado y del lanzador, antes de aumentar la Preparación de Combate del aliado en un 15%. Otorga un turno extra al lanzador."
+        },
+        "S3": {
+            "name": "Ejecutar",
+            "description": "Ataca al enemigo, infligiendo heridas antes de otorgar invencibilidad al lanzador durante 1 turno. Aumenta la Probabilidad de Golpe Crítico en un 50% al atacar. La gravedad de las heridas aumenta proporcionalmente al daño infligido. Las heridas disminuyen la Salud máxima del objetivo hasta un 35% cada vez que se usa esta habilidad."
+        }
+    },
+    "tywin": {
+        "S1": {
+            "name": "Tormenta de Espadas",
+            "description": "Ataca con una tormenta de espadas, con un 75% de probabilidad de disipar un beneficio. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Comando Táctico",
+            "description": "Inmune a debilidades que impiden el movimiento. Cuando el aliado en la fila trasera tiene una debilidad que impide el movimiento después de ser atacado, activa Grito de Mando sobre el objetivo. Puede activarse una vez cada 2 turnos. Grito de Mando: Disipa todas las debilidades del aliado y otorga inmunidad durante 2 turnos."
+        },
+        "S3": {
+            "name": "Ataque Total",
+            "description": "Ataca a todos los enemigos nuevamente después de una tormenta de espadas, con un 100% de probabilidad de disminuir la Defensa durante 2 turnos, y aumenta la Defensa de todos los aliados durante 2 turnos. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "yuna": {
+        "S1": {
+            "name": "Láser Rastreador",
+            "description": "Ataca a todos los enemigos con un dron, antes de aumentar la Preparación de Combate del lanzador en un 15%, y aumentar la Preparación de Combate de todos los aliados excepto el lanzador en un 5%."
+        },
+        "S2": {
+            "name": "Mejora",
+            "description": "Potencia a todos los aliados con un dron y aumenta el Ataque durante 3 turnos. Otorga un turno extra al lanzador."
+        },
+        "S3": {
+            "name": "Cañón Meteoro",
+            "description": "Ataca a todos los enemigos con un cañón. Cuando hay tres o menos enemigos, el daño infligido aumenta con menos enemigos."
+        }
+    },
+    "zeno": {
+        "S1": {
+            "name": "Espina Negra",
+            "description": "Ataca con espinas, con un 35% de probabilidad de aturdir durante 1 turno. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Armadura Estelar",
+            "description": "Cuando el enemigo usa una habilidad no agresiva, aumenta la Defensa del lanzador y el daño infligido por Bestia Ancestral en un 10%, y aumenta la Eficacia en un 5%. Se acumula hasta 8 veces."
+        },
+        "S3": {
+            "name": "Bestia Ancestral",
+            "description": "Invoca una bestia ancestral para atacar a todos los enemigos, con un 80% de probabilidad de silenciar durante 1 turno. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "sol": {
+        "S1": {
+            "name": "Llama de Pistola",
+            "description": "Ataca a un enemigo con pilares de fuego. El daño infligido aumenta cuando el enemigo no tiene beneficios. Activa Cancelación Romana cuando el Espíritu de Lucha del lanzador es 100 después de atacar. No puede activarse por contraataque. Cancelación Romana: Consume todo el Espíritu de Lucha y extiende la duración de los beneficios otorgados al lanzador en 1 turno, antes de otorgar un turno extra."
+        },
+        "S2": {
+            "name": "Víbora Volcánica",
+            "description": "Cuando un enemigo usa una habilidad no agresiva, aumenta la Preparación de Combate del lanzador en un 20% y gana 20 de Espíritu de Lucha. Cuando sufre un ataque que afecta a todos los aliados, activa Víbora Volcánica contra el atacante. Cada efecto solo puede activarse una vez cada 2 turnos. Víbora Volcánica: Lanza al enemigo al aire y ataca repetidamente, infligiendo silencio durante 2 turnos. El daño aumenta proporcionalmente a la Salud máxima del enemigo."
+        },
+        "S3": {
+            "name": "Furia del Tirano ver. Beta",
+            "description": "Ataca con un puñetazo poderoso, disipando todos los beneficios. El daño infligido aumenta proporcionalmente a la Salud máxima del enemigo. Después de atacar, inflige daño adicional independientemente de si el ataque acierta."
+        }
+    },
+    "sez": {
+        "S1": {
+            "name": "Sombra Oscura",
+            "description": "Ataca al enemigo con energía oscura, con un 50% de probabilidad de hacer al enemigo imposible de curar durante 1 turno. El daño infligido aumenta proporcionalmente a la cantidad de Salud perdida del enemigo."
+        },
+        "S2": {
+            "name": "Resistir",
+            "description": "Cuando es atacado, el daño sufrido en un ataque no supera el 51% de la Salud máxima. Después de que un aliado excepto el lanzador ataca, cuando la Salud del objetivo es 30% o menos, activa Invasión. Invasión solo puede activarse una vez cada 3 turnos. Invasión: Libera energía oscura para atacar a todos los enemigos, y aumenta la Preparación de Combate del lanzador en un 30%. El daño aumenta proporcionalmente a la Salud perdida del objetivo."
+        },
+        "S3": {
+            "name": "Convicción",
+            "description": "Inflige daño letal al enemigo. Cuando el enemigo es derrotado, inflige extinción, y causa daño adicional proporcional al Ataque del lanzador a todos los enemigos excepto el objetivo. El daño aumenta proporcionalmente a la Salud perdida del objetivo."
+        }
+    },
+    "kise": {
+        "S1": {
+            "name": "Guadaña de Luna Llena",
+            "description": "Ataca con una guadaña. El daño infligido aumenta un 70% cuando el objetivo tiene beneficios."
+        },
+        "S2": {
+            "name": "Cicatriz Oscura",
+            "description": "Ataca a todos los enemigos con una guadaña. Penetra la Defensa del enemigo en un 30% y un 30% adicional cuando el lanzador está en sigilo."
+        },
+        "S3": {
+            "name": "Nocturno",
+            "description": "Salta hacia el enemigo para atacar. Otorga sigilo y una barrera al lanzador durante 2 turnos, antes de aumentar la Preparación de Combate en un 50%. La fuerza de la barrera aumenta proporcionalmente al Ataque del lanzador. El daño aumenta proporcionalmente a la proporción de Salud actual del lanzador."
+        }
+    },
+    "spirit-eye-celine": {
+        "S1": {
+            "name": "Golpe Poderoso",
+            "description": "Ataca al enemigo con una vaina. Si no se activa mediante un Ataque Dual y el lanzador tiene un beneficio, usa Espada Ágil en su lugar. Espada Ágil: Después de otorgar Ataque aumentado al lanzador durante 1 turno, ataca rápidamente y absorbe parte del daño como Salud. Penetra la Defensa en un 50%."
+        },
+        "S2": {
+            "name": "Sexto Sentido",
+            "description": "El daño sufrido en un ataque no supera el 51% de la Salud máxima. Reduce el tiempo de reutilización de habilidades en 1 turno cuando alguien muere y adquiere 5 Almas. Este efecto solo puede activarse una vez por turno."
+        },
+        "S3": {
+            "name": "Puerta Espiritual: Posesión Ardiente",
+            "description": "Abre la puerta espiritual para revivir a todos los aliados muertos. Otorga inmortalidad a todos los aliados durante 1 turno y otorga Posesión al lanzador durante 3 turnos."
+        }
+    },
+    "specter-tenebria": {
+        "S1": {
+            "name": "Explosión Venenosa",
+            "description": "Ataca con una explosión de energía venenosa, con un 70% de probabilidad de infligir veneno durante 2 turnos. No puede activar contraataques. Ataca a dos enemigos cuando Pesadilla Interminable está en espera."
+        },
+        "S2": {
+            "name": "Ilusión de Pesadilla",
+            "description": "La ilusión permanece durante toda la batalla. Aumenta el Ataque y la Defensa del lanzador en un 10% cada vez que alguien muere (máximo 5 acumulaciones)."
+        },
+        "S3": {
+            "name": "Pesadilla Interminable",
+            "description": "Ataca con un cristal de pesadilla, aturdiendo durante 1 turno. Disminuye la Preparación de Combate de todos los enemigos restantes en un 50% cuando un enemigo muere."
+        }
+    },
+    "ruele-of-light": {
+        "S1": {
+            "name": "Llave del Juramento",
+            "description": "Ataca al enemigo con un bastón y recupera la Salud de todos los aliados. El daño y la recuperación aumentan proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Pilar de Luz",
+            "description": "Invoca un pilar de luz, eliminando todas las debilidades de un aliado y recuperando su Salud, además de otorgar una barrera y límite de daño durante 2 turnos."
+        },
+        "S3": {
+            "name": "Luz Ascendente",
+            "description": "Elimina todas las debilidades de un aliado con magia curativa antes de recuperar el 50% de su Salud y otorgar invencibilidad durante 1 turno. Si el objetivo está muerto, lo revive con el 100% de Salud antes de aplicar los efectos."
+        }
+    },
+    "auxiliary-lots": {
+        "S1": {
+            "name": "Magia Negra",
+            "description": "Ataca con una esfera mágica, aumentando la Preparación de Combate del lanzador en un 15%."
+        },
+        "S2": {
+            "name": "Inyección de Maná",
+            "description": "Inyecta maná a un aliado excepto al lanzador, aumentando el Ataque durante 2 turnos antes de aumentar la Preparación de Combate en un 100%."
+        },
+        "S3": {
+            "name": "Desolación",
+            "description": "Ataca a todos los enemigos liberando maná poderoso, con un 155% de probabilidad de silenciar durante 2 turnos y disminuir la Defensa durante 2 turnos. Otorga un turno extra."
+        }
+    },
+    "faithless-lidica": {
+        "S1": {
+            "name": "Espina",
+            "description": "Ataca con una espada, con un 75% de probabilidad de disminuir la Probabilidad de Golpe durante 1 turno."
+        },
+        "S2": {
+            "name": "Espuela de Caballero",
+            "description": "Ata a todos los enemigos con una espada, con un 100% de probabilidad de disipar un beneficio, antes de aumentar la Preparación de Combate del lanzador en un 25% por objetivo. Esta habilidad no puede activar contraataques."
+        },
+        "S3": {
+            "name": "Histeria",
+            "description": "Ataca al enemigo indiscriminadamente, aumentando el tiempo de reutilización de habilidades al máximo, y aumenta la Preparación de Combate de todos los aliados en un 25%. Un golpe crítico otorga nulificador de habilidad a todos los aliados una vez."
+        }
+    },
+    "archdemons-shadow": {
+        "S1": {
+            "name": "Toque del Caos",
+            "description": "Tiene un 100% de probabilidad de sellar al enemigo durante 2 turnos, antes de atacar con un rayo."
+        },
+        "S2": {
+            "name": "Poder Retorcido",
+            "description": "El daño sufrido por golpe crítico disminuye en un 30%. Después de usar una habilidad básica, cuando el objetivo está sellado, aumenta el Ataque del lanzador durante 1 turno antes de activar Estallido. Estallido: Ataca a todos los enemigos y aumenta la Preparación de Combate del lanzador en un 25% antes de ganar 1 Enfoque."
+        },
+        "S3": {
+            "name": "Disolución",
+            "description": "Ataca a todos los enemigos con el poder de Ilryos, con un 180% de probabilidad de disminuir la Defensa durante 2 turnos y un 180% de probabilidad de infligir dos efectos de quemadura durante 2 turnos. Otorga un turno extra al lanzador."
+        }
+    },
+    "yulha": {
+        "S1": {
+            "name": "Toque Cruel",
+            "description": "Ataca al enemigo, con un 200% de probabilidad de infligir provocación redirigida durante 1 turno. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Sonrisa Maliciosa",
+            "description": "Cuando es atacado, refleja el 40% del daño sufrido al atacante. Después de ser atacado, cuando la Salud es 30% o menos, disipa todas las debilidades del lanzador y activa Intención Asesina. Intención Asesina: Otorga una barrera al lanzador durante 3 turnos y aumenta la Preparación de Combate en un 25%."
+        },
+        "S3": {
+            "name": "Sinfonía de Agonía",
+            "description": "Ataca al enemigo desenrollando la Esfera del Sadismo. Se ignoran los efectos de reparto de daño. Penetra la Defensa del objetivo, pero no puede activar un golpe crítico. El daño infligido aumenta proporcionalmente a la Salud perdida del lanzador."
+        }
+    },
+    "mercedes": {
+        "S1": {
+            "name": "Rayo Divino",
+            "description": "Ataca a dos enemigos con magia de descarga, antes de aumentar la Preparación de Combate del lanzador en un 15%."
+        },
+        "S2": {
+            "name": "Ruptura Dimensional",
+            "description": "Ataca a todos los enemigos con una esfera de luz, con un 70% de probabilidad de disipar un beneficio. Cuando el lanzador tiene Ataque aumentado, otorga un ataque extra con la misma habilidad."
+        },
+        "S3": {
+            "name": "Ojo Ardiente de Kal",
+            "description": "Libera el poder del Libro Antiguo para atacar a todos los enemigos antes de aumentar el Ataque del lanzador durante 2 turnos. Después de completar el Episodio 3, Volatilidad se convierte en Poder Inmenso, otorgando probabilidad de contraatacar cuando un aliado es atacado y aumentando el daño de Ruptura Dimensional."
+        }
+    },
+    "kitty-clarissa": {
+        "S1": {
+            "name": "¡Fuera de Aquí, Miau!",
+            "description": "Ataca con una estrella de la mañana. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador. Cuando el lanzador tiene encanto, activa un Ataque Dual del aliado con mayor Ataque."
+        },
+        "S2": {
+            "name": "¡Miau Estoy Enfadada!",
+            "description": "Ataca a todos los enemigos con una estrella de la mañana mientras enfurece, con un 80% de probabilidad de hacerlos imposibles de curar durante 2 turnos. Cuando el lanzador tiene encanto, la probabilidad del efecto aumenta un 20%. Ignora la Resistencia a Efectos."
+        },
+        "S3": {
+            "name": "¡Soy Tan Linda, Miau♥!",
+            "description": "Mueve la cola lindamente, disminuyendo la duración de debilidades en todos los aliados en 2 turnos, y otorgando inmunidad y encanto al lanzador durante 3 turnos. Otorga un turno extra al lanzador."
+        }
+    },
+    "blood-moon-haste": {
+        "S1": {
+            "name": "Guadaña de Sangre",
+            "description": "Ataca balanceando una guadaña, disipando un beneficio. Al disipar el beneficio del objetivo, activa Retribución de Sangre como ataque extra. Retribución de Sangre: Ataca al enemigo con una guadaña y recupera la Salud de todos los aliados. El daño y la cantidad recuperada aumentan proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Rencor",
+            "description": "Al atacar, penetra la Defensa del objetivo y no puede activar un golpe crítico. Cuando un aliado muere, otorga barrera e inmunidad a todos los aliados durante 2 turnos, y otorga aura de sangre al lanzador durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente a la Salud máxima del lanzador. Solo puede activarse una vez cada 4 turnos."
+        },
+        "S3": {
+            "name": "Corte Lunar",
+            "description": "Disipa todos los beneficios del enemigo antes de atacar con una guadaña. Cuando el enemigo es derrotado, revive a todos los aliados muertos antes de otorgar inmortalidad durante 1 turno. Cuando el lanzador tiene aura de sangre, aumenta el daño en un 100%. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "sage-baal-and-sezan": {
+        "S1": {
+            "name": "Llamada del Espíritu Maligno",
+            "description": "Invoca un espíritu maligno para atacar al enemigo, con un 75% de probabilidad de dormir al enemigo durante 1 turno. Cuando el objetivo está dormido después del ataque, aumenta la Preparación de Combate del lanzador en un 20%. Esta habilidad no activa Ataque Dual."
+        },
+        "S2": {
+            "name": "Nube de Ruina",
+            "description": "Ataca a todos los enemigos invocando nubes de tormenta, con un 120% de probabilidad de disipar un beneficio antes de dormirlos durante 1 turno. Cuando esta habilidad está disponible según el tiempo de reutilización, aumenta la Preparación de Combate del lanzador al final del turno enemigo."
+        },
+        "S3": {
+            "name": "Ojo de la Muerte",
+            "description": "Ataca con ojos malignos. Cuando el enemigo es derrotado, silencia a todos los enemigos restantes durante 1 turno. Penetra la Defensa, pero no puede activar un golpe crítico. El daño aumenta proporcionalmente a la Salud perdida del lanzador."
+        }
+    },
+    "champion-zerato": {
+        "S1": {
+            "name": "Furia Terrenal",
+            "description": "Ataca a dos enemigos incluyendo al objetivo con una explosión de tierra, transfiriendo dos debilidades del lanzador al enemigo y recuperando la Salud del lanzador. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Voluntad de Hierro",
+            "description": "Inmune al aturdimiento, sueño y disminución de Probabilidad de Golpe. Tiene un 100% de probabilidad de contraatacar cuando el lanzador recibe una debilidad después de ser atacado."
+        },
+        "S3": {
+            "name": "Cataclismo",
+            "description": "Ataca a todos los enemigos golpeando con rocas, con un 75% de probabilidad de disminuir la Defensa y el Ataque durante 1 turno. Aumenta la Defensa del lanzador durante 2 turnos."
+        }
+    },
+    "operator-sigret": {
+        "S1": {
+            "name": "Incisión",
+            "description": "Ataca al enemigo con una guadaña, antes de curar al aliado con menor Salud. La cantidad recuperada aumenta proporcionalmente al Ataque del lanzador."
+        },
+        "S2": {
+            "name": "Aniquilación",
+            "description": "Golpea al enemigo con una guadaña. Otorga un turno extra cuando el enemigo es derrotado. Penetra la Defensa del objetivo en un 50%, o en un 100% cuando el objetivo tiene una barrera. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S3": {
+            "name": "Obliteración",
+            "description": "Llama a drones para atacar a todos los enemigos, con un 100% de probabilidad de disminuir la duración de beneficios en 1 turno. Aumenta el Ataque de todos los aliados durante 2 turnos. Cuando el objetivo tiene una barrera, ignora la Resistencia a Efectos. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        }
+    },
+    "designer-lilibet": {
+        "S1": {
+            "name": "Cortar en Pedazos",
+            "description": "Ataca al enemigo con tijeras, con un 75% de probabilidad de disminuir la Defensa durante 1 turno. El daño aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S2": {
+            "name": "Costura de Emergencia",
+            "description": "Comienza la primera batalla con 50 Espíritu de Lucha. Cuando el turno de un enemigo termina, gana 10 Espíritu de Lucha por cada debilidad infligida a un aliado, y cuando el Espíritu de Lucha del lanzador está lleno, consume todo para disipar todas las debilidades del lanzador y otorga Defensa aumentada e inmunidad durante 1 turno antes de aumentar la Preparación de Combate en un 40%."
+        },
+        "S3": {
+            "name": "Descalificación de Modelo",
+            "description": "Disminuye la duración de debilidades de todos los aliados en 2 turnos y sube al escenario para atacar a todos los enemigos, antes de aumentar la Preparación de Combate de todos los aliados en un 15%. Penetra la Defensa del objetivo en un 50%. El daño aumenta proporcionalmente a la Defensa del lanzador."
+        }
+    },
+    "amiki": {
+        "S1": {
+            "name": "Castigo Divino",
+            "description": "Ataca al enemigo con una espada, con un 75% de probabilidad de provocar durante 1 turno. No puede activar un golpe crítico y penetra la Defensa del objetivo en un 30%. Después de atacar, cuando la Salud del lanzador es 30% o menos, otorga un ataque extra con la misma habilidad."
+        },
+        "S2": {
+            "name": "Resolución Desesperada",
+            "description": "Otorga inmortalidad durante 1 turno y Ataque aumentado durante 2 turnos al lanzador. Al recibir daño letal cuando la habilidad está disponible según el contador de tiempo de reutilización, otorga los mismos efectos al lanzador y aumenta completamente el tiempo de reutilización de esta habilidad."
+        },
+        "S3": {
+            "name": "Espada del Vengador",
+            "description": "Corta al enemigo consecutivamente para atacar. No puede activar un golpe crítico. Penetra la Defensa del objetivo en un 30%, y cuando la Salud del lanzador es 30% o menos, penetra un 70%."
+        }
+    },
+    "azalea": {
+        "S1": {
+            "name": "Ataque Persistente",
+            "description": "Apuñala al enemigo con una lanza y recupera la Salud del lanzador. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Golpe Desafiante",
+            "description": "Ataca al enemigo, con un 100% de probabilidad de provocar durante 2 turnos."
+        },
+        "S3": {
+            "name": "Barrida",
+            "description": "Barre a todos los enemigos con una lanza, con un 75% de probabilidad de disminuir la Velocidad y la Defensa durante 2 turnos."
+        }
+    },
+    "batisse": {
+        "S1": {
+            "name": "Pelea",
+            "description": "Golpea al enemigo en la cara. Cuando se usa contra un enemigo con Ataque disminuido, activa Aplastamiento de Roca como ataque extra. Aplastamiento de Roca: Ataca a todos los enemigos. Este ataque recibe efectos que se aplican a la habilidad básica."
+        },
+        "S2": {
+            "name": "Provocación Justificada",
+            "description": "Al inicio del turno, tiene un 100% de probabilidad de disminuir el Ataque del enemigo con la mayor Preparación de Combate durante 2 turnos."
+        },
+        "S3": {
+            "name": "Victoria Segura",
+            "description": "Ataca al enemigo con velocidad cegadora. Cuando se usa contra un enemigo con Ataque disminuido, disminuye la Defensa durante 1 turno."
+        }
+    },
+    "bomb-model-kanna": {
+        "S1": {
+            "name": "Bombardeo Rápido",
+            "description": "Dispara rápidamente para atacar a dos enemigos. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S2": {
+            "name": "Cambio de Postura",
+            "description": "Cuando ¡Bombardeo Total! está disponible al inicio del turno, toma una Postura de Bombardeo. Cuando ¡Bombardeo Total! no está disponible al final del turno, toma una Postura de Golpe. Solo puede tomar una postura a la vez. Postura de Bombardeo: Aumenta la Efectividad en un 65%. Postura de Golpe: Aumenta la Velocidad y la probabilidad de Ataque Dual en un 65%."
+        },
+        "S3": {
+            "name": "¡Bombardeo Total!",
+            "description": "Aumenta la potencia de fuego para atacar a todos los enemigos, con un 100% de probabilidad de disipar un beneficio, antes de aumentar el Ataque del lanzador durante 2 turnos."
+        }
+    },
+    "cartuja": {
+        "S1": {
+            "name": "Desgarro",
+            "description": "Ataca con garras afiladas, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Zona de Peligro",
+            "description": "La Preparación de Combate aumenta un 15% en el momento en que el lanzador es atacado. La Preparación de Combate aumenta un 10% adicional cuando la Salud del lanzador es 50% o menos."
+        },
+        "S3": {
+            "name": "Rugido Depredador",
+            "description": "Ataca a todos los enemigos con energía salvaje, con un 100% de probabilidad de disminuir el Ataque durante 2 turnos, y aumenta la Defensa del lanzador durante 2 turnos. El daño aumenta proporcionalmente a la Salud máxima del lanzador, con aumento adicional cuando la Salud del lanzador es 75% o menos."
+        }
+    },
+    "cecilia": {
+        "S1": {
+            "name": "Liberación",
+            "description": "Ataca con una lanza, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos. Cuando el objetivo tiene Ataque disminuido, la probabilidad del efecto aumenta un 25%. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Tormenta de Acero",
+            "description": "Ataca a todos los enemigos con una lanza mágica, con un 50% de probabilidad de disminuir el Ataque durante 2 turnos, antes de disipar un beneficio. La probabilidad del efecto aumenta un 50% cuando la Salud del lanzador es 50% o menos. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Retribución Ruinosa",
+            "description": "Ataca a todos los enemigos con una lanza imbuida de energía oscura, con un 100% de probabilidad de provocar durante 1 turno, antes de otorgar inmunidad a todos los aliados durante 2 turnos y una barrera al lanzador durante 2 turnos. El daño y la fuerza de la barrera aumentan proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "celeste": {
+        "S1": {
+            "name": "Disparo de Precisión",
+            "description": "Ataca al enemigo, con un 75% de probabilidad de disminuir la Probabilidad de Golpe durante 1 turno."
+        },
+        "S2": {
+            "name": "Salva",
+            "description": "Dispara una salva de flechas a todos los enemigos, con un 85% de probabilidad de disminuir la Preparación de Combate en un 20%. Cuando la Salud del lanzador es 80% o más, no ocurre tiempo de reutilización."
+        },
+        "S3": {
+            "name": "Defcon",
+            "description": "El lanzador recupera 30% de Salud y recibe un turno extra."
+        }
+    },
+    "chaos-inquisitor": {
+        "S1": {
+            "name": "Golpe Pesado",
+            "description": "Golpea al enemigo con una hoja, con un 50% de probabilidad cada vez de disipar un beneficio dos veces."
+        },
+        "S2": {
+            "name": "Equipo del Cuerpo de Carniceros",
+            "description": "El daño sufrido en un ataque no excede el 35% de la Salud máxima."
+        },
+        "S3": {
+            "name": "Predicar",
+            "description": "Ataca al enemigo en nombre del Caos. El daño aumenta proporcionalmente a la Salud perdida del lanzador. Recupera Salud proporcional al daño infligido."
+        }
+    },
+    "chaos-sect-axe": {
+        "S1": {
+            "name": "Desconexión",
+            "description": "Ataca con un hacha, con un 75% de probabilidad de provocar durante 1 turno. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Cadena de Ataque",
+            "description": "Ataca a todos los enemigos con una onda de choque. Con un 60% de probabilidad de provocar durante 1 turno, antes de otorgar inmunidad al lanzador durante 1 turno."
+        },
+        "S3": {
+            "name": "Golpe Vigoroso",
+            "description": "Golpea al enemigo, con un 100% de probabilidad de disminuir la Defensa durante 2 turnos, antes de recuperar el 20% de la Salud máxima del lanzador. Cuando el enemigo es derrotado, otorga un turno extra al lanzador. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "chloe": {
+        "S1": {
+            "name": "Golpe Pesado",
+            "description": "Golpea al enemigo con un martillo. El daño aumenta cuando el enemigo tiene clavo mágico."
+        },
+        "S2": {
+            "name": "Rayo Mágico",
+            "description": "Después de otorgar Ataque aumentado al lanzador durante 3 turnos, ataca al enemigo, infligiendo clavo mágico durante 3 turnos, y aumenta la Preparación de Combate del lanzador en un 50%."
+        },
+        "S3": {
+            "name": "Hiper Golpe",
+            "description": "Se eleva por los aires y ataca al enemigo, aturdiendo durante 1 turno. Cuando el enemigo tiene clavo mágico, ignora la Resistencia a Efectos."
+        }
+    },
+    "christy": {
+        "S1": {
+            "name": "Espada de Protección",
+            "description": "Ataca al enemigo, con un 75% de probabilidad de provocar durante 1 turno. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Escudo del Juramento",
+            "description": "Después de ser atacado, cuando el lanzador no tiene debilidades, aumenta la Preparación de Combate del lanzador y del aliado en la fila trasera en un 20%. Solo se puede activar una vez por turno. Al inicio de la primera batalla, aumenta la Resistencia a Efectos del aliado en la fila trasera en un 50% de la Resistencia a Efectos del lanzador."
+        },
+        "S3": {
+            "name": "Himno del Coraje",
+            "description": "Aumenta el Ataque de todos los aliados durante 2 turnos antes de recuperar la Salud del lanzador. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "cidd": {
+        "S1": {
+            "name": "Golpe Implacable",
+            "description": "Ataca al enemigo con una daga. El daño aumenta proporcionalmente a la Velocidad del lanzador. Cuando el lanzador tiene Velocidad aumentada, usa Torbellino en lugar de Golpe Implacable. Torbellino: Ataca al enemigo repetidamente, disminuyendo la Defensa durante 1 turno. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S2": {
+            "name": "Resolución del Viento",
+            "description": "Un golpe crítico aumentará la Velocidad del lanzador durante 1 turno, con un 100% de probabilidad de otorgar un beneficio aleatorio durante 1 turno. Un beneficio aleatorio solo se puede otorgar una vez por turno."
+        },
+        "S3": {
+            "name": "Tajo",
+            "description": "Ataca al enemigo cortándolo con dagas, otorgando un turno extra cuando el enemigo es derrotado. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        }
+    },
+    "coli": {
+        "S1": {
+            "name": "Emboscada",
+            "description": "Embosca al enemigo, con un 75% de probabilidad de robar un beneficio."
+        },
+        "S2": {
+            "name": "Golpe Preciso",
+            "description": "Ataca al enemigo con una hoja invisible y otorga sigilo al lanzador durante 2 turnos. Al final del turno, detona cualquier efecto de sangrado y bombas infligidas al objetivo."
+        },
+        "S3": {
+            "name": "Bautismo de Fuego",
+            "description": "Ataca al enemigo con una daga y bomba, infligiendo sangrado y plantando una bomba durante 2 turnos, antes de aumentar la Preparación de Combate del lanzador en un 50%. Cuando el objetivo es un Héroe de elemento Fuego, ignora la Resistencia a Efectos y aumenta la Preparación de Combate del lanzador en un 50% adicional."
+        }
+    },
+    "commander-lorina": {
+        "S1": {
+            "name": "Golpe Afilado",
+            "description": "Lanza al enemigo por los aires con una lanza. El daño aumenta proporcionalmente a la Salud máxima del objetivo."
+        },
+        "S2": {
+            "name": "Armamento Espiritual",
+            "description": "Aumenta el Ataque en un 15% cada vez que el lanzador ataca a un enemigo. El efecto solo puede acumularse hasta 5 veces."
+        },
+        "S3": {
+            "name": "Avance en Espiral",
+            "description": "Perfora al enemigo con una lanza, disminuyendo la Preparación de Combate en un 15%. El daño aumenta proporcionalmente a la Salud perdida del enemigo."
+        }
+    },
+    "crescent-moon-rin": {
+        "S1": {
+            "name": "Burla",
+            "description": "Ataca al enemigo con un anillo, con un 40% de probabilidad de aturdir durante 1 turno."
+        },
+        "S2": {
+            "name": "Atrae Miradas",
+            "description": "Ataca al enemigo con un baile lujoso y roba dos beneficios, otorgando sus efectos a todos los aliados, antes de aturdir al objetivo durante 1 turno. Cuando el objetivo no tiene beneficios, disminuye el tiempo de reutilización de esta habilidad en 1 turno."
+        },
+        "S3": {
+            "name": "Llamada Final",
+            "description": "Cruza anillos para atacar al enemigo, disipando todos los beneficios del objetivo, antes de aumentar el Daño Crítico de todos los aliados durante 2 turnos."
+        }
+    },
+    "dingo": {
+        "S1": {
+            "name": "Preparar Ingredientes",
+            "description": "Corta al enemigo con un cuchillo de carnicero, con un 50% de probabilidad de infligir sangrado durante 2 turnos. Después del ataque, hay un 30% de probabilidad de activar Parrilla Rápida."
+        },
+        "S2": {
+            "name": "Parrilla Rápida",
+            "description": "Ataca a todos los enemigos con el Guante Horno, recuperando la Salud del lanzador. Cuando el enemigo está sangrando, tiene un 100% de probabilidad de infligir quemadura durante 2 turnos. La cantidad recuperada aumenta proporcionalmente al daño infligido."
+        },
+        "S3": {
+            "name": "Cena Gratis",
+            "description": "Proporciona una comida a todos los aliados, disipando todas las debilidades y aumentando la Probabilidad de Golpe Crítico durante 2 turnos antes de disminuir el tiempo de reutilización en 1 turno. Cada vez que un enemigo muere, el tiempo de reutilización de esta habilidad disminuye en 1 turno."
+        }
+    },
+    "dominiel": {
+        "S1": {
+            "name": "Granizo",
+            "description": "Lanza fragmentos de hielo al enemigo, con un 40% de probabilidad de aturdir durante 1 turno."
+        },
+        "S2": {
+            "name": "Gracia de Nixied",
+            "description": "Cuando un aliado sufre un golpe crítico, tiene un 35% de probabilidad de activar Capa de Ventisca. Solo se puede activar una vez cada 3 turnos. Capa de Ventisca: Crea una barrera sobre todos los aliados durante 2 turnos con magia de escarcha. La fuerza de la barrera aumenta proporcionalmente a la Salud máxima del aliado."
+        },
+        "S3": {
+            "name": "Lanza de Hielo",
+            "description": "Ataca a todos los enemigos con un gran bloque de hielo, con un 190% de probabilidad de aturdir durante 1 turno y un 190% de probabilidad de disminuir la Preparación de Combate en un 15%. Aumenta la Velocidad del lanzador durante 2 turnos."
+        }
+    },
+    "doris": {
+        "S1": {
+            "name": "Bala de Maná",
+            "description": "Ataca con energía de luz, con un 75% de probabilidad de disminuir la Precisión durante 1 turno."
+        },
+        "S2": {
+            "name": "Celebración de la Luz",
+            "description": "Recita la Celebración de la Luz, recuperando la Salud de todos los aliados y otorgando curación continua y Defensa aumentada durante 2 turnos. La cantidad recuperada es proporcional a la Salud máxima del objetivo."
+        },
+        "S3": {
+            "name": "Cortina de Luz",
+            "description": "Recupera la Salud de un aliado y aumenta su Preparación de Combate en un 35% con magia de luz. La cantidad recuperada es proporcional a la Salud máxima del objetivo."
+        }
+    },
+    "eaton": {
+        "S1": {
+            "name": "Ven Aquí",
+            "description": "Golpea fuertemente al enemigo con la rodilla para atacar, con un 75% de probabilidad de provocar durante 1 turno. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Yo Protejo",
+            "description": "Recibe el 30% del daño recibido por un aliado en su lugar. Solo se aplica el efecto de distribución de daño más alto. Aumenta la Salud máxima en un 20%."
+        },
+        "S3": {
+            "name": "Soy Duro",
+            "description": "Libera energía fuerte, disipando todas las debilidades infligidas al lanzador antes de otorgar una barrera durante 2 turnos. La fuerza de la barrera aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "enott": {
+        "S1": {
+            "name": "Aplastar",
+            "description": "Ataca con un hacha, con un 50% de probabilidad de causar sangrado durante 2 turnos. El daño aumenta proporcionalmente a la Salud perdida del enemigo."
+        },
+        "S2": {
+            "name": "Juicio",
+            "description": "Ataca con un golpe afilado, con un 75% de probabilidad de disminuir la Defensa e impedir que reciban beneficios durante 2 turnos."
+        },
+        "S3": {
+            "name": "Preparar Juicio",
+            "description": "Corrige la postura, aumentando el Ataque del lanzador durante 2 turnos y la Preparación de Combate en un 50%."
+        }
+    },
+    "fighter-maya": {
+        "S1": {
+            "name": "Golpe de Provocación",
+            "description": "Ataca con un arma contundente, con un 75% de probabilidad de provocar durante 1 turno. El daño aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S2": {
+            "name": "Reclamar",
+            "description": "Tiene un 100% de probabilidad de disipar una debilidad y recibir Defensa aumentada durante 2 turnos cuando es atacado. Solo se puede activar una vez por turno."
+        },
+        "S3": {
+            "name": "Ataque Final",
+            "description": "Ataca con un golpe poderoso. El daño aumenta en un 300% cuando la Salud del enemigo es del 30% o menos. El daño aumenta proporcionalmente a la Defensa del lanzador. Otorga un turno extra al lanzador cuando el enemigo es derrotado."
+        }
+    },
+    "gloomyrain": {
+        "S1": {
+            "name": "Lamento",
+            "description": "Tiene un 15% de probabilidad de recibir un turno extra después de atacar al enemigo."
+        },
+        "S2": {
+            "name": "Mala Voluntad",
+            "description": "Aumenta el Ataque en un 70% y la Velocidad en un 70% cuando el lanzador tiene debilidades. Otorga inmunidad al aturdimiento, sueño y provocación."
+        },
+        "S3": {
+            "name": "Destrucción del Alma",
+            "description": "Ataca a todos los enemigos con magia, con un 100% de probabilidad de transferir todas las debilidades infligidas al lanzador, y disipa todas las debilidades del lanzador."
+        }
+    },
+    "gunther": {
+        "S1": {
+            "name": "Golpe Animado",
+            "description": "Ataca con un hacha, con un 50% de probabilidad de causar sangrado durante 2 turnos."
+        },
+        "S2": {
+            "name": "Veterano",
+            "description": "El Ataque aumenta en un 75% y la Resistencia a Golpe Crítico aumenta en un 70%. Al atacar, no puede activar un golpe crítico."
+        },
+        "S3": {
+            "name": "Golpe Tenaz",
+            "description": "Ataca con un hacha, aturdiendo durante 1 turno."
+        }
+    },
+    "hazel": {
+        "S1": {
+            "name": "Libro de Fuego",
+            "description": "Ataca con magia de fuego, con un 50% de probabilidad de hacer incurable durante 2 turnos."
+        },
+        "S2": {
+            "name": "Regeneración Urgente",
+            "description": "Cura al objetivo proporcionalmente al Ataque del lanzador y la Salud máxima del objetivo, antes de aumentar la Preparación de Combate del lanzador en un 15%. La cantidad recuperada se duplica cuando la Salud del objetivo es del 50% o menos."
+        },
+        "S3": {
+            "name": "Orden de Ataque",
+            "description": "Usa magia fortalecedora para aumentar el Ataque de todos los aliados durante 1 turno antes de recuperar Salud y disipar una debilidad. La cantidad recuperada es proporcional al Ataque del lanzador y la Salud máxima del objetivo."
+        }
+    },
+    "helga": {
+        "S1": {
+            "name": "Desgarrar Armadura",
+            "description": "Ataca con un hacha, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos."
+        },
+        "S2": {
+            "name": "Cadena de Ataque",
+            "description": "Golpea fuertemente al enemigo con un hacha, con un 60% de probabilidad de disminuir la Defensa durante 2 turnos. Un golpe crítico tendrá un 50% de probabilidad de extender cualquier beneficio otorgado al lanzador en 1 turno."
+        },
+        "S3": {
+            "name": "Grito de Victoria",
+            "description": "Anima a los aliados, aumentando el Ataque durante 2 turnos antes de aumentar la Preparación de Combate del lanzador en un 50%."
+        }
+    },
+    "hurado": {
+        "S1": {
+            "name": "Golpe de Bastón",
+            "description": "Ataca con un bastón, con un 50% de probabilidad de silenciar durante 1 turno."
+        },
+        "S2": {
+            "name": "Magia Oscura",
+            "description": "Disminuye la cantidad recuperada de todos los enemigos en un 50% y aumenta la Preparación de Combate del lanzador en un 20%. Cuando el enemigo usa una habilidad que no es de ataque."
+        },
+        "S3": {
+            "name": "Explosión Oscura",
+            "description": "Ataca a todos los enemigos con magia oscura, con un 100% de probabilidad de disipar un beneficio antes de disminuir la Preparación de Combate en un 15%."
+        }
+    },
+    "jena": {
+        "S1": {
+            "name": "Golpe Frío",
+            "description": "Ataca con un bastón, con un 35% de probabilidad de aturdir durante 1 turno."
+        },
+        "S2": {
+            "name": "Coaccionar",
+            "description": "Lanza magia debilitadora, con un 100% de probabilidad de disminuir la duración de los beneficios de todos los enemigos en 1 turno e infligir congelación durante 2 turnos."
+        },
+        "S3": {
+            "name": "Ola de Frío",
+            "description": "Ataca a todos los enemigos con magia de escarcha, con un 175% de probabilidad de disminuir la Defensa durante 2 turnos antes de un 175% de probabilidad de disminuir la Preparación de Combate en un 20%."
+        }
+    },
+    "jecht": {
+        "S1": {
+            "name": "Asalto con Bastón",
+            "description": "Ataca con un bastón, con un 75% de probabilidad de disminuir la Precisión durante 1 turno."
+        },
+        "S2": {
+            "name": "Viento de Cola",
+            "description": "100% de probabilidad de disipar una debilidad infligida a un aliado al comienzo de cada turno."
+        },
+        "S3": {
+            "name": "Vendaval",
+            "description": "Ataca a todos los enemigos con magia de viento, otorgando curación continua a todos los aliados durante 2 turnos."
+        }
+    },
+    "judith": {
+        "S1": {
+            "name": "Vulnerabilidad Expuesta",
+            "description": "Ataca con espadas duales. Cuando el lanzador está en sigilo, tiene un 100% de probabilidad de aturdir al enemigo durante 1 turno."
+        },
+        "S2": {
+            "name": "Evasión Urgente",
+            "description": "En el momento en que el lanzador es atacado, tiene un 100% de probabilidad de entrar en sigilo durante 1 turno."
+        },
+        "S3": {
+            "name": "Marca de Aceleración",
+            "description": "Aumenta la Preparación de Combate de todos los aliados en un 30%."
+        }
+    },
+    "kiris": {
+        "S1": {
+            "name": "Flecha Venenosa",
+            "description": "Dispara una flecha envenenada al enemigo, con un 50% de probabilidad de infligir veneno durante 2 turnos."
+        },
+        "S2": {
+            "name": "Descarga Corrosiva",
+            "description": "Dispara una descarga corrosiva a todos los enemigos, extendiendo la duración de cualquier debilidad en 1 turno."
+        },
+        "S3": {
+            "name": "Preparación",
+            "description": "Fortalece el próximo ataque del lanzador, aumenta la Preparación de Combate en un 50%. Flecha Venenosa: Aumenta la probabilidad de efecto al 100%, y los efectos de veneno pueden acumularse hasta 3 veces. Descarga Corrosiva: Extiende la duración de las debilidades en 2 turnos."
+        }
+    },
+    "kluri": {
+        "S1": {
+            "name": "Paso Ligero",
+            "description": "Golpea en dirección al enemigo, aumentando la Preparación de Combate del lanzador en un 20%. El daño aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S2": {
+            "name": "Resistencia Mágica",
+            "description": "Recupera el 10% de la Salud del lanzador al comienzo de cada turno."
+        },
+        "S3": {
+            "name": "Fortaleza",
+            "description": "Tiene un 100% de probabilidad de provocar al enemigo durante 2 turnos."
+        }
+    },
+    "lena": {
+        "S1": {
+            "name": "Eres Suave",
+            "description": "Ataca con un puño fuerte, aumentando la Preparación de Combate del lanzador en un 20%."
+        },
+        "S2": {
+            "name": "Golpe Poderoso",
+            "description": "Aumenta la Probabilidad de Golpe Crítico en un 50%."
+        },
+        "S3": {
+            "name": "¡Expuesto!",
+            "description": "Ataca a todos los enemigos con una tormenta poderosa, disminuyendo la Preparación de Combate en un 20%, antes de aumentar el Ataque del lanzador durante 2 turnos. El daño aumenta proporcionalmente a la Salud perdida del enemigo."
+        }
+    },
+    "leo": {
+        "S1": {
+            "name": "Picada de Gorrión",
+            "description": "Ataca al enemigo con una resortera, con un 35% de probabilidad de aturdir durante 1 turno."
+        },
+        "S2": {
+            "name": "Caza del Zorro",
+            "description": "Ataca con una resortera, con un 100% de probabilidad de disminuir la Defensa durante 2 turnos, y un 50% de probabilidad de usar Picada de Gorrión."
+        },
+        "S3": {
+            "name": "Racoo Volador",
+            "description": "Racoo vuela hacia los enemigos como una bala y ataca a todos, con un 50% de probabilidad de aturdir durante 1 turno."
+        }
+    },
+    "lots": {
+        "S1": {
+            "name": "Luz Sagrada",
+            "description": "Ataca con una esfera de luz, con un 75% de probabilidad de disminuir el Ataque durante 1 turno."
+        },
+        "S2": {
+            "name": "Regeneración",
+            "description": "Usa magia curativa para recuperar Salud y aumentar la Preparación de Combate del aliado en un 100%, antes de aumentar la Preparación de Combate del lanzador en un 30%. La cantidad recuperada es proporcional a la Salud máxima del aliado."
+        },
+        "S3": {
+            "name": "Serenidad",
+            "description": "Usa magia fortalecedora para recuperar Salud, aumentar la Preparación de Combate en un 20% y otorgar curación continua durante 2 turnos a todos los aliados."
+        }
+    },
+    "maya": {
+        "S1": {
+            "name": "Golpe Debilitante",
+            "description": "Ataca con un arma contundente, con un 35% de probabilidad de aturdir durante 1 turno. El daño aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S2": {
+            "name": "Conmoción",
+            "description": "Ataca con un escudo, con un 100% de probabilidad de aturdir durante 1 turno antes de disminuir la Preparación de Combate en un 30%. El daño aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S3": {
+            "name": "Impulso de Moral",
+            "description": "Tiene un 175% de probabilidad de provocar a todos los enemigos durante 1 turno, antes de un 175% de probabilidad de disminuir el Ataque durante 2 turnos. Aumenta la Defensa del lanzador durante 2 turnos."
+        }
+    },
+    "mistychain": {
+        "S1": {
+            "name": "Vampirismo",
+            "description": "Ataca al enemigo con garras, absorbiendo parte del daño para curar a todos los aliados."
+        },
+        "S2": {
+            "name": "Maldición de Banshee",
+            "description": "Lanza un hechizo al enemigo, con un 100% de probabilidad de hacerlo incurable y disminuir el Ataque durante 2 turnos."
+        },
+        "S3": {
+            "name": "Drenar Vida",
+            "description": "Ataca absorbiendo la fuerza vital del enemigo. Parte del daño infligido se absorbe para curar a todos los aliados."
+        }
+    },
+    "montmorancy": {
+        "S1": {
+            "name": "Hechizo de Sueño",
+            "description": "Ataca al enemigo con energía de agua, con un 75% de probabilidad de dormirlo durante 1 turno."
+        },
+        "S2": {
+            "name": "Purificación",
+            "description": "Disipa una debilidad de todos los aliados y cura a los aliados con debilidades. La cantidad recuperada es proporcional a la Salud máxima del aliado."
+        },
+        "S3": {
+            "name": "Cortina de Agua",
+            "description": "Recupera la Salud del aliado y otorga inmunidad durante 2 turnos. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del aliado."
+        }
+    },
+    "mucacha": {
+        "S1": {
+            "name": "Arte de Lanza Ancestral",
+            "description": "Ataca con una lanza, aumentando la Preparación de Combate del lanzador en un 20%. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S2": {
+            "name": "Salvaje",
+            "description": "Aumenta la Velocidad en un 2% cada vez que el lanzador ataca a un enemigo. El efecto solo puede acumularse hasta 5 veces."
+        },
+        "S3": {
+            "name": "Golpe Iluminado",
+            "description": "Ataca con un golpe fatal, con un 100% de probabilidad de disminuir la Defensa durante 2 turnos. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        }
+    },
+    "nemunas": {
+        "S1": {
+            "name": "Fuego de Cobertura",
+            "description": "Disminuye la Preparación de Combate del enemigo en un 15% después de atacarlo."
+        },
+        "S2": {
+            "name": "Flecha de Choque",
+            "description": "Dispara una flecha poderosamente al enemigo, disminuyendo la Precisión durante 2 turnos y la Preparación de Combate en un 30%. El daño aumenta proporcionalmente a la Salud máxima del enemigo."
+        },
+        "S3": {
+            "name": "Determinación de una Chica",
+            "description": "Anima a todos los aliados, disipando una debilidad."
+        }
+    },
+    "otillie": {
+        "S1": {
+            "name": "Flecha Oscura",
+            "description": "Ataca con energía oscura, con un 50% de probabilidad de hacer al enemigo incurable durante 2 turnos."
+        },
+        "S2": {
+            "name": "Defensa de Área",
+            "description": "Todos los aliados reciben un 30% menos de daño de ataques que afectan a todos los aliados. Cuando se otorga más de un efecto de reducción de daño, solo se aplica el efecto más fuerte."
+        },
+        "S3": {
+            "name": "Liberación de Maná",
+            "description": "Exhala oscuridad poderosa para atacar al enemigo, disminuyendo la Preparación de Combate en un 40%, antes de silenciar durante 2 turnos."
+        }
+    },
+    "pearlhorizon": {
+        "S1": {
+            "name": "Golpe Caótico",
+            "description": "Ataca al enemigo con garras, con un 50% de probabilidad de disminuir la Precisión durante 2 turnos."
+        },
+        "S2": {
+            "name": "Hipnosis",
+            "description": "Ataca a todos los enemigos, con un 50% de probabilidad de dormirlos durante 1 turno. Aumenta la Preparación de Combate del lanzador en un 10% por cada debilidad de sueño infligida."
+        },
+        "S3": {
+            "name": "Pesadilla",
+            "description": "Ataca al enemigo y lo aturde durante 1 turno. Cuando el enemigo está dormido, inflige daño adicional equivalente al 10% de la Salud máxima del objetivo."
+        }
+    },
+    "pyllis": {
+        "S1": {
+            "name": "Golpe Debilitante",
+            "description": "Ataca al enemigo, con un 75% de probabilidad de provocar durante 1 turno. El daño aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S2": {
+            "name": "Voluntad",
+            "description": "En el momento en que el lanzador es atacado, aumenta la Defensa del lanzador. En el momento del cuarto ataque recibido, aumenta la Defensa de todos los aliados durante 2 turnos. La Defensa aumentada del lanzador puede acumularse hasta 3 veces."
+        },
+        "S3": {
+            "name": "Guardia",
+            "description": "Ataca al enemigo antes de provocar durante 1 turno, y otorga barrera a todos los aliados durante 2 turnos. El daño y la fuerza de la barrera aumentan proporcionalmente a la Defensa del lanzador."
+        }
+    },
+    "purrgis": {
+        "S1": {
+            "name": "Golpe Descendente",
+            "description": "Arrasa al enemigo con una gran espada, con un 50% de probabilidad de disminuir la Velocidad durante 2 turnos y disminuir la Preparación de Combate en un 20%. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "¡Lárgate!",
+            "description": "Cuando es atacado, tiene un 30% de probabilidad de contraatacar. Contraataca con ¡Lárgate!. Ataca a todos los enemigos con una gran espada. Inflige las mismas debilidades que Golpe Descendente, antes de un 15% de probabilidad de aturdir durante 1 turno."
+        },
+        "S3": {
+            "name": "Golpe Final",
+            "description": "Ataca a todos los enemigos con un poderoso golpe al suelo, con un 50% de probabilidad de aturdir durante 1 turno. Tiene un 70% de probabilidad de aturdir durante 1 turno cuando la Salud del objetivo es del 30% o menos. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "ras": {
+        "S1": {
+            "name": "Corte en X",
+            "description": "Ataca con una espada, infligiendo daño proporcional a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Golpe de Mando",
+            "description": "Ataca al enemigo repetidamente, antes de activar un Ataque Dual del aliado con el Ataque más alto."
+        },
+        "S3": {
+            "name": "Espada del Heredero",
+            "description": "Ataca fuertemente a todos los enemigos con una tormenta de espadas, antes de recuperar la Salud del lanzador y aumentar la Defensa del lanzador durante 2 turnos. La cantidad recuperada y el daño aumentan proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "requiemroar": {
+        "S1": {
+            "name": "Locura",
+            "description": "Ataca al enemigo con garras, con un 75% de probabilidad de disminuir el Ataque durante 1 turno."
+        },
+        "S2": {
+            "name": "Festín de Sangre",
+            "description": "Todos los aliados absorben el 10% del daño que infligen como Salud. Cada vez que un enemigo muere, todos los aliados recuperan el 20% de Salud y la Preparación de Combate del lanzador aumenta en un 10%."
+        },
+        "S3": {
+            "name": "Réquiem",
+            "description": "Ataca con magia, con un 100% de probabilidad de disminuir la Defensa durante 2 turnos."
+        }
+    },
+    "rikoris": {
+        "S1": {
+            "name": "Perforación Rápida",
+            "description": "Ataca al enemigo con una lanza, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos. Cuando el lanzador tiene aumento de Velocidad, la probabilidad de efecto aumenta en un 25%."
+        },
+        "S2": {
+            "name": "Animar",
+            "description": "Anima a todos los aliados, aumentando la Velocidad durante 2 turnos."
+        },
+        "S3": {
+            "name": "Corte Relámpago",
+            "description": "Disminuye la duración de las debilidades de todos los aliados en 1 turno, y ataca a todos los enemigos con una onda de choque, con un 80% de probabilidad de infligir Velocidad disminuida y restricción durante 2 turnos."
+        }
+    },
+    "rima": {
+        "S1": {
+            "name": "Disparo Rápido",
+            "description": "Ataca con un disparo rápido de flecha. Un golpe crítico disminuirá el tiempo de reutilización de habilidad del lanzador en 1 turno."
+        },
+        "S2": {
+            "name": "Flecha de Canción de Cuna",
+            "description": "Dispara una flecha infundida con toxina de sueño, con un 100% de probabilidad de dormir durante 1 turno."
+        },
+        "S3": {
+            "name": "Himno de Guerra",
+            "description": "Anima a un aliado excepto al lanzador, disminuyendo los tiempos de reutilización de habilidades en 2 turnos."
+        }
+    },
+    "romann": {
+        "S1": {
+            "name": "Flecha de Gravedad",
+            "description": "Dispara flechas de gravedad al enemigo, disminuyendo la Preparación de Combate en un 20%, y aumentando la Preparación de Combate del lanzador en un 20%."
+        },
+        "S2": {
+            "name": "Gravitación",
+            "description": "Ataca a todos los enemigos con un círculo mágico, con un 50% de probabilidad de disminuir la Preparación de Combate en un 20% cuatro veces."
+        },
+        "S3": {
+            "name": "Horizonte de Eventos",
+            "description": "Dispara una poderosa esfera de gravedad para atacar a todos los enemigos, disipando todas las mejoras antes de infligir restricción durante 2 turnos. Aumenta la Preparación de Combate del lanzador en un 50%."
+        }
+    },
+    "roozid": {
+        "S1": {
+            "name": "Hemorragia",
+            "description": "Corta al enemigo con espadas de doble empuñadura, con un 50% de probabilidad de disminuir la Velocidad durante 2 turnos. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S2": {
+            "name": "Corte de Viento",
+            "description": "Ataca con una tormenta de espadas, con un 50% de probabilidad de disminuir el Ataque durante 2 turnos. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S3": {
+            "name": "Respuesta Divina",
+            "description": "Corrige la postura, aumentando la Preparación de Combate de todos los aliados en un 20%."
+        }
+    },
+    "rose": {
+        "S1": {
+            "name": "Corte Secuencial",
+            "description": "Ataca con una espada, con un 75% de probabilidad de provocar durante 1 turno cuando la Salud del lanzador es del 50% o más, y aumenta la Defensa del lanzador durante 1 turno cuando la Salud del lanzador es menos del 50%. El daño aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S2": {
+            "name": "Escudo de Luz",
+            "description": "Cubre a un aliado con el Escudo de Luz, disipando dos debilidades y otorgando una barrera durante 2 turnos antes de aumentar la Preparación de Combate en un 20%. La fuerza de la barrera es proporcional a la Defensa del lanzador."
+        },
+        "S3": {
+            "name": "Diosa de la Victoria",
+            "description": "Otorga bendición a todos los aliados, aumentando el Ataque durante 1 turno, y la Preparación de Combate en un 25%."
+        }
+    },
+    "schuri": {
+        "S1": {
+            "name": "Fuego Rápido",
+            "description": "Ataca al enemigo con una pistola, con un 30% de probabilidad de infligir veneno durante 2 turnos."
+        },
+        "S2": {
+            "name": "Caballero Explosivo",
+            "description": "Después de asestar un golpe crítico, el lanzador gana 1 Enfoque, y la Preparación de Combate de todos los aliados excepto el lanzador aumenta en un 25%."
+        },
+        "S3": {
+            "name": "Disparo de Rifle",
+            "description": "Dispara a todos los enemigos con un rifle. Cuando el Enfoque acumulado del lanzador es 3 o más, esta habilidad se mejora a Ráfaga Completa. Un ataque exitoso con Ráfaga Completa siempre resulta en golpe crítico."
+        }
+    },
+    "serila": {
+        "S1": {
+            "name": "Seducción",
+            "description": "Ataca con una llama de seducción, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos."
+        },
+        "S2": {
+            "name": "Absorción de Espíritu",
+            "description": "Ataca al enemigo, con un 75% de probabilidad de disminuir el Ataque durante 2 turnos, y cuando el enemigo es derrotado, reinicia el tiempo de reutilización. Aumenta el Ataque del lanzador durante 2 turnos."
+        },
+        "S3": {
+            "name": "Beso de Llama",
+            "description": "Envuelve al enemigo en la llama de Chatty, la linterna mágica, con un 100% de probabilidad de infligir dos efectos de quemadura durante 2 turnos."
+        }
+    },
+    "silk": {
+        "S1": {
+            "name": "Disparo Único",
+            "description": "Dispara flechas al enemigo, disminuyendo su Preparación de Combate en un 10%. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S2": {
+            "name": "Concentración",
+            "description": "Gana 1 Enfoque al inicio del turno, y consume 1 Enfoque cuando es atacado, aumentando la Preparación de Combate en un 15%. Cuando el Enfoque acumulado del lanzador es 2 o más, Disparo Único se mejora a Fuego Automático."
+        },
+        "S3": {
+            "name": "Flecha de Tormenta",
+            "description": "Ataca a todos los enemigos con viento, con un 100% de probabilidad de disminuir la Velocidad durante 2 turnos, y otorga aumento de Velocidad al lanzador durante 2 turnos."
+        }
+    },
+    "sven": {
+        "S1": {
+            "name": "Golpe Malvado",
+            "description": "Ataca con espadas de doble empuñadura, y cuando la Salud del lanzador es del 50% o menos, activa Golpe Repelente como ataque adicional."
+        },
+        "S2": {
+            "name": "Potencial",
+            "description": "Otorga inmortalidad durante 1 turno y aumenta el Ataque durante 2 turnos cuando el lanzador recibe daño letal. Solo puede activarse una vez cada 4 turnos."
+        },
+        "S3": {
+            "name": "Pena Capital",
+            "description": "Ataca a todos los enemigos. El daño aumenta con la Salud perdida del lanzador."
+        }
+    },
+    "taranor-guard": {
+        "S1": {
+            "name": "Arte de Lanza",
+            "description": "Lanza al enemigo por los aires con una lanza, con un 75% de probabilidad de disminuir la Defensa durante 1 turno."
+        },
+        "S2": {
+            "name": "Disciplina",
+            "description": "Aumenta la probabilidad de Ataque Dual en un 10%. La Preparación de Combate de todos los aliados aumenta en un 25% cuando se activa un Ataque Dual."
+        },
+        "S3": {
+            "name": "Perforar",
+            "description": "Perfora el punto débil del enemigo con una lanza, disminuyendo la Preparación de Combate en un 50%."
+        }
+    },
+    "taranor-royal-guard": {
+        "S1": {
+            "name": "Espada del Reino",
+            "description": "Ataca con una espada, con un 50% de probabilidad de provocar durante 1 turno. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Desvío de Escudo",
+            "description": "El lanzador refleja el 50% del daño sufrido por un golpe crítico al atacante. El daño reflejado no puede ser mayor que la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Golpe",
+            "description": "Salta hacia el enemigo y lo ataca, disipando todas las mejoras. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "tieria": {
+        "S1": {
+            "name": "Cortador Demoníaco",
+            "description": "Ataca con un hacha, con un 75% de probabilidad de disminuir la Precisión durante 1 turno."
+        },
+        "S2": {
+            "name": "Danza de Arenas",
+            "description": "Un ataque exitoso aumenta la Preparación de Combate de todos los aliados excepto el lanzador en un 15%."
+        },
+        "S3": {
+            "name": "Rompe Almas",
+            "description": "Golpea al enemigo, infligiendo daño proporcional a la Salud máxima del objetivo."
+        }
+    },
+    "wanda": {
+        "S1": {
+            "name": "Punto Débil",
+            "description": "Dispara una flecha al enemigo, disminuyendo la Preparación de Combate en un 15%. Cuando el enemigo está marcado, aumenta el daño infligido."
+        },
+        "S2": {
+            "name": "Apuntar Firme",
+            "description": "Tiene un 100% de probabilidad de marcar a un enemigo aleatorio durante 2 turnos al inicio de cada turno."
+        },
+        "S3": {
+            "name": "Disparo Fatal",
+            "description": "Ataca los puntos vitales del enemigo, con un 100% de probabilidad de aturdir durante 1 turno."
+        }
+    },
+    "zerato": {
+        "S1": {
+            "name": "Fragmento de Hielo",
+            "description": "Ataca al enemigo con un pico de hielo, con un 50% de probabilidad de disminuir la Velocidad durante 2 turnos."
+        },
+        "S2": {
+            "name": "Pico de Hielo",
+            "description": "Ataca al enemigo repetidamente, aumentando la Preparación de Combate del lanzador en un 50%."
+        },
+        "S3": {
+            "name": "Iceberg",
+            "description": "Ataca a todos los enemigos con un iceberg gigante, con un 75% de probabilidad de aturdir durante 1 turno."
+        }
+    },
+    "alexa": {
+        "S1": {
+            "name": "Derribar",
+            "description": "Ataca al enemigo cortando con espadas de doble empuñadura. Un golpe crítico tendrá un 50% de probabilidad de activar Rayo como ataque adicional."
+        },
+        "S2": {
+            "name": "Filo Frío",
+            "description": "Ataca al enemigo con una hoja fría, con un 100% de probabilidad de infligir dos efectos de veneno durante 2 turnos, y aumenta la Preparación de Combate del lanzador en un 30%."
+        },
+        "S3": {
+            "name": "Golpe Aplastante",
+            "description": "Ataca al enemigo continuamente, infligiendo daño proporcional al número de debilidades infligidas al enemigo."
+        }
+    },
+    "ains": {
+        "S1": {
+            "name": "Puño Gacela",
+            "description": "Golpea al enemigo, con un 50% de probabilidad de usar Golpe Satisfactorio en su lugar. Golpe Satisfactorio: Ataca al enemigo, un golpe exitoso siempre resulta en golpe crítico."
+        },
+        "S2": {
+            "name": "Herida",
+            "description": "Cuando es atacado, tiene un 50% de probabilidad de contraatacar."
+        },
+        "S3": {
+            "name": "Embestida",
+            "description": "Golpea al enemigo, con un 100% de probabilidad de aturdir durante 1 turno."
+        }
+    },
+    "bask": {
+        "S1": {
+            "name": "Golpe Protector",
+            "description": "Corta con una espada, con un 75% de probabilidad de disminuir el Ataque durante 1 turno. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Golpe de Escudo",
+            "description": "Ataca con un escudo, con un 100% de probabilidad de disipar todas las mejoras. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Voluntad de Protección",
+            "description": "Cubre a todos los aliados con la Voluntad de Protección, otorgando inmunidad durante 3 turnos."
+        }
+    },
+    "carrot": {
+        "S1": {
+            "name": "Golpe",
+            "description": "Ataca con un bastón, con un 50% de probabilidad de disminuir la Velocidad durante 2 turnos, antes de detonar los efectos de quemadura infligidos al enemigo al final del turno."
+        },
+        "S2": {
+            "name": "Barrera de Llamas",
+            "description": "En el momento en que el lanzador es atacado, otorga al lanzador una barrera durante 1 turno, y quema al atacante durante 1 turno."
+        },
+        "S3": {
+            "name": "Explosión de Llamas",
+            "description": "Ataca a todos los enemigos con un fuego poderoso, disipando una mejora antes de un 70% de probabilidad de quemar durante 1 turno."
+        }
+    },
+    "church-of-ilryos-axe": {
+        "S1": {
+            "name": "Desconexión",
+            "description": "Ataca con un hacha, con un 75% de probabilidad de provocar durante 1 turno. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S2": {
+            "name": "Cadena de Ataque",
+            "description": "Ataca a todos los enemigos con una onda de choque. Con un 60% de probabilidad de provocar durante 1 turno, antes de otorgar inmunidad al lanzador durante 1 turno."
+        },
+        "S3": {
+            "name": "Golpe Plagado",
+            "description": "Golpea al enemigo, con un 100% de probabilidad de disminuir la Defensa durante 2 turnos. El daño aumenta proporcionalmente a la Salud máxima del lanzador."
+        }
+    },
+    "crozet": {
+        "S1": {
+            "name": "Embestida",
+            "description": "Ataca con una espada, con un 75% de probabilidad de disminuir el Ataque durante 1 turno. El daño aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S2": {
+            "name": "Marca de Protección",
+            "description": "Otorga una barrera y aumento de Defensa a un aliado durante 2 turnos cuando la Salud del aliado es del 50% o menos después de ser atacado."
+        },
+        "S3": {
+            "name": "Avance",
+            "description": "Ataca a todos los enemigos con una tormenta de espada, disminuyendo su Preparación de Combate en un 50%, antes de un 75% de probabilidad de provocar durante 1 turno."
+        }
+    },
+    "doll-maker-pearlhorizon": {
+        "S1": {
+            "name": "Golpe de Caos",
+            "description": "Araña al enemigo, con un 50% de probabilidad de disminuir la Precisión durante 2 turnos."
+        },
+        "S2": {
+            "name": "Hipnosis",
+            "description": "Ataca a todos los enemigos, con un 50% de probabilidad de dormirlos durante 1 turno. Aumenta la Preparación de Combate del lanzador en un 10% por cada debilidad de sueño infligida."
+        },
+        "S3": {
+            "name": "Pesadilla Infinita",
+            "description": "Ataca al enemigo y lo aturde durante 1 turno. Cuando el enemigo está dormido, inflige daño adicional equivalente al 10% de la Salud máxima del objetivo."
+        }
+    },
+    "glenn": {
+        "S1": {
+            "name": "Fuego Rápido",
+            "description": "Dispara rápidamente al enemigo, con un 50% de probabilidad de disminuir la Defensa durante 2 turnos."
+        },
+        "S2": {
+            "name": "Ataque Preciso",
+            "description": "Dispara un misil al enemigo, y cuando el enemigo es derrotado, inflige extinción. La Precisión aumenta en un 15% al usar esta habilidad."
+        },
+        "S3": {
+            "name": "Fuego Concentrado",
+            "description": "Usando un cubo de mejora, otorga al lanzador aumento de Ataque (Mayor) durante 2 turnos."
+        }
+    },
+    "godmother": {
+        "S1": {
+            "name": "Disparo",
+            "description": "Dispara al enemigo con una pistola, con un 50% de probabilidad de marcarlo durante 2 turnos."
+        },
+        "S2": {
+            "name": "Lanzacohetes",
+            "description": "Ataca con un misil poderoso, con un 100% de probabilidad de disminuir la Precisión y el Ataque durante 1 turno."
+        },
+        "S3": {
+            "name": "Mejorar Maniobrabilidad",
+            "description": "Utiliza el poder de un cubo de mejora, otorgando a todos los aliados aumento de Velocidad durante 2 turnos."
+        }
+    },
+    "hataan": {
+        "S1": {
+            "name": "Rodillazo",
+            "description": "Golpea al enemigo con la rodilla, con un 80% de probabilidad de disminuir la Precisión durante 1 turno. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S2": {
+            "name": "Presión de Viento",
+            "description": "Ataca al enemigo con presión de viento. Activa Presión de Viento nuevamente cuando un enemigo es derrotado. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S3": {
+            "name": "Voluntad Invencible",
+            "description": "Libera energía a todos los aliados, aumentando el Ataque durante 2 turnos."
+        }
+    },
+    "ian": {
+        "S1": {
+            "name": "Fuego Mejorado",
+            "description": "Dispara una pistola mejorada, con un 75% de probabilidad de disipar una mejora del enemigo."
+        },
+        "S2": {
+            "name": "Apoyo de Combate",
+            "description": "Apoya a todos los aliados usando un cubo de mejora, otorgando aumento de Ataque durante 2 turnos. Otorga un turno adicional al lanzador."
+        },
+        "S3": {
+            "name": "Cubo Explosivo de Alta Densidad",
+            "description": "Ataca a todos los enemigos con explosivos poderosos, con un 100% de probabilidad de disipar una mejora, antes de un 75% de probabilidad de disminuir la Precisión durante 2 turnos."
+        }
+    },
+    "kikirat-v2": {
+        "S1": {
+            "name": "Disparo Automático",
+            "description": "Ataca con una ametralladora giratoria, con un 90% de probabilidad de disipar una mejora. El daño aumenta proporcionalmente a la Defensa del lanzador."
+        },
+        "S2": {
+            "name": "Modo Defensa",
+            "description": "Aumenta la Defensa del lanzador en un 10% después de atacar. El efecto solo puede acumularse hasta 5 veces."
+        },
+        "S3": {
+            "name": "Modo Limpieza",
+            "description": "Dispara indiscriminadamente a todos los enemigos, con un 75% de probabilidad de disminuir la Precisión durante 1 turno, antes de activar contraataques del lanzador durante 2 turnos."
+        }
+    },
+    "mirsa": {
+        "S1": {
+            "name": "Doble Filo",
+            "description": "Ataca con espadas de doble empuñadura, con un 50% de probabilidad de disminuir la Velocidad durante 2 turnos. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        },
+        "S2": {
+            "name": "Esquivar",
+            "description": "Aumenta la probabilidad de Evasión en un 50%. Al momento de ser atacado, si el lanzador evade con éxito, disminuye el tiempo de reutilización en 1 turno y aumenta la Velocidad durante 2 turnos."
+        },
+        "S3": {
+            "name": "Incursión",
+            "description": "Embosca al objetivo, silenciándolo durante 1 turno. El daño aumenta proporcionalmente a la Velocidad del lanzador."
+        }
+    },
+    "penelope": {
+        "S1": {
+            "name": "Espada Despiadada",
+            "description": "Ataca al enemigo antes de aumentar el Ataque del lanzador en un 15%. Cuando un enemigo es derrotado, aumenta la Preparación de Combate del lanzador en un 75%."
+        },
+        "S2": {
+            "name": "Planes Preliminares",
+            "description": "Disminuye la duración de debilidades de todos los aliados en 1 turno antes de otorgar una barrera al lanzador durante 3 turnos. Otorga un turno adicional al lanzador."
+        },
+        "S3": {
+            "name": "Desarmar",
+            "description": "Inflige reducción de recursos al objetivo en un 100% antes de atacarlo, con un 100% de probabilidad de disminuir el Ataque durante 2 turnos y aturdir durante 1 turno."
+        }
+    },
+    "sonia": {
+        "S1": {
+            "name": "Fuego de Supresión",
+            "description": "Ataca al enemigo con fuego de cobertura, antes de otorgar una barrera al aliado excepto el lanzador con la Salud más baja durante 2 turnos."
+        },
+        "S2": {
+            "name": "Recuperación",
+            "description": "Recupera la Salud del objetivo usando un cubo de recuperación. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Aura de Cubo",
+            "description": "Usa un cubo de recuperación para otorgar a todos los aliados inmunidad durante 2 turnos, antes de recuperar Salud."
+        }
+    },
+    "aither": {
+        "S1": {
+            "name": "Espíritu Susurrante",
+            "description": "Ataca al enemigo con poder espiritual, con un 50% de probabilidad de disminuir la Velocidad durante 2 turnos."
+        },
+        "S2": {
+            "name": "Guardia",
+            "description": "Recupera la Salud de un aliado con energía de agua y disipa dos debilidades. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del objetivo."
+        },
+        "S3": {
+            "name": "Llamada del Espíritu",
+            "description": "Recupera la Salud de todos los aliados y otorga una barrera durante 2 turnos con poder espiritual."
+        }
+    },
+    "rin": {
+        "S1": {
+            "name": "Lanzamiento de Anillos",
+            "description": "Lanza anillos al enemigo, con un 75% de probabilidad de disipar una mejora, y aumenta la Preparación de Combate del lanzador en un 15%."
+        },
+        "S2": {
+            "name": "Danza Deslumbrante",
+            "description": "Deslumbra al enemigo con una danza, con un 75% de probabilidad de disminuir la Defensa durante 2 turnos, antes de un 50% de probabilidad de usar Lanzamiento de Anillos."
+        },
+        "S3": {
+            "name": "Hora del Espectáculo",
+            "description": "Cura a todos los aliados con una danza elegante, otorgando una mejora aleatoria durante 3 turnos."
+        }
+    },
+    "surin": {
+        "S1": {
+            "name": "Daga Encadenada",
+            "description": "Ataca con un hacha encadenada. Cuando el enemigo está sangrando, causa dos efectos de sangrado durante 2 turnos."
+        },
+        "S2": {
+            "name": "Golpe de Filo",
+            "description": "Golpea al enemigo con un hacha encadenada e inflige dos efectos de sangrado durante 2 turnos, disminuyendo el Ataque durante 1 turno."
+        },
+        "S3": {
+            "name": "Implosión",
+            "description": "Activa todos los efectos de sangrado actualmente infligidos al enemigo. El daño aumenta proporcionalmente al número de efectos de sangrado infligidos."
+        }
+    },
+    "ray": {
+        "S1": {
+            "name": "Remedios Extremos",
+            "description": "Ataca lanzando una botella, disipando una debilidad de un aliado."
+        },
+        "S2": {
+            "name": "Luz del Renacimiento",
+            "description": "Irradia luz sobre todos los aliados, otorgando barrera durante 2 turnos."
+        },
+        "S3": {
+            "name": "Vigorizar",
+            "description": "Vigoriza al equipo disipando todas las debilidades de todos los aliados, y otorga inmunidad durante 2 turnos."
+        }
+    },
+    "armin": {
+        "S1": {
+            "name": "Derribo",
+            "description": "Ataca al enemigo con un escudo, con un 35% de probabilidad de aturdir durante 1 turno."
+        },
+        "S2": {
+            "name": "Proteger",
+            "description": "Cuando es atacada, tiene un 15% de probabilidad de contraatacar. Cuando un aliado es atacado, reduce el daño recibido."
+        },
+        "S3": {
+            "name": "Muro de Escudos",
+            "description": "Usa el Escudo de Luz para disipar una debilidad de todos los aliados, y otorga barrera durante 2 turnos."
+        }
+    },
+    "ravi": {
+        "S1": {
+            "name": "Masacre",
+            "description": "Ataca al enemigo con un hacha de doble filo y absorbe parte del daño infligido como Salud."
+        },
+        "S2": {
+            "name": "Sangre Demoníaca",
+            "description": "Comienza la primera batalla con 60 de Espíritu de Lucha y aumenta el Ataque proporcional a la Salud máxima del lanzador."
+        },
+        "S3": {
+            "name": "Impulso Diabólico",
+            "description": "Ataca brutalmente a todos los enemigos, infligiendo heridas con un 75% de probabilidad de aturdir durante 1 turno."
+        }
+    },
+    "haste": {
+        "S1": {
+            "name": "Guadaña del Enviado",
+            "description": "Ataca al enemigo con una enorme guadaña, con un 50% de probabilidad de reducir la Defensa durante 2 turnos."
+        },
+        "S2": {
+            "name": "Desgarro Sangriento",
+            "description": "Ataca al enemigo con una guadaña y recupera la Salud de todos los aliados."
+        },
+        "S3": {
+            "name": "Sello Vampírico",
+            "description": "Ataca a todos los enemigos con la Guadaña del Enviado, disipando dos beneficios con un 85% de probabilidad de infligir dos efectos de sangrado durante 2 turnos."
+        }
+    },
+    "ludwig": {
+        "S1": {
+            "name": "Luz Estelar",
+            "description": "Ataca con magia, con un 75% de probabilidad de robar un beneficio."
+        },
+        "S2": {
+            "name": "Golpe de Luz Lunar",
+            "description": "Ataca al enemigo con luz, reduciendo la duración de los beneficios en 1 turno con un 100% de probabilidad de aturdir durante 1 turno."
+        },
+        "S3": {
+            "name": "Llamada de la Luna Llena",
+            "description": "Ataca a todos los enemigos con magia Nocturna. Penetra la Defensa del objetivo en un 30%."
+        }
+    },
+    "baal-and-sezan": {
+        "S1": {
+            "name": "Acoso Fantasmal",
+            "description": "Invoca un espíritu maligno para atacar a dos enemigos, con un 50% de probabilidad de envenenar durante 2 turnos."
+        },
+        "S2": {
+            "name": "Nube Oscura",
+            "description": "Invoca la Nube de Oscuridad para atacar a todos los enemigos, infligiendo daño proporcional al número de debuffs infligidos."
+        },
+        "S3": {
+            "name": "Último Réquiem",
+            "description": "Baal y Sezan atacan a todos los enemigos con Magia de Golpe, con un 85% de probabilidad de hacerlos incurables y reducir su Velocidad durante 2 turnos."
+        }
+    },
+    "khawazu": {
+        "S1": {
+            "name": "Golpe de Llama",
+            "description": "Ataca al enemigo con una bola de fuego, con un 50% de probabilidad de reducir la Defensa durante 2 turnos. Después de atacar, tiene un 35% de probabilidad de aumentar la Preparación de Combate en un 20%."
+        },
+        "S2": {
+            "name": "Compostura",
+            "description": "Cuando el lanzador tiene debuffs después de ser atacado, disipa todos los debuffs y aumenta el Ataque del lanzador durante 2 turnos. Solo puede activarse una vez cada 2 turnos."
+        },
+        "S3": {
+            "name": "Tormenta de Brasas",
+            "description": "Ataca con una explosión ardiente, haciendo al objetivo incurable y reduciendo la Defensa durante 1 turno cada uno."
+        }
     }
 }

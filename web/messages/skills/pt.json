@@ -250,5 +250,2511 @@
             "name": "Tempestade de Areia",
             "description": "Ataca todos os inimigos com magia de areia, dissipando todos os bônus e diminuindo a Prontidão de Combate em 30%, antes de impedi-los de receber bônus por 2 turnos."
         }
+    },
+    "belian": {
+        "S1": {
+            "name": "Luz da Destruição",
+            "description": "Ataca todos os inimigos com um raio, com 65% de chance de dissipar um bônus. Quando usado no turno do conjurador, tem 35% de chance de ativar Incursão como ataque extra. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Incursão: Ataca todos os inimigos, diminuindo a Velocidade e a Precisão por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Grilhões de Supressão",
+            "description": "Diminui a quantidade de Almas adquiridas pelo inimigo em 100%. No início do turno, tem 100% de chance de conceder um bônus aleatório ao conjurador por 1 turno."
+        },
+        "S3": {
+            "name": "Apocalipse",
+            "description": "Ataca todos os inimigos com o poder dos deveres, diminuindo a Prontidão de Combate em uma quantidade aleatória entre 10% e 30% e provoca por 1 turno. Aumenta a Defesa do conjurador por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "bellona": {
+        "S1": {
+            "name": "Leque Corta-vento",
+            "description": "Ataca o inimigo com um leque, causando dano proporcional à Vida máxima do inimigo. Quando o Foco acumulado do conjurador é 5 ou mais, consome todo o Foco e ativa Leque de Vento Cortante."
+        },
+        "S2": {
+            "name": "Leque Borboleta",
+            "description": "Ataca todos os inimigos agitando um leque."
+        },
+        "S3": {
+            "name": "Leque de Vento Cortante",
+            "description": "Ataca todos os inimigos criando uma poderosa rajada de vento, com 100% de chance de diminuir a Defesa por 2 turnos. Aumenta o dano causado quando Leque de Vento Cortante é ativado por Leque Corta-vento."
+        }
+    },
+    "benimaru": {
+        "S1": {
+            "name": "Saia do Caminho",
+            "description": "Corta o inimigo para atacar. Quando o conjurador tem Barreira Multicamada, aumenta o dano causado."
+        },
+        "S2": {
+            "name": "Percepção Universal",
+            "description": "No início da primeira batalha, ganha 50 de Espírito de Luta. No início do turno extra de um inimigo, dissipa todos os debuffs do conjurador e concede Barreira Multicamada por 2 turnos antes de aumentar a Prontidão de Combate em 40%. O efeito após o turno extra de um inimigo só pode ser ativado uma vez a cada 2 turnos. Após atacar, quando o Espírito de Luta está cheio, consome todo o Espírito de Luta para ativar Chama Infernal. Chama Infernal: Ataca todos os inimigos com uma esfera de chama sombria. Penetra 30% da Defesa do alvo, e quando o conjurador tem Barreira Multicamada, penetra 30% adicionais da Defesa do alvo."
+        },
+        "S3": {
+            "name": "Sem Piedade",
+            "description": "Ataca o inimigo cortando sua alma, aumentando a Prontidão de Combate do aliado com a maior Prontidão de Combate exceto o conjurador em 15%. Quando o conjurador tem Barreira Multicamada, o Espírito de Luta adquirido é dobrado."
+        }
+    },
+    "blood-blade-karin": {
+        "S1": {
+            "name": "Cortador Sequencial",
+            "description": "Golpeia rapidamente o inimigo com uma espada, recuperando Vida proporcional ao dano causado. Aumenta a Prontidão de Combate do conjurador em 15% e quando o inimigo é derrotado, aumenta a Prontidão de Combate do conjurador em 35% adicionais."
+        },
+        "S2": {
+            "name": "Espada Amaldiçoada",
+            "description": "Conforme a Vida diminui, o Ataque, a Defesa e a Velocidade aumentam. No início da batalha, concede imortalidade ao conjurador por 1 turno."
+        },
+        "S3": {
+            "name": "Arte da Lâmina: Dragão",
+            "description": "Ataca todos os inimigos, sacrificando 20% da Vida atual do conjurador e aumenta o Ataque do conjurador por 2 turnos. Aumenta a Prontidão de Combate do conjurador em 50% quando um inimigo é derrotado. Esta habilidade não pode acionar um contra-ataque."
+        }
+    },
+    "briar-witch-iseria": {
+        "S1": {
+            "name": "Flor Caída",
+            "description": "Lança espadas no inimigo, com 75% de chance de diminuir a Defesa por 1 turno. Um ataque bem-sucedido causa dano adicional proporcional ao Ataque do conjurador."
+        },
+        "S2": {
+            "name": "Maldição da Bruxa",
+            "description": "Aumenta a Precisão em 50%. Aliados e inimigos não podem reviver. Ao receber dano letal, concede imortalidade por 1 turno. O efeito de imortalidade só pode ser ativado uma vez a cada 5 turnos."
+        },
+        "S3": {
+            "name": "Espinho Amaldiçoado",
+            "description": "Ataca todos os inimigos com um arbusto de espinhos amaldiçoado, dissipando todos os bônus, com 100% de chance de impedi-los de receber bônus por 2 turnos. Um ataque bem-sucedido causa dano adicional proporcional ao Ataque do conjurador."
+        }
+    },
+    "celine": {
+        "S1": {
+            "name": "Uppercut",
+            "description": "Ataca o inimigo com uma bainha e concede furtividade ao conjurador por 1 turno."
+        },
+        "S2": {
+            "name": "Intuição",
+            "description": "No início da primeira batalha, concede furtividade por 2 turnos. Depois que um inimigo usa uma habilidade que não é de ataque, dissipa todos os debuffs do conjurador e ataca um inimigo aleatório com Piscar. Só pode ser ativado uma vez a cada 2 turnos. Piscar: Corta o inimigo num piscar de olhos e aumenta a Prontidão de Combate do conjurador em 30%. Não é afetado por desvantagem elemental."
+        },
+        "S3": {
+            "name": "Trovão",
+            "description": "Ataca o inimigo repetidamente e concede aumento de Evasão e uma barreira ao conjurador por 2 turnos. Quando o inimigo não é um monstro Elite ou Chefe, os efeitos de compartilhamento de dano são ignorados. A força da barreira aumenta proporcionalmente ao Ataque do conjurador."
+        }
+    },
+    "cermia": {
+        "S1": {
+            "name": "Brincando com Fogo",
+            "description": "Ataca com uma espada em chamas, com 75% de chance de tornar o alvo incurável por 1 turno."
+        },
+        "S2": {
+            "name": "Sequência Quente!",
+            "description": "Dispara fogo, concedendo ao conjurador Aumento de Ataque (Maior), reiniciando o tempo de recarga de Tudo ou Nada! e concedendo um turno extra."
+        },
+        "S3": {
+            "name": "Tudo ou Nada!",
+            "description": "Ataca com um inferno ardente, penetrando 50% da Defesa."
+        }
+    },
+    "cerise": {
+        "S1": {
+            "name": "Flecha Mística",
+            "description": "Invoca um arco místico para atacar o inimigo, antes de aumentar a Prontidão de Combate do conjurador em 15%. Aciona um Ataque Duplo de um aliado aleatório quando Tempestade de Gelo está indisponível devido ao tempo de recarga."
+        },
+        "S2": {
+            "name": "Explosão Luminosa",
+            "description": "Explode uma esfera mágica, atordoando por 1 turno e impedindo-os de receber bônus por 2 turnos. Aumenta a Prontidão de Combate do conjurador em 50%."
+        },
+        "S3": {
+            "name": "Tempestade de Gelo",
+            "description": "Ataca todos os inimigos com uma tempestade de gelo furiosa, diminuindo a duração dos bônus em 1 turno, antes de ter 100% de chance cada de diminuir a Velocidade e restringir por 2 turnos. Ataca usando um elemento vantajoso."
+        }
+    },
+    "challenger-dominiel": {
+        "S1": {
+            "name": "Eletrocutar",
+            "description": "Ataca com eletricidade. Um acerto crítico aumentará o dano causado."
+        },
+        "S2": {
+            "name": "Carga Elétrica",
+            "description": "Quando um aliado faz um acerto crítico, concede aumento de Ataque acumulável ao conjurador de acordo com o número de acertos críticos feitos. Este efeito é dissipado após atacar."
+        },
+        "S3": {
+            "name": "Supercarga",
+            "description": "Libera eletricidade poderosa, aumentando a Chance de Acerto Crítico de todos os aliados por 3 turnos e a Prontidão de Combate em 20%. O conjurador também recebe um turno extra."
+        }
+    },
+    "charles": {
+        "S1": {
+            "name": "Golpe",
+            "description": "Ataca com uma espada gigante, com 60% de chance de diminuir o Ataque por 1 turno. Após usar esta habilidade, tem 25% de chance de ativar Esmagar como ataque extra. A chance de ativar Esmagar é dobrada quando o inimigo tem bônus."
+        },
+        "S2": {
+            "name": "Esmagar",
+            "description": "Ataca o inimigo repetidamente com uma espada gigante, com 100% de chance de dissipar todos os bônus. O dano causado aumenta proporcionalmente ao número de bônus concedidos ao conjurador."
+        },
+        "S3": {
+            "name": "Golpe Fiel",
+            "description": "Ataca todos os inimigos com uma tempestade de espadas, aumentando o Ataque e a Defesa de todos os aliados por 2 turnos. Quando há três ou menos inimigos, o dano causado aumenta conforme os inimigos diminuem."
+        }
+    },
+    "charlotte": {
+        "S1": {
+            "name": "Espadas Duplas",
+            "description": "Ataca com espadas duplas, com 50% de chance de diminuir o Ataque por 1 turno. Quando o conjurador tem bônus, Espadas Duplas se torna um ataque que afeta todos os inimigos quando usado no turno do conjurador. Aumenta a Prontidão de Combate do conjurador em 20% após atacar com este ataque modificado, e um ataque bem-sucedido com este ataque modificado sempre resulta em acerto crítico. Este ataque modificado não aciona um Ataque Duplo."
+        },
+        "S2": {
+            "name": "Vontade do Pântano",
+            "description": "Após ser atacado, o conjurador ganha 20 de Espírito de Luta e recebe aumento de Ataque e Defesa por 1 turno. Quando é atacado no turno do conjurador, o Espírito de Luta adquirido é dobrado. O aumento de Ataque e Defesa só pode ser concedido uma vez por turno."
+        },
+        "S3": {
+            "name": "Vórtice",
+            "description": "Corta todos os inimigos enquanto gira, tornando-os incuráveis por 2 turnos. Adquire 100 de Espírito de Luta após usar esta habilidade."
+        }
+    },
+    "choux": {
+        "S1": {
+            "name": "Golpe",
+            "description": "Ataca o inimigo com uma lança antes de aumentar a Prontidão de Combate do conjurador em 20%. Um acerto crítico dobrará a quantidade de Foco ganho. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Fwoooosh!",
+            "description": "Ataca o inimigo balançando selvagemente uma lança e absorve parte do dano causado como Vida. Penetra 70% da Defesa do inimigo. Quando o Foco acumulado do conjurador é 5, consome todo o Foco, aumentando o dano causado e reiniciando o tempo de recarga de Fwoooosh!. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Me Ajuda, Cream!",
+            "description": "Congela todos os inimigos antes de atacar com Cream. Aumenta a Resistência a Acerto Crítico de todos os aliados por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Quando esta habilidade está indisponível devido ao tempo de recarga, depois que um aliado exceto o conjurador é atacado, tem 20% de chance de contra-atacar."
+        }
+    },
+    "clarissa": {
+        "S1": {
+            "name": "Lição Dura",
+            "description": "Ataca com uma estrela da manhã, com 50% de chance de diminuir a Defesa por 2 turnos."
+        },
+        "S2": {
+            "name": "Fúria",
+            "description": "O conjurador fica enfurecido por 3 turnos e ativa Kya-hahaha quando um inimigo é derrotado por Lição Dura ou Histérica. Kya-hahaha: Ataca todos os inimigos balançando uma maça de ferro."
+        },
+        "S3": {
+            "name": "Histérica",
+            "description": "Ataca todos os inimigos girando. Quando um inimigo é derrotado, reinicia o tempo de recarga da habilidade. Quando o conjurador está enfurecido, o dano causado aumenta."
+        }
+    },
+    "closer-charles": {
+        "S1": {
+            "name": "Eliminação",
+            "description": "Corta bruscamente o inimigo para atacar. Quando usado no turno do conjurador, se o conjurador tem percepção, usa Demolição em vez de Eliminação. Demolição: Ataca o inimigo com uma espada, absorvendo parte do dano causado como Vida. O dano causado aumenta proporcionalmente à Vida perdida do alvo. Quando o inimigo é derrotado, diminui o tempo de recarga de Descida em 1 turno. Este ataque não aciona um Ataque Duplo."
+        },
+        "S2": {
+            "name": "Aproximador",
+            "description": "No início da primeira batalha, aumenta a Evasão por 1 turno. Depois que um aliado exceto o conjurador ataca, quando a Vida do inimigo é menor que 40%, aumenta a Prontidão de Combate do conjurador em 50% e concede percepção por 2 turnos. Só pode ser ativado uma vez a cada 2 turnos."
+        },
+        "S3": {
+            "name": "Descida",
+            "description": "Ataca todos os inimigos após descer, aumentando o Ataque de todos os aliados por 2 turnos antes de aumentar a Prontidão de Combate em 20%. Esta habilidade não pode acionar um contra-ataque."
+        }
+    },
+    "corvus": {
+        "S1": {
+            "name": "Golpe de Escudo",
+            "description": "Ataca o inimigo empurrando-o com um escudo, com 75% de chance de transferir um debuff do conjurador para o inimigo. Quando o conjurador tem indomável, o dano causado aumenta e o inimigo é atordoado por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S2": {
+            "name": "Macerar",
+            "description": "Ataca todos os inimigos com uma maça de ferro, diminuindo a Prontidão de Combate em 30%. Quando a Prontidão de Combate do inimigo chega a 0, atordoa por 1 turno. Quando o conjurador tem indomável, dobra a quantidade de diminuição de Prontidão de Combate. O dano causado aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S3": {
+            "name": "Advento da Fúria",
+            "description": "Ao descarregar o Espírito de Luta, concede indomável ao conjurador por 3 turnos e um turno extra. Começa a primeira batalha com 50 de Espírito de Luta. Ganha 10 de Espírito de Luta quando é atacado."
+        }
+    },
+    "crimson-armin": {
+        "S1": {
+            "name": "Derrubada",
+            "description": "Ataca com um grande escudo, com 100% de chance de provocar por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S2": {
+            "name": "Estado de Segurança",
+            "description": "Diminui o dano recebido pelos aliados em 15%. Quando mais de um efeito de redução de dano é concedido, apenas o efeito mais forte é aplicado."
+        },
+        "S3": {
+            "name": "Escudo do Espírito Santo",
+            "description": "Cobre todos os aliados com uma aura de espírito santo, concedendo imunidade por 2 turnos e invencibilidade por 1 turno."
+        }
+    },
+    "dark-corvus": {
+        "S1": {
+            "name": "Golpe de Escudo",
+            "description": "Ataca o inimigo com um escudo, com 100% de chance de provocar por 1 turno, antes de recuperar a Vida do conjurador. O dano causado e a quantidade recuperada aumentam proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Advento da Ruína",
+            "description": "Imune a atordoamento. No momento em que o conjurador é atacado, o conjurador tem 100% de chance de seu tempo de recarga de habilidade ser diminuído em 1 turno, ou 2 turnos no caso de acerto crítico."
+        },
+        "S3": {
+            "name": "Descida do Diabo",
+            "description": "Ataca o inimigo com um golpe letal. Quando o inimigo é derrotado, inflige extinção. O dano causado aumenta proporcionalmente à Vida máxima do conjurador e penetra a Defesa do alvo. Este ataque não pode acionar um acerto crítico. Começa a batalha com o tempo de recarga da habilidade no máximo."
+        }
+    },
+    "destina": {
+        "S1": {
+            "name": "Chave de um Juramento",
+            "description": "Ataca o inimigo com um cajado e cura o aliado com menor Vida. A cura aumenta proporcionalmente à Vida máxima do alvo."
+        },
+        "S2": {
+            "name": "Regeneração",
+            "description": "Abençoa um aliado, dissipando dois debuffs e recuperando Vida antes de aumentar a Prontidão de Combate em 30%. A cura aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Graça de Destina",
+            "description": "Concede a todos os aliados a bênção de um Senhor Espírito, dissipando todos os debuffs antes de recuperar Vida. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador. No início da primeira batalha, concede Bênção do Espírito ao conjurador por 2 turnos."
+        }
+    },
+    "diene": {
+        "S1": {
+            "name": "Luz do Julgamento",
+            "description": "Ataca o inimigo com um raio de luz brilhante, aumentando a Prontidão de Combate do conjurador em 15%. O efeito dobra quando o conjurador tem bônus."
+        },
+        "S2": {
+            "name": "Bênçãos da Deusa",
+            "description": "Com as Bênçãos da Deusa, dissipa dois debuffs de todos os aliados e concede barreira por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do alvo."
+        },
+        "S3": {
+            "name": "Oração do Santo",
+            "description": "Um milagre da Deusa se manifesta, aumentando o Ataque de todos os aliados por 3 turnos, antes de aumentar a Prontidão de Combate do conjurador em 50%."
+        }
+    },
+    "dizzy": {
+        "S1": {
+            "name": "Usei Isso para Pescar",
+            "description": "Ataca todos os inimigos com o poder da magia, com 25% de chance cada de atordoar por 1 turno. O dano causado aumenta em inimigos com debuffs."
+        },
+        "S2": {
+            "name": "Raio Gama",
+            "description": "Ataca todos os inimigos com um poderoso raio, estendendo a duração dos debuffs em 1 turno, exceto aqueles que impedem o inimigo de se mover."
+        },
+        "S3": {
+            "name": "Raio Gama Emocional",
+            "description": "Desencadeia uma explosão gigante para atacar todos os inimigos. O ataque erra, mas inflige diminuição de Velocidade, Ataque e Chance de Acerto por 2 turnos de qualquer forma."
+        }
+    },
+    "elphelt": {
+        "S1": {
+            "name": "Barragem",
+            "description": "Dispara uma barragem de balas no inimigo, com 75% de chance de impedi-lo de receber bônus por 1 turno."
+        },
+        "S2": {
+            "name": "Julgar a Cara Metade",
+            "description": "Prende o inimigo em um bolo, antes de atacá-lo com uma lâmina de cortar bolo e aumentar o Ataque de todos os aliados por 2 turnos. Quando o inimigo está dormindo, diminui a Defesa de todos os inimigos por 2 turnos. O dano causado aumenta proporcionalmente ao número de debuffs infligidos no inimigo."
+        },
+        "S3": {
+            "name": "Casamento Magnum",
+            "description": "Dissipa dois bônus do inimigo antes de disparar uma bala de amor, com 100% de chance de fazê-lo dormir por 2 turnos. Concede ao conjurador um turno extra."
+        }
+    },
+    "emilia": {
+        "S1": {
+            "name": "Huma",
+            "description": "Ataca o inimigo com gelo, antes de recuperar a Vida do aliado com menor Vida. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Bênção do Espírito",
+            "description": "Concede uma bênção a um aliado exceto o conjurador, dissipando dois debuffs e aumentando a Prontidão de Combate em 50%. Aumenta a Prontidão de Combate do conjurador em 25%."
+        },
+        "S3": {
+            "name": "Proteção Divina do Grande Espírito",
+            "description": "Usa artes espirituais para dissipar dois debuffs de todos os aliados, antes de recuperar Vida e conceder uma barreira por 2 turnos. A quantidade recuperada e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "eda": {
+        "S1": {
+            "name": "Impacto Gelado",
+            "description": "Ataca o inimigo com fragmentos de gelo, com 75% de chance de diminuir a Defesa por 1 turno."
+        },
+        "S2": {
+            "name": "Onda de Frio",
+            "description": "Ataca todos os inimigos com uma explosão de gelo, dissipando dois bônus antes de diminuir a Prontidão de Combate em uma quantidade aleatória entre 15% e 40%. Concede ao conjurador anulador de habilidade uma vez."
+        },
+        "S3": {
+            "name": "Zero Absoluto",
+            "description": "Libera energia para atacar todos os inimigos, com 85% de chance de atordoar por 1 turno. Quando um aliado usa uma habilidade que não é de ataque e esta habilidade está disponível de acordo com o tempo de recarga, aumenta a Prontidão de Combate do conjurador em 20%."
+        }
+    },
+    "elena": {
+        "S1": {
+            "name": "Vontade da Luz Estelar",
+            "description": "Ataca com o poder das estrelas, dissipando um debuff de cada um de dois aliados."
+        },
+        "S2": {
+            "name": "Autoridade do Guardião",
+            "description": "Quando um aliado sofre um ataque que tem como alvo todos os inimigos, diminui o dano recebido em 20% e ativa Terra Consagrada. Quando mais de um efeito de redução de dano é concedido, apenas o efeito mais forte é aplicado. Terra Consagrada pode ser ativada uma vez a cada 2 turnos. Terra Consagrada: Recupera a Vida de todos os aliados antes de aumentar a Prontidão de Combate do conjurador em 20%. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Cometa Eternamente Brilhante",
+            "description": "Ataca todos os inimigos com uma chuva de meteoros, e dissipa um debuff de todos os aliados antes de conceder invencibilidade a todos os aliados por 1 turno."
+        }
+    },
+    "elson": {
+        "S1": {
+            "name": "Golpe Pesado",
+            "description": "Ataca o inimigo, com 75% de chance de diminuir o Ataque por 1 turno."
+        },
+        "S2": {
+            "name": "Chuva de Meteoros",
+            "description": "Ataca todos os inimigos com Chuva de Meteoros de Luz e recupera a Vida de todos os aliados. A cura aumenta proporcionalmente à Vida máxima do aliado."
+        },
+        "S3": {
+            "name": "Proteção da Luz",
+            "description": "Recupera Vida e aumenta o Ataque e a Defesa de todos os aliados por 2 turnos com magia fortalecedora. A quantidade recuperada é proporcional à Vida máxima do alvo."
+        }
+    },
+    "ervalen": {
+        "S1": {
+            "name": "Vingança",
+            "description": "Ataca rapidamente o inimigo, com 50% de chance de diminuir a Defesa por 2 turnos."
+        },
+        "S2": {
+            "name": "Espada do Ódio",
+            "description": "Ataca o inimigo repetidamente. Quando a Vida máxima do inimigo é maior que a do conjurador, a Prontidão de Combate do conjurador aumenta proporcionalmente à diferença, até um máximo de 30%."
+        },
+        "S3": {
+            "name": "Herdeiro do Trono",
+            "description": "Ataca o inimigo com uma espada, adotando uma postura de contra-ataque e concedendo uma barreira ao conjurador por 2 turnos. Quando o inimigo é derrotado, estende a duração dos bônus do conjurador em 1 turno e concede um turno extra. Quando a Vida máxima do inimigo é maior que a do conjurador, o dano causado aumenta proporcionalmente à diferença, até um máximo de 70%. A força da barreira aumenta proporcionalmente ao Ataque do conjurador."
+        }
+    },
+    "fairytale-tenebria": {
+        "S1": {
+            "name": "Um Par",
+            "description": "Ataca o inimigo com poder místico, com 75% de chance de infligir provocação redirecionada por 1 turno."
+        },
+        "S2": {
+            "name": "Carta Curinga",
+            "description": "Quando um aliado é atacado por um inimigo com provocação ou provocação redirecionada, ativa Embaralhar. Embaralhar só pode ser ativado uma vez por turno. Embaralhar: Ataca todos os inimigos e inflige um debuff aleatório por 1 turno. Um ataque bem-sucedido contra um alvo com provocação ou provocação redirecionada inflige dano adicional. O dano adicional aumenta proporcionalmente à Vida máxima do alvo."
+        },
+        "S3": {
+            "name": "Festa do Chá",
+            "description": "Atrai todos os inimigos com uma festa do chá e ataca, tornando-os incapazes de receber bônus por 2 turnos e infligindo provocação redirecionada por 1 turno."
+        }
+    },
+    "fallen-cecilia": {
+        "S1": {
+            "name": "Erro",
+            "description": "Ataca o inimigo com uma lança de vingança e tem 100% de chance de provocar por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Instinto Forte",
+            "description": "Diminui o dano adicional e o dano fixo recebido pelos aliados de Heróis em 50%. Quando mais de um efeito de redução de dano é concedido, apenas o efeito mais forte é aplicado. No final do turno, concede uma barreira ao aliado com menor Vida por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Lança do Ressentimento",
+            "description": "Ataca todos os inimigos em uma explosão de emoções rancorosas e dissipa todos os bônus antes de transferir todos os debuffs infligidos no conjurador. Concede anulador de habilidade uma vez a todos os aliados. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "flan": {
+        "S1": {
+            "name": "Falha na Comunicação",
+            "description": "Ataca o inimigo com uma arma, com 75% de chance de dissipar um bônus."
+        },
+        "S2": {
+            "name": "Monopólio de Dados",
+            "description": "Encoraja um aliado, aumentando o Ataque e o Dano Crítico por 2 turnos antes de aumentar a Prontidão de Combate em 40%."
+        },
+        "S3": {
+            "name": "Negócio Vantajoso",
+            "description": "Negocia duramente contra todos os inimigos, diminuindo a Defesa por 2 turnos antes de diminuir a Prontidão de Combate em 15%. Concede um turno extra."
+        }
+    },
+    "free-spirit-tieria": {
+        "S1": {
+            "name": "Corte pela Metade",
+            "description": "Ataca o inimigo com um machado, com 50% de chance de diminuir o Ataque por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do alvo."
+        },
+        "S2": {
+            "name": "Onda de Energia",
+            "description": "Ataca todos os inimigos com energia condensada, e absorve parte do dano causado como Vida."
+        },
+        "S3": {
+            "name": "Corte de Perseguição",
+            "description": "Avança em direção ao inimigo para atacar, e diminui a Defesa por 2 turnos. Um acerto crítico concederá imunidade ao conjurador por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do alvo."
+        }
+    },
+    "furious": {
+        "S1": {
+            "name": "Saque Rápido",
+            "description": "Dispara uma arma enquanto avança em direção ao inimigo, com 35% de chance de queimar por 2 turnos."
+        },
+        "S2": {
+            "name": "Impulso de Moral",
+            "description": "Eleva o moral de todos os aliados, concedendo aumento de Chance de Acerto Crítico por 2 turnos."
+        },
+        "S3": {
+            "name": "Bala Fatal",
+            "description": "Ataca com um tiro fatal, com 100% de chance de diminuir a Defesa por 2 turnos."
+        }
+    },
+    "general-purrgis": {
+        "S1": {
+            "name": "Golpe Heroico",
+            "description": "Derruba o inimigo com uma grande espada, com 75% de chance de provocar por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Vanguarda",
+            "description": "Após ser atacado, aumenta a Prontidão de Combate de todos os aliados em 15%."
+        },
+        "S3": {
+            "name": "Ordem de Ataque",
+            "description": "Dá o comando para atacar, causando dano a todos os inimigos, com 100% de chance de atordoar dois inimigos aleatórios por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "guider-aither": {
+        "S1": {
+            "name": "Espírito Sussurrante",
+            "description": "Ataca com poder espiritual, com 50% de chance de diminuir a Velocidade por 2 turnos."
+        },
+        "S2": {
+            "name": "Proteção do Espírito",
+            "description": "Ataca com poder espiritual, antes de recuperar a Vida de todos os aliados e conceder uma barreira por 2 turnos. A quantidade recuperada e a força da barreira aumentam proporcionalmente ao Ataque do conjurador."
+        },
+        "S3": {
+            "name": "Onda de Força",
+            "description": "Desfere um golpe no inimigo com poder espiritual e dissipa todos os bônus, antes de aumentar o Ataque do aliado com o maior Ataque por 2 turnos."
+        }
+    },
+    "hwayoung": {
+        "S1": {
+            "name": "Chute Supersônico",
+            "description": "Ataca o inimigo com um chute. Um ataque bem-sucedido inflige dano adicional proporcional ao Ataque do conjurador."
+        },
+        "S2": {
+            "name": "Falcão da Pradaria",
+            "description": "Ao atacar, não pode acionar um acerto crítico. O dano sofrido por um acerto crítico diminui em 30%. Quando mais de um efeito de redução de dano é concedido, apenas o efeito mais forte é aplicado. No início do turno, quando o conjurador não tem debuffs, aumenta o Ataque por 1 turno."
+        },
+        "S3": {
+            "name": "Golpe Flamejante do Monarca",
+            "description": "Ataca o inimigo com uma técnica secreta e concede imunidade e uma barreira ao conjurador por 2 turnos. Quando o Ataque do conjurador é maior que o do alvo, penetra a Defesa do alvo, com taxa de penetração aumentando proporcionalmente à diferença, até um máximo de 100%. A força da barreira aumenta proporcionalmente ao Ataque do conjurador."
+        }
+    },
+    "ilynav": {
+        "S1": {
+            "name": "Investida",
+            "description": "Ataca o inimigo com uma lança. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Quando esta habilidade é usada, se não foi acionada por um Ataque Duplo, tem 50% de chance de usar Punir em vez de Investida. Esta habilidade não aciona um Ataque Duplo."
+        },
+        "S2": {
+            "name": "Punir",
+            "description": "Ataca e perfura o inimigo, infligindo ferimentos. Um ataque bem-sucedido causa dano adicional equivalente a 50% dos ferimentos infligidos no alvo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. A gravidade dos ferimentos aumenta proporcionalmente ao dano causado. Os ferimentos diminuem a Vida máxima do alvo em até 20% toda vez que esta habilidade é usada."
+        },
+        "S3": {
+            "name": "Repelir",
+            "description": "Ataca todos os inimigos sem piedade, infligindo ferimentos. Aumenta o Dano Crítico de todos os aliados por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. A gravidade dos ferimentos aumenta proporcionalmente ao dano causado. Os ferimentos diminuem a Vida máxima do alvo em até 20% toda vez que esta habilidade é usada."
+        }
+    },
+    "iseria": {
+        "S1": {
+            "name": "Flor Refinada",
+            "description": "Lança espadas no inimigo, com 50% de chance de diminuir a Defesa por 2 turnos."
+        },
+        "S2": {
+            "name": "Guardião do Juramento",
+            "description": "Reseta o tempo de recarga de habilidade de um aliado exceto o conjurador com energia de luz."
+        },
+        "S3": {
+            "name": "Floração Completa",
+            "description": "Ataca o inimigo com uma Espada Mágica gigante, dissipando todos os bônus, antes de diminuir a Defesa e torná-los incapazes de receber bônus por 2 turnos."
+        }
+    },
+    "judge-kise": {
+        "S1": {
+            "name": "Corte",
+            "description": "Ataca o inimigo com uma foice. Penetra a Defesa do alvo em 20%."
+        },
+        "S2": {
+            "name": "Fim do Mal",
+            "description": "Ataca todos os inimigos com uma foice, dissipando todos os bônus antes de aplicar 175% de chance de diminuir a Chance de Acerto por 2 turnos e 175% de chance de diminuir a Defesa por 2 turnos, e aumentar a Prontidão de Combate do conjurador em 25% por alvo. Esta habilidade não pode acionar um contra-ataque."
+        },
+        "S3": {
+            "name": "Onda de Luz",
+            "description": "Ataca todos os inimigos distorcendo espaço e tempo antes de aumentar os tempos de recarga de habilidades em 1 turno."
+        }
+    },
+    "karin": {
+        "S1": {
+            "name": "Cortador Sequencial",
+            "description": "Golpeia o inimigo com uma espada. Um acerto crítico diminuirá o tempo de recarga de habilidade em 1 turno."
+        },
+        "S2": {
+            "name": "Arte da Lâmina: Clarão",
+            "description": "Corta o inimigo. Um acerto crítico diminuirá a Defesa por 1 turno."
+        },
+        "S3": {
+            "name": "Arte da Lâmina: Trovão",
+            "description": "Corta o inimigo na velocidade do relâmpago. O dano causado aumenta com um acerto crítico."
+        }
+    },
+    "kayron": {
+        "S1": {
+            "name": "Corte do Vazio",
+            "description": "Ataca com uma espada, com 50% de chance de diminuir a Chance de Acerto por 1 turno, causando dano proporcional à Vida perdida do conjurador. Quando esta habilidade é usada, se não foi acionada por um Ataque Duplo e o conjurador tem um bônus, esta habilidade se transforma em um ataque que afeta todos os inimigos. O ataque alterado não aciona um Ataque Duplo."
+        },
+        "S2": {
+            "name": "Vontade Imortal",
+            "description": "Quando o conjurador recebe dano letal, concede imortalidade por 1 turno e aumento de Evasão por 2 turnos e reseta o tempo de recarga de Apocalipse. Só pode ser ativado uma vez a cada 6 turnos."
+        },
+        "S3": {
+            "name": "Apocalipse",
+            "description": "Ataca o inimigo explodindo o Poder do Arquidemônio contido na espada, antes de absorver parte do dano causado como Vida. Quando o inimigo é derrotado, estende a duração dos bônus concedidos ao conjurador em 1 turno. O dano causado aumenta proporcionalmente à Vida perdida do conjurador."
+        }
+    },
+    "ken": {
+        "S1": {
+            "name": "Nocaute",
+            "description": "Ataca com uma série de golpes, com 50% de chance de diminuir a Defesa por 2 turnos. Queima o inimigo por 2 turnos quando o conjurador tem vigor. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Chute Celestial",
+            "description": "Chuta o inimigo com uma série de chutes, diminuindo a Defesa por 2 turnos antes de conceder ao conjurador aumento de Velocidade por 2 turnos. Quando o conjurador tem vigor, ignora a Resistência a Efeitos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Rajada da Fênix",
+            "description": "Ataca com uma série de golpes antes de desferir um golpe poderoso, atordoando por 1 turno. Concede vigor ao conjurador por 3 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. No início da primeira batalha, ganha 40 de Espírito de Luta."
+        }
+    },
+    "krau": {
+        "S1": {
+            "name": "Tempestade de Espadas",
+            "description": "Ataca o inimigo com uma tempestade de espadas, com 75% de chance de provocar por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Investida",
+            "description": "Empurra o inimigo com um escudo, diminuindo a Prontidão de Combate em 50%, antes de conceder aumento de Defesa a todos os aliados por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Invocar Ziegfried",
+            "description": "Invoca o Guardião Ziegfried para atacar, causando dano proporcional à Vida perdida do conjurador, penetrando a Defesa. Este ataque não pode acionar um acerto crítico."
+        }
+    },
+    "landy": {
+        "S1": {
+            "name": "Atirar",
+            "description": "Ataca o inimigo com tiros, e aumenta a Prontidão de Combate do conjurador em 15%. Quando o alvo tem um bônus, dobra os efeitos do aumento de Prontidão de Combate e Espírito de Luta ganho."
+        },
+        "S2": {
+            "name": "A Chefe Está em Cena",
+            "description": "No início da primeira batalha, ganha 50 de Espírito de Luta e concede furtividade por 1 turno. No início do turno, ganha 10 de Espírito de Luta para cada bônus concedido a um inimigo, e quando o Espírito de Luta está cheio, reseta o tempo de recarga de habilidade. Após atacar, aumenta o Ataque do conjurador em 25%. Este efeito pode acumular até 3 vezes."
+        },
+        "S3": {
+            "name": "Explosão Total",
+            "description": "Atira em todos os inimigos e concede a todos os aliados aumento de Velocidade por 2 turnos, antes de aumentar sua Prontidão de Combate em 15%. Quando o Espírito de Luta está cheio, consome todo o Espírito de Luta para penetrar a Defesa do alvo em 50%. Este ataque não pode acionar um contra-ataque."
+        }
+    },
+    "last-rider-krau": {
+        "S1": {
+            "name": "Punição",
+            "description": "Ataca o inimigo com uma tempestade de espadas, antes de aumentar a Velocidade do conjurador por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Código Número 00",
+            "description": "Após ser atacado, diminui os tempos de recarga de habilidades em 1 turno. Após sofrer um ataque que afeta todos os aliados, diminui os tempos de recarga de habilidades em 1 turno adicional, e concede uma barreira a todos os aliados por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador. O efeito de barreira só pode ser ativado uma vez por turno."
+        },
+        "S3": {
+            "name": "Arma Móvel Ziegfried",
+            "description": "Invoca Ziegfried para atacar todos os inimigos e diminui os tempos de recarga de habilidades de todos os aliados em 1 turno. Penetra a Defesa, e não pode acionar um acerto crítico. O dano causado aumenta proporcionalmente à Vida máxima e Velocidade do conjurador. O dano causado aumenta toda vez que esta habilidade é usada e pode acumular até 3 vezes."
+        }
+    },
+    "lidica": {
+        "S1": {
+            "name": "Rosa Selvagem",
+            "description": "Ataca o inimigo com uma espada e tem 80% de chance cada de infligir dois efeitos de sangramento por 1 turno. No final do turno, detona os efeitos de sangramento infligidos no alvo."
+        },
+        "S2": {
+            "name": "Espinheiro",
+            "description": "Inflige redução de recursos em todos os inimigos em 60% antes de atacar, diminuindo a duração dos bônus em 1 turno e infligindo amarração por 2 turnos. Para cada alvo, aumenta a Prontidão de Combate do conjurador em 25%."
+        },
+        "S3": {
+            "name": "Execução Pública",
+            "description": "Ataca o inimigo com uma espada chicote, infligindo diminuição de Defesa por 2 turnos antes de diminuir a Prontidão de Combate em 100%. Concede anulador de habilidade uma vez a todos os aliados. Quando o alvo está com amarração, ignora a Resistência a Efeitos."
+        }
+    },
+    "lilias": {
+        "S1": {
+            "name": "Sigam-me! Ao Ataque!",
+            "description": "Lidera o ataque ao inimigo, e aciona um Ataque Duplo de um aliado aleatório. Aumenta a Chance de Acerto Crítico em 50% ao atacar e o dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Até Aqui!",
+            "description": "Após um inimigo usar uma habilidade que não é de ataque, dissipa um debuff do conjurador, e ativa Supressão contra o conjurador inimigo. Supressão só pode ser ativada uma vez a cada 2 turnos. Supressão: Provoca o alvo por 1 turno, e concede uma barreira ao conjurador por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Preparar, Carregar, Fogo!",
+            "description": "Comanda o Exército de Perland para atacar disparando em todos os inimigos, diminuindo a Prontidão de Combate em 25%. Aumenta a Chance de Acerto Crítico em 50% ao atacar, infligindo dano de acordo com o Ataque do Herói com o maior Ataque."
+        }
+    },
+    "lilibet": {
+        "S1": {
+            "name": "Corta-Corta",
+            "description": "Golpeia e corta o inimigo, com 50% de chance de torná-lo incapaz de receber bônus por 2 turnos."
+        },
+        "S2": {
+            "name": "Retalha-Retalha",
+            "description": "Corta brutalmente o inimigo, com 55% de chance cada de infligir três efeitos de sangramento por 2 turnos, antes de aumentar a Prontidão de Combate do conjurador em 50%."
+        },
+        "S3": {
+            "name": "Cortadora de Almas",
+            "description": "Corta o inimigo com Cho e Mal, antes de conceder ao conjurador anulador de habilidade uma vez. Quando o inimigo é derrotado, inflige extinção e diminui o tempo de recarga do conjurador em 1 turno. A Chance de Acerto aumenta em 20% ao usar esta habilidade."
+        }
+    },
+    "little-queen-charlotte": {
+        "S1": {
+            "name": "Julgamento",
+            "description": "Ataca com uma espada gigante antes de conceder imunidade ao conjurador por 1 turno."
+        },
+        "S2": {
+            "name": "Dignidade de uma Rainha",
+            "description": "Diminui o dano sofrido por um acerto crítico em 30%. Diminui o dano sofrido por um acerto crítico para todos os aliados exceto o conjurador em 15%. Quando mais de um efeito de redução de dano é concedido, apenas o efeito mais forte é aplicado. No momento em que o conjurador sofre um acerto crítico, aumenta a Prontidão de Combate do conjurador em 15%."
+        },
+        "S3": {
+            "name": "A Vontade de La Mare",
+            "description": "Esmaga o inimigo com uma espada e ataca. Quando o inimigo é derrotado, inflige extinção. Penetra a Defesa do alvo em 50%. Quando o alvo é um Herói de elemento Sombrio, aumenta o dano causado e inflige dano adicional proporcional ao Ataque do conjurador a todos os inimigos exceto o alvo."
+        }
+    },
+    "luluca": {
+        "S1": {
+            "name": "Onda Selvagem",
+            "description": "Ataca com intensa força elemental, com 50% de chance de diminuir a Defesa por 2 turnos. O dano causado aumenta proporcionalmente à quantidade de Vida perdida do inimigo."
+        },
+        "S2": {
+            "name": "Bênção de Rekos",
+            "description": "Com a bênção das estrelas, concede aumento de Defesa e barreira a todos os aliados por 2 turnos. A força da barreira aumenta proporcionalmente ao Ataque do conjurador."
+        },
+        "S3": {
+            "name": "Onda de Vingança",
+            "description": "Ataca todos os inimigos com o poder da ruína, com 100% de chance de diminuir a Defesa por 2 turnos."
+        }
+    },
+    "luna": {
+        "S1": {
+            "name": "Corte Infinito",
+            "description": "Apunhala o alvo um número aleatório de vezes. O tempo de recarga de habilidade diminui em 1-3 turnos e o dano causado aumenta de acordo com o número de ataques."
+        },
+        "S2": {
+            "name": "Vontade do Cavaleiro Dragão",
+            "description": "Aumenta a Chance de Acerto Crítico e a Resistência a Acerto Crítico em 90%. Aumenta o Ataque em 90% quando a Vida do conjurador é 50% ou mais, e aumenta a Defesa em 90% quando a Vida do conjurador é menor que 50%."
+        },
+        "S3": {
+            "name": "Lança Ragnar",
+            "description": "Sobe aos ares e atinge o inimigo com uma lança, com 100% de chance de diminuir a Defesa por 2 turnos. Penetra a Defesa do alvo em 50%. Adquire 5 Almas adicionais quando o inimigo é derrotado."
+        }
+    },
+    "martial-artist-ken": {
+        "S1": {
+            "name": "Nocaute",
+            "description": "Ataca o inimigo com uma série de golpes, com 100% de chance de infligir provocação por 1 turno. Um ataque bem-sucedido sempre resulta em um acerto crítico."
+        },
+        "S2": {
+            "name": "Chama do Dragão",
+            "description": "No início da batalha, concede vigor por 3 turnos. Quando um aliado exceto o conjurador sofre um acerto crítico, contra-ataca, e quando o conjurador sofre um acerto crítico, contra-ataca com Chama do Dragão. Chama do Dragão (Adquire 1 Alma): Ataca o inimigo com um chute e penetra a Defesa do alvo em 50%. Um ataque bem-sucedido sempre resulta em um acerto crítico, causando dano proporcional à Vida perdida do conjurador."
+        },
+        "S3": {
+            "name": "A Chegada de Asura",
+            "description": "Ataca todos os inimigos com um poderoso golpe no chão, com 80% de chance de diminuir a Defesa por 2 turnos. Um ataque bem-sucedido sempre resulta em um acerto crítico."
+        }
+    },
+    "melissa": {
+        "S1": {
+            "name": "Poder",
+            "description": "Domina o inimigo, com 75% de chance de torná-lo incurável por 1 turno. O dano causado aumenta proporcionalmente à Vida perdida do conjurador."
+        },
+        "S2": {
+            "name": "Manifestação",
+            "description": "Ataca liberando sua raiva interior, antes de conceder imortalidade e imunidade ao conjurador por 1 turno. O tempo de recarga desta habilidade é resetado quando o inimigo é derrotado. O dano causado aumenta proporcionalmente à Vida perdida do conjurador."
+        },
+        "S3": {
+            "name": "Floração de Sangue",
+            "description": "Dissipa todos os bônus do inimigo antes de atacar liberando sua agressão reprimida, amaldiçoando por 2 turnos independentemente de o ataque acertar. Esta habilidade não é afetada por desvantagem elemental. Monstros Elite ou Chefe não podem ser amaldiçoados."
+        }
+    },
+    "milim": {
+        "S1": {
+            "name": "Mergulho do Dragão",
+            "description": "Ataca o inimigo, recuperando Vida proporcional ao dano causado antes de aumentar o Ataque do conjurador por 1 turno."
+        },
+        "S2": {
+            "name": "Olho do Dragão (Olho de Milim)",
+            "description": "No início da batalha e no final do turno, tem 100% de chance de conceder Olho do Dragão (Olho de Milim) ao conjurador por 1 turno. Quando o conjurador tem Olho do Dragão (Olho de Milim) no início do turno, dissipa furtividade de todos os inimigos. Ignora Resistência a Efeitos. Quando o Foco está cheio após atacar, consome todo o Foco para ativar Destruidor de Dragão. Destruidor de Dragão: Ataca todos os inimigos com mana esmagadora, removendo 10 Almas."
+        },
+        "S3": {
+            "name": "Medo do Dragão",
+            "description": "Libera mana para atacar o inimigo, infligindo extinção quando o inimigo é derrotado. Aumenta a Evasão do conjurador por 3 turnos."
+        }
+    },
+    "maid-chloe": {
+        "S1": {
+            "name": "Golpe Pesado",
+            "description": "Ataca com um martelo, com 40% de chance de atordoar por 1 turno. Quando o alvo está atordoado após o ataque, aumenta a Prontidão de Combate de todos os aliados exceto o conjurador em 15%."
+        },
+        "S2": {
+            "name": "Ânimo da Empregada",
+            "description": "Aumenta a Resistência a Efeitos de todos os aliados em 20%. No início do turno, recupera a Vida dos dois aliados com a Vida mais baixa. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Tratamento VIP",
+            "description": "Entretém todos os aliados com Tratamento VIP, revivendo todos os aliados mortos para 20% de Vida. Dissipa dois debuffs de todos os aliados vivos e concede reviver por 3 turnos."
+        }
+    },
+    "mort": {
+        "S1": {
+            "name": "Exterminação",
+            "description": "Ataca o inimigo perfurando-o, com 50% de chance de diminuir a Defesa por 2 turnos. Ignora a Resistência a Efeitos de qualquer alvo com Vida Máxima menor que a Vida Máxima do conjurador."
+        },
+        "S2": {
+            "name": "Dignidade Absoluta",
+            "description": "Imune a debuffs que impedem movimento. Todos os Heróis exceto o conjurador não podem contra-atacar. Quando um aliado é atacado, tem 20% de chance de contra-atacar e ao contra-atacar, ativa Bênção Sagrada. Bênção Sagrada pode ser ativada uma vez a cada 3 turnos. Bênção Sagrada: Concede uma barreira a todos os aliados por 2 turnos, e aumenta a Velocidade do conjurador por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Advento: Mortelix",
+            "description": "Desce e ataca todos os inimigos, infligindo medo por 2 turnos, antes de recuperar a Vida do conjurador. Penetra a Defesa do inimigo com a maior Vida Máxima em 70%, e ignora a Resistência a Efeitos de qualquer alvo com Vida Máxima menor que a Vida Máxima do conjurador. O dano causado e a quantidade recuperada aumentam proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "pavel": {
+        "S1": {
+            "name": "Espada Furacão",
+            "description": "Golpeia o inimigo com uma arma, com 75% de chance de diminuir a Chance de Acerto por 1 turno. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S2": {
+            "name": "Bala de Tempestade",
+            "description": "Dispara uma forte rajada de vento em todos os inimigos. O dano causado aumenta proporcionalmente à Velocidade do conjurador. Esta habilidade não pode acionar um contra-ataque."
+        },
+        "S3": {
+            "name": "Perseguição Destrutiva",
+            "description": "Corta e atira rapidamente no inimigo. Quando o inimigo não é um monstro Elite ou Chefe, os efeitos de compartilhamento de dano são ignorados. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
+        }
+    },
+    "peira": {
+        "S1": {
+            "name": "Garra Lupina",
+            "description": "Corta o inimigo com garras afiadas, com 40% de chance de atordoar por 1 turno. Quando o conjurador tem uma barreira, a chance do efeito aumenta em 25%."
+        },
+        "S2": {
+            "name": "Lâmina Punitiva",
+            "description": "Ataca todos os inimigos com espíritos guardiões, diminuindo a duração dos bônus em 1 turno, antes de restringir e torná-los incapazes de receber bônus por 2 turnos."
+        },
+        "S3": {
+            "name": "Caça em Bando",
+            "description": "Usando o poder do Cálice do Juramento, aumenta o Ataque de todos os aliados exceto o conjurador por 2 turnos, antes de conceder furtividade, escolta e uma barreira ao conjurador por 3 turnos. A força da barreira aumenta proporcionalmente ao nível do conjurador."
+        }
+    },
+    "politis": {
+        "S1": {
+            "name": "Chamado das Estrelas",
+            "description": "Invoca bonecos para atacar o inimigo, com 40% de chance de atordoar por 1 turno."
+        },
+        "S2": {
+            "name": "Guia Astral",
+            "description": "Quando o inimigo não é um monstro Elite ou Chefe, reduz o efeito dos aumentos de Prontidão de Combate concedidos ao inimigo em 50%. Este efeito não acumula com outros efeitos passivos de mesmo nome. Ativa Tranquilidade quando um inimigo usa uma habilidade que não é de ataque. Tranquilidade só pode ser ativada uma vez a cada 2 turnos. Tranquilidade: Ataca todos os inimigos, diminuindo a duração dos bônus em 1 turno, antes de aumentar a Prontidão de Combate do conjurador em 30%."
+        },
+        "S3": {
+            "name": "Queda Estelar",
+            "description": "Ataca todos os inimigos com tecnologia alienígena, com 100% de chance de torná-los incapazes de receber bônus por 2 turnos."
+        }
+    },
+    "ran": {
+        "S1": {
+            "name": "Tempestade",
+            "description": "Ataca o inimigo com uma tempestade de espadas. Penetra a Defesa do alvo em 20%. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S2": {
+            "name": "Foco Mental",
+            "description": "Concede imunidade a todos os aliados por 2 turnos antes de aumentar o Ataque do conjurador por 2 turnos. Concede um turno extra ao conjurador."
+        },
+        "S3": {
+            "name": "Lâmina Instantânea",
+            "description": "Ataca todos os inimigos com uma espada, dissipando dois bônus antes de 85% de chance de infligir estigma por 2 turnos, e 85% de chance de diminuir a Defesa por 2 turnos. O dano causado aumenta proporcionalmente à Velocidade do conjurador e do alvo."
+        }
+    },
+    "rem": {
+        "S1": {
+            "name": "Deixe Comigo.",
+            "description": "Ataca o inimigo com uma estrela da manhã, com 50% de chance de diminuir a Defesa por 2 turnos. Quando o conjurador tem Modo Demônio, concede ao conjurador um ataque extra com a mesma habilidade."
+        },
+        "S2": {
+            "name": "Orgulho de Empregada",
+            "description": "Quando alguém morre, dissipa todos os debuffs do conjurador e concede Modo Demônio por 2 turnos. Só pode ser ativado uma vez a cada 5 turnos. Quando um aliado exceto o conjurador é atacado, tem 20% de chance de contra-atacar com Golpe de Ferro. Golpe de Ferro tem prioridade sobre contra-ataque com habilidade básica. Golpe de Ferro: Ataca todos os inimigos, diminuindo a duração dos bônus em 1 turno e tornando-os incuráveis por 1 turno."
+        },
+        "S3": {
+            "name": "Vou Te Punir!",
+            "description": "Aumenta o Ataque do conjurador por 3 turnos, antes de saltar para atacar todos os inimigos e diminuir a Chance de Acerto por 2 turnos."
+        }
+    },
+    "rimuru": {
+        "S1": {
+            "name": "Bem, Vamos Começar?",
+            "description": "Corta o inimigo para atacar, concedendo um bônus aleatório ao conjurador por 1 turno."
+        },
+        "S2": {
+            "name": "Analisar e Avaliar",
+            "description": "Após atacar com uma habilidade não básica, copia dois bônus quando o alvo tem bônus, independentemente de o ataque acertar e concede seus efeitos a todos os aliados. Este efeito não se aplica a bônus que não podem ser dissipados. Quando um aliado é atacado por um inimigo com bônus, ativa Prepare-se! contra o atacante. Prepare-se! só pode ser ativado uma vez a cada 3 turnos. Prepare-se!: Aproxima-se rapidamente do inimigo e ataca, aumentando a Prontidão de Combate do conjurador em 30%."
+        },
+        "S3": {
+            "name": "Devore, Chama Negra!",
+            "description": "Ataca o inimigo com chama negra, e um ataque bem-sucedido infligirá 5.000 de dano fixo adicional ao alvo. O dano fixo aumenta proporcionalmente ao número de bônus concedidos a todos os aliados, até um máximo de 10.000 de dano fixo. Não é afetado por desvantagem elemental."
+        }
+    },
+    "roana": {
+        "S1": {
+            "name": "Purificação da Alma",
+            "description": "Ataca o inimigo com um poder nobre, concedendo uma barreira ao aliado com a Vida mais baixa por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador. Concede uma barreira a todos os aliados por 2 turnos após atacar."
+        },
+        "S2": {
+            "name": "Olho Vigilante",
+            "description": "Recupera a Vida de todos os aliados quando um aliado é atacado por um ataque extra, contra-ataque ou Ataque Duplo, e aumenta a Prontidão de Combate de todos os aliados em 5% cada por aliado atacado. A quantidade recuperada é proporcional à Vida máxima do conjurador e ao número de aliados atacados."
+        },
+        "S3": {
+            "name": "Nobre Rekos",
+            "description": "Com a graça de Rekos, concede uma barreira e reviver a todos os aliados por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "remnant-violet": {
+        "S1": {
+            "name": "Clarão de Espada",
+            "description": "Corta o inimigo, com 75% de chance de diminuir a Chance de Acerto por 1 turno. Concede um turno extra."
+        },
+        "S2": {
+            "name": "Concentração",
+            "description": "Aumenta a Evasão em 50%, e após evadir com sucesso, ganha 1 Foco. Quando o Foco está em 5 após atacar ou ser atacado, consome tudo e usa Massacre contra um inimigo aleatório."
+        },
+        "S3": {
+            "name": "Massacre",
+            "description": "Ataca o inimigo com uma espada. Penetra a Defesa do alvo em 50%."
+        }
+    },
+    "senya": {
+        "S1": {
+            "name": "Lança da Vingança",
+            "description": "Ataca o inimigo com uma lança, com 75% de chance de provocar por 1 turno. Quando não é o turno do conjurador, a chance do efeito aumenta em 25%."
+        },
+        "S2": {
+            "name": "Espírito Indomável",
+            "description": "O Ataque aumenta em 30% e a Resistência a Acerto Crítico aumenta em 50%. Ao atacar, não pode acionar um acerto crítico. Ao ser atacado, se o conjurador sofrer um acerto não crítico, causa dano ao atacante proporcional ao Ataque do conjurador antes de ativar Graça do Campo de Batalha. Graça do Campo de Batalha só pode ser ativada uma vez a cada 2 turnos. Graça do Campo de Batalha: Concede uma barreira a todos os aliados por 2 turnos, e aumenta a Velocidade do conjurador por 2 turnos. A força da barreira aumenta proporcionalmente ao Ataque do conjurador."
+        },
+        "S3": {
+            "name": "Golpe do Caçador de Dragões",
+            "description": "Ataca todos os inimigos golpeando para baixo com uma lança e tem 100% de chance de diminuir a Chance de Acerto por 2 turnos e 100% de chance de provocar por 1 turno. O tempo de recarga da habilidade é reduzido em 2 turnos."
+        }
+    },
+    "seaside-bellona": {
+        "S1": {
+            "name": "Cuidado!",
+            "description": "Ataca o inimigo com um leque, com 75% de chance de marcar o inimigo por 1 turno."
+        },
+        "S2": {
+            "name": "Estou com Meus Amigos",
+            "description": "Para cada aliado sobrevivente, diminui o dano sofrido em 10%. Quando mais de um efeito de redução de dano do mesmo tipo é concedido, apenas o efeito mais forte é aplicado. Quando um aliado é atacado, ganha 1 Foco, e quando o Foco acumulado do conjurador é 5, consome todo o Foco e ativa Você Não É Fofo. Você Não É Fofo: Ataca todos os inimigos com um leque, com 75% de chance de diminuir a Defesa por 2 turnos."
+        },
+        "S3": {
+            "name": "Eu Não Te Avisei?",
+            "description": "Ataca todos os inimigos com um jato de água, dissipando todos os bônus antes de 100% de chance cada de infligir incapacidade de receber bônus e incurável por 2 turnos. Ignora Resistência a Efeitos."
+        }
+    },
+    "sigret": {
+        "S1": {
+            "name": "Cortar",
+            "description": "Ataca com uma foice, com 50% de chance cada de infligir dois efeitos de sangramento por 2 turnos."
+        },
+        "S2": {
+            "name": "Esmagar",
+            "description": "Golpeia o inimigo com uma foice, com 100% de chance cada de torná-lo incurável e infligir sangramento por 2 turnos. Quando a Vida do inimigo é 50% ou menos após o ataque, ativa Cortar como um ataque extra com 100% de chance de infligir sangramento. Concede um turno extra."
+        },
+        "S3": {
+            "name": "Guilhotina",
+            "description": "Inflige dano letal ao inimigo, perfurando seu ponto fraco. Penetra a Defesa em 30%, com 5% adicional para cada debuff infligido no inimigo. Inflige extinção quando o inimigo é derrotado."
+        }
+    },
+    "straze": {
+        "S1": {
+            "name": "Golpe Poderoso",
+            "description": "Balança uma espada para atacar o inimigo e aumenta a Prontidão de Combate do conjurador em 20%."
+        },
+        "S2": {
+            "name": "Olhar Destrutivo",
+            "description": "Ataca todos os inimigos com uma onda de força e dissipa dois bônus. Ignora a Resistência a Efeitos de qualquer alvo com Ataque menor que o Ataque do conjurador. Quando há três ou menos inimigos, o dano causado aumenta com menos inimigos."
+        },
+        "S3": {
+            "name": "Extinção Estelar",
+            "description": "Ataca todos os inimigos com uma espada. Penetra a Defesa do alvo com a Vida máxima mais alta em 30%. Quando o Ataque do conjurador é maior que o Ataque do alvo de penetração, a taxa de penetração aumenta proporcionalmente à diferença, até um máximo de 100%. Esta habilidade não pode acionar um contra-ataque."
+        }
+    },
+    "tamarinne": {
+        "S1": {
+            "name": "Melodia Serena",
+            "description": "(Tamarinne) Ataca um inimigo com uma melodia serena e cura o aliado com a Vida mais baixa. A quantidade recuperada aumenta proporcionalmente à Vida máxima do aliado. Diminui o tempo de recarga de Estrela Brilhante☆ em 1 turno. (Idol) Ataca todos os inimigos com uma bela voz, dissipando todos os bônus. Aciona um Ataque Duplo do aliado com o maior Ataque."
+        },
+        "S2": {
+            "name": "Canção da Floresta",
+            "description": "(Tamarinne) Cura todos os aliados com uma melodia pacífica. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador. Diminui o tempo de recarga de Estrela Brilhante☆ em 1 turno. (Idol) Com uma performance poderosa, aumenta o Ataque de todos os aliados por 2 turnos e aumenta a Prontidão de Combate em 50%, recuperando Vida. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Estrela Brilhante☆",
+            "description": "Antes de performar, dissipa todos os debuffs infligidos em todos os aliados e recupera o conjurador à Vida máxima. O conjurador se torna um idol por 3 turnos e realiza um show. Começa a primeira batalha com o tempo de recarga completo."
+        }
+    },
+    "tenebria": {
+        "S1": {
+            "name": "Explosão Sombria",
+            "description": "Ataca o inimigo com uma explosão de energia sombria, com 70% de chance de adormecê-lo por 1 turno. Esta habilidade não aciona um Ataque Duplo."
+        },
+        "S2": {
+            "name": "Trovão Ominoso",
+            "description": "Invoca um trovão ominoso para atacar todos os inimigos, diminuindo a Prontidão de Combate em 30% e infligindo Velocidade reduzida e restrição por 2 turnos."
+        },
+        "S3": {
+            "name": "Pesadelo",
+            "description": "Deixa cair a Lua do Pesadelo sobre todos os inimigos, com 85% de chance cada de diminuir a Defesa por 2 turnos e adormecê-los por 1 turno, antes de aumentar o Ataque do conjurador por 2 turnos."
+        }
+    },
+    "top-model-luluca": {
+        "S1": {
+            "name": "Explosão de Energia",
+            "description": "Usa a energia do traje para atacar o inimigo. Quando usado no turno do conjurador, tem 40% de chance de conceder um ataque extra com a mesma habilidade. Quando o inimigo não é um monstro Elite ou Chefe, os efeitos de compartilhamento de dano são ignorados."
+        },
+        "S2": {
+            "name": "Pose de Vitória",
+            "description": "Manifesta a energia do traje, concedendo uma barreira ao conjurador por 3 turnos. Concede ao conjurador um turno extra. A força da barreira aumenta proporcionalmente ao nível do conjurador."
+        },
+        "S3": {
+            "name": "Demolição",
+            "description": "Aumenta o Ataque do conjurador por 3 turnos, antes de atacar o inimigo com energia dimensional e quando o inimigo é derrotado, inflige extinção. Aumenta a Prontidão de Combate de todos os aliados em 20%, e concede furtividade ao conjurador por 2 turnos. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
+        }
+    },
+    "vildred": {
+        "S1": {
+            "name": "Varredura",
+            "description": "Ataca rapidamente dois inimigos com uma tempestade de espadas. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S2": {
+            "name": "Lâmina Dançante",
+            "description": "Aumenta o Ataque do conjurador por 2 turnos e ativa Lâmina Dançante quando um inimigo é derrotado por Varredura ou Ascensão da Lâmina. Lâmina Dançante (Adquire 1 Alma): Ataca todos os inimigos com uma tempestade de espadas."
+        },
+        "S3": {
+            "name": "Ascensão da Lâmina",
+            "description": "Ataca todos os inimigos com uma tempestade de espadas, causando dano proporcional à Velocidade do conjurador."
+        }
+    },
+    "violet": {
+        "S1": {
+            "name": "Corte Elegante",
+            "description": "Ataca com uma espada, com 75% de chance de diminuir o Ataque por 1 turno. Quando não é o turno do conjurador, aumenta a Prontidão de Combate em 15% e ganha o dobro de Foco."
+        },
+        "S2": {
+            "name": "Duelo Aceito",
+            "description": "Prepara-se para um duelo dissipando dois debuffs do conjurador e concedendo percepção por 3 turnos antes de recuperar 15% de Vida. Concede um turno extra ao conjurador."
+        },
+        "S3": {
+            "name": "Corte Borboleta",
+            "description": "Perfura o inimigo com uma espada, e consome todo o Foco. O dano causado aumenta proporcionalmente à quantidade de Foco consumida. Quando Corte Borboleta está disponível de acordo com o tempo de recarga, aumenta a Evasão em 35%, e após evadir com sucesso, contra-ataca com Corte Elegante."
+        }
+    },
+    "vivian": {
+        "S1": {
+            "name": "Drenagem de Vitalidade",
+            "description": "Esmaga o inimigo com uma rocha, aumentando a Prontidão de Combate do conjurador em 15%."
+        },
+        "S2": {
+            "name": "Grito do Deus do Trovão",
+            "description": "Ataca todos os inimigos com uma tempestade de trovões. Ativa Grito do Deus do Trovão novamente quando um inimigo é derrotado. Cada Grito do Deus do Trovão subsequente ativado desta forma causa dano reduzido, e pode ser ativado até 3 vezes."
+        },
+        "S3": {
+            "name": "Amplificação de Mana",
+            "description": "Amplifica completamente o mana, concedendo imunidade a todos os aliados por 3 turnos antes de conceder Ataque aumentado (Maior) ao conjurador por 3 turnos enquanto aumenta o Ataque de todos os aliados exceto o conjurador por 3 turnos."
+        }
+    },
+    "watcher-schuri": {
+        "S1": {
+            "name": "Atirador",
+            "description": "Atira no inimigo com um rifle, com 50% de chance de marcá-lo por 2 turnos."
+        },
+        "S2": {
+            "name": "Tiro Rápido",
+            "description": "Atira em todos os inimigos com um rifle, com 100% de chance de dissipar um bônus, e aumenta a Velocidade do conjurador por 2 turnos."
+        },
+        "S3": {
+            "name": "Tiro Final",
+            "description": "Ataca o inimigo com uma bala de mana. Penetra a Defesa do alvo."
+        }
+    },
+    "yufine": {
+        "S1": {
+            "name": "Corte Duplo",
+            "description": "Ataca balançando sua arma, com 50% de chance de diminuir a Defesa por 2 turnos."
+        },
+        "S2": {
+            "name": "Rugido do Dragão",
+            "description": "Ataca todos os inimigos com um rugido de dragão, dissipando um bônus, antes de 155% de chance de diminuir a Defesa por 2 turnos e 155% de chance de silenciar por 1 turno. Ignora Resistência a Efeitos."
+        },
+        "S3": {
+            "name": "Investida do Dragão",
+            "description": "Após conceder Ataque aumentado ao conjurador por 2 turnos, ataca o inimigo com uma lâmina massiva. Quando o inimigo é derrotado, concede um turno extra. Quando esta habilidade está disponível de acordo com o tempo de recarga, depois que um aliado exceto o conjurador usa uma habilidade, se um inimigo tem um debuff, aumenta a Prontidão de Combate do conjurador em 20%."
+        }
+    },
+    "zahhak": {
+        "S1": {
+            "name": "Vulnerabilidade Exposta",
+            "description": "Ataca o inimigo com uma espada longa. Aumenta a Chance de Acerto Crítico em 50% ao atacar. O dano causado aumenta quando o alvo tem bônus."
+        },
+        "S2": {
+            "name": "Plano Elaborado",
+            "description": "Dissipa dois debuffs de um aliado e do conjurador, antes de aumentar a Prontidão de Combate do aliado em 15%. Concede um turno extra ao conjurador."
+        },
+        "S3": {
+            "name": "Executar",
+            "description": "Ataca o inimigo, infligindo ferimentos antes de conceder invencibilidade ao conjurador por 1 turno. Aumenta a Chance de Acerto Crítico em 50% ao atacar. A gravidade dos ferimentos aumenta proporcionalmente ao dano causado. Os ferimentos diminuem a Vida máxima do alvo em até 35% toda vez que esta habilidade é usada."
+        }
+    },
+    "tywin": {
+        "S1": {
+            "name": "Tempestade de Espadas",
+            "description": "Ataca com uma tempestade de espadas, com 75% de chance de dissipar um bônus. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Comando Tático",
+            "description": "Imune a debuffs que impedem movimento. Quando o aliado na fileira de trás tem um debuff que impede movimento após ser atacado, ativa Grito de Comando no alvo. Pode ser ativado uma vez a cada 2 turnos. Grito de Comando: Dissipa todos os debuffs do aliado e concede imunidade por 2 turnos."
+        },
+        "S3": {
+            "name": "Ataque Total",
+            "description": "Ataca todos os inimigos novamente após uma tempestade de espadas, com 100% de chance de diminuir a Defesa por 2 turnos, e aumenta a Defesa de todos os aliados por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "yuna": {
+        "S1": {
+            "name": "Laser Rastreador",
+            "description": "Ataca todos os inimigos com um drone, antes de aumentar a Prontidão de Combate do conjurador em 15%, e aumentar a Prontidão de Combate de todos os aliados exceto o conjurador em 5%."
+        },
+        "S2": {
+            "name": "Melhoria",
+            "description": "Fortalece todos os aliados com um drone e aumenta o Ataque por 3 turnos. Concede um turno extra ao conjurador."
+        },
+        "S3": {
+            "name": "Canhão Meteoro",
+            "description": "Ataca todos os inimigos com um canhão. Quando há três ou menos inimigos, o dano causado aumenta com menos inimigos."
+        }
+    },
+    "zeno": {
+        "S1": {
+            "name": "Espinho Negro",
+            "description": "Ataca com espinhos, com 35% de chance de atordoar por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Armadura Estelar",
+            "description": "Quando o inimigo usa uma habilidade não-agressiva, aumenta a Defesa do conjurador e o dano causado por Besta Ancestral em 10%, e aumenta a Eficácia em 5%. Pode acumular até 8 vezes."
+        },
+        "S3": {
+            "name": "Besta Ancestral",
+            "description": "Invoca uma besta ancestral para atacar todos os inimigos, com 80% de chance de silenciar por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "sol": {
+        "S1": {
+            "name": "Chama de Pistola",
+            "description": "Ataca um inimigo com pilares de fogo. O dano causado aumenta quando o inimigo não tem bônus. Ativa Cancelamento Romano quando o Espírito de Luta do conjurador é 100 após atacar. Não pode ser ativado por contra-ataque. Cancelamento Romano: Consome todo o Espírito de Luta e estende a duração dos bônus concedidos ao conjurador em 1 turno, antes de conceder um turno extra."
+        },
+        "S2": {
+            "name": "Víbora Vulcânica",
+            "description": "Quando um inimigo usa uma habilidade não-agressiva, aumenta a Prontidão de Combate do conjurador em 20% e ganha 20 de Espírito de Luta. Quando sofre um ataque que afeta todos os aliados, ativa Víbora Vulcânica contra o atacante. Cada efeito só pode ser ativado uma vez a cada 2 turnos. Víbora Vulcânica: Lança o inimigo no ar e ataca repetidamente, infligindo silêncio por 2 turnos. O dano aumenta proporcionalmente à Vida máxima do inimigo."
+        },
+        "S3": {
+            "name": "Fúria do Tirano ver. Beta",
+            "description": "Ataca com um soco poderoso, dissipando todos os bônus. O dano causado aumenta proporcionalmente à Vida máxima do inimigo. Após atacar, inflige dano adicional independentemente de o ataque acertar."
+        }
+    },
+    "sez": {
+        "S1": {
+            "name": "Sombra Escura",
+            "description": "Ataca o inimigo com energia escura, com 50% de chance de tornar o inimigo incurável por 1 turno. O dano causado aumenta proporcionalmente à quantidade de Vida perdida do inimigo."
+        },
+        "S2": {
+            "name": "Persistir",
+            "description": "Quando atacado, o dano sofrido em um ataque não excede 51% da Vida máxima. Depois que um aliado exceto o conjurador ataca, quando a Vida do alvo é 30% ou menos, ativa Invasão. Invasão só pode ser ativada uma vez a cada 3 turnos. Invasão: Libera energia escura para atacar todos os inimigos, e aumenta a Prontidão de Combate do conjurador em 30%. O dano aumenta proporcionalmente à Vida perdida do alvo."
+        },
+        "S3": {
+            "name": "Convicção",
+            "description": "Inflige dano letal ao inimigo. Quando o inimigo é derrotado, inflige extinção, e causa dano adicional proporcional ao Ataque do conjurador a todos os inimigos exceto o alvo. O dano aumenta proporcionalmente à Vida perdida do alvo."
+        }
+    },
+    "kise": {
+        "S1": {
+            "name": "Foice da Lua Cheia",
+            "description": "Ataca com uma foice. O dano causado aumenta 70% quando o alvo tem bônus."
+        },
+        "S2": {
+            "name": "Cicatriz Escura",
+            "description": "Ataca todos os inimigos com uma foice. Penetra a Defesa do inimigo em 30% e 30% adicional quando o conjurador está camuflado."
+        },
+        "S3": {
+            "name": "Noturno",
+            "description": "Salta em direção ao inimigo para atacar. Concede camuflagem e uma barreira ao conjurador por 2 turnos, antes de aumentar a Prontidão de Combate em 50%. A força da barreira aumenta proporcionalmente ao Ataque do conjurador. O dano aumenta proporcionalmente à proporção de Vida atual do conjurador."
+        }
+    },
+    "spirit-eye-celine": {
+        "S1": {
+            "name": "Golpe Poderoso",
+            "description": "Ataca o inimigo com uma bainha. Se não ativado por um Ataque Duplo e o conjurador tem um bônus, usa Espada Ágil em vez disso. Espada Ágil: Após conceder Ataque aumentado ao conjurador por 1 turno, ataca rapidamente e absorve parte do dano como Vida. Penetra a Defesa em 50%."
+        },
+        "S2": {
+            "name": "Sexto Sentido",
+            "description": "O dano sofrido em um ataque não excede 51% da Vida máxima. Diminui o tempo de recarga de habilidades em 1 turno quando alguém morre e adquire 5 Almas. Este efeito só pode ser ativado uma vez por turno."
+        },
+        "S3": {
+            "name": "Portal Espiritual: Possessão Ardente",
+            "description": "Abre o portal espiritual para reviver todos os aliados mortos. Concede imortalidade a todos os aliados por 1 turno e concede Possessão ao conjurador por 3 turnos."
+        }
+    },
+    "specter-tenebria": {
+        "S1": {
+            "name": "Explosão Venenosa",
+            "description": "Ataca com uma explosão de energia venenosa, com 70% de chance de infligir veneno por 2 turnos. Não pode ativar contra-ataques. Ataca dois inimigos quando Pesadelo Interminável está em recarga."
+        },
+        "S2": {
+            "name": "Ilusão de Pesadelo",
+            "description": "A ilusão permanece durante toda a batalha. Aumenta o Ataque e a Defesa do conjurador em 10% cada vez que alguém morre (máximo 5 acumulações)."
+        },
+        "S3": {
+            "name": "Pesadelo Interminável",
+            "description": "Ataca com um cristal de pesadelo, atordoando por 1 turno. Diminui a Prontidão de Combate de todos os inimigos restantes em 50% quando um inimigo morre."
+        }
+    },
+    "ruele-of-light": {
+        "S1": {
+            "name": "Chave do Juramento",
+            "description": "Ataca o inimigo com um cajado e recupera a Vida de todos os aliados. O dano e a recuperação aumentam proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Pilar de Luz",
+            "description": "Invoca um pilar de luz, removendo todos os debuffs de um aliado e recuperando sua Vida, também concedendo uma barreira e limite de dano por 2 turnos."
+        },
+        "S3": {
+            "name": "Luz Ascendente",
+            "description": "Remove todos os debuffs de um aliado com magia curativa antes de recuperar 50% de sua Vida e conceder invencibilidade por 1 turno. Se o alvo estiver morto, revive-o com 100% de Vida antes de aplicar os efeitos."
+        }
+    },
+    "auxiliary-lots": {
+        "S1": {
+            "name": "Magia Negra",
+            "description": "Ataca com uma esfera mágica, aumentando a Prontidão de Combate do conjurador em 15%."
+        },
+        "S2": {
+            "name": "Injeção de Mana",
+            "description": "Injeta mana em um aliado exceto o conjurador, aumentando o Ataque por 2 turnos antes de aumentar a Prontidão de Combate em 100%."
+        },
+        "S3": {
+            "name": "Desolação",
+            "description": "Ataca todos os inimigos liberando mana poderoso, com 155% de chance de silenciar por 2 turnos e diminuir a Defesa por 2 turnos. Concede um turno extra."
+        }
+    },
+    "faithless-lidica": {
+        "S1": {
+            "name": "Espinho",
+            "description": "Ataca com uma espada, com 75% de chance de diminuir a Chance de Acerto por 1 turno."
+        },
+        "S2": {
+            "name": "Espora de Cavaleiro",
+            "description": "Amarra todos os inimigos com uma espada, com 100% de chance de dissipar um bônus, antes de aumentar a Prontidão de Combate do conjurador em 25% por alvo. Esta habilidade não pode ativar contra-ataques."
+        },
+        "S3": {
+            "name": "Histeria",
+            "description": "Ataca o inimigo indiscriminadamente, aumentando o tempo de recarga de habilidades ao máximo, e aumenta a Prontidão de Combate de todos os aliados em 25%. Um acerto crítico concede anulador de habilidade a todos os aliados uma vez."
+        }
+    },
+    "archdemons-shadow": {
+        "S1": {
+            "name": "Toque do Caos",
+            "description": "Tem 100% de chance de selar o inimigo por 2 turnos, antes de atacar com um raio."
+        },
+        "S2": {
+            "name": "Poder Distorcido",
+            "description": "O dano sofrido por acerto crítico diminui em 30%. Após usar uma habilidade básica, quando o alvo está selado, aumenta o Ataque do conjurador por 1 turno antes de ativar Explosão. Explosão: Ataca todos os inimigos e aumenta a Prontidão de Combate do conjurador em 25% antes de ganhar 1 Foco."
+        },
+        "S3": {
+            "name": "Dissolução",
+            "description": "Ataca todos os inimigos com o poder de Ilryos, com 180% de chance de diminuir a Defesa por 2 turnos e 180% de chance de infligir dois efeitos de queimadura por 2 turnos. Concede um turno extra ao conjurador."
+        }
+    },
+    "yulha": {
+        "S1": {
+            "name": "Toque Cruel",
+            "description": "Ataca o inimigo, com 200% de chance de infligir provocação redirecionada por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Sorriso Malicioso",
+            "description": "Quando atacado, reflete 40% do dano sofrido ao atacante. Após ser atacado, quando a Vida é 30% ou menos, dissipa todos os debuffs do conjurador e ativa Intenção Assassina. Intenção Assassina: Concede uma barreira ao conjurador por 3 turnos e aumenta a Prontidão de Combate em 25%."
+        },
+        "S3": {
+            "name": "Sinfonia da Agonia",
+            "description": "Ataca o inimigo desdobrando a Esfera do Sadismo. Efeitos de compartilhamento de dano são ignorados. Penetra a Defesa do alvo, mas não pode ativar um acerto crítico. O dano causado aumenta proporcionalmente à Vida perdida do conjurador."
+        }
+    },
+    "mercedes": {
+        "S1": {
+            "name": "Raio Divino",
+            "description": "Ataca dois inimigos com magia de choque, antes de aumentar a Prontidão de Combate do conjurador em 15%."
+        },
+        "S2": {
+            "name": "Ruptura Dimensional",
+            "description": "Ataca todos os inimigos com uma esfera de luz, com 70% de chance de dissipar um bônus. Quando o conjurador tem Ataque aumentado, concede um ataque extra com a mesma habilidade."
+        },
+        "S3": {
+            "name": "Olho Ardente de Kal",
+            "description": "Libera o poder do Livro Antigo para atacar todos os inimigos antes de aumentar o Ataque do conjurador por 2 turnos. Após completar o Episódio 3, Volatilidade se torna Poder Imenso, concedendo chance de contra-atacar quando um aliado é atacado e aumentando o dano de Ruptura Dimensional."
+        }
+    },
+    "kitty-clarissa": {
+        "S1": {
+            "name": "Sai Daqui, Miau!",
+            "description": "Ataca com uma estrela da manhã. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Quando o conjurador tem encanto, ativa um Ataque Duplo do aliado com maior Ataque."
+        },
+        "S2": {
+            "name": "Miau Estou Brava!",
+            "description": "Ataca todos os inimigos com uma estrela da manhã enquanto enfurecida, com 80% de chance de torná-los incuráveis por 2 turnos. Quando o conjurador tem encanto, a chance do efeito aumenta 20%. Ignora a Resistência a Efeitos."
+        },
+        "S3": {
+            "name": "Sou Tão Fofa, Miau♥!",
+            "description": "Balança a cauda fofamente, diminuindo a duração de debuffs em todos os aliados em 2 turnos, e concedendo imunidade e encanto ao conjurador por 3 turnos. Concede um turno extra ao conjurador."
+        }
+    },
+    "blood-moon-haste": {
+        "S1": {
+            "name": "Foice de Sangue",
+            "description": "Ataca balançando uma foice, dissipando um bônus. Ao dissipar o bônus do alvo, ativa Retribuição de Sangue como ataque extra. Retribuição de Sangue: Ataca o inimigo com uma foice e recupera a Vida de todos os aliados. O dano e a quantidade recuperada aumentam proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Rancor",
+            "description": "Ao atacar, penetra a Defesa do alvo e não pode ativar um acerto crítico. Quando um aliado morre, concede barreira e imunidade a todos os aliados por 2 turnos, e concede aura de sangue ao conjurador por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador. Só pode ser ativada uma vez a cada 4 turnos."
+        },
+        "S3": {
+            "name": "Corte Lunar",
+            "description": "Dissipa todos os bônus do inimigo antes de atacar com uma foice. Quando o inimigo é derrotado, revive todos os aliados mortos antes de conceder imortalidade por 1 turno. Quando o conjurador tem aura de sangue, aumenta o dano em 100%. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "sage-baal-and-sezan": {
+        "S1": {
+            "name": "Chamado do Espírito Maligno",
+            "description": "Invoca um espírito maligno para atacar o inimigo, com 75% de chance de adormecer o inimigo por 1 turno. Quando o alvo está dormindo após o ataque, aumenta a Prontidão de Combate do conjurador em 20%. Esta habilidade não ativa Ataque Duplo."
+        },
+        "S2": {
+            "name": "Nuvem da Ruína",
+            "description": "Ataca todos os inimigos invocando nuvens de tempestade, com 120% de chance de dissipar um bônus antes de adormecê-los por 1 turno. Quando esta habilidade está disponível de acordo com o tempo de recarga, aumenta a Prontidão de Combate do conjurador no final do turno inimigo."
+        },
+        "S3": {
+            "name": "Olho da Morte",
+            "description": "Ataca com olhos malignos. Quando o inimigo é derrotado, silencia todos os inimigos restantes por 1 turno. Penetra a Defesa, mas não pode ativar um acerto crítico. O dano aumenta proporcionalmente à Vida perdida do conjurador."
+        }
+    },
+    "champion-zerato": {
+        "S1": {
+            "name": "Fúria da Terra",
+            "description": "Ataca dois inimigos incluindo o alvo com uma explosão de terra, transferindo dois debuffs do conjurador para o inimigo e recuperando a Vida do conjurador. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Vontade de Ferro",
+            "description": "Imune a atordoamento, sono e diminuição de Chance de Acerto. Tem 100% de chance de contra-atacar quando o conjurador recebe um debuff após ser atacado."
+        },
+        "S3": {
+            "name": "Cataclismo",
+            "description": "Ataca todos os inimigos golpeando com rochas, com 75% de chance cada de diminuir a Defesa e o Ataque por 1 turno. Aumenta a Defesa do conjurador por 2 turnos."
+        }
+    },
+    "operator-sigret": {
+        "S1": {
+            "name": "Incisão",
+            "description": "Ataca o inimigo com uma foice, antes de curar o aliado com menor Vida. A quantidade recuperada aumenta proporcionalmente ao Ataque do conjurador."
+        },
+        "S2": {
+            "name": "Aniquilação",
+            "description": "Golpeia o inimigo com uma foice. Concede um turno extra quando o inimigo é derrotado. Penetra a Defesa do alvo em 50%, ou em 100% quando o alvo tem uma barreira. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S3": {
+            "name": "Obliteração",
+            "description": "Chama drones para atacar todos os inimigos, com 100% de chance de diminuir a duração de bônus em 1 turno. Aumenta o Ataque de todos os aliados por 2 turnos. Quando o alvo tem uma barreira, ignora a Resistência a Efeitos. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        }
+    },
+    "designer-lilibet": {
+        "S1": {
+            "name": "Cortar em Pedaços",
+            "description": "Ataca o inimigo com tesouras, com 75% de chance de diminuir a Defesa por 1 turno. O dano aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S2": {
+            "name": "Costura de Emergência",
+            "description": "Começa a primeira batalha com 50 Espírito de Luta. Quando o turno de um inimigo termina, ganha 10 Espírito de Luta para cada debuff infligido a um aliado, e quando o Espírito de Luta do conjurador está cheio, consome tudo para dissipar todos os debuffs do conjurador e concede Defesa aumentada e imunidade por 1 turno antes de aumentar a Prontidão de Combate em 40%."
+        },
+        "S3": {
+            "name": "Desqualificação de Modelo",
+            "description": "Diminui a duração de debuffs de todos os aliados em 2 turnos e sobe ao palco para atacar todos os inimigos, antes de aumentar a Prontidão de Combate de todos os aliados em 15%. Penetra a Defesa do alvo em 50%. O dano aumenta proporcionalmente à Defesa do conjurador."
+        }
+    },
+    "amiki": {
+        "S1": {
+            "name": "Punição Divina",
+            "description": "Ataca o inimigo com uma espada, com 75% de chance de provocar por 1 turno. Não pode ativar um acerto crítico e penetra a Defesa do alvo em 30%. Após atacar, quando a Vida do conjurador é 30% ou menos, concede um ataque extra com a mesma habilidade."
+        },
+        "S2": {
+            "name": "Resolução Desesperada",
+            "description": "Concede imortalidade por 1 turno e Ataque aumentado por 2 turnos ao conjurador. Ao receber dano letal quando a habilidade está disponível de acordo com a contagem de recarga, concede os mesmos efeitos ao conjurador e aumenta completamente a recarga desta habilidade."
+        },
+        "S3": {
+            "name": "Espada do Vingador",
+            "description": "Corta o inimigo consecutivamente para atacar. Não pode ativar um acerto crítico. Penetra a Defesa do alvo em 30%, e quando a Vida do conjurador é 30% ou menos, penetra 70%."
+        }
+    },
+    "azalea": {
+        "S1": {
+            "name": "Ataque Persistente",
+            "description": "Esfaqueia o inimigo com uma lança e recupera a Vida do conjurador. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Golpe Desafiador",
+            "description": "Ataca o inimigo, com 100% de chance de provocar por 2 turnos."
+        },
+        "S3": {
+            "name": "Varredura",
+            "description": "Varre todos os inimigos com uma lança, com 75% de chance de diminuir a Velocidade e a Defesa por 2 turnos."
+        }
+    },
+    "batisse": {
+        "S1": {
+            "name": "Briga",
+            "description": "Acerta o inimigo na cara. Quando usado contra um inimigo com Ataque diminuído, ativa Esmagar Rocha como ataque extra. Esmagar Rocha: Ataca todos os inimigos. Este ataque recebe efeitos aplicados à habilidade básica."
+        },
+        "S2": {
+            "name": "Provocação Justificada",
+            "description": "No início do turno, tem 100% de chance de diminuir o Ataque do inimigo com maior Prontidão de Combate por 2 turnos."
+        },
+        "S3": {
+            "name": "Vitória Certa",
+            "description": "Ataca o inimigo com velocidade impressionante. Quando usado contra um inimigo com Ataque diminuído, diminui a Defesa por 1 turno."
+        }
+    },
+    "bomb-model-kanna": {
+        "S1": {
+            "name": "Bombardeio Rápido",
+            "description": "Dispara rapidamente para atacar dois inimigos. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S2": {
+            "name": "Mudança de Postura",
+            "description": "Quando Bombardeio Total! está disponível no início do turno, assume uma Postura de Bombardeio. Quando Bombardeio Total! não está disponível no final do turno, assume uma Postura de Ataque. Só pode assumir uma postura por vez. Postura de Bombardeio: Aumenta a Efetividade em 65%. Postura de Ataque: Aumenta a Velocidade e a chance de Ataque Duplo em 65%."
+        },
+        "S3": {
+            "name": "Bombardeio Total!",
+            "description": "Aumenta a potência de fogo para atacar todos os inimigos, com 100% de chance de dissipar um bônus, antes de aumentar o Ataque do conjurador por 2 turnos."
+        }
+    },
+    "cartuja": {
+        "S1": {
+            "name": "Rasgar",
+            "description": "Ataca com garras afiadas, com 50% de chance de diminuir a Defesa por 2 turnos. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Zona de Perigo",
+            "description": "A Prontidão de Combate aumenta 15% no momento em que o conjurador é atacado. A Prontidão de Combate aumenta mais 10% quando a Vida do conjurador é 50% ou menos."
+        },
+        "S3": {
+            "name": "Rugido Predatório",
+            "description": "Ataca todos os inimigos com energia selvagem, com 100% de chance de diminuir o Ataque por 2 turnos, e aumenta a Defesa do conjurador por 2 turnos. O dano aumenta proporcionalmente à Vida máxima do conjurador, com aumento adicional quando a Vida do conjurador é 75% ou menos."
+        }
+    },
+    "cecilia": {
+        "S1": {
+            "name": "Libertação",
+            "description": "Ataca com uma lança, com 50% de chance de diminuir a Defesa por 2 turnos. Quando o alvo está com Ataque diminuído, a chance do efeito aumenta 25%. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Tempestade de Aço",
+            "description": "Ataca todos os inimigos com uma lança mágica, com 50% de chance de diminuir o Ataque por 2 turnos, antes de dissipar um bônus. A chance do efeito aumenta 50% quando a Vida do conjurador é 50% ou menos. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Retribuição Ruinosa",
+            "description": "Ataca todos os inimigos com uma lança imbuída de energia sombria, com 100% de chance de provocar por 1 turno, antes de conceder imunidade a todos os aliados por 2 turnos e uma barreira ao conjurador por 2 turnos. O dano e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "celeste": {
+        "S1": {
+            "name": "Tiro Preciso",
+            "description": "Ataca o inimigo, com 75% de chance de diminuir a Chance de Acerto por 1 turno."
+        },
+        "S2": {
+            "name": "Salva",
+            "description": "Dispara uma salva de flechas em todos os inimigos, com 85% de chance de diminuir a Prontidão de Combate em 20%. Quando a Vida do conjurador é 80% ou mais, não ocorre recarga."
+        },
+        "S3": {
+            "name": "Defcon",
+            "description": "O conjurador recupera 30% de Vida e recebe um turno extra."
+        }
+    },
+    "chaos-inquisitor": {
+        "S1": {
+            "name": "Golpe Pesado",
+            "description": "Atinge o inimigo com uma lâmina, com 50% de chance cada de dissipar um bônus duas vezes."
+        },
+        "S2": {
+            "name": "Equipamento do Corpo de Açougueiros",
+            "description": "O dano sofrido em um ataque não excede 35% da Vida máxima."
+        },
+        "S3": {
+            "name": "Pregar",
+            "description": "Ataca o inimigo em nome do Caos. O dano aumenta proporcionalmente à Vida perdida do conjurador. Recupera Vida proporcional ao dano causado."
+        }
+    },
+    "chaos-sect-axe": {
+        "S1": {
+            "name": "Desconexão",
+            "description": "Ataca com um machado, com 75% de chance de provocar por 1 turno. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Corrente de Ataque",
+            "description": "Ataca todos os inimigos com uma onda de choque. Com 60% de chance de provocar por 1 turno, antes de conceder imunidade ao conjurador por 1 turno."
+        },
+        "S3": {
+            "name": "Golpe Vigoroso",
+            "description": "Golpeia o inimigo, com 100% de chance de diminuir a Defesa por 2 turnos, antes de recuperar 20% da Vida máxima do conjurador. Quando o inimigo é derrotado, concede um turno extra ao conjurador. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "chloe": {
+        "S1": {
+            "name": "Golpe Pesado",
+            "description": "Golpeia o inimigo com um martelo. O dano aumenta quando o inimigo está com prego mágico."
+        },
+        "S2": {
+            "name": "Raio Mágico",
+            "description": "Após conceder Ataque aumentado ao conjurador por 3 turnos, ataca o inimigo, infligindo prego mágico por 3 turnos, e aumenta a Prontidão de Combate do conjurador em 50%."
+        },
+        "S3": {
+            "name": "Hiper Golpe",
+            "description": "Voa pelos ares e ataca o inimigo, atordoando por 1 turno. Quando o inimigo está com prego mágico, ignora a Resistência a Efeitos."
+        }
+    },
+    "christy": {
+        "S1": {
+            "name": "Espada de Proteção",
+            "description": "Ataca o inimigo, com 75% de chance de provocar por 1 turno. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Escudo do Juramento",
+            "description": "Após ser atacado, quando o conjurador não tem penalidades, aumenta a Prontidão de Combate do conjurador e do aliado na fileira de trás em 20%. Só pode ser ativado uma vez por turno. No início da primeira batalha, aumenta a Resistência a Efeitos do aliado na fileira de trás em 50% da Resistência a Efeitos do conjurador."
+        },
+        "S3": {
+            "name": "Hino da Coragem",
+            "description": "Aumenta o Ataque de todos os aliados por 2 turnos antes de recuperar a Vida do conjurador. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "cidd": {
+        "S1": {
+            "name": "Golpe Implacável",
+            "description": "Ataca o inimigo com uma adaga. O dano aumenta proporcionalmente à Velocidade do conjurador. Quando o conjurador tem Velocidade aumentada, usa Redemoinho em vez de Golpe Implacável. Redemoinho: Ataca o inimigo repetidamente, diminuindo a Defesa por 1 turno. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S2": {
+            "name": "Resolução do Vento",
+            "description": "Um acerto crítico aumentará a Velocidade do conjurador por 1 turno, com 100% de chance de conceder um bônus aleatório por 1 turno. Um bônus aleatório só pode ser concedido uma vez por turno."
+        },
+        "S3": {
+            "name": "Corte",
+            "description": "Ataca o inimigo cortando-o com adagas, concedendo um turno extra quando o inimigo é derrotado. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        }
+    },
+    "coli": {
+        "S1": {
+            "name": "Emboscada",
+            "description": "Embosca o inimigo, com 75% de chance de roubar um bônus."
+        },
+        "S2": {
+            "name": "Golpe Preciso",
+            "description": "Ataca o inimigo com uma lâmina invisível e concede furtividade ao conjurador por 2 turnos. No final do turno, detona quaisquer efeitos de sangramento e bombas infligidas no alvo."
+        },
+        "S3": {
+            "name": "Batismo de Fogo",
+            "description": "Ataca o inimigo com uma adaga e bomba, infligindo sangramento e plantando uma bomba por 2 turnos, antes de aumentar a Prontidão de Combate do conjurador em 50%. Quando o alvo é um Herói de elemento Fogo, ignora a Resistência a Efeitos e aumenta a Prontidão de Combate do conjurador em mais 50%."
+        }
+    },
+    "commander-lorina": {
+        "S1": {
+            "name": "Golpe Afiado",
+            "description": "Lança o inimigo pelos ares com uma lança. O dano aumenta proporcionalmente à Vida máxima do alvo."
+        },
+        "S2": {
+            "name": "Armamento Espiritual",
+            "description": "Aumenta o Ataque em 15% cada vez que o conjurador ataca um inimigo. O efeito só pode acumular até 5 vezes."
+        },
+        "S3": {
+            "name": "Avanço em Espiral",
+            "description": "Perfura o inimigo com uma lança, diminuindo a Prontidão de Combate em 15%. O dano aumenta proporcionalmente à Vida perdida do inimigo."
+        }
+    },
+    "crescent-moon-rin": {
+        "S1": {
+            "name": "Zombaria",
+            "description": "Ataca o inimigo com um anel, com 40% de chance de atordoar por 1 turno."
+        },
+        "S2": {
+            "name": "Chama Atenção",
+            "description": "Ataca o inimigo com uma dança luxuosa e rouba dois bônus, concedendo seus efeitos a todos os aliados, antes de atordoar o alvo por 1 turno. Quando o alvo não tem bônus, diminui a recarga desta habilidade em 1 turno."
+        },
+        "S3": {
+            "name": "Chamada Final",
+            "description": "Cruza anéis para atacar o inimigo, dissipando todos os bônus do alvo, antes de aumentar o Dano Crítico de todos os aliados por 2 turnos."
+        }
+    },
+    "dingo": {
+        "S1": {
+            "name": "Preparar Ingredientes",
+            "description": "Corta o inimigo com um cutelo, com 50% de chance de infligir sangramento por 2 turnos. Após o ataque, há 30% de chance de ativar Grelhada Rápida."
+        },
+        "S2": {
+            "name": "Grelhada Rápida",
+            "description": "Ataca todos os inimigos com a Luva Forno, recuperando a Vida do conjurador. Quando o inimigo está sangrando, tem 100% de chance de infligir queimadura por 2 turnos. A quantidade recuperada aumenta proporcionalmente ao dano causado."
+        },
+        "S3": {
+            "name": "Jantar Grátis",
+            "description": "Fornece uma refeição a todos os aliados, dissipando todas as penalidades e aumentando a Chance de Acerto Crítico por 2 turnos antes de diminuir a recarga em 1 turno. Cada vez que um inimigo morre, a recarga desta habilidade diminui em 1 turno."
+        }
+    },
+    "dominiel": {
+        "S1": {
+            "name": "Granizo",
+            "description": "Lança fragmentos de gelo no inimigo, com 40% de chance de atordoar por 1 turno."
+        },
+        "S2": {
+            "name": "Graça de Nixied",
+            "description": "Quando um aliado sofre um acerto crítico, tem 35% de chance de ativar Capa de Nevasca. Só pode ser ativado uma vez a cada 3 turnos. Capa de Nevasca: Cria uma barreira sobre todos os aliados por 2 turnos com magia de gelo. A força da barreira aumenta proporcionalmente à Vida máxima do aliado."
+        },
+        "S3": {
+            "name": "Lança de Gelo",
+            "description": "Ataca todos os inimigos com um grande bloco de gelo, com 190% de chance de atordoar por 1 turno e 190% de chance de diminuir a Prontidão de Combate em 15%. Aumenta a Velocidade do conjurador por 2 turnos."
+        }
+    },
+    "doris": {
+        "S1": {
+            "name": "Bala de Mana",
+            "description": "Ataca com energia de luz, com 75% de chance de diminuir a Precisão por 1 turno."
+        },
+        "S2": {
+            "name": "Celebração da Luz",
+            "description": "Recita a Celebração da Luz, recuperando a Vida de todos os aliados e concedendo cura contínua e Defesa aumentada por 2 turnos. A quantidade recuperada é proporcional à Vida máxima do alvo."
+        },
+        "S3": {
+            "name": "Cortina de Luz",
+            "description": "Recupera a Vida de um aliado e aumenta sua Prontidão de Combate em 35% com magia de luz. A quantidade recuperada é proporcional à Vida máxima do alvo."
+        }
+    },
+    "eaton": {
+        "S1": {
+            "name": "Vem Aqui",
+            "description": "Golpeia fortemente o inimigo com o joelho para atacar, com 75% de chance de provocar por 1 turno. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Eu Protejo",
+            "description": "Recebe 30% do dano recebido por um aliado em seu lugar. Apenas o efeito de distribuição de dano mais alto será aplicado. Aumenta a Vida máxima em 20%."
+        },
+        "S3": {
+            "name": "Sou Durão",
+            "description": "Libera energia forte, dissipando todas as penalidades infligidas ao conjurador antes de conceder uma barreira por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "enott": {
+        "S1": {
+            "name": "Esmagar",
+            "description": "Ataca com um machado, com 50% de chance de causar sangramento por 2 turnos. O dano aumenta proporcionalmente à Vida perdida do inimigo."
+        },
+        "S2": {
+            "name": "Julgamento",
+            "description": "Ataca com um golpe afiado, com 75% de chance de diminuir a Defesa e impedir que recebam bônus por 2 turnos."
+        },
+        "S3": {
+            "name": "Preparar Julgamento",
+            "description": "Corrige a postura, aumentando o Ataque do conjurador por 2 turnos e a Prontidão de Combate em 50%."
+        }
+    },
+    "fighter-maya": {
+        "S1": {
+            "name": "Golpe de Provocação",
+            "description": "Ataca com uma arma contundente, com 75% de chance de provocar por 1 turno. O dano aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S2": {
+            "name": "Reivindicar",
+            "description": "Tem 100% de chance de dissipar uma penalidade e receber Defesa aumentada por 2 turnos quando atacado. Só pode ser acionado uma vez por turno."
+        },
+        "S3": {
+            "name": "Ataque Final",
+            "description": "Ataca com um golpe poderoso. O dano aumenta em 300% quando a Vida do inimigo está em 30% ou menos. O dano aumenta proporcionalmente à Defesa do conjurador. Concede um turno extra ao conjurador quando o inimigo é derrotado."
+        }
+    },
+    "gloomyrain": {
+        "S1": {
+            "name": "Lamento",
+            "description": "Tem 15% de chance de receber um turno extra após atacar o inimigo."
+        },
+        "S2": {
+            "name": "Má Vontade",
+            "description": "Aumenta o Ataque em 70% e a Velocidade em 70% quando o conjurador tem penalidades. Concede imunidade a atordoamento, sono e provocação."
+        },
+        "S3": {
+            "name": "Destruição da Alma",
+            "description": "Ataca todos os inimigos com magia, com 100% de chance de transferir todas as penalidades infligidas ao conjurador, e dissipa todas as penalidades do conjurador."
+        }
+    },
+    "gunther": {
+        "S1": {
+            "name": "Golpe Animado",
+            "description": "Ataca com um machado, com 50% de chance de causar sangramento por 2 turnos."
+        },
+        "S2": {
+            "name": "Veterano",
+            "description": "O Ataque aumenta em 75% e a Resistência a Acerto Crítico aumenta em 70%. Ao atacar, não pode ativar acerto crítico."
+        },
+        "S3": {
+            "name": "Golpe Tenaz",
+            "description": "Ataca com um machado, atordoando por 1 turno."
+        }
+    },
+    "hazel": {
+        "S1": {
+            "name": "Livro de Fogo",
+            "description": "Ataca com magia de fogo, com 50% de chance de tornar incurável por 2 turnos."
+        },
+        "S2": {
+            "name": "Regeneração Urgente",
+            "description": "Cura o alvo proporcionalmente ao Ataque do conjurador e à Vida máxima do alvo, antes de aumentar a Prontidão de Combate do conjurador em 15%. A quantidade recuperada é dobrada quando a Vida do alvo está em 50% ou menos."
+        },
+        "S3": {
+            "name": "Ordem de Ataque",
+            "description": "Usa magia fortalecedora para aumentar o Ataque de todos os aliados por 1 turno antes de recuperar Vida e dissipar uma penalidade. A quantidade recuperada é proporcional ao Ataque do conjurador e à Vida máxima do alvo."
+        }
+    },
+    "helga": {
+        "S1": {
+            "name": "Rasgar Armadura",
+            "description": "Ataca com um machado, com 50% de chance de diminuir a Defesa por 2 turnos."
+        },
+        "S2": {
+            "name": "Cadeia de Ataque",
+            "description": "Golpeia fortemente o inimigo com um machado, com 60% de chance de diminuir a Defesa por 2 turnos. Um acerto crítico terá 50% de chance de estender qualquer bônus concedido ao conjurador por 1 turno."
+        },
+        "S3": {
+            "name": "Grito de Vitória",
+            "description": "Encoraja os aliados, aumentando o Ataque por 2 turnos antes de aumentar a Prontidão de Combate do conjurador em 50%."
+        }
+    },
+    "hurado": {
+        "S1": {
+            "name": "Golpe de Cajado",
+            "description": "Ataca com um cajado, com 50% de chance de silenciar por 1 turno."
+        },
+        "S2": {
+            "name": "Magia Sombria",
+            "description": "Diminui a quantidade recuperada de todos os inimigos em 50% e aumenta a Prontidão de Combate do conjurador em 20%. Quando o inimigo usa uma habilidade que não é de ataque."
+        },
+        "S3": {
+            "name": "Explosão Sombria",
+            "description": "Ataca todos os inimigos com magia sombria, com 100% de chance de dissipar um bônus antes de diminuir a Prontidão de Combate em 15%."
+        }
+    },
+    "jena": {
+        "S1": {
+            "name": "Golpe Frio",
+            "description": "Ataca com um cajado, com 35% de chance de atordoar por 1 turno."
+        },
+        "S2": {
+            "name": "Coagir",
+            "description": "Lança magia enfraquecedora, com 100% de chance de diminuir a duração dos bônus de todos os inimigos em 1 turno e infligir congelamento por 2 turnos."
+        },
+        "S3": {
+            "name": "Onda de Frio",
+            "description": "Ataca todos os inimigos com magia de gelo, com 175% de chance de diminuir a Defesa por 2 turnos antes de 175% de chance de diminuir a Prontidão de Combate em 20%."
+        }
+    },
+    "jecht": {
+        "S1": {
+            "name": "Assalto com Cajado",
+            "description": "Ataca com um cajado, com 75% de chance de diminuir a Precisão por 1 turno."
+        },
+        "S2": {
+            "name": "Vento de Cauda",
+            "description": "100% de chance de dissipar uma penalidade infligida a um aliado no início de cada turno."
+        },
+        "S3": {
+            "name": "Vendaval",
+            "description": "Ataca todos os inimigos com magia de vento, concedendo cura contínua a todos os aliados por 2 turnos."
+        }
+    },
+    "judith": {
+        "S1": {
+            "name": "Vulnerabilidade Exposta",
+            "description": "Ataca com espadas duplas. Quando o conjurador está oculto, tem 100% de chance de atordoar o inimigo por 1 turno."
+        },
+        "S2": {
+            "name": "Evasão Urgente",
+            "description": "No momento em que o conjurador é atacado, tem 100% de chance de ficar oculto por 1 turno."
+        },
+        "S3": {
+            "name": "Marca de Aceleração",
+            "description": "Aumenta a Prontidão de Combate de todos os aliados em 30%."
+        }
+    },
+    "kiris": {
+        "S1": {
+            "name": "Flecha Venenosa",
+            "description": "Dispara uma flecha envenenada no inimigo, com 50% de chance de infligir veneno por 2 turnos."
+        },
+        "S2": {
+            "name": "Rajada Corrosiva",
+            "description": "Dispara uma rajada corrosiva em todos os inimigos, estendendo a duração de qualquer penalidade em 1 turno."
+        },
+        "S3": {
+            "name": "Preparação",
+            "description": "Fortalece o próximo ataque do conjurador, aumenta a Prontidão de Combate em 50%. Flecha Venenosa: Aumenta a chance de efeito para 100%, e os efeitos de veneno podem acumular até 3 vezes. Rajada Corrosiva: Estende a duração das penalidades em 2 turnos."
+        }
+    },
+    "kluri": {
+        "S1": {
+            "name": "Passo Leve",
+            "description": "Golpeia na direção do inimigo, aumentando a Prontidão de Combate do conjurador em 20%. O dano aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S2": {
+            "name": "Resistência Mágica",
+            "description": "Recupera 10% da Vida do conjurador no início de cada turno."
+        },
+        "S3": {
+            "name": "Fortaleza",
+            "description": "Tem 100% de chance de provocar o inimigo por 2 turnos."
+        }
+    },
+    "lena": {
+        "S1": {
+            "name": "Você é Fraco",
+            "description": "Ataca com um soco forte, aumentando a Prontidão de Combate do conjurador em 20%."
+        },
+        "S2": {
+            "name": "Golpe Poderoso",
+            "description": "Aumenta a Chance de Acerto Crítico em 50%."
+        },
+        "S3": {
+            "name": "Exposto!",
+            "description": "Ataca todos os inimigos com uma tempestade poderosa, diminuindo a Prontidão de Combate em 20%, antes de aumentar o Ataque do conjurador por 2 turnos. O dano aumenta proporcionalmente à Vida perdida do inimigo."
+        }
+    },
+    "leo": {
+        "S1": {
+            "name": "Mergulho do Pardal",
+            "description": "Ataca o inimigo com um estilingue, com 35% de chance de atordoar por 1 turno."
+        },
+        "S2": {
+            "name": "Caça à Raposa",
+            "description": "Ataca com um estilingue, com 100% de chance de diminuir a Defesa por 2 turnos, e 50% de chance de usar Mergulho do Pardal."
+        },
+        "S3": {
+            "name": "Racoo Voador",
+            "description": "Racoo voa para os inimigos como uma bala e ataca todos, com 50% de chance de atordoar por 1 turno."
+        }
+    },
+    "lots": {
+        "S1": {
+            "name": "Luz Sagrada",
+            "description": "Ataca com uma esfera de luz, com 75% de chance de diminuir o Ataque por 1 turno."
+        },
+        "S2": {
+            "name": "Regeneração",
+            "description": "Usa magia curativa para recuperar Vida e aumentar a Prontidão de Combate do aliado em 100%, antes de aumentar a Prontidão de Combate do conjurador em 30%. A quantidade recuperada é proporcional à Vida máxima do aliado."
+        },
+        "S3": {
+            "name": "Serenidade",
+            "description": "Usa magia fortalecedora para recuperar Vida, aumentar a Prontidão de Combate em 20% e conceder cura contínua por 2 turnos a todos os aliados."
+        }
+    },
+    "maya": {
+        "S1": {
+            "name": "Golpe Enfraquecedor",
+            "description": "Ataca com uma arma contundente, com 35% de chance de atordoar por 1 turno. O dano aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S2": {
+            "name": "Concussão",
+            "description": "Ataca com um escudo, com 100% de chance de atordoar por 1 turno antes de diminuir a Prontidão de Combate em 30%. O dano aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S3": {
+            "name": "Impulso de Moral",
+            "description": "Tem 175% de chance de provocar todos os inimigos por 1 turno, antes de 175% de chance de diminuir o Ataque por 2 turnos. Aumenta a Defesa do conjurador por 2 turnos."
+        }
+    },
+    "mistychain": {
+        "S1": {
+            "name": "Vampirismo",
+            "description": "Ataca o inimigo com garras, absorvendo parte do dano para curar todos os aliados."
+        },
+        "S2": {
+            "name": "Maldição da Banshee",
+            "description": "Lança um feitiço no inimigo, com 100% de chance de torná-lo incurável e diminuir o Ataque por 2 turnos."
+        },
+        "S3": {
+            "name": "Drenar Vida",
+            "description": "Ataca absorvendo a força vital do inimigo. Parte do dano causado é absorvida para curar todos os aliados."
+        }
+    },
+    "montmorancy": {
+        "S1": {
+            "name": "Feitiço do Sono",
+            "description": "Ataca o inimigo com energia de água, com 75% de chance de adormecê-lo por 1 turno."
+        },
+        "S2": {
+            "name": "Purificação",
+            "description": "Dissipa uma penalidade de todos os aliados e cura aliados com penalidades. A quantidade recuperada é proporcional à Vida máxima do aliado."
+        },
+        "S3": {
+            "name": "Cortina de Água",
+            "description": "Recupera a Vida do aliado e concede imunidade por 2 turnos. A quantidade recuperada aumenta proporcionalmente à Vida máxima do aliado."
+        }
+    },
+    "mucacha": {
+        "S1": {
+            "name": "Arte da Lança Ancestral",
+            "description": "Ataca com uma lança, aumentando a Prontidão de Combate do conjurador em 20%. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S2": {
+            "name": "Selvagem",
+            "description": "Aumenta a Velocidade em 2% cada vez que o conjurador ataca um inimigo. O efeito só pode acumular até 5 vezes."
+        },
+        "S3": {
+            "name": "Golpe Iluminado",
+            "description": "Ataca com um golpe fatal, com 100% de chance de diminuir a Defesa por 2 turnos. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        }
+    },
+    "nemunas": {
+        "S1": {
+            "name": "Fogo de Cobertura",
+            "description": "Diminui a Prontidão de Combate do inimigo em 15% após atacá-lo."
+        },
+        "S2": {
+            "name": "Flecha de Choque",
+            "description": "Dispara uma flecha poderosamente no inimigo, diminuindo a Precisão por 2 turnos e a Prontidão de Combate em 30%. O dano aumenta proporcionalmente à Vida máxima do inimigo."
+        },
+        "S3": {
+            "name": "Determinação de uma Garota",
+            "description": "Encoraja todos os aliados, dissipando uma penalidade."
+        }
+    },
+    "otillie": {
+        "S1": {
+            "name": "Flecha Sombria",
+            "description": "Ataca com energia sombria, com 50% de chance de tornar o inimigo incurável por 2 turnos."
+        },
+        "S2": {
+            "name": "Defesa de Área",
+            "description": "Todos os aliados recebem 30% menos dano de ataques que atingem todos os aliados. Quando mais de um efeito de redução de dano é concedido, apenas o efeito mais forte é aplicado."
+        },
+        "S3": {
+            "name": "Liberação de Mana",
+            "description": "Exala escuridão poderosa para atacar o inimigo, diminuindo a Prontidão de Combate em 40%, antes de silenciar por 2 turnos."
+        }
+    },
+    "pearlhorizon": {
+        "S1": {
+            "name": "Golpe Caótico",
+            "description": "Ataca o inimigo com garras, com 50% de chance de diminuir a Precisão por 2 turnos."
+        },
+        "S2": {
+            "name": "Hipnose",
+            "description": "Ataca todos os inimigos, com 50% de chance de adormecê-los por 1 turno. Aumenta a Prontidão de Combate do conjurador em 10% por cada penalidade de sono infligida."
+        },
+        "S3": {
+            "name": "Pesadelo",
+            "description": "Ataca o inimigo e o atordoa por 1 turno. Quando o inimigo está dormindo, causa dano adicional equivalente a 10% da Vida máxima do alvo."
+        }
+    },
+    "pyllis": {
+        "S1": {
+            "name": "Golpe Enfraquecedor",
+            "description": "Ataca o inimigo, com 75% de chance de provocar por 1 turno. O dano aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S2": {
+            "name": "Vontade",
+            "description": "No momento em que o conjurador é atacado, aumenta a Defesa do conjurador. No momento do quarto ataque sofrido, aumenta a Defesa de todos os aliados por 2 turnos. O aumento de Defesa do conjurador pode acumular até 3 vezes."
+        },
+        "S3": {
+            "name": "Guarda",
+            "description": "Ataca o inimigo antes de provocar por 1 turno, e concede barreira a todos os aliados por 2 turnos. O dano e a força da barreira aumentam proporcionalmente à Defesa do conjurador."
+        }
+    },
+    "purrgis": {
+        "S1": {
+            "name": "Golpe Descendente",
+            "description": "Atropela o inimigo com uma grande espada, com 50% de chance de diminuir a Velocidade por 2 turnos e diminuir a Prontidão de Combate em 20%. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Saia Daqui!",
+            "description": "Quando atacado, tem 30% de chance de contra-atacar. Contra-ataca com Saia Daqui!. Ataca todos os inimigos com uma grande espada. Inflige as mesmas penalidades que Golpe Descendente, antes de 15% de chance de atordoar por 1 turno."
+        },
+        "S3": {
+            "name": "Golpe Final",
+            "description": "Ataca todos os inimigos com um poderoso golpe no chão, com 50% de chance de atordoar por 1 turno. Tem 70% de chance de atordoar por 1 turno quando a Vida do alvo é 30% ou menos. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "ras": {
+        "S1": {
+            "name": "Corte em X",
+            "description": "Ataca com uma espada, causando dano proporcional à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Golpe de Comando",
+            "description": "Ataca o inimigo repetidamente, antes de acionar um Ataque Duplo do aliado com o maior Ataque."
+        },
+        "S3": {
+            "name": "Espada do Herdeiro",
+            "description": "Ataca fortemente todos os inimigos com uma tempestade de espadas, antes de recuperar a Vida do conjurador e aumentar a Defesa do conjurador por 2 turnos. A quantidade recuperada e o dano aumentam proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "requiemroar": {
+        "S1": {
+            "name": "Loucura",
+            "description": "Ataca o inimigo com garras, com 75% de chance de diminuir o Ataque por 1 turno."
+        },
+        "S2": {
+            "name": "Banquete de Sangue",
+            "description": "Todos os aliados absorvem 10% do dano que infligem como Vida. Cada vez que um inimigo morre, todos os aliados recuperam 20% de Vida e a Prontidão de Combate do conjurador aumenta em 10%."
+        },
+        "S3": {
+            "name": "Réquiem",
+            "description": "Ataca com magia, com 100% de chance de diminuir a Defesa por 2 turnos."
+        }
+    },
+    "rikoris": {
+        "S1": {
+            "name": "Perfuração Rápida",
+            "description": "Ataca o inimigo com uma lança, com 50% de chance de diminuir a Defesa por 2 turnos. Quando o conjurador tem aumento de Velocidade, a chance de efeito aumenta em 25%."
+        },
+        "S2": {
+            "name": "Encorajar",
+            "description": "Encoraja todos os aliados, aumentando a Velocidade por 2 turnos."
+        },
+        "S3": {
+            "name": "Corte Relâmpago",
+            "description": "Diminui a duração das penalidades de todos os aliados em 1 turno, e ataca todos os inimigos com uma onda de choque, com 80% de chance de infligir Velocidade diminuída e restrição por 2 turnos."
+        }
+    },
+    "rima": {
+        "S1": {
+            "name": "Disparo Rápido",
+            "description": "Ataca com um disparo rápido de flecha. Um acerto crítico diminuirá o tempo de recarga de habilidade do conjurador em 1 turno."
+        },
+        "S2": {
+            "name": "Flecha de Canção de Ninar",
+            "description": "Dispara uma flecha infundida com toxina de sono, com 100% de chance de adormecer por 1 turno."
+        },
+        "S3": {
+            "name": "Hino de Guerra",
+            "description": "Encoraja um aliado exceto o conjurador, diminuindo os tempos de recarga de habilidades em 2 turnos."
+        }
+    },
+    "romann": {
+        "S1": {
+            "name": "Flecha de Gravidade",
+            "description": "Dispara flechas de gravidade no inimigo, diminuindo a Prontidão de Combate em 20%, e aumentando a Prontidão de Combate do conjurador em 20%."
+        },
+        "S2": {
+            "name": "Gravitação",
+            "description": "Ataca todos os inimigos com um círculo mágico, com 50% de chance de diminuir a Prontidão de Combate em 20% quatro vezes."
+        },
+        "S3": {
+            "name": "Horizonte de Eventos",
+            "description": "Dispara uma poderosa esfera de gravidade para atacar todos os inimigos, dissipando todos os bônus antes de infligir restrição por 2 turnos. Aumenta a Prontidão de Combate do conjurador em 50%."
+        }
+    },
+    "roozid": {
+        "S1": {
+            "name": "Hemorragia",
+            "description": "Corta o inimigo com espadas de empunhadura dupla, com 50% de chance de diminuir a Velocidade por 2 turnos. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S2": {
+            "name": "Corte de Vento",
+            "description": "Ataca com uma tempestade de espadas, com 50% de chance de diminuir o Ataque por 2 turnos. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S3": {
+            "name": "Resposta Divina",
+            "description": "Corrige a postura, aumentando a Prontidão de Combate de todos os aliados em 20%."
+        }
+    },
+    "rose": {
+        "S1": {
+            "name": "Corte Sequencial",
+            "description": "Ataca com uma espada, com 75% de chance de provocar por 1 turno quando a Vida do conjurador é 50% ou mais, e aumenta a Defesa do conjurador por 1 turno quando a Vida do conjurador é menos de 50%. O dano aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S2": {
+            "name": "Escudo de Luz",
+            "description": "Cobre um aliado com o Escudo de Luz, dissipando duas penalidades e concedendo uma barreira por 2 turnos antes de aumentar a Prontidão de Combate em 20%. A força da barreira é proporcional à Defesa do conjurador."
+        },
+        "S3": {
+            "name": "Deusa da Vitória",
+            "description": "Dá bênção a todos os aliados, aumentando o Ataque por 1 turno, e a Prontidão de Combate em 25%."
+        }
+    },
+    "schuri": {
+        "S1": {
+            "name": "Fogo Rápido",
+            "description": "Ataca o inimigo com uma pistola, com 30% de chance de infligir veneno por 2 turnos."
+        },
+        "S2": {
+            "name": "Cavalheiro Explosivo",
+            "description": "Após desferir um acerto crítico, o conjurador ganha 1 Foco, e a Prontidão de Combate de todos os aliados exceto o conjurador aumenta em 25%."
+        },
+        "S3": {
+            "name": "Tiro de Rifle",
+            "description": "Atira em todos os inimigos com um rifle. Quando o Foco acumulado do conjurador é 3 ou mais, esta habilidade é aprimorada para Rajada Completa. Um ataque bem-sucedido com Rajada Completa sempre resulta em acerto crítico."
+        }
+    },
+    "serila": {
+        "S1": {
+            "name": "Sedução",
+            "description": "Ataca com uma chama de sedução, com 50% de chance de diminuir a Defesa por 2 turnos."
+        },
+        "S2": {
+            "name": "Absorção de Espírito",
+            "description": "Ataca o inimigo, com 75% de chance de diminuir o Ataque por 2 turnos, e quando o inimigo é derrotado, reinicia o tempo de recarga. Aumenta o Ataque do conjurador por 2 turnos."
+        },
+        "S3": {
+            "name": "Beijo de Chama",
+            "description": "Envolve o inimigo na chama de Chatty, a lanterna mágica, com 100% de chance de infligir dois efeitos de queimadura por 2 turnos."
+        }
+    },
+    "silk": {
+        "S1": {
+            "name": "Tiro Único",
+            "description": "Dispara flechas no inimigo, diminuindo sua Prontidão de Combate em 10%. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S2": {
+            "name": "Concentração",
+            "description": "Ganha 1 Foco no início do turno, e consome 1 Foco quando atacado, aumentando a Prontidão de Combate em 15%. Quando o Foco acumulado do conjurador é 2 ou mais, Tiro Único é aprimorado para Fogo Automático."
+        },
+        "S3": {
+            "name": "Flecha de Tempestade",
+            "description": "Ataca todos os inimigos com vento, com 100% de chance de diminuir a Velocidade por 2 turnos, e concede aumento de Velocidade ao conjurador por 2 turnos."
+        }
+    },
+    "sven": {
+        "S1": {
+            "name": "Golpe Perverso",
+            "description": "Ataca com espadas de empunhadura dupla, e quando a Vida do conjurador é 50% ou menos, ativa Golpe Repelente como ataque adicional."
+        },
+        "S2": {
+            "name": "Potencial",
+            "description": "Concede imortalidade por 1 turno e aumenta o Ataque por 2 turnos quando o conjurador recebe dano letal. Só pode ser ativado uma vez a cada 4 turnos."
+        },
+        "S3": {
+            "name": "Pena Capital",
+            "description": "Ataca todos os inimigos. O dano aumenta com a Vida perdida do conjurador."
+        }
+    },
+    "taranor-guard": {
+        "S1": {
+            "name": "Arte da Lança",
+            "description": "Lança o inimigo ao ar com uma lança, com 75% de chance de diminuir a Defesa por 1 turno."
+        },
+        "S2": {
+            "name": "Disciplina",
+            "description": "Aumenta a chance de Ataque Duplo em 10%. A Prontidão de Combate de todos os aliados aumenta em 25% quando um Ataque Duplo é acionado."
+        },
+        "S3": {
+            "name": "Perfurar",
+            "description": "Perfura o ponto fraco do inimigo com uma lança, diminuindo a Prontidão de Combate em 50%."
+        }
+    },
+    "taranor-royal-guard": {
+        "S1": {
+            "name": "Espada do Reino",
+            "description": "Ataca com uma espada, com 50% de chance de provocar por 1 turno. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Desvio de Escudo",
+            "description": "O conjurador reflete 50% do dano sofrido de um acerto crítico ao atacante. O dano refletido não pode ser maior que a Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Golpe",
+            "description": "Salta em direção ao inimigo e o ataca, dissipando todos os bônus. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "tieria": {
+        "S1": {
+            "name": "Cortador Demoníaco",
+            "description": "Ataca com um machado, com 75% de chance de diminuir a Precisão por 1 turno."
+        },
+        "S2": {
+            "name": "Dança das Areias",
+            "description": "Um ataque bem-sucedido aumenta a Prontidão de Combate de todos os aliados exceto o conjurador em 15%."
+        },
+        "S3": {
+            "name": "Quebra-Almas",
+            "description": "Golpeia o inimigo, causando dano proporcional à Vida máxima do alvo."
+        }
+    },
+    "wanda": {
+        "S1": {
+            "name": "Ponto Fraco",
+            "description": "Dispara uma flecha no inimigo, diminuindo a Prontidão de Combate em 15%. Quando o inimigo está marcado, aumenta o dano causado."
+        },
+        "S2": {
+            "name": "Mira Firme",
+            "description": "Tem 100% de chance de marcar um inimigo aleatório por 2 turnos no início de cada turno."
+        },
+        "S3": {
+            "name": "Tiro Fatal",
+            "description": "Ataca os pontos vitais do inimigo, com 100% de chance de atordoar por 1 turno."
+        }
+    },
+    "zerato": {
+        "S1": {
+            "name": "Fragmento de Gelo",
+            "description": "Ataca o inimigo com um pico de gelo, com 50% de chance de diminuir a Velocidade por 2 turnos."
+        },
+        "S2": {
+            "name": "Pico de Gelo",
+            "description": "Ataca o inimigo repetidamente, aumentando a Prontidão de Combate do conjurador em 50%."
+        },
+        "S3": {
+            "name": "Iceberg",
+            "description": "Ataca todos os inimigos com um iceberg gigante, com 75% de chance de atordoar por 1 turno."
+        }
+    },
+    "alexa": {
+        "S1": {
+            "name": "Derrubar",
+            "description": "Ataca o inimigo cortando com espadas de empunhadura dupla. Um acerto crítico terá 50% de chance de ativar Raio como ataque adicional."
+        },
+        "S2": {
+            "name": "Lâmina Fria",
+            "description": "Ataca o inimigo com uma lâmina fria, com 100% de chance de infligir dois efeitos de veneno por 2 turnos, e aumenta a Prontidão de Combate do conjurador em 30%."
+        },
+        "S3": {
+            "name": "Golpe Esmagador",
+            "description": "Ataca o inimigo continuamente, causando dano proporcional ao número de debuffs infligidos no inimigo."
+        }
+    },
+    "ains": {
+        "S1": {
+            "name": "Soco Gazela",
+            "description": "Soca o inimigo, com 50% de chance de usar Golpe Satisfatório no lugar. Golpe Satisfatório: Ataca o inimigo, um acerto bem-sucedido sempre resulta em acerto crítico."
+        },
+        "S2": {
+            "name": "Ferida",
+            "description": "Quando atacado, tem 50% de chance de contra-atacar."
+        },
+        "S3": {
+            "name": "Investida",
+            "description": "Soca o inimigo, com 100% de chance de atordoar por 1 turno."
+        }
+    },
+    "bask": {
+        "S1": {
+            "name": "Golpe Protetor",
+            "description": "Corta com uma espada, com 75% de chance de diminuir o Ataque por 1 turno. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Golpe de Escudo",
+            "description": "Ataca com um escudo, com 100% de chance de dissipar todos os bônus. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Vontade de Proteção",
+            "description": "Cobre todos os aliados com a Vontade de Proteção, concedendo imunidade por 3 turnos."
+        }
+    },
+    "carrot": {
+        "S1": {
+            "name": "Balanço",
+            "description": "Ataca com um cajado, com 50% de chance de diminuir a Velocidade por 2 turnos, antes de detonar os efeitos de queimadura infligidos ao inimigo no final do turno."
+        },
+        "S2": {
+            "name": "Barreira de Chamas",
+            "description": "No momento em que o conjurador é atacado, concede ao conjurador uma barreira por 1 turno, e queima o atacante por 1 turno."
+        },
+        "S3": {
+            "name": "Explosão de Chamas",
+            "description": "Ataca todos os inimigos com um fogo poderoso, dissipando um bônus antes de 70% de chance de queimar por 1 turno."
+        }
+    },
+    "church-of-ilryos-axe": {
+        "S1": {
+            "name": "Desconexão",
+            "description": "Ataca com um machado, com 75% de chance de provocar por 1 turno. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S2": {
+            "name": "Cadeia de Ataque",
+            "description": "Ataca todos os inimigos com uma onda de choque. Com 60% de chance de provocar por 1 turno, antes de conceder imunidade ao conjurador por 1 turno."
+        },
+        "S3": {
+            "name": "Golpe Praguejado",
+            "description": "Golpeia o inimigo, com 100% de chance de diminuir a Defesa por 2 turnos. O dano aumenta proporcionalmente à Vida máxima do conjurador."
+        }
+    },
+    "crozet": {
+        "S1": {
+            "name": "Investida",
+            "description": "Ataca com uma espada, com 75% de chance de diminuir o Ataque por 1 turno. O dano aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S2": {
+            "name": "Marca de Proteção",
+            "description": "Concede uma barreira e aumento de Defesa a um aliado por 2 turnos quando a Vida do aliado é 50% ou menos após ser atacado."
+        },
+        "S3": {
+            "name": "Avanço",
+            "description": "Ataca todos os inimigos com uma tempestade de espada, diminuindo sua Prontidão de Combate em 50%, antes de 75% de chance de provocar por 1 turno."
+        }
+    },
+    "doll-maker-pearlhorizon": {
+        "S1": {
+            "name": "Golpe do Caos",
+            "description": "Arranha o inimigo, com 50% de chance de diminuir a Precisão por 2 turnos."
+        },
+        "S2": {
+            "name": "Hipnose",
+            "description": "Ataca todos os inimigos, com 50% de chance de adormecê-los por 1 turno. Aumenta a Prontidão de Combate do conjurador em 10% por cada debuff de sono infligido."
+        },
+        "S3": {
+            "name": "Pesadelo Infinito",
+            "description": "Ataca o inimigo e o atordoa por 1 turno. Quando o inimigo está dormindo, causa dano adicional equivalente a 10% da Vida máxima do alvo."
+        }
+    },
+    "glenn": {
+        "S1": {
+            "name": "Tiro Rápido",
+            "description": "Atira rapidamente no inimigo, com 50% de chance de diminuir a Defesa por 2 turnos."
+        },
+        "S2": {
+            "name": "Ataque Preciso",
+            "description": "Dispara um míssil no inimigo, e quando o inimigo é derrotado, inflige extinção. A Precisão aumenta em 15% ao usar esta habilidade."
+        },
+        "S3": {
+            "name": "Fogo Concentrado",
+            "description": "Usando um cubo de melhoria, concede ao conjurador aumento de Ataque (Maior) por 2 turnos."
+        }
+    },
+    "godmother": {
+        "S1": {
+            "name": "Tiro",
+            "description": "Atira no inimigo com uma pistola, com 50% de chance de marcá-lo por 2 turnos."
+        },
+        "S2": {
+            "name": "Lança-Foguetes",
+            "description": "Ataca com um míssil poderoso, com 100% de chance de diminuir a Precisão e o Ataque por 1 turno."
+        },
+        "S3": {
+            "name": "Melhorar Manobrabilidade",
+            "description": "Utiliza o poder de um cubo de melhoria, concedendo a todos os aliados aumento de Velocidade por 2 turnos."
+        }
+    },
+    "hataan": {
+        "S1": {
+            "name": "Joelhada",
+            "description": "Golpeia o inimigo com o joelho, com 80% de chance de diminuir a Precisão por 1 turno. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S2": {
+            "name": "Pressão do Vento",
+            "description": "Ataca o inimigo com pressão do vento. Ativa Pressão do Vento novamente quando um inimigo é derrotado. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S3": {
+            "name": "Vontade Imbatível",
+            "description": "Libera energia para todos os aliados, aumentando o Ataque por 2 turnos."
+        }
+    },
+    "ian": {
+        "S1": {
+            "name": "Tiro Aprimorado",
+            "description": "Dispara uma pistola aprimorada, com 75% de chance de dissipar um buff do inimigo."
+        },
+        "S2": {
+            "name": "Suporte de Combate",
+            "description": "Apoia todos os aliados usando um cubo de melhoria, concedendo aumento de Ataque por 2 turnos. Concede um turno adicional ao conjurador."
+        },
+        "S3": {
+            "name": "Cubo Explosivo de Alta Densidade",
+            "description": "Ataca todos os inimigos com explosivos poderosos, com 100% de chance de dissipar um buff, antes de 75% de chance de diminuir a Precisão por 2 turnos."
+        }
+    },
+    "kikirat-v2": {
+        "S1": {
+            "name": "Tiro Automático",
+            "description": "Ataca com uma metralhadora giratória, com 90% de chance de dissipar um buff. O dano aumenta proporcionalmente à Defesa do conjurador."
+        },
+        "S2": {
+            "name": "Modo Defesa",
+            "description": "Aumenta a Defesa do conjurador em 10% após atacar. O efeito pode ser acumulado até 5 vezes."
+        },
+        "S3": {
+            "name": "Modo Limpeza",
+            "description": "Dispara indiscriminadamente em todos os inimigos, com 75% de chance de diminuir a Precisão por 1 turno, antes de ativar contra-ataques do conjurador por 2 turnos."
+        }
+    },
+    "mirsa": {
+        "S1": {
+            "name": "Lâmina Dupla",
+            "description": "Ataca com espadas duplas, com 50% de chance de diminuir a Velocidade por 2 turnos. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        },
+        "S2": {
+            "name": "Esquivar",
+            "description": "Aumenta a chance de Evasão em 50%. No momento de ser atacado, se o conjurador esquivar com sucesso, diminui o tempo de recarga em 1 turno e aumenta a Velocidade por 2 turnos."
+        },
+        "S3": {
+            "name": "Incursão",
+            "description": "Embosca o alvo, silenciando-o por 1 turno. O dano aumenta proporcionalmente à Velocidade do conjurador."
+        }
+    },
+    "penelope": {
+        "S1": {
+            "name": "Espada Impiedosa",
+            "description": "Ataca o inimigo antes de aumentar o Ataque do conjurador em 15%. Quando um inimigo é derrotado, aumenta a Prontidão de Combate do conjurador em 75%."
+        },
+        "S2": {
+            "name": "Planos Preliminares",
+            "description": "Diminui a duração dos debuffs de todos os aliados em 1 turno antes de conceder uma barreira ao conjurador por 3 turnos. Concede um turno adicional ao conjurador."
+        },
+        "S3": {
+            "name": "Desarmar",
+            "description": "Inflige redução de recursos ao alvo em 100% antes de atacá-lo, com 100% de chance de diminuir o Ataque por 2 turnos e atordoar por 1 turno."
+        }
+    },
+    "sonia": {
+        "S1": {
+            "name": "Fogo de Supressão",
+            "description": "Ataca o inimigo com fogo de cobertura, antes de conceder uma barreira ao aliado exceto o conjurador com a menor Vida por 2 turnos."
+        },
+        "S2": {
+            "name": "Recuperação",
+            "description": "Recupera a Vida do alvo usando um cubo de recuperação. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Aura de Cubo",
+            "description": "Usa um cubo de recuperação para conceder a todos os aliados imunidade por 2 turnos, antes de recuperar Vida."
+        }
+    },
+    "aither": {
+        "S1": {
+            "name": "Espírito Sussurrante",
+            "description": "Ataca o inimigo com poder espiritual, com 50% de chance de diminuir a Velocidade por 2 turnos."
+        },
+        "S2": {
+            "name": "Guarda",
+            "description": "Recupera a Vida de um aliado com energia de água e dissipa dois debuffs. A quantidade recuperada aumenta proporcionalmente à Vida máxima do alvo."
+        },
+        "S3": {
+            "name": "Chamado do Espírito",
+            "description": "Recupera a Vida de todos os aliados e concede uma barreira por 2 turnos com poder espiritual."
+        }
+    },
+    "rin": {
+        "S1": {
+            "name": "Arremesso de Anéis",
+            "description": "Arremessa anéis no inimigo, com 75% de chance de dissipar um buff, e aumenta a Prontidão de Combate do conjurador em 15%."
+        },
+        "S2": {
+            "name": "Dança Deslumbrante",
+            "description": "Deslumbra o inimigo com uma dança, com 75% de chance de diminuir a Defesa por 2 turnos, antes de 50% de chance de usar Arremesso de Anéis."
+        },
+        "S3": {
+            "name": "Hora do Show",
+            "description": "Cura todos os aliados com uma dança elegante, concedendo um buff aleatório por 3 turnos."
+        }
+    },
+    "surin": {
+        "S1": {
+            "name": "Adaga Encadeada",
+            "description": "Ataca com um machado encadeado. Quando o inimigo está sangrando, causa dois efeitos de sangramento por 2 turnos."
+        },
+        "S2": {
+            "name": "Golpe de Fio",
+            "description": "Golpeia o inimigo com um machado encadeado e inflige dois efeitos de sangramento por 2 turnos, diminuindo o Ataque por 1 turno."
+        },
+        "S3": {
+            "name": "Implosão",
+            "description": "Aciona todos os efeitos de sangramento atualmente infligidos no inimigo. O dano aumenta proporcionalmente ao número de efeitos de sangramento infligidos."
+        }
+    },
+    "ray": {
+        "S1": {
+            "name": "Remédios Extremos",
+            "description": "Ataca jogando uma garrafa, dissipando um debuff de um aliado."
+        },
+        "S2": {
+            "name": "Luz do Renascimento",
+            "description": "Irradia luz sobre todos os aliados, concedendo barreira por 2 turnos."
+        },
+        "S3": {
+            "name": "Revigorar",
+            "description": "Revigora a equipe dissipando todos os debuffs de todos os aliados, e concede imunidade por 2 turnos."
+        }
+    },
+    "armin": {
+        "S1": {
+            "name": "Derrubada",
+            "description": "Ataca o inimigo com um escudo, com 35% de chance de atordoar por 1 turno."
+        },
+        "S2": {
+            "name": "Proteger",
+            "description": "Quando atacada, tem 15% de chance de contra-atacar. Quando um aliado é atacado, reduz o dano recebido."
+        },
+        "S3": {
+            "name": "Muro de Escudos",
+            "description": "Usa o Escudo de Luz para dissipar um debuff de todos os aliados, e concede barreira por 2 turnos."
+        }
+    },
+    "ravi": {
+        "S1": {
+            "name": "Massacre",
+            "description": "Ataca o inimigo com um machado de dois gumes e absorve parte do dano causado como Vida."
+        },
+        "S2": {
+            "name": "Sangue Demoníaco",
+            "description": "Começa a primeira batalha com 60 de Espírito de Luta e aumenta o Ataque proporcional à Vida máxima do conjurador."
+        },
+        "S3": {
+            "name": "Impulso Diabólico",
+            "description": "Ataca brutalmente todos os inimigos, causando ferimentos com 75% de chance de atordoar por 1 turno."
+        }
+    },
+    "haste": {
+        "S1": {
+            "name": "Foice do Enviado",
+            "description": "Ataca o inimigo com uma foice enorme, com 50% de chance de reduzir a Defesa por 2 turnos."
+        },
+        "S2": {
+            "name": "Rasgo Sangrento",
+            "description": "Ataca o inimigo com uma foice e recupera a Vida de todos os aliados."
+        },
+        "S3": {
+            "name": "Selo Vampírico",
+            "description": "Ataca todos os inimigos com a Foice do Enviado, dissipando dois buffs com 85% de chance de causar dois efeitos de sangramento por 2 turnos."
+        }
+    },
+    "ludwig": {
+        "S1": {
+            "name": "Luz Estelar",
+            "description": "Ataca com magia, com 75% de chance de roubar um buff."
+        },
+        "S2": {
+            "name": "Golpe da Luz Lunar",
+            "description": "Ataca o inimigo com luz, reduzindo a duração dos buffs em 1 turno com 100% de chance de atordoar por 1 turno."
+        },
+        "S3": {
+            "name": "Chamado da Lua Cheia",
+            "description": "Ataca todos os inimigos com magia Noturna. Penetra 30% da Defesa do alvo."
+        }
+    },
+    "baal-and-sezan": {
+        "S1": {
+            "name": "Assombração Fantasma",
+            "description": "Invoca um espírito maligno para atacar dois inimigos, com 50% de chance de envenenar por 2 turnos."
+        },
+        "S2": {
+            "name": "Nuvem Sombria",
+            "description": "Invoca a Nuvem da Escuridão para atacar todos os inimigos, causando dano proporcional ao número de debuffs infligidos."
+        },
+        "S3": {
+            "name": "Último Réquiem",
+            "description": "Baal e Sezan atacam todos os inimigos com Magia de Golpe, com 85% de chance de torná-los incuráveis e reduzir a Velocidade por 2 turnos."
+        }
+    },
+    "khawazu": {
+        "S1": {
+            "name": "Golpe de Chama",
+            "description": "Ataca o inimigo com uma bola de fogo, com 50% de chance de reduzir a Defesa por 2 turnos. Após atacar, tem 35% de chance de aumentar a Prontidão de Combate em 20%."
+        },
+        "S2": {
+            "name": "Compostura",
+            "description": "Quando o conjurador recebe debuffs após ser atacado, dissipa todos os debuffs e aumenta o Ataque do conjurador por 2 turnos. Só pode ser ativado uma vez a cada 2 turnos."
+        },
+        "S3": {
+            "name": "Tempestade de Brasas",
+            "description": "Ataca com uma explosão ardente, tornando o alvo incurável e reduzindo a Defesa por 1 turno cada."
+        }
     }
 }

@@ -250,5 +250,2511 @@
             "name": "Sandstorm",
             "description": "Attacks all enemies with sand magic, dispelling all buffs and decreasing Combat Readiness by 30%, before making them unable to be buffed for 2 turns."
         }
+    },
+    "belian": {
+        "S1": {
+            "name": "Light of Destruction",
+            "description": "Attacks all enemies with a ray, with a 65% chance to dispel one buff. When used on the caster's turn, has a 35% chance to activate Incursion as an extra attack. Damage dealt increases proportional to the caster's max Health. Incursion: Attacks all enemies, decreasing Speed and Hit Chance for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Shackles of Suppression",
+            "description": "Decreases the amount of Soul acquired by the enemy by 100%. At the start of the turn, has a 100% chance to grant a random buff to the caster for 1 turn."
+        },
+        "S3": {
+            "name": "Apocalypse",
+            "description": "Attacks all enemies with the power of duties, decreasing Combat Readiness by a random amount between 10% and 30% and provokes for 1 turn. Increases Defense of the caster for 2 turns. Damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "bellona": {
+        "S1": {
+            "name": "Windbreak Fan",
+            "description": "Attacks the enemy with a fan, dealing damage proportional to the enemy's max Health. When the caster's stacked Focus is 5 or more, consumes all Focus and activates Razorwind Fan."
+        },
+        "S2": {
+            "name": "Butterfly Fan",
+            "description": "Attacks all enemies by waving a fan."
+        },
+        "S3": {
+            "name": "Razorwind Fan",
+            "description": "Attacks all enemies by creating a powerful gust of wind, with a 100% chance to decrease Defense for 2 turns. Increases damage dealt when Razorwind Fan is triggered by Windbreak Fan."
+        }
+    },
+    "benimaru": {
+        "S1": {
+            "name": "Move Out of the Way",
+            "description": "Cuts the enemy to attack. When the caster is granted Multilayer Barrier, increases damage dealt."
+        },
+        "S2": {
+            "name": "Universal Perception",
+            "description": "At the start of the first battle, gains 50 Fighting Spirit. At the start of an enemy's extra turn, dispels all debuffs from the caster and grants Multilayer Barrier for 2 turns before increasing Combat Readiness by 40%. The effect following an enemy's extra turn can only be activated once every 2 turns. After attacking, when Fighting Spirit is full, consumes all Fighting Spirit to activate Hell Flare. Hell Flare: Attacks all enemies with a dark flame sphere. Penetrates the target's Defense by 30%, and when the caster is granted Multilayer Barrier, penetrates the target's Defense by an additional 30%."
+        },
+        "S3": {
+            "name": "Show No Mercy",
+            "description": "Attacks the enemy by slashing their soul, increasing Combat Readiness of the ally with the highest Combat Readiness except for the caster by 15%. When the caster is granted Multilayer Barrier, acquired Fighting Spirit is doubled."
+        }
+    },
+    "blood-blade-karin": {
+        "S1": {
+            "name": "Sequential Cutter",
+            "description": "Quickly strikes the enemy with a sword, recovering Health proportional to damage dealt. Increases Combat Readiness of the caster by 15% and when the enemy is defeated, increases Combat Readiness of the caster by an additional 35%."
+        },
+        "S2": {
+            "name": "Cursed Sword",
+            "description": "As Health decreases, Attack, Defense, and Speed increase. At the start of the battle, grants immortality to the caster for 1 turn."
+        },
+        "S3": {
+            "name": "Blade Art: Dragon",
+            "description": "Attacks all enemies, sacrificing 20% of the caster's current Health and increases Attack of the caster for 2 turns. Increases Combat Readiness of the caster by 50% when an enemy is defeated. This skill cannot trigger a counterattack."
+        }
+    },
+    "briar-witch-iseria": {
+        "S1": {
+            "name": "Fallen Flower",
+            "description": "Throws swords at the enemy, with a 75% chance to decrease Defense for 1 turn. A successful attack deals additional damage proportional to the caster's Attack."
+        },
+        "S2": {
+            "name": "Witch's Curse",
+            "description": "Increases Hit Chance by 50%. Allies and enemies cannot revive. Upon receiving lethal damage, grants immortality for 1 turn. Immortality effect can only be activated once every 5 turns."
+        },
+        "S3": {
+            "name": "Cursed Thorn",
+            "description": "Attacks all enemies with a cursed thornbush, dispelling all buffs, with a 100% chance to make them unable to be buffed for 2 turns. A successful attack deals additional damage proportional to the caster's Attack."
+        }
+    },
+    "celine": {
+        "S1": {
+            "name": "Uppercut",
+            "description": "Attacks the enemy with a sheath, and grants stealth to the caster for 1 turn."
+        },
+        "S2": {
+            "name": "Intuition",
+            "description": "At the start of the first battle, grants stealth for 2 turns. After an enemy uses a non-attack skill, dispels all debuffs from the caster and attacks a random enemy with Blink. Can only be activated once every 2 turns. Blink: Cuts the enemy in the blink of an eye and increases Combat Readiness of the caster by 30%. Unaffected by elemental disadvantage."
+        },
+        "S3": {
+            "name": "Thunderclap",
+            "description": "Attacks the enemy repeatedly, and grants increased Evasion and a barrier to the caster for 2 turns. When the enemy is not an Elite or Boss monster, damage sharing effects are ignored. Barrier strength increases proportional to the caster's Attack."
+        }
+    },
+    "cermia": {
+        "S1": {
+            "name": "Playing with Fire",
+            "description": "Attacks with a flaming sword, with a 75% chance to make the target unhealable for 1 turn."
+        },
+        "S2": {
+            "name": "Hot Streak!",
+            "description": "Shoots fire, granting the caster Increase Attack (Greater), resetting the cooldown of All-In!, and granting an extra turn."
+        },
+        "S3": {
+            "name": "All-In!",
+            "description": "Attacks with a blazing inferno, penetrating Defense by 50%."
+        }
+    },
+    "cerise": {
+        "S1": {
+            "name": "Mystical Arrow",
+            "description": "Summons a mystical bow to attack the enemy, before increasing the caster's Combat Readiness by 15%. Triggers a Dual Attack from a random ally when Frost Storm is unavailable due to cooldown count."
+        },
+        "S2": {
+            "name": "Luminous Explosion",
+            "description": "Explodes a magical sphere, stunning for 1 turn and making them unable to be buffed for 2 turns. Increases the caster's Combat Readiness by 50%."
+        },
+        "S3": {
+            "name": "Frost Storm",
+            "description": "Attacks all enemies with a raging frost storm, decreasing buff durations by 1 turn, before a 100% chance each to decrease Speed and restrict for 2 turns. Attacks using an advantageous element."
+        }
+    },
+    "challenger-dominiel": {
+        "S1": {
+            "name": "Electrocute",
+            "description": "Attacks with electricity. A critical hit will increase damage dealt."
+        },
+        "S2": {
+            "name": "Electric Charge",
+            "description": "When an ally makes a critical hit, grants stackable increased Attack to the caster according to the number of critical hits made. This effect is dispelled after attacking."
+        },
+        "S3": {
+            "name": "Supercharge",
+            "description": "Releases powerful electricity, increasing Critical Hit Chance of all allies for 3 turns, and Combat Readiness by 20%. The caster is also granted an extra turn."
+        }
+    },
+    "charles": {
+        "S1": {
+            "name": "Slash",
+            "description": "Attacks with a giant sword, with a 60% chance to decrease Attack for 1 turn. After using this skill, has a 25% chance to activate Smash as an extra attack. Chance to activate Smash is doubled when the enemy is buffed."
+        },
+        "S2": {
+            "name": "Smash",
+            "description": "Attacks the enemy repeatedly with a giant sword, with a 100% chance to dispel all buffs. Damage dealt increases proportional to number of buffs granted to the caster."
+        },
+        "S3": {
+            "name": "Faithful Strike",
+            "description": "Attacks all enemies with a swordstorm, increasing Attack and Defense of all allies for 2 turns. When there are three or fewer enemies, damage dealt increases as enemies become fewer."
+        }
+    },
+    "charlotte": {
+        "S1": {
+            "name": "Dual Swords",
+            "description": "Attacks with dual swords, with a 50% chance to decrease Attack for 1 turn. When the caster is buffed, Dual Swords becomes an attack that targets all enemies when used on the caster's turn. Increases caster's Combat Readiness by 20% after attacking with this changed attack, and a successful attack with this changed attack always results in a critical hit. This changed attack does not trigger a Dual Attack."
+        },
+        "S2": {
+            "name": "Will of the Swamp",
+            "description": "After being attacked, the caster gains 20 Fighting Spirit and is granted increased Attack and Defense for 1 turn. When attacked on the caster's turn, acquired Fighting Spirit is doubled. Increased Attack and Defense can only be granted once per turn."
+        },
+        "S3": {
+            "name": "Vortex",
+            "description": "Cuts all enemies while spinning, making them unhealable for 2 turns. Acquires 100 Fighting Spirit after using this skill."
+        }
+    },
+    "choux": {
+        "S1": {
+            "name": "Chop",
+            "description": "Attacks the enemy with a spear before increasing the caster's Combat Readiness by 20%. A critical hit will double the amount of Focus gained. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Fwoooosh!",
+            "description": "Attacks the enemy by wildly swinging a spear, and absorbs some of the damage dealt as Health. Penetrates the enemy's Defense by 70%. When the caster's stacked Focus is 5, consumes all Focus, increasing damage dealt and resetting the cooldown of Fwoooosh!. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Help Me, Cream!",
+            "description": "Freezes all enemies before attacking with Cream. Increases Critical Hit Resistance of all allies for 2 turns. Damage dealt increases proportional to the caster's max Health. When this skill is unavailable due to cooldown count, after an ally except for the caster is attacked, has a 20% chance to counterattack."
+        }
+    },
+    "clarissa": {
+        "S1": {
+            "name": "Harsh Lesson",
+            "description": "Attacks with a morning star, with a 50% chance to decrease Defense for 2 turns."
+        },
+        "S2": {
+            "name": "Rage",
+            "description": "The caster becomes enraged for 3 turns and activates Kya-hahaha when an enemy is defeated by Harsh Lesson or Hysteric. Kya-hahaha: Attacks all enemies by swinging an iron mace."
+        },
+        "S3": {
+            "name": "Hysteric",
+            "description": "Attacks all enemies by spinning. When an enemy is defeated, resets skill cooldown. When the caster is enraged, damage dealt is increased."
+        }
+    },
+    "closer-charles": {
+        "S1": {
+            "name": "Elimination",
+            "description": "Sharply cuts the enemy to attack. When used on the caster's turn, if the caster is granted perception, uses Demolition instead of Elimination. Demolition: Attacks the enemy with a sword, absorbing some of the damage dealt as Health. Damage dealt increases proportional to the target's lost Health. When the enemy is defeated, decreases cooldown of Descent by 1 turn. This attack does not trigger a Dual Attack."
+        },
+        "S2": {
+            "name": "Closer",
+            "description": "At the start of the first battle, increases Evasion for 1 turn. After an ally except for the caster attacks, when the enemy's Health is less than 40%, increases Combat Readiness of the caster by 50% and grants perception for 2 turns. Can only be activated once every 2 turns."
+        },
+        "S3": {
+            "name": "Descent",
+            "description": "Attacks all enemies after descending, increasing Attack of all allies for 2 turns before increasing Combat Readiness by 20%. This skill cannot trigger a counterattack."
+        }
+    },
+    "corvus": {
+        "S1": {
+            "name": "Shield Slam",
+            "description": "Attacks the enemy by shoving them with a shield, with a 75% chance to transfer one debuff from the caster to the enemy. When the caster is granted indomitable, damage dealt is increased and the enemy is stunned for 1 turn. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S2": {
+            "name": "Macerate",
+            "description": "Attacks all enemies with an iron mace, decreasing Combat Readiness by 30%. When the enemy's Combat Readiness reaches 0, stuns for 1 turn. When the caster is granted indomitable, doubles the amount of Combat Readiness decrease. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S3": {
+            "name": "Fury's Advent",
+            "description": "By discharging Fighting Spirit, grants indomitable to the caster for 3 turns and an extra turn. Begins the first battle with 50 Fighting Spirit. Gains 10 Fighting Spirit when attacked."
+        }
+    },
+    "crimson-armin": {
+        "S1": {
+            "name": "Takedown",
+            "description": "Attacks with a large shield, with a 100% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S2": {
+            "name": "Security State",
+            "description": "Decreases damage received by allies by 15%. When more than one damage reduction effect is granted, only the strongest effect is applied."
+        },
+        "S3": {
+            "name": "Shield of Holy Spirit",
+            "description": "Covers all allies with an aura of holy spirit, granting immunity for 2 turns and invincibility for 1 turn."
+        }
+    },
+    "dark-corvus": {
+        "S1": {
+            "name": "Shield Bash",
+            "description": "Attacks the enemy with a shield, with a 100% chance to provoke for 1 turn, before recovering the caster's Health. Damage dealt and amount recovered increase proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Ruin's Advent",
+            "description": "Immune to stun. At the moment the caster is attacked, the caster has a 100% chance of their skill cooldown being decreased by 1 turn, or 2 turns in the case of a critical hit."
+        },
+        "S3": {
+            "name": "Devil's Descent",
+            "description": "Attacks the enemy with a lethal hit. When the enemy is defeated, inflicts extinction. Damage dealt increases proportional to the caster's max Health and penetrates the target's Defense. This attack cannot trigger a critical hit. Begins the battle with a full skill cooldown count."
+        }
+    },
+    "destina": {
+        "S1": {
+            "name": "Key to an Oath",
+            "description": "Attacks the enemy with a staff and heals the ally with the lowest Health. Healing increases proportional to the target's max Health."
+        },
+        "S2": {
+            "name": "Regen",
+            "description": "Blesses an ally, dispelling two debuffs and recovering Health before increasing Combat Readiness by 30%. Healing increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Destina's Grace",
+            "description": "Grants all allies the blessing of a Spirit Lord, dispelling all debuffs before recovering Health. Amount recovered increases proportional to the caster's max Health. At the start of the first battle, grants Spirit's Blessing to the caster for 2 turns."
+        }
+    },
+    "diene": {
+        "S1": {
+            "name": "Light of Judgment",
+            "description": "Attacks the enemy with a ray of brilliant light, increasing the caster's Combat Readiness by 15%. Effect doubles when caster is buffed."
+        },
+        "S2": {
+            "name": "Blessings of the Goddess",
+            "description": "With the Blessings of the Goddess, dispels two debuffs from all allies and grants barrier for 2 turns. Barrier strength increases proportional to the target's max Health."
+        },
+        "S3": {
+            "name": "Saint's Prayer",
+            "description": "A miracle of the Goddess manifests, increasing Attack of all allies for 3 turns, before increasing the caster's Combat Readiness by 50%."
+        }
+    },
+    "dizzy": {
+        "S1": {
+            "name": "I Used This to Catch Fish",
+            "description": "Attacks all enemies with the power of magic, with a 25% chance each to stun for 1 turn. Damage dealt increases on debuffed enemies."
+        },
+        "S2": {
+            "name": "Gamma Ray",
+            "description": "Attacks all enemies with a powerful ray, extending the duration of debuffs by 1 turn, except for those which prevent the enemy from moving."
+        },
+        "S3": {
+            "name": "Emotional Gamma Ray",
+            "description": "Unleashes a giant explosion to attack all enemies. The attack misses, but inflicts decreased Speed, Attack, and Hit Chance for 2 turns regardless."
+        }
+    },
+    "elphelt": {
+        "S1": {
+            "name": "Barrage",
+            "description": "Fires a barrage of bullets at the enemy, with a 75% chance to make them unable to be buffed for 1 turn."
+        },
+        "S2": {
+            "name": "Judge Better Half",
+            "description": "Traps the enemy in a cake, before attacking them with a cake-cutting blade and increasing Attack of all allies for 2 turns. When the enemy is asleep, decreases Defense of all enemies for 2 turns. Damage dealt increases proportional to the number of debuffs inflicted on the enemy."
+        },
+        "S3": {
+            "name": "Magnum Wedding",
+            "description": "Dispels two buffs from the enemy before shooting a bullet of love, with a 100% chance to put them to sleep for 2 turns. Grants the caster an extra turn."
+        }
+    },
+    "emilia": {
+        "S1": {
+            "name": "Huma",
+            "description": "Attacks the enemy with ice, before recovering Health of the ally with the lowest Health. Amount recovered increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Spirit's Blessing",
+            "description": "Grants a blessing to an ally except for the caster, dispelling two debuffs and increasing Combat Readiness by 50%. Increases Combat Readiness of the caster by 25%."
+        },
+        "S3": {
+            "name": "Divine Protection of the Great Spirit",
+            "description": "Uses spiritual arts to dispel two debuffs from all allies, before recovering Health and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+        }
+    },
+    "eda": {
+        "S1": {
+            "name": "Icy Impact",
+            "description": "Attacks the enemy with shards of ice, with a 75% chance to decrease Defense for 1 turn."
+        },
+        "S2": {
+            "name": "Cold Snap",
+            "description": "Attacks all enemies with an explosion of ice, dispelling two buffs before decreasing Combat Readiness by a random amount between 15% and 40%. Grants the caster skill nullifier once."
+        },
+        "S3": {
+            "name": "Absolute Zero",
+            "description": "Releases energy to attack all enemies, with an 85% chance to stun for 1 turn. When an ally uses a non-attack skill and this skill is available according to cooldown count, increases Combat Readiness of the caster by 20%."
+        }
+    },
+    "elena": {
+        "S1": {
+            "name": "Starlight's Will",
+            "description": "Attacks with the power of the stars, dispelling one debuff each from two allies."
+        },
+        "S2": {
+            "name": "Guardian's Authority",
+            "description": "When an ally suffers an attack that targets all enemies, decreases the damage received by 20% and activates Consecrated Ground. When more than one damage reduction effect is granted, only the strongest effect is applied. Consecrated Ground can be activated once every 2 turns. Consecrated Ground: Recovers the Health of all allies before increasing Combat Readiness of the caster by 20%. Amount recovered increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Eternally Shining Comet",
+            "description": "Attacks all enemies with a meteor shower, and dispels one debuff from all allies before granting invincibility to all allies for 1 turn."
+        }
+    },
+    "elson": {
+        "S1": {
+            "name": "Heavy Strike",
+            "description": "Attacks the enemy, with a 75% chance to decrease Attack for 1 turn."
+        },
+        "S2": {
+            "name": "Meteor Shower",
+            "description": "Attacks all enemies with Meteor Shower of Light and recovers the Health of all allies. Healing increases proportional to the ally's max Health."
+        },
+        "S3": {
+            "name": "Light's Protection",
+            "description": "Recovers Health and increases Attack and Defense of all allies for 2 turns with strengthening magic. Amount recovered is proportional to the target's max Health."
+        }
+    },
+    "ervalen": {
+        "S1": {
+            "name": "Vengeance",
+            "description": "Rapidly attacks the enemy, with a 50% chance to decrease Defense for 2 turns."
+        },
+        "S2": {
+            "name": "Sword of Hatred",
+            "description": "Attacks the enemy repeatedly. When the enemy's max Health is greater than the caster's max Health, Combat Readiness of the caster increases proportional to the difference, up to a maximum of 30%."
+        },
+        "S3": {
+            "name": "Heir to the Throne",
+            "description": "Attacks the enemy with a sword, adopting a counterattacking stance and granting a barrier to the caster for 2 turns. When the enemy is defeated, extends buff durations of the caster by 1 turn and grants an extra turn. When the enemy's max Health is greater than the caster's max Health, damage dealt increases proportional to the difference, up to a maximum of 70%. Barrier strength increases proportional to the caster's Attack."
+        }
+    },
+    "fairytale-tenebria": {
+        "S1": {
+            "name": "One Pair",
+            "description": "Attacks the enemy with a mystical power, with a 75% chance each to inflict redirected provoke for 1 turn."
+        },
+        "S2": {
+            "name": "Wild Card",
+            "description": "When an ally is attacked by an enemy inflicted with provoke or redirected provoke, activates Shuffle. Shuffle can only be activated once per turn. Shuffle: Attacks all enemies and inflicts a random debuff for 1 turn. A successful attack against a target inflicted with provoke or redirected provoke inflicts additional damage. Additional damage increases proportional to the target's max Health."
+        },
+        "S3": {
+            "name": "Tea Party",
+            "description": "Lures all enemies in with a tea party and attacks, making them unable to be buffed for 2 turns and inflicting redirected provoke for 1 turn."
+        }
+    },
+    "fallen-cecilia": {
+        "S1": {
+            "name": "Mistake",
+            "description": "Attacks the enemy with a spear of revenge and has a 100% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Strong Instinct",
+            "description": "Decreases additional damage and fixed damage received by allies from Heroes by 50%. When more than one damage reduction effect is granted, only the strongest effect is applied. At the end of the turn, grants a barrier to the ally with the lowest Health for 2 turns. Barrier strength increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Spear of Resentment",
+            "description": "Attacks all enemies in an explosion of spiteful emotions and dispels all buffs before transferring all debuffs inflicted on the caster. Grants skill nullifier once to all allies. Damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "flan": {
+        "S1": {
+            "name": "Communication Breakdown",
+            "description": "Attacks the enemy with a gun, with a 75% chance to dispel one buff."
+        },
+        "S2": {
+            "name": "Data Monopoly",
+            "description": "Encourages an ally, increasing Attack and Critical Hit Damage for 2 turns before increasing Combat Readiness by 40%."
+        },
+        "S3": {
+            "name": "Advantageous Deal",
+            "description": "Drives a hard bargain against all enemies, decreasing Defense for 2 turns before decreasing Combat Readiness by 15%. Grants an extra turn."
+        }
+    },
+    "free-spirit-tieria": {
+        "S1": {
+            "name": "Half Slash",
+            "description": "Attacks the enemy with an axe, with a 50% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the target's max Health."
+        },
+        "S2": {
+            "name": "Energy Wave",
+            "description": "Attacks all enemies with condensed energy, and absorbs some of the damage dealt as Health."
+        },
+        "S3": {
+            "name": "Pursuit Cut",
+            "description": "Dashes towards the enemy to attack, and decreases Defense for 2 turns. A critical hit will grant immunity to the caster for 2 turns. Damage dealt increases proportional to the target's max Health."
+        }
+    },
+    "furious": {
+        "S1": {
+            "name": "Quickdraw",
+            "description": "Fires a gun while dashing towards the enemy, with a 35% chance to burn for 2 turns."
+        },
+        "S2": {
+            "name": "Morale Boost",
+            "description": "Raises morale of all allies, granting increased Critical Hit Chance for 2 turns."
+        },
+        "S3": {
+            "name": "Fatal Bullet",
+            "description": "Attacks with a fatal shot, with a 100% chance to decrease Defense for 2 turns."
+        }
+    },
+    "general-purrgis": {
+        "S1": {
+            "name": "Heroic Strike",
+            "description": "Mows down the enemy with a great sword, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Spearhead",
+            "description": "After being attacked, increases Combat Readiness of all allies by 15%."
+        },
+        "S3": {
+            "name": "Command to Charge",
+            "description": "Gives the command to charge, dealing damage to all enemies, with a 100% chance each to stun two random enemies for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "guider-aither": {
+        "S1": {
+            "name": "Whispering Spirit",
+            "description": "Attacks with spirit power, with a 50% chance to decrease Speed for 2 turns."
+        },
+        "S2": {
+            "name": "Spirit's Protection",
+            "description": "Attacks with spirit power, before recovering Health of all allies and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's Attack."
+        },
+        "S3": {
+            "name": "Wave of Force",
+            "description": "Delivers a blow to the enemy with spirit power and dispels all buffs, before increasing Attack of the ally with the highest Attack for 2 turns."
+        }
+    },
+    "hwayoung": {
+        "S1": {
+            "name": "Supersonic Kick",
+            "description": "Attacks the enemy with a kick. A successful attack inflicts additional damage proportional to the caster's Attack."
+        },
+        "S2": {
+            "name": "Prairie Hawk",
+            "description": "When attacking, cannot trigger a critical hit. Damage suffered from a critical hit decreases by 30%. When more than one damage reduction effect is granted, only the strongest effect is applied. At the start of the turn, when the caster does not have a debuff, increases Attack for 1 turn."
+        },
+        "S3": {
+            "name": "Monarch's Flaming Strike",
+            "description": "Attacks the enemy with a secret technique and grants immunity and a barrier to the caster for 2 turns. When the caster's Attack is greater than the target's Attack, penetrates the target's Defense, with penetration rate increasing proportional to the difference, up to a maximum of 100%. Barrier strength increases proportional to the caster's Attack."
+        }
+    },
+    "ilynav": {
+        "S1": {
+            "name": "Rush",
+            "description": "Attacks the enemy with a spear. Damage dealt increases proportional to the caster's max Health. When this skill is used, if it was not triggered by a Dual Attack, has a 50% chance to use Punish instead of Rush. This skill does not trigger a Dual Attack."
+        },
+        "S2": {
+            "name": "Punish",
+            "description": "Attacks and pierces the enemy, inflicting injuries. A successful attack deals additional damage equivalent to 50% of injuries inflicted on the target. Damage dealt increases proportional to the caster's max Health. The severity of injuries increases proportional to the damage dealt. Injuries decrease max Health of the target by up to 20% every time this skill is used."
+        },
+        "S3": {
+            "name": "Repel",
+            "description": "Attacks all enemies mercilessly, inflicting injuries. Increases Critical Hit Damage of all allies for 2 turns. Damage dealt increases proportional to the caster's max Health. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 20% every time this skill is used."
+        }
+    },
+    "iseria": {
+        "S1": {
+            "name": "Refined Flower",
+            "description": "Throws swords at the enemy, with a 50% chance to decrease Defense for 2 turns."
+        },
+        "S2": {
+            "name": "Oathkeeper",
+            "description": "Resets skill cooldown of an ally except for the caster with light energy."
+        },
+        "S3": {
+            "name": "Full Bloom",
+            "description": "Attacks the enemy with a giant Magic Sword, dispelling all buffs, before decreasing Defense and making them unable to be buffed for 2 turns."
+        }
+    },
+    "judge-kise": {
+        "S1": {
+            "name": "Sever",
+            "description": "Attacks the enemy with a scythe. Penetrates the target's Defense by 20%."
+        },
+        "S2": {
+            "name": "End of Evil",
+            "description": "Attacks all enemies with a scythe, dispelling all buffs before applying a 175% chance to decrease Hit Chance for 2 turns and a 175% chance to decrease Defense for 2 turns, and increase Combat Readiness of the caster by 25% per target. This skill cannot trigger a counterattack."
+        },
+        "S3": {
+            "name": "Wave of Light",
+            "description": "Attacks all enemies by distorting space and time before increasing skill cooldowns by 1 turn."
+        }
+    },
+    "karin": {
+        "S1": {
+            "name": "Sequential Cutter",
+            "description": "Strikes the enemy with a sword. A critical hit will decrease skill cooldown by 1 turn."
+        },
+        "S2": {
+            "name": "Blade Art: Flash",
+            "description": "Slashes the enemy. A critical hit will decrease Defense for 1 turn."
+        },
+        "S3": {
+            "name": "Blade Art: Thunder",
+            "description": "Cuts the enemy with lightning speed. Damage dealt increases with a critical hit."
+        }
+    },
+    "kayron": {
+        "S1": {
+            "name": "Void Slash",
+            "description": "Attacks with a sword, with a 50% chance to decrease Hit Chance for 1 turn, dealing damage proportional to the caster's lost Health. When this skill is used, if it was not triggered by a Dual Attack and the caster has a buff, this skill changes into an attack that targets all enemies. The changed attack does not trigger a Dual Attack."
+        },
+        "S2": {
+            "name": "Immortal Will",
+            "description": "When the caster receives lethal damage, grants immortality for 1 turn and increased Evasion for 2 turns and resets skill cooldown of Apocalypse. Can only be activated once every 6 turns."
+        },
+        "S3": {
+            "name": "Apocalypse",
+            "description": "Attacks the enemy by exploding the Archdemon's Might contained within the sword, before absorbing some of the damage dealt as Health. When the enemy is defeated, extends buff durations granted to the caster by 1 turn. Damage dealt increases proportional to the caster's lost Health."
+        }
+    },
+    "ken": {
+        "S1": {
+            "name": "Knockout",
+            "description": "Attacks with a flurry of strikes, with a 50% chance to decrease Defense for 2 turns. Burns the enemy for 2 turns when the caster is granted vigor. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Celestial Kick",
+            "description": "Kicks the enemy with a series of kicks, decreasing Defense for 2 turns before granting the caster increased Speed for 2 turns. When the caster is granted vigor, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Phoenix Flurry",
+            "description": "Attacks with a flurry of strikes before delivering a powerful blow, stunning for 1 turn. Grants vigor to the caster for 3 turns. Damage dealt increases proportional to the caster's max Health. At the start of the first battle, gains 40 Fighting Spirit."
+        }
+    },
+    "krau": {
+        "S1": {
+            "name": "Swordstorm",
+            "description": "Attacks the enemy with a swordstorm, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Charge",
+            "description": "Shoves the enemy with a shield, decreasing Combat Readiness by 50%, before granting increased Defense to all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Summon Ziegfried",
+            "description": "Summons the Guardian Ziegfried to attack, dealing damage proportional to the caster's lost Health, penetrating Defense. This attack cannot trigger a critical hit."
+        }
+    },
+    "landy": {
+        "S1": {
+            "name": "Fire",
+            "description": "Attacks the enemy with gunfire, and increases Combat Readiness of the caster by 15%. When the target has a buff, doubles the effects of Combat Readiness increase and Fighting Spirit gained."
+        },
+        "S2": {
+            "name": "The Chief Is on the Scene",
+            "description": "At the start of the first battle, gains 50 Fighting Spirit and grants stealth for 1 turn. At the start of the turn, gains 10 Fighting Spirit for each buff granted to an enemy, and when Fighting Spirit is full, resets skill cooldown. After attacking, increases Attack of the caster by 25%. This effect can stack up to 3 times."
+        },
+        "S3": {
+            "name": "Full Burst",
+            "description": "Fires at all enemies and grants all allies increased Speed for 2 turns, before increasing their Combat Readiness by 15%. When Fighting Spirit is full, consumes all Fighting Spirit to penetrate the target's Defense by 50%. This attack cannot trigger a counterattack."
+        }
+    },
+    "last-rider-krau": {
+        "S1": {
+            "name": "Punishment",
+            "description": "Attacks the enemy with a swordstorm, before increasing Speed of the caster for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Code Number 00",
+            "description": "After being attacked, decreases skill cooldowns by 1 turn. After suffering an attack that targets all allies, decreases skill cooldowns by an additional 1 turn, and grants a barrier to all allies for 2 turns. Barrier strength increases proportional to the caster's max Health. Barrier effect can only be activated once per turn."
+        },
+        "S3": {
+            "name": "Mobile Weapon Ziegfried",
+            "description": "Summons Ziegfried to attack all enemies and decreases skill cooldowns of all allies by 1 turn. Penetrates Defense, and cannot trigger a critical hit. Damage dealt increases proportional to the caster's max Health and Speed. Damage dealt increases every time this skill is used and can stack up to 3 times."
+        }
+    },
+    "lidica": {
+        "S1": {
+            "name": "Wild Rose",
+            "description": "Attacks the enemy with a sword and has a 80% chance each to inflict two bleeding effects for 1 turn. At the end of the turn, detonates bleeding effects inflicted on the target."
+        },
+        "S2": {
+            "name": "Thornbush",
+            "description": "Inflicts resource reduction on all enemies by 60% before attacking, decreasing buff durations by 1 turn and inflicting bind for 2 turns. For every target, increases Combat Readiness of the caster by 25%."
+        },
+        "S3": {
+            "name": "Public Execution",
+            "description": "Attacks the enemy with a whip sword, inflicting decreased Defense for 2 turns before decreasing Combat Readiness by 100%. Grants skill nullifier once to all allies. When the target is inflicted with bind, ignores Effect Resistance."
+        }
+    },
+    "lilias": {
+        "S1": {
+            "name": "Follow Me! Charge!",
+            "description": "Takes the lead to attack the enemy, and triggers a Dual Attack from a random ally. Increases Critical Hit Chance by 50% when attacking and damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "That's Far Enough!",
+            "description": "After an enemy uses a non-attack skill, dispels one debuff from the caster, and activates Suppression against the enemy caster. Suppression can only be activated once every 2 turns. Suppression: Provokes the target for 1 turn, and grants a barrier to the caster for 2 turns. Barrier strength increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Ready, Load, Fire!",
+            "description": "Commands the Perland Army to attack by firing on all enemies, decreasing Combat Readiness by 25%. Increases Critical Hit Chance by 50% when attacking, inflicting damage according to the Attack of the Hero with the highest Attack."
+        }
+    },
+    "lilibet": {
+        "S1": {
+            "name": "Slice-Slice",
+            "description": "Strikes and slices the enemy, with a 50% chance to make them unable to be buffed for 2 turns."
+        },
+        "S2": {
+            "name": "Snip-Snip",
+            "description": "Brutally cuts the enemy, with a 55% chance each to inflict three bleeding effects for 2 turns, before increasing Combat Readiness of the caster by 50%."
+        },
+        "S3": {
+            "name": "Soul Cutter",
+            "description": "Slashes the enemy with Cho & Mal, before granting the caster skill nullifier once. When the enemy is defeated, inflicts extinction and decreases the caster's skill cooldown by 1 turn. Hit Chance is increased by 20% when using this skill."
+        }
+    },
+    "little-queen-charlotte": {
+        "S1": {
+            "name": "Judgment",
+            "description": "Attacks with a giant sword before granting the caster immunity for 1 turn."
+        },
+        "S2": {
+            "name": "A Queen's Dignity",
+            "description": "Decreases damage suffered from a critical hit by 30%. Decreases damage suffered from a critical hit for all allies except for the caster by 15%. When more than one damage reduction effect is granted, only the strongest effect is applied. At the moment the caster suffers a critical hit, increases Combat Readiness of the caster by 15%."
+        },
+        "S3": {
+            "name": "The Will of La Mare",
+            "description": "Smashes the enemy with a sword and attacks. When the enemy is defeated, inflicts extinction. Penetrates the target's Defense by 50%. When the target is a Dark elemental Hero, increases damage dealt and inflicts additional damage proportional to the caster's Attack to all enemies except for the target."
+        }
+    },
+    "luluca": {
+        "S1": {
+            "name": "Wild Wave",
+            "description": "Attacks with intense elemental force, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health."
+        },
+        "S2": {
+            "name": "Rekos's Blessing",
+            "description": "With the blessing of the stars, grants increased Defense and barrier to all allies for 2 turns. Barrier strength increases proportional to the caster's Attack."
+        },
+        "S3": {
+            "name": "Wave of Vengeance",
+            "description": "Attacks all enemies with the power of ruin, with a 100% chance to decrease Defense for 2 turns."
+        }
+    },
+    "luna": {
+        "S1": {
+            "name": "Infinity Slash",
+            "description": "Stabs the target a random number of times. Skill cooldown decreases by 1-3 turns and damage dealt increases according to the number of attacks."
+        },
+        "S2": {
+            "name": "Dragon Knight's Will",
+            "description": "Increases Critical Hit Chance and Critical Hit Resistance by 90%. Increases Attack by 90% when the caster's Health is 50% or more, and increases Defense by 90% when the caster's Health is less than 50%."
+        },
+        "S3": {
+            "name": "Ragnar Spear",
+            "description": "Soars into the air and hits the enemy with a spear, with a 100% chance to decrease Defense for 2 turns. Penetrates the target's Defense by 50%. Acquires 5 additional Souls when the enemy is defeated."
+        }
+    },
+    "martial-artist-ken": {
+        "S1": {
+            "name": "Knockout",
+            "description": "Attacks the enemy with a flurry of strikes, with a 100% chance to inflict provoke for 1 turn. A successful attack always results in a critical hit."
+        },
+        "S2": {
+            "name": "Dragon Flame",
+            "description": "At the start of battle, grants vigor for 3 turns. When an ally except for the caster suffers a critical hit, counterattacks, and when the caster suffers a critical hit, counterattacks with Dragon Flame. Dragon Flame (Acquire 1 Soul): Attacks the enemy with a kick and penetrates the target's Defense by 50%. A successful attack always results in a critical hit, dealing damage proportional to the caster's lost Health."
+        },
+        "S3": {
+            "name": "The Coming of Asura",
+            "description": "Attacks all enemies with a powerful ground pound, with a 80% chance to decrease Defense for 2 turns. A successful attack always results in a critical hit."
+        }
+    },
+    "melissa": {
+        "S1": {
+            "name": "Might",
+            "description": "Overpowers the enemy, with a 75% chance to make them unhealable for 1 turn. Damage dealt increases proportional to the caster's lost Health."
+        },
+        "S2": {
+            "name": "Manifestation",
+            "description": "Attacks by unleashing their inner rage, before granting immortality and immunity to the caster for 1 turn. This skill's cooldown is reset when the enemy is defeated. Damage dealt increases proportional to the caster's lost Health."
+        },
+        "S3": {
+            "name": "Blood Bloom",
+            "description": "Dispels all buffs from the enemy before attacking by releasing their pent-up aggression, cursing for 2 turns regardless of whether the attack hits. This skill is unaffected by elemental disadvantage. Elite or Boss monsters cannot be cursed."
+        }
+    },
+    "milim": {
+        "S1": {
+            "name": "Dragon Dive",
+            "description": "Attacks the enemy, recovering Health proportional to damage dealt before increasing Attack of the caster for 1 turn."
+        },
+        "S2": {
+            "name": "Dragon Eye (Milim Eye)",
+            "description": "At the start of battle and at the end of the turn, has a 100% chance to grant Dragon Eye (Milim Eye) to the caster for 1 turn. When the caster is granted Dragon Eye (Milim Eye) at the start of the turn, dispels stealth from all enemies. Ignores Effect Resistance. When Focus is full after attacking, consumes all Focus to activate Dragon Buster. Dragon Buster: Attacks all enemies with overwhelming mana, removing 10 Souls."
+        },
+        "S3": {
+            "name": "Dragon Fear",
+            "description": "Releases mana to attack the enemy, inflicting extinction when the enemy is defeated. Increases Evasion of the caster for 3 turns."
+        }
+    },
+    "maid-chloe": {
+        "S1": {
+            "name": "Heavy Strike",
+            "description": "Attacks with a hammer, with a 40% chance to stun for 1 turn. When the target is stunned after the attack, increases Combat Readiness of all allies except for the caster by 15%."
+        },
+        "S2": {
+            "name": "Maid's Cheer",
+            "description": "Increases Effect Resistance of all allies by 20%. At the start of the turn, recovers Health of the two allies with the lowest Health. Amount recovered increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "VIP Treatment",
+            "description": "Entertains all allies with VIP Treatment, reviving all dead allies to 20% Health. Dispels two debuffs from all living allies and grants revive for 3 turns."
+        }
+    },
+    "mort": {
+        "S1": {
+            "name": "Extermination",
+            "description": "Attacks the enemy by piercing them, with a 50% chance to decrease Defense for 2 turns. Ignores Effect Resistance of any targets with Max Health lower than the caster's Max Health."
+        },
+        "S2": {
+            "name": "Absolute Dignity",
+            "description": "Immune to debuffs which prevent movement. All Heroes except for the caster cannot counterattack. When an ally is attacked, has a 20% chance to counterattack and when counterattacking, activates Sacred Blessing. Sacred Blessing can be activated once every 3 turns. Sacred Blessing: Grants a barrier to all allies for 2 turns, and increases Speed of the caster for 2 turns. Barrier strength increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Advent: Mortelix",
+            "description": "Descends and attacks all enemies, inflicting fear for 2 turns, before recovering Health of the caster. Penetrates Defense of the enemy with the highest Max Health by 70%, and ignores Effect Resistance of any targets with Max Health lower than the caster's Max Health. Damage dealt and amount recovered increase proportional to the caster's max Health."
+        }
+    },
+    "pavel": {
+        "S1": {
+            "name": "Hurricane Sword",
+            "description": "Strikes the enemy with a gun, with a 75% chance to decrease Hit Chance for 1 turn. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S2": {
+            "name": "Storm Bullet",
+            "description": "Fires a strong blast of wind at all enemies. Damage dealt increases proportional to the caster's Speed. This skill cannot trigger a counterattack."
+        },
+        "S3": {
+            "name": "Destructive Pursuit",
+            "description": "Swiftly cuts and shoots the enemy. When the enemy is not an Elite or Boss monster, damage sharing effects are ignored. Damage dealt increases proportional to the caster's Speed."
+        }
+    },
+    "peira": {
+        "S1": {
+            "name": "Wolven Claw",
+            "description": "Slashes the enemy with sharp claws, with a 40% chance to stun for 1 turn. When the caster is granted a barrier, effect chance increases by 25%."
+        },
+        "S2": {
+            "name": "Punishing Blade",
+            "description": "Attacks all enemies with guardian spirits, decreasing buff duration by 1 turn, before restricting and making them unable to be buffed for 2 turns."
+        },
+        "S3": {
+            "name": "Pack Hunt",
+            "description": "Using the power of the Goblet of Oath, increases Attack of all allies except for the caster for 2 turns, before granting stealth, escort, and a barrier to the caster for 3 turns. Barrier strength increases proportional to the caster's level."
+        }
+    },
+    "politis": {
+        "S1": {
+            "name": "Call of the Stars",
+            "description": "Summons dolls to attack the enemy, with a 40% chance to stun for 1 turn."
+        },
+        "S2": {
+            "name": "Astral Guide",
+            "description": "When the enemy is not an Elite or Boss monster, reduces the effect of Combat Readiness increases granted to the enemy by 50%. This effect does not stack with other passive effects of the same name. Activates Tranquility when an enemy uses a non-attack skill. Tranquility can only be activated once every 2 turns. Tranquility: Attacks all enemies, decreasing buff durations by 1 turn, before increasing Combat Readiness of the caster by 30%."
+        },
+        "S3": {
+            "name": "Starfall",
+            "description": "Attacks all enemies with alien technology, with a 100% chance to make them unable to be buffed for 2 turns."
+        }
+    },
+    "ran": {
+        "S1": {
+            "name": "Tempest",
+            "description": "Attacks the enemy with a swordstorm. Penetrates the target's Defense by 20%. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S2": {
+            "name": "Mental Focus",
+            "description": "Grants immunity to all allies for 2 turns before increasing Attack of the caster for 2 turns. Grants an extra turn to the caster."
+        },
+        "S3": {
+            "name": "Instant Blade",
+            "description": "Attacks all enemies with a sword, dispelling two buffs before a 85% chance to inflict stigma for 2 turns, and a 85% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the caster and the target's Speed."
+        }
+    },
+    "rem": {
+        "S1": {
+            "name": "Leave it to Me.",
+            "description": "Attacks the enemy with a morning star, with a 50% chance to decrease Defense for 2 turns. When the caster is granted Demon Mode, grants the caster an extra attack with the same skill."
+        },
+        "S2": {
+            "name": "A Maid's Pride",
+            "description": "When somebody dies, dispels all debuffs from the caster and grants Demon Mode for 2 turns. Can only be activated once every 5 turns. When an ally except for the caster is attacked, has a 20% chance to counterattack with Iron Strike. Iron Strike takes priority over a counterattack with a basic skill. Iron Strike: Attacks all enemies, decreasing buff durations by 1 turn and making them unhealable for 1 turn."
+        },
+        "S3": {
+            "name": "I Will Punish You!",
+            "description": "Increases Attack of the caster for 3 turns, before leaping up to attack all enemies and decrease Hit Chance for 2 turns."
+        }
+    },
+    "rimuru": {
+        "S1": {
+            "name": "Okay, Shall I Get Started?",
+            "description": "Cuts the enemy to attack, granting a random buff to the caster for 1 turn."
+        },
+        "S2": {
+            "name": "Analyze and Assess",
+            "description": "After attacking with a non-basic skill, copies two buffs when the target is buffed, regardless of whether the attack hits and grants their effects to all allies. This effect is not applied to undispellable buffs. When an ally is attacked by a buffed enemy, activates Be Ready! against the attacker. Be Ready! can only be activated once every 3 turns. Be Ready!: Quickly approaches the enemy and attacks, increasing Combat Readiness of the caster by 30%."
+        },
+        "S3": {
+            "name": "Devour It, Black Flame!",
+            "description": "Attacks the enemy with black flame, and a successful attack will inflict 5,000 additional fixed damage to the target. Fixed damage increases proportional to the number of buffs granted to all allies, up to a maximum of 10,000 fixed damage. Unaffected by elemental disadvantage."
+        }
+    },
+    "roana": {
+        "S1": {
+            "name": "Soul Purification",
+            "description": "Attacks the enemy with a noble power, granting a barrier to the ally with the lowest Health for 2 turns. Barrier strength increases proportional to the caster's max Health. Grants a barrier to all allies for 2 turns after attacking."
+        },
+        "S2": {
+            "name": "Vigilant Eye",
+            "description": "Recovers Health of all allies when an ally is attacked by an extra attack, counterattack, or Dual Attack, and increases Combat Readiness of all allies by 5% each per attacked ally. Amount recovered is proportional to the caster's max Health and the number of attacked allies."
+        },
+        "S3": {
+            "name": "Noble Rekos",
+            "description": "With the grace of Rekos, grants a barrier and revive to all allies for 2 turns. Barrier strength increases proportional to the caster's max Health."
+        }
+    },
+    "remnant-violet": {
+        "S1": {
+            "name": "Sword Flash",
+            "description": "Cuts the enemy, with a 75% chance to decrease Hit Chance for 1 turn. Grants an extra turn."
+        },
+        "S2": {
+            "name": "Concentration",
+            "description": "Increases Evasion by 50%, and after successfully evading, gains 1 Focus. When Focus is at 5 after attacking or being attacked, consumes it all and uses Massacre against a random enemy."
+        },
+        "S3": {
+            "name": "Massacre",
+            "description": "Attacks the enemy with a sword. Penetrates the target's Defense by 50%."
+        }
+    },
+    "senya": {
+        "S1": {
+            "name": "Spear of Vengeance",
+            "description": "Attacks the enemy with a spear, with a 75% chance to provoke for 1 turn. When it is not the caster's turn, effect chance increases by 25%."
+        },
+        "S2": {
+            "name": "Indomitable Spirit",
+            "description": "Attack increases by 30% and Critical Hit Resistance increases by 50%. When attacking, cannot trigger a critical hit. When attacked, if the caster suffers a non-critical hit, deals damage to the attacker proportional to the caster's Attack before activating Grace of the Battlefield. Grace of the Battlefield can only be activated once every 2 turns. Grace of the Battlefield: Grants a barrier to all allies for 2 turns, and increases Speed of the caster for 2 turns. Barrier strength increases proportional to the caster's Attack."
+        },
+        "S3": {
+            "name": "Dragon Slayer's Strike",
+            "description": "Attacks all enemies by striking downwards with a spear and has a 100% chance to decrease Hit Chance for 2 turns and a 100% chance to provoke for 1 turn. Skill cooldown is decreased by 2 turns."
+        }
+    },
+    "seaside-bellona": {
+        "S1": {
+            "name": "Watch Out",
+            "description": "Attacks the enemy with a fan, with a 75% chance to target the enemy for 1 turn."
+        },
+        "S2": {
+            "name": "I'm with My Friends",
+            "description": "For every surviving ally, decreases damage suffered by 10%. When more than one damage reduction effect of the same kind is granted, only the strongest effect is applied. When an ally is attacked, gains 1 Focus, and when the caster's stacked Focus is 5, consumes all Focus and activates You're Not Cute. You're Not Cute: Attacks all enemies with a fan, with a 75% chance to decrease Defense for 2 turns."
+        },
+        "S3": {
+            "name": "Haven't I Warned You?",
+            "description": "Attacks all enemies with a spray of water, dispelling all buffs before a 100% chance each to inflict cannot buff and unhealable for 2 turns. Ignores Effect Resistance."
+        }
+    },
+    "sigret": {
+        "S1": {
+            "name": "Sever",
+            "description": "Attacks with a scythe, with a 50% chance each of inflicting two bleeding effects for 2 turns."
+        },
+        "S2": {
+            "name": "Smash",
+            "description": "Batters the enemy with a scythe, with a 100% chance each to make them unhealable and inflict bleeding for 2 turns. When the enemy's Health is 50% or less after the attack, activates Sever as an extra attack with a 100% chance of inflicting bleeding. Grants an extra turn."
+        },
+        "S3": {
+            "name": "Guillotine",
+            "description": "Inflicts lethal damage to the enemy, piercing their weak point. Penetrates Defense by 30%, with an additional 5% for each debuff inflicted on the enemy. Inflicts extinction when the enemy is defeated."
+        }
+    },
+    "straze": {
+        "S1": {
+            "name": "Powerful Strike",
+            "description": "Swings a sword to attack the enemy and increases Combat Readiness of the caster by 20%."
+        },
+        "S2": {
+            "name": "Destructive Gaze",
+            "description": "Attacks all enemies with a wave of force and dispels two buffs. Ignores Effect Resistance of any targets with Attack lower than the caster's Attack. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+        },
+        "S3": {
+            "name": "Star Extinction",
+            "description": "Attacks all enemies with a sword. Penetrates Defense of the target with the highest max Health by 30%. When the caster's Attack is greater than the penetration target's Attack, penetration rate increases proportional to the difference, up to a maximum of 100%. This skill cannot trigger a counterattack."
+        }
+    },
+    "tamarinne": {
+        "S1": {
+            "name": "Serene Tune",
+            "description": "(Tamarinne) Attacks an enemy with a serene melody and heals the ally with the lowest Health. Amount recovered increases proportional to the ally's max Health. Decreases cooldown of Shining Star☆ by 1 turn. (Idol) Attacks all enemies with a beautiful voice, dispelling all buffs. Triggers a Dual Attack from the ally with the highest Attack."
+        },
+        "S2": {
+            "name": "Song of the Forest",
+            "description": "(Tamarinne) Heals all allies with a peaceful melody. Amount recovered increases proportional to the caster's max Health. Decreases cooldown of Shining Star☆ by 1 turn. (Idol) With a powerful performance, increases Attack of all allies for 2 turns and increases Combat Readiness by 50%, recovering Health. Amount recovered increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Shining Star☆",
+            "description": "Before performing, dispels all debuffs inflicted on all allies and recovers the caster to max Health. The caster becomes an idol for 3 turns and performs a concert. Begins the first battle with full cooldown count."
+        }
+    },
+    "tenebria": {
+        "S1": {
+            "name": "Dark Explosion",
+            "description": "Attacks the enemy with an explosion of dark energy, with a 70% chance to put them to sleep for 1 turn. This skill does not trigger a Dual Attack."
+        },
+        "S2": {
+            "name": "Ominous Thunder",
+            "description": "Summons ominous thunder to attack all enemies, decreasing Combat Readiness by 30% and inflicting decreased Speed and restrict for 2 turns."
+        },
+        "S3": {
+            "name": "Nightmare",
+            "description": "Drops Moon of Nightmare on all enemies, with a 85% chance each to decrease Defense for 2 turns and put them to sleep for 1 turn, before increasing Attack of the caster for 2 turns."
+        }
+    },
+    "top-model-luluca": {
+        "S1": {
+            "name": "Energy Blast",
+            "description": "Uses the suit's energy to attack the enemy. When used on the caster's turn, has a 40% chance to grant an extra attack with the same skill. When the enemy is not an Elite or Boss monster, damage sharing effects are ignored."
+        },
+        "S2": {
+            "name": "Victory Pose",
+            "description": "Manifests the suit's energy, granting a barrier to the caster for 3 turns. Grants the caster an extra turn. Barrier strength increases proportional to the caster's level."
+        },
+        "S3": {
+            "name": "Demolish",
+            "description": "Increases Attack of the caster for 3 turns, before attacking the enemy with dimensional energy and when the enemy is defeated, inflicts extinction. Increases Combat Readiness of all allies by 20%, and grants stealth to the caster for 2 turns. Damage dealt increases proportional to the caster's Speed."
+        }
+    },
+    "vildred": {
+        "S1": {
+            "name": "Sweep",
+            "description": "Rapidly attacks two enemies with a swordstorm. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S2": {
+            "name": "Dancing Blade",
+            "description": "Increases Attack of the caster for 2 turns and activates Dancing Blade when an enemy is defeated by Sweep or Blade Ascent. Dancing Blade (Acquire 1 Soul): Attacks all enemies with a swordstorm."
+        },
+        "S3": {
+            "name": "Blade Ascent",
+            "description": "Attacks all enemies with a swordstorm, dealing damage proportional to the caster's Speed."
+        }
+    },
+    "violet": {
+        "S1": {
+            "name": "Graceful Cut",
+            "description": "Attacks with a sword, with a 75% chance to decrease Attack for 1 turn. When it is not the caster's turn, increases Combat Readiness by 15% and gains double the amount of Focus."
+        },
+        "S2": {
+            "name": "Duel Accepted",
+            "description": "Prepares for a duel by dispelling two debuffs from the caster and granting perception for 3 turns before recovering Health by 15%. Grants an extra turn to the caster."
+        },
+        "S3": {
+            "name": "Butterfly Cut",
+            "description": "Pierces the enemy with a sword, and consumes all Focus. Damage dealt increases proportional to the amount of Focus consumed. When Butterfly Cut is available according to cooldown count, increases Evasion by 35%, and after successfully evading, counterattacks with Graceful Cut."
+        }
+    },
+    "vivian": {
+        "S1": {
+            "name": "Vitality Drain",
+            "description": "Smashes the enemy with a rock, increasing the caster's Combat Readiness by 15%."
+        },
+        "S2": {
+            "name": "Thunder God's Cry",
+            "description": "Attacks all enemies with a thunderstorm. Activates Thunder God's Cry again when an enemy is defeated. Each subsequent Thunder God's Cry activated this way deals decreased damage, and can be activated up to 3 times."
+        },
+        "S3": {
+            "name": "Mana Amplification",
+            "description": "Fully amplifies mana, granting immunity to all allies for 3 turns before granting increased Attack (Greater) to the caster for 3 turns while increasing Attack of all allies except for the caster for 3 turns."
+        }
+    },
+    "watcher-schuri": {
+        "S1": {
+            "name": "Sniper",
+            "description": "Shoots the enemy with a rifle, with a 50% chance to target them for 2 turns."
+        },
+        "S2": {
+            "name": "Quickfire",
+            "description": "Shoots all enemies with a rifle, with a 100% chance to dispel one buff, and increases Speed of the caster for 2 turns."
+        },
+        "S3": {
+            "name": "Finishing Shot",
+            "description": "Attack the enemy with a mana bullet. Penetrates the target's Defense."
+        }
+    },
+    "yufine": {
+        "S1": {
+            "name": "Double Slash",
+            "description": "Attacks by swinging their weapon, with a 50% chance to decrease Defense for 2 turns."
+        },
+        "S2": {
+            "name": "Dragon's Roar",
+            "description": "Attacks all enemies with a dragon howl, dispelling one buff, before a 155% chance to decrease Defense for 2 turns and a 155% chance to silence for 1 turn. Ignores Effect Resistance."
+        },
+        "S3": {
+            "name": "Dragon Charge",
+            "description": "After granting increased Attack to the caster for 2 turns, attacks the enemy with a massive blade. When the enemy is defeated, grants an extra turn. When this skill is available according to cooldown count, after an ally except for the caster uses a skill, if an enemy has a debuff, increases Combat Readiness of the caster by 20%."
+        }
+    },
+    "zahhak": {
+        "S1": {
+            "name": "Vulnerability Exposed",
+            "description": "Attacks the enemy with a longsword. Increases Critical Hit Chance by 50% when attacking. Damage dealt increases when the target is buffed."
+        },
+        "S2": {
+            "name": "Elaborate Plan",
+            "description": "Dispels two debuffs from an ally and the caster, before increasing Combat Readiness of the ally by 15%. Grants an extra turn to the caster."
+        },
+        "S3": {
+            "name": "Execute",
+            "description": "Attacks the enemy, inflicting injuries before granting the caster invincibility for 1 turn. Increases Critical Hit Chance by 50% when attacking. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 35% every time this skill is used."
+        }
+    },
+    "tywin": {
+        "S1": {
+            "name": "Sword Storm",
+            "description": "Attacks with a swordstorm, with a 75% chance to dispel one buff. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Tactical Command",
+            "description": "Immune to debuffs which prevent movement. When the ally in the back row has a debuff which prevents movement after being attacked, activates Commanding Shout on the target. Can be activated once every 2 turns. Commanding Shout: Dispels all debuffs from the ally and grants immunity for 2 turns."
+        },
+        "S3": {
+            "name": "All-Out Attack",
+            "description": "Attacks all enemies again after a swordstorm, with a 100% chance to decrease Defense for 2 turns, and increases Defense of all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "yuna": {
+        "S1": {
+            "name": "Homing Laser",
+            "description": "Attacks all enemies with a drone, before increasing Combat Readiness of the caster by 15%, and increasing Combat Readiness of all allies except for the caster by 5%."
+        },
+        "S2": {
+            "name": "Upgrade",
+            "description": "Buffs all allies with a drone and increases Attack for 3 turns. Grants an extra turn to the caster."
+        },
+        "S3": {
+            "name": "Meteor Cannon",
+            "description": "Attacks all enemies with a cannon. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+        }
+    },
+    "zeno": {
+        "S1": {
+            "name": "Black Thorn",
+            "description": "Attacks with thorns, with a 35% chance to stun for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Star's Armor",
+            "description": "When the enemy uses a non-attack skill, increases Defense of the caster and damage dealt by Ancient Beast by 10%, and increases Effectiveness by 5%. Can stack up to 8 times."
+        },
+        "S3": {
+            "name": "Ancient Beast",
+            "description": "Summons an ancient beast to attack all enemies, with a 80% chance to silence for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "sol": {
+        "S1": {
+            "name": "Gunflame",
+            "description": "Attacks an enemy with pillars of fire. Damage dealt increases when the enemy isn't buffed. Activates Roman Cancel when the caster's Fighting Spirit is 100 after attacking. Cannot be triggered by a counterattack. Roman Cancel: Consumes all Fighting Spirit and extends the duration of buffs granted to the caster by 1 turn, before granting the caster an extra turn."
+        },
+        "S2": {
+            "name": "Volcanic Viper",
+            "description": "When an enemy uses a non-attack skill, increases Combat Readiness of the caster by 20% and gains 20 Fighting Spirit. When suffering an attack that targets all allies, activates Volcanic Viper against the attacker. Each effect can only be activated once every 2 turns. Volcanic Viper: Launches the enemy into the air and attacks repeatedly, inflicting silence for 2 turns. Damage dealt increases proportional to the enemy's max Health."
+        },
+        "S3": {
+            "name": "Tyrant Rave ver. Beta",
+            "description": "Attacks with a strong punch, dispelling all buffs. Damage dealt increases proportional to the enemy's max Health. After attacking, inflicts additional damage regardless of whether the attack hits."
+        }
+    },
+    "sez": {
+        "S1": {
+            "name": "Dark Shadow",
+            "description": "Attacks the enemy with dark energy, with a 50% chance to make the enemy unhealable for 1 turn. Damage dealt increases proportional to the amount of the enemy's lost Health."
+        },
+        "S2": {
+            "name": "Die Hard",
+            "description": "When attacked, damage suffered in one attack does not exceed 51% of max Health. After an ally except for the caster attacks, when the target's Health is 30% or less, activates Encroach. Encroach can only be activated once every 3 turns. Encroach: Releases dark energy to attack all enemies, and increases Combat Readiness of the caster by 30%. Damage dealt increases proportional to the target's lost Health."
+        },
+        "S3": {
+            "name": "Conviction",
+            "description": "Inflicts lethal damage to the enemy. When the enemy is defeated, inflicts extinction, and deals additional damage proportional to the caster's Attack to all enemies except for the target. Damage dealt increases proportional to the target's lost Health."
+        }
+    },
+    "kise": {
+        "S1": {
+            "name": "Full Moon Scythe",
+            "description": "Attacks with a scythe. Damage dealt increases by 70% when the target has buffs."
+        },
+        "S2": {
+            "name": "Dark Scar",
+            "description": "Attacks all enemies with a scythe. Penetrates the enemy's Defense by 30% and an additional 30% when the caster is stealthed."
+        },
+        "S3": {
+            "name": "Nocturne",
+            "description": "Leaps towards the enemy to attack. Grants stealth and a barrier to the caster for 2 turns, before increasing Combat Readiness by 50%. Barrier strength increases proportional to the caster's Attack. Damage dealt increases proportional to the caster's current Health ratio."
+        }
+    },
+    "spirit-eye-celine": {
+        "S1": {
+            "name": "Mighty Strike",
+            "description": "Attacks the enemy with a sheath. If not triggered by a Dual Attack and the caster has a buff, uses Nimble Sword instead. Nimble Sword: After granting increased Attack to the caster for 1 turn, attacks rapidly and absorbs part of the damage as Health. Penetrates Defense by 50%."
+        },
+        "S2": {
+            "name": "Sixth Sense",
+            "description": "Damage suffered in one attack does not exceed 51% of max Health. Decreases skill cooldown by 1 turn when someone dies and acquires 5 Souls. This effect can only be activated once per turn."
+        },
+        "S3": {
+            "name": "Spirit Gate: Burning Possession",
+            "description": "Opens the spirit gate to revive all dead allies. Grants immortality to all allies for 1 turn and grants Possession to the caster for 3 turns."
+        }
+    },
+    "specter-tenebria": {
+        "S1": {
+            "name": "Poison Blast",
+            "description": "Attacks with an explosion of poisonous energy, with a 70% chance to inflict poison for 2 turns. Cannot trigger counterattacks. Attacks two enemies when Endless Nightmare is on cooldown."
+        },
+        "S2": {
+            "name": "Nightmare Illusion",
+            "description": "The illusion remains throughout the battle. Increases Attack and Defense of the caster by 10% each time someone dies (max 5 stacks)."
+        },
+        "S3": {
+            "name": "Endless Nightmare",
+            "description": "Attacks with a nightmare crystal, stunning for 1 turn. Decreases Combat Readiness of all remaining enemies by 50% when an enemy dies."
+        }
+    },
+    "ruele-of-light": {
+        "S1": {
+            "name": "Key to an Oath",
+            "description": "Attacks the enemy with a staff and recovers Health of all allies. Damage dealt and recovery increase proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Light Pillar",
+            "description": "Invokes a pillar of light, removing all debuffs from an ally and recovering their Health, also granting a barrier and damage limit for 2 turns."
+        },
+        "S3": {
+            "name": "Light Ascending",
+            "description": "Removes all debuffs from an ally with healing magic before recovering 50% of their Health and granting invincibility for 1 turn. If the target is dead, revives them with 100% Health before applying effects."
+        }
+    },
+    "auxiliary-lots": {
+        "S1": {
+            "name": "Black Magic",
+            "description": "Attacks with a magic sphere, increasing caster's Combat Readiness by 15%."
+        },
+        "S2": {
+            "name": "Mana Injection",
+            "description": "Injects an ally except for the caster with Mana, increasing Attack for 2 turns before increasing Combat Readiness by 100%."
+        },
+        "S3": {
+            "name": "Desolation",
+            "description": "Attacks all enemies by releasing strong Mana, with a 155% chance to silence for 2 turns and decrease Defense for 2 turns. Grants an extra turn."
+        }
+    },
+    "faithless-lidica": {
+        "S1": {
+            "name": "Thorn",
+            "description": "Attacks with a sword, with a 75% chance to decrease Hit Chance for 1 turn."
+        },
+        "S2": {
+            "name": "Larkspur",
+            "description": "Binds all enemies with a sword, with a 100% chance to dispel one buff, before increasing the caster's Combat Readiness by 25% per target. This skill cannot trigger a counterattack."
+        },
+        "S3": {
+            "name": "Hysteria",
+            "description": "Attacks the enemy indiscriminately, increasing skill cooldown to max, and increases Combat Readiness of all allies by 25%. A critical hit grants all allies skill nullifier once."
+        }
+    },
+    "archdemons-shadow": {
+        "S1": {
+            "name": "Touch of Chaos",
+            "description": "Has a 100% chance to seal the enemy for 2 turns, before attacking with lightning."
+        },
+        "S2": {
+            "name": "Twisted Power",
+            "description": "Damage suffered from a critical hit decreases by 30%. After using a basic skill, when the target is sealed, increases Attack of the caster for 1 turn before activating Burst. Burst: Attacks all enemies, and increases Combat Readiness of the caster by 25% before gaining 1 Focus."
+        },
+        "S3": {
+            "name": "Dissolution",
+            "description": "Attacks all enemies with the power of Ilryos, with a 180% chance to decrease Defense for 2 turns, and a 180% chance each to inflict two burn effects for 2 turns. Grants the caster an extra turn."
+        }
+    },
+    "yulha": {
+        "S1": {
+            "name": "Cruel Touch",
+            "description": "Attacks the enemy, with a 200% chance to inflict redirected provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Malicious Smile",
+            "description": "When attacked, reflects 40% of the damage suffered to the attacker. After being attacked, when Health is 30% or less, dispels all debuffs from the caster and activates Murderous Intent. Murderous Intent: Grants a barrier to the caster for 3 turns and increases Combat Readiness by 25%."
+        },
+        "S3": {
+            "name": "Symphony of Agony",
+            "description": "Attacks the enemy by unraveling Sphere of Sadism. Damage sharing effects are ignored. Penetrates the target's Defense, but cannot trigger a critical hit. Damage dealt increases proportional to the caster's lost Health."
+        }
+    },
+    "mercedes": {
+        "S1": {
+            "name": "Divine Bolt",
+            "description": "Attacks two enemies with shock magic, before increasing Combat Readiness of the caster by 15%."
+        },
+        "S2": {
+            "name": "Dimensional Rupture",
+            "description": "Attacks all enemies with a light sphere, with a 70% chance to dispel one buff. When the caster is granted increased Attack, grants an extra attack with the same skill."
+        },
+        "S3": {
+            "name": "Blazing Eye of Kal",
+            "description": "Releases the power of the Ancient Book to attack all enemies before increasing Attack of the caster for 2 turns. After completing Episode 3, Volatility becomes Immense Power, granting a chance to counterattack when an ally is attacked and increasing damage dealt by Dimensional Rupture."
+        }
+    },
+    "kitty-clarissa": {
+        "S1": {
+            "name": "Get Away, Meow!",
+            "description": "Attacks with a morning star. Damage dealt increases proportional to the caster's max Health. When the caster is granted loveliness, triggers a Dual Attack from the ally with the highest Attack."
+        },
+        "S2": {
+            "name": "Meow I'm Angry!",
+            "description": "Attacks all enemies with a morning star while raging, with a 80% chance to make them unhealable for 2 turns. When the caster is granted loveliness, effect chance increases by 20%. Ignores Effect Resistance."
+        },
+        "S3": {
+            "name": "I'm So Cute, Meow♥",
+            "description": "Wiggles tail cutely, decreasing debuff duration on all allies by 2 turns, and granting the caster immunity and loveliness for 3 turns. Grants the caster an extra turn."
+        }
+    },
+    "blood-moon-haste": {
+        "S1": {
+            "name": "Blood Scythe",
+            "description": "Attacks by swinging a scythe, dispelling one buff. When dispelling the target's buff, activates Blood Retribution as an extra attack. Bloody Retribution: Attacks the enemy with a scythe, and recovers Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Grudge",
+            "description": "When attacking, penetrates the target's Defense, and cannot trigger a critical hit. When an ally dies, grants a barrier and immunity to all allies for 2 turns, and grants blood aura to the caster for 2 turns. Barrier strength increases proportional to the caster's max Health. Can only be activated once every 4 turns."
+        },
+        "S3": {
+            "name": "Moon Slash",
+            "description": "Dispels all buffs from the enemy before attacking with a scythe. When the enemy is defeated, revives all dead allies before granting immortality for 1 turn. When the caster is granted blood aura, increases damage dealt by 100%. Damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "sage-baal-and-sezan": {
+        "S1": {
+            "name": "Evil Spirit's Call",
+            "description": "Summons an evil spirit to attack the enemy, with a 75% chance to put the enemy to sleep for 1 turn. When the target is asleep after the attack, increases the caster's Combat Readiness by 20%. This skill does not trigger a Dual Attack."
+        },
+        "S2": {
+            "name": "Cloud of Ruin",
+            "description": "Attacks all enemies by summoning storm clouds, with a 120% chance to dispel one buff before putting them to sleep for 1 turn. When this skill is available according to cooldown count, increases the caster's Combat Readiness at the end of the enemy's turn."
+        },
+        "S3": {
+            "name": "Eye of Death",
+            "description": "Attacks with evil eyes. When the enemy is defeated, silences all remaining enemies for 1 turn. Penetrates Defense, but cannot trigger a critical hit. Damage dealt increases proportional to the caster's lost Health."
+        }
+    },
+    "champion-zerato": {
+        "S1": {
+            "name": "Earthen Rage",
+            "description": "Attacks two enemies including the target with an earthen blast, transferring two debuffs from the caster to the enemy and recovering the caster's Health. Amount recovered increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Iron Will",
+            "description": "Immune to stun, sleep, and Decrease Hit Chance. Has a 100% chance to counterattack when the caster is debuffed after being attacked."
+        },
+        "S3": {
+            "name": "Cataclysm",
+            "description": "Attacks all enemies by slamming rocks, with a 75% chance each to decrease Defense and Attack for 1 turn. Increases Defense of the caster for 2 turns."
+        }
+    },
+    "operator-sigret": {
+        "S1": {
+            "name": "Incision",
+            "description": "Attacks the enemy with a scythe, before healing the ally with the lowest Health. Amount recovered increases proportional to the caster's Attack."
+        },
+        "S2": {
+            "name": "Annihilation",
+            "description": "Batters the enemy with a scythe. Grants an extra turn when the enemy is defeated. Penetrates the target's Defense by 50%, or by 100% when the target is granted a barrier. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S3": {
+            "name": "Obliterate",
+            "description": "Calls in drones to attack all enemies, with a 100% chance to decrease buff durations by 1 turn. Increases Attack of all allies for 2 turns. When the target is granted a barrier, ignores Effect Resistance. Damage dealt increases proportional to the caster's Speed."
+        }
+    },
+    "designer-lilibet": {
+        "S1": {
+            "name": "Slice to Pieces",
+            "description": "Attacks the enemy with scissors, with a 75% chance to decrease Defense for 1 turn. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S2": {
+            "name": "Emergency Stitching",
+            "description": "Starts the first battle with 50 Fighting Spirit. When an enemy's turn ends, gains 10 Fighting Spirit for each debuff inflicted on an ally, and when the caster's Fighting Spirit is full, consumes all Fighting Spirit to dispel all debuffs from the caster and grants increased Defense and immunity for 1 turn before increasing Combat Readiness by 40%."
+        },
+        "S3": {
+            "name": "Model Disqualification",
+            "description": "Decreases debuff durations of all allies by 2 turns and gets on stage to attack all enemies, before increasing Combat Readiness of all allies by 15%. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's Defense."
+        }
+    },
+    "amiki": {
+        "S1": {
+            "name": "Divine Punishment",
+            "description": "Attacks the enemy with a sword, and has a 75% chance to provoke for 1 turn. Cannot trigger a critical hit, and penetrates the target's Defense by 30%. After attacking, when the caster's Health is 30% or less, grants an extra attack with the same skill."
+        },
+        "S2": {
+            "name": "Desperate Resolve",
+            "description": "Grants immortality for 1 turn and increased Attack for 2 turns to the caster. Upon receiving lethal damage when the skill is available according to cooldown count, grants the same effects to the caster and fully increases cooldown of this skill."
+        },
+        "S3": {
+            "name": "Avenger's Sword",
+            "description": "Slash the enemy consecutively to attack. Cannot trigger a critical hit. Penetrates the target's Defense by 30%, and when the caster's Health is 30% or less, penetrates by 70%."
+        }
+    },
+    "azalea": {
+        "S1": {
+            "name": "Persistent Attack",
+            "description": "Stabs the enemy with a spear and recovers Health of the caster. Amount recovered increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Challenging Blow",
+            "description": "Attacks the enemy, with a 100% chance to provoke for 2 turns."
+        },
+        "S3": {
+            "name": "Sweep",
+            "description": "Sweeps all enemies with a spear, with a 75% chance to decrease Speed and Defense for 2 turns."
+        }
+    },
+    "batisse": {
+        "S1": {
+            "name": "Brawl",
+            "description": "Hits the enemy in the face. When used against an enemy inflicted with decreased Attack, activates Rock Smash as an extra attack. Rock Smash: Attacks all enemies. This attack receives effects that are applied to the basic skill."
+        },
+        "S2": {
+            "name": "Justified Provoke",
+            "description": "At the start of the turn, has a 100% chance to decrease Attack of the enemy with the highest Combat Readiness for 2 turns."
+        },
+        "S3": {
+            "name": "Certain Victory",
+            "description": "Attacks the enemy with blindingly fast speed. When used against an enemy with decreased Attack, decreases Defense for 1 turn."
+        }
+    },
+    "bomb-model-kanna": {
+        "S1": {
+            "name": "Quick Bombardment",
+            "description": "Rapidly fires to attack two enemies. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S2": {
+            "name": "Stance Shift",
+            "description": "When Full Bombardment! is available at the start of the turn, takes a Shelling Stance. When Full Bombardment! is unavailable at the end of the turn, takes a Striking Stance. Can only take one stance at a time. Shelling Stance: Increases Effectiveness by 65%. Striking Stance: Increases Speed and Dual Attack chance by 65%."
+        },
+        "S3": {
+            "name": "Full Bombardment!",
+            "description": "Boosts firepower to attack all enemies, with a 100% chance to dispel one buff, before increasing Attack of the caster for 2 turns."
+        }
+    },
+    "cartuja": {
+        "S1": {
+            "name": "Shred",
+            "description": "Attacks with sharp claws, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Danger Zone",
+            "description": "Combat Readiness increases by 15% at the moment the caster is attacked. Combat Readiness increases by an additional 10% when the caster's Health is 50% or less."
+        },
+        "S3": {
+            "name": "Predatory Roar",
+            "description": "Attacks all enemies with wild energy, with a 100% chance to decrease Attack for 2 turns, and increases Defense of the caster for 2 turns. Damage dealt increases proportional to the caster's max Health, with additional damage increase when the caster's Health is 75% or less."
+        }
+    },
+    "cecilia": {
+        "S1": {
+            "name": "Deliverance",
+            "description": "Attacks with a spear, with a 50% chance to decrease Defense for 2 turns. When the target is inflicted with decreased Attack, effect chance increases by 25%. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Steel Cloudburst",
+            "description": "Attacks all enemies with a magical spear, with a 50% chance to decrease Attack for 2 turns, before dispelling one buff. Effect chance increases by 50% when the caster's Health is 50% or less. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Ruinous Retribution",
+            "description": "Attacks all enemies with a spear infused with dark energy, with a 100% chance to provoke for 1 turn, before granting immunity to all allies for 2 turns and a barrier to the caster for 2 turns. Damage dealt and barrier strength increases proportional to the caster's max Health."
+        }
+    },
+    "celeste": {
+        "S1": {
+            "name": "Precision Fire",
+            "description": "Attacks the enemy, before a 75% chance to decrease Hit Chance for 1 turn."
+        },
+        "S2": {
+            "name": "Volley",
+            "description": "Shoots a volley of arrows at all enemies, with an 85% chance to decrease Combat Readiness by 20%. When the caster's Health is 80% or more, cooldown does not occur."
+        },
+        "S3": {
+            "name": "Defcon",
+            "description": "Caster recovers 30% Health and is granted an extra turn."
+        }
+    },
+    "chaos-inquisitor": {
+        "S1": {
+            "name": "Heavy Strike",
+            "description": "Strikes the enemy with a blade, with a 50% chance each to dispel one buff twice."
+        },
+        "S2": {
+            "name": "Butcher Corps Gear",
+            "description": "Damage suffered in one attack does not exceed 35% of max Health."
+        },
+        "S3": {
+            "name": "Preach",
+            "description": "Attacks the enemy in the name of Chaos. Damage dealt increases proportional to the caster's lost Health. Recovers Health proportional to damage dealt."
+        }
+    },
+    "chaos-sect-axe": {
+        "S1": {
+            "name": "Disconnect",
+            "description": "Attacks with an axe, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Attack Chain",
+            "description": "Attacks all enemies with a shockwave. With a 60% chance to provoke for 1 turn, before granting immunity to the caster for 1 turn."
+        },
+        "S3": {
+            "name": "Vigorous Strike",
+            "description": "Smacks the enemy, with a 100% chance to decrease Defense for 2 turns, before recovering 20% of the caster's max Health. When the enemy is defeated, grants an extra turn to the caster. Damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "chloe": {
+        "S1": {
+            "name": "Heavy Strike",
+            "description": "Hammers the enemy. Damage dealt is increased when the enemy is inflicted with magic nail."
+        },
+        "S2": {
+            "name": "Magic Bolt",
+            "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy, inflicting magic nail for 3 turns, and increases Combat Readiness of the caster by 50%."
+        },
+        "S3": {
+            "name": "Hyper Strike",
+            "description": "Soars into the air and attacks the enemy, stunning for 1 turn. When the enemy is inflicted with magic nail, ignores Effect Resistance."
+        }
+    },
+    "christy": {
+        "S1": {
+            "name": "Sword of Protection",
+            "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Oath Shield",
+            "description": "After being attacked, when the caster does not have a debuff, increases Combat Readiness of the caster and the ally in the back row by 20%. Can only be activated once per turn. At the start of the first battle, increases Effect Resistance of the ally in the back row by 50% of the caster's Effect Resistance."
+        },
+        "S3": {
+            "name": "Hymn of Courage",
+            "description": "Increases Attack of all allies for 2 turns before recovering Health of the caster. Amount recovered increases proportional to the caster's max Health."
+        }
+    },
+    "cidd": {
+        "S1": {
+            "name": "Relentless Strike",
+            "description": "Attacks the enemy with a dagger. Damage dealt increases proportional to the caster's Speed. When the caster is granted increased Speed, uses Whirlwind instead of Relentless Strike. Whirlwind: Attacks the enemy repeatedly, decreasing Defense for 1 turn. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S2": {
+            "name": "Wind's Resolve",
+            "description": "A critical hit will increase Speed of the caster for 1 turn, with a 100% chance to grant a random buff for 1 turn. A random buff can be granted once per turn."
+        },
+        "S3": {
+            "name": "Hack",
+            "description": "Attacks the enemy by slashing at them with daggers, granting an extra turn when the enemy is defeated. Damage dealt increases proportional to caster's Speed."
+        }
+    },
+    "coli": {
+        "S1": {
+            "name": "Ambush",
+            "description": "Ambushes the enemy, with a 75% chance to steal one buff."
+        },
+        "S2": {
+            "name": "Accurate Strike",
+            "description": "Attacks the enemy with an unseen blade and grants stealth to the caster for 2 turns. At the end of the turn, detonates any bleeding effects and bombs inflicted on the target."
+        },
+        "S3": {
+            "name": "Baptism of Fire",
+            "description": "Attacks the enemy with a dagger and bomb, inflicting bleeding and planting a bomb for 2 turns, before increasing Combat Readiness of the caster by 50%. When the target is a Fire elemental Hero, ignores Effect Resistance and increases Combat Readiness of the caster by an additional 50%."
+        }
+    },
+    "commander-lorina": {
+        "S1": {
+            "name": "Sharp Blow",
+            "description": "Knocks the enemy into the air with a spear. Damage dealt increases proportional to the target's max Health."
+        },
+        "S2": {
+            "name": "Spiritual Armament",
+            "description": "Increases Attack by 15% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+        },
+        "S3": {
+            "name": "Spiral Breakthrough",
+            "description": "Pierces the enemy with a spear, decreasing Combat Readiness by 15%. Damage dealt increases proportional to the amount of the enemy's lost Health."
+        }
+    },
+    "crescent-moon-rin": {
+        "S1": {
+            "name": "Heckle",
+            "description": "Attacks the enemy with a ring, with a 40% chance to stun for 1 turn."
+        },
+        "S2": {
+            "name": "Eyecatcher",
+            "description": "Attacks the enemy with a lavish dance and steals two buffs, granting their effects to all allies, before stunning the target for 1 turn. When the target has no buffs, decreases cooldown of this skill by 1 turn."
+        },
+        "S3": {
+            "name": "Curtain Call",
+            "description": "Crosses rings to attack the enemy, dispelling all of the target's buffs, before increasing Critical Hit Damage of all allies for 2 turns."
+        }
+    },
+    "dingo": {
+        "S1": {
+            "name": "Prep Ingredients",
+            "description": "Cuts the enemy with a cleaver, with a 50% chance to inflict bleeding for 2 turns. After attack, there's a 30% chance to activate Quick Grill."
+        },
+        "S2": {
+            "name": "Quick Grill",
+            "description": "Attacks all enemies with the Glove Oven, recovering the caster's Health. When the enemy is bleeding, has a 100% chance to inflict burn for 2 turns. Amount recovered increases proportional to damage dealt."
+        },
+        "S3": {
+            "name": "Free Dinner",
+            "description": "Provides all allies with a meal, dispelling all debuffs and increasing Critical Hit Chance for 2 turns before decreasing skill cooldown by 1 turn. Every time an enemy dies, the cooldown for this skill decreases by 1 turn."
+        }
+    },
+    "dominiel": {
+        "S1": {
+            "name": "Hail",
+            "description": "Throws ice fragments at the enemy, with a 40% chance to stun for 1 turn."
+        },
+        "S2": {
+            "name": "Nixied's Grace",
+            "description": "When an ally suffers a critical hit, has a 35% chance to activate Blizzard Cape. Can only be activated once every 3 turns. Blizzard Cape: Casts a barrier over all allies for 2 turns with frost magic. Barrier strength increases proportional to the ally's max Health."
+        },
+        "S3": {
+            "name": "Ice Spear",
+            "description": "Attacks all enemies with a large block of ice, with a 190% chance to stun for 1 turn and a 190% chance to decrease Combat Readiness by 15%. Increases Speed of the caster for 2 turns."
+        }
+    },
+    "doris": {
+        "S1": {
+            "name": "Mana Bullet",
+            "description": "Attacks with light energy, before a 75% chance to decrease Hit Chance for 1 turn."
+        },
+        "S2": {
+            "name": "Celebration of Light",
+            "description": "Recites the Celebration of Light, recovering the Health of all allies and granting continuous healing and increased Defense for 2 turns. Amount recovered is proportional to the target's max Health."
+        },
+        "S3": {
+            "name": "Light Curtain",
+            "description": "Recovers an ally's Health and increases their Combat Readiness by 35% with light magic. Amount recovered is proportional to the target's max Health."
+        }
+    },
+    "eaton": {
+        "S1": {
+            "name": "Come Here",
+            "description": "Strongly knees the enemy to attack, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "I Protect",
+            "description": "Receives 30% of damage taken by an ally in their place. Only the highest damage distribution effect will be applied. Increases max Health by 20%."
+        },
+        "S3": {
+            "name": "I'm Tough",
+            "description": "Releases strong energy, dispelling all debuffs inflicted on the caster before granting a barrier for 2 turns. Barrier strength increases proportional to the caster's max Health."
+        }
+    },
+    "enott": {
+        "S1": {
+            "name": "Smash",
+            "description": "Attacks with an axe, with a 50% chance to cause bleeding for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health."
+        },
+        "S2": {
+            "name": "Judgement",
+            "description": "Attacks with a sharp blow, with a 75% chance each to decrease Defense and make them unable to be buffed for 2 turns."
+        },
+        "S3": {
+            "name": "Prepare Judgement",
+            "description": "Corrects stance, increasing Attack of the caster for 2 turns and Combat Readiness by 50%."
+        }
+    },
+    "fighter-maya": {
+        "S1": {
+            "name": "Strike of Provocation",
+            "description": "Attacks with a blunt weapon, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S2": {
+            "name": "Reclaim",
+            "description": "Has a 100% chance to dispel one debuff and be granted increased Defense for 2 turns when attacked. Can only be triggered once per turn."
+        },
+        "S3": {
+            "name": "Finishing Attack",
+            "description": "Attacks with a powerful smash. Damage dealt increases by 300% when the enemy's Health is 30% or less. Damage dealt increases proportional to the caster's Defense. Grants the caster an extra turn when the enemy is defeated."
+        }
+    },
+    "gloomyrain": {
+        "S1": {
+            "name": "Wail",
+            "description": "Has a 15% chance of being granted an extra turn after attacking the enemy."
+        },
+        "S2": {
+            "name": "Ill Will",
+            "description": "Increases Attack by 70% and Speed by 70% when the caster is debuffed. Grants immunity to stun, sleep, and provoke."
+        },
+        "S3": {
+            "name": "Soul Destruction",
+            "description": "Attacks all enemies with magic, with a 100% chance to transfer all debuffs inflicted on the caster, and dispels all debuffs from the caster."
+        }
+    },
+    "gunther": {
+        "S1": {
+            "name": "Spirited Blow",
+            "description": "Attacks with an axe, with a 50% chance to cause bleeding for 2 turns."
+        },
+        "S2": {
+            "name": "Veteran",
+            "description": "Attack increases by 75%, and Critical Hit Resistance increases by 70%. When attacking, cannot trigger a critical hit."
+        },
+        "S3": {
+            "name": "Tenacious Strike",
+            "description": "Attacks with an axe, stunning for 1 turn."
+        }
+    },
+    "hazel": {
+        "S1": {
+            "name": "Book of Fire",
+            "description": "Attacks with fire magic, with a 50% chance to make unhealable for 2 turns."
+        },
+        "S2": {
+            "name": "Urgent Regen",
+            "description": "Heals the target proportional to the caster's Attack and the target's max Health, before increasing Combat Readiness of the caster by 15%. Amount recovered is doubled when the target's Health is 50% or less."
+        },
+        "S3": {
+            "name": "Attack Command",
+            "description": "Uses strengthening magic to increase Attack of all allies for 1 turn before recovering Health and dispelling one debuff. Amount recovered is proportional to the caster's Attack and the target's max Health."
+        }
+    },
+    "helga": {
+        "S1": {
+            "name": "Armor Rend",
+            "description": "Attacks with an axe, with a 50% chance to decrease Defense for 2 turns."
+        },
+        "S2": {
+            "name": "Attack Chain",
+            "description": "Strongly slams the enemy with an axe, with a 60% chance to decrease Defense for 2 turns. A critical hit will have a 50% chance to extend any buffs granted to the caster by 1 turn."
+        },
+        "S3": {
+            "name": "Cry of Victory",
+            "description": "Encourages allies, increasing Attack for 2 turns before increasing Combat Readiness of the caster by 50%."
+        }
+    },
+    "hurado": {
+        "S1": {
+            "name": "Staff Strike",
+            "description": "Attacks with a staff, with a 50% chance to silence for 1 turn."
+        },
+        "S2": {
+            "name": "Dark Magic",
+            "description": "Decreases amount recovered of all enemies by 50%, and increases the caster's Combat Readiness by 20%. When the enemy uses a non-attack skill."
+        },
+        "S3": {
+            "name": "Dark Explosion",
+            "description": "Attacks all enemies with dark magic, with a 100% chance to dispel one buff before decreasing Combat Readiness by 15%."
+        }
+    },
+    "jena": {
+        "S1": {
+            "name": "Cold Blow",
+            "description": "Attacks with a staff, with a 35% chance to stun for 1 turn."
+        },
+        "S2": {
+            "name": "Coerce",
+            "description": "Casts weakening magic, with a 100% chance each to decrease buff durations of all enemies by 1 turn and inflict frostbite for 2 turns."
+        },
+        "S3": {
+            "name": "Cold Snap",
+            "description": "Attacks all enemies with frost magic, with a 175% chance to decrease Defense for 2 turns before a 175% chance to decrease Combat Readiness by 20%."
+        }
+    },
+    "jecht": {
+        "S1": {
+            "name": "Staff Assault",
+            "description": "Attacks with a staff, with a 75% chance to decrease Hit Chance for 1 turn."
+        },
+        "S2": {
+            "name": "Tailwind",
+            "description": "100% chance to dispel one debuff inflicted on an ally at the beginning of each turn."
+        },
+        "S3": {
+            "name": "Gale",
+            "description": "Attacks all enemies with wind magic, granting continuous healing to all allies for 2 turns."
+        }
+    },
+    "judith": {
+        "S1": {
+            "name": "Vulnerability Exposed",
+            "description": "Attacks with dual-wielded swords. When the caster is stealthed, has a 100% chance to stun the enemy for 1 turn."
+        },
+        "S2": {
+            "name": "Urgent Evasion",
+            "description": "At the moment the caster is attacked, has a 100% chance to become stealthed for 1 turn."
+        },
+        "S3": {
+            "name": "Mark of Acceleration",
+            "description": "Increases the Combat Readiness of all allies by 30%."
+        }
+    },
+    "kiris": {
+        "S1": {
+            "name": "Venomous Arrow",
+            "description": "Fires a poisoned arrow at the enemy, with a 50% chance to inflict poison for 2 turns."
+        },
+        "S2": {
+            "name": "Corrosive Volley",
+            "description": "Fires a corrosive volley to all enemies, extending any debuff duration by 1 turn."
+        },
+        "S3": {
+            "name": "Preparation",
+            "description": "Strengthens the caster's next attack, increases Combat Readiness by 50%. Venomous Arrow: Increases effect chance to 100%, and poison effects can be stacked up to 3 times. Corrosive Volley: Extends debuff duration by 2 turns."
+        }
+    },
+    "kluri": {
+        "S1": {
+            "name": "Light Step",
+            "description": "Strikes in the direction of the enemy, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S2": {
+            "name": "Magic Resist",
+            "description": "Recovers 10% Health of the caster at the beginning of every turn."
+        },
+        "S3": {
+            "name": "Fortitude",
+            "description": "Has a 100% chance to provoke the enemy for 2 turns."
+        }
+    },
+    "lena": {
+        "S1": {
+            "name": "You're Soft",
+            "description": "Attacks with a strong fist, increasing the caster's Combat Readiness by 20%."
+        },
+        "S2": {
+            "name": "Power Strike",
+            "description": "Increases Critical Hit Chance by 50%."
+        },
+        "S3": {
+            "name": "Exposed!",
+            "description": "Attacks all enemies with a powerful storm, decreasing Combat Readiness by 20%, before increasing Attack of the caster for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health."
+        }
+    },
+    "leo": {
+        "S1": {
+            "name": "Sparrow Dive",
+            "description": "Attacks the enemy with a slingshot, with a 35% chance to stun for 1 turn."
+        },
+        "S2": {
+            "name": "Fox Hunt",
+            "description": "Attacks with a slingshot, with a 100% chance to decrease Defense for 2 turns, and a 50% chance to use Sparrow Dive."
+        },
+        "S3": {
+            "name": "Flying Racoo",
+            "description": "Racoo flies into the enemies like a bullet and attacks all of them, with a 50% chance to stun for 1 turn."
+        }
+    },
+    "lots": {
+        "S1": {
+            "name": "Holy Light",
+            "description": "Attacks with a light sphere, with a 75% chance to decrease Attack for 1 turn."
+        },
+        "S2": {
+            "name": "Regen",
+            "description": "Uses healing magic to recover Health and increase Combat Readiness by 100% of ally, before increasing caster's Combat Readiness by 30%. Amount recovered is proportional to the ally's max Health."
+        },
+        "S3": {
+            "name": "Serenity",
+            "description": "Uses strengthening magic to recover Health, increase Combat Readiness by 20%, and grant continuous healing for 2 turns to all allies."
+        }
+    },
+    "maya": {
+        "S1": {
+            "name": "Weakening Blow",
+            "description": "Attacks with a blunt weapon, with a 35% chance to stun for 1 turn. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S2": {
+            "name": "Concuss",
+            "description": "Attacks with a shield, with a 100% chance each to stun for 1 turn before decreasing Combat Readiness by 30%. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S3": {
+            "name": "Morale Boost",
+            "description": "Has a 175% chance to provoke all enemies for 1 turn, before a 175% chance to decrease Attack for 2 turns. Increases Defense of the caster for 2 turns."
+        }
+    },
+    "mistychain": {
+        "S1": {
+            "name": "Vampirism",
+            "description": "Claws at the enemy, absorbing some of the damage to heal all allies."
+        },
+        "S2": {
+            "name": "Banshee's Curse",
+            "description": "Casts a spell at the enemy, with a 100% chance each to make them unhealable and decrease Attack for 2 turns."
+        },
+        "S3": {
+            "name": "Life Drain",
+            "description": "Attacks by absorbing the enemy's life force. Some of the damage dealt is absorbed to heal all allies."
+        }
+    },
+    "montmorancy": {
+        "S1": {
+            "name": "Sleep Sorcery",
+            "description": "Attacks the enemy with water energy, with a 75% chance to put them to sleep for 1 turn."
+        },
+        "S2": {
+            "name": "Purification",
+            "description": "Dispels one debuff from all allies and heals debuffed allies. Amount recovered is proportional to the ally's max Health."
+        },
+        "S3": {
+            "name": "Watery Curtain",
+            "description": "Recover's ally's Health and grants immunity for 2 turns. Amount recovered increases proportional to the ally's max Health."
+        }
+    },
+    "mucacha": {
+        "S1": {
+            "name": "Ancient Spear Art",
+            "description": "Attacks with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S2": {
+            "name": "Wild",
+            "description": "Increases Speed by 2% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+        },
+        "S3": {
+            "name": "Enlightened Blow",
+            "description": "Attacks with a fatal blow, with a 100% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the caster's Speed."
+        }
+    },
+    "nemunas": {
+        "S1": {
+            "name": "Cover Fire",
+            "description": "Decreases enemy's Combat Readiness by 15% after attacking them."
+        },
+        "S2": {
+            "name": "Shock Arrow",
+            "description": "Powerfully shoots an arrow at the enemy, decreasing Hit Chance for 2 turns and Combat Readiness by 30%. Damage dealt increases proportional to the enemy's max Health."
+        },
+        "S3": {
+            "name": "A Girl's Determination",
+            "description": "Encourages all allies, dispelling one debuff."
+        }
+    },
+    "otillie": {
+        "S1": {
+            "name": "Dark Arrow",
+            "description": "Attacks with dark energy, with a 50% chance to make the enemy unhealable for 2 turns."
+        },
+        "S2": {
+            "name": "Area Defense",
+            "description": "All allies receive 30% less damage from attacks that target all allies. When more than one damage reduction effect is granted, only the strongest effect is applied."
+        },
+        "S3": {
+            "name": "Mana Release",
+            "description": "Exhales powerful darkness to attack the enemy, decreasing Combat Readiness by 40%, before silencing for 2 turns."
+        }
+    },
+    "pearlhorizon": {
+        "S1": {
+            "name": "Chaos Strike",
+            "description": "Claws the enemy, with a 50% chance to decrease Hit Chance for 2 turns."
+        },
+        "S2": {
+            "name": "Hypnosis",
+            "description": "Attacks all enemies, with a 50% chance to put them to sleep for 1 turn. Increases Combat Readiness of the caster by 10% per sleep debuff inflicted."
+        },
+        "S3": {
+            "name": "Nightmare",
+            "description": "Attacks the enemy and stuns them for 1 turn. When the enemy is asleep, deals additional damage equivalent to 10% of the target's max Health."
+        }
+    },
+    "pyllis": {
+        "S1": {
+            "name": "Weakening Blow",
+            "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S2": {
+            "name": "Will",
+            "description": "At the moment the caster is attacked, increases Defense of the caster. At the moment of every fourth attack suffered, increases Defense of all allies for 2 turns. The caster's increased Defense can stack up to 3 times."
+        },
+        "S3": {
+            "name": "Guard",
+            "description": "Attacks the enemy before provoking for 1 turn, and grants barrier to all allies for 2 turns. Damage dealt and barrier strength increases in proportion to the caster's Defense."
+        }
+    },
+    "purrgis": {
+        "S1": {
+            "name": "Falling Strike",
+            "description": "Mows down the enemy with a great sword, with a 50% chance each to decrease Speed for 2 turns and decrease Combat Readiness by 20%. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Get Lost!",
+            "description": "When attacked, has a 30% chance to counterattack. Counterattacks with Get Lost!. Attacks all enemies with a great sword. Inflicts the same debuffs as Falling Strike, before a 15% chance to stun for 1 turn."
+        },
+        "S3": {
+            "name": "Final Blow",
+            "description": "Attacks all enemies with a powerful ground pound, with a 50% chance to stun for 1 turn. Has a 70% chance to stun for 1 turn when the target's Health is 30% or less. Damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "ras": {
+        "S1": {
+            "name": "X-Slash",
+            "description": "Attacks with a sword, dealing damage proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Command Strike",
+            "description": "Attacks the enemy repeatedly, before triggering a Dual Attack from the ally with the highest Attack."
+        },
+        "S3": {
+            "name": "Sword of the Heir",
+            "description": "Strongly attacks all enemies with a swordstorm, before recovering the caster's Health and increasing Defense of the caster for 2 turns. Amount recovered and damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "requiemroar": {
+        "S1": {
+            "name": "Insanity",
+            "description": "Claws the enemy, with a 75% chance to decrease Attack for 1 turn."
+        },
+        "S2": {
+            "name": "Blood Feast",
+            "description": "All allies absorb 10% of the damage they inflict as Health. Every time an enemy dies, all allies recover 20% Health and the caster's Combat Readiness increases by 10%."
+        },
+        "S3": {
+            "name": "Dirge",
+            "description": "Attacks with magic, with a 100% chance to decrease Defense for 2 turns."
+        }
+    },
+    "rikoris": {
+        "S1": {
+            "name": "Quick Pierce",
+            "description": "Attacks the enemy with a spear, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increase Speed, effect chance increases by 25%."
+        },
+        "S2": {
+            "name": "Cheer",
+            "description": "Encourages all allies, increasing Speed for 2 turns."
+        },
+        "S3": {
+            "name": "Flash Cut",
+            "description": "Decreases debuff duration of all allies by 1 turn, and attacks all enemies with a shockwave, with a 80% chance each to inflict decreased Speed and restrict for 2 turns."
+        }
+    },
+    "rima": {
+        "S1": {
+            "name": "Quick Shot",
+            "description": "Attacks with a quick shot of an arrow. A critical hit will decrease the caster's skill cooldown by 1 turn."
+        },
+        "S2": {
+            "name": "Lullaby Arrow",
+            "description": "Shoots an arrow infused with a sleep toxin, with a 100% chance to put them to sleep for 1 turn."
+        },
+        "S3": {
+            "name": "War Hymn",
+            "description": "Encourages an ally except for the caster, decreasing skill cooldowns by 2 turns."
+        }
+    },
+    "romann": {
+        "S1": {
+            "name": "Gravity Arrow",
+            "description": "Shoots gravity arrows at the enemy, decreasing Combat Readiness by 20%, and increasing Combat Readiness of the caster by 20%."
+        },
+        "S2": {
+            "name": "Gravitation",
+            "description": "Attacks all enemies with a magic circle, with a 50% chance each to decrease Combat Readiness by 20% four times."
+        },
+        "S3": {
+            "name": "Event Horizon",
+            "description": "Shoots a powerful gravity sphere to attack all enemies, dispelling all buffs before inflicting restrict for 2 turns. Increases Combat Readiness of the caster by 50%."
+        }
+    },
+    "roozid": {
+        "S1": {
+            "name": "Hemorrhage",
+            "description": "Cuts the enemy with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S2": {
+            "name": "Wind Slash",
+            "description": "Attacks with a swordstorm, with a 50% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S3": {
+            "name": "Divine Response",
+            "description": "Corrects stance, increasing Combat Readiness of all allies by 20%."
+        }
+    },
+    "rose": {
+        "S1": {
+            "name": "Sequential Cutter",
+            "description": "Attacks with a sword, with a 75% chance to provoke for 1 turn when the caster's Health is 50% or more, and increases Defense of the caster for 1 turn when the caster's Health is less than 50%. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S2": {
+            "name": "Shield of Light",
+            "description": "Covers an ally with the Shield of Light, dispelling two debuffs and granting a barrier for 2 turns before increasing Combat Readiness by 20%. Barrier strength is proportional to the caster's Defense."
+        },
+        "S3": {
+            "name": "Goddess of Victory",
+            "description": "Gives blessing to all allies, increasing Attack for 1 turn, and Combat Readiness by 25%."
+        }
+    },
+    "schuri": {
+        "S1": {
+            "name": "Rapid Fire",
+            "description": "Attack the enemy with a pistol, with a 30% chance to inflict poison for 2 turns."
+        },
+        "S2": {
+            "name": "Explosive Gentleman",
+            "description": "After delivering a critical hit, the caster gains 1 Focus, and the Combat Readiness of all allies except the caster is increased by 25%."
+        },
+        "S3": {
+            "name": "Rifle Shot",
+            "description": "Shoots all enemies with a rifle. When the caster's stacked Focus is 3 or more, this skill is enhanced into Full Burst. A successful attack with Full Burst always results in a critical hit."
+        }
+    },
+    "serila": {
+        "S1": {
+            "name": "Seduction",
+            "description": "Attacks with a flame of seduction, with a 50% chance to decrease Defense for 2 turns."
+        },
+        "S2": {
+            "name": "Spirit Absorb",
+            "description": "Attacks the enemy, with a 75% chance to decrease Attack for 2 turns, and when the enemy is defeated, resets cooldown. Increases Attack of the caster for 2 turns."
+        },
+        "S3": {
+            "name": "Flame Kiss",
+            "description": "Swallows the enemy in the flame of Chatty, the magic lantern, with a 100% chance each to inflict two burn effects for 2 turns."
+        }
+    },
+    "silk": {
+        "S1": {
+            "name": "Single Shot",
+            "description": "Shoots arrows at the enemy, decreasing their Combat Readiness by 10%. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S2": {
+            "name": "Concentration",
+            "description": "Gains 1 Focus at the start of the turn, and consumes 1 Focus when attacked, increasing Combat Readiness by 15%. When the caster's stacked Focus is 2 or more, Single Shot is enhanced into Automatic Fire."
+        },
+        "S3": {
+            "name": "Storm Arrow",
+            "description": "Attacks all enemies with wind, with a 100% chance to decrease Speed for 2 turns, and granting increased Speed to the caster for 2 turns."
+        }
+    },
+    "sven": {
+        "S1": {
+            "name": "Wicked Strike",
+            "description": "Attacks with dual-wielded swords, and when the caster's Health is 50% or less, activates Repelling Blow as an extra attack."
+        },
+        "S2": {
+            "name": "Potential",
+            "description": "Grants immortality for 1 turn and increases Attack for 2 turns when the caster receives lethal damage. Can only be activated once every 4 turns."
+        },
+        "S3": {
+            "name": "Capital Punishment",
+            "description": "Attacks all enemies. Damage increases with caster's lost health."
+        }
+    },
+    "taranor-guard": {
+        "S1": {
+            "name": "Spear Art",
+            "description": "Knocks the enemy into the air with a spear, with a 75% chance to decrease Defense for 1 turn."
+        },
+        "S2": {
+            "name": "Discipline",
+            "description": "Increases the chance of Dual Attack by 10%. Combat Readiness of all allies increases by 25% when a Dual Attack is triggered."
+        },
+        "S3": {
+            "name": "Pierce",
+            "description": "Pierces the enemy's weak point with a spear, decreasing Combat Readiness by 50%."
+        }
+    },
+    "taranor-royal-guard": {
+        "S1": {
+            "name": "Sword of the Kingdom",
+            "description": "Attacks with a sword, with a 50% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Shield Deflect",
+            "description": "The caster reflects 50% of the damage suffered from a critical hit to the attacker. Reflected damage can't be higher than caster's max Health."
+        },
+        "S3": {
+            "name": "Strike",
+            "description": "Jumps towards the enemy and attacks them, dispelling all buffs. Damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "tieria": {
+        "S1": {
+            "name": "Demon Cutter",
+            "description": "Attacks with an axe, with a 75% chance to decrease Hit Chance for 1 turn."
+        },
+        "S2": {
+            "name": "Dance of Sands",
+            "description": "A successful attack increases the Combat Readiness of all allies except for the caster by 15%."
+        },
+        "S3": {
+            "name": "Soul Break",
+            "description": "Strikes the enemy, dealing damage proportional to the target's max Health."
+        }
+    },
+    "wanda": {
+        "S1": {
+            "name": "Weak Point",
+            "description": "Shoots an arrow at the enemy, decreasing Combat Readiness by 15%. When the enemy is targeted, increases damage dealt."
+        },
+        "S2": {
+            "name": "Steady Aim",
+            "description": "Has a 100% chance to target a random enemy for 2 turns at the beginning of each turn."
+        },
+        "S3": {
+            "name": "Fatal Shot",
+            "description": "Attacks the enemy's vital points, with a 100% chance to stun for 1 turn."
+        }
+    },
+    "zerato": {
+        "S1": {
+            "name": "Ice Shard",
+            "description": "Attacks an enemy with an ice pick, with a 50% chance to decrease Speed for 2 turns."
+        },
+        "S2": {
+            "name": "Ice Pick",
+            "description": "Attacks the enemy repeatedly, increasing the caster's Combat Readiness by 50%."
+        },
+        "S3": {
+            "name": "Iceberg",
+            "description": "Attacks all enemies with a giant iceberg, with a 75% chance to stun for 1 turn."
+        }
+    },
+    "alexa": {
+        "S1": {
+            "name": "Fell",
+            "description": "Attacks the enemy by cutting with dual-wielded swords. A critical hit will have a 50% chance of activating Lightning Bolt as an extra attack."
+        },
+        "S2": {
+            "name": "Cold Edge",
+            "description": "Attacks the enemy with a cold blade, with a 100% chance to inflict two poison effects for 2 turns, and increases the caster's Combat Readiness by 30%."
+        },
+        "S3": {
+            "name": "Crushing Blow",
+            "description": "Attacks the enemy continuously, dealing damage proportional to the number of debuffs inflicted on the enemy."
+        }
+    },
+    "ains": {
+        "S1": {
+            "name": "Gazelle Punch",
+            "description": "Punches the enemy, with a 50% chance to use Satisfying Strike instead. Satisfying Strike: Attacks the enemy, a successful hit always results in a critical hit."
+        },
+        "S2": {
+            "name": "Gash",
+            "description": "When attacked, has a 50% chance to counterattack."
+        },
+        "S3": {
+            "name": "Ram",
+            "description": "Punches the enemy, with a 100% chance to stun for 1 turn."
+        }
+    },
+    "bask": {
+        "S1": {
+            "name": "Protective Strike",
+            "description": "Slashes with a sword, with a 75% chance to decrease Attack for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Shield Blow",
+            "description": "Attacks with a shield, with a 100% chance to dispel all buffs. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Will of Protection",
+            "description": "Covers all allies with the Will of Protection, granting immunity for 3 turns."
+        }
+    },
+    "carrot": {
+        "S1": {
+            "name": "Swing",
+            "description": "Attacks with a staff, with a 50% chance to decrease Speed for 2 turns, before detonating burn effects inflicted on the enemy at the end of the turn."
+        },
+        "S2": {
+            "name": "Flame Barrier",
+            "description": "At the moment the caster is attacked, grants the caster a barrier for 1 turn, and burns the attacker for 1 turn."
+        },
+        "S3": {
+            "name": "Blaze Explosion",
+            "description": "Attacks all enemies with a powerful fire, dispelling one buff before a 70% chance to burn for 1 turn."
+        }
+    },
+    "church-of-ilryos-axe": {
+        "S1": {
+            "name": "Disconnect",
+            "description": "Attacks with an axe, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+        },
+        "S2": {
+            "name": "Attack Chain",
+            "description": "Attacks all enemies with a shockwave. With a 60% chance to provoke for 1 turn, before granting immunity to the caster for 1 turn."
+        },
+        "S3": {
+            "name": "Plagued Strike",
+            "description": "Smacks the enemy, with a 100% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the caster's max Health."
+        }
+    },
+    "crozet": {
+        "S1": {
+            "name": "Rush",
+            "description": "Attacks with a sword, with a 75% chance to decrease Attack for 1 turn. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S2": {
+            "name": "Mark of Protection",
+            "description": "Grants a barrier and increased Defense to an ally for 2 turns when the ally's Health is 50% or less after being attacked."
+        },
+        "S3": {
+            "name": "Breakthrough",
+            "description": "Attacks all enemies with a swordstorm, decreasing their Combat Readiness by 50%, before a 75% chance to provoke for 1 turn."
+        }
+    },
+    "doll-maker-pearlhorizon": {
+        "S1": {
+            "name": "Chaos Strike",
+            "description": "Claws the enemy, with a 50% chance to decrease Hit Chance for 2 turns."
+        },
+        "S2": {
+            "name": "Hypnosis",
+            "description": "Attacks all enemies, with a 50% chance to put them to sleep for 1 turn. Increases Combat Readiness of the caster by 10% per sleep debuff inflicted."
+        },
+        "S3": {
+            "name": "Endless Nightmare",
+            "description": "Attacks the enemy and stuns them for 1 turn. When the enemy is asleep, deals additional damage equivalent to 10% of the target's max Health."
+        }
+    },
+    "glenn": {
+        "S1": {
+            "name": "Quick Fire",
+            "description": "Rapidly shoots the enemy, with a 50% chance to decrease Defense for 2 turns."
+        },
+        "S2": {
+            "name": "Precise Attack",
+            "description": "Fires a missile at the enemy, and when the enemy is defeated, inflicts extinction. Hit Chance is increased by 15% when using this skill."
+        },
+        "S3": {
+            "name": "Focused Fire",
+            "description": "Using an enhancement cube, grants the caster increased Attack (Greater) for 2 turns."
+        }
+    },
+    "godmother": {
+        "S1": {
+            "name": "Gunshot",
+            "description": "Shoots the enemy with a pistol, with a 50% chance to target them for 2 turns."
+        },
+        "S2": {
+            "name": "Rocket Launcher",
+            "description": "Attacks with a powerful missile, before a 100% chance each to decrease Hit Chance and Attack for 1 turn."
+        },
+        "S3": {
+            "name": "Enhance Maneuverability",
+            "description": "Utilizes the power of an enhancement cube, granting all allies increased Speed for 2 turns."
+        }
+    },
+    "hataan": {
+        "S1": {
+            "name": "Knee Smash",
+            "description": "Smashes the enemy with their knee, with a 80% chance to decrease Hit Chance for 1 turn. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S2": {
+            "name": "Wind Pressure",
+            "description": "Attacks the enemy with wind pressure. Activates Wind Pressure again when an enemy is defeated. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S3": {
+            "name": "Unbeatable Will",
+            "description": "Releases energy to all allies, increasing Attack for 2 turns."
+        }
+    },
+    "ian": {
+        "S1": {
+            "name": "Enhanced Fire",
+            "description": "Fires an enhanced pistol, with a 75% chance to dispel one buff from the enemy."
+        },
+        "S2": {
+            "name": "Combat Support",
+            "description": "Supports all allies using an enhancement cube, granting increased Attack for 2 turns. Grants an extra turn to the caster."
+        },
+        "S3": {
+            "name": "High-Density Explosive Cube",
+            "description": "Attacks all enemies with powerful explosives, with a 100% chance to dispel one buff, before a 75% chance to decrease Hit Chance for 2 turns."
+        }
+    },
+    "kikirat-v2": {
+        "S1": {
+            "name": "Auto-Fire",
+            "description": "Attacks with a gatling gun, with a 90% chance to dispel one buff. Damage dealt increases proportional to the caster's Defense."
+        },
+        "S2": {
+            "name": "Defense Mode",
+            "description": "Increases Defense of the caster by 10% after attacking. Effect can only stack up to 5 times."
+        },
+        "S3": {
+            "name": "Cleaning Mode",
+            "description": "Fires indiscriminately at all enemies, with a 75% chance to decrease Hit Chance for 1 turn, before triggering counterattacks from the caster for 2 turns."
+        }
+    },
+    "mirsa": {
+        "S1": {
+            "name": "Double Edge",
+            "description": "Attacks with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+        },
+        "S2": {
+            "name": "Brush Off",
+            "description": "Increases Evasion chance by 50%. At the moment the caster is attacked, if the caster successfully evades, decreases cooldown of the caster by 1 turn and increases Speed for 2 turns."
+        },
+        "S3": {
+            "name": "Raid",
+            "description": "Ambushes the target, silencing them for 1 turn. Damage dealt increases proportional to the caster's Speed."
+        }
+    },
+    "penelope": {
+        "S1": {
+            "name": "Merciless Sword",
+            "description": "Attacks the enemy before increasing Attack of the caster by 15%. When an enemy is defeated, increases Combat Readiness of the caster by 75%."
+        },
+        "S2": {
+            "name": "Preliminary Plans",
+            "description": "Decreases debuff duration of all allies by 1 turn before granting a barrier to the caster for 3 turns. Grants an extra turn to the caster."
+        },
+        "S3": {
+            "name": "Disarm",
+            "description": "Inflicts resource reduction on the target by 100% before attacking them, with a 100% chance each to decrease Attack for 2 turns, and stun for 1 turn."
+        }
+    },
+    "sonia": {
+        "S1": {
+            "name": "Suppressing Fire",
+            "description": "Attacks the enemy with cover fire, before granting a barrier to the ally except for the caster with the lowest Health for 2 turns."
+        },
+        "S2": {
+            "name": "Recovery",
+            "description": "Recovers the target's Health using a recovery cube. Amount recovered increases proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Cube Aura",
+            "description": "Uses a recovery cube to grant all allies immunity for 2 turns, before recovering Health."
+        }
+    },
+    "aither": {
+        "S1": {
+            "name": "Whispering Spirit",
+            "description": "Attacks the enemy with spirit power, with a 50% chance to decrease Speed for 2 turns."
+        },
+        "S2": {
+            "name": "Guard",
+            "description": "Recovers an ally's Health with water energy and dispels two debuffs. Amount recovered increases proportional to the target's max Health."
+        },
+        "S3": {
+            "name": "Spirit's Call",
+            "description": "Recovers Health of all allies and grants a barrier for 2 turns with spirit power."
+        }
+    },
+    "rin": {
+        "S1": {
+            "name": "Ring Throw",
+            "description": "Throws rings at the enemy, with a 75% chance to dispel one buff, and increases the caster's Combat Readiness by 15%."
+        },
+        "S2": {
+            "name": "Dazzling Dance",
+            "description": "Dazzles the enemy with a dance, with a 75% chance to decrease Defense for 2 turns, before a 50% chance to use Ring Throw."
+        },
+        "S3": {
+            "name": "Showtime",
+            "description": "Heals all allies with an elegant dance, granting one random buff for 3 turns."
+        }
+    },
+    "surin": {
+        "S1": {
+            "name": "Chain Dagger",
+            "description": "Attacks with a chain axe. When the enemy is bleeding, causes two bleeding effects for 2 turns."
+        },
+        "S2": {
+            "name": "Edge Smash",
+            "description": "Batters the enemy with a chain axe and inflicts two bleeding effects for 2 turns, decreasing Attack for 1 turn."
+        },
+        "S3": {
+            "name": "Implosion",
+            "description": "Triggers all the bleeding effects currently inflicted on the enemy. Damage dealt increases proportional to the number of bleeding effects inflicted."
+        }
+    },
+    "ray": {
+        "S1": {
+            "name": "Extreme Remedies",
+            "description": "Attacks by throwing a bottle, dispelling one debuff from an ally."
+        },
+        "S2": {
+            "name": "Light of Rebirth",
+            "description": "Radiates light upon all allies, granting a barrier for 2 turns."
+        },
+        "S3": {
+            "name": "Invigorate",
+            "description": "Invigorates the team by dispelling all debuffs from all allies, and grants immunity for 2 turns."
+        }
+    },
+    "armin": {
+        "S1": {
+            "name": "Takedown",
+            "description": "Attacks the enemy with a shield, with a 35% chance to stun for 1 turn."
+        },
+        "S2": {
+            "name": "Protect",
+            "description": "When attacked, has a 15% chance to counterattack. When an ally is attacked by a Single Attack, decreases damage suffered."
+        },
+        "S3": {
+            "name": "Shield Wall",
+            "description": "Uses the Shield of Light to dispel one debuff from all allies, and grants a barrier to all allies for 2 turns."
+        }
+    },
+    "ravi": {
+        "S1": {
+            "name": "Slaughter",
+            "description": "Attacks the enemy with a double-edged axe, and absorbs some of the damage dealt as Health."
+        },
+        "S2": {
+            "name": "Demon's Blood",
+            "description": "Starts the first battle with 60 Fighting Spirit and increases Attack proportional to the caster's max Health."
+        },
+        "S3": {
+            "name": "Devil Drive",
+            "description": "Brutally attacks all enemies, inflicting injuries before a 75% chance to stun for 1 turn."
+        }
+    },
+    "haste": {
+        "S1": {
+            "name": "Envoy's Scythe",
+            "description": "Attacks the enemy with an enormous scythe, with a 50% chance to decrease Defense for 2 turns."
+        },
+        "S2": {
+            "name": "Blood Rend",
+            "description": "Attacks the enemy with a scythe and recovers the Health of all allies."
+        },
+        "S3": {
+            "name": "Vampiric Seal",
+            "description": "Attacks all enemies with Envoy's Scythe, dispelling two buffs before a 85% chance each to inflict two bleeding effects for 2 turns."
+        }
+    },
+    "ludwig": {
+        "S1": {
+            "name": "Starlight",
+            "description": "Attacks with magic, before a 75% chance to steal one buff."
+        },
+        "S2": {
+            "name": "Moonlight Blow",
+            "description": "Attacks the enemy with light, decreasing buff durations by 1 turn before a 100% chance to stun for 1 turn."
+        },
+        "S3": {
+            "name": "Call of the Full Moon",
+            "description": "Attacks all enemies with Nocturne magic. Penetrates the target's Defense by 30%."
+        }
+    },
+    "baal-and-sezan": {
+        "S1": {
+            "name": "Ghost Haunt",
+            "description": "Summons an evil spirit to attack two enemies, with a 50% chance to inflict poison for 2 turns."
+        },
+        "S2": {
+            "name": "Dark Cloud",
+            "description": "Summons the Cloud of Darkness to attack all enemies, dealing damage proportional to the number of debuffs inflicted on the enemy."
+        },
+        "S3": {
+            "name": "Last Requiem",
+            "description": "Baal & Sezan attack all enemies with Strike Magic, with a 85% chance each to make them unhealable and inflict decreased Speed for 2 turns."
+        }
+    },
+    "khawazu": {
+        "S1": {
+            "name": "Flame Strike",
+            "description": "Attacks the enemy with a ball of flame, with a 50% chance to decrease Defense for 2 turns. After attacking, has a 35% chance to increase Combat Readiness by 20%."
+        },
+        "S2": {
+            "name": "Composure",
+            "description": "When the caster is debuffed after being attacked, dispels all debuffs and increases Attack of the caster for 2 turns. Can only be activated once every 2 turns."
+        },
+        "S3": {
+            "name": "Emberstorm",
+            "description": "Attacks with a fiery explosion, making the target unhealable and decreasing Defense for 1 turn each."
+        }
     }
 }
