@@ -63,3 +63,11 @@ coverage/
 
 # Datamined assets (large files, not for version control)
 DBE7/
+
+# Large binary files
+api/vendor.zip
+*.zip
+
+# Local images (served from Hostinger, not from Git)
+api/public/images/artifacts/
+api/public/images/heroes/

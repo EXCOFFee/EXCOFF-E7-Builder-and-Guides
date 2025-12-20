@@ -284,16 +284,16 @@ export default function BuildsPage() {
 
                                         {/* Artifact */}
                                         {build.artifact && (
-                                            <div className="flex items-center gap-3 mb-3">
+                                            <div className="flex items-center gap-4 mb-3">
                                                 <Image
                                                     src={build.artifact.icon}
                                                     alt={build.artifact.name}
-                                                    width={40}
-                                                    height={40}
-                                                    className="rounded-lg ring-2 ring-e7-gold/30"
+                                                    width={56}
+                                                    height={56}
+                                                    className="rounded-xl ring-2 ring-e7-gold/30"
                                                     unoptimized
                                                 />
-                                                <span className="text-base text-slate-300 font-medium">{build.artifact.name}</span>
+                                                <span className="text-lg text-slate-300 font-medium">{build.artifact.name}</span>
                                             </div>
                                         )}
 

@@ -280,12 +280,12 @@ export default function CreateBuildPage() {
                                             <Image
                                                 src={selectedArtifact.icon}
                                                 alt={selectedArtifact.name}
-                                                width={24}
-                                                height={24}
-                                                className="rounded"
+                                                width={40}
+                                                height={40}
+                                                className="rounded-lg"
                                                 unoptimized
                                             />
-                                            <span>{selectedArtifact.name}</span>
+                                            <span className="text-base">{selectedArtifact.name}</span>
                                         </>
                                     ) : (
                                         <span className="text-gray-400">{t('builds.searchArtifact', 'Search artifact...')}</span>
@@ -303,7 +303,7 @@ export default function CreateBuildPage() {
                                         {filteredArtifacts.map((artifact) => (
                                             <div
                                                 key={artifact.id}
-                                                className="px-4 py-3 hover:bg-e7-gold/20 cursor-pointer text-white flex items-center gap-3"
+                                                className="px-4 py-4 hover:bg-e7-gold/20 cursor-pointer text-white flex items-center gap-4"
                                                 onClick={() => {
                                                     setArtifactId(artifact.id);
                                                     setShowArtifactDropdown(false);
@@ -313,12 +313,12 @@ export default function CreateBuildPage() {
                                                 <Image
                                                     src={artifact.icon}
                                                     alt={artifact.name}
-                                                    width={40}
-                                                    height={40}
-                                                    className="rounded"
+                                                    width={56}
+                                                    height={56}
+                                                    className="rounded-lg"
                                                     unoptimized
                                                 />
-                                                <span className="text-sm">{artifact.name}</span>
+                                                <span className="text-base">{artifact.name}</span>
                                             </div>
                                         ))}
                                         {filteredArtifacts.length === 0 && (
