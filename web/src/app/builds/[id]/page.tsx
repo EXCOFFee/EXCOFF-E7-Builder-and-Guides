@@ -281,23 +281,23 @@ export default function BuildDetailPage() {
                 {/* Build Header */}
                 <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6">
                     {/* Hero Section */}
-                    <div className="flex items-center gap-4 p-6 border-b border-e7-gold/20">
+                    <div className="flex items-center gap-6 p-6 border-b border-e7-gold/20">
                         <div className="relative">
                             <Image
                                 src={build.hero.portrait}
                                 alt={build.hero.name}
-                                width={100}
-                                height={100}
-                                className="rounded-lg"
+                                width={150}
+                                height={150}
+                                className="rounded-xl ring-2 ring-e7-gold/30"
                                 unoptimized
                             />
-                            <span className={`absolute -bottom-1 -right-1 w-6 h-6 rounded-full ${ELEMENT_COLORS[build.hero.element]}`} />
+                            <span className={`absolute -bottom-2 -right-2 w-8 h-8 rounded-full ring-2 ring-e7-dark ${ELEMENT_COLORS[build.hero.element]}`} />
                         </div>
                         <div>
-                            <Link href={`/heroes/${build.hero.slug}`} className="text-e7-gold hover:text-e7-text-gold font-bold text-xl">
+                            <Link href={`/heroes/${build.hero.slug}`} className="text-e7-gold hover:text-e7-text-gold font-bold text-3xl">
                                 {build.hero.name}
                             </Link>
-                            <p className="text-gray-400 capitalize">{build.hero.class.replace('_', ' ')}</p>
+                            <p className="text-xl text-gray-400 capitalize">{build.hero.class.replace('_', ' ')}</p>
                         </div>
                     </div>
 

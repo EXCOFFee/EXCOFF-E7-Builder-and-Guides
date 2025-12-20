@@ -227,21 +227,21 @@ export default function BuildsPage() {
                             <Link key={build.id} href={`/builds/${build.id}`}>
                                 <div className="card-fantasy bg-gradient-to-b from-e7-panel to-e7-void rounded-xl overflow-hidden h-full group">
                                     {/* Hero Header */}
-                                    <div className="flex items-center gap-3 p-4 border-b border-e7-gold/10 bg-e7-dark/30">
+                                    <div className="flex items-center gap-4 p-4 border-b border-e7-gold/10 bg-e7-dark/30">
                                         <div className="relative">
                                             <Image
                                                 src={build.hero.portrait}
                                                 alt={build.hero.name}
-                                                width={60}
-                                                height={60}
+                                                width={80}
+                                                height={80}
                                                 className="rounded-lg ring-2 ring-e7-gold/20 group-hover:ring-e7-gold/50 transition-all"
                                                 unoptimized
                                             />
-                                            <span className={`absolute -bottom-1 -right-1 w-4 h-4 rounded-full ring-2 ring-e7-dark ${ELEMENT_COLORS[build.hero.element]}`} />
+                                            <span className={`absolute -bottom-1 -right-1 w-5 h-5 rounded-full ring-2 ring-e7-dark ${ELEMENT_COLORS[build.hero.element]}`} />
                                         </div>
                                         <div>
-                                            <h3 className="text-slate-100 font-semibold group-hover:text-e7-gold transition-colors">{build.hero.name}</h3>
-                                            <p className="text-xs text-slate-500">{CLASS_NAMES[build.hero.class] || build.hero.class}</p>
+                                            <h3 className="text-lg text-slate-100 font-semibold group-hover:text-e7-gold transition-colors">{build.hero.name}</h3>
+                                            <p className="text-sm text-slate-500">{CLASS_NAMES[build.hero.class] || build.hero.class}</p>
                                         </div>
                                     </div>
 
