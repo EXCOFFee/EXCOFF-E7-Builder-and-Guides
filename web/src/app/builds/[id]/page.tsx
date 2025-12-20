@@ -345,12 +345,12 @@ export default function BuildDetailPage() {
                                 <Image
                                     src={build.artifact.icon}
                                     alt={build.artifact.name}
-                                    width={64}
-                                    height={64}
-                                    className="rounded-lg ring-2 ring-e7-gold/30"
+                                    width={96}
+                                    height={96}
+                                    className="rounded-xl ring-2 ring-e7-gold/30"
                                     unoptimized
                                 />
-                                <span className="text-xl text-white font-medium">{build.artifact.name}</span>
+                                <span className="text-2xl text-white font-medium">{build.artifact.name}</span>
                             </div>
                         )}
 
