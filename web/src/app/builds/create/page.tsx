@@ -26,7 +26,7 @@ interface Artifact {
     id: number;
     name: string;
     code: string;
-    image_url: string;
+    icon: string;
 }
 
 export default function CreateBuildPage() {
@@ -278,7 +278,7 @@ export default function CreateBuildPage() {
                                     {selectedArtifact ? (
                                         <>
                                             <Image
-                                                src={selectedArtifact.image_url}
+                                                src={selectedArtifact.icon}
                                                 alt={selectedArtifact.name}
                                                 width={24}
                                                 height={24}
@@ -311,7 +311,7 @@ export default function CreateBuildPage() {
                                                 }}
                                             >
                                                 <Image
-                                                    src={artifact.image_url}
+                                                    src={artifact.icon}
                                                     alt={artifact.name}
                                                     width={40}
                                                     height={40}
