@@ -8,9 +8,14 @@ use App\Models\UserBuild;
 use App\Models\Hero;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Cache;
 
 class UserBuildController extends Controller
 {
+    /**
+     * Cache duration in seconds (5 minutes for builds list)
+     */
+    private const CACHE_TTL = 300;
     /**
      * Get all builds (for /builds page)
      */

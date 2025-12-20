@@ -12,12 +12,18 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Cache;
 
 /**
  * Guide API Controller - CRUD for community guides.
  */
 class GuideController extends Controller
 {
+    /**
+     * Cache duration in seconds (5 minutes for guide listings)
+     */
+    private const CACHE_TTL = 300;
+
     /**
      * List guides with advanced filtering (RF-13).
      * 
@@ -26,39 +32,54 @@ class GuideController extends Controller
      */
     public function index(Request $request): AnonymousResourceCollection
     {
-        $query = Guide::where('is_published', true)
-            ->with(['hero', 'user', 'artifact']);
+        // Build cache key from query parameters
+        $cacheKey = 'guides:index:' . md5(json_encode($request->query()));
+        
+        $guides = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($request) {
+            $query = Guide::where('is_published', true)
+                ->with(['hero', 'user', 'artifact']);
 
-        // Filter by hero
-        if ($request->has('hero_id')) {
-            $query->where('hero_id', $request->hero_id);
-        }
+            // Filter by hero
+            if ($request->has('hero_id')) {
+                $query->where('hero_id', $request->hero_id);
+            }
 
-        // Filter by type
-        if ($request->has('type')) {
-            $query->where('type', $request->type);
-        }
+            // Filter by type
+            if ($request->has('type')) {
+                $query->where('type', $request->type);
+            }
 
-        // Advanced stat filters (RF-13)
-        if ($request->has('min_spd')) {
-            $query->whereRaw("JSON_EXTRACT(stats, '$.spd') >= ?", [$request->min_spd]);
-        }
-        if ($request->has('min_hp')) {
-            $query->whereRaw("JSON_EXTRACT(stats, '$.hp') >= ?", [$request->min_hp]);
-        }
-        if ($request->has('min_atk')) {
-            $query->whereRaw("JSON_EXTRACT(stats, '$.atk') >= ?", [$request->min_atk]);
-        }
+            // Filter by category
+            if ($request->has('category')) {
+                $query->where('category', $request->category);
+            }
 
-        // Sorting
-        $sort = $request->get('sort', 'votes');
-        match ($sort) {
-            'newest' => $query->orderByDesc('created_at'),
-            'oldest' => $query->orderBy('created_at'),
-            default => $query->orderByDesc('vote_score'),
-        };
+            // Advanced stat filters (RF-13)
+            if ($request->has('min_spd')) {
+                $query->whereRaw("JSON_EXTRACT(stats, '$.spd') >= ?", [$request->min_spd]);
+            }
+            if ($request->has('min_hp')) {
+                $query->whereRaw("JSON_EXTRACT(stats, '$.hp') >= ?", [$request->min_hp]);
+            }
+            if ($request->has('min_atk')) {
+                $query->whereRaw("JSON_EXTRACT(stats, '$.atk') >= ?", [$request->min_atk]);
+            }
 
-        $guides = $query->paginate(20);
+            // Search by title
+            if ($request->has('search') && !empty($request->search)) {
+                $query->where('title', 'like', '%' . $request->search . '%');
+            }
+
+            // Sorting
+            $sort = $request->get('sort', 'votes');
+            match ($sort) {
+                'newest' => $query->orderByDesc('created_at'),
+                'oldest' => $query->orderBy('created_at'),
+                default => $query->orderByDesc('vote_score'),
+            };
+
+            return $query->paginate(20);
+        });
 
         return GuideResource::collection($guides);
     }
