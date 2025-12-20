@@ -281,23 +281,23 @@ export default function BuildDetailPage() {
                 {/* Build Header */}
                 <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6">
                     {/* Hero Section */}
-                    <div className="flex items-center gap-6 p-6 border-b border-e7-gold/20">
+                    <div className="flex items-center gap-8 p-8 border-b border-e7-gold/20">
                         <div className="relative">
                             <Image
                                 src={build.hero.portrait}
                                 alt={build.hero.name}
-                                width={150}
-                                height={150}
-                                className="rounded-xl ring-2 ring-e7-gold/30"
+                                width={200}
+                                height={200}
+                                className="rounded-2xl ring-3 ring-e7-gold/40"
                                 unoptimized
                             />
-                            <span className={`absolute -bottom-2 -right-2 w-8 h-8 rounded-full ring-2 ring-e7-dark ${ELEMENT_COLORS[build.hero.element]}`} />
+                            <span className={`absolute -bottom-2 -right-2 w-10 h-10 rounded-full ring-3 ring-e7-dark ${ELEMENT_COLORS[build.hero.element]}`} />
                         </div>
                         <div>
-                            <Link href={`/heroes/${build.hero.slug}`} className="text-e7-gold hover:text-e7-text-gold font-bold text-3xl">
+                            <Link href={`/heroes/${build.hero.slug}`} className="text-e7-gold hover:text-e7-text-gold font-bold text-4xl">
                                 {build.hero.name}
                             </Link>
-                            <p className="text-xl text-gray-400 capitalize">{build.hero.class.replace('_', ' ')}</p>
+                            <p className="text-2xl text-gray-400 capitalize mt-1">{build.hero.class.replace('_', ' ')}</p>
                         </div>
                     </div>
 
@@ -308,15 +308,15 @@ export default function BuildDetailPage() {
                         </h1>
 
                         {/* Sets */}
-                        <div className="flex gap-3 mb-4">
+                        <div className="flex gap-4 mb-6">
                             {build.primary_set && (
-                                <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full flex items-center gap-2">
+                                <span className="px-4 py-2 text-base bg-purple-500/20 text-purple-300 rounded-full flex items-center gap-3">
                                     {SET_IMAGES[build.primary_set] && (
                                         <Image
                                             src={SET_IMAGES[build.primary_set]}
                                             alt={build.primary_set}
-                                            width={20}
-                                            height={20}
+                                            width={32}
+                                            height={32}
                                             unoptimized
                                         />
                                     )}
@@ -324,13 +324,13 @@ export default function BuildDetailPage() {
                                 </span>
                             )}
                             {build.secondary_set && (
-                                <span className="px-3 py-1 text-sm bg-blue-500/20 text-blue-300 rounded-full flex items-center gap-2">
+                                <span className="px-4 py-2 text-base bg-blue-500/20 text-blue-300 rounded-full flex items-center gap-3">
                                     {SET_IMAGES[build.secondary_set] && (
                                         <Image
                                             src={SET_IMAGES[build.secondary_set]}
                                             alt={build.secondary_set}
-                                            width={20}
-                                            height={20}
+                                            width={32}
+                                            height={32}
                                             unoptimized
                                         />
                                     )}
@@ -341,16 +341,16 @@ export default function BuildDetailPage() {
 
                         {/* Artifact */}
                         {build.artifact && (
-                            <div className="flex items-center gap-3 mb-4 p-3 bg-e7-void/50 rounded-lg">
+                            <div className="flex items-center gap-4 mb-6 p-4 bg-e7-void/50 rounded-xl">
                                 <Image
                                     src={build.artifact.icon}
                                     alt={build.artifact.name}
-                                    width={40}
-                                    height={40}
-                                    className="rounded"
+                                    width={64}
+                                    height={64}
+                                    className="rounded-lg ring-2 ring-e7-gold/30"
                                     unoptimized
                                 />
-                                <span className="text-white">{build.artifact.name}</span>
+                                <span className="text-xl text-white font-medium">{build.artifact.name}</span>
                             </div>
                         )}
 
