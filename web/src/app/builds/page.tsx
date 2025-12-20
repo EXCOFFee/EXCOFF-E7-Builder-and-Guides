@@ -253,13 +253,13 @@ export default function BuildsPage() {
                                         {/* Sets */}
                                         <div className="flex gap-2 mb-3 flex-wrap">
                                             {build.primary_set && (
-                                                <span className="px-2 py-1 text-xs glass-panel text-purple-300 rounded-lg flex items-center gap-1.5 border border-purple-500/30">
+                                                <span className="px-3 py-1.5 text-sm glass-panel text-purple-300 rounded-lg flex items-center gap-2 border border-purple-500/30">
                                                     {SET_IMAGES[build.primary_set] && (
                                                         <Image
                                                             src={SET_IMAGES[build.primary_set]}
                                                             alt={build.primary_set}
-                                                            width={16}
-                                                            height={16}
+                                                            width={32}
+                                                            height={32}
                                                             unoptimized
                                                         />
                                                     )}
@@ -267,13 +267,13 @@ export default function BuildsPage() {
                                                 </span>
                                             )}
                                             {build.secondary_set && (
-                                                <span className="px-2 py-1 text-xs glass-panel text-blue-300 rounded-lg flex items-center gap-1.5 border border-blue-500/30">
+                                                <span className="px-3 py-1.5 text-sm glass-panel text-blue-300 rounded-lg flex items-center gap-2 border border-blue-500/30">
                                                     {SET_IMAGES[build.secondary_set] && (
                                                         <Image
                                                             src={SET_IMAGES[build.secondary_set]}
                                                             alt={build.secondary_set}
-                                                            width={16}
-                                                            height={16}
+                                                            width={32}
+                                                            height={32}
                                                             unoptimized
                                                         />
                                                     )}
