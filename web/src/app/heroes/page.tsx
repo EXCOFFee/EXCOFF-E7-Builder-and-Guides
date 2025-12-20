@@ -88,14 +88,16 @@ export default function HeroesPage() {
     const [search, setSearch] = useState('');
     const [elementFilter, setElementFilter] = useState('');
     const [classFilter, setClassFilter] = useState('');
+    const [rarityFilter, setRarityFilter] = useState<number | null>(null);
 
     const { data, isLoading, error } = useQuery({
-        queryKey: ['heroes', search, elementFilter, classFilter],
+        queryKey: ['heroes', search, elementFilter, classFilter, rarityFilter],
         queryFn: async () => {
             const params: Record<string, string> = {};
             if (search) params.search = search;
             if (elementFilter) params.element = elementFilter;
             if (classFilter) params.class = classFilter;
+            if (rarityFilter) params.rarity = rarityFilter.toString();
 
             const response = await heroApi.list(params);
             return response.data;
@@ -166,6 +168,24 @@ export default function HeroesPage() {
                                     height={40}
                                     className="w-full h-full object-contain"
                                 />
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Rarity Filter */}
+                    <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-gray-400 text-sm mr-2">{t('heroes.filterRarity', 'Rarity')}:</span>
+                        {[5, 4, 3].map((rarity) => (
+                            <button
+                                key={rarity}
+                                onClick={() => setRarityFilter(rarityFilter === rarity ? null : rarity)}
+                                className={`px-3 py-2 rounded-lg transition-all font-semibold text-sm ${rarityFilter === rarity
+                                    ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
+                                    : 'hover:bg-e7-panel hover:scale-105 opacity-70 hover:opacity-100 bg-e7-void/50'
+                                    } ${rarity === 5 ? 'text-e7-gold' : rarity === 4 ? 'text-purple-400' : 'text-blue-400'}`}
+                                title={`${rarity} ${t('common.stars', 'Stars')}`}
+                            >
+                                {'★'.repeat(rarity)}
                             </button>
                         ))}
                     </div>

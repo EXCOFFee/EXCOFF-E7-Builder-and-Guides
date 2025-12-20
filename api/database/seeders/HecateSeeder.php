@@ -68,7 +68,7 @@ class HecateSeeder extends Seeder
                         'SSS' => 0.18,
                     ],
                 ],
-                'image_url' => 'https://moccasin-sparrow-217730.hostingersite.com/images/face/c1178_l.png',
+                'image_url' => 'https://moccasin-sparrow-217730.hostingersite.com/images/heroes/c1178_l.png',
                 'data_hash' => md5('hecate-c1178-v4'),
             ]
         );

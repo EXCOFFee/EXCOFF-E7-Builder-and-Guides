@@ -97,14 +97,16 @@ export default function BuildsPage() {
     const [search, setSearch] = useState('');
     const [selectedElement, setSelectedElement] = useState<string | null>(null);
     const [selectedClass, setSelectedClass] = useState<string | null>(null);
+    const [selectedRarity, setSelectedRarity] = useState<number | null>(null);
 
     const { data, isLoading } = useQuery({
-        queryKey: ['builds', search, selectedElement, selectedClass],
+        queryKey: ['builds', search, selectedElement, selectedClass, selectedRarity],
         queryFn: async () => {
             const params = new URLSearchParams();
             if (search) params.append('search', search);
             if (selectedElement) params.append('element', selectedElement);
             if (selectedClass) params.append('class', selectedClass);
+            if (selectedRarity) params.append('rarity', selectedRarity.toString());
 
             const response = await fetch(`${API_URL}/builds?${params}`);
             if (!response.ok) throw new Error('Failed to fetch builds');
@@ -187,6 +189,24 @@ export default function BuildsPage() {
                                     height={40}
                                     className="w-full h-full object-contain"
                                 />
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Rarity Filter */}
+                    <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-slate-400 text-sm mr-2">{t('heroes.filterRarity', 'Rarity')}:</span>
+                        {[5, 4, 3].map((rarity) => (
+                            <button
+                                key={rarity}
+                                onClick={() => setSelectedRarity(selectedRarity === rarity ? null : rarity)}
+                                className={`px-3 py-2 rounded-lg transition-all font-semibold text-sm ${selectedRarity === rarity
+                                    ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
+                                    : 'hover:bg-e7-panel/50 hover:scale-105 opacity-70 hover:opacity-100 bg-e7-void/50'
+                                    } ${rarity === 5 ? 'text-e7-gold' : rarity === 4 ? 'text-purple-400' : 'text-blue-400'}`}
+                                title={`${rarity} ${t('common.stars', 'Stars')}`}
+                            >
+                                {'★'.repeat(rarity)}
                             </button>
                         ))}
                     </div>

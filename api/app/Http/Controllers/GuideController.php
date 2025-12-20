@@ -64,7 +64,7 @@ class GuideController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required|string|max:255',
-            'category' => 'required|in:general,pve,rta,guild_war,arena,heroes',
+            'category' => 'required|in:general,pve,rta,guild_war,arena,heroes,tier_list,character_guide',
             'hero_id' => 'nullable|exists:heroes,id',
             'description' => 'nullable|string',
             'gameplay_content' => 'required|string',
@@ -113,7 +113,7 @@ class GuideController extends Controller
 
         $validated = $request->validate([
             'title' => 'sometimes|string|max:255',
-            'category' => 'sometimes|in:general,pve,rta,guild_war,arena,heroes',
+            'category' => 'sometimes|in:general,pve,rta,guild_war,arena,heroes,tier_list,character_guide',
             'description' => 'nullable|string',
             'gameplay_content' => 'sometimes|string',
             'video_url' => 'nullable|url',

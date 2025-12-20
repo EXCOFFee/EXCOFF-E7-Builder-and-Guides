@@ -44,6 +44,13 @@ class UserBuildController extends Controller
             });
         }
 
+        // Filter by hero rarity
+        if ($request->has('rarity') && !empty($request->rarity)) {
+            $query->whereHas('hero', function ($q) use ($request) {
+                $q->where('rarity', $request->rarity);
+            });
+        }
+
         // Filter by language
         if ($request->has('language') && $request->language !== 'all') {
             $query->where('language', $request->language);

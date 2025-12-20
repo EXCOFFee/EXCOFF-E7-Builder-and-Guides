@@ -438,20 +438,6 @@ export default function BuildDetailPage() {
                     </div>
                 </div>
 
-                {/* Images */}
-                {build.images && build.images.length > 0 && (
-                    <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
-                        <h2 className="text-xl font-bold text-e7-gold mb-4">📷 Images</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            {build.images.map((img, idx) => (
-                                <div key={idx} className="relative aspect-video rounded overflow-hidden">
-                                    <Image src={img} alt={`Image ${idx + 1}`} fill className="object-cover" unoptimized />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
-
                 {/* Comments */}
                 <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden p-6">
                     <h2 className="text-xl font-bold text-e7-gold mb-4">
