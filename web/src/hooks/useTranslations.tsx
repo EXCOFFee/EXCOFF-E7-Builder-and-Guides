@@ -93,6 +93,13 @@ export function TranslationProvider({ children }: { children: ReactNode }) {
         });
     }, []);
 
+    // Update HTML lang attribute when locale changes (SEO improvement)
+    useEffect(() => {
+        if (typeof document !== 'undefined') {
+            document.documentElement.lang = locale;
+        }
+    }, [locale]);
+
     const setLocale = (newLocale: string) => {
         console.log('[i18n] setLocale called with:', newLocale);
 

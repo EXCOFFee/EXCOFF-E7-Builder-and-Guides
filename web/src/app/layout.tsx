@@ -95,6 +95,13 @@ export default function RootLayout({
                 >
                   Fribbels Epic 7 Optimizer
                 </a>
+                {' | '}
+                <a
+                  href="/credits"
+                  className="text-e7-gold hover:text-e7-text-gold transition-colors underline decoration-e7-gold/30 hover:decoration-e7-gold"
+                >
+                  Credits
+                </a>
               </p>
               <p className="text-xs text-slate-500">
                 Epic Seven © Smilegate &amp; Super Creative. This site is not affiliated with the game developers.

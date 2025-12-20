@@ -98,6 +98,7 @@ export default function BuildsPage() {
     const [selectedElement, setSelectedElement] = useState<string | null>(null);
     const [selectedClass, setSelectedClass] = useState<string | null>(null);
     const [selectedRarity, setSelectedRarity] = useState<number | null>(null);
+    const [sortBy, setSortBy] = useState<'newest' | 'views_desc' | 'views_asc' | 'likes_desc' | 'likes_asc'>('newest');
 
     const { data, isLoading } = useQuery({
         queryKey: ['builds', search, selectedElement, selectedClass, selectedRarity],
@@ -114,7 +115,18 @@ export default function BuildsPage() {
         },
     });
 
-    const builds: Build[] = data?.data || [];
+    const buildsRaw: Build[] = data?.data || [];
+
+    // Sort builds based on selected option
+    const builds = [...buildsRaw].sort((a, b) => {
+        switch (sortBy) {
+            case 'views_desc': return (b.views || 0) - (a.views || 0);
+            case 'views_asc': return (a.views || 0) - (b.views || 0);
+            case 'likes_desc': return (b.likes || 0) - (a.likes || 0);
+            case 'likes_asc': return (a.likes || 0) - (b.likes || 0);
+            default: return 0; // newest, keep API order
+        }
+    });
 
     return (
         <div className="min-h-screen bg-void-glow py-8 px-4">
@@ -210,6 +222,22 @@ export default function BuildsPage() {
                             </button>
                         ))}
                     </div>
+
+                    {/* Sort Filter */}
+                    <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-slate-400 text-sm mr-2">{t('common.sortBy', 'Sort by')}:</span>
+                        <select
+                            value={sortBy}
+                            onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
+                            className="bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg px-3 py-2 text-sm focus:border-e7-gold focus:ring-e7-gold/30"
+                        >
+                            <option value="newest">{t('common.newest', 'Newest')}</option>
+                            <option value="views_desc">👁 {t('common.viewsHigh', 'Views (High)')}</option>
+                            <option value="views_asc">👁 {t('common.viewsLow', 'Views (Low)')}</option>
+                            <option value="likes_desc">❤ {t('common.likesHigh', 'Likes (High)')}</option>
+                            <option value="likes_asc">❤ {t('common.likesLow', 'Likes (Low)')}</option>
+                        </select>
+                    </div>
                 </div>
 
                 {/* Builds Grid */}
@@ -288,8 +316,8 @@ export default function BuildsPage() {
                                                 <Image
                                                     src={build.artifact.icon}
                                                     alt={build.artifact.name}
-                                                    width={56}
-                                                    height={56}
+                                                    width={72}
+                                                    height={72}
                                                     className="rounded-xl ring-2 ring-e7-gold/30"
                                                     unoptimized
                                                 />

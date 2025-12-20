@@ -313,8 +313,8 @@ export default function CreateBuildPage() {
                                                 <Image
                                                     src={artifact.icon}
                                                     alt={artifact.name}
-                                                    width={56}
-                                                    height={56}
+                                                    width={72}
+                                                    height={72}
                                                     className="rounded-lg"
                                                     unoptimized
                                                 />

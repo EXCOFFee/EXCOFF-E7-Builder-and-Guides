@@ -43,6 +43,7 @@ export default function GuidesPage() {
     const { t } = useTranslations();
     const [search, setSearch] = useState('');
     const [categoryFilter, setCategoryFilter] = useState('all');
+    const [sortBy, setSortBy] = useState<'newest' | 'views_desc' | 'views_asc' | 'likes_desc' | 'likes_asc'>('newest');
 
     const CATEGORIES = [
         { id: 'all', label: t('guides.allCategories', 'All'), emoji: '📚' },
@@ -67,7 +68,18 @@ export default function GuidesPage() {
         },
     });
 
-    const guides: Guide[] = data?.data || [];
+    const guidesRaw: Guide[] = data?.data || [];
+
+    // Sort guides based on selected option
+    const guides = [...guidesRaw].sort((a, b) => {
+        switch (sortBy) {
+            case 'views_desc': return (b.views || 0) - (a.views || 0);
+            case 'views_asc': return (a.views || 0) - (b.views || 0);
+            case 'likes_desc': return (b.vote_score || 0) - (a.vote_score || 0);
+            case 'likes_asc': return (a.vote_score || 0) - (b.vote_score || 0);
+            default: return 0; // newest, keep API order
+        }
+    });
 
     return (
         <div className="min-h-screen bg-void-glow py-8 px-4">
@@ -102,14 +114,28 @@ export default function GuidesPage() {
                     ))}
                 </div>
 
-                {/* Search */}
-                <div className="mb-8">
+                {/* Search and Sort */}
+                <div className="mb-8 flex flex-col md:flex-row gap-4 items-start md:items-center">
                     <Input
                         placeholder={t('guides.searchPlaceholder', 'Search guides...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                         className="max-w-md bg-e7-void/50 border-e7-gold/20 text-slate-200 placeholder:text-slate-500 focus:border-e7-gold focus:ring-e7-gold/30 transition-all"
                     />
+                    <div className="flex items-center gap-2">
+                        <span className="text-sm text-slate-400">{t('common.sortBy', 'Sort by')}:</span>
+                        <select
+                            value={sortBy}
+                            onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
+                            className="bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg px-3 py-2 text-sm focus:border-e7-gold focus:ring-e7-gold/30"
+                        >
+                            <option value="newest">{t('common.newest', 'Newest')}</option>
+                            <option value="views_desc">👁 {t('common.viewsHigh', 'Views (High)')}</option>
+                            <option value="views_asc">👁 {t('common.viewsLow', 'Views (Low)')}</option>
+                            <option value="likes_desc">❤ {t('common.likesHigh', 'Likes (High)')}</option>
+                            <option value="likes_asc">❤ {t('common.likesLow', 'Likes (Low)')}</option>
+                        </select>
+                    </div>
                 </div>
 
                 {/* Loading */}
@@ -198,8 +224,21 @@ export default function GuidesPage() {
                                             )}
 
                                             <div className="flex justify-between items-center mt-3 pt-3 border-t border-e7-gold/10 text-xs text-slate-500">
-                                                <span>{guide.user?.name || t('common.anonymous', 'Anonymous')}</span>
-                                                <span>👁 {guide.views || 0}</span>
+                                                <div className="flex items-center gap-2">
+                                                    <Image
+                                                        src="/images/ras-like.gif"
+                                                        alt="avatar"
+                                                        width={20}
+                                                        height={20}
+                                                        className="rounded-full ring-1 ring-e7-gold/20"
+                                                        unoptimized
+                                                    />
+                                                    <span>{guide.user?.name || t('common.anonymous', 'Anonymous')}</span>
+                                                </div>
+                                                <div className="flex items-center gap-3">
+                                                    <span className="flex items-center gap-1"><Image src="/images/ras-like.gif" alt="likes" width={16} height={16} unoptimized /> {guide.vote_score || 0}</span>
+                                                    <span>👁 {guide.views || 0}</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
