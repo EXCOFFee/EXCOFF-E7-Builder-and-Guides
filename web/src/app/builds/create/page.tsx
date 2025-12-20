@@ -292,7 +292,7 @@ export default function CreateBuildPage() {
                                     )}
                                 </div>
                                 {showArtifactDropdown && (
-                                    <div className="absolute z-50 w-full mt-1 bg-e7-panel border border-e7-gold/30 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                                    <div className="absolute z-50 w-full mt-1 bg-e7-panel border border-e7-gold/30 rounded-lg shadow-lg max-h-96 overflow-y-auto">
                                         <Input
                                             value={artifactSearch}
                                             onChange={(e) => setArtifactSearch(e.target.value)}
@@ -303,7 +303,7 @@ export default function CreateBuildPage() {
                                         {filteredArtifacts.map((artifact) => (
                                             <div
                                                 key={artifact.id}
-                                                className="px-4 py-2 hover:bg-e7-gold/20 cursor-pointer text-white flex items-center gap-2"
+                                                className="px-4 py-3 hover:bg-e7-gold/20 cursor-pointer text-white flex items-center gap-3"
                                                 onClick={() => {
                                                     setArtifactId(artifact.id);
                                                     setShowArtifactDropdown(false);
@@ -313,12 +313,12 @@ export default function CreateBuildPage() {
                                                 <Image
                                                     src={artifact.image_url}
                                                     alt={artifact.name}
-                                                    width={24}
-                                                    height={24}
+                                                    width={40}
+                                                    height={40}
                                                     className="rounded"
                                                     unoptimized
                                                 />
-                                                {artifact.name}
+                                                <span className="text-sm">{artifact.name}</span>
                                             </div>
                                         ))}
                                         {filteredArtifacts.length === 0 && (
