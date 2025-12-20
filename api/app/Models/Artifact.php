@@ -35,7 +35,7 @@ class Artifact extends Model
 
     /**
      * Get the artifact icon URL.
-     * Uses local datamined images based on artifact code.
+     * Uses Fribbels CDN images based on artifact code.
      */
     public function getIconAttribute(): ?string
     {
@@ -43,22 +43,9 @@ class Artifact extends Model
             return $this->attributes['image_url'] ?? null;
         }
 
-        // Convert code (e.g., 'art0001' or 'efk21') to icon filename
-        // Datamined files are named 'icon_art0001.png', 'icon_art3_1.png', etc.
-        $baseUrl = rtrim(config('app.url'), '/');
-        
-        // Check if code matches pattern like 'art0001'
-        if (preg_match('/^art(\d+)$/', $this->code, $matches)) {
-            return $baseUrl . '/images/artifacts/icon_' . $this->code . '.png';
-        }
-        
-        // Check if code matches pattern like 'art3_1' (3-star artifacts)
-        if (preg_match('/^art(\d)_(\d+)$/', $this->code, $matches)) {
-            return $baseUrl . '/images/artifacts/icon_' . $this->code . '.png';
-        }
-
-        // Fallback to stored image_url
-        return $this->attributes['image_url'] ?? null;
+        // Use Fribbels CDN for artifact images
+        // Codes like efk21, efw13, ef504, etc. match Fribbels naming convention
+        return 'https://fribbels.github.io/Fribbels-Epic-7-Optimizer/app/assets/images/artifacts/' . $this->code . '.png';
     }
 
     /**
