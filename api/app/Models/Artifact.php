@@ -34,7 +34,7 @@ class Artifact extends Model
     protected $appends = ['icon'];
 
     /**
-     * Mapping for new artifacts not yet in database.
+     * Mapping for new artifacts not yet in epic7db.com.
      * Maps artifact name to local datamined icon URL.
      */
     private const NEW_ARTIFACT_ICONS = [
@@ -44,7 +44,8 @@ class Artifact extends Model
 
     /**
      * Get the artifact icon URL.
-     * Uses special mapping for new artifacts, falls back to image_url from database.
+     * Generates URL dynamically from epic7db.com based on artifact name.
+     * Falls back to special mapping for new artifacts not yet in epic7db.
      */
     public function getIconAttribute(): ?string
     {
@@ -53,8 +54,15 @@ class Artifact extends Model
             return self::NEW_ARTIFACT_ICONS[$this->name];
         }
 
-        // Use image_url from database
-        return $this->attributes['image_url'] ?? null;
+        // Generate URL from epic7db.com using artifact name
+        // Pattern: https://epic7db.com/images/artifacts/{slug}.webp
+        // Name is converted to lowercase with dashes instead of spaces
+        $slug = strtolower(str_replace([' ', "'", "\u{2019}"], ['-', '', ''], $this->name));
+        $slug = preg_replace('/[^a-z0-9\-]/', '', $slug);
+        $slug = preg_replace('/-+/', '-', $slug); // Remove consecutive dashes
+        $slug = trim($slug, '-');
+        
+        return 'https://epic7db.com/images/artifacts/' . $slug . '.webp';
     }
 
     /**
