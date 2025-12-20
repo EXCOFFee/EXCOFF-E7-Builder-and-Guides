@@ -34,11 +34,26 @@ class Artifact extends Model
     protected $appends = ['icon'];
 
     /**
+     * Mapping for new artifacts not yet in database.
+     * Maps artifact name to local datamined icon URL.
+     */
+    private const NEW_ARTIFACT_ICONS = [
+        'Tome of the Life\'s End' => 'https://moccasin-sparrow-217730.hostingersite.com/images/artifacts/icon_art0231.png',
+        // Add more new artifacts here as needed
+    ];
+
+    /**
      * Get the artifact icon URL.
-     * Uses image_url from database (configured to point to local images on Hostinger).
+     * Uses special mapping for new artifacts, falls back to image_url from database.
      */
     public function getIconAttribute(): ?string
     {
+        // Check if this is a new artifact with special icon mapping
+        if (isset(self::NEW_ARTIFACT_ICONS[$this->name])) {
+            return self::NEW_ARTIFACT_ICONS[$this->name];
+        }
+
+        // Use image_url from database
         return $this->attributes['image_url'] ?? null;
     }
 
