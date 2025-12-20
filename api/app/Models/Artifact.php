@@ -34,13 +34,28 @@ class Artifact extends Model
     protected $appends = ['icon'];
 
     /**
+     * Mapping for new artifacts not yet in Fribbels CDN.
+     * Maps artifact slug/name to local datamined icon filename.
+     */
+    private const NEW_ARTIFACT_ICONS = [
+        'tome-of-the-lifes-end' => 'icon_art0231.png',
+        // Add more new artifacts here as needed
+    ];
+
+    /**
      * Get the artifact icon URL.
-     * Uses Fribbels CDN images based on artifact code.
+     * Uses Fribbels CDN images, with fallback to local datamined images for new artifacts.
      */
     public function getIconAttribute(): ?string
     {
         if (!$this->code) {
             return $this->attributes['image_url'] ?? null;
+        }
+
+        // Check if this is a new artifact with local icon
+        if (isset(self::NEW_ARTIFACT_ICONS[$this->slug])) {
+            $baseUrl = rtrim(config('app.url'), '/');
+            return $baseUrl . '/images/artifacts/' . self::NEW_ARTIFACT_ICONS[$this->slug];
         }
 
         // Use Fribbels CDN for artifact images
