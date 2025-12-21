@@ -7,7 +7,7 @@ return [
     | Cross-Origin Resource Sharing (CORS) Configuration
     |--------------------------------------------------------------------------
     |
-    | E7 EXCOFF Builder & Guides - Headless Architecture
+    | E7 Orbis Helper - Headless Architecture
     | Frontend: Vercel | Backend: Hostinger
     |
     */

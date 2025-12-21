@@ -13,6 +13,10 @@ use Illuminate\Http\JsonResponse;
 class CommentController extends Controller
 {
     /**
+     * Maximum comments to return per request (KISS: simple limit)
+     */
+    private const MAX_COMMENTS = 50;
+    /**
      * Get comments for a build
      */
     public function getBuildComments(UserBuild $build): JsonResponse
@@ -21,10 +25,9 @@ class CommentController extends Controller
             ->where('build_id', $build->id)
             ->whereNull('parent_id')
             ->orderBy('created_at', 'desc')
+            ->take(self::MAX_COMMENTS)
             ->get()
-            ->map(function ($comment) {
-                return $this->formatComment($comment);
-            });
+            ->map(fn ($comment) => $this->formatComment($comment));
 
         return response()->json($comments);
     }
@@ -38,10 +41,9 @@ class CommentController extends Controller
             ->where('guide_id', $guide->id)
             ->whereNull('parent_id')
             ->orderBy('created_at', 'desc')
+            ->take(self::MAX_COMMENTS)
             ->get()
-            ->map(function ($comment) {
-                return $this->formatComment($comment);
-            });
+            ->map(fn ($comment) => $this->formatComment($comment));
 
         return response()->json($comments);
     }

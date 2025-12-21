@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Models\UserBuild;
 use App\Models\Hero;
+use App\Services\ImageService;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Cache;
@@ -16,6 +17,10 @@ class UserBuildController extends Controller
      * Cache duration in seconds (5 minutes for builds list)
      */
     private const CACHE_TTL = 300;
+
+    public function __construct(
+        private readonly ImageService $imageService
+    ) {}
     /**
      * Get all builds (for /builds page)
      */
@@ -135,19 +140,16 @@ class UserBuildController extends Controller
         $validated['language'] = $validated['language'] ?? 'en';
         $validated['is_anonymous'] = $validated['is_anonymous'] ?? false;
 
-        // Handle image uploads with absolute URLs
+        // Handle image uploads using ImageService (SOLID: dependency injection)
         $imagePaths = [];
-        $baseUrl = rtrim(config('app.url'), '/');
         if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                if ($image->isValid()) {
-                    $path = $image->store('builds', 'public');
-                    $imagePaths[] = $baseUrl . '/storage/' . $path;
-                }
-            }
+            $result = $this->imageService->processMultiple(
+                $request->file('images'),
+                'builds',
+                5
+            );
+            $imagePaths = $result['urls'];
         }
-        // Limit to 5 images max
-        $imagePaths = array_slice($imagePaths, 0, 5);
         $validated['images'] = $imagePaths;
 
         $build = $request->user()->builds()->create($validated);
@@ -182,18 +184,15 @@ class UserBuildController extends Controller
             'status' => 'sometimes|in:draft,published,archived',
         ]);
 
-        // Handle image uploads
+        // Handle new image uploads using ImageService
         $imagePaths = [];
-        $baseUrl = rtrim(config('app.url'), '/');
-        
-        // Handle new file uploads
         if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                if ($image->isValid()) {
-                    $path = $image->store('builds', 'public');
-                    $imagePaths[] = $baseUrl . '/storage/' . $path;
-                }
-            }
+            $result = $this->imageService->processMultiple(
+                $request->file('images'),
+                'builds',
+                5
+            );
+            $imagePaths = $result['urls'];
         }
         
         // Add existing image URLs

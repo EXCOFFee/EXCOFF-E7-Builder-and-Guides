@@ -48,8 +48,8 @@ Route::middleware('throttle:10,1')->group(function () {
     Route::get('/auth/{provider}/callback', [AuthController::class, 'handleProviderCallback']);
 });
 
-// Protected routes
-Route::middleware('auth:sanctum')->group(function () {
+// Protected routes with rate limiting (30 requests per minute for authenticated users)
+Route::middleware(['auth:sanctum', 'throttle:30,1'])->group(function () {
     // User
     Route::get('/user', [AuthController::class, 'user']);
     Route::post('/logout', [AuthController::class, 'logout']);
