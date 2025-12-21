@@ -18,8 +18,8 @@ const cinzel = Cinzel({
 export const metadata: Metadata = {
   metadataBase: new URL('https://excoff-e7-orbis-helper.vercel.app'),
   title: {
-    default: 'E7 EXCOFF Builder & Guides',
-    template: '%s | E7 EXCOFF',
+    default: 'E7 Orbis Helper - Builds & Guides',
+    template: '%s | E7 Orbis Helper',
   },
   description: 'Descubre y publica tus builds de personajes y crea guías del juego para la comunidad de Epic Seven. Encuentra las mejores builds, artefactos y equipos.',
   keywords: [
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     'EXCOFF', 'Epic 7', 'gacha', 'tier list', 'equipment', 'sets',
     'PvP', 'PvE', 'RTA', 'Arena', 'Guild War'
   ],
-  authors: [{ name: 'E7 EXCOFF Community' }],
-  creator: 'E7 EXCOFF',
-  publisher: 'E7 EXCOFF',
+  authors: [{ name: 'E7 Orbis Helper Community' }],
+  creator: 'E7 Orbis Helper',
+  publisher: 'E7 Orbis Helper',
   robots: {
     index: true,
     follow: true,
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'E7 EXCOFF Builder & Guides',
+    title: 'E7 Orbis Helper - Builds & Guides',
     description: 'Descubre y publica tus builds de personajes y crea guías para la comunidad de Epic Seven.',
-    siteName: 'E7 EXCOFF',
+    siteName: 'E7 Orbis Helper',
     locale: 'es_ES',
     type: 'website',
     images: [
@@ -52,13 +52,13 @@ export const metadata: Metadata = {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'E7 EXCOFF Builder & Guides',
+        alt: 'E7 Orbis Helper - Builds & Guides',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'E7 EXCOFF Builder & Guides',
+    title: 'E7 Orbis Helper - Builds & Guides',
     description: 'Builds y guías para la comunidad de Epic Seven',
     images: ['/images/og-image.png'],
   },

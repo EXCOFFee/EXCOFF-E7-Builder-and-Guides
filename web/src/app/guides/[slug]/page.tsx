@@ -42,21 +42,21 @@ export async function generateMetadata(
             title,
             description,
             openGraph: {
-                title: `${title} | E7 EXCOFF`,
+                title: `${title} | E7 Orbis Helper`,
                 description,
                 type: 'article',
                 images: guide.hero?.portrait ? [guide.hero.portrait] : [],
             },
             twitter: {
                 card: 'summary_large_image',
-                title: `${title} | E7 EXCOFF`,
+                title: `${title} | E7 Orbis Helper`,
                 description,
                 images: guide.hero?.portrait ? [guide.hero.portrait] : [],
             },
         };
     } catch {
         return {
-            title: 'Guide | E7 EXCOFF',
+            title: 'Guide | E7 Orbis Helper',
             description: 'View community guides for Epic Seven.',
         };
     }

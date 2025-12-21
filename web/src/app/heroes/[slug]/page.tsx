@@ -37,21 +37,21 @@ export async function generateMetadata(
             title,
             description,
             openGraph: {
-                title: `${hero.name} | E7 EXCOFF`,
+                title: `${hero.name} | E7 Orbis Helper`,
                 description,
                 type: 'profile',
                 images: hero.image_url ? [hero.image_url] : [],
             },
             twitter: {
                 card: 'summary_large_image',
-                title: `${hero.name} | E7 EXCOFF`,
+                title: `${hero.name} | E7 Orbis Helper`,
                 description,
                 images: hero.image_url ? [hero.image_url] : [],
             },
         };
     } catch {
         return {
-            title: 'Hero | E7 EXCOFF',
+            title: 'Hero | E7 Orbis Helper',
             description: 'View Epic Seven hero details, builds, and stats.',
         };
     }

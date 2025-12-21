@@ -65,7 +65,7 @@ export default function Home() {
               <div className="absolute -inset-2 bg-gradient-to-r from-e7-gold via-e7-purple to-e7-gold rounded-3xl opacity-40 blur-md animate-border-glow" />
               <Image
                 src="/images/icon_menu_orbis.png"
-                alt="E7 EXCOFF"
+                alt="E7 Orbis Helper"
                 fill
                 className="object-contain rounded-2xl shadow-2xl shadow-e7-gold/30 relative"
                 priority
@@ -80,7 +80,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-300 mb-2 font-medium">
-            by EXCOFF
+            by Orbis Helper
           </p>
 
           <p className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
@@ -202,16 +202,16 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Image
               src="/images/icon_menu_orbis.png"
-              alt="E7 EXCOFF"
+              alt="E7 Orbis Helper"
               width={32}
               height={32}
               className="rounded-lg ring-1 ring-e7-gold/30"
               unoptimized
             />
-            <span className="text-e7-gold font-bold">E7 EXCOFF</span>
+            <span className="text-e7-gold font-bold">E7 Orbis Helper</span>
           </div>
           <div className="text-center text-slate-500 text-sm">
-            <p>{t('footer.notAffiliated', 'E7 EXCOFF is not affiliated with Smilegate or Super Creative.')}</p>
+            <p>{t('footer.notAffiliated', 'E7 Orbis Helper is not affiliated with Smilegate or Super Creative.')}</p>
             <p>{t('footer.copyright', 'Epic Seven and all its content are property of their respective owners.')}</p>
           </div>
           <div className="flex gap-4">
