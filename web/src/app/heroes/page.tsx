@@ -231,8 +231,8 @@ export default function HeroesPage() {
                                                 <Image
                                                     src={hero.image_url}
                                                     alt={hero.name}
-                                                    width={200}
-                                                    height={200}
+                                                    width={400}
+                                                    height={400}
                                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                                     style={HERO_POSITION_OVERRIDE[hero.slug] ? { objectPosition: HERO_POSITION_OVERRIDE[hero.slug] } : undefined}
                                                     unoptimized
