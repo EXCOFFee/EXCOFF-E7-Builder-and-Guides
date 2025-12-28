@@ -229,7 +229,7 @@ export default function BuildsPage() {
                         <select
                             value={sortBy}
                             onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-                            className="bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg px-3 py-2 text-sm focus:border-e7-gold focus:ring-e7-gold/30"
+                            className="bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg pl-3 pr-8 py-2 text-sm focus:border-e7-gold focus:ring-e7-gold/30 appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23c5a059%27 stroke-width=%272%27%3e%3cpath d=%27M6 9l6 6 6-6%27/%3e%3c/svg%3e')] bg-no-repeat bg-[right_0.5rem_center] bg-[length:1.25rem]"
                         >
                             <option value="newest">{t('common.newest', 'Newest')}</option>
                             <option value="views_desc">👁 {t('common.viewsHigh', 'Views (High)')}</option>
