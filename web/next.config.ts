@@ -25,10 +25,12 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  // Image optimization - allow external images
+  // Image optimization - allow external images with high quality
   images: {
-    // Only disable optimization for specific external domains that don't support it
     unoptimized: false,
+    // Define image sizes for responsive loading
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [
       {
         protocol: 'https',
@@ -36,7 +38,15 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '*.hostinger.com',
+        hostname: '*.hostingersite.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'moccasin-sparrow-217730.hostingersite.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'epic7.gg.onstatic.com',
       },
     ],
   },
