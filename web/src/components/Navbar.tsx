@@ -121,11 +121,8 @@ export function Navbar() {
                     </div>
                     <div className="hidden sm:block">
                         <h1 className="text-lg font-bold text-gold-gradient tracking-wide group-hover:opacity-90 transition-opacity">
-                            ORBIS HELPER
+                            E7 Orbis Helper
                         </h1>
-                        <p className="text-xs text-slate-500 -mt-1 tracking-wider">
-                            by EXCOFF
-                        </p>
                     </div>
                 </Link>
 

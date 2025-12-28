@@ -158,3 +158,88 @@ export function PageSkeleton() {
         </div>
     );
 }
+
+/**
+ * Image component with skeleton loading state.
+ * Shows an animated placeholder while the image loads.
+ */
+interface ImageWithSkeletonProps {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+    className?: string;
+    skeletonClassName?: string;
+    unoptimized?: boolean;
+}
+
+export function ImageWithSkeleton({
+    src,
+    alt,
+    width,
+    height,
+    className = '',
+    skeletonClassName = '',
+    unoptimized = false
+}: ImageWithSkeletonProps) {
+    const [isLoading, setIsLoading] = React.useState(true);
+    const [hasError, setHasError] = React.useState(false);
+
+    return (
+        <div className={`relative ${skeletonClassName}`} style={{ width, height }}>
+            {/* Skeleton placeholder */}
+            {isLoading && !hasError && (
+                <div
+                    className="absolute inset-0 bg-gradient-to-r from-slate-700/50 via-slate-600/50 to-slate-700/50 animate-pulse rounded-lg"
+                />
+            )}
+
+            {/* Error placeholder */}
+            {hasError && (
+                <div className="absolute inset-0 bg-slate-800 flex items-center justify-center rounded-lg">
+                    <span className="text-slate-500 text-xs">⚠️</span>
+                </div>
+            )}
+
+            {/* Actual image */}
+            {!hasError && (
+                <img
+                    src={src}
+                    alt={alt}
+                    width={width}
+                    height={height}
+                    className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+                    onLoad={() => setIsLoading(false)}
+                    onError={() => {
+                        setIsLoading(false);
+                        setHasError(true);
+                    }}
+                />
+            )}
+        </div>
+    );
+}
+
+/**
+ * Global loading bar that shows at the top of the page during navigation/API calls
+ */
+export function GlobalLoadingBar({ isLoading }: { isLoading: boolean }) {
+    if (!isLoading) return null;
+
+    return (
+        <div className="fixed top-0 left-0 right-0 z-[100] h-1">
+            <div className="h-full bg-gradient-to-r from-e7-gold via-yellow-300 to-e7-gold animate-loading-bar" />
+            <style jsx>{`
+                @keyframes loading-bar {
+                    0% { transform: translateX(-100%); width: 100%; }
+                    50% { transform: translateX(0%); width: 100%; }
+                    100% { transform: translateX(100%); width: 100%; }
+                }
+                .animate-loading-bar {
+                    animation: loading-bar 1.5s ease-in-out infinite;
+                }
+            `}</style>
+        </div>
+    );
+}
+
