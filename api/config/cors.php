@@ -7,8 +7,8 @@ return [
     | Cross-Origin Resource Sharing (CORS) Configuration
     |--------------------------------------------------------------------------
     |
-    | E7 Orbis Helper - Headless Architecture
-    | Frontend: Vercel | Backend: Hostinger
+    | EXCOFF E7 Hub - Headless Architecture
+    | Frontend: Vercel (excoffe7.com) | Backend: Hostinger
     |
     */
 
@@ -17,6 +17,8 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
+        'https://excoffe7.com',
+        'https://www.excoffe7.com',
         'https://excoff-e7-orbis-helper.vercel.app',
         'https://web-git-main-excoffees-projects.vercel.app',
         'https://web-n76r2-excoffees-projects.vercel.app',
