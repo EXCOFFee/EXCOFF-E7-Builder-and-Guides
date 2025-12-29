@@ -85,8 +85,48 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // JSON-LD Structured Data for SEO
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'EXCOFF E7 Hub',
+    alternateName: ['Epic Seven Hub', 'E7 Hub', 'excoffe7', 'Epic Seven Builds'],
+    url: 'https://excoff-e7-orbis-helper.vercel.app',
+    description: 'Your ultimate Epic Seven (E7) resource hub. Hero builds, guides, tier lists & equipment recommendations.',
+    inLanguage: ['en', 'es', 'ko', 'ja', 'zh', 'pt'],
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://excoff-e7-orbis-helper.vercel.app/heroes?search={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  };
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'EXCOFF E7 Hub',
+    url: 'https://excoff-e7-orbis-helper.vercel.app',
+    logo: 'https://excoff-e7-orbis-helper.vercel.app/images/icon_menu_orbis.png',
+  };
+
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/images/icon_menu_orbis.png" />
+        <link rel="apple-touch-icon" href="/images/icon_menu_orbis.png" />
+        <meta name="theme-color" content="#c8aa6e" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${cinzel.variable} font-sans antialiased bg-void-glow text-slate-200 min-h-screen`}
         suppressHydrationWarning

@@ -1,129 +1,71 @@
+//  Dynamic sitemap for EXCOFF E7 Hub
+// Next.js automatically generates sitemap from this file
+
 import { MetadataRoute } from 'next'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
-
-interface Hero {
-    slug: string;
-}
-
-interface Build {
-    id: number;
-    updated_at?: string;
-}
-
-interface Guide {
-    slug: string;
-    updated_at?: string;
-}
+const BASE_URL = 'https://excoff-e7-orbis-helper.vercel.app'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    const baseUrl = 'https://excoff-e7-orbis-helper.vercel.app';
-
     // Static pages
     const staticPages: MetadataRoute.Sitemap = [
         {
-            url: baseUrl,
+            url: BASE_URL,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 1,
         },
         {
-            url: `${baseUrl}/heroes`,
+            url: `${BASE_URL}/heroes`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.9,
         },
         {
-            url: `${baseUrl}/builds`,
+            url: `${BASE_URL}/builds`,
             lastModified: new Date(),
-            changeFrequency: 'hourly',
+            changeFrequency: 'daily',
             priority: 0.9,
         },
         {
-            url: `${baseUrl}/guides`,
+            url: `${BASE_URL}/guides`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 0.9,
+        },
+        {
+            url: `${BASE_URL}/guilds`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.8,
         },
         {
-            url: `${baseUrl}/guilds`,
-            lastModified: new Date(),
-            changeFrequency: 'daily',
-            priority: 0.7,
-        },
-        {
-            url: `${baseUrl}/credits`,
+            url: `${BASE_URL}/login`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.3,
         },
-    ];
+    ]
 
-    // Dynamic hero pages
-    let heroPages: MetadataRoute.Sitemap = [];
+    // Try to fetch dynamic hero pages
+    let heroPages: MetadataRoute.Sitemap = []
     try {
+        const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api'
         const response = await fetch(`${API_URL}/heroes`, {
-            next: { revalidate: 3600 }, // Cache for 1 hour
-        });
-
+            next: { revalidate: 3600 } // Cache for 1 hour
+        })
         if (response.ok) {
-            const data = await response.json();
-            const heroes: Hero[] = data.data || [];
-
-            heroPages = heroes.map((hero) => ({
-                url: `${baseUrl}/heroes/${hero.slug}`,
+            const data = await response.json()
+            const heroes = data.data || data || []
+            heroPages = heroes.map((hero: { slug: string }) => ({
+                url: `${BASE_URL}/heroes/${hero.slug}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly' as const,
                 priority: 0.7,
-            }));
+            }))
         }
     } catch (error) {
-        console.error('Error fetching heroes for sitemap:', error);
+        console.error('Failed to fetch heroes for sitemap:', error)
     }
 
-    // Dynamic build pages
-    let buildPages: MetadataRoute.Sitemap = [];
-    try {
-        const response = await fetch(`${API_URL}/builds`, {
-            next: { revalidate: 1800 }, // Cache for 30 minutes
-        });
-
-        if (response.ok) {
-            const data = await response.json();
-            const builds: Build[] = data.data || [];
-
-            buildPages = builds.map((build) => ({
-                url: `${baseUrl}/builds/${build.id}`,
-                lastModified: build.updated_at ? new Date(build.updated_at) : new Date(),
-                changeFrequency: 'weekly' as const,
-                priority: 0.6,
-            }));
-        }
-    } catch (error) {
-        console.error('Error fetching builds for sitemap:', error);
-    }
-
-    // Dynamic guide pages
-    let guidePages: MetadataRoute.Sitemap = [];
-    try {
-        const response = await fetch(`${API_URL}/guides`, {
-            next: { revalidate: 1800 }, // Cache for 30 minutes
-        });
-
-        if (response.ok) {
-            const data = await response.json();
-            const guides: Guide[] = data.data || [];
-
-            guidePages = guides.map((guide) => ({
-                url: `${baseUrl}/guides/${guide.slug}`,
-                lastModified: guide.updated_at ? new Date(guide.updated_at) : new Date(),
-                changeFrequency: 'weekly' as const,
-                priority: 0.6,
-            }));
-        }
-    } catch (error) {
-        console.error('Error fetching guides for sitemap:', error);
-    }
-
-    return [...staticPages, ...heroPages, ...buildPages, ...guidePages];
+    return [...staticPages, ...heroPages]
 }

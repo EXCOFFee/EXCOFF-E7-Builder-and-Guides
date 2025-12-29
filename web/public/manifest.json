@@ -1,0 +1,70 @@
+{
+    "name": "EXCOFF E7 Hub",
+    "short_name": "E7 Hub",
+    "description": "Your ultimate Epic Seven (E7) resource hub. Hero builds, guides, tier lists & equipment recommendations.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0f",
+    "theme_color": "#c8aa6e",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/images/icon_menu_orbis.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/images/icon_menu_orbis.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "games",
+        "entertainment",
+        "utilities"
+    ],
+    "lang": "en",
+    "dir": "ltr",
+    "screenshots": [],
+    "shortcuts": [
+        {
+            "name": "Heroes",
+            "short_name": "Heroes",
+            "description": "Browse all Epic Seven heroes",
+            "url": "/heroes",
+            "icons": [
+                {
+                    "src": "/images/icon_menu_orbis.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Builds",
+            "short_name": "Builds",
+            "description": "Community hero builds",
+            "url": "/builds",
+            "icons": [
+                {
+                    "src": "/images/icon_menu_orbis.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Guides",
+            "short_name": "Guides",
+            "description": "Game guides and strategies",
+            "url": "/guides",
+            "icons": [
+                {
+                    "src": "/images/icon_menu_orbis.png",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ]
+}
