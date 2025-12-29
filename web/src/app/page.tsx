@@ -76,7 +76,7 @@ export default function Home() {
 
           {/* Title with Gradient */}
           <h1 className="font-display text-5xl md:text-7xl font-bold mb-4 tracking-wide bg-gradient-to-r from-e7-gold via-yellow-300 to-e7-gold bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
-            EpicSevenHub
+            EXCOFF E7 HUB
           </h1>
 
           <p className="text-lg md:text-xl text-slate-300 mb-2 font-medium">
@@ -208,7 +208,7 @@ export default function Home() {
               className="rounded-lg ring-1 ring-e7-gold/30"
               unoptimized
             />
-            <span className="text-e7-gold font-bold">EpicSevenHub</span>
+            <span className="text-e7-gold font-bold">EXCOFF E7 HUB</span>
           </div>
           <div className="text-center text-slate-500 text-sm">
             <p>{t('footer.notAffiliated', 'EpicSevenHub is not affiliated with Smilegate or Super Creative.')}</p>

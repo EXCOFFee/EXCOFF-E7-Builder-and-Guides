@@ -18,20 +18,20 @@ const cinzel = Cinzel({
 export const metadata: Metadata = {
   metadataBase: new URL('https://excoff-e7-orbis-helper.vercel.app'),
   title: {
-    default: 'EpicSevenHub - E7 Builds, Guides & Hero Wiki',
-    template: '%s | EpicSevenHub',
+    default: 'EXCOFF E7 Hub - Epic Seven Builds, Guides & Hero Wiki',
+    template: '%s | EXCOFF E7 Hub',
   },
-  description: 'EpicSevenHub - Your ultimate Epic Seven (E7) resource hub. Discover hero builds, guides, tier lists, and equipment recommendations. Community-driven E7 builds for PvP, RTA, Arena & Guild War.',
+  description: 'EXCOFF E7 Hub - Your ultimate Epic Seven (E7) resource hub. Discover hero builds, guides, tier lists, and equipment recommendations. Community-driven E7 builds for PvP, RTA, Arena & Guild War.',
   keywords: [
-    'Epic Seven', 'E7', 'Epic7', 'Epic 7', 'EpicSeven', 'EpicSevenHub',
+    'Epic Seven', 'E7', 'Epic7', 'Epic 7', 'EpicSeven', 'EXCOFF', 'excoffe7',
     'builds', 'guides', 'wiki', 'heroes', 'artifacts', 'equipment',
     'tier list', 'sets', 'PvP', 'PvE', 'RTA', 'Arena', 'Guild War',
     'gacha', 'mobile game', 'hero builds', 'best builds', 'meta builds',
     'E7 builds', 'E7 guides', 'E7 tier list', 'E7 wiki', 'E7 heroes'
   ],
-  authors: [{ name: 'EpicSevenHub Community' }],
-  creator: 'EpicSevenHub',
-  publisher: 'EpicSevenHub',
+  authors: [{ name: 'EXCOFF E7 Hub Community' }],
+  creator: 'EXCOFF E7 Hub',
+  publisher: 'EXCOFF E7 Hub',
   robots: {
     index: true,
     follow: true,
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'EpicSevenHub - E7 Builds, Guides & Hero Wiki',
+    title: 'EXCOFF E7 Hub - Epic Seven Builds, Guides & Hero Wiki',
     description: 'Your ultimate Epic Seven (E7) resource hub. Hero builds, guides, tier lists & equipment for PvP, RTA, Arena & Guild War.',
-    siteName: 'EpicSevenHub',
+    siteName: 'EXCOFF E7 Hub',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -54,13 +54,13 @@ export const metadata: Metadata = {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'EpicSevenHub - E7 Builds & Guides',
+        alt: 'EXCOFF E7 Hub - Epic Seven Builds & Guides',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'EpicSevenHub - E7 Builds, Guides & Hero Wiki',
+    title: 'EXCOFF E7 Hub - Epic Seven Builds, Guides & Hero Wiki',
     description: 'Your ultimate Epic Seven (E7) resource hub. Hero builds, guides & tier lists.',
     images: ['/images/og-image.png'],
   },
