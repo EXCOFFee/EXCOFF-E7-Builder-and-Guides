@@ -333,10 +333,29 @@ export default function BuildsPage() {
 
                                         {/* Stats Preview */}
                                         {build.min_stats && Object.keys(build.min_stats).length > 0 && (
-                                            <div className="grid grid-cols-3 gap-1 text-xs text-slate-500 mb-3">
-                                                {Object.entries(build.min_stats).slice(0, 6).map(([stat, value]) => (
-                                                    <span key={stat}>{stat}: {value}</span>
-                                                ))}
+                                            <div className="grid grid-cols-3 gap-2 mb-3">
+                                                {Object.entries(build.min_stats).slice(0, 6).map(([stat, value]) => {
+                                                    const statConfig: Record<string, { label: string; color: string }> = {
+                                                        atk: { label: 'ATK', color: 'text-red-400' },
+                                                        def: { label: 'DEF', color: 'text-blue-400' },
+                                                        hp: { label: 'HP', color: 'text-green-400' },
+                                                        spd: { label: 'SPD', color: 'text-yellow-400' },
+                                                        crit_chance: { label: 'CRIT', color: 'text-orange-400' },
+                                                        crit_dmg: { label: 'C.DMG', color: 'text-purple-400' },
+                                                        eff: { label: 'EFF', color: 'text-cyan-400' },
+                                                        res: { label: 'RES', color: 'text-pink-400' },
+                                                    };
+                                                    const config = statConfig[stat] || { label: stat.toUpperCase(), color: 'text-slate-400' };
+                                                    const isPercent = ['crit_chance', 'crit_dmg', 'eff', 'res'].includes(stat);
+                                                    return (
+                                                        <div key={stat} className="bg-e7-void/60 rounded-lg p-2 text-center border border-e7-gold/10">
+                                                            <p className="text-[10px] text-slate-500 uppercase tracking-wide">{config.label}</p>
+                                                            <p className={`text-sm font-bold ${config.color}`}>
+                                                                {typeof value === 'number' ? value.toLocaleString() : value}{isPercent ? '%' : ''}
+                                                            </p>
+                                                        </div>
+                                                    );
+                                                })}
                                             </div>
                                         )}
 
