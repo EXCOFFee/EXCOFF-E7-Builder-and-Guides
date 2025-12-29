@@ -4,7 +4,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = 'https://excoff-e7-orbis-helper.vercel.app'
+    const baseUrl = 'https://excoffe7.com'
 
     return {
         rules: [

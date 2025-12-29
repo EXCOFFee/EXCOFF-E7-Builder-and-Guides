@@ -16,7 +16,7 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://excoff-e7-orbis-helper.vercel.app'),
+  metadataBase: new URL('https://excoffe7.com'),
   title: {
     default: 'EXCOFF E7 Hub - Epic Seven Builds, Guides & Hero Wiki',
     template: '%s | EXCOFF E7 Hub',
@@ -91,12 +91,12 @@ export default function RootLayout({
     '@type': 'WebSite',
     name: 'EXCOFF E7 Hub',
     alternateName: ['Epic Seven Hub', 'E7 Hub', 'excoffe7', 'Epic Seven Builds'],
-    url: 'https://excoff-e7-orbis-helper.vercel.app',
+    url: 'https://excoffe7.com',
     description: 'Your ultimate Epic Seven (E7) resource hub. Hero builds, guides, tier lists & equipment recommendations.',
     inLanguage: ['en', 'es', 'ko', 'ja', 'zh', 'pt'],
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://excoff-e7-orbis-helper.vercel.app/heroes?search={search_term_string}',
+      target: 'https://excoffe7.com/heroes?search={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   };
@@ -105,8 +105,8 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'EXCOFF E7 Hub',
-    url: 'https://excoff-e7-orbis-helper.vercel.app',
-    logo: 'https://excoff-e7-orbis-helper.vercel.app/images/icon_menu_orbis.png',
+    url: 'https://excoffe7.com',
+    logo: 'https://excoffe7.com/images/icon_menu_orbis.png',
   };
 
   return (

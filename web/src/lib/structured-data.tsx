@@ -12,7 +12,7 @@ export interface StructuredDataProps {
     author?: string;
 }
 
-const BASE_URL = 'https://excoff-e7-orbis-helper.vercel.app';
+const BASE_URL = 'https://excoffe7.com';
 
 export function generateWebsiteSchema() {
     return {

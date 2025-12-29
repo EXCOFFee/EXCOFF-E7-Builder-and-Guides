@@ -3,7 +3,7 @@
 
 import { MetadataRoute } from 'next'
 
-const BASE_URL = 'https://excoff-e7-orbis-helper.vercel.app'
+const BASE_URL = 'https://excoffe7.com'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Static pages
