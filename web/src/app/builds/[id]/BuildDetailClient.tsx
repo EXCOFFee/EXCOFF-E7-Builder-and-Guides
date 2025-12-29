@@ -21,6 +21,15 @@ const ELEMENT_COLORS: Record<string, string> = {
     dark: 'bg-purple-600',
 };
 
+// Element to image mapping
+const ELEMENT_IMAGES: Record<string, string> = {
+    fire: '/images/elements/ElementFire.png',
+    ice: '/images/elements/ElementWater.png',
+    earth: '/images/elements/ElementEarth.png',
+    light: '/images/elements/ElementLight.png',
+    dark: '/images/elements/ElementDark.png',
+};
+
 interface Build {
     id: number;
     title: string;
@@ -291,7 +300,13 @@ export function BuildDetailClient() {
                                 className="rounded-2xl ring-3 ring-e7-gold/40"
                                 unoptimized
                             />
-                            <span className={`absolute -bottom-2 -right-2 w-10 h-10 rounded-full ring-3 ring-e7-dark ${ELEMENT_COLORS[build.hero.element]}`} />
+                            <Image
+                                src={ELEMENT_IMAGES[build.hero.element] || '/images/elements/ElementFire.png'}
+                                alt={build.hero.element}
+                                width={40}
+                                height={40}
+                                className="absolute -bottom-2 -right-2 w-10 h-10 ring-3 ring-e7-dark rounded-full bg-e7-dark"
+                            />
                         </div>
                         <div>
                             <Link href={`/heroes/${build.hero.slug}`} className="text-e7-gold hover:text-e7-text-gold font-bold text-4xl">

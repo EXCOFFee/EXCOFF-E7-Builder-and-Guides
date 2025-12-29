@@ -66,11 +66,11 @@ interface Hero {
 }
 
 const ELEMENT_COLORS: Record<string, string> = {
-    fire: 'bg-gradient-to-r from-red-600 to-orange-500',
-    ice: 'bg-gradient-to-r from-blue-500 to-cyan-400',
-    earth: 'bg-gradient-to-r from-green-600 to-emerald-400',
-    light: 'bg-gradient-to-r from-yellow-300 to-amber-200 text-black',
-    dark: 'bg-gradient-to-r from-purple-700 to-violet-500',
+    fire: 'bg-gradient-to-r from-red-700 to-red-500 text-white',
+    ice: 'bg-gradient-to-r from-blue-700 to-blue-500 text-white',
+    earth: 'bg-gradient-to-r from-green-700 to-green-500 text-white',
+    light: 'bg-gradient-to-r from-amber-600 to-yellow-500 text-white',
+    dark: 'bg-gradient-to-r from-purple-800 to-violet-600 text-white',
 };
 
 const ELEMENT_ICONS: Record<string, string> = {

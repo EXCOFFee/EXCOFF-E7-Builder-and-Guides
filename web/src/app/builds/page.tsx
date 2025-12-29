@@ -265,7 +265,13 @@ export default function BuildsPage() {
                                                 className="rounded-lg ring-2 ring-e7-gold/20 group-hover:ring-e7-gold/50 transition-all"
                                                 unoptimized
                                             />
-                                            <span className={`absolute -bottom-1 -right-1 w-6 h-6 rounded-full ring-2 ring-e7-dark ${ELEMENT_COLORS[build.hero.element]}`} />
+                                            <Image
+                                                src={ELEMENT_IMAGES[build.hero.element] || '/images/elements/ElementFire.png'}
+                                                alt={build.hero.element}
+                                                width={24}
+                                                height={24}
+                                                className="absolute -bottom-1 -right-1 w-6 h-6 ring-2 ring-e7-dark rounded-full bg-e7-dark"
+                                            />
                                         </div>
                                         <div>
                                             <h3 className="text-lg text-slate-100 font-semibold group-hover:text-e7-gold transition-colors">{build.hero.name}</h3>
