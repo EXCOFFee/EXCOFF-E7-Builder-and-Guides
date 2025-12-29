@@ -18,18 +18,20 @@ const cinzel = Cinzel({
 export const metadata: Metadata = {
   metadataBase: new URL('https://excoff-e7-orbis-helper.vercel.app'),
   title: {
-    default: 'E7 Orbis Helper - Builds & Guides',
-    template: '%s | E7 Orbis Helper',
+    default: 'EpicSevenHub - E7 Builds, Guides & Hero Wiki',
+    template: '%s | EpicSevenHub',
   },
-  description: 'Descubre y publica tus builds de personajes y crea guías del juego para la comunidad de Epic Seven. Encuentra las mejores builds, artefactos y equipos.',
+  description: 'EpicSevenHub - Your ultimate Epic Seven (E7) resource hub. Discover hero builds, guides, tier lists, and equipment recommendations. Community-driven E7 builds for PvP, RTA, Arena & Guild War.',
   keywords: [
-    'Epic Seven', 'E7', 'builds', 'guides', 'wiki', 'heroes', 'artifacts',
-    'EXCOFF', 'Epic 7', 'gacha', 'tier list', 'equipment', 'sets',
-    'PvP', 'PvE', 'RTA', 'Arena', 'Guild War'
+    'Epic Seven', 'E7', 'Epic7', 'Epic 7', 'EpicSeven', 'EpicSevenHub',
+    'builds', 'guides', 'wiki', 'heroes', 'artifacts', 'equipment',
+    'tier list', 'sets', 'PvP', 'PvE', 'RTA', 'Arena', 'Guild War',
+    'gacha', 'mobile game', 'hero builds', 'best builds', 'meta builds',
+    'E7 builds', 'E7 guides', 'E7 tier list', 'E7 wiki', 'E7 heroes'
   ],
-  authors: [{ name: 'E7 Orbis Helper Community' }],
-  creator: 'E7 Orbis Helper',
-  publisher: 'E7 Orbis Helper',
+  authors: [{ name: 'EpicSevenHub Community' }],
+  creator: 'EpicSevenHub',
+  publisher: 'EpicSevenHub',
   robots: {
     index: true,
     follow: true,
@@ -42,28 +44,39 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'E7 Orbis Helper - Builds & Guides',
-    description: 'Descubre y publica tus builds de personajes y crea guías para la comunidad de Epic Seven.',
-    siteName: 'E7 Orbis Helper',
-    locale: 'es_ES',
+    title: 'EpicSevenHub - E7 Builds, Guides & Hero Wiki',
+    description: 'Your ultimate Epic Seven (E7) resource hub. Hero builds, guides, tier lists & equipment for PvP, RTA, Arena & Guild War.',
+    siteName: 'EpicSevenHub',
+    locale: 'en_US',
     type: 'website',
     images: [
       {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'E7 Orbis Helper - Builds & Guides',
+        alt: 'EpicSevenHub - E7 Builds & Guides',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'E7 Orbis Helper - Builds & Guides',
-    description: 'Builds y guías para la comunidad de Epic Seven',
+    title: 'EpicSevenHub - E7 Builds, Guides & Hero Wiki',
+    description: 'Your ultimate Epic Seven (E7) resource hub. Hero builds, guides & tier lists.',
     images: ['/images/og-image.png'],
   },
   verification: {
     google: 'your-google-verification-code', // Replace with actual code when available
+  },
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en': '/en',
+      'es': '/es',
+      'ko': '/ko',
+      'ja': '/ja',
+      'zh': '/zh',
+      'pt': '/pt',
+    },
   },
 };
 

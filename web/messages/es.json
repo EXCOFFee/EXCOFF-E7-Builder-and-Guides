@@ -1,7 +1,7 @@
 {
     "common": {
-        "appName": "E7 EXCOFF",
-        "appSubtitle": "Builder & Guides",
+        "appName": "EpicSevenHub",
+        "appSubtitle": "Builds y Guías de E7",
         "loading": "Cargando...",
         "error": "Error",
         "save": "Guardar",
@@ -294,7 +294,8 @@
         }
     },
     "footer": {
-        "disclaimer": "E7 EXCOFF no está afiliado con Smilegate o Super Creative.",
-        "copyright": "Epic Seven y todo su contenido son propiedad de sus respectivos dueños."
+        "disclaimer": "EpicSevenHub no está afiliado con Smilegate o Super Creative.",
+        "copyright": "Epic Seven (E7) y todo su contenido son propiedad de sus respectivos dueños.",
+        "notAffiliated": "EpicSevenHub no está afiliado con Smilegate o Super Creative."
     }
 }

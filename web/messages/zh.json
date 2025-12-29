@@ -1,7 +1,7 @@
 {
     "common": {
-        "appName": "E7 EXCOFF",
-        "appSubtitle": "构建与攻略",
+        "appName": "EpicSevenHub",
+        "appSubtitle": "E7 构建与攻略",
         "loading": "加载中...",
         "error": "错误",
         "save": "保存",
@@ -285,8 +285,8 @@
         }
     },
     "footer": {
-        "disclaimer": "E7 EXCOFF与Smilegate或Super Creative无关。",
-        "copyright": "第七史诗及其所有内容均为其各自所有者的财产。",
-        "notAffiliated": "E7 EXCOFF与Smilegate或Super Creative无关。"
+        "disclaimer": "EpicSevenHub与Smilegate或Super Creative无关。",
+        "copyright": "第七史诗(E7)及其所有内容均为其各自所有者的财产。",
+        "notAffiliated": "EpicSevenHub与Smilegate或Super Creative无关。"
     }
 }

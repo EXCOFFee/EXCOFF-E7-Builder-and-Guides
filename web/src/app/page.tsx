@@ -76,11 +76,11 @@ export default function Home() {
 
           {/* Title with Gradient */}
           <h1 className="font-display text-5xl md:text-7xl font-bold mb-4 tracking-wide bg-gradient-to-r from-e7-gold via-yellow-300 to-e7-gold bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
-            E7 Orbis Helper
+            EpicSevenHub
           </h1>
 
           <p className="text-lg md:text-xl text-slate-300 mb-2 font-medium">
-            by Orbis Helper
+            E7 Builds, Guides & Hero Wiki
           </p>
 
           <p className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
@@ -202,16 +202,16 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Image
               src="/images/icon_menu_orbis.png"
-              alt="E7 Orbis Helper"
+              alt="EpicSevenHub"
               width={32}
               height={32}
               className="rounded-lg ring-1 ring-e7-gold/30"
               unoptimized
             />
-            <span className="text-e7-gold font-bold">E7 Orbis Helper</span>
+            <span className="text-e7-gold font-bold">EpicSevenHub</span>
           </div>
           <div className="text-center text-slate-500 text-sm">
-            <p>{t('footer.notAffiliated', 'E7 Orbis Helper is not affiliated with Smilegate or Super Creative.')}</p>
+            <p>{t('footer.notAffiliated', 'EpicSevenHub is not affiliated with Smilegate or Super Creative.')}</p>
             <p>{t('footer.copyright', 'Epic Seven and all its content are property of their respective owners.')}</p>
           </div>
           <div className="flex gap-4">

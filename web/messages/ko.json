@@ -1,7 +1,7 @@
 {
     "common": {
-        "appName": "E7 EXCOFF",
-        "appSubtitle": "빌드 & 가이드",
+        "appName": "EpicSevenHub",
+        "appSubtitle": "E7 빌드 & 가이드",
         "loading": "로딩 중...",
         "error": "에러",
         "save": "저장",
@@ -285,8 +285,8 @@
         }
     },
     "footer": {
-        "disclaimer": "E7 EXCOFF는 Smilegate 또는 Super Creative와 제휴되어 있지 않습니다.",
-        "copyright": "에픽세븐과 모든 콘텐츠는 해당 소유자의 재산입니다.",
-        "notAffiliated": "E7 EXCOFF는 Smilegate 또는 Super Creative와 제휴되어 있지 않습니다."
+        "disclaimer": "EpicSevenHub는 Smilegate 또는 Super Creative와 제휴되어 있지 않습니다.",
+        "copyright": "에픽세븐(E7)과 모든 콘텐츠는 해당 소유자의 재산입니다.",
+        "notAffiliated": "EpicSevenHub는 Smilegate 또는 Super Creative와 제휴되어 있지 않습니다."
     }
 }
