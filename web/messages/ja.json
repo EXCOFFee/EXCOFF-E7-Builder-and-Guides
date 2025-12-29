@@ -48,7 +48,8 @@
         "gameGuidesDetails": "各ゲームモードをマスターするための動画、画像、戦略。",
         "readyToShare": "知識を共有する準備はできましたか？",
         "createAccount": "アカウントを作成して、お気に入りのヒーローのガイドとビルドに貢献しましょう。",
-        "joinCommunity": "コミュニティに参加"
+        "joinCommunity": "コミュニティに参加",
+        "everythingYouNeed": "エピックセブンをマスターするために必要なすべて"
     },
     "heroes": {
         "title": "ヒーローデータベース",

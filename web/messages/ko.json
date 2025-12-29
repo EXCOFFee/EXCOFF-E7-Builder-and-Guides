@@ -48,7 +48,8 @@
         "gameGuidesDetails": "각 게임 모드를 마스터하기 위한 영상, 이미지 및 전략.",
         "readyToShare": "지식을 공유할 준비가 되셨나요?",
         "createAccount": "계정을 만들고 좋아하는 영웅의 가이드와 빌드에 기여하세요.",
-        "joinCommunity": "커뮤니티 참여하기"
+        "joinCommunity": "커뮤니티 참여하기",
+        "everythingYouNeed": "에픽세븐을 마스터하기 위한 모든 것"
     },
     "heroes": {
         "title": "영웅 데이터베이스",

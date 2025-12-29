@@ -120,7 +120,7 @@ export default function Home() {
             {t('home.whatYouFind', 'What will you find?')}
           </h2>
           <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
-            Everything you need to master Epic Seven
+            {t('home.everythingYouNeed', 'Everything you need to master Epic Seven')}
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
