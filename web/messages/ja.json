@@ -55,7 +55,8 @@
         "readyToShare": "知識を共有する準備はできましたか？",
         "createAccount": "アカウントを作成して、お気に入りのヒーローのガイドとビルドに貢献しましょう。",
         "joinCommunity": "コミュニティに参加",
-        "everythingYouNeed": "エピックセブンをマスターするために必要なすべて"
+        "everythingYouNeed": "エピックセブンをマスターするために必要なすべて",
+        "languages": "言語"
     },
     "heroes": {
         "title": "ヒーローデータベース",

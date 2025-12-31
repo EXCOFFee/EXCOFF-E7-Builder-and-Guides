@@ -55,7 +55,8 @@
         "readyToShare": "准备好分享你的知识了吗？",
         "createAccount": "创建账户，开始为你喜欢的英雄贡献攻略和构建。",
         "joinCommunity": "加入社区",
-        "everythingYouNeed": "掌握第七史诗所需的一切"
+        "everythingYouNeed": "掌握第七史诗所需的一切",
+        "languages": "语言"
     },
     "heroes": {
         "title": "英雄数据库",

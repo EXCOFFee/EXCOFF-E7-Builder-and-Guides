@@ -55,7 +55,8 @@
         "readyToShare": "Pronto para compartilhar seu conhecimento?",
         "createAccount": "Crie sua conta e comece a contribuir com guias e builds para seus heróis favoritos.",
         "joinCommunity": "Junte-se à Comunidade",
-        "everythingYouNeed": "Tudo o que você precisa para dominar Epic Seven"
+        "everythingYouNeed": "Tudo o que você precisa para dominar Epic Seven",
+        "languages": "Idiomas"
     },
     "heroes": {
         "title": "Base de Dados de Heróis",

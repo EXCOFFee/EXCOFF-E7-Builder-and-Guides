@@ -55,7 +55,8 @@
         "readyToShare": "지식을 공유할 준비가 되셨나요?",
         "createAccount": "계정을 만들고 좋아하는 영웅의 가이드와 빌드에 기여하세요.",
         "joinCommunity": "커뮤니티 참여하기",
-        "everythingYouNeed": "에픽세븐을 마스터하기 위한 모든 것"
+        "everythingYouNeed": "에픽세븐을 마스터하기 위한 모든 것",
+        "languages": "언어"
     },
     "heroes": {
         "title": "영웅 데이터베이스",

@@ -159,9 +159,8 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { value: "300+", label: t('nav.heroes', 'Heroes') },
-              { value: "500+", label: "Artifacts" },
               { value: "∞", label: t('nav.builds', 'Builds') },
-              { value: "6", label: "Languages" },
+              { value: "6", label: t('home.languages', 'Languages') },
             ].map((stat, i) => (
               <div key={i} className="p-4 rounded-xl glass-panel hover:border-e7-gold/30 transition-all hover:shadow-lg hover:shadow-e7-gold/10">
                 <div className="text-3xl md:text-4xl font-bold text-e7-gold mb-1">{stat.value}</div>
