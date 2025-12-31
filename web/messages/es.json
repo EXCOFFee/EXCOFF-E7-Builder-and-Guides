@@ -22,7 +22,13 @@
         "notConfigured": "No configurada",
         "anonymous": "Anónimo",
         "clearFilters": "Limpiar",
-        "confirmDelete": "¿Estás seguro de que deseas eliminar esto?"
+        "confirmDelete": "¿Estás seguro de que deseas eliminar esto?",
+        "sortBy": "Ordenar por",
+        "newest": "Más reciente",
+        "viewsHigh": "Vistas (Mayor)",
+        "viewsLow": "Vistas (Menor)",
+        "likesHigh": "Likes (Mayor)",
+        "likesLow": "Likes (Menor)"
     },
     "nav": {
         "home": "Inicio",

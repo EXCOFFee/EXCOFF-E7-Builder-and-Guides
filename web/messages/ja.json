@@ -20,7 +20,13 @@
         "saveChanges": "変更を保存",
         "unknownError": "不明なエラー",
         "notConfigured": "未設定",
-        "anonymous": "匿名"
+        "anonymous": "匿名",
+        "sortBy": "並び替え",
+        "newest": "新着順",
+        "viewsHigh": "閲覧数 (多い)",
+        "viewsLow": "閲覧数 (少ない)",
+        "likesHigh": "いいね (多い)",
+        "likesLow": "いいね (少ない)"
     },
     "nav": {
         "home": "ホーム",

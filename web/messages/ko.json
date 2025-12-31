@@ -20,7 +20,13 @@
         "saveChanges": "변경사항 저장",
         "unknownError": "알 수 없는 오류",
         "notConfigured": "설정되지 않음",
-        "anonymous": "익명"
+        "anonymous": "익명",
+        "sortBy": "정렬",
+        "newest": "최신순",
+        "viewsHigh": "조회수 (높음)",
+        "viewsLow": "조회수 (낮음)",
+        "likesHigh": "좋아요 (높음)",
+        "likesLow": "좋아요 (낮음)"
     },
     "nav": {
         "home": "홈",

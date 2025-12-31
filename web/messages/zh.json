@@ -20,7 +20,13 @@
         "saveChanges": "保存更改",
         "unknownError": "未知错误",
         "notConfigured": "未配置",
-        "anonymous": "匿名"
+        "anonymous": "匿名",
+        "sortBy": "排序方式",
+        "newest": "最新",
+        "viewsHigh": "浏览量 (高)",
+        "viewsLow": "浏览量 (低)",
+        "likesHigh": "点赞 (高)",
+        "likesLow": "点赞 (低)"
     },
     "nav": {
         "home": "首页",

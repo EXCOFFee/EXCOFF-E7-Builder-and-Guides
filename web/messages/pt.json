@@ -20,7 +20,13 @@
         "saveChanges": "Salvar Alterações",
         "unknownError": "Erro desconhecido",
         "notConfigured": "Não configurado",
-        "anonymous": "Anônimo"
+        "anonymous": "Anônimo",
+        "sortBy": "Ordenar por",
+        "newest": "Mais recente",
+        "viewsHigh": "Visualizações (Maior)",
+        "viewsLow": "Visualizações (Menor)",
+        "likesHigh": "Curtidas (Maior)",
+        "likesLow": "Curtidas (Menor)"
     },
     "nav": {
         "home": "Início",
