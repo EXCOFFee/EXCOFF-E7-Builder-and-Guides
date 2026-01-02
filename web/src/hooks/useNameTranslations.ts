@@ -343,7 +343,13 @@ const heroTranslations: Record<string, Record<string, string>> = {
  * For other languages (en, es, pt), returns original English names
  */
 export function useHeroTranslations() {
-    const locale = useLocale();
+    let locale = 'en';
+    try {
+        locale = useLocale();
+    } catch {
+        // If next-intl is not configured, default to 'en'
+        locale = 'en';
+    }
 
     const translateHeroName = useMemo(() => {
         return (englishName: string): string => {
