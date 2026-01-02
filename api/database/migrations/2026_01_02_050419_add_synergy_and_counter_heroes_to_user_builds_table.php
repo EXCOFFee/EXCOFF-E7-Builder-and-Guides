@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('user_builds', function (Blueprint $table) {
-            $table->json('synergy_heroes')->nullable()->after('notes');
-            $table->json('counter_heroes')->nullable()->after('synergy_heroes');
+            $table->json('synergy_heroes')->nullable();
+            $table->json('counter_heroes')->nullable();
         });
     }
 
