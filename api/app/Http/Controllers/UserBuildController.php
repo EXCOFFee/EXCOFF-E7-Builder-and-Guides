@@ -108,7 +108,12 @@ class UserBuildController extends Controller
         $build->load(['user', 'hero', 'artifact']);
         $build->increment('views');
 
-        return response()->json($build);
+        // Add synergy and counter heroes data
+        $response = $build->toArray();
+        $response['synergy_heroes_list'] = $build->synergy_heroes_list;
+        $response['counter_heroes_list'] = $build->counter_heroes_list;
+
+        return response()->json($response);
     }
 
     /**

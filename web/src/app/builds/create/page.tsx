@@ -70,6 +70,14 @@ export default function CreateBuildPage() {
     const [images, setImages] = useState<File[]>([]);
     const [imagePreviews, setImagePreviews] = useState<string[]>([]);
 
+    // Synergy and Counter heroes
+    const [synergyHeroes, setSynergyHeroes] = useState<number[]>([]);
+    const [counterHeroes, setCounterHeroes] = useState<number[]>([]);
+    const [showSynergyDropdown, setShowSynergyDropdown] = useState(false);
+    const [showCounterDropdown, setShowCounterDropdown] = useState(false);
+    const [synergySearch, setSynergySearch] = useState('');
+    const [counterSearch, setCounterSearch] = useState('');
+
     // Check authentication
     useEffect(() => {
         const token = localStorage.getItem('auth_token');
@@ -158,6 +166,18 @@ export default function CreateBuildPage() {
             images.forEach((image, index) => {
                 formData.append(`images[${index}]`, image);
             });
+
+            // Add synergy and counter heroes
+            if (synergyHeroes.length > 0) {
+                synergyHeroes.forEach((heroId, index) => {
+                    formData.append(`synergy_heroes[${index}]`, heroId.toString());
+                });
+            }
+            if (counterHeroes.length > 0) {
+                counterHeroes.forEach((heroId, index) => {
+                    formData.append(`counter_heroes[${index}]`, heroId.toString());
+                });
+            }
 
             const response = await fetch(`${API_URL}/builds`, {
                 method: 'POST',
@@ -569,6 +589,168 @@ export default function CreateBuildPage() {
                                                 </button>
                                             </div>
                                         ))}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Synergy Heroes */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    🤝 {t('builds.synergyHeroes', 'Synergy Heroes')}
+                                    <span className="text-gray-500 text-xs ml-2">{t('builds.synergyDesc', '(Heroes that work well with this hero)')}</span>
+                                </label>
+                                <div className="relative">
+                                    <Input
+                                        type="text"
+                                        value={synergySearch}
+                                        onChange={(e) => setSynergySearch(e.target.value)}
+                                        onFocus={() => setShowSynergyDropdown(true)}
+                                        placeholder={t('builds.searchHeroToAdd', 'Search hero to add...')}
+                                        className="bg-e7-void border-e7-gold/30 text-white"
+                                    />
+                                    {showSynergyDropdown && (
+                                        <div className="absolute z-30 w-full mt-1 bg-e7-dark border border-e7-gold/30 rounded-lg shadow-xl max-h-48 overflow-y-auto">
+                                            {heroes
+                                                .filter(h => h.name.toLowerCase().includes(synergySearch.toLowerCase()) && !synergyHeroes.includes(h.id) && h.id !== heroId)
+                                                .slice(0, 10)
+                                                .map(hero => (
+                                                    <button
+                                                        key={hero.id}
+                                                        type="button"
+                                                        onClick={() => {
+                                                            setSynergyHeroes([...synergyHeroes, hero.id]);
+                                                            setSynergySearch('');
+                                                            setShowSynergyDropdown(false);
+                                                        }}
+                                                        className="w-full px-4 py-2 text-left hover:bg-e7-gold/20 flex items-center gap-3"
+                                                    >
+                                                        <Image
+                                                            src={`/images/hero/${hero.slug}_s.png`}
+                                                            alt={hero.name}
+                                                            width={32}
+                                                            height={32}
+                                                            className="rounded-full"
+                                                        />
+                                                        <span className="text-slate-200">{hero.name}</span>
+                                                    </button>
+                                                ))}
+                                            <button
+                                                type="button"
+                                                onClick={() => setShowSynergyDropdown(false)}
+                                                className="w-full px-4 py-2 text-gray-500 text-sm border-t border-e7-gold/10"
+                                            >
+                                                {t('common.close', 'Close')}
+                                            </button>
+                                        </div>
+                                    )}
+                                </div>
+                                {/* Selected synergy heroes */}
+                                {synergyHeroes.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 mt-3">
+                                        {synergyHeroes.map(hId => {
+                                            const h = heroes.find(hero => hero.id === hId);
+                                            if (!h) return null;
+                                            return (
+                                                <div key={hId} className="flex items-center gap-2 bg-green-900/30 border border-green-500/30 rounded-full px-3 py-1">
+                                                    <Image
+                                                        src={`/images/hero/${h.slug}_s.png`}
+                                                        alt={h.name}
+                                                        width={24}
+                                                        height={24}
+                                                        className="rounded-full"
+                                                    />
+                                                    <span className="text-sm text-green-300">{h.name}</span>
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => setSynergyHeroes(synergyHeroes.filter(id => id !== hId))}
+                                                        className="text-green-400 hover:text-red-400 ml-1"
+                                                    >
+                                                        ×
+                                                    </button>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Counter Heroes */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    ⚔️ {t('builds.counterHeroes', 'Counter Heroes')}
+                                    <span className="text-gray-500 text-xs ml-2">{t('builds.counterDesc', '(Heroes that counter this hero)')}</span>
+                                </label>
+                                <div className="relative">
+                                    <Input
+                                        type="text"
+                                        value={counterSearch}
+                                        onChange={(e) => setCounterSearch(e.target.value)}
+                                        onFocus={() => setShowCounterDropdown(true)}
+                                        placeholder={t('builds.searchHeroToAdd', 'Search hero to add...')}
+                                        className="bg-e7-void border-e7-gold/30 text-white"
+                                    />
+                                    {showCounterDropdown && (
+                                        <div className="absolute z-30 w-full mt-1 bg-e7-dark border border-e7-gold/30 rounded-lg shadow-xl max-h-48 overflow-y-auto">
+                                            {heroes
+                                                .filter(h => h.name.toLowerCase().includes(counterSearch.toLowerCase()) && !counterHeroes.includes(h.id) && h.id !== heroId)
+                                                .slice(0, 10)
+                                                .map(hero => (
+                                                    <button
+                                                        key={hero.id}
+                                                        type="button"
+                                                        onClick={() => {
+                                                            setCounterHeroes([...counterHeroes, hero.id]);
+                                                            setCounterSearch('');
+                                                            setShowCounterDropdown(false);
+                                                        }}
+                                                        className="w-full px-4 py-2 text-left hover:bg-e7-gold/20 flex items-center gap-3"
+                                                    >
+                                                        <Image
+                                                            src={`/images/hero/${hero.slug}_s.png`}
+                                                            alt={hero.name}
+                                                            width={32}
+                                                            height={32}
+                                                            className="rounded-full"
+                                                        />
+                                                        <span className="text-slate-200">{hero.name}</span>
+                                                    </button>
+                                                ))}
+                                            <button
+                                                type="button"
+                                                onClick={() => setShowCounterDropdown(false)}
+                                                className="w-full px-4 py-2 text-gray-500 text-sm border-t border-e7-gold/10"
+                                            >
+                                                {t('common.close', 'Close')}
+                                            </button>
+                                        </div>
+                                    )}
+                                </div>
+                                {/* Selected counter heroes */}
+                                {counterHeroes.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 mt-3">
+                                        {counterHeroes.map(hId => {
+                                            const h = heroes.find(hero => hero.id === hId);
+                                            if (!h) return null;
+                                            return (
+                                                <div key={hId} className="flex items-center gap-2 bg-red-900/30 border border-red-500/30 rounded-full px-3 py-1">
+                                                    <Image
+                                                        src={`/images/hero/${h.slug}_s.png`}
+                                                        alt={h.name}
+                                                        width={24}
+                                                        height={24}
+                                                        className="rounded-full"
+                                                    />
+                                                    <span className="text-sm text-red-300">{h.name}</span>
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => setCounterHeroes(counterHeroes.filter(id => id !== hId))}
+                                                        className="text-red-400 hover:text-red-600 ml-1"
+                                                    >
+                                                        ×
+                                                    </button>
+                                                </div>
+                                            );
+                                        })}
                                     </div>
                                 )}
                             </div>

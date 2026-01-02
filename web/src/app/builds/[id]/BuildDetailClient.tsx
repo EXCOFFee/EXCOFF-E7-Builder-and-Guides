@@ -42,6 +42,8 @@ interface Build {
     is_anonymous: boolean;
     synergy_heroes: number[];
     counter_heroes: number[];
+    synergy_heroes_list?: { id: number; name: string; slug: string; element: string; }[];
+    counter_heroes_list?: { id: number; name: string; slug: string; element: string; }[];
     images: string[];
     user: {
         id: number;
@@ -394,6 +396,88 @@ export function BuildDetailClient() {
 
                         {/* Images */}
                         <ImageGallery images={build.images || []} title={t('builds.images', 'Images')} />
+
+                        {/* Synergy Heroes */}
+                        {build.synergy_heroes_list && build.synergy_heroes_list.length > 0 && (
+                            <div className="mb-6">
+                                <h3 className="text-e7-gold font-semibold mb-3 flex items-center gap-2">
+                                    🤝 {t('builds.synergyHeroes', 'Synergy Heroes')}
+                                    <span className="text-gray-500 text-sm font-normal">({build.synergy_heroes_list.length})</span>
+                                </h3>
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                                    {build.synergy_heroes_list.map(hero => (
+                                        <Link
+                                            key={hero.id}
+                                            href={`/heroes/${hero.slug}`}
+                                            className="group flex flex-col items-center p-3 rounded-lg bg-green-900/20 border border-green-500/30 hover:border-green-400/50 hover:bg-green-900/30 transition-all"
+                                        >
+                                            <div className="relative">
+                                                <Image
+                                                    src={`/images/hero/${hero.slug}_s.png`}
+                                                    alt={hero.name}
+                                                    width={56}
+                                                    height={56}
+                                                    className="rounded-full ring-2 ring-green-500/50 group-hover:ring-green-400"
+                                                />
+                                                {ELEMENT_IMAGES[hero.element] && (
+                                                    <Image
+                                                        src={ELEMENT_IMAGES[hero.element]}
+                                                        alt={hero.element}
+                                                        width={18}
+                                                        height={18}
+                                                        className="absolute -bottom-1 -right-1 ring-1 ring-e7-dark rounded-full bg-e7-dark"
+                                                    />
+                                                )}
+                                            </div>
+                                            <span className="mt-2 text-sm text-green-300 group-hover:text-green-200 text-center font-medium truncate max-w-full">
+                                                {hero.name}
+                                            </span>
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Counter Heroes */}
+                        {build.counter_heroes_list && build.counter_heroes_list.length > 0 && (
+                            <div className="mb-6">
+                                <h3 className="text-e7-gold font-semibold mb-3 flex items-center gap-2">
+                                    ⚔️ {t('builds.counterHeroes', 'Counter Heroes')}
+                                    <span className="text-gray-500 text-sm font-normal">({build.counter_heroes_list.length})</span>
+                                </h3>
+                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                                    {build.counter_heroes_list.map(hero => (
+                                        <Link
+                                            key={hero.id}
+                                            href={`/heroes/${hero.slug}`}
+                                            className="group flex flex-col items-center p-3 rounded-lg bg-red-900/20 border border-red-500/30 hover:border-red-400/50 hover:bg-red-900/30 transition-all"
+                                        >
+                                            <div className="relative">
+                                                <Image
+                                                    src={`/images/hero/${hero.slug}_s.png`}
+                                                    alt={hero.name}
+                                                    width={56}
+                                                    height={56}
+                                                    className="rounded-full ring-2 ring-red-500/50 group-hover:ring-red-400"
+                                                />
+                                                {ELEMENT_IMAGES[hero.element] && (
+                                                    <Image
+                                                        src={ELEMENT_IMAGES[hero.element]}
+                                                        alt={hero.element}
+                                                        width={18}
+                                                        height={18}
+                                                        className="absolute -bottom-1 -right-1 ring-1 ring-e7-dark rounded-full bg-e7-dark"
+                                                    />
+                                                )}
+                                            </div>
+                                            <span className="mt-2 text-sm text-red-300 group-hover:text-red-200 text-center font-medium truncate max-w-full">
+                                                {hero.name}
+                                            </span>
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
 
                         {/* Author & Actions */}
                         <div className="flex items-center justify-between pt-4 border-t border-e7-gold/20">
