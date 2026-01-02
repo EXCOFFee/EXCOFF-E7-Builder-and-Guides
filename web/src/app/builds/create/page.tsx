@@ -596,7 +596,7 @@ export default function CreateBuildPage() {
                             {/* Synergy Heroes */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    🤝 {t('builds.synergyHeroes', 'Synergy Heroes')}
+                                    {t('builds.synergyHeroes', 'Synergy Heroes')}
                                     <span className="text-gray-500 text-xs ml-2">{t('builds.synergyDesc', '(Heroes that work well with this hero)')}</span>
                                 </label>
                                 <div className="relative">
@@ -625,7 +625,7 @@ export default function CreateBuildPage() {
                                                         className="w-full px-4 py-2 text-left hover:bg-e7-gold/20 flex items-center gap-3"
                                                     >
                                                         <Image
-                                                            src={`/images/hero/${hero.slug}_s.png`}
+                                                            src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
                                                             alt={hero.name}
                                                             width={32}
                                                             height={32}
@@ -653,7 +653,7 @@ export default function CreateBuildPage() {
                                             return (
                                                 <div key={hId} className="flex items-center gap-2 bg-green-900/30 border border-green-500/30 rounded-full px-3 py-1">
                                                     <Image
-                                                        src={`/images/hero/${h.slug}_s.png`}
+                                                        src={h.image_url || `/images/hero/${h.slug}_s.png`}
                                                         alt={h.name}
                                                         width={24}
                                                         height={24}
@@ -677,7 +677,7 @@ export default function CreateBuildPage() {
                             {/* Counter Heroes */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    ⚔️ {t('builds.counterHeroes', 'Counter Heroes')}
+                                    {t('builds.counterHeroes', 'Counter Heroes')}
                                     <span className="text-gray-500 text-xs ml-2">{t('builds.counterDesc', '(Heroes that counter this hero)')}</span>
                                 </label>
                                 <div className="relative">
@@ -706,7 +706,7 @@ export default function CreateBuildPage() {
                                                         className="w-full px-4 py-2 text-left hover:bg-e7-gold/20 flex items-center gap-3"
                                                     >
                                                         <Image
-                                                            src={`/images/hero/${hero.slug}_s.png`}
+                                                            src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
                                                             alt={hero.name}
                                                             width={32}
                                                             height={32}
@@ -734,7 +734,7 @@ export default function CreateBuildPage() {
                                             return (
                                                 <div key={hId} className="flex items-center gap-2 bg-red-900/30 border border-red-500/30 rounded-full px-3 py-1">
                                                     <Image
-                                                        src={`/images/hero/${h.slug}_s.png`}
+                                                        src={h.image_url || `/images/hero/${h.slug}_s.png`}
                                                         alt={h.name}
                                                         width={24}
                                                         height={24}

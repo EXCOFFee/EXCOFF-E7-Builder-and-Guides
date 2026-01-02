@@ -42,8 +42,8 @@ interface Build {
     is_anonymous: boolean;
     synergy_heroes: number[];
     counter_heroes: number[];
-    synergy_heroes_list?: { id: number; name: string; slug: string; element: string; }[];
-    counter_heroes_list?: { id: number; name: string; slug: string; element: string; }[];
+    synergy_heroes_list?: { id: number; name: string; slug: string; element: string; image_url?: string; portrait?: string; }[];
+    counter_heroes_list?: { id: number; name: string; slug: string; element: string; image_url?: string; portrait?: string; }[];
     images: string[];
     user: {
         id: number;
@@ -401,7 +401,7 @@ export function BuildDetailClient() {
                         {build.synergy_heroes_list && build.synergy_heroes_list.length > 0 && (
                             <div className="mb-6">
                                 <h3 className="text-e7-gold font-semibold mb-3 flex items-center gap-2">
-                                    🤝 {t('builds.synergyHeroes', 'Synergy Heroes')}
+                                    {t('builds.synergyHeroes', 'Synergy Heroes')}
                                     <span className="text-gray-500 text-sm font-normal">({build.synergy_heroes_list.length})</span>
                                 </h3>
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
@@ -413,7 +413,7 @@ export function BuildDetailClient() {
                                         >
                                             <div className="relative">
                                                 <Image
-                                                    src={`/images/hero/${hero.slug}_s.png`}
+                                                    src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
                                                     alt={hero.name}
                                                     width={56}
                                                     height={56}
@@ -442,7 +442,7 @@ export function BuildDetailClient() {
                         {build.counter_heroes_list && build.counter_heroes_list.length > 0 && (
                             <div className="mb-6">
                                 <h3 className="text-e7-gold font-semibold mb-3 flex items-center gap-2">
-                                    ⚔️ {t('builds.counterHeroes', 'Counter Heroes')}
+                                    {t('builds.counterHeroes', 'Counter Heroes')}
                                     <span className="text-gray-500 text-sm font-normal">({build.counter_heroes_list.length})</span>
                                 </h3>
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
@@ -454,7 +454,7 @@ export function BuildDetailClient() {
                                         >
                                             <div className="relative">
                                                 <Image
-                                                    src={`/images/hero/${hero.slug}_s.png`}
+                                                    src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
                                                     alt={hero.name}
                                                     width={56}
                                                     height={56}
