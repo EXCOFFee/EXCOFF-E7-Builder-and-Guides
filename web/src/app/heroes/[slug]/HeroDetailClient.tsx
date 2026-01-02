@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useTranslations } from '@/hooks/useTranslations';
 import { useSkillTranslations } from '@/hooks/useSkillTranslations';
+import { useHeroTranslations } from '@/hooks/useNameTranslations';
 
 interface HeroStats {
     atk: number;
@@ -178,6 +179,7 @@ export function HeroDetailClient() {
     const params = useParams();
     const slug = params.slug as string;
     const { t, locale } = useTranslations();
+    const { translateHeroName } = useHeroTranslations();
 
     const { data, isLoading, error } = useQuery({
         queryKey: ['hero', slug],
@@ -189,6 +191,9 @@ export function HeroDetailClient() {
     });
 
     const hero: Hero | null = data?.data || data;
+
+    // Get translated hero name for Asian locales
+    const translatedHeroName = hero ? translateHeroName(hero.name) : '';
 
     // Load skill translations based on hero slug and current locale
     const { getSkillName, getSkillDescription } = useSkillTranslations(hero?.slug || '', locale);
@@ -284,7 +289,7 @@ export function HeroDetailClient() {
                     {/* Info */}
                     <div className="flex-1 space-y-6">
                         <div>
-                            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-gold-gradient mb-4 tracking-wide text-center lg:text-left">{hero.name}</h1>
+                            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-gold-gradient mb-4 tracking-wide text-center lg:text-left">{translatedHeroName}</h1>
                             <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
                                 <Badge className={`${ELEMENT_COLORS[hero.element]} px-4 py-2 text-sm font-semibold flex items-center gap-2 shadow-lg`}>
                                     {ELEMENT_IMAGES[hero.element] && (

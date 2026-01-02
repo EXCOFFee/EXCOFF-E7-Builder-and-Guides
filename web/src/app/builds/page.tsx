@@ -7,6 +7,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useTranslations } from '@/hooks/useTranslations';
+import { useHeroTranslations } from '@/hooks/useNameTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -94,6 +95,7 @@ interface Build {
 
 export default function BuildsPage() {
     const { t } = useTranslations();
+    const { translateHeroName } = useHeroTranslations();
     const [search, setSearch] = useState('');
     const [selectedElement, setSelectedElement] = useState<string | null>(null);
     const [selectedClass, setSelectedClass] = useState<string | null>(null);
@@ -274,7 +276,7 @@ export default function BuildsPage() {
                                             />
                                         </div>
                                         <div>
-                                            <h3 className="text-lg text-slate-100 font-semibold group-hover:text-e7-gold transition-colors">{build.hero.name}</h3>
+                                            <h3 className="text-lg text-slate-100 font-semibold group-hover:text-e7-gold transition-colors">{translateHeroName(build.hero.name)}</h3>
                                             <p className="text-sm text-slate-500">{CLASS_NAMES[build.hero.class] || build.hero.class}</p>
                                         </div>
                                     </div>

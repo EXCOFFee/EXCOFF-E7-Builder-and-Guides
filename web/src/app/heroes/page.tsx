@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { useState } from 'react';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
 import { useTranslations } from '@/hooks/useTranslations';
+import { useHeroTranslations } from '@/hooks/useNameTranslations';
 
 interface Hero {
     id: number;
@@ -85,6 +86,7 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
 
 export default function HeroesPage() {
     const { t } = useTranslations();
+    const { translateHeroName } = useHeroTranslations();
     const [search, setSearch] = useState('');
     const [elementFilter, setElementFilter] = useState('');
     const [classFilter, setClassFilter] = useState('');
@@ -288,7 +290,7 @@ export default function HeroesPage() {
                                         {/* Hero Name Footer */}
                                         <div className="p-3 bg-gradient-to-t from-e7-dark/80 to-transparent -mt-8 relative z-10 pt-10">
                                             <h3 className="text-slate-100 text-sm font-semibold truncate group-hover:text-e7-gold transition-colors duration-300 text-center">
-                                                {hero.name}
+                                                {translateHeroName(hero.name)}
                                             </h3>
                                         </div>
                                     </div>
