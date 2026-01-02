@@ -433,17 +433,17 @@ export function GuideDetailClient() {
                                 <Link
                                     key={hero.id}
                                     href={`/heroes/${hero.slug}`}
-                                    className="flex items-center gap-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-3 py-2 hover:bg-purple-900/50 transition-colors"
+                                    className="flex items-center gap-3 bg-purple-900/30 border border-purple-500/30 rounded-lg px-4 py-3 hover:bg-purple-900/50 transition-colors"
                                 >
                                     <Image
                                         src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
                                         alt={hero.name}
-                                        width={32}
-                                        height={32}
+                                        width={64}
+                                        height={64}
                                         className="rounded-full"
                                         unoptimized
                                     />
-                                    <span className="text-purple-300 font-medium">{hero.name}</span>
+                                    <span className="text-purple-300 font-medium text-lg">{hero.name}</span>
                                 </Link>
                             ))}
                         </div>
@@ -461,17 +461,17 @@ export function GuideDetailClient() {
                                 <Link
                                     key={artifact.id}
                                     href={`/artifacts`}
-                                    className="flex items-center gap-2 bg-amber-900/30 border border-amber-500/30 rounded-full px-3 py-2 hover:bg-amber-900/50 transition-colors"
+                                    className="flex items-center gap-3 bg-amber-900/30 border border-amber-500/30 rounded-lg px-4 py-3 hover:bg-amber-900/50 transition-colors"
                                 >
                                     <Image
                                         src={artifact.icon || `/images/artifacts/${artifact.code}.png`}
                                         alt={artifact.name}
-                                        width={32}
-                                        height={32}
+                                        width={64}
+                                        height={64}
                                         className="rounded"
                                         unoptimized
                                     />
-                                    <span className="text-amber-300 font-medium">{artifact.name}</span>
+                                    <span className="text-amber-300 font-medium text-lg">{artifact.name}</span>
                                 </Link>
                             ))}
                         </div>

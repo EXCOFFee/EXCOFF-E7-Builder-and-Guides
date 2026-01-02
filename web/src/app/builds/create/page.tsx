@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -78,6 +78,12 @@ export default function CreateBuildPage() {
     const [synergySearch, setSynergySearch] = useState('');
     const [counterSearch, setCounterSearch] = useState('');
 
+    // Refs for click outside
+    const heroDropdownRef = useRef<HTMLDivElement>(null);
+    const artifactDropdownRef = useRef<HTMLDivElement>(null);
+    const synergyDropdownRef = useRef<HTMLDivElement>(null);
+    const counterDropdownRef = useRef<HTMLDivElement>(null);
+
     // Check authentication
     useEffect(() => {
         const token = localStorage.getItem('auth_token');
@@ -95,6 +101,26 @@ export default function CreateBuildPage() {
             setHeroId(parseInt(preselectedHeroId));
         }
     }, [preselectedHeroId, heroId]);
+
+    // Click outside to close dropdowns
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (heroDropdownRef.current && !heroDropdownRef.current.contains(event.target as Node)) {
+                setShowHeroDropdown(false);
+            }
+            if (artifactDropdownRef.current && !artifactDropdownRef.current.contains(event.target as Node)) {
+                setShowArtifactDropdown(false);
+            }
+            if (synergyDropdownRef.current && !synergyDropdownRef.current.contains(event.target as Node)) {
+                setShowSynergyDropdown(false);
+            }
+            if (counterDropdownRef.current && !counterDropdownRef.current.contains(event.target as Node)) {
+                setShowCounterDropdown(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
     // Fetch heroes for selector
     const { data: heroesData } = useQuery({
@@ -599,7 +625,7 @@ export default function CreateBuildPage() {
                                     {t('builds.synergyHeroes', 'Synergy Heroes')}
                                     <span className="text-gray-500 text-xs ml-2">{t('builds.synergyDesc', '(Heroes that work well with this hero)')}</span>
                                 </label>
-                                <div className="relative">
+                                <div className="relative" ref={synergyDropdownRef}>
                                     <Input
                                         type="text"
                                         value={synergySearch}
@@ -627,20 +653,13 @@ export default function CreateBuildPage() {
                                                         <Image
                                                             src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
                                                             alt={hero.name}
-                                                            width={32}
-                                                            height={32}
+                                                            width={48}
+                                                            height={48}
                                                             className="rounded-full"
                                                         />
                                                         <span className="text-slate-200">{hero.name}</span>
                                                     </button>
                                                 ))}
-                                            <button
-                                                type="button"
-                                                onClick={() => setShowSynergyDropdown(false)}
-                                                className="w-full px-4 py-2 text-gray-500 text-sm border-t border-e7-gold/10"
-                                            >
-                                                {t('common.close', 'Close')}
-                                            </button>
                                         </div>
                                     )}
                                 </div>
@@ -680,7 +699,7 @@ export default function CreateBuildPage() {
                                     {t('builds.counterHeroes', 'Counter Heroes')}
                                     <span className="text-gray-500 text-xs ml-2">{t('builds.counterDesc', '(Heroes that counter this hero)')}</span>
                                 </label>
-                                <div className="relative">
+                                <div className="relative" ref={counterDropdownRef}>
                                     <Input
                                         type="text"
                                         value={counterSearch}
@@ -708,20 +727,13 @@ export default function CreateBuildPage() {
                                                         <Image
                                                             src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
                                                             alt={hero.name}
-                                                            width={32}
-                                                            height={32}
+                                                            width={48}
+                                                            height={48}
                                                             className="rounded-full"
                                                         />
                                                         <span className="text-slate-200">{hero.name}</span>
                                                     </button>
                                                 ))}
-                                            <button
-                                                type="button"
-                                                onClick={() => setShowCounterDropdown(false)}
-                                                className="w-full px-4 py-2 text-gray-500 text-sm border-t border-e7-gold/10"
-                                            >
-                                                {t('common.close', 'Close')}
-                                            </button>
                                         </div>
                                     )}
                                 </div>

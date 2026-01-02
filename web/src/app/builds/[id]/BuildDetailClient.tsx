@@ -465,8 +465,8 @@ export function BuildDetailClient() {
                                                 <Image
                                                     src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
                                                     alt={hero.name}
-                                                    width={56}
-                                                    height={56}
+                                                    width={80}
+                                                    height={80}
                                                     className="rounded-full ring-2 ring-green-500/50 group-hover:ring-green-400"
                                                 />
                                                 {ELEMENT_IMAGES[hero.element] && (
@@ -506,8 +506,8 @@ export function BuildDetailClient() {
                                                 <Image
                                                     src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
                                                     alt={hero.name}
-                                                    width={56}
-                                                    height={56}
+                                                    width={80}
+                                                    height={80}
                                                     className="rounded-full ring-2 ring-red-500/50 group-hover:ring-red-400"
                                                 />
                                                 {ELEMENT_IMAGES[hero.element] && (

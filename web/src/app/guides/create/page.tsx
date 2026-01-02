@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -62,6 +62,10 @@ export default function CreateGuidePage() {
     const [showHeroDropdown, setShowHeroDropdown] = useState(false);
     const [showArtifactDropdown, setShowArtifactDropdown] = useState(false);
 
+    // Refs for click outside
+    const heroDropdownRef = useRef<HTMLDivElement>(null);
+    const artifactDropdownRef = useRef<HTMLDivElement>(null);
+
     // Get search params for pre-selection
     const searchParams = useSearchParams();
     const preselectedHeroId = searchParams.get('hero_id');
@@ -84,6 +88,20 @@ export default function CreateGuidePage() {
             setHeroId(parseInt(preselectedHeroId));
         }
     }, [preselectedHeroId, heroId]);
+
+    // Click outside to close dropdowns
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (heroDropdownRef.current && !heroDropdownRef.current.contains(event.target as Node)) {
+                setShowHeroDropdown(false);
+            }
+            if (artifactDropdownRef.current && !artifactDropdownRef.current.contains(event.target as Node)) {
+                setShowArtifactDropdown(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
     // Fetch heroes for selector
     const { data: heroesData } = useQuery({
@@ -358,7 +376,7 @@ export default function CreateGuidePage() {
                                     {t('guides.recommendedHeroes', 'Recommended Heroes')}
                                     <span className="text-gray-500 text-xs ml-2">{t('guides.recommendedHeroesDesc', '(Heroes that synergize with this guide)')}</span>
                                 </label>
-                                <div className="relative">
+                                <div className="relative" ref={heroDropdownRef}>
                                     <Input
                                         type="text"
                                         value={heroSearch}
@@ -387,21 +405,14 @@ export default function CreateGuidePage() {
                                                             <Image
                                                                 src={hero.image_url}
                                                                 alt={hero.name}
-                                                                width={32}
-                                                                height={32}
+                                                                width={48}
+                                                                height={48}
                                                                 className="rounded-full"
                                                             />
                                                         )}
                                                         <span className="text-slate-200">{hero.name}</span>
                                                     </button>
                                                 ))}
-                                            <button
-                                                type="button"
-                                                onClick={() => setShowHeroDropdown(false)}
-                                                className="w-full px-4 py-2 text-gray-500 text-sm border-t border-e7-gold/10"
-                                            >
-                                                {t('common.close', 'Close')}
-                                            </button>
                                         </div>
                                     )}
                                 </div>
@@ -442,7 +453,7 @@ export default function CreateGuidePage() {
                                     {t('guides.recommendedArtifacts', 'Recommended Artifacts')}
                                     <span className="text-gray-500 text-xs ml-2">{t('guides.recommendedArtifactsDesc', '(Artifacts recommended for this guide)')}</span>
                                 </label>
-                                <div className="relative">
+                                <div className="relative" ref={artifactDropdownRef}>
                                     <Input
                                         type="text"
                                         value={artifactSearch}
@@ -468,22 +479,16 @@ export default function CreateGuidePage() {
                                                         className="w-full px-4 py-2 text-left hover:bg-e7-gold/20 flex items-center gap-3"
                                                     >
                                                         <Image
-                                                            src={`/images/artifacts/${artifact.code}.png`}
+                                                            src={artifact.icon || `/images/artifacts/${artifact.code}.png`}
                                                             alt={artifact.name}
-                                                            width={32}
-                                                            height={32}
+                                                            width={48}
+                                                            height={48}
                                                             className="rounded"
+                                                            unoptimized
                                                         />
                                                         <span className="text-slate-200">{artifact.name}</span>
                                                     </button>
                                                 ))}
-                                            <button
-                                                type="button"
-                                                onClick={() => setShowArtifactDropdown(false)}
-                                                className="w-full px-4 py-2 text-gray-500 text-sm border-t border-e7-gold/10"
-                                            >
-                                                {t('common.close', 'Close')}
-                                            </button>
                                         </div>
                                     )}
                                 </div>
@@ -493,13 +498,14 @@ export default function CreateGuidePage() {
                                             const a = artifacts.find(artifact => artifact.id === aId);
                                             if (!a) return null;
                                             return (
-                                                <div key={aId} className="flex items-center gap-2 bg-amber-900/30 border border-amber-500/30 rounded-full px-3 py-1">
+                                                <div key={aId} className="flex items-center gap-2 bg-amber-900/30 border border-amber-500/30 rounded-lg px-3 py-2">
                                                     <Image
-                                                        src={`/images/artifacts/${a.code}.png`}
+                                                        src={a.icon || `/images/artifacts/${a.code}.png`}
                                                         alt={a.name}
-                                                        width={24}
-                                                        height={24}
+                                                        width={40}
+                                                        height={40}
                                                         className="rounded"
+                                                        unoptimized
                                                     />
                                                     <span className="text-sm text-amber-300">{a.name}</span>
                                                     <button

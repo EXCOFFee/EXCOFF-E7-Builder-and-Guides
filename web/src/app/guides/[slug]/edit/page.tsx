@@ -3,11 +3,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useQuery } from '@tanstack/react-query';
-import { heroApi, guideApi } from '@/lib/api';
+import { heroApi, guideApi, artifactApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
@@ -27,6 +28,14 @@ interface Hero {
     id: number;
     name: string;
     slug: string;
+    image_url?: string;
+}
+
+interface Artifact {
+    id: number;
+    name: string;
+    code: string;
+    icon: string;
 }
 
 interface Guide {
@@ -40,6 +49,8 @@ interface Guide {
     video_url: string | null;
     images: string[];
     user: { id: number; name: string };
+    recommended_heroes?: number[];
+    recommended_artifacts?: number[];
 }
 
 export default function EditGuidePage() {
@@ -63,6 +74,16 @@ export default function EditGuidePage() {
     const [images, setImages] = useState<string[]>([]);
     const [imageFiles, setImageFiles] = useState<File[]>([]);
     const [imageUrl, setImageUrl] = useState('');
+
+    // Recommended heroes/artifacts state
+    const [recommendedHeroes, setRecommendedHeroes] = useState<number[]>([]);
+    const [recommendedArtifacts, setRecommendedArtifacts] = useState<number[]>([]);
+    const [heroSearch, setHeroSearch] = useState('');
+    const [artifactSearch, setArtifactSearch] = useState('');
+    const [showHeroDropdown, setShowHeroDropdown] = useState(false);
+    const [showArtifactDropdown, setShowArtifactDropdown] = useState(false);
+    const heroDropdownRef = useRef<HTMLDivElement>(null);
+    const artifactDropdownRef = useRef<HTMLDivElement>(null);
 
     // Check authentication
     useEffect(() => {
@@ -96,6 +117,8 @@ export default function EditGuidePage() {
             setContent(guide.gameplay_content || '');
             setVideoUrl(guide.video_url || '');
             setImages(guide.images || []);
+            setRecommendedHeroes(guide.recommended_heroes || []);
+            setRecommendedArtifacts(guide.recommended_artifacts || []);
         }
     }, [guideData]);
 
@@ -110,6 +133,32 @@ export default function EditGuidePage() {
     });
 
     const heroes: Hero[] = heroesData?.data || [];
+
+    // Fetch artifacts for selector
+    const { data: artifactsData } = useQuery({
+        queryKey: ['artifacts-list'],
+        queryFn: async () => {
+            const response = await artifactApi.list();
+            return response.data;
+        },
+        enabled: isAuthenticated,
+    });
+
+    const artifacts: Artifact[] = artifactsData?.data || [];
+
+    // Click outside to close dropdowns
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (heroDropdownRef.current && !heroDropdownRef.current.contains(event.target as Node)) {
+                setShowHeroDropdown(false);
+            }
+            if (artifactDropdownRef.current && !artifactDropdownRef.current.contains(event.target as Node)) {
+                setShowArtifactDropdown(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -141,6 +190,14 @@ export default function EditGuidePage() {
             // Add new image files
             imageFiles.forEach((file, index) => {
                 formData.append(`images[${index}]`, file);
+            });
+
+            // Add recommended heroes and artifacts
+            recommendedHeroes.forEach((id, index) => {
+                formData.append(`recommended_heroes[${index}]`, id.toString());
+            });
+            recommendedArtifacts.forEach((id, index) => {
+                formData.append(`recommended_artifacts[${index}]`, id.toString());
             });
 
             const response = await fetch(`${API_URL}/guides/${slug}`, {
@@ -297,6 +354,158 @@ export default function EditGuidePage() {
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none resize-none font-mono text-sm"
                                     required
                                 />
+                            </div>
+
+                            {/* Recommended Heroes */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    {t('guides.recommendedHeroes', 'Recommended Heroes')}
+                                    <span className="text-gray-500 text-xs ml-2">{t('guides.recommendedHeroesDesc', '(Heroes that synergize with this guide)')}</span>
+                                </label>
+                                <div className="relative" ref={heroDropdownRef}>
+                                    <Input
+                                        type="text"
+                                        value={heroSearch}
+                                        onChange={(e) => setHeroSearch(e.target.value)}
+                                        onFocus={() => setShowHeroDropdown(true)}
+                                        placeholder={t('guides.searchHeroToAdd', 'Search hero to add...')}
+                                        className="bg-e7-void border-e7-gold/30 text-white"
+                                    />
+                                    {showHeroDropdown && (
+                                        <div className="absolute z-30 w-full mt-1 bg-e7-dark border border-e7-gold/30 rounded-lg shadow-xl max-h-48 overflow-y-auto">
+                                            {heroes
+                                                .filter(h => h.name.toLowerCase().includes(heroSearch.toLowerCase()) && !recommendedHeroes.includes(h.id))
+                                                .slice(0, 10)
+                                                .map(hero => (
+                                                    <button
+                                                        key={hero.id}
+                                                        type="button"
+                                                        onClick={() => {
+                                                            setRecommendedHeroes([...recommendedHeroes, hero.id]);
+                                                            setHeroSearch('');
+                                                            setShowHeroDropdown(false);
+                                                        }}
+                                                        className="w-full px-4 py-2 text-left hover:bg-e7-gold/20 flex items-center gap-3"
+                                                    >
+                                                        {hero.image_url && (
+                                                            <Image
+                                                                src={hero.image_url}
+                                                                alt={hero.name}
+                                                                width={48}
+                                                                height={48}
+                                                                className="rounded-full"
+                                                            />
+                                                        )}
+                                                        <span className="text-slate-200">{hero.name}</span>
+                                                    </button>
+                                                ))}
+                                        </div>
+                                    )}
+                                </div>
+                                {recommendedHeroes.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 mt-3">
+                                        {recommendedHeroes.map(hId => {
+                                            const h = heroes.find(hero => hero.id === hId);
+                                            if (!h) return null;
+                                            return (
+                                                <div key={hId} className="flex items-center gap-2 bg-purple-900/30 border border-purple-500/30 rounded-lg px-3 py-2">
+                                                    {h.image_url && (
+                                                        <Image
+                                                            src={h.image_url}
+                                                            alt={h.name}
+                                                            width={40}
+                                                            height={40}
+                                                            className="rounded-full"
+                                                        />
+                                                    )}
+                                                    <span className="text-sm text-purple-300">{h.name}</span>
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => setRecommendedHeroes(recommendedHeroes.filter(id => id !== hId))}
+                                                        className="text-purple-400 hover:text-red-400 ml-1"
+                                                    >
+                                                        ×
+                                                    </button>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Recommended Artifacts */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    {t('guides.recommendedArtifacts', 'Recommended Artifacts')}
+                                    <span className="text-gray-500 text-xs ml-2">{t('guides.recommendedArtifactsDesc', '(Artifacts recommended for this guide)')}</span>
+                                </label>
+                                <div className="relative" ref={artifactDropdownRef}>
+                                    <Input
+                                        type="text"
+                                        value={artifactSearch}
+                                        onChange={(e) => setArtifactSearch(e.target.value)}
+                                        onFocus={() => setShowArtifactDropdown(true)}
+                                        placeholder={t('guides.searchArtifactToAdd', 'Search artifact to add...')}
+                                        className="bg-e7-void border-e7-gold/30 text-white"
+                                    />
+                                    {showArtifactDropdown && (
+                                        <div className="absolute z-30 w-full mt-1 bg-e7-dark border border-e7-gold/30 rounded-lg shadow-xl max-h-48 overflow-y-auto">
+                                            {artifacts
+                                                .filter(a => a.name.toLowerCase().includes(artifactSearch.toLowerCase()) && !recommendedArtifacts.includes(a.id))
+                                                .slice(0, 10)
+                                                .map(artifact => (
+                                                    <button
+                                                        key={artifact.id}
+                                                        type="button"
+                                                        onClick={() => {
+                                                            setRecommendedArtifacts([...recommendedArtifacts, artifact.id]);
+                                                            setArtifactSearch('');
+                                                            setShowArtifactDropdown(false);
+                                                        }}
+                                                        className="w-full px-4 py-2 text-left hover:bg-e7-gold/20 flex items-center gap-3"
+                                                    >
+                                                        <Image
+                                                            src={artifact.icon || `/images/artifacts/${artifact.code}.png`}
+                                                            alt={artifact.name}
+                                                            width={48}
+                                                            height={48}
+                                                            className="rounded"
+                                                            unoptimized
+                                                        />
+                                                        <span className="text-slate-200">{artifact.name}</span>
+                                                    </button>
+                                                ))}
+                                        </div>
+                                    )}
+                                </div>
+                                {recommendedArtifacts.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 mt-3">
+                                        {recommendedArtifacts.map(aId => {
+                                            const a = artifacts.find(artifact => artifact.id === aId);
+                                            if (!a) return null;
+                                            return (
+                                                <div key={aId} className="flex items-center gap-2 bg-amber-900/30 border border-amber-500/30 rounded-lg px-3 py-2">
+                                                    <Image
+                                                        src={a.icon || `/images/artifacts/${a.code}.png`}
+                                                        alt={a.name}
+                                                        width={40}
+                                                        height={40}
+                                                        className="rounded"
+                                                        unoptimized
+                                                    />
+                                                    <span className="text-sm text-amber-300">{a.name}</span>
+                                                    <button
+                                                        type="button"
+                                                        onClick={() => setRecommendedArtifacts(recommendedArtifacts.filter(id => id !== aId))}
+                                                        className="text-amber-400 hover:text-red-400 ml-1"
+                                                    >
+                                                        ×
+                                                    </button>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
                             </div>
 
                             {/* Images */}
