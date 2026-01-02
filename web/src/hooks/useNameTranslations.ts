@@ -1,28 +1,340 @@
+'use client';
+
 import { useLocale } from 'next-intl';
+import { useMemo } from 'react';
 
-// Import hero translations for each locale
-import heroKo from '../../messages/heroes/ko.json';
-import heroJa from '../../messages/heroes/ja.json';
-import heroZh from '../../messages/heroes/zh.json';
-
-// Import artifact translations for each locale
-import artifactKo from '../../messages/artifacts/ko.json';
-import artifactJa from '../../messages/artifacts/ja.json';
-import artifactZh from '../../messages/artifacts/zh.json';
-
-type HeroTranslations = Record<string, string>;
-type ArtifactTranslations = Record<string, string>;
-
-const heroTranslations: Record<string, HeroTranslations> = {
-    ko: heroKo,
-    ja: heroJa,
-    zh: heroZh,
+// Hero translations for Asian locales
+const heroTranslationsKo: Record<string, string> = {
+    "Adin": "아딘",
+    "Adlay": "아들레이",
+    "Adventurer Ras": "모험가 라스",
+    "Ainos": "아이노스",
+    "Aither": "아이테르",
+    "Alexa": "알렉사",
+    "Ambitious Tywin": "야망의 타이윈",
+    "Angel of Light Angelica": "빛의 천사 안젤리카",
+    "Angelica": "안젤리카",
+    "Apocalypse Ravi": "종말의 라비",
+    "Aramintha": "아라민타",
+    "Arbiter Vildred": "재조자 빌드레드",
+    "Archdemon's Shadow": "대악마의 그림자",
+    "Armin": "아르민",
+    "Assassin Cartuja": "암살자 카르투하",
+    "Assassin Cidd": "암살자 시드",
+    "Assassin Coli": "암살자 콜리",
+    "Baiken": "바이켄",
+    "Basar": "바사르",
+    "Bellona": "벨로나",
+    "Blood Blade Karin": "혈검 카린",
+    "Blood Moon Haste": "혈월 헤이스트",
+    "Briar Witch Iseria": "가시마녀 이세리아",
+    "Carrot": "캐럿",
+    "Cartuja": "카르투하",
+    "Cecilia": "세실리아",
+    "Celestial Mercedes": "천상의 메르세데스",
+    "Cermia": "체르미아",
+    "Challenger Dominiel": "도전자 도미니엘",
+    "Champion Zerato": "챔피언 제라토",
+    "Charles": "찰스",
+    "Charlotte": "샬롯",
+    "Chloe": "클로에",
+    "Cidd": "시드",
+    "Clarissa": "클라리사",
+    "Closer Charles": "클로저 찰스",
+    "Coli": "콜리",
+    "Commander Lorina": "사령관 로리나",
+    "Conqueror Lilias": "정복자 릴리아스",
+    "Corvus": "코르부스",
+    "Crescent Moon Rin": "초승달 린",
+    "Dark Corvus": "어둠의 코르부스",
+    "Destina": "데스티나",
+    "Diene": "디에네",
+    "Dizzy": "디지",
+    "Dominiel": "도미니엘",
+    "Elphelt Valentine": "엘펠트 발렌타인",
+    "Emilia": "에밀리아",
+    "Faithless Lidica": "무신론자 리디카",
+    "Fallen Cecilia": "타락한 세실리아",
+    "General Purrgis": "장군 푸르기스",
+    "Guider Aither": "안내자 아이테르",
+    "Haste": "헤이스트",
+    "Hwayoung": "화영",
+    "Iseria": "이세리아",
+    "Judge Kise": "심판자 키세",
+    "Kawerik": "카베릭",
+    "Kayron": "카이론",
+    "Ken": "켄",
+    "Kise": "키세",
+    "Krau": "크라우",
+    "Landy": "란디",
+    "Last Rider Krau": "최후의 기사 크라우",
+    "Lidica": "리디카",
+    "Lilias": "릴리아스",
+    "Little Queen Charlotte": "어린 여왕 샬롯",
+    "Luluca": "룰루카",
+    "Luna": "루나",
+    "Lilibet": "릴리벳",
+    "Martial Artist Ken": "격투가 켄",
+    "Mediator Kawerik": "중재자 카베릭",
+    "Melissa": "멜리사",
+    "Mercedes": "메르세데스",
+    "Milim": "밀림",
+    "Maid Chloe": "메이드 클로에",
+    "Mort": "모르트",
+    "Mui": "무이",
+    "Operator Sigret": "오퍼레이터 시그렛",
+    "Peira": "페이라",
+    "Politis": "폴리티스",
+    "Ran": "란",
+    "Ravi": "라비",
+    "Remnant Violet": "잔영 바이올렛",
+    "Rimuru": "리무루",
+    "Roana": "로아나",
+    "Sage Baal & Sezan": "현자 바알과 세잔",
+    "Seaside Bellona": "해변 벨로나",
+    "Sealed Eye Surin": "봉인된 눈 수린",
+    "Shepherd Diene": "양치기 디에네",
+    "Sigret": "시그렛",
+    "Sol Badguy": "솔 배드가이",
+    "Specimen Sez": "표본 세즈",
+    "Specter Tenebria": "망령 테네브리아",
+    "Spirit Eye Celine": "영안 셀린",
+    "Straze": "스트라제",
+    "Summertime Iseria": "여름 이세리아",
+    "Tamarinne": "타마린느",
+    "Tempest Surin": "폭풍 수린",
+    "Tenebria": "테네브리아",
+    "Top Model Luluca": "톱모델 룰루카",
+    "Tywin": "타이윈",
+    "Vildred": "빌드레드",
+    "Violet": "바이올렛",
+    "Watcher Schuri": "감시자 슈리",
+    "Yufine": "유피네",
+    "Zahhak": "자학"
 };
 
-const artifactTranslations: Record<string, ArtifactTranslations> = {
-    ko: artifactKo,
-    ja: artifactJa,
-    zh: artifactZh,
+const heroTranslationsJa: Record<string, string> = {
+    "Adin": "アディン",
+    "Adlay": "アドレイ",
+    "Adventurer Ras": "冒険者ラス",
+    "Ainos": "アイノス",
+    "Aither": "アイテル",
+    "Alexa": "アレクサ",
+    "Ambitious Tywin": "野望のタイウィン",
+    "Angel of Light Angelica": "光の天使アンジェリカ",
+    "Angelica": "アンジェリカ",
+    "Apocalypse Ravi": "終末のラヴィ",
+    "Aramintha": "アラミンタ",
+    "Arbiter Vildred": "裁定者ヴィルドレッド",
+    "Archdemon's Shadow": "大悪魔の影",
+    "Armin": "アルミン",
+    "Assassin Cartuja": "暗殺者カルトゥハ",
+    "Assassin Cidd": "暗殺者シド",
+    "Assassin Coli": "暗殺者コリ",
+    "Baiken": "梅喧",
+    "Basar": "バサル",
+    "Bellona": "ベローナ",
+    "Blood Blade Karin": "血剣カリン",
+    "Blood Moon Haste": "血月ヘイスト",
+    "Briar Witch Iseria": "茨の魔女イセリア",
+    "Carrot": "キャロット",
+    "Cartuja": "カルトゥハ",
+    "Cecilia": "セシリア",
+    "Celestial Mercedes": "天上のメルセデス",
+    "Cermia": "チェルミア",
+    "Challenger Dominiel": "挑戦者ドミニエル",
+    "Champion Zerato": "チャンピオンゼラート",
+    "Charles": "チャールズ",
+    "Charlotte": "シャルロット",
+    "Chloe": "クロエ",
+    "Cidd": "シド",
+    "Clarissa": "クラリッサ",
+    "Closer Charles": "クローザーチャールズ",
+    "Coli": "コリ",
+    "Commander Lorina": "司令官ロリナ",
+    "Conqueror Lilias": "征服者リリアス",
+    "Corvus": "コルヴァス",
+    "Crescent Moon Rin": "三日月リン",
+    "Dark Corvus": "闇のコルヴァス",
+    "Destina": "デスティナ",
+    "Diene": "ディエネ",
+    "Dizzy": "ディズィー",
+    "Dominiel": "ドミニエル",
+    "Elphelt Valentine": "エルフェルト・ヴァレンタイン",
+    "Emilia": "エミリア",
+    "Faithless Lidica": "無信仰リディカ",
+    "Fallen Cecilia": "堕落セシリア",
+    "General Purrgis": "将軍ピュルギス",
+    "Guider Aither": "案内人アイテル",
+    "Haste": "ヘイスト",
+    "Hwayoung": "華英",
+    "Iseria": "イセリア",
+    "Judge Kise": "審判者キセ",
+    "Kawerik": "カウェリック",
+    "Kayron": "カイロン",
+    "Ken": "ケン",
+    "Kise": "キセ",
+    "Krau": "クラウ",
+    "Landy": "ランディ",
+    "Last Rider Krau": "最後の騎士クラウ",
+    "Lidica": "リディカ",
+    "Lilias": "リリアス",
+    "Little Queen Charlotte": "幼き女王シャルロット",
+    "Luluca": "ルルカ",
+    "Luna": "ルナ",
+    "Lilibet": "リリベット",
+    "Martial Artist Ken": "格闘家ケン",
+    "Mediator Kawerik": "調停者カウェリック",
+    "Melissa": "メリッサ",
+    "Mercedes": "メルセデス",
+    "Milim": "ミリム",
+    "Maid Chloe": "メイドクロエ",
+    "Mort": "モルト",
+    "Mui": "ムイ",
+    "Operator Sigret": "オペレーターシグレット",
+    "Peira": "ペイラ",
+    "Politis": "ポリティス",
+    "Ran": "蘭",
+    "Ravi": "ラヴィ",
+    "Remnant Violet": "残影ヴァイオレット",
+    "Rimuru": "リムル",
+    "Roana": "ロアナ",
+    "Sage Baal & Sezan": "賢者バアルとセザン",
+    "Seaside Bellona": "海辺のベローナ",
+    "Sealed Eye Surin": "封印眼スリン",
+    "Shepherd Diene": "羊飼いディエネ",
+    "Sigret": "シグレット",
+    "Sol Badguy": "ソル・バッドガイ",
+    "Specimen Sez": "標本セズ",
+    "Specter Tenebria": "亡霊テネブリア",
+    "Spirit Eye Celine": "霊眼セリーヌ",
+    "Straze": "ストラーゼ",
+    "Summertime Iseria": "夏のイセリア",
+    "Tamarinne": "タマリンヌ",
+    "Tempest Surin": "嵐のスリン",
+    "Tenebria": "テネブリア",
+    "Top Model Luluca": "トップモデルルルカ",
+    "Tywin": "タイウィン",
+    "Vildred": "ヴィルドレッド",
+    "Violet": "ヴァイオレット",
+    "Watcher Schuri": "監視者シュリ",
+    "Yufine": "ユフィネ",
+    "Zahhak": "ザハク"
+};
+
+const heroTranslationsZh: Record<string, string> = {
+    "Adin": "阿丁",
+    "Adlay": "阿德莱",
+    "Adventurer Ras": "冒险家拉斯",
+    "Ainos": "艾诺斯",
+    "Aither": "艾瑟",
+    "Alexa": "艾蕾莎",
+    "Ambitious Tywin": "野心的泰温",
+    "Angel of Light Angelica": "光之天使安洁莉卡",
+    "Angelica": "安洁莉卡",
+    "Apocalypse Ravi": "末日拉薇",
+    "Aramintha": "阿拉敏塔",
+    "Arbiter Vildred": "裁决者维尔德雷德",
+    "Archdemon's Shadow": "大恶魔之影",
+    "Armin": "阿明",
+    "Assassin Cartuja": "刺客卡图哈",
+    "Assassin Cidd": "刺客希德",
+    "Assassin Coli": "刺客柯莉",
+    "Baiken": "梅喧",
+    "Basar": "巴萨尔",
+    "Bellona": "贝洛娜",
+    "Blood Blade Karin": "血刃卡琳",
+    "Blood Moon Haste": "血月海斯特",
+    "Briar Witch Iseria": "荆棘魔女伊赛莉亚",
+    "Carrot": "胡萝卜",
+    "Cartuja": "卡图哈",
+    "Cecilia": "塞西莉亚",
+    "Celestial Mercedes": "天上的梅塞德斯",
+    "Cermia": "切尔米娅",
+    "Challenger Dominiel": "挑战者多米尼尔",
+    "Champion Zerato": "冠军泽拉托",
+    "Charles": "查尔斯",
+    "Charlotte": "夏洛特",
+    "Chloe": "克洛艾",
+    "Cidd": "希德",
+    "Clarissa": "克拉丽莎",
+    "Closer Charles": "终结者查尔斯",
+    "Coli": "柯莉",
+    "Commander Lorina": "指挥官洛莉娜",
+    "Conqueror Lilias": "征服者莉莉亚斯",
+    "Corvus": "科尔瓦斯",
+    "Crescent Moon Rin": "新月凛",
+    "Dark Corvus": "暗之科尔瓦斯",
+    "Destina": "黛丝蒂娜",
+    "Diene": "迪耶内",
+    "Dizzy": "蒂兹",
+    "Dominiel": "多米尼尔",
+    "Elphelt Valentine": "艾尔菲特·瓦伦丁",
+    "Emilia": "艾米莉亚",
+    "Faithless Lidica": "无信仰莉迪卡",
+    "Fallen Cecilia": "堕落塞西莉亚",
+    "General Purrgis": "将军普尔吉斯",
+    "Guider Aither": "引导者艾瑟",
+    "Haste": "海斯特",
+    "Hwayoung": "华英",
+    "Iseria": "伊赛莉亚",
+    "Judge Kise": "审判者琪瑟",
+    "Kawerik": "卡威里克",
+    "Kayron": "凯隆",
+    "Ken": "肯",
+    "Kise": "琪瑟",
+    "Krau": "克劳",
+    "Landy": "兰迪",
+    "Last Rider Krau": "最后骑士克劳",
+    "Lidica": "莉迪卡",
+    "Lilias": "莉莉亚斯",
+    "Little Queen Charlotte": "幼女王夏洛特",
+    "Luluca": "露露卡",
+    "Luna": "露娜",
+    "Lilibet": "莉莉贝特",
+    "Martial Artist Ken": "武术家肯",
+    "Mediator Kawerik": "调停者卡威里克",
+    "Melissa": "梅丽莎",
+    "Mercedes": "梅塞德斯",
+    "Milim": "米莉姆",
+    "Maid Chloe": "女仆克洛艾",
+    "Mort": "莫特",
+    "Mui": "梅",
+    "Operator Sigret": "操作员希格蕾特",
+    "Peira": "佩拉",
+    "Politis": "波利蒂斯",
+    "Ran": "兰",
+    "Ravi": "拉薇",
+    "Remnant Violet": "残影紫罗兰",
+    "Rimuru": "利姆路",
+    "Roana": "罗安娜",
+    "Sage Baal & Sezan": "贤者巴尔与赛赞",
+    "Seaside Bellona": "海滨贝洛娜",
+    "Sealed Eye Surin": "封印眼苏琳",
+    "Shepherd Diene": "牧羊人迪耶内",
+    "Sigret": "希格蕾特",
+    "Sol Badguy": "索尔·巴德盖",
+    "Specimen Sez": "标本赛兹",
+    "Specter Tenebria": "幽灵泰妮布莉亚",
+    "Spirit Eye Celine": "灵眼塞琳",
+    "Straze": "斯特拉泽",
+    "Summertime Iseria": "夏日伊赛莉亚",
+    "Tamarinne": "塔玛琳娜",
+    "Tempest Surin": "暴风苏琳",
+    "Tenebria": "泰妮布莉亚",
+    "Top Model Luluca": "顶级模特露露卡",
+    "Tywin": "泰温",
+    "Vildred": "维尔德雷德",
+    "Violet": "紫罗兰",
+    "Watcher Schuri": "监视者舒里",
+    "Yufine": "尤菲涅",
+    "Zahhak": "扎哈克"
+};
+
+const heroTranslations: Record<string, Record<string, string>> = {
+    ko: heroTranslationsKo,
+    ja: heroTranslationsJa,
+    zh: heroTranslationsZh,
 };
 
 /**
@@ -33,29 +345,27 @@ const artifactTranslations: Record<string, ArtifactTranslations> = {
 export function useHeroTranslations() {
     const locale = useLocale();
 
-    const translateHeroName = (englishName: string): string => {
-        // Only translate for Asian languages
-        if (locale === 'ko' || locale === 'ja' || locale === 'zh') {
-            const translations = heroTranslations[locale];
-            if (translations && translations[englishName]) {
-                return translations[englishName];
+    const translateHeroName = useMemo(() => {
+        return (englishName: string): string => {
+            if (!englishName) return '';
+            // Only translate for Asian languages
+            if (locale === 'ko' || locale === 'ja' || locale === 'zh') {
+                const translations = heroTranslations[locale];
+                if (translations && translations[englishName]) {
+                    return translations[englishName];
+                }
             }
-        }
-        // Return original name for en, es, pt or if no translation found
-        return englishName;
-    };
+            // Return original name for en, es, pt or if no translation found
+            return englishName;
+        };
+    }, [locale]);
 
-    const translateArtifactName = (englishName: string): string => {
-        // Only translate for Asian languages
-        if (locale === 'ko' || locale === 'ja' || locale === 'zh') {
-            const translations = artifactTranslations[locale];
-            if (translations && translations[englishName]) {
-                return translations[englishName];
-            }
-        }
-        // Return original name for en, es, pt or if no translation found
-        return englishName;
-    };
+    const translateArtifactName = useMemo(() => {
+        return (englishName: string): string => {
+            // For now, return original name (can add artifact translations later)
+            return englishName;
+        };
+    }, []);
 
     return {
         translateHeroName,
@@ -63,25 +373,4 @@ export function useHeroTranslations() {
         locale,
         isAsianLocale: locale === 'ko' || locale === 'ja' || locale === 'zh',
     };
-}
-
-// Non-hook version for use in server components or contexts where hooks aren't available
-export function getHeroTranslation(englishName: string, locale: string): string {
-    if (locale === 'ko' || locale === 'ja' || locale === 'zh') {
-        const translations = heroTranslations[locale];
-        if (translations && translations[englishName]) {
-            return translations[englishName];
-        }
-    }
-    return englishName;
-}
-
-export function getArtifactTranslation(englishName: string, locale: string): string {
-    if (locale === 'ko' || locale === 'ja' || locale === 'zh') {
-        const translations = artifactTranslations[locale];
-        if (translations && translations[englishName]) {
-            return translations[englishName];
-        }
-    }
-    return englishName;
 }
