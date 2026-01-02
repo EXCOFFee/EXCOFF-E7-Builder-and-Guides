@@ -150,11 +150,18 @@ export default function BuildsPage() {
                             {t('builds.description', 'Explore and share hero builds created by the community')}
                         </p>
                     </div>
-                    <Link href="/builds/create">
-                        <Button className="btn-gold px-6 py-2.5 rounded-lg shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 transition-all">
-                            + {t('builds.createBuild', 'Create Build')}
-                        </Button>
-                    </Link>
+                    <div className="flex gap-3">
+                        <Link href="/builds/compare">
+                            <Button variant="outline" className="border-e7-gold/30 text-e7-gold hover:bg-e7-gold/10 px-6 py-2.5 rounded-lg">
+                                ⚖️ {t('builds.compare', 'Compare')}
+                            </Button>
+                        </Link>
+                        <Link href="/builds/create">
+                            <Button className="btn-gold px-6 py-2.5 rounded-lg shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 transition-all">
+                                + {t('builds.createBuild', 'Create Build')}
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
 
                 {/* Search & Filters */}
