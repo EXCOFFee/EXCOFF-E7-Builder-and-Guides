@@ -40,6 +40,10 @@ Route::middleware('throttle:60,1')->group(function () {
     // Like status
     Route::get('/guides/{guide}/like-status', [VoteController::class, 'checkGuideLike']);
     Route::get('/builds/{build}/like-status', [VoteController::class, 'checkBuildLike']);
+
+    // News
+    Route::get('/news', [\App\Http\Controllers\NewsController::class, 'index']);
+    Route::get('/news/{news}', [\App\Http\Controllers\NewsController::class, 'show']);
 });
 
 // OAuth routes (10 requests per minute for security)

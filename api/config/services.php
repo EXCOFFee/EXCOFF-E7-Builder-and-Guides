@@ -53,5 +53,9 @@ return [
         'redirect' => env('DISCORD_REDIRECT_URI', 'http://localhost:8000/api/auth/discord/callback'),
     ],
 
+    'youtube' => [
+        'api_key' => env('YOUTUBE_API_KEY'),
+    ],
+
 ];
 
