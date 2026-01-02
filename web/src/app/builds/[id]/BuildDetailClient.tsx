@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { ImageGallery } from '@/components/ui/image-gallery';
+import { StarRating } from '@/components/ui/star-rating';
 import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
@@ -64,6 +65,8 @@ interface Build {
         icon: string;
     } | null;
     created_at: string;
+    avg_rating?: number;
+    rating_count?: number;
 }
 
 interface Comment {
@@ -95,6 +98,7 @@ export function BuildDetailClient() {
     const [newComment, setNewComment] = useState('');
     const [hasLiked, setHasLiked] = useState(false);
     const [isAnonymous, setIsAnonymous] = useState(false);
+    const [userRating, setUserRating] = useState<number | null>(null);
 
     // Fetch current user
     useEffect(() => {
@@ -175,6 +179,30 @@ export function BuildDetailClient() {
             queryClient.setQueryData(['build', buildId], (oldData: Build | undefined) => {
                 if (!oldData) return oldData;
                 return { ...oldData, likes: data.likes };
+            });
+        },
+    });
+
+    // Rating mutation
+    const rateMutation = useMutation({
+        mutationFn: async (rating: number) => {
+            const token = localStorage.getItem('auth_token');
+            const response = await fetch(`${API_URL}/builds/${buildId}/rate`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                },
+                body: JSON.stringify({ rating }),
+            });
+            return response.json();
+        },
+        onSuccess: (data) => {
+            setUserRating(data.user_rating);
+            // Update rating locally
+            queryClient.setQueryData(['build', buildId], (oldData: Build | undefined) => {
+                if (!oldData) return oldData;
+                return { ...oldData, avg_rating: data.avg_rating, rating_count: data.rating_count };
             });
         },
     });
@@ -397,6 +425,24 @@ export function BuildDetailClient() {
                                 <p className="text-gray-300 whitespace-pre-wrap">{build.description}</p>
                             </div>
                         )}
+
+                        {/* Rating */}
+                        <div className="mb-6 p-4 bg-e7-void/30 rounded-lg border border-e7-gold/20">
+                            <h3 className="text-e7-gold font-semibold mb-3">{t('builds.rateThisBuild', 'Rate this Build')}</h3>
+                            <StarRating
+                                rating={build.avg_rating || 0}
+                                totalRatings={build.rating_count || 0}
+                                userRating={userRating}
+                                interactive={!!currentUser}
+                                onRate={(r) => rateMutation.mutate(r)}
+                                size="lg"
+                            />
+                            {!currentUser && (
+                                <p className="text-gray-500 text-sm mt-2">
+                                    {t('builds.loginToRate', 'Log in to rate this build')}
+                                </p>
+                            )}
+                        </div>
 
                         {/* Images */}
                         <ImageGallery images={build.images || []} title={t('builds.images', 'Images')} />

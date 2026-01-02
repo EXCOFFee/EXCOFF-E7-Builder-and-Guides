@@ -29,6 +29,8 @@ class UserBuild extends Model
         'status',
         'language',
         'is_anonymous',
+        'avg_rating',
+        'rating_count',
     ];
 
     protected $casts = [
@@ -37,6 +39,7 @@ class UserBuild extends Model
         'counter_heroes' => 'array',
         'images' => 'array',
         'is_anonymous' => 'boolean',
+        'avg_rating' => 'decimal:2',
     ];
 
     /**
@@ -61,6 +64,14 @@ class UserBuild extends Model
     public function artifact()
     {
         return $this->belongsTo(Artifact::class);
+    }
+
+    /**
+     * Get all ratings for this build
+     */
+    public function ratings()
+    {
+        return $this->hasMany(BuildRating::class, 'build_id');
     }
 
     /**

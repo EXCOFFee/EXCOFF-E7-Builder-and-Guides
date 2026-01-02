@@ -76,6 +76,10 @@ Route::middleware(['auth:sanctum', 'throttle:30,1'])->group(function () {
     // Votes (likes)
     Route::post('/guides/{guide}/vote', [VoteController::class, 'voteGuide']);
     Route::post('/builds/{build}/vote', [VoteController::class, 'voteBuild']);
+    
+    // Build ratings (1-5 stars)
+    Route::post('/builds/{build}/rate', [VoteController::class, 'rateBuild']);
+    Route::get('/builds/{build}/rating', [VoteController::class, 'checkBuildRating']);
 
     // Comments
     Route::post('/comments', [CommentController::class, 'store']);
