@@ -25,6 +25,8 @@ class Guide extends Model
         'synergies',
         'counters',
         'alt_artifacts',
+        'recommended_heroes',
+        'recommended_artifacts',
         'description',
         'gameplay_content',
         'video_url',
@@ -46,6 +48,8 @@ class Guide extends Model
         'synergies' => 'array',
         'counters' => 'array',
         'alt_artifacts' => 'array',
+        'recommended_heroes' => 'array',
+        'recommended_artifacts' => 'array',
         'images' => 'array',
         'is_published' => 'boolean',
     ];
@@ -72,6 +76,28 @@ class Guide extends Model
     public function artifact()
     {
         return $this->belongsTo(Artifact::class);
+    }
+
+    /**
+     * Get recommended heroes with full data (DRY: reusable accessor pattern)
+     */
+    public function getRecommendedHeroesListAttribute()
+    {
+        if (empty($this->recommended_heroes)) {
+            return [];
+        }
+        return Hero::whereIn('id', $this->recommended_heroes)->get();
+    }
+
+    /**
+     * Get recommended artifacts with full data
+     */
+    public function getRecommendedArtifactsListAttribute()
+    {
+        if (empty($this->recommended_artifacts)) {
+            return [];
+        }
+        return Artifact::whereIn('id', $this->recommended_artifacts)->get();
     }
 
     /**

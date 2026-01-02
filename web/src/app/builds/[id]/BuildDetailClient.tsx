@@ -171,7 +171,11 @@ export function BuildDetailClient() {
         },
         onSuccess: (data) => {
             setHasLiked(data.liked);
-            queryClient.invalidateQueries({ queryKey: ['build', buildId] });
+            // Update likes locally without refetching (to avoid incrementing views)
+            queryClient.setQueryData(['build', buildId], (oldData: Build | undefined) => {
+                if (!oldData) return oldData;
+                return { ...oldData, likes: data.likes };
+            });
         },
     });
 

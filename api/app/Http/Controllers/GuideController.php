@@ -54,7 +54,12 @@ class GuideController extends Controller
         $guide->load(['user']);
         $guide->increment('views');
 
-        return response()->json($guide);
+        // Add recommended heroes and artifacts data
+        $response = $guide->toArray();
+        $response['recommended_heroes_list'] = $guide->recommended_heroes_list;
+        $response['recommended_artifacts_list'] = $guide->recommended_artifacts_list;
+
+        return response()->json($response);
     }
 
     /**
@@ -70,6 +75,8 @@ class GuideController extends Controller
             'gameplay_content' => 'required|string',
             'video_url' => 'nullable|url',
             'language' => 'nullable|string|max:5',
+            'recommended_heroes' => 'nullable|array',
+            'recommended_artifacts' => 'nullable|array',
         ]);
 
         $validated['slug'] = Str::slug($validated['title']) . '-' . Str::random(6);
@@ -118,6 +125,8 @@ class GuideController extends Controller
             'gameplay_content' => 'sometimes|string',
             'video_url' => 'nullable|url',
             'is_published' => 'sometimes|boolean',
+            'recommended_heroes' => 'nullable|array',
+            'recommended_artifacts' => 'nullable|array',
         ]);
 
         if (isset($validated['title']) && $validated['title'] !== $guide->title) {
