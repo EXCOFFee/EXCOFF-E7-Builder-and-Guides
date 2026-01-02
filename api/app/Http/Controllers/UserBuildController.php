@@ -66,6 +66,27 @@ class UserBuildController extends Controller
             $query->where('language', $request->language);
         }
 
+        // Filter by primary set
+        if ($request->has('primary_set') && !empty($request->primary_set)) {
+            $query->where('primary_set', $request->primary_set);
+        }
+
+        // Filter by secondary set
+        if ($request->has('secondary_set') && !empty($request->secondary_set)) {
+            $query->where('secondary_set', $request->secondary_set);
+        }
+
+        // Filter by minimum stats (supports: min_speed, min_atk, min_hp, min_crit, min_cdmg, min_eff)
+        $statFilters = ['speed' => 'spd', 'atk' => 'atk', 'hp' => 'hp', 'crit' => 'crit', 'cdmg' => 'cdmg', 'eff' => 'eff'];
+        foreach ($statFilters as $param => $jsonKey) {
+            $minKey = "min_{$param}";
+            if ($request->has($minKey) && is_numeric($request->$minKey)) {
+                $minValue = (int) $request->$minKey;
+                // Filter builds where min_stats->jsonKey >= minValue
+                $query->whereRaw("JSON_EXTRACT(min_stats, '$.{$jsonKey}') >= ?", [$minValue]);
+            }
+        }
+
         // Sort by likes or date
         $sortBy = $request->input('sort', 'likes');
         $sortOrder = $request->input('order', 'desc');

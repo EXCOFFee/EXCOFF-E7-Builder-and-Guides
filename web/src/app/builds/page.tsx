@@ -102,14 +102,21 @@ export default function BuildsPage() {
     const [selectedRarity, setSelectedRarity] = useState<number | null>(null);
     const [sortBy, setSortBy] = useState<'newest' | 'views_desc' | 'views_asc' | 'likes_desc' | 'likes_asc'>('newest');
 
+    // Advanced filters
+    const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
+    const [primarySet, setPrimarySet] = useState<string | null>(null);
+    const [minSpeed, setMinSpeed] = useState<string>('');
+
     const { data, isLoading } = useQuery({
-        queryKey: ['builds', search, selectedElement, selectedClass, selectedRarity],
+        queryKey: ['builds', search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed],
         queryFn: async () => {
             const params = new URLSearchParams();
             if (search) params.append('search', search);
             if (selectedElement) params.append('element', selectedElement);
             if (selectedClass) params.append('class', selectedClass);
             if (selectedRarity) params.append('rarity', selectedRarity.toString());
+            if (primarySet) params.append('primary_set', primarySet);
+            if (minSpeed && parseInt(minSpeed) > 0) params.append('min_speed', minSpeed);
 
             const response = await fetch(`${API_URL}/builds?${params}`);
             if (!response.ok) throw new Error('Failed to fetch builds');
@@ -239,7 +246,66 @@ export default function BuildsPage() {
                             <option value="likes_desc">❤ {t('common.likesHigh', 'Likes (High)')}</option>
                             <option value="likes_asc">❤ {t('common.likesLow', 'Likes (Low)')}</option>
                         </select>
+
+                        <button
+                            onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
+                            className={`ml-4 px-3 py-2 rounded-lg text-sm transition-all ${showAdvancedFilters ? 'bg-e7-gold/20 text-e7-gold' : 'bg-e7-void/50 text-slate-400 hover:text-slate-200'}`}
+                        >
+                            ⚙️ {t('builds.advancedFilters', 'Advanced Filters')}
+                        </button>
                     </div>
+
+                    {/* Advanced Filters Panel */}
+                    {showAdvancedFilters && (
+                        <div className="mt-4 p-4 bg-e7-void/50 rounded-lg border border-e7-gold/20 space-y-4">
+                            {/* Set Filter */}
+                            <div className="flex items-center gap-2 flex-wrap">
+                                <span className="text-slate-400 text-sm mr-2">{t('builds.filterSet', 'Set')}:</span>
+                                {Object.entries(SET_IMAGES).slice(0, 12).map(([set, img]) => (
+                                    <button
+                                        key={set}
+                                        onClick={() => setPrimarySet(primarySet === set ? null : set)}
+                                        className={`relative w-10 h-10 rounded-lg transition-all ${primarySet === set
+                                            ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
+                                            : 'hover:bg-e7-panel/50 hover:scale-105 opacity-70 hover:opacity-100'
+                                            }`}
+                                        title={formatSetName(set)}
+                                    >
+                                        <Image
+                                            src={img}
+                                            alt={formatSetName(set)}
+                                            width={40}
+                                            height={40}
+                                            className="w-full h-full object-contain"
+                                        />
+                                    </button>
+                                ))}
+                            </div>
+
+                            {/* Min Speed Filter */}
+                            <div className="flex items-center gap-2">
+                                <span className="text-slate-400 text-sm">{t('builds.minSpeed', 'Min Speed')}:</span>
+                                <Input
+                                    type="number"
+                                    placeholder="200"
+                                    value={minSpeed}
+                                    onChange={(e) => setMinSpeed(e.target.value)}
+                                    className="w-24 bg-e7-void border-e7-gold/30 text-white"
+                                />
+
+                                {/* Clear filters */}
+                                <button
+                                    onClick={() => {
+                                        setPrimarySet(null);
+                                        setMinSpeed('');
+                                    }}
+                                    className="ml-4 text-sm text-gray-500 hover:text-e7-gold"
+                                >
+                                    {t('common.clearFilters', 'Clear filters')}
+                                </button>
+                            </div>
+                        </div>
+                    )}
                 </div>
 
                 {/* Builds Grid */}

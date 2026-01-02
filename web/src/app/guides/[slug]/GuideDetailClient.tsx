@@ -64,6 +64,19 @@ interface Guide {
         portrait: string;
     } | null;
     created_at: string;
+    recommended_heroes_list?: {
+        id: number;
+        name: string;
+        slug: string;
+        image_url?: string;
+        portrait?: string;
+    }[];
+    recommended_artifacts_list?: {
+        id: number;
+        name: string;
+        code: string;
+        icon?: string;
+    }[];
 }
 
 interface Comment {
@@ -408,6 +421,62 @@ export function GuideDetailClient() {
                         <div className="text-gray-300 whitespace-pre-wrap">{guide.gameplay_content}</div>
                     </div>
                 </div>
+
+                {/* Recommended Heroes */}
+                {guide.recommended_heroes_list && guide.recommended_heroes_list.length > 0 && (
+                    <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
+                        <h2 className="text-xl font-bold text-purple-400 mb-4">
+                            {t('guides.recommendedHeroes', 'Recommended Heroes')}
+                        </h2>
+                        <div className="flex flex-wrap gap-3">
+                            {guide.recommended_heroes_list.map(hero => (
+                                <Link
+                                    key={hero.id}
+                                    href={`/heroes/${hero.slug}`}
+                                    className="flex items-center gap-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-3 py-2 hover:bg-purple-900/50 transition-colors"
+                                >
+                                    <Image
+                                        src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
+                                        alt={hero.name}
+                                        width={32}
+                                        height={32}
+                                        className="rounded-full"
+                                        unoptimized
+                                    />
+                                    <span className="text-purple-300 font-medium">{hero.name}</span>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* Recommended Artifacts */}
+                {guide.recommended_artifacts_list && guide.recommended_artifacts_list.length > 0 && (
+                    <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
+                        <h2 className="text-xl font-bold text-amber-400 mb-4">
+                            {t('guides.recommendedArtifacts', 'Recommended Artifacts')}
+                        </h2>
+                        <div className="flex flex-wrap gap-3">
+                            {guide.recommended_artifacts_list.map(artifact => (
+                                <Link
+                                    key={artifact.id}
+                                    href={`/artifacts`}
+                                    className="flex items-center gap-2 bg-amber-900/30 border border-amber-500/30 rounded-full px-3 py-2 hover:bg-amber-900/50 transition-colors"
+                                >
+                                    <Image
+                                        src={artifact.icon || `/images/artifacts/${artifact.code}.png`}
+                                        alt={artifact.name}
+                                        width={32}
+                                        height={32}
+                                        className="rounded"
+                                        unoptimized
+                                    />
+                                    <span className="text-amber-300 font-medium">{artifact.name}</span>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                )}
 
                 {/* Comments */}
                 <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden p-6">
