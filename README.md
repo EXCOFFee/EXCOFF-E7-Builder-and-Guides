@@ -14,7 +14,7 @@
 Este es un proyecto **Full Stack** construido con una arquitectura moderna separando frontend y backend para máxima escalabilidad y rendimiento SEO.
 
 ### Frontend (Cliente)
-*   **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+*   **Framework:** [Next.js 16 (Canary)](https://nextjs.org/) & [React 19](https://react.dev/)
 *   **Lenguaje:** TypeScript
 *   **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/)
 *   **Estado & Data Fetching:** [TanStack Query (React Query)](https://tanstack.com/query/latest)
