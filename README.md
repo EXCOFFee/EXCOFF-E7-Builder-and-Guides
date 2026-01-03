@@ -1,8 +1,8 @@
-# Epic Seven Database 🚀
+# EXCOFF E7 HUB 🚀
 
-![Epic Seven Database Banner]
+![EXCOFF E7 HUB Banner]
 
-**Epic Seven Database** es una plataforma web integral diseñada para la comunidad del juego móvil *Epic Seven*. Este proyecto centraliza información crítica, herramientas de optimización y funciones sociales en una interfaz moderna, rápida y responsiva.
+**EXCOFF E7 HUB** es una plataforma web integral diseñada para la comunidad del juego móvil *Epic Seven*. Este proyecto centraliza información crítica, herramientas de optimización y funciones sociales en una interfaz moderna, rápida y responsiva.
 
 🔗 **Link:** [https://www.excoffe7.com]
 🎨 **Diseño:** Minimalista / Dark Mode
@@ -124,7 +124,7 @@ Este proyecto está bajo la licencia MIT - siéntete libre de usarlo como base p
 
 ---
 
-Hecho con ❤️ por [Tu Nombre] para la comunidad de Epic Seven.
+Hecho con ❤️ por EXCOFF para la comunidad de Epic Seven.
 
 ---
 
