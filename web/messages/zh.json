@@ -98,7 +98,10 @@
         "defScaling": "防御加成",
         "spdScaling": "速度加成",
         "penetration": "穿透",
-        "passiveSkill": "被动或辅助技能"
+        "passiveSkill": "被动或辅助技能",
+        "searchBuilds": "搜索配装...",
+        "allSets": "所有套装",
+        "noBuildsMatch": "没有符合筛选条件的配装"
     },
     "elements": {
         "fire": "火",

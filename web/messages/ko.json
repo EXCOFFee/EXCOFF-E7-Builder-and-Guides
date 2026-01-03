@@ -98,7 +98,10 @@
         "defScaling": "방어 계수",
         "spdScaling": "속도 계수",
         "penetration": "방어 관통",
-        "passiveSkill": "패시브 또는 지원 스킬"
+        "passiveSkill": "패시브 또는 지원 스킬",
+        "searchBuilds": "빌드 검색...",
+        "allSets": "모든 세트",
+        "noBuildsMatch": "필터와 일치하는 빌드가 없습니다"
     },
     "elements": {
         "fire": "화염",

@@ -100,7 +100,10 @@
         "defScaling": "Escalado DEF",
         "spdScaling": "Escalado VEL",
         "penetration": "Penetración",
-        "passiveSkill": "Habilidad pasiva o de soporte"
+        "passiveSkill": "Habilidad pasiva o de soporte",
+        "searchBuilds": "Buscar builds...",
+        "allSets": "Todos los Sets",
+        "noBuildsMatch": "Ninguna build coincide con tus filtros"
     },
     "elements": {
         "fire": "Fuego",

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -209,6 +210,59 @@ export function HeroDetailClient() {
     });
 
     const builds = buildsData?.data || [];
+
+    // Builds filter states
+    const [buildSearch, setBuildSearch] = useState('');
+    const [buildSetFilter, setBuildSetFilter] = useState('');
+    const [buildSortBy, setBuildSortBy] = useState<'newest' | 'likes_desc' | 'likes_asc'>('newest');
+
+    // Get unique sets from builds
+    const availableSets = useMemo(() => {
+        const sets = new Set<string>();
+        builds.forEach((build: any) => {
+            if (build.primary_set) sets.add(build.primary_set);
+            if (build.secondary_set) sets.add(build.secondary_set);
+        });
+        return Array.from(sets).sort();
+    }, [builds]);
+
+    // Filter and sort builds
+    const filteredBuilds = useMemo(() => {
+        let result = [...builds];
+
+        // Search filter
+        if (buildSearch.trim()) {
+            const search = buildSearch.toLowerCase();
+            result = result.filter((build: any) =>
+                build.title?.toLowerCase().includes(search) ||
+                build.description?.toLowerCase().includes(search) ||
+                build.user?.name?.toLowerCase().includes(search)
+            );
+        }
+
+        // Set filter
+        if (buildSetFilter) {
+            result = result.filter((build: any) =>
+                build.primary_set === buildSetFilter || build.secondary_set === buildSetFilter
+            );
+        }
+
+        // Sort
+        switch (buildSortBy) {
+            case 'likes_desc':
+                result.sort((a: any, b: any) => (b.likes || 0) - (a.likes || 0));
+                break;
+            case 'likes_asc':
+                result.sort((a: any, b: any) => (a.likes || 0) - (b.likes || 0));
+                break;
+            case 'newest':
+            default:
+                result.sort((a: any, b: any) => new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime());
+                break;
+        }
+
+        return result;
+    }, [builds, buildSearch, buildSetFilter, buildSortBy]);
 
     if (isLoading) {
         return (
@@ -638,6 +692,9 @@ export function HeroDetailClient() {
                         <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
                             <CardTitle className="text-e7-gold flex items-center gap-2">
                                 <span>{t('heroes.communityBuilds', 'Community Builds')}</span>
+                                {builds.length > 0 && (
+                                    <span className="text-sm text-neutral-500 font-normal">({builds.length})</span>
+                                )}
                             </CardTitle>
                             <Link href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}>
                                 <button className="btn-gold px-4 py-1.5 text-sm rounded-lg shadow-lg shadow-e7-gold/10 hover:shadow-e7-gold/30 transition-all">
@@ -645,16 +702,70 @@ export function HeroDetailClient() {
                                 </button>
                             </Link>
                         </div>
+
+                        {/* Filters Row */}
+                        {builds.length > 0 && (
+                            <div className="mt-4 flex flex-col sm:flex-row gap-3 items-center">
+                                {/* Search */}
+                                <div className="relative flex-1 min-w-0 w-full sm:w-auto">
+                                    <input
+                                        type="text"
+                                        value={buildSearch}
+                                        onChange={(e) => setBuildSearch(e.target.value)}
+                                        placeholder={t('heroes.searchBuilds', 'Search builds...')}
+                                        className="w-full px-3 py-2 pl-9 text-sm rounded-lg bg-e7-void border border-e7-gold/20 text-white placeholder-neutral-500 focus:border-e7-gold focus:outline-none"
+                                    />
+                                    <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </div>
+
+                                {/* Set Filter */}
+                                {availableSets.length > 0 && (
+                                    <select
+                                        value={buildSetFilter}
+                                        onChange={(e) => setBuildSetFilter(e.target.value)}
+                                        className="px-3 py-2 text-sm rounded-lg bg-e7-void border border-e7-gold/20 text-slate-200 focus:border-e7-gold focus:outline-none cursor-pointer min-w-[140px]"
+                                    >
+                                        <option value="">{t('heroes.allSets', 'All Sets')}</option>
+                                        {availableSets.map(set => (
+                                            <option key={set} value={set}>{set}</option>
+                                        ))}
+                                    </select>
+                                )}
+
+                                {/* Sort */}
+                                <select
+                                    value={buildSortBy}
+                                    onChange={(e) => setBuildSortBy(e.target.value as typeof buildSortBy)}
+                                    className="px-3 py-2 text-sm rounded-lg bg-e7-void border border-e7-gold/20 text-slate-200 focus:border-e7-gold focus:outline-none cursor-pointer min-w-[160px]"
+                                >
+                                    <option value="newest">{t('common.newest', 'Newest')}</option>
+                                    <option value="likes_desc">{t('common.likesHigh', 'Likes (High)')}</option>
+                                    <option value="likes_asc">{t('common.likesLow', 'Likes (Low)')}</option>
+                                </select>
+                            </div>
+                        )}
                     </CardHeader>
                     <CardContent className="pt-4">
                         {builds.length === 0 ? (
                             <div className="text-center py-8 text-slate-400">
-                                <p className="text-lg mb-2">💭 {t('heroes.noBuildsYet', 'No builds for this hero yet')}</p>
+                                <p className="text-lg mb-2">{t('heroes.noBuildsYet', 'No builds for this hero yet')}</p>
                                 <p className="text-sm">{t('heroes.beFirst', 'Be the first to share your build!')}</p>
+                            </div>
+                        ) : filteredBuilds.length === 0 ? (
+                            <div className="text-center py-8 text-slate-400">
+                                <p className="text-lg mb-2">{t('heroes.noBuildsMatch', 'No builds match your filters')}</p>
+                                <button
+                                    onClick={() => { setBuildSearch(''); setBuildSetFilter(''); }}
+                                    className="text-e7-gold hover:text-e7-text-gold text-sm"
+                                >
+                                    {t('common.clearFilters', 'Clear filters')}
+                                </button>
                             </div>
                         ) : (
                             <div className="space-y-4">
-                                {builds.slice(0, 5).map((build: any) => (
+                                {filteredBuilds.slice(0, 5).map((build: any) => (
                                     <Link key={build.id} href={`/builds/${build.id}`}>
                                         <div className="bg-e7-void/50 rounded-lg p-4 border border-e7-gold/10 hover:border-e7-gold/40 transition-all cursor-pointer">
                                             <div className="flex justify-between items-start">
@@ -697,15 +808,15 @@ export function HeroDetailClient() {
                                                         <Image src="/images/ras-like.gif" alt="like" width={18} height={18} unoptimized />
                                                         {build.likes || 0}
                                                     </div>
-                                                    <div className="text-gray-500 text-xs">{build.user?.name || 'Anónimo'}</div>
+                                                    <div className="text-gray-500 text-xs">{build.user?.name || t('common.anonymous', 'Anonymous')}</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </Link>
                                 ))}
-                                {builds.length > 5 && (
-                                    <Link href={`/heroes/${slug}/builds`} className="block text-center text-e7-gold hover:text-e7-text-gold text-sm">
-                                        Ver todas las {builds.length} builds →
+                                {filteredBuilds.length > 5 && (
+                                    <Link href={`/builds?hero=${hero.slug}`} className="block text-center text-e7-gold hover:text-e7-text-gold text-sm">
+                                        {t('heroes.viewAllBuilds', `View all ${filteredBuilds.length} builds`)} →
                                     </Link>
                                 )}
                             </div>

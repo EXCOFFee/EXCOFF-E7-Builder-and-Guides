@@ -100,7 +100,10 @@
         "defScaling": "DEF Scaling",
         "spdScaling": "SPD Scaling",
         "penetration": "Penetration",
-        "passiveSkill": "Passive or support skill"
+        "passiveSkill": "Passive or support skill",
+        "searchBuilds": "Search builds...",
+        "allSets": "All Sets",
+        "noBuildsMatch": "No builds match your filters"
     },
     "elements": {
         "fire": "Fire",

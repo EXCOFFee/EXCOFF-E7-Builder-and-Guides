@@ -98,7 +98,10 @@
         "defScaling": "防御補正",
         "spdScaling": "速度補正",
         "penetration": "防御貫通",
-        "passiveSkill": "パッシブまたはサポートスキル"
+        "passiveSkill": "パッシブまたはサポートスキル",
+        "searchBuilds": "ビルドを検索...",
+        "allSets": "全セット",
+        "noBuildsMatch": "フィルターに一致するビルドがありません"
     },
     "elements": {
         "fire": "火",
