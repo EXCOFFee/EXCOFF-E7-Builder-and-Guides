@@ -49,50 +49,42 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-void-glow overflow-hidden">
-      {/* Hero Section with Animated Background */}
-      <section className="relative py-16 md:py-24 px-4">
-        {/* Animated Background Gradient */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-e7-gold/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
-          <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-500" />
-        </div>
+      {/* Hero Section */}
+      <section className="relative py-20 md:py-28 px-4">
 
         <div className="max-w-6xl mx-auto text-center relative z-10">
           {/* Logo */}
-          <div className="mb-6 flex justify-center">
-            <div className="relative w-32 h-32 md:w-40 md:h-40 animate-float">
-              <div className="absolute -inset-2 bg-gradient-to-r from-e7-gold via-e7-purple to-e7-gold rounded-3xl opacity-40 blur-md animate-border-glow" />
+          <div className="mb-8 flex justify-center">
+            <div className="relative w-24 h-24 md:w-32 md:h-32">
               <Image
                 src="/images/icon_menu_orbis.png"
                 alt="E7 Orbis Helper"
                 fill
-                className="object-contain rounded-2xl shadow-2xl shadow-e7-gold/30 relative"
+                className="object-contain rounded-xl"
                 priority
                 unoptimized
               />
             </div>
           </div>
 
-          {/* Title with Gradient */}
-          <h1 className="font-display text-5xl md:text-7xl font-bold mb-4 tracking-wide bg-gradient-to-r from-e7-gold via-yellow-300 to-e7-gold bg-clip-text text-transparent animate-shimmer bg-[length:200%_100%]">
+          {/* Title */}
+          <h1 className="font-display text-4xl md:text-6xl font-semibold mb-4 tracking-tight text-e7-gold">
             EXCOFF E7 HUB
           </h1>
 
-          <p className="text-lg md:text-xl text-slate-300 mb-2 font-medium">
+          <p className="text-base md:text-lg text-neutral-400 mb-2">
             E7 Builds, Guides & Hero Wiki
           </p>
 
-          <p className="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-neutral-500 mb-10 max-w-xl mx-auto">
             {t('home.subtitle', 'Discover and publish your character builds and create game guides for the community')}
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex gap-3 justify-center flex-wrap">
             <Link href="/heroes">
               <Button
                 size="lg"
-                className="btn-gold px-8 font-semibold shadow-lg shadow-e7-gold/30 hover:shadow-e7-gold/50 transition-all duration-300 hover:scale-105"
+                className="btn-gold px-6 font-medium"
               >
                 {t('home.exploreHeroes', 'Explore Heroes')}
               </Button>
@@ -101,7 +93,7 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-e7-gold text-e7-gold hover:bg-e7-gold/10 px-8 hover:scale-105 transition-all duration-300"
+                className="border-e7-gold/40 text-e7-gold hover:bg-e7-gold/10 px-6"
               >
                 {t('home.viewGuides', 'View Guides')}
               </Button>
@@ -111,41 +103,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section with Glassmorphism Cards */}
-      <section className="py-16 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-e7-panel/30 to-transparent" />
-
-        <div className="max-w-6xl mx-auto relative z-10">
-          <h2 className="font-display text-3xl md:text-4xl text-center text-gold-gradient mb-4">
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center text-e7-gold mb-3">
             {t('home.whatYouFind', 'What will you find?')}
           </h2>
-          <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-neutral-500 mb-12 max-w-lg mx-auto">
             {t('home.everythingYouNeed', 'Everything you need to master Epic Seven')}
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {features.map((feature, index) => (
               <Link key={index} href={feature.href}>
-                <div
-                  className={`group card-fantasy relative glass-panel rounded-xl overflow-hidden h-full`}
-                >
-                  {/* Gradient Background on Hover */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-
-                  <div className="relative p-6">
-                    <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-slate-100 mb-2 group-hover:text-e7-gold transition-colors">
-                      {feature.title}
-                    </h3>
-                    <p className="text-slate-400 text-sm mb-3">
-                      {feature.desc}
-                    </p>
-                    <p className="text-slate-500 text-xs">
-                      {feature.details}
-                    </p>
+                <div className="group p-5 rounded-lg bg-e7-panel border border-white/6 hover:border-e7-gold/30 transition-colors h-full">
+                  <div className="text-3xl mb-3">
+                    {feature.icon}
                   </div>
+                  <h3 className="text-base font-medium text-neutral-200 mb-2 group-hover:text-e7-gold transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-neutral-500 text-sm mb-2">
+                    {feature.desc}
+                  </p>
+                  <p className="text-neutral-600 text-xs">
+                    {feature.details}
+                  </p>
                 </div>
               </Link>
             ))}

@@ -10,15 +10,19 @@
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-cinzel);
 
-  /* E7 EXCOFF Theme - Dark Fantasy Gold */
-  --color-e7-void: #111521;
-  --color-e7-panel: #1B2030;
-  --color-e7-dark: #0D1117;
-  --color-e7-gold: #C8AA6E;
-  --color-e7-text-gold: #FFD700;
-  --color-e7-gold-dim: #9A7B4F;
-  --color-e7-purple: #8B5CF6;
-  --color-e7-purple-dim: #6D28D9;
+  /* Minimalist Dark Theme - Refined & Clean */
+  --color-e7-void: #0c0e14;
+  --color-e7-panel: #14171f;
+  --color-e7-dark: #0a0b10;
+  --color-e7-gold: #d4a853;
+  --color-e7-text-gold: #e8c06a;
+  --color-e7-gold-dim: #9a7b4f;
+  --color-e7-purple: #7c3aed;
+  --color-e7-purple-dim: #5b21b6;
+  --color-e7-accent: #3b82f6;
+  --color-e7-success: #10b981;
+  --color-e7-error: #ef4444;
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -55,72 +59,72 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --radius: 0.5rem;
+  --background: #fafafa;
+  --foreground: #171717;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+  --primary: #171717;
+  --primary-foreground: #fafafa;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #171717;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --accent: #f5f5f5;
+  --accent-foreground: #171717;
+  --destructive: #ef4444;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #a3a3a3;
+  --chart-1: #f97316;
+  --chart-2: #14b8a6;
+  --chart-3: #334155;
+  --chart-4: #eab308;
+  --chart-5: #f59e0b;
+  --sidebar: #fafafa;
+  --sidebar-foreground: #171717;
+  --sidebar-primary: #171717;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #f5f5f5;
+  --sidebar-accent-foreground: #171717;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #a3a3a3;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: #0c0e14;
+  --foreground: #e5e5e5;
+  --card: #14171f;
+  --card-foreground: #e5e5e5;
+  --popover: #14171f;
+  --popover-foreground: #e5e5e5;
+  --primary: #e5e5e5;
+  --primary-foreground: #171717;
+  --secondary: #1e222d;
+  --secondary-foreground: #e5e5e5;
+  --muted: #1e222d;
+  --muted-foreground: #9ca3af;
+  --accent: #1e222d;
+  --accent-foreground: #e5e5e5;
+  --destructive: #ef4444;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: #6b7280;
+  --chart-1: #6366f1;
+  --chart-2: #10b981;
+  --chart-3: #f59e0b;
+  --chart-4: #8b5cf6;
+  --chart-5: #ef4444;
+  --sidebar: #14171f;
+  --sidebar-foreground: #e5e5e5;
+  --sidebar-primary: #6366f1;
+  --sidebar-primary-foreground: #e5e5e5;
+  --sidebar-accent: #1e222d;
+  --sidebar-accent-foreground: #e5e5e5;
+  --sidebar-border: rgba(255, 255, 255, 0.08);
+  --sidebar-ring: #6b7280;
 }
 
 @layer base {
@@ -129,30 +133,30 @@
   }
 
   html {
-    font-size: 18px;
-    /* Base size increased from 16px */
+    font-size: 16px;
   }
 
   body {
-    @apply bg-e7-void text-slate-200;
+    @apply bg-e7-void text-neutral-200 antialiased;
     line-height: 1.6;
+    font-feature-settings: "kern" 1, "liga" 1;
   }
 
-  /* Scale up text sizes globally */
+  /* Clean typography scale */
   h1 {
-    @apply text-5xl;
+    @apply text-4xl font-semibold tracking-tight;
   }
 
   h2 {
-    @apply text-4xl;
+    @apply text-3xl font-semibold tracking-tight;
   }
 
   h3 {
-    @apply text-3xl;
+    @apply text-2xl font-medium;
   }
 
   h4 {
-    @apply text-2xl;
+    @apply text-xl font-medium;
   }
 
   p,
@@ -163,87 +167,219 @@
 }
 
 /* ========================================
-   E7 Dark Fantasy Custom Utilities
+   Minimalist Design System
    ======================================== */
 
-/* Glassmorphism Panel Effect */
+/* Clean solid backgrounds instead of glassmorphism */
 .glass-panel {
-  background: rgba(27, 32, 48, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(200, 170, 110, 0.15);
+  background: var(--color-e7-panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Gold Glow Effect for important elements */
-.glow-gold {
-  box-shadow: 0 0 20px rgba(200, 170, 110, 0.3),
-    0 0 40px rgba(200, 170, 110, 0.1);
+/* Subtle accent line instead of glows */
+.accent-line {
+  position: relative;
 }
 
-.glow-gold-hover:hover {
-  box-shadow: 0 0 25px rgba(200, 170, 110, 0.4),
-    0 0 50px rgba(200, 170, 110, 0.2);
+.accent-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--color-e7-gold);
+  border-radius: 2px;
 }
 
-/* Radial gradient background for depth */
+/* Clean background - no radial gradients */
 .bg-void-radial {
-  background: radial-gradient(ellipse at center, #1B2030 0%, #111521 50%, #0D1117 100%);
+  background: var(--color-e7-void);
 }
 
 .bg-void-glow {
-  background:
-    radial-gradient(ellipse at 20% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(200, 170, 110, 0.05) 0%, transparent 50%),
-    #111521;
+  background: var(--color-e7-void);
 }
 
-/* Card hover transitions (Trading Card feel) */
+/* Card styles - clean with subtle lift */
 .card-fantasy {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-e7-panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .card-fantasy:hover {
-  border-color: rgba(200, 170, 110, 0.6);
-  transform: scale(1.03) translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4),
-    0 0 20px rgba(200, 170, 110, 0.15);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
 }
 
-/* Button gradient styles */
+/* Clean button styles */
 .btn-gold {
-  background: linear-gradient(135deg, #C8AA6E 0%, #9A7B4F 100%);
-  color: #111521;
-  font-weight: 600;
-  transition: all 0.2s ease;
+  background: var(--color-e7-gold);
+  color: #0c0e14;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.15s ease;
+  border-radius: 0.5rem;
 }
 
 .btn-gold:hover {
-  background: linear-gradient(135deg, #FFD700 0%, #C8AA6E 100%);
-  box-shadow: 0 0 20px rgba(200, 170, 110, 0.4);
+  background: var(--color-e7-text-gold);
+  transform: translateY(-1px);
 }
 
-/* Text with gold gradient */
+.btn-gold:active {
+  transform: translateY(0);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-e7-text-gold);
+  font-weight: 500;
+  transition: background 0.2s ease;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Text accent - simple color instead of gradient */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #FFD700 0%, #C8AA6E 50%, #9A7B4F 100%);
+  color: var(--color-e7-gold);
+}
+
+/* For important headings, keep subtle gradient */
+.text-gold-shine {
+  background: linear-gradient(to right, var(--color-e7-text-gold), var(--color-e7-gold));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Animated border glow */
-@keyframes borderGlow {
+/* Remove animated borders - static subtle borders only */
+.animate-border-glow {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-  0%,
-  100% {
-    border-color: rgba(200, 170, 110, 0.3);
+/* Clean input styles */
+input,
+textarea,
+select {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.5rem;
+  transition: border-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-e7-gold);
+  outline: none;
+}
+
+/* Subtle dividers */
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Badge styles - clean and flat */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted-foreground);
+}
+
+.badge-gold {
+  background: rgba(212, 168, 83, 0.15);
+  color: var(--color-e7-text-gold);
+}
+
+/* Element colors - clean and muted */
+.element-fire {
+  color: #f87171;
+}
+
+.element-ice {
+  color: #60a5fa;
+}
+
+.element-earth {
+  color: #4ade80;
+}
+
+.element-light {
+  color: #fbbf24;
+}
+
+.element-dark {
+  color: #a78bfa;
+}
+
+/* Scrollbar - minimal */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Focus states - clean ring */
+*:focus-visible {
+  outline: 2px solid var(--color-e7-gold);
+  outline-offset: 2px;
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.08) 50%,
+      rgba(255, 255, 255, 0.04) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
   }
 
-  50% {
-    border-color: rgba(200, 170, 110, 0.6);
+  100% {
+    background-position: -200% 0;
   }
 }
 
-.animate-border-glow {
-  animation: borderGlow 2s ease-in-out infinite;
+/* Transition utilities */
+.transition-default {
+  transition: all 0.2s ease;
+}
+
+/* Hover highlight */
+.hover-highlight {
+  transition: background 0.15s ease;
+}
+
+.hover-highlight:hover {
+  background: rgba(255, 255, 255, 0.04);
 }

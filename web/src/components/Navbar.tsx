@@ -113,15 +113,15 @@ export function Navbar() {
     };
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-e7-gold/20 bg-e7-void/80 backdrop-blur-xl supports-[backdrop-filter]:bg-e7-void/70 shadow-lg shadow-black/20">
+        <header className="sticky top-0 z-50 w-full border-b border-white/6 bg-e7-void/95 backdrop-blur-md">
             <div className="container mx-auto flex h-16 items-center justify-between px-4">
                 {/* Logo & App Name */}
                 <Link href="/" className="flex items-center gap-3 group">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-e7-gold to-e7-purple flex items-center justify-center overflow-hidden ring-2 ring-e7-gold/30 group-hover:ring-e7-gold/60 transition-all group-hover:shadow-lg group-hover:shadow-e7-gold/20">
-                        <Image src="/images/icon_menu_orbis.png" alt="ORBIS" width={40} height={40} className="object-cover" unoptimized />
+                    <div className="w-9 h-9 rounded-lg bg-e7-panel flex items-center justify-center overflow-hidden border border-white/8 transition-colors group-hover:border-e7-gold/40">
+                        <Image src="/images/icon_menu_orbis.png" alt="ORBIS" width={36} height={36} className="object-cover" unoptimized />
                     </div>
                     <div className="hidden sm:block">
-                        <h1 className="text-lg font-bold text-gold-gradient tracking-wide group-hover:opacity-90 transition-opacity">
+                        <h1 className="text-base font-semibold text-e7-gold tracking-wide">
                             EXCOFF E7 HUB
                         </h1>
                     </div>
@@ -137,15 +137,12 @@ export function Navbar() {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative ${isActive
-                                    ? 'bg-e7-gold/15 text-e7-gold border border-e7-gold/30'
-                                    : 'text-slate-400 hover:text-e7-gold hover:bg-e7-panel/50 border border-transparent hover:border-e7-gold/20'
+                                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${isActive
+                                    ? 'bg-white/8 text-e7-gold'
+                                    : 'text-neutral-400 hover:text-neutral-200 hover:bg-white/4'
                                     }`}
                             >
                                 {link.label}
-                                {isActive && (
-                                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-e7-gold rounded-full" />
-                                )}
                             </Link>
                         );
                     })}
@@ -158,22 +155,22 @@ export function Navbar() {
                     {!isLoading && (
                         user ? (
                             <div className="hidden sm:flex items-center gap-2">
-                                <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg glass-panel border border-e7-gold/20 hover:border-e7-gold/40 transition-colors">
+                                <div className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/4 border border-white/8">
                                     {user.avatar ? (
                                         <Image
                                             src={user.avatar}
                                             alt={user.name}
                                             width={24}
                                             height={24}
-                                            className="w-6 h-6 rounded-full ring-1 ring-e7-gold/30"
+                                            className="w-6 h-6 rounded-full"
                                             unoptimized
                                         />
                                     ) : (
-                                        <div className="w-6 h-6 rounded-full bg-gradient-to-br from-e7-gold to-e7-gold-dim flex items-center justify-center text-xs text-e7-void font-bold">
+                                        <div className="w-6 h-6 rounded-full bg-e7-gold flex items-center justify-center text-xs text-e7-void font-medium">
                                             {user.name.charAt(0).toUpperCase()}
                                         </div>
                                     )}
-                                    <span className="text-sm text-slate-300">{user.name}</span>
+                                    <span className="text-sm text-neutral-300">{user.name}</span>
                                 </div>
                                 <button
                                     onClick={handleLogout}
@@ -185,7 +182,7 @@ export function Navbar() {
                             </div>
                         ) : (
                             <Link href="/login" className="hidden sm:block">
-                                <Button size="sm" className="btn-gold px-4 rounded-lg shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40">
+                                <Button size="sm" className="btn-gold px-4 rounded-md">
                                     {t('nav.login', 'Login')}
                                 </Button>
                             </Link>
@@ -195,7 +192,7 @@ export function Navbar() {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        className="md:hidden p-2 rounded-lg text-slate-400 hover:text-e7-gold hover:bg-e7-panel/50 transition-colors"
+                        className="md:hidden p-2 rounded-md text-neutral-400 hover:text-neutral-200 hover:bg-white/4 transition-colors"
                         aria-label="Toggle menu"
                     >
                         {mobileMenuOpen ? (
