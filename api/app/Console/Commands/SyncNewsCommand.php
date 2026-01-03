@@ -8,6 +8,7 @@ use App\Models\News;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Carbon;
 use DOMDocument;
 use DOMXPath;
 
@@ -19,6 +20,7 @@ class SyncNewsCommand extends Command
 
     private const YOUTUBE_CHANNEL_ID = 'UC3dR_jP_fZ7qH6_-8-VTDNQ'; // Epic Seven official channel @EpicSeven
     private const STOVE_URL = 'https://page.onstove.com/epicseven/global';
+    private const STOVE_DOMINIEL_ID = '79157751'; // Official Epic Seven Stove account (Dominiel)
 
     public function handle(): int
     {
@@ -178,78 +180,175 @@ class SyncNewsCommand extends Command
     }
 
     /**
-     * Sync news from Stove via web scraping
+     * Sync news from Stove via Dominiel's profile (official Epic Seven account)
      */
     private function syncStove(): void
     {
-        $this->info('Scraping Stove news...');
+        $this->info('Fetching Stove news from official Dominiel account...');
 
         try {
-            // Fetch the main news page
+            // Try to get Dominiel's posts via the activity API
+            $activityUrl = 'https://profile.onstove.com/api/v1/member/' . self::STOVE_DOMINIEL_ID . '/activities';
+            
             $response = Http::withHeaders([
                 'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-                'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                'Accept-Language' => 'en-US,en;q=0.5',
-            ])->get(self::STOVE_URL);
+                'Accept' => 'application/json',
+                'Accept-Language' => 'en-US,en;q=0.9',
+                'Referer' => 'https://profile.onstove.com/en/' . self::STOVE_DOMINIEL_ID,
+            ])->get($activityUrl, [
+                'page' => 1,
+                'size' => 20,
+            ]);
 
-            if (!$response->successful()) {
-                $this->error('Failed to fetch Stove page: ' . $response->status());
-                return;
+            if ($response->successful()) {
+                $data = $response->json();
+                $count = $this->processStoveActivities($data);
+                
+                if ($count > 0) {
+                    $this->info("Synced {$count} Stove news items from Dominiel's profile");
+                    return;
+                }
             }
 
-            $html = $response->body();
-            
-            // Parse HTML
-            libxml_use_internal_errors(true);
-            $doc = new DOMDocument();
-            $doc->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));
-            $xpath = new DOMXPath($doc);
+            // Fallback: scrape the Epic Seven global page for official posts
+            $this->info('Activity API failed, trying page scraping...');
+            $this->scrapeStoveOfficialPosts();
 
-            // Find news/notice items (adjust selectors based on actual page structure)
-            // Common patterns: .article-list, .notice-list, .board-list, etc.
-            $newsItems = $xpath->query("//div[contains(@class, 'article') or contains(@class, 'notice') or contains(@class, 'list-item')]//a");
+        } catch (\Exception $e) {
+            $this->error('Stove sync error: ' . $e->getMessage());
+            Log::error('Stove sync failed', ['error' => $e->getMessage()]);
+        }
+    }
 
-            $count = 0;
-            foreach ($newsItems as $item) {
-                if ($count >= 20) break; // Limit to 20 items
+    /**
+     * Process activities from Stove API
+     */
+    private function processStoveActivities(array $data): int
+    {
+        $count = 0;
+        $activities = $data['data']['list'] ?? $data['list'] ?? $data['data'] ?? [];
 
-                $href = $item->getAttribute('href');
-                $title = trim($item->textContent);
+        foreach ($activities as $activity) {
+            if ($count >= 20) break;
 
-                if (empty($href) || empty($title) || strlen($title) < 5) continue;
+            $title = $activity['title'] ?? $activity['content'] ?? null;
+            $url = $activity['url'] ?? $activity['link'] ?? null;
+            $thumbnail = $activity['thumbnail'] ?? $activity['image'] ?? null;
+            $publishedAt = $activity['created_at'] ?? $activity['reg_dt'] ?? null;
 
-                // Create full URL if relative
+            if (empty($title) || strlen($title) < 5) continue;
+
+            // Generate URL if not provided
+            if (empty($url) && isset($activity['board_sn'], $activity['article_sn'])) {
+                $url = "https://page.onstove.com/epicseven/global/view/{$activity['article_sn']}";
+            }
+
+            if (empty($url)) continue;
+
+            $externalId = 'stove_' . ($activity['article_sn'] ?? md5($url));
+
+            News::updateOrCreate(
+                ['external_id' => $externalId],
+                [
+                    'title' => substr($title, 0, 255),
+                    'description' => substr($activity['content'] ?? '', 0, 500) ?: null,
+                    'thumbnail' => $thumbnail,
+                    'url' => $url,
+                    'source' => 'stove',
+                    'published_at' => $publishedAt ? Carbon::parse($publishedAt) : now(),
+                ]
+            );
+            $count++;
+        }
+
+        return $count;
+    }
+
+    /**
+     * Scrape official posts from Epic Seven Stove page
+     */
+    private function scrapeStoveOfficialPosts(): void
+    {
+        $response = Http::withHeaders([
+            'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        ])->get(self::STOVE_URL);
+
+        if (!$response->successful()) {
+            $this->error('Failed to fetch Stove page');
+            return;
+        }
+
+        $html = $response->body();
+        
+        // Look for OFFICIAL posts from Dominiel
+        preg_match_all('/href=["\']([^"\']*\/view\/(\d+)[^"\']*)["\'][^>]*>.*?(?:OFFICIAL|Dominiel).*?<\/a>/is', $html, $matches);
+        
+        $count = 0;
+        if (!empty($matches[1])) {
+            foreach ($matches[1] as $index => $href) {
+                if ($count >= 20) break;
+                
                 if (!str_starts_with($href, 'http')) {
                     $href = 'https://page.onstove.com' . $href;
                 }
 
-                // Use URL hash as external_id
-                $externalId = 'stove_' . md5($href);
-
-                News::updateOrCreate(
-                    ['external_id' => $externalId],
-                    [
-                        'title' => substr($title, 0, 255),
-                        'description' => null,
-                        'thumbnail' => null, // Stove doesn't have easy thumbnails
-                        'url' => $href,
-                        'source' => 'stove',
-                        'published_at' => now(), // We don't have exact date from listing
-                    ]
-                );
+                // Fetch individual post to get title
+                $this->fetchAndSaveStovePost($href, $matches[2][$index] ?? null);
                 $count++;
             }
+        }
 
-            // If no items found with the generic selectors, try alternative approach
-            if ($count === 0) {
-                $this->warn('No news found with default selectors, trying alternative...');
-                $this->scrapeStoveAlternative($html);
-            } else {
-                $this->info("Synced {$count} Stove news items");
-            }
+        // If still no posts, try the general news approach
+        if ($count === 0) {
+            $this->scrapeStoveAlternative($html);
+        } else {
+            $this->info("Synced {$count} official Stove posts");
+        }
+    }
+
+    /**
+     * Fetch individual Stove post details
+     */
+    private function fetchAndSaveStovePost(string $url, ?string $articleId): void
+    {
+        try {
+            $response = Http::withHeaders([
+                'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+            ])->get($url);
+
+            if (!$response->successful()) return;
+
+            $html = $response->body();
+            
+            // Extract title from page
+            preg_match('/<title>([^<]+)<\/title>/i', $html, $titleMatch);
+            $title = $titleMatch[1] ?? 'Epic Seven News';
+            $title = preg_replace('/\s*[-|]\s*STOVE.*$/i', '', $title);
+
+            // Extract description/content
+            preg_match('/<meta[^>]*name=["\']description["\'][^>]*content=["\']([^"\']+)["\']/', $html, $descMatch);
+            $description = $descMatch[1] ?? null;
+
+            // Extract thumbnail
+            preg_match('/<meta[^>]*property=["\']og:image["\'][^>]*content=["\']([^"\']+)["\']/', $html, $imgMatch);
+            $thumbnail = $imgMatch[1] ?? null;
+
+            $externalId = 'stove_' . ($articleId ?? md5($url));
+
+            News::updateOrCreate(
+                ['external_id' => $externalId],
+                [
+                    'title' => substr(trim($title), 0, 255),
+                    'description' => $description ? substr($description, 0, 500) : null,
+                    'thumbnail' => $thumbnail,
+                    'url' => $url,
+                    'source' => 'stove',
+                    'published_at' => now(),
+                ]
+            );
         } catch (\Exception $e) {
-            $this->error('Stove sync error: ' . $e->getMessage());
-            Log::error('Stove sync failed', ['error' => $e->getMessage()]);
+            Log::warning('Failed to fetch Stove post: ' . $url, ['error' => $e->getMessage()]);
         }
     }
 
