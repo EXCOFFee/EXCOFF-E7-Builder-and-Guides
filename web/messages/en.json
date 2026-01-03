@@ -28,7 +28,10 @@
         "viewsHigh": "Views (High)",
         "viewsLow": "Views (Low)",
         "likesHigh": "Likes (High)",
-        "likesLow": "Likes (Low)"
+        "likesLow": "Likes (Low)",
+        "backToHome": "Back to Home",
+        "previous": "Previous",
+        "close": "Close"
     },
     "nav": {
         "home": "Home",
@@ -36,6 +39,7 @@
         "guides": "Guides",
         "guilds": "Guilds",
         "builds": "Builds",
+        "news": "News",
         "login": "Login",
         "register": "Register"
     },
@@ -278,6 +282,15 @@
         "updateBuild": "Update Build",
         "updating": "Updating...",
         "confirmDelete": "Are you sure you want to delete this build?",
+        "rateThisBuild": "Rate this Build",
+        "loginToRate": "Log in to rate this build",
+        "compare": "Compare",
+        "comparator": "Build Comparator",
+        "selectBuild1": "Select first build",
+        "selectBuild2": "Select second build",
+        "noBuildSelected": "No build selected",
+        "selectSameHero": "Please select builds for the same hero to compare",
+        "filterByHero": "Filter by hero...",
         "setNames": {
             "speed": "Speed",
             "attack": "Attack",
@@ -308,6 +321,15 @@
             "eff": "EFF %",
             "res": "RES %"
         }
+    },
+    "news": {
+        "title": "Epic Seven News",
+        "subtitle": "Latest updates, announcements and videos from the official Epic Seven channels",
+        "disclaimer": "All content is sourced from official Smilegate/Super Creative channels. We are not affiliated with the developers.",
+        "allSources": "All Sources",
+        "error": "Failed to load news. Please try again later.",
+        "noNews": "No news available at the moment.",
+        "readMore": "Read more →"
     },
     "footer": {
         "disclaimer": "EpicSevenHub is not affiliated with Smilegate or Super Creative.",

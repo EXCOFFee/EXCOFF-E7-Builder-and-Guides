@@ -26,7 +26,10 @@
         "viewsHigh": "閲覧数 (多い)",
         "viewsLow": "閲覧数 (少ない)",
         "likesHigh": "いいね (多い)",
-        "likesLow": "いいね (少ない)"
+        "likesLow": "いいね (少ない)",
+        "backToHome": "ホームに戻る",
+        "previous": "前へ",
+        "close": "閉じる"
     },
     "nav": {
         "home": "ホーム",
@@ -34,6 +37,7 @@
         "guides": "ガイド",
         "guilds": "ギルド",
         "builds": "ビルド",
+        "news": "ニュース",
         "login": "ログイン",
         "register": "登録"
     },
@@ -290,6 +294,15 @@
             "eff": "効果 %",
             "res": "抵抗 %"
         }
+    },
+    "news": {
+        "title": "エピックセブンニュース",
+        "subtitle": "エピックセブン公式チャンネルからの最新情報、お知らせ、動画",
+        "disclaimer": "すべてのコンテンツはSmilegate/Super Creativeの公式チャンネルから取得しています。開発者とは提携していません。",
+        "allSources": "全てのソース",
+        "error": "ニュースの読み込みに失敗しました。後でもう一度お試しください。",
+        "noNews": "現在利用可能なニュースはありません。",
+        "readMore": "続きを読む →"
     },
     "footer": {
         "disclaimer": "EpicSevenHubはSmilgateまたはSuper Creativeと提携していません。",

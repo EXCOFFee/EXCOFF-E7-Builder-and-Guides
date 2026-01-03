@@ -26,7 +26,10 @@
         "viewsHigh": "Visualizações (Maior)",
         "viewsLow": "Visualizações (Menor)",
         "likesHigh": "Curtidas (Maior)",
-        "likesLow": "Curtidas (Menor)"
+        "likesLow": "Curtidas (Menor)",
+        "backToHome": "Voltar ao Início",
+        "previous": "Anterior",
+        "close": "Fechar"
     },
     "nav": {
         "home": "Início",
@@ -34,6 +37,7 @@
         "guides": "Guias",
         "guilds": "Guildas",
         "builds": "Builds",
+        "news": "Notícias",
         "login": "Entrar",
         "register": "Registrar"
     },
@@ -290,6 +294,15 @@
             "eff": "EFI %",
             "res": "RES %"
         }
+    },
+    "news": {
+        "title": "Notícias de Epic Seven",
+        "subtitle": "Últimas atualizações, anúncios e vídeos dos canais oficiais de Epic Seven",
+        "disclaimer": "Todo o conteúdo é proveniente dos canais oficiais da Smilegate/Super Creative. Não somos afiliados aos desenvolvedores.",
+        "allSources": "Todas as Fontes",
+        "error": "Erro ao carregar notícias. Por favor tente novamente mais tarde.",
+        "noNews": "Não há notícias disponíveis no momento.",
+        "readMore": "Leia mais →"
     },
     "footer": {
         "disclaimer": "EpicSevenHub não é afiliado com Smilegate ou Super Creative.",

@@ -15,6 +15,7 @@ const getNavLinks = (t: (key: string, fallback: string) => string) => [
     { href: '/heroes', label: t('nav.heroes', 'Heroes') },
     { href: '/builds', label: t('nav.builds', 'Builds') },
     { href: '/guides', label: t('nav.guides', 'Guides') },
+    { href: '/news', label: t('nav.news', 'News') },
     { href: '/guilds', label: t('nav.guilds', 'Guilds') },
 ];
 

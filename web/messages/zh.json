@@ -26,7 +26,10 @@
         "viewsHigh": "浏览量 (高)",
         "viewsLow": "浏览量 (低)",
         "likesHigh": "点赞 (高)",
-        "likesLow": "点赞 (低)"
+        "likesLow": "点赞 (低)",
+        "backToHome": "返回首页",
+        "previous": "上一页",
+        "close": "关闭"
     },
     "nav": {
         "home": "首页",
@@ -34,6 +37,7 @@
         "guides": "攻略",
         "guilds": "公会",
         "builds": "构建",
+        "news": "新闻",
         "login": "登录",
         "register": "注册"
     },
@@ -290,6 +294,15 @@
             "eff": "效命 %",
             "res": "效抗 %"
         }
+    },
+    "news": {
+        "title": "第七史诗新闻",
+        "subtitle": "来自第七史诗官方频道的最新更新、公告和视频",
+        "disclaimer": "所有内容均来自Smilegate/Super Creative的官方频道。我们与开发商无关。",
+        "allSources": "所有来源",
+        "error": "加载新闻失败。请稍后重试。",
+        "noNews": "暂无可用新闻。",
+        "readMore": "阅读更多 →"
     },
     "footer": {
         "disclaimer": "EpicSevenHub与Smilegate或Super Creative无关。",
