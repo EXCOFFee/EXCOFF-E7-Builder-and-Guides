@@ -17,6 +17,7 @@ class News extends Model
         'thumbnail',
         'url',
         'source',
+        'category',
         'external_id',
         'published_at',
     ];

@@ -261,6 +261,9 @@ class SyncNewsCommand extends Command
                         }
                     }
 
+                    // Convert board name to category slug
+                    $categorySlug = strtolower(str_replace(' ', '_', $boardName));
+
                     News::updateOrCreate(
                         ['external_id' => 'stove_' . $articleId],
                         [
@@ -269,6 +272,7 @@ class SyncNewsCommand extends Command
                             'thumbnail' => $thumbnail,
                             'url' => "https://page.onstove.com/epicseven/global/view/{$articleId}",
                             'source' => 'stove',
+                            'category' => $categorySlug,
                             'published_at' => $publishedAt ?? now(),
                         ]
                     );

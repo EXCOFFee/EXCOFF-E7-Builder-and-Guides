@@ -22,15 +22,37 @@ class NewsController extends Controller
             $query->where('source', $request->input('source'));
         }
 
-        // Search
-        if ($request->has('search')) {
-            $query->where('title', 'like', '%' . $request->input('search') . '%');
+        // Filter by category (for Stove news)
+        if ($request->has('category') && $request->input('category') !== 'all') {
+            $query->where('category', $request->input('category'));
         }
+
+        // Search in title and description
+        if ($request->filled('search')) {
+            $searchTerm = $request->input('search');
+            $query->where(function ($q) use ($searchTerm) {
+                $q->where('title', 'like', '%' . $searchTerm . '%')
+                  ->orWhere('description', 'like', '%' . $searchTerm . '%');
+            });
+        }
+
+        // Get available categories for current source filter
+        $categories = News::query()
+            ->when($request->input('source') !== 'all', function ($q) use ($request) {
+                $q->where('source', $request->input('source'));
+            })
+            ->whereNotNull('category')
+            ->distinct()
+            ->pluck('category');
 
         $news = $query->orderBy('published_at', 'desc')
             ->paginate($request->input('per_page', 20));
 
-        return response()->json($news);
+        // Add categories to response
+        $response = $news->toArray();
+        $response['categories'] = $categories;
+
+        return response()->json($response);
     }
 
     /**
