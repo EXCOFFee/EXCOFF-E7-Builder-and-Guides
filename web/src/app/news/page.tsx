@@ -60,7 +60,7 @@ export default function NewsPage() {
                     {/* Disclaimer */}
                     <div className="mt-4 p-3 bg-amber-900/10 border border-amber-500/20 rounded-md inline-block">
                         <p className="text-amber-400/80 text-sm">
-                            ⚠�E�E{t('news.disclaimer', 'All content is sourced from official Smilegate/Super Creative channels. We are not affiliated with the developers.')}
+                            笞�・・{t('news.disclaimer', 'All content is sourced from official Smilegate/Super Creative channels. We are not affiliated with the developers.')}
                         </p>
                     </div>
                 </div>
@@ -76,9 +76,9 @@ export default function NewsPage() {
                                 : 'bg-white/4 text-neutral-400 hover:bg-white/6'
                                 }`}
                         >
-                            {source === 'youtube' && <span className="text-red-500">▶</span>}
-                            {source === 'stove' && <span className="text-blue-400">📰</span>}
-                            {source === 'all' && <span>🌐</span>}
+                            {source === 'youtube' && <span className="text-red-500">笆ｶ</span>}
+                            {source === 'stove' && <span className="text-blue-400">�堂</span>}
+                            {source === 'all' && <span>�倹</span>}
                             {source === 'all'
                                 ? t('news.allSources', 'All Sources')
                                 : source === 'youtube'
@@ -131,7 +131,7 @@ export default function NewsPage() {
                                             ) : (
                                                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-e7-dark to-e7-void">
                                                     <span className="text-4xl">
-                                                        {item.source === 'youtube' ? '▶' : '📰'}
+                                                        {item.source === 'youtube' ? '笆ｶ' : '�堂'}
                                                     </span>
                                                 </div>
                                             )}
@@ -141,7 +141,7 @@ export default function NewsPage() {
                                                 ? 'bg-red-600 text-white'
                                                 : 'bg-blue-600 text-white'
                                                 }`}>
-                                                {item.source === 'youtube' ? '▶ YouTube' : '📰 Stove'}
+                                                {item.source === 'youtube' ? '笆ｶ YouTube' : '�堂 Stove'}
                                             </div>
                                         </div>
 
@@ -162,7 +162,7 @@ export default function NewsPage() {
                                                     {new Date(item.published_at).toLocaleDateString()}
                                                 </span>
                                                 <span className="text-e7-gold group-hover:translate-x-1 transition-transform">
-                                                    {t('news.readMore', 'Read more ↁE)}
+                                                    {t('news.readMore', 'Read more →')}
                                                 </span>
                                             </div>
                                         </div>
@@ -179,7 +179,7 @@ export default function NewsPage() {
                                     disabled={page === 1}
                                     className="px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/20 text-slate-400 hover:border-e7-gold/50 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    ↁE{t('common.previous', 'Previous')}
+                                    ← {t('common.previous', 'Previous')}
                                 </button>
                                 <span className="px-4 py-2 text-slate-400">
                                     {page} / {newsData.last_page}
@@ -189,7 +189,7 @@ export default function NewsPage() {
                                     disabled={page === newsData.last_page}
                                     className="px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/20 text-slate-400 hover:border-e7-gold/50 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    {t('common.next', 'Next')} ↁE
+                                    {t('common.next', 'Next')} →
                                 </button>
                             </div>
                         )}
@@ -202,7 +202,7 @@ export default function NewsPage() {
                         href="/"
                         className="text-e7-gold hover:text-e7-text-gold text-sm inline-flex items-center gap-2 group transition-colors"
                     >
-                        <span className="group-hover:-translate-x-1 transition-transform">ↁE/span>
+                        <span className="group-hover:-translate-x-1 transition-transform">←</span>
                         {t('common.backToHome', 'Back to Home')}
                     </Link>
                 </div>

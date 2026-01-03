@@ -49,11 +49,11 @@ export default function GuidesPage() {
         { id: 'all', label: t('guides.allCategories', 'All'), emoji: '📚' },
         { id: 'general', label: t('guides.general', 'General'), emoji: '📖' },
         { id: 'pve', label: 'PVE', emoji: '🐉' },
-        { id: 'rta', label: 'RTA', emoji: '⚔︁E },
+        { id: 'rta', label: 'RTA', emoji: '⚔️' },
         { id: 'guild_war', label: t('guides.guildWar', 'Guild War'), emoji: '🏰' },
         { id: 'arena', label: t('guides.arena', 'Arena'), emoji: '🏆' },
         { id: 'tier_list', label: t('guides.categories.tier_list', 'Tier List'), emoji: '📊' },
-        { id: 'character_guide', label: t('guides.categories.character_guide', 'Character Guide'), emoji: '🧁E },
+        { id: 'character_guide', label: t('guides.categories.character_guide', 'Character Guide'), emoji: '🦸' },
     ];
 
     const { data, isLoading, error } = useQuery({

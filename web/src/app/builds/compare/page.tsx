@@ -129,7 +129,7 @@ export default function ComparePage() {
                 {/* Header */}
                 <div className="mb-8">
                     <Link href="/builds" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
-                        <span className="group-hover:-translate-x-1 transition-transform">ↁE/span> {t('builds.backToBuilds', 'Back to Builds')}
+                        <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('builds.backToBuilds', 'Back to Builds')}
                     </Link>
                     <h1 className="font-display text-4xl text-gold-gradient tracking-wide mb-2">
                         {t('builds.comparator', 'Build Comparator')}
@@ -231,7 +231,7 @@ export default function ComparePage() {
                                                 <span className="text-gray-400 text-sm">{STAT_LABELS[stat] || stat}</span>
                                                 <span className={`font-bold ${comparison.winner === 1 ? 'text-green-400' : 'text-white'}`}>
                                                     {comparison.val1}
-                                                    {comparison.winner === 1 && <span className="text-green-400 ml-1">▲</span>}
+                                                    {comparison.winner === 1 && <span className="text-green-400 ml-1">笆ｲ</span>}
                                                 </span>
                                             </div>
                                         );
@@ -240,7 +240,7 @@ export default function ComparePage() {
 
                                 {/* Rating & Stats */}
                                 <div className="mt-4 pt-4 border-t border-e7-gold/20 flex justify-between text-sm">
-                                    <span className="text-gray-400">👁 {build1.views} • ❤�E�E{build1.likes}</span>
+                                    <span className="text-gray-400">�早 {build1.views} 窶｢ 笶､・・{build1.likes}</span>
                                     <StarRating rating={build1.avg_rating || 0} totalRatings={build1.rating_count || 0} size="sm" />
                                 </div>
 
@@ -289,7 +289,7 @@ export default function ComparePage() {
                                                 <span className="text-gray-400 text-sm">{STAT_LABELS[stat] || stat}</span>
                                                 <span className={`font-bold ${comparison.winner === 2 ? 'text-green-400' : 'text-white'}`}>
                                                     {comparison.val2}
-                                                    {comparison.winner === 2 && <span className="text-green-400 ml-1">▲</span>}
+                                                    {comparison.winner === 2 && <span className="text-green-400 ml-1">笆ｲ</span>}
                                                 </span>
                                             </div>
                                         );
@@ -298,7 +298,7 @@ export default function ComparePage() {
 
                                 {/* Rating & Stats */}
                                 <div className="mt-4 pt-4 border-t border-e7-gold/20 flex justify-between text-sm">
-                                    <span className="text-gray-400">👁 {build2.views} • ❤�E�E{build2.likes}</span>
+                                    <span className="text-gray-400">�早 {build2.views} 窶｢ 笶､・・{build2.likes}</span>
                                     <StarRating rating={build2.avg_rating || 0} totalRatings={build2.rating_count || 0} size="sm" />
                                 </div>
 

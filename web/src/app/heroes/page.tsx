@@ -187,7 +187,7 @@ export default function HeroesPage() {
                                     } ${rarity === 5 ? 'text-e7-gold' : rarity === 4 ? 'text-purple-400' : 'text-blue-400'}`}
                                 title={`${rarity} ${t('common.stars', 'Stars')}`}
                             >
-                                {'☁E.repeat(rarity)}
+                                {'★'.repeat(rarity)}
                             </button>
                         ))}
                     </div>
@@ -276,7 +276,7 @@ export default function HeroesPage() {
                                                     hero.rarity === 4 ? 'text-purple-400' :
                                                         'text-blue-400'
                                                     }`}>
-                                                    {'☁E.repeat(hero.rarity)}
+                                                    {'★'.repeat(hero.rarity)}
                                                 </span>
                                             </div>
                                         </div>

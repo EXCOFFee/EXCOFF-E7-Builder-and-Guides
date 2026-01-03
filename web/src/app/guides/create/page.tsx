@@ -16,10 +16,10 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 const CATEGORIES = [
     { id: 'general', label: 'General', emoji: '📖', key: 'general' },
     { id: 'pve', label: 'PVE', emoji: '🐉', key: 'pve' },
-    { id: 'rta', label: 'RTA', emoji: '⚔︁E, key: 'rta' },
+    { id: 'rta', label: 'RTA', emoji: '⚔️', key: 'rta' },
     { id: 'guild_war', label: 'Guild War', emoji: '🏰', key: 'guild_war' },
     { id: 'arena', label: 'Arena', emoji: '🏆', key: 'arena' },
-    { id: 'heroes', label: 'Heroes', emoji: '🧁E, key: 'heroes' },
+    { id: 'heroes', label: 'Heroes', emoji: '🦸', key: 'heroes' },
     { id: 'tier_list', label: 'Tier List', emoji: '📊', key: 'tier_list' },
     { id: 'character_guide', label: 'Character Guide', emoji: '📋', key: 'character_guide' },
 ];
@@ -200,7 +200,7 @@ export default function CreateGuidePage() {
                 {/* Header */}
                 <div className="mb-8">
                     <Link href="/guides" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
-                        <span className="group-hover:-translate-x-1 transition-transform">ↁE/span> {t('guides.backToGuides', 'Back to Guides')}
+                        <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('guides.backToGuides', 'Back to Guides')}
                     </Link>
                     <h1 className="font-display text-4xl text-gold-gradient tracking-wide mb-2">{t('guidesCreate.createGuide', 'Create New Guide')}</h1>
                     <p className="text-slate-400">

@@ -30,19 +30,19 @@ const SERVER_LABELS: Record<string, string> = {
 
 const SERVER_FLAGS: Record<string, string> = {
     global: '🌍',
-    europe: '�E�E',
+    europe: '🇪🇺',
     asia: '🌏',
-    japan: '�E�E',
-    korea: '�E�E',
-    china: '�E�E',
+    japan: '🇯🇵',
+    korea: '🇰🇷',
+    china: '🇨🇳',
 };
 
 const LANGUAGE_LABELS: Record<string, string> = {
     en: 'English',
     es: 'Español',
-    ko: '���국�E�',
-    ja: '日本誁E,
-    zh: '中斁E,
+    ko: '한국어',
+    ja: '日本語',
+    zh: '中文',
     pt: 'Português',
 };
 
@@ -176,7 +176,7 @@ export default function CreateGuildPostPage() {
                 {/* Header */}
                 <div className="mb-8">
                     <Link href="/guilds" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
-                        <span className="group-hover:-translate-x-1 transition-transform">ↁE/span> {t('guilds.backToList', 'Back to Guild Posts')}
+                        <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('guilds.backToList', 'Back to Guild Posts')}
                     </Link>
                     <h1 className="text-3xl font-display text-gold-gradient tracking-wide">
                         {t('guilds.createPost', 'Create Guild Post')}
@@ -349,7 +349,7 @@ export default function CreateGuildPostPage() {
                                                     onClick={() => setImageFiles(prev => prev.filter((_, i) => i !== index))}
                                                     className="absolute -top-2 -right-2 w-5 h-5 bg-red-600 text-white rounded-full text-xs flex items-center justify-center hover:bg-red-500"
                                                 >
-                                                    ✁E
+                                                    ✕
                                                 </button>
                                             </div>
                                         ))}
@@ -373,7 +373,7 @@ export default function CreateGuildPostPage() {
                                                     onClick={() => removeImageUrl(index)}
                                                     className="absolute top-1 right-1 w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center hover:bg-red-600"
                                                 >
-                                                    ÁE
+                                                    ✕
                                                 </button>
                                             </div>
                                         ))}

@@ -74,7 +74,7 @@ export default function LoginPage() {
                 href="/"
                 className="absolute top-6 left-6 text-e7-gold hover:text-e7-text-gold flex items-center gap-2 group transition-colors"
             >
-                <span className="group-hover:-translate-x-1 transition-transform">ↁE/span> Volver al inicio
+                <span className="group-hover:-translate-x-1 transition-transform">←</span> Volver al inicio
             </Link>
         </div>
     );

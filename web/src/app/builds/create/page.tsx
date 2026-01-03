@@ -249,7 +249,7 @@ export default function CreateBuildPage() {
                 {/* Header */}
                 <div className="mb-8">
                     <Link href="/heroes" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
-                        <span className="group-hover:-translate-x-1 transition-transform">ↁE/span> {t('builds.backToHeroes', 'Back to Heroes')}
+                        <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('builds.backToHeroes', 'Back to Heroes')}
                     </Link>
                     <h1 className="font-display text-4xl text-gold-gradient tracking-wide mb-2">{t('builds.createNewBuild', 'Create New Build')}</h1>
                     <p className="text-slate-400">
