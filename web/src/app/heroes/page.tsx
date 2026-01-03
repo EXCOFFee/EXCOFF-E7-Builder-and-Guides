@@ -109,21 +109,21 @@ export default function HeroesPage() {
     const heroes: Hero[] = data?.data || [];
 
     return (
-        <div className="min-h-screen bg-void-glow py-8 px-4">
+        <div className="min-h-screen bg-e7-void py-8 px-4">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-10 text-center">
-                    <h1 className="font-display text-4xl md:text-5xl text-gold-gradient mb-3 tracking-wide">{t('heroes.title', 'Hero Database')}</h1>
-                    <p className="text-slate-400 max-w-2xl mx-auto">{t('heroes.description', 'Explore all Epic Seven heroes, their stats and builds')}</p>
+                    <h1 className="text-3xl md:text-4xl font-semibold text-e7-gold mb-3 tracking-tight">{t('heroes.title', 'Hero Database')}</h1>
+                    <p className="text-neutral-500 max-w-xl mx-auto">{t('heroes.description', 'Explore all Epic Seven heroes, their stats and builds')}</p>
                 </div>
 
                 {/* Filters */}
-                <div className="mb-8 space-y-4 glass-panel p-4 rounded-xl">
+                <div className="mb-8 space-y-4 bg-e7-panel p-4 rounded-lg border border-white/6">
                     <Input
                         placeholder={t('heroes.searchPlaceholder', 'Search heroes...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-md bg-e7-void/50 border-e7-gold/20 text-slate-200 placeholder:text-slate-500 focus:border-e7-gold focus:ring-e7-gold/30 transition-all"
+                        className="max-w-md bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-500 focus:border-e7-gold"
                     />
 
                     {/* Element Filter */}
@@ -133,9 +133,9 @@ export default function HeroesPage() {
                             <button
                                 key={el}
                                 onClick={() => setElementFilter(elementFilter === el ? '' : el)}
-                                className={`relative w-10 h-10 rounded-lg transition-all ${elementFilter === el
-                                    ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
-                                    : 'hover:bg-e7-panel hover:scale-105 opacity-70 hover:opacity-100'
+                                className={`relative w-9 h-9 rounded-md transition-colors ${elementFilter === el
+                                    ? 'bg-e7-gold/20 ring-1 ring-e7-gold'
+                                    : 'hover:bg-white/6 opacity-70 hover:opacity-100'
                                     }`}
                                 title={ELEMENT_NAMES[el]}
                             >
@@ -157,9 +157,9 @@ export default function HeroesPage() {
                             <button
                                 key={cls}
                                 onClick={() => setClassFilter(classFilter === cls ? '' : cls)}
-                                className={`relative w-10 h-10 rounded-lg transition-all ${classFilter === cls
-                                    ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
-                                    : 'hover:bg-e7-panel hover:scale-105 opacity-70 hover:opacity-100'
+                                className={`relative w-9 h-9 rounded-md transition-colors ${classFilter === cls
+                                    ? 'bg-e7-gold/20 ring-1 ring-e7-gold'
+                                    : 'hover:bg-white/6 opacity-70 hover:opacity-100'
                                     }`}
                                 title={CLASS_NAMES[cls]}
                             >
@@ -181,9 +181,9 @@ export default function HeroesPage() {
                             <button
                                 key={rarity}
                                 onClick={() => setRarityFilter(rarityFilter === rarity ? null : rarity)}
-                                className={`px-3 py-2 rounded-lg transition-all font-semibold text-sm ${rarityFilter === rarity
-                                    ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
-                                    : 'hover:bg-e7-panel hover:scale-105 opacity-70 hover:opacity-100 bg-e7-void/50'
+                                className={`px-3 py-1.5 rounded-md transition-colors text-sm ${rarityFilter === rarity
+                                    ? 'bg-e7-gold/20 ring-1 ring-e7-gold'
+                                    : 'hover:bg-white/6 opacity-70 hover:opacity-100 bg-white/4'
                                     } ${rarity === 5 ? 'text-e7-gold' : rarity === 4 ? 'text-purple-400' : 'text-blue-400'}`}
                                 title={`${rarity} ${t('common.stars', 'Stars')}`}
                             >
@@ -220,22 +220,16 @@ export default function HeroesPage() {
                         ) : (
                             heroes.map((hero) => (
                                 <Link key={hero.id} href={`/heroes/${hero.slug}`}>
-                                    <div className="card-fantasy bg-gradient-to-b from-e7-panel to-e7-void rounded-xl overflow-hidden cursor-pointer h-full group relative">
-                                        {/* Rarity glow overlay */}
-                                        <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none ${hero.rarity === 5 ? 'bg-gradient-to-t from-e7-gold/20 via-transparent to-transparent' :
-                                            hero.rarity === 4 ? 'bg-gradient-to-t from-purple-500/20 via-transparent to-transparent' :
-                                                'bg-gradient-to-t from-blue-500/10 via-transparent to-transparent'
-                                            }`} />
-
+                                    <div className="bg-e7-panel rounded-lg overflow-hidden border border-white/6 hover:border-e7-gold/30 transition-colors h-full group">
                                         {/* Hero Image Container */}
-                                        <div className="aspect-square bg-gradient-to-br from-e7-void to-e7-dark relative overflow-hidden">
+                                        <div className="aspect-square bg-e7-dark relative overflow-hidden">
                                             {hero.image_url ? (
                                                 <Image
                                                     src={hero.image_url}
                                                     alt={hero.name}
                                                     width={256}
                                                     height={256}
-                                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                                    className="w-full h-full object-cover"
                                                     style={{
                                                         objectPosition: HERO_POSITION_OVERRIDE[hero.slug] || 'center',
                                                         imageRendering: 'auto',

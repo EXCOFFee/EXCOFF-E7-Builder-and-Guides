@@ -82,33 +82,33 @@ export default function GuidesPage() {
     });
 
     return (
-        <div className="min-h-screen bg-void-glow py-8 px-4">
+        <div className="min-h-screen bg-e7-void py-8 px-4">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
                     <div className="text-center md:text-left">
-                        <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">{t('guides.title', 'Game Guides')}</h1>
-                        <p className="text-slate-400">{t('guides.description', 'Learn strategies and tips from the community')}</p>
+                        <h1 className="text-3xl md:text-4xl font-semibold text-e7-gold tracking-tight mb-2">{t('guides.title', 'Game Guides')}</h1>
+                        <p className="text-neutral-500">{t('guides.description', 'Learn strategies and tips from the community')}</p>
                     </div>
                     <Link href="/guides/create">
-                        <Button className="btn-gold px-6 py-2.5 rounded-lg shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 transition-all">
+                        <Button className="btn-gold px-4 py-2 rounded-md">
                             + {t('guides.createGuide', 'Create Guide')}
                         </Button>
                     </Link>
                 </div>
 
                 {/* Category Tabs */}
-                <div className="mb-6 flex flex-wrap gap-2 glass-panel p-3 rounded-xl">
+                <div className="mb-6 flex flex-wrap gap-2 bg-e7-panel p-3 rounded-lg border border-white/6">
                     {CATEGORIES.map((cat) => (
                         <button
                             key={cat.id}
                             onClick={() => setCategoryFilter(cat.id)}
-                            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${categoryFilter === cat.id
-                                ? 'bg-e7-gold/20 text-e7-gold border border-e7-gold shadow-lg shadow-e7-gold/10'
-                                : 'bg-e7-void/50 text-slate-400 border border-white/10 hover:border-e7-gold/40 hover:text-e7-gold'
+                            className={`px-3 py-1.5 rounded-md text-sm transition-colors ${categoryFilter === cat.id
+                                ? 'bg-e7-gold/20 text-e7-gold ring-1 ring-e7-gold'
+                                : 'bg-white/4 text-neutral-400 hover:text-neutral-200 hover:bg-white/6'
                                 }`}
                         >
-                            <span className="mr-2">{cat.emoji}</span>
+                            <span className="mr-1.5">{cat.emoji}</span>
                             {cat.label}
                         </button>
                     ))}
@@ -120,14 +120,14 @@ export default function GuidesPage() {
                         placeholder={t('guides.searchPlaceholder', 'Search guides...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-md bg-e7-void/50 border-e7-gold/20 text-slate-200 placeholder:text-slate-500 focus:border-e7-gold focus:ring-e7-gold/30 transition-all"
+                        className="max-w-md bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-500 focus:border-e7-gold"
                     />
                     <div className="flex items-center gap-2">
-                        <span className="text-sm text-slate-400">{t('common.sortBy', 'Sort by')}:</span>
+                        <span className="text-sm text-neutral-500">{t('common.sortBy', 'Sort by')}:</span>
                         <select
                             value={sortBy}
                             onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-                            className="bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg pl-3 pr-10 py-2 text-sm focus:border-e7-gold focus:ring-e7-gold/30 cursor-pointer"
+                            className="bg-white/4 border border-white/8 text-neutral-200 rounded-md pl-3 pr-10 py-1.5 text-sm focus:border-e7-gold cursor-pointer"
                         >
                             <option value="newest">{t('common.newest', 'Newest')}</option>
                             <option value="views_desc">👁 {t('common.viewsHigh', 'Views (High)')}</option>
