@@ -16,7 +16,7 @@ export default function LoginPage() {
     };
 
     return (
-        <div className="min-h-screen bg-void-glow flex items-center justify-center px-4">
+        <div className="min-h-screen bg-e7-void flex items-center justify-center px-4">
             <Card className="w-full max-w-md glass-panel border-e7-gold/20 rounded-2xl overflow-hidden">
                 <CardHeader className="text-center pt-8">
                     <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-e7-gold via-amber-500 to-purple-600 flex items-center justify-center shadow-lg shadow-e7-gold/30 animate-border-glow">
@@ -74,7 +74,7 @@ export default function LoginPage() {
                 href="/"
                 className="absolute top-6 left-6 text-e7-gold hover:text-e7-text-gold flex items-center gap-2 group transition-colors"
             >
-                <span className="group-hover:-translate-x-1 transition-transform">←</span> Volver al inicio
+                <span className="group-hover:-translate-x-1 transition-transform">ↁE/span> Volver al inicio
             </Link>
         </div>
     );

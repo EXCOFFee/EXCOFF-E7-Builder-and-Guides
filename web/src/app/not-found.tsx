@@ -34,7 +34,7 @@ export default function NotFound() {
                         href="/heroes"
                         className="px-6 py-3 bg-slate-700/50 hover:bg-slate-600/50 text-slate-200 rounded-lg transition-all duration-300 font-medium border border-slate-600/30"
                     >
-                        ⚔️ Ver héroes
+                        ⚔︁EVer héroes
                     </Link>
                 </div>
             </div>

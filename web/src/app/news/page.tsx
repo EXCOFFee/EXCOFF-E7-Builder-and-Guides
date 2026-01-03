@@ -46,21 +46,21 @@ export default function NewsPage() {
     const news = newsData?.data || [];
 
     return (
-        <div className="min-h-screen bg-void-glow py-8 px-4">
+        <div className="min-h-screen bg-e7-void py-8 px-4">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="mb-8 text-center">
-                    <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-4">
+                    <h1 className="text-3xl md:text-4xl font-semibold text-e7-gold tracking-tight mb-4">
                         {t('news.title', 'Epic Seven News')}
                     </h1>
-                    <p className="text-slate-400 max-w-2xl mx-auto">
+                    <p className="text-neutral-500 max-w-xl mx-auto">
                         {t('news.subtitle', 'Latest updates, announcements and videos from the official Epic Seven channels')}
                     </p>
 
                     {/* Disclaimer */}
-                    <div className="mt-4 p-3 bg-amber-900/20 border border-amber-500/30 rounded-lg inline-block">
-                        <p className="text-amber-300 text-sm">
-                            ⚠️ {t('news.disclaimer', 'All content is sourced from official Smilegate/Super Creative channels. We are not affiliated with the developers.')}
+                    <div className="mt-4 p-3 bg-amber-900/10 border border-amber-500/20 rounded-md inline-block">
+                        <p className="text-amber-400/80 text-sm">
+                            ⚠�E�E{t('news.disclaimer', 'All content is sourced from official Smilegate/Super Creative channels. We are not affiliated with the developers.')}
                         </p>
                     </div>
                 </div>
@@ -71,9 +71,9 @@ export default function NewsPage() {
                         <button
                             key={source}
                             onClick={() => { setSourceFilter(source); setPage(1); }}
-                            className={`px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-2 ${sourceFilter === source
-                                    ? 'bg-e7-gold/20 text-e7-gold border border-e7-gold'
-                                    : 'bg-e7-void text-gray-400 border border-e7-gold/20 hover:border-e7-gold/50'
+                            className={`px-3 py-1.5 rounded-md text-sm transition-colors flex items-center gap-2 ${sourceFilter === source
+                                ? 'bg-e7-gold/20 text-e7-gold ring-1 ring-e7-gold'
+                                : 'bg-white/4 text-neutral-400 hover:bg-white/6'
                                 }`}
                         >
                             {source === 'youtube' && <span className="text-red-500">▶</span>}
@@ -138,8 +138,8 @@ export default function NewsPage() {
 
                                             {/* Source Badge */}
                                             <div className={`absolute top-2 right-2 px-2 py-1 rounded text-xs font-semibold ${item.source === 'youtube'
-                                                    ? 'bg-red-600 text-white'
-                                                    : 'bg-blue-600 text-white'
+                                                ? 'bg-red-600 text-white'
+                                                : 'bg-blue-600 text-white'
                                                 }`}>
                                                 {item.source === 'youtube' ? '▶ YouTube' : '📰 Stove'}
                                             </div>
@@ -162,7 +162,7 @@ export default function NewsPage() {
                                                     {new Date(item.published_at).toLocaleDateString()}
                                                 </span>
                                                 <span className="text-e7-gold group-hover:translate-x-1 transition-transform">
-                                                    {t('news.readMore', 'Read more →')}
+                                                    {t('news.readMore', 'Read more ↁE)}
                                                 </span>
                                             </div>
                                         </div>
@@ -179,7 +179,7 @@ export default function NewsPage() {
                                     disabled={page === 1}
                                     className="px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/20 text-slate-400 hover:border-e7-gold/50 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    ← {t('common.previous', 'Previous')}
+                                    ↁE{t('common.previous', 'Previous')}
                                 </button>
                                 <span className="px-4 py-2 text-slate-400">
                                     {page} / {newsData.last_page}
@@ -189,7 +189,7 @@ export default function NewsPage() {
                                     disabled={page === newsData.last_page}
                                     className="px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/20 text-slate-400 hover:border-e7-gold/50 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    {t('common.next', 'Next')} →
+                                    {t('common.next', 'Next')} ↁE
                                 </button>
                             </div>
                         )}
@@ -202,7 +202,7 @@ export default function NewsPage() {
                         href="/"
                         className="text-e7-gold hover:text-e7-text-gold text-sm inline-flex items-center gap-2 group transition-colors"
                     >
-                        <span className="group-hover:-translate-x-1 transition-transform">←</span>
+                        <span className="group-hover:-translate-x-1 transition-transform">ↁE/span>
                         {t('common.backToHome', 'Back to Home')}
                     </Link>
                 </div>

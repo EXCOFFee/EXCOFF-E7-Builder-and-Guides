@@ -38,9 +38,9 @@ export default function AuthCallbackPage() {
 
     if (error) {
         return (
-            <div className="min-h-screen bg-void-glow flex items-center justify-center">
+            <div className="min-h-screen bg-e7-void flex items-center justify-center">
                 <div className="text-center glass-panel p-8 rounded-2xl border-red-500/30">
-                    <p className="text-red-400 text-xl mb-4">❌ {error}</p>
+                    <p className="text-red-400 text-xl mb-4">❁E{error}</p>
                     <p className="text-slate-500">Redirigiendo...</p>
                 </div>
             </div>
@@ -48,7 +48,7 @@ export default function AuthCallbackPage() {
     }
 
     return (
-        <div className="min-h-screen bg-void-glow flex items-center justify-center">
+        <div className="min-h-screen bg-e7-void flex items-center justify-center">
             <LoadingSpinner size="lg" text="Completando inicio de sesión..." />
         </div>
     );

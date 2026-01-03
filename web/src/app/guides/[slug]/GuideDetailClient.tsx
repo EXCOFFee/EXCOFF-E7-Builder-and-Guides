@@ -271,7 +271,7 @@ export function GuideDetailClient() {
 
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-void-glow flex items-center justify-center">
+            <div className="min-h-screen bg-e7-void flex items-center justify-center">
                 <div className="text-slate-400">{t('common.loading', 'Loading...')}</div>
             </div>
         );
@@ -279,7 +279,7 @@ export function GuideDetailClient() {
 
     if (error || !guide) {
         return (
-            <div className="min-h-screen bg-void-glow flex items-center justify-center">
+            <div className="min-h-screen bg-e7-void flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-2xl font-bold text-red-500 mb-4">Guide not found</h1>
                     <Link href="/guides">
@@ -291,7 +291,7 @@ export function GuideDetailClient() {
     }
 
     return (
-        <div className="min-h-screen bg-void-glow py-8 px-4">
+        <div className="min-h-screen bg-e7-void py-8 px-4">
             <div className="max-w-4xl mx-auto">
                 {/* Back link */}
                 <Link href="/guides" className="text-e7-gold hover:text-e7-text-gold text-sm mb-4 inline-flex items-center gap-2 group transition-colors">

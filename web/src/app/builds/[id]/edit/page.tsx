@@ -249,7 +249,7 @@ export default function EditBuildPage() {
 
     if (isLoading) {
         return (
-            <div className="min-h-screen bg-void-glow py-8 px-4 flex items-center justify-center">
+            <div className="min-h-screen bg-e7-void py-8 px-4 flex items-center justify-center">
                 <div className="text-e7-gold">{t('common.loading', 'Loading...')}</div>
             </div>
         );
@@ -258,7 +258,7 @@ export default function EditBuildPage() {
     const build = buildData as Build | undefined;
 
     return (
-        <div className="min-h-screen bg-void-glow py-8 px-4">
+        <div className="min-h-screen bg-e7-void py-8 px-4">
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">

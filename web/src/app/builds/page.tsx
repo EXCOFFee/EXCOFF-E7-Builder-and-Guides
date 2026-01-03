@@ -153,7 +153,7 @@ export default function BuildsPage() {
                     <div className="flex gap-3">
                         <Link href="/builds/compare">
                             <Button variant="outline" className="border-white/10 text-e7-gold hover:bg-white/4 px-4 py-2 rounded-md">
-                                ⚖️ {t('builds.compare', 'Compare')}
+                                ⚖︁E{t('builds.compare', 'Compare')}
                             </Button>
                         </Link>
                         <Link href="/builds/create">
@@ -234,7 +234,7 @@ export default function BuildsPage() {
                                     } ${rarity === 5 ? 'text-e7-gold' : rarity === 4 ? 'text-purple-400' : 'text-blue-400'}`}
                                 title={`${rarity} ${t('common.stars', 'Stars')}`}
                             >
-                                {'★'.repeat(rarity)}
+                                {'☁E.repeat(rarity)}
                             </button>
                         ))}
                     </div>
@@ -258,7 +258,7 @@ export default function BuildsPage() {
                             onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
                             className={`ml-4 px-3 py-2 rounded-lg text-sm transition-all ${showAdvancedFilters ? 'bg-e7-gold/20 text-e7-gold' : 'bg-e7-void/50 text-slate-400 hover:text-slate-200'}`}
                         >
-                            ⚙️ {t('builds.advancedFilters', 'Advanced Filters')}
+                            ⚙︁E{t('builds.advancedFilters', 'Advanced Filters')}
                         </button>
                     </div>
 
@@ -451,7 +451,7 @@ export default function BuildsPage() {
                                             </div>
                                             <div className="flex items-center gap-3 text-xs text-slate-500">
                                                 <span className="flex items-center gap-1"><Image src="/images/ras-like.gif" alt="likes" width={16} height={16} unoptimized /> {build.likes}</span>
-                                                <span>👁️ {build.views}</span>
+                                                <span>👁�E�E{build.views}</span>
                                             </div>
                                         </div>
                                     </div>

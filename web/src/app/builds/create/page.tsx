@@ -244,12 +244,12 @@ export default function CreateBuildPage() {
     }
 
     return (
-        <div className="min-h-screen bg-void-glow py-8 px-4">
+        <div className="min-h-screen bg-e7-void py-8 px-4">
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">
                     <Link href="/heroes" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
-                        <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('builds.backToHeroes', 'Back to Heroes')}
+                        <span className="group-hover:-translate-x-1 transition-transform">ↁE/span> {t('builds.backToHeroes', 'Back to Heroes')}
                     </Link>
                     <h1 className="font-display text-4xl text-gold-gradient tracking-wide mb-2">{t('builds.createNewBuild', 'Create New Build')}</h1>
                     <p className="text-slate-400">
@@ -611,7 +611,7 @@ export default function CreateBuildPage() {
                                                     }}
                                                     className="absolute top-1 right-1 w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center hover:bg-red-600"
                                                 >
-                                                    ×
+                                                    ÁE
                                                 </button>
                                             </div>
                                         ))}
@@ -684,7 +684,7 @@ export default function CreateBuildPage() {
                                                         onClick={() => setSynergyHeroes(synergyHeroes.filter(id => id !== hId))}
                                                         className="text-green-400 hover:text-red-400 ml-1"
                                                     >
-                                                        ×
+                                                        ÁE
                                                     </button>
                                                 </div>
                                             );
@@ -758,7 +758,7 @@ export default function CreateBuildPage() {
                                                         onClick={() => setCounterHeroes(counterHeroes.filter(id => id !== hId))}
                                                         className="text-red-400 hover:text-red-600 ml-1"
                                                     >
-                                                        ×
+                                                        ÁE
                                                     </button>
                                                 </div>
                                             );

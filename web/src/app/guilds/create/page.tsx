@@ -30,19 +30,19 @@ const SERVER_LABELS: Record<string, string> = {
 
 const SERVER_FLAGS: Record<string, string> = {
     global: '🌍',
-    europe: '🇪🇺',
+    europe: '�E�E',
     asia: '🌏',
-    japan: '🇯🇵',
-    korea: '🇰🇷',
-    china: '🇨🇳',
+    japan: '�E�E',
+    korea: '�E�E',
+    china: '�E�E',
 };
 
 const LANGUAGE_LABELS: Record<string, string> = {
     en: 'English',
     es: 'Español',
-    ko: '한국어',
-    ja: '日本語',
-    zh: '中文',
+    ko: '���국�E�',
+    ja: '日本誁E,
+    zh: '中斁E,
     pt: 'Português',
 };
 
@@ -171,12 +171,12 @@ export default function CreateGuildPostPage() {
     }
 
     return (
-        <div className="min-h-screen bg-void-glow py-8 px-4">
+        <div className="min-h-screen bg-e7-void py-8 px-4">
             <div className="max-w-4xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">
                     <Link href="/guilds" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
-                        <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('guilds.backToList', 'Back to Guild Posts')}
+                        <span className="group-hover:-translate-x-1 transition-transform">ↁE/span> {t('guilds.backToList', 'Back to Guild Posts')}
                     </Link>
                     <h1 className="text-3xl font-display text-gold-gradient tracking-wide">
                         {t('guilds.createPost', 'Create Guild Post')}
@@ -349,7 +349,7 @@ export default function CreateGuildPostPage() {
                                                     onClick={() => setImageFiles(prev => prev.filter((_, i) => i !== index))}
                                                     className="absolute -top-2 -right-2 w-5 h-5 bg-red-600 text-white rounded-full text-xs flex items-center justify-center hover:bg-red-500"
                                                 >
-                                                    ✕
+                                                    ✁E
                                                 </button>
                                             </div>
                                         ))}
@@ -373,7 +373,7 @@ export default function CreateGuildPostPage() {
                                                     onClick={() => removeImageUrl(index)}
                                                     className="absolute top-1 right-1 w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center hover:bg-red-600"
                                                 >
-                                                    ×
+                                                    ÁE
                                                 </button>
                                             </div>
                                         ))}

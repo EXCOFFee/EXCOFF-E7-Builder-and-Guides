@@ -245,12 +245,12 @@ export function HeroDetailClient() {
     const hasUsageStats = hero.guides_count > 0;
 
     return (
-        <div className="min-h-screen bg-void-glow py-8 px-4">
+        <div className="min-h-screen bg-e7-void py-8 px-4">
             <div className="max-w-6xl mx-auto">
                 {/* Breadcrumb */}
                 <div className="mb-6">
-                    <Link href="/heroes" className="text-e7-gold hover:text-e7-text-gold text-sm transition-colors inline-flex items-center gap-2 group">
-                        <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('heroes.backToHeroes', 'Back to Heroes')}
+                    <Link href="/heroes" className="text-e7-gold hover:text-e7-text-gold text-sm transition-colors inline-flex items-center gap-2">
+                        <span>←</span> {t('heroes.backToHeroes', 'Back to Heroes')}
                     </Link>
                 </div>
 
@@ -259,9 +259,7 @@ export function HeroDetailClient() {
                     {/* Portrait */}
                     <div className="w-full max-w-xs mx-auto lg:mx-0 lg:w-80 flex-shrink-0">
                         <div className="relative">
-                            {/* Animated glow border */}
-                            <div className="absolute -inset-1 bg-gradient-to-r from-e7-gold via-e7-purple to-e7-gold rounded-2xl opacity-50 blur-sm animate-border-glow" />
-                            <div className="relative aspect-square bg-gradient-to-br from-e7-panel to-e7-dark rounded-xl overflow-hidden border border-e7-gold/40 shadow-2xl shadow-e7-gold/20">
+                            <div className="aspect-square bg-e7-panel rounded-lg overflow-hidden border border-e7-gold/30">
                                 {hero.image_url ? (
                                     <Image
                                         src={hero.image_url}
@@ -280,7 +278,7 @@ export function HeroDetailClient() {
                         </div>
                         {/* Rarity Stars */}
                         <div className="mt-4 text-center">
-                            <span className="text-2xl tracking-widest text-e7-gold drop-shadow-[0_0_10px_rgba(200,170,110,0.5)]">
+                            <span className="text-xl tracking-widest text-e7-gold">
                                 {'★'.repeat(hero.rarity)}
                             </span>
                         </div>

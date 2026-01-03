@@ -116,14 +116,14 @@ export default function AdminReportsPage() {
 
     if (!isAdmin) {
         return (
-            <div className="min-h-screen bg-void-glow flex items-center justify-center">
+            <div className="min-h-screen bg-e7-void flex items-center justify-center">
                 <div className="text-e7-gold">Verificando permisos...</div>
             </div>
         );
     }
 
     return (
-        <div className="min-h-screen bg-void-glow py-8 px-4">
+        <div className="min-h-screen bg-e7-void py-8 px-4">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">

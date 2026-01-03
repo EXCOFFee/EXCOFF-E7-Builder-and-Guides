@@ -128,7 +128,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${cinzel.variable} font-sans antialiased bg-void-glow text-slate-200 min-h-screen`}
+        className={`${inter.variable} ${cinzel.variable} font-sans antialiased bg-e7-void text-slate-200 min-h-screen`}
         suppressHydrationWarning
       >
         <Providers>

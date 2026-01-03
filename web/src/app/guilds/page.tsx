@@ -15,9 +15,9 @@ const SERVERS = ['global', 'europe', 'asia', 'japan', 'korea', 'china'];
 const LANGUAGES = ['en', 'es', 'ko', 'ja', 'zh', 'pt'];
 
 const TAGS = [
-    { id: 'casual', emoji: 'ğŸ˜' },
+    { id: 'casual', emoji: 'ğŸE' },
     { id: 'chill', emoji: 'ğŸŒ´' },
-    { id: 'semi_competitive', emoji: 'âš”ï¸' },
+    { id: 'semi_competitive', emoji: 'âš”ï¸E },
     { id: 'competitive_all', emoji: 'ğŸ†' },
     { id: 'competitive_gw', emoji: 'ğŸ°' },
     { id: 'competitive_rta', emoji: 'ğŸ®' },
@@ -32,28 +32,28 @@ const TAGS = [
 const LANGUAGE_NAMES: Record<string, string> = {
     en: 'English',
     es: 'EspaÃ±ol',
-    ko: 'í•œêµ­ì–´',
-    ja: 'æ—¥æœ¬èª',
-    zh: 'ä¸­æ–‡',
+    ko: 'ú±œêµ­E´',
+    ja: 'æ—¥æœ¬èªE,
+    zh: 'ä¸­æ–E,
     pt: 'PortuguÃªs',
 };
 
 const LANGUAGE_FLAGS: Record<string, string> = {
-    en: 'ğŸ‡ºğŸ‡¸',
-    es: 'ğŸ‡ªğŸ‡¸',
-    ko: 'ğŸ‡°ğŸ‡·',
-    ja: 'ğŸ‡¯ğŸ‡µ',
-    zh: 'ğŸ‡¨ğŸ‡³',
-    pt: 'ğŸ‡§ğŸ‡·',
+    en: 'ğŸEğŸE',
+    es: 'ğŸEğŸE',
+    ko: 'ğŸEğŸE',
+    ja: 'ğŸEğŸE',
+    zh: 'ğŸEğŸE',
+    pt: 'ğŸEğŸE',
 };
 
 const SERVER_FLAGS: Record<string, string> = {
     global: 'ğŸŒ',
-    europe: 'ğŸ‡ªğŸ‡º',
+    europe: 'ğŸEğŸE',
     asia: 'ğŸŒ',
-    japan: 'ğŸ‡¯ğŸ‡µ',
-    korea: 'ğŸ‡°ğŸ‡·',
-    china: 'ğŸ‡¨ğŸ‡³',
+    japan: 'ğŸEğŸE',
+    korea: 'ğŸEğŸE',
+    china: 'ğŸEğŸE',
 };
 
 interface GuildPost {
@@ -106,38 +106,39 @@ export default function GuildsPage() {
     const posts: GuildPost[] = data?.data || [];
 
     return (
-        <div className="min-h-screen bg-void-glow py-8 px-4">
+        <div className="min-h-screen bg-e7-void py-8 px-4">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
                     <div className="text-center md:text-left">
-                        <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">
+                        <h1 className="text-3xl md:text-4xl font-semibold text-e7-gold tracking-tight mb-2">
                             {t('guilds.title', 'Guild Recruitment')}
                         </h1>
-                        <p className="text-slate-400">
+                        <p className="text-neutral-500">
                             {t('guilds.subtitle', 'Find your perfect guild or recruit new members')}
                         </p>
                     </div>
                     <Link href="/guilds/create">
-                        <Button className="btn-gold px-6 py-2.5 rounded-lg shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 transition-all">
+                        <Button className="btn-gold px-4 py-2 rounded-md">
                             + {t('guilds.createPost', 'Create Post')}
                         </Button>
                     </Link>
                 </div>
 
                 {/* Filters */}
-                <div className="flex flex-col gap-4 mb-6 glass-panel p-4 rounded-xl">
+                <div className="flex flex-col gap-4 mb-6 bg-e7-panel p-4 rounded-lg border border-white/6">
                     <Input
                         placeholder={t('guilds.searchPlaceholder', 'Search guilds...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-md bg-e7-void/50 border-e7-gold/20 text-slate-200 placeholder:text-slate-500 focus:border-e7-gold focus:ring-e7-gold/30 transition-all"
+                        className="max-w-md bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-500 focus:border-e7-gold"
                     />
                     <div className="flex gap-2 flex-wrap">
                         <Button
                             variant={selectedServer === null ? 'default' : 'outline'}
                             onClick={() => setSelectedServer(null)}
-                            className={selectedServer === null ? 'bg-e7-gold text-e7-void font-semibold' : 'border-e7-gold/30 text-slate-400 hover:text-e7-gold hover:border-e7-gold/50'}
+                            className={selectedServer === null ? 'bg-e7-gold text-e7-void' : 'border-white/10 text-neutral-400 hover:bg-white/6'}
+                            size="sm"
                         >
                             {t('common.all', 'All')}
                         </Button>
@@ -146,18 +147,18 @@ export default function GuildsPage() {
                                 key={server}
                                 variant={selectedServer === server ? 'default' : 'outline'}
                                 onClick={() => setSelectedServer(server)}
-                                className={selectedServer === server ? 'bg-e7-gold text-e7-void font-semibold' : 'border-e7-gold/30 text-slate-400 hover:text-e7-gold hover:border-e7-gold/50'}
+                                className={selectedServer === server ? 'bg-e7-gold text-e7-void' : 'border-white/10 text-neutral-400 hover:bg-white/6'}
+                                size="sm"
                             >
                                 {SERVER_FLAGS[server]} {t(`guilds.servers.${server}`, server.charAt(0).toUpperCase() + server.slice(1))}
                             </Button>
                         ))}
                     </div>
-                    {/* Language Filter */}
                     <div className="flex gap-2 flex-wrap">
                         <Button
                             variant={selectedLanguage === null ? 'default' : 'outline'}
                             onClick={() => setSelectedLanguage(null)}
-                            className={selectedLanguage === null ? 'bg-e7-purple text-white font-semibold' : 'border-e7-gold/30 text-slate-400 hover:text-e7-gold hover:border-e7-gold/50'}
+                            className={selectedLanguage === null ? 'bg-e7-purple text-white' : 'border-white/10 text-neutral-400 hover:bg-white/6'}
                             size="sm"
                         >
                             {t('guilds.allLanguages', 'All Languages')}
@@ -167,22 +168,21 @@ export default function GuildsPage() {
                                 key={lang}
                                 variant={selectedLanguage === lang ? 'default' : 'outline'}
                                 onClick={() => setSelectedLanguage(lang)}
-                                className={selectedLanguage === lang ? 'bg-e7-purple text-white font-semibold' : 'border-e7-gold/30 text-slate-400 hover:text-e7-gold hover:border-e7-gold/50'}
+                                className={selectedLanguage === lang ? 'bg-e7-purple text-white' : 'border-white/10 text-neutral-400 hover:bg-white/6'}
                                 size="sm"
                             >
                                 {LANGUAGE_FLAGS[lang]} {LANGUAGE_NAMES[lang]}
                             </Button>
                         ))}
                     </div>
-                    {/* Tags Filter */}
                     <div className="flex gap-2 flex-wrap items-center">
-                        <span className="text-slate-400 text-sm">{t('guilds.filterByTags', 'Tags')}:</span>
+                        <span className="text-neutral-500 text-sm">{t('guilds.filterByTags', 'Tags')}:</span>
                         {TAGS.map((tag) => (
                             <Button
                                 key={tag.id}
                                 variant={selectedTags.includes(tag.id) ? 'default' : 'outline'}
                                 onClick={() => toggleTag(tag.id)}
-                                className={selectedTags.includes(tag.id) ? 'bg-green-600 text-white' : 'border-e7-gold/30 text-slate-400 hover:text-e7-gold hover:border-e7-gold/50'}
+                                className={selectedTags.includes(tag.id) ? 'bg-green-600 text-white' : 'border-white/10 text-neutral-400 hover:bg-white/6'}
                                 size="sm"
                             >
                                 {tag.emoji} {t(`guilds.tags.${tag.id}`, tag.id.replace('_', ' '))}
@@ -214,14 +214,14 @@ export default function GuildsPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {posts.map((post) => (
                             <Link key={post.id} href={`/guilds/${post.slug}`}>
-                                <div className="card-fantasy bg-gradient-to-b from-e7-panel to-e7-void rounded-xl overflow-hidden h-full group">
+                                <div className="bg-e7-panel rounded-lg overflow-hidden border border-white/6 hover:border-e7-gold/30 transition-colors h-full group">
                                     {post.images?.[0] && (
                                         <div className="aspect-video relative overflow-hidden">
                                             <Image
                                                 src={post.images[0]}
                                                 alt={post.title}
                                                 fill
-                                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                                className="object-cover"
                                                 unoptimized
                                             />
                                         </div>
@@ -243,7 +243,7 @@ export default function GuildsPage() {
                                             {post.tags?.slice(0, 3).map((tag) => (
                                                 <span
                                                     key={tag}
-                                                    className="px-2 py-1 text-xs glass-panel text-purple-300 rounded-lg border border-purple-500/30"
+                                                    className="px-2 py-0.5 text-xs bg-purple-500/10 text-purple-300 rounded-md"
                                                 >
                                                     {t(`guilds.tags.${tag}`, tag.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()))}
                                                 </span>
@@ -256,7 +256,7 @@ export default function GuildsPage() {
                                                     alt={post.user.name}
                                                     width={20}
                                                     height={20}
-                                                    className="rounded-full ring-1 ring-e7-gold/20"
+                                                    className="rounded-full"
                                                     unoptimized
                                                 />
                                             )}

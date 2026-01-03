@@ -10,7 +10,7 @@ export default function Home() {
 
   const features = [
     {
-      icon: "🗡️",
+      icon: "🗡�E�E,
       href: "/heroes",
       title: t('home.heroWiki', 'Hero Wiki'),
       desc: t('home.heroWikiDesc', 'Explore all the heroes in the game, their information and builds created by the community.'),
@@ -28,7 +28,7 @@ export default function Home() {
       borderColor: "hover:border-blue-500/50",
     },
     {
-      icon: "⚔️",
+      icon: "⚔︁E,
       href: "/guides",
       title: t('home.gameGuides', 'Game Guides'),
       desc: t('home.gameGuidesDesc', 'Guides for PVE, RTA, Arena, Guild War and more game content.'),
@@ -48,7 +48,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-void-glow overflow-hidden">
+    <main className="min-h-screen bg-e7-void overflow-hidden">
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 px-4">
 
@@ -142,7 +142,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { value: "300+", label: t('nav.heroes', 'Heroes') },
-              { value: "∞", label: t('nav.builds', 'Builds') },
+              { value: "∁E, label: t('nav.builds', 'Builds') },
               { value: "6", label: t('home.languages', 'Languages') },
             ].map((stat, i) => (
               <div key={i} className="p-4 rounded-xl glass-panel hover:border-e7-gold/30 transition-all hover:shadow-lg hover:shadow-e7-gold/10">
