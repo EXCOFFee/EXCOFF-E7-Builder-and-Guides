@@ -184,10 +184,37 @@ class SyncNewsCommand extends Command
      */
     private function syncStove(): void
     {
-        $this->info('Fetching Stove news from official Dominiel account...');
+        $this->info('Fetching Stove news...');
 
         try {
-            // Try to get Dominiel's posts via the activity API
+            // Method 1: Try the official board API for Epic Seven Global
+            $boardApiUrl = 'https://api.onstove.com/cafe/v1/epicseven/global/articles';
+            
+            $response = Http::withHeaders([
+                'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                'Accept' => 'application/json',
+                'Accept-Language' => 'en-US,en;q=0.9',
+                'Origin' => 'https://page.onstove.com',
+                'Referer' => 'https://page.onstove.com/epicseven/global',
+            ])->get($boardApiUrl, [
+                'board_key' => 'notice', // Official notices
+                'page' => 1,
+                'size' => 20,
+            ]);
+
+            if ($response->successful()) {
+                $data = $response->json();
+                if (is_array($data) && !empty($data)) {
+                    $count = $this->processStoveBoardArticles($data);
+                    if ($count > 0) {
+                        $this->info("Synced {$count} Stove news items from board API");
+                        return;
+                    }
+                }
+            }
+
+            // Method 2: Try Dominiel's profile activities
+            $this->info('Board API failed, trying Dominiel profile...');
             $activityUrl = 'https://profile.onstove.com/api/v1/member/' . self::STOVE_DOMINIEL_ID . '/activities';
             
             $response = Http::withHeaders([
@@ -202,15 +229,18 @@ class SyncNewsCommand extends Command
 
             if ($response->successful()) {
                 $data = $response->json();
-                $count = $this->processStoveActivities($data);
                 
-                if ($count > 0) {
-                    $this->info("Synced {$count} Stove news items from Dominiel's profile");
-                    return;
+                if (is_array($data) && !empty($data)) {
+                    $count = $this->processStoveActivities($data);
+                    
+                    if ($count > 0) {
+                        $this->info("Synced {$count} Stove news items from Dominiel's profile");
+                        return;
+                    }
                 }
             }
 
-            // Fallback: scrape the Epic Seven global page for official posts
+            // Method 3: Fallback to page scraping
             $this->info('Activity API failed, trying page scraping...');
             $this->scrapeStoveOfficialPosts();
 
@@ -218,6 +248,46 @@ class SyncNewsCommand extends Command
             $this->error('Stove sync error: ' . $e->getMessage());
             Log::error('Stove sync failed', ['error' => $e->getMessage()]);
         }
+    }
+
+    /**
+     * Process articles from Stove board API
+     */
+    private function processStoveBoardArticles(array $data): int
+    {
+        $count = 0;
+        $articles = $data['data']['list'] ?? $data['list'] ?? $data['data']['articles'] ?? $data['articles'] ?? [];
+
+        foreach ($articles as $article) {
+            if ($count >= 20) break;
+
+            $title = $article['title'] ?? $article['subject'] ?? null;
+            $articleId = $article['article_id'] ?? $article['id'] ?? $article['article_sn'] ?? null;
+            
+            if (empty($title) || strlen($title) < 5) continue;
+            if (empty($articleId)) continue;
+
+            $url = "https://page.onstove.com/epicseven/global/view/{$articleId}";
+            $thumbnail = $article['thumbnail'] ?? $article['image'] ?? $article['og_image'] ?? null;
+            $publishedAt = $article['created_at'] ?? $article['reg_dt'] ?? $article['write_dt'] ?? null;
+
+            $externalId = 'stove_' . $articleId;
+
+            News::updateOrCreate(
+                ['external_id' => $externalId],
+                [
+                    'title' => substr($title, 0, 255),
+                    'description' => substr($article['content'] ?? $article['description'] ?? '', 0, 500) ?: null,
+                    'thumbnail' => $thumbnail,
+                    'url' => $url,
+                    'source' => 'stove',
+                    'published_at' => $publishedAt ? Carbon::parse($publishedAt) : now(),
+                ]
+            );
+            $count++;
+        }
+
+        return $count;
     }
 
     /**
