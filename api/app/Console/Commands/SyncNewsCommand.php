@@ -187,74 +187,104 @@ class SyncNewsCommand extends Command
     }
 
     /**
-     * Sync news from Stove via Dominiel's profile (official Epic Seven account)
+     * Sync news from Stove official boards
+     * Board IDs: 985 (News), 988 (Events), 986 (Patch Notes), 987 (Dev Notes)
      */
     private function syncStove(): void
     {
         $this->info('Fetching Stove news...');
 
-        try {
-            // Method 1: Try the official board API for Epic Seven Global
-            $boardApiUrl = 'https://api.onstove.com/cafe/v1/epicseven/global/articles';
-            
-            $response = Http::withHeaders([
-                'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-                'Accept' => 'application/json',
-                'Accept-Language' => 'en-US,en;q=0.9',
-                'Origin' => 'https://page.onstove.com',
-                'Referer' => 'https://page.onstove.com/epicseven/global',
-            ])->get($boardApiUrl, [
-                'board_key' => 'notice', // Official notices
-                'page' => 1,
-                'size' => 20,
-            ]);
+        // Official board IDs for Epic Seven Global (Channel 126)
+        $boardIds = [
+            985 => 'News',
+            988 => 'Events', 
+            986 => 'Patch Notes',
+            987 => 'Dev Notes',
+        ];
 
-            if ($response->successful()) {
-                $data = $response->json();
-                if (is_array($data) && !empty($data)) {
-                    $count = $this->processStoveBoardArticles($data);
-                    if ($count > 0) {
-                        $this->info("Synced {$count} Stove news items from board API");
-                        return;
-                    }
-                }
-            }
+        $totalCount = 0;
 
-            // Method 2: Try Dominiel's profile activities
-            $this->info('Board API failed, trying Dominiel profile...');
-            $activityUrl = 'https://profile.onstove.com/api/v1/member/' . self::STOVE_DOMINIEL_ID . '/activities';
-            
-            $response = Http::withHeaders([
-                'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-                'Accept' => 'application/json',
-                'Accept-Language' => 'en-US,en;q=0.9',
-                'Referer' => 'https://profile.onstove.com/en/' . self::STOVE_DOMINIEL_ID,
-            ])->get($activityUrl, [
-                'page' => 1,
-                'size' => 20,
-            ]);
-
-            if ($response->successful()) {
-                $data = $response->json();
+        foreach ($boardIds as $boardId => $boardName) {
+            try {
+                $this->info("Fetching {$boardName} (Board {$boardId})...");
                 
-                if (is_array($data) && !empty($data)) {
-                    $count = $this->processStoveActivities($data);
-                    
-                    if ($count > 0) {
-                        $this->info("Synced {$count} Stove news items from Dominiel's profile");
-                        return;
-                    }
+                $apiUrl = "https://api.onstove.com/cwms/v3.0/article_group/BOARD/{$boardId}/article/list";
+                
+                $response = Http::withHeaders([
+                    'User-Agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                    'Accept' => 'application/json',
+                    'Accept-Language' => 'en-US,en;q=0.9',
+                    'Referer' => 'https://page.onstove.com/epicseven/global',
+                ])->get($apiUrl, [
+                    'interaction_type_code' => 'LIKE,DISLIKE,COMMENT,VIEW',
+                    'content_yn' => 'Y',
+                    'summary_yn' => 'Y',
+                    'sort_type_code' => 'LATEST',
+                    'translation_yn' => 'Y',
+                    'page' => 1,
+                    'size' => 10,
+                ]);
+
+                if (!$response->successful()) {
+                    $this->warn("Failed to fetch {$boardName}: " . $response->status());
+                    continue;
                 }
+
+                $data = $response->json();
+                $articles = $data['value']['list'] ?? [];
+                
+                if (empty($articles)) {
+                    $this->info("No articles found in {$boardName}");
+                    continue;
+                }
+
+                $count = 0;
+                foreach ($articles as $article) {
+                    $articleId = $article['article_id'] ?? null;
+                    $title = $article['title'] ?? null;
+                    
+                    if (!$articleId || !$title) continue;
+
+                    // Build thumbnail URL (needs https: prefix)
+                    $thumbnail = $article['media_thumbnail_url'] ?? null;
+                    if ($thumbnail && !str_starts_with($thumbnail, 'http')) {
+                        $thumbnail = 'https:' . $thumbnail;
+                    }
+
+                    // Parse timestamp (milliseconds)
+                    $publishedAt = null;
+                    if (!empty($article['create_datetime'])) {
+                        try {
+                            $publishedAt = Carbon::createFromTimestampMs($article['create_datetime']);
+                        } catch (\Exception $e) {
+                            $publishedAt = now();
+                        }
+                    }
+
+                    News::updateOrCreate(
+                        ['external_id' => 'stove_' . $articleId],
+                        [
+                            'title' => substr($title, 0, 255),
+                            'description' => substr($article['summary'] ?? '', 0, 500) ?: null,
+                            'thumbnail' => $thumbnail,
+                            'url' => "https://page.onstove.com/epicseven/global/view/{$articleId}",
+                            'source' => 'stove',
+                            'published_at' => $publishedAt ?? now(),
+                        ]
+                    );
+                    $count++;
+                }
+
+                $this->info("Synced {$count} items from {$boardName}");
+                $totalCount += $count;
+
+            } catch (\Exception $e) {
+                $this->error("Error fetching {$boardName}: " . $e->getMessage());
+                Log::error("Stove sync error for board {$boardId}", ['error' => $e->getMessage()]);
             }
-
-            // Method 3: Fallback to page scraping
-            $this->info('Activity API failed, trying page scraping...');
-            $this->scrapeStoveOfficialPosts();
-
-        } catch (\Exception $e) {
-            $this->error('Stove sync error: ' . $e->getMessage());
-            Log::error('Stove sync failed', ['error' => $e->getMessage()]);
         }
+
+        $this->info("Total Stove news synced: {$totalCount}");
     }
 
     /**
