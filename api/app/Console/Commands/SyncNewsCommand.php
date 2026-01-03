@@ -14,7 +14,7 @@ use DOMXPath;
 
 class SyncNewsCommand extends Command
 {
-    protected $signature = 'app:sync-news {--source=all : Source to sync (youtube, stove, or all)}';
+    protected $signature = 'app:sync-news {--source=all : Source to sync (youtube, stove, or all)} {--clear : Clear all news before syncing}';
 
     protected $description = 'Sync news from YouTube and Stove for Epic Seven';
 
@@ -25,8 +25,24 @@ class SyncNewsCommand extends Command
     public function handle(): int
     {
         $source = $this->option('source');
+        $clear = $this->option('clear');
 
         $this->info('Starting news sync...');
+
+        // Clear existing news if requested
+        if ($clear) {
+            $this->info('Clearing existing news...');
+            if ($source === 'all') {
+                $deleted = News::query()->delete();
+            } elseif ($source === 'youtube') {
+                $deleted = News::where('source', 'youtube')->delete();
+            } elseif ($source === 'stove') {
+                $deleted = News::where('source', 'stove')->delete();
+            } else {
+                $deleted = 0;
+            }
+            $this->info("Deleted {$deleted} existing news items");
+        }
 
         if ($source === 'all' || $source === 'youtube') {
             $this->syncYouTube();
@@ -46,6 +62,7 @@ class SyncNewsCommand extends Command
     private function syncYouTube(): void
     {
         $this->info('Syncing YouTube videos...');
+        $this->info('Using Channel ID: ' . self::YOUTUBE_CHANNEL_ID);
 
         $apiKey = config('services.youtube.api_key');
         if (empty($apiKey)) {
@@ -54,44 +71,34 @@ class SyncNewsCommand extends Command
         }
 
         try {
-            // Get channel's uploads playlist ID first
+            // Direct approach: Get channel's uploads playlist using our known Channel ID
             $channelResponse = Http::get('https://www.googleapis.com/youtube/v3/channels', [
-                'part' => 'contentDetails',
-                'forUsername' => 'EpicSeven', // Try by username first
+                'part' => 'contentDetails,snippet',
+                'id' => self::YOUTUBE_CHANNEL_ID,
                 'key' => $apiKey,
             ]);
 
-            $uploadsPlaylistId = null;
+            if (!$channelResponse->successful()) {
+                $this->error('Failed to fetch channel info: ' . $channelResponse->body());
+                $this->syncYouTubeViaSearch($apiKey);
+                return;
+            }
+
+            $channelData = $channelResponse->json();
             
-            // If username doesn't work, try by channel handle
-            if (!$channelResponse->successful() || empty($channelResponse->json('items'))) {
-                // Search for the channel by handle @EpicSeven
-                $searchResponse = Http::get('https://www.googleapis.com/youtube/v3/search', [
-                    'part' => 'snippet',
-                    'q' => 'Epic Seven official',
-                    'type' => 'channel',
-                    'maxResults' => 1,
-                    'key' => $apiKey,
-                ]);
-
-                if ($searchResponse->successful() && !empty($searchResponse->json('items'))) {
-                    $channelId = $searchResponse->json('items.0.snippet.channelId');
-                    
-                    // Get the uploads playlist
-                    $channelResponse = Http::get('https://www.googleapis.com/youtube/v3/channels', [
-                        'part' => 'contentDetails',
-                        'id' => $channelId,
-                        'key' => $apiKey,
-                    ]);
-                }
+            if (empty($channelData['items'])) {
+                $this->error('Channel not found with ID: ' . self::YOUTUBE_CHANNEL_ID);
+                $this->syncYouTubeViaSearch($apiKey);
+                return;
             }
 
-            if ($channelResponse->successful() && !empty($channelResponse->json('items'))) {
-                $uploadsPlaylistId = $channelResponse->json('items.0.contentDetails.relatedPlaylists.uploads');
-            }
+            $channelTitle = $channelData['items'][0]['snippet']['title'] ?? 'Unknown';
+            $this->info("Found channel: {$channelTitle}");
+            
+            $uploadsPlaylistId = $channelData['items'][0]['contentDetails']['relatedPlaylists']['uploads'] ?? null;
 
             if (!$uploadsPlaylistId) {
-                // Fallback: Use search API directly
+                $this->error('Could not get uploads playlist ID');
                 $this->syncYouTubeViaSearch($apiKey);
                 return;
             }
