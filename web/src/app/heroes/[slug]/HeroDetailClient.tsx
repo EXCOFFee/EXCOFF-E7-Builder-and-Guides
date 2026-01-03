@@ -214,7 +214,7 @@ export function HeroDetailClient() {
     // Builds filter states
     const [buildSearch, setBuildSearch] = useState('');
     const [buildSetFilter, setBuildSetFilter] = useState('');
-    const [buildSortBy, setBuildSortBy] = useState<'newest' | 'likes_desc' | 'likes_asc'>('newest');
+    const [buildSortBy, setBuildSortBy] = useState<'newest' | 'views_desc' | 'views_asc' | 'likes_desc' | 'likes_asc'>('newest');
 
     // Get unique sets from builds
     const availableSets = useMemo(() => {
@@ -249,6 +249,12 @@ export function HeroDetailClient() {
 
         // Sort
         switch (buildSortBy) {
+            case 'views_desc':
+                result.sort((a: any, b: any) => (b.views || 0) - (a.views || 0));
+                break;
+            case 'views_asc':
+                result.sort((a: any, b: any) => (a.views || 0) - (b.views || 0));
+                break;
             case 'likes_desc':
                 result.sort((a: any, b: any) => (b.likes || 0) - (a.likes || 0));
                 break;
@@ -741,6 +747,8 @@ export function HeroDetailClient() {
                                     className="px-3 py-2 text-sm rounded-lg bg-e7-void border border-e7-gold/20 text-slate-200 focus:border-e7-gold focus:outline-none cursor-pointer min-w-[160px]"
                                 >
                                     <option value="newest">{t('common.newest', 'Newest')}</option>
+                                    <option value="views_desc">{t('common.viewsHigh', 'Views (High)')}</option>
+                                    <option value="views_asc">{t('common.viewsLow', 'Views (Low)')}</option>
                                     <option value="likes_desc">{t('common.likesHigh', 'Likes (High)')}</option>
                                     <option value="likes_asc">{t('common.likesLow', 'Likes (Low)')}</option>
                                 </select>
@@ -807,6 +815,13 @@ export function HeroDetailClient() {
                                                     <div className="text-e7-gold font-bold flex items-center gap-1 justify-end">
                                                         <Image src="/images/ras-like.gif" alt="like" width={18} height={18} unoptimized />
                                                         {build.likes || 0}
+                                                    </div>
+                                                    <div className="text-neutral-400 text-xs flex items-center gap-1 justify-end">
+                                                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                                        </svg>
+                                                        {build.views || 0}
                                                     </div>
                                                     <div className="text-gray-500 text-xs">{build.user?.name || t('common.anonymous', 'Anonymous')}</div>
                                                 </div>
