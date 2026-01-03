@@ -329,9 +329,18 @@
         "subtitle": "에픽세븐 공식 채널의 최신 업데이트, 공지사항 및 동영상",
         "disclaimer": "모든 콘텐츠는 Smilegate/Super Creative의 공식 채널에서 가져온 것입니다. 개발자와 제휴하지 않았습니다.",
         "allSources": "모든 소스",
+        "allCategories": "모든 카테고리",
+        "searchPlaceholder": "뉴스 검색...",
+        "searchResults": "검색 결과",
         "error": "뉴스를 불러오는 데 실패했습니다. 나중에 다시 시도해 주세요.",
         "noNews": "현재 이용 가능한 뉴스가 없습니다.",
-        "readMore": "자세히 보기 →"
+        "readMore": "자세히 보기",
+        "categories": {
+            "news": "뉴스",
+            "events": "이벤트",
+            "patchNotes": "패치 노트",
+            "devNotes": "개발자 노트"
+        }
     },
     "footer": {
         "disclaimer": "EpicSevenHub는 Smilegate 또는 Super Creative와 제휴되어 있지 않습니다.",

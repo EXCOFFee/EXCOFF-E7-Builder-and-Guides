@@ -347,9 +347,18 @@
         "subtitle": "Latest updates, announcements and videos from the official Epic Seven channels",
         "disclaimer": "All content is sourced from official Smilegate/Super Creative channels. We are not affiliated with the developers.",
         "allSources": "All Sources",
+        "allCategories": "All Categories",
+        "searchPlaceholder": "Search news...",
+        "searchResults": "Showing results for",
         "error": "Failed to load news. Please try again later.",
         "noNews": "No news available at the moment.",
-        "readMore": "Read more →"
+        "readMore": "Read more",
+        "categories": {
+            "news": "News",
+            "events": "Events",
+            "patchNotes": "Patch Notes",
+            "devNotes": "Dev Notes"
+        }
     },
     "footer": {
         "disclaimer": "EpicSevenHub is not affiliated with Smilegate or Super Creative.",

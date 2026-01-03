@@ -329,9 +329,18 @@
         "subtitle": "エピックセブン公式チャンネルからの最新情報、お知らせ、動画",
         "disclaimer": "すべてのコンテンツはSmilegate/Super Creativeの公式チャンネルから取得しています。開発者とは提携していません。",
         "allSources": "全てのソース",
+        "allCategories": "全てのカテゴリー",
+        "searchPlaceholder": "ニュースを検索...",
+        "searchResults": "検索結果",
         "error": "ニュースの読み込みに失敗しました。後でもう一度お試しください。",
         "noNews": "現在利用可能なニュースはありません。",
-        "readMore": "続きを読む →"
+        "readMore": "続きを読む",
+        "categories": {
+            "news": "ニュース",
+            "events": "イベント",
+            "patchNotes": "パッチノート",
+            "devNotes": "開発者ノート"
+        }
     },
     "footer": {
         "disclaimer": "EpicSevenHubはSmilgateまたはSuper Creativeと提携していません。",

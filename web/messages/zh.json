@@ -329,9 +329,18 @@
         "subtitle": "来自第七史诗官方频道的最新更新、公告和视频",
         "disclaimer": "所有内容均来自Smilegate/Super Creative的官方频道。我们与开发商无关。",
         "allSources": "所有来源",
+        "allCategories": "所有分类",
+        "searchPlaceholder": "搜索新闻...",
+        "searchResults": "搜索结果",
         "error": "加载新闻失败。请稍后重试。",
         "noNews": "暂无可用新闻。",
-        "readMore": "阅读更多 →"
+        "readMore": "阅读更多",
+        "categories": {
+            "news": "新闻",
+            "events": "活动",
+            "patchNotes": "补丁说明",
+            "devNotes": "开发者说明"
+        }
     },
     "footer": {
         "disclaimer": "EpicSevenHub与Smilegate或Super Creative无关。",

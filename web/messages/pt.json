@@ -329,9 +329,18 @@
         "subtitle": "Últimas atualizações, anúncios e vídeos dos canais oficiais de Epic Seven",
         "disclaimer": "Todo o conteúdo é proveniente dos canais oficiais da Smilegate/Super Creative. Não somos afiliados aos desenvolvedores.",
         "allSources": "Todas as Fontes",
+        "allCategories": "Todas as Categorias",
+        "searchPlaceholder": "Pesquisar notícias...",
+        "searchResults": "Mostrando resultados para",
         "error": "Erro ao carregar notícias. Por favor tente novamente mais tarde.",
         "noNews": "Não há notícias disponíveis no momento.",
-        "readMore": "Leia mais →"
+        "readMore": "Leia mais",
+        "categories": {
+            "news": "Notícias",
+            "events": "Eventos",
+            "patchNotes": "Notas de Atualização",
+            "devNotes": "Notas do Desenvolvedor"
+        }
     },
     "footer": {
         "disclaimer": "EpicSevenHub não é afiliado com Smilegate ou Super Creative.",
