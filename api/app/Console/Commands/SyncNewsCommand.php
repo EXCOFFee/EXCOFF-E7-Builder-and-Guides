@@ -17,7 +17,7 @@ class SyncNewsCommand extends Command
 
     protected $description = 'Sync news from YouTube and Stove for Epic Seven';
 
-    private const YOUTUBE_CHANNEL_ID = 'UCkpN8M6C2wELDLx7XKUlL7Q'; // Epic Seven official channel
+    private const YOUTUBE_CHANNEL_ID = 'UC3dR_jP_fZ7qH6_-8-VTDNQ'; // Epic Seven official channel @EpicSeven
     private const STOVE_URL = 'https://page.onstove.com/epicseven/global';
 
     public function handle(): int
