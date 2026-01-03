@@ -33,6 +33,10 @@ const TAG_LABELS: Record<string, string> = {
     beginner: 'For Beginners',
     help_improve: 'Help Improve',
     active: 'Be Active',
+    mystic_x3: 'x3 Mystic',
+    mystic_x4: 'x4 Mystic',
+    mystic_x5: 'x5 Mystic',
+    guild_buffs_24_7: '24/7 Guild Buffs',
 };
 
 const LANGUAGE_NAMES: Record<string, string> = {
@@ -201,14 +205,20 @@ export default function GuildPostDetailPage() {
 
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2 mb-6">
-                            {post.tags?.map((tag) => (
-                                <span
-                                    key={tag}
-                                    className="px-3 py-1 text-sm bg-e7-gold/10 text-e7-gold rounded-full"
-                                >
-                                    {t(`guilds.tags.${tag}`, TAG_LABELS[tag] || tag.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()))}
-                                </span>
-                            ))}
+                            {post.tags?.map((tag) => {
+                                const isMysticTag = tag.startsWith('mystic_');
+                                return (
+                                    <span
+                                        key={tag}
+                                        className="px-3 py-1 text-sm bg-e7-gold/10 text-e7-gold rounded-full flex items-center gap-1"
+                                    >
+                                        {isMysticTag && (
+                                            <Image src="/images/mystic.png" alt="mystic" width={16} height={16} unoptimized />
+                                        )}
+                                        {t(`guilds.tags.${tag}`, TAG_LABELS[tag] || tag.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()))}
+                                    </span>
+                                );
+                            })}
                         </div>
 
                         {/* Description */}

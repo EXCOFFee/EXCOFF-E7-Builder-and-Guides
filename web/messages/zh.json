@@ -221,7 +221,11 @@
             "other_social": "其他社交",
             "beginner": "欢迎新手",
             "help_improve": "帮助成长",
-            "active": "保持活跃"
+            "active": "保持活跃",
+            "mystic_x3": "x3 神秘",
+            "mystic_x4": "x4 神秘",
+            "mystic_x5": "x5 神秘",
+            "guild_buffs_24_7": "24/7 公会增益"
         },
         "servers": {
             "global": "全球",

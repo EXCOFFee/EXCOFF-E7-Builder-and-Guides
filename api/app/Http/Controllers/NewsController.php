@@ -37,13 +37,13 @@ class NewsController extends Controller
         }
 
         // Get available categories for current source filter
-        $categories = News::query()
-            ->when($request->input('source') !== 'all', function ($q) use ($request) {
-                $q->where('source', $request->input('source'));
-            })
-            ->whereNotNull('category')
-            ->distinct()
-            ->pluck('category');
+        $categoriesQuery = News::query()->whereNotNull('category');
+        
+        if ($request->has('source') && $request->input('source') !== 'all') {
+            $categoriesQuery->where('source', $request->input('source'));
+        }
+        
+        $categories = $categoriesQuery->distinct()->pluck('category');
 
         $news = $query->orderBy('published_at', 'desc')
             ->paginate($request->input('per_page', 20));

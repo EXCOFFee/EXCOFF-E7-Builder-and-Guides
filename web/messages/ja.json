@@ -221,7 +221,11 @@
             "other_social": "その他SNS",
             "beginner": "初心者歓迎",
             "help_improve": "成長サポート",
-            "active": "アクティブ"
+            "active": "アクティブ",
+            "mystic_x3": "x3 ミスティック",
+            "mystic_x4": "x4 ミスティック",
+            "mystic_x5": "x5 ミスティック",
+            "guild_buffs_24_7": "24/7 ギルドバフ"
         },
         "servers": {
             "global": "グローバル",

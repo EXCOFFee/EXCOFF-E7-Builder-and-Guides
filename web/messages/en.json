@@ -240,7 +240,11 @@
             "other_social": "Other Social",
             "beginner": "For Beginners",
             "help_improve": "Help Improve",
-            "active": "Be Active"
+            "active": "Be Active",
+            "mystic_x3": "x3 Mystic",
+            "mystic_x4": "x4 Mystic",
+            "mystic_x5": "x5 Mystic",
+            "guild_buffs_24_7": "24/7 Guild Buffs"
         },
         "servers": {
             "global": "Global",

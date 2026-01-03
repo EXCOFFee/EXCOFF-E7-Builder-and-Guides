@@ -16,7 +16,8 @@ const LANGUAGES = ['en', 'es', 'ko', 'ja', 'zh', 'pt'];
 const TAGS = [
     'casual', 'chill', 'semi_competitive', 'competitive_all',
     'competitive_gw', 'competitive_rta', 'whatsapp', 'discord',
-    'other_social', 'beginner', 'help_improve', 'active'
+    'other_social', 'beginner', 'help_improve', 'active',
+    'mystic_x3', 'mystic_x4', 'mystic_x5', 'guild_buffs_24_7'
 ];
 
 const SERVER_LABELS: Record<string, string> = {
@@ -88,6 +89,10 @@ export default function CreateGuildPostPage() {
         beginner: t('guilds.tags.beginner', 'For Beginners'),
         help_improve: t('guilds.tags.help_improve', 'Help Improve'),
         active: t('guilds.tags.active', 'Be Active'),
+        mystic_x3: t('guilds.tags.mystic_x3', 'x3 Mystic'),
+        mystic_x4: t('guilds.tags.mystic_x4', 'x4 Mystic'),
+        mystic_x5: t('guilds.tags.mystic_x5', 'x5 Mystic'),
+        guild_buffs_24_7: t('guilds.tags.guild_buffs_24_7', '24/7 Guild Buffs'),
     };
 
     const toggleTag = (tag: string) => {
@@ -254,19 +259,25 @@ export default function CreateGuildPostPage() {
                                     {t('guilds.tagsLabel', 'Tags')}
                                 </label>
                                 <div className="flex flex-wrap gap-2">
-                                    {TAGS.map((tag) => (
-                                        <button
-                                            key={tag}
-                                            type="button"
-                                            onClick={() => toggleTag(tag)}
-                                            className={`px-3 py-1.5 rounded-full text-sm transition-colors ${selectedTags.includes(tag)
-                                                ? 'bg-purple-600 text-white'
-                                                : 'bg-e7-void border border-e7-gold/30 text-gray-400 hover:border-purple-500'
-                                                }`}
-                                        >
-                                            {TAG_LABELS[tag]}
-                                        </button>
-                                    ))}
+                                    {TAGS.map((tag) => {
+                                        const isMysticTag = tag.startsWith('mystic_');
+                                        return (
+                                            <button
+                                                key={tag}
+                                                type="button"
+                                                onClick={() => toggleTag(tag)}
+                                                className={`px-3 py-1.5 rounded-full text-sm transition-colors flex items-center gap-1 ${selectedTags.includes(tag)
+                                                    ? 'bg-purple-600 text-white'
+                                                    : 'bg-e7-void border border-e7-gold/30 text-gray-400 hover:border-purple-500'
+                                                    }`}
+                                            >
+                                                {isMysticTag && (
+                                                    <Image src="/images/mystic.png" alt="mystic" width={16} height={16} unoptimized />
+                                                )}
+                                                {TAG_LABELS[tag]}
+                                            </button>
+                                        );
+                                    })}
                                 </div>
                             </div>
 

@@ -221,7 +221,11 @@
             "other_social": "기타 소셜",
             "beginner": "초보자 환영",
             "help_improve": "성장 도움",
-            "active": "활발히 활동"
+            "active": "활발히 활동",
+            "mystic_x3": "x3 미스틱",
+            "mystic_x4": "x4 미스틱",
+            "mystic_x5": "x5 미스틱",
+            "guild_buffs_24_7": "24/7 길드 버프"
         },
         "servers": {
             "global": "글로벌",

@@ -27,6 +27,10 @@ const TAGS = [
     { id: 'beginner', emoji: '🌱' },
     { id: 'help_improve', emoji: '📈' },
     { id: 'active', emoji: '🔥' },
+    { id: 'mystic_x3', emoji: 'mystic', isImage: true },
+    { id: 'mystic_x4', emoji: 'mystic', isImage: true },
+    { id: 'mystic_x5', emoji: 'mystic', isImage: true },
+    { id: 'guild_buffs_24_7', emoji: '🎁' },
 ];
 
 const LANGUAGE_NAMES: Record<string, string> = {
@@ -185,7 +189,11 @@ export default function GuildsPage() {
                                 className={selectedTags.includes(tag.id) ? 'bg-green-600 text-white' : 'border-e7-gold/30 text-slate-400 hover:text-e7-gold hover:border-e7-gold/50'}
                                 size="sm"
                             >
-                                {tag.emoji} {t(`guilds.tags.${tag.id}`, tag.id.replace('_', ' '))}
+                                {'isImage' in tag && tag.isImage ? (
+                                    <Image src={`/images/${tag.emoji}.png`} alt={tag.id} width={16} height={16} className="inline mr-1" unoptimized />
+                                ) : (
+                                    <span>{tag.emoji}</span>
+                                )} {t(`guilds.tags.${tag.id}`, tag.id.replace('_', ' '))}
                             </Button>
                         ))}
                         {selectedTags.length > 0 && (
@@ -240,14 +248,23 @@ export default function GuildsPage() {
                                             {post.description}
                                         </p>
                                         <div className="flex flex-wrap gap-1.5 mb-3">
-                                            {post.tags?.slice(0, 3).map((tag) => (
-                                                <span
-                                                    key={tag}
-                                                    className="px-2 py-1 text-xs glass-panel text-purple-300 rounded-lg border border-purple-500/30"
-                                                >
-                                                    {t(`guilds.tags.${tag}`, tag.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()))}
-                                                </span>
-                                            ))}
+                                            {post.tags?.slice(0, 4).map((tag: string) => {
+                                                const tagInfo = TAGS.find(t => t.id === tag);
+                                                const isMysticTag = tag.startsWith('mystic_');
+                                                return (
+                                                    <span
+                                                        key={tag}
+                                                        className="px-2 py-1 text-xs glass-panel text-purple-300 rounded-lg border border-purple-500/30 flex items-center gap-1"
+                                                    >
+                                                        {isMysticTag ? (
+                                                            <Image src="/images/mystic.png" alt="mystic" width={14} height={14} unoptimized />
+                                                        ) : tagInfo && 'isImage' in tagInfo ? (
+                                                            <Image src={`/images/${tagInfo.emoji}.png`} alt={tag} width={14} height={14} unoptimized />
+                                                        ) : null}
+                                                        {t(`guilds.tags.${tag}`, tag.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()))}
+                                                    </span>
+                                                );
+                                            })}
                                         </div>
                                         <div className="flex items-center gap-2 text-xs text-slate-500 pt-3 border-t border-e7-gold/10">
                                             {post.user.avatar && (

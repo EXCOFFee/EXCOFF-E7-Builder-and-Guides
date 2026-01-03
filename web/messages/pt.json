@@ -221,7 +221,11 @@
             "other_social": "Outra Rede Social",
             "beginner": "Para Iniciantes",
             "help_improve": "Ajuda a Evoluir",
-            "active": "Seja Ativo"
+            "active": "Seja Ativo",
+            "mystic_x3": "x3 Mystic",
+            "mystic_x4": "x4 Mystic",
+            "mystic_x5": "x5 Mystic",
+            "guild_buffs_24_7": "Buffs de Guilda 24/7"
         },
         "servers": {
             "global": "Global",

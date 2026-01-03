@@ -231,7 +231,11 @@
             "other_social": "Otra Red Social",
             "beginner": "Para Principiantes",
             "help_improve": "Ayuda a Mejorar",
-            "active": "Sé Activo"
+            "active": "Sé Activo",
+            "mystic_x3": "x3 Mystic",
+            "mystic_x4": "x4 Mystic",
+            "mystic_x5": "x5 Mystic",
+            "guild_buffs_24_7": "Buffos de Gremio 24/7"
         },
         "servers": {
             "global": "Global",
