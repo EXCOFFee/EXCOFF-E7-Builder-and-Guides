@@ -325,7 +325,11 @@
             "unity": "Unity",
             "hit": "Hit",
             "resist": "Resist",
-            "torrent": "Torrent"
+            "torrent": "Torrent",
+            "warfare": "Warfare",
+            "pursuit": "Pursuit",
+            "riposte": "Riposte",
+            "revival": "Revival"
         },
         "statNames": {
             "atk": "ATK",

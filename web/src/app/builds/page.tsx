@@ -268,7 +268,7 @@ export default function BuildsPage() {
                             {/* Set Filter */}
                             <div className="flex items-center gap-2 flex-wrap">
                                 <span className="text-slate-400 text-sm mr-2">{t('builds.filterSet', 'Set')}:</span>
-                                {Object.entries(SET_IMAGES).slice(0, 12).map(([set, img]) => (
+                                {Object.entries(SET_IMAGES).map(([set, img]) => (
                                     <button
                                         key={set}
                                         onClick={() => setPrimarySet(primarySet === set ? null : set)}

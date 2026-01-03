@@ -316,7 +316,11 @@
             "unity": "Unidad",
             "hit": "Precisión",
             "resist": "Resistencia",
-            "torrent": "Torrente"
+            "torrent": "Torrente",
+            "warfare": "Guerra",
+            "pursuit": "Persecución",
+            "riposte": "Réplica",
+            "revival": "Renacimiento"
         },
         "statNames": {
             "atk": "ATK",

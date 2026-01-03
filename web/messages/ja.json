@@ -307,7 +307,11 @@
             "unity": "協力",
             "hit": "命中",
             "resist": "抵抗",
-            "torrent": "激流"
+            "torrent": "激流",
+            "warfare": "戦闘",
+            "pursuit": "追撃",
+            "riposte": "反撃",
+            "revival": "復活"
         },
         "statNames": {
             "atk": "攻撃力",

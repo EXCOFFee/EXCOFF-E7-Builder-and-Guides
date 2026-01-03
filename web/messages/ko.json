@@ -307,7 +307,11 @@
             "unity": "협동",
             "hit": "적중",
             "resist": "저항",
-            "torrent": "격류"
+            "torrent": "격류",
+            "warfare": "전쟁",
+            "pursuit": "추격",
+            "riposte": "반격",
+            "revival": "부활"
         },
         "statNames": {
             "atk": "공격력",

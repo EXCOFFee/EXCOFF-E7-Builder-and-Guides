@@ -307,7 +307,11 @@
             "unity": "团结",
             "hit": "命中",
             "resist": "抵抗",
-            "torrent": "激流"
+            "torrent": "激流",
+            "warfare": "战争",
+            "pursuit": "追击",
+            "riposte": "反击",
+            "revival": "复活"
         },
         "statNames": {
             "atk": "攻击力",
