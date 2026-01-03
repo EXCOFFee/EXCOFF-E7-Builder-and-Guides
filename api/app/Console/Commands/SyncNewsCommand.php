@@ -145,7 +145,7 @@ class SyncNewsCommand extends Command
 
         $response = Http::get('https://www.googleapis.com/youtube/v3/search', [
             'part' => 'snippet',
-            'channelId' => 'UCkpN8M6C2wELDLx7XKUlL7Q', // Epic Seven channel ID
+            'channelId' => self::YOUTUBE_CHANNEL_ID, // Use the correct channel ID
             'type' => 'video',
             'order' => 'date',
             'maxResults' => 20,

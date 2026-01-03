@@ -10,7 +10,7 @@ export default function Home() {
 
   const features = [
     {
-      icon: "🗡�E�E,
+      icon: "🗡️",
       href: "/heroes",
       title: t('home.heroWiki', 'Hero Wiki'),
       desc: t('home.heroWikiDesc', 'Explore all the heroes in the game, their information and builds created by the community.'),
@@ -28,7 +28,7 @@ export default function Home() {
       borderColor: "hover:border-blue-500/50",
     },
     {
-      icon: "⚔︁E,
+      icon: "⚔️",
       href: "/guides",
       title: t('home.gameGuides', 'Game Guides'),
       desc: t('home.gameGuidesDesc', 'Guides for PVE, RTA, Arena, Guild War and more game content.'),
@@ -42,6 +42,15 @@ export default function Home() {
       title: t('nav.guilds', 'Guilds'),
       desc: t('guilds.subtitle', 'Find your perfect guild or recruit new members'),
       details: t('guilds.noPosts', 'Connect with active players worldwide'),
+      gradient: "from-green-500/20 to-emerald-500/20",
+      borderColor: "hover:border-green-500/50",
+    },
+    {
+      icon: "📰",
+      href: "/news",
+      title: t('nav.news', 'News'),
+      desc: t('news.subtitle', 'Latest updates, announcements and videos'),
+      details: t('news.disclaimer', 'Official Epic Seven news and YouTube content'),
       gradient: "from-green-500/20 to-emerald-500/20",
       borderColor: "hover:border-green-500/50",
     },
@@ -142,7 +151,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { value: "300+", label: t('nav.heroes', 'Heroes') },
-              { value: "∁E, label: t('nav.builds', 'Builds') },
+              { value: "竏・, label: t('nav.builds', 'Builds') },
               { value: "6", label: t('home.languages', 'Languages') },
             ].map((stat, i) => (
               <div key={i} className="p-4 rounded-xl glass-panel hover:border-e7-gold/30 transition-all hover:shadow-lg hover:shadow-e7-gold/10">
