@@ -48,6 +48,18 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'epic7.gg.onstatic.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'image.onstove.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'd2x8kymwjom7h7.cloudfront.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'i.ytimg.com',
+      },
     ],
   },
 
