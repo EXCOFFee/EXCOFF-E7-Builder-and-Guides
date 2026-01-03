@@ -82,7 +82,7 @@ export default function Home() {
           </h1>
 
           <p className="text-base md:text-lg text-neutral-400 mb-2">
-            E7 Builds, Guides & Hero Wiki
+            {t('home.tagline', 'E7 Builds, Guides & Hero Wiki')}
           </p>
 
           <p className="text-base md:text-lg text-neutral-500 mb-10 max-w-xl mx-auto">

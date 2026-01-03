@@ -43,6 +43,7 @@
     },
     "home": {
         "title": "E7 EXCOFF",
+        "tagline": "E7 构建、攻略 & 英雄图鉴",
         "subtitle": "发现并分享角色构建，为社区创建游戏攻略",
         "exploreHeroes": "探索英雄",
         "viewGuides": "查看攻略",
@@ -61,6 +62,11 @@
         "joinCommunity": "加入社区",
         "everythingYouNeed": "掌握第七史诗所需的一切",
         "languages": "语言"
+    },
+    "footer": {
+        "dataPoweredBy": "英雄和神器数据提供",
+        "credits": "鸣谢",
+        "disclaimer": "Epic Seven © Smilegate & Super Creative。本站与游戏开发者无关联。"
     },
     "heroes": {
         "title": "英雄数据库",

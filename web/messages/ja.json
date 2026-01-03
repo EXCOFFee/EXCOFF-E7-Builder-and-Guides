@@ -43,6 +43,7 @@
     },
     "home": {
         "title": "E7 EXCOFF",
+        "tagline": "E7 ビルド、ガイド & ヒーローウィキ",
         "subtitle": "キャラクタービルドを発見・共有し、コミュニティのためのゲームガイドを作成しましょう",
         "exploreHeroes": "ヒーローを探索",
         "viewGuides": "ガイドを見る",
@@ -61,6 +62,11 @@
         "joinCommunity": "コミュニティに参加",
         "everythingYouNeed": "エピックセブンをマスターするために必要なすべて",
         "languages": "言語"
+    },
+    "footer": {
+        "dataPoweredBy": "ヒーローとアーティファクトデータ提供",
+        "credits": "クレジット",
+        "disclaimer": "Epic Seven © Smilegate & Super Creative。このサイトはゲーム開発者と提携していません。"
     },
     "heroes": {
         "title": "ヒーローデータベース",

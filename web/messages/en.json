@@ -45,6 +45,7 @@
     },
     "home": {
         "title": "E7 EXCOFF",
+        "tagline": "E7 Builds, Guides & Hero Wiki",
         "subtitle": "Discover and publish your character builds and create game guides for the community",
         "exploreHeroes": "Explore Heroes",
         "viewGuides": "View Guides",
@@ -63,6 +64,11 @@
         "joinCommunity": "Join the Community",
         "everythingYouNeed": "Everything you need to master Epic Seven",
         "languages": "Languages"
+    },
+    "footer": {
+        "dataPoweredBy": "Hero & Artifact data powered by",
+        "credits": "Credits",
+        "disclaimer": "Epic Seven © Smilegate & Super Creative. This site is not affiliated with the game developers."
     },
     "heroes": {
         "title": "Hero Database",
