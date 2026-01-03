@@ -138,26 +138,26 @@ export default function BuildsPage() {
     });
 
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
+        <div className="min-h-screen bg-void-glow py-8 px-4">
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
                     <div className="text-center md:text-left">
-                        <h1 className="text-3xl md:text-4xl font-semibold text-e7-gold tracking-tight mb-2">
+                        <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">
                             {t('builds.title', 'Community Builds')}
                         </h1>
-                        <p className="text-neutral-500">
+                        <p className="text-slate-400">
                             {t('builds.description', 'Explore and share hero builds created by the community')}
                         </p>
                     </div>
                     <div className="flex gap-3">
                         <Link href="/builds/compare">
-                            <Button variant="outline" className="border-white/10 text-e7-gold hover:bg-white/4 px-4 py-2 rounded-md">
-                                ⚖︁E{t('builds.compare', 'Compare')}
+                            <Button variant="outline" className="border-e7-gold/30 text-e7-gold hover:bg-e7-gold/10 px-6 py-2.5 rounded-lg">
+                                ⚖️ {t('builds.compare', 'Compare')}
                             </Button>
                         </Link>
                         <Link href="/builds/create">
-                            <Button className="btn-gold px-4 py-2 rounded-md">
+                            <Button className="btn-gold px-6 py-2.5 rounded-lg shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 transition-all">
                                 + {t('builds.createBuild', 'Create Build')}
                             </Button>
                         </Link>
@@ -165,12 +165,12 @@ export default function BuildsPage() {
                 </div>
 
                 {/* Search & Filters */}
-                <div className="mb-8 space-y-4 bg-e7-panel p-4 rounded-lg border border-white/6">
+                <div className="mb-8 space-y-4 glass-panel p-4 rounded-xl">
                     <Input
                         placeholder={t('builds.searchPlaceholder', 'Search builds...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-md bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-500 focus:border-e7-gold"
+                        className="max-w-md bg-e7-void/50 border-e7-gold/20 text-slate-200 placeholder:text-slate-500 focus:border-e7-gold focus:ring-e7-gold/30 transition-all"
                     />
 
                     {/* Element Filter */}
@@ -180,9 +180,9 @@ export default function BuildsPage() {
                             <button
                                 key={el}
                                 onClick={() => setSelectedElement(selectedElement === el ? null : el)}
-                                className={`relative w-9 h-9 rounded-md transition-colors ${selectedElement === el
-                                    ? 'bg-e7-gold/20 ring-1 ring-e7-gold'
-                                    : 'hover:bg-white/6 opacity-70 hover:opacity-100'
+                                className={`relative w-10 h-10 rounded-lg transition-all ${selectedElement === el
+                                    ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
+                                    : 'hover:bg-e7-panel/50 hover:scale-105 opacity-70 hover:opacity-100'
                                     }`}
                                 title={ELEMENT_NAMES[el]}
                             >
@@ -204,9 +204,9 @@ export default function BuildsPage() {
                             <button
                                 key={cls}
                                 onClick={() => setSelectedClass(selectedClass === cls ? null : cls)}
-                                className={`relative w-9 h-9 rounded-md transition-colors ${selectedClass === cls
-                                    ? 'bg-e7-gold/20 ring-1 ring-e7-gold'
-                                    : 'hover:bg-white/6 opacity-70 hover:opacity-100'
+                                className={`relative w-10 h-10 rounded-lg transition-all ${selectedClass === cls
+                                    ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
+                                    : 'hover:bg-e7-panel/50 hover:scale-105 opacity-70 hover:opacity-100'
                                     }`}
                                 title={CLASS_NAMES[cls]}
                             >
@@ -228,13 +228,13 @@ export default function BuildsPage() {
                             <button
                                 key={rarity}
                                 onClick={() => setSelectedRarity(selectedRarity === rarity ? null : rarity)}
-                                className={`px-3 py-1.5 rounded-md transition-colors text-sm ${selectedRarity === rarity
-                                    ? 'bg-e7-gold/20 ring-1 ring-e7-gold'
-                                    : 'hover:bg-white/6 opacity-70 hover:opacity-100 bg-white/4'
+                                className={`px-3 py-2 rounded-lg transition-all font-semibold text-sm ${selectedRarity === rarity
+                                    ? 'ring-2 ring-e7-gold bg-e7-gold/20 scale-110'
+                                    : 'hover:bg-e7-panel/50 hover:scale-105 opacity-70 hover:opacity-100 bg-e7-void/50'
                                     } ${rarity === 5 ? 'text-e7-gold' : rarity === 4 ? 'text-purple-400' : 'text-blue-400'}`}
                                 title={`${rarity} ${t('common.stars', 'Stars')}`}
                             >
-                                {'☁E.repeat(rarity)}
+                                {'★'.repeat(rarity)}
                             </button>
                         ))}
                     </div>
@@ -245,7 +245,7 @@ export default function BuildsPage() {
                         <select
                             value={sortBy}
                             onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-                            className="bg-white/4 border border-white/8 text-neutral-200 rounded-md pl-3 pr-10 py-1.5 text-sm focus:border-e7-gold cursor-pointer"
+                            className="bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg pl-3 pr-10 py-2 text-sm focus:border-e7-gold focus:ring-e7-gold/30 cursor-pointer"
                         >
                             <option value="newest">{t('common.newest', 'Newest')}</option>
                             <option value="views_desc">👁 {t('common.viewsHigh', 'Views (High)')}</option>
@@ -258,7 +258,7 @@ export default function BuildsPage() {
                             onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
                             className={`ml-4 px-3 py-2 rounded-lg text-sm transition-all ${showAdvancedFilters ? 'bg-e7-gold/20 text-e7-gold' : 'bg-e7-void/50 text-slate-400 hover:text-slate-200'}`}
                         >
-                            ⚙︁E{t('builds.advancedFilters', 'Advanced Filters')}
+                            ⚙️ {t('builds.advancedFilters', 'Advanced Filters')}
                         </button>
                     </div>
 
@@ -451,7 +451,7 @@ export default function BuildsPage() {
                                             </div>
                                             <div className="flex items-center gap-3 text-xs text-slate-500">
                                                 <span className="flex items-center gap-1"><Image src="/images/ras-like.gif" alt="likes" width={16} height={16} unoptimized /> {build.likes}</span>
-                                                <span>👁�E�E{build.views}</span>
+                                                <span>👁️ {build.views}</span>
                                             </div>
                                         </div>
                                     </div>
