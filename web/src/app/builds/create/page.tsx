@@ -78,6 +78,9 @@ export default function CreateBuildPage() {
     const [synergySearch, setSynergySearch] = useState('');
     const [counterSearch, setCounterSearch] = useState('');
 
+    // Anonymous option
+    const [isAnonymous, setIsAnonymous] = useState(false);
+
     // Refs for click outside
     const heroDropdownRef = useRef<HTMLDivElement>(null);
     const artifactDropdownRef = useRef<HTMLDivElement>(null);
@@ -187,6 +190,9 @@ export default function CreateBuildPage() {
             if (artifactId) {
                 formData.append('artifact_id', artifactId.toString());
             }
+
+            // Add anonymous option
+            formData.append('is_anonymous', isAnonymous ? '1' : '0');
 
             // Add images
             images.forEach((image, index) => {
@@ -783,6 +789,21 @@ export default function CreateBuildPage() {
                                     {error}
                                 </div>
                             )}
+
+                            {/* Anonymous option */}
+                            <div className="flex items-center gap-3 p-4 bg-e7-void/30 rounded-lg border border-e7-gold/20">
+                                <input
+                                    type="checkbox"
+                                    id="isAnonymous"
+                                    checked={isAnonymous}
+                                    onChange={(e) => setIsAnonymous(e.target.checked)}
+                                    className="w-5 h-5 rounded border-e7-gold/30 bg-e7-void text-e7-gold focus:ring-e7-gold/30 cursor-pointer"
+                                />
+                                <label htmlFor="isAnonymous" className="text-slate-300 cursor-pointer">
+                                    {t('builds.publishAnonymous', 'Publish anonymously')}
+                                    <span className="block text-xs text-slate-500">{t('builds.anonymousDescription', 'Your username will not appear on this build')}</span>
+                                </label>
+                            </div>
 
                             {/* Submit buttons */}
                             <div className="flex gap-4 justify-end pt-6 border-t border-e7-gold/10">
