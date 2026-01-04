@@ -426,24 +426,6 @@ export function BuildDetailClient() {
                             </div>
                         )}
 
-                        {/* Rating */}
-                        <div className="mb-6 p-4 bg-e7-void/30 rounded-lg border border-e7-gold/20">
-                            <h3 className="text-e7-gold font-semibold mb-3">{t('builds.rateThisBuild', 'Rate this Build')}</h3>
-                            <StarRating
-                                rating={build.avg_rating || 0}
-                                totalRatings={build.rating_count || 0}
-                                userRating={userRating}
-                                interactive={!!currentUser}
-                                onRate={(r) => rateMutation.mutate(r)}
-                                size="lg"
-                            />
-                            {!currentUser && (
-                                <p className="text-gray-500 text-sm mt-2">
-                                    {t('builds.loginToRate', 'Log in to rate this build')}
-                                </p>
-                            )}
-                        </div>
-
                         {/* Images */}
                         <ImageGallery images={build.images || []} title={t('builds.images', 'Images')} />
 

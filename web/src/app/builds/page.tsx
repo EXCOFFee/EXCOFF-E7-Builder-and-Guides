@@ -102,7 +102,7 @@ export default function BuildsPage() {
     const [selectedElement, setSelectedElement] = useState<string | null>(null);
     const [selectedClass, setSelectedClass] = useState<string | null>(null);
     const [selectedRarity, setSelectedRarity] = useState<number | null>(null);
-    const [sortBy, setSortBy] = useState<'newest' | 'views_desc' | 'views_asc' | 'likes_desc' | 'likes_asc' | 'rating_desc' | 'rating_asc'>('newest');
+    const [sortBy, setSortBy] = useState<'newest' | 'views_desc' | 'views_asc' | 'likes_desc' | 'likes_asc'>('newest');
 
     // Advanced filters
     const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
@@ -135,8 +135,6 @@ export default function BuildsPage() {
             case 'views_asc': return (a.views || 0) - (b.views || 0);
             case 'likes_desc': return (b.likes || 0) - (a.likes || 0);
             case 'likes_asc': return (a.likes || 0) - (b.likes || 0);
-            case 'rating_desc': return (b.avg_rating || 0) - (a.avg_rating || 0);
-            case 'rating_asc': return (a.avg_rating || 0) - (b.avg_rating || 0);
             default: return 0; // newest, keep API order
         }
     });
@@ -256,8 +254,6 @@ export default function BuildsPage() {
                             <option value="views_asc">👁 {t('common.viewsLow', 'Views (Low)')}</option>
                             <option value="likes_desc">❤ {t('common.likesHigh', 'Likes (High)')}</option>
                             <option value="likes_asc">❤ {t('common.likesLow', 'Likes (Low)')}</option>
-                            <option value="rating_desc">★ {t('common.ratingHigh', 'Rating (High)')}</option>
-                            <option value="rating_asc">★ {t('common.ratingLow', 'Rating (Low)')}</option>
                         </select>
 
                         <button
@@ -458,11 +454,6 @@ export default function BuildsPage() {
                                             <div className="flex items-center gap-3 text-xs text-slate-500">
                                                 <span className="flex items-center gap-1"><Image src="/images/ras-like.gif" alt="likes" width={16} height={16} unoptimized /> {build.likes}</span>
                                                 <span>👁️ {build.views}</span>
-                                                {build.avg_rating > 0 && (
-                                                    <span className="flex items-center gap-1 text-yellow-400">
-                                                        ★ {build.avg_rating.toFixed(1)}
-                                                    </span>
-                                                )}
                                             </div>
                                         </div>
                                     </div>
