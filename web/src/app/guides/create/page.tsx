@@ -405,8 +405,8 @@ export default function CreateGuidePage() {
                                                             <Image
                                                                 src={hero.image_url}
                                                                 alt={hero.name}
-                                                                width={48}
-                                                                height={48}
+                                                                width={64}
+                                                                height={64}
                                                                 className="rounded-full"
                                                             />
                                                         )}

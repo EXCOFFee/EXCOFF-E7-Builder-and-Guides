@@ -295,13 +295,23 @@ export default function CreateBuildPage() {
                                         {filteredHeroes.slice(0, 20).map((hero) => (
                                             <div
                                                 key={hero.id}
-                                                className="px-4 py-2 hover:bg-e7-gold/20 cursor-pointer text-white"
+                                                className="px-4 py-2 hover:bg-e7-gold/20 cursor-pointer text-white flex items-center gap-3"
                                                 onClick={() => {
                                                     setHeroId(hero.id);
                                                     setShowHeroDropdown(false);
                                                     setHeroSearch('');
                                                 }}
                                             >
+                                                {hero.image_url && (
+                                                    <Image
+                                                        src={hero.image_url}
+                                                        alt={hero.name}
+                                                        width={64}
+                                                        height={64}
+                                                        className="rounded-full"
+                                                        unoptimized
+                                                    />
+                                                )}
                                                 {hero.name}
                                             </div>
                                         ))}
