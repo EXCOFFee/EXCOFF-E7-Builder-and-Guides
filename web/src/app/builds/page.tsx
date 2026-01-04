@@ -71,6 +71,8 @@ interface Build {
     secondary_set: string;
     likes: number;
     views: number;
+    avg_rating: number;
+    rating_count: number;
     is_anonymous: boolean;
     user: {
         id: number;
@@ -452,6 +454,11 @@ export default function BuildsPage() {
                                             <div className="flex items-center gap-3 text-xs text-slate-500">
                                                 <span className="flex items-center gap-1"><Image src="/images/ras-like.gif" alt="likes" width={16} height={16} unoptimized /> {build.likes}</span>
                                                 <span>👁️ {build.views}</span>
+                                                {build.avg_rating > 0 && (
+                                                    <span className="flex items-center gap-1 text-yellow-400">
+                                                        ★ {build.avg_rating.toFixed(1)}
+                                                    </span>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
