@@ -25,7 +25,7 @@ interface Guide {
     vote_score: number;
     views: number;
     hero: { name: string; slug: string } | null;
-    user: { name: string } | null;
+    user: { name: string; avatar?: string } | null;
     created_at: string;
 }
 
@@ -225,14 +225,20 @@ export default function GuidesPage() {
 
                                             <div className="flex justify-between items-center mt-3 pt-3 border-t border-e7-gold/10 text-xs text-slate-500">
                                                 <div className="flex items-center gap-2">
-                                                    <Image
-                                                        src="/images/ras-like.gif"
-                                                        alt="avatar"
-                                                        width={20}
-                                                        height={20}
-                                                        className="rounded-full ring-1 ring-e7-gold/20"
-                                                        unoptimized
-                                                    />
+                                                    {guide.user?.avatar ? (
+                                                        <Image
+                                                            src={guide.user.avatar}
+                                                            alt="avatar"
+                                                            width={20}
+                                                            height={20}
+                                                            className="rounded-full ring-1 ring-e7-gold/20"
+                                                            unoptimized
+                                                        />
+                                                    ) : (
+                                                        <div className="w-5 h-5 rounded-full bg-e7-gold/20 flex items-center justify-center text-xs text-e7-gold">
+                                                            {(guide.user?.name || 'A').charAt(0).toUpperCase()}
+                                                        </div>
+                                                    )}
                                                     <span>{guide.user?.name || t('common.anonymous', 'Anonymous')}</span>
                                                 </div>
                                                 <div className="flex items-center gap-3">
