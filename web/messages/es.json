@@ -29,6 +29,8 @@
         "viewsLow": "Vistas (Menor)",
         "likesHigh": "Likes (Mayor)",
         "likesLow": "Likes (Menor)",
+        "ratingHigh": "Rating (Mayor)",
+        "ratingLow": "Rating (Menor)",
         "backToHome": "Volver al Inicio",
         "previous": "Anterior",
         "close": "Cerrar"

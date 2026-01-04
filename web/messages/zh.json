@@ -27,6 +27,8 @@
         "viewsLow": "浏览量 (低)",
         "likesHigh": "点赞 (高)",
         "likesLow": "点赞 (低)",
+        "ratingHigh": "评分 (高)",
+        "ratingLow": "评分 (低)",
         "backToHome": "返回首页",
         "previous": "上一页",
         "close": "关闭"

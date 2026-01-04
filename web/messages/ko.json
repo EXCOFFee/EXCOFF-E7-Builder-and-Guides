@@ -27,6 +27,8 @@
         "viewsLow": "조회수 (낮음)",
         "likesHigh": "좋아요 (높음)",
         "likesLow": "좋아요 (낮음)",
+        "ratingHigh": "평점 (높음)",
+        "ratingLow": "평점 (낮음)",
         "backToHome": "홈으로 돌아가기",
         "previous": "이전",
         "close": "닫기"

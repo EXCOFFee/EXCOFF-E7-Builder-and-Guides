@@ -27,6 +27,8 @@
         "viewsLow": "Visualizações (Menor)",
         "likesHigh": "Curtidas (Maior)",
         "likesLow": "Curtidas (Menor)",
+        "ratingHigh": "Avaliação (Maior)",
+        "ratingLow": "Avaliação (Menor)",
         "backToHome": "Voltar ao Início",
         "previous": "Anterior",
         "close": "Fechar"

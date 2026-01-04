@@ -29,6 +29,8 @@
         "viewsLow": "Views (Low)",
         "likesHigh": "Likes (High)",
         "likesLow": "Likes (Low)",
+        "ratingHigh": "Rating (High)",
+        "ratingLow": "Rating (Low)",
         "backToHome": "Back to Home",
         "previous": "Previous",
         "close": "Close"
