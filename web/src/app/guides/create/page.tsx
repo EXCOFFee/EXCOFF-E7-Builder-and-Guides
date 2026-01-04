@@ -438,7 +438,7 @@ export default function CreateGuidePage() {
                                                         onClick={() => setRecommendedHeroes(recommendedHeroes.filter(id => id !== hId))}
                                                         className="text-purple-400 hover:text-red-400 ml-1"
                                                     >
-                                                        ÁE
+                                                        ×
                                                     </button>
                                                 </div>
                                             );
@@ -513,7 +513,7 @@ export default function CreateGuidePage() {
                                                         onClick={() => setRecommendedArtifacts(recommendedArtifacts.filter(id => id !== aId))}
                                                         className="text-amber-400 hover:text-red-400 ml-1"
                                                     >
-                                                        ÁE
+                                                        ×
                                                     </button>
                                                 </div>
                                             );

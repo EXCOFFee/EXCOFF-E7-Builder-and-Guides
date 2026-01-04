@@ -621,7 +621,7 @@ export default function CreateBuildPage() {
                                                     }}
                                                     className="absolute top-1 right-1 w-5 h-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center hover:bg-red-600"
                                                 >
-                                                    ÁE
+                                                    ×
                                                 </button>
                                             </div>
                                         ))}
@@ -694,7 +694,7 @@ export default function CreateBuildPage() {
                                                         onClick={() => setSynergyHeroes(synergyHeroes.filter(id => id !== hId))}
                                                         className="text-green-400 hover:text-red-400 ml-1"
                                                     >
-                                                        ÁE
+                                                        ×
                                                     </button>
                                                 </div>
                                             );
@@ -768,7 +768,7 @@ export default function CreateBuildPage() {
                                                         onClick={() => setCounterHeroes(counterHeroes.filter(id => id !== hId))}
                                                         className="text-red-400 hover:text-red-600 ml-1"
                                                     >
-                                                        ÁE
+                                                        ×
                                                     </button>
                                                 </div>
                                             );
