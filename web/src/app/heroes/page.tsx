@@ -227,14 +227,15 @@ export default function HeroesPage() {
                                                 <Image
                                                     src={hero.image_url}
                                                     alt={hero.name}
-                                                    width={320}
-                                                    height={320}
+                                                    width={512}
+                                                    height={512}
                                                     className="w-full h-full object-cover"
                                                     style={{
                                                         objectPosition: HERO_POSITION_OVERRIDE[hero.slug] || 'center',
-                                                        imageRendering: 'auto',
+                                                        imageRendering: 'high-quality',
                                                     }}
                                                     unoptimized
+                                                    priority={false}
                                                 />
                                             ) : (
                                                 <div className="w-full h-full flex items-center justify-center">
