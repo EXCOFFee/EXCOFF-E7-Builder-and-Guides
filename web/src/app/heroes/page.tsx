@@ -349,11 +349,22 @@ export default function HeroesPage() {
 
                 {/* Error State */}
                 {error && (
-                    <div className="text-center text-red-400 py-20">
-                        <p>{t('heroes.loadError', 'Error loading heroes. Make sure the API is running.')}</p>
-                        <p className="text-sm text-gray-500 mt-2">
-                            API URL: {process.env.NEXT_PUBLIC_API_URL || t('common.notConfigured', 'Not configured')}
-                        </p>
+                    <div className="flex flex-col items-center justify-center py-20 px-4">
+                        <div className="text-center max-w-md">
+                            <div className="text-6xl mb-4">😔</div>
+                            <h3 className="text-xl font-bold text-red-400 mb-2">
+                                {t('common.connectionError', 'No connection')}
+                            </h3>
+                            <p className="text-gray-400 mb-6">
+                                {t('common.networkErrorMsg', 'Could not connect. Check your internet connection.')}
+                            </p>
+                            <button
+                                onClick={() => window.location.reload()}
+                                className="btn-gold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity"
+                            >
+                                {t('common.retry', 'Retry')}
+                            </button>
+                        </div>
                     </div>
                 )}
 
