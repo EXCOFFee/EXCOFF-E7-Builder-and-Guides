@@ -313,9 +313,9 @@ class SyncFribbelsData extends Command
      */
     private function getHeroImageUrl(string $code): string
     {
-        // Use app URL + local path for datamined images
+        // Use app URL + local path for high-res datamined images (_su = higher quality)
         $baseUrl = config('app.url');
-        return "{$baseUrl}/images/heroes/{$code}_l.png";
+        return "{$baseUrl}/images/heroes/{$code}_su.png";
     }
 
     /**
