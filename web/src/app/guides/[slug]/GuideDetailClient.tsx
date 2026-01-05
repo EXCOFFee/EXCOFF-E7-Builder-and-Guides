@@ -299,21 +299,24 @@ export function GuideDetailClient() {
                 </Link>
 
                 {/* Guide Header */}
-                <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6">
+                <div className="glass-panel border-e7-gold/20 rounded-2xl overflow-hidden mb-6 backdrop-blur-xl bg-gradient-to-br from-e7-panel/90 to-e7-dark/90 shadow-2xl">
                     {/* Hero Image */}
                     {guide.hero && (
-                        <div className="flex items-center gap-4 p-6 border-b border-e7-gold/20">
-                            <Image
-                                src={guide.hero.portrait}
-                                alt={guide.hero.name}
-                                width={80}
-                                height={80}
-                                className="rounded-lg"
-                                unoptimized
-                            />
+                        <div className="flex items-center gap-6 p-6 border-b border-e7-gold/20 bg-gradient-to-r from-transparent via-e7-gold/5 to-transparent">
+                            <div className="relative group">
+                                <div className="absolute inset-0 bg-gradient-to-br from-e7-gold/20 to-e7-purple/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                                <Image
+                                    src={guide.hero.portrait}
+                                    alt={guide.hero.name}
+                                    width={80}
+                                    height={80}
+                                    className="rounded-xl ring-2 ring-e7-gold/50 relative z-10 shadow-xl transform group-hover:scale-105 transition-transform duration-300"
+                                    unoptimized
+                                />
+                            </div>
                             <div>
-                                <p className="text-sm text-gray-400">{t('guides.relatedHero', 'Related Hero')}</p>
-                                <Link href={`/heroes/${guide.hero.slug}`} className="text-e7-gold hover:text-e7-text-gold font-bold">
+                                <p className="text-sm text-gray-400 mb-1">{t('guides.relatedHero', 'Related Hero')}</p>
+                                <Link href={`/heroes/${guide.hero.slug}`} className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold hover:from-e7-gold hover:to-e7-text-gold font-bold text-xl transition-all duration-300">
                                     {guide.hero.name}
                                 </Link>
                             </div>
@@ -322,17 +325,17 @@ export function GuideDetailClient() {
 
                     <div className="p-6">
                         {/* Category Badge */}
-                        <span className="px-3 py-1 text-sm bg-purple-500/20 text-purple-300 rounded-full">
+                        <span className="px-4 py-2 text-sm bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-200 rounded-full border border-purple-500/30 backdrop-blur-sm shadow-lg inline-block font-semibold">
                             {CATEGORY_LABELS[guide.category] || guide.category}
                         </span>
 
                         {/* Title */}
-                        <h1 className="text-2xl md:text-3xl font-bold text-white mt-4 mb-4">
+                        <h1 className="text-3xl md:text-4xl font-bold text-white mt-4 mb-4">
                             {guide.title}
                         </h1>
 
                         {/* Description */}
-                        <p className="text-gray-400 mb-6">{guide.description}</p>
+                        <p className="text-gray-400 mb-6 leading-relaxed">{guide.description}</p>
 
                         {/* Author & Actions */}
                         <div className="flex items-center justify-between pt-4 border-t border-e7-gold/20">
@@ -416,34 +419,38 @@ export function GuideDetailClient() {
                 )}
 
                 {/* Content */}
-                <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
+                <div className="glass-panel border-e7-gold/20 rounded-2xl overflow-hidden mb-6 p-6 backdrop-blur-sm bg-gradient-to-br from-e7-panel/80 to-e7-void/80 shadow-lg">
+                    <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4">Guide Content</h2>
                     <div className="prose prose-invert max-w-none">
-                        <div className="text-gray-300 whitespace-pre-wrap">{guide.gameplay_content}</div>
+                        <div className="text-gray-300 whitespace-pre-wrap leading-relaxed">{guide.gameplay_content}</div>
                     </div>
                 </div>
 
                 {/* Recommended Heroes */}
                 {guide.recommended_heroes_list && guide.recommended_heroes_list.length > 0 && (
                     <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
-                        <h2 className="text-xl font-bold text-purple-400 mb-4">
+                        <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-purple-400 font-bold text-xl mb-4">
                             {t('guides.recommendedHeroes', 'Recommended Heroes')}
                         </h2>
-                        <div className="flex flex-wrap gap-3">
+                        <div className="flex flex-wrap gap-4">
                             {guide.recommended_heroes_list.map(hero => (
                                 <Link
                                     key={hero.id}
                                     href={`/heroes/${hero.slug}`}
-                                    className="flex items-center gap-3 bg-purple-900/30 border border-purple-500/30 rounded-lg px-4 py-3 hover:bg-purple-900/50 transition-colors"
+                                    className="group flex items-center gap-4 bg-gradient-to-br from-purple-900/40 to-purple-800/20 border-2 border-purple-500/40 rounded-xl px-5 py-4 hover:border-purple-400/60 hover:bg-gradient-to-br hover:from-purple-900/50 hover:to-purple-800/30 transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1"
                                 >
-                                    <Image
-                                        src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
-                                        alt={hero.name}
-                                        width={64}
-                                        height={64}
-                                        className="rounded-full"
-                                        unoptimized
-                                    />
-                                    <span className="text-purple-300 font-medium text-lg">{hero.name}</span>
+                                    <div className="relative">
+                                        <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-purple-600/10 rounded-full blur-md group-hover:blur-lg transition-all duration-300"></div>
+                                        <Image
+                                            src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
+                                            alt={hero.name}
+                                            width={64}
+                                            height={64}
+                                            className="rounded-full ring-2 ring-purple-500/60 relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                                            unoptimized
+                                        />
+                                    </div>
+                                    <span className="text-purple-200 font-semibold text-lg group-hover:text-purple-100 transition-colors duration-300">{hero.name}</span>
                                 </Link>
                             ))}
                         </div>
@@ -453,25 +460,28 @@ export function GuideDetailClient() {
                 {/* Recommended Artifacts */}
                 {guide.recommended_artifacts_list && guide.recommended_artifacts_list.length > 0 && (
                     <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
-                        <h2 className="text-xl font-bold text-amber-400 mb-4">
+                        <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-400 font-bold text-xl mb-4">
                             {t('guides.recommendedArtifacts', 'Recommended Artifacts')}
                         </h2>
-                        <div className="flex flex-wrap gap-3">
+                        <div className="flex flex-wrap gap-4">
                             {guide.recommended_artifacts_list.map(artifact => (
                                 <Link
                                     key={artifact.id}
                                     href={`/artifacts`}
-                                    className="flex items-center gap-3 bg-amber-900/30 border border-amber-500/30 rounded-lg px-4 py-3 hover:bg-amber-900/50 transition-colors"
+                                    className="group flex items-center gap-4 bg-gradient-to-br from-amber-900/40 to-amber-800/20 border-2 border-amber-500/40 rounded-xl px-5 py-4 hover:border-amber-400/60 hover:bg-gradient-to-br hover:from-amber-900/50 hover:to-amber-800/30 transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-amber-500/20 hover:-translate-y-1"
                                 >
-                                    <Image
-                                        src={artifact.icon || `/images/artifacts/${artifact.code}.png`}
-                                        alt={artifact.name}
-                                        width={64}
-                                        height={64}
-                                        className="rounded"
-                                        unoptimized
-                                    />
-                                    <span className="text-amber-300 font-medium text-lg">{artifact.name}</span>
+                                    <div className="relative">
+                                        <div className="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-amber-600/10 rounded-lg blur-md group-hover:blur-lg transition-all duration-300"></div>
+                                        <Image
+                                            src={artifact.icon || `/images/artifacts/${artifact.code}.png`}
+                                            alt={artifact.name}
+                                            width={64}
+                                            height={64}
+                                            className="rounded-lg ring-2 ring-amber-500/60 relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                                            unoptimized
+                                        />
+                                    </div>
+                                    <span className="text-amber-200 font-semibold text-lg group-hover:text-amber-100 transition-colors duration-300">{artifact.name}</span>
                                 </Link>
                             ))}
                         </div>

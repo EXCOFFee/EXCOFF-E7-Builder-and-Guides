@@ -322,16 +322,17 @@ export function BuildDetailClient() {
                 </Link>
 
                 {/* Build Header */}
-                <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6">
+                <div className="glass-panel border-e7-gold/20 rounded-2xl overflow-hidden mb-6 backdrop-blur-xl bg-gradient-to-br from-e7-panel/90 to-e7-dark/90 shadow-2xl">
                     {/* Hero Section */}
-                    <div className="flex items-center gap-8 p-8 border-b border-e7-gold/20">
-                        <div className="relative">
+                    <div className="flex flex-col md:flex-row items-center gap-8 p-8 border-b border-e7-gold/20 bg-gradient-to-r from-transparent via-e7-gold/5 to-transparent">
+                        <div className="relative group">
+                            <div className="absolute inset-0 bg-gradient-to-br from-e7-gold/30 to-e7-purple/30 rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
                             <Image
                                 src={build.hero.portrait}
                                 alt={build.hero.name}
                                 width={200}
                                 height={200}
-                                className="rounded-2xl ring-3 ring-e7-gold/40"
+                                className="rounded-2xl ring-2 ring-e7-gold/60 relative z-10 shadow-2xl transform group-hover:scale-105 transition-transform duration-300"
                                 unoptimized
                             />
                             <Image
@@ -339,14 +340,14 @@ export function BuildDetailClient() {
                                 alt={build.hero.element}
                                 width={40}
                                 height={40}
-                                className="absolute -bottom-2 -right-2 w-10 h-10 ring-3 ring-e7-dark rounded-full bg-e7-dark"
+                                className="absolute -bottom-2 -right-2 w-10 h-10 ring-2 ring-e7-dark rounded-full bg-e7-dark/90 backdrop-blur-sm z-20 shadow-lg"
                             />
                         </div>
-                        <div>
-                            <Link href={`/heroes/${build.hero.slug}`} className="text-e7-gold hover:text-e7-text-gold font-bold text-4xl">
+                        <div className="flex-1 text-center md:text-left">
+                            <Link href={`/heroes/${build.hero.slug}`} className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold hover:from-e7-gold hover:to-e7-text-gold font-bold text-4xl md:text-5xl transition-all duration-300 transform hover:scale-105">
                                 {build.hero.name}
                             </Link>
-                            <p className="text-2xl text-gray-400 capitalize mt-1">{build.hero.class.replace('_', ' ')}</p>
+                            <p className="text-2xl text-gray-400 capitalize mt-2 font-medium">{build.hero.class.replace('_', ' ')}</p>
                         </div>
                     </div>
 
@@ -357,61 +358,66 @@ export function BuildDetailClient() {
                         </h1>
 
                         {/* Sets */}
-                        <div className="flex gap-4 mb-6">
+                        <div className="flex flex-wrap gap-4 mb-6">
                             {build.primary_set && (
-                                <span className="px-4 py-2 text-base bg-purple-500/20 text-purple-300 rounded-full flex items-center gap-3">
+                                <span className="px-5 py-3 text-base bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-200 rounded-2xl flex items-center gap-3 border border-purple-500/30 backdrop-blur-sm shadow-lg hover:shadow-purple-500/20 hover:scale-105 transition-all duration-300">
                                     {SET_IMAGES[build.primary_set] && (
                                         <Image
                                             src={SET_IMAGES[build.primary_set]}
                                             alt={build.primary_set}
                                             width={32}
                                             height={32}
+                                            className="drop-shadow-lg"
                                             unoptimized
                                         />
                                     )}
-                                    {build.primary_set}
+                                    <span className="font-semibold">{build.primary_set}</span>
                                 </span>
                             )}
                             {build.secondary_set && (
-                                <span className="px-4 py-2 text-base bg-blue-500/20 text-blue-300 rounded-full flex items-center gap-3">
+                                <span className="px-5 py-3 text-base bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-200 rounded-2xl flex items-center gap-3 border border-blue-500/30 backdrop-blur-sm shadow-lg hover:shadow-blue-500/20 hover:scale-105 transition-all duration-300">
                                     {SET_IMAGES[build.secondary_set] && (
                                         <Image
                                             src={SET_IMAGES[build.secondary_set]}
                                             alt={build.secondary_set}
                                             width={32}
                                             height={32}
+                                            className="drop-shadow-lg"
                                             unoptimized
                                         />
                                     )}
-                                    {build.secondary_set}
+                                    <span className="font-semibold">{build.secondary_set}</span>
                                 </span>
                             )}
                         </div>
 
                         {/* Artifact */}
                         {build.artifact && (
-                            <div className="flex items-center gap-4 mb-6 p-4 bg-e7-void/50 rounded-xl">
-                                <Image
-                                    src={build.artifact.icon}
-                                    alt={build.artifact.name}
-                                    width={96}
-                                    height={96}
-                                    className="rounded-xl ring-2 ring-e7-gold/30"
-                                    unoptimized
-                                />
-                                <span className="text-2xl text-white font-medium">{build.artifact.name}</span>
+                            <div className="group flex items-center gap-6 mb-6 p-5 bg-gradient-to-r from-e7-void/70 via-e7-panel/50 to-e7-void/70 rounded-2xl border border-e7-gold/20 backdrop-blur-sm hover:border-e7-gold/40 transition-all duration-300 shadow-lg">
+                                <div className="relative">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-e7-gold/20 to-e7-purple/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                                    <Image
+                                        src={build.artifact.icon}
+                                        alt={build.artifact.name}
+                                        width={96}
+                                        height={96}
+                                        className="rounded-xl ring-2 ring-e7-gold/40 relative z-10 shadow-xl group-hover:scale-110 transition-transform duration-300"
+                                        unoptimized
+                                    />
+                                </div>
+                                <span className="text-2xl text-white font-semibold group-hover:text-e7-text-gold transition-colors duration-300">{build.artifact.name}</span>
                             </div>
                         )}
 
                         {/* Min Stats */}
                         {build.min_stats && Object.keys(build.min_stats).length > 0 && (
                             <div className="mb-6">
-                                <h3 className="text-e7-gold font-semibold mb-3">{t('builds.minStats', 'Min Stats')}</h3>
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4">{t('builds.minStats', 'Min Stats')}</h3>
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                     {Object.entries(build.min_stats).map(([stat, value]) => (
-                                        <div key={stat} className="bg-e7-void/50 p-3 rounded-lg">
-                                            <p className="text-xs text-gray-400 uppercase">{stat}</p>
-                                            <p className="text-lg font-bold text-white">{value}</p>
+                                        <div key={stat} className="group bg-gradient-to-br from-e7-void/70 to-e7-panel/50 p-4 rounded-xl border border-e7-gold/20 backdrop-blur-sm hover:border-e7-gold/40 hover:shadow-lg hover:shadow-e7-gold/10 transition-all duration-300 hover:-translate-y-1">
+                                            <p className="text-xs text-gray-400 uppercase font-semibold tracking-wider mb-1">{stat}</p>
+                                            <p className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent group-hover:from-e7-text-gold group-hover:to-e7-gold transition-all duration-300">{value}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -420,9 +426,9 @@ export function BuildDetailClient() {
 
                         {/* Description */}
                         {build.description && (
-                            <div className="mb-6">
-                                <h3 className="text-e7-gold font-semibold mb-2">{t('builds.description', 'Description')}</h3>
-                                <p className="text-gray-300 whitespace-pre-wrap">{build.description}</p>
+                            <div className="mb-6 p-5 bg-gradient-to-br from-e7-void/50 to-e7-panel/30 rounded-xl border border-e7-gold/10 backdrop-blur-sm">
+                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-3">Description</h3>
+                                <p className="text-gray-300 whitespace-pre-wrap leading-relaxed">{build.description}</p>
                             </div>
                         )}
 
@@ -432,24 +438,25 @@ export function BuildDetailClient() {
                         {/* Synergy Heroes */}
                         {build.synergy_heroes_list && build.synergy_heroes_list.length > 0 && (
                             <div className="mb-6">
-                                <h3 className="text-e7-gold font-semibold mb-3 flex items-center gap-2">
+                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4 flex items-center gap-2">
                                     {t('builds.synergyHeroes', 'Synergy Heroes')}
-                                    <span className="text-gray-500 text-sm font-normal">({build.synergy_heroes_list.length})</span>
+                                    <span className="text-gray-500 text-base font-normal">({build.synergy_heroes_list.length})</span>
                                 </h3>
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                                     {build.synergy_heroes_list.map(hero => (
                                         <Link
                                             key={hero.id}
                                             href={`/heroes/${hero.slug}`}
-                                            className="group flex flex-col items-center p-4 rounded-lg bg-green-900/20 border border-green-500/30 hover:border-green-400/50 hover:bg-green-900/30 transition-all"
+                                            className="group flex flex-col items-center p-4 rounded-xl bg-gradient-to-br from-green-900/30 to-emerald-900/20 border-2 border-green-500/40 hover:border-green-400/60 hover:bg-gradient-to-br hover:from-green-900/40 hover:to-emerald-900/30 transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-green-500/20 hover:-translate-y-1"
                                         >
                                             <div className="relative">
+                                                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-400/10 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
                                                 <Image
                                                     src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
                                                     alt={hero.name}
                                                     width={128}
                                                     height={128}
-                                                    className="w-32 h-32 rounded-full ring-2 ring-green-500/50 group-hover:ring-green-400 object-cover"
+                                                    className="w-32 h-32 rounded-full ring-2 ring-green-500/60 group-hover:ring-green-400 group-hover:ring-3 object-cover relative z-10 shadow-xl group-hover:scale-110 transition-all duration-300"
                                                     unoptimized
                                                 />
                                                 {ELEMENT_IMAGES[hero.element] && (
@@ -458,11 +465,11 @@ export function BuildDetailClient() {
                                                         alt={hero.element}
                                                         width={24}
                                                         height={24}
-                                                        className="absolute -bottom-1 -right-1 ring-1 ring-e7-dark rounded-full bg-e7-dark"
+                                                        className="absolute -bottom-1 -right-1 ring-2 ring-e7-dark rounded-full bg-e7-dark/90 backdrop-blur-sm z-20 shadow-lg"
                                                     />
                                                 )}
                                             </div>
-                                            <span className="mt-3 text-sm text-green-300 group-hover:text-green-200 text-center font-medium truncate max-w-full">
+                                            <span className="mt-3 text-sm text-green-300 group-hover:text-green-200 text-center font-semibold truncate max-w-full transition-colors duration-300">
                                                 {hero.name}
                                             </span>
                                         </Link>
@@ -474,24 +481,25 @@ export function BuildDetailClient() {
                         {/* Counter Heroes */}
                         {build.counter_heroes_list && build.counter_heroes_list.length > 0 && (
                             <div className="mb-6">
-                                <h3 className="text-e7-gold font-semibold mb-3 flex items-center gap-2">
+                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4 flex items-center gap-2">
                                     {t('builds.counterHeroes', 'Counter Heroes')}
-                                    <span className="text-gray-500 text-sm font-normal">({build.counter_heroes_list.length})</span>
+                                    <span className="text-gray-500 text-base font-normal">({build.counter_heroes_list.length})</span>
                                 </h3>
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                                     {build.counter_heroes_list.map(hero => (
                                         <Link
                                             key={hero.id}
                                             href={`/heroes/${hero.slug}`}
-                                            className="group flex flex-col items-center p-4 rounded-lg bg-red-900/20 border border-red-500/30 hover:border-red-400/50 hover:bg-red-900/30 transition-all"
+                                            className="group flex flex-col items-center p-4 rounded-xl bg-gradient-to-br from-red-900/30 to-rose-900/20 border-2 border-red-500/40 hover:border-red-400/60 hover:bg-gradient-to-br hover:from-red-900/40 hover:to-rose-900/30 transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-red-500/20 hover:-translate-y-1"
                                         >
                                             <div className="relative">
+                                                <div className="absolute inset-0 bg-gradient-to-br from-red-400/20 to-rose-400/10 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
                                                 <Image
                                                     src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
                                                     alt={hero.name}
                                                     width={128}
                                                     height={128}
-                                                    className="w-32 h-32 rounded-full ring-2 ring-red-500/50 group-hover:ring-red-400 object-cover"
+                                                    className="w-32 h-32 rounded-full ring-2 ring-red-500/60 group-hover:ring-red-400 group-hover:ring-3 object-cover relative z-10 shadow-xl group-hover:scale-110 transition-all duration-300"
                                                     unoptimized
                                                 />
                                                 {ELEMENT_IMAGES[hero.element] && (
@@ -500,11 +508,11 @@ export function BuildDetailClient() {
                                                         alt={hero.element}
                                                         width={24}
                                                         height={24}
-                                                        className="absolute -bottom-1 -right-1 ring-1 ring-e7-dark rounded-full bg-e7-dark"
+                                                        className="absolute -bottom-1 -right-1 ring-2 ring-e7-dark rounded-full bg-e7-dark/90 backdrop-blur-sm z-20 shadow-lg"
                                                     />
                                                 )}
                                             </div>
-                                            <span className="mt-3 text-sm text-red-300 group-hover:text-red-200 text-center font-medium truncate max-w-full">
+                                            <span className="mt-3 text-sm text-red-300 group-hover:text-red-200 text-center font-semibold truncate max-w-full transition-colors duration-300">
                                                 {hero.name}
                                             </span>
                                         </Link>

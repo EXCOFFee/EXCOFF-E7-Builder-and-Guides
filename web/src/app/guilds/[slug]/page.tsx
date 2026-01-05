@@ -181,39 +181,39 @@ export default function GuildPostDetailPage() {
                 </Link>
 
                 {/* Post Header */}
-                <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
+                <div className="glass-panel border-e7-gold/20 rounded-2xl overflow-hidden backdrop-blur-xl bg-gradient-to-br from-e7-panel/90 to-e7-dark/90 shadow-2xl">
                     {/* Images */}
-                    <div className="p-4">
+                    <div className="p-6">
                         <ImageGallery images={post.images || []} title={t('guilds.images', 'Images')} />
                     </div>
 
                     <div className="p-6">
                         {/* Server & Language */}
-                        <div className="flex items-center gap-4 mb-4">
-                            <span className="flex items-center gap-2 px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">
-                                {SERVER_FLAGS[post.server]} {post.server.charAt(0).toUpperCase() + post.server.slice(1)}
+                        <div className="flex flex-wrap items-center gap-4 mb-4">
+                            <span className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-purple-600/20 text-purple-200 rounded-full text-sm border border-purple-500/30 backdrop-blur-sm shadow-lg font-semibold">
+                                <span className="text-xl">{SERVER_FLAGS[post.server]}</span> {post.server.charAt(0).toUpperCase() + post.server.slice(1)}
                             </span>
-                            <span className="text-gray-400 text-sm">
-                                {LANGUAGE_NAMES[post.language] || post.language.toUpperCase()}
+                            <span className="px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-200 rounded-full text-sm border border-blue-500/30 backdrop-blur-sm shadow-lg font-semibold">
+                                🌐 {LANGUAGE_NAMES[post.language] || post.language.toUpperCase()}
                             </span>
                         </div>
 
                         {/* Title */}
-                        <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                        <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
                             {post.title}
                         </h1>
 
                         {/* Tags */}
-                        <div className="flex flex-wrap gap-2 mb-6">
+                        <div className="flex flex-wrap gap-3 mb-6">
                             {post.tags?.map((tag) => {
                                 const isMysticTag = tag.startsWith('mystic_');
                                 return (
                                     <span
                                         key={tag}
-                                        className="px-3 py-1 text-sm bg-e7-gold/10 text-e7-gold rounded-full flex items-center gap-1"
+                                        className="group px-4 py-2 text-sm bg-gradient-to-r from-e7-gold/20 to-e7-text-gold/10 text-e7-text-gold rounded-xl flex items-center gap-2 border border-e7-gold/30 backdrop-blur-sm shadow-lg hover:shadow-e7-gold/20 hover:scale-105 hover:border-e7-gold/50 transition-all duration-300 font-semibold"
                                     >
                                         {isMysticTag && (
-                                            <Image src="/images/mystic.png" alt="mystic" width={16} height={16} unoptimized />
+                                            <Image src="/images/mystic.png" alt="mystic" width={18} height={18} className="drop-shadow-lg" unoptimized />
                                         )}
                                         {t(`guilds.tags.${tag}`, TAG_LABELS[tag] || tag.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()))}
                                     </span>
@@ -222,8 +222,11 @@ export default function GuildPostDetailPage() {
                         </div>
 
                         {/* Description */}
-                        <div className="prose prose-invert max-w-none mb-6">
-                            <p className="text-gray-300 whitespace-pre-wrap">{post.description}</p>
+                        <div className="p-5 bg-gradient-to-br from-e7-void/50 to-e7-panel/30 rounded-xl border border-e7-gold/10 backdrop-blur-sm mb-6">
+                            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-lg mb-3">Description</h3>
+                            <div className="prose prose-invert max-w-none">
+                                <p className="text-gray-300 whitespace-pre-wrap leading-relaxed">{post.description}</p>
+                            </div>
                         </div>
 
                         {/* Author & Actions */}
