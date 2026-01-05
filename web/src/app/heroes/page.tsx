@@ -61,6 +61,11 @@ const CLASS_NAMES: Record<string, string> = {
 // Hero portraits that need custom positioning (faces cut off with center)
 // Values: CSS object-position (higher % = shows more of the right side)
 const HERO_POSITION_OVERRIDE: Record<string, string> = {
+    'abyssal-yufine': '15% 30%',
+    'afternoon-soak-flan': '20% 35%',
+    'ainz-ooal-gown': 'center 30%',
+    'amid': '25% 30%',
+    'angel-of-light-angelica': '20% 30%',
     'apocalypse-ravi': '85% center',
     'assassin-cidd': '85% center',
     'bask': '85% center',
