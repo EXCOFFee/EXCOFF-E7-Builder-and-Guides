@@ -756,6 +756,377 @@
                     "note": "Buffed from 1.1"
                 }
             }
+        },
+        {
+            "name": "Closer Charles",
+            "code": "c2027",
+            "datamine_date": "2024.12.19",
+            "skills": {
+                "s1_proc": {
+                    "att_rate": 1.4,
+                    "pow": 1.0,
+                    "heal_strength": "30% of damage dealt",
+                    "lost_hp_scaling": "0.4% increased damage per 1% target missing Health",
+                    "note": "Buffed from 1.2"
+                }
+            }
+        },
+        {
+            "name": "Archdemon's Shadow",
+            "code": "c2062",
+            "datamine_date": "2024.12.19",
+            "skills": {
+                "s2_proc": {
+                    "att_rate": 0.45,
+                    "pow": 1.3,
+                    "additional_damage": "40% caster's Attack",
+                    "note": "Changed from 0.6"
+                }
+            }
+        },
+        {
+            "name": "Eligos",
+            "code": "c1141",
+            "datamine_date": "2024.12.19",
+            "skills": {
+                "s1": {
+                    "att_rate": 0.85,
+                    "pow": 0.9,
+                    "note": "Changed from 0.95"
+                },
+                "s2_proc": {
+                    "att_rate": 1.4,
+                    "pow": 1.3,
+                    "speed_scaling": 0.15,
+                    "note": "Buffed from 0.75"
+                },
+                "s3": {
+                    "att_rate": 1.2,
+                    "pow": 1.0,
+                    "note": "Changed from 1.5"
+                }
+            }
+        },
+        {
+            "name": "Chloe",
+            "code": "c1031",
+            "datamine_date": "2024.12.19",
+            "skills": {
+                "s2": {
+                    "magic_nail_damage": "80% attacker's Attack"
+                },
+                "s3": {
+                    "att_rate": 1.8,
+                    "att_rate_soulburn": 3.3,
+                    "pow": 0.8,
+                    "note": "Buffed from 1.7 (soulburn from 3.0)"
+                }
+            }
+        },
+        {
+            "name": "Yufine",
+            "code": "c1016",
+            "datamine_date": "2024.12.19",
+            "skills": {
+                "s3": {
+                    "damage_increase_debuffed": 0.5,
+                    "note": "50% increased damage if target is debuffed"
+                }
+            }
+        },
+        {
+            "name": "Young Senya",
+            "code": "c1143",
+            "datamine_date": "2024.12.05",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.0,
+                    "pow": 1.0
+                },
+                "s2_proc": {
+                    "att_rate": 1.0,
+                    "pow": 1.0,
+                    "health_scaling": "15% self and ally's max Health"
+                },
+                "special_friendship": {
+                    "additional_damage": "8% attacker's max Health on critical hit"
+                }
+            }
+        },
+        {
+            "name": "Bystander Hwayoung",
+            "code": "c1144",
+            "datamine_date": "2024.12.05",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.2,
+                    "pow": 1.0
+                },
+                "s2": {
+                    "def_increase": "40% of self Attack"
+                },
+                "s3": {
+                    "att_rate": 1.8,
+                    "att_rate_soulburn": 2.3,
+                    "pow": 0.95,
+                    "ignores_dmg_share": true,
+                    "light_element_bonus": 1.0,
+                    "light_element_bonus_soulburn": 1.2,
+                    "note": "100% (120% soulburn) damage increase vs light element. Ignores damage sharing (PVP only)"
+                }
+            }
+        },
+        {
+            "name": "Westwind Executioner Schuri",
+            "code": "c2020s",
+            "datamine_date": "2024.11.21",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.0,
+                    "pow": 1.0
+                },
+                "s1_proc": {
+                    "att_rate": 1.0,
+                    "pow": 1.0,
+                    "burn_detonation": 1.0,
+                    "note": "No bonus damage on detonation"
+                },
+                "s3": {
+                    "att_rate": 1.2,
+                    "pow": 1.0,
+                    "bomb_detonation": 1.0,
+                    "burn_detonation": 1.0
+                }
+            }
+        },
+        {
+            "name": "Fairytale Tenebria",
+            "code": "c2061",
+            "datamine_date": "2024.11.21",
+            "skills": {
+                "s3_ee": {
+                    "barrier_strength": "25% target's max Health"
+                }
+            }
+        },
+        {
+            "name": "Harsetti",
+            "code": "c1140",
+            "datamine_date": "2024.09.12",
+            "skills": {
+                "s1": {
+                    "att_rate": 0.6,
+                    "pow": 1.0,
+                    "health_scaling": "8% caster's max Health"
+                },
+                "s1_proc": {
+                    "att_rate": 0.5,
+                    "pow": 1.0,
+                    "health_scaling": "11% caster's max Health"
+                },
+                "s3": {
+                    "att_rate": 0.1,
+                    "pow": 1.0,
+                    "damage_increase_full_focus": 1.0
+                }
+            }
+        },
+        {
+            "name": "Fenris",
+            "code": "c1139",
+            "datamine_date": "2024.09.12",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.2,
+                    "att_rate_soulburn": 1.9,
+                    "pow": 1.0
+                },
+                "s2": {
+                    "att_rate": 0.7,
+                    "pow": 1.0
+                },
+                "s3": {
+                    "att_rate": 1.3,
+                    "pow": 1.0,
+                    "hp_diff_scaling": 0.005,
+                    "hp_diff_cap": 0.7,
+                    "note": "0.005% per HP difference, 70% cap (14000 HP diff for max)"
+                }
+            }
+        },
+        {
+            "name": "Revna",
+            "code": "c3133",
+            "datamine_date": "2024.09.12",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.0,
+                    "pow": 1.0,
+                    "target_hp_scaling": "2.5% target's max Health"
+                },
+                "s3": {
+                    "att_rate": 1.5,
+                    "att_rate_soulburn": 1.8,
+                    "pow": 1.0,
+                    "target_hp_scaling": "3% target's max Health"
+                }
+            }
+        },
+        {
+            "name": "Judge Kise",
+            "code": "c2006",
+            "datamine_date": "2024.09.12",
+            "skills": {
+                "s3": {
+                    "att_rate": 1.2,
+                    "pow": 0.95,
+                    "note": "Buffed from 1.1"
+                }
+            }
+        },
+        {
+            "name": "Frida",
+            "code": "c1138",
+            "datamine_date": "2024.08.15",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.0,
+                    "pow": 1.0,
+                    "barrier_strength": "20% caster's max Health"
+                }
+            }
+        },
+        {
+            "name": "New Moon Luna",
+            "code": "c2044",
+            "datamine_date": "2024.06.20",
+            "skills": {
+                "s1": {
+                    "att_rate": 0.7,
+                    "pow": 1.0,
+                    "health_scaling": "12% caster's max Health"
+                },
+                "s2": {
+                    "att_rate": 0.7,
+                    "pow": 0.95,
+                    "health_scaling": "20% caster's max Health",
+                    "additional_damage": "16% caster's max Health"
+                }
+            }
+        },
+        {
+            "name": "Immortal Wukong",
+            "code": "c1136",
+            "datamine_date": "2024.06.20",
+            "skills": {
+                "s1_single": {
+                    "att_rate": 0.85,
+                    "att_rate_soulburn": 1.55,
+                    "pow": 1.0,
+                    "shield_strength": "30% caster's Attack"
+                },
+                "s1_aoe": {
+                    "att_rate": 0.85,
+                    "att_rate_soulburn": 1.1,
+                    "pow": 1.0,
+                    "shield_strength": "30% caster's Attack"
+                },
+                "s3": {
+                    "att_rate": 1.5,
+                    "pow": 1.0,
+                    "atk_diff_scaling": 0.0175,
+                    "atk_diff_cap": 0.7,
+                    "note": "0.0175% per ATK difference, 70% cap (4000 ATK diff for max)"
+                }
+            }
+        },
+        {
+            "name": "Ainz Ooal Gown",
+            "code": "c1132",
+            "datamine_date": "2024.04.11",
+            "skills": {
+                "s1": {
+                    "att_rate": 0.7,
+                    "pow": 0.95
+                },
+                "s2": {
+                    "barrier_strength": "20% caster's max Health"
+                }
+            }
+        },
+        {
+            "name": "Albedo",
+            "code": "c1133",
+            "datamine_date": "2024.04.11",
+            "skills": {
+                "s1": {
+                    "att_rate": 0.75,
+                    "pow": 1.0,
+                    "health_scaling": "9% caster's max Health",
+                    "additional_damage": "7% caster's max Health"
+                },
+                "s2": {
+                    "att_rate": 0.3,
+                    "pow": 1.3,
+                    "health_scaling": "7% caster's max Health"
+                },
+                "s3": {
+                    "att_rate": 0.7,
+                    "pow": 1.05,
+                    "health_scaling": "25% caster's max Health"
+                }
+            }
+        },
+        {
+            "name": "Shalltear",
+            "code": "c1134",
+            "datamine_date": "2024.04.25",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.1,
+                    "att_rate_soulburn": 1.5,
+                    "pow": 1.0
+                },
+                "s3": {
+                    "att_rate": 1.9,
+                    "pow": 1.0
+                }
+            }
+        },
+        {
+            "name": "Wandering Prince Cidd",
+            "code": "c2014",
+            "datamine_date": "2024.04.25",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.0,
+                    "pow": 1.0
+                },
+                "s2_proc": {
+                    "att_rate": 0.6,
+                    "pow": 0.9
+                },
+                "s3": {
+                    "detonation_bonus": 0.1,
+                    "note": "+10% detonation multiplier"
+                }
+            }
+        },
+        {
+            "name": "Bernard",
+            "code": "c1135",
+            "datamine_date": "2024.06.05",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.0,
+                    "pow": 1.0
+                },
+                "s2": {
+                    "barrier_start": "20% caster's max Health",
+                    "barrier_start_max": "30% caster's max Health",
+                    "barrier_turn_end": "15% caster's max Health"
+                }
+            }
         }
     ]
 }
