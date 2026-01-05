@@ -81,10 +81,10 @@ export default function NewsPage() {
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="mb-8 text-center">
-                    <h1 className="text-3xl md:text-4xl font-semibold text-e7-gold tracking-tight mb-4">
+                    <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">
                         {t('news.title', 'Epic Seven News')}
                     </h1>
-                    <p className="text-neutral-500 max-w-xl mx-auto">
+                    <p className="text-slate-400 max-w-xl mx-auto">
                         {t('news.subtitle', 'Latest updates, announcements and videos from the official Epic Seven channels')}
                     </p>
 

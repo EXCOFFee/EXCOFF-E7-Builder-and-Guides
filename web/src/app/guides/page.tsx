@@ -87,8 +87,8 @@ export default function GuidesPage() {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
                     <div className="text-center md:text-left">
-                        <h1 className="text-3xl md:text-4xl font-semibold text-e7-gold tracking-tight mb-2">{t('guides.title', 'Game Guides')}</h1>
-                        <p className="text-neutral-500">{t('guides.description', 'Learn strategies and tips from the community')}</p>
+                        <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">{t('guides.title', 'Game Guides')}</h1>
+                        <p className="text-slate-400">{t('guides.description', 'Learn strategies and tips from the community')}</p>
                     </div>
                     <Link href="/guides/create">
                         <Button className="btn-gold px-4 py-2 rounded-md">

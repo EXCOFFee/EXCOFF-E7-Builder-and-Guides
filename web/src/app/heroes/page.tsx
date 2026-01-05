@@ -113,8 +113,8 @@ export default function HeroesPage() {
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-10 text-center">
-                    <h1 className="text-3xl md:text-4xl font-semibold text-e7-gold mb-3 tracking-tight">{t('heroes.title', 'Hero Database')}</h1>
-                    <p className="text-neutral-500 max-w-xl mx-auto">{t('heroes.description', 'Explore all Epic Seven heroes, their stats and builds')}</p>
+                    <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">{t('heroes.title', 'Hero Database')}</h1>
+                    <p className="text-slate-400 max-w-xl mx-auto">{t('heroes.description', 'Explore all Epic Seven heroes, their stats and builds')}</p>
                 </div>
 
                 {/* Filters */}
