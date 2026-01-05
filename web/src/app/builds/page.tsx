@@ -148,14 +148,14 @@ export default function BuildsPage() {
                         <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">
                             {t('builds.title', 'Community Builds')}
                         </h1>
-                        <p className="text-slate-400">
+                        <p className="font-display text-slate-400">
                             {t('builds.description', 'Explore and share hero builds created by the community')}
                         </p>
                     </div>
                     <div className="flex gap-3">
                         <Link href="/builds/compare">
                             <Button variant="outline" className="border-e7-gold/30 text-e7-gold hover:bg-e7-gold/10 px-6 py-2.5 rounded-lg">
-                                ⚖️ {t('builds.compare', 'Compare')}
+                                {t('builds.compare', 'Compare')}
                             </Button>
                         </Link>
                         <Link href="/builds/create">
@@ -250,17 +250,17 @@ export default function BuildsPage() {
                             className="bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg pl-3 pr-10 py-2 text-sm focus:border-e7-gold focus:ring-e7-gold/30 cursor-pointer"
                         >
                             <option value="newest">{t('common.newest', 'Newest')}</option>
-                            <option value="views_desc">👁 {t('common.viewsHigh', 'Views (High)')}</option>
-                            <option value="views_asc">👁 {t('common.viewsLow', 'Views (Low)')}</option>
-                            <option value="likes_desc">❤ {t('common.likesHigh', 'Likes (High)')}</option>
-                            <option value="likes_asc">❤ {t('common.likesLow', 'Likes (Low)')}</option>
+                            <option value="views_desc">{t('common.viewsHigh', 'Views (High)')}</option>
+                            <option value="views_asc">{t('common.viewsLow', 'Views (Low)')}</option>
+                            <option value="likes_desc">{t('common.likesHigh', 'Likes (High)')}</option>
+                            <option value="likes_asc">{t('common.likesLow', 'Likes (Low)')}</option>
                         </select>
 
                         <button
                             onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
                             className={`ml-4 px-3 py-2 rounded-lg text-sm transition-all ${showAdvancedFilters ? 'bg-e7-gold/20 text-e7-gold' : 'bg-e7-void/50 text-slate-400 hover:text-slate-200'}`}
                         >
-                            ⚙️ {t('builds.advancedFilters', 'Advanced Filters')}
+                            {t('builds.advancedFilters', 'Advanced Filters')}
                         </button>
                     </div>
 

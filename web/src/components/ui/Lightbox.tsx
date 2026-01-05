@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Image from 'next/image';
 
 interface LightboxProps {
@@ -11,6 +12,16 @@ interface LightboxProps {
 
 export function Lightbox({ images, initialIndex = 0, onClose }: LightboxProps) {
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+        // Prevent scrolling when lightbox is open
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, []);
 
     const next = () => {
         setCurrentIndex((currentIndex + 1) % images.length);
@@ -32,9 +43,11 @@ export function Lightbox({ images, initialIndex = 0, onClose }: LightboxProps) {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [currentIndex, onClose]);
 
-    return (
+    if (!mounted) return null;
+
+    return createPortal(
         <div
-            className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center"
+            className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center backdrop-blur-none"
             onClick={onClose}
         >
             {/* Close button */}
@@ -100,6 +113,7 @@ export function Lightbox({ images, initialIndex = 0, onClose }: LightboxProps) {
                     {currentIndex + 1} / {images.length}
                 </span>
             </div>
-        </div>
+        </div>,
+        document.body
     );
 }

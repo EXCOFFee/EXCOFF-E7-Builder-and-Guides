@@ -5,7 +5,8 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { SkillUpgradeInput } from '@/components/builds/SkillUpgradeInput';
 import { useQuery } from '@tanstack/react-query';
 import { heroApi, buildApi } from '@/lib/api';
 import Image from 'next/image';
@@ -20,6 +21,11 @@ interface Hero {
     name: string;
     slug: string;
     image_url?: string;
+    skills?: {
+        name: string;
+        icon: string;
+        description: string;
+    }[];
 }
 
 interface Artifact {
@@ -47,6 +53,7 @@ export default function CreateBuildPage() {
     const [description, setDescription] = useState('');
     const [primarySet, setPrimarySet] = useState('');
     const [secondarySet, setSecondarySet] = useState('');
+    const [skillLevels, setSkillLevels] = useState<[number, number, number]>([0, 0, 0]);
 
     // Search states for dropdowns
     const [heroSearch, setHeroSearch] = useState('');
@@ -205,11 +212,14 @@ export default function CreateBuildPage() {
                     formData.append(`synergy_heroes[${index}]`, heroId.toString());
                 });
             }
-            if (counterHeroes.length > 0) {
-                counterHeroes.forEach((heroId, index) => {
-                    formData.append(`counter_heroes[${index}]`, heroId.toString());
-                });
-            }
+            counterHeroes.forEach((heroId, index) => {
+                formData.append(`counter_heroes[${index}]`, heroId.toString());
+            });
+
+            // Add skill levels
+            if (skillLevels[0] > 0) formData.append('skill_1', skillLevels[0].toString());
+            if (skillLevels[1] > 0) formData.append('skill_2', skillLevels[1].toString());
+            if (skillLevels[2] > 0) formData.append('skill_3', skillLevels[2].toString());
 
             const response = await fetch(`${API_URL}/builds`, {
                 method: 'POST',
@@ -389,6 +399,35 @@ export default function CreateBuildPage() {
                                     </div>
                                 )}
                             </div>
+
+                            {/* Skill Recommendations */}
+                            {selectedHero && selectedHero.skills && selectedHero.skills.length >= 3 && (
+                                <div className="mb-6">
+                                    <h3 className="text-xl font-semibold mb-4 text-gold-gradient flex items-center gap-2">
+                                        ⚡ {t('builds.skillRecommendations', 'Skill Upgrade Recommendations')}
+                                    </h3>
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                        <SkillUpgradeInput
+                                            skillNumber={1}
+                                            skillData={selectedHero.skills[0]}
+                                            value={skillLevels[0]}
+                                            onChange={(val) => setSkillLevels([val, skillLevels[1], skillLevels[2]])}
+                                        />
+                                        <SkillUpgradeInput
+                                            skillNumber={2}
+                                            skillData={selectedHero.skills[1]}
+                                            value={skillLevels[1]}
+                                            onChange={(val) => setSkillLevels([skillLevels[0], val, skillLevels[2]])}
+                                        />
+                                        <SkillUpgradeInput
+                                            skillNumber={3}
+                                            skillData={selectedHero.skills[2]}
+                                            value={skillLevels[2]}
+                                            onChange={(val) => setSkillLevels([skillLevels[0], skillLevels[1], val])}
+                                        />
+                                    </div>
+                                </div>
+                            )}
 
                             {/* Title */}
                             <div>

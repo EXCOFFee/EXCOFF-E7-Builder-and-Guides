@@ -43,6 +43,9 @@ interface Build {
     is_anonymous: boolean;
     synergy_heroes: number[];
     counter_heroes: number[];
+    skill_1?: number;
+    skill_2?: number;
+    skill_3?: number;
     synergy_heroes_list?: { id: number; name: string; slug: string; element: string; image_url?: string; portrait?: string; }[];
     counter_heroes_list?: { id: number; name: string; slug: string; element: string; image_url?: string; portrait?: string; }[];
     images: string[];
@@ -58,6 +61,11 @@ interface Build {
         portrait: string;
         element: string;
         class: string;
+        skills?: {
+            name: string;
+            icon: string;
+            description: string;
+        }[];
     };
     artifact: {
         id: number;
@@ -344,16 +352,16 @@ export function BuildDetailClient() {
                             />
                         </div>
                         <div className="flex-1 text-center md:text-left">
-                            <Link href={`/heroes/${build.hero.slug}`} className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold hover:from-e7-gold hover:to-e7-text-gold font-bold text-4xl md:text-5xl transition-all duration-300 transform hover:scale-105">
+                            <Link href={`/heroes/${build.hero.slug}`} className="font-display inline-block text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold hover:from-e7-gold hover:to-e7-text-gold font-bold text-4xl md:text-5xl transition-all duration-300 transform hover:scale-105">
                                 {build.hero.name}
                             </Link>
-                            <p className="text-2xl text-gray-400 capitalize mt-2 font-medium">{build.hero.class.replace('_', ' ')}</p>
+                            <p className="font-display text-2xl text-gray-400 capitalize mt-2 font-medium">{build.hero.class.replace('_', ' ')}</p>
                         </div>
                     </div>
 
                     <div className="p-6">
                         {/* Title */}
-                        <h1 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                        <h1 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
                             {build.title}
                         </h1>
 
@@ -408,6 +416,64 @@ export function BuildDetailClient() {
                                 <span className="text-2xl text-white font-semibold group-hover:text-e7-text-gold transition-colors duration-300">{build.artifact.name}</span>
                             </div>
                         )}
+
+
+
+                        {/* Skill Recommendations */}
+                        {build.hero.skills && build.hero.skills.length >= 3 &&
+                            (build.skill_1 || build.skill_2 || build.skill_3) ? (
+                            <div className="mb-6">
+                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4">
+                                    {t('builds.skillRecommendations', 'Skill Recommendations')}
+                                </h3>
+                                <div className="flex flex-wrap gap-6">
+                                    {[0, 1, 2].map(idx => {
+                                        const skillLevel = build[`skill_${idx + 1}` as keyof Build] as number || 0;
+                                        const skill = build.hero.skills![idx];
+                                        return (
+                                            <div key={idx} className="relative group">
+                                                <div className={`
+                                                    relative w-16 h-16 rounded-xl overflow-hidden border-2 transition-all duration-300
+                                                    ${skillLevel > 0
+                                                        ? 'border-e7-gold shadow-lg shadow-e7-gold/20'
+                                                        : 'border-white/10 opacity-70 group-hover:opacity-100 group-hover:border-white/30'
+                                                    }
+                                                `}>
+                                                    <Image
+                                                        src={skill.icon}
+                                                        alt={skill.name}
+                                                        width={64}
+                                                        height={64}
+                                                        className="w-full h-full object-cover"
+                                                        unoptimized
+                                                    />
+                                                    {skillLevel > 0 && (
+                                                        <div className="absolute inset-0 border-2 border-e7-gold/50 rounded-xl animate-pulse"></div>
+                                                    )}
+                                                </div>
+
+                                                {/* Level Badge */}
+                                                <div className={`
+                                                    absolute -top-2 -right-2 w-7 h-7 flex items-center justify-center rounded-full text-xs font-bold border
+                                                    ${skillLevel > 0
+                                                        ? 'bg-e7-gold text-black border-white/20 shadow-md transform scale-110'
+                                                        : 'bg-e7-panel text-gray-400 border-white/10'
+                                                    }
+                                                `}>
+                                                    +{skillLevel}
+                                                </div>
+
+                                                {/* Tooltip */}
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-black/90 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 border border-white/10">
+                                                    {skill.name}
+                                                    {skillLevel === 0 && <span className="block text-gray-500 text-[10px]">{t('common.noUpgrade', 'No upgrade')}</span>}
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        ) : null}
 
                         {/* Min Stats */}
                         {build.min_stats && Object.keys(build.min_stats).length > 0 && (

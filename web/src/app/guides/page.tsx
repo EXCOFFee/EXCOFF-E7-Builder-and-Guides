@@ -88,7 +88,7 @@ export default function GuidesPage() {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
                     <div className="text-center md:text-left">
                         <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">{t('guides.title', 'Game Guides')}</h1>
-                        <p className="text-slate-400">{t('guides.description', 'Learn strategies and tips from the community')}</p>
+                        <p className="font-display text-slate-400">{t('guides.description', 'Learn strategies and tips from the community')}</p>
                     </div>
                     <Link href="/guides/create">
                         <Button className="btn-gold px-4 py-2 rounded-md">
@@ -108,7 +108,6 @@ export default function GuidesPage() {
                                 : 'bg-white/4 text-neutral-400 hover:text-neutral-200 hover:bg-white/6'
                                 }`}
                         >
-                            <span className="mr-1.5">{cat.emoji}</span>
                             {cat.label}
                         </button>
                     ))}
@@ -130,10 +129,10 @@ export default function GuidesPage() {
                             className="bg-white/4 border border-white/8 text-neutral-200 rounded-md pl-3 pr-10 py-1.5 text-sm focus:border-e7-gold cursor-pointer"
                         >
                             <option value="newest">{t('common.newest', 'Newest')}</option>
-                            <option value="views_desc">👁 {t('common.viewsHigh', 'Views (High)')}</option>
-                            <option value="views_asc">👁 {t('common.viewsLow', 'Views (Low)')}</option>
-                            <option value="likes_desc">❤ {t('common.likesHigh', 'Likes (High)')}</option>
-                            <option value="likes_asc">❤ {t('common.likesLow', 'Likes (Low)')}</option>
+                            <option value="views_desc">{t('common.viewsHigh', 'Views (High)')}</option>
+                            <option value="views_asc">{t('common.viewsLow', 'Views (Low)')}</option>
+                            <option value="likes_desc">{t('common.likesHigh', 'Likes (High)')}</option>
+                            <option value="likes_asc">{t('common.likesLow', 'Likes (Low)')}</option>
                         </select>
                     </div>
                 </div>

@@ -22,9 +22,9 @@ export function ImageGallery({ images, title = 'Imágenes' }: ImageGalleryProps)
 
     return (
         <div className="mb-6">
-            <h3 className="text-e7-gold font-semibold mb-2">📷 {title}</h3>
+            <h3 className="text-e7-gold font-semibold mb-2">{title}</h3>
             <p className="text-xs text-gray-400 mb-3 italic">
-                💡 Haz clic en una imagen para verla en tamaño completo
+                Haz clic en una imagen para verla en tamaño completo
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

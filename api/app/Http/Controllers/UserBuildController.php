@@ -156,6 +156,9 @@ class UserBuildController extends Controller
             'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:5120',
             'language' => 'nullable|string|max:5',
             'is_anonymous' => 'nullable|boolean',
+            'skill_1' => 'nullable|integer|min:0|max:7',
+            'skill_2' => 'nullable|integer|min:0|max:7',
+            'skill_3' => 'nullable|integer|min:0|max:7',
         ]);
 
         // Parse min_stats if JSON string
@@ -207,7 +210,11 @@ class UserBuildController extends Controller
             'artifact_id' => 'nullable|exists:artifacts,id',
             'synergy_heroes' => 'nullable|array',
             'counter_heroes' => 'nullable|array',
+            'counter_heroes' => 'nullable|array',
             'status' => 'sometimes|in:draft,published,archived',
+            'skill_1' => 'nullable|integer|min:0|max:7',
+            'skill_2' => 'nullable|integer|min:0|max:7',
+            'skill_3' => 'nullable|integer|min:0|max:7',
         ]);
 
         // Handle new image uploads using ImageService

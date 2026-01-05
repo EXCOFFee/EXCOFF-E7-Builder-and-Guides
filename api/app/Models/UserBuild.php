@@ -22,6 +22,9 @@ class UserBuild extends Model
         'artifact_id',
         'synergy_heroes',
         'counter_heroes',
+        'skill_1',
+        'skill_2',
+        'skill_3',
         'images',
         'views',
         'likes',
@@ -40,6 +43,9 @@ class UserBuild extends Model
         'images' => 'array',
         'is_anonymous' => 'boolean',
         'avg_rating' => 'decimal:2',
+        'skill_1' => 'integer',
+        'skill_2' => 'integer',
+        'skill_3' => 'integer',
     ];
 
     /**
