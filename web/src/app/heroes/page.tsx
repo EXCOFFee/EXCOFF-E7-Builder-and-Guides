@@ -72,8 +72,8 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
     'apocalypse-ravi': '15% 35%',
 
     // Updated from screenshots - FACE positioning analysis
-    'archdemon-shadow': '35% 30%',    // Face slightly right of center
-    'archemons-shadow': '35% 30%',
+    'archdemon-shadow': '25% 25%',    // Face left and high - adjusted after careful review
+    'archemons-shadow': '25% 25%',
     'archduke-tywin': '30% 30%',
     'architect-laika': '30% 20%',     // Face left, positioned high
     'aria': '15% 25%',
