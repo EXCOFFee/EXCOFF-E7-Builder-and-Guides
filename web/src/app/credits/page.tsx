@@ -2,7 +2,7 @@
 
 import { useTranslations } from "@/hooks/useTranslations";
 import Link from 'next/link';
-import { ArrowLeft, Database, Github, Heart, Server, Users } from "lucide-react";
+import { ArrowLeft, Database, Github, Server, Users } from "lucide-react";
 
 export default function CreditsPage() {
     const { t } = useTranslations();
