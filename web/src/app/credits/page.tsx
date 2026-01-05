@@ -20,29 +20,6 @@ export default function CreditsPage() {
                 </div>
 
                 <div className="space-y-8">
-                    {/* Developer */}
-                    <div className="glass-panel p-8 rounded-xl border border-e7-gold/20">
-                        <div className="flex items-center gap-3 mb-6 border-b border-e7-gold/10 pb-4">
-                            <span className="p-2 bg-e7-gold/10 rounded-lg text-e7-gold">
-                                <Users size={24} />
-                            </span>
-                            <h2 className="text-2xl font-semibold text-e7-gold">
-                                {t('credits.developer_title', 'Developed By')}
-                            </h2>
-                        </div>
-
-                        <div className="flex items-center gap-4 mb-4">
-                            <div className="flex flex-col">
-                                <span className="text-lg font-medium text-slate-200 flex items-center gap-2">
-                                    {t('credits.built_with', 'Built with')} <Heart className="text-red-500 fill-red-500" size={16} /> {t('credits.by_author', 'by Santi and the Antigravity AI team.')}
-                                </span>
-                                <span className="text-sm text-slate-500 mt-1">
-                                    {t('credits.dedication', 'Dedicated to providing the best tools for the E7 community.')}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
                     {/* Data Sources */}
                     <div className="glass-panel p-8 rounded-xl border border-e7-gold/20">
                         <div className="flex items-center gap-3 mb-6 border-b border-e7-gold/10 pb-4">
