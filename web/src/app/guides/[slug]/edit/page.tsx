@@ -83,6 +83,9 @@ export default function EditGuidePage() {
     const heroDropdownRef = useRef<HTMLDivElement>(null);
     const artifactDropdownRef = useRef<HTMLDivElement>(null);
 
+    // Anonymous option
+    const [isAnonymous, setIsAnonymous] = useState(false);
+
     // Check authentication
     useEffect(() => {
         const token = localStorage.getItem('auth_token');
@@ -195,6 +198,9 @@ export default function EditGuidePage() {
             recommendedArtifacts.forEach((id, index) => {
                 formData.append(`recommended_artifacts[${index}]`, id.toString());
             });
+
+            // Add anonymous option
+            formData.append('is_anonymous', isAnonymous ? '1' : '0');
 
             const response = await fetch(`${API_URL}/guides/${slug}`, {
                 method: 'POST', // Use POST with _method=PUT for FormData
@@ -584,6 +590,21 @@ export default function EditGuidePage() {
                                     </Button>
                                 </div>
                                 <p className="text-xs text-gray-500 mt-1">{t('guides.maxImages', 'Maximum 5 images')}</p>
+                            </div>
+
+                            {/* Anonymous option */}
+                            <div className="flex items-center gap-3 p-4 bg-e7-void/30 rounded-lg border border-e7-gold/20">
+                                <input
+                                    type="checkbox"
+                                    id="isAnonymous"
+                                    checked={isAnonymous}
+                                    onChange={(e) => setIsAnonymous(e.target.checked)}
+                                    className="w-5 h-5 rounded border-e7-gold/30 bg-e7-void text-e7-gold focus:ring-e7-gold/30 cursor-pointer"
+                                />
+                                <label htmlFor="isAnonymous" className="text-slate-300 cursor-pointer">
+                                    {t('guides.publishAnonymous', 'Publish anonymously')}
+                                    <span className="block text-xs text-slate-500">{t('guides.anonymousDescription', 'Your username will not appear on this guide')}</span>
+                                </label>
                             </div>
 
                             {/* Error message */}
