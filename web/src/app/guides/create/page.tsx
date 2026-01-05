@@ -48,7 +48,6 @@ export default function CreateGuidePage() {
     // Form state
     const [title, setTitle] = useState('');
     const [category, setCategory] = useState('general');
-    const [heroId, setHeroId] = useState<number | null>(null);
     const [description, setDescription] = useState('');
     const [content, setContent] = useState('');
     const [videoUrl, setVideoUrl] = useState('');
@@ -69,10 +68,7 @@ export default function CreateGuidePage() {
     const heroDropdownRef = useRef<HTMLDivElement>(null);
     const artifactDropdownRef = useRef<HTMLDivElement>(null);
 
-    // Get search params for pre-selection
-    const searchParams = useSearchParams();
-    const preselectedHeroId = searchParams.get('hero_id');
-    const preselectedHeroName = searchParams.get('hero_name');
+    // Get search params for pre-selection (removed - no longer needed)
 
     // Check authentication
     useEffect(() => {
@@ -85,12 +81,7 @@ export default function CreateGuidePage() {
         }
     }, [router]);
 
-    // Set preselected hero
-    useEffect(() => {
-        if (preselectedHeroId && !heroId) {
-            setHeroId(parseInt(preselectedHeroId));
-        }
-    }, [preselectedHeroId, heroId]);
+    // Removed preselected hero logic - no longer using hero_id field
 
     // Click outside to close dropdowns
     useEffect(() => {
@@ -142,11 +133,9 @@ export default function CreateGuidePage() {
         }
 
         try {
-            // Use FormData for image uploads
             const formData = new FormData();
             formData.append('title', title);
             formData.append('category', category);
-            if (heroId) formData.append('hero_id', heroId.toString());
             if (description) formData.append('description', description);
             if (content) formData.append('gameplay_content', content);
             if (videoUrl) formData.append('video_url', videoUrl);
@@ -210,10 +199,7 @@ export default function CreateGuidePage() {
                     </Link>
                     <h1 className="font-display text-4xl text-gold-gradient tracking-wide mb-2">{t('guidesCreate.createGuide', 'Create New Guide')}</h1>
                     <p className="text-slate-400">
-                        {preselectedHeroName
-                            ? `${t('guidesCreate.creatingFor', 'Creating guide for')} ${decodeURIComponent(preselectedHeroName)}`
-                            : t('guidesCreate.shareKnowledge', 'Share your knowledge with the community')
-                        }
+                        {t('guidesCreate.shareKnowledge', 'Share your knowledge with the community')}
                     </p>
                 </div>
 
@@ -258,25 +244,6 @@ export default function CreateGuidePage() {
                                         </button>
                                     ))}
                                 </div>
-                            </div>
-
-                            {/* Hero selector */}
-                            <div>
-                                <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    {t('guides.relatedHero', 'Related Hero (optional)')}
-                                </label>
-                                <select
-                                    value={heroId || ''}
-                                    onChange={(e) => setHeroId(e.target.value ? parseInt(e.target.value) : null)}
-                                    className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
-                                >
-                                    <option value="">{t('guides.noSpecificHero', 'No specific hero')}</option>
-                                    {heroes.map((hero) => (
-                                        <option key={hero.id} value={hero.id}>
-                                            {hero.name}
-                                        </option>
-                                    ))}
-                                </select>
                             </div>
 
                             {/* Video URL */}
@@ -336,7 +303,7 @@ export default function CreateGuidePage() {
                                                     onClick={() => setImages(prev => prev.filter((_, i) => i !== index))}
                                                     className="absolute -top-2 -right-2 w-5 h-5 bg-red-600 text-white rounded-full text-xs flex items-center justify-center hover:bg-red-500"
                                                 >
-                                                    ✁E
+                                                    ×
                                                 </button>
                                             </div>
                                         ))}

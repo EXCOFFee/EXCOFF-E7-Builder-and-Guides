@@ -43,7 +43,6 @@ interface Guide {
     slug: string;
     title: string;
     category: string;
-    hero_id: number | null;
     description: string;
     gameplay_content: string;
     video_url: string | null;
@@ -67,7 +66,6 @@ export default function EditGuidePage() {
     // Form state
     const [title, setTitle] = useState('');
     const [category, setCategory] = useState('general');
-    const [heroId, setHeroId] = useState<number | null>(null);
     const [description, setDescription] = useState('');
     const [content, setContent] = useState('');
     const [videoUrl, setVideoUrl] = useState('');
@@ -112,7 +110,6 @@ export default function EditGuidePage() {
             const guide = guideData as Guide;
             setTitle(guide.title || '');
             setCategory(guide.category || 'general');
-            setHeroId(guide.hero_id);
             setDescription(guide.description || '');
             setContent(guide.gameplay_content || '');
             setVideoUrl(guide.video_url || '');
@@ -177,7 +174,6 @@ export default function EditGuidePage() {
             formData.append('_method', 'PUT'); // Laravel method spoofing
             formData.append('title', title);
             formData.append('category', category);
-            if (heroId) formData.append('hero_id', heroId.toString());
             if (description) formData.append('description', description);
             if (content) formData.append('gameplay_content', content);
             if (videoUrl) formData.append('video_url', videoUrl);
@@ -293,25 +289,6 @@ export default function EditGuidePage() {
                                         </button>
                                     ))}
                                 </div>
-                            </div>
-
-                            {/* Hero selector */}
-                            <div>
-                                <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    {t('guides.relatedHero', 'Related Hero (optional)')}
-                                </label>
-                                <select
-                                    value={heroId || ''}
-                                    onChange={(e) => setHeroId(e.target.value ? parseInt(e.target.value) : null)}
-                                    className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
-                                >
-                                    <option value="">{t('guides.noSpecificHero', 'No specific hero')}</option>
-                                    {heroes.map((hero) => (
-                                        <option key={hero.id} value={hero.id}>
-                                            {hero.name}
-                                        </option>
-                                    ))}
-                                </select>
                             </div>
 
                             {/* Video URL */}
