@@ -73,7 +73,7 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
 
     // Updated from screenshots - FACE positioning analysis
     'archdemon-shadow': '25% 25%',    // Face left and high - adjusted after careful review
-    'archemons-shadow': '25% 25%',
+    'archdemons-shadow': '25% 25%',   // Live site uses this slug (with 's')
     'archduke-tywin': '30% 30%',
     'architect-laika': '30% 20%',     // Face left, positioned high
     'aria': '15% 25%',
@@ -196,6 +196,7 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
     'roy-mustang': '40% 30%',          // Face slightly left
     'ruele-of-light': '35% 30%',       // Face slightly right
     'sage-baal-and-sezan': '70% 30%',  // Face right
+    'sage-baal-sezan': '70% 30%',      // Live site uses this slug (no 'and')
     'schniel': '35% 30%',              // Face slightly right
     'school-nurse-yulha': '30% 25%',
     'seal-guardian-arowell': '30% 30%',
