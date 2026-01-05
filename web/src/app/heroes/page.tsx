@@ -171,7 +171,7 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
     'magic-scholar-doris': '25% 30%',
     'maid-chloe': '85% center',
     'martial-artist-ken': '30% 30%',
-    'mascot-hazel': '70% 30%',         // Face right
+    'mascot-hazel': '50% 25%',         // Face center-ish, positioned high
     'mediator-kawerik': '30% 30%',
     'melany': '35% 30%',               // Face slightly right
     'melissa': '25% 30%',
@@ -189,10 +189,10 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
     'purple-phantom-sharun': '30% 30%',
     'pyllis': '35% 30%',               // Face slightly right
     'ran': '30% 30%',
-    'remnant-violet': '80% 30%',       // Face very far right
+    'remnant-violet': '30% 70%',       // Face left, positioned low to show character
     'righteous-thief-roozid': '75% 30%',  // Face right
     'rinak': '35% 30%',                // Face slightly right
-    'roaming-warrior-leo': '75% 30%',  // Face right
+    'roaming-warrior-leo': '70% 40%',  // Face right, lower position
     'roana': '40% 30%',                // Face slightly left
     'roy-mustang': '40% 30%',          // Face slightly left
     'ruele-of-light': '35% 30%',       // Face slightly right
@@ -220,8 +220,8 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
     'vildred': '70% 30%',
     'violet': '70% 30%',
     'vivian': '70% 30%',               // Face right
-    'watcher-schuri': '85% 30%',       // Face very far right
-    'westwind-executioner-schuri': '75% 30%',  // Face right
+    'watcher-schuri': '30% 20%',       // Face left and high (was 85% - badly cut)
+    'westwind-executioner-schuri': '35% 15%',  // Face left and very high (was 75%)
     'witch-of-the-mere-tenebria': '35% 30%',   // Face slightly right
     'yoonseok': '30% 30%',
     'yufine': '40% 30%',               // Face slightly left
