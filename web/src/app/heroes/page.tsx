@@ -90,7 +90,7 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
     'blood-moon-haste': '20% 30%',
     'blooming-lidica': '25% 35%',
     'bomb-model-kanna': '40% 30%',    // Face slightly left
-    'boss-arunka': '75% 30%',         // Face right
+    'boss-arunka': '25% 30%',         // Face LEFT (was incorrectly 75%)
     'briar-witch-iseria': '30% 30%',
     'brieg': '35% 30%',               // Face slightly right
     'butcher-corps-inquisitor': '20% 35%',
