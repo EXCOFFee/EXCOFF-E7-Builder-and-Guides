@@ -232,7 +232,6 @@ export default function HeroesPage() {
                                                     className="w-full h-full object-cover"
                                                     style={{
                                                         objectPosition: HERO_POSITION_OVERRIDE[hero.slug] || 'center',
-                                                        imageRendering: 'high-quality',
                                                     }}
                                                     unoptimized
                                                     priority={false}
