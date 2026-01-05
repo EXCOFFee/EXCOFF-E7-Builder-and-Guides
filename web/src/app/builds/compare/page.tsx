@@ -8,7 +8,6 @@ import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { useTranslations } from '@/hooks/useTranslations';
 import { SET_IMAGES, formatSetName } from '@/lib/sets';
-import { StarRating } from '@/components/ui/star-rating';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -212,13 +211,28 @@ export default function ComparePage() {
                                 </div>
                             </div>
                             <div className="p-4">
-                                {/* Sets */}
-                                <div className="flex items-center gap-2 mb-4">
-                                    {build1.primary_set && SET_IMAGES[build1.primary_set] && (
-                                        <Image src={SET_IMAGES[build1.primary_set]} alt={build1.primary_set} width={32} height={32} />
-                                    )}
-                                    {build1.secondary_set && SET_IMAGES[build1.secondary_set] && (
-                                        <Image src={SET_IMAGES[build1.secondary_set]} alt={build1.secondary_set} width={32} height={32} />
+                                {/* Sets & Artifact */}
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="flex items-center gap-2">
+                                        {build1.primary_set && SET_IMAGES[build1.primary_set] && (
+                                            <Image src={SET_IMAGES[build1.primary_set]} alt={build1.primary_set} width={32} height={32} />
+                                        )}
+                                        {build1.secondary_set && SET_IMAGES[build1.secondary_set] && (
+                                            <Image src={SET_IMAGES[build1.secondary_set]} alt={build1.secondary_set} width={32} height={32} />
+                                        )}
+                                    </div>
+                                    {build1.artifact && (
+                                        <div className="flex items-center gap-2 ml-4 pl-4 border-l border-e7-gold/20">
+                                            <Image
+                                                src={build1.artifact.icon}
+                                                alt={build1.artifact.name}
+                                                width={40}
+                                                height={40}
+                                                className="rounded"
+                                                unoptimized
+                                            />
+                                            <span className="text-sm text-gray-300">{build1.artifact.name}</span>
+                                        </div>
                                     )}
                                 </div>
 
@@ -241,7 +255,7 @@ export default function ComparePage() {
                                 {/* Rating & Stats */}
                                 <div className="mt-4 pt-4 border-t border-e7-gold/20 flex justify-between text-sm">
                                     <span className="text-gray-400">�早 {build1.views} 窶｢ 笶､・・{build1.likes}</span>
-                                    <StarRating rating={build1.avg_rating || 0} totalRatings={build1.rating_count || 0} size="sm" />
+
                                 </div>
 
                                 <Link href={`/builds/${build1.id}`}>
@@ -270,13 +284,28 @@ export default function ComparePage() {
                                 </div>
                             </div>
                             <div className="p-4">
-                                {/* Sets */}
-                                <div className="flex items-center gap-2 mb-4">
-                                    {build2.primary_set && SET_IMAGES[build2.primary_set] && (
-                                        <Image src={SET_IMAGES[build2.primary_set]} alt={build2.primary_set} width={32} height={32} />
-                                    )}
-                                    {build2.secondary_set && SET_IMAGES[build2.secondary_set] && (
-                                        <Image src={SET_IMAGES[build2.secondary_set]} alt={build2.secondary_set} width={32} height={32} />
+                                {/* Sets & Artifact */}
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="flex items-center gap-2">
+                                        {build2.primary_set && SET_IMAGES[build2.primary_set] && (
+                                            <Image src={SET_IMAGES[build2.primary_set]} alt={build2.primary_set} width={32} height={32} />
+                                        )}
+                                        {build2.secondary_set && SET_IMAGES[build2.secondary_set] && (
+                                            <Image src={SET_IMAGES[build2.secondary_set]} alt={build2.secondary_set} width={32} height={32} />
+                                        )}
+                                    </div>
+                                    {build2.artifact && (
+                                        <div className="flex items-center gap-2 ml-4 pl-4 border-l border-e7-gold/20">
+                                            <Image
+                                                src={build2.artifact.icon}
+                                                alt={build2.artifact.name}
+                                                width={40}
+                                                height={40}
+                                                className="rounded"
+                                                unoptimized
+                                            />
+                                            <span className="text-sm text-gray-300">{build2.artifact.name}</span>
+                                        </div>
                                     )}
                                 </div>
 
@@ -299,7 +328,7 @@ export default function ComparePage() {
                                 {/* Rating & Stats */}
                                 <div className="mt-4 pt-4 border-t border-e7-gold/20 flex justify-between text-sm">
                                     <span className="text-gray-400">�早 {build2.views} 窶｢ 笶､・・{build2.likes}</span>
-                                    <StarRating rating={build2.avg_rating || 0} totalRatings={build2.rating_count || 0} size="sm" />
+
                                 </div>
 
                                 <Link href={`/builds/${build2.id}`}>
