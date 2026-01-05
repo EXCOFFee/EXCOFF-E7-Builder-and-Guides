@@ -43,7 +43,8 @@
         "builds": "Builds",
         "news": "Noticias",
         "login": "Iniciar Sesión",
-        "register": "Registrarse"
+        "register": "Registrarse",
+        "credits": "Créditos"
     },
     "home": {
         "title": "E7 EXCOFF",
@@ -370,9 +371,18 @@
             "devNotes": "Notas del Desarrollador"
         }
     },
-    "footer": {
-        "disclaimer": "EpicSevenHub no está afiliado con Smilegate o Super Creative.",
-        "copyright": "Epic Seven (E7) y todo su contenido son propiedad de sus respectivos dueños.",
-        "notAffiliated": "EpicSevenHub no está afiliado con Smilegate o Super Creative."
+    "credits": {
+        "title": "Créditos y Agradecimientos",
+        "description": "Este proyecto es posible gracias a la increíble comunidad de Epic Seven y a los desarrolladores que crean herramientas para ella.",
+        "developer_title": "Desarrollado Por",
+        "built_with": "Hecho con",
+        "by_author": "por Santi y el equipo de IA Antigravity.",
+        "dedication": "Dedicado a proporcionar las mejores herramientas para la comunidad de E7.",
+        "ceciliabot_desc": "Fuente invaluable para descripciones detalladas de habilidades, traducciones y datos del juego. El estándar de oro para información de E7.",
+        "website": "Sitio Web",
+        "fribbels_desc": "Proporciona la base de datos fundamental de héroes y artefactos utilizada en toda esta aplicación.",
+        "repository": "Repositorio",
+        "reddit_title": "Datamines de Reddit",
+        "reddit_desc": "Contribuyentes de la comunidad que extraen multiplicadores de habilidades y datos ocultos de los archivos del juego."
     }
 }

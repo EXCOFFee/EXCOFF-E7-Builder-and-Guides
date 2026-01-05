@@ -41,7 +41,8 @@
         "builds": "构建",
         "news": "新闻",
         "login": "登录",
-        "register": "注册"
+        "register": "注册",
+        "credits": "鸣谢"
     },
     "home": {
         "title": "E7 EXCOFF",
@@ -68,7 +69,9 @@
     "footer": {
         "dataPoweredBy": "英雄和神器数据提供",
         "credits": "鸣谢",
-        "disclaimer": "Epic Seven © Smilegate & Super Creative。本站与游戏开发者无关联。"
+        "disclaimer": "Epic Seven © Smilegate & Super Creative。本站与游戏开发者无关联。",
+        "copyright": "第七史诗(E7)及其所有内容均为其各自所有者的财产。",
+        "notAffiliated": "EpicSevenHub与Smilegate或Super Creative无关。"
     },
     "heroes": {
         "title": "英雄数据库",
@@ -361,9 +364,18 @@
             "devNotes": "开发者说明"
         }
     },
-    "footer": {
-        "disclaimer": "EpicSevenHub与Smilegate或Super Creative无关。",
-        "copyright": "第七史诗(E7)及其所有内容均为其各自所有者的财产。",
-        "notAffiliated": "EpicSevenHub与Smilegate或Super Creative无关。"
+    "credits": {
+        "title": "鸣谢与致谢",
+        "description": "本项目的实现离不开精彩的第七史诗社区以及为之开发工具的开发者们。",
+        "developer_title": "开发者",
+        "built_with": "制作：",
+        "by_author": "Santi 和 Antigravity AI 团队。",
+        "dedication": "致力于为E7社区提供最好的工具。",
+        "ceciliabot_desc": "详细的英雄技能描述、翻译和游戏数据的宝贵来源。E7信息的黄金标准。",
+        "website": "网站",
+        "fribbels_desc": "提供本应用中使用的基础英雄和神器数据库。",
+        "repository": "仓库",
+        "reddit_title": "Reddit 数据挖掘",
+        "reddit_desc": "从游戏文件中提取技能倍率和隐藏数据的社区贡献者。"
     }
 }

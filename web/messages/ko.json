@@ -41,7 +41,8 @@
         "builds": "빌드",
         "news": "뉴스",
         "login": "로그인",
-        "register": "회원가입"
+        "register": "회원가입",
+        "credits": "크레딧"
     },
     "home": {
         "title": "E7 EXCOFF",
@@ -68,7 +69,9 @@
     "footer": {
         "dataPoweredBy": "영웅 및 아티팩트 데이터 제공",
         "credits": "크레딧",
-        "disclaimer": "Epic Seven © Smilegate & Super Creative. 이 사이트는 게임 개발자와 제휴하지 않습니다."
+        "disclaimer": "Epic Seven © Smilegate & Super Creative. 이 사이트는 게임 개발자와 제휴하지 않습니다.",
+        "copyright": "에픽세븐(E7)과 모든 콘텐츠는 해당 소유자의 재산입니다.",
+        "notAffiliated": "EpicSevenHub는 Smilegate 또는 Super Creative와 제휴되어 있지 않습니다."
     },
     "heroes": {
         "title": "영웅 데이터베이스",
@@ -361,9 +364,18 @@
             "devNotes": "개발자 노트"
         }
     },
-    "footer": {
-        "disclaimer": "EpicSevenHub는 Smilegate 또는 Super Creative와 제휴되어 있지 않습니다.",
-        "copyright": "에픽세븐(E7)과 모든 콘텐츠는 해당 소유자의 재산입니다.",
-        "notAffiliated": "EpicSevenHub는 Smilegate 또는 Super Creative와 제휴되어 있지 않습니다."
+    "credits": {
+        "title": "크레딧 및 감사의 말",
+        "description": "이 프로젝트는 훌륭한 Epic Seven 커뮤니티와 도구를 만든 개발자들 덕분에 가능했습니다.",
+        "developer_title": "개발자",
+        "built_with": "제작:",
+        "by_author": "Santi 및 Antigravity AI 팀",
+        "dedication": "E7 커뮤니티에 최고의 도구를 제공하기 위해 헌신합니다.",
+        "ceciliabot_desc": "상세한 스킬 설명, 번역 및 게임 데이터의 귀중한 출처. E7 정보의 표준.",
+        "website": "웹사이트",
+        "fribbels_desc": "이 애플리케이션 전체에서 사용되는 기본 영웅 및 아티팩트 데이터베이스를 제공합니다.",
+        "repository": "저장소",
+        "reddit_title": "Reddit 데이터마인",
+        "reddit_desc": "게임 파일에서 스킬 계수 및 숨겨진 데이터를 추출하는 커뮤니티 기여자."
     }
 }

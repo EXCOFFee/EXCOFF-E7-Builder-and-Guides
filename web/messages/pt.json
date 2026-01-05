@@ -41,7 +41,8 @@
         "builds": "Builds",
         "news": "Notícias",
         "login": "Entrar",
-        "register": "Registrar"
+        "register": "Registrar",
+        "credits": "Créditos"
     },
     "home": {
         "title": "E7 EXCOFF",
@@ -68,7 +69,9 @@
     "footer": {
         "dataPoweredBy": "Dados de heróis e artefatos fornecidos por",
         "credits": "Créditos",
-        "disclaimer": "Epic Seven © Smilegate & Super Creative. Este site não é afiliado aos desenvolvedores do jogo."
+        "disclaimer": "Epic Seven © Smilegate & Super Creative. Este site não é afiliado aos desenvolvedores do jogo.",
+        "copyright": "Epic Seven (E7) e todo seu conteúdo são propriedade de seus respectivos donos.",
+        "notAffiliated": "EpicSevenHub não é afiliado com Smilegate ou Super Creative."
     },
     "heroes": {
         "title": "Base de Dados de Heróis",
@@ -361,9 +364,18 @@
             "devNotes": "Notas do Desenvolvedor"
         }
     },
-    "footer": {
-        "disclaimer": "EpicSevenHub não é afiliado com Smilegate ou Super Creative.",
-        "copyright": "Epic Seven (E7) e todo seu conteúdo são propriedade de seus respectivos donos.",
-        "notAffiliated": "EpicSevenHub não é afiliado com Smilegate ou Super Creative."
+    "credits": {
+        "title": "Créditos e Agradecimentos",
+        "description": "Este projeto é possível graças à incrível comunidade de Epic Seven e aos desenvolvedores que criam ferramentas para ela.",
+        "developer_title": "Desenvolvido Por",
+        "built_with": "Feito com",
+        "by_author": "por Santi e a equipe Antigravity AI.",
+        "dedication": "Dedicado a fornecer as melhores ferramentas para a comunidade de E7.",
+        "ceciliabot_desc": "Fonte inestimável para descrições detalhadas de habilidades, traduções e dados do jogo. O padrão ouro para informações de E7.",
+        "website": "Site",
+        "fribbels_desc": "Fornece o banco de dados fundamental de heróis e artefatos usado em todo este aplicativo.",
+        "repository": "Repositório",
+        "reddit_title": "Datamines do Reddit",
+        "reddit_desc": "Contribuintes da comunidade que extraem multiplicadores de habilidades e dados ocultos dos arquivos do jogo."
     }
 }

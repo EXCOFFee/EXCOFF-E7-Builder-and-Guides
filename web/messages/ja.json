@@ -41,7 +41,8 @@
         "builds": "ビルド",
         "news": "ニュース",
         "login": "ログイン",
-        "register": "登録"
+        "register": "登録",
+        "credits": "クレジット"
     },
     "home": {
         "title": "E7 EXCOFF",
@@ -68,7 +69,9 @@
     "footer": {
         "dataPoweredBy": "ヒーローとアーティファクトデータ提供",
         "credits": "クレジット",
-        "disclaimer": "Epic Seven © Smilegate & Super Creative。このサイトはゲーム開発者と提携していません。"
+        "disclaimer": "Epic Seven © Smilegate & Super Creative。このサイトはゲーム開発者と提携していません。",
+        "copyright": "エピックセブン(E7)とそのすべてのコンテンツはそれぞれの所有者の財産です。",
+        "notAffiliated": "EpicSevenHubはSmilgateまたはSuper Creativeと提携していません。"
     },
     "heroes": {
         "title": "ヒーローデータベース",
@@ -361,9 +364,18 @@
             "devNotes": "開発者ノート"
         }
     },
-    "footer": {
-        "disclaimer": "EpicSevenHubはSmilgateまたはSuper Creativeと提携していません。",
-        "copyright": "エピックセブン(E7)とそのすべてのコンテンツはそれぞれの所有者の財産です。",
-        "notAffiliated": "EpicSevenHubはSmilgateまたはSuper Creativeと提携していません。"
+    "credits": {
+        "title": "クレジット＆謝辞",
+        "description": "このプロジェクトは、素晴らしいEpic Sevenコミュニティとツールを作成した開発者のおかげで実現しました。",
+        "developer_title": "開発者",
+        "built_with": "作成：",
+        "by_author": "SantiとAntigravity AIチーム",
+        "dedication": "E7コミュニティに最高のツールを提供することに捧げます。",
+        "ceciliabot_desc": "詳細なスキル説明、翻訳、ゲームデータの貴重な情報源。E7情報のゴールドスタンダード。",
+        "website": "ウェブサイト",
+        "fribbels_desc": "このアプリケーション全体で使用される基本的なヒーローとアーティファクトのデータベースを提供します。",
+        "repository": "リポジトリ",
+        "reddit_title": "Redditデータマイン",
+        "reddit_desc": "ゲームファイルからスキル倍率や隠しデータを抽出するコミュニティの貢献者。"
     }
 }

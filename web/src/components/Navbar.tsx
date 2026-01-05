@@ -17,6 +17,7 @@ const getNavLinks = (t: (key: string, fallback: string) => string) => [
     { href: '/guides', label: t('nav.guides', 'Guides') },
     { href: '/news', label: t('nav.news', 'News') },
     { href: '/guilds', label: t('nav.guilds', 'Guilds') },
+    { href: '/credits', label: t('nav.credits', 'Credits') },
 ];
 
 interface User {
