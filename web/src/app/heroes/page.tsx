@@ -227,8 +227,8 @@ export default function HeroesPage() {
                                                 <Image
                                                     src={hero.image_url}
                                                     alt={hero.name}
-                                                    width={256}
-                                                    height={256}
+                                                    width={320}
+                                                    height={320}
                                                     className="w-full h-full object-cover"
                                                     style={{
                                                         objectPosition: HERO_POSITION_OVERRIDE[hero.slug] || 'center',
