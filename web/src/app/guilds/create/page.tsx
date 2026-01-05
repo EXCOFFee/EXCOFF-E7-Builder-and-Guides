@@ -65,6 +65,9 @@ export default function CreateGuildPostPage() {
     const [newImageUrl, setNewImageUrl] = useState('');
     const [imageFiles, setImageFiles] = useState<File[]>([]);
 
+    // Anonymous option
+    const [isAnonymous, setIsAnonymous] = useState(false);
+
     // Check authentication
     useEffect(() => {
         const token = localStorage.getItem('auth_token');
@@ -141,6 +144,9 @@ export default function CreateGuildPostPage() {
             imageFiles.forEach((file, index) => {
                 formData.append(`images[${index}]`, file);
             });
+
+            // Add anonymous option
+            formData.append('is_anonymous', isAnonymous ? '1' : '0');
 
             const response = await fetch(`${API_URL}/guilds`, {
                 method: 'POST',
@@ -390,6 +396,21 @@ export default function CreateGuildPostPage() {
                                         ))}
                                     </div>
                                 )}
+                            </div>
+
+                            {/* Anonymous option */}
+                            <div className="flex items-center gap-3 p-4 bg-e7-void/30 rounded-lg border border-e7-gold/20">
+                                <input
+                                    type="checkbox"
+                                    id="isAnonymous"
+                                    checked={isAnonymous}
+                                    onChange={(e) => setIsAnonymous(e.target.checked)}
+                                    className="w-5 h-5 rounded border-e7-gold/30 bg-e7-void text-e7-gold focus:ring-e7-gold/30 cursor-pointer"
+                                />
+                                <label htmlFor="isAnonymous" className="text-slate-300 cursor-pointer">
+                                    <div className="font-medium">{t('guilds.publishAnonymously', 'Publish anonymously')}</div>
+                                    <div className="text-xs text-gray-500">{t('guilds.anonymousDesc', 'Your username will not appear in this post')}</div>
+                                </label>
                             </div>
 
                             {/* Error message */}
