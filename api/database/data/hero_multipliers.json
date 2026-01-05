@@ -423,6 +423,339 @@
                     "barrier_strength": "100 * level"
                 }
             }
+        },
+        {
+            "name": "Specimen Sez",
+            "code": "c2048",
+            "datamine_date": "2025.08.07",
+            "skills": {
+                "s3": {
+                    "heal_strength": "30% of the damage dealt"
+                }
+            }
+        },
+        {
+            "name": "Sage Baal & Sezan",
+            "code": "c2015",
+            "datamine_date": "2025.08.07",
+            "skills": {
+                "s3": {
+                    "att_rate": 0.3,
+                    "pow": 1.0,
+                    "health_scaling": "24% caster's max Health",
+                    "damage_increase_asleep": 0.5,
+                    "note": "Buffed from 0.5 att_rate. Removed lost health scaling"
+                }
+            }
+        },
+        {
+            "name": "Commander Pavel",
+            "code": "c2108",
+            "datamine_date": "2025.08.07",
+            "skills": {
+                "s2": {
+                    "att_rate": 0.8,
+                    "pow": 1.0,
+                    "note": "Buffed from 0.75"
+                },
+                "s3": {
+                    "att_rate": 0.85,
+                    "att_rate_soulburn": 1.2,
+                    "pow": 1.0,
+                    "note": "Buffed from 0.75 (soulburn from 1.05)"
+                }
+            }
+        },
+        {
+            "name": "Festive Eda",
+            "code": "c5073",
+            "datamine_date": "2025.08.07",
+            "skills": {
+                "s2": {
+                    "additional_damage": "40% caster's max Health",
+                    "def_pen": 0.7
+                }
+            }
+        },
+        {
+            "name": "Summer Break Charlotte",
+            "code": "c5009",
+            "datamine_date": "2025.08.07",
+            "skills": {
+                "s3": {
+                    "att_rate": 1.7,
+                    "pow": 1.0,
+                    "note": "Buffed from 1.5"
+                }
+            }
+        },
+        {
+            "name": "Lilibet",
+            "code": "c1095",
+            "datamine_date": "2025.08.07",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.2,
+                    "pow": 1.0,
+                    "note": "Buffed from 1.0"
+                },
+                "s2": {
+                    "att_rate": 1.2,
+                    "pow": 1.0,
+                    "note": "Changed from 1.5"
+                },
+                "s3": {
+                    "att_rate": 0.65,
+                    "pow": 0.95,
+                    "def_pen": 1.0,
+                    "note": "Changed from 2.0 att_rate. Added 100% def pen"
+                }
+            }
+        },
+        {
+            "name": "Mui",
+            "code": "c1102",
+            "datamine_date": "2025.08.07",
+            "skills": {
+                "s2": {
+                    "att_rate": 0.8,
+                    "pow": 1.0,
+                    "note": "Buffed from 0.7"
+                }
+            }
+        },
+        {
+            "name": "Mediator Kawerik",
+            "code": "c2073",
+            "datamine_date": "2025.08.07",
+            "skills": {
+                "s2_with_ee": {
+                    "att_rate": 0.75,
+                    "pow": 1.0,
+                    "def_pen": 1.0
+                },
+                "s2_without_ee": {
+                    "att_rate": 1.5,
+                    "pow": 1.0
+                }
+            }
+        },
+        {
+            "name": "Fenne",
+            "code": "c1145",
+            "datamine_date": "2025.01.16",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.5,
+                    "pow": 1.0,
+                    "heal_strength": "3% caster's max Health + 30% caster's Attack",
+                    "heal_strength_soulburn": "8% caster's max Health + 75% caster's Attack"
+                },
+                "s1_proc": {
+                    "att_rate": 0.7,
+                    "pow": 1.0,
+                    "injury_scaling": 1.0
+                },
+                "s2": {
+                    "shield_strength": "250% caster's Attack",
+                    "attack_increase": "CASTER_ATT * (INJURY_RATE * 3)",
+                    "speed_increase": "CASTER_SPEED * (INJURY_RATE * 1)"
+                },
+                "s3": {
+                    "att_rate": 2.0,
+                    "pow": 1.0,
+                    "injury_scaling": 1.5,
+                    "lifesteal": "25% of damage dealt"
+                }
+            }
+        },
+        {
+            "name": "Lone Wolf Peira",
+            "code": "c2121s",
+            "datamine_date": "2025.01.16",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.0,
+                    "pow": 1.0,
+                    "additional_damage": "25% caster's Attack"
+                }
+            }
+        },
+        {
+            "name": "Krau",
+            "code": "c5070",
+            "datamine_date": "2025.04.10",
+            "skills": {
+                "s1": {
+                    "att_rate": 0.7,
+                    "pow": 1.0,
+                    "def_scaling": 0.85,
+                    "additional_damage": "60% caster's Defense"
+                },
+                "s2": {
+                    "att_rate": 0.7,
+                    "pow": 1.0,
+                    "def_scaling": 1.4
+                },
+                "s3": {
+                    "att_rate": 0.3,
+                    "att_rate_soulburn": 0.6,
+                    "pow": 1.0,
+                    "def_scaling": 0.5,
+                    "def_scaling_soulburn": 1.45,
+                    "lifesteal": "30% of damage dealt"
+                }
+            }
+        },
+        {
+            "name": "Victorika",
+            "code": "c1166",
+            "datamine_date": "2025.04.10",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.0,
+                    "pow": 1.0
+                },
+                "s2": {
+                    "att_rate": 1.2,
+                    "att_rate_soulburn": 1.45,
+                    "pow": 1.0
+                },
+                "s3": {
+                    "att_rate": 1.4,
+                    "pow": 1.0,
+                    "health_scaling": "5% target's max Health"
+                }
+            }
+        },
+        {
+            "name": "Boss Arunka",
+            "code": "c2124",
+            "datamine_date": "2025.04.10",
+            "skills": {
+                "s1": {
+                    "att_rate": 0.6,
+                    "pow": 1.0,
+                    "def_scaling": "100% caster's Defense"
+                },
+                "s3": {
+                    "att_rate": 0.6,
+                    "pow": 0.95,
+                    "def_scaling": "200% caster's Defense",
+                    "barrier_strength": "120% caster's Defense"
+                }
+            }
+        },
+        {
+            "name": "Martial Artist Ken",
+            "code": "c2047",
+            "datamine_date": "2025.04.10",
+            "skills": {
+                "s1": {
+                    "att_rate_soulburn": 1.7,
+                    "pow": 0.95,
+                    "note": "Soulburn buffed from 1.3. Added guaranteed crit"
+                }
+            }
+        },
+        {
+            "name": "Sylvan Sage Vivian",
+            "code": "c2084",
+            "datamine_date": "2025.04.10",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.0,
+                    "pow": 1.0,
+                    "note": "Changed from 1.1"
+                }
+            }
+        },
+        {
+            "name": "Lidica",
+            "code": "c1046",
+            "datamine_date": "2025.04.10",
+            "skills": {
+                "s1": {
+                    "att_rate": 0.7,
+                    "pow": 1.0,
+                    "detonation": 1.3,
+                    "note": "Changed from 1.1"
+                }
+            }
+        },
+        {
+            "name": "Kayron",
+            "code": "c1023",
+            "datamine_date": "2025.04.10",
+            "skills": {
+                "s1_single": {
+                    "att_rate": 0.9,
+                    "att_rate_soulburn": 1.4,
+                    "pow": 1.0,
+                    "lost_hp_scaling": 0.2,
+                    "note": "Buffed from 0.85 (soulburn 1.35). Lost HP scaling: 0.15 to 0.20"
+                },
+                "s1_aoe": {
+                    "att_rate": 0.9,
+                    "att_rate_soulburn": 1.1,
+                    "pow": 1.0,
+                    "lost_hp_scaling": 0.2,
+                    "note": "Buffed from 0.85 (soulburn 1.05)"
+                },
+                "s3": {
+                    "lost_hp_scaling": 0.4,
+                    "lifesteal": "50% of damage dealt",
+                    "note": "Lost HP scaling: 0.3 to 0.4. Added 50% lifesteal"
+                }
+            }
+        },
+        {
+            "name": "Seaside Bellona",
+            "code": "c5021",
+            "datamine_date": "2025.04.10",
+            "skills": {
+                "s3": {
+                    "att_rate": 1.2,
+                    "pow": 1.0,
+                    "note": "Buffed from 1.0. Removed 20% crit damage increase"
+                }
+            }
+        },
+        {
+            "name": "Lethe",
+            "code": "c1126",
+            "datamine_date": "2025.04.10",
+            "skills": {
+                "s1": {
+                    "health_scaling": "25% caster's max Health",
+                    "heal_strength": "20% caster's max Health",
+                    "note": "HP scaling buffed from 22%. Heal changed from target's HP to caster's HP"
+                }
+            }
+        },
+        {
+            "name": "Destina",
+            "code": "c2022",
+            "datamine_date": "2025.04.10",
+            "skills": {
+                "s1": {
+                    "heal_strength": "8% caster's max Health",
+                    "heal_strength_soulburn": "35% caster's max Health",
+                    "note": "Buffed from 6% (soulburn from 30%)"
+                }
+            }
+        },
+        {
+            "name": "Landy",
+            "code": "c1109",
+            "datamine_date": "2025.04.10",
+            "skills": {
+                "s1": {
+                    "att_rate": 1.2,
+                    "pow": 1.0,
+                    "note": "Buffed from 1.1"
+                }
+            }
         }
     ]
 }
