@@ -59,41 +59,44 @@ const CLASS_NAMES: Record<string, string> = {
 };
 
 // Hero portraits that need custom positioning (faces cut off with center)
-// Values: CSS object-position (higher % = shows more of the right side)
+// Values: CSS object-position - positions the FACE of the character in the center of the card
+// X: horizontal (lower % = face on left, higher % = face on right)
+// Y: vertical (lower % = face at top, higher % = face at bottom)
 const HERO_POSITION_OVERRIDE: Record<string, string> = {
-    // Batch from user screenshots - 80+ heroes
+    // Previously configured heroes
     'abyssal-yufine': '15% 30%',
     'afternoon-soak-flan': '20% 35%',
     'ainz-ooal-gown': 'center 30%',
     'amid': '25% 30%',
     'angel-of-light-angelica': '20% 30%',
     'apocalypse-ravi': '15% 35%',
-    'archdemon-shadow': 'center 40%',
-    'archemons-shadow': 'center 40%',
+
+    // Updated from screenshots - FACE positioning analysis
+    'archdemon-shadow': '35% 30%',    // Face slightly right of center
+    'archemons-shadow': '35% 30%',
     'archduke-tywin': '30% 30%',
-    'architect-laika': 'center center',
+    'architect-laika': '30% 20%',     // Face left, positioned high
     'aria': '15% 25%',
-    'arunka': 'center center',
+    'arunka': '75% 30%',              // Face on right side
     'assassin-cidd': '40% 30%',
     'astromancer-elena': '25% 30%',
     'auxiliary-lots': '20% 25%',
     'basar': '30% 30%',
-    'bask': 'center center',
-    'belian': 'center center',
+    'bask': '20% 30%',                // Face far left
+    'belian': '35% 25%',              // Face left, high
+    'benimaru': '30% 30%',            // Face left
     'birgitta': '35% 30%',
     'blessed-crozet': '30% 30%',
     'blood-moon-haste': '20% 30%',
     'blooming-lidica': '25% 35%',
-    'benimaru': 'center center',
-    'bomb-model-kanna': 'center center',
-    'boss-arunka': 'center center',
-    'brieg': 'center center',
+    'bomb-model-kanna': '40% 30%',    // Face slightly left
+    'boss-arunka': '75% 30%',         // Face right
     'briar-witch-iseria': '30% 30%',
+    'brieg': '35% 30%',               // Face slightly right
     'butcher-corps-inquisitor': '20% 35%',
-    'camilla': 'center center',
     'caides': 'center 30%',
+    'camilla': '40% 30%',             // Face slightly left
     'captain-rikoris': '30% 30%',
-    'command-model-laika': 'center center',
     'celestial-mercedes': '25% 30%',
     'cerise': '25% 30%',
     'challenger-dominiel': '25% 30%',
@@ -109,120 +112,121 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
     'closer-charles': '30% 30%',
     'closest-kin-yulha': '30% 25%',
     'coli': '25% 30%',
+    'command-model-laika': '35% 30%',  // Face slightly right
     'commander-lorina': '25% 30%',
     'conqueror-lilias': '35% 30%',
     'crimson-armin': '30% 30%',
     'dark-corvus': '40% 30%',
-    'death-dealer-ray': 'center center',
+    'death-dealer-ray': '35% 30%',     // Face slightly right
     'designer-lilibet': '25% 30%',
     'desert-jewel-basar': '30% 30%',
-    'dragon-bride-senya': 'center center',
     'diene': '25% 30%',
     'dominiel': '25% 30%',
+    'dragon-bride-senya': '40% 30%',   // Face slightly left
     'elena': '25% 30%',
-    'elphelt': 'center center',
+    'elphelt': '40% 30%',              // Face slightly left
     'elphelt-valentine': '30% 30%',
     'emilia': '25% 30%',
     'faithless-lidica': '25% 30%',
     'falconer-kluri': '25% 30%',
-    'fern': 'center center',
-    'festive-eda': 'center center',
+    'fern': '35% 30%',                 // Face slightly right
+    'festive-eda': '40% 30%',          // Face slightly left
     'fighter-maya': '30% 30%',
     'free-spirit-tieria': '25% 30%',
-    'frieren': 'center center',
-    'furious': '50% center',
+    'frieren': '35% 30%',              // Face slightly right
+    'furious': '75% 30%',              // Face far right
+    'general-purgis': '35% 30%',       // Face slightly right
     'goddess-of-vengeful-light-achates': '25% 25%',
+    'guard-captain-krau': '40% 30%',   // Face slightly left
     'guiding-light-elson': '30% 30%',
-    'general-purgis': 'center center',
-    'guard-captain-krau': 'center center',
     'gunther': '30% 30%',
     'haste': '25% 30%',
-    'hecate': 'center center',
     'hasteloch-seeker-yulha': '30% 25%',
     'hataan': '30% 30%',
     'heavenly-blade-shikinomai': '30% 25%',
+    'hecate': '30% 30%',               // Face left
     'helen': '25% 30%',
     'holiday-yufine': '25% 30%',
     'hwayoung': '30% 30%',
     'ilynav': '25% 30%',
-    'infinite-horizon-achates': 'center center',
+    'infinite-horizon-achates': '35% 30%',  // Face slightly right
     'iseria': '25% 30%',
-    'januta': 'center center',
-    'jenua': 'center center',
+    'januta': '40% 30%',               // Face slightly left
+    'jenua': '35% 30%',                // Face slightly right
     'judge-kise': '25% 30%',
     'karin': '25% 30%',
     'kawerik': '30% 30%',
-    'kayron': '50% center',
+    'kayron': '75% 30%',               // Face far right
     'ken': '30% 30%',
-    'kikirat-v2': 'center center',
+    'kikirat-v2': '80% 30%',           // Face very far right
     'kise': '25% 30%',
     'kitty-clarissa': '25% 30%',
     'landy': '30% 30%',
-    'lua': 'center center',
     'last-rider-krau': '35% 30%',
     'lilias': '30% 30%',
     'lilibet': '25% 30%',
+    'lua': '40% 30%',                  // Face slightly left
     'luna': '70% 30%',
     'magic-scholar-doris': '25% 30%',
     'maid-chloe': '85% center',
-    'melany': 'center center',
-    'mercenary-helga': 'center center',
     'martial-artist-ken': '30% 30%',
-    'mascot-hazel': 'center center',
+    'mascot-hazel': '70% 30%',         // Face right
     'mediator-kawerik': '30% 30%',
+    'melany': '35% 30%',               // Face slightly right
     'melissa': '25% 30%',
-    'midnight-gala-lilias': 'center center',
-    'milim': 'center center',
+    'mercenary-helga': '40% 30%',      // Face slightly left
+    'midnight-gala-lilias': '35% 30%', // Face slightly right
+    'milim': '40% 30%',                // Face slightly left
     'moon-bunny-dominiel': '25% 30%',
     'mort': '35% 30%',
-    'nahkwol': 'center center',
-    'new-kid-adin': 'center center',
-    'new-moon-luna': 'center center',
+    'nahkwol': '40% 30%',              // Face slightly left
+    'new-kid-adin': '35% 30%',         // Face slightly right
+    'new-moon-luna': '40% 30%',        // Face slightly left
     'penelope': '25% 30%',
-    'pirate-captain-flan': 'center center',
+    'pirate-captain-flan': '40% 30%',  // Face slightly left
     'politis': '25% 30%',
     'purple-phantom-sharun': '30% 30%',
-    'pyllis': 'center center',
+    'pyllis': '35% 30%',               // Face slightly right
     'ran': '30% 30%',
-    'remnant-violet': 'center center',
-    'righteous-thief-roozid': 'center center',
-    'rinak': 'center center',
-    'roaming-warrior-leo': 'center center',
-    'roana': 'center center',
-    'roy-mustang': 'center center',
-    'ruele-of-light': 'center center',
-    'sage-baal-and-sezan': 'center center',
-    'schniel': 'center center',
+    'remnant-violet': '80% 30%',       // Face very far right
+    'righteous-thief-roozid': '75% 30%',  // Face right
+    'rinak': '35% 30%',                // Face slightly right
+    'roaming-warrior-leo': '75% 30%',  // Face right
+    'roana': '40% 30%',                // Face slightly left
+    'roy-mustang': '40% 30%',          // Face slightly left
+    'ruele-of-light': '35% 30%',       // Face slightly right
+    'sage-baal-and-sezan': '70% 30%',  // Face right
+    'schniel': '35% 30%',              // Face slightly right
     'school-nurse-yulha': '30% 25%',
     'seal-guardian-arowell': '30% 30%',
-    'seaside-bellona': 'center center',
+    'seaside-bellona': '75% 30%',      // Face right
     'senya': '25% 30%',
     'serila': '25% 30%',
     'shepherd-of-the-dark-diene': '25% 30%',
     'solitaria-of-the-snow': '25% 30%',
-    'specimen-sez': 'center center',
-    'successor-taeyou': 'center center',
-    'summer-break-charlotte': 'center center',
-    'surin': 'center center',
-    'swift-flagbearer-sigret': 'center center',
+    'specimen-sez': '75% 30%',         // Face right
+    'successor-taeyou': '40% 30%',     // Face slightly left
+    'summer-break-charlotte': '35% 30%',  // Face slightly right
     'summertime-iseria': '30% 25%',
+    'surin': '40% 30%',                // Face slightly left
+    'swift-flagbearer-sigret': '35% 30%',  // Face slightly right
     'tempest-surin': '25% 30%',
-    'top-model-luluca': 'center center',
+    'top-model-luluca': '40% 30%',     // Face slightly left
     'troublemaker-crozet': '30% 30%',
-    'verdant-adin': 'center center',
-    'victorika': 'center center',
+    'verdant-adin': '35% 30%',         // Face slightly right
+    'victorika': '40% 30%',            // Face slightly left
     'vildred': '70% 30%',
     'violet': '70% 30%',
-    'vivian': 'center center',
-    'watcher-schuri': 'center center',
-    'westwind-executioner-schuri': 'center center',
-    'witch-of-the-mere-tenebria': 'center center',
+    'vivian': '70% 30%',               // Face right
+    'watcher-schuri': '85% 30%',       // Face very far right
+    'westwind-executioner-schuri': '75% 30%',  // Face right
+    'witch-of-the-mere-tenebria': '35% 30%',   // Face slightly right
     'yoonseok': '30% 30%',
-    'yufine': 'center center',
-    'zahhak': 'center center',
-    'zeno': 'center center',
+    'yufine': '40% 30%',               // Face slightly left
+    'zahhak': '35% 30%',               // Face slightly right
+    'zeno': '75% 30%',                 // Face right
     'zio': '30% 30%',
-    'ae-ningning': 'center center',
+    'ae-ningning': '40% 30%',          // Face slightly left
 };
 
 export default function HeroesPage() {
