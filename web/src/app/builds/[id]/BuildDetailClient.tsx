@@ -447,9 +447,10 @@ export function BuildDetailClient() {
                                                 <Image
                                                     src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
                                                     alt={hero.name}
-                                                    width={120}
-                                                    height={120}
-                                                    className="w-24 h-24 rounded-full ring-2 ring-green-500/50 group-hover:ring-green-400 object-cover"
+                                                    width={128}
+                                                    height={128}
+                                                    className="w-32 h-32 rounded-full ring-2 ring-green-500/50 group-hover:ring-green-400 object-cover"
+                                                    unoptimized
                                                 />
                                                 {ELEMENT_IMAGES[hero.element] && (
                                                     <Image
@@ -488,9 +489,10 @@ export function BuildDetailClient() {
                                                 <Image
                                                     src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
                                                     alt={hero.name}
-                                                    width={120}
-                                                    height={120}
-                                                    className="w-24 h-24 rounded-full ring-2 ring-red-500/50 group-hover:ring-red-400 object-cover"
+                                                    width={128}
+                                                    height={128}
+                                                    className="w-32 h-32 rounded-full ring-2 ring-red-500/50 group-hover:ring-red-400 object-cover"
+                                                    unoptimized
                                                 />
                                                 {ELEMENT_IMAGES[hero.element] && (
                                                     <Image
