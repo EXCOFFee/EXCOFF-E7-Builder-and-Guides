@@ -1,0 +1,2894 @@
+{
+    "alencia": {
+        "id": "c1100",
+        "_id": "alencia",
+        "name": "Alencia",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "ambitious-tywin": {
+        "id": "c2042",
+        "_id": "ambitious-tywin",
+        "name": "Ambitious Tywin",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "archer"
+    },
+    "apocalypse-ravi": {
+        "id": "c2019",
+        "_id": "apocalypse-ravi",
+        "name": "Apocalypse Ravi",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "aramintha": {
+        "id": "c1048",
+        "_id": "aramintha",
+        "name": "Aramintha",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "arbiter-vildred": {
+        "id": "c2007",
+        "_id": "arbiter-vildred",
+        "name": "Arbiter Vildred",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "archdemons-shadow": {
+        "id": "c5004",
+        "_id": "archdemons-shadow",
+        "name": "Archdemon's Shadow",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "waterbearer"
+    },
+    "baal-sezan": {
+        "id": "c1015",
+        "_id": "baal-sezan",
+        "name": "Baal & Sezan",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "twins"
+    },
+    "baiken": {
+        "id": "c1093",
+        "_id": "baiken",
+        "name": "Baiken",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "basar": {
+        "id": "c1053",
+        "_id": "basar",
+        "name": "Basar",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "waterbearer"
+    },
+    "bellona": {
+        "id": "c1071",
+        "_id": "bellona",
+        "name": "Bellona",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "blood-moon-haste": {
+        "id": "c2039",
+        "_id": "blood-moon-haste",
+        "name": "Blood Moon Haste",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "manauser",
+        "sex": 1,
+        "zodiac": "fish"
+    },
+    "bomb-model-kanna": {
+        "id": "c1097",
+        "_id": "bomb-model-kanna",
+        "name": "Bomb Model Kanna",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "briar-witch-iseria": {
+        "id": "c2024",
+        "_id": "briar-witch-iseria",
+        "name": "Briar Witch Iseria",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "cecilia": {
+        "id": "c1002",
+        "_id": "cecilia",
+        "name": "Cecilia",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "celine": {
+        "id": "c1103",
+        "_id": "celine",
+        "name": "Celine",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "cerise": {
+        "id": "c1081",
+        "_id": "cerise",
+        "name": "Cerise",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "waterbearer"
+    },
+    "cermia": {
+        "id": "c1079",
+        "_id": "cermia",
+        "name": "Cermia",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "charles": {
+        "id": "c1027",
+        "_id": "charles",
+        "name": "Charles",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "twins"
+    },
+    "charlotte": {
+        "id": "c1009",
+        "_id": "charlotte",
+        "name": "Charlotte",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "chloe": {
+        "id": "c1049",
+        "_id": "chloe",
+        "name": "Chloe",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "choux": {
+        "id": "c1101",
+        "_id": "choux",
+        "name": "Choux",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "dark-corvus": {
+        "id": "c2012",
+        "_id": "dark-corvus",
+        "name": "Dark Corvus",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "goat"
+    },
+    "desert-jewel-basar": {
+        "id": "c2053",
+        "_id": "desert-jewel-basar",
+        "name": "Desert Jewel Basar",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 1,
+        "zodiac": "archer"
+    },
+    "designer-lilibet": {
+        "id": "c2095",
+        "_id": "designer-lilibet",
+        "name": "Designer Lilibet",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "destina": {
+        "id": "c2022",
+        "_id": "destina",
+        "name": "Destina",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "diene": {
+        "id": "c1076",
+        "_id": "diene",
+        "name": "Diene",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "dizzy": {
+        "id": "c1094",
+        "_id": "dizzy",
+        "name": "Dizzy",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "eda": {
+        "id": "c1111",
+        "_id": "eda",
+        "name": "Eda",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "elena": {
+        "id": "c1091",
+        "_id": "elena",
+        "name": "Elena",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "elphelt": {
+        "id": "c1105",
+        "_id": "elphelt",
+        "name": "Elphelt",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "ervalen": {
+        "id": "c1108",
+        "_id": "ervalen",
+        "name": "Ervalen",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "fairytale-tenebria": {
+        "id": "c5050",
+        "_id": "fairytale-tenebria",
+        "name": "Fairytale Tenebria",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "faithless-lidica": {
+        "id": "c2046",
+        "_id": "faithless-lidica",
+        "name": "Faithless Lidica",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "fallen-cecilia": {
+        "id": "c2002",
+        "_id": "fallen-cecilia",
+        "name": "Fallen Cecilia",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "flan": {
+        "id": "c1110",
+        "_id": "flan",
+        "name": "Flan",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "haste": {
+        "id": "c1039",
+        "_id": "haste",
+        "name": "Haste",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "twins"
+    },
+    "holiday-yufine": {
+        "id": "c5016",
+        "_id": "holiday-yufine",
+        "name": "Holiday Yufine",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "iseria": {
+        "id": "c1024",
+        "_id": "iseria",
+        "name": "Iseria",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "judge-kise": {
+        "id": "c2006",
+        "_id": "judge-kise",
+        "name": "Judge Kise",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "kawerik": {
+        "id": "c1073",
+        "_id": "kawerik",
+        "name": "Kawerik",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "maiden"
+    },
+    "kayron": {
+        "id": "c1023",
+        "_id": "kayron",
+        "name": "Kayron",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "ram"
+    },
+    "ken": {
+        "id": "c1047",
+        "_id": "ken",
+        "name": "Ken",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "goat"
+    },
+    "kise": {
+        "id": "c1006",
+        "_id": "kise",
+        "name": "Kise",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "krau": {
+        "id": "c1070",
+        "_id": "krau",
+        "name": "Krau",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "fish"
+    },
+    "landy": {
+        "id": "c1109",
+        "_id": "landy",
+        "name": "Landy",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "last-rider-krau": {
+        "id": "c2070",
+        "_id": "last-rider-krau",
+        "name": "Last Rider Krau",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "fish"
+    },
+    "lidica": {
+        "id": "c1046",
+        "_id": "lidica",
+        "name": "Lidica",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "lilias": {
+        "id": "c1089",
+        "_id": "lilias",
+        "name": "Lilias",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "lilibet": {
+        "id": "c1095",
+        "_id": "lilibet",
+        "name": "Lilibet",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "little-queen-charlotte": {
+        "id": "c2009",
+        "_id": "little-queen-charlotte",
+        "name": "Little Queen Charlotte",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "ludwig": {
+        "id": "c1069",
+        "_id": "ludwig",
+        "name": "Ludwig",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "luluca": {
+        "id": "c1082",
+        "_id": "luluca",
+        "name": "Luluca",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "waterbearer"
+    },
+    "luna": {
+        "id": "c1066",
+        "_id": "luna",
+        "name": "Luna",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "maid-chloe": {
+        "id": "c2049",
+        "_id": "maid-chloe",
+        "name": "Maid Chloe",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "martial-artist-ken": {
+        "id": "c2047",
+        "_id": "martial-artist-ken",
+        "name": "Martial Artist Ken",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "mediator-kawerik": {
+        "id": "c2073",
+        "_id": "mediator-kawerik",
+        "name": "Mediator Kawerik",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "goat"
+    },
+    "melissa": {
+        "id": "c1096",
+        "_id": "melissa",
+        "name": "Melissa",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "mort": {
+        "id": "c1104",
+        "_id": "mort",
+        "name": "Mort",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "twins"
+    },
+    "mui": {
+        "id": "c1044",
+        "_id": "mui",
+        "name": "Mui",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "operator-sigret": {
+        "id": "c2072",
+        "_id": "operator-sigret",
+        "name": "Operator Sigret",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "pavel": {
+        "id": "c1080",
+        "_id": "pavel",
+        "name": "Pavel",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "maiden"
+    },
+    "politis": {
+        "id": "c1112",
+        "_id": "politis",
+        "name": "Politis",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "ravi": {
+        "id": "c1019",
+        "_id": "ravi",
+        "name": "Ravi",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "ray": {
+        "id": "c1090",
+        "_id": "ray",
+        "name": "Ray",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "manauser",
+        "sex": 1,
+        "zodiac": "bull"
+    },
+    "remnant-violet": {
+        "id": "c2074",
+        "_id": "remnant-violet",
+        "name": "Remnant Violet",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "roana": {
+        "id": "c1102",
+        "_id": "roana",
+        "name": "Roana",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "fish"
+    },
+    "ruele-of-light": {
+        "id": "c1022",
+        "_id": "ruele-of-light",
+        "name": "Ruele of Light",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "fish"
+    },
+    "sage-baal-sezan": {
+        "id": "c2015",
+        "_id": "sage-baal-sezan",
+        "name": "Sage Baal & Sezan",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "bull"
+    },
+    "seaside-bellona": {
+        "id": "c5071",
+        "_id": "seaside-bellona",
+        "name": "Seaside Bellona",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "senya": {
+        "id": "c1106",
+        "_id": "senya",
+        "name": "Senya",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "sez": {
+        "id": "c1038",
+        "_id": "sez",
+        "name": "Sez",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "sigret": {
+        "id": "c1072",
+        "_id": "sigret",
+        "name": "Sigret",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "silver-blade-aramintha": {
+        "id": "c2048",
+        "_id": "silver-blade-aramintha",
+        "name": "Silver Blade Aramintha",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "sol": {
+        "id": "c1092",
+        "_id": "sol",
+        "name": "Sol",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "archer"
+    },
+    "solitaria-of-the-snow": {
+        "id": "c2111",
+        "_id": "solitaria-of-the-snow",
+        "name": "Solitaria of the Snow",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "specimen-sez": {
+        "id": "c2038",
+        "_id": "specimen-sez",
+        "name": "Specimen Sez",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "specter-tenebria": {
+        "id": "c2050",
+        "_id": "specter-tenebria",
+        "name": "Specter Tenebria",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "tamarinne": {
+        "id": "c1067",
+        "_id": "tamarinne",
+        "name": "Tamarinne",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "tenebria": {
+        "id": "c1050",
+        "_id": "tenebria",
+        "name": "Tenebria",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "top-model-luluca": {
+        "id": "c2082",
+        "_id": "top-model-luluca",
+        "name": "Top Model Luluca",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "tywin": {
+        "id": "c1042",
+        "_id": "tywin",
+        "name": "Tywin",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "ram"
+    },
+    "vildred": {
+        "id": "c1007",
+        "_id": "vildred",
+        "name": "Vildred",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "violet": {
+        "id": "c1074",
+        "_id": "violet",
+        "name": "Violet",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "vivian": {
+        "id": "c1088",
+        "_id": "vivian",
+        "name": "Vivian",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "yufine": {
+        "id": "c1016",
+        "_id": "yufine",
+        "name": "Yufine",
+        "rarity": 5,
+        "attribute": "wind",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "yuna": {
+        "id": "c1030",
+        "_id": "yuna",
+        "name": "Yuna",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "zeno": {
+        "id": "c1083",
+        "_id": "zeno",
+        "name": "Zeno",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "bull"
+    },
+    "achates": {
+        "id": "c1017",
+        "_id": "achates",
+        "name": "Achates",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "angelica": {
+        "id": "c1062",
+        "_id": "angelica",
+        "name": "Angelica",
+        "rarity": 4,
+        "attribute": "ice",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "armin": {
+        "id": "c1008",
+        "_id": "armin",
+        "name": "Armin",
+        "rarity": 4,
+        "attribute": "wind",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "assassin-cartuja": {
+        "id": "c2013",
+        "_id": "assassin-cartuja",
+        "name": "Assassin Cartuja",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "assassin-cidd": {
+        "id": "c2014",
+        "_id": "assassin-cidd",
+        "name": "Assassin Cidd",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "waterbearer"
+    },
+    "assassin-coli": {
+        "id": "c2033",
+        "_id": "assassin-coli",
+        "name": "Assassin Coli",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "auxiliary-lots": {
+        "id": "c2031",
+        "_id": "auxiliary-lots",
+        "name": "Auxiliary Lots",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "fish"
+    },
+    "benevolent-romann": {
+        "id": "c2043",
+        "_id": "benevolent-romann",
+        "name": "Benevolent Romann",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "bull"
+    },
+    "blaze-dingo": {
+        "id": "c2021",
+        "_id": "blaze-dingo",
+        "name": "Blaze Dingo",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 1,
+        "zodiac": "archer"
+    },
+    "blood-blade-karin": {
+        "id": "c2011",
+        "_id": "blood-blade-karin",
+        "name": "Blood Blade Karin",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "cartuja": {
+        "id": "c1013",
+        "_id": "cartuja",
+        "name": "Cartuja",
+        "rarity": 4,
+        "attribute": "wind",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "crab"
+    },
+    "celestial-mercedes": {
+        "id": "c2005",
+        "_id": "celestial-mercedes",
+        "name": "Celestial Mercedes",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "challenger-dominiel": {
+        "id": "c2037",
+        "_id": "challenger-dominiel",
+        "name": "Challenger Dominiel",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "champion-zerato": {
+        "id": "c2010",
+        "_id": "champion-zerato",
+        "name": "Champion Zerato",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "ram"
+    },
+    "cidd": {
+        "id": "c1014",
+        "_id": "cidd",
+        "name": "Cidd",
+        "rarity": 4,
+        "attribute": "wind",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "ram"
+    },
+    "clarissa": {
+        "id": "c1028",
+        "_id": "clarissa",
+        "name": "Clarissa",
+        "rarity": 4,
+        "attribute": "ice",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "coli": {
+        "id": "c1033",
+        "_id": "coli",
+        "name": "Coli",
+        "rarity": 4,
+        "attribute": "ice",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "corvus": {
+        "id": "c1012",
+        "_id": "corvus",
+        "name": "Corvus",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "crab"
+    },
+    "crescent-moon-rin": {
+        "id": "c2054",
+        "_id": "crescent-moon-rin",
+        "name": "Crescent Moon Rin",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "crimson-armin": {
+        "id": "c2008",
+        "_id": "crimson-armin",
+        "name": "Crimson Armin",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "crozet": {
+        "id": "c1036",
+        "_id": "crozet",
+        "name": "Crozet",
+        "rarity": 4,
+        "attribute": "ice",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "crab"
+    },
+    "dingo": {
+        "id": "c1021",
+        "_id": "dingo",
+        "name": "Dingo",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "maiden"
+    },
+    "dominiel": {
+        "id": "c1037",
+        "_id": "dominiel",
+        "name": "Dominiel",
+        "rarity": 4,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "fighter-maya": {
+        "id": "c2032",
+        "_id": "fighter-maya",
+        "name": "Fighter Maya",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "free-spirit-tieria": {
+        "id": "c3026",
+        "_id": "free-spirit-tieria",
+        "name": "Free Spirit Tieria",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "furious": {
+        "id": "c1087",
+        "_id": "furious",
+        "name": "Furious",
+        "rarity": 4,
+        "attribute": "ice",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "general-purrgis": {
+        "id": "c2035",
+        "_id": "general-purrgis",
+        "name": "General Purrgis",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "crab"
+    },
+    "great-chief-khawana": {
+        "id": "c2086",
+        "_id": "great-chief-khawana",
+        "name": "Great Chief Khawana",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "guider-aither": {
+        "id": "c2018",
+        "_id": "guider-aither",
+        "name": "Guider Aither",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "crab"
+    },
+    "karin": {
+        "id": "c1011",
+        "_id": "karin",
+        "name": "Karin",
+        "rarity": 4,
+        "attribute": "ice",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "khawana": {
+        "id": "c1086",
+        "_id": "khawana",
+        "name": "Khawana",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "fish"
+    },
+    "khawazu": {
+        "id": "c1085",
+        "_id": "khawazu",
+        "name": "Khawazu",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "kitty-clarissa": {
+        "id": "c2028",
+        "_id": "kitty-clarissa",
+        "name": "Kitty Clarissa",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "kizuna-ai": {
+        "id": "c1107",
+        "_id": "kizuna-ai",
+        "name": "Kizuna AI",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "leo": {
+        "id": "c1029",
+        "_id": "leo",
+        "name": "Leo",
+        "rarity": 4,
+        "attribute": "wind",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "goat"
+    },
+    "lots": {
+        "id": "c1031",
+        "_id": "lots",
+        "name": "Lots",
+        "rarity": 4,
+        "attribute": "wind",
+        "role": "manauser",
+        "sex": 1,
+        "zodiac": "twins"
+    },
+    "maya": {
+        "id": "c1032",
+        "_id": "maya",
+        "name": "Maya",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "mercedes": {
+        "id": "c1005",
+        "_id": "mercedes",
+        "name": "Mercedes",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "purrgis": {
+        "id": "c1035",
+        "_id": "purrgis",
+        "name": "Purrgis",
+        "rarity": 4,
+        "attribute": "wind",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "rin": {
+        "id": "c1054",
+        "_id": "rin",
+        "name": "Rin",
+        "rarity": 4,
+        "attribute": "wind",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "roaming-warrior-leo": {
+        "id": "c2029",
+        "_id": "roaming-warrior-leo",
+        "name": "Roaming Warrior Leo",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "twins"
+    },
+    "romann": {
+        "id": "c1043",
+        "_id": "romann",
+        "name": "Romann",
+        "rarity": 4,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "twins"
+    },
+    "rose": {
+        "id": "c1003",
+        "_id": "rose",
+        "name": "Rose",
+        "rarity": 4,
+        "attribute": "ice",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "schuri": {
+        "id": "c1020",
+        "_id": "schuri",
+        "name": "Schuri",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "serila": {
+        "id": "c1040",
+        "_id": "serila",
+        "name": "Serila",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "waterbearer"
+    },
+    "shadow-rose": {
+        "id": "c2003",
+        "_id": "shadow-rose",
+        "name": "Shadow Rose",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "shooting-star-achates": {
+        "id": "c2017",
+        "_id": "shooting-star-achates",
+        "name": "Shooting Star Achates",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "silk": {
+        "id": "c1004",
+        "_id": "silk",
+        "name": "Silk",
+        "rarity": 4,
+        "attribute": "wind",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "sinful-angelica": {
+        "id": "c2062",
+        "_id": "sinful-angelica",
+        "name": "Sinful Angelica",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "surin": {
+        "id": "c1065",
+        "_id": "surin",
+        "name": "Surin",
+        "rarity": 4,
+        "attribute": "fire",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "tempest-surin": {
+        "id": "c2065",
+        "_id": "tempest-surin",
+        "name": "Tempest Surin",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "troublemaker-crozet": {
+        "id": "c2036",
+        "_id": "troublemaker-crozet",
+        "name": "Troublemaker Crozet",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "fish"
+    },
+    "wanderer-silk": {
+        "id": "c2004",
+        "_id": "wanderer-silk",
+        "name": "Wanderer Silk",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "watcher-schuri": {
+        "id": "c2020",
+        "_id": "watcher-schuri",
+        "name": "Watcher Schuri",
+        "rarity": 4,
+        "attribute": "light",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "zerato": {
+        "id": "c1010",
+        "_id": "zerato",
+        "name": "Zerato",
+        "rarity": 4,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "ram"
+    },
+    "adlay": {
+        "id": "c3043",
+        "_id": "adlay",
+        "name": "Adlay",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "archer"
+    },
+    "adventurer-ras": {
+        "id": "c5001",
+        "_id": "adventurer-ras",
+        "name": "Adventurer Ras",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "scales"
+    },
+    "ainos": {
+        "id": "c3105",
+        "_id": "ainos",
+        "name": "Ainos",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "ains": {
+        "id": "c3093",
+        "_id": "ains",
+        "name": "Ains",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "scales"
+    },
+    "aither": {
+        "id": "c1018",
+        "_id": "aither",
+        "name": "Aither",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "manauser",
+        "sex": 1,
+        "zodiac": "scales"
+    },
+    "alexa": {
+        "id": "c3012",
+        "_id": "alexa",
+        "name": "Alexa",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "allrounder-wanda": {
+        "id": "c4065",
+        "_id": "allrounder-wanda",
+        "name": "All-Rounder Wanda",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "angelic-montmorancy": {
+        "id": "c4042",
+        "_id": "angelic-montmorancy",
+        "name": "Angelic Montmorancy",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "fish"
+    },
+    "arowell": {
+        "id": "c3004",
+        "_id": "arowell",
+        "name": "Arowell",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "azalea": {
+        "id": "c3031",
+        "_id": "azalea",
+        "name": "Azalea",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "bask": {
+        "id": "c3006",
+        "_id": "bask",
+        "name": "Bask",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "batisse": {
+        "id": "c3095",
+        "_id": "batisse",
+        "name": "Batisse",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "bull"
+    },
+    "butcher-corps-inquisitor": {
+        "id": "c3001",
+        "_id": "butcher-corps-inquisitor",
+        "name": "Butcher Corps Inquisitor",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "captain-rikoris": {
+        "id": "c4034",
+        "_id": "captain-rikoris",
+        "name": "Captain Rikoris",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "scales"
+    },
+    "carmainerose": {
+        "id": "c3071",
+        "_id": "carmainerose",
+        "name": "Carmainerose",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "waterbearer"
+    },
+    "carrot": {
+        "id": "c3051",
+        "_id": "carrot",
+        "name": "Carrot",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "celeste": {
+        "id": "c3064",
+        "_id": "celeste",
+        "name": "Celeste",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "chaos-inquisitor": {
+        "id": "c4001",
+        "_id": "chaos-inquisitor",
+        "name": "Chaos Inquisitor",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "chaos-sect-axe": {
+        "id": "c4025",
+        "_id": "chaos-sect-axe",
+        "name": "Chaos Sect Axe",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "church-of-ilryos-axe": {
+        "id": "c3025",
+        "_id": "church-of-ilryos-axe",
+        "name": "Church of Ilryos Axe",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "commander-lorina": {
+        "id": "c4035",
+        "_id": "commander-lorina",
+        "name": "Commander Lorina",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "doll-maker-pearlhorizon": {
+        "id": "c4073",
+        "_id": "doll-maker-pearlhorizon",
+        "name": "Doll Maker Pearlhorizon",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "doris": {
+        "id": "c3044",
+        "_id": "doris",
+        "name": "Doris",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "eaton": {
+        "id": "c3094",
+        "_id": "eaton",
+        "name": "Eaton",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 0,
+        "zodiac": "crab"
+    },
+    "elson": {
+        "id": "c3054",
+        "_id": "elson",
+        "name": "Elson",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 1,
+        "zodiac": "fish"
+    },
+    "enott": {
+        "id": "c3022",
+        "_id": "enott",
+        "name": "Enott",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "falconer-kluri": {
+        "id": "c4003",
+        "_id": "falconer-kluri",
+        "name": "Falconer Kluri",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "glenn": {
+        "id": "c3103",
+        "_id": "glenn",
+        "name": "Glenn",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "scales"
+    },
+    "gloomyrain": {
+        "id": "c3074",
+        "_id": "gloomyrain",
+        "name": "Gloomyrain",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "godmother": {
+        "id": "c3101",
+        "_id": "godmother",
+        "name": "Godmother",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "gunther": {
+        "id": "c3024",
+        "_id": "gunther",
+        "name": "Gunther",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "scales"
+    },
+    "hataan": {
+        "id": "c3091",
+        "_id": "hataan",
+        "name": "Hataan",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "hazel": {
+        "id": "c3041",
+        "_id": "hazel",
+        "name": "Hazel",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "waterbearer"
+    },
+    "helga": {
+        "id": "c3023",
+        "_id": "helga",
+        "name": "Helga",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "hurado": {
+        "id": "c3055",
+        "_id": "hurado",
+        "name": "Hurado",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "fish"
+    },
+    "ian": {
+        "id": "c3102",
+        "_id": "ian",
+        "name": "Ian",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "maiden"
+    },
+    "jecht": {
+        "id": "c3053",
+        "_id": "jecht",
+        "name": "Jecht",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "manauser",
+        "sex": 1,
+        "zodiac": "archer"
+    },
+    "jena": {
+        "id": "c3052",
+        "_id": "jena",
+        "name": "Jena",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "judith": {
+        "id": "c3011",
+        "_id": "judith",
+        "name": "Judith",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "fish"
+    },
+    "kikirat-v2": {
+        "id": "c3084",
+        "_id": "kikirat-v2",
+        "name": "Kikirat v2",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "knight",
+        "sex": 0,
+        "zodiac": "goat"
+    },
+    "kiris": {
+        "id": "c3063",
+        "_id": "kiris",
+        "name": "Kiris",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "kluri": {
+        "id": "c3003",
+        "_id": "kluri",
+        "name": "Kluri",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "lena": {
+        "id": "c3092",
+        "_id": "lena",
+        "name": "Lena",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "lorina": {
+        "id": "c3035",
+        "_id": "lorina",
+        "name": "Lorina",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "lucy": {
+        "id": "c3113",
+        "_id": "lucy",
+        "name": "Lucy",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "magic-scholar-doris": {
+        "id": "c4044",
+        "_id": "magic-scholar-doris",
+        "name": "Magic Scholar Doris",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "mascot-hazel": {
+        "id": "c4041",
+        "_id": "mascot-hazel",
+        "name": "Mascot Hazel",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "waterbearer"
+    },
+    "mercenary-helga": {
+        "id": "c4023",
+        "_id": "mercenary-helga",
+        "name": "Mercenary Helga",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "mirsa": {
+        "id": "c3014",
+        "_id": "mirsa",
+        "name": "Mirsa",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "fish"
+    },
+    "mistychain": {
+        "id": "c3072",
+        "_id": "mistychain",
+        "name": "Mistychain",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "montmorancy": {
+        "id": "c3042",
+        "_id": "montmorancy",
+        "name": "Montmorancy",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "fish"
+    },
+    "mucacha": {
+        "id": "c3033",
+        "_id": "mucacha",
+        "name": "Mucacha",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "archer"
+    },
+    "muse-rima": {
+        "id": "c4062",
+        "_id": "muse-rima",
+        "name": "Muse Rima",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "waterbearer"
+    },
+    "nemunas": {
+        "id": "c3061",
+        "_id": "nemunas",
+        "name": "Nemunas",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "otillie": {
+        "id": "c3045",
+        "_id": "otillie",
+        "name": "Otillie",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "pearlhorizon": {
+        "id": "c3073",
+        "_id": "pearlhorizon",
+        "name": "Pearlhorizon",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "pyllis": {
+        "id": "c3005",
+        "_id": "pyllis",
+        "name": "Pyllis",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "knight",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "ras": {
+        "id": "c1001",
+        "_id": "ras",
+        "name": "Ras",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "scales"
+    },
+    "requiemroar": {
+        "id": "c3075",
+        "_id": "requiemroar",
+        "name": "Requiemroar",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "researcher-carrot": {
+        "id": "c4051",
+        "_id": "researcher-carrot",
+        "name": "Researcher Carrot",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "righteous-thief-roozid": {
+        "id": "c4013",
+        "_id": "righteous-thief-roozid",
+        "name": "Righteous Thief Roozid",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "twins"
+    },
+    "rikoris": {
+        "id": "c3034",
+        "_id": "rikoris",
+        "name": "Rikoris",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "scales"
+    },
+    "rima": {
+        "id": "c3062",
+        "_id": "rima",
+        "name": "Rima",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "waterbearer"
+    },
+    "roozid": {
+        "id": "c3013",
+        "_id": "roozid",
+        "name": "Roozid",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "twins"
+    },
+    "sonia": {
+        "id": "c3104",
+        "_id": "sonia",
+        "name": "Sonia",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "fish"
+    },
+    "sven": {
+        "id": "c3015",
+        "_id": "sven",
+        "name": "Sven",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "assassin",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "taranor-guard": {
+        "id": "c3032",
+        "_id": "taranor-guard",
+        "name": "Taranor Guard",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "scales"
+    },
+    "taranor-royal-guard": {
+        "id": "c3002",
+        "_id": "taranor-royal-guard",
+        "name": "Taranor Royal Guard",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "knight",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "tieria": {
+        "id": "c3021",
+        "_id": "tieria",
+        "name": "Tieria",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "wanda": {
+        "id": "c3065",
+        "_id": "wanda",
+        "name": "Wanda",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "zealot-carmainerose": {
+        "id": "c4071",
+        "_id": "zealot-carmainerose",
+        "name": "Zealot Carmainerose",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "waterbearer"
+    },
+    "ilynav": {
+        "id": "c1113",
+        "_id": "ilynav",
+        "name": "Ilynav",
+        "rarity": 5,
+        "role": "knight",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "inferno-khawazu": {
+        "id": "c2085",
+        "_id": "inferno-khawazu",
+        "name": "Inferno Khawazu",
+        "rarity": 4,
+        "role": "warrior",
+        "attribute": "dark",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "straze": {
+        "id": "c1034",
+        "_id": "straze",
+        "name": "Straze",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "dark",
+        "sex": 1,
+        "zodiac": "bull"
+    },
+    "emilia": {
+        "id": "c1116",
+        "_id": "emilia",
+        "name": "Emilia",
+        "rarity": 5,
+        "role": "manauser",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "rem": {
+        "id": "c1114",
+        "_id": "rem",
+        "name": "Rem",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "ram": {
+        "id": "c1115",
+        "_id": "ram",
+        "name": "Ram",
+        "rarity": 5,
+        "role": "mage",
+        "attribute": "wind",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "melany": {
+        "id": "c3121",
+        "_id": "melany",
+        "name": "Melany",
+        "rarity": 3,
+        "role": "warrior",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "helen": {
+        "id": "c3122",
+        "_id": "helen",
+        "name": "Helen",
+        "rarity": 3,
+        "role": "knight",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "christy": {
+        "id": "c3123",
+        "_id": "christy",
+        "name": "Christy",
+        "rarity": 3,
+        "role": "knight",
+        "attribute": "wind",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "camilla": {
+        "id": "c3124",
+        "_id": "camilla",
+        "name": "Camilla",
+        "rarity": 3,
+        "role": "warrior",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "penelope": {
+        "id": "c3125",
+        "_id": "penelope",
+        "name": "Penelope",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "dark",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "summertime-iseria": {
+        "id": "c5024",
+        "_id": "summertime-iseria",
+        "name": "Summertime Iseria",
+        "rarity": 5,
+        "role": "ranger",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "closer-charles": {
+        "id": "c2027",
+        "_id": "closer-charles",
+        "name": "Closer Charles",
+        "rarity": 5,
+        "role": "assassin",
+        "attribute": "dark",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "angel-of-light-angelica": {
+        "id": "c6062",
+        "_id": "angel-of-light-angelica",
+        "name": "Angel of Light Angelica",
+        "rarity": 4,
+        "role": "mage",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "belian": {
+        "id": "c1117",
+        "_id": "belian",
+        "name": "Belian",
+        "rarity": 5,
+        "role": "knight",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "ran": {
+        "id": "c1118",
+        "_id": "ran",
+        "name": "Ran",
+        "rarity": 5,
+        "role": "assassin",
+        "attribute": "ice",
+        "sex": 1,
+        "zodiac": "ram"
+    },
+    "rimuru": {
+        "id": "c1121",
+        "_id": "rimuru",
+        "name": "Rimuru",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "wind",
+        "sex": 0,
+        "zodiac": "scales"
+    },
+    "shuna": {
+        "id": "c1123",
+        "_id": "shuna",
+        "name": "Shuna",
+        "rarity": 5,
+        "role": "manauser",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "milim": {
+        "id": "c1122",
+        "_id": "milim",
+        "name": "Milim",
+        "rarity": 5,
+        "role": "mage",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "shadow-knight-pyllis": {
+        "id": "c4005",
+        "_id": "shadow-knight-pyllis",
+        "name": "Shadow Knight Pyllis",
+        "rarity": 3,
+        "role": "knight",
+        "attribute": "dark",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "spirit-eye-celine": {
+        "id": "c2103",
+        "_id": "spirit-eye-celine",
+        "name": "Spirit Eye Celine",
+        "rarity": 5,
+        "role": "assassin",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "adin": {
+        "id": "c3143",
+        "_id": "adin",
+        "name": "Adin",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "wind",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "zahhak": {
+        "id": "c1119",
+        "_id": "zahhak",
+        "name": "Zahhak",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "wind",
+        "sex": 1,
+        "zodiac": "archer"
+    },
+    "conqueror-lilias": {
+        "id": "c2089",
+        "_id": "conqueror-lilias",
+        "name": "Conqueror Lilias",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "waterbearer"
+    },
+    "command-model-laika": {
+        "id": "c1099",
+        "_id": "command-model-laika",
+        "name": "Command Model Laika",
+        "rarity": 5,
+        "role": "ranger",
+        "attribute": "wind",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "peira": {
+        "id": "c1125",
+        "_id": "peira",
+        "name": "Peira",
+        "rarity": 5,
+        "role": "assassin",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "muwi": {
+        "id": "c3132",
+        "_id": "muwi",
+        "name": "Muwi",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "ice",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "lionheart-cermia": {
+        "id": "c2079",
+        "_id": "lionheart-cermia",
+        "name": "Lionheart Cermia",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "fish"
+    },
+    "januta": {
+        "id": "c3131",
+        "_id": "januta",
+        "name": "Januta",
+        "rarity": 3,
+        "role": "warrior",
+        "attribute": "fire",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "orte": {
+        "id": "c3133",
+        "_id": "orte",
+        "name": "Orte",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "wind",
+        "sex": 2,
+        "zodiac": "waterbearer"
+    },
+    "yoonryoung": {
+        "_id": "yoonryoung",
+        "id": "c3134",
+        "name": "Yoonryoung",
+        "rarity": 3,
+        "role": "knight",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "hasol": {
+        "_id": "hasol",
+        "id": "c3135",
+        "name": "Hasol",
+        "rarity": 3,
+        "role": "knight",
+        "attribute": "dark",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "hwayoung": {
+        "id": "c1128",
+        "_id": "hwayoung",
+        "name": "Hwayoung",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "bad-cat-armin": {
+        "id": "c6008",
+        "_id": "bad-cat-armin",
+        "name": "Bad Cat Armin",
+        "rarity": 4,
+        "role": "warrior",
+        "attribute": "dark",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "pirate-captain-flan": {
+        "id": "c2110",
+        "_id": "pirate-captain-flan",
+        "name": "Pirate Captain Flan",
+        "rarity": 5,
+        "role": "ranger",
+        "attribute": "dark",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "vigilante-leader-glenn": {
+        "id": "c4103",
+        "_id": "vigilante-leader-glenn",
+        "name": "Vigilante Leader Glenn",
+        "rarity": 3,
+        "role": "ranger",
+        "attribute": "wind",
+        "sex": 1,
+        "zodiac": "scales"
+    },
+    "verdant-adin": {
+        "_id": "verdant-adin",
+        "id": "c4143",
+        "name": "Verdant Adin",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "wind",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "holy-flame-adin": {
+        "_id": "holy-flame-adin",
+        "id": "c4141",
+        "name": "Holy Flame Adin",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "serene-purity-adin": {
+        "_id": "serene-purity-adin",
+        "id": "c4142",
+        "name": "Serene Purity Adin",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "jacko": {
+        "id": "c1130",
+        "_id": "jacko",
+        "name": "Jack-O'",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "aria": {
+        "id": "c1129",
+        "_id": "aria",
+        "name": "Aria",
+        "rarity": 5,
+        "role": "mage",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "taeyou": {
+        "_id": "taeyou",
+        "id": "c1127",
+        "name": "Taeyou",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "ice",
+        "sex": 1,
+        "zodiac": "maiden"
+    },
+    "yulha": {
+        "_id": "yulha",
+        "id": "c1131",
+        "name": "Yulha",
+        "rarity": 5,
+        "role": "knight",
+        "attribute": "wind",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "sylvan-sage-vivian": {
+        "_id": "sylvan-sage-vivian",
+        "id": "c2088",
+        "name": "Sylvan Sage Vivian",
+        "rarity": 5,
+        "role": "mage",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "crab"
+    },
+    "summers-disciple-alexa": {
+        "_id": "summers-disciple-alexa",
+        "id": "c4012",
+        "name": "Summer's Disciple Alexa",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "lion"
+    },
+    "sharun": {
+        "_id": "sharun",
+        "id": "c1132",
+        "name": "Sharun",
+        "rarity": 5,
+        "role": "manauser",
+        "attribute": "wind",
+        "sex": 2,
+        "zodiac": "maiden"
+    },
+    "summer-break-charlotte": {
+        "_id": "summer-break-charlotte",
+        "id": "c5009",
+        "name": "Summer Break Charlotte",
+        "rarity": 5,
+        "role": "knight",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "moon-bunny-dominiel": {
+        "_id": "moon-bunny-dominiel",
+        "id": "c6037",
+        "name": "Moon Bunny Dominiel",
+        "rarity": 4,
+        "role": "manauser",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "bull"
+    },
+    "commander-pavel": {
+        "_id": "commander-pavel",
+        "id": "c2080",
+        "name": "Commander Pavel",
+        "rarity": 5,
+        "role": "ranger",
+        "attribute": "light",
+        "sex": 1,
+        "zodiac": "bull"
+    },
+    "edward-elric": {
+        "_id": "edward-elric",
+        "id": "c1134",
+        "name": "Edward Elric",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "fire",
+        "sex": 1,
+        "zodiac": "ram"
+    },
+    "roy-mustang": {
+        "_id": "roy-mustang",
+        "id": "c1135",
+        "name": "Roy Mustang",
+        "rarity": 5,
+        "role": "mage",
+        "attribute": "fire",
+        "sex": 1,
+        "zodiac": "lion"
+    },
+    "riza-hawkeye": {
+        "_id": "riza-hawkeye",
+        "id": "c1136",
+        "name": "Riza Hawkeye",
+        "rarity": 5,
+        "role": "ranger",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "lua": {
+        "_id": "lua",
+        "id": "c1126",
+        "name": "Lua",
+        "rarity": 5,
+        "role": "ranger",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "fish"
+    },
+    "astromancer-elena": {
+        "_id": "astromancer-elena",
+        "id": "c2091",
+        "name": "Astromancer Elena",
+        "rarity": 5,
+        "role": "ranger",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "unbound-knight-arowell": {
+        "_id": "unbound-knight-arowell",
+        "id": "c4004",
+        "name": "Unbound Knight Arowell",
+        "rarity": 3,
+        "role": "knight",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "scales"
+    },
+    "arunka": {
+        "_id": "arunka",
+        "id": "c1124",
+        "name": "Arunka",
+        "rarity": 5,
+        "role": "warrior",
+        "attribute": "wind",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "savior-adin": {
+        "_id": "savior-adin",
+        "id": "c4144",
+        "name": "Savior Adin",
+        "rarity": 3,
+        "role": "assassin",
+        "attribute": "light",
+        "sex": 2,
+        "zodiac": "leo",
+        "gacha": false
+    },
+    "zio": {
+        "_id": "zio",
+        "id": "c1133",
+        "name": "Zio",
+        "rarity": 5,
+        "role": "mage",
+        "attribute": "dark",
+        "sex": 1,
+        "zodiac": "ram"
+    },
+    "aewinter": {
+        "_id": "aewinter",
+        "id": "c1139",
+        "name": "ae-WINTER",
+        "rarity": 5,
+        "role": "assassin",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "aeningning": {
+        "_id": "aeningning",
+        "id": "c1140",
+        "name": "ae-NINGNING",
+        "rarity": 5,
+        "role": "manauser",
+        "attribute": "fire",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "aegiselle": {
+        "_id": "aegiselle",
+        "id": "c1138",
+        "name": "ae-GISELLE",
+        "rarity": 5,
+        "role": "mage",
+        "attribute": "wind",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "aekarina": {
+        "_id": "aekarina",
+        "id": "c1137",
+        "name": "ae-KARINA",
+        "rarity": 5,
+        "role": "knight",
+        "attribute": "ice",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "death-dealer-ray": {
+        "_id": "death-dealer-ray",
+        "id": "c2090",
+        "name": "Death Dealer Ray",
+        "rarity": 5,
+        "role": "manauser",
+        "attribute": "dark",
+        "sex": 1,
+        "zodiac": "crab"
+    },
+    "shepherd-jena": {
+        "id": "c4052",
+        "_id": "shepherd-jena",
+        "name": "Shepherd Jena",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "ram"
+    },
+    "beehoo": {
+        "id": "c1141",
+        "_id": "beehoo",
+        "name": "Beehoo",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "goat"
+    },
+    "peacemaker-furious": {
+        "id": "c2087",
+        "_id": "peacemaker-furious",
+        "name": "Peacemaker Furious",
+        "rarity": 4,
+        "attribute": "dark",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "scorpion"
+    },
+    "juni": {
+        "id": "c3151",
+        "_id": "juni",
+        "name": "Juni",
+        "rarity": 3,
+        "attribute": "fire",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "talaz": {
+        "id": "c3152",
+        "_id": "talaz",
+        "name": "Talaz",
+        "rarity": 3,
+        "attribute": "ice",
+        "role": "warrior",
+        "sex": 1,
+        "zodiac": "leo"
+    },
+    "lilka": {
+        "id": "c3153",
+        "_id": "lilka",
+        "name": "Lilka",
+        "rarity": 3,
+        "attribute": "wind",
+        "role": "ranger",
+        "sex": 2,
+        "zodiac": "twins"
+    },
+    "talia": {
+        "id": "c3154",
+        "_id": "talia",
+        "name": "Talia",
+        "rarity": 3,
+        "attribute": "light",
+        "role": "assassin",
+        "sex": 2,
+        "zodiac": "goat"
+    },
+    "suthan": {
+        "id": "c3155",
+        "_id": "suthan",
+        "name": "Suthan",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "mage",
+        "sex": 1,
+        "zodiac": "waterbearer"
+    },
+    "lone-crescent-bellona": {
+        "id": "c2071",
+        "_id": "lone-crescent-bellona",
+        "name": "Lone Crescent Bellona",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "warrior",
+        "sex": 2,
+        "zodiac": "scorpion"
+    },
+    "amid": {
+        "id": "c1143",
+        "_id": "amid",
+        "name": "Amid",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "bull",
+        "limited": true
+    },
+    "eligos": {
+        "id": "c1142",
+        "_id": "eligos",
+        "name": "Eligos",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "ranger",
+        "sex": 1,
+        "zodiac": "maiden"
+    },
+    "architect-laika": {
+        "id": "c2099",
+        "_id": "architect-laika",
+        "name": "Architect Laika",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "mage",
+        "sex": 2,
+        "zodiac": "archer"
+    },
+    "ainos-20": {
+        "id": "c4105",
+        "_id": "ainos-20",
+        "name": "Ainos 2.0",
+        "rarity": 3,
+        "attribute": "dark",
+        "role": "manauser",
+        "sex": 2,
+        "zodiac": "archer"
+    }
+}

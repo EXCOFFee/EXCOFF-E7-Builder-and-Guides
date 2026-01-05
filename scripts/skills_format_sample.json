@@ -1,0 +1,77 @@
+=== Setsuka Skills ===
+{
+  "S1": {
+    "hitTypes": [
+      "crit",
+      "crushing",
+      "normal",
+      "miss"
+    ],
+    "rate": 0.6,
+    "pow": 1,
+    "targets": 1,
+    "selfHpScaling": 0.12,
+    "options": []
+  },
+  "S2": {
+    "hitTypes": [
+      "crit",
+      "crushing",
+      "normal",
+      "miss"
+    ],
+    "rate": 0.9,
+    "pow": 0.95,
+    "targets": 1,
+    "options": []
+  },
+  "S3": {
+    "hitTypes": [],
+    "options": []
+  }
+}
+
+=== Genesis Ras Skills ===
+{
+  "S1": {
+    "hitTypes": [
+      "crit",
+      "crushing",
+      "normal",
+      "miss"
+    ],
+    "rate": 0.9,
+    "pow": 1,
+    "targets": 1,
+    "selfHpScaling": 0.1,
+    "options": []
+  },
+  "S2": {
+    "hitTypes": [
+      "crit",
+      "crushing",
+      "normal",
+      "miss"
+    ],
+    "rate": 0.9,
+    "pow": 1,
+    "targets": 1,
+    "selfHpScaling": 0.07,
+    "options": []
+  },
+  "S3": {
+    "hitTypes": [
+      "crit",
+      "crushing",
+      "normal",
+      "miss"
+    ],
+    "rate": 0.1,
+    "pow": 1,
+    "targets": 3,
+    "selfHpScaling": 0.05,
+    "penetration": 1,
+    "note": "100% penetration",
+    "options": []
+  }
+}
