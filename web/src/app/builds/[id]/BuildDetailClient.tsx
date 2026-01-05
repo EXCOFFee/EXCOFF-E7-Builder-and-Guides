@@ -449,7 +449,7 @@ export function BuildDetailClient() {
                                                     alt={hero.name}
                                                     width={120}
                                                     height={120}
-                                                    className="rounded-full ring-2 ring-green-500/50 group-hover:ring-green-400"
+                                                    className="w-24 h-24 rounded-full ring-2 ring-green-500/50 group-hover:ring-green-400 object-cover"
                                                 />
                                                 {ELEMENT_IMAGES[hero.element] && (
                                                     <Image
@@ -490,7 +490,7 @@ export function BuildDetailClient() {
                                                     alt={hero.name}
                                                     width={120}
                                                     height={120}
-                                                    className="rounded-full ring-2 ring-red-500/50 group-hover:ring-red-400"
+                                                    className="w-24 h-24 rounded-full ring-2 ring-red-500/50 group-hover:ring-red-400 object-cover"
                                                 />
                                                 {ELEMENT_IMAGES[hero.element] && (
                                                     <Image
