@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -84,6 +84,31 @@ export default function EditBuildPage() {
     const [synergySearch, setSynergySearch] = useState('');
     const [counterSearch, setCounterSearch] = useState('');
 
+    // Anonymous option
+    const [isAnonymous, setIsAnonymous] = useState(false);
+
+    // Refs for click outside
+    const artifactDropdownRef = useRef<HTMLDivElement>(null);
+    const synergyDropdownRef = useRef<HTMLDivElement>(null);
+    const counterDropdownRef = useRef<HTMLDivElement>(null);
+
+
+    // Click outside to close dropdowns
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (artifactDropdownRef.current && !artifactDropdownRef.current.contains(event.target as Node)) {
+                setShowArtifactDropdown(false);
+            }
+            if (synergyDropdownRef.current && !synergyDropdownRef.current.contains(event.target as Node)) {
+                setShowSynergyDropdown(false);
+            }
+            if (counterDropdownRef.current && !counterDropdownRef.current.contains(event.target as Node)) {
+                setShowCounterDropdown(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
     // Check authentication
     useEffect(() => {
@@ -208,6 +233,9 @@ export default function EditBuildPage() {
                     formData.append(`counter_heroes[${index}]`, heroId.toString());
                 });
             }
+
+            // Add anonymous option
+            formData.append('is_anonymous', isAnonymous ? '1' : '0');
 
             const response = await fetch(`${API_URL}/builds/${buildId}`, {
                 method: 'POST', // Use POST with _method=PUT for FormData
@@ -373,7 +401,7 @@ export default function EditBuildPage() {
                             </div>
 
                             {/* Artifact Selector */}
-                            <div className="relative">
+                            <div className="relative" ref={artifactDropdownRef}>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
                                     {t('builds.artifact', 'Artifact')} ({t('common.optional', 'optional')})
                                 </label>
@@ -534,7 +562,7 @@ export default function EditBuildPage() {
                             </div>
 
                             {/* Synergy Heroes */}
-                            <div>
+                            <div ref={synergyDropdownRef}>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
                                     {t('builds.synergyHeroes', 'Synergy Heroes')}
                                     <span className="text-gray-500 text-xs ml-2">{t('builds.synergyDesc', '(Heroes that work well with this hero)')}</span>
@@ -614,7 +642,7 @@ export default function EditBuildPage() {
                             </div>
 
                             {/* Counter Heroes */}
-                            <div>
+                            <div ref={counterDropdownRef}>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
                                     {t('builds.counterHeroes', 'Counter Heroes')}
                                     <span className="text-gray-500 text-xs ml-2">{t('builds.counterDesc', '(Heroes that counter this hero)')}</span>
@@ -691,6 +719,21 @@ export default function EditBuildPage() {
                                         })}
                                     </div>
                                 )}
+                            </div>
+
+                            {/* Anonymous option */}
+                            <div className="flex items-center gap-3 p-4 bg-e7-void/30 rounded-lg border border-e7-gold/20">
+                                <input
+                                    type="checkbox"
+                                    id="isAnonymous"
+                                    checked={isAnonymous}
+                                    onChange={(e) => setIsAnonymous(e.target.checked)}
+                                    className="w-5 h-5 rounded border-e7-gold/30 bg-e7-void text-e7-gold focus:ring-e7-gold/30 cursor-pointer"
+                                />
+                                <label htmlFor="isAnonymous" className="text-slate-300 cursor-pointer">
+                                    <div className="font-medium">{t('builds.publishAnonymously', 'Publish anonymously')}</div>
+                                    <div className="text-xs text-gray-500">{t('builds.anonymousDesc', 'Your username will not appear in this build')}</div>
+                                </label>
                             </div>
 
                             {/* Error message */}
