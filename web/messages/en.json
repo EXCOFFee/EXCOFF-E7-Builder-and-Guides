@@ -239,6 +239,10 @@
         "createError": "Error creating post",
         "createSubtitle": "Recruit members for your guild",
         "publishPost": "Publish",
+        "publishAnonymously": "Publish anonymously",
+        "anonymousDesc": "Your username will not appear in this post",
+        "editPost": "Edit Guild Post",
+        "updateError": "Error updating post",
         "allLanguages": "All Languages",
         "filterByTags": "Tags",
         "tags": {

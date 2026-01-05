@@ -228,6 +228,10 @@
         "createError": "Error al crear la publicación",
         "createSubtitle": "Recluta miembros para tu gremio",
         "publishPost": "Publicar",
+        "publishAnonymously": "Publicar anónimamente",
+        "anonymousDesc": "Tu nombre de usuario no aparecerá en esta publicación",
+        "editPost": "Editar Publicación de Gremio",
+        "updateError": "Error al actualizar la publicación",
         "allLanguages": "Todos los Idiomas",
         "filterByTags": "Etiquetas",
         "tags": {
