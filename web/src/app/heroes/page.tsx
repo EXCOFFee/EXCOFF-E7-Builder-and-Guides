@@ -135,7 +135,8 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
     'free-spirit-tieria': '25% 30%',
     'frieren': '35% 30%',              // Face slightly right
     'furious': '75% 30%',              // Face far right
-    'general-purgis': '35% 30%',       // Face slightly right
+    'general-purgis': '35% 30%',       // Face slightly right (OLD - wrong slug?)
+    'general-purrgis': '25% 30%',      // Correct slug with double 'r', face left
     'goddess-of-vengeful-light-achates': '25% 25%',
     'guard-captain-krau': '40% 30%',   // Face slightly left
     'guiding-light-elson': '30% 30%',
