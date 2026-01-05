@@ -36,11 +36,15 @@ export async function generateMetadata(
         return {
             title,
             description,
+            alternates: {
+                canonical: `https://excoffe7.com/heroes/${slug}`,
+            },
             openGraph: {
                 title: `${hero.name} | E7 Orbis Helper`,
                 description,
                 type: 'profile',
                 images: hero.image_url ? [hero.image_url] : [],
+                url: `https://excoffe7.com/heroes/${slug}`,
             },
             twitter: {
                 card: 'summary_large_image',

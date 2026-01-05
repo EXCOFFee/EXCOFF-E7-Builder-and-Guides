@@ -39,11 +39,15 @@ export async function generateMetadata(
         return {
             title,
             description,
+            alternates: {
+                canonical: `https://excoffe7.com/builds/${id}`,
+            },
             openGraph: {
                 title: `${heroName} Build | E7 Orbis Helper`,
                 description,
                 type: 'article',
                 images: build.hero?.portrait ? [build.hero.portrait] : [],
+                url: `https://excoffe7.com/builds/${id}`,
             },
             twitter: {
                 card: 'summary_large_image',
