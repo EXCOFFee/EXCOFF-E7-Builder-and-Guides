@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 interface SkillData {
     name: string;
     description: string;
+    soulburn_effect?: string;
 }
 
 interface HeroSkills {
@@ -79,11 +80,20 @@ export function useSkillTranslations(heroSlug: string, locale: string = 'en') {
         return skills?.[skillKey]?.description || fallback;
     };
 
+    /**
+     * Get soulburn effect with fallback
+     */
+    const getSoulburnEffect = (skillKey: 'S1' | 'S2' | 'S3', fallback: string): string => {
+        return skills?.[skillKey]?.soulburn_effect || fallback;
+    };
+
     return {
         skills,
         loading,
         getSkill,
         getSkillName,
         getSkillDescription,
+        getSoulburnEffect,
     };
 }
+

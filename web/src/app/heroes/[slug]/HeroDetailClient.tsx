@@ -197,7 +197,7 @@ export function HeroDetailClient() {
     const translatedHeroName = hero ? translateHeroName(hero.name) : '';
 
     // Load skill translations based on hero slug and current locale
-    const { getSkillName, getSkillDescription } = useSkillTranslations(hero?.slug || '', locale);
+    const { getSkillName, getSkillDescription, getSoulburnEffect } = useSkillTranslations(hero?.slug || '', locale);
 
     // Fetch builds for this hero
     const { data: buildsData } = useQuery({
@@ -627,7 +627,7 @@ export function HeroDetailClient() {
                                         {s.soulburn && s.soulburn_effect && (
                                             <div className="bg-purple-900/30 rounded px-3 py-2 mb-3 text-sm">
                                                 <span className="text-purple-300 font-semibold">Soulburn:</span>{' '}
-                                                <span className="text-purple-200">{s.soulburn_effect}</span>
+                                                <span className="text-purple-200">{getSoulburnEffect(skillKey as 'S1' | 'S2' | 'S3', s.soulburn_effect)}</span>
                                             </div>
                                         )}
 
