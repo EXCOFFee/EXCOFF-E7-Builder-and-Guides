@@ -97,8 +97,9 @@ Route::middleware(['auth:sanctum', 'throttle:30,1'])->group(function () {
         Route::post('/admin/sync', [\App\Http\Controllers\Api\AdminController::class, 'syncAll']);
         Route::post('/admin/sync/heroes', [\App\Http\Controllers\Api\AdminController::class, 'syncHeroesEndpoint']);
         Route::post('/admin/sync/artifacts', [\App\Http\Controllers\Api\AdminController::class, 'syncArtifactsEndpoint']);
+        Route::post('/admin/sync/skill-descriptions', [\App\Http\Controllers\Api\AdminController::class, 'syncSkillDescriptions']);
+        Route::post('/admin/import/hero-multipliers', [\App\Http\Controllers\Api\AdminController::class, 'importHeroMultipliers']);
         Route::get('/admin/sync/status', [\App\Http\Controllers\Api\AdminController::class, 'status']);
         Route::get('/admin/sync/check-new', [\App\Http\Controllers\Api\AdminController::class, 'checkNewHeroes']);
     });
 });
-

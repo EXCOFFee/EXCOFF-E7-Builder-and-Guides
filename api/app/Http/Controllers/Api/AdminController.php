@@ -103,6 +103,57 @@ class AdminController extends Controller
     }
 
     /**
+     * Import/update hero multipliers (force sync all hero data including skills).
+     * This ensures all skill multipliers (rate, pow, scaling) are up to date.
+     */
+    public function importHeroMultipliers(Request $request): JsonResponse
+    {
+        // Force update all heroes to ensure skill data is refreshed
+        $result = $this->syncHeroes(true);
+
+        if (isset($result['error'])) {
+            return response()->json([
+                'success' => false,
+                'error' => $result['error'],
+            ], 500);
+        }
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Hero multipliers imported successfully',
+            ...$result,
+        ]);
+    }
+
+    /**
+     * Sync skill descriptions from CeciliaBot API.
+     * This adds skill names, descriptions, cooldowns, and soulburn info.
+     */
+    public function syncSkillDescriptions(Request $request): JsonResponse
+    {
+        $heroSlug = $request->input('hero');
+        
+        try {
+            $exitCode = Artisan::call('heroes:sync-skill-descriptions', [
+                '--hero' => $heroSlug,
+            ]);
+
+            return response()->json([
+                'success' => $exitCode === 0,
+                'message' => $exitCode === 0 
+                    ? 'Skill descriptions synced successfully' 
+                    : 'Sync completed with errors',
+                'output' => Artisan::output(),
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    /**
      * Check for new heroes in Fribbels API that are not in local DB.
      */
     public function checkNewHeroes(): JsonResponse
