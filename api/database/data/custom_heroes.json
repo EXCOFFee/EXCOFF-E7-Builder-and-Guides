@@ -87,7 +87,10 @@
                 "description": "Attacks the enemy with an axe, inflicting injuries proportional to damage dealt (up to 10% of max Health). Damage dealt increases proportional to the caster's max Health. A critical hit will heal the caster.",
                 "rate": 1,
                 "pow": 0.95,
-                "selfHpScaling": 0.12
+                "selfHpScaling": 0.12,
+                "soulburn": true,
+                "soulburn_souls": 20,
+                "soulburn_effect": "Grants an extra turn."
             },
             "S2": {
                 "name": "Combat Frenzy",
@@ -100,10 +103,7 @@
                 "rate": 1.3,
                 "pow": 0.95,
                 "selfHpScaling": 0.2,
-                "cooldown": 5,
-                "soulburn": true,
-                "soulburn_souls": 20,
-                "soulburn_effect": "Increases damage dealt."
+                "cooldown": 5
             }
         },
         "source": "balance_patch_20241120"
@@ -134,10 +134,7 @@
             "S2": {
                 "name": "Mental Focus",
                 "description": "Grants immunity to all allies for 2 turns, before granting Skill Nullifier to the caster.",
-                "cooldown": 4,
-                "soulburn": true,
-                "soulburn_souls": 10,
-                "soulburn_effect": "Extends buff durations by 1 turn."
+                "cooldown": 4
             },
             "S3": {
                 "name": "Instant Blade",

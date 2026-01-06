@@ -167,8 +167,7 @@
         },
         "S3": {
             "name": "Punishment Strike",
-            "description": "Attacks all enemies with an aura of vengeance, with a 75% chance to make them unhealable for 2 turns, before granting immunity to the caster for 3 turns.",
-            "soulburn_effect": "Increases damage dealt."
+            "description": "Attacks all enemies with an aura of vengeance, with a 75% chance to make them unhealable for 2 turns, before granting immunity to the caster for 3 turns."
         }
     },
     "aramintha": {
@@ -1063,8 +1062,7 @@
         },
         "S2": {
             "name": "Mental Focus",
-            "description": "Grants immunity to all allies for 2 turns, before granting Skill Nullifier to the caster.",
-            "soulburn_effect": "Extends buff durations by 1 turn."
+            "description": "Grants immunity to all allies for 2 turns, before granting Skill Nullifier to the caster."
         },
         "S3": {
             "name": "Instant Blade",

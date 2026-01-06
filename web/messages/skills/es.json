@@ -167,8 +167,7 @@
         },
         "S3": {
             "name": "Golpe de Castigo",
-            "description": "Ataca a todos los enemigos con un aura de venganza, con un 75% de probabilidad de hacerlos incurables durante 2 turnos, antes de otorgar inmunidad al lanzador durante 3 turnos.",
-            "soulburn_effect": "Aumenta el daño infligido."
+            "description": "Ataca a todos los enemigos con un aura de venganza, con un 75% de probabilidad de hacerlos incurables durante 2 turnos, antes de otorgar inmunidad al lanzador durante 3 turnos."
         }
     },
     "aramintha": {
@@ -1063,8 +1062,7 @@
         },
         "S2": {
             "name": "Concentracion Mental",
-            "description": "Otorga inmunidad a todos los aliados durante 2 turnos antes de aumentar el Ataque del lanzador durante 2 turnos. Otorga Anulacion de Habilidad al lanzador.",
-            "soulburn_effect": "Extiende la duracion de beneficios en 1 turno."
+            "description": "Otorga inmunidad a todos los aliados durante 2 turnos antes de aumentar el Ataque del lanzador durante 2 turnos. Otorga Anulacion de Habilidad al lanzador."
         },
         "S3": {
             "name": "Hoja Instantanea",
