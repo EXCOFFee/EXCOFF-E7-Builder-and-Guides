@@ -1,70 +1,8 @@
 {
     "_meta": {
-        "description": "Custom hero data overrides for heroes not in Fribbels or requiring manual corrections",
-        "balance_patches": [
-            "11/20/2024 - ARavi, Laika, Zio, Ran, Zahhak, Schuri, Hasol"
-        ]
-    },
-    "swift-flagbearer-sigret": {
-        "code": "c5072",
-        "_id": "swift-flagbearer-sigret",
-        "name": "Swift Flagbearer Sigret",
-        "rarity": 5,
-        "attribute": "fire",
-        "role": "assassin",
-        "zodiac": "scorpion",
-        "calculatedStatus": {
-            "lv60SixStarFullyAwakened": {
-                "atk": 1057,
-                "hp": 5542,
-                "def": 532,
-                "spd": 118,
-                "chc": 0.15,
-                "chd": 1.5,
-                "eff": 0.30,
-                "efr": 0
-            }
-        },
-        "skills": {
-            "S1": {
-                "name": "Strike of Flagbearer",
-                "description": "Attacks the enemy with a flag, with a 75% chance to silence for 1 turn. If the enemy is silenced after the attack, decreases Combat Readiness by 25%.",
-                "rate": 1.0,
-                "pow": 1.0,
-                "soulburn": false
-            },
-            "S2": {
-                "name": "Target Lock",
-                "description": "After dispelling all buffs from a single enemy, has a 100% chance to inflict Target for 2 turns, and all allies except the caster attack the enemy with a basic skill. Increases Combat Readiness of the caster by 30%.",
-                "rate": 0,
-                "pow": 0,
-                "cooldown": 4,
-                "soulburn": true,
-                "soulburn_effect": "Ignores Effect Resistance",
-                "soulburn_souls": 10
-            },
-            "S3": {
-                "name": "Flag of Victory",
-                "description": "Dispels two buffs from all enemies before a 100% chance to inflict Fear for 2 turns and decrease Combat Readiness by 20%. Grants increased Speed to all allies for 2 turns. At the start of the first battle, grants increased Evasion to the caster for 2 turns.",
-                "rate": 1.0,
-                "pow": 1.0,
-                "cooldown": 5,
-                "targets": 3,
-                "soulburn": false
-            }
-        },
-        "self_devotion": {
-            "type": "acc",
-            "grades": {
-                "B": 0.09,
-                "A": 0.135,
-                "S": 0.18,
-                "SS": 0.225,
-                "SSS": 0.27
-            }
-        },
-        "source": "epic7x",
-        "source_url": "https://www.epic7x.com/character/swift-flagbearer-sigret/"
+        "description": "Balance Patch 11/20/2024 - Hero skill updates",
+        "source": "https://page.onstove.com/epicseven/global/view/11202043",
+        "applied_date": "2026-01-06"
     },
     "apocalypse-ravi": {
         "code": "c2019",
@@ -89,7 +27,7 @@
                 "selfHpScaling": 0.12
             },
             "S2": {
-                "name": "Combat Frenzy",
+                "name": "Passive: Combat Frenzy",
                 "description": "After being attacked, increases the caster's Combat Readiness by 8%. When an ally dies, resets the cooldown of Deliverance: Soul Exchange and grants the caster the War God buff. War God increases Defense penetration of Deliverance: Soul Exchange by 50%. Dispelled after attacking.",
                 "passive": true
             },
@@ -104,8 +42,67 @@
                 "soulburn_souls": 20,
                 "soulburn_effect": "Increases damage dealt."
             }
-        },
-        "source": "balance_patch_20241120"
+        }
+    },
+    "architect-laika": {
+        "code": "c2099",
+        "_id": "architect-laika",
+        "name": "Architect Laika",
+        "skills": {
+            "S1": {
+                "name": "Eliminating Variables",
+                "description": "Attacks the enemy by eliminating unnecessary variables. Damage dealt increases proportional to the caster's Speed.",
+                "rate": 1,
+                "pow": 0.9,
+                "selfSpdScaling": 0.00075
+            },
+            "S2": {
+                "name": "Laying the Groundwork",
+                "description": "Dispels one debuff from an ally before granting increased Attack (Greater) to the caster. When the target has the Target debuff, grants an extra turn to the caster.",
+                "cooldown": 3,
+                "passive": false
+            },
+            "S3": {
+                "name": "Eliminating the Target",
+                "description": "Attacks all enemies by calculating the optimal route, and penetrates Defense by 80%. Damage dealt increases proportional to the caster's Speed. Inflicts Extinction when the enemy is defeated.",
+                "rate": 0.95,
+                "pow": 0.9,
+                "selfSpdScaling": 0.001125,
+                "penetration": 0.8,
+                "cooldown": 4,
+                "soulburn": true,
+                "soulburn_souls": 20,
+                "soulburn_effect": "Increases damage dealt."
+            }
+        }
+    },
+    "zio": {
+        "code": "c1133",
+        "_id": "zio",
+        "name": "Zio",
+        "skills": {
+            "S1": {
+                "name": "Overwhelming Dominance",
+                "description": "Attacks the enemy with overwhelming dominance, with a 75% chance to decrease Hit Chance for 1 turn. A critical hit increases damage dealt.",
+                "rate": 0.9,
+                "pow": 0.95
+            },
+            "S2": {
+                "name": "Supreme Authority",
+                "description": "At the start of the first battle, increases the caster's Combat Readiness by 30%, and is immune to Combat Readiness reduction effects. When it is not the caster's turn, when an enemy uses a non-attack skill, decreases their Combat Readiness by 30%.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Kneel Before Me",
+                "description": "After dispelling all buffs from all enemies, attacks with dark magic, absorbing 40% of damage dealt as Health. This skill is activated even when the caster is unable to use a skill.",
+                "rate": 1.1,
+                "pow": 0.95,
+                "cooldown": 5,
+                "soulburn": true,
+                "soulburn_souls": 20,
+                "soulburn_effect": "Ignores Effect Resistance."
+            }
+        }
     },
     "ran": {
         "code": "c1118",
@@ -134,6 +131,7 @@
                 "name": "Mental Focus",
                 "description": "Grants immunity to all allies for 2 turns, before granting Skill Nullifier to the caster.",
                 "cooldown": 4,
+                "passive": false,
                 "soulburn": true,
                 "soulburn_souls": 10,
                 "soulburn_effect": "Extends buff durations by 1 turn."
@@ -149,63 +147,7 @@
                 "soulburn_souls": 20,
                 "soulburn_effect": "Ignores Effect Resistance."
             }
-        },
-        "source": "balance_patch_20241120"
-    },
-    "architect-laika": {
-        "code": "c2099",
-        "_id": "architect-laika",
-        "name": "Architect Laika",
-        "skills": {
-            "S1": {
-                "name": "Eliminating Variables",
-                "description": "Attacks the enemy by eliminating unnecessary variables. Damage dealt increases proportional to the caster's Speed.",
-                "rate": 1,
-                "pow": 0.9,
-                "selfSpdScaling": 0.00075
-            },
-            "S2": {
-                "name": "Laying the Groundwork",
-                "description": "Dispels one debuff from an ally before granting increased Attack (Greater) to the caster. When the target has the Target debuff, grants an extra turn to the caster.",
-                "cooldown": 3
-            },
-            "S3": {
-                "name": "Eliminating the Target",
-                "description": "Attacks all enemies by calculating the optimal route, and penetrates Defense by 80%. Damage dealt increases proportional to the caster's Speed. Inflicts Extinction when the enemy is defeated.",
-                "rate": 0.95,
-                "pow": 0.9,
-                "selfSpdScaling": 0.001125,
-                "penetration": 0.8,
-                "cooldown": 4,
-                "soulburn": true,
-                "soulburn_souls": 20,
-                "soulburn_effect": "Increases damage dealt."
-            }
-        },
-        "source": "balance_patch_20241120"
-    },
-    "zio": {
-        "code": "c1133",
-        "_id": "zio",
-        "name": "Zio",
-        "skills": {
-            "S2": {
-                "name": "Supreme Authority",
-                "description": "At the start of the first battle, increases the caster's Combat Readiness by 30%, and is immune to Combat Readiness reduction effects. When it is not the caster's turn, when an enemy uses a non-attack skill, decreases their Combat Readiness by 30%.",
-                "passive": true
-            },
-            "S3": {
-                "name": "Kneel Before Me",
-                "description": "After dispelling all buffs from all enemies, attacks with dark magic, absorbing 40% of damage dealt as Health.",
-                "rate": 1.1,
-                "pow": 0.95,
-                "cooldown": 5,
-                "soulburn": true,
-                "soulburn_souls": 20,
-                "soulburn_effect": "Ignores Effect Resistance."
-            }
-        },
-        "source": "balance_patch_20241120"
+        }
     },
     "zahhak": {
         "code": "c1119",
@@ -222,12 +164,21 @@
                 "name": "Elaborate Plan",
                 "description": "Dispels all debuffs from a single ally, before increasing their Combat Readiness by 30%. Grants increased Attack (Greater) and increased Hit Chance to the caster for 3 turns.",
                 "cooldown": 3,
+                "passive": false,
                 "soulburn": true,
                 "soulburn_souls": 10,
                 "soulburn_effect": "Grants an extra turn."
+            },
+            "S3": {
+                "name": "Dragon's Descent",
+                "description": "Attacks the enemy with the power of the Dragon King. Damage dealt increases proportional to the target's max Health. This attack always results in a critical hit, and cannot trigger a counterattack.",
+                "rate": 0.8,
+                "pow": 1,
+                "targetMaxHpScaling": 0.1875,
+                "cooldown": 4,
+                "soulburn": false
             }
-        },
-        "source": "balance_patch_20241120"
+        }
     },
     "schuri": {
         "code": "c1020",
@@ -251,10 +202,10 @@
                 "description": "Attacks the enemy with a rifle shot, increasing Combat Readiness of all allies by 15%. When Focus is fully charged, consumes all Focus to increase damage dealt and ignore Effect Resistance.",
                 "rate": 1.6,
                 "pow": 0.9,
-                "cooldown": 3
+                "cooldown": 3,
+                "soulburn": false
             }
-        },
-        "source": "balance_patch_20241120"
+        }
     },
     "hasol": {
         "code": "c3135",
@@ -283,7 +234,6 @@
                 "soulburn_souls": 20,
                 "soulburn_effect": "Increases damage dealt."
             }
-        },
-        "source": "balance_patch_20241120"
+        }
     }
 }

@@ -116,12 +116,97 @@ class ImportHeroData extends Command
             }
         }
 
-        $this->info("Done. Updated: $updatedCount, Not Found in DB: $notFoundCount");
+        $this->info("Updated $updatedCount heroes from Fribbels data. Not found: $notFoundCount");
         
         if ($notFoundCount > 0) {
             $this->warn("Some heroes from Fribbels data were not found in your database. You may need to add them first.");
         }
 
+        // Apply custom hero overrides (balance patches)
+        $this->applyCustomHeroOverrides($dryRun);
+
         return 0;
+    }
+
+    /**
+     * Apply custom hero data overrides from custom_heroes.json.
+     * This includes balance patch corrections.
+     */
+    private function applyCustomHeroOverrides(bool $dryRun): void
+    {
+        $customPath = database_path('data/custom_heroes.json');
+        
+        if (!file_exists($customPath)) {
+            return;
+        }
+
+        $this->newLine();
+        $this->info("Applying custom hero overrides (balance patches)...");
+
+        $customData = json_decode(file_get_contents($customPath), true);
+        if (!$customData) {
+            $this->warn("Invalid custom_heroes.json");
+            return;
+        }
+
+        // Remove metadata
+        unset($customData['_meta']);
+
+        $overrideCount = 0;
+
+        foreach ($customData as $slug => $override) {
+            $hero = Hero::where('slug', $slug)->first();
+            
+            if (!$hero && isset($override['code'])) {
+                $hero = Hero::where('code', $override['code'])->first();
+            }
+
+            if (!$hero) {
+                $this->line("  Override skipped (hero not found): {$slug}");
+                continue;
+            }
+
+            $changes = [];
+
+            // Apply self_devotion override (imprint)
+            if (isset($override['self_devotion'])) {
+                $oldType = $hero->self_devotion['type'] ?? 'unknown';
+                $newType = $override['self_devotion']['type'];
+                
+                if ($oldType !== $newType) {
+                    $changes[] = "Imprint: {$oldType} → {$newType}";
+                    $hero->self_devotion = $override['self_devotion'];
+                }
+            }
+
+            // Apply skill overrides
+            if (isset($override['skills'])) {
+                $existingSkills = $hero->skills ?? [];
+
+                foreach ($override['skills'] as $skillKey => $skillData) {
+                    $oldSkill = $existingSkills[$skillKey] ?? [];
+                    $existingSkills[$skillKey] = array_merge($oldSkill, $skillData);
+                    
+                    if (isset($skillData['name']) && ($oldSkill['name'] ?? '') !== $skillData['name']) {
+                        $changes[] = "{$skillKey}: {$skillData['name']}";
+                    } elseif (isset($skillData['description'])) {
+                        $changes[] = "{$skillKey} description updated";
+                    }
+                }
+
+                $hero->skills = $existingSkills;
+            }
+
+            if (!empty($changes)) {
+                $this->line("  ✓ {$hero->name}: " . implode(', ', $changes));
+                
+                if (!$dryRun) {
+                    $hero->save();
+                }
+                $overrideCount++;
+            }
+        }
+
+        $this->info("Applied {$overrideCount} custom hero overrides");
     }
 }
