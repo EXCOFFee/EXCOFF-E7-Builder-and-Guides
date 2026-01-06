@@ -158,15 +158,16 @@
     "apocalypse-ravi": {
         "S1": {
             "name": "Hacha Espectral",
-            "description": "Ataca al enemigo con un hacha, infligiendo heridas antes de absorber parte del daño como Salud. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador. La gravedad de las heridas aumenta proporcionalmente al daño infligido. Las heridas disminuyen la Salud máxima del objetivo hasta un 10% cada vez que se usa esta habilidad."
+            "description": "Ataca al enemigo con un hacha, infligiendo heridas antes de absorber parte del daño como Salud. El daño infligido aumenta proporcionalmente a la Salud maxima del lanzador.",
+            "soulburn_effect": "Otorga un turno extra."
         },
         "S2": {
             "name": "Poder del Dios de la Guerra",
-            "description": "Aumenta la Probabilidad de Golpe Crítico en un 30%. Comienza la primera batalla con 50 de Espíritu de Lucha. En el momento en que el lanzador es atacado, consume 10 de Espíritu de Lucha para aumentar la Preparación de Combate del lanzador en un 15% y recuperar la Salud del lanzador. La cantidad recuperada aumenta proporcionalmente a la Salud máxima del lanzador."
+            "description": "Aumenta la Probabilidad de Golpe Critico en un 30%. Comienza la primera batalla con 50 de Espiritu de Lucha."
         },
         "S3": {
-            "name": "Liberación: Intercambio de Almas",
-            "description": "Entrega juicio divino sobre el enemigo. Cuando el enemigo es derrotado, revive a un aliado muerto aleatorio con 15% de Salud y otorga anulación de habilidad una vez. El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador. El daño infligido por esta habilidad aumenta cada vez que alguien muere. El efecto solo puede acumularse hasta 3 veces.",
+            "name": "Golpe de Castigo",
+            "description": "Ataca a todos los enemigos con un aura de venganza, con un 75% de probabilidad de hacerlos incurables durante 2 turnos, antes de otorgar inmunidad al lanzador durante 3 turnos.",
             "soulburn_effect": "Aumenta el daño infligido."
         }
     },
@@ -1058,16 +1059,16 @@
     "ran": {
         "S1": {
             "name": "Tempestad",
-            "description": "Ataca al enemigo con una tormenta de espadas. Penetra la Defensa del objetivo en un 20%. El daño infligido aumenta proporcionalmente a la Velocidad del lanzador."
+            "description": "Ataca rapidamente al enemigo, con un 35% de probabilidad de disminuir la Velocidad durante 1 turno. El daño infligido aumenta proporcionalmente a la Velocidad del lanzador."
         },
         "S2": {
-            "name": "Concentración Mental",
-            "description": "Otorga inmunidad a todos los aliados durante 2 turnos antes de aumentar el Ataque del lanzador durante 2 turnos. Otorga un turno extra al lanzador.",
-            "soulburn_effect": "Extiende la duración de beneficios en 1 turno."
+            "name": "Concentracion Mental",
+            "description": "Otorga inmunidad a todos los aliados durante 2 turnos antes de aumentar el Ataque del lanzador durante 2 turnos. Otorga Anulacion de Habilidad al lanzador.",
+            "soulburn_effect": "Extiende la duracion de beneficios en 1 turno."
         },
         "S3": {
-            "name": "Hoja Instantánea",
-            "description": "Ataca a todos los enemigos con una espada, disipando dos beneficios antes de un 85% de probabilidad de infligir estigma durante 2 turnos, y un 85% de probabilidad de disminuir la Defensa durante 2 turnos. El daño infligido aumenta proporcionalmente a la Velocidad del lanzador y del objetivo.",
+            "name": "Hoja Instantanea",
+            "description": "Ataca a todos los enemigos con una espada, disipando dos beneficios antes de un 85% de probabilidad de infligir Estigma, Congelacion y Restriccion durante 2 turnos.",
             "soulburn_effect": "Ignora la Resistencia a Efectos."
         }
     },
@@ -2794,16 +2795,17 @@
     },
     "hasol": {
         "S1": {
-            "name": "Swift Cut",
-            "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster's max Health."
+            "name": "Corte Rapido",
+            "description": "Ataca al enemigo con la espada de venganza, antes de recuperar Salud. La cantidad recuperada aumenta proporcionalmente a la Salud maxima del lanzador.",
+            "soulburn_effect": "Aumenta considerablemente el daño infligido. No activa Ataque Dual."
         },
         "S2": {
-            "name": "Blade of Vengeance",
-            "description": "When more than one enemy is alive, at the start of the caster's turn, gain 1 stack of Grudge (max 5 stacks). Additional damage dealt (up to 1,500 per stack, max 7,500) increases proportional to number of Grudge stacks. At the start of the first battle, gains 5 stacks of Grudge."
+            "name": "Hoja de Venganza",
+            "description": "Cuando hay mas de un enemigo vivo, al inicio del turno del lanzador, obtiene 1 acumulacion de Rencor (max 5). El daño adicional aumenta con cada acumulacion."
         },
         "S3": {
-            "name": "Punishment Strike",
-            "description": "Attacks all enemies with an aura of vengeance, with a 75% chance to make them unhealable for 2 turns, before granting immunity to the caster for 3 turns.",
+            "name": "Liberacion: Intercambio de Almas",
+            "description": "Entrega juicio divino sobre el enemigo. Cuando el enemigo es derrotado, revive a un aliado muerto aleatorio con 15% de Salud.",
             "soulburn_effect": "Aumenta el daño infligido."
         }
     },

@@ -157,16 +157,17 @@
     },
     "apocalypse-ravi": {
         "S1": {
-            "name": "Spectral Axe",
-            "description": "Attacks the enemy with an axe, inflicting injuries proportional to damage dealt (up to 10% of max Health). Damage dealt increases proportional to the caster's max Health. A critical hit will heal the caster."
+            "name": "Swift Cut",
+            "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster max Health.",
+            "soulburn_effect": "Grants an extra turn."
         },
         "S2": {
-            "name": "Combat Frenzy",
-            "description": "After being attacked, increases the caster's Combat Readiness by 8%. When an ally dies, resets the cooldown of Deliverance: Soul Exchange and grants the caster the War God buff. War God increases Defense penetration of Deliverance: Soul Exchange by 50%. Dispelled after attacking."
+            "name": "Blade of Vengeance",
+            "description": "When more than one enemy is alive, at the start of the caster turn, gain 1 stack of Grudge (max 5 stacks). Additional damage dealt increases proportional to number of Grudge stacks."
         },
         "S3": {
-            "name": "Deliverance: Soul Exchange",
-            "description": "Attacks the enemy with divine judgment. Damage dealt increases proportional to the caster's max Health. When the enemy is defeated, revives one random dead ally with 30% Health and 100% Combat Readiness. When the caster has War God, penetrates the target's Defense by 50%.",
+            "name": "Punishment Strike",
+            "description": "Attacks all enemies with an aura of vengeance, with a 75% chance to make them unhealable for 2 turns, before granting immunity to the caster for 3 turns.",
             "soulburn_effect": "Increases damage dealt."
         }
     },
@@ -2795,15 +2796,16 @@
     "hasol": {
         "S1": {
             "name": "Swift Cut",
-            "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster's max Health."
+            "description": "Attacks the enemy with the sword of vengeance, before recovering Health.",
+            "soulburn_effect": "Greatly increases damage dealt. Does not trigger a Dual Attack."
         },
         "S2": {
             "name": "Blade of Vengeance",
-            "description": "When more than one enemy is alive, at the start of the caster's turn, gain 1 stack of Grudge (max 5 stacks). Additional damage dealt (up to 1,500 per stack, max 7,500) increases proportional to number of Grudge stacks. At the start of the first battle, gains 5 stacks of Grudge."
+            "description": "When more than one enemy is alive, at the start of the caster turn, gain 1 stack of Grudge (max 5 stacks)."
         },
         "S3": {
-            "name": "Punishment Strike",
-            "description": "Attacks all enemies with an aura of vengeance, with a 75% chance to make them unhealable for 2 turns, before granting immunity to the caster for 3 turns.",
+            "name": "Liberation: Soul Exchange",
+            "description": "Delivers divine judgment upon the enemy. When the enemy is defeated, revives a random dead ally with 15% Health.",
             "soulburn_effect": "Increases damage dealt."
         }
     },
