@@ -22,7 +22,7 @@
                 "spd": 118,
                 "chc": 0.15,
                 "chd": 1.5,
-                "eff": 0.30,
+                "eff": 0.3,
                 "efr": 0
             }
         },
@@ -30,8 +30,8 @@
             "S1": {
                 "name": "Strike of Flagbearer",
                 "description": "Attacks the enemy with a flag, with a 75% chance to silence for 1 turn. If the enemy is silenced after the attack, decreases Combat Readiness by 25%.",
-                "rate": 1.0,
-                "pow": 1.0,
+                "rate": 1,
+                "pow": 1,
                 "soulburn": false
             },
             "S2": {
@@ -47,8 +47,8 @@
             "S3": {
                 "name": "Flag of Victory",
                 "description": "Dispels two buffs from all enemies before a 100% chance to inflict Fear for 2 turns and decrease Combat Readiness by 20%. Grants increased Speed to all allies for 2 turns. At the start of the first battle, grants increased Evasion to the caster for 2 turns.",
-                "rate": 1.0,
-                "pow": 1.0,
+                "rate": 1,
+                "pow": 1,
                 "cooldown": 5,
                 "targets": 3,
                 "soulburn": false
@@ -84,7 +84,7 @@
         "skills": {
             "S1": {
                 "name": "Spectral Axe",
-                "description": "Attacks the enemy with an axe, inflicting injuries proportional to damage dealt (up to 10% of max Health). Damage dealt increases proportional to the caster's max Health. A critical hit will heal the caster.",
+                "description": "Attacks the enemy with an axe, inflicting injuries proportional to damage dealt (up to 10% of max Health). Damage dealt increases proportional to the caster max Health. A critical hit will heal the caster.",
                 "rate": 1,
                 "pow": 0.95,
                 "selfHpScaling": 0.12,
@@ -93,13 +93,13 @@
                 "soulburn_effect": "Grants an extra turn."
             },
             "S2": {
-                "name": "Combat Frenzy",
-                "description": "After being attacked, increases the caster's Combat Readiness by 8%. When an ally dies, resets the cooldown of Deliverance: Soul Exchange and grants the caster the War God buff. War God increases Defense penetration of Deliverance: Soul Exchange by 50%. Dispelled after attacking.",
+                "name": "War God Might",
+                "description": "Increases Penetration Resistance by 30%. At the start of the first battle, gains 50 Fighting Spirit. After being attacked, consumes 10 Fighting Spirit, increasing Combat Readiness by 15% and recovering Health proportional to the caster max Health.",
                 "passive": true
             },
             "S3": {
                 "name": "Deliverance: Soul Exchange",
-                "description": "Attacks the enemy with divine judgment. Damage dealt increases proportional to the caster's max Health. When the enemy is defeated, revives one random dead ally with 30% Health and 100% Combat Readiness. When the caster has War God, penetrates the target's Defense by 50%.",
+                "description": "Attacks the enemy with divine judgment. When the enemy is defeated, revives one random dead ally to 15% Health and grants skill nullifier once. Damage dealt increases proportional to the caster max Health. When an ally dies, grants War God to the caster and resets cooldown of this skill. War God: Increases Defense Penetration by 50%. Dispelled after the effect activates.",
                 "rate": 1.3,
                 "pow": 0.95,
                 "selfHpScaling": 0.2,
@@ -157,27 +157,25 @@
         "skills": {
             "S1": {
                 "name": "Eliminating Variables",
-                "description": "Attacks the enemy by eliminating unnecessary variables. Damage dealt increases proportional to the caster's Speed.",
+                "description": "Attacks the enemy by eliminating unnecessary variables. Damage dealt increases proportional to the caster Speed.",
                 "rate": 1,
                 "pow": 0.9,
                 "selfSpdScaling": 0.00075
             },
             "S2": {
                 "name": "Laying the Groundwork",
-                "description": "Dispels one debuff from an ally before granting increased Attack (Greater) to the caster. When the target has the Target debuff, grants an extra turn to the caster.",
+                "description": "Confirms the target, with a 100% chance each to dispel two buffs from the enemy and inflict target for 2 turns, before granting increased Attack and immunity to the caster for 2 turns. After using this skill, when the enemy is inflicted with target, grants an extra turn to the caster.",
                 "cooldown": 3
             },
             "S3": {
                 "name": "Eliminating the Target",
-                "description": "Attacks all enemies by calculating the optimal route, and penetrates Defense by 80%. Damage dealt increases proportional to the caster's Speed. Inflicts Extinction when the enemy is defeated.",
-                "rate": 0.95,
+                "description": "With everything going as planned, attacks all enemies, and when the enemy is defeated, inflicts extinction. When the target is not an Elite or Boss monster, ignores damage sharing. When the enemy is inflicted with target, penetrates Defense by 80%. Damage dealt increases proportional to the caster Speed.",
+                "rate": 1,
                 "pow": 0.9,
-                "selfSpdScaling": 0.001125,
+                "selfSpdScaling": 0.00075,
                 "penetration": 0.8,
                 "cooldown": 4,
-                "soulburn": true,
-                "soulburn_souls": 20,
-                "soulburn_effect": "Increases damage dealt."
+                "targets": 3
             }
         },
         "source": "balance_patch_20241120"
@@ -206,23 +204,28 @@
         "source": "balance_patch_20241120"
     },
     "zahhak": {
-        "code": "c1119",
+        "code": "c1123",
         "_id": "zahhak",
         "name": "Zahhak",
         "skills": {
             "S1": {
-                "name": "Exposed Vulnerability",
-                "description": "Attacks the enemy, increasing both Hit Chance and Critical Hit Chance by 50% when attacking.",
-                "rate": 1.2,
+                "name": "Vulnerability Exposed",
+                "description": "Attacks the enemy with a longsword. Increases Hit Chance and Critical Hit Chance of this skill by 50%. When the target has a buff, increases damage dealt.",
+                "rate": 1,
                 "pow": 1
             },
             "S2": {
                 "name": "Elaborate Plan",
-                "description": "Dispels all debuffs from a single ally, before increasing their Combat Readiness by 30%. Grants increased Attack (Greater) and increased Hit Chance to the caster for 3 turns.",
-                "cooldown": 3,
-                "soulburn": true,
-                "soulburn_souls": 10,
-                "soulburn_effect": "Grants an extra turn."
+                "description": "Dispels two debuffs from an ally before increasing Combat Readiness by 30%. Grants increased Attack and increased Hit Chance to the caster for 3 turns. Grants an extra turn.",
+                "cooldown": 3
+            },
+            "S3": {
+                "name": "Annihilate",
+                "description": "Attacks the enemy, penetrating Defense by 100%. This skill does not trigger a counterattack.",
+                "rate": 1.6,
+                "pow": 1,
+                "penetration": 1,
+                "cooldown": 6
             }
         },
         "source": "balance_patch_20241120"
@@ -234,52 +237,54 @@
         "skills": {
             "S1": {
                 "name": "Rapid Fire",
-                "description": "Rapidly fires at the enemy. Damage dealt increases proportional to the target's max Health. A Critical Hit grants two Focus. Otherwise, grants one Focus.",
-                "rate": 0.8,
-                "pow": 1,
-                "targetMaxHpScaling": 0.04
+                "description": "Attacks the enemy with a pistol. Damage dealt increases proportional to the target max Health. A critical hit will double the amount of Focus gained. Gain 1 Focus.",
+                "rate": 1,
+                "pow": 1
             },
             "S2": {
-                "name": "Explosive Cavalier",
-                "description": "At the start of the first battle, gains 3 Focus. When Focus is fully charged, consumes it all before taking another turn. When an ally lands a Critical Hit, grants 1 Focus to the caster.",
+                "name": "Explosive Gentleman",
+                "description": "At the start of the first battle, gains 3 Focus. After making a critical hit, increases Combat Readiness of all allies except for the caster by 25%.",
                 "passive": true
             },
             "S3": {
                 "name": "Rifle Shot",
-                "description": "Attacks the enemy with a rifle shot, increasing Combat Readiness of all allies by 15%. When Focus is fully charged, consumes all Focus to increase damage dealt and ignore Effect Resistance.",
-                "rate": 1.6,
-                "pow": 0.9,
-                "cooldown": 3
+                "description": "Attacks all enemies with a rifle and decreases Combat Readiness by 30%. When Focus is full, consumes all, increasing damage dealt and ignoring Effect Resistance.",
+                "rate": 0.9,
+                "pow": 1,
+                "cooldown": 4,
+                "targets": 3
             }
         },
         "source": "balance_patch_20241120"
     },
     "hasol": {
-        "code": "c3135",
+        "code": "c4091",
         "_id": "hasol",
         "name": "Hasol",
         "skills": {
             "S1": {
                 "name": "Swift Cut",
-                "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster's max Health.",
+                "description": "Attacks the enemy, before recovering Health of the caster. Inflicts 500 additional damage regardless of whether the attack hits. Damage dealt and amount recovered increase proportional to the caster max Health. Amount recovered increased.",
                 "rate": 1,
                 "pow": 1,
-                "selfHpScaling": 0.08
+                "selfHpScaling": 0.08,
+                "soulburn": true,
+                "soulburn_souls": 20,
+                "soulburn_effect": "Greatly increases damage dealt. Does not trigger a Dual Attack."
             },
             "S2": {
                 "name": "Blade of Vengeance",
-                "description": "When more than one enemy is alive, at the start of the caster's turn, gain 1 stack of Grudge (max 5 stacks). Additional damage dealt (up to 1,500 per stack, max 7,500) increases proportional to number of Grudge stacks. At the start of the first battle, gains 5 stacks of Grudge.",
+                "description": "When an ally suffers a counterattack, grants 25% damage reduction. After an enemy counterattacks, increases Combat Readiness of the caster by 25% and increases additional damage of Swift Cut and Punishing Strike by 1,500. Additional damage increase effect can stack up to 5 times.",
                 "passive": true
             },
             "S3": {
-                "name": "Punishment Strike",
-                "description": "Attacks all enemies with an aura of vengeance, with a 75% chance to make them unhealable for 2 turns, before granting immunity to the caster for 3 turns.",
+                "name": "Punishing Strike",
+                "description": "Attacks all enemies with a secret skill and inflicts 500 additional damage regardless of whether the attack hits. Grants increased Defense to all allies for 3 turns, and grants immunity to the caster for 3 turns. Damage dealt increases proportional to the caster max Health. After suffering a counterattack, decreases skill cooldowns by 1 turn.",
                 "rate": 0.9,
                 "pow": 1,
+                "selfHpScaling": 0.05,
                 "cooldown": 4,
-                "soulburn": true,
-                "soulburn_souls": 20,
-                "soulburn_effect": "Increases damage dealt."
+                "targets": 3
             }
         },
         "source": "balance_patch_20241120"
@@ -403,7 +408,7 @@
             },
             "S2": {
                 "name": "Prairie Hawk",
-                "description": "Increases Attack by 50% and grants 50% Evasion. At the start of the caster's turn, if not debuffed, increases Attack by an additional amount.",
+                "description": "Increases Evasion by 50%. When attacking, cannot trigger a critical hit or a heavy blow. At the start of the turn, grants increased Attack for 1 turn.",
                 "passive": true
             },
             "S3": {
@@ -435,11 +440,13 @@
                 "passive": true
             },
             "S3": {
-                "name": "Full Blast",
-                "description": "Attacks all enemies with full power. Increases Combat Readiness of all allies by 25% and grants the caster a barrier (proportional to Attack) for 2 turns.",
+                "name": "Full Burst",
+                "description": "Fires at all enemies to attack, and increases Combat Readiness of all allies by 25%, before granting a barrier (proportional to Attack) to the caster for 2 turns. When Fighting Spirit is full, consumes all Fighting Spirit to penetrate the target Defense by 50%. This skill cannot trigger a counterattack.",
                 "rate": 0.9,
                 "pow": 1,
                 "cooldown": 4,
+                "targets": 3,
+                "penetration": 0.5,
                 "soulburn": true,
                 "soulburn_souls": 20,
                 "soulburn_effect": "Increases damage dealt."

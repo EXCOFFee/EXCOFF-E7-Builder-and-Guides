@@ -157,17 +157,17 @@
     },
     "apocalypse-ravi": {
         "S1": {
-            "name": "Swift Cut",
-            "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster max Health.",
+            "name": "Spectral Axe",
+            "description": "Attacks the enemy with an axe, inflicting injuries proportional to damage dealt. Damage dealt increases proportional to the caster max Health. A critical hit will heal the caster.",
             "soulburn_effect": "Grants an extra turn."
         },
         "S2": {
-            "name": "Blade of Vengeance",
-            "description": "When more than one enemy is alive, at the start of the caster turn, gain 1 stack of Grudge (max 5 stacks). Additional damage dealt increases proportional to number of Grudge stacks."
+            "name": "War God Might",
+            "description": "Increases Penetration Resistance by 30%. At the start of the first battle, gains 50 Fighting Spirit. After being attacked, consumes 10 Fighting Spirit, increasing Combat Readiness by 15% and recovering Health."
         },
         "S3": {
-            "name": "Punishment Strike",
-            "description": "Attacks all enemies with an aura of vengeance, with a 75% chance to make them unhealable for 2 turns, before granting immunity to the caster for 3 turns."
+            "name": "Deliverance: Soul Exchange",
+            "description": "Attacks the enemy with divine judgment. When the enemy is defeated, revives one random dead ally to 15% Health and grants skill nullifier once. When an ally dies, grants War God to the caster and resets cooldown of this skill."
         }
     },
     "aramintha": {
@@ -724,7 +724,7 @@
         },
         "S2": {
             "name": "Prairie Hawk",
-            "description": "Increases Attack by 50% and grants 50% Evasion. At the start of the caster's turn, if not debuffed, increases Attack by an additional amount."
+            "description": "Increases Evasion by 50%. When attacking, cannot trigger a critical hit or a heavy blow. At the start of the turn, grants increased Attack for 1 turn."
         },
         "S3": {
             "name": "Monarch's Flaming Strike",
@@ -840,8 +840,8 @@
             "description": "When the enemy gains a buff, gains Fighting Spirit. When Fighting Spirit is fully charged, resets the cooldown of Full Blast. After using Full Blast, gains increased Combat Readiness."
         },
         "S3": {
-            "name": "Full Blast",
-            "description": "Attacks all enemies with full power. Increases Combat Readiness of all allies by 25% and grants the caster a barrier (proportional to Attack) for 2 turns.",
+            "name": "Full Burst",
+            "description": "Fires at all enemies to attack, and increases Combat Readiness of all allies by 25%, before granting a barrier to the caster for 2 turns. When Fighting Spirit is full, consumes all to penetrate Defense by 50%.",
             "soulburn_effect": "Increases damage dealt."
         }
     },
@@ -1296,17 +1296,16 @@
     },
     "zahhak": {
         "S1": {
-            "name": "Exposed Vulnerability",
-            "description": "Attacks the enemy, increasing both Hit Chance and Critical Hit Chance by 50% when attacking."
+            "name": "Vulnerability Exposed",
+            "description": "Attacks the enemy with a longsword. Increases Hit Chance and Critical Hit Chance of this skill by 50%. When the target has a buff, increases damage dealt."
         },
         "S2": {
             "name": "Elaborate Plan",
-            "description": "Dispels all debuffs from a single ally, before increasing their Combat Readiness by 30%. Grants increased Attack (Greater) and increased Hit Chance to the caster for 3 turns.",
-            "soulburn_effect": "Grants an extra turn."
+            "description": "Dispels two debuffs from an ally before increasing Combat Readiness by 30%. Grants increased Attack and increased Hit Chance to the caster for 3 turns. Grants an extra turn."
         },
         "S3": {
-            "name": "Execute",
-            "description": "Attacks the enemy, inflicting injuries before granting the caster invincibility for 1 turn. Increases Critical Hit Chance by 50% when attacking. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 35% every time this skill is used."
+            "name": "Annihilate",
+            "description": "Attacks the enemy, penetrating Defense by 100%. This skill does not trigger a counterattack."
         }
     },
     "tywin": {
@@ -2292,15 +2291,15 @@
     "schuri": {
         "S1": {
             "name": "Rapid Fire",
-            "description": "Rapidly fires at the enemy. Damage dealt increases proportional to the target's max Health. A Critical Hit grants two Focus. Otherwise, grants one Focus."
+            "description": "Attacks the enemy with a pistol. Damage dealt increases proportional to the target max Health. A critical hit will double the amount of Focus gained. Gain 1 Focus."
         },
         "S2": {
-            "name": "Explosive Cavalier",
-            "description": "At the start of the first battle, gains 3 Focus. When Focus is fully charged, consumes it all before taking another turn. When an ally lands a Critical Hit, grants 1 Focus to the caster."
+            "name": "Explosive Gentleman",
+            "description": "At the start of the first battle, gains 3 Focus. After making a critical hit, increases Combat Readiness of all allies except for the caster by 25%."
         },
         "S3": {
             "name": "Rifle Shot",
-            "description": "Attacks the enemy with a rifle shot, increasing Combat Readiness of all allies by 15%. When Focus is fully charged, consumes all Focus to increase damage dealt and ignore Effect Resistance."
+            "description": "Attacks all enemies with a rifle and decreases Combat Readiness by 30%. When Focus is full, consumes all, increasing damage dealt and ignoring Effect Resistance."
         }
     },
     "serila": {
@@ -2768,16 +2767,15 @@
     "architect-laika": {
         "S1": {
             "name": "Eliminating Variables",
-            "description": "Attacks the enemy by eliminating unnecessary variables. Damage dealt increases proportional to the caster's Speed."
+            "description": "Attacks the enemy by eliminating unnecessary variables. Damage dealt increases proportional to the caster Speed."
         },
         "S2": {
             "name": "Laying the Groundwork",
-            "description": "Dispels one debuff from an ally before granting increased Attack (Greater) to the caster. When the target has the Target debuff, grants an extra turn to the caster."
+            "description": "Dispels two buffs from the enemy and inflicts target for 2 turns, before granting increased Attack and immunity to the caster for 2 turns. When the enemy is inflicted with target, grants an extra turn."
         },
         "S3": {
             "name": "Eliminating the Target",
-            "description": "Attacks all enemies by calculating the optimal route, and penetrates Defense by 80%. Damage dealt increases proportional to the caster's Speed. Inflicts Extinction when the enemy is defeated.",
-            "soulburn_effect": "Increases damage dealt."
+            "description": "Attacks all enemies, and when the enemy is defeated, inflicts extinction. When the enemy is inflicted with target, penetrates Defense by 80%. Damage dealt increases proportional to the caster Speed."
         }
     },
     "zio": {
@@ -2794,17 +2792,16 @@
     "hasol": {
         "S1": {
             "name": "Swift Cut",
-            "description": "Attacks the enemy with the sword of vengeance, before recovering Health.",
+            "description": "Attacks the enemy, before recovering Health. Inflicts 500 additional damage. Damage dealt and amount recovered increase proportional to the caster max Health.",
             "soulburn_effect": "Greatly increases damage dealt. Does not trigger a Dual Attack."
         },
         "S2": {
             "name": "Blade of Vengeance",
-            "description": "When more than one enemy is alive, at the start of the caster turn, gain 1 stack of Grudge (max 5 stacks)."
+            "description": "When an ally suffers a counterattack, grants 25% damage reduction. After an enemy counterattacks, increases Combat Readiness by 25% and increases additional damage by 1,500. Effect can stack up to 5 times."
         },
         "S3": {
-            "name": "Liberation: Soul Exchange",
-            "description": "Delivers divine judgment upon the enemy. When the enemy is defeated, revives a random dead ally with 15% Health.",
-            "soulburn_effect": "Increases damage dealt."
+            "name": "Punishing Strike",
+            "description": "Attacks all enemies and inflicts 500 additional damage. Grants increased Defense to all allies for 3 turns, and grants immunity to the caster for 3 turns. Damage dealt increases proportional to the caster max Health."
         }
     },
     "dragon-bride-senya": {

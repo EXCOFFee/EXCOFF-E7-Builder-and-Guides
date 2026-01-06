@@ -158,7 +158,8 @@
     "apocalypse-ravi": {
         "S1": {
             "name": "幽霊の斧",
-            "description": "斧で敵を攻撃し、傷を負わせた後、ダメージの一部をHPとして吸収します。ダメージは術者の最大HPに比例して増加します。傷の深刻度はダメージに比例して増加します。このスキルを使用するたびに対象の最大HPを最大10%減少させます。"
+            "description": "斧で敵を攻撃し、傷を負わせた後、ダメージの一部をHPとして吸収します。ダメージは術者の最大HPに比例して増加します。傷の深刻度はダメージに比例して増加します。このスキルを使用するたびに対象の最大HPを最大10%減少させます。",
+            "soulburn_effect": "Grants an extra turn."
         },
         "S2": {
             "name": "軍神の力",
@@ -2795,7 +2796,8 @@
     "hasol": {
         "S1": {
             "name": "Swift Cut",
-            "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster's max Health."
+            "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster's max Health.",
+            "soulburn_effect": "Greatly increases damage dealt. Does not trigger a Dual Attack."
         },
         "S2": {
             "name": "Blade of Vengeance",

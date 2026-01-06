@@ -158,7 +158,8 @@
     "apocalypse-ravi": {
         "S1": {
             "name": "幽靈之斧",
-            "description": "用斧頭攻擊敵人並造成傷口，然後吸收部分傷害作為生命值。傷害量隨施法者最大生命值按比例增加。傷口嚴重程度隨傷害量按比例增加。每次使用此技能時降低目標最大生命值最多10%。"
+            "description": "用斧頭攻擊敵人並造成傷口，然後吸收部分傷害作為生命值。傷害量隨施法者最大生命值按比例增加。傷口嚴重程度隨傷害量按比例增加。每次使用此技能時降低目標最大生命值最多10%。",
+            "soulburn_effect": "Grants an extra turn."
         },
         "S2": {
             "name": "戰神之力",
@@ -2795,7 +2796,8 @@
     "hasol": {
         "S1": {
             "name": "Swift Cut",
-            "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster's max Health."
+            "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster's max Health.",
+            "soulburn_effect": "Greatly increases damage dealt. Does not trigger a Dual Attack."
         },
         "S2": {
             "name": "Blade of Vengeance",

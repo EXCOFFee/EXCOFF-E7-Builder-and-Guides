@@ -158,7 +158,8 @@
     "apocalypse-ravi": {
         "S1": {
             "name": "Machado Espectral",
-            "description": "Ataca o inimigo com um machado, causando ferimentos antes de absorver parte do dano como Vida. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. A gravidade dos ferimentos aumenta proporcionalmente ao dano causado. Os ferimentos diminuem a Vida máxima do alvo em até 10% cada vez que esta habilidade é usada."
+            "description": "Ataca o inimigo com um machado, causando ferimentos antes de absorver parte do dano como Vida. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. A gravidade dos ferimentos aumenta proporcionalmente ao dano causado. Os ferimentos diminuem a Vida máxima do alvo em até 10% cada vez que esta habilidade é usada.",
+            "soulburn_effect": "Grants an extra turn."
         },
         "S2": {
             "name": "Poder do Deus da Guerra",
@@ -2795,7 +2796,8 @@
     "hasol": {
         "S1": {
             "name": "Swift Cut",
-            "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster's max Health."
+            "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster's max Health.",
+            "soulburn_effect": "Greatly increases damage dealt. Does not trigger a Dual Attack."
         },
         "S2": {
             "name": "Blade of Vengeance",

@@ -158,16 +158,16 @@
     "apocalypse-ravi": {
         "S1": {
             "name": "Hacha Espectral",
-            "description": "Ataca al enemigo con un hacha, infligiendo heridas antes de absorber parte del daño como Salud. El daño infligido aumenta proporcionalmente a la Salud maxima del lanzador.",
+            "description": "Ataca al enemigo con un hacha, infligiendo heridas proporcionales al dano infligido. El dano infligido aumenta proporcionalmente a la Salud maxima del lanzador. Un golpe critico cura al lanzador.",
             "soulburn_effect": "Otorga un turno extra."
         },
         "S2": {
             "name": "Poder del Dios de la Guerra",
-            "description": "Aumenta la Probabilidad de Golpe Critico en un 30%. Comienza la primera batalla con 50 de Espiritu de Lucha."
+            "description": "Aumenta la Resistencia a Penetracion en un 30%. Al inicio de la primera batalla, obtiene 50 de Espiritu de Lucha. Despues de ser atacado, consume 10 de Espiritu de Lucha, aumentando la Preparacion de Combate en un 15% y recuperando Salud."
         },
         "S3": {
-            "name": "Golpe de Castigo",
-            "description": "Ataca a todos los enemigos con un aura de venganza, con un 75% de probabilidad de hacerlos incurables durante 2 turnos, antes de otorgar inmunidad al lanzador durante 3 turnos."
+            "name": "Liberacion: Intercambio de Almas",
+            "description": "Ataca al enemigo con juicio divino. Cuando el enemigo es derrotado, revive a un aliado muerto aleatorio al 15% de Salud y otorga Anulacion de Habilidad. Cuando un aliado muere, otorga Dios de la Guerra al lanzador y reinicia el tiempo de reutilizacion."
         }
     },
     "aramintha": {
@@ -723,8 +723,8 @@
             "soulburn_effect": "Otorga un ataque extra con la misma habilidad."
         },
         "S2": {
-            "name": "Halcón de la Pradera",
-            "description": "Al atacar, no puede activar un golpe crítico. El daño sufrido por un golpe crítico disminuye en un 30%. Cuando se otorga más de un efecto de reducción de daño, solo se aplica el efecto más fuerte. Al inicio del turno, cuando el lanzador no tiene debilidades, aumenta el Ataque durante 1 turno."
+            "name": "Halcon de la Pradera",
+            "description": "Aumenta la Evasion en un 50%. Al atacar, no puede activar golpe critico ni golpe pesado. Al inicio del turno, otorga aumento de Ataque durante 1 turno."
         },
         "S3": {
             "name": "Golpe Ardiente del Monarca",
@@ -840,9 +840,9 @@
             "description": "Al inicio de la primera batalla, gana 50 de Espíritu de Lucha y otorga sigilo durante 1 turno. Al inicio del turno, gana 10 de Espíritu de Lucha por cada beneficio otorgado a un enemigo, y cuando el Espíritu de Lucha está lleno, reinicia el tiempo de reutilización de habilidad. Después de atacar, aumenta el Ataque del lanzador en un 25%. Este efecto puede acumularse hasta 3 veces."
         },
         "S3": {
-            "name": "Ráfaga Completa",
-            "description": "Dispara a todos los enemigos y otorga a todos los aliados aumento de Velocidad durante 2 turnos, antes de aumentar su Preparación de Combate en un 15%. Cuando el Espíritu de Lucha está lleno, consume todo el Espíritu de Lucha para penetrar la Defensa del objetivo en un 50%. Este ataque no puede activar un contraataque.",
-            "soulburn_effect": "Aumenta el daño infligido."
+            "name": "Rafaga Completa",
+            "description": "Dispara a todos los enemigos para atacar, y aumenta la Preparacion de Combate de todos los aliados en un 25%, antes de otorgar una barrera al lanzador durante 2 turnos. Cuando el Espiritu de Lucha esta lleno, lo consume todo para penetrar la Defensa en un 50%.",
+            "soulburn_effect": "Aumenta el dano infligido."
         }
     },
     "last-rider-krau": {
@@ -1297,16 +1297,15 @@
     "zahhak": {
         "S1": {
             "name": "Vulnerabilidad Expuesta",
-            "description": "Ataca al enemigo con una espada larga. Aumenta la Probabilidad de Golpe Crítico en un 50% al atacar. El daño infligido aumenta cuando el objetivo tiene beneficios."
+            "description": "Ataca al enemigo con una espada larga. Aumenta la Probabilidad de Impacto y Golpe Critico de esta habilidad en un 50%. Cuando el objetivo tiene un beneficio, aumenta el dano infligido."
         },
         "S2": {
             "name": "Plan Elaborado",
-            "description": "Disipa dos debilidades de un aliado y del lanzador, antes de aumentar la Preparación de Combate del aliado en un 15%. Otorga un turno extra al lanzador.",
-            "soulburn_effect": "Otorga un turno extra."
+            "description": "Disipa dos debilidades de un aliado antes de aumentar la Preparacion de Combate en un 30%. Otorga aumento de Ataque y Probabilidad de Impacto al lanzador durante 3 turnos. Otorga un turno extra."
         },
         "S3": {
-            "name": "Ejecutar",
-            "description": "Ataca al enemigo, infligiendo heridas antes de otorgar invencibilidad al lanzador durante 1 turno. Aumenta la Probabilidad de Golpe Crítico en un 50% al atacar. La gravedad de las heridas aumenta proporcionalmente al daño infligido. Las heridas disminuyen la Salud máxima del objetivo hasta un 35% cada vez que se usa esta habilidad."
+            "name": "Aniquilar",
+            "description": "Ataca al enemigo, penetrando la Defensa en un 100%. Esta habilidad no activa contraataques."
         }
     },
     "tywin": {
@@ -2291,16 +2290,16 @@
     },
     "schuri": {
         "S1": {
-            "name": "Fuego Rápido",
-            "description": "Ataca al enemigo con una pistola, con un 30% de probabilidad de infligir veneno durante 2 turnos."
+            "name": "Fuego Rapido",
+            "description": "Ataca al enemigo con una pistola. El dano infligido aumenta proporcionalmente a la Salud maxima del objetivo. Un golpe critico duplica la cantidad de Focus ganado. Gana 1 Focus."
         },
         "S2": {
             "name": "Caballero Explosivo",
-            "description": "Después de asestar un golpe crítico, el lanzador gana 1 Enfoque, y la Preparación de Combate de todos los aliados excepto el lanzador aumenta en un 25%."
+            "description": "Al inicio de la primera batalla, obtiene 3 de Focus. Despues de un golpe critico, aumenta la Preparacion de Combate de todos los aliados excepto el lanzador en un 25%."
         },
         "S3": {
             "name": "Disparo de Rifle",
-            "description": "Dispara a todos los enemigos con un rifle. Cuando el Enfoque acumulado del lanzador es 3 o más, esta habilidad se mejora a Ráfaga Completa. Un ataque exitoso con Ráfaga Completa siempre resulta en golpe crítico."
+            "description": "Ataca a todos los enemigos con un rifle y disminuye la Preparacion de Combate en un 30%. Cuando el Focus esta lleno, lo consume todo, aumentando el dano e ignorando la Resistencia a Efectos."
         }
     },
     "serila": {
@@ -2767,17 +2766,16 @@
     },
     "architect-laika": {
         "S1": {
-            "name": "Eliminating Variables",
-            "description": "Attacks the enemy by eliminating unnecessary variables. Damage dealt increases proportional to the caster's Speed."
+            "name": "Eliminando Variables",
+            "description": "Ataca al enemigo eliminando variables innecesarias. El dano infligido aumenta proporcionalmente a la Velocidad del lanzador."
         },
         "S2": {
-            "name": "Laying the Groundwork",
-            "description": "Dispels one debuff from an ally before granting increased Attack (Greater) to the caster. When the target has the Target debuff, grants an extra turn to the caster."
+            "name": "Preparando el Terreno",
+            "description": "Disipa dos beneficios del enemigo e inflige Objetivo durante 2 turnos, antes de otorgar aumento de Ataque e inmunidad al lanzador durante 2 turnos. Cuando el enemigo tiene Objetivo, otorga un turno extra."
         },
         "S3": {
-            "name": "Eliminating the Target",
-            "description": "Attacks all enemies by calculating the optimal route, and penetrates Defense by 80%. Damage dealt increases proportional to the caster's Speed. Inflicts Extinction when the enemy is defeated.",
-            "soulburn_effect": "Aumenta el daño infligido."
+            "name": "Eliminando el Objetivo",
+            "description": "Ataca a todos los enemigos, y cuando el enemigo es derrotado, inflige extincion. Cuando el enemigo tiene Objetivo, penetra la Defensa en un 80%. El dano aumenta proporcionalmente a la Velocidad del lanzador."
         }
     },
     "zio": {
@@ -2794,17 +2792,16 @@
     "hasol": {
         "S1": {
             "name": "Corte Rapido",
-            "description": "Ataca al enemigo con la espada de venganza, antes de recuperar Salud. La cantidad recuperada aumenta proporcionalmente a la Salud maxima del lanzador.",
-            "soulburn_effect": "Aumenta considerablemente el daño infligido. No activa Ataque Dual."
+            "description": "Ataca al enemigo, antes de recuperar Salud. Inflige 500 de dano adicional. El dano y la cantidad recuperada aumentan proporcionalmente a la Salud maxima del lanzador.",
+            "soulburn_effect": "Aumenta considerablemente el dano infligido. No activa Ataque Dual."
         },
         "S2": {
             "name": "Hoja de Venganza",
-            "description": "Cuando hay mas de un enemigo vivo, al inicio del turno del lanzador, obtiene 1 acumulacion de Rencor (max 5). El daño adicional aumenta con cada acumulacion."
+            "description": "Cuando un aliado sufre un contraataque, otorga 25% de reduccion de dano. Despues de un contraataque enemigo, aumenta la Preparacion de Combate en un 25% y el dano adicional en 1.500. El efecto puede acumularse hasta 5 veces."
         },
         "S3": {
-            "name": "Liberacion: Intercambio de Almas",
-            "description": "Entrega juicio divino sobre el enemigo. Cuando el enemigo es derrotado, revive a un aliado muerto aleatorio con 15% de Salud.",
-            "soulburn_effect": "Aumenta el daño infligido."
+            "name": "Golpe de Castigo",
+            "description": "Ataca a todos los enemigos e inflige 500 de dano adicional. Otorga aumento de Defensa a todos los aliados durante 3 turnos e inmunidad al lanzador durante 3 turnos. El dano aumenta proporcionalmente a la Salud maxima del lanzador."
         }
     },
     "dragon-bride-senya": {

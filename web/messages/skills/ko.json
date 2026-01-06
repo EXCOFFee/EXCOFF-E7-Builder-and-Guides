@@ -158,7 +158,8 @@
     "apocalypse-ravi": {
         "S1": {
             "name": "유령 도끼",
-            "description": "도끼로 적을 공격하고 상처를 입힌 후 피해량의 일부를 체력으로 흡수합니다. 피해량은 시전자의 최대 체력에 비례하여 증가합니다. 상처의 심각도는 피해량에 비례하여 증가합니다. 이 스킬을 사용할 때마다 대상의 최대 체력을 최대 10%까지 감소시킵니다."
+            "description": "도끼로 적을 공격하고 상처를 입힌 후 피해량의 일부를 체력으로 흡수합니다. 피해량은 시전자의 최대 체력에 비례하여 증가합니다. 상처의 심각도는 피해량에 비례하여 증가합니다. 이 스킬을 사용할 때마다 대상의 최대 체력을 최대 10%까지 감소시킵니다.",
+            "soulburn_effect": "Grants an extra turn."
         },
         "S2": {
             "name": "전쟁신의 힘",
@@ -2795,7 +2796,8 @@
     "hasol": {
         "S1": {
             "name": "Swift Cut",
-            "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster's max Health."
+            "description": "Attacks the enemy with the sword of vengeance, before recovering Health. Amount recovered increases proportional to the caster's max Health.",
+            "soulburn_effect": "Greatly increases damage dealt. Does not trigger a Dual Attack."
         },
         "S2": {
             "name": "Blade of Vengeance",
