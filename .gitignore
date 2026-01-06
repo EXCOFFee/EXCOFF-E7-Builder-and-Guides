@@ -15,7 +15,12 @@ dist/
 .env.test.local
 .env.production.local
 .env.production
+*.env.bak
 api/.env
+api/.env.bak
+
+# Planning/specs (internal documents)
+SRS_EpicSeven.md
 
 # IDE
 .idea/
