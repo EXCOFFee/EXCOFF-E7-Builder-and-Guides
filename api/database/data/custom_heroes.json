@@ -2,7 +2,8 @@
     "_meta": {
         "description": "Custom hero data overrides for heroes not in Fribbels or requiring manual corrections",
         "balance_patches": [
-            "11/20/2024 - ARavi, Laika, Zio, Ran, Zahhak, Schuri, Hasol"
+            "11/20/2024 - ARavi, Laika, Zio, Ran, Zahhak, Schuri, Hasol",
+            "01/08/2026 - Judge Kise, LR Krau, DB Senya, Beehoo, Hwayoung, Landy, MG Lilias, M Bunny Dominiel, Savior Adin, A Mont"
         ]
     },
     "swift-flagbearer-sigret": {
@@ -285,5 +286,282 @@
             }
         },
         "source": "balance_patch_20241120"
+    },
+    "judge-kise": {
+        "code": "c2006",
+        "_id": "judge-kise",
+        "name": "Judge Kise",
+        "zodiac": "sagittarius",
+        "skills": {
+            "S1": {
+                "name": "Nocturne",
+                "description": "Attacks the enemy with dark magic, recovering Health. Amount recovered increases proportional to damage dealt."
+            },
+            "S2": {
+                "name": "Reign of Terror",
+                "description": "At the start of battle, gains Focus. When Focus is fully charged, activates End of Evil. After attacking, if the enemy is defeated, resets the cooldown of End of Evil.",
+                "passive": true
+            },
+            "S3": {
+                "name": "End of Evil",
+                "description": "Attacks all enemies with dark magic, with an 85% chance to decrease Defense for 2 turns. Increases Combat Readiness of all allies by 20%.",
+                "rate": 0.85,
+                "pow": 1,
+                "cooldown": 4,
+                "soulburn": true,
+                "soulburn_souls": 20,
+                "soulburn_effect": "Increases damage dealt."
+            }
+        },
+        "source": "balance_patch_20260108"
+    },
+    "last-rider-krau": {
+        "code": "c2070",
+        "_id": "last-rider-krau",
+        "name": "Last Rider Krau",
+        "skills": {
+            "S1": {
+                "name": "Light's Judgment",
+                "description": "Attacks the enemy with divine light. Damage dealt increases proportional to the caster's max Health.",
+                "selfHpScaling": 0.1
+            },
+            "S2": {
+                "name": "Code Number 00",
+                "description": "When all allies are attacked at once, has a 50% chance to grant a barrier to all allies for 2 turns. Barrier strength increased.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Infinite Horizon",
+                "description": "Attacks all enemies, dispelling one buff before a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health.",
+                "selfHpScaling": 0.15,
+                "cooldown": 4
+            }
+        },
+        "source": "balance_patch_20260108"
+    },
+    "dragon-bride-senya": {
+        "code": "c2106",
+        "_id": "dragon-bride-senya",
+        "name": "Dragon Bride Senya",
+        "skills": {
+            "S1": {
+                "name": "Dragon's Blessing",
+                "description": "Attacks the enemy, with damage increasing proportional to the caster's max Health.",
+                "selfHpScaling": 0.1
+            },
+            "S2": {
+                "name": "Bride's Resolve",
+                "description": "When an enemy attacks, has a 50% chance to activate Bridal Prayer. Bridal Prayer: Dispels one debuff from the attacked ally and grants a barrier for 3 turns. Gains 10 Souls. When an ally protected by a barrier is attacked, activates Oath of Punishment. Oath of Punishment deals 4000 fixed damage and lasts 3 turns.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Overcoming Hardships",
+                "description": "Attacks the enemy with increased damage. Damage dealt increases proportional to the caster's max Health. Penetrates Defense by 100%.",
+                "selfHpScaling": 0.09,
+                "penetration": 1,
+                "cooldown": 5,
+                "soulburn": true,
+                "soulburn_souls": 10,
+                "soulburn_effect": "Reduces skill cooldown by 2 turns."
+            }
+        },
+        "source": "balance_patch_20260108"
+    },
+    "beehoo": {
+        "code": "c1141",
+        "_id": "beehoo",
+        "name": "Beehoo",
+        "zodiac": "pisces",
+        "skills": {
+            "S1": {
+                "name": "Blazing Bullet",
+                "description": "Attacks the enemy with bullets of flame. Damage increases proportional to the target's lost Health."
+            },
+            "S2": {
+                "name": "Flame Keeper",
+                "description": "At the start of battle and at the start of the caster's turn, grants the caster increased Attack for 2 turns and increases Effectiveness by 30%. When the caster attacks an enemy with Burn, activates Blaze Bullet.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Symphony of Radiance",
+                "description": "Inflicts Burn on all enemies for 2 turns, before increasing the caster's Combat Readiness by 25%.",
+                "cooldown": 3
+            }
+        },
+        "source": "balance_patch_20260108"
+    },
+    "hwayoung": {
+        "code": "c1128",
+        "_id": "hwayoung",
+        "name": "Hwayoung",
+        "skills": {
+            "S1": {
+                "name": "Supersonic Kick",
+                "description": "Attacks the enemy with a powerful kick.",
+                "rate": 0.8,
+                "pow": 1,
+                "soulburn": true,
+                "soulburn_souls": 10,
+                "soulburn_effect": "Grants an extra attack with the same skill."
+            },
+            "S2": {
+                "name": "Prairie Hawk",
+                "description": "Increases Attack by 50% and grants 50% Evasion. At the start of the caster's turn, if not debuffed, increases Attack by an additional amount.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Monarch's Flaming Strike",
+                "description": "Attacks the enemy with a devastating kick. Defense penetration increases based on the difference between the caster's Attack and the target's Attack (max 100% penetration). Reduced Attack difference required for max penetration.",
+                "rate": 1.1,
+                "pow": 1,
+                "penetration": 1,
+                "cooldown": 4,
+                "soulburn": false
+            }
+        },
+        "source": "balance_patch_20260108"
+    },
+    "landy": {
+        "code": "c1109",
+        "_id": "landy",
+        "name": "Landy",
+        "skills": {
+            "S1": {
+                "name": "Rapid Fire Cannon",
+                "description": "Attacks the enemy with a cannon. A Critical Hit grants Fighting Spirit.",
+                "rate": 1.2,
+                "pow": 1
+            },
+            "S2": {
+                "name": "Rampaging Machine",
+                "description": "When the enemy gains a buff, gains Fighting Spirit. When Fighting Spirit is fully charged, resets the cooldown of Full Blast. After using Full Blast, gains increased Combat Readiness.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Full Blast",
+                "description": "Attacks all enemies with full power. Increases Combat Readiness of all allies by 25% and grants the caster a barrier (proportional to Attack) for 2 turns.",
+                "rate": 0.9,
+                "pow": 1,
+                "cooldown": 4,
+                "soulburn": true,
+                "soulburn_souls": 20,
+                "soulburn_effect": "Increases damage dealt."
+            }
+        },
+        "source": "balance_patch_20260108"
+    },
+    "midnight-gala-lilias": {
+        "code": "c5089",
+        "_id": "midnight-gala-lilias",
+        "name": "Midnight Gala Lilias",
+        "skills": {
+            "S1": {
+                "name": "Let's Go, Kyla!",
+                "description": "Attacks the enemy with Kyla, recovering Health for all allies. Increased base healing.",
+                "rate": 1,
+                "pow": 1,
+                "soulburn": true,
+                "soulburn_souls": 10,
+                "soulburn_effect": "Increases damage dealt."
+            },
+            "S2": {
+                "name": "Elaborate Scheme",
+                "description": "When an ally except for the caster is attacked, activates Now or Never. Now or Never grants Attack (Greater) to all allies except the caster and increases Combat Readiness of allies by 20%. Grants the caster 50% Combat Readiness.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Take the Initiative",
+                "description": "Attacks the enemy. Grants increased Attack to all allies for 3 turns. When the target is a Hero, ignores damage reduction and damage sharing effects.",
+                "rate": 1.5,
+                "pow": 1,
+                "cooldown": 4,
+                "soulburn": false
+            }
+        },
+        "source": "balance_patch_20260108"
+    },
+    "moon-bunny-dominiel": {
+        "code": "c2037",
+        "_id": "moon-bunny-dominiel",
+        "name": "Moon Bunny Dominiel",
+        "skills": {
+            "S1": {
+                "name": "Bunny Magic",
+                "description": "Attacks the enemy with bunny magic, with a chance to decrease Combat Readiness.",
+                "rate": 1,
+                "pow": 1
+            },
+            "S2": {
+                "name": "Flow Control",
+                "description": "When an ally lands a Critical Hit, increases their Combat Readiness by 6%. When the caster's Fighting Spirit is fully charged, activates Flow Control. Flow Control grants Skill Effect Nullifier (1 time) to all allies and increases the caster's Combat Readiness by 30%.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Divination",
+                "description": "Grants Vigor to all allies for 2 turns and increases their Combat Readiness by 30%. Recovers the Health of all allies.",
+                "cooldown": 4,
+                "soulburn": true,
+                "soulburn_souls": 20,
+                "soulburn_effect": "Extends buff duration by 1 turn."
+            }
+        },
+        "source": "balance_patch_20260108"
+    },
+    "savior-adin": {
+        "code": "c4143",
+        "_id": "savior-adin",
+        "name": "Savior Adin",
+        "skills": {
+            "S1": {
+                "name": "Decisive Blow",
+                "description": "Attacks the enemy with a powerful strike.",
+                "rate": 1,
+                "pow": 1,
+                "soulburn": false
+            },
+            "S2": {
+                "name": "Victorious Return",
+                "description": "When an ally is attacked, counterattacks and gains 10 Souls. When an enemy is defeated, gains 50% Combat Readiness.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Light of Salvation",
+                "description": "Attacks all enemies. Inflicts Extinction when the enemy is defeated. Faith Rune now increases damage against all elements.",
+                "rate": 1.2,
+                "pow": 1,
+                "cooldown": 4,
+                "soulburn": true,
+                "soulburn_souls": 10,
+                "soulburn_effect": "Increases damage dealt."
+            }
+        },
+        "source": "balance_patch_20260108"
+    },
+    "angelic-montmorancy": {
+        "code": "c4042",
+        "_id": "angelic-montmorancy",
+        "name": "Angelic Montmorancy",
+        "skills": {
+            "S1": {
+                "name": "Water Gun",
+                "description": "Attacks the enemy with a water projectile.",
+                "rate": 1,
+                "pow": 1
+            },
+            "S2": {
+                "name": "Cleansing Light",
+                "description": "Dispels one debuff from an ally before recovering their Health. Order Rune: 100% chance to dispel.",
+                "cooldown": 2
+            },
+            "S3": {
+                "name": "Earnest Prayer",
+                "description": "Recovers Health of all allies and dispels one debuff. Reduces the caster's skill cooldowns by 1 turn. Health Rune: 25% HP increase.",
+                "cooldown": 4,
+                "soulburn": true,
+                "soulburn_souls": 20,
+                "soulburn_effect": "Dispels all debuffs."
+            }
+        },
+        "source": "balance_patch_20260108"
     }
 }
