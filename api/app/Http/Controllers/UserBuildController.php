@@ -150,8 +150,8 @@ class UserBuildController extends Controller
             'primary_set' => 'nullable|string|max:50',
             'secondary_set' => 'nullable|string|max:50',
             'artifact_id' => 'nullable|exists:artifacts,id',
-            'synergy_heroes' => 'nullable|array',
-            'counter_heroes' => 'nullable|array',
+            'synergy_heroes' => 'nullable',
+            'counter_heroes' => 'nullable',
             'images' => 'nullable|array',
             'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:5120',
             'language' => 'nullable|string|max:5',
@@ -168,16 +168,30 @@ class UserBuildController extends Controller
             'reason_arena' => 'nullable|string|max:255',
             'reason_gw' => 'nullable|string|max:255',
             'reason_rta' => 'nullable|string|max:255',
-            // Pros/Cons tags (max 5 each)
-            'pro_tags' => 'nullable|array|max:5',
-            'pro_tags.*' => 'string|max:50',
-            'con_tags' => 'nullable|array|max:5',
-            'con_tags.*' => 'string|max:50',
+            // Pros/Cons tags (JSON string or array)
+            'pro_tags' => 'nullable',
+            'con_tags' => 'nullable',
         ]);
 
         // Parse min_stats if JSON string
         if (isset($validated['min_stats']) && is_string($validated['min_stats'])) {
             $validated['min_stats'] = json_decode($validated['min_stats'], true);
+        }
+
+        // Parse tags if JSON string
+        if (isset($validated['pro_tags']) && is_string($validated['pro_tags'])) {
+            $validated['pro_tags'] = json_decode($validated['pro_tags'], true);
+        }
+        if (isset($validated['con_tags']) && is_string($validated['con_tags'])) {
+            $validated['con_tags'] = json_decode($validated['con_tags'], true);
+        }
+
+        // Parse synergy/counter heroes if JSON string
+        if (isset($validated['synergy_heroes']) && is_string($validated['synergy_heroes'])) {
+            $validated['synergy_heroes'] = json_decode($validated['synergy_heroes'], true);
+        }
+        if (isset($validated['counter_heroes']) && is_string($validated['counter_heroes'])) {
+            $validated['counter_heroes'] = json_decode($validated['counter_heroes'], true);
         }
 
         $validated['language'] = $validated['language'] ?? 'en';
@@ -222,8 +236,8 @@ class UserBuildController extends Controller
             'primary_set' => 'nullable|string|max:50',
             'secondary_set' => 'nullable|string|max:50',
             'artifact_id' => 'nullable|exists:artifacts,id',
-            'synergy_heroes' => 'nullable|array',
-            'counter_heroes' => 'nullable|array',
+            'synergy_heroes' => 'nullable',
+            'counter_heroes' => 'nullable',
             'status' => 'sometimes|in:draft,published,archived',
             'skill_1' => 'nullable|integer|min:0|max:7',
             'skill_2' => 'nullable|integer|min:0|max:7',
@@ -237,12 +251,26 @@ class UserBuildController extends Controller
             'reason_arena' => 'nullable|string|max:255',
             'reason_gw' => 'nullable|string|max:255',
             'reason_rta' => 'nullable|string|max:255',
-            // Pros/Cons tags (max 5 each)
-            'pro_tags' => 'nullable|array|max:5',
-            'pro_tags.*' => 'string|max:50',
-            'con_tags' => 'nullable|array|max:5',
-            'con_tags.*' => 'string|max:50',
+            // Pros/Cons tags (JSON string or array)
+            'pro_tags' => 'nullable',
+            'con_tags' => 'nullable',
         ]);
+
+        // Parse tags if JSON string
+        if (isset($validated['pro_tags']) && is_string($validated['pro_tags'])) {
+            $validated['pro_tags'] = json_decode($validated['pro_tags'], true);
+        }
+        if (isset($validated['con_tags']) && is_string($validated['con_tags'])) {
+            $validated['con_tags'] = json_decode($validated['con_tags'], true);
+        }
+
+        // Parse synergy/counter heroes if JSON string
+        if (isset($validated['synergy_heroes']) && is_string($validated['synergy_heroes'])) {
+            $validated['synergy_heroes'] = json_decode($validated['synergy_heroes'], true);
+        }
+        if (isset($validated['counter_heroes']) && is_string($validated['counter_heroes'])) {
+            $validated['counter_heroes'] = json_decode($validated['counter_heroes'], true);
+        }
 
         // Handle new image uploads using ImageService
         $imagePaths = [];

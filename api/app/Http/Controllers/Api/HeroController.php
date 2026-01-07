@@ -120,7 +120,6 @@ class HeroController extends Controller
         
         $stats = Cache::remember($cacheKey, 300, function () use ($hero) { // 5 min cache
             $builds = \App\Models\UserBuild::where('hero_id', $hero->id)
-                ->where('status', 'approved')
                 ->get();
 
             $totalBuilds = $builds->count();

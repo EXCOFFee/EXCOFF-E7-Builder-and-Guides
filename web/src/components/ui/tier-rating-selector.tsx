@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations } from '@/hooks/useTranslations';
 
 /**
@@ -71,7 +72,9 @@ interface TierRatingSelectorProps {
 
 /**
  * TierRatingSelector - Component for selecting D-S ratings for each category.
- * Follows SRP: only handles rating selection UI logic.
+ * Features:
+ * - Larger textarea for reasons (instead of input)
+ * - Better visibility for text entry
  */
 export function TierRatingSelector({
     ratings,
@@ -100,7 +103,7 @@ export function TierRatingSelector({
                     {t('builds.tierRatings', 'Tier Ratings')}
                 </h3>
                 {generalTier && (
-                    <div className={`px-3 py-1 rounded-lg font-bold text-lg ${TIER_COLORS[generalTier].bg} ${TIER_COLORS[generalTier].text} ${TIER_COLORS[generalTier].border} border`}>
+                    <div className={`px-4 py-2 rounded-lg font-bold text-xl ${TIER_COLORS[generalTier].bg} ${TIER_COLORS[generalTier].text} ${TIER_COLORS[generalTier].border} border`}>
                         {t('builds.general', 'General')}: {generalTier}
                     </div>
                 )}
@@ -109,14 +112,14 @@ export function TierRatingSelector({
             {/* Category Ratings Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {TIER_CATEGORIES.map((category) => (
-                    <div key={category} className="p-4 rounded-xl bg-e7-void/50 border border-e7-gold/20">
+                    <div key={category} className="p-5 rounded-xl bg-e7-void/50 border border-e7-gold/20">
                         {/* Category Label */}
-                        <label className="block text-sm font-medium text-gray-300 mb-2 uppercase tracking-wider">
+                        <label className="block text-sm font-medium text-gray-300 mb-3 uppercase tracking-wider">
                             {t(`builds.tier_${category}`, category.toUpperCase())}
                         </label>
 
                         {/* Tier Buttons */}
-                        <div className="flex gap-2 mb-2">
+                        <div className="flex gap-2 mb-3">
                             {(['D', 'C', 'B', 'A', 'S'] as TierLetter[]).map((tier) => {
                                 const isSelected = ratings[category] === TIER_VALUES[tier];
                                 const colors = TIER_COLORS[tier];
@@ -128,7 +131,7 @@ export function TierRatingSelector({
                                         onClick={() => handleRatingChange(category, isSelected ? null : TIER_VALUES[tier])}
                                         disabled={disabled}
                                         className={`
-                                            w-10 h-10 rounded-lg font-bold text-lg transition-all duration-200
+                                            w-11 h-11 rounded-lg font-bold text-lg transition-all duration-200
                                             ${isSelected
                                                 ? `${colors.bg} ${colors.text} ${colors.border} border-2 scale-110 shadow-lg`
                                                 : `bg-e7-panel/50 text-gray-400 border border-white/10 ${colors.hover}`
@@ -142,16 +145,16 @@ export function TierRatingSelector({
                             })}
                         </div>
 
-                        {/* Optional Reason Input */}
+                        {/* Reason Textarea - LARGER */}
                         {showReasons && (
-                            <input
-                                type="text"
+                            <textarea
                                 value={reasons[category] || ''}
                                 onChange={(e) => handleReasonChange(category, e.target.value)}
                                 placeholder={t('builds.tierReasonPlaceholder', 'Why this rating? (optional)')}
                                 disabled={disabled}
                                 maxLength={255}
-                                className="w-full px-3 py-2 text-sm rounded-lg bg-e7-dark/50 border border-e7-gold/20 text-white placeholder-gray-500 focus:border-e7-gold/50 focus:outline-none"
+                                rows={3}
+                                className="w-full px-4 py-3 text-sm rounded-lg bg-e7-dark/50 border border-e7-gold/20 text-white placeholder-gray-500 focus:border-e7-gold/50 focus:outline-none resize-none"
                             />
                         )}
                     </div>
@@ -163,7 +166,10 @@ export function TierRatingSelector({
 
 /**
  * TierRatingDisplay - Read-only display of tier ratings.
- * SRP: Only handles rating display, not selection.
+ * Features:
+ * - Larger text for readability
+ * - Full text display (no truncation)
+ * - Expandable reasons
  */
 interface TierRatingDisplayProps {
     ratings: Partial<Record<TierCategory, number | null>>;
@@ -173,11 +179,16 @@ interface TierRatingDisplayProps {
 
 export function TierRatingDisplay({ ratings, reasons = {}, compact = false }: TierRatingDisplayProps) {
     const { t } = useTranslations();
+    const [expandedReasons, setExpandedReasons] = useState<Record<string, boolean>>({});
     const generalTier = calculateGeneralTier(ratings);
 
     // Don't render if no ratings
     const hasRatings = TIER_CATEGORIES.some(cat => ratings[cat] !== null && ratings[cat] !== undefined);
     if (!hasRatings) return null;
+
+    const toggleExpand = (category: string) => {
+        setExpandedReasons(prev => ({ ...prev, [category]: !prev[category] }));
+    };
 
     if (compact) {
         // Compact mode: single row with all ratings
@@ -203,34 +214,61 @@ export function TierRatingDisplay({ ratings, reasons = {}, compact = false }: Ti
         );
     }
 
-    // Full mode: detailed display with reasons
+    // Full mode: detailed display with expandable reasons
     return (
-        <div className="space-y-3">
+        <div className="space-y-4">
             <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold text-e7-gold">
+                <h3 className="text-xl font-semibold text-e7-gold">
                     {t('builds.tierRatings', 'Tier Ratings')}
                 </h3>
                 {generalTier && (
-                    <div className={`px-3 py-1 rounded-lg font-bold text-xl ${TIER_COLORS[generalTier].bg} ${TIER_COLORS[generalTier].text} ${TIER_COLORS[generalTier].border} border`}>
+                    <div className={`px-4 py-2 rounded-lg font-bold text-2xl ${TIER_COLORS[generalTier].bg} ${TIER_COLORS[generalTier].text} ${TIER_COLORS[generalTier].border} border-2`}>
                         {generalTier}
                     </div>
                 )}
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {TIER_CATEGORIES.map((category) => {
                     const tier = tierToLetter(ratings[category]);
                     if (!tier) return null;
                     const colors = TIER_COLORS[tier];
+                    const reason = reasons[category];
+                    const isLong = reason && reason.length > 80;
+                    const isExpanded = expandedReasons[category];
 
                     return (
-                        <div key={category} className={`p-3 rounded-xl ${colors.bg} ${colors.border} border`}>
-                            <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">
+                        <div key={category} className={`p-4 rounded-xl ${colors.bg} ${colors.border} border`}>
+                            <div className="text-sm text-gray-400 uppercase tracking-wider mb-2">
                                 {t(`builds.tier_${category}`, category.toUpperCase())}
                             </div>
-                            <div className={`text-2xl font-bold ${colors.text}`}>{tier}</div>
-                            {reasons[category] && (
-                                <div className="text-xs text-gray-300 mt-1 line-clamp-2">{reasons[category]}</div>
+                            <div className={`text-3xl font-bold ${colors.text} mb-2`}>{tier}</div>
+                            {reason && (
+                                <div className="text-sm text-gray-200 leading-relaxed">
+                                    {isLong && !isExpanded ? (
+                                        <>
+                                            {reason.slice(0, 80)}...
+                                            <button
+                                                onClick={() => toggleExpand(category)}
+                                                className="text-e7-gold hover:underline ml-1"
+                                            >
+                                                {t('common.showMore', 'Show more')}
+                                            </button>
+                                        </>
+                                    ) : (
+                                        <>
+                                            {reason}
+                                            {isLong && (
+                                                <button
+                                                    onClick={() => toggleExpand(category)}
+                                                    className="text-e7-gold hover:underline ml-1 block mt-1"
+                                                >
+                                                    {t('common.showLess', 'Show less')}
+                                                </button>
+                                            )}
+                                        </>
+                                    )}
+                                </div>
                             )}
                         </div>
                     );

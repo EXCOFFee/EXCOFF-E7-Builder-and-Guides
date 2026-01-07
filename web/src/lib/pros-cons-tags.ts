@@ -180,6 +180,14 @@ export const PROS_TAGS: Tag[] = [
     { id: 'constellation_trial', type: 'pro', category: 'pve', translations: t('Good in Constellation Trial', 'Bueno en Prueba de Constelaciones', '星座試練向き', '별자리 시련 적합', 'Bom em Prova de Constelação', '星座试炼好用') },
     { id: 'automaton_tower', type: 'pro', category: 'pve', translations: t('Good in Automaton Tower', 'Bueno en Torre Autómata', 'オートマタ塔向き', '오토마타 타워 적합', 'Bom na Torre Autômata', '自动塔好用') },
     { id: 'labyrinth', type: 'pro', category: 'pve', translations: t('Good in Labyrinth', 'Bueno en Laberinto', '迷宮向き', '미로 적합', 'Bom no Labirinto', '迷宫好用') },
+
+    // NEW PROS - Additional variety
+    { id: 'consistent_damage', type: 'pro', category: 'damage', translations: t('Consistent damage', 'Daño consistente', '安定ダメージ', '안정적 데미지', 'Dano consistente', '稳定伤害') },
+    { id: 'anti_evasion', type: 'pro', category: 'damage', translations: t('Anti-evasion', 'Anti-evasión', '回避無視', '회피 무시', 'Anti-evasão', '无视闪避') },
+    { id: 'dispel_before_damage', type: 'pro', category: 'control', translations: t('Dispel before damage', 'Dispela antes de dañar', 'ダメージ前解除', '공격 전 해제', 'Dispela antes do dano', '先驱散后伤害') },
+    { id: 'reset_cooldowns', type: 'pro', category: 'utility', translations: t('Resets cooldowns', 'Reinicia enfriamientos', 'クールダウンリセット', '재사용 대기 초기화', 'Reinicia tempos de recarga', '重置冷却') },
+    { id: 'passive_income', type: 'pro', category: 'utility', translations: t('Passive resource gain', 'Ganancia pasiva de recursos', 'パッシブ資源獲得', '패시브 자원 획득', 'Ganho passivo de recursos', '被动资源获取') },
+    { id: 'unlimited_stacking', type: 'pro', category: 'damage', translations: t('Unlimited stacking', 'Acumulación ilimitada', '無限スタック', '무한 중첩', 'Acumulação ilimitada', '无限叠加') },
 ];
 
 /**
@@ -262,6 +270,14 @@ export const CONS_TAGS: Tag[] = [
     { id: 'needs_specific_comp', type: 'con', category: 'dependencies', translations: t('Specific comp required', 'Composición específica', '特定構成必要', '특정 조합 필요', 'Composição específica necessária', '需要特定阵容') },
     { id: 'needs_attack_buffer', type: 'con', category: 'dependencies', translations: t('Needs ATK buffer', 'Necesita ATK buffer', '攻撃バッファー必要', '공버 필요', 'Precisa de ATK buffer', '需要攻击buff') },
     { id: 'synergy_dependent', type: 'con', category: 'dependencies', translations: t('Synergy dependent', 'Depende de sinergias', 'シナジー依存', '시너지 의존', 'Dependente de sinergias', '依赖协同') },
+
+    // NEW CONS - Additional variety
+    { id: 'weak_to_injury', type: 'con', category: 'fragility', translations: t('Weak to Injury', 'Débil a la Herida', '負傷に弱い', '부상에 약함', 'Fraco contra Ferimento', '怕创伤') },
+    { id: 'no_aoe', type: 'con', category: 'offense', translations: t('No AoE damage', 'Sin daño AoE', '範囲攻撃なし', '광역 공격 없음', 'Sem dano em área', '无范围伤害') },
+    { id: 'rng_dependent', type: 'con', category: 'utility_limits', translations: t('RNG dependent', 'Depende del RNG', 'RNG依存', 'RNG 의존', 'Dependente de RNG', '依赖运气') },
+    { id: 'countered_by_debuffs', type: 'con', category: 'competitive', translations: t('Weak to debuffs', 'Débil a debuffs', 'デバフに弱い', '디버프에 약함', 'Fraco contra debuffs', '怕减益') },
+    { id: 'slow_animations', type: 'con', category: 'utility_limits', translations: t('Slow animations', 'Animaciones lentas', 'アニメーションが遅い', '느린 애니메이션', 'Animações lentas', '动画慢') },
+    { id: 'outdated_kit', type: 'con', category: 'competitive', translations: t('Outdated kit', 'Kit desactualizado', '時代遅れキット', '구식 키트', 'Kit desatualizado', '技能组过时') },
 ];
 
 /**

@@ -10,6 +10,7 @@ import { ImageCarousel } from '@/components/ui/image-carousel';
 import { StarRating } from '@/components/ui/star-rating';
 import { TierRatingDisplay, TierCategory } from '@/components/ui/tier-rating-selector';
 import { ProConsDisplay } from '@/components/ui/pro-cons-selector';
+import { SynergyCounterSection, HeroWithNote } from '@/components/builds/SynergyCounterCard';
 import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
@@ -48,8 +49,8 @@ interface Build {
     skill_1?: number;
     skill_2?: number;
     skill_3?: number;
-    synergy_heroes_list?: { id: number; name: string; slug: string; element: string; hero_code?: string; image_url?: string; portrait?: string; }[];
-    counter_heroes_list?: { id: number; name: string; slug: string; element: string; hero_code?: string; image_url?: string; portrait?: string; }[];
+    synergy_heroes_list?: HeroWithNote[];
+    counter_heroes_list?: HeroWithNote[];
     images: string[];
     user: {
         id: number;
@@ -542,90 +543,18 @@ export function BuildDetailClient() {
                         <ImageCarousel images={build.images || []} title={t('builds.images', 'Images')} />
 
                         {/* Synergy Heroes */}
-                        {build.synergy_heroes_list && build.synergy_heroes_list.length > 0 && (
-                            <div className="mb-6">
-                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4 flex items-center gap-2">
-                                    {t('builds.synergyHeroes', 'Synergy Heroes')}
-                                    <span className="text-gray-500 text-base font-normal">({build.synergy_heroes_list.length})</span>
-                                </h3>
-                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                                    {build.synergy_heroes_list.map(hero => (
-                                        <Link
-                                            key={hero.id}
-                                            href={`/heroes/${hero.slug}`}
-                                            className="group flex flex-col items-center p-4 rounded-xl bg-gradient-to-br from-green-900/30 to-emerald-900/20 border-2 border-green-500/40 hover:border-green-400/60 hover:bg-gradient-to-br hover:from-green-900/40 hover:to-emerald-900/30 transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-green-500/20 hover:-translate-y-1"
-                                        >
-                                            <div className="relative">
-                                                <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-400/10 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
-                                                <Image
-                                                    src={hero.hero_code ? `${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/heroes/${hero.hero_code}_l.png` : (hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`)}
-                                                    alt={hero.name}
-                                                    width={128}
-                                                    height={128}
-                                                    className="w-32 h-32 rounded-full ring-2 ring-green-500/60 group-hover:ring-green-400 group-hover:ring-3 object-cover relative z-10 shadow-xl group-hover:scale-110 transition-all duration-300"
-                                                    unoptimized
-                                                />
-                                                {ELEMENT_IMAGES[hero.element] && (
-                                                    <Image
-                                                        src={ELEMENT_IMAGES[hero.element]}
-                                                        alt={hero.element}
-                                                        width={24}
-                                                        height={24}
-                                                        className="absolute -bottom-1 -right-1 ring-2 ring-e7-dark rounded-full bg-e7-dark/90 backdrop-blur-sm z-20 shadow-lg"
-                                                    />
-                                                )}
-                                            </div>
-                                            <span className="mt-3 text-sm text-green-300 group-hover:text-green-200 text-center font-semibold truncate max-w-full transition-colors duration-300">
-                                                {hero.name}
-                                            </span>
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                        <SynergyCounterSection
+                            title={t('builds.synergyHeroes', 'Synergy Heroes')}
+                            heroes={build.synergy_heroes_list || []}
+                            type="synergy"
+                        />
 
                         {/* Counter Heroes */}
-                        {build.counter_heroes_list && build.counter_heroes_list.length > 0 && (
-                            <div className="mb-6">
-                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4 flex items-center gap-2">
-                                    {t('builds.counterHeroes', 'Counter Heroes')}
-                                    <span className="text-gray-500 text-base font-normal">({build.counter_heroes_list.length})</span>
-                                </h3>
-                                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                                    {build.counter_heroes_list.map(hero => (
-                                        <Link
-                                            key={hero.id}
-                                            href={`/heroes/${hero.slug}`}
-                                            className="group flex flex-col items-center p-4 rounded-xl bg-gradient-to-br from-red-900/30 to-rose-900/20 border-2 border-red-500/40 hover:border-red-400/60 hover:bg-gradient-to-br hover:from-red-900/40 hover:to-rose-900/30 transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-red-500/20 hover:-translate-y-1"
-                                        >
-                                            <div className="relative">
-                                                <div className="absolute inset-0 bg-gradient-to-br from-red-400/20 to-rose-400/10 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
-                                                <Image
-                                                    src={hero.hero_code ? `${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/heroes/${hero.hero_code}_l.png` : (hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`)}
-                                                    alt={hero.name}
-                                                    width={128}
-                                                    height={128}
-                                                    className="w-32 h-32 rounded-full ring-2 ring-red-500/60 group-hover:ring-red-400 group-hover:ring-3 object-cover relative z-10 shadow-xl group-hover:scale-110 transition-all duration-300"
-                                                    unoptimized
-                                                />
-                                                {ELEMENT_IMAGES[hero.element] && (
-                                                    <Image
-                                                        src={ELEMENT_IMAGES[hero.element]}
-                                                        alt={hero.element}
-                                                        width={24}
-                                                        height={24}
-                                                        className="absolute -bottom-1 -right-1 ring-2 ring-e7-dark rounded-full bg-e7-dark/90 backdrop-blur-sm z-20 shadow-lg"
-                                                    />
-                                                )}
-                                            </div>
-                                            <span className="mt-3 text-sm text-red-300 group-hover:text-red-200 text-center font-semibold truncate max-w-full transition-colors duration-300">
-                                                {hero.name}
-                                            </span>
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                        <SynergyCounterSection
+                            title={t('builds.counterHeroes', 'Counter Heroes')}
+                            heroes={build.counter_heroes_list || []}
+                            type="counter"
+                        />
 
                         {/* Author & Actions */}
                         <div className="flex items-center justify-between pt-4 border-t border-e7-gold/20">

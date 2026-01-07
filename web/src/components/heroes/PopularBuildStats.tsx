@@ -87,7 +87,19 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
     }
 
     if (error || !stats || stats.total_builds === 0) {
-        return null; // Don't show anything if no builds
+        return (
+            <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/50 to-e7-dark/30 border border-e7-gold/20">
+                <div className="text-center py-4">
+                    <div className="text-4xl mb-3">📊</div>
+                    <h3 className="text-lg font-semibold text-gray-300 mb-2">
+                        {t('heroes.noBuildsYet', 'No builds for this hero yet')}
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                        {t('heroes.beFirst', 'Be the first to share your build!')}
+                    </p>
+                </div>
+            </div>
+        );
     }
 
     return (

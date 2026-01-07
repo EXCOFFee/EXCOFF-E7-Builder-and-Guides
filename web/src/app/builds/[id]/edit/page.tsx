@@ -7,6 +7,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SkillUpgradeInput } from '@/components/builds/SkillUpgradeInput';
+import { TierRatingSelector, TIER_CATEGORIES, TierCategory } from '@/components/ui/tier-rating-selector';
+import { ProConsSelector, TagWithNote } from '@/components/ui/pro-cons-selector';
+import { HeroSelectorWithNotes, HeroWithNote } from '@/components/builds/HeroSelectorWithNotes';
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 import { useTranslations } from '@/hooks/useTranslations';
@@ -43,6 +46,16 @@ interface Build {
     skill_1?: number;
     skill_2?: number;
     skill_3?: number;
+    rating_pve?: number;
+    rating_arena?: number;
+    rating_gw?: number;
+    rating_rta?: number;
+    reason_pve?: string;
+    reason_arena?: string;
+    reason_gw?: string;
+    reason_rta?: string;
+    pro_tags?: TagWithNote[] | string[];
+    con_tags?: TagWithNote[] | string[];
 }
 
 interface Hero {
@@ -92,33 +105,28 @@ export default function EditBuildPage() {
     const [showArtifactDropdown, setShowArtifactDropdown] = useState(false);
 
     // Synergy and Counter heroes
-    const [synergyHeroes, setSynergyHeroes] = useState<number[]>([]);
-    const [counterHeroes, setCounterHeroes] = useState<number[]>([]);
-    const [showSynergyDropdown, setShowSynergyDropdown] = useState(false);
-    const [showCounterDropdown, setShowCounterDropdown] = useState(false);
-    const [synergySearch, setSynergySearch] = useState('');
-    const [counterSearch, setCounterSearch] = useState('');
+    const [synergyHeroes, setSynergyHeroes] = useState<HeroWithNote[]>([]);
+    const [counterHeroes, setCounterHeroes] = useState<HeroWithNote[]>([]);
 
     // Anonymous option
     const [isAnonymous, setIsAnonymous] = useState(false);
 
-    // Refs for click outside
+    // Tier Ratings (D-S system)
+    const [tierRatings, setTierRatings] = useState<Partial<Record<TierCategory, number | null>>>({});
+    const [tierReasons, setTierReasons] = useState<Partial<Record<TierCategory, string>>>({});
+
+    // Pros/Cons Tags
+    const [proTags, setProTags] = useState<TagWithNote[]>([]);
+    const [conTags, setConTags] = useState<TagWithNote[]>([]);
+
     const artifactDropdownRef = useRef<HTMLDivElement>(null);
-    const synergyDropdownRef = useRef<HTMLDivElement>(null);
-    const counterDropdownRef = useRef<HTMLDivElement>(null);
 
 
-    // Click outside to close dropdowns
+    // Click outside to close artifact dropdown
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (artifactDropdownRef.current && !artifactDropdownRef.current.contains(event.target as Node)) {
                 setShowArtifactDropdown(false);
-            }
-            if (synergyDropdownRef.current && !synergyDropdownRef.current.contains(event.target as Node)) {
-                setShowSynergyDropdown(false);
-            }
-            if (counterDropdownRef.current && !counterDropdownRef.current.contains(event.target as Node)) {
-                setShowCounterDropdown(false);
             }
         };
         document.addEventListener('mousedown', handleClickOutside);
@@ -192,14 +200,48 @@ export default function EditBuildPage() {
             if (build.artifact) {
                 setArtifactId(build.artifact.id);
             }
-            if (build.synergy_heroes) {
-                setSynergyHeroes(build.synergy_heroes);
+            // Pre-fill synergy/counter heroes (handle both old number[] and new HeroWithNote[] format)
+            if (build.synergy_heroes && build.synergy_heroes.length > 0) {
+                if (typeof build.synergy_heroes[0] === 'number') {
+                    setSynergyHeroes((build.synergy_heroes as unknown as number[]).map(id => ({ id })));
+                } else {
+                    setSynergyHeroes(build.synergy_heroes as unknown as HeroWithNote[]);
+                }
             }
-            if (build.counter_heroes) {
-                setCounterHeroes(build.counter_heroes);
+            if (build.counter_heroes && build.counter_heroes.length > 0) {
+                if (typeof build.counter_heroes[0] === 'number') {
+                    setCounterHeroes((build.counter_heroes as unknown as number[]).map(id => ({ id })));
+                } else {
+                    setCounterHeroes(build.counter_heroes as unknown as HeroWithNote[]);
+                }
             }
             if (build.skill_1 !== undefined || build.skill_2 !== undefined || build.skill_3 !== undefined) {
                 setSkillLevels([build.skill_1 || 0, build.skill_2 || 0, build.skill_3 || 0]);
+            }
+            // Pre-fill tier ratings
+            const ratings: Partial<Record<TierCategory, number | null>> = {};
+            const reasons: Partial<Record<TierCategory, string>> = {};
+            if (build.rating_pve) { ratings.pve = build.rating_pve; if (build.reason_pve) reasons.pve = build.reason_pve; }
+            if (build.rating_arena) { ratings.arena = build.rating_arena; if (build.reason_arena) reasons.arena = build.reason_arena; }
+            if (build.rating_gw) { ratings.gw = build.rating_gw; if (build.reason_gw) reasons.gw = build.reason_gw; }
+            if (build.rating_rta) { ratings.rta = build.rating_rta; if (build.reason_rta) reasons.rta = build.reason_rta; }
+            setTierRatings(ratings);
+            setTierReasons(reasons);
+
+            // Pre-fill pros/cons tags (handle both old string[] and new TagWithNote[] format)
+            if (build.pro_tags) {
+                if (typeof build.pro_tags[0] === 'string') {
+                    setProTags((build.pro_tags as string[]).map(id => ({ id })));
+                } else {
+                    setProTags(build.pro_tags as TagWithNote[]);
+                }
+            }
+            if (build.con_tags) {
+                if (typeof build.con_tags[0] === 'string') {
+                    setConTags((build.con_tags as string[]).map(id => ({ id })));
+                } else {
+                    setConTags(build.con_tags as TagWithNote[]);
+                }
             }
         }
     }, [buildData]);
@@ -258,6 +300,24 @@ export default function EditBuildPage() {
 
             // Add anonymous option
             formData.append('is_anonymous', isAnonymous ? '1' : '0');
+
+            // Add tier ratings
+            TIER_CATEGORIES.forEach(cat => {
+                if (tierRatings[cat] !== null && tierRatings[cat] !== undefined) {
+                    formData.append(`rating_${cat}`, tierRatings[cat]!.toString());
+                }
+                if (tierReasons[cat]) {
+                    formData.append(`reason_${cat}`, tierReasons[cat]!);
+                }
+            });
+
+            // Add pros/cons tags as JSON
+            if (proTags.length > 0) {
+                formData.append('pro_tags', JSON.stringify(proTags));
+            }
+            if (conTags.length > 0) {
+                formData.append('con_tags', JSON.stringify(conTags));
+            }
 
             const response = await fetch(`${API_URL}/builds/${buildId}`, {
                 method: 'POST', // Use POST with _method=PUT for FormData
@@ -614,164 +674,47 @@ export default function EditBuildPage() {
                             </div>
 
                             {/* Synergy Heroes */}
-                            <div ref={synergyDropdownRef}>
-                                <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    {t('builds.synergyHeroes', 'Synergy Heroes')}
-                                    <span className="text-gray-500 text-xs ml-2">{t('builds.synergyDesc', '(Heroes that work well with this hero)')}</span>
-                                </label>
-                                <div className="relative">
-                                    <Input
-                                        type="text"
-                                        value={synergySearch}
-                                        onChange={(e) => setSynergySearch(e.target.value)}
-                                        onFocus={() => setShowSynergyDropdown(true)}
-                                        placeholder={t('builds.searchHeroToAdd', 'Search hero to add...')}
-                                        className="bg-e7-void border-e7-gold/30 text-white"
-                                    />
-                                    {showSynergyDropdown && (
-                                        <div className="absolute z-30 w-full mt-1 bg-e7-dark border border-e7-gold/30 rounded-lg shadow-xl max-h-48 overflow-y-auto">
-                                            {heroes
-                                                .filter(h => h.name.toLowerCase().includes(synergySearch.toLowerCase()) && !synergyHeroes.includes(h.id))
-                                                .slice(0, 10)
-                                                .map(hero => (
-                                                    <button
-                                                        key={hero.id}
-                                                        type="button"
-                                                        onClick={() => {
-                                                            setSynergyHeroes([...synergyHeroes, hero.id]);
-                                                            setSynergySearch('');
-                                                            setShowSynergyDropdown(false);
-                                                        }}
-                                                        className="w-full px-4 py-2 text-left hover:bg-e7-gold/20 flex items-center gap-3"
-                                                    >
-                                                        <Image
-                                                            src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
-                                                            alt={hero.name}
-                                                            width={32}
-                                                            height={32}
-                                                            className="rounded-full"
-                                                        />
-                                                        <span className="text-slate-200">{hero.name}</span>
-                                                    </button>
-                                                ))}
-                                            <button
-                                                type="button"
-                                                onClick={() => setShowSynergyDropdown(false)}
-                                                className="w-full px-4 py-2 text-gray-500 text-sm border-t border-e7-gold/10"
-                                            >
-                                                {t('common.close', 'Close')}
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
-                                {synergyHeroes.length > 0 && (
-                                    <div className="flex flex-wrap gap-2 mt-3">
-                                        {synergyHeroes.map(hId => {
-                                            const h = heroes.find(hero => hero.id === hId);
-                                            if (!h) return null;
-                                            return (
-                                                <div key={hId} className="flex items-center gap-2 bg-green-900/30 border border-green-500/30 rounded-full px-3 py-1">
-                                                    <Image
-                                                        src={h.image_url || `/images/hero/${h.slug}_s.png`}
-                                                        alt={h.name}
-                                                        width={24}
-                                                        height={24}
-                                                        className="rounded-full"
-                                                    />
-                                                    <span className="text-sm text-green-300">{h.name}</span>
-                                                    <button
-                                                        type="button"
-                                                        onClick={() => setSynergyHeroes(synergyHeroes.filter(id => id !== hId))}
-                                                        className="text-green-400 hover:text-red-400 ml-1"
-                                                    >
-                                                        ×
-                                                    </button>
-                                                </div>
-                                            );
-                                        })}
-                                    </div>
-                                )}
-                            </div>
+                            <HeroSelectorWithNotes
+                                label={t('builds.synergyHeroes', 'Synergy Heroes')}
+                                description={t('builds.synergyDesc', '(Heroes that work well with this hero)')}
+                                selectedHeroes={synergyHeroes}
+                                availableHeroes={heroes.filter(h => h.id !== build?.hero?.id)}
+                                onChange={setSynergyHeroes}
+                                type="synergy"
+                                maxHeroes={5}
+                            />
 
                             {/* Counter Heroes */}
-                            <div ref={counterDropdownRef}>
-                                <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    {t('builds.counterHeroes', 'Counter Heroes')}
-                                    <span className="text-gray-500 text-xs ml-2">{t('builds.counterDesc', '(Heroes that counter this hero)')}</span>
-                                </label>
-                                <div className="relative">
-                                    <Input
-                                        type="text"
-                                        value={counterSearch}
-                                        onChange={(e) => setCounterSearch(e.target.value)}
-                                        onFocus={() => setShowCounterDropdown(true)}
-                                        placeholder={t('builds.searchHeroToAdd', 'Search hero to add...')}
-                                        className="bg-e7-void border-e7-gold/30 text-white"
-                                    />
-                                    {showCounterDropdown && (
-                                        <div className="absolute z-30 w-full mt-1 bg-e7-dark border border-e7-gold/30 rounded-lg shadow-xl max-h-48 overflow-y-auto">
-                                            {heroes
-                                                .filter(h => h.name.toLowerCase().includes(counterSearch.toLowerCase()) && !counterHeroes.includes(h.id))
-                                                .slice(0, 10)
-                                                .map(hero => (
-                                                    <button
-                                                        key={hero.id}
-                                                        type="button"
-                                                        onClick={() => {
-                                                            setCounterHeroes([...counterHeroes, hero.id]);
-                                                            setCounterSearch('');
-                                                            setShowCounterDropdown(false);
-                                                        }}
-                                                        className="w-full px-4 py-2 text-left hover:bg-e7-gold/20 flex items-center gap-3"
-                                                    >
-                                                        <Image
-                                                            src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
-                                                            alt={hero.name}
-                                                            width={32}
-                                                            height={32}
-                                                            className="rounded-full"
-                                                        />
-                                                        <span className="text-slate-200">{hero.name}</span>
-                                                    </button>
-                                                ))}
-                                            <button
-                                                type="button"
-                                                onClick={() => setShowCounterDropdown(false)}
-                                                className="w-full px-4 py-2 text-gray-500 text-sm border-t border-e7-gold/10"
-                                            >
-                                                {t('common.close', 'Close')}
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
-                                {counterHeroes.length > 0 && (
-                                    <div className="flex flex-wrap gap-2 mt-3">
-                                        {counterHeroes.map(hId => {
-                                            const h = heroes.find(hero => hero.id === hId);
-                                            if (!h) return null;
-                                            return (
-                                                <div key={hId} className="flex items-center gap-2 bg-red-900/30 border border-red-500/30 rounded-full px-3 py-1">
-                                                    <Image
-                                                        src={h.image_url || `/images/hero/${h.slug}_s.png`}
-                                                        alt={h.name}
-                                                        width={24}
-                                                        height={24}
-                                                        className="rounded-full"
-                                                    />
-                                                    <span className="text-sm text-red-300">{h.name}</span>
-                                                    <button
-                                                        type="button"
-                                                        onClick={() => setCounterHeroes(counterHeroes.filter(id => id !== hId))}
-                                                        className="text-red-400 hover:text-red-600 ml-1"
-                                                    >
-                                                        ×
-                                                    </button>
-                                                </div>
-                                            );
-                                        })}
-                                    </div>
-                                )}
-                            </div>
+                            <HeroSelectorWithNotes
+                                label={t('builds.counterHeroes', 'Counter Heroes')}
+                                description={t('builds.counterDesc', '(Heroes that counter this hero)')}
+                                selectedHeroes={counterHeroes}
+                                availableHeroes={heroes.filter(h => h.id !== build?.hero?.id)}
+                                onChange={setCounterHeroes}
+                                type="counter"
+                                maxHeroes={5}
+                            />
+
+                            {/* Tier Ratings */}
+                            <TierRatingSelector
+                                ratings={tierRatings}
+                                reasons={tierReasons}
+                                onChange={(newRatings, newReasons) => {
+                                    setTierRatings(newRatings);
+                                    if (newReasons) setTierReasons(newReasons);
+                                }}
+                                showReasons={true}
+                            />
+
+                            {/* Pros/Cons Tags */}
+                            <ProConsSelector
+                                selectedPros={proTags}
+                                selectedCons={conTags}
+                                onChange={(pros, cons) => {
+                                    setProTags(pros);
+                                    setConTags(cons);
+                                }}
+                            />
 
                             {/* Anonymous option */}
                             <div className="flex items-center gap-3 p-4 bg-e7-void/30 rounded-lg border border-e7-gold/20">
