@@ -54,7 +54,7 @@ export function HeroSelectorWithNotes({
     availableHeroes,
     onChange,
     type,
-    maxHeroes = 5,
+    maxHeroes,
     disabled = false,
 }: HeroSelectorWithNotesProps) {
     const { t } = useTranslations();
@@ -86,17 +86,15 @@ export function HeroSelectorWithNotes({
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
-    // Filter available heroes
+    // Filter available heroes (no limit - show all matches)
     const filteredHeroes = availableHeroes.filter(hero =>
         hero.name.toLowerCase().includes(search.toLowerCase()) &&
         !selectedHeroes.some(sh => sh.id === hero.id)
-    ).slice(0, 10);
+    );
 
-    // Add hero
+    // Add hero (no limit)
     const addHero = (heroId: number) => {
-        if (selectedHeroes.length < maxHeroes) {
-            onChange([...selectedHeroes, { id: heroId }]);
-        }
+        onChange([...selectedHeroes, { id: heroId }]);
         setSearch('');
         setShowDropdown(false);
     };
@@ -182,7 +180,7 @@ export function HeroSelectorWithNotes({
                 <label className={`block text-lg font-semibold ${colors.text} mb-1`}>
                     {label}
                     <span className="text-sm font-normal text-gray-500 ml-2">
-                        ({selectedHeroes.length}/{maxHeroes})
+                        ({selectedHeroes.length})
                     </span>
                 </label>
                 {description && (
@@ -192,7 +190,7 @@ export function HeroSelectorWithNotes({
 
             {/* Instruction */}
             <p className={`text-sm ${colors.text} bg-${isSynergy ? 'green' : 'red'}-900/30 rounded-lg px-3 py-2 mb-3 border ${colors.border}`}>
-                💡 {t('builds.clickHeroForNote', 'Click on a selected hero to add a note')}
+                {t('builds.clickHeroForNote', 'Click on a selected hero to add a note')}
             </p>
 
             {/* Search Input */}
@@ -203,12 +201,12 @@ export function HeroSelectorWithNotes({
                     onChange={(e) => setSearch(e.target.value)}
                     onFocus={() => setShowDropdown(true)}
                     placeholder={t('builds.searchHeroToAdd', 'Search hero to add...')}
-                    disabled={disabled || selectedHeroes.length >= maxHeroes}
+                    disabled={disabled}
                     className={`bg-e7-dark/50 border ${colors.border} text-white`}
                 />
 
                 {showDropdown && filteredHeroes.length > 0 && (
-                    <div className="absolute z-40 w-full mt-1 bg-e7-dark border border-e7-gold/30 rounded-lg shadow-xl max-h-60 overflow-y-auto">
+                    <div className="absolute z-40 w-full mt-1 bg-e7-dark border border-e7-gold/30 rounded-lg shadow-xl max-h-96 overflow-y-auto">
                         {filteredHeroes.map(hero => (
                             <button
                                 key={hero.id}
@@ -219,8 +217,8 @@ export function HeroSelectorWithNotes({
                                 <Image
                                     src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
                                     alt={hero.name}
-                                    width={40}
-                                    height={40}
+                                    width={64}
+                                    height={64}
                                     className="rounded-full"
                                     unoptimized
                                 />
@@ -268,8 +266,8 @@ export function HeroSelectorWithNotes({
                                     <Image
                                         src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
                                         alt={hero.name}
-                                        width={48}
-                                        height={48}
+                                        width={80}
+                                        height={80}
                                         className={`rounded-full ring-2 ${colors.ring}`}
                                         unoptimized
                                     />

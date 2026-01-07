@@ -144,25 +144,77 @@ class UserBuild extends Model
     }
 
     /**
-     * Get synergy heroes
+     * Get synergy heroes with optional notes
+     * Handles both old format (number[]) and new format ({id, note}[])
      */
     public function getSynergyHeroesListAttribute()
     {
         if (empty($this->synergy_heroes)) {
             return [];
         }
-        return Hero::whereIn('id', $this->synergy_heroes)->get();
+
+        $heroesData = $this->synergy_heroes;
+        $heroIds = [];
+        $notes = [];
+
+        foreach ($heroesData as $item) {
+            if (is_array($item) && isset($item['id'])) {
+                // New format: {id, note}
+                $heroIds[] = $item['id'];
+                if (!empty($item['note'])) {
+                    $notes[$item['id']] = $item['note'];
+                }
+            } else {
+                // Old format: just the ID
+                $heroIds[] = $item;
+            }
+        }
+
+        $heroes = Hero::whereIn('id', $heroIds)->get();
+        
+        // Merge notes into hero objects
+        return $heroes->map(function ($hero) use ($notes) {
+            $heroArray = $hero->toArray();
+            $heroArray['note'] = $notes[$hero->id] ?? null;
+            return $heroArray;
+        });
     }
 
     /**
-     * Get counter heroes
+     * Get counter heroes with optional notes
+     * Handles both old format (number[]) and new format ({id, note}[])
      */
     public function getCounterHeroesListAttribute()
     {
         if (empty($this->counter_heroes)) {
             return [];
         }
-        return Hero::whereIn('id', $this->counter_heroes)->get();
+
+        $heroesData = $this->counter_heroes;
+        $heroIds = [];
+        $notes = [];
+
+        foreach ($heroesData as $item) {
+            if (is_array($item) && isset($item['id'])) {
+                // New format: {id, note}
+                $heroIds[] = $item['id'];
+                if (!empty($item['note'])) {
+                    $notes[$item['id']] = $item['note'];
+                }
+            } else {
+                // Old format: just the ID
+                $heroIds[] = $item;
+            }
+        }
+
+        $heroes = Hero::whereIn('id', $heroIds)->get();
+        
+        // Merge notes into hero objects
+        return $heroes->map(function ($hero) use ($notes) {
+            $heroArray = $hero->toArray();
+            $heroArray['note'] = $notes[$hero->id] ?? null;
+            return $heroArray;
+        });
     }
 
     /**
