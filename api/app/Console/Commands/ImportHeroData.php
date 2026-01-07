@@ -185,7 +185,10 @@ class ImportHeroData extends Command
 
                 foreach ($override['skills'] as $skillKey => $skillData) {
                     $oldSkill = $existingSkills[$skillKey] ?? [];
-                    $existingSkills[$skillKey] = array_merge($oldSkill, $skillData);
+                    
+                    // IMPORTANT: Replace skill completely instead of merging
+                    // This ensures soulburn fields are removed when not present in override
+                    $existingSkills[$skillKey] = $skillData;
                     
                     if (isset($skillData['name']) && ($oldSkill['name'] ?? '') !== $skillData['name']) {
                         $changes[] = "{$skillKey}: {$skillData['name']}";
