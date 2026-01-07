@@ -158,7 +158,7 @@
     "apocalypse-ravi": {
         "S1": {
             "name": "Hacha Espectral",
-            "description": "Ataca al enemigo con un hacha, infligiendo heridas proporcionales al dano infligido. El dano infligido aumenta proporcionalmente a la Salud maxima del lanzador. Un golpe critico cura al lanzador.",
+            "description": "Ataca al enemigo con un hacha, infligiendo heridas proporcionales al daño infligido (hasta un 10% de la Salud máxima). El daño infligido aumenta proporcionalmente a la Salud máxima del lanzador. Un golpe crítico cura al lanzador.",
             "soulburn_effect": "Otorga un turno extra."
         },
         "S2": {

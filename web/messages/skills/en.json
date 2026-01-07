@@ -158,7 +158,7 @@
     "apocalypse-ravi": {
         "S1": {
             "name": "Spectral Axe",
-            "description": "Attacks the enemy with an axe, inflicting injuries proportional to damage dealt. Damage dealt increases proportional to the caster max Health. A critical hit will heal the caster.",
+            "description": "Attacks the enemy with an axe, inflicting injuries proportional to damage dealt (up to 10% of max Health). Damage dealt increases proportional to the caster's max Health. A critical hit will heal the caster.",
             "soulburn_effect": "Grants an extra turn."
         },
         "S2": {
