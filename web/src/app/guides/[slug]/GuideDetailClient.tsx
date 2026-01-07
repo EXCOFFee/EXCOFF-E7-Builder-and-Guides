@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { ImageGallery } from '@/components/ui/image-gallery';
 import { guideApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
+import { TeamCompositionDisplay, Team } from '@/components/guides/TeamCompositionDisplay';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -77,6 +78,7 @@ interface Guide {
         code: string;
         icon?: string;
     }[];
+    teams?: Team[];
 }
 
 interface Comment {
@@ -425,6 +427,13 @@ export function GuideDetailClient() {
                         <div className="text-gray-300 whitespace-pre-wrap leading-relaxed">{guide.gameplay_content}</div>
                     </div>
                 </div>
+
+                {/* Team Compositions (new feature) */}
+                {guide.teams && guide.teams.length > 0 && (
+                    <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
+                        <TeamCompositionDisplay teams={guide.teams} />
+                    </div>
+                )}
 
                 {/* Recommended Heroes */}
                 {guide.recommended_heroes_list && guide.recommended_heroes_list.length > 0 && (

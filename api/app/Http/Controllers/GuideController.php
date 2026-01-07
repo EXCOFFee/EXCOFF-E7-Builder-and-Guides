@@ -54,10 +54,11 @@ class GuideController extends Controller
         $guide->load(['user']);
         $guide->increment('views');
 
-        // Add recommended heroes and artifacts data
+        // Add recommended heroes and artifacts data (legacy) + teams
         $response = $guide->toArray();
         $response['recommended_heroes_list'] = $guide->recommended_heroes_list;
         $response['recommended_artifacts_list'] = $guide->recommended_artifacts_list;
+        // Teams is already cast to array automatically
 
         return response()->json($response);
     }
@@ -77,7 +78,13 @@ class GuideController extends Controller
             'language' => 'nullable|string|max:5',
             'recommended_heroes' => 'nullable|array',
             'recommended_artifacts' => 'nullable|array',
+            'teams' => 'nullable|string', // JSON string
         ]);
+
+        // Parse teams JSON if provided
+        if (!empty($validated['teams'])) {
+            $validated['teams'] = json_decode($validated['teams'], true);
+        }
 
         $validated['slug'] = Str::slug($validated['title']) . '-' . Str::random(6);
         $validated['user_id'] = $request->user()->id;
@@ -127,7 +134,13 @@ class GuideController extends Controller
             'is_published' => 'sometimes|boolean',
             'recommended_heroes' => 'nullable|array',
             'recommended_artifacts' => 'nullable|array',
+            'teams' => 'nullable|string', // JSON string
         ]);
+
+        // Parse teams JSON if provided
+        if (!empty($validated['teams'])) {
+            $validated['teams'] = json_decode($validated['teams'], true);
+        }
 
         if (isset($validated['title']) && $validated['title'] !== $guide->title) {
             $validated['slug'] = Str::slug($validated['title']) . '-' . Str::random(6);

@@ -27,6 +27,7 @@ class Guide extends Model
         'alt_artifacts',
         'recommended_heroes',
         'recommended_artifacts',
+        'teams',
         'description',
         'gameplay_content',
         'video_url',
@@ -50,6 +51,7 @@ class Guide extends Model
         'alt_artifacts' => 'array',
         'recommended_heroes' => 'array',
         'recommended_artifacts' => 'array',
+        'teams' => 'array',
         'images' => 'array',
         'is_published' => 'boolean',
     ];
