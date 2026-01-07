@@ -37,7 +37,8 @@
         "images": "이미지",
         "image": "이미지",
         "clickImage": "이미지를 클릭하여 전체 크기로 보기",
-        "viewFull": "전체 크기로 보기"
+        "viewFull": "전체 크기로 보기",
+        "optional": "선택사항"
     },
     "nav": {
         "home": "홈",

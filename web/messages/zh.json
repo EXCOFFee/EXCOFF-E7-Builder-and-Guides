@@ -37,7 +37,8 @@
         "images": "图片",
         "image": "图片",
         "clickImage": "点击图片查看完整尺寸",
-        "viewFull": "查看完整尺寸"
+        "viewFull": "查看完整尺寸",
+        "optional": "可选"
     },
     "nav": {
         "home": "首页",

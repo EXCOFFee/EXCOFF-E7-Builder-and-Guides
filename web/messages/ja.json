@@ -37,7 +37,8 @@
         "images": "画像",
         "image": "画像",
         "clickImage": "クリックで画像を拡大表示",
-        "viewFull": "フルサイズで表示"
+        "viewFull": "フルサイズで表示",
+        "optional": "任意"
     },
     "nav": {
         "home": "ホーム",
