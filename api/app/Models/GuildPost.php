@@ -25,12 +25,14 @@ class GuildPost extends Model
         'likes',
         'dislikes',
         'is_active',
+        'contacts',
     ];
 
     protected $casts = [
         'tags' => 'array',
         'images' => 'array',
         'is_active' => 'boolean',
+        'contacts' => 'array',
     ];
 
     /**

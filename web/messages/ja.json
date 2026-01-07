@@ -33,7 +33,11 @@
         "backToHome": "ホームに戻る",
         "previous": "前へ",
         "close": "閉じる",
-        "allCategories": "すべてのカテゴリー"
+        "allCategories": "すべてのカテゴリー",
+        "images": "画像",
+        "image": "画像",
+        "clickImage": "クリックで画像を拡大表示",
+        "viewFull": "フルサイズで表示"
     },
     "nav": {
         "home": "ホーム",

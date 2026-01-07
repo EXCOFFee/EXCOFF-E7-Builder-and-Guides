@@ -436,21 +436,21 @@ export function ProConsDisplay({ pros, cons, compact = false }: ProConsDisplayPr
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Pros */}
             {normalizedPros.length > 0 && (
-                <div className="p-5 rounded-xl bg-gradient-to-br from-green-900/20 to-emerald-900/10 border border-green-500/30">
-                    <h4 className="text-lg text-green-400 font-semibold mb-4 flex items-center gap-2">
+                <div className="p-6 rounded-xl bg-gradient-to-br from-green-900/30 to-emerald-900/20 border border-green-500/40 shadow-lg shadow-green-500/5">
+                    <h4 className="text-xl font-display text-green-400 font-semibold mb-5 flex items-center gap-2">
                         ✓ {t('builds.pros', 'Pros')}
                     </h4>
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                         {normalizedPros.map(tagWithNote => {
                             const tag = PROS_TAGS.find(t => t.id === tagWithNote.id);
                             if (!tag) return null;
                             return (
-                                <div key={tagWithNote.id} className="bg-green-900/20 rounded-lg p-3 border border-green-500/20">
-                                    <span className="text-base font-medium text-green-300">
+                                <div key={tagWithNote.id} className="bg-gradient-to-r from-green-900/30 to-green-800/10 rounded-lg p-4 border border-green-500/30 hover:border-green-400/50 transition-colors">
+                                    <span className="text-lg font-display font-medium text-green-300">
                                         {getTagLabel(tag, locale)}
                                     </span>
                                     {tagWithNote.note && (
-                                        <p className="text-sm text-gray-300 mt-2 leading-relaxed">
+                                        <p className="text-sm text-gray-300 mt-3 leading-relaxed">
                                             {tagWithNote.note}
                                         </p>
                                     )}
@@ -463,21 +463,21 @@ export function ProConsDisplay({ pros, cons, compact = false }: ProConsDisplayPr
 
             {/* Cons */}
             {normalizedCons.length > 0 && (
-                <div className="p-5 rounded-xl bg-gradient-to-br from-red-900/20 to-rose-900/10 border border-red-500/30">
-                    <h4 className="text-lg text-red-400 font-semibold mb-4 flex items-center gap-2">
+                <div className="p-6 rounded-xl bg-gradient-to-br from-red-900/30 to-rose-900/20 border border-red-500/40 shadow-lg shadow-red-500/5">
+                    <h4 className="text-xl font-display text-red-400 font-semibold mb-5 flex items-center gap-2">
                         ✗ {t('builds.cons', 'Cons')}
                     </h4>
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                         {normalizedCons.map(tagWithNote => {
                             const tag = CONS_TAGS.find(t => t.id === tagWithNote.id);
                             if (!tag) return null;
                             return (
-                                <div key={tagWithNote.id} className="bg-red-900/20 rounded-lg p-3 border border-red-500/20">
-                                    <span className="text-base font-medium text-red-300">
+                                <div key={tagWithNote.id} className="bg-gradient-to-r from-red-900/30 to-red-800/10 rounded-lg p-4 border border-red-500/30 hover:border-red-400/50 transition-colors">
+                                    <span className="text-lg font-display font-medium text-red-300">
                                         {getTagLabel(tag, locale)}
                                     </span>
                                     {tagWithNote.note && (
-                                        <p className="text-sm text-gray-300 mt-2 leading-relaxed">
+                                        <p className="text-sm text-gray-300 mt-3 leading-relaxed">
                                             {tagWithNote.note}
                                         </p>
                                     )}

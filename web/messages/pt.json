@@ -33,7 +33,11 @@
         "backToHome": "Voltar ao Início",
         "previous": "Anterior",
         "close": "Fechar",
-        "allCategories": "Todas as Categorias"
+        "allCategories": "Todas as Categorias",
+        "images": "Imagens",
+        "image": "Imagem",
+        "clickImage": "Clique em uma imagem para ver em tamanho completo",
+        "viewFull": "Ver em tamanho completo"
     },
     "nav": {
         "home": "Início",

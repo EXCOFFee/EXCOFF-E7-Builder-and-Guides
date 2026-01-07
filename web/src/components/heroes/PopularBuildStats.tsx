@@ -90,8 +90,7 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
         return (
             <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/50 to-e7-dark/30 border border-e7-gold/20">
                 <div className="text-center py-4">
-                    <div className="text-4xl mb-3">📊</div>
-                    <h3 className="text-lg font-semibold text-gray-300 mb-2">
+                    <h3 className="text-lg font-display font-semibold text-gray-300 mb-2">
                         {t('heroes.noBuildsYet', 'No builds for this hero yet')}
                     </h3>
                     <p className="text-sm text-gray-500">
@@ -106,8 +105,8 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
         <div className="space-y-6">
             {/* Popular Sets Section */}
             <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-e7-gold/30 backdrop-blur-sm">
-                <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-4 flex items-center gap-2">
-                    📊 {t('heroes.popularSets', 'Popular Set Combinations')}
+                <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-4 flex items-center gap-2">
+                    {t('heroes.popularSets', 'Popular Set Combinations')}
                     <span className="text-sm font-normal text-gray-400">
                         ({t('heroes.fromBuilds', 'from {count} builds').replace('{count}', stats.total_builds.toString())})
                     </span>
@@ -116,29 +115,29 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Primary Sets */}
                     <div>
-                        <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">
+                        <h4 className="text-sm font-display font-semibold text-gray-400 mb-3 uppercase tracking-wide">
                             {t('builds.primarySet', 'Primary Set')}
                         </h4>
-                        <div className="space-y-2">
+                        <div className="space-y-3">
                             {stats.primary_sets.slice(0, 5).map((setData) => (
-                                <div key={setData.set} className="flex items-center gap-3">
-                                    <div className="w-8 h-8 rounded-lg bg-e7-dark/60 flex items-center justify-center border border-e7-gold/20">
+                                <div key={setData.set} className="flex items-center gap-4">
+                                    <div className="w-10 h-10 rounded-lg bg-e7-dark/60 flex items-center justify-center border border-e7-gold/20">
                                         {SET_IMAGES[setData.set.toLowerCase()] ? (
                                             <img
                                                 src={SET_IMAGES[setData.set.toLowerCase()]}
                                                 alt={setData.set}
-                                                className="w-6 h-6"
+                                                className="w-8 h-8"
                                             />
                                         ) : (
-                                            <span className="text-xs text-gray-400">{setData.set.charAt(0)}</span>
+                                            <span className="text-sm text-gray-400">{setData.set.charAt(0)}</span>
                                         )}
                                     </div>
                                     <div className="flex-1">
                                         <div className="flex items-center justify-between">
-                                            <span className="text-sm text-gray-200">{setData.set}</span>
-                                            <span className="text-sm font-semibold text-e7-gold">{setData.percentage}%</span>
+                                            <span className="text-base text-gray-200">{setData.set}</span>
+                                            <span className="text-base font-semibold text-e7-gold">{setData.percentage}%</span>
                                         </div>
-                                        <div className="h-1.5 bg-e7-dark/60 rounded-full overflow-hidden mt-1">
+                                        <div className="h-2 bg-e7-dark/60 rounded-full overflow-hidden mt-1">
                                             <div
                                                 className="h-full bg-gradient-to-r from-e7-gold to-yellow-400 rounded-full transition-all"
                                                 style={{ width: `${setData.percentage}%` }}
@@ -152,29 +151,29 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
 
                     {/* Secondary Sets */}
                     <div>
-                        <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">
+                        <h4 className="text-sm font-display font-semibold text-gray-400 mb-3 uppercase tracking-wide">
                             {t('builds.secondarySet', 'Secondary Set')}
                         </h4>
-                        <div className="space-y-2">
+                        <div className="space-y-3">
                             {stats.secondary_sets.slice(0, 5).map((setData) => (
-                                <div key={setData.set} className="flex items-center gap-3">
-                                    <div className="w-8 h-8 rounded-lg bg-e7-dark/60 flex items-center justify-center border border-e7-gold/20">
+                                <div key={setData.set} className="flex items-center gap-4">
+                                    <div className="w-10 h-10 rounded-lg bg-e7-dark/60 flex items-center justify-center border border-e7-gold/20">
                                         {SET_IMAGES[setData.set.toLowerCase()] ? (
                                             <img
                                                 src={SET_IMAGES[setData.set.toLowerCase()]}
                                                 alt={setData.set}
-                                                className="w-6 h-6"
+                                                className="w-8 h-8"
                                             />
                                         ) : (
-                                            <span className="text-xs text-gray-400">{setData.set.charAt(0)}</span>
+                                            <span className="text-sm text-gray-400">{setData.set.charAt(0)}</span>
                                         )}
                                     </div>
                                     <div className="flex-1">
                                         <div className="flex items-center justify-between">
-                                            <span className="text-sm text-gray-200">{setData.set}</span>
-                                            <span className="text-sm font-semibold text-cyan-400">{setData.percentage}%</span>
+                                            <span className="text-base text-gray-200">{setData.set}</span>
+                                            <span className="text-base font-semibold text-cyan-400">{setData.percentage}%</span>
                                         </div>
-                                        <div className="h-1.5 bg-e7-dark/60 rounded-full overflow-hidden mt-1">
+                                        <div className="h-2 bg-e7-dark/60 rounded-full overflow-hidden mt-1">
                                             <div
                                                 className="h-full bg-gradient-to-r from-cyan-500 to-blue-400 rounded-full transition-all"
                                                 style={{ width: `${setData.percentage}%` }}
@@ -191,52 +190,52 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
             {/* Tier Ratings Section */}
             {stats.average_ratings && (
                 <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-e7-gold/30 backdrop-blur-sm">
-                    <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-4">
-                        🏆 {t('builds.tierRatings', 'Tier Ratings')}
+                    <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-5">
+                        {t('builds.tierRatings', 'Tier Ratings')}
                     </h3>
 
                     <div className="flex flex-wrap gap-4 justify-center">
                         {/* General Rating */}
                         {stats.average_ratings.general && (
-                            <div className="text-center px-6 py-3 rounded-xl bg-gradient-to-br from-yellow-900/30 to-amber-900/20 border-2 border-yellow-500/50">
-                                <div className={`text-3xl font-bold ${getTierColor(stats.average_ratings.general)}`}>
+                            <div className="text-center px-8 py-4 rounded-xl bg-gradient-to-br from-yellow-900/40 to-amber-900/30 border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10">
+                                <div className={`text-4xl font-display font-bold ${getTierColor(stats.average_ratings.general)}`}>
                                     {tierToLetter(stats.average_ratings.general)}
                                 </div>
-                                <div className="text-xs text-gray-400 mt-1">{t('builds.general', 'General')}</div>
+                                <div className="text-sm font-display text-gray-300 mt-2">{t('builds.general', 'General')}</div>
                             </div>
                         )}
 
                         {/* Individual Ratings */}
                         {stats.average_ratings.pve !== undefined && (
-                            <div className="text-center px-4 py-2 rounded-lg bg-e7-dark/40 border border-gray-600/30">
-                                <div className={`text-xl font-bold ${getTierColor(stats.average_ratings.pve)}`}>
+                            <div className="text-center px-6 py-3 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
+                                <div className={`text-2xl font-display font-bold ${getTierColor(stats.average_ratings.pve)}`}>
                                     {tierToLetter(stats.average_ratings.pve)}
                                 </div>
-                                <div className="text-xs text-gray-400">{t('builds.tier_pve', 'PVE')}</div>
+                                <div className="text-sm font-display text-gray-400 mt-1">{t('builds.tier_pve', 'PVE')}</div>
                             </div>
                         )}
                         {stats.average_ratings.arena !== undefined && (
-                            <div className="text-center px-4 py-2 rounded-lg bg-e7-dark/40 border border-gray-600/30">
-                                <div className={`text-xl font-bold ${getTierColor(stats.average_ratings.arena)}`}>
+                            <div className="text-center px-6 py-3 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
+                                <div className={`text-2xl font-display font-bold ${getTierColor(stats.average_ratings.arena)}`}>
                                     {tierToLetter(stats.average_ratings.arena)}
                                 </div>
-                                <div className="text-xs text-gray-400">{t('builds.tier_arena', 'Arena')}</div>
+                                <div className="text-sm font-display text-gray-400 mt-1">{t('builds.tier_arena', 'Arena')}</div>
                             </div>
                         )}
                         {stats.average_ratings.gw !== undefined && (
-                            <div className="text-center px-4 py-2 rounded-lg bg-e7-dark/40 border border-gray-600/30">
-                                <div className={`text-xl font-bold ${getTierColor(stats.average_ratings.gw)}`}>
+                            <div className="text-center px-6 py-3 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
+                                <div className={`text-2xl font-display font-bold ${getTierColor(stats.average_ratings.gw)}`}>
                                     {tierToLetter(stats.average_ratings.gw)}
                                 </div>
-                                <div className="text-xs text-gray-400">{t('builds.tier_gw', 'Guild War')}</div>
+                                <div className="text-sm font-display text-gray-400 mt-1">{t('builds.tier_gw', 'Guild War')}</div>
                             </div>
                         )}
                         {stats.average_ratings.rta !== undefined && (
-                            <div className="text-center px-4 py-2 rounded-lg bg-e7-dark/40 border border-gray-600/30">
-                                <div className={`text-xl font-bold ${getTierColor(stats.average_ratings.rta)}`}>
+                            <div className="text-center px-6 py-3 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
+                                <div className={`text-2xl font-display font-bold ${getTierColor(stats.average_ratings.rta)}`}>
                                     {tierToLetter(stats.average_ratings.rta)}
                                 </div>
-                                <div className="text-xs text-gray-400">{t('builds.tier_rta', 'RTA')}</div>
+                                <div className="text-sm font-display text-gray-400 mt-1">{t('builds.tier_rta', 'RTA')}</div>
                             </div>
                         )}
                     </div>
@@ -246,26 +245,26 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
             {/* Popular Artifacts */}
             {stats.artifacts.length > 0 && (
                 <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-e7-gold/30 backdrop-blur-sm">
-                    <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-4">
-                        ⚔️ {t('heroes.popularArtifacts', 'Popular Artifacts')}
+                    <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-5">
+                        {t('heroes.popularArtifacts', 'Popular Artifacts')}
                     </h3>
 
                     <div className="flex flex-wrap gap-4 justify-center">
                         {stats.artifacts.map((artifact) => (
                             <div
                                 key={artifact.artifact_id}
-                                className="flex items-center gap-3 px-4 py-2 rounded-lg bg-e7-dark/40 border border-purple-500/30 hover:border-purple-400/50 transition-colors"
+                                className="flex items-center gap-4 px-5 py-3 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-800/20 border border-purple-500/40 hover:border-purple-400/60 transition-all shadow-lg hover:shadow-purple-500/10"
                             >
                                 {artifact.icon && (
                                     <img
                                         src={`https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/data/item/${artifact.icon}`}
                                         alt={artifact.name}
-                                        className="w-10 h-10 rounded"
+                                        className="w-14 h-14 rounded-lg ring-1 ring-purple-500/30"
                                     />
                                 )}
                                 <div>
-                                    <div className="text-sm text-gray-200">{artifact.name}</div>
-                                    <div className="text-xs text-purple-400 font-semibold">{artifact.percentage}%</div>
+                                    <div className="text-base font-display text-gray-200">{artifact.name}</div>
+                                    <div className="text-sm text-purple-400 font-semibold">{artifact.percentage}%</div>
                                 </div>
                             </div>
                         ))}

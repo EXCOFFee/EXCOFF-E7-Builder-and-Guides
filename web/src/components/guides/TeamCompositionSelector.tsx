@@ -222,8 +222,8 @@ export function TeamCompositionSelector({
                                             });
                                         }}
                                         className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all capitalize ${(buildModal.hero.sets || []).includes(set)
-                                                ? 'bg-e7-gold/30 text-e7-gold border border-e7-gold'
-                                                : 'bg-e7-void text-gray-400 border border-e7-gold/20 hover:border-e7-gold/50'
+                                            ? 'bg-e7-gold/30 text-e7-gold border border-e7-gold'
+                                            : 'bg-e7-void text-gray-400 border border-e7-gold/20 hover:border-e7-gold/50'
                                             }`}
                                     >
                                         {t(`builds.setNames.${set}`, set)}
@@ -480,7 +480,7 @@ export function TeamCompositionSelector({
 
                             {/* Heroes Grid */}
                             {team.heroes.length > 0 ? (
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                     {team.heroes.map((teamHero, heroIndex) => {
                                         const heroData = getHeroData(teamHero.hero_id);
                                         if (!heroData) return null;
@@ -489,13 +489,13 @@ export function TeamCompositionSelector({
                                         return (
                                             <div
                                                 key={heroIndex}
-                                                className="relative p-3 rounded-lg bg-e7-dark/50 border border-cyan-500/20 hover:border-cyan-500/50 transition-all group"
+                                                className="relative p-4 rounded-xl bg-e7-dark/50 border border-cyan-500/20 hover:border-cyan-500/50 transition-all group min-w-[160px]"
                                             >
                                                 {/* Remove button */}
                                                 <button
                                                     type="button"
                                                     onClick={() => removeHeroFromTeam(teamIndex, heroIndex)}
-                                                    className="absolute -top-2 -right-2 w-5 h-5 bg-red-600 text-white rounded-full text-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                                                    className="absolute -top-2 -right-2 w-6 h-6 bg-red-600 text-white rounded-full text-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
                                                 >
                                                     ×
                                                 </button>
@@ -509,19 +509,19 @@ export function TeamCompositionSelector({
                                                     <Image
                                                         src={heroData.image_url || `/images/hero/${heroData.slug}_s.png`}
                                                         alt={heroData.name}
-                                                        width={64}
-                                                        height={64}
+                                                        width={80}
+                                                        height={80}
                                                         className="rounded-full mx-auto ring-2 ring-cyan-500/40"
                                                         unoptimized
                                                     />
-                                                    <p className="text-sm text-cyan-300 mt-2 font-medium truncate">
+                                                    <p className="text-base text-cyan-300 mt-3 font-medium truncate">
                                                         {heroData.name}
                                                     </p>
                                                     {hasInfo && (
-                                                        <span className="text-yellow-400 text-xs">📝 {t('guides.hasBuild', 'Has build')}</span>
+                                                        <span className="text-yellow-400 text-sm mt-1 inline-block">📝 {t('guides.hasBuild', 'Has build')}</span>
                                                     )}
                                                     {!hasInfo && (
-                                                        <span className="text-gray-500 text-xs">{t('guides.clickToAddBuild', 'Click to add build')}</span>
+                                                        <span className="text-gray-500 text-sm mt-1 inline-block">{t('guides.clickToAddBuild', 'Click to add build')}</span>
                                                     )}
                                                 </button>
                                             </div>

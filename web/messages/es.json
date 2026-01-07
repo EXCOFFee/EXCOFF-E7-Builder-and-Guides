@@ -37,7 +37,11 @@
         "ratingLow": "Rating (Menor)",
         "backToHome": "Volver al Inicio",
         "previous": "Anterior",
-        "close": "Cerrar"
+        "close": "Cerrar",
+        "images": "Imágenes",
+        "image": "Imagen",
+        "clickImage": "Haz clic en una imagen para verla en tamaño completo",
+        "viewFull": "Ver en tamaño completo"
     },
     "nav": {
         "home": "Inicio",

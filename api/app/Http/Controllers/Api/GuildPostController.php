@@ -129,6 +129,12 @@ class GuildPostController extends Controller
         // Limit to 5 images max
         $imagePaths = array_slice($imagePaths, 0, 5);
 
+        // Handle contacts from form
+        $contacts = $request->input('contacts');
+        if (is_string($contacts)) {
+            $contacts = json_decode($contacts, true) ?? null;
+        }
+
         $post = GuildPost::create([
             'user_id' => $request->user()->id,
             'title' => $request->input('title'),
@@ -140,6 +146,7 @@ class GuildPostController extends Controller
             'is_active' => true,
             'likes' => 0,
             'dislikes' => 0,
+            'contacts' => $contacts,
         ]);
 
         return response()->json([
@@ -207,6 +214,12 @@ class GuildPostController extends Controller
         // Limit to 5 images max
         $imagePaths = array_slice($imagePaths, 0, 5);
 
+        // Handle contacts from form
+        $contacts = $request->input('contacts');
+        if (is_string($contacts)) {
+            $contacts = json_decode($contacts, true);
+        }
+
         // Update fields
         $updateData = [];
         if ($request->has('title')) $updateData['title'] = $request->input('title');
@@ -215,6 +228,7 @@ class GuildPostController extends Controller
         if ($request->has('language')) $updateData['language'] = $request->input('language');
         if ($tags !== null) $updateData['tags'] = $tags;
         if (!empty($imagePaths)) $updateData['images'] = $imagePaths;
+        if ($contacts !== null) $updateData['contacts'] = $contacts;
 
         $post->update($updateData);
 

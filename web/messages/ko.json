@@ -33,7 +33,11 @@
         "backToHome": "홈으로 돌아가기",
         "previous": "이전",
         "close": "닫기",
-        "allCategories": "모든 카테고리"
+        "allCategories": "모든 카테고리",
+        "images": "이미지",
+        "image": "이미지",
+        "clickImage": "이미지를 클릭하여 전체 크기로 보기",
+        "viewFull": "전체 크기로 보기"
     },
     "nav": {
         "home": "홈",

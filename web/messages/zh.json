@@ -33,7 +33,11 @@
         "backToHome": "返回首页",
         "previous": "上一页",
         "close": "关闭",
-        "allCategories": "所有分类"
+        "allCategories": "所有分类",
+        "images": "图片",
+        "image": "图片",
+        "clickImage": "点击图片查看完整尺寸",
+        "viewFull": "查看完整尺寸"
     },
     "nav": {
         "home": "首页",

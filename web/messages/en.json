@@ -37,7 +37,11 @@
         "ratingLow": "Rating (Low)",
         "backToHome": "Back to Home",
         "previous": "Previous",
-        "close": "Close"
+        "close": "Close",
+        "images": "Images",
+        "image": "Image",
+        "clickImage": "Click on an image to view full size",
+        "viewFull": "View full size"
     },
     "nav": {
         "home": "Home",
