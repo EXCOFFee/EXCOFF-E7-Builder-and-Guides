@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
-import { ImageGallery } from '@/components/ui/image-gallery';
+import { ImageCarousel } from '@/components/ui/image-carousel';
 import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
@@ -189,7 +189,7 @@ export default function GuildPostDetailPage() {
                 <div className="glass-panel border-e7-gold/20 rounded-2xl overflow-hidden backdrop-blur-xl bg-gradient-to-br from-e7-panel/90 to-e7-dark/90 shadow-2xl">
                     {/* Images */}
                     <div className="p-6">
-                        <ImageGallery images={post.images || []} title={t('guilds.images', 'Images')} />
+                        <ImageCarousel images={post.images || []} title={t('guilds.images', 'Images')} />
                     </div>
 
                     <div className="p-6">

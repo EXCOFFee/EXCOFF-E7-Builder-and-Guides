@@ -260,6 +260,10 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                                         src={`https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/data/item/${artifact.icon}`}
                                         alt={artifact.name}
                                         className="w-14 h-14 rounded-lg ring-1 ring-purple-500/30"
+                                        onError={(e) => {
+                                            const target = e.target as HTMLImageElement;
+                                            target.style.display = 'none';
+                                        }}
                                     />
                                 )}
                                 <div>

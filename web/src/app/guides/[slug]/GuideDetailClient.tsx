@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
-import { ImageGallery } from '@/components/ui/image-gallery';
+import { ImageCarousel } from '@/components/ui/image-carousel';
 import { guideApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
 import { TeamCompositionDisplay, Team } from '@/components/guides/TeamCompositionDisplay';
@@ -413,7 +413,7 @@ export function GuideDetailClient() {
                 {/* Images */}
                 {guide.images && Array.isArray(guide.images) && guide.images.length > 0 && (
                     <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
-                        <ImageGallery
+                        <ImageCarousel
                             images={guide.images.filter(img => typeof img === 'string' && img && (img.startsWith('http') || img.startsWith('data:image')))}
                             title={t('guides.images', 'Images')}
                         />
