@@ -32,7 +32,8 @@
         "ratingLow": "评分 (低)",
         "backToHome": "返回首页",
         "previous": "上一页",
-        "close": "关闭"
+        "close": "关闭",
+        "allCategories": "所有分类"
     },
     "nav": {
         "home": "首页",
@@ -349,7 +350,17 @@
             "crit_dmg": "暴伤 %",
             "eff": "效命 %",
             "res": "效抗 %"
-        }
+        },
+        "tierRatings": "强度评级",
+        "general": "综合",
+        "tier_pve": "PVE",
+        "tier_arena": "竞技场",
+        "tier_gw": "公会战",
+        "tier_rta": "RTA",
+        "tierReasonPlaceholder": "为什么给这个评级？（可选）",
+        "pros": "优点",
+        "cons": "缺点",
+        "searchTags": "搜索标签..."
     },
     "news": {
         "title": "第七史诗新闻",

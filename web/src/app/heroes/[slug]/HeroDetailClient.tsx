@@ -11,6 +11,7 @@ import { Badge } from '@/components/ui/badge';
 import { useTranslations } from '@/hooks/useTranslations';
 import { useSkillTranslations } from '@/hooks/useSkillTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
+import { PopularBuildStats } from '@/components/heroes/PopularBuildStats';
 
 interface HeroStats {
     atk: number;
@@ -399,6 +400,11 @@ export function HeroDetailClient() {
                             </CardContent>
                         </Card>
                     </div>
+                </div>
+
+                {/* Popular Build Stats from API */}
+                <div className="mb-8">
+                    <PopularBuildStats heroSlug={slug} />
                 </div>
 
                 {/* Usage Statistics */}

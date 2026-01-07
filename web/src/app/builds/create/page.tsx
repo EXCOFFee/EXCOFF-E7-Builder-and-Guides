@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SkillUpgradeInput } from '@/components/builds/SkillUpgradeInput';
+import { TierRatingSelector, TIER_CATEGORIES, TierCategory } from '@/components/ui/tier-rating-selector';
+import { ProConsSelector } from '@/components/ui/pro-cons-selector';
 import { useQuery } from '@tanstack/react-query';
 import { heroApi, buildApi } from '@/lib/api';
 import Image from 'next/image';
@@ -87,6 +89,14 @@ export default function CreateBuildPage() {
 
     // Anonymous option
     const [isAnonymous, setIsAnonymous] = useState(false);
+
+    // Tier Ratings (D-S system)
+    const [tierRatings, setTierRatings] = useState<Partial<Record<TierCategory, number | null>>>({});
+    const [tierReasons, setTierReasons] = useState<Partial<Record<TierCategory, string>>>({});
+
+    // Pros/Cons Tags
+    const [proTags, setProTags] = useState<string[]>([]);
+    const [conTags, setConTags] = useState<string[]>([]);
 
     // Refs for click outside
     const heroDropdownRef = useRef<HTMLDivElement>(null);
@@ -220,6 +230,24 @@ export default function CreateBuildPage() {
             if (skillLevels[0] > 0) formData.append('skill_1', skillLevels[0].toString());
             if (skillLevels[1] > 0) formData.append('skill_2', skillLevels[1].toString());
             if (skillLevels[2] > 0) formData.append('skill_3', skillLevels[2].toString());
+
+            // Add tier ratings
+            TIER_CATEGORIES.forEach(cat => {
+                if (tierRatings[cat] !== null && tierRatings[cat] !== undefined) {
+                    formData.append(`rating_${cat}`, tierRatings[cat]!.toString());
+                }
+                if (tierReasons[cat]) {
+                    formData.append(`reason_${cat}`, tierReasons[cat]!);
+                }
+            });
+
+            // Add pros/cons tags
+            proTags.forEach((tag, index) => {
+                formData.append(`pro_tags[${index}]`, tag);
+            });
+            conTags.forEach((tag, index) => {
+                formData.append(`con_tags[${index}]`, tag);
+            });
 
             const response = await fetch(`${API_URL}/builds`, {
                 method: 'POST',
@@ -821,6 +849,27 @@ export default function CreateBuildPage() {
                                     </div>
                                 )}
                             </div>
+
+                            {/* Tier Ratings (D-S) */}
+                            <TierRatingSelector
+                                ratings={tierRatings}
+                                reasons={tierReasons}
+                                onChange={(newRatings, newReasons) => {
+                                    setTierRatings(newRatings);
+                                    if (newReasons) setTierReasons(newReasons);
+                                }}
+                                showReasons={true}
+                            />
+
+                            {/* Pros/Cons Tags */}
+                            <ProConsSelector
+                                selectedPros={proTags}
+                                selectedCons={conTags}
+                                onChange={(pros, cons) => {
+                                    setProTags(pros);
+                                    setConTags(cons);
+                                }}
+                            />
 
                             {/* Error message */}
                             {error && (

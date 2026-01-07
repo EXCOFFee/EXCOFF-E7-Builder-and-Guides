@@ -159,6 +159,20 @@ class UserBuildController extends Controller
             'skill_1' => 'nullable|integer|min:0|max:7',
             'skill_2' => 'nullable|integer|min:0|max:7',
             'skill_3' => 'nullable|integer|min:0|max:7',
+            // Tier ratings (D=1 to S=5)
+            'rating_pve' => 'nullable|integer|min:1|max:5',
+            'rating_arena' => 'nullable|integer|min:1|max:5',
+            'rating_gw' => 'nullable|integer|min:1|max:5',
+            'rating_rta' => 'nullable|integer|min:1|max:5',
+            'reason_pve' => 'nullable|string|max:255',
+            'reason_arena' => 'nullable|string|max:255',
+            'reason_gw' => 'nullable|string|max:255',
+            'reason_rta' => 'nullable|string|max:255',
+            // Pros/Cons tags (max 5 each)
+            'pro_tags' => 'nullable|array|max:5',
+            'pro_tags.*' => 'string|max:50',
+            'con_tags' => 'nullable|array|max:5',
+            'con_tags.*' => 'string|max:50',
         ]);
 
         // Parse min_stats if JSON string
@@ -210,11 +224,24 @@ class UserBuildController extends Controller
             'artifact_id' => 'nullable|exists:artifacts,id',
             'synergy_heroes' => 'nullable|array',
             'counter_heroes' => 'nullable|array',
-            'counter_heroes' => 'nullable|array',
             'status' => 'sometimes|in:draft,published,archived',
             'skill_1' => 'nullable|integer|min:0|max:7',
             'skill_2' => 'nullable|integer|min:0|max:7',
             'skill_3' => 'nullable|integer|min:0|max:7',
+            // Tier ratings (D=1 to S=5)
+            'rating_pve' => 'nullable|integer|min:1|max:5',
+            'rating_arena' => 'nullable|integer|min:1|max:5',
+            'rating_gw' => 'nullable|integer|min:1|max:5',
+            'rating_rta' => 'nullable|integer|min:1|max:5',
+            'reason_pve' => 'nullable|string|max:255',
+            'reason_arena' => 'nullable|string|max:255',
+            'reason_gw' => 'nullable|string|max:255',
+            'reason_rta' => 'nullable|string|max:255',
+            // Pros/Cons tags (max 5 each)
+            'pro_tags' => 'nullable|array|max:5',
+            'pro_tags.*' => 'string|max:50',
+            'con_tags' => 'nullable|array|max:5',
+            'con_tags.*' => 'string|max:50',
         ]);
 
         // Handle new image uploads using ImageService

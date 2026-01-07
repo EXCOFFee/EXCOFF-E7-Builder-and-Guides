@@ -32,7 +32,8 @@
         "ratingLow": "Avaliação (Menor)",
         "backToHome": "Voltar ao Início",
         "previous": "Anterior",
-        "close": "Fechar"
+        "close": "Fechar",
+        "allCategories": "Todas as Categorias"
     },
     "nav": {
         "home": "Início",
@@ -349,7 +350,17 @@
             "crit_dmg": "D.Crit %",
             "eff": "EFI %",
             "res": "RES %"
-        }
+        },
+        "tierRatings": "Classificação por Tier",
+        "general": "Geral",
+        "tier_pve": "PVE",
+        "tier_arena": "Arena",
+        "tier_gw": "Guerra de Guilda",
+        "tier_rta": "RTA",
+        "tierReasonPlaceholder": "Por que essa classificação? (opcional)",
+        "pros": "Prós",
+        "cons": "Contras",
+        "searchTags": "Buscar tags..."
     },
     "news": {
         "title": "Notícias de Epic Seven",

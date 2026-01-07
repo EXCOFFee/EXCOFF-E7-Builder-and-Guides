@@ -32,7 +32,8 @@
         "ratingLow": "評価 (低い)",
         "backToHome": "ホームに戻る",
         "previous": "前へ",
-        "close": "閉じる"
+        "close": "閉じる",
+        "allCategories": "すべてのカテゴリー"
     },
     "nav": {
         "home": "ホーム",
@@ -349,7 +350,17 @@
             "crit_dmg": "クリダメ %",
             "eff": "効果 %",
             "res": "抵抗 %"
-        }
+        },
+        "tierRatings": "ティア評価",
+        "general": "総合",
+        "tier_pve": "PVE",
+        "tier_arena": "アリーナ",
+        "tier_gw": "ギルド戦",
+        "tier_rta": "RTA",
+        "tierReasonPlaceholder": "この評価の理由は？（任意）",
+        "pros": "長所",
+        "cons": "短所",
+        "searchTags": "タグを検索..."
     },
     "news": {
         "title": "エピックセブンニュース",

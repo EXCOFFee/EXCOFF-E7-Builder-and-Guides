@@ -6,8 +6,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
-import { ImageGallery } from '@/components/ui/image-gallery';
+import { ImageCarousel } from '@/components/ui/image-carousel';
 import { StarRating } from '@/components/ui/star-rating';
+import { TierRatingDisplay, TierCategory } from '@/components/ui/tier-rating-selector';
+import { ProConsDisplay } from '@/components/ui/pro-cons-selector';
 import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
@@ -46,8 +48,8 @@ interface Build {
     skill_1?: number;
     skill_2?: number;
     skill_3?: number;
-    synergy_heroes_list?: { id: number; name: string; slug: string; element: string; image_url?: string; portrait?: string; }[];
-    counter_heroes_list?: { id: number; name: string; slug: string; element: string; image_url?: string; portrait?: string; }[];
+    synergy_heroes_list?: { id: number; name: string; slug: string; element: string; hero_code?: string; image_url?: string; portrait?: string; }[];
+    counter_heroes_list?: { id: number; name: string; slug: string; element: string; hero_code?: string; image_url?: string; portrait?: string; }[];
     images: string[];
     user: {
         id: number;
@@ -75,6 +77,18 @@ interface Build {
     created_at: string;
     avg_rating?: number;
     rating_count?: number;
+    // Tier Ratings (D-S system)
+    rating_pve?: number | null;
+    rating_arena?: number | null;
+    rating_gw?: number | null;
+    rating_rta?: number | null;
+    reason_pve?: string;
+    reason_arena?: string;
+    reason_gw?: string;
+    reason_rta?: string;
+    // Pros/Cons tags
+    pro_tags?: string[];
+    con_tags?: string[];
 }
 
 interface Comment {
@@ -498,8 +512,34 @@ export function BuildDetailClient() {
                             </div>
                         )}
 
+                        {/* Tier Ratings (D-S) */}
+                        <div className="mb-6 p-5 bg-gradient-to-br from-e7-void/50 to-e7-panel/30 rounded-xl border border-e7-gold/10 backdrop-blur-sm">
+                            <TierRatingDisplay
+                                ratings={{
+                                    pve: build.rating_pve ?? null,
+                                    arena: build.rating_arena ?? null,
+                                    gw: build.rating_gw ?? null,
+                                    rta: build.rating_rta ?? null,
+                                }}
+                                reasons={{
+                                    pve: build.reason_pve,
+                                    arena: build.reason_arena,
+                                    gw: build.reason_gw,
+                                    rta: build.reason_rta,
+                                }}
+                            />
+                        </div>
+
+                        {/* Pros/Cons Tags */}
+                        <div className="mb-6">
+                            <ProConsDisplay
+                                pros={build.pro_tags || []}
+                                cons={build.con_tags || []}
+                            />
+                        </div>
+
                         {/* Images */}
-                        <ImageGallery images={build.images || []} title={t('builds.images', 'Images')} />
+                        <ImageCarousel images={build.images || []} title={t('builds.images', 'Images')} />
 
                         {/* Synergy Heroes */}
                         {build.synergy_heroes_list && build.synergy_heroes_list.length > 0 && (
@@ -518,7 +558,7 @@ export function BuildDetailClient() {
                                             <div className="relative">
                                                 <div className="absolute inset-0 bg-gradient-to-br from-green-400/20 to-emerald-400/10 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
                                                 <Image
-                                                    src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
+                                                    src={hero.hero_code ? `${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/heroes/${hero.hero_code}_l.png` : (hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`)}
                                                     alt={hero.name}
                                                     width={128}
                                                     height={128}
@@ -561,7 +601,7 @@ export function BuildDetailClient() {
                                             <div className="relative">
                                                 <div className="absolute inset-0 bg-gradient-to-br from-red-400/20 to-rose-400/10 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
                                                 <Image
-                                                    src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
+                                                    src={hero.hero_code ? `${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/heroes/${hero.hero_code}_l.png` : (hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`)}
                                                     alt={hero.name}
                                                     width={128}
                                                     height={128}

@@ -317,6 +317,12 @@
         "images": "Build Images (Screenshots)",
         "clickToUpload": "Click to upload images",
         "maxImages": "Maximum 5 images (PNG, JPG)",
+        "clickToViewFull": "Click on image to view full size",
+        "image": "Image",
+        "viewFull": "View full size",
+        "previous": "Previous",
+        "next": "Next",
+        "goToImage": "Go to image",
         "editBuild": "Edit Build",
         "editSubtitle": "Update your build",
         "updateBuild": "Update Build",
@@ -374,7 +380,14 @@
             "crit_dmg": "C.Dmg %",
             "eff": "EFF %",
             "res": "RES %"
-        }
+        },
+        "tierRatings": "Tier Ratings",
+        "general": "General",
+        "tier_pve": "PVE",
+        "tier_arena": "Arena",
+        "tier_gw": "Guild War",
+        "tier_rta": "RTA",
+        "tierReasonPlaceholder": "Why this rating? (optional)"
     },
     "news": {
         "title": "Epic Seven News",

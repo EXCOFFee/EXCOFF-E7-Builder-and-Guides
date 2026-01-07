@@ -34,6 +34,18 @@ class UserBuild extends Model
         'is_anonymous',
         'avg_rating',
         'rating_count',
+        // Tier ratings (D=1 to S=5)
+        'rating_pve',
+        'rating_arena',
+        'rating_gw',
+        'rating_rta',
+        'reason_pve',
+        'reason_arena',
+        'reason_gw',
+        'reason_rta',
+        // Pros/Cons tags
+        'pro_tags',
+        'con_tags',
     ];
 
     protected $casts = [
@@ -46,7 +58,58 @@ class UserBuild extends Model
         'skill_1' => 'integer',
         'skill_2' => 'integer',
         'skill_3' => 'integer',
+        'rating_pve' => 'integer',
+        'rating_arena' => 'integer',
+        'rating_gw' => 'integer',
+        'rating_rta' => 'integer',
+        'pro_tags' => 'array',
+        'con_tags' => 'array',
     ];
+
+    /**
+     * Tier rating constants (KISS: simple enum-like values)
+     */
+    public const TIER_D = 1;
+    public const TIER_C = 2;
+    public const TIER_B = 3;
+    public const TIER_A = 4;
+    public const TIER_S = 5;
+
+    /**
+     * Convert numeric tier to letter grade.
+     * SRP: Single method for tier conversion, reusable across the app.
+     */
+    public static function tierToLetter(?int $tier): ?string
+    {
+        return match ($tier) {
+            self::TIER_S => 'S',
+            self::TIER_A => 'A',
+            self::TIER_B => 'B',
+            self::TIER_C => 'C',
+            self::TIER_D => 'D',
+            default => null,
+        };
+    }
+
+    /**
+     * Calculate the general tier rating (average of all categories).
+     * Uses round() with standard rounding: 4.5+ = S, 3.5-4.4 = A, etc.
+     */
+    public function getGeneralTierAttribute(): ?int
+    {
+        $ratings = array_filter([
+            $this->rating_pve,
+            $this->rating_arena,
+            $this->rating_gw,
+            $this->rating_rta,
+        ], fn($r) => $r !== null);
+
+        if (empty($ratings)) {
+            return null;
+        }
+
+        return (int) round(array_sum($ratings) / count($ratings));
+    }
 
     /**
      * Get the user who created this build

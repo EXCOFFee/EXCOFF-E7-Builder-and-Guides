@@ -32,7 +32,8 @@
         "ratingLow": "평점 (낮음)",
         "backToHome": "홈으로 돌아가기",
         "previous": "이전",
-        "close": "닫기"
+        "close": "닫기",
+        "allCategories": "모든 카테고리"
     },
     "nav": {
         "home": "홈",
@@ -349,7 +350,17 @@
             "crit_dmg": "치피 %",
             "eff": "효적 %",
             "res": "효저 %"
-        }
+        },
+        "tierRatings": "티어 평가",
+        "general": "종합",
+        "tier_pve": "PVE",
+        "tier_arena": "아레나",
+        "tier_gw": "길드전",
+        "tier_rta": "RTA",
+        "tierReasonPlaceholder": "이 평가의 이유는? (선택)",
+        "pros": "장점",
+        "cons": "단점",
+        "searchTags": "태그 검색..."
     },
     "news": {
         "title": "에픽세븐 뉴스",

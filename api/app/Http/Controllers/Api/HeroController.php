@@ -95,4 +95,120 @@ class HeroController extends Controller
 
         return new HeroResource($hero);
     }
+
+    /**
+     * Get aggregated build statistics for a hero.
+     * 
+     * GET /api/v1/heroes/{slug}/stats
+     * Returns: set frequencies, artifact popularity, average tier ratings
+     */
+    public function buildStats(string $slug): JsonResponse
+    {
+        $hero = Hero::where('slug', $slug)->first();
+
+        if (!$hero) {
+            return response()->json([
+                'success' => false,
+                'error' => [
+                    'code' => 'HERO_NOT_FOUND',
+                    'message' => "Hero with slug '{$slug}' not found",
+                ],
+            ], 404);
+        }
+
+        $cacheKey = "heroes:stats:{$slug}";
+        
+        $stats = Cache::remember($cacheKey, 300, function () use ($hero) { // 5 min cache
+            $builds = \App\Models\UserBuild::where('hero_id', $hero->id)
+                ->where('status', 'approved')
+                ->get();
+
+            $totalBuilds = $builds->count();
+
+            if ($totalBuilds === 0) {
+                return [
+                    'total_builds' => 0,
+                    'primary_sets' => [],
+                    'secondary_sets' => [],
+                    'artifacts' => [],
+                    'average_ratings' => null,
+                ];
+            }
+
+            // Count primary sets
+            $primarySets = $builds->groupBy('primary_set')
+                ->map(fn($group, $set) => [
+                    'set' => $set,
+                    'count' => $group->count(),
+                    'percentage' => round(($group->count() / $totalBuilds) * 100, 1),
+                ])
+                ->sortByDesc('count')
+                ->values()
+                ->toArray();
+
+            // Count secondary sets
+            $secondarySets = $builds->filter(fn($b) => !empty($b->secondary_set))
+                ->groupBy('secondary_set')
+                ->map(fn($group, $set) => [
+                    'set' => $set,
+                    'count' => $group->count(),
+                    'percentage' => round(($group->count() / $totalBuilds) * 100, 1),
+                ])
+                ->sortByDesc('count')
+                ->values()
+                ->toArray();
+
+            // Count artifacts
+            $artifacts = $builds->filter(fn($b) => !empty($b->artifact_id))
+                ->groupBy('artifact_id')
+                ->map(function($group, $artifactId) use ($totalBuilds) {
+                    $artifact = \App\Models\Artifact::find($artifactId);
+                    return [
+                        'artifact_id' => $artifactId,
+                        'name' => $artifact ? $artifact->name : 'Unknown',
+                        'icon' => $artifact ? $artifact->icon : null,
+                        'count' => $group->count(),
+                        'percentage' => round(($group->count() / $totalBuilds) * 100, 1),
+                    ];
+                })
+                ->sortByDesc('count')
+                ->values()
+                ->take(5)
+                ->toArray();
+
+            // Calculate average tier ratings
+            $ratingFields = ['rating_pve', 'rating_arena', 'rating_gw', 'rating_rta'];
+            $averageRatings = [];
+            
+            foreach ($ratingFields as $field) {
+                $validRatings = $builds->filter(fn($b) => !is_null($b->$field));
+                if ($validRatings->count() > 0) {
+                    $avg = $validRatings->avg($field);
+                    $averageRatings[str_replace('rating_', '', $field)] = round($avg, 1);
+                }
+            }
+
+            // Calculate general average
+            $allRatings = [];
+            foreach ($ratingFields as $field) {
+                $allRatings = array_merge($allRatings, $builds->pluck($field)->filter()->toArray());
+            }
+            if (count($allRatings) > 0) {
+                $averageRatings['general'] = round(array_sum($allRatings) / count($allRatings), 1);
+            }
+
+            return [
+                'total_builds' => $totalBuilds,
+                'primary_sets' => $primarySets,
+                'secondary_sets' => $secondarySets,
+                'artifacts' => $artifacts,
+                'average_ratings' => !empty($averageRatings) ? $averageRatings : null,
+            ];
+        });
+
+        return response()->json([
+            'success' => true,
+            'data' => $stats,
+        ]);
+    }
 }
