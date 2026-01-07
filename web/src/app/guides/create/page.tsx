@@ -214,7 +214,6 @@ export default function CreateGuidePage() {
                                                 : 'bg-e7-void text-gray-400 border border-e7-gold/20 hover:border-e7-gold/50'
                                                 }`}
                                         >
-                                            <span className="mr-2">{cat.emoji}</span>
                                             {t(`guides.categories.${cat.key}`, cat.label)}
                                         </button>
                                     ))}
