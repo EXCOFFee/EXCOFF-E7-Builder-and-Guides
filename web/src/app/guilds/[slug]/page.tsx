@@ -63,6 +63,11 @@ interface GuildPost {
         avatar: string | null;
     };
     created_at: string;
+    contacts?: {
+        discord?: string;
+        whatsapp?: string;
+        telegram?: string;
+    };
 }
 
 interface CurrentUser {
@@ -228,6 +233,50 @@ export default function GuildPostDetailPage() {
                                 <p className="text-gray-300 whitespace-pre-wrap leading-relaxed">{post.description}</p>
                             </div>
                         </div>
+
+                        {/* Contact Links */}
+                        {post.contacts && (post.contacts.discord || post.contacts.whatsapp || post.contacts.telegram) && (
+                            <div className="p-5 bg-gradient-to-br from-indigo-900/20 to-purple-900/10 rounded-xl border border-indigo-500/20 backdrop-blur-sm mb-6">
+                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400 font-bold text-lg mb-4">
+                                    {t('guilds.contactLinks', 'Contact Links')}
+                                </h3>
+                                <div className="flex flex-wrap gap-3">
+                                    {post.contacts.discord && (
+                                        <a
+                                            href={post.contacts.discord.startsWith('http') ? post.contacts.discord : `https://${post.contacts.discord}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 px-4 py-2 bg-indigo-600/30 text-indigo-300 rounded-lg border border-indigo-500/40 hover:bg-indigo-600/50 hover:scale-105 transition-all"
+                                        >
+                                            <span className="font-semibold">Discord</span>
+                                            <span className="text-sm text-indigo-400">→</span>
+                                        </a>
+                                    )}
+                                    {post.contacts.whatsapp && (
+                                        <a
+                                            href={`https://wa.me/${post.contacts.whatsapp.replace(/[^0-9]/g, '')}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 px-4 py-2 bg-green-600/30 text-green-300 rounded-lg border border-green-500/40 hover:bg-green-600/50 hover:scale-105 transition-all"
+                                        >
+                                            <span className="font-semibold">WhatsApp</span>
+                                            <span className="text-sm text-green-400">→</span>
+                                        </a>
+                                    )}
+                                    {post.contacts.telegram && (
+                                        <a
+                                            href={post.contacts.telegram.startsWith('http') ? post.contacts.telegram : `https://${post.contacts.telegram}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 px-4 py-2 bg-cyan-600/30 text-cyan-300 rounded-lg border border-cyan-500/40 hover:bg-cyan-600/50 hover:scale-105 transition-all"
+                                        >
+                                            <span className="font-semibold">Telegram</span>
+                                            <span className="text-sm text-cyan-400">→</span>
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+                        )}
 
                         {/* Author & Actions */}
                         <div className="flex items-center justify-between pt-4 border-t border-e7-gold/20">

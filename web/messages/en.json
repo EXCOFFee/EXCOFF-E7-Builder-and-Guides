@@ -41,7 +41,8 @@
         "images": "Images",
         "image": "Image",
         "clickImage": "Click on an image to view full size",
-        "viewFull": "View full size"
+        "viewFull": "View full size",
+        "optional": "optional"
     },
     "nav": {
         "home": "Home",

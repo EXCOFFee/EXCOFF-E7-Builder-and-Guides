@@ -70,6 +70,9 @@ export default function EditGuildPostPage() {
     // Anonymous option
     const [isAnonymous, setIsAnonymous] = useState(false);
 
+    // Contacts
+    const [contacts, setContacts] = useState<{ discord?: string; whatsapp?: string; telegram?: string }>({});
+
     const TAG_LABELS: Record<string, string> = {
         casual: t('guilds.tags.casual', 'Casual'),
         chill: t('guilds.tags.chill', 'Chill'),
@@ -110,6 +113,7 @@ export default function EditGuildPostPage() {
                 setLanguage(post.language);
                 setSelectedTags(post.tags || []);
                 setImageUrls(post.images || []);
+                setContacts(post.contacts || {});
             } catch (err) {
                 setError(err instanceof Error ? err.message : 'Failed to load post');
             } finally {
@@ -169,6 +173,11 @@ export default function EditGuildPostPage() {
 
             // Add anonymous option
             formData.append('is_anonymous', isAnonymous ? '1' : '0');
+
+            // Add contacts if any
+            if (contacts.discord || contacts.whatsapp || contacts.telegram) {
+                formData.append('contacts', JSON.stringify(contacts));
+            }
 
             const response = await fetch(`${API_URL}/guilds/${slug}`, {
                 method: 'POST', // Use POST with _method=PUT for FormData
@@ -433,6 +442,43 @@ export default function EditGuildPostPage() {
                                     <div className="font-medium">{t('guilds.publishAnonymously', 'Publish anonymously')}</div>
                                     <div className="text-xs text-gray-500">{t('guilds.anonymousDesc', 'Your username will not appear in this post')}</div>
                                 </label>
+                            </div>
+
+                            {/* Contact Links */}
+                            <div>
+                                <label className="block text-sm font-medium text-gray-300 mb-2">
+                                    {t('guilds.contactLinks', 'Contact Links')} <span className="text-gray-500">({t('common.optional', 'optional')})</span>
+                                </label>
+                                <div className="space-y-3">
+                                    <div className="flex items-center gap-3">
+                                        <span className="w-24 text-sm text-indigo-400">Discord</span>
+                                        <Input
+                                            value={contacts.discord || ''}
+                                            onChange={(e) => setContacts(c => ({ ...c, discord: e.target.value }))}
+                                            placeholder="discord.gg/xxx"
+                                            className="bg-e7-void border-e7-gold/30 text-white flex-1"
+                                        />
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <span className="w-24 text-sm text-green-400">WhatsApp</span>
+                                        <Input
+                                            value={contacts.whatsapp || ''}
+                                            onChange={(e) => setContacts(c => ({ ...c, whatsapp: e.target.value }))}
+                                            placeholder="+1234567890"
+                                            className="bg-e7-void border-e7-gold/30 text-white flex-1"
+                                        />
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <span className="w-24 text-sm text-cyan-400">Telegram</span>
+                                        <Input
+                                            value={contacts.telegram || ''}
+                                            onChange={(e) => setContacts(c => ({ ...c, telegram: e.target.value }))}
+                                            placeholder="t.me/xxx"
+                                            className="bg-e7-void border-e7-gold/30 text-white flex-1"
+                                        />
+                                    </div>
+                                </div>
+                                <p className="text-xs text-gray-500 mt-2">{t('guilds.contactLinksDesc', 'Add contact links so members can reach you')}</p>
                             </div>
 
                             {/* Error message */}
