@@ -258,6 +258,56 @@ class HeroController extends Controller
                 }
             }
 
+            // Calculate priority stats (stats users recommend above base stats)
+            // We count which stats appear in min_stats across builds
+            $statCounts = [
+                'atk' => 0,
+                'hp' => 0,
+                'spd' => 0,
+                'def' => 0,
+                'chc' => 0,  // crit chance
+                'chd' => 0,  // crit damage
+                'eff' => 0,  // effectiveness
+                'efr' => 0,  // effect resistance
+            ];
+            
+            $statLabels = [
+                'atk' => 'Attack',
+                'hp' => 'HP',
+                'spd' => 'Speed',
+                'def' => 'Defense',
+                'chc' => 'Crit Chance',
+                'chd' => 'Crit Damage',
+                'eff' => 'Effectiveness',
+                'efr' => 'Effect Resistance',
+            ];
+            
+            foreach ($builds as $build) {
+                if (!empty($build->min_stats) && is_array($build->min_stats)) {
+                    foreach ($build->min_stats as $stat => $value) {
+                        if (isset($statCounts[$stat]) && !empty($value) && $value > 0) {
+                            $statCounts[$stat]++;
+                        }
+                    }
+                }
+            }
+            
+            // Sort by count and get top 4
+            arsort($statCounts);
+            $priorityStats = [];
+            $count = 0;
+            foreach ($statCounts as $stat => $statCount) {
+                if ($statCount > 0 && $count < 4) {
+                    $priorityStats[] = [
+                        'stat' => $stat,
+                        'label' => $statLabels[$stat] ?? $stat,
+                        'count' => $statCount,
+                        'percentage' => round(($statCount / $totalBuilds) * 100, 1),
+                    ];
+                    $count++;
+                }
+            }
+
             return [
                 'total_builds' => $totalBuilds,
                 'primary_sets' => $primarySets,
@@ -266,6 +316,7 @@ class HeroController extends Controller
                 'average_ratings' => !empty($averageRatings) ? $averageRatings : null,
                 'synergy_heroes' => $synergyHeroes,
                 'counter_heroes' => $counterHeroes,
+                'priority_stats' => $priorityStats,
             ];
         });
 

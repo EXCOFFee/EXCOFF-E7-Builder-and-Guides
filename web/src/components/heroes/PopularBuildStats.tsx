@@ -40,6 +40,13 @@ interface SynergyHeroStats {
     percentage: number;
 }
 
+interface PriorityStatStats {
+    stat: string;
+    label: string;
+    count: number;
+    percentage: number;
+}
+
 interface HeroBuildStats {
     total_builds: number;
     primary_sets: SetStats[];
@@ -48,6 +55,7 @@ interface HeroBuildStats {
     average_ratings: AverageRatings | null;
     synergy_heroes: SynergyHeroStats[];
     counter_heroes: SynergyHeroStats[];
+    priority_stats: PriorityStatStats[];
 }
 
 interface PopularBuildStatsProps {
@@ -200,6 +208,32 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                     </div>
                 </div>
             </div>
+
+            {/* Priority Stats Section */}
+            {stats.priority_stats && stats.priority_stats.length > 0 && (
+                <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-cyan-500/30 backdrop-blur-sm">
+                    <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-sky-400 mb-5">
+                        {t('heroes.priorityStats', 'Priority Stats')}
+                    </h3>
+
+                    <div className="flex flex-wrap gap-5 justify-center">
+                        {stats.priority_stats.map((stat, index) => (
+                            <div
+                                key={stat.stat}
+                                className={`flex flex-col items-center px-8 py-5 rounded-xl bg-gradient-to-br from-cyan-900/30 to-sky-800/20 border ${index === 0 ? 'border-2 border-cyan-400/60' : 'border-cyan-500/40'} hover:border-cyan-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-cyan-500/20 min-w-[140px]`}
+                            >
+                                <div className={`text-3xl font-display font-bold ${index === 0 ? 'text-cyan-300' : 'text-cyan-400'}`}>
+                                    {stat.percentage}%
+                                </div>
+                                <div className="text-base font-display text-gray-200 mt-2">{stat.label}</div>
+                                <div className="text-xs text-gray-500 mt-1">
+                                    ({stat.count} {t('heroes.builds', 'builds')})
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
 
             {/* Tier Ratings Section */}
             {stats.average_ratings && (

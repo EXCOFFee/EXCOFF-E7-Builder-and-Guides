@@ -53,13 +53,13 @@ export function SynergyCounterHeroCard({ hero, type }: SynergyCounterCardProps) 
         <div className={`group flex flex-col items-center p-4 rounded-xl bg-gradient-to-br ${colors.bg} border-2 ${colors.border} ${colors.hoverBorder} transition-all duration-300 backdrop-blur-sm shadow-lg ${colors.shadow} hover:-translate-y-1`}>
             <Link href={`/heroes/${hero.slug}`} className="flex flex-col items-center">
                 <div className="relative">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${colors.glow} rounded-full blur-lg group-hover:blur-xl transition-all duration-300`}></div>
+                    <div className={`absolute inset-0 bg-gradient-to-br ${colors.glow} rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300`}></div>
                     <Image
                         src={imageUrl}
                         alt={hero.name}
                         width={96}
                         height={96}
-                        className={`w-24 h-24 rounded-full ring-2 ${colors.ring} group-hover:ring-3 object-cover relative z-10 shadow-xl group-hover:scale-105 transition-all duration-300`}
+                        className={`w-24 h-24 rounded-2xl ring-2 ${colors.ring} group-hover:ring-3 object-cover relative z-10 shadow-xl group-hover:scale-105 transition-all duration-300`}
                         unoptimized
                     />
                     {ELEMENT_IMAGES[hero.element] && (
