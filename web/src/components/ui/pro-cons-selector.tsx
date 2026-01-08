@@ -180,9 +180,10 @@ export function ProConsSelector({
                 </div>
 
                 {/* Instruction message */}
-                <p className="text-sm text-green-300 bg-green-900/30 rounded-lg px-3 py-2 mb-3 border border-green-500/20">
-                    💡 {t('builds.clickTagForNote', 'Click on a selected tag to add a note')}
-                </p>
+                <div className="text-sm text-green-300 bg-gradient-to-r from-green-900/40 to-emerald-800/30 rounded-lg px-4 py-3 mb-4 border-2 border-green-500/30 backdrop-blur-sm">
+                    <span className="font-semibold">{t('builds.clickTagForNote', 'Click on a selected tag to add a note')}</span>
+                    <span className="text-gray-400 ml-2">({t('common.optional', 'optional')})</span>
+                </div>
 
                 {/* Search and Filter */}
                 <div className="flex gap-2 mb-3">
@@ -283,9 +284,10 @@ export function ProConsSelector({
                 </div>
 
                 {/* Instruction message */}
-                <p className="text-sm text-red-300 bg-red-900/30 rounded-lg px-3 py-2 mb-3 border border-red-500/20">
-                    💡 {t('builds.clickTagForNote', 'Click on a selected tag to add a note')}
-                </p>
+                <div className="text-sm text-red-300 bg-gradient-to-r from-red-900/40 to-rose-800/30 rounded-lg px-4 py-3 mb-4 border-2 border-red-500/30 backdrop-blur-sm">
+                    <span className="font-semibold">{t('builds.clickTagForNote', 'Click on a selected tag to add a note')}</span>
+                    <span className="text-gray-400 ml-2">({t('common.optional', 'optional')})</span>
+                </div>
 
                 {/* Search and Filter */}
                 <div className="flex gap-2 mb-3">

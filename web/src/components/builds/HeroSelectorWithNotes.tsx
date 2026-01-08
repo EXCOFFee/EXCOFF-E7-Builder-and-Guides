@@ -189,9 +189,10 @@ export function HeroSelectorWithNotes({
             </div>
 
             {/* Instruction */}
-            <p className={`text-sm ${colors.text} bg-${isSynergy ? 'green' : 'red'}-900/30 rounded-lg px-3 py-2 mb-3 border ${colors.border}`}>
-                {t('builds.clickHeroForNote', 'Click on a selected hero to add a note')}
-            </p>
+            <div className={`text-sm ${colors.text} bg-gradient-to-r ${isSynergy ? 'from-green-900/40 to-emerald-800/30' : 'from-red-900/40 to-rose-800/30'} rounded-lg px-4 py-3 mb-4 border-2 ${colors.border} backdrop-blur-sm`}>
+                <span className="font-semibold">{t('builds.clickHeroForNote', 'Click on a selected hero to add a note')}</span>
+                <span className="text-gray-400 ml-2">({t('common.optional', 'optional')})</span>
+            </div>
 
             {/* Search Input */}
             <div className="relative mb-4" ref={dropdownRef}>
@@ -255,31 +256,43 @@ export function HeroSelectorWithNotes({
                         return (
                             <div
                                 key={heroWithNote.id}
-                                className={`flex items-start gap-3 p-3 rounded-lg ${colors.btnBg} border ${colors.btnBorder} group`}
+                                className={`flex items-start gap-4 p-4 rounded-xl ${colors.btnBg} border-2 ${colors.btnBorder} group hover:scale-[1.01] transition-all`}
                             >
                                 <button
                                     type="button"
                                     onClick={() => openNoteModal(heroWithNote)}
-                                    className="flex items-center gap-3 flex-1 text-left"
+                                    className="flex items-center gap-4 flex-1 text-left"
                                     title={t('builds.clickToAddNote', 'Click to add note')}
                                 >
-                                    <Image
-                                        src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
-                                        alt={hero.name}
-                                        width={80}
-                                        height={80}
-                                        className={`rounded-full ring-2 ${colors.ring}`}
-                                        unoptimized
-                                    />
+                                    <div className="relative">
+                                        <Image
+                                            src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
+                                            alt={hero.name}
+                                            width={80}
+                                            height={80}
+                                            className={`rounded-xl ring-2 ${colors.ring} object-cover`}
+                                            unoptimized
+                                        />
+                                        {hero.element && ELEMENT_IMAGES[hero.element] && (
+                                            <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-e7-dark border border-e7-gold/30 flex items-center justify-center">
+                                                <Image
+                                                    src={ELEMENT_IMAGES[hero.element]}
+                                                    alt={hero.element}
+                                                    width={16}
+                                                    height={16}
+                                                />
+                                            </div>
+                                        )}
+                                    </div>
                                     <div className="flex-1 min-w-0">
                                         <div className="flex items-center gap-2">
-                                            <span className={`font-semibold ${colors.text}`}>{hero.name}</span>
-                                            {heroWithNote.note && <span className="text-yellow-400">📝</span>}
+                                            <span className={`font-display font-semibold text-lg ${colors.text}`}>{hero.name}</span>
+                                            {heroWithNote.note && <span className="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded">+{t('builds.note', 'Note')}</span>}
                                         </div>
                                         {heroWithNote.note ? (
-                                            <p className="text-xs text-gray-400 mt-1 line-clamp-2">{heroWithNote.note}</p>
+                                            <p className="text-sm text-gray-300 mt-1 line-clamp-2">{heroWithNote.note}</p>
                                         ) : (
-                                            <p className="text-xs text-gray-500 mt-1 italic">{t('builds.clickToAddNote', 'Click to add note')}</p>
+                                            <p className={`text-sm ${colors.text} mt-1 opacity-70 font-medium`}>{t('builds.clickToAddNote', 'Click to add note')}</p>
                                         )}
                                     </div>
                                 </button>
@@ -287,7 +300,7 @@ export function HeroSelectorWithNotes({
                                     type="button"
                                     onClick={() => removeHero(heroWithNote.id)}
                                     disabled={disabled}
-                                    className={`${colors.text} hover:text-red-400 text-xl font-bold transition-colors p-1`}
+                                    className="text-gray-400 hover:text-red-400 text-2xl font-bold transition-colors p-2 rounded-lg hover:bg-red-500/10"
                                 >
                                     ×
                                 </button>

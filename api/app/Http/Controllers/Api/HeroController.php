@@ -196,12 +196,76 @@ class HeroController extends Controller
                 $averageRatings['general'] = round(array_sum($allRatings) / count($allRatings), 1);
             }
 
+            // Count synergy heroes across all builds
+            $synergyHeroCounts = [];
+            foreach ($builds as $build) {
+                if (!empty($build->synergy_heroes)) {
+                    foreach ($build->synergy_heroes as $item) {
+                        $heroId = is_array($item) && isset($item['id']) ? $item['id'] : $item;
+                        if ($heroId) {
+                            $synergyHeroCounts[$heroId] = ($synergyHeroCounts[$heroId] ?? 0) + 1;
+                        }
+                    }
+                }
+            }
+            arsort($synergyHeroCounts);
+            $topSynergyHeroes = array_slice($synergyHeroCounts, 0, 5, true);
+            
+            $synergyHeroes = [];
+            foreach ($topSynergyHeroes as $heroId => $count) {
+                $heroData = \App\Models\Hero::find($heroId);
+                if ($heroData) {
+                    $synergyHeroes[] = [
+                        'hero_id' => $heroId,
+                        'name' => $heroData->name,
+                        'slug' => $heroData->slug,
+                        'image_url' => $heroData->image_url,
+                        'element' => $heroData->element,
+                        'count' => $count,
+                        'percentage' => round(($count / $totalBuilds) * 100, 1),
+                    ];
+                }
+            }
+
+            // Count counter heroes across all builds
+            $counterHeroCounts = [];
+            foreach ($builds as $build) {
+                if (!empty($build->counter_heroes)) {
+                    foreach ($build->counter_heroes as $item) {
+                        $heroId = is_array($item) && isset($item['id']) ? $item['id'] : $item;
+                        if ($heroId) {
+                            $counterHeroCounts[$heroId] = ($counterHeroCounts[$heroId] ?? 0) + 1;
+                        }
+                    }
+                }
+            }
+            arsort($counterHeroCounts);
+            $topCounterHeroes = array_slice($counterHeroCounts, 0, 5, true);
+            
+            $counterHeroes = [];
+            foreach ($topCounterHeroes as $heroId => $count) {
+                $heroData = \App\Models\Hero::find($heroId);
+                if ($heroData) {
+                    $counterHeroes[] = [
+                        'hero_id' => $heroId,
+                        'name' => $heroData->name,
+                        'slug' => $heroData->slug,
+                        'image_url' => $heroData->image_url,
+                        'element' => $heroData->element,
+                        'count' => $count,
+                        'percentage' => round(($count / $totalBuilds) * 100, 1),
+                    ];
+                }
+            }
+
             return [
                 'total_builds' => $totalBuilds,
                 'primary_sets' => $primarySets,
                 'secondary_sets' => $secondarySets,
                 'artifacts' => $artifacts,
                 'average_ratings' => !empty($averageRatings) ? $averageRatings : null,
+                'synergy_heroes' => $synergyHeroes,
+                'counter_heroes' => $counterHeroes,
             ];
         });
 

@@ -3,6 +3,8 @@
 import { useQuery } from '@tanstack/react-query';
 import { useTranslations } from '@/hooks/useTranslations';
 import { SET_IMAGES } from '@/lib/sets';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -28,12 +30,24 @@ interface AverageRatings {
     general?: number;
 }
 
+interface SynergyHeroStats {
+    hero_id: number;
+    name: string;
+    slug: string;
+    image_url: string | null;
+    element: string;
+    count: number;
+    percentage: number;
+}
+
 interface HeroBuildStats {
     total_builds: number;
     primary_sets: SetStats[];
     secondary_sets: SetStats[];
     artifacts: ArtifactStats[];
     average_ratings: AverageRatings | null;
+    synergy_heroes: SynergyHeroStats[];
+    counter_heroes: SynergyHeroStats[];
 }
 
 interface PopularBuildStatsProps {
@@ -249,28 +263,100 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                         {t('heroes.popularArtifacts', 'Popular Artifacts')}
                     </h3>
 
-                    <div className="flex flex-wrap gap-4 justify-center">
+                    <div className="flex flex-wrap gap-5 justify-center">
                         {stats.artifacts.map((artifact) => (
                             <div
                                 key={artifact.artifact_id}
-                                className="flex items-center gap-4 px-5 py-3 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-800/20 border border-purple-500/40 hover:border-purple-400/60 transition-all shadow-lg hover:shadow-purple-500/10"
+                                className="flex items-center gap-4 px-6 py-4 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-800/20 border border-purple-500/40 hover:border-purple-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/20"
                             >
-                                {artifact.icon && (
-                                    <img
-                                        src={`https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/data/item/${artifact.icon}`}
-                                        alt={artifact.name}
-                                        className="w-14 h-14 rounded-lg ring-1 ring-purple-500/30"
-                                        onError={(e) => {
-                                            const target = e.target as HTMLImageElement;
-                                            target.style.display = 'none';
-                                        }}
-                                    />
-                                )}
+                                <div className="relative w-16 h-16 rounded-lg ring-2 ring-purple-500/40 overflow-hidden bg-purple-900/50">
+                                    {artifact.icon ? (
+                                        <img
+                                            src={artifact.icon}
+                                            alt={artifact.name}
+                                            className="w-full h-full object-cover"
+                                            onError={(e) => {
+                                                const target = e.target as HTMLImageElement;
+                                                target.style.display = 'none';
+                                                const parent = target.parentElement;
+                                                if (parent) {
+                                                    parent.innerHTML = '<div class="w-full h-full flex items-center justify-center text-purple-400 text-2xl">?</div>';
+                                                }
+                                            }}
+                                        />
+                                    ) : (
+                                        <div className="w-full h-full flex items-center justify-center text-purple-400 text-2xl">?</div>
+                                    )}
+                                </div>
                                 <div>
-                                    <div className="text-base font-display text-gray-200">{artifact.name}</div>
-                                    <div className="text-sm text-purple-400 font-semibold">{artifact.percentage}%</div>
+                                    <div className="text-lg font-display text-gray-200">{artifact.name}</div>
+                                    <div className="text-base text-purple-400 font-semibold">{artifact.percentage}%</div>
                                 </div>
                             </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Popular Synergy Heroes */}
+            {stats.synergy_heroes && stats.synergy_heroes.length > 0 && (
+                <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-green-500/30 backdrop-blur-sm">
+                    <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400 mb-5">
+                        {t('heroes.popularSynergies', 'Popular Synergy Heroes')}
+                    </h3>
+
+                    <div className="flex flex-wrap gap-4 justify-center">
+                        {stats.synergy_heroes.map((hero) => (
+                            <Link
+                                key={hero.hero_id}
+                                href={`/heroes/${hero.slug}`}
+                                className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gradient-to-br from-green-900/30 to-emerald-800/20 border border-green-500/40 hover:border-green-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-green-500/20"
+                            >
+                                <Image
+                                    src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
+                                    alt={hero.name}
+                                    width={56}
+                                    height={56}
+                                    className="rounded-xl ring-2 ring-green-500/40"
+                                    unoptimized
+                                />
+                                <div>
+                                    <div className="text-base font-display text-gray-200">{hero.name}</div>
+                                    <div className="text-sm text-green-400 font-semibold">{hero.percentage}%</div>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Popular Counter Heroes */}
+            {stats.counter_heroes && stats.counter_heroes.length > 0 && (
+                <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-red-500/30 backdrop-blur-sm">
+                    <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-rose-400 mb-5">
+                        {t('heroes.popularCounters', 'Popular Counter Heroes')}
+                    </h3>
+
+                    <div className="flex flex-wrap gap-4 justify-center">
+                        {stats.counter_heroes.map((hero) => (
+                            <Link
+                                key={hero.hero_id}
+                                href={`/heroes/${hero.slug}`}
+                                className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gradient-to-br from-red-900/30 to-rose-800/20 border border-red-500/40 hover:border-red-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-red-500/20"
+                            >
+                                <Image
+                                    src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
+                                    alt={hero.name}
+                                    width={56}
+                                    height={56}
+                                    className="rounded-xl ring-2 ring-red-500/40"
+                                    unoptimized
+                                />
+                                <div>
+                                    <div className="text-base font-display text-gray-200">{hero.name}</div>
+                                    <div className="text-sm text-red-400 font-semibold">{hero.percentage}%</div>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
