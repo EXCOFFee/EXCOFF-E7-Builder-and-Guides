@@ -126,8 +126,10 @@ export const guildApi = {
 };
 
 export const commentApi = {
-  create: (data: { type: 'build' | 'guide'; id: number; content: string; is_anonymous?: boolean }) =>
+  create: (data: { type: 'build' | 'guide'; id: number; content: string; is_anonymous?: boolean; parent_id?: number }) =>
     api.post('/comments', data),
+  update: (id: number, content: string) =>
+    api.put(`/comments/${id}`, { content }),
   delete: (id: number) =>
     api.delete(`/comments/${id}`),
 };

@@ -105,12 +105,46 @@ class CommentController extends Controller
     }
 
     /**
+     * Update a comment (owner only, within 24 hours)
+     */
+    public function update(Request $request, Comment $comment): JsonResponse
+    {
+        $user = $request->user();
+
+        // Check if user is owner
+        if ($comment->user_id !== $user->id) {
+            return response()->json(['error' => 'Unauthorized'], 403);
+        }
+
+        // Check if within 24 hours
+        $hoursOld = $comment->created_at->diffInHours(now());
+        if ($hoursOld > 24) {
+            return response()->json(['error' => 'Comments can only be edited within 24 hours of posting'], 422);
+        }
+
+        $content = $request->input('content');
+        if (!$content || empty(trim(strip_tags($content)))) {
+            return response()->json(['error' => 'Comment content cannot be empty'], 422);
+        }
+
+        $comment->update([
+            'content' => strip_tags($content),
+        ]);
+
+        $comment->load('user');
+
+        return response()->json($this->formatComment($comment));
+    }
+
+    /**
      * Format comment for API response
      */
     private function formatComment(Comment $comment): array
     {
         return [
             'id' => $comment->id,
+            'user_id' => $comment->user_id, // For edit permission check
+            'parent_id' => $comment->parent_id, // For reply structure
             'content' => $comment->content,
             'is_anonymous' => $comment->is_anonymous,
             'user' => $comment->is_anonymous ? null : [

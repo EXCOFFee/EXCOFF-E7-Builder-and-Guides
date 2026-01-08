@@ -282,15 +282,13 @@ export default function EditBuildPage() {
                 formData.append(`images[${index}]`, file);
             });
 
-            // Add synergy and counter heroes
+            // Add synergy and counter heroes as JSON (same format as create page)
             if (synergyHeroes.length > 0) {
-                synergyHeroes.forEach((heroId, index) => {
-                    formData.append(`synergy_heroes[${index}]`, heroId.toString());
-                });
+                formData.append('synergy_heroes', JSON.stringify(synergyHeroes));
             }
-            counterHeroes.forEach((heroId, index) => {
-                formData.append(`counter_heroes[${index}]`, heroId.toString());
-            });
+            if (counterHeroes.length > 0) {
+                formData.append('counter_heroes', JSON.stringify(counterHeroes));
+            }
 
 
             // Add skill levels

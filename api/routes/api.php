@@ -84,6 +84,7 @@ Route::middleware(['auth:sanctum', 'throttle:30,1'])->group(function () {
 
     // Comments
     Route::post('/comments', [CommentController::class, 'store']);
+    Route::put('/comments/{comment}', [CommentController::class, 'update']);
     Route::delete('/comments/{comment}', [CommentController::class, 'destroy']);
 
     // Reports
