@@ -8,15 +8,17 @@ return [
     |--------------------------------------------------------------------------
     |
     | EXCOFF E7 Hub - Headless Architecture
-    | Frontend: Vercel (excoffe7.com) | Backend: Hostinger
+    | Frontend: excoff67.com | Backend: Hostinger
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie', 'images/*', 'storage/*'],
 
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
+        'https://excoff67.com',
+        'https://www.excoff67.com',
         'https://excoffe7.com',
         'https://www.excoffe7.com',
         'https://excoff-e7-orbis-helper.vercel.app',
@@ -26,7 +28,7 @@ return [
     ],
 
     'allowed_origins_patterns' => [
-        '/^https:\\/\\/.*excoff.*\\.vercel\\.app$/',  // All Vercel preview deployments
+        '/^https:\/\/.*excoff.*\.vercel\.app$/',  // All Vercel preview deployments
     ],
 
     'allowed_headers' => ['*'],

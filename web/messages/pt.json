@@ -395,7 +395,10 @@
         "tierReasonPlaceholder": "Por que essa classificação? (opcional)",
         "pros": "Prós",
         "cons": "Contras",
-        "searchTags": "Buscar tags..."
+        "searchTags": "Buscar tags...",
+        "exportImage": "Exportar Imagem",
+        "exporting": "Exportando...",
+        "exportError": "Erro ao exportar a imagem. Por favor tente novamente."
     },
     "news": {
         "title": "Notícias de Epic Seven",

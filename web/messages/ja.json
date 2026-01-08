@@ -395,7 +395,10 @@
         "tierReasonPlaceholder": "この評価の理由は？（任意）",
         "pros": "長所",
         "cons": "短所",
-        "searchTags": "タグを検索..."
+        "searchTags": "タグを検索...",
+        "exportImage": "画像をエクスポート",
+        "exporting": "エクスポート中...",
+        "exportError": "画像のエクスポートに失敗しました。もう一度お試しください。"
     },
     "news": {
         "title": "エピックセブンニュース",

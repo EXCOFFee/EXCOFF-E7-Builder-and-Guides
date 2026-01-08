@@ -395,7 +395,10 @@
         "tierReasonPlaceholder": "为什么给这个评级？（可选）",
         "pros": "优点",
         "cons": "缺点",
-        "searchTags": "搜索标签..."
+        "searchTags": "搜索标签...",
+        "exportImage": "导出图片",
+        "exporting": "导出中...",
+        "exportError": "导出图片失败。请重试。"
     },
     "news": {
         "title": "第七史诗新闻",

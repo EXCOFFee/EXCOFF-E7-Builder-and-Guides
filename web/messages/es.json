@@ -411,7 +411,10 @@
         "tier_arena": "Arena",
         "tier_gw": "Guerra de Gremio",
         "tier_rta": "RTA",
-        "tierReasonPlaceholder": "¿Por qué esta calificación? (opcional)"
+        "tierReasonPlaceholder": "¿Por qué esta calificación? (opcional)",
+        "exportImage": "Exportar Imagen",
+        "exporting": "Exportando...",
+        "exportError": "Error al exportar la imagen. Por favor intenta de nuevo."
     },
     "news": {
         "title": "Noticias de Epic Seven",

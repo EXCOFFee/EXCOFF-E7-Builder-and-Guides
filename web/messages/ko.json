@@ -395,7 +395,10 @@
         "tierReasonPlaceholder": "이 평가의 이유는? (선택)",
         "pros": "장점",
         "cons": "단점",
-        "searchTags": "태그 검색..."
+        "searchTags": "태그 검색...",
+        "exportImage": "이미지 내보내기",
+        "exporting": "내보내는 중...",
+        "exportError": "이미지 내보내기 실패. 다시 시도해 주세요."
     },
     "news": {
         "title": "에픽세븐 뉴스",
