@@ -61,6 +61,17 @@ const CLASS_NAMES: Record<string, string> = {
     soul_weaver: 'Soul Weaver',
 };
 
+const LANGUAGES = ['all', 'en', 'es', 'ko', 'ja', 'zh', 'pt'];
+const LANGUAGE_LABELS: Record<string, string> = {
+    all: 'All Languages',
+    en: 'English',
+    es: 'Español',
+    ko: '한국어',
+    ja: '日本語',
+    zh: '中文',
+    pt: 'Português',
+};
+
 
 interface Build {
     id: number;
@@ -103,6 +114,7 @@ export default function BuildsPage() {
     const [selectedClass, setSelectedClass] = useState<string | null>(null);
     const [selectedRarity, setSelectedRarity] = useState<number | null>(null);
     const [sortBy, setSortBy] = useState<'newest' | 'views_desc' | 'views_asc' | 'likes_desc' | 'likes_asc'>('newest');
+    const [selectedLanguage, setSelectedLanguage] = useState<string>('all');
 
     // Advanced filters
     const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
@@ -110,7 +122,7 @@ export default function BuildsPage() {
     const [minSpeed, setMinSpeed] = useState<string>('');
 
     const { data, isLoading } = useQuery({
-        queryKey: ['builds', search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed],
+        queryKey: ['builds', search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, selectedLanguage],
         queryFn: async () => {
             const params = new URLSearchParams();
             if (search) params.append('search', search);
@@ -119,6 +131,7 @@ export default function BuildsPage() {
             if (selectedRarity) params.append('rarity', selectedRarity.toString());
             if (primarySet) params.append('primary_set', primarySet);
             if (minSpeed && parseInt(minSpeed) > 0) params.append('min_speed', minSpeed);
+            if (selectedLanguage && selectedLanguage !== 'all') params.append('language', selectedLanguage);
 
             const response = await fetch(`${API_URL}/builds?${params}`);
             if (!response.ok) throw new Error('Failed to fetch builds');
@@ -254,6 +267,17 @@ export default function BuildsPage() {
                             <option value="views_asc">{t('common.viewsLow', 'Views (Low)')}</option>
                             <option value="likes_desc">{t('common.likesHigh', 'Likes (High)')}</option>
                             <option value="likes_asc">{t('common.likesLow', 'Likes (Low)')}</option>
+                        </select>
+
+                        {/* Language Filter */}
+                        <select
+                            value={selectedLanguage}
+                            onChange={(e) => setSelectedLanguage(e.target.value)}
+                            className="bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg pl-3 pr-10 py-2 text-sm focus:border-e7-gold focus:ring-e7-gold/30 cursor-pointer"
+                        >
+                            {LANGUAGES.map((lang) => (
+                                <option key={lang} value={lang}>{LANGUAGE_LABELS[lang]}</option>
+                            ))}
                         </select>
 
                         <button

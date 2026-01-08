@@ -10,7 +10,7 @@ export default function Home() {
 
   const features = [
     {
-      icon: "🗡️",
+      icon: "",
       href: "/heroes",
       title: t('home.heroWiki', 'Hero Wiki'),
       desc: t('home.heroWikiDesc', 'Explore all the heroes in the game, their information and builds created by the community.'),
@@ -19,7 +19,7 @@ export default function Home() {
       borderColor: "hover:border-red-500/50",
     },
     {
-      icon: "📊",
+      icon: "",
       href: "/builds",
       title: t('home.communityBuilds', 'Community Builds'),
       desc: t('home.communityBuildsDesc', 'Create and share your builds with recommended stats, sets and artifacts.'),
@@ -28,7 +28,7 @@ export default function Home() {
       borderColor: "hover:border-blue-500/50",
     },
     {
-      icon: "⚔️",
+      icon: "",
       href: "/guides",
       title: t('home.gameGuides', 'Game Guides'),
       desc: t('home.gameGuidesDesc', 'Guides for PVE, RTA, Arena, Guild War and more game content.'),
@@ -37,7 +37,7 @@ export default function Home() {
       borderColor: "hover:border-purple-500/50",
     },
     {
-      icon: "🏰",
+      icon: "",
       href: "/guilds",
       title: t('nav.guilds', 'Guilds'),
       desc: t('guilds.subtitle', 'Find your perfect guild or recruit new members'),
@@ -46,7 +46,7 @@ export default function Home() {
       borderColor: "hover:border-green-500/50",
     },
     {
-      icon: "📰",
+      icon: "",
       href: "/news",
       title: t('nav.news', 'News'),
       desc: t('news.subtitle', 'Latest updates, announcements and videos'),
@@ -67,7 +67,7 @@ export default function Home() {
             <div className="relative w-24 h-24 md:w-32 md:h-32">
               <Image
                 src="/images/icon_menu_orbis.png"
-                alt="E7 Orbis Helper"
+                alt="EXCOFF E7 HUB"
                 fill
                 className="object-contain rounded-xl"
                 priority
@@ -126,10 +126,7 @@ export default function Home() {
             {features.map((feature, index) => (
               <Link key={index} href={feature.href}>
                 <div className="group p-5 rounded-lg bg-e7-panel border border-white/6 hover:border-e7-gold/30 transition-colors h-full">
-                  <div className="text-3xl mb-3">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-base font-medium text-neutral-200 mb-2 group-hover:text-e7-gold transition-colors">
+                  <h3 className="font-display text-base font-medium text-neutral-200 mb-2 group-hover:text-e7-gold transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-neutral-500 text-sm mb-2">
@@ -205,7 +202,13 @@ export default function Home() {
             <p>{t('footer.notAffiliated', 'EpicSevenHub is not affiliated with Smilegate or Super Creative.')}</p>
             <p>{t('footer.copyright', 'Epic Seven and all its content are property of their respective owners.')}</p>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
+            <a href="https://discord.gg/Tx7Nr6vJjp" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-indigo-400 transition-colors text-sm flex items-center gap-1">
+              Discord
+            </a>
+            <a href="https://www.youtube.com/@EXCOFFe7" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-red-400 transition-colors text-sm flex items-center gap-1">
+              YouTube
+            </a>
             <Link href="/heroes" className="text-slate-400 hover:text-e7-gold transition-colors text-sm">
               {t('nav.heroes', 'Heroes')}
             </Link>

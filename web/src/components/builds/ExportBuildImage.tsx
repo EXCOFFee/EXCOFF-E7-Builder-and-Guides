@@ -25,13 +25,24 @@ export function ExportBuildImage({ buildRef, heroName, buildTitle }: ExportBuild
         setIsExporting(true);
 
         try {
-            // Configure html2canvas
-            const canvas = await html2canvas(buildRef.current, {
+            // Clone the element to avoid modifying the original
+            const element = buildRef.current;
+
+            // Configure html2canvas with improved settings for cross-origin images
+            const canvas = await html2canvas(element, {
                 backgroundColor: '#0a0a0f', // e7-void background
                 scale: 2, // Higher quality
                 useCORS: true, // Allow cross-origin images
-                allowTaint: true,
+                allowTaint: false, // Don't allow tainted canvas
                 logging: false,
+                imageTimeout: 15000, // Longer timeout for images
+                onclone: (clonedDoc) => {
+                    // Find all images in the cloned document and add crossorigin attribute
+                    const images = clonedDoc.querySelectorAll('img');
+                    images.forEach((img) => {
+                        img.crossOrigin = 'anonymous';
+                    });
+                },
             });
 
             // Convert to PNG and download
@@ -56,14 +67,9 @@ export function ExportBuildImage({ buildRef, heroName, buildTitle }: ExportBuild
             className="border-purple-500/30 text-purple-400 hover:bg-purple-500/20 flex items-center gap-2"
         >
             {isExporting ? (
-                <>
-                    <span className="animate-spin">⏳</span>
-                    {t('builds.exporting', 'Exporting...')}
-                </>
+                t('builds.exporting', 'Exporting...')
             ) : (
-                <>
-                    📷 {t('builds.exportImage', 'Export Image')}
-                </>
+                t('builds.exportImage', 'Export Image')
             )}
         </Button>
     );

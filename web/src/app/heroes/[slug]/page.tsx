@@ -40,7 +40,7 @@ export async function generateMetadata(
                 canonical: `https://excoffe7.com/heroes/${slug}`,
             },
             openGraph: {
-                title: `${hero.name} | E7 Orbis Helper`,
+                title: `${hero.name} | EXCOFF E7 HUB`,
                 description,
                 type: 'profile',
                 images: hero.image_url ? [hero.image_url] : [],
@@ -48,14 +48,14 @@ export async function generateMetadata(
             },
             twitter: {
                 card: 'summary_large_image',
-                title: `${hero.name} | E7 Orbis Helper`,
+                title: `${hero.name} | EXCOFF E7 HUB`,
                 description,
                 images: hero.image_url ? [hero.image_url] : [],
             },
         };
     } catch {
         return {
-            title: 'Hero | E7 Orbis Helper',
+            title: 'Hero | EXCOFF E7 HUB',
             description: 'View Epic Seven hero details, builds, and stats.',
         };
     }

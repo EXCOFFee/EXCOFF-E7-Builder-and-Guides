@@ -2,10 +2,16 @@
 
 /**
  * Hero Image URL utility with cache-busting
- * Version is updated when images are changed to force browser cache refresh
- * Increment IMAGE_VERSION when updating hero images
+ * Uses hour-based timestamp to ensure images refresh every hour
+ * This helps with stale cached images after updates
  */
-export const IMAGE_VERSION = '20260108'; // YYYYMMDD format - increment when images change
+
+// Generate version based on current hour (refreshes cache hourly)
+function getHourlyVersion(): string {
+    const now = new Date();
+    // Format: YYYYMMDDHH
+    return `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}${String(now.getHours()).padStart(2, '0')}`;
+}
 
 /**
  * Get hero image URL with cache-busting version
@@ -17,15 +23,27 @@ export function getHeroImageUrl(
 ): string {
     const baseUrl = apiUrl || (process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '');
     const url = `${baseUrl}/images/heroes/${heroCodeOrSlug}_${size}.png`;
-    return `${url}?v=${IMAGE_VERSION}`;
+    return `${url}?v=${getHourlyVersion()}`;
 }
 
 /**
- * Get hero image URL from image_url field with cache-busting
+ * Get image URL with cache-busting version
+ * @param imageUrl - The original image URL
+ * @param updatedAt - Optional updated_at timestamp from API for more precise cache invalidation
  */
-export function appendImageVersion(imageUrl: string | null | undefined): string {
+export function appendImageVersion(imageUrl: string | null | undefined, updatedAt?: string): string {
     if (!imageUrl) return '';
+
+    // Use updated_at timestamp if provided, otherwise use hourly version
+    let version: string;
+    if (updatedAt) {
+        // Use timestamp from updated_at (e.g., "2026-01-08T10:30:00Z" -> "20260108103000")
+        version = updatedAt.replace(/[-:TZ]/g, '').slice(0, 14);
+    } else {
+        version = getHourlyVersion();
+    }
+
     // Check if URL already has query params
     const separator = imageUrl.includes('?') ? '&' : '?';
-    return `${imageUrl}${separator}v=${IMAGE_VERSION}`;
+    return `${imageUrl}${separator}v=${version}`;
 }

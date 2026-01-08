@@ -12,6 +12,7 @@ import { useTranslations } from '@/hooks/useTranslations';
 import { useSkillTranslations } from '@/hooks/useSkillTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { PopularBuildStats } from '@/components/heroes/PopularBuildStats';
+import { appendImageVersion } from '@/lib/heroImages';
 
 interface HeroStats {
     atk: number;
@@ -323,7 +324,7 @@ export function HeroDetailClient() {
                             <div className="aspect-square bg-e7-panel rounded-lg overflow-hidden border border-e7-gold/30">
                                 {hero.image_url ? (
                                     <Image
-                                        src={hero.image_url}
+                                        src={appendImageVersion(hero.image_url)}
                                         alt={hero.name}
                                         width={320}
                                         height={320}

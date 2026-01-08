@@ -45,7 +45,7 @@ export async function generateMetadata(
                 canonical: `https://excoffe7.com/guides/${slug}`,
             },
             openGraph: {
-                title: `${title} | E7 Orbis Helper`,
+                title: `${title} | EXCOFF E7 HUB`,
                 description,
                 type: 'article',
                 images: guide.hero?.portrait ? [guide.hero.portrait] : [],
@@ -53,14 +53,14 @@ export async function generateMetadata(
             },
             twitter: {
                 card: 'summary_large_image',
-                title: `${title} | E7 Orbis Helper`,
+                title: `${title} | EXCOFF E7 HUB`,
                 description,
                 images: guide.hero?.portrait ? [guide.hero.portrait] : [],
             },
         };
     } catch {
         return {
-            title: 'Guide | E7 Orbis Helper',
+            title: 'Guide | EXCOFF E7 HUB',
             description: 'View community guides for Epic Seven.',
         };
     }
