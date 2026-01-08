@@ -123,7 +123,11 @@
         "passiveSkill": "Passive or support skill",
         "searchBuilds": "Search builds...",
         "allSets": "All Sets",
-        "noBuildsMatch": "No builds match your filters"
+        "noBuildsMatch": "No builds match your filters",
+        "popularSynergies": "Popular Synergy Heroes",
+        "popularCounters": "Popular Counter Heroes",
+        "priorityStats": "Priority Stats",
+        "builds": "builds"
     },
     "elements": {
         "fire": "Fire",

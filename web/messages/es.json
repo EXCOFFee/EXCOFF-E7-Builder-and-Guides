@@ -121,7 +121,11 @@
         "passiveSkill": "Habilidad pasiva o de soporte",
         "searchBuilds": "Buscar builds...",
         "allSets": "Todos los Sets",
-        "noBuildsMatch": "Ninguna build coincide con tus filtros"
+        "noBuildsMatch": "Ninguna build coincide con tus filtros",
+        "popularSynergies": "Héroes Sinergia Populares",
+        "popularCounters": "Héroes Counter Populares",
+        "priorityStats": "Stats Prioritarias",
+        "builds": "builds"
     },
     "elements": {
         "fire": "Fuego",

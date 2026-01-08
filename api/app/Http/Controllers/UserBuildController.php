@@ -195,7 +195,8 @@ class UserBuildController extends Controller
         }
 
         $validated['language'] = $validated['language'] ?? 'en';
-        $validated['is_anonymous'] = $validated['is_anonymous'] ?? false;
+        // Convert '1'/'0' string to boolean (FormData sends as string)
+        $validated['is_anonymous'] = filter_var($validated['is_anonymous'] ?? false, FILTER_VALIDATE_BOOLEAN);
 
         // Handle image uploads using ImageService (SOLID: dependency injection)
         $imagePaths = [];
@@ -270,6 +271,11 @@ class UserBuildController extends Controller
         }
         if (isset($validated['counter_heroes']) && is_string($validated['counter_heroes'])) {
             $validated['counter_heroes'] = json_decode($validated['counter_heroes'], true);
+        }
+        
+        // Convert '1'/'0' string to boolean (FormData sends as string)
+        if (isset($validated['is_anonymous'])) {
+            $validated['is_anonymous'] = filter_var($validated['is_anonymous'], FILTER_VALIDATE_BOOLEAN);
         }
 
         // Handle new image uploads using ImageService

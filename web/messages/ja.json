@@ -119,7 +119,11 @@
         "passiveSkill": "パッシブまたはサポートスキル",
         "searchBuilds": "ビルドを検索...",
         "allSets": "全セット",
-        "noBuildsMatch": "フィルターに一致するビルドがありません"
+        "noBuildsMatch": "フィルターに一致するビルドがありません",
+        "popularSynergies": "人気シナジーヒーロー",
+        "popularCounters": "人気カウンターヒーロー",
+        "priorityStats": "優先ステータス",
+        "builds": "ビルド"
     },
     "elements": {
         "fire": "火",

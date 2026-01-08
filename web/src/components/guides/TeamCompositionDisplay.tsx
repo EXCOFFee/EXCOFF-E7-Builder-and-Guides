@@ -108,8 +108,8 @@ export function TeamCompositionDisplay({ teams }: TeamCompositionDisplayProps) {
                                             <Image
                                                 src={heroData.image_url || `/images/hero/${heroData.slug}_s.png`}
                                                 alt={heroData.name}
-                                                width={100}
-                                                height={100}
+                                                width={120}
+                                                height={120}
                                                 className="rounded-xl mx-auto ring-2 ring-cyan-500/40 object-cover"
                                                 unoptimized
                                             />

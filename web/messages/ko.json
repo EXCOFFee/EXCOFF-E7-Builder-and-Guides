@@ -119,7 +119,11 @@
         "passiveSkill": "패시브 또는 지원 스킬",
         "searchBuilds": "빌드 검색...",
         "allSets": "모든 세트",
-        "noBuildsMatch": "필터와 일치하는 빌드가 없습니다"
+        "noBuildsMatch": "필터와 일치하는 빌드가 없습니다",
+        "popularSynergies": "인기 시너지 영웅",
+        "popularCounters": "인기 카운터 영웅",
+        "priorityStats": "우선순위 스탯",
+        "builds": "빌드"
     },
     "elements": {
         "fire": "화염",

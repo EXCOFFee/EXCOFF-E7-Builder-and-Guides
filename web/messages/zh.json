@@ -119,7 +119,11 @@
         "passiveSkill": "被动或辅助技能",
         "searchBuilds": "搜索配装...",
         "allSets": "所有套装",
-        "noBuildsMatch": "没有符合筛选条件的配装"
+        "noBuildsMatch": "没有符合筛选条件的配装",
+        "popularSynergies": "热门协同英雄",
+        "popularCounters": "热门克制英雄",
+        "priorityStats": "优先属性",
+        "builds": "配装"
     },
     "elements": {
         "fire": "火",
