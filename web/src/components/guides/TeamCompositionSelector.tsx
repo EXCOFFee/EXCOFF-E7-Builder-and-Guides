@@ -192,7 +192,7 @@ export function TeamCompositionSelector({
                                             alt={heroData.name}
                                             width={48}
                                             height={48}
-                                            className="rounded-full"
+                                            className="rounded-2xl"
                                             unoptimized
                                         />
                                         {t('guides.heroBuild', 'Build for')} {heroData.name}
@@ -458,7 +458,7 @@ export function TeamCompositionSelector({
                                                         alt={hero.name}
                                                         width={48}
                                                         height={48}
-                                                        className="rounded-full"
+                                                        className="rounded-2xl"
                                                         unoptimized
                                                     />
                                                     <span className="text-slate-200">{hero.name}</span>

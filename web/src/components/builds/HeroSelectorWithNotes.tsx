@@ -220,7 +220,7 @@ export function HeroSelectorWithNotes({
                                     alt={hero.name}
                                     width={64}
                                     height={64}
-                                    className="rounded-full"
+                                    className="rounded-2xl"
                                     unoptimized
                                 />
                                 <span className="text-slate-200">{hero.name}</span>

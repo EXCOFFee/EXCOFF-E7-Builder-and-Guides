@@ -449,13 +449,13 @@ export function GuideDetailClient() {
                                     className="group flex items-center gap-4 bg-gradient-to-br from-purple-900/40 to-purple-800/20 border-2 border-purple-500/40 rounded-xl px-5 py-4 hover:border-purple-400/60 hover:bg-gradient-to-br hover:from-purple-900/50 hover:to-purple-800/30 transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-purple-500/20 hover:-translate-y-1"
                                 >
                                     <div className="relative">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-purple-600/10 rounded-full blur-md group-hover:blur-lg transition-all duration-300"></div>
+                                        <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-purple-600/10 rounded-2xl blur-md group-hover:blur-lg transition-all duration-300"></div>
                                         <Image
                                             src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
                                             alt={hero.name}
                                             width={64}
                                             height={64}
-                                            className="rounded-full ring-2 ring-purple-500/60 relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300"
+                                            className="rounded-2xl ring-2 ring-purple-500/60 relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300"
                                             unoptimized
                                         />
                                     </div>
