@@ -47,8 +47,8 @@ Route::middleware('throttle:60,1')->group(function () {
     Route::get('/news/{news}', [\App\Http\Controllers\NewsController::class, 'show']);
 });
 
-// OAuth routes (10 requests per minute for security)
-Route::middleware('throttle:10,1')->group(function () {
+// OAuth routes (30 requests per minute - increased to prevent 429 during login flow)
+Route::middleware('throttle:30,1')->group(function () {
     Route::get('/auth/{provider}', [AuthController::class, 'redirectToProvider']);
     Route::get('/auth/{provider}/callback', [AuthController::class, 'handleProviderCallback']);
 });
