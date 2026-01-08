@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -11,6 +11,7 @@ import { StarRating } from '@/components/ui/star-rating';
 import { TierRatingDisplay, TierCategory } from '@/components/ui/tier-rating-selector';
 import { ProConsDisplay } from '@/components/ui/pro-cons-selector';
 import { SynergyCounterSection, HeroWithNote } from '@/components/builds/SynergyCounterCard';
+import { ExportBuildImage } from '@/components/builds/ExportBuildImage';
 import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
@@ -94,6 +95,8 @@ interface Build {
 
 interface Comment {
     id: number;
+    user_id: number;
+    parent_id?: number | null;
     content: string;
     is_anonymous: boolean;
     user: {
@@ -122,6 +125,13 @@ export function BuildDetailClient() {
     const [hasLiked, setHasLiked] = useState(false);
     const [isAnonymous, setIsAnonymous] = useState(false);
     const [userRating, setUserRating] = useState<number | null>(null);
+    // Reply and edit state
+    const [replyingTo, setReplyingTo] = useState<number | null>(null);
+    const [replyContent, setReplyContent] = useState('');
+    const [editingComment, setEditingComment] = useState<number | null>(null);
+    const [editContent, setEditContent] = useState('');
+    // Ref for export to image
+    const buildCardRef = useRef<HTMLDivElement>(null);
 
     // Fetch current user
     useEffect(() => {
@@ -271,6 +281,58 @@ export function BuildDetailClient() {
         },
     });
 
+    // Edit comment mutation
+    const editCommentMutation = useMutation({
+        mutationFn: async ({ commentId, content }: { commentId: number; content: string }) => {
+            const token = localStorage.getItem('auth_token');
+            const response = await fetch(`${API_URL}/comments/${commentId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                },
+                body: JSON.stringify({ content }),
+            });
+            if (!response.ok) {
+                const data = await response.json();
+                throw new Error(data.error || 'Failed to edit comment');
+            }
+            return response.json();
+        },
+        onSuccess: () => {
+            setEditingComment(null);
+            setEditContent('');
+            queryClient.invalidateQueries({ queryKey: ['build-comments', buildId] });
+        },
+    });
+
+    // Reply to comment mutation
+    const replyMutation = useMutation({
+        mutationFn: async ({ parentId, content }: { parentId: number; content: string }) => {
+            const token = localStorage.getItem('auth_token');
+            const response = await fetch(`${API_URL}/comments`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                },
+                body: JSON.stringify({
+                    type: 'build',
+                    id: build?.id,
+                    content,
+                    parent_id: parentId,
+                    is_anonymous: false,
+                }),
+            });
+            return response.json();
+        },
+        onSuccess: () => {
+            setReplyingTo(null);
+            setReplyContent('');
+            queryClient.invalidateQueries({ queryKey: ['build-comments', buildId] });
+        },
+    });
+
     // Delete build mutation
     const deleteMutation = useMutation({
         mutationFn: async () => {
@@ -345,7 +407,7 @@ export function BuildDetailClient() {
                 </Link>
 
                 {/* Build Header */}
-                <div className="glass-panel border-e7-gold/20 rounded-2xl overflow-hidden mb-6 backdrop-blur-xl bg-gradient-to-br from-e7-panel/90 to-e7-dark/90 shadow-2xl">
+                <div ref={buildCardRef} className="glass-panel border-e7-gold/20 rounded-2xl overflow-hidden mb-6 backdrop-blur-xl bg-gradient-to-br from-e7-panel/90 to-e7-dark/90 shadow-2xl">
                     {/* Hero Section */}
                     <div className="flex flex-col md:flex-row items-center gap-8 p-8 border-b border-e7-gold/20 bg-gradient-to-r from-transparent via-e7-gold/5 to-transparent">
                         <div className="relative group">
@@ -579,7 +641,7 @@ export function BuildDetailClient() {
                                 </div>
                             </div>
 
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 flex-wrap">
                                 {/* Like Button */}
                                 <Button
                                     variant="outline"
@@ -590,6 +652,13 @@ export function BuildDetailClient() {
                                     <Image src="/images/ras-like.gif" alt="like" width={24} height={24} className="inline-block" unoptimized />
                                     {build.likes}
                                 </Button>
+
+                                {/* Export Image Button */}
+                                <ExportBuildImage
+                                    buildRef={buildCardRef}
+                                    heroName={build.hero?.name || 'hero'}
+                                    buildTitle={build.title}
+                                />
 
                                 {/* Edit/Delete Buttons */}
                                 {canModify && (
@@ -666,46 +735,158 @@ export function BuildDetailClient() {
                         {comments.length === 0 ? (
                             <p className="text-gray-500">{t('guides.noComments', 'No comments yet.')}</p>
                         ) : (
-                            comments.map((comment) => (
-                                <div key={comment.id} className="flex gap-3 p-4 bg-e7-void/50 rounded-lg">
-                                    {!comment.is_anonymous && comment.user?.avatar && (
-                                        <Image
-                                            src={comment.user.avatar}
-                                            alt={comment.user?.name || ''}
-                                            width={36}
-                                            height={36}
-                                            className="rounded-full"
-                                            unoptimized
-                                        />
-                                    )}
-                                    <div className="flex-1">
-                                        <div className="flex items-center justify-between mb-1">
-                                            <div className="flex items-center gap-2">
-                                                <span className="text-white font-medium text-sm">
-                                                    {comment.is_anonymous ? 'Anonymous' : comment.user?.name}
-                                                </span>
-                                                <span className="text-xs text-gray-500">
-                                                    {new Date(comment.created_at).toLocaleDateString()}
-                                                </span>
-                                            </div>
-                                            {currentUser && (currentUser.is_admin || comment.user?.id === currentUser.id) && (
-                                                <button
-                                                    onClick={() => {
-                                                        if (confirm(t('common.confirmDelete', 'Are you sure you want to delete this?'))) {
-                                                            deleteCommentMutation.mutate(comment.id);
-                                                        }
-                                                    }}
-                                                    className="text-red-400 hover:text-red-300 text-xs"
-                                                    disabled={deleteCommentMutation.isPending}
-                                                >
-                                                    {t('common.delete', 'Delete')}
-                                                </button>
+                            comments.map((comment) => {
+                                const canEdit = currentUser && comment.user_id === currentUser.id &&
+                                    (new Date().getTime() - new Date(comment.created_at).getTime()) < 24 * 60 * 60 * 1000;
+                                const canDelete = currentUser && (currentUser.is_admin || comment.user_id === currentUser.id);
+
+                                return (
+                                    <div key={comment.id} className="space-y-2">
+                                        <div className="flex gap-3 p-4 bg-e7-void/50 rounded-lg">
+                                            {!comment.is_anonymous && comment.user?.avatar && (
+                                                <Image
+                                                    src={comment.user.avatar}
+                                                    alt={comment.user?.name || ''}
+                                                    width={36}
+                                                    height={36}
+                                                    className="rounded-full flex-shrink-0"
+                                                    unoptimized
+                                                />
                                             )}
+                                            <div className="flex-1 min-w-0">
+                                                <div className="flex items-center justify-between mb-1 flex-wrap gap-2">
+                                                    <div className="flex items-center gap-2">
+                                                        <span className="text-white font-medium text-sm">
+                                                            {comment.is_anonymous ? t('common.anonymous', 'Anonymous') : comment.user?.name}
+                                                        </span>
+                                                        <span className="text-xs text-gray-500">
+                                                            {new Date(comment.created_at).toLocaleDateString()}
+                                                        </span>
+                                                    </div>
+                                                    <div className="flex gap-2 text-xs">
+                                                        {currentUser && (
+                                                            <button
+                                                                onClick={() => { setReplyingTo(comment.id); setReplyContent(''); }}
+                                                                className="text-cyan-400 hover:text-cyan-300"
+                                                            >
+                                                                {t('comments.reply', 'Reply')}
+                                                            </button>
+                                                        )}
+                                                        {canEdit && (
+                                                            <button
+                                                                onClick={() => { setEditingComment(comment.id); setEditContent(comment.content); }}
+                                                                className="text-e7-gold hover:text-e7-text-gold"
+                                                            >
+                                                                {t('common.edit', 'Edit')}
+                                                            </button>
+                                                        )}
+                                                        {canDelete && (
+                                                            <button
+                                                                onClick={() => {
+                                                                    if (confirm(t('common.confirmDelete', 'Are you sure?'))) {
+                                                                        deleteCommentMutation.mutate(comment.id);
+                                                                    }
+                                                                }}
+                                                                className="text-red-400 hover:text-red-300"
+                                                            >
+                                                                {t('common.delete', 'Delete')}
+                                                            </button>
+                                                        )}
+                                                    </div>
+                                                </div>
+
+                                                {/* Edit form or content */}
+                                                {editingComment === comment.id ? (
+                                                    <div className="space-y-2">
+                                                        <textarea
+                                                            value={editContent}
+                                                            onChange={(e) => setEditContent(e.target.value)}
+                                                            className="w-full px-3 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white text-sm resize-none"
+                                                            rows={2}
+                                                        />
+                                                        <div className="flex gap-2">
+                                                            <button
+                                                                onClick={() => editCommentMutation.mutate({ commentId: comment.id, content: editContent })}
+                                                                disabled={editCommentMutation.isPending}
+                                                                className="px-3 py-1 bg-e7-gold text-black text-xs rounded hover:bg-e7-text-gold"
+                                                            >
+                                                                {t('common.save', 'Save')}
+                                                            </button>
+                                                            <button
+                                                                onClick={() => setEditingComment(null)}
+                                                                className="px-3 py-1 border border-gray-500 text-gray-400 text-xs rounded hover:text-white"
+                                                            >
+                                                                {t('common.cancel', 'Cancel')}
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                ) : (
+                                                    <p className="text-gray-300 text-sm">{comment.content}</p>
+                                                )}
+                                            </div>
                                         </div>
-                                        <p className="text-gray-300 text-sm">{comment.content}</p>
+
+                                        {/* Reply form */}
+                                        {replyingTo === comment.id && (
+                                            <div className="ml-8 p-3 bg-e7-void/30 rounded-lg border border-cyan-500/20">
+                                                <textarea
+                                                    value={replyContent}
+                                                    onChange={(e) => setReplyContent(e.target.value)}
+                                                    placeholder={t('comments.writeReply', 'Write a reply...')}
+                                                    className="w-full px-3 py-2 rounded-lg bg-e7-void border border-cyan-500/30 text-white text-sm resize-none"
+                                                    rows={2}
+                                                />
+                                                <div className="flex gap-2 mt-2">
+                                                    <button
+                                                        onClick={() => replyMutation.mutate({ parentId: comment.id, content: replyContent })}
+                                                        disabled={replyMutation.isPending || !replyContent.trim()}
+                                                        className="px-3 py-1 bg-cyan-600 text-white text-xs rounded hover:bg-cyan-500"
+                                                    >
+                                                        {t('comments.reply', 'Reply')}
+                                                    </button>
+                                                    <button
+                                                        onClick={() => setReplyingTo(null)}
+                                                        className="px-3 py-1 border border-gray-500 text-gray-400 text-xs rounded hover:text-white"
+                                                    >
+                                                        {t('common.cancel', 'Cancel')}
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        )}
+
+                                        {/* Nested replies */}
+                                        {comment.replies && comment.replies.length > 0 && (
+                                            <div className="ml-8 space-y-2">
+                                                {comment.replies.map((reply) => (
+                                                    <div key={reply.id} className="flex gap-2 p-3 bg-e7-void/30 rounded-lg border-l-2 border-cyan-500/30">
+                                                        {!reply.is_anonymous && reply.user?.avatar && (
+                                                            <Image
+                                                                src={reply.user.avatar}
+                                                                alt={reply.user?.name || ''}
+                                                                width={28}
+                                                                height={28}
+                                                                className="rounded-full flex-shrink-0"
+                                                                unoptimized
+                                                            />
+                                                        )}
+                                                        <div className="flex-1">
+                                                            <div className="flex items-center gap-2 mb-1">
+                                                                <span className="text-white font-medium text-xs">
+                                                                    {reply.is_anonymous ? t('common.anonymous', 'Anonymous') : reply.user?.name}
+                                                                </span>
+                                                                <span className="text-xs text-gray-500">
+                                                                    {new Date(reply.created_at).toLocaleDateString()}
+                                                                </span>
+                                                            </div>
+                                                            <p className="text-gray-300 text-sm">{reply.content}</p>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
                                     </div>
-                                </div>
-                            ))
+                                );
+                            })
                         )}
                     </div>
                 </div>
