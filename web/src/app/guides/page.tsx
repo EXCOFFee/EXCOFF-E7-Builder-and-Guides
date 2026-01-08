@@ -44,6 +44,18 @@ export default function GuidesPage() {
     const [search, setSearch] = useState('');
     const [categoryFilter, setCategoryFilter] = useState('all');
     const [sortBy, setSortBy] = useState<'newest' | 'views_desc' | 'views_asc' | 'likes_desc' | 'likes_asc'>('newest');
+    const [selectedLanguage, setSelectedLanguage] = useState<string>('all');
+
+    const LANGUAGES = ['all', 'en', 'es', 'ko', 'ja', 'zh', 'pt'];
+    const LANGUAGE_LABELS: Record<string, string> = {
+        all: 'All Languages',
+        en: 'English',
+        es: 'Español',
+        ko: '한국어',
+        ja: '日本語',
+        zh: '中文',
+        pt: 'Português',
+    };
 
     const CATEGORIES = [
         { id: 'all', label: t('guides.allCategories', 'All'), emoji: '📚' },
@@ -57,11 +69,12 @@ export default function GuidesPage() {
     ];
 
     const { data, isLoading, error } = useQuery({
-        queryKey: ['guides', search, categoryFilter],
+        queryKey: ['guides', search, categoryFilter, selectedLanguage],
         queryFn: async () => {
             const params: Record<string, string> = {};
             if (categoryFilter && categoryFilter !== 'all') params.category = categoryFilter;
             if (search) params.search = search;
+            if (selectedLanguage && selectedLanguage !== 'all') params.language = selectedLanguage;
 
             const response = await guideApi.list(params);
             return response.data;
@@ -133,6 +146,16 @@ export default function GuidesPage() {
                             <option value="views_asc">{t('common.viewsLow', 'Views (Low)')}</option>
                             <option value="likes_desc">{t('common.likesHigh', 'Likes (High)')}</option>
                             <option value="likes_asc">{t('common.likesLow', 'Likes (Low)')}</option>
+                        </select>
+                        {/* Language Filter */}
+                        <select
+                            value={selectedLanguage}
+                            onChange={(e) => setSelectedLanguage(e.target.value)}
+                            className="bg-white/4 border border-white/8 text-neutral-200 rounded-md pl-3 pr-10 py-1.5 text-sm focus:border-e7-gold cursor-pointer"
+                        >
+                            {LANGUAGES.map((lang) => (
+                                <option key={lang} value={lang}>{LANGUAGE_LABELS[lang]}</option>
+                            ))}
                         </select>
                     </div>
                 </div>

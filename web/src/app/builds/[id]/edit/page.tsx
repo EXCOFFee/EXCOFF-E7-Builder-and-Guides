@@ -56,6 +56,7 @@ interface Build {
     reason_rta?: string;
     pro_tags?: TagWithNote[] | string[];
     con_tags?: TagWithNote[] | string[];
+    language?: string;
 }
 
 interface Hero {
@@ -110,6 +111,8 @@ export default function EditBuildPage() {
 
     // Anonymous option
     const [isAnonymous, setIsAnonymous] = useState(false);
+    // Language selector
+    const [language, setLanguage] = useState('en');
 
     // Tier Ratings (D-S system)
     const [tierRatings, setTierRatings] = useState<Partial<Record<TierCategory, number | null>>>({});
@@ -243,6 +246,10 @@ export default function EditBuildPage() {
                     setConTags(build.con_tags as TagWithNote[]);
                 }
             }
+            // Pre-fill language
+            if (build.language) {
+                setLanguage(build.language);
+            }
         }
     }, [buildData]);
 
@@ -298,6 +305,10 @@ export default function EditBuildPage() {
 
             // Add anonymous option
             formData.append('is_anonymous', isAnonymous ? '1' : '0');
+            // Add language
+            if (language) {
+                formData.append('language', language);
+            }
 
             // Add tier ratings
             TIER_CATEGORIES.forEach(cat => {
@@ -713,6 +724,23 @@ export default function EditBuildPage() {
                                     setConTags(cons);
                                 }}
                             />
+
+                            {/* Language selector */}
+                            <div className="space-y-2">
+                                <label className="text-slate-300 text-sm font-medium">{t('language.selectLanguage', 'Language')}</label>
+                                <select
+                                    value={language}
+                                    onChange={(e) => setLanguage(e.target.value)}
+                                    className="w-full bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg px-4 py-3 focus:border-e7-gold focus:ring-e7-gold/30"
+                                >
+                                    <option value="en">English</option>
+                                    <option value="es">Español</option>
+                                    <option value="ko">한국어</option>
+                                    <option value="ja">日本語</option>
+                                    <option value="zh">中文</option>
+                                    <option value="pt">Português</option>
+                                </select>
+                            </div>
 
                             {/* Anonymous option */}
                             <div className="flex items-center gap-3 p-4 bg-e7-void/30 rounded-lg border border-e7-gold/20">

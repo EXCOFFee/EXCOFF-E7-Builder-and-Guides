@@ -745,6 +745,23 @@ export default function CreateBuildPage() {
                                 </div>
                             )}
 
+                            {/* Language selector */}
+                            <div className="space-y-2">
+                                <label className="text-slate-300 text-sm font-medium">{t('language.selectLanguage', 'Language')}</label>
+                                <select
+                                    value={language}
+                                    onChange={(e) => setLanguage(e.target.value)}
+                                    className="w-full bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg px-4 py-3 focus:border-e7-gold focus:ring-e7-gold/30"
+                                >
+                                    <option value="en">English</option>
+                                    <option value="es">Español</option>
+                                    <option value="ko">한국어</option>
+                                    <option value="ja">日本語</option>
+                                    <option value="zh">中文</option>
+                                    <option value="pt">Português</option>
+                                </select>
+                            </div>
+
                             {/* Anonymous option */}
                             <div className="flex items-center gap-3 p-4 bg-e7-void/30 rounded-lg border border-e7-gold/20">
                                 <input

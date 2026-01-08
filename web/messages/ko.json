@@ -428,5 +428,22 @@
         "repository": "저장소",
         "reddit_title": "Reddit 데이터마인",
         "reddit_desc": "게임 파일에서 스킬 계수 및 숨겨진 데이터를 추출하는 커뮤니티 기여자."
+    },
+    "comments": {
+        "reply": "답글",
+        "writeReply": "답글을 작성하세요...",
+        "editComment": "댓글 수정",
+        "replyToComment": "댓글에 답글 달기"
+    },
+    "language": {
+        "all": "모든 언어",
+        "en": "English",
+        "es": "Español",
+        "ko": "한국어",
+        "ja": "日本語",
+        "zh": "中文",
+        "pt": "Português",
+        "selectLanguage": "언어",
+        "filterByLanguage": "언어로 필터링"
     }
 }

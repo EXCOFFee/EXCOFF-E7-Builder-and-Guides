@@ -428,5 +428,22 @@
         "repository": "リポジトリ",
         "reddit_title": "Redditデータマイン",
         "reddit_desc": "ゲームファイルからスキル倍率や隠しデータを抽出するコミュニティの貢献者。"
+    },
+    "comments": {
+        "reply": "返信",
+        "writeReply": "返信を入力...",
+        "editComment": "コメントを編集",
+        "replyToComment": "コメントに返信"
+    },
+    "language": {
+        "all": "すべての言語",
+        "en": "English",
+        "es": "Español",
+        "ko": "한국어",
+        "ja": "日本語",
+        "zh": "中文",
+        "pt": "Português",
+        "selectLanguage": "言語",
+        "filterByLanguage": "言語でフィルター"
     }
 }

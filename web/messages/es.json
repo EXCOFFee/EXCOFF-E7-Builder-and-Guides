@@ -444,5 +444,22 @@
         "repository": "Repositorio",
         "reddit_title": "Datamines de Reddit",
         "reddit_desc": "Contribuyentes de la comunidad que extraen multiplicadores de habilidades y datos ocultos de los archivos del juego."
+    },
+    "comments": {
+        "reply": "Responder",
+        "writeReply": "Escribe una respuesta...",
+        "editComment": "Editar Comentario",
+        "replyToComment": "Responder al Comentario"
+    },
+    "language": {
+        "all": "Todos los Idiomas",
+        "en": "English",
+        "es": "Español",
+        "ko": "한국어",
+        "ja": "日本語",
+        "zh": "中文",
+        "pt": "Português",
+        "selectLanguage": "Idioma",
+        "filterByLanguage": "Filtrar por Idioma"
     }
 }

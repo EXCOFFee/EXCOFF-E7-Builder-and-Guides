@@ -428,5 +428,22 @@
         "repository": "仓库",
         "reddit_title": "Reddit 数据挖掘",
         "reddit_desc": "从游戏文件中提取技能倍率和隐藏数据的社区贡献者。"
+    },
+    "comments": {
+        "reply": "回复",
+        "writeReply": "写下你的回复...",
+        "editComment": "编辑评论",
+        "replyToComment": "回复评论"
+    },
+    "language": {
+        "all": "所有语言",
+        "en": "English",
+        "es": "Español",
+        "ko": "한국어",
+        "ja": "日本語",
+        "zh": "中文",
+        "pt": "Português",
+        "selectLanguage": "语言",
+        "filterByLanguage": "按语言筛选"
     }
 }
