@@ -263,13 +263,13 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                         {t('heroes.popularArtifacts', 'Popular Artifacts')}
                     </h3>
 
-                    <div className="flex flex-wrap gap-5 justify-center">
+                    <div className="flex flex-wrap gap-6 justify-center">
                         {stats.artifacts.map((artifact) => (
                             <div
                                 key={artifact.artifact_id}
-                                className="flex items-center gap-4 px-6 py-4 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-800/20 border border-purple-500/40 hover:border-purple-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/20"
+                                className="flex items-center gap-5 px-8 py-5 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-800/20 border border-purple-500/40 hover:border-purple-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/20 min-w-[280px]"
                             >
-                                <div className="relative w-16 h-16 rounded-lg ring-2 ring-purple-500/40 overflow-hidden bg-purple-900/50">
+                                <div className="relative w-20 h-20 rounded-lg ring-2 ring-purple-500/40 overflow-hidden bg-purple-900/50 flex-shrink-0">
                                     {artifact.icon ? (
                                         <img
                                             src={artifact.icon}
@@ -280,17 +280,17 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                                                 target.style.display = 'none';
                                                 const parent = target.parentElement;
                                                 if (parent) {
-                                                    parent.innerHTML = '<div class="w-full h-full flex items-center justify-center text-purple-400 text-2xl">?</div>';
+                                                    parent.innerHTML = '<div class="w-full h-full flex items-center justify-center text-purple-400 text-3xl">?</div>';
                                                 }
                                             }}
                                         />
                                     ) : (
-                                        <div className="w-full h-full flex items-center justify-center text-purple-400 text-2xl">?</div>
+                                        <div className="w-full h-full flex items-center justify-center text-purple-400 text-3xl">?</div>
                                     )}
                                 </div>
                                 <div>
-                                    <div className="text-lg font-display text-gray-200">{artifact.name}</div>
-                                    <div className="text-base text-purple-400 font-semibold">{artifact.percentage}%</div>
+                                    <div className="text-xl font-display text-gray-200">{artifact.name}</div>
+                                    <div className="text-lg text-purple-400 font-semibold">{artifact.percentage}%</div>
                                 </div>
                             </div>
                         ))}
