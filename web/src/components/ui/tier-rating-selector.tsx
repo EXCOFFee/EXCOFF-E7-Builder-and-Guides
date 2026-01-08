@@ -103,7 +103,7 @@ export function TierRatingSelector({
                     {t('builds.tierRatings', 'Tier Ratings')}
                 </h3>
                 {generalTier && (
-                    <div className={`px-4 py-2 rounded-lg font-bold text-xl ${TIER_COLORS[generalTier].bg} ${TIER_COLORS[generalTier].text} ${TIER_COLORS[generalTier].border} border`}>
+                    <div className={`px-5 py-3 rounded-lg font-bold text-2xl ${TIER_COLORS[generalTier].bg} ${TIER_COLORS[generalTier].text} ${TIER_COLORS[generalTier].border} border`}>
                         {t('builds.general', 'General')}: {generalTier}
                     </div>
                 )}
@@ -131,7 +131,7 @@ export function TierRatingSelector({
                                         onClick={() => handleRatingChange(category, isSelected ? null : TIER_VALUES[tier])}
                                         disabled={disabled}
                                         className={`
-                                            w-11 h-11 rounded-lg font-bold text-lg transition-all duration-200
+                                            w-14 h-14 rounded-lg font-bold text-xl transition-all duration-200
                                             ${isSelected
                                                 ? `${colors.bg} ${colors.text} ${colors.border} border-2 scale-110 shadow-lg`
                                                 : `bg-e7-panel/50 text-gray-400 border border-white/10 ${colors.hover}`

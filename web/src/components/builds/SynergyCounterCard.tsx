@@ -37,7 +37,7 @@ export function SynergyCounterHeroCard({ hero, type }: SynergyCounterCardProps) 
     const { t } = useTranslations();
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const isLong = hero.note && hero.note.length > 60;
+    const isLong = hero.note && hero.note.length > 100;
     const isSynergy = type === 'synergy';
 
     const colors = isSynergy
@@ -72,18 +72,18 @@ export function SynergyCounterHeroCard({ hero, type }: SynergyCounterCardProps) 
                         />
                     )}
                 </div>
-                <span className={`mt-2 text-sm ${colors.text} ${colors.hoverText} text-center font-semibold transition-colors duration-300`}>
+                <span className={`mt-3 text-base ${colors.text} ${colors.hoverText} text-center font-semibold transition-colors duration-300`}>
                     {hero.name}
                 </span>
             </Link>
 
             {/* Note with expandable text */}
             {hero.note && (
-                <div className="mt-2 w-full text-center">
-                    <p className="text-xs text-gray-400 leading-relaxed">
+                <div className="mt-3 w-full text-center">
+                    <p className="text-sm text-gray-300 leading-relaxed">
                         {isLong && !isExpanded ? (
                             <>
-                                {hero.note.slice(0, 60)}...
+                                {hero.note.slice(0, 100)}...
                                 <button
                                     onClick={(e) => { e.preventDefault(); setIsExpanded(true); }}
                                     className="text-e7-gold hover:underline ml-1"

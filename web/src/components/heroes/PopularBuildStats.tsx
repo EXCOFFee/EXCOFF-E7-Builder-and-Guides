@@ -208,48 +208,48 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                         {t('builds.tierRatings', 'Tier Ratings')}
                     </h3>
 
-                    <div className="flex flex-wrap gap-4 justify-center">
+                    <div className="flex flex-wrap gap-6 justify-center">
                         {/* General Rating */}
                         {stats.average_ratings.general && (
-                            <div className="text-center px-8 py-4 rounded-xl bg-gradient-to-br from-yellow-900/40 to-amber-900/30 border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10">
-                                <div className={`text-4xl font-display font-bold ${getTierColor(stats.average_ratings.general)}`}>
+                            <div className="text-center px-10 py-6 rounded-xl bg-gradient-to-br from-yellow-900/40 to-amber-900/30 border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10">
+                                <div className={`text-5xl font-display font-bold ${getTierColor(stats.average_ratings.general)}`}>
                                     {tierToLetter(stats.average_ratings.general)}
                                 </div>
-                                <div className="text-sm font-display text-gray-300 mt-2">{t('builds.general', 'General')}</div>
+                                <div className="text-base font-display text-gray-300 mt-3">{t('builds.general', 'General')}</div>
                             </div>
                         )}
 
                         {/* Individual Ratings */}
                         {stats.average_ratings.pve !== undefined && (
-                            <div className="text-center px-6 py-3 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
-                                <div className={`text-2xl font-display font-bold ${getTierColor(stats.average_ratings.pve)}`}>
+                            <div className="text-center px-8 py-5 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
+                                <div className={`text-4xl font-display font-bold ${getTierColor(stats.average_ratings.pve)}`}>
                                     {tierToLetter(stats.average_ratings.pve)}
                                 </div>
-                                <div className="text-sm font-display text-gray-400 mt-1">{t('builds.tier_pve', 'PVE')}</div>
+                                <div className="text-base font-display text-gray-400 mt-2">{t('builds.tier_pve', 'PVE')}</div>
                             </div>
                         )}
                         {stats.average_ratings.arena !== undefined && (
-                            <div className="text-center px-6 py-3 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
-                                <div className={`text-2xl font-display font-bold ${getTierColor(stats.average_ratings.arena)}`}>
+                            <div className="text-center px-8 py-5 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
+                                <div className={`text-4xl font-display font-bold ${getTierColor(stats.average_ratings.arena)}`}>
                                     {tierToLetter(stats.average_ratings.arena)}
                                 </div>
-                                <div className="text-sm font-display text-gray-400 mt-1">{t('builds.tier_arena', 'Arena')}</div>
+                                <div className="text-base font-display text-gray-400 mt-2">{t('builds.tier_arena', 'Arena')}</div>
                             </div>
                         )}
                         {stats.average_ratings.gw !== undefined && (
-                            <div className="text-center px-6 py-3 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
-                                <div className={`text-2xl font-display font-bold ${getTierColor(stats.average_ratings.gw)}`}>
+                            <div className="text-center px-8 py-5 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
+                                <div className={`text-4xl font-display font-bold ${getTierColor(stats.average_ratings.gw)}`}>
                                     {tierToLetter(stats.average_ratings.gw)}
                                 </div>
-                                <div className="text-sm font-display text-gray-400 mt-1">{t('builds.tier_gw', 'Guild War')}</div>
+                                <div className="text-base font-display text-gray-400 mt-2">{t('builds.tier_gw', 'Guild War')}</div>
                             </div>
                         )}
                         {stats.average_ratings.rta !== undefined && (
-                            <div className="text-center px-6 py-3 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
-                                <div className={`text-2xl font-display font-bold ${getTierColor(stats.average_ratings.rta)}`}>
+                            <div className="text-center px-8 py-5 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
+                                <div className={`text-4xl font-display font-bold ${getTierColor(stats.average_ratings.rta)}`}>
                                     {tierToLetter(stats.average_ratings.rta)}
                                 </div>
-                                <div className="text-sm font-display text-gray-400 mt-1">{t('builds.tier_rta', 'RTA')}</div>
+                                <div className="text-base font-display text-gray-400 mt-2">{t('builds.tier_rta', 'RTA')}</div>
                             </div>
                         )}
                     </div>
@@ -300,29 +300,29 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
 
             {/* Popular Synergy Heroes */}
             {stats.synergy_heroes && stats.synergy_heroes.length > 0 && (
-                <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-green-500/30 backdrop-blur-sm">
-                    <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400 mb-5">
+                <div className="p-8 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-green-500/30 backdrop-blur-sm">
+                    <h3 className="text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400 mb-6">
                         {t('heroes.popularSynergies', 'Popular Synergy Heroes')}
                     </h3>
 
-                    <div className="flex flex-wrap gap-4 justify-center">
+                    <div className="flex flex-wrap gap-5 justify-center">
                         {stats.synergy_heroes.map((hero) => (
                             <Link
                                 key={hero.hero_id}
                                 href={`/heroes/${hero.slug}`}
-                                className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gradient-to-br from-green-900/30 to-emerald-800/20 border border-green-500/40 hover:border-green-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-green-500/20"
+                                className="flex items-center gap-4 px-6 py-4 rounded-xl bg-gradient-to-br from-green-900/30 to-emerald-800/20 border border-green-500/40 hover:border-green-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-green-500/20"
                             >
                                 <Image
                                     src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
                                     alt={hero.name}
-                                    width={56}
-                                    height={56}
+                                    width={80}
+                                    height={80}
                                     className="rounded-xl ring-2 ring-green-500/40"
                                     unoptimized
                                 />
                                 <div>
-                                    <div className="text-base font-display text-gray-200">{hero.name}</div>
-                                    <div className="text-sm text-green-400 font-semibold">{hero.percentage}%</div>
+                                    <div className="text-lg font-display text-gray-200">{hero.name}</div>
+                                    <div className="text-base text-green-400 font-semibold">{hero.percentage}%</div>
                                 </div>
                             </Link>
                         ))}
@@ -332,29 +332,29 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
 
             {/* Popular Counter Heroes */}
             {stats.counter_heroes && stats.counter_heroes.length > 0 && (
-                <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-red-500/30 backdrop-blur-sm">
-                    <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-rose-400 mb-5">
+                <div className="p-8 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-red-500/30 backdrop-blur-sm">
+                    <h3 className="text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-rose-400 mb-6">
                         {t('heroes.popularCounters', 'Popular Counter Heroes')}
                     </h3>
 
-                    <div className="flex flex-wrap gap-4 justify-center">
+                    <div className="flex flex-wrap gap-5 justify-center">
                         {stats.counter_heroes.map((hero) => (
                             <Link
                                 key={hero.hero_id}
                                 href={`/heroes/${hero.slug}`}
-                                className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gradient-to-br from-red-900/30 to-rose-800/20 border border-red-500/40 hover:border-red-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-red-500/20"
+                                className="flex items-center gap-4 px-6 py-4 rounded-xl bg-gradient-to-br from-red-900/30 to-rose-800/20 border border-red-500/40 hover:border-red-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-red-500/20"
                             >
                                 <Image
                                     src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
                                     alt={hero.name}
-                                    width={56}
-                                    height={56}
+                                    width={80}
+                                    height={80}
                                     className="rounded-xl ring-2 ring-red-500/40"
                                     unoptimized
                                 />
                                 <div>
-                                    <div className="text-base font-display text-gray-200">{hero.name}</div>
-                                    <div className="text-sm text-red-400 font-semibold">{hero.percentage}%</div>
+                                    <div className="text-lg font-display text-gray-200">{hero.name}</div>
+                                    <div className="text-base text-red-400 font-semibold">{hero.percentage}%</div>
                                 </div>
                             </Link>
                         ))}
