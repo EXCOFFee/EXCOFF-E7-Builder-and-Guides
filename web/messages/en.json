@@ -422,7 +422,10 @@
         "tier_arena": "Arena",
         "tier_gw": "Guild War",
         "tier_rta": "RTA",
-        "tierReasonPlaceholder": "Why this rating? (optional)"
+        "tierReasonPlaceholder": "Why this rating? (optional)",
+        "exportImage": "Export Image",
+        "exporting": "Exporting...",
+        "exportError": "Failed to export image. Please try again."
     },
     "news": {
         "title": "Epic Seven News",
@@ -455,5 +458,22 @@
         "repository": "Repository",
         "reddit_title": "Reddit Datamines",
         "reddit_desc": "Community contributors who extract skill multipliers and hidden data from game files."
+    },
+    "comments": {
+        "reply": "Reply",
+        "writeReply": "Write a reply...",
+        "editComment": "Edit Comment",
+        "replyToComment": "Reply to Comment"
+    },
+    "language": {
+        "all": "All Languages",
+        "en": "English",
+        "es": "Español",
+        "ko": "한국어",
+        "ja": "日本語",
+        "zh": "中文",
+        "pt": "Português",
+        "selectLanguage": "Language",
+        "filterByLanguage": "Filter by Language"
     }
 }

@@ -86,6 +86,8 @@ export default function CreateBuildPage() {
 
     // Anonymous option
     const [isAnonymous, setIsAnonymous] = useState(false);
+    // Language selector
+    const [language, setLanguage] = useState('en');
 
     // Tier Ratings (D-S system)
     const [tierRatings, setTierRatings] = useState<Partial<Record<TierCategory, number | null>>>({});
@@ -199,6 +201,10 @@ export default function CreateBuildPage() {
 
             // Add anonymous option
             formData.append('is_anonymous', isAnonymous ? '1' : '0');
+            // Add language
+            if (language) {
+                formData.append('language', language);
+            }
 
             // Add images
             images.forEach((image, index) => {
