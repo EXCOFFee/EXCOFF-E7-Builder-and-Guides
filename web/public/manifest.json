@@ -3,7 +3,7 @@
     "short_name": "E7 Hub",
     "description": "Your ultimate Epic Seven (E7) resource hub. Hero builds, guides, tier lists & equipment recommendations.",
     "start_url": "/",
-    "display": "standalone",
+    "display": "browser",
     "background_color": "#0a0a0f",
     "theme_color": "#c8aa6e",
     "orientation": "portrait-primary",

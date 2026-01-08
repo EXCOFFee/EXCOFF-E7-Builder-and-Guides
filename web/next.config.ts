@@ -24,6 +24,14 @@ const securityHeaders = [
   },
 ];
 
+// Cache headers for static assets (1 year)
+const cacheHeaders = [
+  {
+    key: 'Cache-Control',
+    value: 'public, max-age=31536000, immutable'
+  },
+];
+
 const nextConfig: NextConfig = {
   // Image optimization - allow external images with high quality
   images: {
@@ -63,12 +71,31 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // Security headers
+  // Enable gzip/brotli compression
+  compress: true,
+
+  // Optimize for production
+  poweredByHeader: false,
+
+  // Security and cache headers
   async headers() {
     return [
       {
         source: '/:path*',
         headers: securityHeaders,
+      },
+      // Cache static assets for 1 year
+      {
+        source: '/images/:path*',
+        headers: cacheHeaders,
+      },
+      {
+        source: '/fonts/:path*',
+        headers: cacheHeaders,
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: cacheHeaders,
       },
     ];
   },
@@ -78,3 +105,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
