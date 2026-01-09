@@ -11,7 +11,7 @@ class ImportSkillTranslations extends Command
     /**
      * The name and signature of the console command.
      */
-    protected $signature = 'skills:import-translations {--dry-run : Show what would be updated without making changes}';
+    protected $signature = 'skills:import-translations {--dry-run : Show what would be updated without making changes} {--check-missing : List heroes with missing translations}';
 
     /**
      * The console command description.
@@ -34,8 +34,14 @@ class ImportSkillTranslations extends Command
         $basePath = base_path('/');
         $dryRun = $this->option('dry-run');
         
-        if ($dryRun) {
+        if ($this->option('dry-run')) {
             $this->warn('DRY RUN MODE - No changes will be made');
+        }
+
+        // Logic to check missing translations
+        if ($this->option('check-missing')) {
+           $this->checkMissing($basePath);
+           return 0;
         }
         
         // Load all translation files
@@ -144,5 +150,49 @@ class ImportSkillTranslations extends Command
         }
         
         return 0;
+    }
+
+    private function checkMissing($basePath)
+    {
+        $enPath = $basePath . "recovered_skills_en.json";
+        if (!File::exists($enPath)) {
+            $this->error("EN file not found");
+            return;
+        }
+        $en = json_decode(File::get($enPath), true);
+        
+        foreach ($this->languages as $lang) {
+            if ($lang === 'en') continue;
+            
+            $path = $basePath . "recovered_skills_{$lang}.json";
+            if (!File::exists($path)) continue;
+            
+            $data = json_decode(File::get($path), true);
+            $missingCount = 0;
+            $missingList = [];
+            
+            foreach ($en as $slug => $skills) {
+                // If not in other lang, it's missing
+                if (!isset($data[$slug])) {
+                    $missingList[] = $slug;
+                    $missingCount++;
+                    continue;
+                }
+                
+                // If S1 description matches EN, it's likely not translated
+                $enDesc = trim(preg_replace('/\s+/', ' ', $skills['S1']['description'] ?? ''));
+                $targetDesc = trim(preg_replace('/\s+/', ' ', $data[$slug]['S1']['description'] ?? ''));
+                
+                if ($enDesc && $targetDesc && $enDesc === $targetDesc) {
+                     $missingList[] = $slug;
+                     $missingCount++;
+                }
+            }
+            
+            $this->info("Language {$lang}: {$missingCount} missing translations.");
+            if ($missingCount > 0) {
+                $this->line("Heroes: " . implode(', ', array_slice($missingList, 0, 50)) . (count($missingList) > 50 ? '...' : ''));
+            }
+        }
     }
 }
