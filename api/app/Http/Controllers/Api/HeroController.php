@@ -292,30 +292,33 @@ class HeroController extends Controller
                 }
             }
             
-            // Calculate averages and sort by count (popularity)
+            // Calculate averages - always show all 8 stats
             $priorityStats = [];
             foreach ($statSums as $stat => $data) {
                 if ($data['count'] > 0) {
                     $avg = $data['sum'] / $data['count'];
-                    // Format based on stat type
-                    if (in_array($stat, ['chc', 'chd', 'eff', 'efr'])) {
-                        // Percentage stats
-                        $formattedValue = round($avg, 1) . '%';
-                    } elseif ($stat === 'spd') {
-                        // Speed - whole number
-                        $formattedValue = (string)round($avg);
-                    } else {
-                        // HP, ATK, DEF - format with comma
-                        $formattedValue = number_format(round($avg));
-                    }
-                    $priorityStats[] = [
-                        'stat' => $stat,
-                        'label' => $statLabels[$stat] ?? $stat,
-                        'count' => $data['count'],
-                        'average_value' => round($avg, 1),
-                        'formatted_value' => $formattedValue,
-                    ];
+                } else {
+                    $avg = 0; // No data for this stat
                 }
+                
+                // Format based on stat type
+                if (in_array($stat, ['chc', 'chd', 'eff', 'efr'])) {
+                    // Percentage stats
+                    $formattedValue = round($avg, 1) . '%';
+                } elseif ($stat === 'spd') {
+                    // Speed - whole number
+                    $formattedValue = (string)round($avg);
+                } else {
+                    // HP, ATK, DEF - format with comma
+                    $formattedValue = number_format(round($avg));
+                }
+                $priorityStats[] = [
+                    'stat' => $stat,
+                    'label' => $statLabels[$stat] ?? $stat,
+                    'count' => $data['count'],
+                    'average_value' => round($avg, 1),
+                    'formatted_value' => $formattedValue,
+                ];
             }
             
             

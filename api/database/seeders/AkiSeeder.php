@@ -95,7 +95,7 @@ class AkiSeeder extends Seeder
                         'SSS' => 0.108,
                     ],
                 ],
-                'image_url' => 'https://moccasin-sparrow-217730.hostingersite.com/images/heroes/c1179_l.png',
+                'image_url' => 'https://moccasin-sparrow-217730.hostingersite.com/images/heroes/c1179_su.png',
                 'data_hash' => md5('aki-c1179-v1'),
             ]
         );

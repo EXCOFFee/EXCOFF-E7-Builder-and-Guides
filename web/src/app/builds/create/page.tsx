@@ -24,6 +24,16 @@ interface Hero {
     name: string;
     slug: string;
     image_url?: string;
+    base_stats?: {
+        atk?: number;
+        def?: number;
+        hp?: number;
+        spd?: number;
+        crit_chance?: number;
+        crit_dmg?: number;
+        eff?: number;
+        res?: number;
+    };
     skills?: {
         name: string;
         icon: string;
@@ -164,6 +174,23 @@ export default function CreateBuildPage() {
         a.name.toLowerCase().includes(artifactSearch.toLowerCase())
     );
     const selectedArtifact = artifacts.find(a => a.id === artifactId);
+
+    // Auto-fill stats with hero base stats when hero changes
+    useEffect(() => {
+        if (selectedHero?.base_stats) {
+            const baseStats = selectedHero.base_stats;
+            setStats({
+                atk: baseStats.atk?.toString() || '',
+                def: baseStats.def?.toString() || '',
+                hp: baseStats.hp?.toString() || '',
+                spd: baseStats.spd?.toString() || '',
+                crit_chance: baseStats.crit_chance?.toString() || '',
+                crit_dmg: baseStats.crit_dmg?.toString() || '',
+                eff: baseStats.eff?.toString() || '',
+                res: baseStats.res?.toString() || ''
+            });
+        }
+    }, [selectedHero]);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
