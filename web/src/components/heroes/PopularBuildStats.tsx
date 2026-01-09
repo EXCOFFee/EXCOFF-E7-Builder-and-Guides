@@ -44,7 +44,8 @@ interface PriorityStatStats {
     stat: string;
     label: string;
     count: number;
-    percentage: number;
+    average_value: number;
+    formatted_value: string;
 }
 
 interface HeroBuildStats {
@@ -223,12 +224,9 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                                 className={`flex flex-col items-center px-8 py-5 rounded-xl bg-gradient-to-br from-cyan-900/30 to-sky-800/20 border ${index === 0 ? 'border-2 border-cyan-400/60' : 'border-cyan-500/40'} hover:border-cyan-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-cyan-500/20 min-w-[140px]`}
                             >
                                 <div className={`text-3xl font-display font-bold ${index === 0 ? 'text-cyan-300' : 'text-cyan-400'}`}>
-                                    {stat.percentage}%
+                                    {stat.formatted_value}
                                 </div>
                                 <div className="text-base font-display text-gray-200 mt-2">{stat.label}</div>
-                                <div className="text-xs text-gray-500 mt-1">
-                                    ({stat.count} {t('heroes.builds', 'builds')})
-                                </div>
                             </div>
                         ))}
                     </div>

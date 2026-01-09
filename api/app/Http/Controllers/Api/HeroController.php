@@ -258,17 +258,16 @@ class HeroController extends Controller
                 }
             }
 
-            // Calculate priority stats (stats users recommend above base stats)
-            // We count which stats appear in min_stats across builds
-            $statCounts = [
-                'atk' => 0,
-                'hp' => 0,
-                'spd' => 0,
-                'def' => 0,
-                'chc' => 0,  // crit chance
-                'chd' => 0,  // crit damage
-                'eff' => 0,  // effectiveness
-                'efr' => 0,  // effect resistance
+            // Calculate priority stats - average values for each stat across all builds
+            $statSums = [
+                'atk' => ['sum' => 0, 'count' => 0],
+                'hp' => ['sum' => 0, 'count' => 0],
+                'spd' => ['sum' => 0, 'count' => 0],
+                'def' => ['sum' => 0, 'count' => 0],
+                'chc' => ['sum' => 0, 'count' => 0],  // crit chance
+                'chd' => ['sum' => 0, 'count' => 0],  // crit damage
+                'eff' => ['sum' => 0, 'count' => 0],  // effectiveness
+                'efr' => ['sum' => 0, 'count' => 0],  // effect resistance
             ];
             
             $statLabels = [
@@ -285,28 +284,43 @@ class HeroController extends Controller
             foreach ($builds as $build) {
                 if (!empty($build->min_stats) && is_array($build->min_stats)) {
                     foreach ($build->min_stats as $stat => $value) {
-                        if (isset($statCounts[$stat]) && !empty($value) && $value > 0) {
-                            $statCounts[$stat]++;
+                        if (isset($statSums[$stat]) && !empty($value) && $value > 0) {
+                            $statSums[$stat]['sum'] += $value;
+                            $statSums[$stat]['count']++;
                         }
                     }
                 }
             }
             
-            // Sort by count and get top 4
-            arsort($statCounts);
+            // Calculate averages and sort by count (popularity)
             $priorityStats = [];
-            $count = 0;
-            foreach ($statCounts as $stat => $statCount) {
-                if ($statCount > 0 && $count < 4) {
+            foreach ($statSums as $stat => $data) {
+                if ($data['count'] > 0) {
+                    $avg = $data['sum'] / $data['count'];
+                    // Format based on stat type
+                    if (in_array($stat, ['chc', 'chd', 'eff', 'efr'])) {
+                        // Percentage stats
+                        $formattedValue = round($avg, 1) . '%';
+                    } elseif ($stat === 'spd') {
+                        // Speed - whole number
+                        $formattedValue = (string)round($avg);
+                    } else {
+                        // HP, ATK, DEF - format with comma
+                        $formattedValue = number_format(round($avg));
+                    }
                     $priorityStats[] = [
                         'stat' => $stat,
                         'label' => $statLabels[$stat] ?? $stat,
-                        'count' => $statCount,
-                        'percentage' => round(($statCount / $totalBuilds) * 100, 1),
+                        'count' => $data['count'],
+                        'average_value' => round($avg, 1),
+                        'formatted_value' => $formattedValue,
                     ];
-                    $count++;
                 }
             }
+            
+            // Sort by count (most common stats first) and take top 4
+            usort($priorityStats, fn($a, $b) => $b['count'] - $a['count']);
+            $priorityStats = array_slice($priorityStats, 0, 4);
 
             return [
                 'total_builds' => $totalBuilds,
