@@ -27,6 +27,7 @@ interface Guide {
     hero: { name: string; slug: string } | null;
     user: { name: string; avatar?: string } | null;
     created_at: string;
+    language?: string;
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -232,6 +233,11 @@ export default function GuidesPage() {
                                                 </span>
                                                 {guide.video_platform === 'youtube' && (
                                                     <span className="text-red-500 text-xs">▶ YouTube</span>
+                                                )}
+                                                {guide.language && guide.language !== 'en' && (
+                                                    <span className="text-xs text-e7-gold/70 bg-e7-gold/10 px-2 py-0.5 rounded">
+                                                        {LANGUAGE_LABELS[guide.language] || guide.language}
+                                                    </span>
                                                 )}
                                             </div>
 

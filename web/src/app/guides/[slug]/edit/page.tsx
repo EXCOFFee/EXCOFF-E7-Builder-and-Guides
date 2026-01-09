@@ -50,6 +50,7 @@ interface Guide {
     images: string[];
     user: { id: number; name: string };
     teams?: Team[];
+    language?: string;
 }
 
 export default function EditGuidePage() {
@@ -76,8 +77,18 @@ export default function EditGuidePage() {
     // Team compositions state
     const [teams, setTeams] = useState<Team[]>([]);
 
-    // Anonymous option
-    const [isAnonymous, setIsAnonymous] = useState(false);
+    // Language selector
+    const [language, setLanguage] = useState('en');
+
+    const LANGUAGES = ['en', 'es', 'ko', 'ja', 'zh', 'pt'];
+    const LANGUAGE_LABELS: Record<string, string> = {
+        en: 'English',
+        es: 'Español',
+        ko: '한국어',
+        ja: '日本語',
+        zh: '中文',
+        pt: 'Português',
+    };
 
     // Check authentication
     useEffect(() => {
@@ -111,6 +122,7 @@ export default function EditGuidePage() {
             setVideoUrl(guide.video_url || '');
             setImages(guide.images || []);
             setTeams(guide.teams || []);
+            setLanguage(guide.language || 'en');
         }
     }, [guideData]);
 
@@ -174,8 +186,8 @@ export default function EditGuidePage() {
                 formData.append('teams', JSON.stringify(teams));
             }
 
-            // Add anonymous option
-            formData.append('is_anonymous', isAnonymous ? '1' : '0');
+            // Add language
+            formData.append('language', language);
 
             const response = await fetch(`${API_URL}/guides/${slug}`, {
                 method: 'POST', // Use POST with _method=PUT for FormData
@@ -422,19 +434,18 @@ export default function EditGuidePage() {
                                 <p className="text-xs text-gray-500 mt-1">{t('guides.maxImages', 'Maximum 5 images')}</p>
                             </div>
 
-                            {/* Anonymous option */}
-                            <div className="flex items-center gap-3 p-4 bg-e7-void/30 rounded-lg border border-e7-gold/20">
-                                <input
-                                    type="checkbox"
-                                    id="isAnonymous"
-                                    checked={isAnonymous}
-                                    onChange={(e) => setIsAnonymous(e.target.checked)}
-                                    className="w-5 h-5 rounded border-e7-gold/30 bg-e7-void text-e7-gold focus:ring-e7-gold/30 cursor-pointer"
-                                />
-                                <label htmlFor="isAnonymous" className="text-slate-300 cursor-pointer">
-                                    {t('guides.publishAnonymous', 'Publish anonymously')}
-                                    <span className="block text-xs text-slate-500">{t('guides.anonymousDescription', 'Your username will not appear on this guide')}</span>
-                                </label>
+                            {/* Language selector */}
+                            <div className="space-y-2">
+                                <label className="text-slate-300 text-sm font-medium">{t('language.selectLanguage', 'Language')}</label>
+                                <select
+                                    value={language}
+                                    onChange={(e) => setLanguage(e.target.value)}
+                                    className="w-full bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg px-4 py-3 focus:border-e7-gold focus:ring-e7-gold/30"
+                                >
+                                    {LANGUAGES.map((lang) => (
+                                        <option key={lang} value={lang}>{LANGUAGE_LABELS[lang]}</option>
+                                    ))}
+                                </select>
                             </div>
 
                             {/* Error message */}

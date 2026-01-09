@@ -104,6 +104,7 @@ interface Build {
         icon: string;
     } | null;
     created_at: string;
+    language?: string;
 }
 
 export default function BuildsPage() {
@@ -376,7 +377,14 @@ export default function BuildsPage() {
                                         </div>
                                         <div>
                                             <h3 className="text-lg text-slate-100 font-semibold group-hover:text-e7-gold transition-colors">{translateHeroName(build.hero.name)}</h3>
-                                            <p className="text-sm text-slate-500">{CLASS_NAMES[build.hero.class] || build.hero.class}</p>
+                                            <div className="flex items-center gap-2">
+                                                <p className="text-sm text-slate-500">{CLASS_NAMES[build.hero.class] || build.hero.class}</p>
+                                                {build.language && build.language !== 'en' && (
+                                                    <span className="text-xs text-e7-gold/70 bg-e7-gold/10 px-2 py-0.5 rounded">
+                                                        {LANGUAGE_LABELS[build.language] || build.language}
+                                                    </span>
+                                                )}
+                                            </div>
                                         </div>
                                     </div>
 
