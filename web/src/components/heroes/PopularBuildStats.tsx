@@ -210,11 +210,11 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                 </div>
             </div>
 
-            {/* Priority Stats Section */}
+            {/* Statistics Section */}
             {stats.priority_stats && stats.priority_stats.length > 0 && (
                 <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-cyan-500/30 backdrop-blur-sm">
                     <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-sky-400 mb-5">
-                        {t('heroes.priorityStats', 'Priority Stats')}
+                        {t('heroes.statistics', 'Statistics')}
                     </h3>
 
                     <div className="flex flex-wrap gap-5 justify-center">

@@ -318,9 +318,9 @@ class HeroController extends Controller
                 }
             }
             
-            // Sort by count (most common stats first) and take top 4
+            
+            // Sort by count (most common stats first) - show all stats
             usort($priorityStats, fn($a, $b) => $b['count'] - $a['count']);
-            $priorityStats = array_slice($priorityStats, 0, 4);
 
             return [
                 'total_builds' => $totalBuilds,
