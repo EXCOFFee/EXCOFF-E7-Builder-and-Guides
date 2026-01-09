@@ -13,6 +13,7 @@ import { ProConsDisplay } from '@/components/ui/pro-cons-selector';
 import { SynergyCounterSection, HeroWithNote } from '@/components/builds/SynergyCounterCard';
 import { ExportBuildImage } from '@/components/builds/ExportBuildImage';
 import { useTranslations } from '@/hooks/useTranslations';
+import { appendImageVersion } from '@/lib/heroImages';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -413,7 +414,7 @@ export function BuildDetailClient() {
                         <div className="relative group">
                             <div className="absolute inset-0 bg-gradient-to-br from-e7-gold/30 to-e7-purple/30 rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
                             <Image
-                                src={build.hero.portrait}
+                                src={appendImageVersion(build.hero.portrait)}
                                 alt={build.hero.name}
                                 width={200}
                                 height={200}

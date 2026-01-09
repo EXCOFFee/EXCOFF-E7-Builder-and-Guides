@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useTranslations } from '@/hooks/useTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
+import { appendImageVersion } from '@/lib/heroImages';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -360,7 +361,7 @@ export default function BuildsPage() {
                                     <div className="flex items-center gap-4 p-4 border-b border-e7-gold/10 bg-e7-dark/30">
                                         <div className="relative">
                                             <Image
-                                                src={build.hero.portrait}
+                                                src={appendImageVersion(build.hero.portrait)}
                                                 alt={build.hero.name}
                                                 width={100}
                                                 height={100}
