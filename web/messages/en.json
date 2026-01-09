@@ -286,6 +286,7 @@
             "competitive_rta": "Competitive (RTA)",
             "whatsapp": "WhatsApp Group",
             "discord": "Discord Server",
+            "telegram": "Telegram",
             "other_social": "Other Social",
             "beginner": "For Beginners",
             "help_improve": "Help Improve",
@@ -294,6 +295,13 @@
             "mystic_x4": "x4 Mystic",
             "mystic_x5": "x5 Mystic",
             "guild_buffs_24_7": "24/7 Guild Buffs"
+        },
+        "contacts": {
+            "discordOptional": "Discord Server (optional)",
+            "whatsappOptional": "WhatsApp (optional)",
+            "telegramOptional": "Telegram (optional)",
+            "youtubeOptional": "YouTube/TikTok (optional)",
+            "contactLinks": "Contact Links"
         },
         "servers": {
             "global": "Global",

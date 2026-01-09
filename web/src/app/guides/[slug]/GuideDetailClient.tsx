@@ -10,6 +10,7 @@ import { ImageCarousel } from '@/components/ui/image-carousel';
 import { guideApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
 import { TeamCompositionDisplay, Team } from '@/components/guides/TeamCompositionDisplay';
+import { appendImageVersion } from '@/lib/heroImages';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -308,7 +309,7 @@ export function GuideDetailClient() {
                             <div className="relative group">
                                 <div className="absolute inset-0 bg-gradient-to-br from-e7-gold/20 to-e7-purple/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                                 <Image
-                                    src={guide.hero.portrait}
+                                    src={appendImageVersion(guide.hero.portrait)}
                                     alt={guide.hero.name}
                                     width={80}
                                     height={80}
@@ -451,7 +452,7 @@ export function GuideDetailClient() {
                                     <div className="relative">
                                         <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-purple-600/10 rounded-2xl blur-md group-hover:blur-lg transition-all duration-300"></div>
                                         <Image
-                                            src={hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`}
+                                            src={appendImageVersion(hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`)}
                                             alt={hero.name}
                                             width={64}
                                             height={64}

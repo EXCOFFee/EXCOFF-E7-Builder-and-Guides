@@ -8,6 +8,7 @@ import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { useTranslations } from '@/hooks/useTranslations';
 import { SET_IMAGES, formatSetName } from '@/lib/sets';
+import { appendImageVersion } from '@/lib/heroImages';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -196,7 +197,7 @@ export default function ComparePage() {
                             <div className="bg-gradient-to-r from-blue-900/50 to-blue-800/30 p-4 border-b border-e7-gold/20">
                                 <div className="flex items-center gap-4">
                                     <Image
-                                        src={build1.hero.portrait}
+                                        src={appendImageVersion(build1.hero.portrait)}
                                         alt={build1.hero.name}
                                         width={64}
                                         height={64}
@@ -269,7 +270,7 @@ export default function ComparePage() {
                             <div className="bg-gradient-to-r from-purple-900/50 to-purple-800/30 p-4 border-b border-e7-gold/20">
                                 <div className="flex items-center gap-4">
                                     <Image
-                                        src={build2.hero.portrait}
+                                        src={appendImageVersion(build2.hero.portrait)}
                                         alt={build2.hero.name}
                                         width={64}
                                         height={64}

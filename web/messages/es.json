@@ -282,7 +282,15 @@
             "mystic_x3": "x3 Mystic",
             "mystic_x4": "x4 Mystic",
             "mystic_x5": "x5 Mystic",
-            "guild_buffs_24_7": "Buffos de Gremio 24/7"
+            "guild_buffs_24_7": "Buffos de Gremio 24/7",
+            "telegram": "Telegram"
+        },
+        "contacts": {
+            "discordOptional": "Servidor de Discord (opcional)",
+            "whatsappOptional": "WhatsApp (opcional)",
+            "telegramOptional": "Telegram (opcional)",
+            "youtubeOptional": "YouTube/TikTok (opcional)",
+            "contactLinks": "Enlaces de Contacto"
         },
         "servers": {
             "global": "Global",
