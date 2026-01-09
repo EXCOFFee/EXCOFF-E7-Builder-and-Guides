@@ -442,6 +442,69 @@ export function BuildDetailClient() {
                             {build.title}
                         </h1>
 
+                        {/* Author & Actions - moved to top */}
+                        <div className="flex items-center justify-between pb-4 mb-4 border-b border-e7-gold/20">
+                            <div className="flex items-center gap-3">
+                                {!build.is_anonymous && build.user?.avatar && (
+                                    <Image
+                                        src={build.user.avatar}
+                                        alt={build.user.name}
+                                        width={40}
+                                        height={40}
+                                        className="rounded-full"
+                                        unoptimized
+                                    />
+                                )}
+                                <div>
+                                    <p className="text-white font-medium">
+                                        {build.is_anonymous ? 'Anonymous' : build.user?.name}
+                                    </p>
+                                    <p className="text-xs text-gray-400">
+                                        {new Date(build.created_at).toLocaleDateString()} • 👁️ {build.views}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="flex gap-2 flex-wrap">
+                                {/* Like Button */}
+                                <Button
+                                    variant="outline"
+                                    className={`border-e7-gold/30 flex items-center gap-2 ${hasLiked ? 'text-red-400 border-red-400/50' : 'text-e7-gold'}`}
+                                    onClick={() => likeMutation.mutate()}
+                                    disabled={likeMutation.isPending || !currentUser}
+                                >
+                                    <Image src="/images/ras-like.gif" alt="like" width={24} height={24} className="inline-block" unoptimized />
+                                    {build.likes}
+                                </Button>
+
+                                {/* Export Image Button */}
+                                <ExportBuildImage
+                                    buildRef={buildCardRef}
+                                    heroName={build.hero?.name || 'hero'}
+                                    buildTitle={build.title}
+                                />
+
+                                {/* Edit/Delete Buttons */}
+                                {canModify && (
+                                    <>
+                                        <Link href={`/builds/${build.id}/edit`}>
+                                            <Button variant="outline" className="border-e7-gold/30 text-e7-gold">
+                                                {t('common.edit', 'Edit')}
+                                            </Button>
+                                        </Link>
+                                        <Button
+                                            variant="outline"
+                                            className="border-red-500/30 text-red-400 hover:bg-red-500/20"
+                                            onClick={handleDelete}
+                                            disabled={deleteMutation.isPending}
+                                        >
+                                            {t('common.delete', 'Delete')}
+                                        </Button>
+                                    </>
+                                )}
+                            </div>
+                        </div>
+
                         {/* Sets */}
                         <div className="flex flex-wrap gap-4 mb-6">
                             {build.primary_set && (
@@ -617,69 +680,6 @@ export function BuildDetailClient() {
                             heroes={build.counter_heroes_list || []}
                             type="counter"
                         />
-
-                        {/* Author & Actions */}
-                        <div className="flex items-center justify-between pt-4 border-t border-e7-gold/20">
-                            <div className="flex items-center gap-3">
-                                {!build.is_anonymous && build.user?.avatar && (
-                                    <Image
-                                        src={build.user.avatar}
-                                        alt={build.user.name}
-                                        width={40}
-                                        height={40}
-                                        className="rounded-full"
-                                        unoptimized
-                                    />
-                                )}
-                                <div>
-                                    <p className="text-white font-medium">
-                                        {build.is_anonymous ? 'Anonymous' : build.user?.name}
-                                    </p>
-                                    <p className="text-xs text-gray-400">
-                                        {new Date(build.created_at).toLocaleDateString()} • 👁️ {build.views}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex gap-2 flex-wrap">
-                                {/* Like Button */}
-                                <Button
-                                    variant="outline"
-                                    className={`border-e7-gold/30 flex items-center gap-2 ${hasLiked ? 'text-red-400 border-red-400/50' : 'text-e7-gold'}`}
-                                    onClick={() => likeMutation.mutate()}
-                                    disabled={likeMutation.isPending || !currentUser}
-                                >
-                                    <Image src="/images/ras-like.gif" alt="like" width={24} height={24} className="inline-block" unoptimized />
-                                    {build.likes}
-                                </Button>
-
-                                {/* Export Image Button */}
-                                <ExportBuildImage
-                                    buildRef={buildCardRef}
-                                    heroName={build.hero?.name || 'hero'}
-                                    buildTitle={build.title}
-                                />
-
-                                {/* Edit/Delete Buttons */}
-                                {canModify && (
-                                    <>
-                                        <Link href={`/builds/${build.id}/edit`}>
-                                            <Button variant="outline" className="border-e7-gold/30 text-e7-gold">
-                                                {t('common.edit', 'Edit')}
-                                            </Button>
-                                        </Link>
-                                        <Button
-                                            variant="outline"
-                                            className="border-red-500/30 text-red-400 hover:bg-red-500/20"
-                                            onClick={handleDelete}
-                                            disabled={deleteMutation.isPending}
-                                        >
-                                            {t('common.delete', 'Delete')}
-                                        </Button>
-                                    </>
-                                )}
-                            </div>
-                        </div>
                     </div>
                 </div>
 

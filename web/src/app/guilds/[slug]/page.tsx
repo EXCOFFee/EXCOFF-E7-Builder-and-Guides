@@ -204,9 +204,49 @@ export default function GuildPostDetailPage() {
                         </div>
 
                         {/* Title */}
-                        <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                        <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                             {post.title}
                         </h1>
+
+                        {/* Author & Actions - moved to top */}
+                        <div className="flex items-center justify-between pb-4 mb-4 border-b border-e7-gold/20">
+                            <div className="flex items-center gap-3">
+                                {post.user.avatar && (
+                                    <Image
+                                        src={post.user.avatar}
+                                        alt={post.user.name}
+                                        width={40}
+                                        height={40}
+                                        className="rounded-full"
+                                        unoptimized
+                                    />
+                                )}
+                                <div>
+                                    <p className="text-white font-medium">{post.user.name}</p>
+                                    <p className="text-xs text-gray-400">
+                                        {new Date(post.created_at).toLocaleDateString()}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {canModify && (
+                                <div className="flex gap-2">
+                                    <Link href={`/guilds/${post.slug}/edit`}>
+                                        <Button variant="outline" className="border-e7-gold/30 text-e7-gold">
+                                            {t('common.edit', 'Edit')}
+                                        </Button>
+                                    </Link>
+                                    <Button
+                                        variant="outline"
+                                        className="border-red-500/30 text-red-400 hover:bg-red-500/20"
+                                        onClick={handleDelete}
+                                        disabled={deleteMutation.isPending}
+                                    >
+                                        {t('common.delete', 'Delete')}
+                                    </Button>
+                                </div>
+                            )}
+                        </div>
 
                         {/* Tags */}
                         <div className="flex flex-wrap gap-3 mb-6">
@@ -278,45 +318,6 @@ export default function GuildPostDetailPage() {
                             </div>
                         )}
 
-                        {/* Author & Actions */}
-                        <div className="flex items-center justify-between pt-4 border-t border-e7-gold/20">
-                            <div className="flex items-center gap-3">
-                                {post.user.avatar && (
-                                    <Image
-                                        src={post.user.avatar}
-                                        alt={post.user.name}
-                                        width={40}
-                                        height={40}
-                                        className="rounded-full"
-                                        unoptimized
-                                    />
-                                )}
-                                <div>
-                                    <p className="text-white font-medium">{post.user.name}</p>
-                                    <p className="text-xs text-gray-400">
-                                        {new Date(post.created_at).toLocaleDateString()}
-                                    </p>
-                                </div>
-                            </div>
-
-                            {canModify && (
-                                <div className="flex gap-2">
-                                    <Link href={`/guilds/${post.slug}/edit`}>
-                                        <Button variant="outline" className="border-e7-gold/30 text-e7-gold">
-                                            {t('common.edit', 'Edit')}
-                                        </Button>
-                                    </Link>
-                                    <Button
-                                        variant="outline"
-                                        className="border-red-500/30 text-red-400 hover:bg-red-500/20"
-                                        onClick={handleDelete}
-                                        disabled={deleteMutation.isPending}
-                                    >
-                                        {t('common.delete', 'Delete')}
-                                    </Button>
-                                </div>
-                            )}
-                        </div>
                     </div>
                 </div>
             </div>
