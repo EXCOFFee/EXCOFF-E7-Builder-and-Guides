@@ -11,7 +11,7 @@ class ImportSkillTranslations extends Command
     /**
      * The name and signature of the console command.
      */
-    protected $signature = 'skills:import-translations {--dry-run : Show what would be updated without making changes} {--check-missing : List heroes with missing translations}';
+    protected $signature = 'skills:import-translations {--dry-run : Show what would be updated without making changes} {--check-missing : List heroes with missing translations} {--force : Overwrite existing translations}';
 
     /**
      * The console command description.
@@ -78,6 +78,8 @@ class ImportSkillTranslations extends Command
         $skipped = 0;
         $bar = $this->output->createProgressBar($heroes->count());
         
+        $force = $this->option('force');
+        
         foreach ($heroes as $hero) {
             $slug = $hero->slug;
             $skills = $hero->skills;
@@ -104,22 +106,35 @@ class ImportSkillTranslations extends Command
                     
                     $langSkill = $translations[$lang][$slug][$skillKey];
                     
-                    // Add translated name
-                    if (!empty($langSkill['name']) && empty($skill["name_{$lang}"])) {
-                        $skill["name_{$lang}"] = $langSkill['name'];
-                        $modified = true;
+                    // Add/Update translated name
+                    if (!empty($langSkill['name'])) {
+                        if ($force || empty($skill["name_{$lang}"])) {
+                            // Check if different from current value
+                            if (($skill["name_{$lang}"] ?? '') !== $langSkill['name']) {
+                                $skill["name_{$lang}"] = $langSkill['name'];
+                                $modified = true;
+                            }
+                        }
                     }
                     
-                    // Add translated description
-                    if (!empty($langSkill['description']) && empty($skill["description_{$lang}"])) {
-                        $skill["description_{$lang}"] = $langSkill['description'];
-                        $modified = true;
+                    // Add/Update translated description
+                    if (!empty($langSkill['description'])) {
+                        if ($force || empty($skill["description_{$lang}"])) {
+                             if (($skill["description_{$lang}"] ?? '') !== $langSkill['description']) {
+                                $skill["description_{$lang}"] = $langSkill['description'];
+                                $modified = true;
+                            }
+                        }
                     }
                     
-                    // Add translated soulburn effect
-                    if (!empty($langSkill['soulburn_effect']) && empty($skill["soulburn_effect_{$lang}"])) {
-                        $skill["soulburn_effect_{$lang}"] = $langSkill['soulburn_effect'];
-                        $modified = true;
+                    // Add/Update translated soulburn effect
+                    if (!empty($langSkill['soulburn_effect'])) {
+                        if ($force || empty($skill["soulburn_effect_{$lang}"])) {
+                             if (($skill["soulburn_effect_{$lang}"] ?? '') !== $langSkill['soulburn_effect']) {
+                                $skill["soulburn_effect_{$lang}"] = $langSkill['soulburn_effect'];
+                                $modified = true;
+                            }
+                        }
                     }
                 }
             }
