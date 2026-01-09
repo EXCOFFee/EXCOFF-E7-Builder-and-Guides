@@ -101,18 +101,19 @@ export function TeamCompositionDisplay({ teams }: TeamCompositionDisplayProps) {
                                 return (
                                     <div
                                         key={heroIndex}
-                                        className="p-4 rounded-xl bg-e7-dark/50 border border-cyan-500/20 min-w-[160px]"
+                                        className="p-5 rounded-xl bg-e7-dark/50 border border-cyan-500/20 min-w-[180px] min-h-[200px] flex flex-col"
                                     >
                                         {/* Hero Image */}
-                                        <div className="text-center mb-4">
-                                            <Image
-                                                src={heroData.image_url || `/images/hero/${heroData.slug}_s.png`}
-                                                alt={heroData.name}
-                                                width={120}
-                                                height={120}
-                                                className="rounded-xl mx-auto ring-2 ring-cyan-500/40 object-cover"
-                                                unoptimized
-                                            />
+                                        <div className="text-center mb-4 flex-1 flex flex-col items-center justify-center">
+                                            <div className="w-[140px] h-[140px] relative mx-auto">
+                                                <Image
+                                                    src={heroData.image_url || `/images/hero/${heroData.slug}_s.png`}
+                                                    alt={heroData.name}
+                                                    fill
+                                                    className="rounded-xl ring-2 ring-cyan-500/40 object-cover"
+                                                    unoptimized
+                                                />
+                                            </div>
                                             <p className="text-base font-display text-cyan-300 mt-3 font-medium">
                                                 {heroData.name}
                                             </p>

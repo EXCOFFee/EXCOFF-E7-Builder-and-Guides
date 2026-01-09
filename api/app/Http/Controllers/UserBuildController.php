@@ -243,6 +243,9 @@ class UserBuildController extends Controller
             'skill_1' => 'nullable|integer|min:0|max:7',
             'skill_2' => 'nullable|integer|min:0|max:7',
             'skill_3' => 'nullable|integer|min:0|max:7',
+            // Anonymous and language options
+            'is_anonymous' => 'nullable',
+            'language' => 'nullable|string|max:5',
             // Tier ratings (D=1 to S=5)
             'rating_pve' => 'nullable|integer|min:1|max:5',
             'rating_arena' => 'nullable|integer|min:1|max:5',

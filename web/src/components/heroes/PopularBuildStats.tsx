@@ -301,7 +301,7 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                                 key={artifact.artifact_id}
                                 className="flex items-center gap-5 px-8 py-5 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-800/20 border border-purple-500/40 hover:border-purple-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/20 min-w-[280px]"
                             >
-                                <div className="relative w-20 h-20 rounded-lg ring-2 ring-purple-500/40 overflow-hidden bg-purple-900/50 flex-shrink-0">
+                                <div className="relative w-28 h-28 rounded-lg ring-2 ring-purple-500/40 overflow-hidden bg-purple-900/50 flex-shrink-0">
                                     {artifact.icon ? (
                                         <img
                                             src={artifact.icon}
@@ -342,13 +342,13 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                             <Link
                                 key={hero.hero_id}
                                 href={`/heroes/${hero.slug}`}
-                                className="flex items-center gap-4 px-6 py-4 rounded-xl bg-gradient-to-br from-green-900/30 to-emerald-800/20 border border-green-500/40 hover:border-green-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-green-500/20"
+                                className="flex items-center gap-6 px-8 py-6 rounded-xl bg-gradient-to-br from-green-900/30 to-emerald-800/20 border border-green-500/40 hover:border-green-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-green-500/20 min-w-[280px]"
                             >
                                 <Image
                                     src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
                                     alt={hero.name}
-                                    width={80}
-                                    height={80}
+                                    width={120}
+                                    height={120}
                                     className="rounded-xl ring-2 ring-green-500/40"
                                     unoptimized
                                 />
@@ -374,13 +374,13 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                             <Link
                                 key={hero.hero_id}
                                 href={`/heroes/${hero.slug}`}
-                                className="flex items-center gap-4 px-6 py-4 rounded-xl bg-gradient-to-br from-red-900/30 to-rose-800/20 border border-red-500/40 hover:border-red-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-red-500/20"
+                                className="flex items-center gap-6 px-8 py-6 rounded-xl bg-gradient-to-br from-red-900/30 to-rose-800/20 border border-red-500/40 hover:border-red-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-red-500/20 min-w-[280px]"
                             >
                                 <Image
                                     src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
                                     alt={hero.name}
-                                    width={80}
-                                    height={80}
+                                    width={120}
+                                    height={120}
                                     className="rounded-xl ring-2 ring-red-500/40"
                                     unoptimized
                                 />
