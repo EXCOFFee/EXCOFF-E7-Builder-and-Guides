@@ -45,8 +45,8 @@ export default api;
 export const heroApi = {
   list: (params?: Record<string, string>) =>
     api.get('/heroes', { params }),
-  get: (slug: string) =>
-    api.get(`/heroes/${slug}`),
+  get: (slug: string, lang?: string) =>
+    api.get(`/heroes/${slug}`, { params: lang ? { lang } : {} }),
   getBuilds: (slug: string) =>
     api.get(`/heroes/${slug}/builds`),
 };

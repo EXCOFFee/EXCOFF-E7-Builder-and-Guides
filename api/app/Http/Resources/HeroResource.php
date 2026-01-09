@@ -37,7 +37,7 @@ class HeroResource extends JsonResource
             'class' => $this->class,
             'rarity' => $this->rarity,
             'base_stats' => $this->base_stats,
-            'skills' => $this->skills,
+            'skills' => $this->getLocalizedSkills($lang),
             'self_devotion' => $this->self_devotion,
             'image_url' => $this->image_url,
             // Usage statistics (from community guides)
@@ -63,4 +63,75 @@ class HeroResource extends JsonResource
             default => $this->name,
         };
     }
+
+    /**
+     * Get skills with localized name, description, and soulburn_effect.
+     */
+    private function getLocalizedSkills(string $lang): ?array
+    {
+        if (!$this->skills || !is_array($this->skills)) {
+            return $this->skills;
+        }
+
+        $localizedSkills = [];
+        
+        foreach ($this->skills as $key => $skill) {
+            if (!is_array($skill)) {
+                $localizedSkills[$key] = $skill;
+                continue;
+            }
+
+            // Get localized values with fallback to English
+            $localizedSkills[$key] = [
+                'name' => $this->getLocalizedField($skill, 'name', $lang),
+                'description' => $this->getLocalizedField($skill, 'description', $lang),
+                'soulburn_effect' => $this->getLocalizedField($skill, 'soulburn_effect', $lang),
+                // Keep other fields as-is
+                'rate' => $skill['rate'] ?? null,
+                'pow' => $skill['pow'] ?? null,
+                'cooldown' => $skill['cooldown'] ?? null,
+                'souls' => $skill['souls'] ?? null,
+                'soulburn' => $skill['soulburn'] ?? false,
+                'soulburn_souls' => $skill['soulburn_souls'] ?? null,
+                'targets' => $skill['targets'] ?? null,
+                'selfHpScaling' => $skill['selfHpScaling'] ?? null,
+                'selfAtkScaling' => $skill['selfAtkScaling'] ?? null,
+                'selfDefScaling' => $skill['selfDefScaling'] ?? null,
+                'selfSpdScaling' => $skill['selfSpdScaling'] ?? null,
+                'penetration' => $skill['penetration'] ?? null,
+                'hitTypes' => $skill['hitTypes'] ?? null,
+                'passive' => $skill['passive'] ?? null,
+            ];
+        }
+
+        return $localizedSkills;
+    }
+
+    /**
+     * Get a localized field value with fallback to English.
+     */
+    private function getLocalizedField(array $skill, string $field, string $lang): ?string
+    {
+        // Map language codes to field suffixes
+        $langKey = match ($lang) {
+            'es' => 'es',
+            'ko' => 'ko',
+            'ja' => 'ja',
+            'zh' => 'zh',
+            'pt' => 'pt',
+            default => null, // English uses base field
+        };
+
+        // Try localized field first
+        if ($langKey !== null) {
+            $localizedField = "{$field}_{$langKey}";
+            if (!empty($skill[$localizedField])) {
+                return $skill[$localizedField];
+            }
+        }
+
+        // Fallback to English (base field)
+        return $skill[$field] ?? null;
+    }
 }
+

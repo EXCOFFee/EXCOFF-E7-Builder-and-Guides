@@ -91,7 +91,7 @@ class ShepherdDieneSeeder extends Seeder
                         'SSS' => 0.18,
                     ],
                 ],
-                'image_url' => 'https://moccasin-sparrow-217730.hostingersite.com/images/heroes/c2076_l.png',
+                'image_url' => 'https://moccasin-sparrow-217730.hostingersite.com/images/heroes/c2076_su.png',
                 'data_hash' => md5('shepherd-of-the-dark-diene-c2076-v1'),
             ]
         );

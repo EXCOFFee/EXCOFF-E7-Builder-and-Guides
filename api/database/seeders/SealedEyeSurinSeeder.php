@@ -90,7 +90,7 @@ class SealedEyeSurinSeeder extends Seeder
                         'SSS' => 0.14,
                     ],
                 ],
-                'image_url' => 'https://moccasin-sparrow-217730.hostingersite.com/images/heroes/c6065_l.png',
+                'image_url' => 'https://moccasin-sparrow-217730.hostingersite.com/images/heroes/c6065_su.png',
                 'data_hash' => md5('sealed-eye-surin-c6065-v1'),
             ]
         );

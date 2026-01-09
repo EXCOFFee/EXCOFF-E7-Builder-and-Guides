@@ -9,7 +9,6 @@ import { heroApi, buildApi } from '@/lib/api';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useTranslations } from '@/hooks/useTranslations';
-import { useSkillTranslations } from '@/hooks/useSkillTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { PopularBuildStats } from '@/components/heroes/PopularBuildStats';
 import { appendImageVersion } from '@/lib/heroImages';
@@ -185,9 +184,9 @@ export function HeroDetailClient() {
     const { translateHeroName } = useHeroTranslations();
 
     const { data, isLoading, error } = useQuery({
-        queryKey: ['hero', slug],
+        queryKey: ['hero', slug, locale],
         queryFn: async () => {
-            const response = await heroApi.get(slug);
+            const response = await heroApi.get(slug, locale);
             return response.data;
         },
         enabled: !!slug,
@@ -197,9 +196,6 @@ export function HeroDetailClient() {
 
     // Get translated hero name for Asian locales
     const translatedHeroName = hero ? translateHeroName(hero.name) : '';
-
-    // Load skill translations based on hero slug and current locale
-    const { getSkillName, getSkillDescription, getSoulburnEffect } = useSkillTranslations(hero?.slug || '', locale);
 
     // Fetch builds for this hero
     const { data: buildsData } = useQuery({
@@ -612,7 +608,7 @@ export function HeroDetailClient() {
                                                 />
                                             )}
                                             <Badge className="bg-e7-gold text-black font-bold px-3">{skillKey}</Badge>
-                                            <h3 className="text-white font-semibold">{getSkillName(skillKey as 'S1' | 'S2' | 'S3', s.name || `Skill ${skillKey}`)}</h3>
+                                            <h3 className="text-white font-semibold">{s.name || `Skill ${skillKey}`}</h3>
                                             {s.targets && (
                                                 <Badge variant="outline" className="border-gray-500 text-gray-400">
                                                     {s.targets === 1 ? 'Single Target' : `${s.targets} Targets`}
@@ -634,7 +630,7 @@ export function HeroDetailClient() {
                                         {s.soulburn && s.soulburn_effect && (
                                             <div className="bg-purple-900/30 rounded px-3 py-2 mb-3 text-sm">
                                                 <span className="text-purple-300 font-semibold">Soulburn:</span>{' '}
-                                                <span className="text-purple-200">{getSoulburnEffect(skillKey as 'S1' | 'S2' | 'S3', s.soulburn_effect)}</span>
+                                                <span className="text-purple-200">{s.soulburn_effect}</span>
                                             </div>
                                         )}
 
@@ -678,8 +674,8 @@ export function HeroDetailClient() {
                                             </div>
                                         )}
 
-                                        {(s.description || getSkillDescription(skillKey as 'S1' | 'S2' | 'S3', '')) && (
-                                            <p className="text-gray-300 text-sm leading-relaxed">{getSkillDescription(skillKey as 'S1' | 'S2' | 'S3', s.description || '')}</p>
+                                        {s.description && (
+                                            <p className="text-gray-300 text-sm leading-relaxed">{s.description}</p>
                                         )}
 
                                         {!hasScaling && !s.description && (
