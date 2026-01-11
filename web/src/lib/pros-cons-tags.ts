@@ -68,6 +68,28 @@ export const PROS_TAGS: Tag[] = [
     { id: 'damage_spd_scaling', type: 'pro', category: 'damage', translations: t('Damage scales with SPD', 'Daño escala con VEL', '速度でダメージ増加', '속도 비례 데미지', 'Dano escala com VEL', '速度比例伤害') },
     { id: 'damage_target_hp', type: 'pro', category: 'damage', translations: t('Damage scales with enemy HP', 'Daño escala con HP enemigo', '敵HPでダメージ増加', '적 HP 비례 데미지', 'Dano escala com HP inimigo', '敌方HP比例伤害') },
     { id: 'damage_target_atk', type: 'pro', category: 'damage', translations: t('Damage scales with enemy ATK', 'Daño escala con ATK enemigo', '敵攻撃でダメージ増加', '적 공격력 비례 데미지', 'Dano escala com ATK inimigo', '敌方攻击比例伤害') },
+    { id: 'max_hp_scaling', type: 'pro', category: 'damage', translations: t('Scales off Max HP', 'Escala con HP Máx', '最大HP比例', '최대 생명력 비례', 'Escala com HP Máx', '最大生命值比例') },
+    { id: 'lost_hp_scaling', type: 'pro', category: 'damage', translations: t('Scales off Lost HP', 'Escala con HP Perdida', '失ったHP比例', '잃은 생명력 비례', 'Escala com HP Perdida', '已损生命值比例') },
+    { id: 'def_scaling', type: 'pro', category: 'damage', translations: t('Scales off DEF', 'Escala con DEF', '防御力比例', '방어력 비례', 'Escala com DEF', '防御力比例') },
+    { id: 'speed_scaling', type: 'pro', category: 'damage', translations: t('Scales off SPD', 'Escala con VEL', '速度比例', '속도 비례', 'Escala com VEL', '速度比例') },
+
+    // DAMAGE - Mechanics
+    { id: 'guaranteed_crit', type: 'pro', category: 'damage', translations: t('Guaranteed Crit', 'Crítico Garantizado', '確定クリティカル', '확정 치명타', 'Crítico Garantido', '必定暴击') },
+    { id: 'hit_chance_up', type: 'pro', category: 'damage', translations: t('Increased Hit Chance', 'Aumento Prob. Golpe', '命中率UP', '명중률 증가', 'Aumento Prob. Acerto', '命中率提升') },
+    { id: 'cannot_trigger_counter', type: 'pro', category: 'damage', translations: t('Cannot be countered', 'No activa contrataques', '反撃不可', '반격 불가', 'Não ativa contra-ataques', '无法触发反击') },
+    { id: 'ignores_dmg_sharing', type: 'pro', category: 'damage', translations: t('Ignores Damage Sharing', 'Ignora Distribución de Daño', 'ダメージ分配無視', '데미지 분배 무시', 'Ignora Distribuição de Dano', '无视伤害分摊') },
+    { id: 'ignores_dmg_reduction', type: 'pro', category: 'damage', translations: t('Ignores Damage Reduction', 'Ignora Reducción de Daño', 'ダメージ軽減無視', '데미지 감소 무시', 'Ignora Redução de Dano', '无视伤害减免') },
+    { id: 'ignores_er_soulburn', type: 'pro', category: 'damage', translations: t('Ignores ER (Soulburn)', 'Ignora Res (Soulburn)', '抵抗無視 (SB)', '효저 무시 (소울번)', 'Ignora Res (Soulburn)', '无视抗性 (烧魂)') },
+    { id: 'ignores_er_skill', type: 'pro', category: 'damage', translations: t('Ignores ER (Always)', 'Ignora Res (Siempre)', '抵抗無視 (常時)', '효저 무시 (상시)', 'Ignora Res (Sempre)', '无视抗性 (常驻)') },
+    { id: 'detonates_dots', type: 'pro', category: 'damage', translations: t('Detonates DoTs', 'Detona Sangrado/Quemaduras', '激爆', '격폭 (출혈/화상)', 'Detona DoTs', '激爆') },
+    { id: 'splash_damage', type: 'pro', category: 'damage', translations: t('Splash Damage', 'Daño Salpicadura (Splash)', 'スプラッシュダメ', '추가 피해 (스플래시)', 'Dano Splash', '溅射伤害') },
+    { id: 'extra_dmg_fixed', type: 'pro', category: 'damage', translations: t('Extra Fixed Damage', 'Daño Fijo Extra', '追加固定ダメージ', '추가 고정 데미지', 'Dano Fixo Extra', '额外固定伤害') },
+    { id: 'reflects_damage', type: 'pro', category: 'damage', translations: t('Reflects Damage', 'Refleja Daño', 'ダメージ反射', '데미지 반사', 'Reflete Dano', '反射伤害') },
+    { id: 'barrier_inversion', type: 'pro', category: 'damage', translations: t('Barrier Inversion', 'Inversión de Barrera', 'バリア反転', '보호막 반전', 'Inversão de Barreira', '护盾逆转') },
+    { id: 'shield_penetration', type: 'pro', category: 'damage', translations: t('Penetrates Shields', 'Penetra Barreras', 'シールド貫通', '보호막 관통', 'Penetra Barreiras', '护盾穿透') },
+    { id: 'injury_inflict', type: 'pro', category: 'damage', translations: t('Inflicts Injury', 'Aplica Herida', '負傷付与', '부상 발생', 'Aplica Ferimento', '造成创伤') },
+    { id: 'always_element_advantage', type: 'pro', category: 'damage', translations: t('Advantages vs All Elements', 'Ventaja vs Todos los Elementos', '全属性有利', '모든 속성 우위', 'Vantagem vs Todos Elementos', '全属性克制') },
+
     // DAMAGE - Type
     { id: 'high_multipliers', type: 'pro', category: 'damage', translations: t('High damage multipliers', 'Multiplicadores de daño altos', '高倍率', '높은 배율', 'Multiplicadores altos', '高倍率') },
     { id: 'aoe_damage', type: 'pro', category: 'damage', translations: t('AoE damage', 'Daño en área (AoE)', '範囲攻撃', '광역 공격', 'Dano em área', '范围伤害') },
@@ -75,10 +97,13 @@ export const PROS_TAGS: Tag[] = [
     { id: 'fixed_damage', type: 'pro', category: 'damage', translations: t('Fixed damage (ignores DEF)', 'Daño fijo (ignora DEF)', '固定ダメージ', '고정 데미지', 'Dano fixo (ignora DEF)', '固定伤害') },
     { id: 'extra_attacks', type: 'pro', category: 'damage', translations: t('Extra attacks', 'Ataques adicionales', '追加攻撃', '추가 공격', 'Ataques extras', '额外攻击') },
     { id: 'dual_attack_synergy', type: 'pro', category: 'damage', translations: t('Dual Attack synergy', 'Sinergia con Dual Attack', '協力攻撃シナジー', '협공 시너지', 'Sinergia com Ataque Duplo', '协同攻击协同') },
+    { id: 'unlimited_stacking', type: 'pro', category: 'damage', translations: t('Unlimited stacking', 'Acumulación ilimitada', '無限スタック', '무한 중첩', 'Acumulação ilimitada', '无限叠加') },
     // DAMAGE - Penetration
     { id: 'def_penetration', type: 'pro', category: 'damage', translations: t('Defense penetration', 'Penetración de defensa', '防御貫通', '방어 관통', 'Penetração de defesa', '防御穿透') },
     { id: 'def_ignore', type: 'pro', category: 'damage', translations: t('Ignores defense (100%)', 'Ignora defensa (100%)', '防御無視', '방어 무시', 'Ignora defesa (100%)', '无视防御') },
     { id: 'element_advantage', type: 'pro', category: 'damage', translations: t('Always elemental advantage', 'Siempre ventaja elemental', '常時属性有利', '항상 속성 유리', 'Sempre vantagem elemental', '始终元素有利') },
+    { id: 'consistent_damage', type: 'pro', category: 'damage', translations: t('Consistent damage', 'Daño consistente', '安定ダメージ', '안정적 데미지', 'Dano consistente', '稳定伤害') },
+    { id: 'anti_evasion', type: 'pro', category: 'damage', translations: t('Anti-evasion', 'Anti-evasión', '回避無視', '회피 무시', 'Anti-evasão', '无视闪避') },
 
     // SURVIVABILITY - Defensive
     { id: 'high_base_hp', type: 'pro', category: 'survivability', translations: t('High base HP', 'HP base alta', '高HP', '높은 기본 HP', 'HP base alto', '高基础HP') },
@@ -87,16 +112,27 @@ export const PROS_TAGS: Tag[] = [
     { id: 'damage_share', type: 'pro', category: 'survivability', translations: t('Shares damage with allies', 'Comparte daño con aliados', 'ダメージ分散', '데미지 분산', 'Compartilha dano', '分担伤害') },
     { id: 'self_healing', type: 'pro', category: 'survivability', translations: t('Self healing', 'Se cura a sí mismo', '自己回復', '자가 회복', 'Auto cura', '自我治疗') },
     { id: 'lifesteal_built_in', type: 'pro', category: 'survivability', translations: t('Built-in lifesteal', 'Lifesteal incorporado', '内蔵吸血', '내장 흡혈', 'Roubo de vida embutido', '内置吸血') },
+    { id: 'crit_res_buff', type: 'pro', category: 'survivability', translations: t('Critical Hit Resistance', 'Resistencia Crítica', 'クリティカル抵抗', '치명타 저항', 'Resistência Crítica', '暴击抗性') },
+    { id: 'anti_crit_bonus', type: 'pro', category: 'survivability', translations: t('Bonus vs Crits', 'Bonus al recibir Crítico', '被クリ時ボーナス', '피격 시 보너스', 'Bônus ao receber Crítico', '受击暴击加成') },
+    { id: 'dmg_limit', type: 'pro', category: 'survivability', translations: t('Damage Limit', 'Límite de Daño Máximo', '被ダメージ制限', '최대 데미지 제한', 'Limite de Dano Máximo', '伤害上限') },
+    { id: 'elem_neutrality', type: 'pro', category: 'survivability', translations: t('Elemental Neutrality (Defense)', 'Neutralidad Elemental (Def)', '属性不利無視 (防御)', '역속성 무시 (방어)', 'Neutralidade Elemental (Def)', '无视属性 (防御)') },
+
     // SURVIVABILITY - Immunity
     { id: 'self_immunity', type: 'pro', category: 'survivability', translations: t('Grants self immunity', 'Se otorga inmunidad', '自己免疫付与', '자체 면역 부여', 'Concede auto imunidade', '自我免疫') },
     { id: 'skill_nullifier', type: 'pro', category: 'survivability', translations: t('Grants Skill Nullifier', 'Otorga Skill Nullifier', 'スキル無効化付与', '스킬 무효화 부여', 'Concede Anulação de Skill', '技能无效化') },
     { id: 'invincibility', type: 'pro', category: 'survivability', translations: t('Grants invincibility', 'Otorga invencibilidad', '無敵付与', '무적 부여', 'Concede invencibilidade', '无敌') },
     { id: 'immortality_buff', type: 'pro', category: 'survivability', translations: t('Grants immortality', 'Otorga inmortalidad', '不死付与', '불사 부여', 'Concede imortalidade', '不死') },
+    { id: 'immortality', type: 'pro', category: 'survivability', translations: t('Immortality', 'Inmortalidad', '不死', '불사', 'Imortalidade', '不死') },
+    { id: 'invincibility_passive', type: 'pro', category: 'survivability', translations: t('Invincibility', 'Invencibilidad', '無敵', '무적', 'Invencibilidade', '无敌') },
     { id: 'stealth', type: 'pro', category: 'survivability', translations: t('Grants stealth', 'Otorga sigilo', 'ステルス付与', '은신 부여', 'Concede furtividade', '隐身') },
+    { id: 'stealth_permanent', type: 'pro', category: 'survivability', translations: t('Permanent Stealth', 'Sigilo Permanente', '常時ステルス', '영구 은신', 'Furtividade Permanente', '永久隐身') },
     { id: 'evasion_buff', type: 'pro', category: 'survivability', translations: t('High evasion', 'Alta evasión', '高回避', '높은 회피', 'Alta evasão', '高闪避') },
+    { id: 'barrier_thick', type: 'pro', category: 'survivability', translations: t('Thick Barrier (High Scaling)', 'Barrera Gruesa', '高耐久バリア', '두꺼운 보호막', 'Barreira Espessa', '厚护盾') },
+
     // SURVIVABILITY - Revive
     { id: 'revive_ally', type: 'pro', category: 'survivability', translations: t('Can revive allies', 'Puede revivir aliados', '味方蘇生可能', '아군 부활 가능', 'Pode reviver aliados', '可复活队友') },
     { id: 'self_revive', type: 'pro', category: 'survivability', translations: t('Self revive', 'Se revive a sí mismo', '自己蘇生', '자가 부활', 'Auto revive', '自我复活') },
+    { id: 'revive_buffs', type: 'pro', category: 'survivability', translations: t('Revives with Buffs', 'Revive con Buffs', 'バフ付き蘇生', '버프와 함께 부활', 'Revive com Buffs', '复活带增益') },
     { id: 'barrier_provider', type: 'pro', category: 'survivability', translations: t('Provides barriers', 'Otorga barreras', 'バリア付与', '보호막 부여', 'Fornece barreiras', '提供护盾') },
 
     // CONTROL
@@ -104,6 +140,7 @@ export const PROS_TAGS: Tag[] = [
     { id: 'sleep', type: 'pro', category: 'control', translations: t('Inflicts sleep', 'Inflige sueño', '睡眠付与', '수면 부여', 'Inflige sono', '睡眠') },
     { id: 'silence', type: 'pro', category: 'control', translations: t('Inflicts silence', 'Inflige silencio', '沈黙付与', '침묵 부여', 'Inflige silêncio', '沉默') },
     { id: 'provoke', type: 'pro', category: 'control', translations: t('Inflicts provoke', 'Inflige provocar', '挑発付与', '도발 부여', 'Inflige provocação', '嘲讽') },
+    { id: 'redirect_provoke', type: 'pro', category: 'control', translations: t('Redirected Provoke', 'Provocar Redirigido', '指定挑発', '지정 도발', 'Provocação Redirecionada', '指定挑衅') },
     { id: 'restrict', type: 'pro', category: 'control', translations: t('Inflicts restrict', 'Inflige restringir', '拘束付与', '구속 부여', 'Inflige restrição', '禁锢') },
     { id: 'def_break', type: 'pro', category: 'control', translations: t('Defense break', 'Rompe defensa', '防御ダウン', '방어력 감소', 'Quebra de defesa', '防御下降') },
     { id: 'target_debuff', type: 'pro', category: 'control', translations: t('Inflicts target', 'Inflige objetivo', 'ターゲット付与', '타겟 부여', 'Inflige alvo', '目标') },
@@ -111,20 +148,41 @@ export const PROS_TAGS: Tag[] = [
     { id: 'decrease_atk', type: 'pro', category: 'control', translations: t('Decreases attack', 'Reduce ataque', '攻撃ダウン', '공격력 감소', 'Reduz ataque', '攻击下降') },
     { id: 'unhealable', type: 'pro', category: 'control', translations: t('Inflicts unhealable', 'Inflige incurable', '回復不能付与', '회복 불가 부여', 'Inflige incurável', '无法治愈') },
     { id: 'unable_to_buff', type: 'pro', category: 'control', translations: t('Blocks buffs', 'Bloquea buffs', 'バフ封印', '버프 불가', 'Bloqueia buffs', '禁止增益') },
+    { id: 'unbuffable', type: 'pro', category: 'control', translations: t('Cannot be Buffed', 'Anti-Buff', '強化不可', '강화 불가', 'Anti-Buff', '无法强化') },
     { id: 'strip_buffs', type: 'pro', category: 'control', translations: t('Strips/Dispels buffs', 'Quita/Disipa buffs', 'バフ解除', '버프 해제', 'Remove buffs', '驱散增益') },
     { id: 'extinction', type: 'pro', category: 'control', translations: t('Inflicts extinction', 'Inflige extinción', '消滅付与', '소멸 부여', 'Inflige extinção', '湮灭') },
     { id: 'injury', type: 'pro', category: 'control', translations: t('Inflicts injury', 'Inflige herida', '負傷付与', '부상 부여', 'Inflige ferimento', '创伤') },
     { id: 'seal', type: 'pro', category: 'control', translations: t('Inflicts seal', 'Inflige sello', '封印付与', '봉인 부여', 'Inflige selo', '封印') },
+    { id: 'blind', type: 'pro', category: 'control', translations: t('Blind (Hit Chance)', 'Ceguera', '命中ダウン', '명중 감소', 'Cegueira', '致盲') },
     { id: 'cooldown_increase', type: 'pro', category: 'control', translations: t('Increases cooldowns', 'Aumenta enfriamientos', 'クールダウン増加', '재사용 대기시간 증가', 'Aumenta tempos de recarga', '增加冷却') },
+    { id: 'cd_increase', type: 'pro', category: 'control', translations: t('Increases Cooldowns', 'Aumenta Cooldowns', 'CD増加', '쿨타임 증가', 'Aumenta Cooldowns', '增加冷却') },
+    { id: 'cd_reset', type: 'pro', category: 'control', translations: t('Resets Cooldowns', 'Resetea Cooldowns', 'CDリセット', '쿨타임 초기화', 'Reseta Cooldowns', '重置冷却') },
+    { id: 'resource_reduction', type: 'pro', category: 'control', translations: t('Reduces Souls/Focus', 'Reduce Almas/Foco', 'リソース減少', '자원 감소 (소울/집중)', 'Reduz Almas/Foco', '削减资源') },
+    { id: 'buff_steal', type: 'pro', category: 'control', translations: t('Steals Buffs', 'Roba Buffs', 'バフ奪取', '버프 강탈', 'Rouba Buffs', '偷取增益') },
+    { id: 'buff_duration_reduce', type: 'pro', category: 'control', translations: t('Reduces Buff Duration', 'Reduce Duración Buffs', 'バフ短縮', '버프 턴 감소', 'Reduz Duração Buffs', '减少增益回合') },
+    { id: 'debuff_extension', type: 'pro', category: 'control', translations: t('Extends Debuffs', 'Extiende Debuffs', 'デバフ延長', '디버프 연장', 'Estende Debuffs', '延长减益') },
+    { id: 'debuff_transfer', type: 'pro', category: 'control', translations: t('Transfers Debuffs', 'Transfiere Debuffs', 'デバフ転嫁', '디버프 전이', 'Transfere Debuffs', '转移减益') },
+    { id: 'dispel_before_damage', type: 'pro', category: 'control', translations: t('Dispel before damage', 'Dispela antes de dañar', 'ダメージ前解除', '공격 전 해제', 'Dispela antes do dano', '先驱散后伤害') },
+
+    // IMMUNITIES
+    { id: 'immune_stun', type: 'pro', category: 'survivability', translations: t('Immune to Stun', 'Inmune a Aturdimiento', 'スタン免疫', '기절 면역', 'Imune a Atordoamento', '免疫眩晕') },
+    { id: 'immune_sleep', type: 'pro', category: 'survivability', translations: t('Immune to Sleep', 'Inmune a Sueño', '睡眠免疫', '수면 면역', 'Imune a Sono', '免疫睡眠') },
+    { id: 'immune_provoke', type: 'pro', category: 'survivability', translations: t('Immune to Provoke', 'Inmune a Provocar', '挑発免疫', '도발 면역', 'Imune a Provocação', '免疫嘲讽') },
+    { id: 'immune_silence', type: 'pro', category: 'survivability', translations: t('Immune to Silence', 'Inmune a Silencio', '沈黙免疫', '침묵 면역', 'Imune a Silêncio', '免疫沉默') },
+    { id: 'immune_pushback', type: 'pro', category: 'survivability', translations: t('Immune to CR Pushback', 'Inmune a Reducción CR', 'ゲージダウン免疫', '행동게이지 감소 면역', 'Imune a Redução CR', '免疫推条') },
+    { id: 'immune_unbuffable', type: 'pro', category: 'survivability', translations: t('Immune to Unbuffable', 'Inmune a Anti-Buff', '強化不可免疫', '강불 면역', 'Imune a Anti-Buff', '免疫无法强化') },
 
     // SPEED
     { id: 'high_base_speed', type: 'pro', category: 'speed', translations: t('High base speed (110+)', 'Velocidad base alta (110+)', '高速度(110+)', '높은 기본 속도 (110+)', 'Velocidade base alta (110+)', '高基础速度(110+)') },
-    { id: 'very_high_base_speed', type: 'pro', category: 'speed', translations: t('Very high base speed (115+)', 'Velocidad base muy alta (115+)', '超高速度(115+)', '매우 높은 기본 속도 (115+)', 'Velocidade base muito alta (115+)', '极高基础速度(115+)') },
+    { id: 'very_high_base_speed', type: 'pro', category: 'speed', translations: t('Very high base speed (115+)', 'Velocidad base muy alta (115+)', '超高速度(115+)', '매우 높은 기본 속도 (115+)', 'Velocidade base muy alta (115+)', '極高基础速度(115+)') },
     { id: 'cr_push_self', type: 'pro', category: 'speed', translations: t('Self CR push', 'Push de CR propio', '自己CR増加', '자신 CR 증가', 'Push de CR próprio', '自我CR推进') },
+    { id: 'self_push', type: 'pro', category: 'speed', translations: t('Self CR Push', 'Auto-Push CR', '自己ゲージUP', '자가 행게증', 'Auto-Push CR', '自拉条') },
     { id: 'cr_push_team', type: 'pro', category: 'speed', translations: t('Team CR push', 'Push de CR al equipo', 'チームCR増加', '팀 CR 증가', 'Push de CR para equipe', '团队CR推进') },
+    { id: 'team_push', type: 'pro', category: 'speed', translations: t('Team CR Push', 'Push CR Equipo', '味方ゲージUP', '아군 행게증', 'Push CR Equipe', '全队拉条') },
     { id: 'cr_decrease_enemy', type: 'pro', category: 'speed', translations: t('Enemy CR decrease', 'Reduce CR enemigo', '敵CR減少', '적 CR 감소', 'Reduz CR inimigo', '降低敌方CR') },
     { id: 'extra_turn', type: 'pro', category: 'speed', translations: t('Extra turn', 'Turno extra', '追加ターン', '추가 턴', 'Turno extra', '额外回合') },
-    { id: 'turn_cycling', type: 'pro', category: 'speed', translations: t('Good turn cycling', 'Buen ciclado de turnos', 'ターン回転良好', '좋은 턴 순환', 'Bom ciclo de turnos', '良好的轮换') },
+    { id: 'extra_turn_kill', type: 'pro', category: 'speed', translations: t('Extra Turn on Kill', 'Turno Extra al Matar', '撃破時追加ターン', '처치 시 추가 턴', 'Turno Extra ao Matar', '击杀追加回合') },
+    { id: 'turn_cycling', type: 'pro', category: 'speed', translations: t('Good turn cycling', 'Buen ciclado de turnos', 'ターン回転良好', '좋은 턴 순환', 'Bom ciclo de turnos', '良好的轮換') },
 
     // UTILITY - Buffs
     { id: 'atk_buff', type: 'pro', category: 'utility', translations: t('ATK buff', 'Buff de ATK', '攻撃バフ', '공격력 버프', 'Buff de ATK', '攻击增益') },
@@ -135,12 +193,20 @@ export const PROS_TAGS: Tag[] = [
     { id: 'greater_atk_buff', type: 'pro', category: 'utility', translations: t('Greater ATK buff', 'Buff de ATK mayor', '大攻撃バフ', '대형 공격력 버프', 'Buff de ATK maior', '大攻击增益') },
     { id: 'skill_nullifier_team', type: 'pro', category: 'utility', translations: t('Team Skill Nullifier', 'Skill Nullifier al equipo', 'チームスキル無効化', '팀 스킬 무효화', 'Anulação de Skill para equipe', '团队技能无效化') },
     { id: 'immortality_team', type: 'pro', category: 'utility', translations: t('Team immortality', 'Inmortalidad al equipo', 'チーム不死', '팀 불사', 'Imortalidade para equipe', '团队不死') },
+    { id: 'team_invincibility', type: 'pro', category: 'utility', translations: t('Team Invincibility', 'Invencibilidad en Equipo', 'チーム無敵', '팀 무적', 'Invencibilidade em Equipe', '全体无敌') },
+    { id: 'reset_cooldowns', type: 'pro', category: 'utility', translations: t('Resets cooldowns', 'Reinicia enfriamientos', 'クールダウンリセット', '재사용 대기 초기화', 'Reinicia tempos de recarga', '重置冷却') },
+    { id: 'passive_income', type: 'pro', category: 'utility', translations: t('Passive resource gain', 'Ganancia pasiva de recursos', 'パッシブ資源獲得', '패시브 자원 획득', 'Ganho passivo de recursos', '被动资源获取') },
+
     // UTILITY - Cleanse
     { id: 'cleanse_debuffs', type: 'pro', category: 'utility', translations: t('Cleanses debuffs', 'Limpia debuffs', 'デバフ解除', '디버프 해제', 'Limpa debuffs', '净化减益') },
     { id: 'transfer_debuffs', type: 'pro', category: 'utility', translations: t('Transfers debuffs', 'Transfiere debuffs', 'デバフ移転', '디버프 전이', 'Transfere debuffs', '转移减益') },
     { id: 'full_team_cleanse', type: 'pro', category: 'utility', translations: t('Full team cleanse', 'Cleanse completo al equipo', 'フルチーム解除', '전체 해제', 'Limpeza completa da equipe', '全队净化') },
+    { id: 'cleanses_full', type: 'pro', category: 'utility', translations: t('Full Cleanse', 'Limpieza Total', '全デバフ解除', '약화효과 전체 해제', 'Limpeza Total', '全体驱散') },
+    { id: 'cleanses_1_debuff', type: 'pro', category: 'utility', translations: t('Cleanses 1 Debuff', 'Limpia 1 Debuff', 'デバフ1つ解除', '디버프 1개 해제', 'Limpa 1 Debuff', '驱散1个减益') },
+
     // UTILITY - Support
     { id: 'team_healer', type: 'pro', category: 'utility', translations: t('Team healer', 'Curador del equipo', 'チームヒーラー', '팀 힐러', 'Curador da equipe', '团队治疗者') },
+    { id: 'vampirism', type: 'pro', category: 'utility', translations: t('Vampirism (Heal Team)', 'Vampirismo', '吸血 (味方回復)', '흡혈 (아군 회복)', 'Vampirismo', '吸血 (回复队友)') },
     { id: 'cr_pusher', type: 'pro', category: 'utility', translations: t('CR pusher', 'Pusher de CR', 'CRプッシャー', 'CR 푸셔', 'Pusher de CR', 'CR推进者') },
     { id: 'buff_extender', type: 'pro', category: 'utility', translations: t('Extends buffs', 'Extiende buffs', 'バフ延長', '버프 연장', 'Estende buffs', '延长增益') },
     { id: 'anti_revive', type: 'pro', category: 'utility', translations: t('Anti-revive (extinction)', 'Anti-revive (extinción)', '蘇生防止', '부활 방지', 'Anti-revive (extinção)', '反复活') },
@@ -153,6 +219,18 @@ export const PROS_TAGS: Tag[] = [
     { id: 'multiple_viable_sets', type: 'pro', category: 'stats', translations: t('Multiple viable sets', 'Varios sets viables', '複数セット可能', '여러 세트 가능', 'Vários sets viáveis', '多套装可选') },
     { id: 'no_crit_needed', type: 'pro', category: 'stats', translations: t('No crit needed', 'No necesita crítico', 'クリ不要', '치명타 불필요', 'Não precisa de crítico', '无需暴击') },
 
+    // BUILD & SETS
+    { id: 'counter_set_viable', type: 'pro', category: 'stats', translations: t('Good with Counter Set', 'Bueno con Set Contraataque', '反撃セット向き', '반격셋 추천', 'Bom com Set Contra-ataque', '推荐反击套') },
+    { id: 'lifesteal_set_viable', type: 'pro', category: 'stats', translations: t('Good with Lifesteal Set', 'Bueno con Set Robo de Vida', '吸血セット向き', '흡혈셋 추천', 'Bom com Set Roubo de Vida', '推荐吸血套') },
+    { id: 'injury_set_viable', type: 'pro', category: 'stats', translations: t('Good with Injury Set', 'Bueno con Set Herida', '負傷セット向き', '부상셋 추천', 'Bom com Set Ferimento', '推荐伤口套') },
+    { id: 'protection_set_viable', type: 'pro', category: 'stats', translations: t('Good with Protection Set', 'Bueno con Set Protección', '保護セット向き', '보호셋 추천', 'Bom com Set Proteção', '推荐保护套') },
+    { id: 'torrent_set_viable', type: 'pro', category: 'stats', translations: t('Good with Torrent Set', 'Bueno con Set Torrente', '激流セット向き', '격류셋 추천', 'Bom com Set Torrente', '推荐激流套') },
+    { id: 'rage_set_viable', type: 'pro', category: 'stats', translations: t('Good with Rage Set', 'Bueno con Set Ira', '激怒セット向き', '분노셋 추천', 'Bom com Set Ira', '推荐愤怒套') },
+    { id: 'revenge_set_viable', type: 'pro', category: 'stats', translations: t('Good with Revenge Set', 'Bueno con Set Venganza', '復讐セット向き', '복수셋 추천', 'Bom com Set Vingança', '推荐复仇套') },
+    { id: 'elbris_user', type: 'pro', category: 'stats', translations: t('Elbris User (Knights)', 'Usuario de Elbris', 'エルブリス (騎士)', '엘브리스 (기사)', 'Usuário de Elbris', '大保健 (骑士)') },
+    { id: 'sigurd_user', type: 'pro', category: 'stats', translations: t('Sigurd User (Warriors)', 'Usuario de Sigurd', 'シグルド (戦士)', '시구르드 (전사)', 'Usuário de Sigurd', '西格德 (战士)') },
+    { id: 'rnl_user', type: 'pro', category: 'stats', translations: t('R&L User (Thieves)', 'Usuario de R&L', 'R&L (盗賊)', '알앤엘 (도적)', 'Usuário de R&L', '双子 (盗贼)') },
+
     // META - RTA
     { id: 'rta_first_pick', type: 'pro', category: 'meta', translations: t('Good RTA first pick', 'Buen first pick en RTA', 'RTA先出し推奨', 'RTA 선픽 추천', 'Bom primeiro pick no RTA', 'RTA先手推荐') },
     { id: 'rta_flex_pick', type: 'pro', category: 'meta', translations: t('RTA flex pick', 'Pick flexible en RTA', 'RTA柔軟ピック', 'RTA 유연 픽', 'Pick flexível no RTA', 'RTA灵活选择') },
@@ -160,6 +238,16 @@ export const PROS_TAGS: Tag[] = [
     { id: 'rta_safe_pick', type: 'pro', category: 'meta', translations: t('Safe pick', 'Pick seguro', '安全ピック', '안전 픽', 'Pick seguro', '安全选择') },
     { id: 'rta_pick_guard', type: 'pro', category: 'meta', translations: t('Good pick guard', 'Buen pick guard', 'ピックガード', '픽 가드 추천', 'Bom pick guard', '好的守护选择') },
     { id: 'rta_carry', type: 'pro', category: 'meta', translations: t('Can carry games', 'Puede carry partidas', 'キャリー可能', '캐리 가능', 'Pode carregar jogos', '可carry比赛') },
+    { id: 'opener', type: 'pro', category: 'meta', translations: t('Opener (First Turn)', 'Opener / Iniciador', 'オープナー', '선턴 잡이', 'Opener / Iniciador', '先手') },
+    { id: 'cleaver', type: 'pro', category: 'meta', translations: t('Cleaver', 'Cleaver', 'クリーバー', '클리버', 'Cleaver', '核爆手') },
+    { id: 'anchor', type: 'pro', category: 'meta', translations: t('Anchor (Last Man)', 'Anchor / Último Hombre', 'アンカー', '앵커', 'Anchor', '锚点 (底力)') },
+    { id: 'bridge', type: 'pro', category: 'meta', translations: t('Bridge (Combo)', 'Bridge / Conector', 'ブリッジ', '브릿지', 'Bridge / Conector', '衔接手') },
+    { id: 'aggro', type: 'pro', category: 'meta', translations: t('Aggro Player', 'Jugador Aggro', 'アグロ', '어그로', 'Jogador Aggro', '激进') },
+    { id: 'standard', type: 'pro', category: 'meta', translations: t('Standard Player', 'Jugador Standard', 'スタンダード', '스탠다드', 'Jogador Standard', '标准') },
+    { id: 'strong_low_hp', type: 'pro', category: 'meta', translations: t('Stronger at Low HP', 'Más fuerte con poca HP', '低HPほど強い', '체력 낮을수록 강함', 'Mais forte com pouco HP', '血越少越强') },
+    { id: 'strong_high_hp', type: 'pro', category: 'meta', translations: t('Stronger at High HP', 'Más fuerte con mucha HP', '高HPほど強い', '체력 높을수록 강함', 'Mais forte com muito HP', '血越多越强') },
+    { id: 'stacking_stats', type: 'pro', category: 'meta', translations: t('Stacking Stats (Battle)', 'Acumula Stats en Batalla', 'ステータス累積', '스탯 중첩', 'Acumula Stats em Batalha', '叠加属性') },
+
     // META - Arena/GW
     { id: 'arena_offense', type: 'pro', category: 'meta', translations: t('Great Arena offense', 'Excelente en Arena Offense', 'アリーナ攻撃に最適', '아레나 공격 추천', 'Ótimo para ataque na Arena', '竞技场进攻强') },
     { id: 'arena_defense', type: 'pro', category: 'meta', translations: t('Great Arena defense', 'Excelente en Arena Defense', 'アリーナ防衛に最適', '아레나 방어 추천', 'Ótimo para defesa na Arena', '竞技场防守强') },
@@ -167,10 +255,12 @@ export const PROS_TAGS: Tag[] = [
     { id: 'gw_defense', type: 'pro', category: 'meta', translations: t('Great GW defense', 'Excelente en GW Defense', 'ギルド戦防衛に最適', '길드전 방어 추천', 'Ótimo para defesa na GW', '公会战防守强') },
     // META - Counters
     { id: 'counters_cleave', type: 'pro', category: 'meta', translations: t('Counters cleave', 'Counterea cleave', 'クリーブ対策', '클리브 카운터', 'Counterea cleave', '克制开速') },
+    { id: 'anti_cleave', type: 'pro', category: 'meta', translations: t('Anti-Cleave', 'Anti-Cleave', 'アンチクリーブ', '안티 클리브', 'Anti-Cleave', '反核爆') },
     { id: 'counters_bruisers', type: 'pro', category: 'meta', translations: t('Counters bruisers', 'Counterea bruisers', 'ブルーザー対策', '브루저 카운터', 'Counterea bruisers', '克制坦刺') },
     { id: 'counters_tanks', type: 'pro', category: 'meta', translations: t('Counters tanks', 'Counterea tanks', 'タンク対策', '탱커 카운터', 'Counterea tanks', '克制坦克') },
     { id: 'counters_revivers', type: 'pro', category: 'meta', translations: t('Counters revivers', 'Counterea revivers', '蘇生対策', '부활 카운터', 'Counterea revive', '克制复活') },
     { id: 'counters_openers', type: 'pro', category: 'meta', translations: t('Counters openers', 'Counterea openers', 'オープナー対策', '오프너 카운터', 'Counterea openers', '克制先手') },
+    { id: 'anti_control', type: 'pro', category: 'meta', translations: t('Anti-Control', 'Anti-Control', 'アンチコントロール', '안티 컨트롤', 'Anti-Control', '反控制') },
 
     // PVE
     { id: 'pve_general', type: 'pro', category: 'pve', translations: t('Good in PvE', 'Bueno en PvE', 'PvE向き', 'PvE 적합', 'Bom em PvE', 'PvE好用') },
@@ -180,14 +270,22 @@ export const PROS_TAGS: Tag[] = [
     { id: 'constellation_trial', type: 'pro', category: 'pve', translations: t('Good in Constellation Trial', 'Bueno en Prueba de Constelaciones', '星座試練向き', '별자리 시련 적합', 'Bom em Prova de Constelação', '星座试炼好用') },
     { id: 'automaton_tower', type: 'pro', category: 'pve', translations: t('Good in Automaton Tower', 'Bueno en Torre Autómata', 'オートマタ塔向き', '오토마타 타워 적합', 'Bom na Torre Autômata', '自动塔好用') },
     { id: 'labyrinth', type: 'pro', category: 'pve', translations: t('Good in Labyrinth', 'Bueno en Laberinto', '迷宮向き', '미로 적합', 'Bom no Labirinto', '迷宫好用') },
-
-    // NEW PROS - Additional variety
-    { id: 'consistent_damage', type: 'pro', category: 'damage', translations: t('Consistent damage', 'Daño consistente', '安定ダメージ', '안정적 데미지', 'Dano consistente', '稳定伤害') },
-    { id: 'anti_evasion', type: 'pro', category: 'damage', translations: t('Anti-evasion', 'Anti-evasión', '回避無視', '회피 무시', 'Anti-evasão', '无视闪避') },
-    { id: 'dispel_before_damage', type: 'pro', category: 'control', translations: t('Dispel before damage', 'Dispela antes de dañar', 'ダメージ前解除', '공격 전 해제', 'Dispela antes do dano', '先驱散后伤害') },
-    { id: 'reset_cooldowns', type: 'pro', category: 'utility', translations: t('Resets cooldowns', 'Reinicia enfriamientos', 'クールダウンリセット', '재사용 대기 초기화', 'Reinicia tempos de recarga', '重置冷却') },
-    { id: 'passive_income', type: 'pro', category: 'utility', translations: t('Passive resource gain', 'Ganancia pasiva de recursos', 'パッシブ資源獲得', '패시브 자원 획득', 'Ganho passivo de recursos', '被动资源获取') },
-    { id: 'unlimited_stacking', type: 'pro', category: 'damage', translations: t('Unlimited stacking', 'Acumulación ilimitada', '無限スタック', '무한 중첩', 'Acumulação ilimitada', '无限叠加') },
+    { id: 'hunt_wyvern', type: 'pro', category: 'pve', translations: t('Wyvern Specialist', 'Especialista Wyvern', 'ワイバーン特化', '와이번 전문', 'Especialista em Wyvern', '双足飞龙专家') },
+    { id: 'hunt_golem', type: 'pro', category: 'pve', translations: t('Golem Specialist', 'Especialista Golem', 'ゴーレム特化', '골렘 전문', 'Especialista em Golem', '戈伦专家') },
+    { id: 'hunt_banshee', type: 'pro', category: 'pve', translations: t('Banshee Specialist', 'Especialista Banshee', 'バンシー特化', '밴시 전문', 'Especialista em Banshee', 'banshee专家') },
+    { id: 'hunt_azimanak', type: 'pro', category: 'pve', translations: t('Azimanak Specialist', 'Especialista Azimanak', 'アジマネク特化', '아지마나크 전문', 'Especialista em Azimanak', '蜘蛛专家') },
+    { id: 'hunt_caides', type: 'pro', category: 'pve', translations: t('Caides Specialist', 'Especialista Caides', 'カイデス特化', '카이데스 전문', 'Especialista em Caides', '凯德斯专家') },
+    { id: 'exped_fire', type: 'pro', category: 'pve', translations: t('Fire Expedition', 'Expedición Fuego', '火の遠征', '불 원정대', 'Expedição Fogo', '火属性远征') },
+    { id: 'exped_water', type: 'pro', category: 'pve', translations: t('Water Expedition', 'Expedición Agua', '水の遠征', '물 원정대', 'Expedição Água', '水属性远征') },
+    { id: 'exped_earth', type: 'pro', category: 'pve', translations: t('Earth Expedition', 'Expedición Tierra', '木の遠征', '풀 원정대', 'Expedição Terra', '木属性远征') },
+    { id: 'exped_dark', type: 'pro', category: 'pve', translations: t('Dark Expedition', 'Expedición Oscuridad', '闇の遠征', '암 원정대', 'Expedição Escuridão', '暗属性远征') },
+    { id: 'exped_light', type: 'pro', category: 'pve', translations: t('Light Expedition', 'Expedición Luz', '光の遠征', '빛 원정대', 'Expedição Luz', '光属性远征') },
+    { id: 'rift_mvp', type: 'pro', category: 'pve', translations: t('Rift MVP', 'MVP de Grieta', '亀裂MVP', '균열 MVP', 'MVP da Fenda', '裂缝MVP') },
+    { id: 'abyss_king', type: 'pro', category: 'pve', translations: t('Abyss King/Queen', 'Rey/Reina del Abismo', '深淵の王', '심연의 왕', 'Rei/Rainha do Abismo', '深渊之王') },
+    { id: 'labyrinth_nm', type: 'pro', category: 'pve', translations: t('Nightmare Raid', 'Raid Pesadilla', '悪夢迷宮', '악몽 미궁', 'Raid Pesadelo', '噩梦迷宫') },
+    { id: 'hall_of_trials', type: 'pro', category: 'pve', translations: t('Hall of Trials', 'Sala de Pruebas', '試練の殿堂', '시련의 전당', 'Salão das Provas', '试炼殿堂') },
+    { id: 'ancient_inheritance', type: 'pro', category: 'pve', translations: t('Ancient Inheritance', 'Herencia Ancestral', '古の遺産', '고대 유산', 'Herança Ancestral', '古代遗产') },
+    { id: 'adventure_farmer', type: 'pro', category: 'pve', translations: t('Adventure Farmer', 'Farmer de Aventura', '冒険周回', '모험 쫄작', 'Farmer de Aventura', '冒险带狗粮') },
 ];
 
 /**
@@ -202,6 +300,7 @@ export const CONS_TAGS: Tag[] = [
     { id: 'weak_multipliers', type: 'con', category: 'offense', translations: t('Weak multipliers', 'Multiplicadores bajos', '低倍率', '낮은 배율', 'Multiplicadores baixos', '低倍率') },
     { id: 'unreliable_damage', type: 'con', category: 'offense', translations: t('Unreliable damage', 'Daño inconsistente', '不安定ダメージ', '불안정한 데미지', 'Dano inconsistente', '伤害不稳定') },
     { id: 'penetration_dependent', type: 'con', category: 'offense', translations: t('Penetration dependent', 'Depende de penetración', '貫通依存', '관통 의존', 'Dependente de penetração', '依赖穿透') },
+    { id: 'no_aoe', type: 'con', category: 'offense', translations: t('No AoE damage', 'Sin daño AoE', '範囲攻撃なし', '광역 공격 없음', 'Sem dano em área', '无范围伤害') },
 
     // FRAGILITY
     { id: 'low_base_hp', type: 'con', category: 'fragility', translations: t('Low base HP', 'HP base baja', '低HP', '낮은 기본 HP', 'HP base baixo', '低基础HP') },
@@ -210,6 +309,12 @@ export const CONS_TAGS: Tag[] = [
     { id: 'no_self_sustain', type: 'con', category: 'fragility', translations: t('No self sustain', 'Sin sustain propio', '自己維持なし', '자체 유지력 없음', 'Sem auto sustentação', '无自我维持') },
     { id: 'easily_killed', type: 'con', category: 'fragility', translations: t('Easily killed', 'Fácil de matar', '倒されやすい', '쉽게 죽음', 'Fácil de matar', '容易死') },
     { id: 'weak_to_burst', type: 'con', category: 'fragility', translations: t('Weak to burst', 'Débil al burst', 'バーストに弱い', '버스트에 약함', 'Fraco contra burst', '怕爆发') },
+    { id: 'weak_to_injury', type: 'con', category: 'fragility', translations: t('Weak to Injury', 'Débil a la Herida', '負傷に弱い', '부상에 약함', 'Fraco contra Ferimento', '怕创伤') },
+    { id: 'weak_vs_fixed', type: 'con', category: 'fragility', translations: t('Low HP (Weak vs Fixed Dmg)', 'Débil vs Daño Fijo', '低HP (固定ダメに弱い)', '저체력 (고정뎀 취약)', 'Fraco contra Dano Fixo', '低血量 (怕固伤)') },
+    { id: 'weak_vs_injury', type: 'con', category: 'fragility', translations: t('HP Scaling (Weak vs Injury)', 'Escala HP (Débil vs Herida)', 'HP比例 (負傷に弱い)', '생퍼뎀 (부상에 취약)', 'Escala HP (Fraco vs Ferimento)', '生命倍率 (怕创伤)') },
+    { id: 'weak_vs_bombs', type: 'con', category: 'fragility', translations: t('No Cleanse (Weak vs Bombs)', 'Sin Cleanse (Débil vs Bombas)', '解除なし (爆弾に弱い)', '해제 없음 (폭탄 취약)', 'Sem Cleanse (Fraco vs Bombas)', '无驱散 (怕炸弹)') },
+    { id: 'weak_vs_aoe', type: 'con', category: 'fragility', translations: t('Weak vs AoE', 'Débil vs AoE', '全体攻撃に弱い', '광역기에 취약', 'Fraco contra AoE', '怕AOE') },
+    { id: 'weak_vs_stealth', type: 'con', category: 'fragility', translations: t('Weak vs Stealth', 'Débil vs Sigilo', 'ステルスに弱い', '은신에 취약', 'Fraco contra Furtividade', '怕隐身') },
 
     // CONTROL ISSUES
     { id: 'low_effectiveness', type: 'con', category: 'control_issues', translations: t('Low base effectiveness', 'Efectividad base baja', '低効果命中', '낮은 기본 효과적중', 'Efetividade base baixa', '效命低') },
@@ -226,6 +331,7 @@ export const CONS_TAGS: Tag[] = [
     { id: 'speed_contesting', type: 'con', category: 'speed_issues', translations: t('Hard to speed contest', 'Difícil competir en velocidad', '速度競争困難', '선속 경쟁 어려움', 'Difícil competir em velocidade', '难以抢速') },
     { id: 'outsped_easily', type: 'con', category: 'speed_issues', translations: t('Easily outsped', 'Fácil de outspeed', '先手取られやすい', '쉽게 선턴 뺏김', 'Facilmente superado em velocidade', '容易被抢速') },
     { id: 'no_cr_manipulation', type: 'con', category: 'speed_issues', translations: t('No CR manipulation', 'Sin manipulación de CR', 'CR操作なし', 'CR 조작 없음', 'Sem manipulação de CR', '无CR操作') },
+    { id: 'slow_base', type: 'con', category: 'speed_issues', translations: t('Very Slow Base Speed', 'Velocidad Base Muy Lenta', '鈍足', '거북이 (기본 속도 느림)', 'Velocidade Base Muito Lenta', '龟速') },
 
     // GEAR REQUIREMENTS
     { id: 'hard_to_gear', type: 'con', category: 'gear', translations: t('Hard to gear', 'Difícil de equipar', '装備が難しい', '장비하기 어려움', 'Difícil de equipar', '难以装备') },
@@ -235,6 +341,13 @@ export const CONS_TAGS: Tag[] = [
     { id: 'high_speed_requirement', type: 'con', category: 'gear', translations: t('High speed requirement', 'Requiere mucha velocidad', '高速度必要', '높은 속도 필요', 'Exige alta velocidade', '需要高速度') },
     { id: 'needs_100_crit', type: 'con', category: 'gear', translations: t('Needs 100% crit', 'Necesita 100% crítico', '100%クリ必要', '100% 치명타 필요', 'Precisa 100% de crítico', '需要100%暴击') },
     { id: 'needs_high_eff_res', type: 'con', category: 'gear', translations: t('Needs high Eff Res', 'Necesita alta Res Efecto', '高効抵必要', '높은 효저 필요', 'Precisa alta Res de Efeito', '需要高效抗') },
+    { id: 'mola_hungry', type: 'con', category: 'gear', translations: t('Mola Hungry (+15 needed)', 'Come Molas (+15 necesario)', 'モラゴラ不足', '머라고라 많이 필요', 'Come Molas (+15 necessário)', '吃萝卜大户') },
+    { id: 'high_gs_needed', type: 'con', category: 'gear', translations: t('Needs 400+ GS', 'Necesita Gear Perfecto', '神装備必須', '종결템 필요', 'Precisa de Gear Perfeito', '需要传家宝') },
+    { id: 'specific_arti', type: 'con', category: 'gear', translations: t('Artifact Dependent', 'Depende de Artefacto Específico', '特定遺物必須', '특정 아티 필수', 'Depende de Artefato Específico', '绑定神器') },
+    { id: 'needs_ee', type: 'con', category: 'gear', translations: t('Needs Exclusive Equipment', 'Requiere Equipo Exclusivo', '専用装備必須', '전용장비 필수', 'Precisa de Equipamento Exclusivo', '需要专属装备') },
+    { id: 'low_base_cc', type: 'con', category: 'gear', translations: t('Low Base Crit Chance', 'Crítico Base Bajo', '低クリ率', '기본 치확 낮음', 'Crítico Base Baixo', '基础暴击低') },
+    { id: 'low_base_atk', type: 'con', category: 'gear', translations: t('Low Base Attack', 'Ataque Base Bajo', '低攻撃力', '기본 공 낮음', 'Ataque Base Baixo', '基础攻击低') },
+    { id: 'no_imprint', type: 'con', category: 'gear', translations: t('No Crit Imprint', 'Sin Imprint de Crítico', '刻印なし', '치명 각인 없음', 'Sem Imprint de Crítico', '无暴击阵型') },
 
     // UTILITY LIMITS
     { id: 'no_utility', type: 'con', category: 'utility_limits', translations: t('No extra utility', 'Sin utilidad extra', '追加ユーティリティなし', '추가 유틸리티 없음', 'Sem utilidade extra', '无额外功能') },
@@ -243,6 +356,10 @@ export const CONS_TAGS: Tag[] = [
     { id: 'needs_soulburn', type: 'con', category: 'utility_limits', translations: t('Soulburn dependent', 'Depende de soulburn', 'ソウルバーン依存', '소울번 의존', 'Dependente de Soulburn', '依赖燃魂') },
     { id: 'needs_molagora', type: 'con', category: 'utility_limits', translations: t('Needs many molas', 'Necesita muchos molas', 'モラ多く必要', '몰라고라 많이 필요', 'Precisa de muitos molas', '需要很多魔种') },
     { id: 'imprint_dependent', type: 'con', category: 'utility_limits', translations: t('Imprint dependent', 'Depende del imprint', '陣形効果依存', '각인 의존', 'Dependente de Imprint', '依赖刻印') },
+    { id: 'rng_dependent', type: 'con', category: 'utility_limits', translations: t('RNG dependent', 'Depende del RNG', 'RNG依存', 'RNG 의존', 'Dependente de RNG', '依赖运气') },
+    { id: 'slow_animations', type: 'con', category: 'utility_limits', translations: t('Slow animations', 'Animaciones lentas', 'アニメーションが遅い', '느린 애니메이션', 'Animações lentas', '动画慢') },
+    { id: 'focus_dependent', type: 'con', category: 'utility_limits', translations: t('Focus Dependent', 'Depende de Foco', '集中依存', '집중 의존', 'Depende de Foco', '依赖专注') },
+    { id: 'fighting_spirit_dependent', type: 'con', category: 'utility_limits', translations: t('Fighting Spirit Dependent', 'Depende de Esp. de Lucha', '闘志依存', '투지 의존', 'Depende de Esp. de Luta', '依赖斗志') },
 
     // COMPETITIVE
     { id: 'easily_countered', type: 'con', category: 'competitive', translations: t('Easily countered', 'Fácil de counterear', '対策されやすい', '쉽게 카운터됨', 'Facilmente counterado', '易被克制') },
@@ -256,6 +373,17 @@ export const CONS_TAGS: Tag[] = [
     { id: 'easily_banned', type: 'con', category: 'competitive', translations: t('Easily banned (RTA)', 'Fácil de banear (RTA)', 'BAN対象になりやすい', '쉽게 밴됨 (RTA)', 'Facilmente banido (RTA)', '容易被禁') },
     { id: 'predictable', type: 'con', category: 'competitive', translations: t('Predictable', 'Predecible', '予測可能', '예측 가능', 'Previsível', '可预测') },
     { id: 'replaced_by_better', type: 'con', category: 'competitive', translations: t('Better options exist', 'Hay mejores opciones', 'より良い選択肢あり', '더 좋은 대안 있음', 'Existem opções melhores', '有更好选择') },
+    { id: 'countered_by_debuffs', type: 'con', category: 'competitive', translations: t('Weak to debuffs', 'Débil a debuffs', 'デバフに弱い', '디버프에 약함', 'Fraco contra debuffs', '怕减益') },
+    { id: 'outdated_kit', type: 'con', category: 'competitive', translations: t('Outdated kit', 'Kit desactualizado', '時代遅れキット', '구식 키트', 'Kit desatualizado', '技能组过时') },
+    { id: 'weak_vs_politis', type: 'con', category: 'competitive', translations: t('Trigger Happy (Weak vs Politis)', 'Activa muchas pasivas (Politis)', 'S2依存 (対ポリティス不利)', '2스킬 의존 (폴리티스 밥)', 'Ativa muitas passivas (Politis)', '2技能依赖 (怕Politis)') },
+    { id: 'weak_vs_belian', type: 'con', category: 'competitive', translations: t('Soul Dependent (Weak vs Belian)', 'Depende de Almas (Belian)', 'ソウル依存 (対ベリアン不利)', '소울 의존 (벨리안 밥)', 'Depende de Almas (Belian)', '依赖魂 (怕Belian)') },
+    { id: 'weak_vs_solitis', type: 'con', category: 'competitive', translations: t('Focus Dependent (Weak vs Solitis)', 'Depende de Foco (Solitis)', '集中依存 (対光ポリティス不利)', '집중 의존 (해플랑 밥)', 'Depende de Foco (Solitis)', '依赖专注 (怕光兰蒂)') },
+    { id: 'weak_vs_nahkwol', type: 'con', category: 'competitive', translations: t('CD Dependent (Weak vs Nahkwol)', 'Sufre con Cooldowns (Nahkwol)', 'CD延長に弱い', '쿨밀에 취약', 'Sofre com Cooldowns (Nahkwol)', '怕冷却延长') },
+    { id: 'weak_vs_seal', type: 'con', category: 'competitive', translations: t('Passive Dependent (Weak vs Seal)', 'Depende de Pasiva (Sello)', 'パッシブ依存 (封印に弱い)', '패시브 의존 (봉인 취약)', 'Depende de Passiva (Selo)', '依赖被动 (怕封印)') },
+    { id: 'weak_vs_evasion', type: 'con', category: 'competitive', translations: t('High Miss Chance', 'Falla mucho (Ciego/Evasión)', 'ミスりやすい', '빗나감 취약', 'Erra muito (Cego/Evasão)', '容易Miss') },
+    { id: 'weak_vs_cc', type: 'con', category: 'competitive', translations: t('Weak vs CC', 'Débil vs CC (Stun/Sleep)', 'CCに弱い', 'CC에 취약', 'Fraco contra CC', '怕控制') },
+    { id: 'weak_vs_strip', type: 'con', category: 'competitive', translations: t('Weak vs Strip (Buff Dependent)', 'Depende de Buffs (Strip)', 'バフ解除に弱い', '해제에 취약', 'Depende de Buffs (Strip)', '怕驱散') },
+    { id: 'triggers_counters', type: 'con', category: 'competitive', translations: t('Prone to Counters (Roana/LHC)', 'Activa muchos Counters (Roana/LHC)', '反撃誘発', '반격/추가타 유발 (로앤나 밥)', 'Ativa muitos Counters (Roana/LHC)', '触发反击 (Roana/LHC)') },
 
     // PVE LIMITS
     { id: 'bad_in_hunts', type: 'con', category: 'pve_limits', translations: t('Bad in Hunts', 'Malo en Hunts', '討伐に不向き', '사냥에 부적합', 'Ruim em Caçadas', '讨伐不好用') },
@@ -271,13 +399,14 @@ export const CONS_TAGS: Tag[] = [
     { id: 'needs_attack_buffer', type: 'con', category: 'dependencies', translations: t('Needs ATK buffer', 'Necesita ATK buffer', '攻撃バッファー必要', '공버 필요', 'Precisa de ATK buffer', '需要攻击buff') },
     { id: 'synergy_dependent', type: 'con', category: 'dependencies', translations: t('Synergy dependent', 'Depende de sinergias', 'シナジー依存', '시너지 의존', 'Dependente de sinergias', '依赖协同') },
 
-    // NEW CONS - Additional variety
-    { id: 'weak_to_injury', type: 'con', category: 'fragility', translations: t('Weak to Injury', 'Débil a la Herida', '負傷に弱い', '부상에 약함', 'Fraco contra Ferimento', '怕创伤') },
-    { id: 'no_aoe', type: 'con', category: 'offense', translations: t('No AoE damage', 'Sin daño AoE', '範囲攻撃なし', '광역 공격 없음', 'Sem dano em área', '无范围伤害') },
-    { id: 'rng_dependent', type: 'con', category: 'utility_limits', translations: t('RNG dependent', 'Depende del RNG', 'RNG依存', 'RNG 의존', 'Dependente de RNG', '依赖运气') },
-    { id: 'countered_by_debuffs', type: 'con', category: 'competitive', translations: t('Weak to debuffs', 'Débil a debuffs', 'デバフに弱い', '디버프에 약함', 'Fraco contra debuffs', '怕减益') },
-    { id: 'slow_animations', type: 'con', category: 'utility_limits', translations: t('Slow animations', 'Animaciones lentas', 'アニメーションが遅い', '느린 애니메이션', 'Animações lentas', '动画慢') },
-    { id: 'outdated_kit', type: 'con', category: 'competitive', translations: t('Outdated kit', 'Kit desactualizado', '時代遅れキット', '구식 키트', 'Kit desatualizado', '技能组过时') },
+    // GAMEPLAY FLAWS
+    { id: 'rng_reliant', type: 'con', category: 'dependencies', translations: t('RNG Reliant (Casino)', 'Depende de la Suerte (Casino)', '運ゲー', '운빨 의존', 'Depende da Sorte (Cassino)', '看脸') },
+    { id: 'long_ramp_up', type: 'con', category: 'offense', translations: t('Slow Ramp Up', 'Tarda en cargar', 'スロースターター', '예열 김', 'Demora pra carregar', '暖机慢') },
+    { id: 'ai_dumb', type: 'con', category: 'utility_limits', translations: t('Bad AI (Auto)', 'Mala IA (Auto)', 'AIが馬鹿', '자동 사냥 멍청함', 'IA Ruim (Auto)', 'AI智障') },
+    { id: 'manual_only', type: 'con', category: 'utility_limits', translations: t('Manual Play Only', 'Solo Manual', '手動必須', '수동 조작 필수', 'Só Manual', '只能手操') },
+    { id: 'team_reliant', type: 'con', category: 'dependencies', translations: t('Needs Support Team', 'Necesita Niñera/Soporte', '介護必要', '케어 필요', 'Precisa de Babá/Suporte', '需要保姆') },
+    { id: 'one_shot_wonder', type: 'con', category: 'utility_limits', translations: t('One Trick Pony', 'Solo sirve para una cosa', 'ワンパターン', '원툴', 'One Trick Pony', '一招鲜') },
+    { id: 'long_animation', type: 'con', category: 'utility_limits', translations: t('Long Animations (Slow Farm)', 'Animaciones Eternas', '演出が長い', '스킬 모션 김', 'Animações Eternas', '动画太长') },
 ];
 
 /**
