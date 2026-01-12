@@ -248,6 +248,23 @@ export const PROS_TAGS: Tag[] = [
     { id: 'strong_high_hp', type: 'pro', category: 'meta', translations: t('Stronger at High HP', 'Más fuerte con mucha HP', '高HPほど強い', '체력 높을수록 강함', 'Mais forte com muito HP', '血越多越强') },
     { id: 'stacking_stats', type: 'pro', category: 'meta', translations: t('Stacking Stats (Battle)', 'Acumula Stats en Batalla', 'ステータス累積', '스탯 중첩', 'Acumula Stats em Batalha', '叠加属性') },
 
+    // META - RTA Specifics (Advanced)
+    { id: 'frenzy_scaling', type: 'pro', category: 'meta', translations: t('Frenzy Scaler', 'Escala con Frenzy', '熱狂係数', '열광 비례', 'Escala com Frenesia', '狂热系数') },
+    { id: 'force_ban', type: 'pro', category: 'meta', translations: t('Force Ban (Must Ban)', 'Force Ban (Must Ban)', '必須BAN', '필밴 (Must Ban)', 'Force Ban (Ban Obrigatório)', '必Ban角色') },
+    { id: 'last_pick_god', type: 'pro', category: 'meta', translations: t('God Tier Last Pick', 'Last Pick God Tier', 'ラストピック神', '5픽 조커 (God List Pick)', 'Last Pick God Tier', '五楼战神') },
+    { id: 'draft_trap', type: 'pro', category: 'meta', translations: t('Draft Trap (Bait)', 'Trampa de Draft (Bait)', 'ドラフトの罠', '밴픽 함정 (Bait)', 'Armadilha de Draft', 'BP陷阱') },
+    { id: 'tempo_swing', type: 'pro', category: 'meta', translations: t('Tempo Swing', 'Cambio de Tempo', 'テンポスイング', '템포 스윙', 'Mudança de Tempo', '节奏转换') },
+    { id: '1v4_potential', type: 'pro', category: 'meta', translations: t('1v4 Potential', 'Potencial 1v4', '1v4の可能性', '1대4 가능', 'Potencial 1v4', '1v4潜力') },
+    { id: 'neutral_element_rta', type: 'pro', category: 'meta', translations: t('Neutral Element (Safe)', 'Elemento Neutro (Seguro)', '属性不利なし (安全)', '역속성 없음 (안전)', 'Elemento Neutro (Seguro)', '无属性克制 (安全)') },
+    { id: 'hyper_aggro', type: 'pro', category: 'meta', translations: t('Hyper Aggro', 'Hyper Aggro', 'ハイパーアグロ', '극속공 (Hyper Aggro)', 'Hyper Aggro', '极限快攻') },
+    { id: 'protect_the_carry', type: 'pro', category: 'meta', translations: t('Protect the Carry', 'Protect the Carry', 'キャリー介護', '캐리 보호 조합', 'Proteger o Carry', '四保一') },
+
+    // META - GW & Arena Defense Strategies
+    { id: 'rng_defense', type: 'pro', category: 'meta', translations: t('RNG Defense (Coinflip)', 'Defensa RNG (Coinflip)', '運ゲー防衛', '운빨 방덱 (동전 던지기)', 'Defesa RNG (Cara ou Coroa)', '运气体防守') },
+    { id: 'stall_defense', type: 'pro', category: 'meta', translations: t('Stall Defense', 'Defensa Stall (Muro)', '耐久防衛', '눕덱 방어 (Stall)', 'Defesa Stall (Muro)', '拖延防守') },
+    { id: 'time_waster', type: 'pro', category: 'meta', translations: t('Time Waster (Rush Hour)', 'Time Waster (Rush Hour)', '時間稼ぎ', '시간 끌기 (마감 방어)', 'Time Waster (Rush Hour)', '拖延时间 (结算防守)') },
+    { id: 'trap_defense', type: 'pro', category: 'meta', translations: t('Trap Defense', 'Defensa Trampa', '釣り防衛', '낚시 방덱', 'Defesa Armadilha', '陷阱防守') },
+
     // META - Arena/GW
     { id: 'arena_offense', type: 'pro', category: 'meta', translations: t('Great Arena offense', 'Excelente en Arena Offense', 'アリーナ攻撃に最適', '아레나 공격 추천', 'Ótimo para ataque na Arena', '竞技场进攻强') },
     { id: 'arena_defense', type: 'pro', category: 'meta', translations: t('Great Arena defense', 'Excelente en Arena Defense', 'アリーナ防衛に最適', '아레나 방어 추천', 'Ótimo para defesa na Arena', '竞技场防守强') },
@@ -261,6 +278,29 @@ export const PROS_TAGS: Tag[] = [
     { id: 'counters_revivers', type: 'pro', category: 'meta', translations: t('Counters revivers', 'Counterea revivers', '蘇生対策', '부활 카운터', 'Counterea revive', '克制复活') },
     { id: 'counters_openers', type: 'pro', category: 'meta', translations: t('Counters openers', 'Counterea openers', 'オープナー対策', '오프너 카운터', 'Counterea openers', '克制先手') },
     { id: 'anti_control', type: 'pro', category: 'meta', translations: t('Anti-Control', 'Anti-Control', 'アンチコントロール', '안티 컨트롤', 'Anti-Control', '反控制') },
+
+    // META - Emerging 2025/2026 (Research)
+    { id: 'trauma_user', type: 'pro', category: 'meta', translations: t('Trauma User', 'Usuario de Trauma', 'トラウマ持ち', '트라우마 보유', 'Usuário de Trauma', '创伤机制') },
+    { id: 'speed_limiter', type: 'pro', category: 'meta', translations: t('Speed Limiter (Harsetti)', 'Limitador de Velocidad', '速度制限', '속도 고정 (이속 제한)', 'Limitador de Velocidade', '速度限制 (锁速)') },
+    { id: 'turn_denial', type: 'pro', category: 'meta', translations: t('Turn Denial (No CR)', 'Negación de Turno (No CR)', 'ターン獲得不可', '턴 잡기 차단', 'Negação de Turno', '禁止拉条 (Turn Denial)') },
+    { id: 'draft_mode_god', type: 'pro', category: 'meta', translations: t('Draft Arena MVP', 'MVP de Draft Arena', 'ドラフトモード最強', '드래프트 아레나 신', 'MVP do Draft Arena', '选秀模式战神') },
+    { id: 'anti_buff_scaling', type: 'pro', category: 'meta', translations: t('Punishes Buffs', 'Castiga Buffs Enemigos', 'バフ数で威力増', '버프 비례 피해 (Punish)', 'Pune Buffs Inimigos', '惩罚增益') },
+
+    // MECHANICS - Advanced
+    { id: 'def_penetration', type: 'pro', category: 'mechanics', translations: t('Defense Penetration', 'Penetración de Defensa', '防御貫通', '방어력 관통', 'Penetração de Defesa', '防御穿透') },
+    { id: 'ignores_er', type: 'pro', category: 'mechanics', translations: t('Ignores Eff Res', 'Ignora Resistencia a Efectos', '効果抵抗無視', '효과저항 무시', 'Ignora Resistência', '无视效果抗性') },
+    { id: 'resource_reduction', type: 'pro', category: 'mechanics', translations: t('Resource Reduction', 'Reducción de Recursos', '闘志/集中減少', '자원 감소 (투지/집중)', 'Redução de Recursos', '资源削减 (斗志/专注)') },
+    { id: 'cd_reset', type: 'pro', category: 'mechanics', translations: t('Cooldown Reset', 'Reseteo de Cooldowns', 'スキルターン延長', '쿨타임 초기화/밀기', 'Reset de Cooldown', '冷却重置/增加') },
+    { id: 'passive_seal', type: 'pro', category: 'mechanics', translations: t('Passive Sealer', 'Sella Pasivas', 'パッシブ封印', '패시브 봉인', 'Sela Passivas', '被动封印') },
+    { id: 'restrict_user', type: 'pro', category: 'mechanics', translations: t('Restrict (No CR Push)', 'Restricción (No CR Push)', 'アクションゲージ増加不可', '속박 (행게증 불가)', 'Restrição (Sem CR)', '束缚 (无法拉条)') },
+    { id: 'stealth_user', type: 'pro', category: 'mechanics', translations: t('Stealth User', 'Usuario de Sigilo', '潜伏', '은신 사용', 'Usuário de Furtividade', '隐身角色') },
+
+    // PUNISHERS (Counters specific actions)
+    { id: 'non_attack_punisher', type: 'pro', category: 'mechanics', translations: t('Punishes Non-Attack', 'Castiga Habilidades No Agresivas', '非攻撃スキルに反応', '비타격 스킬 반응', 'Pune Skills Não-Ofensivas', '反制非攻击技能') },
+    { id: 'extra_turn_punisher', type: 'pro', category: 'mechanics', translations: t('Punishes Extra Turns', 'Castiga Turnos Extra', '追加ターンに反応', '추가 턴 반응', 'Pune Turnos Extras', '反制追加回合') },
+    { id: 'counter_punisher', type: 'pro', category: 'mechanics', translations: t('Punishes Counters', 'Castiga Contraataques', '反撃に反応', '반격 반응/불가', 'Pune Contra-ataques', '反制反击') },
+    { id: 'aoe_punisher', type: 'pro', category: 'mechanics', translations: t('Punishes AoE', 'Castiga ataques AoE', '全体攻撃に反応', '광역기 반응', 'Pune ataques AoE', '反制AOE') },
+
 
     // PVE
     { id: 'pve_general', type: 'pro', category: 'pve', translations: t('Good in PvE', 'Bueno en PvE', 'PvE向き', 'PvE 적합', 'Bom em PvE', 'PvE好用') },
@@ -371,6 +411,11 @@ export const CONS_TAGS: Tag[] = [
     { id: 'off_meta', type: 'con', category: 'competitive', translations: t('Off meta', 'Fuera del meta', 'メタ外', '메타 밖', 'Fora do meta', '非主流') },
     { id: 'niche_pick', type: 'con', category: 'competitive', translations: t('Niche pick', 'Pick situacional', 'ニッチピック', '니치 픽', 'Pick de nicho', '小众选择') },
     { id: 'easily_banned', type: 'con', category: 'competitive', translations: t('Easily banned (RTA)', 'Fácil de banear (RTA)', 'BAN対象になりやすい', '쉽게 밴됨 (RTA)', 'Facilmente banido (RTA)', '容易被禁') },
+    { id: 'pre_ban_target', type: 'con', category: 'competitive', translations: t('High Pre-ban Rate', 'Alto Pre-ban Rate', 'プリBAN対象', '높은 프리밴율', 'Alto Índice de Pre-ban', '高预Ban率') },
+    { id: 'bad_blind_pick', type: 'con', category: 'competitive', translations: t('Bad Blind Pick', 'Mal Blind Pick', 'ブラインドピック非推奨', '선픽 비추천 (Blind Pick Bad)', 'Ruim Blind Pick', '盲选劣势') },
+    { id: 'exposed_if_banned', type: 'con', category: 'competitive', translations: t('Comp Exposed if Banned', 'Comp Expuesta si se Banea', 'BANで構成崩壊', '밴 당하면 조합 꼬임', 'Comp Exposta se Banido', '被Ban阵容崩塌') },
+    { id: 'easy_bait', type: 'con', category: 'competitive', translations: t('Easy to Bait (AI)', 'Fácil de Baitear (IA)', 'AI誘導容易', 'AI 유도 쉬움', 'Fácil de Iscar (IA)', '易被AI诱导') },
+    { id: 'defense_only', type: 'con', category: 'competitive', translations: t('Defense Team Only', 'Solo Defensa', '防衛専用', '방어팀 전용', 'Apenas Defesa', '仅限防守') },
     { id: 'predictable', type: 'con', category: 'competitive', translations: t('Predictable', 'Predecible', '予測可能', '예측 가능', 'Previsível', '可预测') },
     { id: 'replaced_by_better', type: 'con', category: 'competitive', translations: t('Better options exist', 'Hay mejores opciones', 'より良い選択肢あり', '더 좋은 대안 있음', 'Existem opções melhores', '有更好选择') },
     { id: 'countered_by_debuffs', type: 'con', category: 'competitive', translations: t('Weak to debuffs', 'Débil a debuffs', 'デバフに弱い', '디버프에 약함', 'Fraco contra debuffs', '怕减益') },
@@ -384,6 +429,13 @@ export const CONS_TAGS: Tag[] = [
     { id: 'weak_vs_cc', type: 'con', category: 'competitive', translations: t('Weak vs CC', 'Débil vs CC (Stun/Sleep)', 'CCに弱い', 'CC에 취약', 'Fraco contra CC', '怕控制') },
     { id: 'weak_vs_strip', type: 'con', category: 'competitive', translations: t('Weak vs Strip (Buff Dependent)', 'Depende de Buffs (Strip)', 'バフ解除に弱い', '해제에 취약', 'Depende de Buffs (Strip)', '怕驱散') },
     { id: 'triggers_counters', type: 'con', category: 'competitive', translations: t('Prone to Counters (Roana/LHC)', 'Activa muchos Counters (Roana/LHC)', '反撃誘発', '반격/추가타 유발 (로앤나 밥)', 'Ativa muitos Counters (Roana/LHC)', '触发反击 (Roana/LHC)') },
+    { id: 'weak_vs_fixed_dmg', type: 'con', category: 'competitive', translations: t('Weak vs Fixed Dmg', 'Débil vs Daño Fijo', '固定ダメに弱い', '고정 데미지에 취약', 'Fraco contra Dano Fixo', '怕固定伤害') },
+    { id: 'crit_dependent', type: 'con', category: 'competitive', translations: t('Crit Dmg Reliant (Weak vs Anti-Crit)', 'Depende de Daño Crítico (Anti-Crit)', 'クリダメ依存', '치피 의존 (안티 크리 취약)', 'Depende de Dano Crítico', '依赖爆伤 (怕抗暴)') },
+    { id: 'weak_vs_bomb', type: 'con', category: 'competitive', translations: t('Weak vs Bombs/Burns', 'Débil vs Bombas/Quemaduras', '爆弾/火傷に弱い', '폭탄/화상에 취약', 'Fraco contra Bombas/Queimaduras', '怕炸弹/烧伤') },
+    { id: 'weak_vs_aoe', type: 'con', category: 'competitive', translations: t('Weak vs AoE', 'Débil vs AoE', '全体攻撃に弱い', '광역기에 취약', 'Fraco contra AoE', '怕AOE') },
+    { id: 'weak_vs_burst', type: 'con', category: 'competitive', translations: t('Weak vs Burst Dmg', 'Débil vs Burst', '高火力に弱い', '폭딜에 취약', 'Fraco contra Burst', '怕爆发') },
+    { id: 'weak_vs_dot', type: 'con', category: 'competitive', translations: t('Weak vs DoT', 'Débil vs DoT', '持続ダメージに弱い', '지속 피해에 취약', 'Fraco contra DoT', '怕持续伤害') },
+    { id: 'cooldown_dependent', type: 'con', category: 'utility_limits', translations: t('High Cooldown Dependency', 'Depende de Cooldowns', 'クールダウン依存', '쿨타임 의존', 'Depende de Cooldowns', '依赖冷却') },
 
     // PVE LIMITS
     { id: 'bad_in_hunts', type: 'con', category: 'pve_limits', translations: t('Bad in Hunts', 'Malo en Hunts', '討伐に不向き', '사냥에 부적합', 'Ruim em Caçadas', '讨伐不好用') },
