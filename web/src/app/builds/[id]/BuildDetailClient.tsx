@@ -157,9 +157,9 @@ export function BuildDetailClient() {
 
     // Fetch build
     const { data: build, isLoading, error } = useQuery<Build>({
-        queryKey: ['build', buildId],
+        queryKey: ['build', buildId, locale],
         queryFn: async () => {
-            const response = await fetch(`${API_URL}/builds/${buildId}`);
+            const response = await fetch(`${API_URL}/builds/${buildId}?lang=${locale}`);
             if (!response.ok) throw new Error('Build not found');
             return response.json();
         },

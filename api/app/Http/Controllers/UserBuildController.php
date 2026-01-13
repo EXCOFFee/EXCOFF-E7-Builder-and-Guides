@@ -98,6 +98,15 @@ class UserBuildController extends Controller
 
         $builds = $query->paginate(20);
 
+        // Localize artifacts
+        $lang = $request->query('lang', 'en');
+        $builds->getCollection()->transform(function ($build) use ($lang) {
+            if ($build->artifact) {
+                $build->artifact->name = $this->getLocalizedArtifactName($build->artifact, $lang);
+            }
+            return $build;
+        });
+
         return response()->json($builds);
     }
 
@@ -118,16 +127,34 @@ class UserBuildController extends Controller
         $builds = $query->orderBy('likes', 'desc')
             ->paginate(20);
 
+        // Localize artifacts
+        $lang = $request->query('lang', 'en');
+        $builds->getCollection()->transform(function ($build) use ($lang) {
+            if ($build->artifact) {
+                $build->artifact->name = $this->getLocalizedArtifactName($build->artifact, $lang);
+            }
+            return $build;
+        });
+
         return response()->json($builds);
     }
 
     /**
      * Show a specific build
      */
-    public function show(UserBuild $build): JsonResponse
+    /**
+     * Show a specific build
+     */
+    public function show(Request $request, UserBuild $build): JsonResponse
     {
         $build->load(['user', 'hero', 'artifact']);
         $build->increment('views');
+
+        // Localize artifact
+        $lang = $request->query('lang', 'en');
+        if ($build->artifact) {
+            $build->artifact->name = $this->getLocalizedArtifactName($build->artifact, $lang);
+        }
 
         // Add synergy and counter heroes data
         $response = $build->toArray();
@@ -135,6 +162,18 @@ class UserBuildController extends Controller
         $response['counter_heroes_list'] = $build->counter_heroes_list;
 
         return response()->json($response);
+    }
+
+    private function getLocalizedArtifactName($artifact, string $lang): string
+    {
+        return match ($lang) {
+            'ko' => $artifact->name_ko ?? $artifact->name,
+            'ja' => $artifact->name_ja ?? $artifact->name,
+            'zh' => $artifact->name_zh ?? $artifact->name,
+            'es' => $artifact->name_es ?? $artifact->name,
+            'pt' => $artifact->name_pt ?? $artifact->name,
+            default => $artifact->name,
+        };
     }
 
     /**

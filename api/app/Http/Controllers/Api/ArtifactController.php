@@ -87,6 +87,8 @@ class ArtifactController extends Controller
             'ko' => $artifact->name_ko ?? $artifact->name,
             'ja' => $artifact->name_ja ?? $artifact->name,
             'zh' => $artifact->name_zh ?? $artifact->name,
+            'es' => $artifact->name_es ?? $artifact->name,
+            'pt' => $artifact->name_pt ?? $artifact->name,
             default => $artifact->name,
         };
     }

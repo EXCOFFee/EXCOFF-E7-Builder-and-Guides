@@ -102,7 +102,7 @@ class HeroController extends Controller
      * GET /api/v1/heroes/{slug}/stats
      * Returns: set frequencies, artifact popularity, average tier ratings
      */
-    public function buildStats(string $slug): JsonResponse
+    public function buildStats(Request $request, string $slug): JsonResponse
     {
         $hero = Hero::where('slug', $slug)->first();
 
@@ -116,9 +116,10 @@ class HeroController extends Controller
             ], 404);
         }
 
-        $cacheKey = "heroes:stats:{$slug}";
+        $lang = $request->query('lang', 'en');
+        $cacheKey = "heroes:stats:{$slug}:{$lang}";
         
-        $stats = Cache::remember($cacheKey, 300, function () use ($hero) { // 5 min cache
+        $stats = Cache::remember($cacheKey, 300, function () use ($hero, $lang) { // 5 min cache
             $builds = \App\Models\UserBuild::where('hero_id', $hero->id)
                 ->get();
 
@@ -160,11 +161,24 @@ class HeroController extends Controller
             // Count artifacts
             $artifacts = $builds->filter(fn($b) => !empty($b->artifact_id))
                 ->groupBy('artifact_id')
-                ->map(function($group, $artifactId) use ($totalBuilds) {
+                ->map(function($group, $artifactId) use ($totalBuilds, $lang) {
                     $artifact = \App\Models\Artifact::find($artifactId);
+                    
+                    $name = 'Unknown';
+                    if ($artifact) {
+                        $name = match ($lang) {
+                            'ko' => $artifact->name_ko ?? $artifact->name,
+                            'ja' => $artifact->name_ja ?? $artifact->name,
+                            'zh' => $artifact->name_zh ?? $artifact->name,
+                            'es' => $artifact->name_es ?? $artifact->name,
+                            'pt' => $artifact->name_pt ?? $artifact->name,
+                            default => $artifact->name,
+                        };
+                    }
+
                     return [
                         'artifact_id' => $artifactId,
-                        'name' => $artifact ? $artifact->name : 'Unknown',
+                        'name' => $name,
                         'icon' => $artifact ? $artifact->icon : null,
                         'count' => $group->count(),
                         'percentage' => round(($group->count() / $totalBuilds) * 100, 1),

@@ -54,8 +54,8 @@ export const heroApi = {
 export const artifactApi = {
   list: (params?: Record<string, string>) =>
     api.get('/artifacts', { params }),
-  get: (id: number) =>
-    api.get(`/artifacts/${id}`),
+  get: (id: number, lang?: string) =>
+    api.get(`/artifacts/${id}`, { params: lang ? { lang } : {} }),
 };
 
 export const buildApi = {

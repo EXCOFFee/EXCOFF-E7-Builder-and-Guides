@@ -87,12 +87,12 @@ function getTierColor(tier: number): string {
  * Used on hero detail pages to show aggregated build data.
  */
 export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
-    const { t } = useTranslations();
+    const { t, locale } = useTranslations();
 
     const { data: stats, isLoading, error } = useQuery<HeroBuildStats>({
-        queryKey: ['hero-stats', heroSlug],
+        queryKey: ['hero-stats', heroSlug, locale],
         queryFn: async () => {
-            const res = await fetch(`${API_URL}/heroes/${heroSlug}/stats`);
+            const res = await fetch(`${API_URL}/heroes/${heroSlug}/stats?lang=${locale}`);
             if (!res.ok) throw new Error('Failed to fetch stats');
             const data = await res.json();
             return data.data;
