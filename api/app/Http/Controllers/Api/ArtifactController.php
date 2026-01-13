@@ -58,9 +58,9 @@ class ArtifactController extends Controller
         // Get language preference
         $lang = $request->query('lang', 'en');
 
-        // Transform to add display_name
+        // Localize name directly (overwrite for consistency with UserBuildController)
         $artifacts->getCollection()->transform(function ($artifact) use ($lang) {
-            $artifact->display_name = $this->getLocalizedName($artifact, $lang);
+            $artifact->name = $this->getLocalizedName($artifact, $lang);
             return $artifact;
         });
 
@@ -73,7 +73,7 @@ class ArtifactController extends Controller
     public function show(Request $request, Artifact $artifact): JsonResponse
     {
         $lang = $request->query('lang', 'en');
-        $artifact->display_name = $this->getLocalizedName($artifact, $lang);
+        $artifact->name = $this->getLocalizedName($artifact, $lang);
 
         return response()->json($artifact);
     }

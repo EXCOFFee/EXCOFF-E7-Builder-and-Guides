@@ -51,7 +51,7 @@ interface Artifact {
 export default function CreateBuildPage() {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const { t } = useTranslations();
+    const { t, locale } = useTranslations();
     const preselectedHeroId = searchParams.get('hero_id');
     const preselectedHeroName = searchParams.get('hero_name');
 
@@ -145,9 +145,9 @@ export default function CreateBuildPage() {
 
     // Fetch heroes for selector
     const { data: heroesData } = useQuery({
-        queryKey: ['heroes-list'],
+        queryKey: ['heroes-list', locale],
         queryFn: async () => {
-            const response = await heroApi.list({});
+            const response = await heroApi.list({ lang: locale });
             return response.data;
         },
         enabled: isAuthenticated,
@@ -159,11 +159,11 @@ export default function CreateBuildPage() {
     );
     const selectedHero = heroes.find(h => h.id === heroId);
 
-    // Fetch artifacts for selector
+    // Fetch artifacts for selector (with localization)
     const { data: artifactsData } = useQuery({
-        queryKey: ['artifacts-list'],
+        queryKey: ['artifacts-list', locale],
         queryFn: async () => {
-            const response = await fetch(`${API_URL}/artifacts`);
+            const response = await fetch(`${API_URL}/artifacts?lang=${locale}`);
             return response.json();
         },
         enabled: isAuthenticated,

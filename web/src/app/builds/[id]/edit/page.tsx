@@ -82,7 +82,7 @@ export default function EditBuildPage() {
     const router = useRouter();
     const params = useParams();
     const buildId = params.id as string;
-    const { t } = useTranslations();
+    const { t, locale } = useTranslations();
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
@@ -149,30 +149,30 @@ export default function EditBuildPage() {
 
     // Fetch existing build data
     const { data: buildData, isLoading } = useQuery({
-        queryKey: ['build', buildId],
+        queryKey: ['build', buildId, locale],
         queryFn: async () => {
-            const response = await fetch(`${API_URL}/builds/${buildId}`);
+            const response = await fetch(`${API_URL}/builds/${buildId}?lang=${locale}`);
             if (!response.ok) throw new Error('Build not found');
             return response.json();
         },
         enabled: isAuthenticated && !!buildId,
     });
 
-    // Fetch artifacts for selector
+    // Fetch artifacts for selector (with localization)
     const { data: artifactsData } = useQuery({
-        queryKey: ['artifacts-list'],
+        queryKey: ['artifacts-list', locale],
         queryFn: async () => {
-            const response = await fetch(`${API_URL}/artifacts`);
+            const response = await fetch(`${API_URL}/artifacts?lang=${locale}`);
             return response.json();
         },
         enabled: isAuthenticated,
     });
 
-    // Fetch heroes for synergy/counter selectors
+    // Fetch heroes for synergy/counter selectors (with localization)
     const { data: heroesData } = useQuery({
-        queryKey: ['heroes-list'],
+        queryKey: ['heroes-list', locale],
         queryFn: async () => {
-            const response = await fetch(`${API_URL}/heroes`);
+            const response = await fetch(`${API_URL}/heroes?lang=${locale}`);
             return response.json();
         },
         enabled: isAuthenticated,
