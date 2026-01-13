@@ -109,7 +109,7 @@ interface Build {
 }
 
 export default function BuildsPage() {
-    const { t } = useTranslations();
+    const { t, locale } = useTranslations();
     const { translateHeroName } = useHeroTranslations();
     const [search, setSearch] = useState('');
     const [selectedElement, setSelectedElement] = useState<string | null>(null);
@@ -124,7 +124,7 @@ export default function BuildsPage() {
     const [minSpeed, setMinSpeed] = useState<string>('');
 
     const { data, isLoading } = useQuery({
-        queryKey: ['builds', search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, selectedLanguage],
+        queryKey: ['builds', search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, selectedLanguage, locale],
         queryFn: async () => {
             const params = new URLSearchParams();
             if (search) params.append('search', search);
@@ -134,6 +134,8 @@ export default function BuildsPage() {
             if (primarySet) params.append('primary_set', primarySet);
             if (minSpeed && parseInt(minSpeed) > 0) params.append('min_speed', minSpeed);
             if (selectedLanguage && selectedLanguage !== 'all') params.append('language', selectedLanguage);
+            // Add user's interface locale for artifact translation
+            params.append('lang', locale);
 
             const response = await fetch(`${API_URL}/builds?${params}`);
             if (!response.ok) throw new Error('Failed to fetch builds');

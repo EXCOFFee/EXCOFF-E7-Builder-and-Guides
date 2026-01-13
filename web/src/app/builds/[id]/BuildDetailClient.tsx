@@ -118,7 +118,7 @@ export function BuildDetailClient() {
     const params = useParams();
     const router = useRouter();
     const queryClient = useQueryClient();
-    const { t } = useTranslations();
+    const { t, locale } = useTranslations();
     const buildId = params.id as string;
 
     const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
