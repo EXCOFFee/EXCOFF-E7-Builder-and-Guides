@@ -20,6 +20,8 @@ class Artifact extends Model
         'name_ko', // Korean
         'name_ja', // Japanese
         'name_zh', // Chinese
+        'name_es', // Spanish
+        'name_pt', // Portuguese
         'slug',
         'class',
         'rarity',

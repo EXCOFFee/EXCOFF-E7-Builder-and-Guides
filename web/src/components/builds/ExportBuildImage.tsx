@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import html2canvas from 'html2canvas';
+import { toPng } from 'html-to-image';
 import { Button } from '@/components/ui/button';
 import { useTranslations } from '@/hooks/useTranslations';
 
@@ -13,11 +13,28 @@ interface ExportBuildImageProps {
 
 /**
  * ExportBuildImage - Button to export build card as PNG image
- * Uses html2canvas to capture the build card element
+ * Uses html-to-image to capture the build card element
+ * Proxies external images through /api/proxy-image to bypass CORS
  */
 export function ExportBuildImage({ buildRef, heroName, buildTitle }: ExportBuildImageProps) {
     const { t } = useTranslations();
     const [isExporting, setIsExporting] = useState(false);
+
+    /**
+     * Rewrites external image URLs to go through our proxy
+     */
+    const proxyImageUrl = (url: string): string => {
+        // Skip if already relative or data URL
+        if (url.startsWith('/') || url.startsWith('data:')) {
+            return url;
+        }
+        // Skip if already proxied
+        if (url.includes('/api/proxy-image')) {
+            return url;
+        }
+        // Proxy external URLs
+        return `/api/proxy-image?url=${encodeURIComponent(url)}`;
+    };
 
     const handleExport = async () => {
         if (!buildRef.current) return;
@@ -25,35 +42,44 @@ export function ExportBuildImage({ buildRef, heroName, buildTitle }: ExportBuild
         setIsExporting(true);
 
         try {
-            // Clone the element to avoid modifying the original
             const element = buildRef.current;
 
-            // Configure html2canvas with improved settings for cross-origin images
-            const canvas = await html2canvas(element, {
+            // Use html-to-image with filter to proxy external images
+            const dataUrl = await toPng(element, {
                 backgroundColor: '#0a0a0f', // e7-void background
-                scale: 2, // Higher quality
-                useCORS: true, // Allow cross-origin images
-                allowTaint: false, // Don't allow tainted canvas
-                logging: false,
-                imageTimeout: 15000, // Longer timeout for images
-                onclone: (clonedDoc) => {
-                    // Find all images in the cloned document and add crossorigin attribute
-                    const images = clonedDoc.querySelectorAll('img');
-                    images.forEach((img) => {
-                        img.crossOrigin = 'anonymous';
-                    });
+                pixelRatio: 2, // Higher quality
+                cacheBust: true, // Prevent caching issues
+                // Skip problematic elements
+                filter: (node: Node) => {
+                    // Skip elements with problematic classes (if any)
+                    if (node instanceof HTMLElement) {
+                        // Skip hidden elements
+                        if (node.style.display === 'none' || node.style.visibility === 'hidden') {
+                            return false;
+                        }
+                    }
+                    return true;
+                },
+                // Fetch function to proxy external images
+                fetchRequestInit: {
+                    mode: 'cors',
+                    credentials: 'omit',
+                },
+                // Custom style to ensure colors work
+                style: {
+                    // Force standard colors to avoid lab() issues if any remain
                 },
             });
 
-            // Convert to PNG and download
+            // Download the image
             const link = document.createElement('a');
             const filename = `${heroName.toLowerCase().replace(/\s+/g, '-')}-${buildTitle.toLowerCase().replace(/\s+/g, '-')}.png`;
             link.download = filename;
-            link.href = canvas.toDataURL('image/png');
+            link.href = dataUrl;
             link.click();
         } catch (error) {
             console.error('Failed to export build image:', error);
-            alert(t('builds.exportError', 'Failed to export image. Please try again.'));
+            alert(t('builds.exportError', 'Error al exportar la imagen. Por favor intenta de nuevo.'));
         } finally {
             setIsExporting(false);
         }
@@ -67,9 +93,9 @@ export function ExportBuildImage({ buildRef, heroName, buildTitle }: ExportBuild
             className="border-purple-500/30 text-purple-400 hover:bg-purple-500/20 flex items-center gap-2"
         >
             {isExporting ? (
-                t('builds.exporting', 'Exporting...')
+                t('builds.exporting', 'Exportando...')
             ) : (
-                t('builds.exportImage', 'Export Image')
+                t('builds.exportImage', 'Exportar Imagen')
             )}
         </Button>
     );

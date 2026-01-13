@@ -38,7 +38,9 @@
         "image": "Imagem",
         "clickImage": "Clique em uma imagem para ver em tamanho completo",
         "viewFull": "Ver em tamanho completo",
-        "optional": "opcional"
+        "optional": "opcional",
+        "showMore": "Mostrar mais",
+        "showLess": "Mostrar menos"
     },
     "nav": {
         "home": "Início",

@@ -42,7 +42,9 @@
         "image": "Image",
         "clickImage": "Click on an image to view full size",
         "viewFull": "View full size",
-        "optional": "optional"
+        "optional": "optional",
+        "showMore": "Show More",
+        "showLess": "Show Less"
     },
     "nav": {
         "home": "Home",
