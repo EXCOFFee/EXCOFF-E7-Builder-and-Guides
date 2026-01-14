@@ -33,7 +33,6 @@ class FixHeroData extends Command
         
         $heroes = Hero::all();
         $imageFixed = 0;
-        $zioFixed = false;
 
         $bar = $this->output->createProgressBar($heroes->count());
         $bar->start();
@@ -51,9 +50,32 @@ class FixHeroData extends Command
             // Fix Zio's class: warrior -> mage
             if ($hero->slug === 'zio' && $hero->class !== 'mage') {
                 $changes['class'] = 'mage';
-                $zioFixed = true;
                 $this->newLine();
                 $this->info("  ✓ Zio: class '{$hero->class}' -> 'mage'");
+            }
+            
+            // Fix Hasol: class, element, hero_code and image
+            if ($hero->slug === 'hasol') {
+                $baseUrl = config('app.url');
+                if ($hero->class !== 'knight') {
+                    $changes['class'] = 'knight';
+                    $this->newLine();
+                    $this->info("  ✓ Hasol: class '{$hero->class}' -> 'knight'");
+                }
+                if ($hero->element !== 'dark') {
+                    $changes['element'] = 'dark';
+                    $this->newLine();
+                    $this->info("  ✓ Hasol: element '{$hero->element}' -> 'dark'");
+                }
+                if ($hero->hero_code !== 'c3135') {
+                    $changes['hero_code'] = 'c3135';
+                    $this->newLine();
+                    $this->info("  ✓ Hasol: hero_code '{$hero->hero_code}' -> 'c3135'");
+                }
+                // Always update image URL for Hasol
+                $changes['image_url'] = "{$baseUrl}/images/heroes/c3135_su.png";
+                $this->newLine();
+                $this->info("  ✓ Hasol: image_url updated to use c3135_su.png");
             }
             
             // Apply changes
@@ -70,7 +92,6 @@ class FixHeroData extends Command
         $this->newLine(2);
 
         $this->info("📸 Image URLs fixed: {$imageFixed}");
-        $this->info("🎭 Zio class fixed: " . ($zioFixed ? 'Yes' : 'No change needed'));
         
         if ($dryRun) {
             $this->warn('⚠️  Dry run - no changes were made. Run without --dry-run to apply.');
