@@ -12,6 +12,7 @@ import { TierRatingDisplay, TierCategory } from '@/components/ui/tier-rating-sel
 import { ProConsDisplay } from '@/components/ui/pro-cons-selector';
 import { SynergyCounterSection, HeroWithNote } from '@/components/builds/SynergyCounterCard';
 import { ExportBuildImage } from '@/components/builds/ExportBuildImage';
+import { ShareButton } from '@/components/ui/ShareButton';
 import { useTranslations } from '@/hooks/useTranslations';
 import { appendImageVersion } from '@/lib/heroImages';
 
@@ -477,6 +478,13 @@ export function BuildDetailClient() {
                                     <Image src="/images/ras-like.gif" alt="like" width={24} height={24} className="inline-block" unoptimized />
                                     {build.likes}
                                 </Button>
+
+                                {/* Share Button */}
+                                <ShareButton
+                                    title={`${build.hero.name} - ${build.title}`}
+                                    url={`/builds/${build.id}`}
+                                    description={build.description}
+                                />
 
                                 {/* Export Image Button */}
                                 <ExportBuildImage

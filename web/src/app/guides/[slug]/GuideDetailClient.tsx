@@ -10,6 +10,7 @@ import { ImageCarousel } from '@/components/ui/image-carousel';
 import { guideApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
 import { TeamCompositionDisplay, Team } from '@/components/guides/TeamCompositionDisplay';
+import { ShareButton } from '@/components/ui/ShareButton';
 import { appendImageVersion } from '@/lib/heroImages';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
@@ -362,6 +363,13 @@ export function GuideDetailClient() {
                             </div>
 
                             <div className="flex gap-2">
+                                {/* Share Button */}
+                                <ShareButton
+                                    title={guide.title}
+                                    url={`/guides/${guide.slug}`}
+                                    description={guide.description}
+                                />
+
                                 {/* Like Button */}
                                 <Button
                                     variant="outline"

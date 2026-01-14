@@ -46,6 +46,11 @@
         "showMore": "Show More",
         "showLess": "Show Less"
     },
+    "share": {
+        "title": "Share",
+        "copyLink": "Copy Link",
+        "copied": "Copied!"
+    },
     "nav": {
         "home": "Home",
         "heroes": "Heroes",
