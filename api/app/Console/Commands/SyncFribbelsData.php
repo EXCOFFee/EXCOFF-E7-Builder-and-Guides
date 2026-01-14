@@ -295,7 +295,9 @@ class SyncFribbelsData extends Command
             'image_url' => $this->getArtifactImageUrl(Str::slug($name)),
         ];
 
-        $existing = Artifact::where('code', $fribbelsCode)->first();
+        $existing = Artifact::where('code', $fribbelsCode)
+            ->orWhere('slug', Str::slug($name))
+            ->first();
 
         if ($existing) {
             $existing->update($artifactData);
