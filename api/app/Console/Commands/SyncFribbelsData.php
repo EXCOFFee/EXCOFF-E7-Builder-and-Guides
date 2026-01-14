@@ -145,12 +145,6 @@ class SyncFribbelsData extends Command
 
         // Check if hero exists
         $existingHero = Hero::where('code', $code)->first();
-        
-        // Fallback: Check by slug to avoid UniqueConstraintViolation
-        if (!$existingHero) {
-            $slugToCheck = Str::slug($data['name'] ?? $code);
-            $existingHero = Hero::where('slug', $slugToCheck)->first();
-        }
 
         if ($existingHero && !$force && $existingHero->data_hash === $dataHash) {
             return 'skipped';
@@ -159,11 +153,6 @@ class SyncFribbelsData extends Command
         // Map element
         $element = strtolower($data['attribute'] ?? $data['element'] ?? 'fire');
         $element = self::ELEMENT_MAP[$element] ?? 'fire';
-
-        // Manual Fixes
-        if (strtolower($data['name'] ?? '') === 'zio') {
-            $element = 'dark';
-        }
 
         // Map class
         $heroClass = strtolower($data['role'] ?? $data['class'] ?? 'warrior');
@@ -199,46 +188,13 @@ class SyncFribbelsData extends Command
             ];
         }
 
-        // Extract skills if available from Fribbels
-        $newSkills = $data['skills'] ?? null;
-        
-        // IMPORTANT: Fribbels data doesn't include skill names/descriptions.
-        // If an existing hero has skills with names, preserve them instead of overwriting.
-        $skills = $newSkills;
-        if ($existingHero && $existingHero->skills) {
-            $existingSkills = $existingHero->skills;
-            // Check if existing skills have 'name' field (our rich data)
-            $hasRichData = false;
-            if (is_array($existingSkills)) {
-                foreach ($existingSkills as $skill) {
-                    if (is_array($skill) && !empty($skill['name'])) {
-                        $hasRichData = true;
-                        break;
-                    }
-                }
-            }
-            // If existing has rich data and new doesn't, keep existing
-            if ($hasRichData) {
-                $newHasRichData = false;
-                if (is_array($newSkills)) {
-                    foreach ($newSkills as $skill) {
-                        if (is_array($skill) && !empty($skill['name'])) {
-                            $newHasRichData = true;
-                            break;
-                        }
-                    }
-                }
-                if (!$newHasRichData) {
-                    $skills = $existingSkills; // Preserve existing rich data
-                }
-            }
-        }
+        // Extract skills if available
+        $skills = $data['skills'] ?? null;
 
         // Extract self_devotion (Memory Imprint) if available
         $selfDevotion = $data['self_devotion'] ?? null;
 
-        // Get image: prefer Fribbels provided URLs, fallback to local _su.png
-        // Fribbels provides high-quality GitHub-hosted images
+        // Get image from assets or fallback - use imageCode for local images
         $imageUrl = $data['assets']['thumbnail']
             ?? $data['assets']['icon']
             ?? $this->getHeroImageUrl($imageCode);
