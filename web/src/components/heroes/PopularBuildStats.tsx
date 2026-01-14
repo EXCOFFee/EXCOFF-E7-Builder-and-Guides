@@ -3,6 +3,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useTranslations } from '@/hooks/useTranslations';
 import { SET_IMAGES } from '@/lib/sets';
+import { getTagById, getTagLabel } from '@/lib/pros-cons-tags';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -318,7 +319,12 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                                         key={tag.tag}
                                         className="flex items-center justify-between px-4 py-3 rounded-lg bg-gradient-to-r from-green-900/40 to-green-800/20 border border-green-500/30 hover:border-green-400/50 transition-colors"
                                     >
-                                        <span className="text-green-200 font-medium">{tag.tag}</span>
+                                        <span className="text-green-200 font-medium">
+                                            {(() => {
+                                                const tagData = getTagById(tag.tag);
+                                                return tagData ? getTagLabel(tagData, locale) : tag.tag;
+                                            })()}
+                                        </span>
                                         <span className="text-green-400 font-semibold">{tag.percentage}%</span>
                                     </div>
                                 ))
@@ -338,7 +344,12 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                                         key={tag.tag}
                                         className="flex items-center justify-between px-4 py-3 rounded-lg bg-gradient-to-r from-red-900/40 to-red-800/20 border border-red-500/30 hover:border-red-400/50 transition-colors"
                                     >
-                                        <span className="text-red-200 font-medium">{tag.tag}</span>
+                                        <span className="text-red-200 font-medium">
+                                            {(() => {
+                                                const tagData = getTagById(tag.tag);
+                                                return tagData ? getTagLabel(tagData, locale) : tag.tag;
+                                            })()}
+                                        </span>
                                         <span className="text-red-400 font-semibold">{tag.percentage}%</span>
                                     </div>
                                 ))
