@@ -418,7 +418,9 @@ class SyncFribbelsData extends Command
                     'image_url' => $artifactData['image_url'] ?? "https://epic7db.com/images/artifact/icon/{$artifactData['_id']}.webp",
                 ];
 
-                $existing = Artifact::where('code', $code)->first();
+                $existing = Artifact::where('code', $code)
+                    ->orWhere('slug', Str::slug($artifactData['name'] ?? $code))
+                    ->first();
 
                 if ($existing) {
                     $existing->update($data);
