@@ -45,8 +45,9 @@ export function SynergyCounterHeroCard({ hero, type }: SynergyCounterCardProps) 
         : { bg: 'from-red-900/30 to-rose-900/20', border: 'border-red-500/40', hoverBorder: 'hover:border-red-400/60', ring: 'ring-red-500/60', text: 'text-red-300', hoverText: 'group-hover:text-red-200', shadow: 'hover:shadow-red-500/20', glow: 'from-red-400/20 to-rose-400/10' };
 
     const apiUrl = (process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '');
-    // Usage: always use the small square icon (_s.png) for these cards so they are uniform
-    const imageUrl = `/images/hero/${hero.slug}_s.png`;
+    // Use hero.image_url (backend provided) to ensure image exists. 
+    // The CSS object-cover will handle the square aspect ratio.
+    const imageUrl = hero.image_url || `/images/hero/${hero.slug}_s.png`;
 
     return (
         <div className={`group flex flex-col items-center p-4 rounded-xl bg-gradient-to-br ${colors.bg} border-2 ${colors.border} ${colors.hoverBorder} transition-all duration-300 backdrop-blur-sm shadow-lg ${colors.shadow} hover:-translate-y-1`}>

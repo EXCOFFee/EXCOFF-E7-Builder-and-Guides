@@ -145,6 +145,12 @@ class SyncFribbelsData extends Command
 
         // Check if hero exists
         $existingHero = Hero::where('code', $code)->first();
+        
+        // Fallback: Check by slug to avoid UniqueConstraintViolation
+        if (!$existingHero) {
+            $slugToCheck = Str::slug($data['name'] ?? $code);
+            $existingHero = Hero::where('slug', $slugToCheck)->first();
+        }
 
         if ($existingHero && !$force && $existingHero->data_hash === $dataHash) {
             return 'skipped';
