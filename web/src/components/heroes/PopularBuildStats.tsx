@@ -345,11 +345,11 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                                 className="flex items-center gap-6 px-8 py-6 rounded-xl bg-gradient-to-br from-green-900/30 to-emerald-800/20 border border-green-500/40 hover:border-green-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-green-500/20 min-w-[280px]"
                             >
                                 <Image
-                                    src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
+                                    src={hero.image_url || `/images/hero/${hero.slug}_su.png`}
                                     alt={hero.name}
                                     width={120}
                                     height={120}
-                                    className="rounded-xl ring-2 ring-green-500/40"
+                                    className="rounded-xl ring-2 ring-green-500/40 w-[120px] h-[120px] object-cover"
                                     unoptimized
                                 />
                                 <div>
@@ -377,11 +377,11 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                                 className="flex items-center gap-6 px-8 py-6 rounded-xl bg-gradient-to-br from-red-900/30 to-rose-800/20 border border-red-500/40 hover:border-red-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-red-500/20 min-w-[280px]"
                             >
                                 <Image
-                                    src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
+                                    src={hero.image_url || `/images/hero/${hero.slug}_su.png`}
                                     alt={hero.name}
                                     width={120}
                                     height={120}
-                                    className="rounded-xl ring-2 ring-red-500/40"
+                                    className="rounded-xl ring-2 ring-red-500/40 w-[120px] h-[120px] object-cover"
                                     unoptimized
                                 />
                                 <div>
