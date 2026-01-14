@@ -220,7 +220,7 @@ export function HeroSelectorWithNotes({
                                     alt={hero.name}
                                     width={64}
                                     height={64}
-                                    className="rounded-2xl"
+                                    className="rounded-2xl object-cover w-16 h-16"
                                     unoptimized
                                 />
                                 <span className="text-slate-200">{hero.name}</span>
@@ -270,7 +270,7 @@ export function HeroSelectorWithNotes({
                                             alt={hero.name}
                                             width={80}
                                             height={80}
-                                            className={`rounded-xl ring-2 ${colors.ring} object-cover`}
+                                            className={`rounded-xl ring-2 ${colors.ring} object-cover w-20 h-20`}
                                             unoptimized
                                         />
                                         {hero.element && ELEMENT_IMAGES[hero.element] && (
