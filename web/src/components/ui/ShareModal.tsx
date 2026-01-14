@@ -122,58 +122,65 @@ export function ShareModal({ isOpen, onClose, title, url, description }: ShareMo
     ];
 
     return (
-        <div
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
-            onClick={onClose}
-        >
+        <>
+            {/* Backdrop - separate from modal content */}
             <div
-                className="bg-slate-900 border border-amber-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl"
-                onClick={(e) => e.stopPropagation()}
+                className="fixed inset-0 z-[100] bg-black/70 backdrop-blur-sm"
+                onClick={onClose}
+            />
+            {/* Modal Content - positioned above backdrop */}
+            <div
+                className="fixed inset-0 z-[101] flex items-center justify-center p-4 pointer-events-none"
             >
-                <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-xl font-bold text-amber-400">
-                        {t('share.title', 'Share')}
-                    </h3>
-                    <button
-                        onClick={onClose}
-                        className="text-gray-400 hover:text-white transition-colors"
-                    >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
+                <div
+                    className="bg-slate-900 border border-amber-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl pointer-events-auto"
+                    onClick={(e) => e.stopPropagation()}
+                >
+                    <div className="flex items-center justify-between mb-6">
+                        <h3 className="text-xl font-bold text-amber-400">
+                            {t('share.title', 'Share')}
+                        </h3>
+                        <button
+                            onClick={onClose}
+                            className="text-gray-400 hover:text-white transition-colors"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
 
-                <div className="grid grid-cols-3 gap-3">
-                    {shareOptions.map((option) => (
-                        option.href ? (
-                            <a
-                                key={option.name}
-                                href={option.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={`flex flex-col items-center gap-2 p-4 rounded-xl ${option.bgColor} text-white transition-all duration-200 hover:scale-105`}
-                            >
-                                {option.icon}
-                                <span className="text-xs font-medium">{option.label || option.name}</span>
-                            </a>
-                        ) : (
-                            <button
-                                key={option.name}
-                                onClick={option.onClick}
-                                className={`flex flex-col items-center gap-2 p-4 rounded-xl ${option.bgColor} text-white transition-all duration-200 hover:scale-105`}
-                            >
-                                {option.icon}
-                                <span className="text-xs font-medium">{option.label || option.name}</span>
-                            </button>
-                        )
-                    ))}
-                </div>
+                    <div className="grid grid-cols-3 gap-3">
+                        {shareOptions.map((option) => (
+                            option.href ? (
+                                <a
+                                    key={option.name}
+                                    href={option.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`flex flex-col items-center gap-2 p-4 rounded-xl ${option.bgColor} text-white transition-all duration-200 hover:scale-105`}
+                                >
+                                    {option.icon}
+                                    <span className="text-xs font-medium">{option.label || option.name}</span>
+                                </a>
+                            ) : (
+                                <button
+                                    key={option.name}
+                                    onClick={option.onClick}
+                                    className={`flex flex-col items-center gap-2 p-4 rounded-xl ${option.bgColor} text-white transition-all duration-200 hover:scale-105`}
+                                >
+                                    {option.icon}
+                                    <span className="text-xs font-medium">{option.label || option.name}</span>
+                                </button>
+                            )
+                        ))}
+                    </div>
 
-                <p className="mt-4 text-center text-gray-500 text-sm truncate" title={fullUrl}>
-                    {fullUrl}
-                </p>
+                    <p className="mt-4 text-center text-gray-500 text-sm truncate" title={fullUrl}>
+                        {fullUrl}
+                    </p>
+                </div>
             </div>
-        </div>
+        </>
     );
 }

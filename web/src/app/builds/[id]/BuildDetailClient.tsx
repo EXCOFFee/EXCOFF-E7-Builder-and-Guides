@@ -208,13 +208,45 @@ export function BuildDetailClient() {
             });
             return response.json();
         },
+        // Optimistic update - update UI immediately before server response
+        onMutate: async () => {
+            // Cancel any outgoing refetches
+            await queryClient.cancelQueries({ queryKey: ['build', buildId] });
+
+            // Snapshot previous value
+            const previousBuild = queryClient.getQueryData(['build', buildId]) as Build | undefined;
+            const previousHasLiked = hasLiked;
+
+            // Optimistically update the UI
+            const newLikeCount = previousBuild ?
+                (hasLiked ? previousBuild.likes - 1 : previousBuild.likes + 1) : 0;
+
+            setHasLiked(!hasLiked);
+
+            queryClient.setQueryData(['build', buildId], (oldData: Build | undefined) => {
+                if (!oldData) return oldData;
+                return { ...oldData, likes: newLikeCount };
+            });
+
+            // Return context for rollback
+            return { previousBuild, previousHasLiked };
+        },
         onSuccess: (data) => {
+            // Server confirmed - update with actual values
             setHasLiked(data.liked);
-            // Update likes locally without refetching (to avoid incrementing views)
             queryClient.setQueryData(['build', buildId], (oldData: Build | undefined) => {
                 if (!oldData) return oldData;
                 return { ...oldData, likes: data.likes };
             });
+        },
+        onError: (_error, _variables, context) => {
+            // Rollback on error
+            if (context?.previousBuild) {
+                queryClient.setQueryData(['build', buildId], context.previousBuild);
+            }
+            if (context?.previousHasLiked !== undefined) {
+                setHasLiked(context.previousHasLiked);
+            }
         },
     });
 

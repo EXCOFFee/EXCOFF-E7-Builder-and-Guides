@@ -173,9 +173,45 @@ export function GuideDetailClient() {
             });
             return response.json();
         },
+        // Optimistic update - update UI immediately before server response
+        onMutate: async () => {
+            // Cancel any outgoing refetches
+            await queryClient.cancelQueries({ queryKey: ['guide', slug] });
+
+            // Snapshot previous value
+            const previousGuide = queryClient.getQueryData(['guide', slug]) as Guide | undefined;
+            const previousHasLiked = hasLiked;
+
+            // Optimistically update the UI
+            const newLikeCount = previousGuide ?
+                (hasLiked ? previousGuide.likes - 1 : previousGuide.likes + 1) : 0;
+
+            setHasLiked(!hasLiked);
+
+            queryClient.setQueryData(['guide', slug], (oldData: Guide | undefined) => {
+                if (!oldData) return oldData;
+                return { ...oldData, likes: newLikeCount };
+            });
+
+            // Return context for rollback
+            return { previousGuide, previousHasLiked };
+        },
         onSuccess: (data) => {
+            // Server confirmed - update with actual values
             setHasLiked(data.liked);
-            queryClient.invalidateQueries({ queryKey: ['guide', slug] });
+            queryClient.setQueryData(['guide', slug], (oldData: Guide | undefined) => {
+                if (!oldData) return oldData;
+                return { ...oldData, likes: data.likes };
+            });
+        },
+        onError: (_error, _variables, context) => {
+            // Rollback on error
+            if (context?.previousGuide) {
+                queryClient.setQueryData(['guide', slug], context.previousGuide);
+            }
+            if (context?.previousHasLiked !== undefined) {
+                setHasLiked(context.previousHasLiked);
+            }
         },
     });
 
