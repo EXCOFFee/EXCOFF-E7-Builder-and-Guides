@@ -339,6 +339,52 @@ class HeroController extends Controller
             // Sort by count (most common stats first) - show all stats
             usort($priorityStats, fn($a, $b) => $b['count'] - $a['count']);
 
+            // Count pro tags across all builds
+            $proTagCounts = [];
+            foreach ($builds as $build) {
+                if (!empty($build->pro_tags) && is_array($build->pro_tags)) {
+                    foreach ($build->pro_tags as $tag) {
+                        $tagId = is_array($tag) ? ($tag['id'] ?? $tag['tag'] ?? $tag) : $tag;
+                        if ($tagId && is_string($tagId)) {
+                            $proTagCounts[$tagId] = ($proTagCounts[$tagId] ?? 0) + 1;
+                        }
+                    }
+                }
+            }
+            arsort($proTagCounts);
+            $topProTags = array_slice($proTagCounts, 0, 5, true);
+            $proTags = [];
+            foreach ($topProTags as $tagId => $count) {
+                $proTags[] = [
+                    'tag' => $tagId,
+                    'count' => $count,
+                    'percentage' => round(($count / $totalBuilds) * 100, 1),
+                ];
+            }
+
+            // Count con tags across all builds
+            $conTagCounts = [];
+            foreach ($builds as $build) {
+                if (!empty($build->con_tags) && is_array($build->con_tags)) {
+                    foreach ($build->con_tags as $tag) {
+                        $tagId = is_array($tag) ? ($tag['id'] ?? $tag['tag'] ?? $tag) : $tag;
+                        if ($tagId && is_string($tagId)) {
+                            $conTagCounts[$tagId] = ($conTagCounts[$tagId] ?? 0) + 1;
+                        }
+                    }
+                }
+            }
+            arsort($conTagCounts);
+            $topConTags = array_slice($conTagCounts, 0, 5, true);
+            $conTags = [];
+            foreach ($topConTags as $tagId => $count) {
+                $conTags[] = [
+                    'tag' => $tagId,
+                    'count' => $count,
+                    'percentage' => round(($count / $totalBuilds) * 100, 1),
+                ];
+            }
+
             return [
                 'total_builds' => $totalBuilds,
                 'primary_sets' => $primarySets,
@@ -348,6 +394,8 @@ class HeroController extends Controller
                 'synergy_heroes' => $synergyHeroes,
                 'counter_heroes' => $counterHeroes,
                 'priority_stats' => $priorityStats,
+                'pro_tags' => $proTags,
+                'con_tags' => $conTags,
             ];
         });
 

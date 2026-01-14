@@ -48,6 +48,12 @@ interface PriorityStatStats {
     formatted_value: string;
 }
 
+interface TagStats {
+    tag: string;
+    count: number;
+    percentage: number;
+}
+
 interface HeroBuildStats {
     total_builds: number;
     primary_sets: SetStats[];
@@ -57,6 +63,8 @@ interface HeroBuildStats {
     synergy_heroes: SynergyHeroStats[];
     counter_heroes: SynergyHeroStats[];
     priority_stats: PriorityStatStats[];
+    pro_tags: TagStats[];
+    con_tags: TagStats[];
 }
 
 interface PopularBuildStatsProps {
@@ -284,6 +292,60 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                                 <div className="text-base font-display text-gray-400 mt-2">{t('builds.tier_rta', 'RTA')}</div>
                             </div>
                         )}
+                    </div>
+                </div>
+            )}
+
+            {/* Pros & Cons Section */}
+            {(stats.pro_tags?.length > 0 || stats.con_tags?.length > 0) && (
+                <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-e7-gold/30 backdrop-blur-sm">
+                    <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-5">
+                        {t('builds.prosAndCons', 'Pros & Cons')}
+                        <span className="text-sm font-normal text-gray-400 ml-2">
+                            ({t('heroes.fromBuilds', 'from {count} builds').replace('{count}', stats.total_builds.toString())})
+                        </span>
+                    </h3>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {/* Pros */}
+                        <div className="space-y-3">
+                            <h4 className="text-lg font-display font-semibold text-green-400 flex items-center gap-2">
+                                <span>✓</span> {t('builds.pros', 'Pros')}
+                            </h4>
+                            {stats.pro_tags?.length > 0 ? (
+                                stats.pro_tags.map((tag, index) => (
+                                    <div
+                                        key={tag.tag}
+                                        className="flex items-center justify-between px-4 py-3 rounded-lg bg-gradient-to-r from-green-900/40 to-green-800/20 border border-green-500/30 hover:border-green-400/50 transition-colors"
+                                    >
+                                        <span className="text-green-200 font-medium">{tag.tag}</span>
+                                        <span className="text-green-400 font-semibold">{tag.percentage}%</span>
+                                    </div>
+                                ))
+                            ) : (
+                                <p className="text-gray-500 text-sm italic">{t('builds.noProTags', 'No pro tags yet')}</p>
+                            )}
+                        </div>
+
+                        {/* Cons */}
+                        <div className="space-y-3">
+                            <h4 className="text-lg font-display font-semibold text-red-400 flex items-center gap-2">
+                                <span>✗</span> {t('builds.cons', 'Cons')}
+                            </h4>
+                            {stats.con_tags?.length > 0 ? (
+                                stats.con_tags.map((tag, index) => (
+                                    <div
+                                        key={tag.tag}
+                                        className="flex items-center justify-between px-4 py-3 rounded-lg bg-gradient-to-r from-red-900/40 to-red-800/20 border border-red-500/30 hover:border-red-400/50 transition-colors"
+                                    >
+                                        <span className="text-red-200 font-medium">{tag.tag}</span>
+                                        <span className="text-red-400 font-semibold">{tag.percentage}%</span>
+                                    </div>
+                                ))
+                            ) : (
+                                <p className="text-gray-500 text-sm italic">{t('builds.noConTags', 'No con tags yet')}</p>
+                            )}
+                        </div>
                     </div>
                 </div>
             )}
