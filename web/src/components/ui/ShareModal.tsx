@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useTranslations } from '@/hooks/useTranslations';
 
 interface ShareModalProps {
@@ -121,7 +122,7 @@ export function ShareModal({ isOpen, onClose, title, url, description }: ShareMo
         },
     ];
 
-    return (
+    return createPortal(
         <>
             {/* Backdrop - separate from modal content */}
             <div
@@ -181,6 +182,8 @@ export function ShareModal({ isOpen, onClose, title, url, description }: ShareMo
                     </p>
                 </div>
             </div>
-        </>
+        </>,
+        document.body
     );
 }
+
