@@ -47,23 +47,35 @@ class Artifact extends Model
 
     /**
      * Get the artifact icon URL.
-     * Generates URL dynamically from epic7db.com based on artifact name.
+     * Generates URL dynamically from epic7db.com based on artifact slug.
      * Falls back to special mapping for new artifacts not yet in epic7db.
+     * 
+     * IMPORTANT: Uses $this->slug (always English) instead of $this->name
+     * because name may be overwritten with localized translation.
      */
     public function getIconAttribute(): ?string
     {
+        // Get the original English name from slug for NEW_ARTIFACT_ICONS check
+        // Convert slug back to readable format for checking
+        $originalName = $this->getOriginal('name') ?? $this->attributes['name'] ?? null;
+        
         // Check if this is a new artifact with special icon mapping
-        if (isset(self::NEW_ARTIFACT_ICONS[$this->name])) {
-            return self::NEW_ARTIFACT_ICONS[$this->name];
+        if ($originalName && isset(self::NEW_ARTIFACT_ICONS[$originalName])) {
+            return self::NEW_ARTIFACT_ICONS[$originalName];
         }
 
-        // Generate URL from epic7db.com using artifact name
-        // Pattern: https://epic7db.com/images/artifacts/{slug}.webp
-        // Name is converted to lowercase with dashes instead of spaces
-        $slug = strtolower(str_replace([' ', "'", "\u{2019}"], ['-', '', ''], $this->name));
-        $slug = preg_replace('/[^a-z0-9\-]/', '', $slug);
-        $slug = preg_replace('/-+/', '-', $slug); // Remove consecutive dashes
-        $slug = trim($slug, '-');
+        // Use slug field which is always in English and never localized
+        // This ensures icon URLs work regardless of current language
+        $slug = $this->slug;
+        
+        if (empty($slug)) {
+            // Fallback: generate from original name if slug is missing
+            $nameForSlug = $originalName ?? $this->name ?? 'unknown';
+            $slug = strtolower(str_replace([' ', "'", "\u{2019}"], ['-', '', ''], $nameForSlug));
+            $slug = preg_replace('/[^a-z0-9\-]/', '', $slug);
+            $slug = preg_replace('/-+/', '-', $slug);
+            $slug = trim($slug, '-');
+        }
         
         return 'https://epic7db.com/images/artifacts/' . $slug . '.webp';
     }
