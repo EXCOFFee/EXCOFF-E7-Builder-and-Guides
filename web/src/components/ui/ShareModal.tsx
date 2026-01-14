@@ -123,15 +123,15 @@ export function ShareModal({ isOpen, onClose, title, url, description }: ShareMo
 
     return (
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
             onClick={onClose}
         >
             <div
-                className="bg-e7-dark-light border border-e7-gold/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl"
+                className="bg-slate-900 border border-amber-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl"
                 onClick={(e) => e.stopPropagation()}
             >
                 <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-xl font-display font-bold text-e7-gold">
+                    <h3 className="text-xl font-bold text-amber-400">
                         {t('share.title', 'Share')}
                     </h3>
                     <button

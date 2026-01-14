@@ -42,6 +42,11 @@
         "showMore": "더 보기",
         "showLess": "접기"
     },
+    "share": {
+        "title": "공유",
+        "copyLink": "링크 복사",
+        "copied": "복사됨!"
+    },
     "nav": {
         "home": "홈",
         "heroes": "영웅",

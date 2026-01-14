@@ -42,6 +42,11 @@
         "showMore": "Mostrar mais",
         "showLess": "Mostrar menos"
     },
+    "share": {
+        "title": "Compartilhar",
+        "copyLink": "Copiar Link",
+        "copied": "Copiado!"
+    },
     "nav": {
         "home": "Início",
         "heroes": "Heróis",

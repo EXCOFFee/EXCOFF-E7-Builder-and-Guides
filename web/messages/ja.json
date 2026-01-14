@@ -42,6 +42,11 @@
         "showMore": "もっと見る",
         "showLess": "表示を減らす"
     },
+    "share": {
+        "title": "共有",
+        "copyLink": "リンクをコピー",
+        "copied": "コピーしました！"
+    },
     "nav": {
         "home": "ホーム",
         "heroes": "ヒーロー",
