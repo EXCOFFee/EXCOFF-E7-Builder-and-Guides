@@ -60,41 +60,22 @@ export function ExportBuildImage({ buildRef, heroName, buildTitle }: ExportBuild
         try {
             const element = buildRef.current;
 
-            // Clone the element to avoid modifying the original
-            const clone = element.cloneNode(true) as HTMLElement;
-            clone.style.position = 'absolute';
-            clone.style.left = '-9999px';
-            clone.style.top = '-9999px';
-            document.body.appendChild(clone);
-
-            // Find all images and convert external ones to data URLs
-            const images = clone.querySelectorAll('img');
-            const imagePromises: Promise<void>[] = [];
-
-            images.forEach((img) => {
-                const src = img.getAttribute('src');
-                if (src && (src.includes('hostingersite.com') || src.includes('epic7db.com'))) {
-                    // Remove query params for cleaner proxy URL
-                    const cleanSrc = src.split('?')[0];
-                    const promise = loadImageAsDataUrl(cleanSrc).then((dataUrl) => {
-                        img.setAttribute('src', dataUrl);
-                    });
-                    imagePromises.push(promise);
-                }
-            });
-
-            // Wait for all images to be converted
-            await Promise.all(imagePromises);
-
-            // Now export the clone with data URLs
-            const dataUrl = await toPng(clone, {
+            // Export the element directly without cloning
+            // html-to-image handles the conversion properly
+            const dataUrl = await toPng(element, {
                 backgroundColor: '#0a0a0f',
                 pixelRatio: 2,
                 cacheBust: true,
+                // Include styles from stylesheets
+                includeQueryParams: true,
+                // Skip elements that might cause issues
+                filter: (node) => {
+                    // Skip script tags and other non-visual elements
+                    if (node instanceof HTMLScriptElement) return false;
+                    if (node instanceof HTMLStyleElement) return false;
+                    return true;
+                },
             });
-
-            // Clean up the clone
-            document.body.removeChild(clone);
 
             // Download the image
             const link = document.createElement('a');
