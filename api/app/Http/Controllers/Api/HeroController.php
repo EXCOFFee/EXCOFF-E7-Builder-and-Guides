@@ -132,6 +132,11 @@ class HeroController extends Controller
                     'secondary_sets' => [],
                     'artifacts' => [],
                     'average_ratings' => null,
+                    'synergy_heroes' => [],
+                    'counter_heroes' => [],
+                    'priority_stats' => [],
+                    'popular_pro_tags' => [],
+                    'popular_con_tags' => [],
                 ];
             }
 

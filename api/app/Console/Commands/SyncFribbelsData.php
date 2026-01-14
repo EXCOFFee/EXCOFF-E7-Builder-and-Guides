@@ -237,8 +237,11 @@ class SyncFribbelsData extends Command
         // Extract self_devotion (Memory Imprint) if available
         $selfDevotion = $data['self_devotion'] ?? null;
 
-        // ALWAYS use _su.png images for consistency
-        $imageUrl = $this->getHeroImageUrl($imageCode);
+        // Get image: prefer Fribbels provided URLs, fallback to local _su.png
+        // Fribbels provides high-quality GitHub-hosted images
+        $imageUrl = $data['assets']['thumbnail']
+            ?? $data['assets']['icon']
+            ?? $this->getHeroImageUrl($imageCode);
 
         $heroData = [
             'code' => $code,

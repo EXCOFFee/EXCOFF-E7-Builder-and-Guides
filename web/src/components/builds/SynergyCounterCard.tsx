@@ -44,13 +44,9 @@ export function SynergyCounterHeroCard({ hero, type }: SynergyCounterCardProps) 
         ? { bg: 'from-green-900/30 to-emerald-900/20', border: 'border-green-500/40', hoverBorder: 'hover:border-green-400/60', ring: 'ring-green-500/60', text: 'text-green-300', hoverText: 'group-hover:text-green-200', shadow: 'hover:shadow-green-500/20', glow: 'from-green-400/20 to-emerald-400/10' }
         : { bg: 'from-red-900/30 to-rose-900/20', border: 'border-red-500/40', hoverBorder: 'hover:border-red-400/60', ring: 'ring-red-500/60', text: 'text-red-300', hoverText: 'group-hover:text-red-200', shadow: 'hover:shadow-red-500/20', glow: 'from-red-400/20 to-rose-400/10' };
 
-    const apiUrl = (process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '');
-    // Explicit request: Use _su.png (Skill Use/Startup) images for Synergy/Counter cards
-    // Use hero.hero_code to construct the URL if available.
-    let imageUrl = hero.image_url || `/images/hero/${hero.slug}_s.png`;
-    if (hero.hero_code) {
-        imageUrl = `${apiUrl}/images/heroes/${hero.hero_code}_su.png`;
-    }
+    // Use the image_url provided by the backend (Fribbels high-quality images)
+    // Fallback to local path if not available
+    const imageUrl = hero.image_url || `/images/hero/${hero.slug}_s.png`;
 
     return (
         <div className={`group flex flex-col items-center p-4 rounded-xl bg-gradient-to-br ${colors.bg} border-2 ${colors.border} ${colors.hoverBorder} transition-all duration-300 backdrop-blur-sm shadow-lg ${colors.shadow} hover:-translate-y-1`}>
