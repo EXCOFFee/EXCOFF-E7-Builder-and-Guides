@@ -572,13 +572,28 @@ export function HeroDetailClient() {
                             {Object.entries(hero.skills).map(([skillKey, skill]: [string, unknown]) => {
                                 const s = skill as {
                                     name?: string;
+                                    name_es?: string;
+                                    name_ko?: string;
+                                    name_ja?: string;
+                                    name_zh?: string;
+                                    name_pt?: string;
                                     description?: string;
+                                    description_es?: string;
+                                    description_ko?: string;
+                                    description_ja?: string;
+                                    description_zh?: string;
+                                    description_pt?: string;
                                     rate?: number;
                                     pow?: number;
                                     targets?: number;
                                     cooldown?: number;
                                     soulburn?: boolean;
                                     soulburn_effect?: string;
+                                    soulburn_effect_es?: string;
+                                    soulburn_effect_ko?: string;
+                                    soulburn_effect_ja?: string;
+                                    soulburn_effect_zh?: string;
+                                    soulburn_effect_pt?: string;
                                     soulburn_souls?: number;
                                     selfHpScaling?: number;
                                     selfAtkScaling?: number;
@@ -587,6 +602,17 @@ export function HeroDetailClient() {
                                     penetration?: number;
                                     hitTypes?: string[];
                                 };
+
+                                // Get localized text based on current locale
+                                const skillName = (locale !== 'en' && s[`name_${locale}` as keyof typeof s])
+                                    ? String(s[`name_${locale}` as keyof typeof s])
+                                    : s.name;
+                                const skillDesc = (locale !== 'en' && s[`description_${locale}` as keyof typeof s])
+                                    ? String(s[`description_${locale}` as keyof typeof s])
+                                    : s.description;
+                                const skillSoulburn = (locale !== 'en' && s[`soulburn_effect_${locale}` as keyof typeof s])
+                                    ? String(s[`soulburn_effect_${locale}` as keyof typeof s])
+                                    : s.soulburn_effect;
 
                                 const hasScaling = s.rate || s.pow || s.selfHpScaling || s.selfAtkScaling || s.selfDefScaling || s.selfSpdScaling || s.penetration;
 
@@ -608,7 +634,7 @@ export function HeroDetailClient() {
                                                 />
                                             )}
                                             <Badge className="bg-e7-gold text-black font-bold px-3">{skillKey}</Badge>
-                                            <h3 className="text-white font-semibold">{s.name || `Skill ${skillKey}`}</h3>
+                                            <h3 className="text-white font-semibold">{skillName || `Skill ${skillKey}`}</h3>
                                             {s.targets && (
                                                 <Badge variant="outline" className="border-gray-500 text-gray-400">
                                                     {s.targets === 1 ? 'Single Target' : `${s.targets} Targets`}
@@ -627,10 +653,10 @@ export function HeroDetailClient() {
                                         </div>
 
                                         {/* Soulburn Effect */}
-                                        {s.soulburn && s.soulburn_effect && (
+                                        {s.soulburn && skillSoulburn && (
                                             <div className="bg-purple-900/30 rounded px-3 py-2 mb-3 text-sm">
                                                 <span className="text-purple-300 font-semibold">Soulburn:</span>{' '}
-                                                <span className="text-purple-200">{s.soulburn_effect}</span>
+                                                <span className="text-purple-200">{skillSoulburn}</span>
                                             </div>
                                         )}
 
@@ -674,11 +700,11 @@ export function HeroDetailClient() {
                                             </div>
                                         )}
 
-                                        {s.description && (
-                                            <p className="text-gray-300 text-sm leading-relaxed">{s.description}</p>
+                                        {skillDesc && (
+                                            <p className="text-gray-300 text-sm leading-relaxed">{skillDesc}</p>
                                         )}
 
-                                        {!hasScaling && !s.description && (
+                                        {!hasScaling && !skillDesc && (
                                             <p className="text-gray-500 text-sm italic">Passive or support skill</p>
                                         )}
                                     </div>
