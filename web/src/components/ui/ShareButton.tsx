@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 import { ShareModal } from './ShareModal';
 
 interface ShareButtonProps {
@@ -35,9 +36,10 @@ export function ShareButton({ title, url, description, className = '' }: ShareBu
 
     return (
         <>
-            <button
+            <Button
+                variant="outline"
                 onClick={handleShare}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-medium transition-all duration-200 shadow-lg hover:shadow-blue-500/25 ${className}`}
+                className={`border-e7-gold/30 text-e7-gold flex items-center gap-2 ${className}`}
                 title="Share"
             >
                 <svg
@@ -54,7 +56,7 @@ export function ShareButton({ title, url, description, className = '' }: ShareBu
                     />
                 </svg>
                 <span className="hidden sm:inline">Share</span>
-            </button>
+            </Button>
 
             <ShareModal
                 isOpen={isOpen}
@@ -66,3 +68,4 @@ export function ShareButton({ title, url, description, className = '' }: ShareBu
         </>
     );
 }
+
