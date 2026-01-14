@@ -452,7 +452,7 @@ export function GuideDetailClient() {
                                     <div className="relative">
                                         <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-purple-600/10 rounded-2xl blur-md group-hover:blur-lg transition-all duration-300"></div>
                                         <Image
-                                            src={appendImageVersion(hero.image_url || hero.portrait || `/images/hero/${hero.slug}_s.png`)}
+                                            src={appendImageVersion(hero.image_url || hero.portrait || `/images/hero/${hero.slug}_su.png`)}
                                             alt={hero.name}
                                             width={64}
                                             height={64}

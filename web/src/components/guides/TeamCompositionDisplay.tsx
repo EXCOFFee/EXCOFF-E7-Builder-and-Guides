@@ -107,7 +107,7 @@ export function TeamCompositionDisplay({ teams }: TeamCompositionDisplayProps) {
                                         <div className="text-center mb-4 flex-1 flex flex-col items-center justify-center">
                                             <div className="w-[140px] h-[140px] relative mx-auto">
                                                 <Image
-                                                    src={heroData.image_url || `/images/hero/${heroData.slug}_s.png`}
+                                                    src={heroData.image_url || `/images/hero/${heroData.slug}_su.png`}
                                                     alt={heroData.name}
                                                     fill
                                                     className="rounded-xl ring-2 ring-cyan-500/40 object-cover"

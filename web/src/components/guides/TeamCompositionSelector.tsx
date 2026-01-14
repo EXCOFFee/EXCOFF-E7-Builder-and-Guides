@@ -188,7 +188,7 @@ export function TeamCompositionSelector({
                                 return heroData ? (
                                     <>
                                         <Image
-                                            src={heroData.image_url || `/images/hero/${heroData.slug}_s.png`}
+                                            src={heroData.image_url || `/images/hero/${heroData.slug}_su.png`}
                                             alt={heroData.name}
                                             width={48}
                                             height={48}
@@ -454,7 +454,7 @@ export function TeamCompositionSelector({
                                                     className="w-full px-4 py-2 text-left hover:bg-e7-gold/20 flex items-center gap-3"
                                                 >
                                                     <Image
-                                                        src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
+                                                        src={hero.image_url || `/images/hero/${hero.slug}_su.png`}
                                                         alt={hero.name}
                                                         width={48}
                                                         height={48}
@@ -507,7 +507,7 @@ export function TeamCompositionSelector({
                                                     className="w-full text-center"
                                                 >
                                                     <Image
-                                                        src={heroData.image_url || `/images/hero/${heroData.slug}_s.png`}
+                                                        src={heroData.image_url || `/images/hero/${heroData.slug}_su.png`}
                                                         alt={heroData.name}
                                                         width={100}
                                                         height={100}

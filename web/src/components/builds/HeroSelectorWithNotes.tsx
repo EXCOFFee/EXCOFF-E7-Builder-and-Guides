@@ -216,7 +216,7 @@ export function HeroSelectorWithNotes({
                                 className="w-full px-4 py-3 text-left hover:bg-e7-gold/20 flex items-center gap-3 transition-colors"
                             >
                                 <Image
-                                    src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
+                                    src={hero.image_url || `/images/hero/${hero.slug}_su.png`}
                                     alt={hero.name}
                                     width={64}
                                     height={64}
@@ -266,7 +266,7 @@ export function HeroSelectorWithNotes({
                                 >
                                     <div className="relative">
                                         <Image
-                                            src={hero.image_url || `/images/hero/${hero.slug}_s.png`}
+                                            src={hero.image_url || `/images/hero/${hero.slug}_su.png`}
                                             alt={hero.name}
                                             width={80}
                                             height={80}
