@@ -6,6 +6,8 @@ import { SET_IMAGES } from '@/lib/sets';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { getTagById, getTagLabel } from '@/lib/pros-cons-tags';
+
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 interface SetStats {
@@ -40,6 +42,12 @@ interface SynergyHeroStats {
     percentage: number;
 }
 
+interface TagStats {
+    tag: string;
+    count: number;
+    percentage: number;
+}
+
 interface PriorityStatStats {
     stat: string;
     label: string;
@@ -57,6 +65,8 @@ interface HeroBuildStats {
     synergy_heroes: SynergyHeroStats[];
     counter_heroes: SynergyHeroStats[];
     priority_stats: PriorityStatStats[];
+    popular_pro_tags?: TagStats[];
+    popular_con_tags?: TagStats[];
 }
 
 interface PopularBuildStatsProps {
@@ -393,6 +403,50 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                     </div>
                 </div>
             )}
+
+            {/* Popular Pros & Cons */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Popular Pros */}
+                {stats.popular_pro_tags && stats.popular_pro_tags.length > 0 && (
+                    <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-green-500/30 backdrop-blur-sm">
+                        <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400 mb-5">
+                            {t('heroes.popularPros', 'Popular Pros')}
+                        </h3>
+                        <div className="space-y-3">
+                            {stats.popular_pro_tags.map((tagStats) => {
+                                const tag = getTagById(tagStats.tag);
+                                if (!tag) return null;
+                                return (
+                                    <div key={tag.id} className="flex items-center justify-between p-3 rounded-lg bg-green-900/20 border border-green-500/20">
+                                        <span className="text-gray-200 font-medium">{getTagLabel(tag, locale)}</span>
+                                        <span className="text-green-400 font-bold">{tagStats.percentage}%</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                )}
+                {/* Popular Cons */}
+                {stats.popular_con_tags && stats.popular_con_tags.length > 0 && (
+                    <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-red-500/30 backdrop-blur-sm">
+                        <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-rose-400 mb-5">
+                            {t('heroes.popularCons', 'Popular Cons')}
+                        </h3>
+                        <div className="space-y-3">
+                            {stats.popular_con_tags.map((tagStats) => {
+                                const tag = getTagById(tagStats.tag);
+                                if (!tag) return null;
+                                return (
+                                    <div key={tag.id} className="flex items-center justify-between p-3 rounded-lg bg-red-900/20 border border-red-500/20">
+                                        <span className="text-gray-200 font-medium">{getTagLabel(tag, locale)}</span>
+                                        <span className="text-red-400 font-bold">{tagStats.percentage}%</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }

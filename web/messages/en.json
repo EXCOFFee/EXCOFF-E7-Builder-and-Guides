@@ -130,6 +130,8 @@
         "popularCounters": "Popular Counter Heroes",
         "priorityStats": "Priority Stats",
         "statistics": "Statistics",
+        "popularPros": "Popular Pros",
+        "popularCons": "Popular Cons",
         "builds": "builds"
     },
     "elements": {

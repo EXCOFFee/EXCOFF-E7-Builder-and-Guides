@@ -339,6 +339,46 @@ class HeroController extends Controller
             // Sort by count (most common stats first) - show all stats
             usort($priorityStats, fn($a, $b) => $b['count'] - $a['count']);
 
+            // Count pro tags
+            $proTagsCount = [];
+            foreach ($builds as $build) {
+                if (!empty($build->pro_tags) && is_array($build->pro_tags)) {
+                    foreach ($build->pro_tags as $tag) {
+                        $proTagsCount[$tag] = ($proTagsCount[$tag] ?? 0) + 1;
+                    }
+                }
+            }
+            arsort($proTagsCount);
+            
+            $popularProTags = [];
+            foreach (array_slice($proTagsCount, 0, 10) as $tag => $count) {
+                 $popularProTags[] = [
+                     'tag' => $tag,
+                     'count' => $count,
+                     'percentage' => round(($count / $totalBuilds) * 100, 1),
+                 ];
+            }
+
+            // Count con tags
+            $conTagsCount = [];
+            foreach ($builds as $build) {
+                if (!empty($build->con_tags) && is_array($build->con_tags)) {
+                    foreach ($build->con_tags as $tag) {
+                        $conTagsCount[$tag] = ($conTagsCount[$tag] ?? 0) + 1;
+                    }
+                }
+            }
+            arsort($conTagsCount);
+            
+            $popularConTags = [];
+            foreach (array_slice($conTagsCount, 0, 10) as $tag => $count) {
+                 $popularConTags[] = [
+                     'tag' => $tag,
+                     'count' => $count,
+                     'percentage' => round(($count / $totalBuilds) * 100, 1),
+                 ];
+            }
+
             return [
                 'total_builds' => $totalBuilds,
                 'primary_sets' => $primarySets,
@@ -348,6 +388,8 @@ class HeroController extends Controller
                 'synergy_heroes' => $synergyHeroes,
                 'counter_heroes' => $counterHeroes,
                 'priority_stats' => $priorityStats,
+                'popular_pro_tags' => $popularProTags,
+                'popular_con_tags' => $popularConTags,
             ];
         });
 

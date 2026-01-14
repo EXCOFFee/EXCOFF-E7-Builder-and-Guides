@@ -154,6 +154,11 @@ class SyncFribbelsData extends Command
         $element = strtolower($data['attribute'] ?? $data['element'] ?? 'fire');
         $element = self::ELEMENT_MAP[$element] ?? 'fire';
 
+        // Manual Fixes
+        if (strtolower($data['name'] ?? '') === 'zio') {
+            $element = 'dark';
+        }
+
         // Map class
         $heroClass = strtolower($data['role'] ?? $data['class'] ?? 'warrior');
         $heroClass = self::CLASS_MAP[$heroClass] ?? 'warrior';
