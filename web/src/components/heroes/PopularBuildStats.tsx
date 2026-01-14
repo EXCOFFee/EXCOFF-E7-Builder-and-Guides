@@ -36,6 +36,7 @@ interface SynergyHeroStats {
     hero_id: number;
     name: string;
     slug: string;
+    hero_code?: string;
     image_url: string | null;
     element: string;
     count: number;

@@ -199,16 +199,46 @@ class SyncFribbelsData extends Command
             ];
         }
 
-        // Extract skills if available
-        $skills = $data['skills'] ?? null;
+        // Extract skills if available from Fribbels
+        $newSkills = $data['skills'] ?? null;
+        
+        // IMPORTANT: Fribbels data doesn't include skill names/descriptions.
+        // If an existing hero has skills with names, preserve them instead of overwriting.
+        $skills = $newSkills;
+        if ($existingHero && $existingHero->skills) {
+            $existingSkills = $existingHero->skills;
+            // Check if existing skills have 'name' field (our rich data)
+            $hasRichData = false;
+            if (is_array($existingSkills)) {
+                foreach ($existingSkills as $skill) {
+                    if (is_array($skill) && !empty($skill['name'])) {
+                        $hasRichData = true;
+                        break;
+                    }
+                }
+            }
+            // If existing has rich data and new doesn't, keep existing
+            if ($hasRichData) {
+                $newHasRichData = false;
+                if (is_array($newSkills)) {
+                    foreach ($newSkills as $skill) {
+                        if (is_array($skill) && !empty($skill['name'])) {
+                            $newHasRichData = true;
+                            break;
+                        }
+                    }
+                }
+                if (!$newHasRichData) {
+                    $skills = $existingSkills; // Preserve existing rich data
+                }
+            }
+        }
 
         // Extract self_devotion (Memory Imprint) if available
         $selfDevotion = $data['self_devotion'] ?? null;
 
-        // Get image from assets or fallback - use imageCode for local images
-        $imageUrl = $data['assets']['thumbnail']
-            ?? $data['assets']['icon']
-            ?? $this->getHeroImageUrl($imageCode);
+        // ALWAYS use _su.png images for consistency
+        $imageUrl = $this->getHeroImageUrl($imageCode);
 
         $heroData = [
             'code' => $code,
