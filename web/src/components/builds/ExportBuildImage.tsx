@@ -21,19 +21,35 @@ export function ExportBuildImage({ buildRef, heroName, buildTitle }: ExportBuild
     const [isExporting, setIsExporting] = useState(false);
 
     /**
-     * Rewrites external image URLs to go through our proxy
+     * Preload image through proxy and return data URL
      */
-    const proxyImageUrl = (url: string): string => {
-        // Skip if already relative or data URL
-        if (url.startsWith('/') || url.startsWith('data:')) {
+    const loadImageAsDataUrl = async (url: string): Promise<string> => {
+        // Skip if already data URL or relative
+        if (url.startsWith('data:') || url.startsWith('/')) {
+            // For relative URLs, still need to proxy if they point to external
+            if (url.startsWith('/') && !url.startsWith('/api/')) {
+                return url;
+            }
             return url;
         }
-        // Skip if already proxied
-        if (url.includes('/api/proxy-image')) {
-            return url;
+
+        try {
+            // Use our proxy endpoint
+            const proxyUrl = `/api/proxy-image?url=${encodeURIComponent(url)}`;
+            const response = await fetch(proxyUrl);
+            if (!response.ok) throw new Error('Failed to load');
+
+            const blob = await response.blob();
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onloadend = () => resolve(reader.result as string);
+                reader.onerror = reject;
+                reader.readAsDataURL(blob);
+            });
+        } catch (error) {
+            console.warn('Failed to proxy image:', url, error);
+            return url; // Return original URL as fallback
         }
-        // Proxy external URLs
-        return `/api/proxy-image?url=${encodeURIComponent(url)}`;
     };
 
     const handleExport = async () => {
@@ -44,32 +60,41 @@ export function ExportBuildImage({ buildRef, heroName, buildTitle }: ExportBuild
         try {
             const element = buildRef.current;
 
-            // Use html-to-image with filter to proxy external images
-            const dataUrl = await toPng(element, {
-                backgroundColor: '#0a0a0f', // e7-void background
-                pixelRatio: 2, // Higher quality
-                cacheBust: true, // Prevent caching issues
-                // Skip problematic elements
-                filter: (node: Node) => {
-                    // Skip elements with problematic classes (if any)
-                    if (node instanceof HTMLElement) {
-                        // Skip hidden elements
-                        if (node.style.display === 'none' || node.style.visibility === 'hidden') {
-                            return false;
-                        }
-                    }
-                    return true;
-                },
-                // Fetch function to proxy external images
-                fetchRequestInit: {
-                    mode: 'cors',
-                    credentials: 'omit',
-                },
-                // Custom style to ensure colors work
-                style: {
-                    // Force standard colors to avoid lab() issues if any remain
-                },
+            // Clone the element to avoid modifying the original
+            const clone = element.cloneNode(true) as HTMLElement;
+            clone.style.position = 'absolute';
+            clone.style.left = '-9999px';
+            clone.style.top = '-9999px';
+            document.body.appendChild(clone);
+
+            // Find all images and convert external ones to data URLs
+            const images = clone.querySelectorAll('img');
+            const imagePromises: Promise<void>[] = [];
+
+            images.forEach((img) => {
+                const src = img.getAttribute('src');
+                if (src && (src.includes('hostingersite.com') || src.includes('epic7db.com'))) {
+                    // Remove query params for cleaner proxy URL
+                    const cleanSrc = src.split('?')[0];
+                    const promise = loadImageAsDataUrl(cleanSrc).then((dataUrl) => {
+                        img.setAttribute('src', dataUrl);
+                    });
+                    imagePromises.push(promise);
+                }
             });
+
+            // Wait for all images to be converted
+            await Promise.all(imagePromises);
+
+            // Now export the clone with data URLs
+            const dataUrl = await toPng(clone, {
+                backgroundColor: '#0a0a0f',
+                pixelRatio: 2,
+                cacheBust: true,
+            });
+
+            // Clean up the clone
+            document.body.removeChild(clone);
 
             // Download the image
             const link = document.createElement('a');
@@ -100,3 +125,4 @@ export function ExportBuildImage({ buildRef, heroName, buildTitle }: ExportBuild
         </Button>
     );
 }
+

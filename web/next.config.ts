@@ -102,6 +102,16 @@ const nextConfig: NextConfig = {
 
   // Trailing slash for compatibility
   trailingSlash: true,
+
+  // Rewrite API images to avoid CORS issues in html2canvas
+  async rewrites() {
+    return [
+      {
+        source: '/api-images/:path*',
+        destination: `${process.env.NEXT_PUBLIC_API_URL?.replace('/api', '') || 'https://moccasin-sparrow-217730.hostingersite.com'}/:path*`,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
