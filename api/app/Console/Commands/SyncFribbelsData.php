@@ -291,7 +291,7 @@ class SyncFribbelsData extends Command
             'class' => $artifactClass,
             'rarity' => (int) ($data['rarity'] ?? 5),
             'description' => $data['skill']['description'] ?? null,
-            'image_url' => $this->getArtifactImageUrl($fribbelsCode),
+            'image_url' => $this->getArtifactImageUrl(Str::slug($name)),
         ];
 
         $existing = Artifact::where('code', $fribbelsCode)
@@ -309,24 +309,25 @@ class SyncFribbelsData extends Command
 
     /**
      * Get hero portrait image URL.
-     * Uses CeciliaBot CDN for high-quality images.
-     * Fallback: Local images at /images/heroes/{code}_su.png on Hostinger
+     * Uses CeciliaBot GitHub raw assets for high-quality images.
+     * URL: https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/face/{code}_su.png
      */
     private function getHeroImageUrl(string $code): string
     {
-        // CeciliaBot CDN - same codes as Fribbels (c1001, c2004, etc.)
-        return "https://ceciliabot.github.io/assets/face/{$code}_su.webp";
+        // CeciliaBot E7Assets-Temp repository - same codes as Fribbels (c1001, c2004, etc.)
+        return "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/face/{$code}_su.png";
     }
 
     /**
      * Get artifact image URL.
-     * Uses CeciliaBot CDN for artifact icons.
-     * Fallback: Local images at /images/artifacts/ on Hostinger
+     * Uses local Hostinger images since CeciliaBot uses different code format (art#### vs ef###).
+     * Fallback: epic7db if local not available
      */
-    private function getArtifactImageUrl(string $code): string
+    private function getArtifactImageUrl(string $slug): string
     {
-        // CeciliaBot CDN - uses Fribbels artifact codes (ef001, ef002, etc.)
-        return "https://ceciliabot.github.io/assets/artifact/{$code}.webp";
+        // Use local Hostinger images for artifacts (more reliable mapping with slug)
+        $baseUrl = config('app.url');
+        return "https://epic7db.com/images/artifact/icon/{$slug}.webp";
     }
 
     /**
