@@ -1,8 +1,9 @@
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 
 /**
  * Axios instance configured for E7-Hub API.
  * Uses environment variable for API URL.
+ * Includes automatic retry for failed requests.
  */
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api',
@@ -11,6 +12,7 @@ const api = axios.create({
     'Content-Type': 'application/json',
   },
   withCredentials: true, // Required for Sanctum cookies
+  timeout: 15000, // 15 second timeout
 });
 
 // Request interceptor to add auth token
@@ -24,17 +26,38 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-// Response interceptor for error handling
+// Retry configuration
+const MAX_RETRIES = 3;
+const RETRY_DELAY = 1000; // 1 second
+
+// Response interceptor for error handling with retry
 api.interceptors.response.use(
   (response) => response,
-  (error) => {
-    if (error.response?.status === 401) {
-      // Clear token and redirect to login
-      if (typeof window !== 'undefined') {
+  async (error: AxiosError) => {
+    const config = error.config as typeof error.config & { _retryCount?: number };
+
+    // Don't retry for 4xx errors (client errors) or if no config
+    if (!config || (error.response && error.response.status >= 400 && error.response.status < 500)) {
+      if (error.response?.status === 401 && typeof window !== 'undefined') {
         localStorage.removeItem('auth_token');
-        // Optionally redirect to login
       }
+      return Promise.reject(error);
     }
+
+    // Initialize retry count
+    config._retryCount = config._retryCount || 0;
+
+    // Check if we should retry
+    if (config._retryCount < MAX_RETRIES) {
+      config._retryCount += 1;
+
+      // Wait before retrying
+      await new Promise(resolve => setTimeout(resolve, RETRY_DELAY * config._retryCount));
+
+      console.log(`Retrying request (${config._retryCount}/${MAX_RETRIES}):`, config.url);
+      return api(config);
+    }
+
     return Promise.reject(error);
   }
 );

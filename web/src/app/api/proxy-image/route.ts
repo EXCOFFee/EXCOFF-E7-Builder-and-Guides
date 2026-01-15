@@ -60,11 +60,12 @@ export async function GET(request: NextRequest) {
         const contentType = response.headers.get('content-type') || 'image/png';
 
         // Return the image with permissive CORS headers
+        // Cache for 7 days, stale-while-revalidate for 30 days (reduces Vercel function invocations)
         return new NextResponse(imageBuffer, {
             status: 200,
             headers: {
                 'Content-Type': contentType,
-                'Cache-Control': 'public, max-age=86400', // Cache for 24 hours
+                'Cache-Control': 'public, max-age=604800, stale-while-revalidate=2592000',
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'GET',
             },
