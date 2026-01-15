@@ -118,6 +118,7 @@ export function GuideDetailClient() {
     const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
     const [newComment, setNewComment] = useState('');
     const [hasLiked, setHasLiked] = useState(false);
+    const [likeCount, setLikeCount] = useState(0);
     const [isAnonymous, setIsAnonymous] = useState(false);
 
     // Fetch current user
@@ -151,6 +152,13 @@ export function GuideDetailClient() {
         },
     });
 
+    // Sync likeCount when guide loads
+    useEffect(() => {
+        if (guide?.likes !== undefined) {
+            setLikeCount(guide.likes);
+        }
+    }, [guide?.likes]);
+
     // Fetch comments
     const { data: commentsData } = useQuery({
         queryKey: ['guide-comments', slug],
@@ -183,14 +191,13 @@ export function GuideDetailClient() {
             const previousHasLiked = hasLiked;
 
             // Optimistically update the UI
-            const newLikeCount = previousGuide ?
-                (hasLiked ? previousGuide.likes - 1 : previousGuide.likes + 1) : 0;
-
             setHasLiked(!hasLiked);
+            setLikeCount(prev => hasLiked ? prev - 1 : prev + 1);
 
+            // Keep queryClient in sync for other components
             queryClient.setQueryData(['guide', slug], (oldData: Guide | undefined) => {
                 if (!oldData) return oldData;
-                return { ...oldData, likes: newLikeCount };
+                return { ...oldData, likes: hasLiked ? oldData.likes - 1 : oldData.likes + 1 };
             });
 
             // Return context for rollback
@@ -199,6 +206,7 @@ export function GuideDetailClient() {
         onSuccess: (data) => {
             // Server confirmed - update with actual values
             setHasLiked(data.liked);
+            setLikeCount(data.likes);
             queryClient.setQueryData(['guide', slug], (oldData: Guide | undefined) => {
                 if (!oldData) return oldData;
                 return { ...oldData, likes: data.likes };
@@ -211,6 +219,9 @@ export function GuideDetailClient() {
             }
             if (context?.previousHasLiked !== undefined) {
                 setHasLiked(context.previousHasLiked);
+            }
+            if (context?.previousGuide) {
+                setLikeCount(context.previousGuide.likes);
             }
         },
     });
@@ -414,7 +425,7 @@ export function GuideDetailClient() {
                                     disabled={likeMutation.isPending || !currentUser}
                                 >
                                     <Image src="/images/ras-like.gif" alt="like" width={24} height={24} className="inline-block" unoptimized />
-                                    {guide.likes || 0}
+                                    {likeCount}
                                 </Button>
 
                                 {/* Edit/Delete Buttons */}

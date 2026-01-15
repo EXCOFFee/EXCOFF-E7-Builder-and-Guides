@@ -125,6 +125,7 @@ export function BuildDetailClient() {
     const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
     const [newComment, setNewComment] = useState('');
     const [hasLiked, setHasLiked] = useState(false);
+    const [likeCount, setLikeCount] = useState(0);
     const [isAnonymous, setIsAnonymous] = useState(false);
     const [userRating, setUserRating] = useState<number | null>(null);
     // Reply and edit state
@@ -165,6 +166,13 @@ export function BuildDetailClient() {
             return response.json();
         },
     });
+
+    // Sync likeCount when build loads
+    useEffect(() => {
+        if (build?.likes !== undefined) {
+            setLikeCount(build.likes);
+        }
+    }, [build?.likes]);
 
     // Check if user liked this build
     useEffect(() => {
@@ -218,14 +226,13 @@ export function BuildDetailClient() {
             const previousHasLiked = hasLiked;
 
             // Optimistically update the UI
-            const newLikeCount = previousBuild ?
-                (hasLiked ? previousBuild.likes - 1 : previousBuild.likes + 1) : 0;
-
             setHasLiked(!hasLiked);
+            setLikeCount(prev => hasLiked ? prev - 1 : prev + 1);
 
+            // Keep queryClient in sync for other components
             queryClient.setQueryData(['build', buildId], (oldData: Build | undefined) => {
                 if (!oldData) return oldData;
-                return { ...oldData, likes: newLikeCount };
+                return { ...oldData, likes: hasLiked ? oldData.likes - 1 : oldData.likes + 1 };
             });
 
             // Return context for rollback
@@ -234,6 +241,7 @@ export function BuildDetailClient() {
         onSuccess: (data) => {
             // Server confirmed - update with actual values
             setHasLiked(data.liked);
+            setLikeCount(data.likes);
             queryClient.setQueryData(['build', buildId], (oldData: Build | undefined) => {
                 if (!oldData) return oldData;
                 return { ...oldData, likes: data.likes };
@@ -246,6 +254,9 @@ export function BuildDetailClient() {
             }
             if (context?.previousHasLiked !== undefined) {
                 setHasLiked(context.previousHasLiked);
+            }
+            if (context?.previousBuild) {
+                setLikeCount(context.previousBuild.likes);
             }
         },
     });
@@ -508,7 +519,7 @@ export function BuildDetailClient() {
                                     disabled={likeMutation.isPending || !currentUser}
                                 >
                                     <Image src="/images/ras-like.gif" alt="like" width={24} height={24} className="inline-block" unoptimized />
-                                    {build.likes}
+                                    {likeCount}
                                 </Button>
 
                                 {/* Share Button */}
