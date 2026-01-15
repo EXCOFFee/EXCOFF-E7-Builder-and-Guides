@@ -71,6 +71,8 @@
         "code": "c2019",
         "_id": "apocalypse-ravi",
         "name": "Apocalypse Ravi",
+        "attribute": "dark",
+        "role": "warrior",
         "self_devotion": {
             "type": "cri",
             "grades": {
@@ -112,6 +114,8 @@
         "code": "c1118",
         "_id": "ran",
         "name": "Ran",
+        "attribute": "ice",
+        "role": "assassin",
         "self_devotion": {
             "type": "cri",
             "grades": {
@@ -154,6 +158,8 @@
         "code": "c2099",
         "_id": "architect-laika",
         "name": "Architect Laika",
+        "attribute": "light",
+        "role": "mage",
         "skills": {
             "S1": {
                 "name": "Eliminating Variables",
@@ -184,6 +190,8 @@
         "code": "c1133",
         "_id": "zio",
         "name": "Zio",
+        "attribute": "dark",
+        "role": "mage",
         "skills": {
             "S2": {
                 "name": "Supreme Authority",
@@ -207,6 +215,8 @@
         "code": "c1123",
         "_id": "zahhak",
         "name": "Zahhak",
+        "attribute": "wind",
+        "role": "warrior",
         "skills": {
             "S1": {
                 "name": "Vulnerability Exposed",
@@ -234,6 +244,8 @@
         "code": "c1020",
         "_id": "schuri",
         "name": "Schuri",
+        "attribute": "fire",
+        "role": "ranger",
         "skills": {
             "S1": {
                 "name": "Rapid Fire",
@@ -261,6 +273,8 @@
         "code": "c4091",
         "_id": "hasol",
         "name": "Hasol",
+        "attribute": "dark",
+        "role": "warrior",
         "skills": {
             "S1": {
                 "name": "Swift Cut",
@@ -293,6 +307,8 @@
         "code": "c2006",
         "_id": "judge-kise",
         "name": "Judge Kise",
+        "attribute": "light",
+        "role": "warrior",
         "zodiac": "sagittarius",
         "skills": {
             "S1": {
@@ -321,6 +337,8 @@
         "code": "c2070",
         "_id": "last-rider-krau",
         "name": "Last Rider Krau",
+        "attribute": "light",
+        "role": "knight",
         "skills": {
             "S1": {
                 "name": "Light's Judgment",
@@ -345,6 +363,8 @@
         "code": "c2106",
         "_id": "dragon-bride-senya",
         "name": "Dragon Bride Senya",
+        "attribute": "light",
+        "role": "knight",
         "skills": {
             "S1": {
                 "name": "Dragon's Blessing",
@@ -373,6 +393,8 @@
         "code": "c1141",
         "_id": "beehoo",
         "name": "Beehoo",
+        "attribute": "fire",
+        "role": "ranger",
         "zodiac": "pisces",
         "skills": {
             "S1": {
@@ -396,6 +418,8 @@
         "code": "c1128",
         "_id": "hwayoung",
         "name": "Hwayoung",
+        "attribute": "fire",
+        "role": "warrior",
         "skills": {
             "S1": {
                 "name": "Supersonic Kick",
@@ -427,6 +451,8 @@
         "code": "c1109",
         "_id": "landy",
         "name": "Landy",
+        "attribute": "wind",
+        "role": "ranger",
         "skills": {
             "S1": {
                 "name": "Rapid Fire Cannon",
@@ -458,6 +484,8 @@
         "code": "c5089",
         "_id": "midnight-gala-lilias",
         "name": "Midnight Gala Lilias",
+        "attribute": "wind",
+        "role": "assassin",
         "skills": {
             "S1": {
                 "name": "Let's Go, Kyla!",
@@ -488,6 +516,8 @@
         "code": "c2037",
         "_id": "moon-bunny-dominiel",
         "name": "Moon Bunny Dominiel",
+        "attribute": "dark",
+        "role": "mage",
         "skills": {
             "S1": {
                 "name": "Bunny Magic",
@@ -512,9 +542,11 @@
         "source": "balance_patch_20260108"
     },
     "savior-adin": {
-        "code": "c4143",
+        "code": "c4144",
         "_id": "savior-adin",
         "name": "Savior Adin",
+        "attribute": "light",
+        "role": "assassin",
         "skills": {
             "S1": {
                 "name": "Decisive Blow",
@@ -545,6 +577,8 @@
         "code": "c4042",
         "_id": "angelic-montmorancy",
         "name": "Angelic Montmorancy",
+        "attribute": "ice",
+        "role": "manauser",
         "skills": {
             "S1": {
                 "name": "Water Gun",
