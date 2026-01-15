@@ -8,12 +8,14 @@ import { Footer } from "@/components/Footer";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap", // Prevent FOIT (Flash of Invisible Text)
 });
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
   subsets: ["latin"],
   weight: ["400", "600", "700"],
+  display: "swap", // Prevent FOIT (Flash of Invisible Text)
 });
 
 export const metadata: Metadata = {
