@@ -26,79 +26,93 @@ class UserBuildController extends Controller
      */
     public function index(Request $request): JsonResponse
     {
-        $query = UserBuild::with(['user', 'artifact', 'hero'])
-            ->where('status', 'published');
+        // Build cache key from all query parameters
+        $cacheKey = 'builds:list:' . md5(json_encode($request->query()));
+        
+        // Cache the paginated results for 5 minutes
+        $builds = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($request) {
+            $query = UserBuild::with(['user', 'artifact', 'hero'])
+                ->where('status', 'published');
 
-        // Search by title or hero name
-        if ($request->has('search') && !empty($request->search)) {
-            $search = $request->search;
-            $query->where(function ($q) use ($search) {
-                $q->where('title', 'like', '%' . $search . '%')
-                    ->orWhereHas('hero', function ($q) use ($search) {
-                        $q->where('name', 'like', '%' . $search . '%');
-                    });
-            });
-        }
-
-        // Filter by hero element
-        if ($request->has('element') && !empty($request->element)) {
-            $query->whereHas('hero', function ($q) use ($request) {
-                $q->where('element', $request->element);
-            });
-        }
-
-        // Filter by hero class
-        if ($request->has('class') && !empty($request->class)) {
-            $query->whereHas('hero', function ($q) use ($request) {
-                $q->where('class', $request->class);
-            });
-        }
-
-        // Filter by hero rarity
-        if ($request->has('rarity') && !empty($request->rarity)) {
-            $query->whereHas('hero', function ($q) use ($request) {
-                $q->where('rarity', $request->rarity);
-            });
-        }
-
-        // Filter by language
-        if ($request->has('language') && $request->language !== 'all') {
-            $query->where('language', $request->language);
-        }
-
-        // Filter by primary set
-        if ($request->has('primary_set') && !empty($request->primary_set)) {
-            $query->where('primary_set', $request->primary_set);
-        }
-
-        // Filter by secondary set
-        if ($request->has('secondary_set') && !empty($request->secondary_set)) {
-            $query->where('secondary_set', $request->secondary_set);
-        }
-
-        // Filter by minimum stats (supports: min_speed, min_atk, min_hp, min_crit, min_cdmg, min_eff)
-        $statFilters = ['speed' => 'spd', 'atk' => 'atk', 'hp' => 'hp', 'crit' => 'crit', 'cdmg' => 'cdmg', 'eff' => 'eff'];
-        foreach ($statFilters as $param => $jsonKey) {
-            $minKey = "min_{$param}";
-            if ($request->has($minKey) && is_numeric($request->$minKey)) {
-                $minValue = (int) $request->$minKey;
-                // Filter builds where min_stats->jsonKey >= minValue
-                $query->whereRaw("JSON_EXTRACT(min_stats, '$.{$jsonKey}') >= ?", [$minValue]);
+            // Search by title or hero name
+            if ($request->has('search') && !empty($request->search)) {
+                $search = $request->search;
+                $query->where(function ($q) use ($search) {
+                    $q->where('title', 'like', '%' . $search . '%')
+                        ->orWhereHas('hero', function ($q) use ($search) {
+                            $q->where('name', 'like', '%' . $search . '%');
+                        });
+                });
             }
-        }
 
-        // Sort by likes or date
-        $sortBy = $request->input('sort', 'likes');
-        $sortOrder = $request->input('order', 'desc');
-        if ($sortBy === 'likes') {
-            $query->orderBy('likes', $sortOrder);
-        } else {
-            $query->orderBy('created_at', $sortOrder);
-        }
+            // Filter by hero element
+            if ($request->has('element') && !empty($request->element)) {
+                $query->whereHas('hero', function ($q) use ($request) {
+                    $q->where('element', $request->element);
+                });
+            }
 
-        $builds = $query->paginate(20);
+            // Filter by hero class
+            if ($request->has('class') && !empty($request->class)) {
+                $query->whereHas('hero', function ($q) use ($request) {
+                    $q->where('class', $request->class);
+                });
+            }
 
-        // Localize artifacts
+            // Filter by hero rarity
+            if ($request->has('rarity') && !empty($request->rarity)) {
+                $query->whereHas('hero', function ($q) use ($request) {
+                    $q->where('rarity', $request->rarity);
+                });
+            }
+
+            // Filter by language
+            if ($request->has('language') && $request->language !== 'all') {
+                $query->where('language', $request->language);
+            }
+
+            // Filter by primary set
+            if ($request->has('primary_set') && !empty($request->primary_set)) {
+                $query->where('primary_set', $request->primary_set);
+            }
+
+            // Filter by secondary set
+            if ($request->has('secondary_set') && !empty($request->secondary_set)) {
+                $query->where('secondary_set', $request->secondary_set);
+            }
+
+            // Filter by minimum stats (supports: min_speed, min_atk, min_hp, min_crit, min_cdmg, min_eff)
+            $statFilters = ['speed' => 'spd', 'atk' => 'atk', 'hp' => 'hp', 'crit' => 'crit', 'cdmg' => 'cdmg', 'eff' => 'eff'];
+            foreach ($statFilters as $param => $jsonKey) {
+                $minKey = "min_{$param}";
+                if ($request->has($minKey) && is_numeric($request->$minKey)) {
+                    $minValue = (int) $request->$minKey;
+                    // Filter builds where min_stats->jsonKey >= minValue
+                    $query->whereRaw("JSON_EXTRACT(min_stats, '$.{$jsonKey}') >= ?", [$minValue]);
+                }
+            }
+
+            // Extended sorting options: newest, likes, views
+            $sortBy = $request->input('sort', 'newest');
+            $sortOrder = $request->input('order', 'desc');
+            
+            switch ($sortBy) {
+                case 'likes':
+                    $query->orderBy('likes', $sortOrder);
+                    break;
+                case 'views':
+                    $query->orderBy('views', $sortOrder);
+                    break;
+                case 'newest':
+                default:
+                    $query->orderBy('created_at', $sortOrder);
+                    break;
+            }
+
+            return $query->paginate(20);
+        });
+
+        // Localize artifacts (done outside cache since lang may vary)
         $lang = $request->query('lang', 'en');
         $builds->getCollection()->transform(function ($build) use ($lang) {
             if ($build->artifact) {

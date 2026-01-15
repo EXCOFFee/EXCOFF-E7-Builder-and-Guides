@@ -124,7 +124,7 @@ export default function BuildsPage() {
     const [minSpeed, setMinSpeed] = useState<string>('');
 
     const { data, isLoading } = useQuery({
-        queryKey: ['builds', search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, selectedLanguage, locale],
+        queryKey: ['builds', search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, selectedLanguage, sortBy, locale],
         queryFn: async () => {
             const params = new URLSearchParams();
             if (search) params.append('search', search);
@@ -134,6 +134,19 @@ export default function BuildsPage() {
             if (primarySet) params.append('primary_set', primarySet);
             if (minSpeed && parseInt(minSpeed) > 0) params.append('min_speed', minSpeed);
             if (selectedLanguage && selectedLanguage !== 'all') params.append('language', selectedLanguage);
+
+            // Server-side sorting - map frontend values to backend params
+            const sortMap: Record<string, { sort: string; order: string }> = {
+                'newest': { sort: 'newest', order: 'desc' },
+                'views_desc': { sort: 'views', order: 'desc' },
+                'views_asc': { sort: 'views', order: 'asc' },
+                'likes_desc': { sort: 'likes', order: 'desc' },
+                'likes_asc': { sort: 'likes', order: 'asc' },
+            };
+            const sortConfig = sortMap[sortBy] || sortMap['newest'];
+            params.append('sort', sortConfig.sort);
+            params.append('order', sortConfig.order);
+
             // Add user's interface locale for artifact translation
             params.append('lang', locale);
 
@@ -143,18 +156,8 @@ export default function BuildsPage() {
         },
     });
 
-    const buildsRaw: Build[] = data?.data || [];
-
-    // Sort builds based on selected option
-    const builds = [...buildsRaw].sort((a, b) => {
-        switch (sortBy) {
-            case 'views_desc': return (b.views || 0) - (a.views || 0);
-            case 'views_asc': return (a.views || 0) - (b.views || 0);
-            case 'likes_desc': return (b.likes || 0) - (a.likes || 0);
-            case 'likes_asc': return (a.likes || 0) - (b.likes || 0);
-            default: return 0; // newest, keep API order
-        }
-    });
+    // Use builds directly from API (already sorted server-side)
+    const builds: Build[] = data?.data || [];
 
     return (
         <div className="min-h-screen bg-void-glow py-8 px-4">
@@ -347,8 +350,36 @@ export default function BuildsPage() {
 
                 {/* Builds Grid */}
                 {isLoading ? (
-                    <div className="text-center py-12 text-slate-400">
-                        {t('common.loading', 'Loading...')}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {[...Array(6)].map((_, i) => (
+                            <div key={i} className="card-fantasy bg-gradient-to-b from-e7-panel to-e7-void rounded-xl overflow-hidden h-full animate-pulse">
+                                {/* Skeleton Hero Header */}
+                                <div className="flex items-center gap-4 p-4 border-b border-e7-gold/10 bg-e7-dark/30">
+                                    <div className="w-[100px] h-[100px] bg-slate-700 rounded-lg" />
+                                    <div className="flex-1">
+                                        <div className="h-5 bg-slate-700 rounded w-3/4 mb-2" />
+                                        <div className="h-4 bg-slate-800 rounded w-1/2" />
+                                    </div>
+                                </div>
+                                {/* Skeleton Body */}
+                                <div className="p-4">
+                                    <div className="h-5 bg-slate-700 rounded w-2/3 mb-3" />
+                                    <div className="flex gap-2 mb-3">
+                                        <div className="h-8 bg-slate-700 rounded-lg w-24" />
+                                        <div className="h-8 bg-slate-700 rounded-lg w-20" />
+                                    </div>
+                                    <div className="flex items-center gap-4 mb-3">
+                                        <div className="w-16 h-16 bg-slate-700 rounded-xl" />
+                                        <div className="h-5 bg-slate-700 rounded w-1/2" />
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-2">
+                                        {[...Array(6)].map((_, j) => (
+                                            <div key={j} className="h-12 bg-slate-800 rounded-lg" />
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 ) : builds.length === 0 ? (
                     <div className="text-center py-12 text-slate-400">
@@ -406,7 +437,6 @@ export default function BuildsPage() {
                                                             alt={build.primary_set}
                                                             width={32}
                                                             height={32}
-                                                            unoptimized
                                                         />
                                                     )}
                                                     {formatSetName(build.primary_set)}
@@ -420,7 +450,6 @@ export default function BuildsPage() {
                                                             alt={build.secondary_set}
                                                             width={32}
                                                             height={32}
-                                                            unoptimized
                                                         />
                                                     )}
                                                     {formatSetName(build.secondary_set)}
