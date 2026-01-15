@@ -194,10 +194,9 @@ class SyncFribbelsData extends Command
         // Extract self_devotion (Memory Imprint) if available
         $selfDevotion = $data['self_devotion'] ?? null;
 
-        // Get image from assets or fallback - use imageCode for local images
-        $imageUrl = $data['assets']['thumbnail']
-            ?? $data['assets']['icon']
-            ?? $this->getHeroImageUrl($imageCode);
+        // Always use local API image URL (from Hostinger) instead of Fribbels GitHub
+        // This ensures images are served with proper CORS headers for export
+        $imageUrl = $this->getHeroImageUrl($imageCode);
 
         $heroData = [
             'code' => $code,

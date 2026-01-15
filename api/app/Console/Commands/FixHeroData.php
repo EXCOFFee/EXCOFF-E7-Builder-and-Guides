@@ -47,6 +47,17 @@ class FixHeroData extends Command
                 $imageFixed++;
             }
             
+            // Fix Fribbels GitHub URLs -> use local Hostinger API
+            if ($hero->image_url && Str::contains($hero->image_url, 'raw.githubusercontent.com/fribbels')) {
+                $baseUrl = config('app.url');
+                $heroCode = $hero->hero_code ?? 'c' . $hero->code;
+                $newUrl = "{$baseUrl}/images/heroes/{$heroCode}_su.png";
+                $changes['image_url'] = $newUrl;
+                $imageFixed++;
+                $this->newLine();
+                $this->info("  ✓ {$hero->name}: Fribbels GitHub -> Local API");
+            }
+            
             // Fix Zio's class: warrior -> mage
             if ($hero->slug === 'zio' && $hero->class !== 'mage') {
                 $changes['class'] = 'mage';
