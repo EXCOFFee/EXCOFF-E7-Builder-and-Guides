@@ -392,15 +392,17 @@ export default function BuildsPage() {
                                 <div className="card-fantasy bg-gradient-to-b from-e7-panel to-e7-void rounded-xl overflow-hidden h-full group">
                                     {/* Hero Header */}
                                     <div className="flex items-center gap-4 p-4 border-b border-e7-gold/10 bg-e7-dark/30">
-                                        <div className="relative">
-                                            <Image
-                                                src={appendImageVersion(build.hero.portrait)}
-                                                alt={build.hero.name}
-                                                width={100}
-                                                height={100}
-                                                className="rounded-lg ring-2 ring-e7-gold/20 group-hover:ring-e7-gold/50 transition-all"
-                                                unoptimized
-                                            />
+                                        <div className="relative w-[80px] h-[80px] flex-shrink-0">
+                                            <div className="w-full h-full rounded-lg overflow-hidden ring-2 ring-e7-gold/20 group-hover:ring-e7-gold/50 transition-all">
+                                                <Image
+                                                    src={appendImageVersion(build.hero.portrait)}
+                                                    alt={build.hero.name}
+                                                    width={80}
+                                                    height={80}
+                                                    className="w-full h-full object-cover object-top"
+                                                    unoptimized
+                                                />
+                                            </div>
                                             <Image
                                                 src={ELEMENT_IMAGES[build.hero.element] || '/images/elements/ElementFire.png'}
                                                 alt={build.hero.element}
