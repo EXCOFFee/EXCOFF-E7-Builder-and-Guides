@@ -25,7 +25,7 @@ const DEFAULT_LOCALE = 'en';
 // Messages cache
 const messagesCache: Record<string, Messages> = {};
 
-// Load messages for a locale
+// Load messages for a locale (including artifact translations)
 async function loadMessages(locale: string): Promise<Messages> {
     const validLocale = SUPPORTED_LOCALES.includes(locale) ? locale : DEFAULT_LOCALE;
 
@@ -35,9 +35,26 @@ async function loadMessages(locale: string): Promise<Messages> {
     }
 
     try {
-        const messages = await import(`../../messages/${validLocale}.json`);
-        messagesCache[validLocale] = messages.default;
-        return messages.default;
+        // Load main messages
+        const mainMessages = await import(`../../messages/${validLocale}.json`);
+
+        // Load artifact translations
+        let artifactMessages = {};
+        try {
+            const artifacts = await import(`../../messages/artifacts/${validLocale}.json`);
+            artifactMessages = artifacts.default || {};
+        } catch (artifactError) {
+            console.warn(`No artifact translations for ${validLocale}`);
+        }
+
+        // Merge messages with artifacts under 'artifacts' key
+        const mergedMessages = {
+            ...mainMessages.default,
+            artifacts: artifactMessages
+        };
+
+        messagesCache[validLocale] = mergedMessages;
+        return mergedMessages;
     } catch (error) {
         console.error(`Failed to load messages for ${validLocale}:`, error);
         if (validLocale !== 'en') {
