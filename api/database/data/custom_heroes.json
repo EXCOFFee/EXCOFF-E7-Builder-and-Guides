@@ -274,7 +274,7 @@
         "_id": "hasol",
         "name": "Hasol",
         "attribute": "dark",
-        "role": "warrior",
+        "role": "knight",
         "skills": {
             "S1": {
                 "name": "Swift Cut",
