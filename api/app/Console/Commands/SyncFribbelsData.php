@@ -291,7 +291,7 @@ class SyncFribbelsData extends Command
             'class' => $artifactClass,
             'rarity' => (int) ($data['rarity'] ?? 5),
             'description' => $data['skill']['description'] ?? null,
-            'image_url' => $this->getArtifactImageUrl(Str::slug($name)),
+            'image_url' => $this->getArtifactImageUrl($fribbelsCode),
         ];
 
         $existing = Artifact::where('code', $fribbelsCode)
@@ -309,25 +309,24 @@ class SyncFribbelsData extends Command
 
     /**
      * Get hero portrait image URL.
-     * Uses local datamined images from DBE7/face folder.
-     * Images should be copied to public/images/heroes/ on the server.
+     * Uses CeciliaBot CDN for high-quality images.
+     * Fallback: Local images at /images/heroes/{code}_su.png on Hostinger
      */
     private function getHeroImageUrl(string $code): string
     {
-        // Use app URL + local path for high-res datamined images (_su = higher quality)
-        $baseUrl = config('app.url');
-        return "{$baseUrl}/images/heroes/{$code}_su.png";
+        // CeciliaBot CDN - same codes as Fribbels (c1001, c2004, etc.)
+        return "https://ceciliabot.github.io/assets/face/{$code}_su.webp";
     }
 
     /**
      * Get artifact image URL.
-     * Uses epic7db.com artifact images with slug-based naming.
-     * Format: https://epic7db.com/images/artifact/icon/{slug}.webp
+     * Uses CeciliaBot CDN for artifact icons.
+     * Fallback: Local images at /images/artifacts/ on Hostinger
      */
-    private function getArtifactImageUrl(string $slug): string
+    private function getArtifactImageUrl(string $code): string
     {
-        // epic7db.com uses slug-based naming for artifact images
-        return "https://epic7db.com/images/artifact/icon/{$slug}.webp";
+        // CeciliaBot CDN - uses Fribbels artifact codes (ef001, ef002, etc.)
+        return "https://ceciliabot.github.io/assets/artifact/{$code}.webp";
     }
 
     /**
