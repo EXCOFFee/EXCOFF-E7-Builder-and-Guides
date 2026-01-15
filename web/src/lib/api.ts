@@ -50,11 +50,12 @@ api.interceptors.response.use(
     // Check if we should retry
     if (config._retryCount < MAX_RETRIES) {
       config._retryCount += 1;
+      const retryCount = config._retryCount;
 
       // Wait before retrying
-      await new Promise(resolve => setTimeout(resolve, RETRY_DELAY * config._retryCount));
+      await new Promise(resolve => setTimeout(resolve, RETRY_DELAY * retryCount));
 
-      console.log(`Retrying request (${config._retryCount}/${MAX_RETRIES}):`, config.url);
+      console.log(`Retrying request (${retryCount}/${MAX_RETRIES}):`, config.url);
       return api(config);
     }
 
