@@ -60,22 +60,53 @@ export function ExportBuildImage({ buildRef, heroName, buildTitle }: ExportBuild
         try {
             const element = buildRef.current;
 
-            // Export the element directly without cloning
-            // html-to-image handles the conversion properly
-            const dataUrl = await toPng(element, {
+            // Clone the element to modify images without affecting the original
+            const clone = element.cloneNode(true) as HTMLElement;
+            clone.style.position = 'absolute';
+            clone.style.left = '-9999px';
+            clone.style.top = '-9999px';
+            clone.style.width = `${element.offsetWidth}px`;
+            document.body.appendChild(clone);
+
+            // Convert all external images to data URLs via proxy
+            const images = clone.querySelectorAll('img');
+            const imagePromises: Promise<void>[] = [];
+
+            images.forEach((img) => {
+                const src = img.getAttribute('src') || img.src;
+                // Skip data URLs and relative URLs that don't need proxying
+                if (src && !src.startsWith('data:') && !src.startsWith('/images/')) {
+                    // External URL - needs proxy
+                    if (src.includes('hostingersite.com') || src.includes('epic7db.com') || src.includes('http')) {
+                        const promise = loadImageAsDataUrl(src).then((dataUrl) => {
+                            img.src = dataUrl;
+                            img.setAttribute('crossorigin', 'anonymous');
+                        });
+                        imagePromises.push(promise);
+                    }
+                }
+            });
+
+            // Wait for all images to be converted
+            await Promise.all(imagePromises);
+
+            // Small delay to ensure images are rendered
+            await new Promise(resolve => setTimeout(resolve, 100));
+
+            // Now export the clone with data URLs (no CORS issues)
+            const dataUrl = await toPng(clone, {
                 backgroundColor: '#0a0a0f',
                 pixelRatio: 2,
                 cacheBust: true,
-                // Include styles from stylesheets
-                includeQueryParams: true,
-                // Skip elements that might cause issues
                 filter: (node) => {
-                    // Skip script tags and other non-visual elements
                     if (node instanceof HTMLScriptElement) return false;
                     if (node instanceof HTMLStyleElement) return false;
                     return true;
                 },
             });
+
+            // Clean up the clone
+            document.body.removeChild(clone);
 
             // Download the image
             const link = document.createElement('a');
