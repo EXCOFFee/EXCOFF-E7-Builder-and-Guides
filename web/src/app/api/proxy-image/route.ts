@@ -24,12 +24,15 @@ export async function GET(request: NextRequest) {
             'ceciliabot.github.io',
             'excoffe7.com',
             'www.excoffe7.com',
+            'lh3.googleusercontent.com', // Google user avatars
+            'googleusercontent.com',
         ];
 
-        // Allow any host for now since images come from multiple sources
-        // In production, you might want to restrict this more
-        if (!allowedHosts.some(host => parsedUrl.hostname.includes(host)) &&
-            !parsedUrl.hostname.includes('hostingersite.com')) {
+        // Check if it's from an allowed host
+        const isAllowedHost = allowedHosts.some(host => parsedUrl.hostname.includes(host)) ||
+            parsedUrl.hostname.includes('hostingersite.com');
+
+        if (!isAllowedHost) {
             // Still allow if it's a known image extension
             const isImage = /\.(png|jpg|jpeg|gif|webp|svg)(\?.*)?$/i.test(parsedUrl.pathname);
             if (!isImage) {

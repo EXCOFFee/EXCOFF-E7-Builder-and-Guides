@@ -60,53 +60,25 @@ export function ExportBuildImage({ buildRef, heroName, buildTitle }: ExportBuild
         try {
             const element = buildRef.current;
 
-            // Clone the element to modify images without affecting the original
-            const clone = element.cloneNode(true) as HTMLElement;
-            clone.style.position = 'absolute';
-            clone.style.left = '-9999px';
-            clone.style.top = '-9999px';
-            clone.style.width = `${element.offsetWidth}px`;
-            document.body.appendChild(clone);
-
-            // Convert all external images to data URLs via proxy
-            const images = clone.querySelectorAll('img');
-            const imagePromises: Promise<void>[] = [];
-
-            images.forEach((img) => {
-                const src = img.getAttribute('src') || img.src;
-                // Skip data URLs and relative URLs that don't need proxying
-                if (src && !src.startsWith('data:') && !src.startsWith('/images/')) {
-                    // External URL - needs proxy
-                    if (src.includes('hostingersite.com') || src.includes('epic7db.com') || src.includes('http')) {
-                        const promise = loadImageAsDataUrl(src).then((dataUrl) => {
-                            img.src = dataUrl;
-                            img.setAttribute('crossorigin', 'anonymous');
-                        });
-                        imagePromises.push(promise);
-                    }
-                }
-            });
-
-            // Wait for all images to be converted
-            await Promise.all(imagePromises);
-
-            // Small delay to ensure images are rendered
-            await new Promise(resolve => setTimeout(resolve, 100));
-
-            // Now export the clone with data URLs (no CORS issues)
-            const dataUrl = await toPng(clone, {
+            // Export using html-to-image with custom fetch that proxies external images
+            const dataUrl = await toPng(element, {
                 backgroundColor: '#0a0a0f',
                 pixelRatio: 2,
                 cacheBust: true,
+                // Custom fetch to proxy external images
+                fetchRequestInit: {
+                    mode: 'cors',
+                    credentials: 'omit',
+                },
+                // Transform image URLs to use proxy for external sources
+                imagePlaceholder: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==',
                 filter: (node) => {
+                    // Skip script and style tags
                     if (node instanceof HTMLScriptElement) return false;
                     if (node instanceof HTMLStyleElement) return false;
                     return true;
                 },
             });
-
-            // Clean up the clone
-            document.body.removeChild(clone);
 
             // Download the image
             const link = document.createElement('a');
@@ -116,7 +88,35 @@ export function ExportBuildImage({ buildRef, heroName, buildTitle }: ExportBuild
             link.click();
         } catch (error) {
             console.error('Failed to export build image:', error);
-            alert(t('builds.exportError', 'Error al exportar la imagen. Por favor intenta de nuevo.'));
+
+            // Fallback: try without external images
+            try {
+                const element = buildRef.current;
+                const dataUrl = await toPng(element, {
+                    backgroundColor: '#0a0a0f',
+                    pixelRatio: 2,
+                    skipFonts: true,
+                    filter: (node) => {
+                        // Skip external images that might fail
+                        if (node instanceof HTMLImageElement) {
+                            const src = node.src || '';
+                            if (src.includes('googleusercontent.com')) return false;
+                        }
+                        if (node instanceof HTMLScriptElement) return false;
+                        if (node instanceof HTMLStyleElement) return false;
+                        return true;
+                    },
+                });
+
+                const link = document.createElement('a');
+                const filename = `${heroName.toLowerCase().replace(/\s+/g, '-')}-${buildTitle.toLowerCase().replace(/\s+/g, '-')}.png`;
+                link.download = filename;
+                link.href = dataUrl;
+                link.click();
+            } catch (fallbackError) {
+                console.error('Fallback export also failed:', fallbackError);
+                alert(t('builds.exportError', 'Error al exportar la imagen. Por favor intenta de nuevo.'));
+            }
         } finally {
             setIsExporting(false);
         }
