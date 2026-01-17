@@ -108,7 +108,33 @@
                 "cooldown": 5
             }
         },
-        "source": "balance_patch_20241120"
+        "source": "balance_patch_20241120",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 17465,
+                "atk": 782,
+                "hp": 5616,
+                "spd": 106,
+                "def": 497,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 22263,
+                "atk": 975,
+                "hp": 7054,
+                "spd": 106,
+                "def": 652,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            }
+        }
     },
     "ran": {
         "code": "c1118",
@@ -152,7 +178,33 @@
                 "soulburn_effect": "Ignores Effect Resistance."
             }
         },
-        "source": "balance_patch_20241120"
+        "source": "balance_patch_20241120",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 16276,
+                "atk": 897,
+                "hp": 4285,
+                "spd": 125,
+                "def": 390,
+                "chc": 0.23,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 20675,
+                "atk": 1119,
+                "hp": 5380,
+                "spd": 129,
+                "def": 483,
+                "chc": 0.23,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            }
+        }
     },
     "architect-laika": {
         "code": "c2099",
@@ -184,7 +236,33 @@
                 "targets": 3
             }
         },
-        "source": "balance_patch_20241120"
+        "source": "balance_patch_20241120",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 16927,
+                "atk": 1047,
+                "hp": 3385,
+                "spd": 117,
+                "def": 525,
+                "chc": 0.23,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 21520,
+                "atk": 1306,
+                "hp": 4248,
+                "spd": 121,
+                "def": 652,
+                "chc": 0.23,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            }
+        }
     },
     "zio": {
         "code": "c1133",
@@ -209,7 +287,33 @@
                 "soulburn_effect": "Ignores Effect Resistance."
             }
         },
-        "source": "balance_patch_20241120"
+        "source": "balance_patch_20241120",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 17217,
+                "atk": 1007,
+                "hp": 3996,
+                "spd": 106,
+                "def": 525,
+                "chc": 0.19,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0.18,
+                "efr": 0
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 21683,
+                "atk": 1255,
+                "hp": 5016,
+                "spd": 106,
+                "def": 652,
+                "chc": 0.27,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0.18,
+                "efr": 0
+            }
+        }
     },
     "zahhak": {
         "code": "c1123",
@@ -238,7 +342,33 @@
                 "cooldown": 6
             }
         },
-        "source": "balance_patch_20241120"
+        "source": "balance_patch_20241120",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 16925,
+                "atk": 945,
+                "hp": 4414,
+                "spd": 119,
+                "def": 446,
+                "chc": 0.19,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 21319,
+                "atk": 1177,
+                "hp": 5542,
+                "spd": 119,
+                "def": 553,
+                "chc": 0.27,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            }
+        }
     },
     "schuri": {
         "code": "c1020",
@@ -267,7 +397,33 @@
                 "targets": 3
             }
         },
-        "source": "balance_patch_20241120"
+        "source": "balance_patch_20241120",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 15517,
+                "atk": 857,
+                "hp": 4271,
+                "spd": 110,
+                "def": 432,
+                "chc": 0.23,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 19766,
+                "atk": 1068,
+                "hp": 5650,
+                "spd": 110,
+                "def": 536,
+                "chc": 0.23,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            }
+        }
     },
     "hasol": {
         "code": "c3135",
@@ -301,7 +457,33 @@
                 "targets": 3
             }
         },
-        "source": "balance_patch_20241120"
+        "source": "balance_patch_20241120",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 15191,
+                "atk": 607,
+                "hp": 4780,
+                "spd": 97,
+                "def": 515,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 19300,
+                "atk": 758,
+                "hp": 6002,
+                "spd": 101,
+                "def": 639,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            }
+        }
     },
     "judge-kise": {
         "code": "c2006",
@@ -331,7 +513,33 @@
                 "soulburn_effect": "Increases damage dealt."
             }
         },
-        "source": "balance_patch_20260108"
+        "source": "balance_patch_20260108",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 16925,
+                "atk": 945,
+                "hp": 4414,
+                "spd": 119,
+                "def": 446,
+                "chc": 0.19,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 21319,
+                "atk": 1177,
+                "hp": 5542,
+                "spd": 119,
+                "def": 553,
+                "chc": 0.27,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            }
+        }
     },
     "last-rider-krau": {
         "code": "c2070",
@@ -357,7 +565,33 @@
                 "cooldown": 4
             }
         },
-        "source": "balance_patch_20260108"
+        "source": "balance_patch_20260108",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 17459,
+                "atk": 673,
+                "hp": 5101,
+                "spd": 100,
+                "def": 607,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0.06
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 22284,
+                "atk": 839,
+                "hp": 6405,
+                "spd": 100,
+                "def": 752,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0.18
+            }
+        }
     },
     "dragon-bride-senya": {
         "code": "c2106",
@@ -387,7 +621,35 @@
                 "soulburn_effect": "Reduces skill cooldown by 2 turns."
             }
         },
-        "source": "balance_patch_20260108"
+        "source": "balance_patch_20260108",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 17286,
+                "atk": 716,
+                "hp": 5446,
+                "spd": 100,
+                "def": 559,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0,
+                "bonusMaxHpPercent": 10
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 21972,
+                "atk": 894,
+                "hp": 6840,
+                "spd": 104,
+                "def": 694,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0,
+                "bonusMaxHpPercent": 10
+            }
+        }
     },
     "beehoo": {
         "code": "c1141",
@@ -412,7 +674,35 @@
                 "cooldown": 3
             }
         },
-        "source": "balance_patch_20260108"
+        "source": "balance_patch_20260108",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 18019,
+                "atk": 797,
+                "hp": 4536,
+                "spd": 120,
+                "def": 492,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0.3,
+                "efr": 0,
+                "bonusMaxAtkPercent": 30
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 22959,
+                "atk": 993,
+                "hp": 6002,
+                "spd": 120,
+                "def": 611,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0.3,
+                "efr": 0,
+                "bonusMaxAtkPercent": 30
+            }
+        }
     },
     "hwayoung": {
         "code": "c1128",
@@ -420,6 +710,20 @@
         "name": "Hwayoung",
         "attribute": "fire",
         "role": "warrior",
+        "calculatedStatus": {
+            "lv60SixStarFullyAwakened": {
+                "cp": 21763,
+                "atk": 1119,
+                "hp": 6266,
+                "spd": 109,
+                "def": 627,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            }
+        },
         "skills": {
             "S1": {
                 "name": "Supersonic Kick",
@@ -478,7 +782,33 @@
                 "soulburn_effect": "Increases damage dealt."
             }
         },
-        "source": "balance_patch_20260108"
+        "source": "balance_patch_20260108",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 16552,
+                "atk": 928,
+                "hp": 4536,
+                "spd": 112,
+                "def": 446,
+                "chc": 0.23,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 21089,
+                "atk": 1158,
+                "hp": 6002,
+                "spd": 112,
+                "def": 553,
+                "chc": 0.23,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            }
+        }
     },
     "midnight-gala-lilias": {
         "code": "c5089",
@@ -510,7 +840,33 @@
                 "soulburn": false
             }
         },
-        "source": "balance_patch_20260108"
+        "source": "balance_patch_20260108",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 16221,
+                "atk": 968,
+                "hp": 4124,
+                "spd": 121,
+                "def": 409,
+                "chc": 0.15,
+                "chd": 1.55,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 20337,
+                "atk": 1208,
+                "hp": 5178,
+                "spd": 121,
+                "def": 508,
+                "chc": 0.15,
+                "chd": 1.65,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            }
+        }
     },
     "moon-bunny-dominiel": {
         "code": "c2037",
@@ -539,7 +895,33 @@
                 "soulburn_effect": "Extends buff duration by 1 turn."
             }
         },
-        "source": "balance_patch_20260108"
+        "source": "balance_patch_20260108",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 14749,
+                "atk": 520,
+                "hp": 3642,
+                "spd": 114,
+                "def": 508,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0.18
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 18832,
+                "atk": 649,
+                "hp": 4572,
+                "spd": 114,
+                "def": 631,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0.3
+            }
+        }
     },
     "savior-adin": {
         "code": "c4144",
@@ -571,7 +953,33 @@
                 "soulburn_effect": "Increases damage dealt."
             }
         },
-        "source": "balance_patch_20260108"
+        "source": "balance_patch_20260108",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 15128,
+                "atk": 923,
+                "hp": 3642,
+                "spd": 116,
+                "def": 398,
+                "chc": 0.33,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 19120,
+                "atk": 1199,
+                "hp": 4572,
+                "spd": 116,
+                "def": 494,
+                "chc": 0.33,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0
+            }
+        }
     },
     "angelic-montmorancy": {
         "code": "c4042",
@@ -600,6 +1008,32 @@
                 "soulburn_effect": "Dispels all debuffs."
             }
         },
-        "source": "balance_patch_20260108"
+        "source": "balance_patch_20260108",
+        "calculatedStatus": {
+            "lv50FiveStarFullyAwakened": {
+                "cp": 16574,
+                "atk": 433,
+                "hp": 4721,
+                "spd": 98,
+                "def": 556,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0.52
+            },
+            "lv60SixStarFullyAwakened": {
+                "cp": 21222,
+                "atk": 540,
+                "hp": 5928,
+                "spd": 98,
+                "def": 729,
+                "chc": 0.15,
+                "chd": 1.5,
+                "dac": 0.03,
+                "eff": 0,
+                "efr": 0.52
+            }
+        }
     }
 }

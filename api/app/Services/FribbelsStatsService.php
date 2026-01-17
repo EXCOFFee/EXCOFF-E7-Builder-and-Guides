@@ -152,10 +152,10 @@ class FribbelsStatsService
         foreach ($sets as $setCode => $pieceCount) {
             // 4-piece sets
             if (in_array($setCode, ['set_speed', 'set_att', 'set_cri_dmg', 'set_lifesteal', 'set_counter', 'set_rage', 'set_revenge', 'set_injury'])) {
-                $setCount = intdiv($pieceCount, 4);
+                $setCount = intdiv((int) $pieceCount, 4);
             } else {
                 // 2-piece sets
-                $setCount = intdiv($pieceCount, 2);
+                $setCount = intdiv((int) $pieceCount, 2);
             }
 
             for ($i = 0; $i < $setCount; $i++) {
