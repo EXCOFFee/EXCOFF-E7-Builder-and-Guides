@@ -12,6 +12,7 @@ import { useTranslations } from '@/hooks/useTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { PopularBuildStats } from '@/components/heroes/PopularBuildStats';
 import { appendImageVersion } from '@/lib/heroImages';
+import { formatSkillText } from '@/utils/skillFormatter';
 
 interface HeroStats {
     atk: number;
@@ -577,7 +578,7 @@ export function HeroDetailClient() {
                                         {s.soulburn && skillSoulburn && (
                                             <div className="bg-purple-900/30 rounded px-3 py-2 mb-3 text-sm">
                                                 <span className="text-purple-300 font-semibold">Soulburn:</span>{' '}
-                                                <span className="text-purple-200">{skillSoulburn}</span>
+                                                <span className="text-purple-200">{formatSkillText(skillSoulburn)}</span>
                                             </div>
                                         )}
 
@@ -622,7 +623,9 @@ export function HeroDetailClient() {
                                         )}
 
                                         {skillDesc && (
-                                            <p className="text-gray-300 text-sm leading-relaxed">{skillDesc}</p>
+                                            <div className="text-gray-300 text-sm leading-relaxed whitespace-pre-line">
+                                                {formatSkillText(skillDesc)}
+                                            </div>
                                         )}
 
                                         {!hasScaling && !skillDesc && (
