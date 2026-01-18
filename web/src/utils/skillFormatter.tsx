@@ -6,24 +6,38 @@ const TERMS: Record<string, string> = {
     // Buffs (Blue/Green theme)
     'Increase Attack': 'text-blue-300 font-bold',
     'Increased Attack': 'text-blue-300 font-bold',
+    'Attack Buff': 'text-blue-300 font-bold',
+    'Greater Attack': 'text-blue-300 font-bold',
     'Defense Buff': 'text-blue-300 font-bold',
     'Increased Defense': 'text-blue-300 font-bold',
+    'Greater Defense': 'text-blue-300 font-bold',
     'Immunity': 'text-blue-300 font-bold',
     'Invincibility': 'text-blue-300 font-bold',
+    'Immortality': 'text-blue-300 font-bold',
     'Skill Nullifier': 'text-blue-300 font-bold',
     'Barrier': 'text-blue-300 font-bold',
     'Continuous Healing': 'text-green-300 font-bold',
     'Vigor': 'text-yellow-300 font-bold',
     'Evasion': 'text-blue-300 font-bold',
+    'Increased Evasion': 'text-blue-300 font-bold',
     'Counterattack': 'text-blue-300 font-bold',
     'Stealth': 'text-gray-300 font-bold',
     'Revive': 'text-green-400 font-bold',
+    'Speed Up': 'text-blue-300 font-bold',
+    'Increased Speed': 'text-blue-300 font-bold',
+    'Critical Hit Resistance': 'text-blue-300 font-bold',
+    'Reflect': 'text-purple-300 font-bold',
+    'Mind\'s Eye': 'text-yellow-300 font-bold',
+    'Enrage': 'text-red-400 font-bold',
+    'Cascade': 'text-blue-300 font-bold',
 
     // Debuffs (Red theme)
     'Defense Break': 'text-red-400 font-bold',
     'Decreased Defense': 'text-red-400 font-bold',
     'Attack Down': 'text-red-400 font-bold',
     'Decreased Attack': 'text-red-400 font-bold',
+    'Speed Down': 'text-red-400 font-bold',
+    'Decreased Speed': 'text-red-400 font-bold',
     'Stun': 'text-red-400 font-bold',
     'Sleep': 'text-red-400 font-bold',
     'Silence': 'text-red-400 font-bold',
@@ -42,6 +56,12 @@ const TERMS: Record<string, string> = {
     'Injury': 'text-orange-700 font-bold',
     'Injuries': 'text-orange-700 font-bold',
     'Extinction': 'text-gray-500 font-bold',
+    'Venom': 'text-purple-500 font-bold',
+    'Target': 'text-red-400 font-bold',
+    'Blind': 'text-gray-400 font-bold',
+    'Decrease Hit Chance': 'text-gray-400 font-bold',
+    'Stigma': 'text-red-400 font-bold',
+    'Vampiric Touch': 'text-red-400 font-bold',
 
     // Mechanics (Gold/Special)
     'Combat Readiness': 'text-e7-gold font-bold',
@@ -50,13 +70,22 @@ const TERMS: Record<string, string> = {
     'Dual Attack': 'text-orange-300 font-bold',
     'Penetrates Defense': 'text-red-300 font-bold',
     'Ignore Effect Resistance': 'text-indigo-300 font-bold',
+    'Ignores Effect Resistance': 'text-indigo-300 font-bold',
     'Extra Turn': 'text-yellow-200 font-bold',
     'Critical Hit': 'text-orange-400 font-bold',
     'Crushing Hit': 'text-gray-300 font-bold',
+    'Fixed Damage': 'text-orange-300 font-bold',
+    'Share Damage': 'text-blue-300 font-bold',
+    'Dispel': 'text-blue-200 font-bold',
+    'Dispels': 'text-blue-200 font-bold',
+    'Cleanse': 'text-green-200 font-bold',
+    'Transfer': 'text-purple-300 font-bold',
+    'Resets Cooldown': 'text-blue-200 font-bold',
+    'Reset Cooldown': 'text-blue-200 font-bold',
 };
 
 // Regex to match any of the terms (case insensitive)
-const TERM_REGEX = new RegExp(`\\b(${Object.keys(TERMS).join('|')})\\b`, 'gi');
+const TERM_REGEX = new RegExp(`\\b(${Object.keys(TERMS).map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'gi');
 
 export function formatSkillText(text: string | undefined): React.ReactNode {
     if (!text) return null;
