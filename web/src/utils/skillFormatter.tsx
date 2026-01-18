@@ -1,5 +1,6 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
+import { getBuffIcon } from './buffIconMapper';
 
 // Dictionary of terms to highlight
 const TERMS: Record<string, string> = {
@@ -8,8 +9,9 @@ const TERMS: Record<string, string> = {
     'Increased Attack': 'text-blue-300 font-bold',
     'Attack Buff': 'text-blue-300 font-bold',
     'Greater Attack': 'text-blue-300 font-bold',
-    'Defense Buff': 'text-blue-300 font-bold',
+    'Increase Defense': 'text-blue-300 font-bold',
     'Increased Defense': 'text-blue-300 font-bold',
+    'Defense Buff': 'text-blue-300 font-bold',
     'Greater Defense': 'text-blue-300 font-bold',
     'Immunity': 'text-blue-300 font-bold',
     'Invincibility': 'text-blue-300 font-bold',
@@ -33,7 +35,7 @@ const TERMS: Record<string, string> = {
     'Cascade': 'text-blue-300 font-bold',
     'Perception': 'text-purple-300 font-bold',
     'Possession': 'text-red-400 font-bold',
-    'Offering': 'text-e7-gold font-bold', // User requested unique buff
+    'Offering': 'text-e7-gold font-bold',
     'Insight': 'text-yellow-300 font-bold',
     'Fetters': 'text-red-500 font-bold',
 
@@ -119,9 +121,23 @@ export function formatSkillText(text: string | undefined): React.ReactNode {
                 const matchedTerm = Object.keys(TERMS).find(t => t.toLowerCase() === lowerPart);
 
                 if (matchedTerm) {
+                    const iconPath = getBuffIcon(matchedTerm);
+
                     return (
-                        <span key={index} className={TERMS[matchedTerm]}>
-                            {part}
+                        <span key={index} className="inline-flex items-center align-baseline gap-0.5 mx-0.5">
+                            <span className={TERMS[matchedTerm]}>
+                                {part}
+                            </span>
+                            {iconPath && (
+                                <img
+                                    src={iconPath}
+                                    alt={matchedTerm}
+                                    className="w-4 h-4 inline-block select-none pointer-events-none"
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).style.display = 'none';
+                                    }}
+                                />
+                            )}
                         </span>
                     );
                 }
@@ -135,15 +151,21 @@ export function formatSkillText(text: string | undefined): React.ReactNode {
 export function getSkillMechanics(text: string | undefined): string[] {
     if (!text) return [];
 
-    const mechanics: string[] = [];
-    if (text.toLowerCase().includes('stun')) mechanics.push('Stun');
-    if (text.toLowerCase().includes('fense break') || text.toLowerCase().includes('creased defense')) mechanics.push('Def Break');
-    if (text.toLowerCase().includes('strip') || text.toLowerCase().includes('dispels')) mechanics.push('Strip');
-    if (text.toLowerCase().includes('cleanse')) mechanics.push('Cleanse');
-    if (text.toLowerCase().includes('push')) mechanics.push('Push');
-    if (text.toLowerCase().includes('cr') || text.toLowerCase().includes('combat readiness')) mechanics.push('CR');
-    if (text.toLowerCase().includes('extinction')) mechanics.push('Extinction');
-    if (text.toLowerCase().includes('immortality')) mechanics.push('Immortality');
+    // Find all terms that exist in the text using regex for exact word matching
+    // Filter duplicates via Set at the end
+    const foundTerms: string[] = [];
 
-    return [...new Set(mechanics)]; // Unique
+    // Optimize: Instead of checking every term individually with regex,
+    // match against the big regex and collect matches.
+    const matches = text.match(TERM_REGEX);
+
+    if (matches) {
+        matches.forEach(match => {
+            const lowerMatch = match.toLowerCase();
+            const matchedKey = Object.keys(TERMS).find(k => k.toLowerCase() === lowerMatch);
+            if (matchedKey) foundTerms.push(matchedKey);
+        });
+    }
+
+    return [...new Set(foundTerms)];
 }
