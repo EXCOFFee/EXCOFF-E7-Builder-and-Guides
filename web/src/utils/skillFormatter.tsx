@@ -16,6 +16,7 @@ const TERMS: Record<string, string> = {
     'Immortality': 'text-blue-300 font-bold',
     'Skill Nullifier': 'text-blue-300 font-bold',
     'Barrier': 'text-blue-300 font-bold',
+    'Shield': 'text-blue-300 font-bold',
     'Continuous Healing': 'text-green-300 font-bold',
     'Vigor': 'text-yellow-300 font-bold',
     'Evasion': 'text-blue-300 font-bold',
@@ -30,6 +31,19 @@ const TERMS: Record<string, string> = {
     'Mind\'s Eye': 'text-yellow-300 font-bold',
     'Enrage': 'text-red-400 font-bold',
     'Cascade': 'text-blue-300 font-bold',
+    'Perception': 'text-purple-300 font-bold',
+    'Possession': 'text-red-400 font-bold',
+    'Offering': 'text-e7-gold font-bold', // User requested unique buff
+    'Insight': 'text-yellow-300 font-bold',
+    'Fetters': 'text-red-500 font-bold',
+
+    // Healing (Green theme)
+    'Recover Health': 'text-green-300 font-bold',
+    'Recovers Health': 'text-green-300 font-bold',
+    'Heal': 'text-green-300 font-bold',
+    'Heals': 'text-green-300 font-bold',
+    'Healing': 'text-green-300 font-bold',
+    'Regenerate': 'text-green-300 font-bold',
 
     // Debuffs (Red theme)
     'Defense Break': 'text-red-400 font-bold',
@@ -62,6 +76,7 @@ const TERMS: Record<string, string> = {
     'Decrease Hit Chance': 'text-gray-400 font-bold',
     'Stigma': 'text-red-400 font-bold',
     'Vampiric Touch': 'text-red-400 font-bold',
+    'Curse': 'text-indigo-400 font-bold',
 
     // Mechanics (Gold/Special)
     'Combat Readiness': 'text-e7-gold font-bold',
@@ -82,9 +97,12 @@ const TERMS: Record<string, string> = {
     'Transfer': 'text-purple-300 font-bold',
     'Resets Cooldown': 'text-blue-200 font-bold',
     'Reset Cooldown': 'text-blue-200 font-bold',
+    'Fighting Spirit': 'text-red-500 font-bold',
+    'Focus': 'text-orange-400 font-bold',
 };
 
 // Regex to match any of the terms (case insensitive)
+// Escape special characters in terms
 const TERM_REGEX = new RegExp(`\\b(${Object.keys(TERMS).map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'gi');
 
 export function formatSkillText(text: string | undefined): React.ReactNode {
@@ -124,6 +142,8 @@ export function getSkillMechanics(text: string | undefined): string[] {
     if (text.toLowerCase().includes('cleanse')) mechanics.push('Cleanse');
     if (text.toLowerCase().includes('push')) mechanics.push('Push');
     if (text.toLowerCase().includes('cr') || text.toLowerCase().includes('combat readiness')) mechanics.push('CR');
+    if (text.toLowerCase().includes('extinction')) mechanics.push('Extinction');
+    if (text.toLowerCase().includes('immortality')) mechanics.push('Immortality');
 
     return [...new Set(mechanics)]; // Unique
 }
