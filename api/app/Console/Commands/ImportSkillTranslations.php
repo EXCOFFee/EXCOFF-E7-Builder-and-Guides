@@ -124,9 +124,30 @@ class ImportSkillTranslations extends Command
                 // Try finding hero data by slug or direct match
                 $heroData = $translations[$lang][$slug] ?? null;
                 
+                // If not found, try case-insensitive/slug matching against the loaded keys
+                if (!$heroData) {
+                    // Lazy indexing for this language if not done yet
+                    if (!isset($translations[$lang]['_normalized_index'])) {
+                        $translations[$lang]['_normalized_index'] = [];
+                        foreach ($translations[$lang] as $k => $v) {
+                            if ($k === '_normalized_index') continue;
+                            // Index by slugified key (e.g. "Abyssal Yufine" -> "abyssal-yufine")
+                            $normalizedKey = \Illuminate\Support\Str::slug((string)$k);
+                            $translations[$lang]['_normalized_index'][$normalizedKey] = $v;
+                        }
+                    }
+                    
+                    $heroData = $translations[$lang]['_normalized_index'][$slug] ?? null;
+                }
+
+                // If still not found, try matching by Hero Name from DB
+                if (!$heroData) {
+                     $dbNameSlug = \Illuminate\Support\Str::slug($hero->name);
+                     $heroData = $translations[$lang]['_normalized_index'][$dbNameSlug] ?? null;
+                }
+
                 // If not found by slug, try searching by name or id if structured differently
                 if (!$heroData) {
-                    // Fallback search logic could go here if needed
                     continue;
                 }
                 
