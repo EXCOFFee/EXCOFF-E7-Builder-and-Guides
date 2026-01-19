@@ -72,6 +72,10 @@ export const PROS_TAGS: Tag[] = [
     { id: 'max_hp_scaling', type: 'pro', category: 'damage', translations: t('Scales off Max HP', 'Escala con HP Máx', '最大HP比例', '최대 생명력 비례', 'Escala com HP Máx', '最大生命值比例') },
     { id: 'lost_hp_scaling', type: 'pro', category: 'damage', translations: t('Scales off Lost HP', 'Escala con HP Perdida', '失ったHP比例', '잃은 생명력 비례', 'Escala com HP Perdida', '已损生命值比例') },
 
+    // NEW ORPHANS (Fixed)
+    { id: 'no_crit_needed', type: 'pro', category: 'stats', translations: t('No Crit Needed', 'No Necesita Crítico', 'クリ不要', '치확 불필요', 'Não Precisa de Crítico', '无需暴击') },
+    { id: 'anti_immortality', type: 'pro', category: 'mechanics', translations: t('Anti-Immortality', 'Anti-Inmortalidad', '不死対策', '불사 카운터', 'Anti-Imortalidade', '反不死') },
+
     // DAMAGE - Mechanics
     { id: 'guaranteed_crit', type: 'pro', category: 'damage', translations: t('Guaranteed Crit', 'Crítico Garantizado', '確定クリティカル', '확정 치명타', 'Crítico Garantido', '必定暴击') },
     { id: 'hit_chance_up', type: 'pro', category: 'damage', translations: t('Increased Hit Chance', 'Aumento Prob. Golpe', '命中率UP', '명중률 증가', 'Aumento Prob. Acerto', '命中率提升') },
@@ -249,6 +253,12 @@ export const PROS_TAGS: Tag[] = [
     { id: 'pocket_pick', type: 'pro', category: 'meta', translations: t('Pocket Pick', 'Pick de Bolsillo', 'ポケットピック', '깜짝 픽', 'Pick de Bolso', '口袋奇兵') },
     { id: 'draft_finisher', type: 'pro', category: 'meta', translations: t('Draft Finisher', 'Draft Finisher', 'ドラフトフィニッシャー', '밴픽 마무리', 'Finalizador de Draft', 'BP终结者') },
 
+    // NEW META 2026 PROS
+    { id: 'anti_opener', type: 'pro', category: 'meta', translations: t('Anti-Opener', 'Anti-Opener', 'アンチオープナー', '선턴잡이 카운터', 'Anti-Opener', '反先手') },
+    { id: 'rift_specialist', type: 'pro', category: 'pve', translations: t('Rift Specialist', 'Especialista en Grieta', '亀裂スペシャリスト', '균열 전문가', 'Especialista em Fenda', '裂缝专家') },
+    { id: 'harid_tier', type: 'pro', category: 'meta', translations: t('Harid Tier (Late Game)', 'Tier Harid (Late Game)', 'ハリドティア', '하리드 티어', 'Tier Harid', '后期战神') },
+    { id: 'draft_flexible', type: 'pro', category: 'meta', translations: t('Draft Flexible', 'Flexible en Draft', 'ドラフト柔軟', '밴픽 유연함', 'Flexível no Draft', 'BP灵活') },
+
     // SYNERGIES
     { id: 'requires_debuffs', type: 'con', category: 'dependencies', translations: t('Requires Debuffs', 'Requiere Debuffs', 'デバフ依存', '디버프 필요', 'Requer Debuffs', '依赖减益') },
     { id: 'requires_buffs', type: 'con', category: 'dependencies', translations: t('Requires Buffs', 'Requiere Buffs', 'バフ依存', '버프 필요', 'Requer Buffs', '依赖增益') },
@@ -298,6 +308,7 @@ export const CONS_TAGS: Tag[] = [
     { id: 'no_aoe', type: 'con', category: 'offense', translations: t('No AoE', 'Sin AoE', '全体攻撃なし', '광역기 없음', 'Sem AoE', '无AOE') },
     { id: 'long_ramp_up', type: 'con', category: 'offense', translations: t('Slow Ramp Up', 'Tarda en Cargar', 'スロースターター', '예열 김', 'Demora pra Carregar', '启动慢') },
     { id: 'rng_damage', type: 'con', category: 'offense', translations: t('RNG Damage', 'Daño Inconsistente', 'ダメージ不安定', '로또 데미지', 'Dano Inconsistente', '伤害看脸') },
+    { id: 'unreliable_debuffs', type: 'con', category: 'offense', translations: t('Unreliable Debuffs', 'Debuffs Inconsistentes', 'デバフ不安定', '불안정한 디버프', 'Debuffs Inconsistentes', '减益不稳定') },
 
     // FRAGILITY
     { id: 'squishy', type: 'con', category: 'fragility', translations: t('Very Squishy', 'Muy Frágil', '紙耐久', '물몸', 'Muito Frágil', '身板脆') },
@@ -306,6 +317,7 @@ export const CONS_TAGS: Tag[] = [
     { id: 'weak_to_fixed_dmg', type: 'con', category: 'fragility', translations: t('Weak to Fixed Dmg', 'Débil vs Daño Fijo', '固定ダメに弱い', '고정뎀 취약', 'Fraco contra Dano Fixo', '怕固伤') },
     { id: 'weak_to_aoe', type: 'con', category: 'fragility', translations: t('Weak to AoE', 'Débil vs AoE', '全体攻撃に弱い', '광역기 취약', 'Fraco contra AoE', '怕AOE') },
     { id: 'weak_to_cc', type: 'con', category: 'fragility', translations: t('Weak to CC', 'Débil vs Control', 'CCに弱い', 'CC 취약', 'Fraco contra Controle', '怕控制') },
+    { id: 'countered_by_control', type: 'con', category: 'fragility', translations: t('Countered by Control', 'Countereado por Control', 'コントロールに弱い', '컨트롤에 카운터', 'Counterado por Controle', '怕控制 (Counter)') },
     { id: 'no_sustain', type: 'con', category: 'fragility', translations: t('No Self Sustain', 'Sin Recuperación', '回復手段なし', '유지력 없음', 'Sem Recuperação', '无续航') },
 
     // CONTROL ISSUES
@@ -323,6 +335,7 @@ export const CONS_TAGS: Tag[] = [
     { id: 'hard_to_gear', type: 'con', category: 'gear', translations: t('Hard to Gear', 'Difícil de Equipar', '装備難易度高', '장비 세팅 어려움', 'Difícil de Equipar', '面板难堆') },
     { id: 'stat_hungry', type: 'con', category: 'gear', translations: t('Stat Hungry', 'Pide Muchas Stats', 'ステータス要求高', '스탯 괴물', 'Pede Muitos Stats', '吃属性') },
     { id: 'mola_hungry', type: 'con', category: 'gear', translations: t('Mola Hungry', 'Gasta Muchos Molas', 'モラゴラ泥棒', '머라고라 많이 듦', 'Gasta Muitos Molas', '吃萝卜') },
+    { id: 'needs_molagora', type: 'con', category: 'gear', translations: t('Needs Molagora Investments', 'Requiere Inversión de Molas', 'モラゴラ投資必須', '머라고라 투자 필요', 'Requer Molagoras', '需大量萝卜') },
     { id: 'needs_specific_arti', type: 'con', category: 'gear', translations: t('Artifact Dependent', 'Depende de Artefacto', '特定遺物必須', '아티 의존도 높음', 'Depende de Artefato', '绑定神器') },
     { id: 'needs_exclusive_equip', type: 'con', category: 'gear', translations: t('Needs Exclusive Equip', 'Requiere Equipo Exclusivo', '専用装備必須', '전용장비 필수', 'Requer Equip. Exclusivo', '绑定专属') },
     { id: 'needs_100_crit', type: 'con', category: 'gear', translations: t('Needs 100% Crit', 'Necesita 100% Crítico', 'クリ100%必須', '치확 100% 강제', 'Precisa 100% Crítico', '满爆强迫症') },
@@ -344,7 +357,17 @@ export const CONS_TAGS: Tag[] = [
     { id: 'countered_by_belian', type: 'con', category: 'competitive', translations: t('Weak vs Belian', 'Débil vs Belian', '対ベリアン不利', '벨리안 밥', 'Fraco contra Belian', '怕Belian') },
     { id: 'countered_by_seal', type: 'con', category: 'competitive', translations: t('Weak vs Seal', 'Débil vs Sello', '対封印不利', '봉인에 취약', 'Fraco contra Selo', '怕封印') },
     { id: 'countered_by_fracture', type: 'con', category: 'competitive', translations: t('Weak vs Fracture', 'Débil vs Fractura', '対骨折不利', '골절에 취약', 'Fraco contra Fratura', '怕骨折') },
-    { id: 'countered_by_injury', type: 'con', category: 'competitive', translations: t('Weak vs Injury', 'Débil vs Herida', '対負傷不利', '부상에 취약', 'Fraco contra Ferimento', '怕伤口') },
+    { id: 'weak_to_injury', type: 'con', category: 'competitive', translations: t('Weak vs Injury', 'Débil vs Herida', '対負傷不利', '부상에 취약', 'Fraco contra Ferimento', '怕伤口') },
+
+    // NEW META 2026 CONS
+    { id: 'weak_to_fixed_dmg', type: 'con', category: 'fragility', translations: t('Weak to Fixed Dmg', 'Débil vs Daño Fijo', '固定ダメに弱い', '고정뎀 취약', 'Fraco contra Dano Fixo', '怕固伤') },
+    { id: 'weak_to_seal', type: 'con', category: 'competitive', translations: t('Weak vs Seal', 'Débil vs Sello', '対封印不利', '봉인에 취약', 'Fraco contra Selo', '怕封印') },
+    { id: 'weak_to_evasion', type: 'con', category: 'offense', translations: t('Struggles vs Evasion', 'Sufre vs Evasión', '対回避不利', '회피 덱에 약함', 'Sofre contra Evasão', '怕闪避') },
+    { id: 'susceptible_to_cleave', type: 'con', category: 'fragility', translations: t('Susceptible to Cleave', 'Susceptible a Cleave', 'クリーブに弱い', '속공/클리브 취약', 'Suscetível a Cleave', '怕核爆') },
+    { id: 'resource_reliant', type: 'con', category: 'utility_limits', translations: t('Resource Reliant', 'Depende de Recursos', 'リソース依存', '자원 의존', 'Depende de Recursos', '依赖资源') },
+
+    // NEW META 2026 PROS (Should be up but putting here for context or moving up? Let's keep cons in cons section.
+    // Wait, PROS tags are in PROS_TAGS array. I need to edit PROS_TAGS for the pros.)
     { id: 'rng_reliant', type: 'con', category: 'dependencies', translations: t('RNG Reliant', 'Depende de la Suerte', '運ゲー', '운빨', 'Depende da Sorte', '看脸') },
 ];
 
