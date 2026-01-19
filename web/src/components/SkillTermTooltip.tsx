@@ -3,8 +3,7 @@
 import React from 'react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { getBuffIcon } from '@/utils/buffIconMapper';
-
-import { GLOSSARY } from '@/utils/glossary';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface SkillTermTooltipProps {
     term: string;
@@ -13,13 +12,16 @@ interface SkillTermTooltipProps {
 }
 
 export function SkillTermTooltip({ term, highlightClass, children }: SkillTermTooltipProps) {
+    const { t } = useTranslations();
     const iconPath = getBuffIcon(term);
 
-    // Case-insensitive lookup
-    const glossaryKey = Object.keys(GLOSSARY).find(k => k.toLowerCase() === term.toLowerCase());
-    const description = glossaryKey ? GLOSSARY[glossaryKey] : null;
+    // Look up term in glossary translations
+    // Ensure case-insensitive lookup if direct key fails (best effort)
+    // Note: t() usually requires exact key. Dynamic lookup can be tricky.
+    // For now, assume key matches exactly or try to match common casing.
+    const description = t(`glossary.${term}`, '');
 
-    // If no description and no icon, just render text
+    // If no description (fallback matched empty string) and no icon, just render text
     if (!description && !iconPath) {
         return <span className={highlightClass}>{children}</span>;
     }

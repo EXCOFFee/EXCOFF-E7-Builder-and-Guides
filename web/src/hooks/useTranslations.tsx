@@ -43,14 +43,34 @@ async function loadMessages(locale: string): Promise<Messages> {
         try {
             const artifacts = await import(`../../messages/artifacts/${validLocale}.json`);
             artifactMessages = artifacts.default || {};
-        } catch (artifactError) {
+        } catch (error) {
             console.warn(`No artifact translations for ${validLocale}`);
         }
 
-        // Merge messages with artifacts under 'artifacts' key
+        // Load skill translations
+        let skillMessages = {};
+        try {
+            const skills = await import(`../../messages/skills/${validLocale}.json`);
+            skillMessages = skills.default || {};
+        } catch (error) {
+            console.warn(`No skill translations for ${validLocale}`);
+        }
+
+        // Load glossary translations
+        let glossaryMessages = {};
+        try {
+            const glossary = await import(`../../messages/glossary/${validLocale}.json`);
+            glossaryMessages = glossary.default || {};
+        } catch (error) {
+            console.warn(`No glossary translations for ${validLocale}`);
+        }
+
+        // Merge messages
         const mergedMessages = {
             ...mainMessages.default,
-            artifacts: artifactMessages
+            artifacts: artifactMessages,
+            skills: skillMessages,
+            glossary: glossaryMessages
         };
 
         messagesCache[validLocale] = mergedMessages;

@@ -1,5 +1,4 @@
-export const GLOSSARY: Record<string, string> = {
-    // Buffs
+{
     "Increase Attack": "Aumenta el Ataque en un 50%.",
     "Increased Attack": "Aumenta el Ataque en un 50%.",
     "Greater Attack": "Aumenta el Ataque en un 75%.",
@@ -24,8 +23,6 @@ export const GLOSSARY: Record<string, string> = {
     "Increased Effectiveness": "Aumenta la Eficacia.",
     "Effect Resistance": "Aumenta la Resistencia a Efectos.",
     "Increased Effect Resistance": "Aumenta la Resistencia a Efectos.",
-
-    // Debuffs
     "Defense Break": "Disminuye la Defensa en un 70%.",
     "Decreased Defense": "Disminuye la Defensa en un 70%.",
     "Attack Down": "Disminuye el Ataque en un 50%.",
@@ -54,8 +51,6 @@ export const GLOSSARY: Record<string, string> = {
     "Stigma": "Disminuye la curación recibida en un 50%.",
     "Vampiric Touch": "Recupera Vida de los aliados al atacar al objetivo.",
     "Venom": "Causa daño proporcional a la Vida Máxima y causa lesiones.",
-
-    // Mechanics
     "Combat Readiness": "Determina el orden del turno.",
     "Soulburn": "Consume Almas para mejorar una habilidad.",
     "Dual Attack": "Un aliado ataca junto con el lanzador.",
@@ -69,4 +64,4 @@ export const GLOSSARY: Record<string, string> = {
     "Perception": "Aumenta Probabilidad Golpe Crítico y Daño Crítico.",
     "Enrage": "Aumenta el daño causado y Velocidad.",
     "Stealth (Unique)": "Efectos especiales de sigilo."
-};
+}
