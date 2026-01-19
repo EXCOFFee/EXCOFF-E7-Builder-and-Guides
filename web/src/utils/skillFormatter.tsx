@@ -3,6 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { SkillTermTooltip } from '@/components/SkillTermTooltip';
 
 // Dictionary of terms to highlight
+// Dictionary of terms to highlight
 const TERMS: Record<string, string> = {
     // Buffs (Blue/Green theme)
     'Increase Attack': 'text-blue-300 font-bold',
@@ -104,9 +105,65 @@ const TERMS: Record<string, string> = {
     'Focus': 'text-orange-400 font-bold',
 };
 
+// Map localized terms to their canonical English keys for Glossary lookup & Color mapping
+const TERM_ALIASES: Record<string, string> = {
+    // Spanish
+    'Aumento de Ataque': 'Increase Attack',
+    'Aumento de Defensa': 'Increase Defense',
+    'Inmunidad': 'Immunity',
+    'Invencibilidad': 'Invincibility',
+    'Barrera': 'Barrier',
+    'Curación Continua': 'Continuous Healing',
+    'Vigor': 'Vigor',
+    'Evasión': 'Evasion',
+    'Revivir': 'Revive',
+    'Aumento de Velocidad': 'Speed Up',
+    'Resistencia a Golpes Críticos': 'Critical Hit Resistance',
+    'Reflejo': 'Reflect',
+
+    'Romper Defensa': 'Defense Break',
+    'Disminución de Ataque': 'Attack Down',
+    'Disminución de Velocidad': 'Speed Down',
+    'Aturdimiento': 'Stun',
+    'Sueño': 'Sleep',
+    'Silencio': 'Silence',
+    'Provocación': 'Provoke',
+    'Bloqueo de Mejoras': 'Unbuffable',
+    'No se puede recibir mejoras': 'Unbuffable',
+    'Anti-Curación': 'Unhealable',
+    'Quemadura': 'Burn',
+    'Sangrado': 'Bleeding',
+    'Veneno': 'Poison', // Check consistency
+    'Bomba': 'Bomb',
+    'Restricción': 'Restrict',
+    'Sellar': 'Seal',
+    'Lesión': 'Injury',
+    'Extinción': 'Extinction',
+    'Ceguera': 'Blind',
+    // 'Blanco' is already in TERMS, but better to map it to Target for glossary
+    'Blanco': 'Target',
+
+    'Preparación de Combate': 'Combat Readiness',
+    'Quema de Alma': 'Soulburn',
+    'Ataque Dual': 'Dual Attack',
+    'Penetrar Defensa': 'Penetrates Defense',
+    'Ignora Resistencia a Efectos': 'Ignore Effect Resistance',
+    'Turno Extra': 'Extra Turn',
+    'Golpe Crítico': 'Critical Hit',
+    'Daño Fijo': 'Fixed Damage',
+    'Disipar': 'Dispel',
+    'Limpiar': 'Cleanse',
+    'Transferir': 'Transfer',
+    'Restablece Reactivación': 'Resets Cooldown',
+    'Espíritu de Lucha': 'Fighting Spirit',
+    'Foco': 'Focus',
+};
+
+// Combine TERMS keys and ALIAS keys
+const ALL_KEYS = [...Object.keys(TERMS), ...Object.keys(TERM_ALIASES)];
 // Regex to match any of the terms (case insensitive)
 // Escape special characters in terms
-const TERM_REGEX = new RegExp(`\\b(${Object.keys(TERMS).map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'gi');
+const TERM_REGEX = new RegExp(`\\b(${ALL_KEYS.map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'gi');
 
 export function formatSkillText(text: string | undefined): React.ReactNode {
     if (!text) return null;
@@ -117,22 +174,41 @@ export function formatSkillText(text: string | undefined): React.ReactNode {
     return (
         <span>
             {parts.map((part, index) => {
-                // Check if this part is a term (case insensitive check)
                 const lowerPart = part.toLowerCase();
-                const matchedTerm = Object.keys(TERMS).find(t => t.toLowerCase() === lowerPart);
+
+                // Try to find in TERMS (Direct match)
+                let matchedTerm = Object.keys(TERMS).find(t => t.toLowerCase() === lowerPart);
+
+                // If not found, try ALIASES
+                if (!matchedTerm) {
+                    const aliasKey = Object.keys(TERM_ALIASES).find(t => t.toLowerCase() === lowerPart);
+                    if (aliasKey) {
+                        // Found an alias, resolve to canonical
+                        matchedTerm = TERM_ALIASES[aliasKey];
+                    }
+                }
 
                 if (matchedTerm) {
-                    // Special handling for "Target": Only highlight if it matches case ("Target")
-                    // to avoid highlighting the common word "target" (noun).
-                    if (matchedTerm === 'Target' && part !== 'Target') {
+                    // Special handling for "Target": Only highlight if it matches exact case ("Target")
+                    // or if it is the Spanish "Blanco" (which is safe).
+                    if (matchedTerm === 'Target' && part === 'target') {
+                        // "target" (lowercase noun) -> Skip
                         return <span key={index}>{part}</span>;
                     }
+
+                    // Resolve color using canonical term
+                    const highlightClass = TERMS[matchedTerm];
+
+                    // If it was an alias (e.g. Blanco), we want the tooltip to look up 'Target' in glossary
+                    // but maybe show the original text 'Blanco'? 
+                    // SkillTermTooltip uses `term` for lookup. 
+                    // We should pass the *Canonical* term for lookup, but render the *original* part text.
 
                     return (
                         <SkillTermTooltip
                             key={index}
-                            term={matchedTerm}
-                            highlightClass={TERMS[matchedTerm]}
+                            term={matchedTerm} // Canonical term for glossary lookup
+                            highlightClass={highlightClass}
                         >
                             {part}
                         </SkillTermTooltip>
@@ -148,19 +224,28 @@ export function formatSkillText(text: string | undefined): React.ReactNode {
 export function getSkillMechanics(text: string | undefined): string[] {
     if (!text) return [];
 
-    // Find all terms that exist in the text using regex for exact word matching
-    // Filter duplicates via Set at the end
     const foundTerms: string[] = [];
-
-    // Optimize: Instead of checking every term individually with regex,
-    // match against the big regex and collect matches.
     const matches = text.match(TERM_REGEX);
 
     if (matches) {
         matches.forEach(match => {
             const lowerMatch = match.toLowerCase();
-            const matchedKey = Object.keys(TERMS).find(k => k.toLowerCase() === lowerMatch);
-            if (matchedKey) foundTerms.push(matchedKey);
+
+            // Resolve Alias/Direct match to canonical key
+            let canonicalKey = Object.keys(TERMS).find(k => k.toLowerCase() === lowerMatch);
+
+            if (!canonicalKey) {
+                const aliasKey = Object.keys(TERM_ALIASES).find(t => t.toLowerCase() === lowerMatch);
+                if (aliasKey) canonicalKey = TERM_ALIASES[aliasKey];
+            }
+
+            if (canonicalKey) {
+                // Strict check for Target
+                if (canonicalKey === 'Target' && match === 'target') {
+                    return; // Skip generic 'target'
+                }
+                foundTerms.push(canonicalKey);
+            }
         });
     }
 
