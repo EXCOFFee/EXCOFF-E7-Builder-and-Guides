@@ -1,6 +1,6 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
-import { getBuffIcon } from './buffIconMapper';
+import { SkillTermTooltip } from '@/components/SkillTermTooltip';
 
 // Dictionary of terms to highlight
 const TERMS: Record<string, string> = {
@@ -121,24 +121,14 @@ export function formatSkillText(text: string | undefined): React.ReactNode {
                 const matchedTerm = Object.keys(TERMS).find(t => t.toLowerCase() === lowerPart);
 
                 if (matchedTerm) {
-                    const iconPath = getBuffIcon(matchedTerm);
-
                     return (
-                        <span key={index} className="inline-flex items-center align-baseline gap-0.5 mx-0.5">
-                            <span className={TERMS[matchedTerm]}>
-                                {part}
-                            </span>
-                            {iconPath && (
-                                <img
-                                    src={iconPath}
-                                    alt={matchedTerm}
-                                    className="w-4 h-4 inline-block select-none pointer-events-none"
-                                    onError={(e) => {
-                                        (e.target as HTMLImageElement).style.display = 'none';
-                                    }}
-                                />
-                            )}
-                        </span>
+                        <SkillTermTooltip
+                            key={index}
+                            term={matchedTerm}
+                            highlightClass={TERMS[matchedTerm]}
+                        >
+                            {part}
+                        </SkillTermTooltip>
                     );
                 }
                 return <span key={index}>{part}</span>;

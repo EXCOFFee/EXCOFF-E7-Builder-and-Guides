@@ -11,9 +11,9 @@ description: Standard development workflow for EpicSeven project with auto-run e
    cd api && php artisan <command>
    ```
 
-2. **Run npm/node commands:**
+2. **Run pnpm/node commands:**
    ```bash
-   cd web && npm run <script>
+   cd web ; pnpm run <script>
    ```
 
 3. **Git operations:**
