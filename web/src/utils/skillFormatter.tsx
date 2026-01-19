@@ -74,6 +74,7 @@ const TERMS: Record<string, string> = {
     'Extinction': 'text-gray-500 font-bold',
     'Venom': 'text-purple-500 font-bold',
     'Target': 'text-red-400 font-bold',
+    'Blanco': 'text-red-400 font-bold', // Spanish Target
     'Blind': 'text-gray-400 font-bold',
     'Decrease Hit Chance': 'text-gray-400 font-bold',
     'Stigma': 'text-red-400 font-bold',
@@ -121,6 +122,12 @@ export function formatSkillText(text: string | undefined): React.ReactNode {
                 const matchedTerm = Object.keys(TERMS).find(t => t.toLowerCase() === lowerPart);
 
                 if (matchedTerm) {
+                    // Special handling for "Target": Only highlight if it matches case ("Target")
+                    // to avoid highlighting the common word "target" (noun).
+                    if (matchedTerm === 'Target' && part !== 'Target') {
+                        return <span key={index}>{part}</span>;
+                    }
+
                     return (
                         <SkillTermTooltip
                             key={index}

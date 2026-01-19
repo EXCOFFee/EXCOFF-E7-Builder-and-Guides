@@ -21,4 +21,6 @@ description: Cosas que debes hacer SIEMPRE
     - Si falla la API, la App no debe crashear (pantalla blanca). Debe mostrar un Toast/Alerta y permitir reintentar.
     - Si falla la BD, el Backend debe loguear el error real internamente pero devolver un mensaje genérico seguro al cliente.
 
-6. Siempre asegurate de actulizar tus datos sobre como procedder stacks tecnologico e informacion de la actualidad (enero 2026 o las fechas mas cercana a esas)
+6. Siempre asegurate de actulizar tus datos sobre como procedder stacks tecnologico e informacion de la actualidad (enero 2026 o las fechas mas cercana a esas) 
+
+7.que los planes de implementacion esten en español

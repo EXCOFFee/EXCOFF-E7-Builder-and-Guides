@@ -529,15 +529,14 @@ export function HeroDetailClient() {
                                 };
 
                                 // Get localized text based on current locale
-                                const skillName = (locale !== 'en' && s[`name_${locale}` as keyof typeof s])
-                                    ? String(s[`name_${locale}` as keyof typeof s])
-                                    : s.name;
-                                const skillDesc = (locale !== 'en' && s[`description_${locale}` as keyof typeof s])
-                                    ? String(s[`description_${locale}` as keyof typeof s])
-                                    : s.description;
-                                const skillSoulburn = (locale !== 'en' && s[`soulburn_effect_${locale}` as keyof typeof s])
-                                    ? String(s[`soulburn_effect_${locale}` as keyof typeof s])
-                                    : s.soulburn_effect;
+                                const skillKeyPath = `skills.${hero.name}.skills.${skillKey}`;
+
+                                // Try to get translation, fallback to API data
+                                const skillName = t(`${skillKeyPath}.name`, s.name || `Skill ${skillKey}`);
+                                const skillDesc = t(`${skillKeyPath}.description`, s.description || '');
+                                const skillSoulburn = s.soulburn
+                                    ? t(`${skillKeyPath}.soulburn_effect`, s.soulburn_effect || '')
+                                    : null;
 
                                 const hasScaling = s.rate || s.pow || s.selfHpScaling || s.selfAtkScaling || s.selfDefScaling || s.selfSpdScaling || s.penetration;
 
