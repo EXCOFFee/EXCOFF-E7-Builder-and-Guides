@@ -63,5 +63,8 @@
     "Cascade": "Evita que la Presteza del objetivo se reduzca más del 50%.",
     "Perception": "Aumenta Probabilidad Golpe Crítico y Daño Crítico.",
     "Enrage": "Aumenta el daño causado y Velocidad.",
+    "Immortality": "El objetivo no muere al recibir daño letal.",
+    "Healing": "Recupera Vida.",
+    "Barier (Strength)": "Barrera (Fuerza)",
     "Stealth (Unique)": "Efectos especiales de sigilo."
 }

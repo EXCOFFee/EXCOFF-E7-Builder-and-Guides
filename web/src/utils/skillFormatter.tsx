@@ -156,6 +156,15 @@ const TERM_ALIASES: Record<string, string> = {
     'Transferir': 'Transfer',
     'Restablece Reactivación': 'Resets Cooldown',
     'Espíritu de Lucha': 'Fighting Spirit',
+    // Aliases for Buffs
+    'Presteza': 'Combat Readiness',
+    'Inmortalidad': 'Immortality',
+    'Curación': 'Healing',
+    'Paso Veloz': 'Speed Up', // Assuming this is user's term for Speed Up
+    'Ataque Mayor': 'Greater Attack',
+    'Gran Aumento de Ataque': 'Greater Attack',
+    'Gran Aum. de Ataque': 'Greater Attack',
+    'Mayor Aumento de Ataque': 'Greater Attack',
     'Foco': 'Focus',
 };
 

@@ -63,5 +63,6 @@
     "Cascade": "Prevents target's Combat Readiness from being reduced by more than 50%.",
     "Perception": "Increases Critical Hit Chance and Critical Hit Damage.",
     "Enrage": "Increases damage dealt and Speed.",
-    "Stealth (Unique)": "Special stealth effects."
+    "Stealth (Unique)": "Special stealth effects.",
+    "Immortality": "Target does not die when taking lethal damage."
 }
