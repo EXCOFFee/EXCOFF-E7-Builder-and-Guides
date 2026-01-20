@@ -2043,7 +2043,7 @@
             },
             "S2": {
                 "name": "El Limpiador",
-                "description": "La Probabilidad de Golpe y el Daño Crítico aumentan un 50%. Cuando un aliado excepto el lanzador derrota a un enemigo, activa Bomba de Tiempo contra el enemigo con la Vida más baja. Solo se puede activar una vez cada 3 turnos. Bomba de Tiempo: Después de otorgar aumento de Ataque (Mayor) al lanzador por 2 turnos, ataca al enemigo con una bomba. El daño causado aumenta proporcionalmente a la Velocidad del lanzador."
+                "description": "La Probabilidad de Golpe y el Daño Crítico aumentan un 50%. Cuando un aliado excepto el lanzador derrota a un enemigo, activa Carga Explosiva contra el enemigo con la Vida más baja. Solo se puede activar una vez cada 3 turnos. Carga Explosiva: Después de otorgar aumento de Ataque (Mayor) al lanzador por 2 turnos, ataca al enemigo con un explosivo. El daño causado aumenta proporcionalmente a la Velocidad del lanzador."
             },
             "S3": {
                 "name": "Capa y Gatillo",
@@ -3556,11 +3556,11 @@
             },
             "S2": {
                 "name": "Soñadora en las Profundidades",
-                "description": "No cuesta ninguna Alma activar la primera Quemadura de Almas del lanzador. Al atacar tiene un 75% de probabilidad de infligir un presagio en el objetivo independientemente de si el ataque golpea. No puede ser activado por un contraataque, Ataque Dual o ataque extra."
+                "description": "No cuesta ninguna Alma activar el primer Costo de almas del lanzador. Al atacar tiene un 75% de probabilidad de infligir un presagio en el objetivo independientemente de si el ataque golpea. No puede ser activado por un contraataque, Ataque Dual o ataque extra."
             },
             "S3": {
                 "name": "Congelar",
-                "description": "Ataca a todos los enemigos con una masa congelada, disminuyendo la duración de mejoras en 1 turno antes de un 75% de probabilidad cada uno de infligir congelación y restricción por 2 turnos.",
+                "description": "Ataca a todos los enemigos con una masa congelada, disminuyendo la duración de mejoras en 1 turno antes de un 75% de probabilidad cada uno de infligir congelación y atadura por 2 turnos.",
                 "soulburn_effect": "Otorga un turno extra."
             }
         }
