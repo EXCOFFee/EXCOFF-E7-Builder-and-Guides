@@ -116,7 +116,6 @@ const TERMS: Record<string, string> = {
     'Death Sentence': 'text-gray-900 font-bold',
     'Fear': 'text-gray-500 font-bold',
     'Beguile': 'text-pink-400 font-bold',
-    'Decrease Hit Chance': 'text-gray-400 font-bold',
     'Decreased Hit Chance': 'text-gray-400 font-bold',
 
     // Mechanics (Gold/Special)
