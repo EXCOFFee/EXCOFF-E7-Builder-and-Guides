@@ -13,15 +13,26 @@ class UpdateArtifactSpanishTranslationsSeeder extends Seeder
      */
     public function run(): void
     {
-        // Path to the frontend es.json file
-        // We are in api/database/seeders
-        // We need to go up to root/web/messages/artifacts/es.json
-        $jsonPath = base_path('../web/messages/artifacts/es.json');
+        // Paths to check (priority: Production Storage -> Dev Relative Path)
+        $paths = [
+            storage_path('app/artifact_translations/es.json'),
+            base_path('../web/messages/artifacts/es.json'),
+        ];
 
-        if (!File::exists($jsonPath)) {
-            $this->command->error("File not found: {$jsonPath}");
+        $jsonPath = null;
+        foreach ($paths as $path) {
+            if (File::exists($path)) {
+                $jsonPath = $path;
+                break;
+            }
+        }
+
+        if (!$jsonPath) {
+            $this->command->error("Translation file not found. Checked paths: " . implode(', ', $paths));
             return;
         }
+
+        $this->command->info("Reading translations from: {$jsonPath}");
 
         $jsonContent = File::get($jsonPath);
         $translations = json_decode($jsonContent, true);
