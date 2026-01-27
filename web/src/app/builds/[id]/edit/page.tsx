@@ -16,7 +16,7 @@ import { useTranslations } from '@/hooks/useTranslations';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
-import { SETS, SET_IMAGES } from '@/lib/sets';
+import { SETS, SET_IMAGES, SET_NAMES } from '@/lib/sets';
 
 interface Build {
     id: number;
@@ -430,31 +430,31 @@ export default function EditBuildPage() {
                                     <label className="block text-sm font-medium text-gray-300 mb-2">
                                         {t('builds.primarySet', 'Primary Set')}
                                     </label>
-                                    <div className="grid grid-cols-6 gap-2">
+                                    <div className="grid grid-cols-6 gap-2 p-3 bg-e7-void rounded-lg border border-e7-gold/30">
                                         {SETS.map((set) => (
                                             <button
                                                 key={set}
                                                 type="button"
-                                                onClick={() => setPrimarySet(set)}
-                                                className={`p-2 rounded-lg border transition-all ${primarySet === set
-                                                    ? 'border-purple-500 bg-purple-500/20'
-                                                    : 'border-e7-gold/20 hover:border-e7-gold/50'
+                                                onClick={() => setPrimarySet(primarySet === set ? '' : set)}
+                                                className={`relative w-10 h-10 rounded-lg transition-all ${primarySet === set
+                                                    ? 'ring-2 ring-e7-gold bg-e7-gold/30 scale-110'
+                                                    : 'hover:bg-e7-panel hover:scale-105 opacity-70 hover:opacity-100'
                                                     }`}
-                                                title={set}
+                                                title={SET_NAMES[set]}
                                             >
                                                 <Image
                                                     src={SET_IMAGES[set]}
-                                                    alt={set}
-                                                    width={24}
-                                                    height={24}
-                                                    className="mx-auto"
+                                                    alt={SET_NAMES[set]}
+                                                    width={40}
+                                                    height={40}
+                                                    className="w-full h-full object-contain"
                                                     unoptimized
                                                 />
                                             </button>
                                         ))}
                                     </div>
                                     {primarySet && (
-                                        <p className="text-sm text-purple-400 mt-2 capitalize">{primarySet}</p>
+                                        <p className="text-sm text-e7-gold mt-1 capitalize">{SET_NAMES[primarySet]}</p>
                                     )}
                                 </div>
 
@@ -462,31 +462,31 @@ export default function EditBuildPage() {
                                     <label className="block text-sm font-medium text-gray-300 mb-2">
                                         {t('builds.secondarySet', 'Secondary Set')}
                                     </label>
-                                    <div className="grid grid-cols-6 gap-2">
+                                    <div className="grid grid-cols-6 gap-2 p-3 bg-e7-void rounded-lg border border-e7-gold/30">
                                         {SETS.map((set) => (
                                             <button
                                                 key={set}
                                                 type="button"
-                                                onClick={() => setSecondarySet(set)}
-                                                className={`p-2 rounded-lg border transition-all ${secondarySet === set
-                                                    ? 'border-blue-500 bg-blue-500/20'
-                                                    : 'border-e7-gold/20 hover:border-e7-gold/50'
+                                                onClick={() => setSecondarySet(secondarySet === set ? '' : set)}
+                                                className={`relative w-10 h-10 rounded-lg transition-all ${secondarySet === set
+                                                    ? 'ring-2 ring-e7-gold bg-e7-gold/30 scale-110'
+                                                    : 'hover:bg-e7-panel hover:scale-105 opacity-70 hover:opacity-100'
                                                     }`}
-                                                title={set}
+                                                title={SET_NAMES[set]}
                                             >
                                                 <Image
                                                     src={SET_IMAGES[set]}
-                                                    alt={set}
-                                                    width={24}
-                                                    height={24}
-                                                    className="mx-auto"
+                                                    alt={SET_NAMES[set]}
+                                                    width={40}
+                                                    height={40}
+                                                    className="w-full h-full object-contain"
                                                     unoptimized
                                                 />
                                             </button>
                                         ))}
                                     </div>
                                     {secondarySet && (
-                                        <p className="text-sm text-blue-400 mt-2 capitalize">{secondarySet}</p>
+                                        <p className="text-sm text-e7-gold mt-1 capitalize">{SET_NAMES[secondarySet]}</p>
                                     )}
                                 </div>
                             </div>

@@ -374,12 +374,12 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
                                 key={artifact.artifact_id}
                                 className="flex items-center gap-5 px-8 py-5 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-800/20 border border-purple-500/40 hover:border-purple-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/20 min-w-[280px]"
                             >
-                                <div className="relative w-28 h-28 rounded-lg ring-2 ring-purple-500/40 overflow-hidden bg-purple-900/50 flex-shrink-0">
+                                <div className="relative w-20 h-28 rounded-lg ring-2 ring-purple-500/40 overflow-hidden bg-purple-900/50 flex-shrink-0">
                                     {artifact.icon ? (
                                         <img
                                             src={artifact.icon}
                                             alt={artifact.name}
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full object-contain"
                                             onError={(e) => {
                                                 const target = e.target as HTMLImageElement;
                                                 target.style.display = 'none';
