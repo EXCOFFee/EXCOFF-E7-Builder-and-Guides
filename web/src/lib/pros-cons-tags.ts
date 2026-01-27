@@ -260,40 +260,84 @@ export const PROS_TAGS: Tag[] = [
     { id: 'draft_flexible', type: 'pro', category: 'meta', translations: t('Draft Flexible', 'Flexible en Draft', 'ドラフト柔軟', '밴픽 유연함', 'Flexível no Draft', 'BP灵活') },
 
     // SYNERGIES
-    { id: 'requires_debuffs', type: 'con', category: 'dependencies', translations: t('Requires Debuffs', 'Requiere Debuffs', 'デバフ依存', '디버프 필요', 'Requer Debuffs', '依赖减益') },
-    { id: 'requires_buffs', type: 'con', category: 'dependencies', translations: t('Requires Buffs', 'Requiere Buffs', 'バフ依存', '버프 필요', 'Requer Buffs', '依赖增益') },
-    { id: 'requires_aoe', type: 'con', category: 'dependencies', translations: t('Requires AoE', 'Requiere AoE', '全体攻撃持ちと相性良', '광역기 필요', 'Requer AoE', '依赖AOE') },
-    { id: 'requires_non_attack', type: 'con', category: 'dependencies', translations: t('Requires Non-Attack', 'Requiere Skills No Ofensivas', '非攻撃スキル依存', '비타격 스킬 필요', 'Requer Skills Não-Ofensivas', '依赖非攻击技能') },
-    // VARIETY EXPANSION (Round 3) - User Requested Specifics
-    // Anti-Evasion
-    { id: 'hit_chance_buff', type: 'pro', category: 'damage', translations: t('Accuracy Buff', 'Buff de Puntería', '命中バフ', '명중 버프', 'Buff de Precisão', '命中增益') },
-    { id: 'ignore_evasion_mechanic', type: 'pro', category: 'mechanics', translations: t('Ignores Evasion', 'Ignora Evasión', '回避無視', '회피 무시', 'Ignora Evasão', '无视闪避') },
+    { id: 'synergy_aoe', type: 'pro', category: 'mechanics', translations: t('Synergizes with AoE', 'Sinergia con AoE', '全体攻撃シナジー', '광역 시너지', 'Sinergia com AoE', 'AOE协同') },
+    { id: 'synergy_non_attack', type: 'pro', category: 'mechanics', translations: t('Synergizes with Non-Attack', 'Sinergia con Skills No Ofensivas', '非攻撃スキルシナジー', '비타격 시너지', 'Sinergia com Skills Não-Ofensivas', '非攻击技能协同') },
 
-    // Anti-Revive & Revive
-    { id: 'anti_revive_passive', type: 'pro', category: 'mechanics', translations: t('Anti-Revive Passive', 'Pasiva Anti-Revive', '蘇生不可パッシブ', '부활 불가 패시브', 'Passiva Anti-Revive', '被动无法复活') },
-    { id: 'cannot_be_revived', type: 'con', category: 'fragility', translations: t('Cannot be Revived', 'No puede ser revivido', '蘇生不可', '부활 불가', 'Não pode ser revivido', '无法复活') },
+    // NEW BUFFS
+    { id: 'buff_speed', type: 'pro', category: 'speed', translations: t('Speed Up', 'Aumento de Velocidad', '速度UP', '속도 증가', 'Aumento de Velocidade', '速度增加') },
+    { id: 'buff_continuous_healing', type: 'pro', category: 'survivability', translations: t('Continuous Healing', 'Curación Continua', '継続回復', '지속 회복', 'Cura Contínua', '持续恢复') },
+    { id: 'buff_reflect', type: 'pro', category: 'damage', translations: t('Reflect', 'Reflejo', '反射', '반사', 'Reflexo', '反射') },
+    { id: 'buff_barrier', type: 'pro', category: 'survivability', translations: t('Barrier', 'Barrera', 'シールド', '보호막', 'Barreira', '防护罩') },
+    { id: 'buff_revive', type: 'pro', category: 'survivability', translations: t('Revive Buff', 'Buff de Revivir', '蘇生バフ', '부활 버프', 'Buff de Reviver', '复活增益') },
+    { id: 'buff_cascade', type: 'pro', category: 'mechanics', translations: t('Cascade', 'Cascada', 'カスケード', '연쇄', 'Cascata', '连锁') },
+    { id: 'buff_rage', type: 'pro', category: 'damage', translations: t('Rage', 'Ira', '怒り', '분노', 'Ira', '愤怒') },
+    { id: 'buff_possession', type: 'pro', category: 'mechanics', translations: t('Possession', 'Posesión', '憑依', '빙의', 'Possessão', '附身') },
+    { id: 'buff_insight', type: 'pro', category: 'utility', translations: t('Insight', 'Perspicacia', '洞察', '통찰', 'Perspicácia', '洞察') },
 
-    // Counter Mechanics
-    { id: 'counter_stance', type: 'pro', category: 'mechanics', translations: t('Counter Stance', 'Postura de Contraataque', '反撃体勢', '반격 태세', 'Postura de Contra-ataque', '反击架势') },
-    { id: 'elbris_holder', type: 'pro', category: 'stats', translations: t('Elbris Holder', 'Usuario de Elbris', 'エルブリス', '엘브리스', 'Usuário de Elbris', '大保健') },
-    { id: 'reacts_to_crit', type: 'pro', category: 'mechanics', translations: t('Reacts to Crits', 'Reacciona a Críticos', '被クリ反応', '피격 시 반응 (치명)', 'Reage a Críticos', '暴击反击') },
-    { id: 'reacts_to_aoe', type: 'pro', category: 'mechanics', translations: t('Reacts to AoE', 'Reacciona a AoE', '全体攻撃反応', '광역 피격 시 반응', 'Reage a AoE', 'AOE反击') },
+    // NEW BUFFS (2026 Expansion)
+    { id: 'buff_greater_def', type: 'pro', category: 'utility', translations: t('Greater Defense', 'Mayor Defensa', '防御力大幅UP', '방어력 대폭 증가', 'Maior Defesa', '防御大幅提升') },
+    { id: 'buff_evasion_team', type: 'pro', category: 'utility', translations: t('Team Evasion', 'Evasión en Equipo', 'チーム回避', '팀 회피', 'Evasão em Equipe', '群体闪避') },
+    { id: 'buff_crit_resist_team', type: 'pro', category: 'utility', translations: t('Team Crit Resist', 'Resist. Crit Equipo', 'チームクリ抵抗', '팀 치명타 저항', 'Resist. Crit Equipe', '群体暴击抗性') },
+    { id: 'buff_revive_auto', type: 'pro', category: 'survivability', translations: t('Auto-Revive Buff', 'Buff Auto-Revivir', '自動蘇生', '자동 부활', 'Buff Auto-Reviver', '自动复活') },
 
-    // Dual & Extra Attacks
-    { id: 'forced_dual_attack', type: 'pro', category: 'mechanics', translations: t('Forced Dual Attack', 'Dual Attack Forzado', '強制協力攻撃', '강제 협공', 'Ataque Duplo Forçado', '强制夹攻') },
-    { id: 'random_dual_attack', type: 'pro', category: 'mechanics', translations: t('Random Dual Attack', 'Dual Attack Aleatorio', 'ランダム協力攻撃', '랜덤 협공', 'Ataque Duplo Aleatório', '随机夹攻') },
-    { id: 'extra_attack_trigger', type: 'pro', category: 'mechanics', translations: t('Triggers Extra Attack', 'Activa Ataque Extra', '追加攻撃発生', '추가 공격 발동', 'Ativa Ataque Extra', '触发额外攻击') },
-    { id: 'follow_up_attack', type: 'pro', category: 'mechanics', translations: t('Follow-up Attack', 'Ataque de Seguimiento', '追撃', '후속 타격', 'Ataque de Seguimento', '追加打击') },
-    // COMMUNITY ESSENTIALS (Round 4)
-    { id: 'soul_generator', type: 'pro', category: 'utility', translations: t('Soul Generator', 'Generador de Almas', 'ソウル獲得', '소울 수급', 'Gerador de Almas', '产魂') },
-    { id: 'undispellable', type: 'pro', category: 'mechanics', translations: t('Undispellable Buffs', 'Buffs Indisipables', '解除不可バフ', '해제 불가 버프', 'Buffs Indispelláveis', '不可驱散增益') },
-    { id: 'stat_stacking', type: 'pro', category: 'mechanics', translations: t('Stacks Stats', 'Acumula Stats', 'ステータス累積', '스탯 중첩', 'Acumula Stats', '叠加属性') },
-    { id: 'skill_chain', type: 'pro', category: 'mechanics', translations: t('Skill Chain/Combo', 'Combo de Habilidades', 'スキル連携', '스킬 연계', 'Combo de Habilidades', '技能连招') },
-    { id: 'one_shot_capable', type: 'pro', category: 'damage', translations: t('One-Shot Capable', 'Capaz de One-Shot', 'ワンパン可能', '원킬 가능', 'Capaz de One-Shot', '一击必杀') },
-    { id: 'variable_stats', type: 'pro', category: 'mechanics', translations: t('Stat Conversion', 'Conversión de Stats', 'ステータス変換', '스탯 변환', 'Conversão de Stats', '属性转化') },
-    { id: 'ignore_dmg_limit', type: 'pro', category: 'damage', translations: t('Ignores Dmg Limit', 'Ignora Límite de Daño', 'ダメージ制限無視', '피격 제한 무시', 'Ignora Limite de Dano', '无视伤害上限') },
-    { id: 'block_focus', type: 'pro', category: 'control', translations: t('Blocks Focus', 'Bloquea Foco', '集中獲得不可', '집중 획득 불가', 'Bloqueia Foco', '阻止专注') },
-    { id: 'block_fighting_spirit', type: 'pro', category: 'control', translations: t('Blocks Fighting Spirit', 'Bloquea Esp. Lucha', '闘志獲得不可', '투지 획득 불가', 'Bloqueia Esp. Luta', '阻止斗志') },
+    // SPECIAL EFFECTS
+    { id: 'effect_escort', type: 'pro', category: 'survivability', translations: t('Escort', 'Escolta', '護衛', '호위', 'Escolta', '护卫') },
+    { id: 'effect_mine', type: 'pro', category: 'damage', translations: t('Plant Mine', 'Planta Mina', '爆弾設置', '지뢰 설치', 'Mina', '埋雷') },
+    { id: 'effect_magic_nail', type: 'pro', category: 'damage', translations: t('Magic Nail', 'Clavo Mágico', '魔法釘', '마법 못', 'Prego Mágico', '魔法钉') },
+
+    // NEW DEBUFFS
+    { id: 'debuff_burn', type: 'pro', category: 'damage', translations: t('Burn', 'Quemadura', '火傷', '화상', 'Queimadura', '烧伤') },
+    { id: 'debuff_bleed', type: 'pro', category: 'damage', translations: t('Bleed', 'Sangrado', '出血', '출혈', 'Sangramento', '流血') },
+    { id: 'debuff_poison', type: 'pro', category: 'damage', translations: t('Poison', 'Veneno', '毒', '중독', 'Veneno', '中毒') },
+    { id: 'debuff_bomb', type: 'pro', category: 'damage', translations: t('Bomb', 'Bomba', '爆弾', '폭탄', 'Bomba', '炸弹') },
+    { id: 'debuff_venom', type: 'pro', category: 'damage', translations: t('Venom', 'Toxina', '猛毒', '맹독', 'Toxina', '剧毒') },
+    { id: 'debuff_stigma', type: 'pro', category: 'control', translations: t('Stigma', 'Estigma', '烙印', '낙인', 'Estigma', '烙印') },
+    { id: 'debuff_curse', type: 'pro', category: 'damage', translations: t('Curse', 'Maldición', '呪い', '저주', 'Maldição', '诅咒') },
+    { id: 'debuff_bind', type: 'pro', category: 'control', translations: t('Bind', 'Atadura', '束縛', '속박', 'Atadura', '束缚') },
+    { id: 'debuff_beguile', type: 'pro', category: 'control', translations: t('Beguile', 'Seducción', '誘惑', '현혹', 'Sedução', '迷惑') },
+    { id: 'debuff_vampiric', type: 'pro', category: 'damage', translations: t('Vampiric Touch', 'Toque Vampírico', '吸血の手', '흡혈의 손길', 'Toque Vampírico', '吸血鬼之触') },
+    { id: 'debuff_share', type: 'pro', category: 'damage', translations: t('Share Damage', 'Compartir Daño', 'ダメージ分配', '피해 분담', 'Compartilhar Dano', '分担伤害') },
+    { id: 'debuff_frostbite', type: 'pro', category: 'damage', translations: t('Frostbite', 'Congelación', '凍傷', '동상', 'Congelamento', '冻伤') },
+    { id: 'debuff_fear', type: 'pro', category: 'control', translations: t('Fear', 'Miedo', '恐怖', '공포', 'Medo', '恐惧') },
+
+    // NEW DEBUFFS (2026 Expansion)
+    { id: 'debuff_block', type: 'pro', category: 'control', translations: t('Block', 'Bloqueo', 'ブロック', '차단', 'Bloqueio', '封锁') },
+    { id: 'debuff_trauma', type: 'pro', category: 'damage', translations: t('Trauma', 'Trauma', 'トラウマ', '트라우마', 'Trauma', '创伤') },
+    { id: 'debuff_decrease_crit_chance', type: 'pro', category: 'control', translations: t('Decr. Crit Chance', 'Red. Prob. Crítico', 'クリ率ダウン', '치명타 확률 감소', 'Red. Chance Crítica', '暴击率降低') },
+    { id: 'debuff_decrease_crit_dmg', type: 'pro', category: 'control', translations: t('Decr. Crit Dmg', 'Red. Daño Crítico', 'クリダメダウン', '치명타 피해 감소', 'Red. Dano Crítico', '暴击伤害降低') },
+    { id: 'debuff_confuse', type: 'pro', category: 'control', translations: t('Confusion', 'Confusión', '混乱', '혼란', 'Confusão', '混乱') },
+
+    // MECHANICS (Advanced)
+    { id: 'mech_reset_cooldown', type: 'pro', category: 'utility', translations: t('Reset Cooldown', 'Resetea CD', 'CDリセット', '쿨타임 초기화', 'Reseta CD', '重置冷却') },
+    { id: 'mech_dispel_debuff', type: 'pro', category: 'utility', translations: t('Dispel Debuffs', 'Disipa Debuffs', 'デバフ解除', '디버프 해제', 'Disipa Debuffs', '驱散减益') },
+
+    // NEW META
+    { id: 'meta_aggro', type: 'pro', category: 'meta', translations: t('Aggro', 'Aggro', 'アグロ', '어그로', 'Aggro', '快攻') },
+    { id: 'meta_cleave', type: 'pro', category: 'meta', translations: t('Cleave', 'Cleave', 'クリーブ', '속공', 'Cleave', '核爆') },
+    { id: 'meta_control', type: 'pro', category: 'meta', translations: t('Control', 'Control', 'コントロール', '컨트롤', 'Control', '控制') },
+    { id: 'meta_antitank', type: 'pro', category: 'meta', translations: t('Anti-Tank', 'Anti-Tanque', 'アンチタンク', '탱커 카운터', 'Anti-Tanque', '反肉盾') },
+    { id: 'meta_anticontrol', type: 'pro', category: 'meta', translations: t('Anti-Control', 'Anti-Control', 'アンチコントロール', '컨트롤 카운터', 'Anti-Controle', '反控制') },
+
+    // ADDITIONAL BUFFS & MECHS (Final Expansion)
+    { id: 'buff_hit_chance', type: 'pro', category: 'utility', translations: t('Hit Chance Up', 'Aumento Prob. Golpe', '命中率UP', '명중률 증가', 'Aumento Prob. Acerto', '命中率提升') },
+    { id: 'buff_counter', type: 'pro', category: 'damage', translations: t('Counterattack Buff', 'Buff Contraataque', '反撃バフ', '반격 버프', 'Buff Contra-ataque', '反击增益') },
+    { id: 'mech_always_crit', type: 'pro', category: 'damage', translations: t('Always Crits', 'Siempre Crítico', '常時クリティカル', '항상 치명타', 'Sempre Crítico', '必定暴击') },
+    { id: 'mech_never_crit', type: 'pro', category: 'stats', translations: t('Cannot Crit', 'No puede Criticar', 'クリティカル不可', '치명타 불가', 'Não pode Critar', '无法暴击') },
+    { id: 'mech_start_stealth', type: 'pro', category: 'survivability', translations: t('Starts in Stealth', 'Inicia con Sigilo', '開幕隠れ身', '시작 시 은신', 'Inicia com Furtividade', '开局隐身') },
+    { id: 'mech_start_barrier', type: 'pro', category: 'survivability', translations: t('Starts with Barrier', 'Inicia con Barrera', '開幕シールド', '시작 시 보호막', 'Inicia com Barreira', '开局护盾') },
+    { id: 'mech_start_immunity', type: 'pro', category: 'survivability', translations: t('Starts with Immunity', 'Inicia con Inmunidad', '開幕免疫', '시작 시 면역', 'Inicia com Imunidade', '开局免疫') },
+    { id: 'synergy_elbris', type: 'pro', category: 'stats', translations: t('Elbris Synergy', 'Sinergia Elbris', 'エルブリス相性', '엘브리스 시너지', 'Sinergia Elbris', '大宝剑协同') },
+    { id: 'synergy_dual', type: 'pro', category: 'mechanics', translations: t('Dual Atk Synergy', 'Sinergia Dual', '連携相性', '협공 시너지', 'Sinergia Dual', '夹攻协同') },
+
+    // NEW MECHANICS & DAMAGE TYPES (2026 Expansion)
+    { id: 'mech_crushing_hit', type: 'pro', category: 'damage', translations: t('Crushing Hit', 'Golpe Aplastante', '壊滅打撃', '분쇄', 'Golpe Esmagador', '粉碎') },
+    { id: 'mech_execution', type: 'pro', category: 'damage', translations: t('Execution', 'Ejecución', '処刑', '처형', 'Execução', '处决') },
+    { id: 'damage_collision', type: 'pro', category: 'damage', translations: t('Collision Damage', 'Daño Colisión', '衝突ダメージ', '충돌 피해', 'Dano Colisão', '碰撞伤害') },
+    { id: 'mech_zone_effect', type: 'pro', category: 'mechanics', translations: t('Zone Effect', 'Efecto de Zona', '領域展開', '영역 전개', 'Efeito de Zona', '领域效果') },
+    { id: 'mech_undispellable', type: 'pro', category: 'mechanics', translations: t('Undispellable', 'Indisipable', '解除不可', '해제 불가', 'Indissipável', '无法驱散') },
+    { id: 'mech_ignore_dmg_limit', type: 'pro', category: 'damage', translations: t('Ignores Dmg Limit', 'Ignora Lím. Daño', 'ダメ制限無視', '피해량 제한 무시', 'Ignora Lim. Dano', '无视伤害上限') },
+    { id: 'mech_anti_revive_mechanic', type: 'pro', category: 'mechanics', translations: t('Anti-Revive', 'Anti-Revivir', '蘇生不可', '부활 불가', 'Anti-Reviver', '无法复活') },
+    { id: 'mech_resource_block', type: 'pro', category: 'control', translations: t('Resource Block', 'Bloqueo Recursos', 'リソース封印', '자원 차단', 'Bloqueio Recursos', '资源封锁') },
 ];
 
 /**
@@ -360,15 +404,55 @@ export const CONS_TAGS: Tag[] = [
     { id: 'weak_to_injury', type: 'con', category: 'competitive', translations: t('Weak vs Injury', 'Débil vs Herida', '対負傷不利', '부상에 취약', 'Fraco contra Ferimento', '怕伤口') },
 
     // NEW META 2026 CONS
-    { id: 'weak_to_fixed_dmg', type: 'con', category: 'fragility', translations: t('Weak to Fixed Dmg', 'Débil vs Daño Fijo', '固定ダメに弱い', '고정뎀 취약', 'Fraco contra Dano Fixo', '怕固伤') },
-    { id: 'weak_to_seal', type: 'con', category: 'competitive', translations: t('Weak vs Seal', 'Débil vs Sello', '対封印不利', '봉인에 취약', 'Fraco contra Selo', '怕封印') },
+
     { id: 'weak_to_evasion', type: 'con', category: 'offense', translations: t('Struggles vs Evasion', 'Sufre vs Evasión', '対回避不利', '회피 덱에 약함', 'Sofre contra Evasão', '怕闪避') },
     { id: 'susceptible_to_cleave', type: 'con', category: 'fragility', translations: t('Susceptible to Cleave', 'Susceptible a Cleave', 'クリーブに弱い', '속공/클리브 취약', 'Suscetível a Cleave', '怕核爆') },
     { id: 'resource_reliant', type: 'con', category: 'utility_limits', translations: t('Resource Reliant', 'Depende de Recursos', 'リソース依存', '자원 의존', 'Depende de Recursos', '依赖资源') },
 
     // NEW META 2026 PROS (Should be up but putting here for context or moving up? Let's keep cons in cons section.
     // Wait, PROS tags are in PROS_TAGS array. I need to edit PROS_TAGS for the pros.)
+    // WEAKNESSES - Mechanics
+    { id: 'weak_to_stun', type: 'con', category: 'fragility', translations: t('Weak to Stun', 'Débil vs Stun', 'スタンに弱い', '기절에 취약', 'Fraco contra Stun', '怕眩晕') },
+    { id: 'weak_to_sleep', type: 'con', category: 'fragility', translations: t('Weak to Sleep', 'Débil vs Sueño', '睡眠に弱い', '수면에 취약', 'Fraco contra Sono', '怕睡眠') },
+    { id: 'weak_to_silence', type: 'con', category: 'fragility', translations: t('Weak to Silence', 'Débil vs Silencio', '沈黙に弱い', '침묵에 취약', 'Fraco contra Silêncio', '怕沉默') },
+    { id: 'weak_to_provoke', type: 'con', category: 'fragility', translations: t('Weak to Provoke', 'Débil vs Provocar', '挑発に弱い', '도발에 취약', 'Fraco contra Provocação', '怕嘲讽') },
+    { id: 'weak_to_unbuffable', type: 'con', category: 'fragility', translations: t('Weak to Unbuffable', 'Débil vs Anti-Buff', '強化不可に弱い', '강불에 취약', 'Fraco contra Anti-Buff', '怕无法强化') },
+    { id: 'weak_to_unhealable', type: 'con', category: 'fragility', translations: t('Weak to Unhealable', 'Débil vs Incurable', '回復不可に弱い', '회불에 취약', 'Fraco contra Incurável', '怕无法恢复') },
+    { id: 'weak_to_burn', type: 'con', category: 'fragility', translations: t('Weak to Burn', 'Débil vs Quemadura', '火傷に弱い', '화상에 취약', 'Fraco contra Queimadura', '怕烧伤') },
+    { id: 'weak_to_bleed', type: 'con', category: 'fragility', translations: t('Weak to Bleed', 'Débil vs Sangrado', '出血に弱い', '출혈에 취약', 'Fraco contra Sangramento', '怕流血') },
+    { id: 'weak_to_poison', type: 'con', category: 'fragility', translations: t('Weak to Poison', 'Débil vs Veneno', '毒に弱い', '중독에 취약', 'Fraco contra Veneno', '怕中毒') },
+    { id: 'weak_to_bomb', type: 'con', category: 'fragility', translations: t('Weak to Bomb', 'Débil vs Bombas', '爆弾に弱い', '폭탄에 취약', 'Fraco contra Bombas', '怕炸弹') },
+
+    // DEPENDENCIES - Resources & Stats
+    { id: 'requires_souls', type: 'con', category: 'dependencies', translations: t('Requires Souls', 'Requiere Almas', 'ソウル必要', '소울 필요', 'Requer Almas', '需要魂') },
+    { id: 'requires_focus', type: 'con', category: 'dependencies', translations: t('Requires Focus', 'Requiere Foco', '集中必要', '집중 필요', 'Requer Foco', '需要专注') },
+    { id: 'requires_fighting_spirit', type: 'con', category: 'dependencies', translations: t('Requires Fighting Spirit', 'Requiere Esp. Lucha', '闘志必要', '투지 필요', 'Requer Esp. Luta', '需要斗志') },
+    { id: 'requires_specific_debuff', type: 'con', category: 'dependencies', translations: t('Requires Specific Debuff', 'Requiere Debuff Específico', '特定デバフ必要', '특정 디버프 필요', 'Requer Debuff Específico', '依赖特定减益') },
+    { id: 'requires_specific_buff', type: 'con', category: 'dependencies', translations: t('Requires Specific Buff', 'Requiere Buff Específico', '特定バフ必要', '특정 버프 필요', 'Requer Buff Específico', '依赖特定增益') },
+    { id: 'requires_crit', type: 'con', category: 'dependencies', translations: t('Requires Crit', 'Requiere Crítico', 'クリティカル必要', '치명타 필요', 'Requer Crítico', '需要暴击') },
+    { id: 'requires_high_speed', type: 'con', category: 'dependencies', translations: t('Requires High Speed', 'Requiere Alta Velocidad', '高速度必要', '높은 속도 필요', 'Requer Alta Velocidade', '需要高速') },
+    { id: 'requires_effectiveness', type: 'con', category: 'dependencies', translations: t('Requires Effectiveness', 'Requiere Efectividad', '効果命中必要', '효과적중 필요', 'Requer Efetividade', '需要命中') },
+    { id: 'requires_effect_res', type: 'con', category: 'dependencies', translations: t('Requires Eff Res', 'Requiere Resistencia', '効果抵抗必要', '효과저항 필요', 'Requer Resistência', '需要抗性') },
+
+    // META CONS
+    { id: 'easily_kited', type: 'con', category: 'speed_issues', translations: t('Easily Kited', 'Fácil de Kitear', 'カイトされやすい', '카이팅 당함', 'Fácil de Kitear', '易被风筝') },
+    { id: 'turn_limit', type: 'con', category: 'utility_limits', translations: t('Turn Limit', 'Límite de Turnos', 'ターン制限', '턴 제한', 'Limite de Turnos', '回合限制') },
+    { id: 'cannot_use_skills', type: 'con', category: 'control_issues', translations: t('Cannot Use Skills (AI)', 'No Usa Skills (IA)', 'AIスキル使用不可', 'AI 스킬 미사용', 'Não Usa Skills (IA)', 'AI不放技能') },
     { id: 'rng_reliant', type: 'con', category: 'dependencies', translations: t('RNG Reliant', 'Depende de la Suerte', '運ゲー', '운빨', 'Depende da Sorte', '看脸') },
+
+    // MORE WEAKNESSES
+    { id: 'weak_to_strippers', type: 'con', category: 'competitive', translations: t('Weak to Strippers', 'Débil vs Dispel', '解除に弱い', '해제에 취약', 'Fraco contra Dispel', '怕驱散') },
+    { id: 'weak_to_def_break', type: 'con', category: 'fragility', translations: t('Weak to Def Break', 'Débil vs Def Break', '防御ダウンに弱い', '방깍 취약', 'Fraco contra Quebra Def', '怕破甲') },
+    { id: 'weak_to_burst', type: 'con', category: 'fragility', translations: t('Weak to Burst', 'Débil vs Burst', 'バーストに弱い', '폭딜에 취약', 'Fraco contra Burst', '怕爆发') },
+    { id: 'no_defensive_tools', type: 'con', category: 'fragility', translations: t('No Defense Skills', 'Sin Habilidades Def', '防御スキルなし', '방어 스킬 없음', 'Sem Skills Defensivas', '无保命') },
+    { id: 'combo_reliant', type: 'con', category: 'dependencies', translations: t('Combo Reliant', 'Depende de Combo', 'コンボ依存', '콤보 의존', 'Depende de Combo', '依赖连招') },
+    { id: 'setup_reliant', type: 'con', category: 'dependencies', translations: t('Setup Reliant', 'Depende de Setup', 'セットアップ依存', '준비 필요', 'Depende de Setup', '依赖启动') },
+
+    // NEW WEAKNESSES (2026 Expansion)
+    { id: 'weak_to_block', type: 'con', category: 'fragility', translations: t('Weak to Block', 'Débil vs Bloqueo', 'ブロックに弱い', '차단에 취약', 'Fraco contra Bloqueio', '怕封锁') },
+    { id: 'weak_to_zone', type: 'con', category: 'fragility', translations: t('Weak to Zone Eff.', 'Débil vs Zonas', '領域に弱い', '영역 효과에 취약', 'Fraco contra Zonas', '怕领域') },
+    { id: 'weak_to_fixed_dmg_burst', type: 'con', category: 'fragility', translations: t('Weak to Fixed Burst', 'Débil vs Burst Fijo', '固定ダメバースト弱', '고정딜 폭발 취약', 'Fraco contra Burst Fixo', '怕固伤爆发') },
+    { id: 'weak_to_execution', type: 'con', category: 'fragility', translations: t('Weak to Execution', 'Débil vs Ejecución', '処刑に弱い', '처형에 취약', 'Fraco contra Execução', '怕处决') },
 ];
 
 /**
