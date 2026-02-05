@@ -83,7 +83,7 @@ class MonarchIseriaSeeder extends Seeder
                 ],
                 
                 // Construct Image URL
-                'image_url' => 'https://raw.githubusercontent.com/CeciliaBot/E7Tools/master/public/assets/hero/c6024_su.png',
+                'image_url' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/face/c6024_su.png',
                 
                 'data_hash' => md5('monarch-of-the-sword-iseria-c6024-v1'),
             ]
