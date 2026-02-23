@@ -42,6 +42,8 @@ class Artifact extends Model
     private const NEW_ARTIFACT_ICONS = [
         'Tome of the Life\'s End' => 'https://moccasin-sparrow-217730.hostingersite.com/images/artifacts/icon_art0231.png',
         'Ritual of Sealing Flames' => 'https://moccasin-sparrow-217730.hostingersite.com/images/artifacts/art0236_fu.png',
+        'Gifted Pen' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0235_fu.png',
+        'Unleashed Axe of Heavenly Mandate' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0239_fu.png',
         // Add more new artifacts here as needed
     ];
 
