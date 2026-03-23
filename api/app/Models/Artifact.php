@@ -44,6 +44,8 @@ class Artifact extends Model
         'Ritual of Sealing Flames' => 'https://moccasin-sparrow-217730.hostingersite.com/images/artifacts/art0236_fu.png',
         'Gifted Pen' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0235_fu.png',
         'Unleashed Axe of Heavenly Mandate' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0239_fu.png',
+        'Shadow Winds 7' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0242_fu.png',
+        'Glorious Throne' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0240_fu.png',
         // Add more new artifacts here as needed
     ];
 
