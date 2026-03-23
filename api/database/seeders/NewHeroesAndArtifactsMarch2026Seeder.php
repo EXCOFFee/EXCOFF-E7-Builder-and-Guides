@@ -103,7 +103,7 @@ class NewHeroesAndArtifactsMarch2026Seeder extends Seeder
                 'name' => 'Tactical Archetype Coli',
                 'slug' => 'tactical-archetype-coli',
                 'element' => 'ice',
-                'class' => 'assassin',
+                'class' => 'thief',
                 'rarity' => 5,
 
                 // Base Stats (from web)
@@ -186,7 +186,7 @@ class NewHeroesAndArtifactsMarch2026Seeder extends Seeder
                 'name' => 'Shadow Winds 7',
                 'name_es' => 'Shadow Winds 7',
                 'slug' => 'shadow-winds-7',
-                'class' => 'assassin',
+                'class' => 'thief',
                 'rarity' => 5,
                 'description' => "Increases Attack by 10% (Max 20%). At the start of the first battle, has a 50% (Max 100%) chance to gain 10 Soul and grant swift attack to the caster. This Artifact's skill effect can only apply to one Hero within a team.",
                 'image_url' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0242_fu.png',
