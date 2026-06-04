@@ -3,8 +3,120 @@
         "description": "Custom hero data overrides for heroes not in Fribbels or requiring manual corrections",
         "balance_patches": [
             "11/20/2024 - ARavi, Laika, Zio, Ran, Zahhak, Schuri, Hasol",
-            "01/08/2026 - Judge Kise, LR Krau, DB Senya, Beehoo, Hwayoung, Landy, MG Lilias, M Bunny Dominiel, Savior Adin, A Mont"
+            "01/08/2026 - Judge Kise, LR Krau, DB Senya, Beehoo, Hwayoung, Landy, MG Lilias, M Bunny Dominiel, Savior Adin, A Mont",
+            "05/28/2026 - Ivana",
+            "06/04/2026 - Rhianna and Luciella"
         ]
+    },
+    "rhianna-and-luciella": {
+        "code": "c2185",
+        "_id": "rhianna-and-luciella",
+        "name": "Rhianna and Luciella",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "assassin",
+        "skills": {
+            "S1": {
+                "name": "Dual Strike",
+                "description": "Rhianna attacks the enemy, with a 75% chance to inflict Bind for 1 turn. Then, Luciella attacks the enemy, with the attack ignoring damage sharing. Damage dealt increases proportional to the caster's Speed.",
+                "rate": 0.95,
+                "pow": 1,
+                "selfSpdScaling": 0.00075
+            },
+            "S2": {
+                "name": "Rhianna's Resolve",
+                "description": "At the start of battle and when an ally is defeated, gains Rhianna's Resolve (non-dispellable) for 2 turns. Rhianna's Resolve: Increases Evasion, Effectiveness, and Critical Damage. While in this state, after Dual Strike, grants an extra turn.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Phantom Execution",
+                "description": "Rhianna attacks all enemies, with a 75% chance to inflict Defense Break for 2 turns. Then, Luciella attacks all enemies, with a 75% chance to inflict Fear for 1 turn. Both attacks ignore damage sharing and penetrate Defense by 30%. Damage dealt increases proportional to the caster's Speed.",
+                "rate": 0.85,
+                "pow": 1,
+                "selfSpdScaling": 0.00075,
+                "penetration": 0.3,
+                "cooldown": 5,
+                "targets": 3
+            }
+        },
+        "self_devotion": {
+            "type": "cri",
+            "grades": {
+                "B": 0.056,
+                "A": 0.084,
+                "S": 0.112,
+                "SS": 0.14,
+                "SSS": 0.168
+            }
+        },
+        "calculatedStatus": {
+            "lv60SixStarFullyAwakened": {
+                "atk": 1119,
+                "hp": 4988,
+                "def": 536,
+                "spd": 132,
+                "chc": 0.23,
+                "chd": 1.5,
+                "eff": 0,
+                "efr": 0
+            }
+        },
+        "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/face/c2185_su.png",
+        "source": "ceciliabot",
+        "source_url": "https://ceciliabot.github.io/#/hero/rhianna-and-luciella"
+    },
+    "ivana": {
+        "code": "c1182",
+        "_id": "ivana",
+        "name": "Ivana",
+        "rarity": 5,
+        "attribute": "fire",
+        "role": "manauser",
+        "skills": {
+            "S1": {
+                "name": "Starlight",
+                "description": "Attacks the enemy with holy light and restores the health of all allies proportional to their maximum health.",
+                "rate": 1,
+                "pow": 1,
+                "soulburn": true,
+                "soulburn_souls": 20,
+                "soulburn_effect": "Increases the amount of health recovered."
+            },
+            "S2": {
+                "name": "Light of Repose",
+                "description": "The caster is immune to Combat Readiness reduction effects. At the start of the turn, dispels Immortality from all enemies (ignores Effect Resistance). If an enemy has Immortality at the end of any unit's turn, removes all debuffs from all allies, grants Radiance (non-dispellable buff: reduces damage taken by 50% when attacked) for 2 turns, and increases the caster's Combat Readiness by 35%.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Requiem Prayer",
+                "description": "Dispels 2 debuffs from all allies, grants them Immunity for 2 turns and Ignore Sharing for 3 turns. Increases Combat Readiness of all allies by 20%.",
+                "cooldown": 5
+            }
+        },
+        "self_devotion": {
+            "type": "res",
+            "grades": {
+                "B": 0.06,
+                "A": 0.09,
+                "S": 0.12,
+                "SS": 0.15,
+                "SSS": 0.18
+            }
+        },
+        "calculatedStatus": {
+            "lv60SixStarFullyAwakened": {
+                "atk": 694,
+                "hp": 4855,
+                "def": 655,
+                "spd": 117,
+                "chc": 0.15,
+                "chd": 1.5,
+                "eff": 0.3,
+                "efr": 0
+            }
+        },
+        "source": "ceciliabot",
+        "source_url": "https://ceciliabot.github.io/#/hero/ivana"
     },
     "swift-flagbearer-sigret": {
         "code": "c5072",

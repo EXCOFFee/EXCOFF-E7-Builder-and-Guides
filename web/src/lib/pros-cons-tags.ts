@@ -241,7 +241,6 @@ export const PROS_TAGS: Tag[] = [
     { id: 'frostbite', type: 'pro', category: 'damage', translations: t('Inflicts Frostbite', 'Inflige Congelación', '凍傷付与', '동상 부여', 'Inflige Congelamento', '造成冻伤') },
     { id: 'electric_shock', type: 'pro', category: 'damage', translations: t('Inflicts Shock', 'Inflige Electroshock', '感電付与', '감전 부여', 'Inflige Choque', '造成感电') },
     { id: 'stealth_detection', type: 'pro', category: 'mechanics', translations: t('Detects Stealth', 'Detecta Sigilo', 'ステルス看破', '은신 감지', 'Detecta Furtividade', '看破隐身') },
-    { id: 'barrier_inversion_mechanic', type: 'pro', category: 'mechanics', translations: t('Barrier Inversion', 'Inversión de Barrera', 'バリア反転', '보호막 반전', 'Inversão de Barreira', '护盾逆转') },
     { id: 'reflect_buff', type: 'pro', category: 'utility', translations: t('Reflect Buff', 'Buff Reflejo', '反射バフ', '반사 버프', 'Buff Reflexo', '反射增益') },
     { id: 'revive_prevention', type: 'pro', category: 'mechanics', translations: t('Extinction (Anti-Revive)', 'Extinción (Anti-Revive)', '消滅', '소멸', 'Extinção (Anti-Revive)', '灭亡 (无法复活)') },
     { id: 'ignore_effect_res', type: 'pro', category: 'mechanics', translations: t('Ignore Effect Res', 'Ignora Resistencia', '効果抵抗無視', '효저 무시', 'Ignora Resistência', '无视抗性') },
@@ -336,8 +335,30 @@ export const PROS_TAGS: Tag[] = [
     { id: 'mech_zone_effect', type: 'pro', category: 'mechanics', translations: t('Zone Effect', 'Efecto de Zona', '領域展開', '영역 전개', 'Efeito de Zona', '领域效果') },
     { id: 'mech_undispellable', type: 'pro', category: 'mechanics', translations: t('Undispellable', 'Indisipable', '解除不可', '해제 불가', 'Indissipável', '无法驱散') },
     { id: 'mech_ignore_dmg_limit', type: 'pro', category: 'damage', translations: t('Ignores Dmg Limit', 'Ignora Lím. Daño', 'ダメ制限無視', '피해량 제한 무시', 'Ignora Lim. Dano', '无视伤害上限') },
-    { id: 'mech_anti_revive_mechanic', type: 'pro', category: 'mechanics', translations: t('Anti-Revive', 'Anti-Revivir', '蘇生不可', '부활 불가', 'Anti-Reviver', '无法复活') },
     { id: 'mech_resource_block', type: 'pro', category: 'control', translations: t('Resource Block', 'Bloqueo Recursos', 'リソース封印', '자원 차단', 'Bloqueio Recursos', '资源封锁') },
+
+    // NEW ERA 2026 — Mechanics & Buffs
+    { id: 'grants_radiance', type: 'pro', category: 'survivability', translations: t('Grants Radiance', 'Otorga Radiancia', '輝き付与', '광휘 부여', 'Concede Radiância', '赋予光辉') },
+    { id: 'grants_ignore_sharing', type: 'pro', category: 'utility', translations: t('Grants Team Ignore Sharing', 'Equipo Ignora Distribución', 'チーム分配無視付与', '팀 분배 무시 부여', 'Equipe Ignora Distribuição', '赋予团队忽视分摊') },
+    { id: 'dispels_immortality', type: 'pro', category: 'mechanics', translations: t('Dispels Immortality', 'Disipa Inmortalidad (ignora Res)', '不死解除 (抵抗無視)', '불사 해제 (효저 무시)', 'Disipa Imortalidade (ignora Res)', '驱散不死 (无视抗性)') },
+    { id: 'anti_damage_share', type: 'pro', category: 'mechanics', translations: t('Counters Damage Sharing', 'Contra Distribución de Daño', 'ダメージ分配対策', '피해 분배 카운터', 'Contra Distribuição de Dano', '反制伤害分摊') },
+    { id: 'seals_passive', type: 'pro', category: 'mechanics', translations: t('Seals Enemy Passive', 'Sella Pasiva Enemiga', '敵パッシブ封印', '적 패시브 봉인', 'Sela Passiva Inimiga', '封印敌方被动') },
+    { id: 'turn_cycler', type: 'pro', category: 'speed', translations: t('Turn Cycler', 'Cicla Turnos Rápido', '高速ターン回転', '고속 턴 사이클러', 'Ciclador de Turnos', '快速循环回合') },
+    { id: 'works_without_first_turn', type: 'pro', category: 'speed', translations: t("Doesn't Need First Turn", 'No Necesita Primer Turno', '先攻不要', '선턴 불필요', 'Não Precisa de Primeiro Turno', '无需先手') },
+    { id: 'duo_mechanic', type: 'pro', category: 'mechanics', translations: t('Dual Character Mechanic', 'Mecánica Doble Personaje', 'デュオキャラ', '듀오 캐릭터', 'Mecânica Personagem Duplo', '双角色机制') },
+
+    // NEW ERA 2026 — Meta & Competitive
+    { id: 'anti_bruiser', type: 'pro', category: 'meta', translations: t('Anti-Bruiser', 'Anti-Tanque Bruiser', 'アンチブルーザー', '브루저 카운터', 'Anti-Bruiser', '反肉盾') },
+    { id: 'new_era_staple', type: 'pro', category: 'meta', translations: t('New Era Staple', 'Esencial New Era', 'ニューエラ定番', '뉴에라 필수픽', 'Indispensável New Era', '新纪元核心') },
+    { id: 'speed_variance_immune', type: 'pro', category: 'stats', translations: t('Ignores Speed Variance', 'Inmune Varianza Vel.', '速度差無視', '속도 편차 무시', 'Ignora Variância de Vel.', '无视速度差') },
+
+    // NEW ERA 2026 — Gear Sets
+    { id: 'fervor_set_best', type: 'pro', category: 'stats', translations: t('Best on Fervor Set', 'Mejor con Set Fervor', 'フェルボーセット推奨', '열정셋 추천', 'Melhor com Set Fervor', '推荐热情套') },
+    { id: 'weakening_set_synergy', type: 'pro', category: 'stats', translations: t('Weakening Set Synergy', 'Sinergia Set Debilitador', 'ウィークニングセット相性', '약화셋 시너지', 'Sinergia Set Enfraquecedor', '虚弱套协同') },
+
+    // NEW ERA 2026 — PvE Content
+    { id: 'otherworld_breach_pick', type: 'pro', category: 'pve', translations: t('Otherworld Breach Pick', 'Pick Brecha Otro Mundo', '異世界侵攻推奨', '이세계 침공 추천', 'Pick Brecha do Outro Mundo', '异界侵蚀推荐') },
+    { id: 'constellation_trial_pick', type: 'pro', category: 'pve', translations: t('Trial of Constellations Pick', 'Pick Prueba Constelaciones', '星座試練推奨', '별자리 시험 추천', 'Pick Prova das Constelações', '星座试炼推荐') },
 ];
 
 /**
@@ -409,8 +430,6 @@ export const CONS_TAGS: Tag[] = [
     { id: 'susceptible_to_cleave', type: 'con', category: 'fragility', translations: t('Susceptible to Cleave', 'Susceptible a Cleave', 'クリーブに弱い', '속공/클리브 취약', 'Suscetível a Cleave', '怕核爆') },
     { id: 'resource_reliant', type: 'con', category: 'utility_limits', translations: t('Resource Reliant', 'Depende de Recursos', 'リソース依存', '자원 의존', 'Depende de Recursos', '依赖资源') },
 
-    // NEW META 2026 PROS (Should be up but putting here for context or moving up? Let's keep cons in cons section.
-    // Wait, PROS tags are in PROS_TAGS array. I need to edit PROS_TAGS for the pros.)
     // WEAKNESSES - Mechanics
     { id: 'weak_to_stun', type: 'con', category: 'fragility', translations: t('Weak to Stun', 'Débil vs Stun', 'スタンに弱い', '기절에 취약', 'Fraco contra Stun', '怕眩晕') },
     { id: 'weak_to_sleep', type: 'con', category: 'fragility', translations: t('Weak to Sleep', 'Débil vs Sueño', '睡眠に弱い', '수면에 취약', 'Fraco contra Sono', '怕睡眠') },
@@ -453,6 +472,22 @@ export const CONS_TAGS: Tag[] = [
     { id: 'weak_to_zone', type: 'con', category: 'fragility', translations: t('Weak to Zone Eff.', 'Débil vs Zonas', '領域に弱い', '영역 효과에 취약', 'Fraco contra Zonas', '怕领域') },
     { id: 'weak_to_fixed_dmg_burst', type: 'con', category: 'fragility', translations: t('Weak to Fixed Burst', 'Débil vs Burst Fijo', '固定ダメバースト弱', '고정딜 폭발 취약', 'Fraco contra Burst Fixo', '怕固伤爆发') },
     { id: 'weak_to_execution', type: 'con', category: 'fragility', translations: t('Weak to Execution', 'Débil vs Ejecución', '処刑に弱い', '처형에 취약', 'Fraco contra Execução', '怕处决') },
+
+    // NEW ERA 2026 — Competitive Weaknesses
+    { id: 'speed_rng_reliant', type: 'con', category: 'speed_issues', translations: t('Speed RNG Reliant (±5%)', 'Varianza de Vel. ±5%', '速度RNG依存 (±5%)', '속도 RNG 의존 (±5%)', 'Dependente de RNG Vel. (±5%)', '依赖速度随机 (±5%)') },
+    { id: 'passive_sealable', type: 'con', category: 'competitive', translations: t('Passive Can Be Sealed', 'Pasiva Sellable', 'パッシブ封印可能', '패시브 봉인 가능', 'Passiva Pode Ser Selada', '被动可被封印') },
+    { id: 'exodia_dependent', type: 'con', category: 'dependencies', translations: t('Exodia Comp Only', 'Solo en Combo Exodia', 'エクゾディア依存', '엑조디아 의존', 'Apenas em Combo Exodia', '仅Exodia组合') },
+    { id: 'countered_by_ivana', type: 'con', category: 'competitive', translations: t('Hard-Countered by Ivana', 'Contrarrestado por Ivana', 'イバナにカウンター', '이바나에 카운터', 'Counterado por Ivana', '被伊万娜克制') },
+    { id: 'rta_coin_flip', type: 'con', category: 'competitive', translations: t('RTA Coin Flip', 'Cara o Cruz en RTA', 'RTA運ゲー', 'RTA 동전 던지기', 'Cara ou Coroa no RTA', 'RTA靠运气') },
+    { id: 'roster_depth_required', type: 'con', category: 'competitive', translations: t('Requires Wide Roster', 'Requiere Roster Amplio', '広いロスター必要', '폭넓은 로스터 필요', 'Requer Roster Amplo', '需要宽厚阵容') },
+    { id: 'only_works_on_offense', type: 'con', category: 'utility_limits', translations: t('Offense-Only (useless in GW def)', 'Solo Ofensivo (inútil en def GW)', '攻撃専用 (防衛不向き)', '공격 전용 (방덱 부적합)', 'Apenas Ofensivo (inútil GW def)', '仅进攻 (防守无用)') },
+    { id: 'new_era_countered', type: 'con', category: 'competitive', translations: t('Outclassed by New Era Heroes', 'Superado por Héroes New Era', 'ニューエラに抜かれた', '뉴에라에 추월당함', 'Superado por Heróis New Era', '被新纪元英雄超越') },
+    { id: 'high_er_required', type: 'con', category: 'gear', translations: t('Needs 200%+ Effect Res', 'Requiere 200%+ Resist.', '200%+ 効果抵抗必要', '효과저항 200% 이상 필요', 'Precisa 200%+ Resistência', '需要200%+效果抗性') },
+    { id: 'drafts_predictably', type: 'con', category: 'competitive', translations: t('Predictable Draft Pick', 'Pick Predecible', '予測可能なピック', '예측 가능한 픽', 'Pick Previsível', '拿法可预测') },
+    { id: 'countered_by_notos', type: 'con', category: 'competitive', translations: t('Weak vs Notos', 'Débil vs Notos', '対ノートス不利', '노토스 밥', 'Fraco contra Notos', '怕Notos') },
+    { id: 'countered_by_ecate', type: 'con', category: 'competitive', translations: t('Weak vs Ecate', 'Débil vs Ecate', '対エカテ不利', '에카테 밥', 'Fraco contra Ecate', '怕Ecate') },
+    { id: 'duo_comp_only', type: 'con', category: 'dependencies', translations: t('Only Viable in Duo Comp', 'Solo Viable en Comp Dúo', 'デュオコンプのみ', '듀오 덱 전용', 'Apenas Viável em Comp Dupla', '仅在双人组合有用') },
+    { id: 'imprint_locked', type: 'con', category: 'gear', translations: t('Imprint Circuit PvE-Only', 'Circuito de Impronta solo PvE', 'インプリントPvE専用', '각인 회로 PvE 전용', 'Circuito Impronta apenas PvE', '烙印回路仅PvE') },
 ];
 
 /**

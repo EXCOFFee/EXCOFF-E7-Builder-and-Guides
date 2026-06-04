@@ -1,4 +1,24 @@
 {
+    "excommunicants-censer": {
+        "code": "a0238",
+        "_id": "excommunicants-censer",
+        "name": "Excommunicant's Censer",
+        "rarity": 5,
+        "role": "manauser",
+        "exclusive": false,
+        "skill": {
+            "description": "Increases Effect Resistance by 15%. At the end of an enemy's turn, if the caster has no debuffs, increases the caster's Combat Readiness by 10%. This effect activates once per turn."
+        },
+        "stats": {
+            "atk_base": 9,
+            "atk_max": 117,
+            "hp_base": 54,
+            "hp_max": 702
+        },
+        "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0238_fu.png",
+        "source": "ceciliabot",
+        "source_url": "https://ceciliabot.github.io/#/artifact/excommunicants-censer"
+    },
     "glorious-flag": {
         "code": "a0151",
         "_id": "glorious-flag",

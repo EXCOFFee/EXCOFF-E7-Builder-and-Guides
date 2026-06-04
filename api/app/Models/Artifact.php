@@ -46,6 +46,9 @@ class Artifact extends Model
         'Unleashed Axe of Heavenly Mandate' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0239_fu.png',
         'Shadow Winds 7' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0242_fu.png',
         'Glorious Throne' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0240_fu.png',
+        'Veritas' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0234_fu.png',
+        "Excommunicant's Censer" => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0238_fu.png',
+        'With a Little Friend' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0237_fu.png',
         // Add more new artifacts here as needed
     ];
 
