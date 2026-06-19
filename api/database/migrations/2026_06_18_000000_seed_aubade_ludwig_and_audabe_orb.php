@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\DB;
  * Artifact: Audabe Orb
  * Image : https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0243_fu.png
  *
- * Artifact: Butterfly's Baptism
- * Image : https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0244_fu.png
- *
  * Usage: php artisan migrate
  */
 return new class extends Migration
@@ -112,7 +109,7 @@ return new class extends Migration
         );
 
         // ──────────────────────────────────────────────────────────────
-        // ARTIFACT: Audabe Orb & Butterfly's Baptism
+        // ARTIFACT: Audabe Orb
         // ──────────────────────────────────────────────────────────────
         DB::table('artifacts')->upsert(
             [
@@ -125,18 +122,6 @@ return new class extends Migration
                     'rarity'      => 5,
                     'description' => "Increases Attack and Critical Hit Damage. When the caster defeats an enemy, increases Combat Readiness of all allies.",
                     'image_url'   => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0243_fu.png',
-                    'created_at'  => $now,
-                    'updated_at'  => $now,
-                ],
-                [
-                    'code'        => 'a0244',
-                    'name'        => "Butterfly's Baptism",
-                    'name_es'     => 'Bautismo de la mariposa',
-                    'slug'        => 'butterflys-baptism',
-                    'class'       => 'soul_weaver',
-                    'rarity'      => 5,
-                    'description' => "Increases Effect Resistance. After using a non-attack skill, recovers Health of the ally with the lowest Health.",
-                    'image_url'   => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0244_fu.png',
                     'created_at'  => $now,
                     'updated_at'  => $now,
                 ],
@@ -157,7 +142,7 @@ return new class extends Migration
 
     public function down(): void
     {
-        DB::table('artifacts')->whereIn('code', ['a0243', 'a0244'])->delete();
+        DB::table('artifacts')->where('code', 'a0243')->delete();
         DB::table('heroes')->where('code', 'aubade-ludwig')->delete();
     }
 };
