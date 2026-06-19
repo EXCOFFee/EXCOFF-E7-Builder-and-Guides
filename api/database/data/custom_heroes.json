@@ -5,8 +5,61 @@
             "11/20/2024 - ARavi, Laika, Zio, Ran, Zahhak, Schuri, Hasol",
             "01/08/2026 - Judge Kise, LR Krau, DB Senya, Beehoo, Hwayoung, Landy, MG Lilias, M Bunny Dominiel, Savior Adin, A Mont",
             "05/28/2026 - Ivana",
-            "06/04/2026 - Rhianna and Luciella"
+            "06/04/2026 - Rhianna and Luciella",
+            "06/18/2026 - Aubade Ludwig"
         ]
+    },
+    "aubade-ludwig": {
+        "code": "c5069",
+        "_id": "aubade-ludwig",
+        "name": "Aubade Ludwig",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "mage",
+        "skills": {
+            "S1": {
+                "name": "Moonlight Call",
+                "description": "Attacks the enemy with magic, with a 60% chance to decrease Defense for 1 turn. Damage dealt increases proportional to the caster's Attack.",
+                "rate": 1.0,
+                "pow": 1
+            },
+            "S2": {
+                "name": "Starlight Veil",
+                "description": "Grants a barrier to the caster for 2 turns and increases Combat Readiness by 50%. Soulburn: Ignores Effect Resistance.",
+                "cooldown": 4
+            },
+            "S3": {
+                "name": "Aubade's Requiem",
+                "description": "Attacks all enemies with a powerful spell, penetrating Defense by 50%. If the enemy is defeated, inflicts extinction. Damage dealt increases proportional to the caster's Attack.",
+                "rate": 1.1,
+                "pow": 1,
+                "penetration": 0.5,
+                "cooldown": 5,
+                "targets": 4
+            }
+        },
+        "self_devotion": {
+            "type": "atk",
+            "grades": {
+                "B": 0.06,
+                "A": 0.09,
+                "S": 0.12,
+                "SS": 0.15,
+                "SSS": 0.18
+            }
+        },
+        "calculatedStatus": {
+            "lv60SixStarFullyAwakened": {
+                "atk": 1412,
+                "hp": 4895,
+                "def": 652,
+                "spd": 115,
+                "chc": 0.23,
+                "chd": 1.5,
+                "eff": 0,
+                "efr": 0
+            }
+        }
     },
     "rhianna-and-luciella": {
         "code": "c2185",

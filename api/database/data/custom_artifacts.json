@@ -1,4 +1,38 @@
 {
+    "butterflys-baptism": {
+        "code": "a0244",
+        "_id": "butterflys-baptism",
+        "name": "Butterfly's Baptism",
+        "rarity": 5,
+        "role": "soul_weaver",
+        "exclusive": false,
+        "skill": {
+            "description": "Increases Effect Resistance. After using a non-attack skill, recovers Health of the ally with the lowest Health."
+        },
+        "stats": {
+            "atk_base": 9,
+            "atk_max": 117,
+            "hp_base": 54,
+            "hp_max": 702
+        }
+    },
+    "audabe-orb": {
+        "code": "a0243",
+        "_id": "audabe-orb",
+        "name": "Audabe Orb",
+        "rarity": 5,
+        "role": "mage",
+        "exclusive": false,
+        "skill": {
+            "description": "Increases Attack and Critical Hit Damage. When the caster defeats an enemy, increases Combat Readiness of all allies."
+        },
+        "stats": {
+            "atk_base": 21,
+            "atk_max": 273,
+            "hp_base": 32,
+            "hp_max": 416
+        }
+    },
     "excommunicants-censer": {
         "code": "a0238",
         "_id": "excommunicants-censer",

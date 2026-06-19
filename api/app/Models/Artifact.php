@@ -49,6 +49,8 @@ class Artifact extends Model
         'Veritas' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0234_fu.png',
         "Excommunicant's Censer" => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0238_fu.png',
         'With a Little Friend' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0237_fu.png',
+        'Audabe Orb' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0243_fu.png',
+        "Butterfly's Baptism" => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0244_fu.png',
         // Add more new artifacts here as needed
     ];
 
