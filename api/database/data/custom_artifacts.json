@@ -1,4 +1,21 @@
 {
+    "refracted-desire": {
+        "code": "a0241",
+        "_id": "refracted-desire",
+        "name": "Refracted Desire",
+        "rarity": 5,
+        "role": "mage",
+        "exclusive": false,
+        "skill": {
+            "description": "Increases the Combat Readiness of the caster when an ally other than the caster takes the first turn."
+        },
+        "stats": {
+            "atk_base": 21,
+            "atk_max": 273,
+            "hp_base": 32,
+            "hp_max": 416
+        }
+    },
     "butterflys-baptism": {
         "code": "a0244",
         "_id": "butterflys-baptism",

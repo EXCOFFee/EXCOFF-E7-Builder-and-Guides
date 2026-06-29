@@ -6,8 +6,60 @@
             "01/08/2026 - Judge Kise, LR Krau, DB Senya, Beehoo, Hwayoung, Landy, MG Lilias, M Bunny Dominiel, Savior Adin, A Mont",
             "05/28/2026 - Ivana",
             "06/04/2026 - Rhianna and Luciella",
-            "06/18/2026 - Aubade Ludwig"
+            "06/18/2026 - Aubade Ludwig",
+            "06/29/2026 - Eye of the Abyss Fumyr"
         ]
+    },
+    "eye-of-the-abyss-fumyr": {
+        "code": "c5147",
+        "_id": "eye-of-the-abyss-fumyr",
+        "name": "Eye of the Abyss Fumyr",
+        "rarity": 5,
+        "attribute": "earth",
+        "role": "mage",
+        "skills": {
+            "S1": {
+                "name": "Elemental Magic",
+                "description": "Attacks the enemy with a chance to inflict Stun for 1 turn. Consuming 10 Souls increases the effect chance to 100%.",
+                "rate": 0.9,
+                "pow": 1
+            },
+            "S2": {
+                "name": "Blue Despair",
+                "description": "Envelops all enemies, dispelling 2 buffs and decreasing Combat Readiness by 25%. Grants the caster an extra turn.",
+                "cooldown": 4
+            },
+            "S3": {
+                "name": "Eye of the Abyss",
+                "description": "Pierces the foremost enemy Hero, inflicting Detain (removes them from the battlefield). When Detain is inflicted, grants Deterrence to the caster for 3 turns. Also grants a barrier proportional to level and Stealth to the caster for 2 turns.",
+                "rate": 1.5,
+                "pow": 1,
+                "cooldown": 5,
+                "targets": 1
+            }
+        },
+        "self_devotion": {
+            "type": "eff",
+            "grades": {
+                "B": 0.06,
+                "A": 0.09,
+                "S": 0.12,
+                "SS": 0.15,
+                "SSS": 0.18
+            }
+        },
+        "calculatedStatus": {
+            "lv60SixStarFullyAwakened": {
+                "atk": 1039,
+                "hp": 5299,
+                "def": 673,
+                "spd": 115,
+                "chc": 0.15,
+                "chd": 1.5,
+                "eff": 0,
+                "efr": 0
+            }
+        }
     },
     "aubade-ludwig": {
         "code": "c5069",
