@@ -382,7 +382,9 @@
             "warfare": "戦闘",
             "pursuit": "追撃",
             "riposte": "反撃",
-            "revival": "復活"
+            "revival": "復活",
+            "might": "威力",
+            "weak": "弱体化"
         },
         "statNames": {
             "atk": "攻撃力",

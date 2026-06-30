@@ -382,7 +382,9 @@
             "warfare": "战争",
             "pursuit": "追击",
             "riposte": "反击",
-            "revival": "复活"
+            "revival": "复活",
+            "might": "威力",
+            "weak": "削弱"
         },
         "statNames": {
             "atk": "攻击力",

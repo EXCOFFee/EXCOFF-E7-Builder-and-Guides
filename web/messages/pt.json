@@ -382,7 +382,9 @@
             "warfare": "Guerra",
             "pursuit": "Perseguição",
             "riposte": "Contra-ataque",
-            "revival": "Ressurreição"
+            "revival": "Ressurreição",
+            "might": "Poder",
+            "weak": "Enfraquecimento"
         },
         "statNames": {
             "atk": "ATK",

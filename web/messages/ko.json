@@ -382,7 +382,9 @@
             "warfare": "전쟁",
             "pursuit": "추격",
             "riposte": "반격",
-            "revival": "부활"
+            "revival": "부활",
+            "might": "위력",
+            "weak": "약화"
         },
         "statNames": {
             "atk": "공격력",

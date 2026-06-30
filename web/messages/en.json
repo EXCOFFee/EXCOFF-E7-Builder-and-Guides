@@ -420,7 +420,9 @@
             "warfare": "Warfare",
             "pursuit": "Pursuit",
             "riposte": "Riposte",
-            "revival": "Revival"
+            "revival": "Revival",
+            "might": "Might",
+            "weak": "Weakening"
         },
         "statNames": {
             "atk": "ATK",
