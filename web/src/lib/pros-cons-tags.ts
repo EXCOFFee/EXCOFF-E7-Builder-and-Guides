@@ -359,6 +359,27 @@ export const PROS_TAGS: Tag[] = [
     // NEW ERA 2026 — PvE Content
     { id: 'otherworld_breach_pick', type: 'pro', category: 'pve', translations: t('Otherworld Breach Pick', 'Pick Brecha Otro Mundo', '異世界侵攻推奨', '이세계 침공 추천', 'Pick Brecha do Outro Mundo', '异界侵蚀推荐') },
     { id: 'constellation_trial_pick', type: 'pro', category: 'pve', translations: t('Trial of Constellations Pick', 'Pick Prueba Constelaciones', '星座試練推奨', '별자리 시험 추천', 'Pick Prova das Constelações', '星座试炼推荐') },
+
+    // NEW — Damage & Offense
+    { id: 'one_shot_potential', type: 'pro', category: 'damage', translations: t('One-Shot Potential', 'Potencial de One-Shot', 'ワンショット性能', '원샷 잠재력', 'Potencial de One-Shot', '秒杀潜力') },
+    { id: 'redirects_damage', type: 'pro', category: 'mechanics', translations: t('Redirects Damage', 'Redirige Daño', 'ダメージ転向', '데미지 전환', 'Redireciona Dano', '伤害转向') },
+    { id: 'anti_cr_push', type: 'pro', category: 'speed', translations: t('Anti-CR Push', 'Anti-Push CR', 'ゲージUP妨害', '행게증 방해', 'Anti-Push CR', '反推条') },
+    { id: 'enables_second_turn', type: 'pro', category: 'speed', translations: t('Enables Second Turn', 'Habilita Segundo Turno', 'セカンドターン確保', '2턴 확보', 'Habilita Segundo Turno', '确保第二回合') },
+    { id: 'preventive_cleanse', type: 'pro', category: 'utility', translations: t('Preventive Cleanse', 'Limpieza Preventiva', '予防クレンズ', '선제 해제', 'Limpeza Preventiva', '预防净化') },
+    { id: 'team_soul_generation', type: 'pro', category: 'utility', translations: t('Team Soul Generation', 'Genera Almas al Equipo', 'チームソウル生成', '팀 소울 생성', 'Geração de Almas', '全队生魂') },
+    { id: 'anti_cleave_defensive', type: 'pro', category: 'meta', translations: t('Anti-Cleave (Defensive)', 'Anti-Cleave (Defensivo)', 'アンチクリーブ(防御)', '안티 클리브 (방어)', 'Anti-Cleave (Defensivo)', '反核爆 (防御)') },
+    { id: 'punishes_enemy_buffs', type: 'pro', category: 'mechanics', translations: t('Punishes Enemy Buffs', 'Castiga Buffs Enemigos', '敵バフペナルティ', '적 버프 처벌', 'Pune Buffs Inimigos', '惩罚敌方增益') },
+    { id: 'anti_tank', type: 'pro', category: 'meta', translations: t('Anti-Tank', 'Anti-Tanke', 'アンチタンク', '탱커 카운터', 'Anti-Tanque', '反肉盾') },
+    { id: 'force_ban', type: 'pro', category: 'meta', translations: t('Force Ban', 'Force Ban', '強制BAN', '강제 밴', 'Force Ban', '逼Ban') },
+    { id: 'safe_first_pick', type: 'pro', category: 'meta', translations: t('Safe First Pick', 'Primer Pick Seguro', '安定先取り', '안전 선픽', 'Primeiro Pick Seguro', '稳定先拿') },
+    { id: 'universal_counter_pick', type: 'pro', category: 'meta', translations: t('Universal Counter Pick', 'Counter Pick Universal', '万能カウンターピック', '범용 카운터 픽', 'Counter Pick Universal', '万能反手') },
+    { id: 'safe_blind_pick', type: 'pro', category: 'meta', translations: t('Safe Blind Pick', 'Pick Ciego Seguro', '安定ブラインドピック', '안전 블라인드 픽', 'Pick Cego Seguro', '安全盲选') },
+    { id: 'draft_bait', type: 'pro', category: 'meta', translations: t('Draft Bait', 'Bait de Draft', 'ドラフトベイト', '밴픽 미끼', 'Isca de Draft', 'BP诱饵') },
+    { id: 'recently_buffed', type: 'pro', category: 'meta', translations: t('Recently Buffed', 'Buffeado Recientemente', '最近強化', '최근 상향', 'Bufado Recentemente', '近期加强') },
+    { id: 'relevant_post_buff', type: 'pro', category: 'meta', translations: t('Relevant Post-Buff', 'Relevante Post-Buff', '強化後活躍中', '상향 후 활약 중', 'Relevante Pós-Buff', '加强后活跃') },
+    { id: 'meta_gw_offense', type: 'pro', category: 'meta', translations: t('GW Offense Meta', 'Meta Ofensiva GW', 'ギルド攻撃メタ', '길전 공격 메타', 'Meta Ofensiva GW', '公会战进攻核心') },
+    { id: 'meta_arena_offense', type: 'pro', category: 'meta', translations: t('Arena Offense Meta', 'Meta Ofensiva Arena', 'アリーナ攻撃メタ', '아레나 공격 메타', 'Meta Ofensiva Arena', '竞技场进攻核心') },
+    { id: 'meta_rta', type: 'pro', category: 'meta', translations: t('RTA Meta', 'Meta en RTA', 'RTAメタ', 'RTA 메타', 'Meta no RTA', 'RTA核心') },
 ];
 
 /**
@@ -488,6 +509,54 @@ export const CONS_TAGS: Tag[] = [
     { id: 'countered_by_ecate', type: 'con', category: 'competitive', translations: t('Weak vs Ecate', 'Débil vs Ecate', '対エカテ不利', '에카테 밥', 'Fraco contra Ecate', '怕Ecate') },
     { id: 'duo_comp_only', type: 'con', category: 'dependencies', translations: t('Only Viable in Duo Comp', 'Solo Viable en Comp Dúo', 'デュオコンプのみ', '듀오 덱 전용', 'Apenas Viável em Comp Dupla', '仅在双人组合有用') },
     { id: 'imprint_locked', type: 'con', category: 'gear', translations: t('Imprint Circuit PvE-Only', 'Circuito de Impronta solo PvE', 'インプリントPvE専用', '각인 회로 PvE 전용', 'Circuito Impronta apenas PvE', '烙印回路仅PvE') },
+
+    // NEW — Sustainability & Turn Order
+    { id: 'no_self_sustain', type: 'con', category: 'fragility', translations: t('No Self-Sustain', 'Sin Auto-Sustain', '自己維持力なし', '자체 유지력 없음', 'Sem Auto-Sustain', '无自保能力') },
+    { id: 'requires_speed_tuning', type: 'con', category: 'speed_issues', translations: t('Requires Speed Tuning', 'Requiere Speed Tuning', '速度調整必須', '스피드 튜닝 필요', 'Requer Speed Tuning', '需要调速') },
+    { id: 'useless_without_first_turn', type: 'con', category: 'speed_issues', translations: t('Useless without First Turn', 'Inútil sin Primer Turno', '先攻なしでは無力', '선턴 없으면 무용', 'Inútil sem Primeiro Turno', '没先手就废') },
+    { id: 'turn_order_dependent', type: 'con', category: 'dependencies', translations: t('Turn Order Dependent', 'Depende del Orden de Turnos', 'ターン順依存', '턴 순서 의존', 'Depende da Ordem de Turnos', '依赖出手顺序') },
+
+    // NEW — Weakness vs Mechanics
+    { id: 'weak_to_extinction', type: 'con', category: 'competitive', translations: t('Weak vs Extinction', 'Débil vs Extinción', '消滅に弱い', '소멸에 취약', 'Fraco contra Extinção', '怕湮灭') },
+    { id: 'weak_to_anti_revive', type: 'con', category: 'competitive', translations: t('Weak vs Anti-Revive', 'Débil vs Anti-Revive', '蘇生妨害に弱い', '부활 방해에 취약', 'Fraco contra Anti-Revive', '怕反复活') },
+    { id: 'weak_to_buff_reduction', type: 'con', category: 'competitive', translations: t('Weak vs Buff Reduction', 'Débil vs Reducción de Buffs', 'バフ短縮に弱い', '버프 감소에 취약', 'Fraco contra Red. Buffs', '怕削buff') },
+    { id: 'weak_to_turn_steal', type: 'con', category: 'competitive', translations: t('Weak vs Turn Steal', 'Débil vs Robo de Turno', 'ターン奪取に弱い', '턴 강탈에 취약', 'Fraco contra Roubo de Turno', '怕抢回合') },
+    { id: 'weak_to_skill_nullifier', type: 'con', category: 'competitive', translations: t('Weak vs Skill Nullifier', 'Débil vs Skill Nullifier', 'スキル無効化に弱い', '스킬 무효화에 취약', 'Fraco contra Anulação', '怕技能无效') },
+    { id: 'weak_to_reflect', type: 'con', category: 'competitive', translations: t('Weak vs Reflect', 'Débil vs Reflejo', '反射に弱い', '반사에 취약', 'Fraco contra Reflexo', '怕反射') },
+    { id: 'weak_to_counterattack', type: 'con', category: 'competitive', translations: t('Weak vs Counterattack', 'Débil vs Contraataque', '反撃に弱い', '반격에 취약', 'Fraco contra Contra-ataque', '怕反击') },
+    { id: 'weak_to_anti_cr_push', type: 'con', category: 'competitive', translations: t('Weak vs Anti-CR Push', 'Débil vs Anti-Push CR', 'ゲージ妨害に弱い', '행게감에 취약', 'Fraco contra Anti-Push CR', '怕压条') },
+
+    // NEW — Weakness vs Specific Heroes
+    { id: 'weak_to_byblis', type: 'con', category: 'competitive', translations: t('Weak vs Byblis', 'Débil vs Byblis', '対ビブリス不利', '비블리스에 취약', 'Fraco contra Byblis', '怕Byblis') },
+    { id: 'weak_to_rhianna_luciella', type: 'con', category: 'competitive', translations: t('Weak vs Rhianna & Luciella', 'Débil vs Rhianna & Luciella', '対リアナ＆ルシエラ不利', '리아나&루시엘라에 취약', 'Fraco contra Rhianna & Luciella', '怕Rhianna&Luciella') },
+    { id: 'weak_to_lady_scales', type: 'con', category: 'competitive', translations: t('Weak vs Lady of the Scales', 'Débil vs Lady of the Scales', '対天秤の女神不利', '저울의 여신에 취약', 'Fraco contra Lady of the Scales', '怕天秤女神') },
+    { id: 'weak_to_setsuka', type: 'con', category: 'competitive', translations: t('Weak vs Setsuka', 'Débil vs Setsuka', '対セツカ不利', '셋츠카에 취약', 'Fraco contra Setsuka', '怕Setsuka') },
+    { id: 'weak_to_ludwig', type: 'con', category: 'competitive', translations: t('Weak vs Ludwig', 'Débil vs Ludwig', '対ルートヴィヒ不利', '루드비히에 취약', 'Fraco contra Ludwig', '怕Ludwig') },
+    { id: 'weak_to_dominiel', type: 'con', category: 'competitive', translations: t('Weak vs Dominiel', 'Débil vs Dominiel', '対ドミニエル不利', '도미니엘에 취약', 'Fraco contra Dominiel', '怕Dominiel') },
+    { id: 'weak_to_genesis_ras', type: 'con', category: 'competitive', translations: t('Weak vs Genesis Ras', 'Débil vs Genesis Ras', '対ジェネシスラス不利', '제네시스 라스에 취약', 'Fraco contra Genesis Ras', '怕创世Ras') },
+    { id: 'weak_to_frieren', type: 'con', category: 'competitive', translations: t('Weak vs Frieren', 'Débil vs Frieren', '対フリーレン不利', '프리렌에 취약', 'Fraco contra Frieren', '怕Frieren') },
+    { id: 'weak_to_ivanna', type: 'con', category: 'competitive', translations: t('Weak vs Ivanna', 'Débil vs Ivanna', '対イバナ不利', '이바나에 취약', 'Fraco contra Ivanna', '怕Ivanna') },
+    { id: 'weak_to_mort', type: 'con', category: 'competitive', translations: t('Weak vs Mort', 'Débil vs Mort', '対モルト不利', '모르트에 취약', 'Fraco contra Mort', '怕Mort') },
+
+    // NEW — Conditional Weaknesses
+    { id: 'nullified_without_buffs', type: 'con', category: 'dependencies', translations: t('Nullified without Buffs', 'Anulado sin Buffs', 'バフなしでは無力', '버프 없이 무용', 'Anulado sem Buffs', '没增益就废') },
+    { id: 'useless_combo_stolen', type: 'con', category: 'dependencies', translations: t('Useless if Combo Stolen', 'Inútil si le Roban el Combo', 'コンボ奪われると無力', '콤보 뺏기면 무용', 'Inútil se Combo Roubado', '被断连招就废') },
+    { id: 'specific_set_only', type: 'con', category: 'gear', translations: t('Specific Set Only', 'Solo con Set Específico', '特定セット専用', '특정 세트 전용', 'Apenas Set Específico', '绑定套装') },
+
+    // NEW — Availability & Cost
+    { id: 'limited_character', type: 'con', category: 'gear', translations: t('Limited Character', 'Personaje Limitado', '限定キャラ', '한정 캐릭터', 'Personagem Limitado', '限定角色') },
+    { id: 'limited_artifact', type: 'con', category: 'gear', translations: t('Limited Artifact', 'Artefacto Limitado', '限定遺物', '한정 아티팩트', 'Artefato Limitado', '限定神器') },
+    { id: 'whale_gear_required', type: 'con', category: 'gear', translations: t('Requires Whale Gear', 'Requiere Gear de Ballena', '廃課金装備必要', '과금 장비 필요', 'Requer Gear de Baleia', '需要氪金装备') },
+    { id: 'expensive_to_build', type: 'con', category: 'gear', translations: t('Expensive to Build', 'Costoso de Armar', '育成コスト高', '육성 비용 높음', 'Caro de Montar', '培养成本高') },
+
+    // NEW — Draft & Competitive Issues
+    { id: 'frequently_prebanned', type: 'con', category: 'competitive', translations: t('Frequently Prebanned', 'Prebaneado Frecuentemente', '事前BAN常連', '사전 밴 단골', 'Pré-banido Frequentemente', '常被预Ban') },
+    { id: 'fourth_fifth_pick_only', type: 'con', category: 'competitive', translations: t('4th/5th Pick Only', 'Pick de Cuarto/Quinto Solamente', '4-5番手専用', '4-5번 픽 전용', 'Apenas 4º/5º Pick', '仅4-5手位') },
+    { id: 'no_first_pick', type: 'con', category: 'competitive', translations: t('Doesn\'t Work First Pick', 'No Funciona en Primer Pick', '先取り不向き', '선픽 부적합', 'Não Funciona no 1º Pick', '不适合先手拿') },
+    { id: 'telegraphs_strategy', type: 'con', category: 'competitive', translations: t('Telegraphs Strategy', 'Telegrafía tu Estrategia', '戦略バレる', '전략 노출', 'Telegrafar Estratégia', '暴露策略') },
+    { id: 'requires_preban_counter', type: 'con', category: 'competitive', translations: t('Requires Prebanning Counter', 'Requiere Prebanear un Counter', 'カウンター事前BAN必要', '카운터 사전 밴 필수', 'Requer Pré-ban de Counter', '需预Ban克制角色') },
+    { id: 'recently_nerfed', type: 'con', category: 'competitive', translations: t('Recently Nerfed', 'Nerfeado Recientemente', '最近弱体化', '최근 하향', 'Nerfado Recentemente', '近期削弱') },
+    { id: 'obsolete_new_era', type: 'con', category: 'competitive', translations: t('Obsolete by New Era', 'Obsoleto por New Era', 'ニューエラで時代遅れ', '뉴에라로 구식', 'Obsoleto pela New Era', '被新纪元淘汰') },
 ];
 
 /**
