@@ -45,10 +45,10 @@ export function SynergyCounterHeroCard({ hero, type }: SynergyCounterCardProps) 
         : { bg: 'from-red-900/30 to-rose-900/20', border: 'border-red-500/40', hoverBorder: 'hover:border-red-400/60', ring: 'ring-red-500/60', text: 'text-red-300', hoverText: 'group-hover:text-red-200', shadow: 'hover:shadow-red-500/20', glow: 'from-red-400/20 to-rose-400/10' };
 
     const apiUrl = (process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '');
-    // Always use _su suffix for consistent bust/status unit images
-    const imageUrl = hero.hero_code
-        ? `${apiUrl}/images/heroes/${hero.hero_code}_su.png`
-        : (hero.image_url || hero.portrait || `/images/hero/${hero.slug}_su.png`);
+    // Prefer image_url/portrait (works for all heroes including custom ones from CeciliaBot)
+    // Fall back to hero_code-based backend URL only if no direct image URL exists
+    const imageUrl = hero.image_url || hero.portrait
+        || (hero.hero_code ? `${apiUrl}/images/heroes/${hero.hero_code}_su.png` : `/images/hero/${hero.slug}_su.png`);
 
     return (
         <div className={`group flex flex-col items-center p-4 rounded-xl bg-gradient-to-br ${colors.bg} border-2 ${colors.border} ${colors.hoverBorder} transition-all duration-300 backdrop-blur-sm shadow-lg ${colors.shadow} hover:-translate-y-1`}>
