@@ -1,4 +1,23 @@
 {
+    "intoxicating-indulgence": {
+        "code": "a0245",
+        "_id": "intoxicating-indulgence",
+        "name": "Intoxicating Indulgence",
+        "rarity": 5,
+        "role": "mage",
+        "exclusive": false,
+        "skill": {
+            "description": "Increases Attack. When the caster attacks, increases Combat Readiness of the caster."
+        },
+        "stats": {
+            "atk_base": 21,
+            "atk_max": 273,
+            "hp_base": 32,
+            "hp_max": 416
+        },
+        "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0245_fu.png",
+        "source": "ceciliabot"
+    },
     "refracted-desire": {
         "code": "a0241",
         "_id": "refracted-desire",

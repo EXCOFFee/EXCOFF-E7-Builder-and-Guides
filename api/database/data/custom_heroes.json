@@ -7,8 +7,123 @@
             "05/28/2026 - Ivana",
             "06/04/2026 - Rhianna and Luciella",
             "06/18/2026 - Aubade Ludwig",
-            "06/29/2026 - Eye of the Abyss Fumyr"
+            "06/29/2026 - Eye of the Abyss Fumyr",
+            "07/26/2026 - Tidal Rift Elvira, Aube"
         ]
+    },
+    "tidal-rift-elvira": {
+        "code": "c2148",
+        "_id": "tidal-rift-elvira",
+        "name": "Tidal Rift Elvira",
+        "rarity": 5,
+        "attribute": "dark",
+        "role": "mage",
+        "skills": {
+            "S1": {
+                "name": "Rift Cleave",
+                "description": "Has a 75% chance to inflict seal on the enemy for 2 turns before attacking. When used on the caster's turn, has a 40% chance to activate Twisted Strike as an extra attack. Twisted Strike: Attacks all enemies, absorbing some of the damage dealt as Health, and has a 35% chance to inflict fear for 1 turn. When the caster is granted engulf, effect chance is doubled.",
+                "rate": 0.9,
+                "pow": 1,
+                "soulburn": true,
+                "soulburn_souls": 10,
+                "soulburn_effect": "Increases chance of activating Twisted Strike to 100%."
+            },
+            "S2": {
+                "name": "Craving Affection",
+                "description": "At the start of battle, grants engulf. When attacking, penetrates the target's Defense, and cannot trigger a critical hit or heavy blow. After an ally uses a skill, for each debuff inflicted on all enemies, has a 25% chance to increase Combat Readiness by 10%.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Wave of Curses",
+                "description": "Has a 35% chance to inflict curse on all enemies except for the target for 2 turns before attacking the enemy, and increases Combat Readiness of the caster by 50%. When the caster is granted engulf, effect chance is doubled.",
+                "rate": 1.2,
+                "pow": 1,
+                "cooldown": 5,
+                "targets": 1
+            }
+        },
+        "self_devotion": {
+            "type": "eff",
+            "grades": {
+                "B": 0.06,
+                "A": 0.09,
+                "S": 0.12,
+                "SS": 0.15,
+                "SSS": 0.18
+            }
+        },
+        "calculatedStatus": {
+            "lv60SixStarFullyAwakened": {
+                "atk": 1102,
+                "hp": 5782,
+                "def": 634,
+                "spd": 120,
+                "chc": 0.15,
+                "chd": 1.5,
+                "eff": 0,
+                "efr": 0
+            }
+        },
+        "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/face/c2148_su.png",
+        "source": "ceciliabot",
+        "source_url": "https://ceciliabot.github.io/#/hero/tidal-rift-elvira"
+    },
+    "aube": {
+        "code": "c5190",
+        "_id": "aube",
+        "name": "Aube",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "ranger",
+        "skills": {
+            "S1": {
+                "name": "Coral Swell",
+                "description": "Attacks the enemy with coral magic and decreases Combat Readiness by 15%.",
+                "rate": 0.9,
+                "pow": 1
+            },
+            "S2": {
+                "name": "Film Fiesta",
+                "description": "Releases the moment engraved in the film, with a 70% chance to grant cascade to all allies. Grants skill nullifier once and an extra turn to the caster.",
+                "cooldown": 3
+            },
+            "S3": {
+                "name": "Eternal Moment",
+                "description": "Fixes all enemies in a frame, dispelling two buffs before a 70% chance each to inflict immobilize and restrict for 2 turns. Concealment will remain throughout the battle.",
+                "rate": 1.0,
+                "pow": 1,
+                "cooldown": 7,
+                "targets": 4,
+                "soulburn": true,
+                "soulburn_souls": 10,
+                "soulburn_effect": "Ignores Effect Resistance."
+            }
+        },
+        "self_devotion": {
+            "type": "atk",
+            "grades": {
+                "B": 0.048,
+                "A": 0.072,
+                "S": 0.096,
+                "SS": 0.12,
+                "SSS": 0.144
+            }
+        },
+        "calculatedStatus": {
+            "lv60SixStarFullyAwakened": {
+                "atk": 993,
+                "hp": 6002,
+                "def": 611,
+                "spd": 120,
+                "chc": 0.15,
+                "chd": 1.5,
+                "eff": 0,
+                "efr": 0
+            }
+        },
+        "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/face/c5190_su.png",
+        "source": "ceciliabot",
+        "source_url": "https://ceciliabot.github.io/#/hero/aube"
     },
     "eye-of-the-abyss-fumyr": {
         "code": "c5147",
