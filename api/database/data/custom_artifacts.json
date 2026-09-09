@@ -1,4 +1,41 @@
 {
+    "light-and-darkness": {
+        "code": "a0249",
+        "_id": "light-and-darkness",
+        "name": "Light and Darkness",
+        "rarity": 5,
+        "role": "ranger",
+        "exclusive": false,
+        "skill": {
+            "description": "After using an attack that targets all enemies, deals 2000 additional damage, and has a 100% chance to decrease the Combat Readiness of the target by 15%."
+        },
+        "stats": {
+            "atk_base": 9,
+            "atk_max": 117,
+            "hp_base": 76,
+            "hp_max": 988
+        },
+        "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0249_fu.png",
+        "source": "ceciliabot"
+    },
+    "land-of-lingering-light": {
+        "code": "a0250",
+        "_id": "land-of-lingering-light",
+        "name": "Land of Lingering Light",
+        "rarity": 5,
+        "exclusive": false,
+        "skill": {
+            "description": "Increases the Friendship acquired after completing a stage in Adventure, Side Story, Spirit Altar, Emergency Mission, Hunt, Rift, and Otherworld Breach by the Hero who has this Artifact equipped by 100%. When more than one Friendship increase effect is granted, only the strongest effect is applied. The skill effect of this Artifact does not increase when enhanced."
+        },
+        "stats": {
+            "atk_base": 15,
+            "atk_max": 195,
+            "hp_base": 54,
+            "hp_max": 702
+        },
+        "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0250_fu.png",
+        "source": "ceciliabot"
+    },
     "intoxicating-indulgence": {
         "code": "a0245",
         "_id": "intoxicating-indulgence",

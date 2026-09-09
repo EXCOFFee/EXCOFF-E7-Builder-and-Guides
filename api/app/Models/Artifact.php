@@ -53,6 +53,8 @@ class Artifact extends Model
         "Butterfly's Baptism" => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0244_fu.png',
         'Refracted Desire' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0241_fu.png',
         'Intoxicating Indulgence' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0245_fu.png',
+        'Light and Darkness' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0249_fu.png',
+        'Land of Lingering Light' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0250_fu.png',
         // Add more new artifacts here as needed
     ];
 

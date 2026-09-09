@@ -8,8 +8,121 @@
             "06/04/2026 - Rhianna and Luciella",
             "06/18/2026 - Aubade Ludwig",
             "06/29/2026 - Eye of the Abyss Fumyr",
-            "07/26/2026 - Tidal Rift Elvira, Aube"
+            "07/26/2026 - Tidal Rift Elvira, Aube",
+            "09/09/2026 - Lisette, Uncharted Pioneer Politis"
         ]
+    },
+    "lisette": {
+        "code": "c2186",
+        "_id": "lisette",
+        "name": "Lisette",
+        "rarity": 5,
+        "attribute": "light",
+        "role": "manauser",
+        "skills": {
+            "S1": {
+                "name": "Guidance of Salvation",
+                "description": "Attacks the enemy with celestial power. Increases Combat Readiness of the ally with the highest Attack by 15%.",
+                "rate": 1,
+                "pow": 1
+            },
+            "S2": {
+                "name": "Purification of the Mind",
+                "description": "When an enemy uses a non-attack skill, dispels one debuff from all allies and grants stealth and barrier to the ally with the highest Attack for 2 turns. Barrier strength increases proportional to the caster's max Health.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Prayer for Continuation",
+                "description": "Dispels all debuffs from all allies and recovers Health, before granting immunity for 2 turns and skill nullifier once. Re-grants buffs when an ally is revived. Health recovered increases proportional to the caster's max Health.",
+                "cooldown": 5,
+                "soulburn": true,
+                "soulburn_souls": 20,
+                "soulburn_effect": "Grants an extra turn."
+            }
+        },
+        "self_devotion": {
+            "type": "res",
+            "grades": {
+                "B": 0.09,
+                "A": 0.14,
+                "S": 0.19,
+                "SS": 0.23,
+                "SSS": 0.27
+            }
+        },
+        "calculatedStatus": {
+            "lv60SixStarFullyAwakened": {
+                "atk": 621,
+                "hp": 5254,
+                "def": 703,
+                "spd": 104,
+                "chc": 0.15,
+                "chd": 1.5,
+                "eff": 0,
+                "efr": 0
+            }
+        },
+        "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/face/c2186_su.png",
+        "source": "ceciliabot",
+        "source_url": "https://ceciliabot.github.io/#/hero/lisette"
+    },
+    "uncharted-pioneer-politis": {
+        "code": "c5112",
+        "_id": "uncharted-pioneer-politis",
+        "name": "Uncharted Pioneer Politis",
+        "rarity": 5,
+        "attribute": "ice",
+        "role": "ranger",
+        "skills": {
+            "S1": {
+                "name": "Pulse Deployment",
+                "description": "Attacks all enemies with light, with a 50% chance to dispel one buff. Deals 1000 additional damage regardless of whether the attack hits.",
+                "rate": 0.8,
+                "pow": 1,
+                "targets": 4
+            },
+            "S2": {
+                "name": "Survivor's Mission",
+                "description": "At the start of battle, when in the front row, grants offense mission, and when in the back row, grants defense mission. When a mission is complete, dispels the mission and all debuffs from the caster, and activates Last Words of a Fallen Star. Last Words of a Fallen Star: Grants knowledge of the stars to all allies, and grants an extra turn to the caster.",
+                "passive": true
+            },
+            "S3": {
+                "name": "Light Piercing the End",
+                "description": "Attacks all enemies with a drone, dispelling all buffs before increasing skill cooldowns by 1 turn. Deals 3000 additional damage regardless of whether the attack hits.",
+                "rate": 1,
+                "pow": 1,
+                "cooldown": 7,
+                "targets": 4,
+                "soulburn": true,
+                "soulburn_souls": 20,
+                "soulburn_effect": "Ignores Effect Resistance."
+            }
+        },
+        "self_devotion": {
+            "type": "eff",
+            "grades": {
+                "B": 0.09,
+                "A": 0.14,
+                "S": 0.19,
+                "SS": 0.23,
+                "SSS": 0.27
+            }
+        },
+        "calculatedStatus": {
+            "lv60SixStarFullyAwakened": {
+                "atk": 993,
+                "hp": 6002,
+                "def": 611,
+                "spd": 120,
+                "chc": 0.15,
+                "chd": 1.5,
+                "eff": 0,
+                "efr": 0
+            }
+        },
+        "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/face/c5112_su.png",
+        "source": "ceciliabot",
+        "source_url": "https://ceciliabot.github.io/#/hero/uncharted-pioneer-politis"
     },
     "tidal-rift-elvira": {
         "code": "c2148",
