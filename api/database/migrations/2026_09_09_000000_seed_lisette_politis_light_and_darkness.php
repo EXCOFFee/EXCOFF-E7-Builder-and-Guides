@@ -86,7 +86,7 @@ return new class extends Migration
                     'name'          => 'Lisette',
                     'slug'          => 'lisette',
                     'element'       => 'light',
-                    'class'         => 'manauser',
+                    'class'         => 'soul_weaver',
                     'rarity'        => 5,
                     'base_stats'    => json_encode($lisetteStats),
                     'skills'        => json_encode($lisetteSkills),
