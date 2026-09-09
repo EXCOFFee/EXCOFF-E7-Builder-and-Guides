@@ -245,7 +245,7 @@ return new class extends Migration
                     'name'        => 'Land of Lingering Light',
                     'name_es'     => 'La Tierra donde permanece la Luz',
                     'slug'        => 'land-of-lingering-light',
-                    'class'       => null,
+                    'class'       => 'knight',
                     'rarity'      => 5,
                     'description' => 'Increases the Friendship acquired after completing a stage in Adventure, Side Story, Spirit Altar, Emergency Mission, Hunt, Rift, and Otherworld Breach by the Hero who has this Artifact equipped by 100%. When more than one Friendship increase effect is granted, only the strongest effect is applied. The skill effect of this Artifact does not increase when enhanced.',
                     'image_url'   => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0250_fu.png',
