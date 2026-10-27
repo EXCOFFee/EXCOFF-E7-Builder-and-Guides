@@ -77,6 +77,8 @@ E7Tools-main/
 
 # Root level scripts (development/analysis)
 scripts/
+# ...pero los scripts del frontend sí se versionan
+!web/scripts/
 
 # Temporary files
 *.zip

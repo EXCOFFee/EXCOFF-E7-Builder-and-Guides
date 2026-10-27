@@ -12,8 +12,8 @@ import { useTranslations } from '@/hooks/useTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { PopularBuildStats } from '@/components/heroes/PopularBuildStats';
 import { appendImageVersion } from '@/lib/heroImages';
-import { formatSkillText, getSkillMechanics } from '@/utils/skillFormatter';
-import { getBuffIcon } from '@/utils/buffIconMapper';
+import { formatSkillText } from '@/utils/skillFormatter';
+import { SkillEffects, SkillIcon, useHeroEffects } from '@/components/heroes/SkillEffects';
 
 
 
@@ -186,6 +186,7 @@ export function HeroDetailClient() {
     const slug = params.slug as string;
     const { t, locale } = useTranslations();
     const { translateHeroName } = useHeroTranslations();
+    const effectsData = useHeroEffects();
 
     const { data, isLoading, error } = useQuery({
         queryKey: ['hero', slug, locale],
@@ -543,20 +544,8 @@ export function HeroDetailClient() {
                                 return (
                                     <div key={skillKey} className="bg-e7-void/50 rounded-lg p-4 border border-e7-gold/10">
                                         <div className="flex items-center gap-3 mb-3 flex-wrap">
-                                            {/* Skill Icon from datamine */}
-                                            {hero.hero_code && (
-                                                <Image
-                                                    src={`${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/skills/sk_${hero.hero_code}_${skillKey.replace('S', '')}.png`}
-                                                    alt={`${skillKey} icon`}
-                                                    width={56}
-                                                    height={56}
-                                                    className="rounded-lg"
-                                                    unoptimized
-                                                    onError={(e) => {
-                                                        (e.target as HTMLImageElement).style.display = 'none';
-                                                    }}
-                                                />
-                                            )}
+                                            {/* Skill Icon from datamine (fallback a CeciliaBot) */}
+                                            {hero.hero_code && <SkillIcon heroCode={hero.hero_code} skillKey={skillKey} />}
                                             <Badge className="bg-e7-gold text-black font-bold px-3">{skillKey}</Badge>
                                             <h3 className="text-white font-semibold">{skillName || `Skill ${skillKey}`}</h3>
                                             {s.targets && (
@@ -600,43 +589,14 @@ export function HeroDetailClient() {
                                             </div>
                                         )}
 
-                                        {/* Header Icons Summary */}
-                                        {(skillDesc || skillSoulburn) && (
-                                            <div className="flex flex-wrap gap-1.5 mb-2 pb-2 border-b border-white/5">
-                                                {(() => {
-                                                    // Import functions locally if needed or assume imported at top
-                                                    // Note: We need to import getSkillMechanics and getBuffIcon at top of file
-                                                    // For now assuming existing imports or I will add them in next step
-                                                    // Combining desc + soulburn for summary
-                                                    const fullText = (skillDesc || '') + ' ' + (skillSoulburn || '');
-                                                    // Function from utils
-                                                    const mechanics = getSkillMechanics(fullText);
+                                        {/* Íconos de buffs/debuffs de la skill */}
+                                        <SkillEffects
+                                            heroName={hero.name}
+                                            skillKey={skillKey}
+                                            fallbackText={`${skillDesc || ''} ${skillSoulburn || ''}`}
+                                            data={effectsData}
+                                        />
 
-                                                    if (mechanics.length === 0) return null;
-
-                                                    return mechanics.map(mech => {
-                                                        const icon = getBuffIcon(mech);
-                                                        if (!icon) return null;
-                                                        return (
-                                                            <div key={mech} className="relative group cursor-help">
-                                                                <Image
-                                                                    src={icon}
-                                                                    alt={mech}
-                                                                    width={24}
-                                                                    height={24}
-                                                                    className="w-6 h-6"
-                                                                    unoptimized
-                                                                />
-                                                                {/* Simple Native Tooltip for now */}
-                                                                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 px-2 py-1 text-xs text-white bg-black/80 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
-                                                                    {mech}
-                                                                </span>
-                                                            </div>
-                                                        );
-                                                    });
-                                                })()}
-                                            </div>
-                                        )}
 
                                         {skillDesc && (
                                             <div className="text-gray-300 text-sm leading-relaxed whitespace-pre-line">
