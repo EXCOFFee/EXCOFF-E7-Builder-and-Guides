@@ -20,17 +20,17 @@ class ArtifactFactory extends Factory
      */
     public function definition(): array
     {
-        $classes = ['warrior', 'knight', 'thief', 'ranger', 'mage', 'soul_weaver', 'common'];
+        $classes = ['warrior', 'knight', 'thief', 'ranger', 'mage', 'soul_weaver'];
         $rarities = [3, 4, 5];
         
         $name = $this->faker->unique()->words(3, true);
         
         return [
             'name' => ucwords($name),
+            'slug' => Str::slug($name),
             'code' => 'a' . $this->faker->unique()->numberBetween(1000, 9999),
             'class' => $this->faker->randomElement($classes),
             'rarity' => $this->faker->randomElement($rarities),
-            'exclusive' => false,
             'image_url' => '/images/artifacts/default.png',
         ];
     }

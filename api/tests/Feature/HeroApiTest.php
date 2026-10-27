@@ -15,6 +15,8 @@ class HeroApiTest extends TestCase
     {
         parent::setUp();
         Cache::flush();
+        // Las migraciones de seed insertan héroes reales; los tests cuentan solo los de factory
+        Hero::query()->delete();
     }
 
     /**
@@ -78,7 +80,8 @@ class HeroApiTest extends TestCase
     {
         Hero::factory()->create(['name' => 'Aravi']);
         Hero::factory()->create(['name' => 'Arbiter Vildred']);
-        Hero::factory()->create(['name' => 'Charlotte']);
+        // La búsqueda es "contiene" (LIKE %Ar%): el tercer nombre no debe contener "ar"
+        Hero::factory()->create(['name' => 'Celine']);
 
         $response = $this->getJson('/api/heroes?search=Ar');
 
