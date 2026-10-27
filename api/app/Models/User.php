@@ -18,8 +18,7 @@ class User extends Authenticatable
         'email',
         'password',
         'avatar',
-        'role',
-        'is_admin',
+        // 'role' e 'is_admin' quedan fuera a propósito: nunca deben venir de mass assignment
         'provider',
         'provider_id',
         'provider_token',

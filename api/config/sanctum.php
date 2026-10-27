@@ -47,7 +47,8 @@ return [
     |
     */
 
-    'expiration' => null,
+    // 30 días por defecto: un token robado deja de servir y el usuario se reloguea vía OAuth
+    'expiration' => (int) env('SANCTUM_EXPIRATION', 60 * 24 * 30),
 
     /*
     |--------------------------------------------------------------------------
