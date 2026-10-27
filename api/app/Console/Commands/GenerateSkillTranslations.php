@@ -54,7 +54,7 @@ class GenerateSkillTranslations extends Command
             return self::FAILURE;
         }
 
-        $sourcePath = base_path('web/src/messages/skills/en.json');
+        $sourcePath = base_path('../web/messages/skills/en.json');
         if (!File::exists($sourcePath)) {
             $this->error("Source file not found: {$sourcePath}");
             return self::FAILURE;
@@ -72,7 +72,7 @@ class GenerateSkillTranslations extends Command
 
         foreach ($targetLangs as $lang) {
             $this->info("🚀 Processing language: {$lang}");
-            $targetPath = base_path("web/src/messages/skills/{$lang}.json");
+            $targetPath = base_path("../web/messages/skills/{$lang}.json");
             
             // Load existing or init empty
             $targetData = File::exists($targetPath) ? json_decode(File::get($targetPath), true) : [];

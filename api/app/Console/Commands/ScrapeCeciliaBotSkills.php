@@ -18,7 +18,7 @@ use Illuminate\Support\Str;
 class ScrapeCeciliaBotSkills extends Command
 {
     protected $signature = 'ceciliabot:scrape-skills 
-                            {--output= : Output file path (default: ../web/src/messages/skills/en.json)}
+                            {--output= : Output file path (default: ../web/messages/skills/en.json)}
                             {--limit= : Limit number of heroes to scrape (for testing)}
                             {--hero= : Scrape specific hero by slug}';
 
@@ -31,7 +31,7 @@ class ScrapeCeciliaBotSkills extends Command
     
     public function handle(): int
     {
-        $outputPath = $this->option('output') ?: base_path('../web/src/messages/skills/en.json');
+        $outputPath = $this->option('output') ?: base_path('../web/messages/skills/en.json');
         $limit = $this->option('limit') ? (int)$this->option('limit') : null;
         $specificHero = $this->option('hero');
 

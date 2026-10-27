@@ -61,7 +61,7 @@ class ImportSkillTranslations extends Command
             } else {
                 $filePrefix = $lang === 'en' ? 'messages/skills/en' : "recovered_skills_{$lang}";
                 // Try to find the file in standardized locations if custom path not provided
-                $scrapedPath = base_path("../web/src/messages/skills/{$lang}.json");
+                $scrapedPath = base_path("../web/messages/skills/{$lang}.json");
                 $legacyPath = $basePath . "{$filePrefix}.json";
                 
                 $filePath = File::exists($scrapedPath) ? $scrapedPath : $legacyPath;
