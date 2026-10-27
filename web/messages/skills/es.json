@@ -346,16 +346,16 @@
         "_name": "Montmorancy Angélica",
         "skills": {
             "S1": {
-                "name": "Hechicería de Sueño",
-                "description": "Ataca al enemigo con energía de agua, con un 65% de probabilidad de ponerlo a dormir por 1 turno."
+                "name": "Hechizo del Sueño",
+                "description": "Ataca al enemigo con energía del agua, con un 75% de probabilidad de dormirlo por 1 turno."
             },
             "S2": {
                 "name": "Purificación",
-                "description": "Disipa una desventaja de todos los aliados y cura a los aliados con desventajas. La cantidad recuperada es proporcional a la Vida máxima del aliado."
+                "description": "Disipa una desventaja de todos los aliados y recupera la Vida de los aliados con desventajas proporcionalmente a la Vida máxima del objetivo."
             },
             "S3": {
-                "name": "Oración Ferviente",
-                "description": "Disipa dos desventajas de un aliado antes de recuperar Vida y otorgar inmunidad por 2 turnos. Aumenta la Presteza del lanzador en un 50%. La cantidad recuperada aumenta proporcionalmente a la Vida máxima del aliado.",
+                "name": "Plegaria Ferviente",
+                "description": "Disipa dos desventajas de un aliado antes de recuperar su Vida proporcionalmente a la Vida máxima del objetivo y otorgarle inmunidad por 2 turnos. Disminuye la reactivación de las habilidades del lanzador en 1 turno.",
                 "soulburn_effect": "El efecto se otorga a todos los aliados."
             }
         }
@@ -454,17 +454,17 @@
         "_name": "Arquitecta Laika",
         "skills": {
             "S1": {
-                "name": "Eliminando Variables",
-                "description": "Ataca al enemigo, y aumenta la Presteza del lanzador en un 20%. El daño causado aumenta proporcionalmente a la Velocidad del lanzador."
+                "name": "Eliminar Variables.",
+                "description": "Ataca al enemigo y aumenta la Presteza del lanzador en un 20%. El daño causado aumenta proporcionalmente a la Velocidad del lanzador."
             },
             "S2": {
-                "name": "Preparando el Terreno",
-                "description": "Confirma el objetivo, con un 85% de probabilidad cada uno de disipar dos mejoras del enemigo e infligir blanco por 2 turnos, antes de otorgar aumento de Ataque e inmunidad al lanzador por 2 turnos. Después de usar esta habilidad, cuando el enemigo está infligido con blanco, otorga un turno extra al lanzador.",
+                "name": "Sentar las Bases",
+                "description": "Confirma el objetivo, con un 100% de probabilidad de disipar dos mejoras del enemigo e infligir objetivo por 2 turnos, antes de otorgar aumento de Ataque e inmunidad al lanzador por 2 turnos. Después de usar esta habilidad, si el enemigo tiene objetivo, otorga un turno extra al lanzador.",
                 "soulburn_effect": "Ignora Resistencia a Efectos."
             },
             "S3": {
-                "name": "Eliminando el Objetivo",
-                "description": "Con todo saliendo según el plan, ataca a todos los enemigos, y cuando el enemigo es derrotado, inflige extinción. Cuando el objetivo no es un monstruo Élite o Jefe, ignora compartir daño. Cuando el enemigo está infligido con blanco, penetra la Defensa en un 80%. El daño causado aumenta proporcionalmente a la Velocidad del lanzador."
+                "name": "Eliminar el Objetivo.",
+                "description": "Con todo saliendo según lo planeado, ataca a todos los enemigos, y cuando el enemigo es derrotado, inflige extinción. Si el objetivo no es un monstruo Élite o Jefe, ignora compartir daño. Si el enemigo tiene objetivo, penetra la Defensa en un 80%. El daño causado aumenta proporcionalmente a la Velocidad del lanzador."
             }
         }
     },
@@ -630,6 +630,42 @@
             }
         }
     },
+    "Aubade Ludwig": {
+        "_name": "Ludwig Alborada",
+        "skills": {
+            "S1": {
+                "name": "Luz de Luna",
+                "description": "Ataca al enemigo con luz de luna. Cuando el lanzador tiene amanecer, activa Luz de Condena como ataque extra. Luz de Condena solo puede activarse una vez por turno, durante el turno del lanzador. Luz de Condena (obtiene 5 de Alma): Ataca a todos los enemigos y consume toda el Alma sin importar si el ataque acierta, causando 1.000 de daño adicional. El daño adicional aumenta proporcionalmente a la cantidad de Alma consumida, hasta 25.000."
+            },
+            "S2": {
+                "name": "La Noche que Saluda al Alba",
+                "description": "Aumenta la Defensa en un 30%. Al final del turno de un aliado, cuando el Alma es 10 o más, aumenta la Presteza del lanzador en un 20%."
+            },
+            "S3": {
+                "name": "Noche Blanca",
+                "description": "Disipa dos mejoras de todos los enemigos y tiene un 85% de probabilidad de infligir bloqueo por 2 turnos y silencio por 1 turno a cada enemigo. Otorga amanecer y una barrera (proporcional a la Vida máxima) al lanzador por 3 turnos.",
+                "soulburn_effect": "Aumenta la fuerza de la barrera."
+            }
+        }
+    },
+    "Aube": {
+        "_name": "Aube",
+        "skills": {
+            "S1": {
+                "name": "Oleaje de Coral",
+                "description": "Ataca al enemigo con magia de coral y disminuye su Presteza en un 20%."
+            },
+            "S2": {
+                "name": "Fiesta de Película",
+                "description": "Libera el momento grabado en la película, con un 100% de probabilidad de otorgar cascada a todos los aliados. Otorga anulador de habilidad una vez y un turno extra al lanzador."
+            },
+            "S3": {
+                "name": "Momento Eterno",
+                "description": "Fija a todos los enemigos en un fotograma, disipando dos mejoras antes de un 100% de probabilidad de infligir inmovilización y restricción por 2 turnos a cada uno. El ocultamiento permanece durante toda la batalla.",
+                "soulburn_effect": "Ignora Resistencia a Efectos."
+            }
+        }
+    },
     "Auxiliary Lots": {
         "_name": "Lots Auxiliar",
         "skills": {
@@ -779,15 +815,15 @@
         "skills": {
             "S1": {
                 "name": "Llamarada Abrasadora",
-                "description": "Ataca al enemigo con llamas, quemándolo por 1 turno. Cuando se usa en el turno del lanzador, activa Incinerar en lugar de Llamarada Abrasadora. Incinerar: Ataca al enemigo con una explosión de llamas y quema por 1 turno, antes de detonar los efectos de quemadura infligidos en el objetivo al final del turno. Esta habilidad no activa un Ataque Dual."
+                "description": "Ataca al enemigo con llamas, infligiendo quemadura por 1 turno. Al usarla en el turno del lanzador, activa Incinerar en lugar de Llamarada Abrasadora. Incinerar: Ataca al enemigo con una explosión de llamas e inflige quemadura por 1 turno, antes de detonar los efectos de quemadura del objetivo al final del turno. Esta habilidad no puede activar un Ataque Dual."
             },
             "S2": {
                 "name": "Guardián de la Llama",
-                "description": "Aumenta el Ataque y la Defensa en un 20%. Al atacar, no puede activar un golpe crítico. Aumenta el daño de quemadura sufrido por los enemigos en un 30%. Este efecto de habilidad no se acumula con otras habilidades pasivas del mismo nombre."
+                "description": "Aumenta el Ataque y la Efectividad en un 30%. Al atacar, no puede activar golpe crítico. Aumenta el daño de quemadura que reciben los enemigos en un 30%. Este efecto no se acumula con otras habilidades pasivas del mismo nombre."
             },
             "S3": {
-                "name": "Sinfonía de Resplandor",
-                "description": "Con luz, disipa dos mejoras de todos los enemigos y los hace incapaces de recibir mejoras por 2 turnos, antes de aumentar la Presteza del lanzador en un 50%. Aumenta la Presteza de todos los aliados excepto el lanzador en un 20%.",
+                "name": "Sinfonía del Resplandor",
+                "description": "Con luz, disipa dos mejoras de todos los enemigos e inflige bloqueo de mejoras y quemadura por 2 turnos, antes de aumentar la Presteza del lanzador en un 50%. Aumenta la Presteza de todos los aliados excepto el lanzador en un 20%.",
                 "soulburn_effect": "La reactivación de la habilidad disminuye en 2 turnos."
             }
         }
@@ -1934,13 +1970,13 @@
                 "description": "Se acerca y ataca al enemigo con una lanza, y aumenta la Velocidad del lanzador por 1 turno. El daño causado aumenta proporcionalmente a la Vida máxima del lanzador."
             },
             "S2": {
-                "name": "Resolución de la Novia",
-                "description": "Aumenta la Vida máxima en un 10%. Cuando la Vida del aliado en la retaguardia excepto el lanzador es 50% o menos después de ser atacado, disipa todas las desventajas del lanzador y del aliado en la retaguardia, y activa Oración Nupcial. Oración Nupcial: Otorga una barrera (proporcional a la Vida máxima del lanzador) al lanzador y al aliado en la retaguardia por 2 turnos, y otorga Juramento de Castigo al lanzador por 2 turnos antes de restablecer las reactivaciones de habilidad del lanzador."
+                "name": "Determinación de la Novia",
+                "description": "Aumenta la Vida máxima en un 10%. Cuando la Vida del aliado de la fila trasera distinto del lanzador es del 50% o menos tras ser atacado, disipa todas las desventajas del lanzador y de ese aliado, y activa Plegaria Nupcial. Plegaria Nupcial (obtiene 10 de Alma): Otorga una barrera (proporcional a la Vida máxima del lanzador) al lanzador y al aliado de la fila trasera por 3 turnos, y otorga Juramento de Castigo al lanzador por 3 turnos antes de restablecer la reactivación de sus habilidades."
             },
             "S3": {
-                "name": "Superar la Dificultad",
-                "description": "Ataca al enemigo perforándolo, y aumenta la Presteza del lanzador y del aliado en la retaguardia en un 30%. Penetra la Defensa, pero no puede activar un golpe crítico o un golpe fuerte. El daño causado aumenta proporcionalmente a la Vida máxima del lanzador. Cuando el lanzador tiene Juramento de Castigo, ataca a todos los enemigos.",
-                "soulburn_effect": "Aumenta el daño causado."
+                "name": "Superar la Adversidad",
+                "description": "Ataca al enemigo atravesándolo y aumenta la Presteza del lanzador y del aliado de la fila trasera en un 30%. Penetra la Defensa, pero no puede activar golpe crítico ni golpe contundente. El daño causado aumenta proporcionalmente a la Vida máxima del lanzador. Cuando el lanzador tiene Juramento de Castigo, ataca a todos los enemigos.",
+                "soulburn_effect": "La reactivación de la habilidad disminuye en 2 turnos."
             }
         }
     },
@@ -2194,6 +2230,24 @@
             "S3": {
                 "name": "Puedes Manejar Esto?",
                 "description": "Ataca a todos los enemigos con la esencia de la ingeniería mágica. Cuando alguien usa una Quemadura de Almas, aumenta la Presteza del lanzador en un 20% y la tasa de penetración de esta habilidad en un 30%. El efecto de aumento de tasa de penetración puede acumularse hasta 2 veces."
+            }
+        }
+    },
+    "Eye of the Abyss Fumyr": {
+        "_name": "Fumyr Ojo del Abismo",
+        "skills": {
+            "S1": {
+                "name": "Magia Elemental",
+                "description": "Ataca al enemigo con magia elemental, con un 40% de probabilidad de infligir aturdimiento por 1 turno.",
+                "soulburn_effect": "Aumenta la probabilidad de efecto al 100%."
+            },
+            "S2": {
+                "name": "Desesperación Azul",
+                "description": "Envuelve a todos los enemigos con la energía del mar profundo, disipando dos mejoras antes de disminuir su Presteza en un 25%. Otorga un turno extra."
+            },
+            "S3": {
+                "name": "Ojo del Abismo",
+                "description": "Atraviesa con luz al Héroe enemigo más adelantado, infligiendo retención, y cuando la retención se inflige, otorga disuasión al lanzador por 2 turnos. Otorga una barrera (proporcional al nivel) y sigilo al lanzador por 2 turnos."
             }
         }
     },
@@ -2665,21 +2719,39 @@
             }
         }
     },
+    "Haru": {
+        "_name": "Haru",
+        "skills": {
+            "S1": {
+                "name": "Ancla de Poder",
+                "description": "Ataca al enemigo con un ancla y otorga una barrera a todos los aliados por 1 turno. El daño causado y la fuerza de la barrera aumentan proporcionalmente a la Vida máxima del lanzador. Al inicio del turno, cuando el Foco está completo, cambia a Golpe de Poder. Golpe de Poder (consume 5 Foco): Ataca al enemigo y otorga un turno extra al lanzador. Penetra la Defensa del objetivo. No se ve afectado por la desventaja elemental. El daño causado aumenta proporcionalmente a la Vida máxima del lanzador. El ataque modificado no activa un Ataque Dual."
+            },
+            "S2": {
+                "name": "Puntero de Ancla",
+                "description": "Al inicio de la batalla, obtiene 3 Foco y tiene un 100% de probabilidad de otorgar indomable a todos los aliados por 1 turno. Al inicio del turno, cuando el lanzador tiene una mejora, disipa todas las desventajas del lanzador y restablece la reactivación de Disparo de Ancla."
+            },
+            "S3": {
+                "name": "Disparo de Ancla",
+                "description": "Ataca al enemigo con un ancla, absorbiendo parte del daño causado como Vida, y otorga moral a todos los aliados por 2 turnos. Cuando el objetivo tiene una barrera, penetra la Defensa del objetivo en un 70%. El daño causado aumenta proporcionalmente a la Vida máxima del lanzador. El daño causado aumenta cada vez que se usa esta habilidad, acumulándose hasta 5 veces.",
+                "soulburn_effect": "Aumenta la probabilidad de acierto en un 100% al usar esta habilidad."
+            }
+        }
+    },
     "Hasol": {
         "_name": "Hasol",
         "skills": {
             "S1": {
-                "name": "Corte Rápido",
-                "description": "Ataca al enemigo, antes de recuperar Vida del lanzador. Adicionalmente inflige 500 de daño fijo independientemente de si el ataque golpea. El daño causado y la cantidad recuperada aumentan proporcionalmente a la Vida máxima del lanzador.",
+                "name": "Corte Veloz",
+                "description": "Ataca al enemigo antes de recuperar la Vida del lanzador. Además, causa 500 de daño fijo sin importar si el ataque acierta. El daño causado y la cantidad recuperada aumentan proporcionalmente a la Vida máxima del lanzador.",
                 "soulburn_effect": "Otorga un turno extra."
             },
             "S2": {
-                "name": "Hoja de Venganza",
-                "description": "Cuando un aliado sufre un contraataque, disminuye el daño sufrido en un 25%. Cuando se otorga más de un efecto de reducción de daño, solo se aplica el efecto más fuerte. Después de que un enemigo contraataca, aumenta la Presteza del lanzador en un 15% y aumenta el daño fijo de Corte Rápido y Golpe Castigador en 1500. El aumento de daño fijo puede acumularse hasta 5 veces."
+                "name": "Hoja de la Venganza",
+                "description": "Cuando un aliado sufre un contraataque, disminuye el daño recibido en un 25%. Si se otorga más de un efecto de reducción de daño, solo se aplica el más fuerte. Después de que un enemigo contraataca, aumenta la Presteza del lanzador en un 25% y aumenta el daño fijo de Corte Veloz y Golpe Punitivo en 1500. El aumento de daño fijo se acumula hasta 5 veces."
             },
             "S3": {
-                "name": "Golpe Castigador",
-                "description": "Ataca a todos los enemigos con una habilidad secreta y adicionalmente inflige 500 de daño fijo independientemente de si el ataque golpea. Otorga aumento de Defensa a todos los aliados por 3 turnos, y otorga inmunidad al lanzador por 3 turnos. El daño causado aumenta proporcionalmente a la Vida máxima del lanzador. Después de sufrir un contraataque, disminuye la reactivación de habilidades en 1 turno."
+                "name": "Golpe Punitivo",
+                "description": "Ataca a todos los enemigos con una técnica secreta y además causa 500 de daño fijo sin importar si el ataque acierta. Otorga aumento de Defensa a todos los aliados por 3 turnos e inmunidad al lanzador por 3 turnos. El daño causado aumenta proporcionalmente a la Vida máxima del lanzador. Después de sufrir un contraataque, disminuye la reactivación de la habilidad en 1 turno."
             }
         }
     },
@@ -2868,16 +2940,16 @@
         "skills": {
             "S1": {
                 "name": "Patada Supersónica",
-                "description": "Ataca al enemigo con una patada. Un ataque exitoso inflige daño adicional proporcional al Ataque del lanzador.",
-                "soulburn_effect": "Aumenta el daño causado y el daño adicional."
+                "description": "Ataca al enemigo con una patada y causa daño adicional proporcional al Ataque del lanzador.",
+                "soulburn_effect": "Otorga un ataque extra con la misma habilidad."
             },
             "S2": {
                 "name": "Halcón de la Pradera",
-                "description": "Al atacar, no puede activar un golpe crítico. El daño sufrido por un golpe crítico disminuye en un 20%. Cuando se otorga más de un efecto de reducción de daño, solo se aplica el efecto más fuerte. Al inicio del turno, cuando el lanzador no tiene una desventaja, aumenta el Ataque por 1 turno."
+                "description": "Aumenta la Evasión en un 50%. Al atacar, no puede activar golpe crítico ni golpe contundente. Al inicio del turno, aumenta el Ataque por 1 turno."
             },
             "S3": {
                 "name": "Golpe Llameante del Monarca",
-                "description": "Disipa todas las desventajas del lanzador, y ataca al enemigo con una técnica secreta y otorga inmunidad y una barrera al lanzador por 2 turnos. Cuando el Ataque del lanzador es mayor que el Ataque del objetivo, penetra la Defensa del objetivo, aumentando la tasa de penetración proporcionalmente a la diferencia, hasta un máximo del 100%. La fuerza de la barrera aumenta proporcionalmente al Ataque del lanzador."
+                "description": "Disipa todas las desventajas del lanzador y ataca al enemigo con una técnica secreta antes de otorgar inmunidad y una barrera (proporcional al Ataque) al lanzador por 2 turnos. Cuando el Ataque del lanzador es mayor que el del objetivo, penetra la Defensa proporcionalmente, hasta un 100%."
             }
         }
     },
@@ -3007,6 +3079,24 @@
             }
         }
     },
+    "Ivana": {
+        "_name": "Ivana",
+        "skills": {
+            "S1": {
+                "name": "Luz Sagrada",
+                "description": "Ataca al enemigo con luz sagrada y recupera la Vida de los aliados proporcionalmente a la Vida máxima del objetivo.",
+                "soulburn_effect": "Aumenta la cantidad recuperada."
+            },
+            "S2": {
+                "name": "Luz del Reposo",
+                "description": "No se ve afectada por disminuciones de Presteza. Al inicio del turno, disipa la inmortalidad de todos los enemigos. Ignora Resistencia a Efectos. Al final del turno de cualquiera, si un enemigo tiene inmortalidad, esparce la luz del incensario para disipar todas las desventajas de todos los aliados y otorgar resplandor por 2 turnos, antes de aumentar la Presteza del lanzador en un 50%."
+            },
+            "S3": {
+                "name": "Plegaria de Réquiem",
+                "description": "Disipa dos desventajas de todos los aliados ofreciendo una plegaria para desterrar el mal, y otorga ignorar compartir daño por 3 turnos e inmunidad por 2 turnos antes de aumentar la Presteza en un 20%."
+            }
+        }
+    },
     "Jack-O'": {
         "_name": "Jack-O'",
         "skills": {
@@ -3106,12 +3196,12 @@
             },
             "S2": {
                 "name": "Fin del Mal",
-                "description": "Ataca a todos los enemigos con una guadaña, disipando todas las mejoras antes de un 85% de probabilidad de infligir disminución de Probabilidad de Golpe por 2 turnos y un 60% de probabilidad de infligir disminución de Defensa por 2 turnos, y aumenta la Presteza del lanzador en un 25% por objetivo. Esta habilidad no puede activar un contraataque.",
+                "description": "Ataca a todos los enemigos con una guadaña, disipando todas las mejoras antes de un 100% de probabilidad de infligir disminución de probabilidad de acierto por 2 turnos y un 85% de probabilidad de infligir disminución de Defensa por 2 turnos, y aumenta la Presteza del lanzador en un 25% por cada objetivo. Esta habilidad no puede activar un contraataque.",
                 "soulburn_effect": "Ignora Resistencia a Efectos."
             },
             "S3": {
-                "name": "Onda de Luz",
-                "description": "Ataca a todos los enemigos distorsionando el espacio y el tiempo antes de aumentar la reactivación de habilidades en 1 turno. Otorga invencibilidad al lanzador por 1 turno."
+                "name": "Ola de Luz",
+                "description": "Ataca a todos los enemigos distorsionando el espacio y el tiempo antes de aumentar la reactivación de sus habilidades en 1 turno. Otorga invencibilidad al lanzador por 1 turno."
             }
         }
     },
@@ -3444,15 +3534,15 @@
         "skills": {
             "S1": {
                 "name": "Fuego",
-                "description": "Ataca al enemigo con disparos, y aumenta la Presteza del lanzador en un 10%. Cuando el objetivo tiene una mejora, duplica los efectos de aumento de Presteza y de ganancia de Espíritu de Lucha."
+                "description": "Ataca al enemigo con disparos y aumenta la Presteza del lanzador en un 15%. Si el objetivo tiene una mejora, duplica el aumento de Presteza y el Espíritu de Lucha obtenido."
             },
             "S2": {
-                "name": "La Jefa está en la Escena",
-                "description": "Al inicio de la primera batalla, gana 50 de Espíritu de Lucha y otorga sigilo por 1 turno. Al inicio del turno, gana 10 de Espíritu de Lucha por cada mejora otorgada a un enemigo, y cuando el Espíritu de Lucha está lleno, restablece la reactivación de habilidad. Después de atacar, aumenta el Ataque del lanzador en un 20%. Este efecto puede acumularse hasta 3 veces."
+                "name": "La Jefa Está en Escena",
+                "description": "Al inicio de la primera batalla, obtiene 50 de Espíritu de Lucha y otorga sigilo por 1 turno. Al inicio del turno, obtiene 10 de Espíritu de Lucha por cada mejora que tenga un enemigo, y cuando el Espíritu de Lucha está completo, restablece la reactivación de la habilidad. Después de atacar, aumenta el Ataque del lanzador en un 25%. Este efecto se acumula hasta 3 veces."
             },
             "S3": {
-                "name": "Ráfaga Completa",
-                "description": "Dispara a todos los enemigos y otorga a todos los aliados aumento de Velocidad por 2 turnos, antes de aumentar su Presteza en un 15%. Cuando el Espíritu de Lucha está lleno, consume todo el Espíritu de Lucha para penetrar la Defensa del objetivo en un 50%. Esta habilidad no puede activar un contraataque.",
+                "name": "Ráfaga Total",
+                "description": "Dispara a todos los enemigos y aumenta la Presteza de todos los aliados en un 25%, antes de otorgar una barrera (proporcional al Ataque) al lanzador por 2 turnos. Cuando el Espíritu de Lucha está completo, lo consume por completo para penetrar la Defensa del objetivo en un 50%. Esta habilidad no puede activar un contraataque.",
                 "soulburn_effect": "Otorga un turno extra."
             }
         }
@@ -3652,6 +3742,23 @@
             "S3": {
                 "name": "¡Soy la Ganadora!",
                 "description": "Ataca a todos los enemigos con una explosión de espada, antes de otorgar un turno extra. Penetra la Defensa del objetivo en un 50%. El daño causado aumenta proporcionalmente a la Defensa del lanzador. Comienza la primera batalla con la cuenta de reactivación completa."
+            }
+        }
+    },
+    "Lisette": {
+        "_name": "Lisette",
+        "skills": {
+            "S1": {
+                "name": "Fuente de Luz",
+                "description": "Ataca al enemigo con luz y recupera la Vida de todos los aliados. El daño causado y la cantidad recuperada aumentan proporcionalmente a la Vida máxima del lanzador."
+            },
+            "S2": {
+                "name": "Devoción",
+                "description": "Al inicio de la primera batalla, otorga cuatro efectos de divinidad. Cuando muere un aliado distinto del lanzador, consume una divinidad para revivirlo como Fragmento de Vida por 2 turnos y aumentar su Presteza en un 30%."
+            },
+            "S3": {
+                "name": "Tiempo Convergente",
+                "description": "Reconstruye el mundo para recuperar por completo la Vida de todos los aliados y les otorga aumento de Velocidad por 3 turnos. Cuando el lanzador tiene divinidad, otorga reversión temporal a todos los aliados excepto al lanzador. Esta habilidad no se ve afectada por efectos que aumentan o disminuyen la reactivación."
             }
         }
     },
@@ -3943,6 +4050,23 @@
             }
         }
     },
+    "Mei Lin": {
+        "_name": "Mei Lin",
+        "skills": {
+            "S1": {
+                "name": "Golpe",
+                "description": "Ataca al enemigo con el puño, antes de aumentar la Presteza del lanzador en un 25% y disminuir la reactivación de sus habilidades en 1 turno. Un ataque exitoso siempre resulta en golpe crítico."
+            },
+            "S2": {
+                "name": "Aguja del Dragón Ascendente",
+                "description": "Tras otorgar aumento de Ataque al lanzador por 2 turnos, ataca al enemigo con una patada, y cuando el enemigo es derrotado, inflige extinción. Un ataque exitoso siempre resulta en golpe crítico. Cuando un aliado de elemento Fuego usa una habilidad, otorga fervor, que potencia Aguja del Dragón Ascendente."
+            },
+            "S3": {
+                "name": "Dragón de Llama Celestial",
+                "description": "Recupera por completo la Vida del lanzador y le otorga un turno extra. En el siguiente ataque, otorga un ataque extra con la misma habilidad. Comienza la primera batalla con la reactivación de la habilidad al máximo, y la menor estadística entre Ataque y Defensa pasa a ser igual a la mayor."
+            }
+        }
+    },
     "Melany": {
         "_name": "Melany",
         "skills": {
@@ -4019,17 +4143,17 @@
         "_name": "Lilias Gala de Medianoche",
         "skills": {
             "S1": {
-                "name": "¡Vamos, Kyla!",
-                "description": "Ataca al enemigo con Kyla, y recupera Vida. La cantidad recuperada aumenta proporcionalmente al Ataque del lanzador. Un ataque exitoso siempre resulta en un golpe crítico.",
-                "soulburn_effect": "Aumenta la cantidad recuperada."
+                "name": "¡Ve, Kyla!",
+                "description": "Ataca al enemigo con Kyla y recupera Vida. La cantidad recuperada aumenta proporcionalmente al Ataque del lanzador. Un ataque exitoso siempre resulta en golpe crítico.",
+                "soulburn_effect": "Aumenta el daño causado."
             },
             "S2": {
                 "name": "Plan Elaborado",
-                "description": "Al inicio de la batalla y al final del turno, otorga límite de daño al lanzador por 1 turno. Después de atacar en el turno del lanzador, cuando la Vida del objetivo es 50% o menos, activa ¡Ahora o Nunca!. ¡Ahora o Nunca! solo puede activarse una vez cada 3 turnos. ¡Ahora o Nunca!: Aumenta el Ataque de todos los aliados por 2 turnos antes de aumentar la Presteza en un 10%."
+                "description": "Al inicio de la batalla y al final del turno, otorga límite de daño al lanzador por 1 turno. Después de atacar en el turno del lanzador, si la Vida del objetivo es del 50% o menos, activa ¡Ahora o Nunca!. ¡Ahora o Nunca!: Otorga aumento de Ataque a todos los aliados excepto el lanzador por 2 turnos antes de aumentar su Presteza en un 20%, y aumenta la Presteza del lanzador en un 50%."
             },
             "S3": {
                 "name": "Tomar la Delantera",
-                "description": "Aumenta el Ataque del lanzador por 2 turnos, antes de atacar al enemigo en su punto ciego, y aumenta la Presteza del lanzador en un 35%. Cuando la Vida máxima del objetivo es mayor que la Vida máxima del lanzador, penetra la Defensa del objetivo, con la tasa de penetración aumentando proporcionalmente a la diferencia, hasta un máximo del 100%. Un ataque exitoso siempre resulta en un golpe crítico."
+                "description": "Tras otorgar aumento de Ataque al lanzador por 3 turnos, ataca al enemigo aprovechando su debilidad. Si el objetivo es un Héroe, ignora los efectos de reducción de daño y de compartir daño. Cuando la Vida máxima del objetivo es mayor que la del lanzador, penetra la Defensa proporcionalmente, hasta un 100%. Un ataque exitoso siempre resulta en golpe crítico."
             }
         }
     },
@@ -4109,17 +4233,17 @@
         "_name": "Dominiel Conejita Lunar",
         "skills": {
             "S1": {
-                "name": "Ola de Luz de Luna",
-                "description": "Ataca al enemigo con una ola de luz de luna etérea y tiene un 65% de probabilidad de ponerlos a dormir por 1 turno. Esta habilidad no activa un Ataque Dual.",
+                "name": "Onda Lunar",
+                "description": "Ataca al enemigo con una etérea onda de luz de luna y tiene un 75% de probabilidad de dormirlo por 1 turno. Esta habilidad no activa un Ataque Dual.",
                 "soulburn_effect": "Aumenta la probabilidad de efecto al 100%."
             },
             "S2": {
-                "name": "Control de Flujo",
-                "description": "Aumenta la Resistencia a Efectos en un 20%. Al inicio del turno extra de un enemigo, disipa todas las desventajas de todos los aliados y otorga anulación de habilidades una vez e inmunidad por 2 turnos. Solo puede activarse una vez cada 2 turnos, y solo se activa cuando el enemigo es un Héroe."
+                "name": "Control del Flujo",
+                "description": "Al inicio del turno extra de un enemigo, disipa todas las desventajas de todos los aliados antes de otorgar anulador de habilidad una vez y anulador de efecto de habilidad una vez, y aumenta la Presteza del lanzador en un 30%. Solo se activa cuando el enemigo es un Héroe."
             },
             "S3": {
                 "name": "Adivinación",
-                "description": "De acuerdo con las adivinaciones, otorga aumento de Ataque y una barrera a todos los aliados por 2 turnos y aumenta la Presteza en un 15%. La fuerza de la barrera aumenta proporcionalmente a la Vida máxima del lanzador."
+                "description": "De acuerdo con las adivinaciones, otorga vigor y una barrera (proporcional a la Vida máxima del lanzador) a todos los aliados por 2 turnos y aumenta su Presteza en un 30%."
             }
         }
     },
@@ -4599,12 +4723,12 @@
                 "description": "Ataca al enemigo con una tormenta de espadas. Penetra la Defensa del objetivo en un 20%. El daño causado aumenta proporcionalmente a la Velocidad del lanzador."
             },
             "S2": {
-                "name": "Enfoque Mental",
-                "description": "Otorga inmunidad a todos los aliados por 2 turnos, antes de otorgar anulación de habilidades una vez al lanzador y aumento de Ataque al lanzador por 2 turnos. Otorga un turno extra."
+                "name": "Concentración Mental",
+                "description": "Otorga inmunidad a todos los aliados por 2 turnos, antes de otorgar anulador de habilidad una vez y aumento de Ataque al lanzador por 2 turnos. Otorga un turno extra."
             },
             "S3": {
-                "name": "Espada Instantánea",
-                "description": "Ataca a todos los enemigos con una espada, disipando dos mejoras antes de un 80% de probabilidad de infligir congelación y restringir por 2 turnos, y un golpe crítico tendrá un 65% de probabilidad de infligir disminución de Defensa por 2 turnos. El daño causado aumenta proporcionalmente a la Velocidad del lanzador y del objetivo.",
+                "name": "Hoja Instantánea",
+                "description": "Ataca a todos los enemigos con una espada, disipando dos mejoras antes de un 100% de probabilidad de infligir congelación y restricción por 2 turnos, y un golpe crítico tiene un 85% de probabilidad de infligir disminución de Defensa por 2 turnos. El daño causado aumenta proporcionalmente a la Velocidad del lanzador y del objetivo.",
                 "soulburn_effect": "Ignora Resistencia a Efectos."
             }
         }
@@ -4699,6 +4823,24 @@
             }
         }
     },
+    "Renoa": {
+        "_name": "Renoa",
+        "skills": {
+            "S1": {
+                "name": "Juicio Instantáneo",
+                "description": "Ataca al enemigo con una pistola. El daño causado aumenta proporcionalmente a la Defensa del lanzador. Al inicio del turno, cuando el Foco está completo, cambia a Espina Negra. Espina Negra (consume 5 Foco): Ataca al enemigo con espinas y otorga al lanzador el número máximo de Balas Fúnebres. El daño causado aumenta proporcionalmente a la Defensa del lanzador. El ataque modificado no activa un Ataque Dual."
+            },
+            "S2": {
+                "name": "Rosa Negra",
+                "description": "Las mejoras y desventajas aplicadas al lanzador se convierten en Balas Fúnebres. Después de usar una habilidad en el turno del lanzador, si este tiene una Bala Fúnebre, usa Bala Fúnebre contra un enemigo aleatorio. Bala Fúnebre (obtiene 1 Foco): Ataca al enemigo con una pistola. El daño causado aumenta proporcionalmente a la Defensa del lanzador. El daño causado y la cantidad de ataques aumentan proporcionalmente al número de Balas Fúnebres otorgadas."
+            },
+            "S3": {
+                "name": "Flor del Destino Devorado",
+                "description": "Aumenta la Presteza de todos los aliados en un 50% y otorga tres Balas Fúnebres al lanzador.",
+                "soulburn_effect": "Se duplica el número de Balas Fúnebres otorgadas."
+            }
+        }
+    },
     "Requiem Roana": {
         "_name": "Roana Réquiem",
         "skills": {
@@ -4768,6 +4910,24 @@
                 "name": "Golpear Objetivo",
                 "description": "Ataca al enemigo implacablemente, con un 75% de probabilidad de infligir blanco y disminución de Velocidad por 2 turnos. Cuando tiene promoción, el daño causado aumenta proporcionalmente a la Vida máxima del objetivo.",
                 "soulburn_effect": "Aumenta el daño causado."
+            }
+        }
+    },
+    "Rhianna and Luciella": {
+        "_name": "Rhianna y Luciella",
+        "skills": {
+            "S1": {
+                "name": "Tajo de Media Luna / Tajo de Luna Menguante",
+                "description": "(Rhianna) Ataca al enemigo con una daga, infligiendo erosión por 2 turnos. Un golpe crítico detona los efectos de erosión infligidos al objetivo. (Luciella) Tras otorgar aumento de Ataque al lanzador por 1 turno, ataca al enemigo con una daga y absorbe parte del daño causado como Vida."
+            },
+            "S2": {
+                "name": "Marca del Cazador / Hoja de Persecución",
+                "description": "(Rhianna) Ataca al enemigo, disipando dos mejoras antes de infligir atadura y disminución de Defensa por 2 turnos. Intercambia lugar con Luciella y otorga un turno extra. Después de atacar, si el objetivo tiene una desventaja, Luciella activa Tajo de Luna Menguante como ataque extra. (Luciella) Tras otorgar aumento de Ataque al lanzador por 3 turnos, ataca al enemigo. Intercambia lugar con Rhianna y otorga un turno extra. Después de atacar, si la Vida del objetivo es del 50% o menos, Rhianna activa Tajo de Media Luna como ataque extra.",
+                "soulburn_effect": "(Rhianna) Ignora Resistencia a Efectos. (Luciella) Aumenta el daño causado."
+            },
+            "S3": {
+                "name": "Persecución de la Muerte",
+                "description": "Rhianna y Luciella lanzan un ataque coordinado. Luciella ataca a todos los enemigos y, si el objetivo es un Héroe, ignora compartir daño. Rhianna disipa dos mejoras de todos los enemigos antes de infligir miedo por 1 turno. Otorga una barrera (proporcional al Ataque) al lanzador por 3 turnos. Un Ensueño de Mariposa permanece durante toda la batalla."
             }
         }
     },
@@ -5082,16 +5242,16 @@
         "skills": {
             "S1": {
                 "name": "Corte de Tobillo",
-                "description": "Ataca al enemigo con una espada, con un 65% de probabilidad de hacerlos incapaces de recibir mejoras por 1 turno.",
-                "soulburn_effect": "Aumenta la probabilidad de efecto al 100% y los hace incapaces de recibir mejoras por 2 turnos."
+                "description": "Ataca al enemigo con una espada, con un 85% de probabilidad de bloquear sus mejoras por 1 turno."
             },
             "S2": {
                 "name": "Poder de las Cuatro Estaciones",
-                "description": "La Evasión aumenta en un 35%, y después de evadir con éxito, contraataca con Ráfaga de Cuchillas. Ráfaga de Cuchillas solo puede activarse una vez cada 2 turnos. Ráfaga de Cuchillas: Ataca a todos los enemigos con una ráfaga de cuchillas, disipando una mejora."
+                "description": "Aumenta la Evasión en un 50%, y tras evadir con éxito, contraataca con Ráfaga de Hoja. Ráfaga de Hoja solo puede activarse una vez cada 2 turnos. Ráfaga de Hoja (obtiene 10 de Alma): Ataca a todos los enemigos con una ráfaga de hoja, disipando una mejora."
             },
             "S3": {
                 "name": "Golpe de Salvación",
-                "description": "Ataca al enemigo con un golpe poderoso y otorga invencibilidad a todos los aliados excepto al lanzador por 1 turno. Penetra la Defensa del objetivo en un 50%."
+                "description": "Ataca al enemigo con un golpe poderoso y otorga invencibilidad a todos los aliados excepto el lanzador por 1 turno. Cuando el enemigo es derrotado, inflige extinción. Penetra la Defensa del objetivo en un 50%.",
+                "soulburn_effect": "Aumenta el daño causado."
             }
         }
     },
@@ -5136,15 +5296,15 @@
         "skills": {
             "S1": {
                 "name": "Fuego Rápido",
-                "description": "Ataca al enemigo con una pistola. El daño causado aumenta proporcionalmente a la Vida máxima del objetivo. Un golpe crítico duplicará la cantidad de Foco ganado."
+                "description": "Ataca al enemigo con una pistola. El daño causado aumenta proporcionalmente a la Vida máxima del objetivo. Un golpe crítico duplica la cantidad de Foco obtenido."
             },
             "S2": {
                 "name": "Caballero Explosivo",
-                "description": "Al inicio de la primera batalla, gana 3 de Foco. Después de realizar un golpe crítico, aumenta la Presteza de todos los aliados excepto del lanzador en un 15%."
+                "description": "Al inicio de la primera batalla, obtiene 3 Foco. Después de asestar un golpe crítico, aumenta la Presteza de todos los aliados excepto el lanzador en un 25%."
             },
             "S3": {
                 "name": "Disparo de Rifle",
-                "description": "Ataca a todos los enemigos con un rifle y disminuye la Presteza en un 30%. Cuando el Foco está lleno, lo consume todo, aumentando el daño causado e ignorando la Resistencia a Efectos.",
+                "description": "Ataca a todos los enemigos con un rifle y disminuye su Presteza en un 30%. Cuando el Foco está completo, lo consume por completo, aumentando el daño causado e ignorando Resistencia a Efectos.",
                 "soulburn_effect": "Otorga un turno extra."
             }
         }
@@ -5784,16 +5944,16 @@
         "skills": {
             "S1": {
                 "name": "Golpe de Abanderada",
-                "description": "Ataca al enemigo con una bandera, con un 60% de probabilidad de infligir silencio por 1 turno. Después de atacar, si el objetivo está infligido con silencio, disminuye la Presteza del objetivo en un 25%."
+                "description": "Ataca al enemigo con una bandera, con un 75% de probabilidad de infligir silencio por 1 turno. Después de atacar, si el objetivo tiene silencio, disminuye su Presteza en un 25%."
             },
             "S2": {
-                "name": "Bloqueo de Objetivo",
-                "description": "Después de disipar todas las mejoras del enemigo, tiene un 75% de probabilidad de infligir blanco por 2 turnos, y hace que todos los aliados excepto el lanzador ataquen con una habilidad básica. Aumenta la Presteza del lanzador en un 30%.",
+                "name": "Fijar Objetivo",
+                "description": "Tras disipar todas las mejoras del enemigo, tiene un 100% de probabilidad de infligir objetivo por 2 turnos, y hace que todos los aliados excepto el lanzador ataquen con una habilidad básica. Aumenta la Presteza del lanzador en un 30%.",
                 "soulburn_effect": "Ignora Resistencia a Efectos."
             },
             "S3": {
                 "name": "Bandera de la Victoria",
-                "description": "Disipa dos mejoras de todos los enemigos, antes de un 70% de probabilidad de infligir miedo por 2 turnos, y disminuir la Presteza en un 20%. Otorga aumento de Velocidad a todos los aliados por 2 turnos. Al inicio de la primera batalla, otorga aumento de Evasión al lanzador por 2 turnos."
+                "description": "Disipa dos mejoras de todos los enemigos antes de un 100% de probabilidad de infligir miedo por 2 turnos y disminuir su Presteza en un 20%. Otorga aumento de Velocidad a todos los aliados por 2 turnos. Al inicio de la primera batalla, otorga aumento de Evasión al lanzador por 2 turnos."
             }
         }
     },
@@ -5959,6 +6119,24 @@
             }
         }
     },
+    "Tidal Rift Elvira": {
+        "_name": "Elvira Grieta de Marea",
+        "skills": {
+            "S1": {
+                "name": "Tajo de Grieta",
+                "description": "Tiene un 85% de probabilidad de infligir sello al enemigo por 2 turnos antes de atacar. Al usarla en el turno del lanzador, tiene un 40% de probabilidad de activar Golpe Retorcido como ataque extra. Golpe Retorcido: Ataca a todos los enemigos, absorbiendo parte del daño causado como Vida, y tiene un 35% de probabilidad de infligir miedo por 1 turno. Cuando el lanzador tiene engullir, la probabilidad de efecto se duplica.",
+                "soulburn_effect": "Aumenta la probabilidad de activar Golpe Retorcido al 100%."
+            },
+            "S2": {
+                "name": "Ansia de Afecto",
+                "description": "Al inicio de la batalla, otorga engullir. Al atacar, penetra la Defensa del objetivo y no puede activar golpe crítico ni golpe contundente. Después de que un aliado usa una habilidad, por cada desventaja infligida a todos los enemigos, tiene un 25% de probabilidad de aumentar la Presteza en un 15%."
+            },
+            "S3": {
+                "name": "Ola de Maldiciones",
+                "description": "Tiene un 35% de probabilidad de infligir maldición a todos los enemigos excepto al objetivo por 2 turnos antes de atacar al enemigo, y aumenta la Presteza del lanzador en un 50%. Cuando el lanzador tiene engullir, la probabilidad de efecto se duplica."
+            }
+        }
+    },
     "Tieria": {
         "_name": "Tieria",
         "skills": {
@@ -6082,6 +6260,24 @@
             "S3": {
                 "name": "Juicio de Luz",
                 "description": "Ataca al enemigo con un escudo, disipando todas las mejoras y con un 75% de probabilidad de aturdir por 1 turno, antes de otorgar una barrera a todos los aliados por 2 turnos. El daño causado y la fuerza de la barrera aumentan proporcionalmente a la Vida máxima del lanzador."
+            }
+        }
+    },
+    "Uncharted Pioneer Politis": {
+        "_name": "Politis Pionera de lo Inexplorado",
+        "skills": {
+            "S1": {
+                "name": "Despliegue de Pulso",
+                "description": "Ataca a todos los enemigos con luz, con un 65% de probabilidad de disipar una mejora. Causa 1000 de daño adicional sin importar si el ataque acierta."
+            },
+            "S2": {
+                "name": "Misión del Superviviente",
+                "description": "Al inicio de la batalla, si está en la fila delantera, otorga misión ofensiva, y si está en la fila trasera, otorga misión defensiva. Cuando completa una misión, disipa la misión y todas las desventajas del lanzador, y activa Últimas Palabras de una Estrella Caída. Últimas Palabras de una Estrella Caída: Otorga conocimiento de las estrellas a todos los aliados y un turno extra al lanzador."
+            },
+            "S3": {
+                "name": "Luz que Atraviesa el Fin",
+                "description": "Ataca a todos los enemigos con un dron, disipando todas las mejoras antes de aumentar la reactivación de sus habilidades en 1 turno. Causa 3000 de daño adicional sin importar si el ataque acierta.",
+                "soulburn_effect": "Ignora Resistencia a Efectos."
             }
         }
     },
@@ -6450,16 +6646,16 @@
         "skills": {
             "S1": {
                 "name": "Vulnerabilidad Expuesta",
-                "description": "Ataca al enemigo con una espada larga. Aumenta la Probabilidad de Golpe y la Probabilidad de Golpe Crítico de esta habilidad en un 50%. Cuando el objetivo tiene una mejora, aumenta el daño causado.",
+                "description": "Ataca al enemigo con una espada larga. Aumenta la probabilidad de acierto y la Probabilidad de Crítico de esta habilidad en un 50%. Si el objetivo tiene una mejora, aumenta el daño causado.",
                 "soulburn_effect": "Aumenta el daño causado."
             },
             "S2": {
                 "name": "Plan Elaborado",
-                "description": "Disipa dos desventajas de un aliado antes de aumentar la Presteza del aliado en un 20%. Otorga aumento de Ataque y aumento de Probabilidad de Golpe al lanzador por 3 turnos. Otorga un turno extra."
+                "description": "Disipa dos desventajas de un aliado antes de aumentar su Presteza en un 30%. Otorga aumento de Ataque y aumento de probabilidad de acierto al lanzador por 3 turnos. Otorga un turno extra."
             },
             "S3": {
                 "name": "Ejecutar",
-                "description": "Ataca al enemigo, infligiendo hasta 35% de lesiones, antes de otorgar invencibilidad al lanzador por 1 turno. Aumenta la Probabilidad de Golpe Crítico y la Probabilidad de Golpe de esta habilidad en un 50%."
+                "description": "Ataca al enemigo, infligiendo hasta un 35% de lesiones, antes de otorgar invencibilidad al lanzador por 1 turno. Aumenta la Probabilidad de Crítico y la probabilidad de acierto de esta habilidad en un 50%."
             }
         }
     },
@@ -6522,15 +6718,15 @@
         "skills": {
             "S1": {
                 "name": "Déjame Destruirte",
-                "description": "Ataca al enemigo con una lanza, antes de aumentar el Ataque del lanzador por 1 turno. Cuando el lanzador está deificado, activa Desaparecer como un ataque extra. Desaparecer solo puede activarse una vez por turno, durante el turno del lanzador. Desaparecer: Ataca al enemigo con una tormenta de espadas, y cuando el enemigo es derrotado, aumenta la Presteza del lanzador en un 50%. Penetra la Defensa del objetivo en un 50%."
+                "description": "Ataca al enemigo con una lanza, antes de aumentar el Ataque del lanzador por 1 turno. Cuando el lanzador tiene deificación, activa Desaparecer como ataque extra. Desaparecer solo puede activarse una vez por turno, durante el turno del lanzador. Desaparecer: Ataca al enemigo con una tormenta de espadas, y cuando el enemigo es derrotado, aumenta la Presteza del lanzador en un 50%. Penetra la Defensa del objetivo en un 50%."
             },
             "S2": {
                 "name": "Autoridad Suprema",
-                "description": "Al inicio de la primera batalla, aumenta la Presteza en un 20%. No se ve afectado por efectos que reducen los aumentos de Presteza que recibe el lanzador."
+                "description": "Al inicio de la primera batalla, aumenta la Presteza en un 30%. No se ve afectado por efectos que reducen los aumentos de Presteza que recibe el lanzador."
             },
             "S3": {
-                "name": "¡Arrodíllate Ante Mí!",
-                "description": "Ataca al enemigo, disipando dos mejoras antes de silenciar por 1 turno y disminuir la Presteza en un 30%. Otorga deificación al lanzador por 3 turnos. Penetra la Defensa del objetivo en un 100% y no puede activar un golpe crítico. Cuando el objetivo es un Héroe, el daño causado aumenta proporcionalmente a la Vida actual del objetivo.",
+                "name": "Inclínate ante Mí",
+                "description": "Ataca al enemigo, disipando dos mejoras antes de infligir silencio por 1 turno y disminuir su Presteza en un 40%. Otorga deificación al lanzador por 3 turnos. Penetra la Defensa del objetivo en un 100% y no puede activar golpe crítico. Si el objetivo es un Héroe, el daño causado aumenta proporcionalmente a la Vida actual del objetivo.",
                 "soulburn_effect": "Ignora Resistencia a Efectos."
             }
         }

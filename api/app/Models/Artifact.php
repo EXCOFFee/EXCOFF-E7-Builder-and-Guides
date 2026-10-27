@@ -55,6 +55,9 @@ class Artifact extends Model
         'Intoxicating Indulgence' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0245_fu.png',
         'Light and Darkness' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0249_fu.png',
         'Land of Lingering Light' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0250_fu.png',
+        "Flame Dragon's Jewel" => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0247_fu.png',
+        'Sorrow of the Rose' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0248_fu.png',
+        'Custom-Made Power Anchor' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0246_fu.png',
         // Add more new artifacts here as needed
     ];
 

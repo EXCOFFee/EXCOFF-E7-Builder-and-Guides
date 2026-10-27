@@ -347,15 +347,15 @@
         "skills": {
             "S1": {
                 "name": "Sleep Sorcery",
-                "description": "Attacks the enemy with water energy, with a 65% chance to put them to sleep for 1 turn."
+                "description": "Attacks the enemy with water energy, with a 75% chance to put them to sleep for 1 turn."
             },
             "S2": {
                 "name": "Purification",
-                "description": "Dispels one debuff from all allies and heals debuffed allies. Amount recovered is proportional to the ally's max Health."
+                "description": "Dispels one debuff from all allies and recovers Health of allies inflicted with debuffs proportional to the target's max Health"
             },
             "S3": {
                 "name": "Earnest Prayer",
-                "description": "Dispels two debuffs from an ally before recovering Health and granting immunity for 2 turns. Increases Combat Readiness of the caster by 50%. Amount recovered increases proportional to the ally's max Health.",
+                "description": "Dispels two debuffs from an ally before recovering Health proportional to the target's max Health and grants immunity for 2 turns. Decreases skill cooldown of the caster by 1 turn.",
                 "soulburn_effect": "Effect is granted to all allies."
             }
         }
@@ -459,7 +459,7 @@
             },
             "S2": {
                 "name": "Laying the Groundwork",
-                "description": "Confirms the target, with a 85% chance each to dispel two buffs from the enemy and inflict target for 2 turns, before granting increased Attack and immunity to the caster for 2 turns. After using this skill, when the enemy is inflicted with target, grants an extra turn to the caster.",
+                "description": "Confirms the target, with a 100% chance each to dispel two buffs from the enemy and inflict target for 2 turns, before granting increased Attack and immunity to the caster for 2 turns. After using this skill, when the enemy is inflicted with target, grants an extra turn to the caster.",
                 "soulburn_effect": "Ignores Effect Resistance."
             },
             "S3": {
@@ -630,6 +630,42 @@
             }
         }
     },
+    "Aubade Ludwig": {
+        "_name": "Aubade Ludwig",
+        "skills": {
+            "S1": {
+                "name": "Moonlight",
+                "description": "Attacks the enemy with moonlight. When the caster is granted dawn, activates Light of Condemnation as an extra attack. Light of Condemnation can only be activated once per turn, during the caster's turn. Light of Condemnation (Acquire 5 Soul): Attacks all enemies and consumes all Soul regardless of whether the attack hits, inflicting 1,000 additional damage. Additional damage increases proportional to the amount of consumed Soul, up to 25,000."
+            },
+            "S2": {
+                "name": "Night Greeting the Dawn",
+                "description": "Increases Defense by 30%. At the end of an ally's turn, when Soul is 10 or higher, increases Combat Readiness of the caster by 20%."
+            },
+            "S3": {
+                "name": "White Night",
+                "description": "Dispels two buffs from all enemies, and has a 85% chance each to inflict block for 2 turns and silence for 1 turn on all enemies. Grants dawn and a barrier (proportional to max Health) to the caster for 3 turns.",
+                "soulburn_effect": "Increases barrier strength."
+            }
+        }
+    },
+    "Aube": {
+        "_name": "Aube",
+        "skills": {
+            "S1": {
+                "name": "Coral Swell",
+                "description": "Attacks the enemy with coral magic and decreases Combat Readiness by 20%"
+            },
+            "S2": {
+                "name": "Film Fiesta",
+                "description": "Releases the moment engraved in the film, with a 100% chance to grant cascade to all allies. Grants skill nullifier once and an extra turn to the caster."
+            },
+            "S3": {
+                "name": "Eternal Moment",
+                "description": "Fixes all enemies in a frame, dispelling two buffs before a 100% chance each to inflict immobilize and restrict for 2 turns. Concealment will remain throughout the battle.",
+                "soulburn_effect": "Ignores Effect Resistance."
+            }
+        }
+    },
     "Auxiliary Lots": {
         "_name": "Auxiliary Lots",
         "skills": {
@@ -779,15 +815,15 @@
         "skills": {
             "S1": {
                 "name": "Scorching Flare",
-                "description": "Attacks the enemy with flames, burning for 1 turn. When used on the caster's turn, activates lncinerate instead of Scorching Flare. Incinerate: Attacks the enemy with an explosion of flames and burns for 1 turn, before detonating burn effects inflicted on the target at the end of the turn. This skill cannot trigger a Dual Attack."
+                "description": "Attacks the enemy with flames, burning for 1 turn. When used on the caster's turn, activates Incinerate instead of Scorching Flare. Incinerate: Attacks the enemy with an explosion of flames and burns for 1 turn, before detonating burn effects inflicted on the target at the end of the turn. This skill cannot trigger a Dual Attack."
             },
             "S2": {
                 "name": "Flame Keeper",
-                "description": "Increases Attack and Defense by 20%. When attacking, cannot trigger a critical hit. Increases burn damage suffered by enemies by 30%. This skill effect does not stack with other passive skills of the same name."
+                "description": "Increases Attack and Effectiveness by 30%. When attacking, cannot trigger a critical hit. Increases burn damage suffered by enemies by 30%. This skill effect does not stack with other passive skills of the same name."
             },
             "S3": {
                 "name": "Symphony of Radiance",
-                "description": "With light, dispels two buffs from all enemies and makes them unable to be buffed for 2 turns, before increasing Combat Readiness of the caster by 50%. Increases Combat Readiness of all allies except for the caster by 20%.",
+                "description": "With light, dispels two buffs from all enemies and inflicts cannot buff and burn for 2 turns, before increasing Combat Readiness of the caster by 50%. Increases Combat Readiness of all allies except for the caster by 20%.",
                 "soulburn_effect": "Skill cooldown is decreased by 2 turns."
             }
         }
@@ -1935,12 +1971,12 @@
             },
             "S2": {
                 "name": "Bride's Resolve",
-                "description": "Increases max Health by 10%. When Health of the ally in the back row except for the caster is 50% or less after being attacked, dispels all debuffs from the caster and the ally in the back row, and activates Bridal Prayer. Bridal Prayer: Grants a barrier (proportional to the caster’s max Health) to the caster and the ally in the back row for 2 turns, and grants Oath of Punishment to the caster for 2 turns before resetting skill cooldowns of the caster."
+                "description": "Increases max Health by 10%. When Health of the ally in the back row except for the caster is 50% or less after being attacked, dispels all debuffs from the caster and the ally in the back row, and activates Bridal Prayer. Bridal Prayer (Gains 10 Soul): Grants a barrier (proportional to the caster’s max Health) to the caster and the ally in the back row for 3 turns, and grants Oath of Punishment to the caster for 3 turns before resetting skill cooldowns of the caster."
             },
             "S3": {
                 "name": "Overcoming Hardship",
                 "description": "Attacks the enemy by piercing them, and increases Combat Readiness of the caster and the ally in the back row by 30%. Penetrates Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. When the caster is granted Oath of Punishment, attacks all enemies.",
-                "soulburn_effect": "Increases damage dealt."
+                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
             }
         }
     },
@@ -2194,6 +2230,24 @@
             "S3": {
                 "name": "Can You Handle This?",
                 "description": "Attacks all enemies with the essence of magical engineering. When someone uses a Soulburn, increases Combat Readiness of the caster by 20% and penetration rate of this skill by 30%. Penetration rate increase effect can stack up to 2 times."
+            }
+        }
+    },
+    "Eye of the Abyss Fumyr": {
+        "_name": "Eye of the Abyss Fumyr",
+        "skills": {
+            "S1": {
+                "name": "Elemental Magic",
+                "description": "Attacks the enemy with elemental magic, with a 40% chance to inflict stun for 1 turn.",
+                "soulburn_effect": "Increases effect chance to 100%."
+            },
+            "S2": {
+                "name": "Blue Despair",
+                "description": "Envelops all enemies with the energy of the deep sea, dispelling two buffs before decreasing Combat Readiness by 25%. Grants an extra turn."
+            },
+            "S3": {
+                "name": "Eye of the Abyss",
+                "description": "Pierces the foremost enemy Hero with light, inflicting detain, and when detain is inflicted, grants deterrence to the caster for 2 turns. Grants a barrier (proportional to level) and stealth to the caster for 2 turns."
             }
         }
     },
@@ -2665,17 +2719,35 @@
             }
         }
     },
+    "Haru": {
+        "_name": "Haru",
+        "skills": {
+            "S1": {
+                "name": "Power Anchor",
+                "description": "Attacks the enemy with an anchor, and grants a barrier to all allies for 1 turn. Damage dealt and barrier strength increase proportional to the caster's max Health. At the start of the turn, when Focus is full, changes to Power Strike. Power Strike (Consume 5 Focus): Attacks the enemy, and grants an extra turn to the caster. Penetrates the target's Defense. Unaffected by elemental disadvantage. Damage dealt increases proportional to the caster's max Health. The changed attack does not trigger a Dual Attack."
+            },
+            "S2": {
+                "name": "Anchor Pointer",
+                "description": "At the start of battle, gains 3 Focus, and has a 100% chance to grant indomitable to all allies for 1 turn. At the start of the turn, when the caster has a buff, dispels all debuffs from the caster and resets skill cooldown of Anchor Shot."
+            },
+            "S3": {
+                "name": "Anchor Shot",
+                "description": "Attacks the enemy with an anchor, absorbing some of the damage dealt as Health, and granting morale to all allies for 2 turns. When the target is granted a barrier, penetrates the target's Defense by 70%. Damage dealt increases proportional to the caster's Max Health. Damage dealt increases every time this skill is used, stacking up to 5 times.",
+                "soulburn_effect": "Increases Hit Chance by 100% when using this skill."
+            }
+        }
+    },
     "Hasol": {
         "_name": "Hasol",
         "skills": {
             "S1": {
                 "name": "Swift Cut",
                 "description": "Attacks the enemy, before recovering Health of the caster. Additionally inflicts 500 fixed damage regardless of whether the attack hits. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "soulburn_effect": "Grants an extra turn."
             },
             "S2": {
                 "name": "Blade of Vengeance",
-                "description": "When an ally suffers a counterattack, decreases damage suffered by 25%. When more than one damage reduction effect is granted, only the strongest effect is applied. After an enemy counterattacks, increases Combat Readiness of the caster by 15% and increases the fixed damage of Swift Cut and Punishing Strike by 1500. The fixed damage increase can stack up to 5 times."
+                "description": "When an ally suffers a counterattack, decreases damage suffered by 25%. When more than one damage reduction effect is granted, only the strongest effect is applied. After an enemy counterattacks, increases Combat Readiness of the caster by 25% and increases the fixed damage of Swift Cut and Punishing Strike by 1500. The fixed damage increase can stack up to 5 times."
             },
             "S3": {
                 "name": "Punishing Strike",
@@ -2868,16 +2940,16 @@
         "skills": {
             "S1": {
                 "name": "Supersonic Kick",
-                "description": "Attacks the enemy with a kick. A successful attack inflicts additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Increases damage dealt and additional damage."
+                "description": "Attacks the enemy with a kick and deals additional damage proportional to the caster's Attack.",
+                "soulburn_effect": "Grants an extra attack with the same skill."
             },
             "S2": {
                 "name": "Prairie Hawk",
-                "description": "When attacking, cannot trigger a critical hit. Damage suffered from a critical hit decreases by 20%. When more than one damage reduction effect is granted, only the strongest effect is applied. At the start of the turn, when the caster does not have a debuff, increases Attack for 1 turn."
+                "description": "Increases Evasion by 50%. When attacking, cannot trigger a critical hit or a heavy blow. At the start of the turn, increases Attack for 1 turn."
             },
             "S3": {
                 "name": "Monarch's Flaming Strike",
-                "description": "Dispels all debuffs from the caster, and attacks the enemy with a secret technique and grants immunity and a barrier to the caster for 2 turns. When the caster's Attack is greater than the target's Attack, penetrates the target's Defense, with penetration rate increasing proportional to the difference, up to a maximum of 100%. Barrier strength increases proportional to the caster's Attack."
+                "description": "Dispels all debuffs from the caster, and attacks the enemy with a secret technique before granting immunity and a barrier (proportional to Attack) to the caster for 2 turns. When the caster's Attack is greater than the target's Attack, penetrates Defense proportionally, up to 100%."
             }
         }
     },
@@ -3007,6 +3079,24 @@
             }
         }
     },
+    "Ivana": {
+        "_name": "Ivana",
+        "skills": {
+            "S1": {
+                "name": "Holy Light",
+                "description": "Attacks the enemy with holy light, and recovers Health of allies proportional to the target's max Health.",
+                "soulburn_effect": "Increases the amount recovered."
+            },
+            "S2": {
+                "name": "Light of Repose",
+                "description": "Unaffected by decreases to Combat Readiness. At the start of the turn, dispels immortality from all enemies. Ignores Effect Resistance. At the end of someone's turn, when the enemy is granted immortality, spreads the censer's light to dispel all debuffs from all allies and grants radiance for 2 turns, before increasing Combat Readiness of the caster by 50%"
+            },
+            "S3": {
+                "name": "Requiem Prayer",
+                "description": "Dispels two debuffs from all allies by offering a prayer to banish evil, and grants ignore sharing for 3 turns and immunity for 2 turns before increasing Combat Readiness by 20%."
+            }
+        }
+    },
     "Januta": {
         "_name": "Januta",
         "skills": {
@@ -3088,7 +3178,7 @@
             },
             "S2": {
                 "name": "End of Evil",
-                "description": "Attacks all enemies with a scythe, dispelling all buffs before a 85% chance to inflict decreased Hit Chance for 2 turns and a 60% chance to inflict decreased Defense for 2 turns, and increases Combat Readiness of the caster by 25% per target. This skill cannot trigger a counterattack.",
+                "description": "Attacks all enemies with a scythe, dispelling all buffs before a 100% chance to inflict decreased Hit Chance for 2 turns and a 85% chance to inflict decreased Defense for 2 turns, and increases Combat Readiness of the caster by 25% per target. This skill cannot trigger a counterattack.",
                 "soulburn_effect": "Ignores Effect Resistance."
             },
             "S3": {
@@ -3426,15 +3516,15 @@
         "skills": {
             "S1": {
                 "name": "Fire",
-                "description": "Attacks the enemy with gunfire, and increases Combat Readiness of the caster by 10%. When the target has a buff, doubles the effects of Combat Readiness increase and Fighting Spirit gained."
+                "description": "Attacks the enemy with gunfire, and increases Combat Readiness of the caster by 15%. When the target has a buff, doubles the effects of Combat Readiness increase and Fighting Spirit gained."
             },
             "S2": {
                 "name": "The Chief Is on the Scene",
-                "description": "At the start of the first battle, gains 50 Fighting Spirit and grants stealth for 1 turn. At the start of the turn, gains 10 Fighting Spirit for each buff granted to an enemy, and when Fighting Spirit is full, resets skill cooldown. After attacking, increases Attack of the caster by 20%. This effect can stack up to 3 times."
+                "description": "At the start of the first battle, gains 50 Fighting Spirit and grants stealth for 1 turn. At the start of the turn, gains 10 Fighting Spirit for each buff granted to an enemy, and when Fighting Spirit is full, resets skill cooldown. After attacking, increases Attack of the caster by 25%. This effect can stack up to 3 times."
             },
             "S3": {
                 "name": "Full Burst",
-                "description": "Fires at all enemies and grants all allies increased Speed for 2 turns, before increasing their Combat Readiness by 15%. When Fighting Spirit is full, consumes all Fighting Spirit to penetrate the target's Defense by 50%. This skill cannot trigger a counterattack.",
+                "description": "Fires at all enemies to attack, and increases Combat Readiness of all allies by 25%, before granting a barrier (proportional to Attack) to the caster for 2 turns. When Fighting Spirit is full, consumes all Fighting Spirit to penetrate the target's Defense by 50%. This skill cannot trigger a counterattack.",
                 "soulburn_effect": "Grants an extra turn."
             }
         }
@@ -3634,6 +3724,23 @@
             "S3": {
                 "name": "I Am The Victor!",
                 "description": "Attacks all enemies with a sword blast, before granting an extra turn. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's Defense. Begins the first battle with full cooldown count."
+            }
+        }
+    },
+    "Lisette": {
+        "_name": "Lisette",
+        "skills": {
+            "S1": {
+                "name": "Light Source",
+                "description": "Attacks the enemy with light, and recovers Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health."
+            },
+            "S2": {
+                "name": "Devotion",
+                "description": "At the start of the first battle, grants four divinity effects. When an ally except for the caster dies, consumes one divinity to revive them as a Fragment of Life for 2 turns and increase Combat Readiness by 30%"
+            },
+            "S3": {
+                "name": "Converged Time",
+                "description": "Reconstructs the world to fully recover Health of all allies and grants increased Speed for 3 turns. When the caster is granted divinity, grants time reversal to all allies except for the caster. This skill is unaffected by cooldown increase and decrease effects."
             }
         }
     },
@@ -3925,6 +4032,23 @@
             }
         }
     },
+    "Mei Lin": {
+        "_name": "Mei Lin",
+        "skills": {
+            "S1": {
+                "name": "Strike",
+                "description": "Attacks the enemy with a fist, before increasing Combat Readiness of the caster by 25% and decreasing skill cooldowns by 1 turn. A successful attack always results in a critical hit."
+            },
+            "S2": {
+                "name": "Rising Dragon Spire",
+                "description": "After granting increased Attack to the caster for 2 turns, attacks the enemy with a kick, and when the enemy is defeated, inflicts extinction. A successful attack always results in a critical hit. When a Fire elemental ally uses a skill, grants zeal, which enhances Rising Dragon Spire."
+            },
+            "S3": {
+                "name": "Heavenly Flame Dragon",
+                "description": "Fully recovers Health of the caster and grants an extra turn. On the next attack, grants an extra attack with the same skill. Begins the first battle with full skill cooldown count, and the lower stat between Attack and Defense becomes equal to the higher stat."
+            }
+        }
+    },
     "Melany": {
         "_name": "Melany",
         "skills": {
@@ -4003,15 +4127,15 @@
             "S1": {
                 "name": "Go, Kyla!",
                 "description": "Attacks the enemy with Kyla, and recovers Health. Amount recovered increases proportional to the caster's Attack. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases the amount recovered."
+                "soulburn_effect": "Increases damage dealt."
             },
             "S2": {
                 "name": "Elaborate Scheme",
-                "description": "At the start of battle and at the end of the turn, grants damage limit to the caster for 1 turn. After attacking on the caster's turn, when the target's Health is 50% or less, activates Now or Never!. Now or Never! can only be activated once every 3 turns. Now or Never!: Increases Attack of all allies for 2 turns before increasing Combat Readiness by 10%."
+                "description": "At the start of battle and at the end of the turn, grants damage limit to the caster for 1 turn. After attacking on the caster's turn, when the target's Health is 50% or less, activates Now or Never!. Now or Never!: Grants increased Attack to all allies except for the caster for 2 turns before increasing Combat Readiness by 20%, and increases Combat Readiness of the caster by 50%."
             },
             "S3": {
                 "name": "Take the Lead",
-                "description": "Increases Attack of the caster for 2 turns, before attacking the enemy in their blind spot, and increases Combat Readiness of the caster by 35%. When the target's max Health is greater than the caster's max Health, penetrates the target's Defense, with penetration rate increasing proportional to the difference, up to a maximum of 100%. A successful attack always results in a critical hit."
+                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy by exploiting their weakness. When the target is a Hero, ignores damage reduction and damage sharing effect. When the target's max Health is greater than the caster's max Health, penetrates Defense proportionally, up to 100%. A successful attack always results in a critical hit."
             }
         }
     },
@@ -4092,16 +4216,16 @@
         "skills": {
             "S1": {
                 "name": "Moonlight Wave",
-                "description": "Attacks the enemy with an ethereal moonlight wave and has a 65% chance to put them to sleep for 1 turn. This skill does not trigger a Dual Attack.",
+                "description": "Attacks the enemy with an ethereal moonlight wave and has a 75% chance to put them to sleep for 1 turn. This skill does not trigger a Dual Attack.",
                 "soulburn_effect": "Increases effect chance to 100%."
             },
             "S2": {
                 "name": "Flow Control",
-                "description": "Effect Resistance increases by 20%. At the start of an enemy's extra turn, dispels all debuffs from all allies and grants skill nullifier once and immunity for 2 turns. Can only be activated once every 2 turns, and only activates when the enemy is a Hero."
+                "description": "At the start of an enemy's extra turn, dispels all debuffs from all allies before granting skill nullifier once and skill effect nullifier once, and increases Combat Readiness of the caster by 30%. Only activates when the enemy is a Hero."
             },
             "S3": {
                 "name": "Divination",
-                "description": "In accordance with the divinations, grants increased Attack and a barrier to all allies for 2 turns and increases Combat Readiness by 15%. Barrier strength increases proportional to the caster's max Health."
+                "description": "In accordance with the divinations, grants vigor and a barrier (proportional to the caster's max Health) to all allies for 2 turns and increases Combat Readiness by 30%."
             }
         }
     },
@@ -4586,7 +4710,7 @@
             },
             "S3": {
                 "name": "Instant Blade",
-                "description": "Attacks all enemies with a sword, dispelling two buffs before a 80% chance to inflict frostbite and restrict for 2 turns, and a critical hit will have a 65% chance to inflict decreased Defense for 2 turns. Damage dealt increases proportional to the caster and the target's Speed.",
+                "description": "Attacks all enemies with a sword, dispelling two buffs before a 100% chance to inflict frostbite and restrict for 2 turns, and a critical hit will have a 85% chance to inflict decreased Defense for 2 turns. Damage dealt increases proportional to the caster and the target's Speed.",
                 "soulburn_effect": "Ignores Effect Resistance."
             }
         }
@@ -4681,6 +4805,24 @@
             }
         }
     },
+    "Renoa": {
+        "_name": "Renoa",
+        "skills": {
+            "S1": {
+                "name": "Instant Judgement",
+                "description": "Attacks the enemy with a pistol. Damage dealt increases proportional to the caster's Defense. At the start of the turn, when Focus is full, changes to Black Thorn. Black Thorn (Consumes 5 Focus): Attacks the enemy with thorns, and grants the maximum number of Dirge Bullets to the caster. Damage dealt increases proportional to the caster's Defense. The changed attack does not trigger a Dual Attack."
+            },
+            "S2": {
+                "name": "Black Rose",
+                "description": "Buffs and debuffs applied to the caster become Dirge Bullets. After using a skill on the caster's turn, when the caster has a Dirge Bullet, uses Dirge Bullet on a random enemy. Dirge Bullet (Gains 1 Focus): Attacks the enemy with a pistol. Damage dealt increases proportional to the caster's Defense. Damage dealt and attack count increase proportional to the number of Dirge Bullets granted."
+            },
+            "S3": {
+                "name": "Flower of Devoured Fate",
+                "description": "Increases Combat Readiness of all allies by 50%, and grants three Dirge Bullets to the caster.",
+                "soulburn_effect": "The number of Dirge Bullets granted is doubled."
+            }
+        }
+    },
     "Requiem Roana": {
         "_name": "Requiem Roana",
         "skills": {
@@ -4750,6 +4892,24 @@
                 "name": "Strike Target",
                 "description": "Attacks the enemy relentlessly, with a 75% chance to inflict target and decreased Speed for 2 turns. When granted promotion, damage dealt increases proportional to the target's max Health.",
                 "soulburn_effect": "Increases damage dealt."
+            }
+        }
+    },
+    "Rhianna and Luciella": {
+        "_name": "Rhianna and Luciella",
+        "skills": {
+            "S1": {
+                "name": "Half Moon Slash / Waning Moon Slash",
+                "description": "(Rhianna) Attacks the enemy with a dagger, inflicting erosion for 2 turns. A critical hit will detonate erosion effects inflicted on the target. (Luciella) After granting increased Attack to the caster for 1 turn, attacks the enemy with a dagger and absorbs some of the damage dealt as health."
+            },
+            "S2": {
+                "name": "Hunter's Mark / Blade of Pursuit",
+                "description": "(Rhianna) Attacks the enemy, dispelling two buffs before inflicting bind and decreased Defense for 2 turns. Swaps with Luciella and grants an extra turn. After attacking, when the target has a debuff, Luciella activates Waning Moon Slash as an extra attack. (Luciella) After granting increased Attack to the caster for 3 turns, attacks the enemy. Swaps with Rhianna and grants an extra turn. After attacking, when the target's Health is 50% or less, Rhianna activates Half Moon Slash as an extra attack.",
+                "soulburn_effect": "(Rhianna) Ignores Effect Resistance. (Luciella) Increases damage dealt."
+            },
+            "S3": {
+                "name": "Pursuit of Death",
+                "description": "Rhianna and Luciella launch a coordinated attack. Luciella attacks all enemies and when the target is a Hero, ignores damage sharing. Rhianna dispels two buffs from all enemies, before inflicting fear for 1 turn. Grants a barrier (proportional to Attack) to the caster for 3 turns. One Butterfly's Afterdream will remain throughout the battle."
             }
         }
     },
@@ -5064,16 +5224,16 @@
         "skills": {
             "S1": {
                 "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, with a 65% chance to make them unable to be buffed for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100% and makes them unable to be buffed for 2 turns."
+                "description": "Attacks the enemy with a sword, with a 85% chance to make them unable to be buffed for 1 turn."
             },
             "S2": {
                 "name": "Power of the Four Seasons",
-                "description": "Evasion increases by 35%, and after successfully evading, counterattacks with Blade Gust. Blade Gust can only be activated once every 2 turns. Blade Gust: Attacks all enemies with a blade gust, dispelling one buff."
+                "description": "Evasion increases by 50%, and after successfully evading, counterattacks with Blade Gust. Blade Gust can only be activated once every 2 turns. Blade Gust (Gains 10 Soul): Attacks all enemies with a blade gust, dispelling one buff."
             },
             "S3": {
                 "name": "Smite of Salvation",
-                "description": "Attacks the enemy with a powerful blow and grants invincibility to all allies except for the caster for 1 turn. Penetrates the target's Defense by 50%."
+                "description": "Attacks the enemy with a powerful blow and grants invincibility to all allies except for the caster for 1 turn. When the enemy is defeated, inflicts extinction. Penetrates the target's Defense by 50%.",
+                "soulburn_effect": "Increases damage dealt."
             }
         }
     },
@@ -5118,15 +5278,15 @@
         "skills": {
             "S1": {
                 "name": "Rapid Fire",
-                "description": "Attack the enemy with a pistol. Damage dealt increases proportional to the target's max Health. A critical hit will double the amount of Focus gained."
+                "description": "Attacks the enemy with a pistol. Damage dealt increases proportional to the target's max Health. A critical hit will double the amount of Focus gained."
             },
             "S2": {
                 "name": "Explosive Gentleman",
-                "description": "At the start of the first battle, gains 3 Focus. After making a critical hit, increases Combat Readiness of all allies except for the caster by 15%."
+                "description": "At the start of the first battle, gains 3 Focus. After making a critical hit, increases Combat Readiness of all allies except for the caster by 25%."
             },
             "S3": {
                 "name": "Rifle Shot",
-                "description": "Attacks all enemies with a rifle and decreases Combat Readiness by 30%. . When Focus is full, consumes it all, increasing damage dealt and ignoring Effect Resistance.",
+                "description": "Attacks all enemies with a rifle and decreases Combat Readiness by 30%. When Focus is full, consumes it all, increasing damage dealt and ignoring Effect Resistance.",
                 "soulburn_effect": "Grants an extra turn."
             }
         }
@@ -5766,16 +5926,16 @@
         "skills": {
             "S1": {
                 "name": "Strike of Flagbearer",
-                "description": "Attacks the enemy with a flag, with a 60% chance to inflict silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness of the target by 25%."
+                "description": "Attacks the enemy with a flag, with a 75% chance to inflict silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness of the target by 25%."
             },
             "S2": {
                 "name": "Target Lock",
-                "description": "After dispelling all buffs from the enemy, has a 75% chance to inflict target for 2 turns, and makes all allies except for the caster attack with a basic skill. Increases Combat Readiness of the caster by 30%.",
+                "description": "After dispelling all buffs from the enemy, has a 100% chance to inflict target for 2 turns, and makes all allies except for the caster attack with a basic skill. Increases Combat Readiness of the caster by 30%.",
                 "soulburn_effect": "Ignores Effect Resistance."
             },
             "S3": {
                 "name": "Flag of Victory",
-                "description": "Dispels two buffs from all enemies, before a 70% chance to inflict fear for 2 turns, and decrease Combat Readiness by 20%. Grants increase Speed to all allies for 2 turns. At the start of the first battle, grants increased Evasion to the caster for 2 turns."
+                "description": "Dispels two buffs from all enemies, before a 100% chance to inflict fear for 2 turns, and decrease Combat Readiness by 20%. Grants increased Speed to all allies for 2 turns. At the start of the first battle, grants increased Evasion to the caster for 2 turns."
             }
         }
     },
@@ -5941,6 +6101,24 @@
             }
         }
     },
+    "Tidal Rift Elvira": {
+        "_name": "Tidal Rift Elvira",
+        "skills": {
+            "S1": {
+                "name": "Rift Cleave",
+                "description": "Has a 85% chance to inflict seal on the enemy for 2 turns before attacking. When used on the caster's turn, has a 40% chance to activate Twisted Strike as an extra attack. Twisted Strike: Attacks all enemies, absorbing some of the damage dealt as Health, and has a 35% chance to inflict fear for 1 turn. When the caster is granted engulf, effect chance is doubled.",
+                "soulburn_effect": "Increases chance of activating Twisted Strike to 100%."
+            },
+            "S2": {
+                "name": "Craving Affection",
+                "description": "At the start of battle, grants engulf. When attacking, penetrates the target's Defense, and cannot trigger a critical hit or heavy blow. After an ally uses a skill, for each debuff inflicted on all enemies, has a 25% chance to increase Combat Readiness by 15%"
+            },
+            "S3": {
+                "name": "Wave of Curses",
+                "description": "Has a 35% chance to inflict curse on all enemies except for the target for 2 turns before attacking the enemy, and increases Combat Readiness of the caster by 50%. When the caster is granted engulf, effect chance is doubled."
+            }
+        }
+    },
     "Tieria": {
         "_name": "Tieria",
         "skills": {
@@ -6064,6 +6242,24 @@
             "S3": {
                 "name": "Judgment of Light",
                 "description": "Attacks the enemy with a shield, dispelling all buffs and a 75% chance to stun for 1 turn, before granting a barrier to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's max Health."
+            }
+        }
+    },
+    "Uncharted Pioneer Politis": {
+        "_name": "Uncharted Pioneer Politis",
+        "skills": {
+            "S1": {
+                "name": "Pulse Deployment",
+                "description": "Attacks all enemies with light, with a 65% chance to dispel one buff. Deals 1000 additional damage regardless of whether the attack hits."
+            },
+            "S2": {
+                "name": "Survivor's Mission",
+                "description": "At the start of battle, when in the front row, grants offense mission, and when in the back row, grants defense mission. When a mission is complete, dispels the mission and all debuffs from the caster, and activates Last Words of a Fallen Star. Last Words of a Fallen Star: Grants knowledge of the stars to all allies, and grants an extra turn to the caster."
+            },
+            "S3": {
+                "name": "Light Piercing the End",
+                "description": "Attacks all enemies with a drone, dispelling all buffs before increasing skill cooldowns by 1 turn. Deals 3000 additional damage regardless of whether the attack hits.",
+                "soulburn_effect": "Ignores Effect Resistance."
             }
         }
     },
@@ -6437,7 +6633,7 @@
             },
             "S2": {
                 "name": "Elaborate Plan",
-                "description": "Dispels two debuffs from an ally before increasing Combat Readiness of the ally by 20%. Grants increased Attack and increased Hit Chance to the caster for 3 turns. Grants an extra turn."
+                "description": "Dispels two debuffs from an ally before increasing Combat Readiness of the ally by 30%. Grants increased Attack and increased Hit Chance to the caster for 3 turns. Grants an extra turn."
             },
             "S3": {
                 "name": "Execute",
@@ -6508,11 +6704,11 @@
             },
             "S2": {
                 "name": "Supreme Authority",
-                "description": "At the start of the first battle, increases Combat Readiness by 20%. Unaffected by effects that reduce Combat Readiness increases the caster receives."
+                "description": "At the start of the first battle, increases Combat Readiness by 30%. Unaffected by effects that reduce Combat Readiness increases the caster receives."
             },
             "S3": {
                 "name": "Bow Down Before Me",
-                "description": "Attacks the enemy, dispelling two buffs before silencing for 1 turn and decreasing Combat Readiness by 30%. Grants deify to the caster for 3 turns. Penetrates the target's Defense by 100% and cannot trigger a critical hit. When the target is a Hero, damage dealt increases proportional to the target's current Health.",
+                "description": "Attacks the enemy, dispelling two buffs before silencing for 1 turn and decreasing Combat Readiness by 40%. Grants deify to the caster for 3 turns. Penetrates the target's Defense by 100% and cannot trigger a critical hit. When the target is a Hero, damage dealt increases proportional to the target's current Health.",
                 "soulburn_effect": "Ignores Effect Resistance."
             }
         }

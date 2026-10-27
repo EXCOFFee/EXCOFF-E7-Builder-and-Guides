@@ -1,4 +1,61 @@
 {
+    "flame-dragons-jewel": {
+        "code": "a0247",
+        "_id": "flame-dragons-jewel",
+        "name": "Flame Dragon's Jewel",
+        "rarity": 5,
+        "role": "assassin",
+        "exclusive": false,
+        "skill": {
+            "description": "Increases Attack by 20%. After being attacked, has a 100% chance to decrease debuff durations of the caster by 1 turn."
+        },
+        "stats": {
+            "atk_base": 21,
+            "atk_max": 273,
+            "hp_base": 32,
+            "hp_max": 416
+        },
+        "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0247_fu.png",
+        "source": "ceciliabot"
+    },
+    "sorrow-of-the-rose": {
+        "code": "a0248",
+        "_id": "sorrow-of-the-rose",
+        "name": "Sorrow of the Rose",
+        "rarity": 5,
+        "role": "ranger",
+        "exclusive": false,
+        "skill": {
+            "description": "At the start of battle and at the start of every third ally turn, grants a random buff to the caster for 1 turn. (Increase Attack, Immunity, Increase Critical Hit Resistance, Barrier proportional to max Health) The skill effect of this Artifact does not increase when enhanced."
+        },
+        "stats": {
+            "atk_base": 9,
+            "atk_max": 117,
+            "hp_base": 76,
+            "hp_max": 988
+        },
+        "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0248_fu.png",
+        "source": "ceciliabot"
+    },
+    "custom-made-power-anchor": {
+        "code": "a0246",
+        "_id": "custom-made-power-anchor",
+        "name": "Custom-Made Power Anchor",
+        "rarity": 5,
+        "role": "warrior",
+        "exclusive": false,
+        "skill": {
+            "description": "At the start of the first battle, has a 100% chance to gain 10 Soul. After an ally is attacked by a Single Attack, increases the caster's Combat Readiness by 16%. This Artifact's skill effect can only apply to one Hero within a team."
+        },
+        "stats": {
+            "def_base": 5,
+            "def_max": 65,
+            "hp_base": 76,
+            "hp_max": 988
+        },
+        "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0246_fu.png",
+        "source": "ceciliabot"
+    },
     "light-and-darkness": {
         "code": "a0249",
         "_id": "light-and-darkness",
