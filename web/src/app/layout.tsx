@@ -70,16 +70,10 @@ export const metadata: Metadata = {
   verification: {
     google: 'jBF7oUiQLe02TBiM6W4lxblmG0pop_nWYfV03yKDvRI',
   },
+  // './' se resuelve contra la ruta de cada página: cada una es su propio canonical.
+  // Sin hreflang: el idioma se elige en el cliente y todas las versiones comparten URL.
   alternates: {
-    canonical: '/',
-    languages: {
-      'en': '/en',
-      'es': '/es',
-      'ko': '/ko',
-      'ja': '/ja',
-      'zh': '/zh',
-      'pt': '/pt',
-    },
+    canonical: './',
   },
 };
 

@@ -40,14 +40,14 @@ export async function generateMetadata(
             title,
             description,
             alternates: {
-                canonical: `https://excoffe7.com/builds/${id}`,
+                canonical: './',
             },
             openGraph: {
                 title: `${heroName} Build | EXCOFF E7 HUB`,
                 description,
                 type: 'article',
                 images: build.hero?.portrait ? [build.hero.portrait] : [],
-                url: `https://excoffe7.com/builds/${id}`,
+                url: `https://excoffe7.com/builds/${id}/`,
             },
             twitter: {
                 card: 'summary_large_image',

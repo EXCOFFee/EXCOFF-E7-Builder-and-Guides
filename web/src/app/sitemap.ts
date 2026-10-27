@@ -16,34 +16,34 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             priority: 1,
         },
         {
-            url: `${BASE_URL}/heroes`,
+            url: `${BASE_URL}/heroes/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.9,
         },
         {
-            url: `${BASE_URL}/builds`,
+            url: `${BASE_URL}/builds/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.9,
         },
         {
-            url: `${BASE_URL}/guides`,
+            url: `${BASE_URL}/guides/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.9,
         },
         {
-            url: `${BASE_URL}/guilds`,
+            url: `${BASE_URL}/guilds/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.8,
         },
         {
-            url: `${BASE_URL}/artifacts`,
+            url: `${BASE_URL}/news/`,
             lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.8,
+            changeFrequency: 'daily',
+            priority: 0.7,
         },
     ]
 
@@ -59,7 +59,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             const heroesData = await heroesResponse.json()
             const heroes = heroesData.data || heroesData || []
             const heroPages = heroes.map((hero: { slug: string; updated_at?: string }) => ({
-                url: `${BASE_URL}/heroes/${hero.slug}`,
+                url: `${BASE_URL}/heroes/${hero.slug}/`,
                 lastModified: hero.updated_at ? new Date(hero.updated_at) : new Date(),
                 changeFrequency: 'weekly' as const,
                 priority: 0.7,
@@ -75,7 +75,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             const buildsData = await buildsResponse.json()
             const builds = buildsData.data || buildsData || []
             const buildPages = builds.map((build: { id: number; updated_at?: string }) => ({
-                url: `${BASE_URL}/builds/${build.id}`,
+                url: `${BASE_URL}/builds/${build.id}/`,
                 lastModified: build.updated_at ? new Date(build.updated_at) : new Date(),
                 changeFrequency: 'weekly' as const,
                 priority: 0.7,
@@ -91,7 +91,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             const guidesData = await guidesResponse.json()
             const guides = guidesData.data || guidesData || []
             const guidePages = guides.map((guide: { slug: string; updated_at?: string }) => ({
-                url: `${BASE_URL}/guides/${guide.slug}`,
+                url: `${BASE_URL}/guides/${guide.slug}/`,
                 lastModified: guide.updated_at ? new Date(guide.updated_at) : new Date(),
                 changeFrequency: 'weekly' as const,
                 priority: 0.8,
@@ -107,7 +107,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             const guildsData = await guildsResponse.json()
             const guilds = guildsData.data || guildsData || []
             const guildPages = guilds.map((guild: { slug: string; updated_at?: string }) => ({
-                url: `${BASE_URL}/guilds/${guild.slug}`,
+                url: `${BASE_URL}/guilds/${guild.slug}/`,
                 lastModified: guild.updated_at ? new Date(guild.updated_at) : new Date(),
                 changeFrequency: 'daily' as const,
                 priority: 0.7,

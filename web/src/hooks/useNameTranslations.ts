@@ -1,7 +1,7 @@
 'use client';
 
-import { useLocale } from 'next-intl';
 import { useMemo } from 'react';
+import { useTranslations } from '@/hooks/useTranslations';
 
 // Hero translations for Asian locales
 const heroTranslationsKo: Record<string, string> = {
@@ -343,13 +343,7 @@ const heroTranslations: Record<string, Record<string, string>> = {
  * For other languages (en, es, pt), returns original English names
  */
 export function useHeroTranslations() {
-    let locale = 'en';
-    try {
-        locale = useLocale();
-    } catch {
-        // If next-intl is not configured, default to 'en'
-        locale = 'en';
-    }
+    const { locale } = useTranslations();
 
     const translateHeroName = useMemo(() => {
         return (englishName: string): string => {
