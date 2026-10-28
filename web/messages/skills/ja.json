@@ -2722,17 +2722,17 @@
         "_name": "Guider Aither",
         "skills": {
             "S1": {
-                "name": "Whispering Spirit",
-                "description": "Attacks the enemy with spirit power, with a 50% chance to decrease Speed for 2 turns."
+                "name": "囁く精霊",
+                "description": "精霊の力で敵を攻撃し、50%の確率で2ターンの間スピードをダウンさせる。"
             },
             "S2": {
-                "name": "Spirit's Protection",
-                "description": "Attacks the enemy with spirit power, before recovering Health of all allies and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's Attack."
+                "name": "精霊の加護",
+                "description": "精霊の力で敵を攻撃した後、味方全員のHPを回復し、2ターンの間バリアを付与する。発動者の攻撃力に比例して回復量とバリアの強度がアップする。"
             },
             "S3": {
-                "name": "Wave of Force",
-                "description": "Delivers a blow to the enemy with spirit power and dispels all buffs, before increasing Attack of the ally with the highest Attack for 2 turns and increasing Combat Readiness by 50%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "力の波動",
+                "description": "精霊の力で敵に一撃を加え、強化効果をすべて解除した後、2ターンの間攻撃力が最も高い味方の攻撃力をアップさせ、行動ゲージを50%増加させる。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -2740,17 +2740,17 @@
         "_name": "Gunther",
         "skills": {
             "S1": {
-                "name": "Spirited Blow",
-                "description": "Attacks with an axe, with a 50% chance to cause bleeding for 2 turns."
+                "name": "気迫の一撃",
+                "description": "斧で攻撃し、50%の確率で2ターンの間出血を付与する。"
             },
             "S2": {
-                "name": "Veteran",
-                "description": "Attack increases by 75%, and Critical Hit Resistance increases by 70%. When attacking, cannot trigger a critical hit."
+                "name": "ベテラン",
+                "description": "攻撃力が75%、クリティカル抵抗が70%アップする。攻撃時、クリティカルが発生しない。"
             },
             "S3": {
-                "name": "Tenacious Strike",
-                "description": "Attacks with an axe, stunning for 1 turn and decreasing Defense for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "粘り強い一撃",
+                "description": "斧で攻撃し、1ターンの間気絶させ、2ターンの間防御力をダウンさせる。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -2758,17 +2758,17 @@
         "_name": "Harsetti",
         "skills": {
             "S1": {
-                "name": "Gambit",
-                "description": "Attacks the enemy, with a 75% chance to decrease Defense for 1 turn. When it is the caster's turn, uses En Passant as an extra attack. Damage dealt increases proportional to the caster's max Health. En Passant: Attacks all enemies, with a 60% chance to decrease Attack for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Effect Chance of Gambit increases to 100%, and decreases Defense for 2 turns."
+                "name": "ギャンビット",
+                "description": "敵を攻撃し、75%の確率で1ターンの間防御力をダウンさせる。発動者のターンなら、追加攻撃としてアンパッサンを使用する。発動者の最大HPに比例して与ダメージがアップする。アンパッサン：敵全体を攻撃し、60%の確率で1ターンの間攻撃力をダウンさせる。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "ギャンビットの効果発動確率が100%にアップし、2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "The Law of Skuggiheim",
-                "description": "At the start of battle, Speed of the caster is fixed going forward, and Speed of all Heroes except for the caster is limited to a maximum of 90% of the caster's Speed. On the caster's turn, Combat Readiness increase effects of all Heroes is not applied. The Law of Skuggiheim only applies to PvP."
+                "name": "スクッギヘイムの法則",
+                "description": "バトル開始時、以降の発動者のスピードが固定され、発動者を除くすべての英雄のスピードは発動者のスピードの最大90%に制限される。発動者のターンには、すべての英雄の行動ゲージ増加効果が適用されない。スクッギヘイムの法則はPvPでのみ適用される。"
             },
             "S3": {
-                "name": "Checkmate",
-                "description": "Attacks all enemies, decreasing buff durations by 2 turns and a 100% chance each to inflict unable to counterattack and unable to be buffed for 2 turns. Penetrates the target's Defense. When Focus is full, consumes it all, increasing damage dealt. Damage dealt increases proportional to the caster's max Health."
+                "name": "チェックメイト",
+                "description": "敵全体を攻撃し、強化効果の持続時間を2ターン減少させ、それぞれ100%の確率で2ターンの間反撃不可と強化不可を付与する。対象の防御力を貫通する。集中が満タンなら、すべて消費して与ダメージがアップする。発動者の最大HPに比例して与ダメージがアップする。"
             }
         }
     },
@@ -2776,17 +2776,17 @@
         "_name": "Haru",
         "skills": {
             "S1": {
-                "name": "Power Anchor",
-                "description": "Attacks the enemy with an anchor, and grants a barrier to all allies for 1 turn. Damage dealt and barrier strength increase proportional to the caster's max Health. At the start of the turn, when Focus is full, changes to Power Strike. Power Strike (Consume 5 Focus): Attacks the enemy, and grants an extra turn to the caster. Penetrates the target's Defense. Unaffected by elemental disadvantage. Damage dealt increases proportional to the caster's max Health. The changed attack does not trigger a Dual Attack."
+                "name": "パワーアンカー",
+                "description": "錨で敵を攻撃し、味方全員に1ターンの間バリアを付与する。発動者の最大HPに比例して与ダメージとバリアの強度がアップする。ターン開始時、集中が満タンならパワーストライクに変わる。パワーストライク（集中5消費）：敵を攻撃し、発動者は追加ターンを得る。対象の防御力を貫通する。属性の不利の影響を受けない。発動者の最大HPに比例して与ダメージがアップする。変化した攻撃では協攻が発動しない。"
             },
             "S2": {
-                "name": "Anchor Pointer",
-                "description": "At the start of battle, gains 3 Focus, and has a 100% chance to grant indomitable to all allies for 1 turn. At the start of the turn, when the caster has a buff, dispels all debuffs from the caster and resets skill cooldown of Anchor Shot."
+                "name": "アンカーポインター",
+                "description": "バトル開始時、集中を3獲得し、100%の確率で味方全員に1ターンの間不屈を付与する。ターン開始時、発動者に強化効果があれば、発動者の弱体効果をすべて解除し、アンカーショットのクールタイムをリセットする。"
             },
             "S3": {
-                "name": "Anchor Shot",
-                "description": "Attacks the enemy with an anchor, absorbing some of the damage dealt as Health, and granting morale to all allies for 2 turns. When the target is granted a barrier, penetrates the target's Defense by 70%. Damage dealt increases proportional to the caster's Max Health. Damage dealt increases every time this skill is used, stacking up to 5 times.",
-                "soulburn_effect": "Increases Hit Chance by 100% when using this skill."
+                "name": "アンカーショット",
+                "description": "錨で敵を攻撃し、与ダメージの一部をHPとして吸収し、味方全員に2ターンの間士気を付与する。対象にバリアがあれば、対象の防御力を70%貫通する。発動者の最大HPに比例して与ダメージがアップする。このスキルを使用するたびに与ダメージがアップし、最大5回まで重複する。",
+                "soulburn_effect": "このスキルの使用時、命中率が100%アップする。"
             }
         }
     },
@@ -2794,17 +2794,17 @@
         "_name": "Hasol",
         "skills": {
             "S1": {
-                "name": "Swift Cut",
-                "description": "Attacks the enemy, before recovering Health of the caster. Additionally inflicts 500 fixed damage regardless of whether the attack hits. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "迅速な斬撃",
+                "description": "敵を攻撃した後、発動者のHPを回復する。攻撃の命中に関係なく、さらに500の固定ダメージを与える。発動者の最大HPに比例して与ダメージと回復量がアップする。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Blade of Vengeance",
-                "description": "When an ally suffers a counterattack, decreases damage suffered by 25%. When more than one damage reduction effect is granted, only the strongest effect is applied. After an enemy counterattacks, increases Combat Readiness of the caster by 25% and increases the fixed damage of Swift Cut and Punishing Strike by 1500. The fixed damage increase can stack up to 5 times."
+                "name": "復讐の刃",
+                "description": "味方が反撃を受けると、受けるダメージが25%減少する。ダメージ減少効果が複数付与された場合、最も強い効果のみ適用される。敵が反撃した後、発動者の行動ゲージを25%増加させ、迅速な斬撃と懲罰の一撃の固定ダメージを1500増加させる。固定ダメージ増加効果は最大5回まで重複する。"
             },
             "S3": {
-                "name": "Punishing Strike",
-                "description": "Attacks all enemies with a secret skill and additionally inflicts 500 fixed damage regardless of whether the attack hits. Grants increased Defense to all allies for 3 turns, and grants immunity to the caster for 3 turns. Damage dealt increases proportional to the caster's max Health. After suffering a counterattack, decreases skill cooldown by 1 turn."
+                "name": "懲罰の一撃",
+                "description": "秘技で敵全体を攻撃し、攻撃の命中に関係なく、さらに500の固定ダメージを与える。味方全員に3ターンの間防御力アップを、発動者に3ターンの間免疫を付与する。発動者の最大HPに比例して与ダメージがアップする。反撃を受けた後、スキルのクールタイムを1ターン短縮する。"
             }
         }
     },
@@ -2812,17 +2812,17 @@
         "_name": "Haste",
         "skills": {
             "S1": {
-                "name": "Envoy's Scythe",
-                "description": "Attacks the enemy with an enormous scythe, with a 50% chance to decrease Defense for 2 turns."
+                "name": "使徒の鎌",
+                "description": "巨大な鎌で敵を攻撃し、50%の確率で2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Blood Rend",
-                "description": "Attacks the enemy with a scythe, inflicting unhealable and vampiric touch for 2 turns, and recovers Health of all allies proportional to damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "血の裂傷",
+                "description": "鎌で敵を攻撃し、2ターンの間回復不可と吸血の手を付与し、与ダメージに比例して味方全員のHPを回復する。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Vampiric Seal",
-                "description": "Attacks all enemies with Envoy's Scythe, dispelling two buffs before a 100% chance each to inflict two bleeding effects for 2 turns. A critical hit has a 85% chance to inflict decreased Defense for 2 turns. When there are three or fewer enemies, damage dealt increases with fewer enemies. This skill cannot trigger a counterattack."
+                "name": "吸血の封印",
+                "description": "使徒の鎌で敵全体を攻撃し、強化効果を二つ解除した後、それぞれ100%の確率で2ターンの間出血を二つ付与する。クリティカルが発生すると、85%の確率で2ターンの間防御力ダウンを付与する。敵が三体以下の場合、敵が少ないほど与ダメージがアップする。このスキルでは反撃を誘発できない。"
             }
         }
     },
@@ -2830,17 +2830,17 @@
         "_name": "Hataan",
         "skills": {
             "S1": {
-                "name": "Knee Smash",
-                "description": "Smashes the enemy with their knee, with a 80% chance to decrease Hit Chance for 1 turn. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "膝蹴り",
+                "description": "膝で敵を打ち、80%の確率で1ターンの間命中率をダウンさせる。発動者のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S2": {
-                "name": "Wind Pressure",
-                "description": "Attacks the enemy with wind pressure. Activates Wind Pressure again when an enemy is defeated. Damage dealt increases proportional to the caster's Speed."
+                "name": "風圧",
+                "description": "風圧で敵を攻撃する。敵を倒すと風圧を再び発動する。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Unbeatable Will",
-                "description": "Releases energy to all allies, increasing Attack for 2 turns, before increasing Speed of the caster for 2 turns."
+                "name": "不敗の意志",
+                "description": "味方全員に気を放ち、2ターンの間攻撃力をアップさせた後、2ターンの間発動者のスピードをアップさせる。"
             }
         }
     },
@@ -2848,17 +2848,17 @@
         "_name": "Hazel",
         "skills": {
             "S1": {
-                "name": "Book of Fire",
-                "description": "Attacks with fire magic, with a 50% chance to make unhealable for 2 turns."
+                "name": "炎の書",
+                "description": "火の魔法で攻撃し、50%の確率で2ターンの間回復不可を付与する。"
             },
             "S2": {
-                "name": "Urgent Regen",
-                "description": "Heals the target proportional to the caster's Attack and the target's max Health, before increasing Combat Readiness of the caster by 15%. Amount recovered is doubled when the target's Health is 50% or less."
+                "name": "緊急再生",
+                "description": "発動者の攻撃力と対象の最大HPに比例して対象を回復した後、発動者の行動ゲージを15%増加させる。対象のHPが50%以下なら回復量が倍になる。"
             },
             "S3": {
-                "name": "Attack Command",
-                "description": "Uses strengthening magic to increase Attack of all allies for 2 turns before recovering Health and dispelling one debuff. Amount recovered is proportional to the caster's Attack and the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "攻撃命令",
+                "description": "強化魔法で2ターンの間味方全員の攻撃力をアップさせた後、HPを回復し、弱体効果を一つ解除する。回復量は発動者の攻撃力と対象の最大HPに比例する。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },

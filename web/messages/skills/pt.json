@@ -2722,17 +2722,17 @@
         "_name": "Guider Aither",
         "skills": {
             "S1": {
-                "name": "Whispering Spirit",
-                "description": "Attacks the enemy with spirit power, with a 50% chance to decrease Speed for 2 turns."
+                "name": "Espírito sussurrante",
+                "description": "Ataca o inimigo com poder espiritual, com 50% de chance de diminuir a Velocidade por 2 turnos."
             },
             "S2": {
-                "name": "Spirit's Protection",
-                "description": "Attacks the enemy with spirit power, before recovering Health of all allies and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's Attack."
+                "name": "Proteção espiritual",
+                "description": "Ataca o inimigo com poder espiritual, depois recupera a Vida de todos os aliados e concede uma barreira por 2 turnos. A quantidade recuperada e a força da barreira aumentam proporcionalmente ao Ataque do conjurador."
             },
             "S3": {
-                "name": "Wave of Force",
-                "description": "Delivers a blow to the enemy with spirit power and dispels all buffs, before increasing Attack of the ally with the highest Attack for 2 turns and increasing Combat Readiness by 50%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Onda de força",
+                "description": "Desfere um golpe no inimigo com poder espiritual e dissipa todos os efeitos positivos, depois aumenta o Ataque do aliado com maior Ataque por 2 turnos e aumenta a Prontidão de Combate em 50%.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -2740,17 +2740,17 @@
         "_name": "Gunther",
         "skills": {
             "S1": {
-                "name": "Spirited Blow",
-                "description": "Attacks with an axe, with a 50% chance to cause bleeding for 2 turns."
+                "name": "Golpe vigoroso",
+                "description": "Ataca com um machado, com 50% de chance de causar sangramento por 2 turnos."
             },
             "S2": {
-                "name": "Veteran",
-                "description": "Attack increases by 75%, and Critical Hit Resistance increases by 70%. When attacking, cannot trigger a critical hit."
+                "name": "Veterano",
+                "description": "O Ataque aumenta 75% e a Resistência a Crítico aumenta 70%. Ao atacar, não pode causar acerto crítico."
             },
             "S3": {
-                "name": "Tenacious Strike",
-                "description": "Attacks with an axe, stunning for 1 turn and decreasing Defense for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Golpe tenaz",
+                "description": "Ataca com um machado, atordoando por 1 turno e diminuindo a Defesa por 2 turnos.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -2758,17 +2758,17 @@
         "_name": "Harsetti",
         "skills": {
             "S1": {
-                "name": "Gambit",
-                "description": "Attacks the enemy, with a 75% chance to decrease Defense for 1 turn. When it is the caster's turn, uses En Passant as an extra attack. Damage dealt increases proportional to the caster's max Health. En Passant: Attacks all enemies, with a 60% chance to decrease Attack for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Effect Chance of Gambit increases to 100%, and decreases Defense for 2 turns."
+                "name": "Gambito",
+                "description": "Ataca o inimigo, com 75% de chance de diminuir a Defesa por 1 turno. Quando é o turno do conjurador, usa En passant como ataque extra. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. En passant: ataca todos os inimigos, com 60% de chance de diminuir o Ataque por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "A chance do efeito de Gambito aumenta para 100% e diminui a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "The Law of Skuggiheim",
-                "description": "At the start of battle, Speed of the caster is fixed going forward, and Speed of all Heroes except for the caster is limited to a maximum of 90% of the caster's Speed. On the caster's turn, Combat Readiness increase effects of all Heroes is not applied. The Law of Skuggiheim only applies to PvP."
+                "name": "A lei de Skuggiheim",
+                "description": "No início da batalha, a Velocidade do conjurador fica fixa daí em diante, e a Velocidade de todos os heróis, exceto o conjurador, é limitada a no máximo 90% da Velocidade do conjurador. No turno do conjurador, os aumentos de Prontidão de Combate de todos os heróis não são aplicados. A lei de Skuggiheim só se aplica ao PvP."
             },
             "S3": {
-                "name": "Checkmate",
-                "description": "Attacks all enemies, decreasing buff durations by 2 turns and a 100% chance each to inflict unable to counterattack and unable to be buffed for 2 turns. Penetrates the target's Defense. When Focus is full, consumes it all, increasing damage dealt. Damage dealt increases proportional to the caster's max Health."
+                "name": "Xeque-mate",
+                "description": "Ataca todos os inimigos, diminuindo a duração dos efeitos positivos em 2 turnos e com 100% de chance cada de aplicar impedimento de contra-ataque e impedimento de efeitos positivos por 2 turnos. Penetra a Defesa do alvo. Quando o Foco está cheio, consome todo o Foco, aumentando o dano causado. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -2776,17 +2776,17 @@
         "_name": "Haru",
         "skills": {
             "S1": {
-                "name": "Power Anchor",
-                "description": "Attacks the enemy with an anchor, and grants a barrier to all allies for 1 turn. Damage dealt and barrier strength increase proportional to the caster's max Health. At the start of the turn, when Focus is full, changes to Power Strike. Power Strike (Consume 5 Focus): Attacks the enemy, and grants an extra turn to the caster. Penetrates the target's Defense. Unaffected by elemental disadvantage. Damage dealt increases proportional to the caster's max Health. The changed attack does not trigger a Dual Attack."
+                "name": "Âncora poderosa",
+                "description": "Ataca o inimigo com uma âncora e concede uma barreira a todos os aliados por 1 turno. O dano causado e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador. No início do turno, quando o Foco está cheio, muda para Golpe poderoso. Golpe poderoso (consome 5 de Foco): ataca o inimigo e concede um turno extra ao conjurador. Penetra a Defesa do alvo. Não é afetado por desvantagem elemental. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. O ataque alterado não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Anchor Pointer",
-                "description": "At the start of battle, gains 3 Focus, and has a 100% chance to grant indomitable to all allies for 1 turn. At the start of the turn, when the caster has a buff, dispels all debuffs from the caster and resets skill cooldown of Anchor Shot."
+                "name": "Ponteiro da âncora",
+                "description": "No início da batalha, ganha 3 de Foco e tem 100% de chance de conceder indomável a todos os aliados por 1 turno. No início do turno, quando o conjurador tem um efeito positivo, dissipa todos os efeitos negativos do conjurador e reinicia a recarga de Disparo de âncora."
             },
             "S3": {
-                "name": "Anchor Shot",
-                "description": "Attacks the enemy with an anchor, absorbing some of the damage dealt as Health, and granting morale to all allies for 2 turns. When the target is granted a barrier, penetrates the target's Defense by 70%. Damage dealt increases proportional to the caster's Max Health. Damage dealt increases every time this skill is used, stacking up to 5 times.",
-                "soulburn_effect": "Increases Hit Chance by 100% when using this skill."
+                "name": "Disparo de âncora",
+                "description": "Ataca o inimigo com uma âncora, absorvendo parte do dano causado como Vida e concedendo moral a todos os aliados por 2 turnos. Quando o alvo tem uma barreira, penetra 70% da Defesa do alvo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. O dano causado aumenta cada vez que esta habilidade é usada, acumulando até 5 vezes.",
+                "soulburn_effect": "Aumenta a Precisão em 100% ao usar esta habilidade."
             }
         }
     },
@@ -2794,17 +2794,17 @@
         "_name": "Hasol",
         "skills": {
             "S1": {
-                "name": "Swift Cut",
-                "description": "Attacks the enemy, before recovering Health of the caster. Additionally inflicts 500 fixed damage regardless of whether the attack hits. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Corte veloz",
+                "description": "Ataca o inimigo, depois recupera a Vida do conjurador. Além disso, causa 500 de dano fixo independentemente de o ataque acertar. O dano causado e a quantidade recuperada aumentam proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Blade of Vengeance",
-                "description": "When an ally suffers a counterattack, decreases damage suffered by 25%. When more than one damage reduction effect is granted, only the strongest effect is applied. After an enemy counterattacks, increases Combat Readiness of the caster by 25% and increases the fixed damage of Swift Cut and Punishing Strike by 1500. The fixed damage increase can stack up to 5 times."
+                "name": "Lâmina da vingança",
+                "description": "Quando um aliado sofre um contra-ataque, diminui o dano sofrido em 25%. Quando mais de um efeito de redução de dano é concedido, só o mais forte é aplicado. Após um inimigo contra-atacar, aumenta a Prontidão de Combate do conjurador em 25% e aumenta em 1500 o dano fixo de Corte veloz e Golpe punitivo. O aumento de dano fixo acumula até 5 vezes."
             },
             "S3": {
-                "name": "Punishing Strike",
-                "description": "Attacks all enemies with a secret skill and additionally inflicts 500 fixed damage regardless of whether the attack hits. Grants increased Defense to all allies for 3 turns, and grants immunity to the caster for 3 turns. Damage dealt increases proportional to the caster's max Health. After suffering a counterattack, decreases skill cooldown by 1 turn."
+                "name": "Golpe punitivo",
+                "description": "Ataca todos os inimigos com uma técnica secreta e, além disso, causa 500 de dano fixo independentemente de o ataque acertar. Concede Aumentar Defesa a todos os aliados por 3 turnos e imunidade ao conjurador por 3 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Após sofrer um contra-ataque, diminui a recarga da habilidade em 1 turno."
             }
         }
     },
@@ -2812,17 +2812,17 @@
         "_name": "Haste",
         "skills": {
             "S1": {
-                "name": "Envoy's Scythe",
-                "description": "Attacks the enemy with an enormous scythe, with a 50% chance to decrease Defense for 2 turns."
+                "name": "Foice do enviado",
+                "description": "Ataca o inimigo com uma foice enorme, com 50% de chance de diminuir a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Blood Rend",
-                "description": "Attacks the enemy with a scythe, inflicting unhealable and vampiric touch for 2 turns, and recovers Health of all allies proportional to damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Rasgo de sangue",
+                "description": "Ataca o inimigo com uma foice, aplicando impedimento de cura e toque vampírico por 2 turnos, e recupera a Vida de todos os aliados proporcionalmente ao dano causado.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Vampiric Seal",
-                "description": "Attacks all enemies with Envoy's Scythe, dispelling two buffs before a 100% chance each to inflict two bleeding effects for 2 turns. A critical hit has a 85% chance to inflict decreased Defense for 2 turns. When there are three or fewer enemies, damage dealt increases with fewer enemies. This skill cannot trigger a counterattack."
+                "name": "Selo vampírico",
+                "description": "Ataca todos os inimigos com a Foice do enviado, dissipando dois efeitos positivos, depois com 100% de chance cada aplica dois efeitos de sangramento por 2 turnos. Um acerto crítico tem 85% de chance de aplicar Diminuir Defesa por 2 turnos. Quando há três inimigos ou menos, o dano causado aumenta quanto menos inimigos houver. Esta habilidade não pode ativar contra-ataques."
             }
         }
     },
@@ -2830,17 +2830,17 @@
         "_name": "Hataan",
         "skills": {
             "S1": {
-                "name": "Knee Smash",
-                "description": "Smashes the enemy with their knee, with a 80% chance to decrease Hit Chance for 1 turn. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Joelhada",
+                "description": "Golpeia o inimigo com o joelho, com 80% de chance de diminuir a Precisão por 1 turno. O dano causado aumenta proporcionalmente à Velocidade do conjurador.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S2": {
-                "name": "Wind Pressure",
-                "description": "Attacks the enemy with wind pressure. Activates Wind Pressure again when an enemy is defeated. Damage dealt increases proportional to the caster's Speed."
+                "name": "Pressão do vento",
+                "description": "Ataca o inimigo com pressão do vento. Ativa Pressão do vento novamente ao derrotar um inimigo. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S3": {
-                "name": "Unbeatable Will",
-                "description": "Releases energy to all allies, increasing Attack for 2 turns, before increasing Speed of the caster for 2 turns."
+                "name": "Vontade invencível",
+                "description": "Libera energia para todos os aliados, aumentando o Ataque por 2 turnos, depois aumenta a Velocidade do conjurador por 2 turnos."
             }
         }
     },
@@ -2848,17 +2848,17 @@
         "_name": "Hazel",
         "skills": {
             "S1": {
-                "name": "Book of Fire",
-                "description": "Attacks with fire magic, with a 50% chance to make unhealable for 2 turns."
+                "name": "Livro do fogo",
+                "description": "Ataca com magia de fogo, com 50% de chance de aplicar impedimento de cura por 2 turnos."
             },
             "S2": {
-                "name": "Urgent Regen",
-                "description": "Heals the target proportional to the caster's Attack and the target's max Health, before increasing Combat Readiness of the caster by 15%. Amount recovered is doubled when the target's Health is 50% or less."
+                "name": "Regeneração urgente",
+                "description": "Cura o alvo proporcionalmente ao Ataque do conjurador e à Vida máxima do alvo, depois aumenta a Prontidão de Combate do conjurador em 15%. A quantidade recuperada dobra quando a Vida do alvo é 50% ou menos."
             },
             "S3": {
-                "name": "Attack Command",
-                "description": "Uses strengthening magic to increase Attack of all allies for 2 turns before recovering Health and dispelling one debuff. Amount recovered is proportional to the caster's Attack and the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Comando de ataque",
+                "description": "Usa magia de fortalecimento para aumentar o Ataque de todos os aliados por 2 turnos, depois recupera Vida e dissipa um efeito negativo. A quantidade recuperada é proporcional ao Ataque do conjurador e à Vida máxima do alvo.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },

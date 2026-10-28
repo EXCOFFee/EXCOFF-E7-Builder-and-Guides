@@ -2722,17 +2722,17 @@
         "_name": "Guider Aither",
         "skills": {
             "S1": {
-                "name": "Whispering Spirit",
-                "description": "Attacks the enemy with spirit power, with a 50% chance to decrease Speed for 2 turns."
+                "name": "低语精灵",
+                "description": "以精灵之力攻击敌人，有50%的几率降低其速度2回合。"
             },
             "S2": {
-                "name": "Spirit's Protection",
-                "description": "Attacks the enemy with spirit power, before recovering Health of all allies and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's Attack."
+                "name": "精灵守护",
+                "description": "以精灵之力攻击敌人，然后恢复所有友军的生命值，并施加2回合屏障。恢复量与屏障强度按施放者的攻击力比例提升。"
             },
             "S3": {
-                "name": "Wave of Force",
-                "description": "Delivers a blow to the enemy with spirit power and dispels all buffs, before increasing Attack of the ally with the highest Attack for 2 turns and increasing Combat Readiness by 50%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "力量波动",
+                "description": "以精灵之力对敌人施以一击，并解除所有强化效果，然后提升攻击力最高的友军的攻击力2回合，并提升50%行动值。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -2740,17 +2740,17 @@
         "_name": "Gunther",
         "skills": {
             "S1": {
-                "name": "Spirited Blow",
-                "description": "Attacks with an axe, with a 50% chance to cause bleeding for 2 turns."
+                "name": "气魄一击",
+                "description": "以斧头攻击，有50%的几率施加2回合出血。"
             },
             "S2": {
-                "name": "Veteran",
-                "description": "Attack increases by 75%, and Critical Hit Resistance increases by 70%. When attacking, cannot trigger a critical hit."
+                "name": "老兵",
+                "description": "攻击力提升75%，暴击抵抗提升70%。攻击时无法造成暴击。"
             },
             "S3": {
-                "name": "Tenacious Strike",
-                "description": "Attacks with an axe, stunning for 1 turn and decreasing Defense for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "顽强一击",
+                "description": "以斧头攻击，使其眩晕1回合并降低防御力2回合。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -2758,17 +2758,17 @@
         "_name": "Harsetti",
         "skills": {
             "S1": {
-                "name": "Gambit",
-                "description": "Attacks the enemy, with a 75% chance to decrease Defense for 1 turn. When it is the caster's turn, uses En Passant as an extra attack. Damage dealt increases proportional to the caster's max Health. En Passant: Attacks all enemies, with a 60% chance to decrease Attack for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Effect Chance of Gambit increases to 100%, and decreases Defense for 2 turns."
+                "name": "弃兵",
+                "description": "攻击敌人，有75%的几率降低防御力1回合。在施放者的回合时，以追加攻击使用吃过路兵。造成的伤害按施放者的最大生命值比例提升。吃过路兵：攻击所有敌人，有60%的几率降低攻击力1回合。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "弃兵的效果几率提升至100%，并降低防御力2回合。"
             },
             "S2": {
-                "name": "The Law of Skuggiheim",
-                "description": "At the start of battle, Speed of the caster is fixed going forward, and Speed of all Heroes except for the caster is limited to a maximum of 90% of the caster's Speed. On the caster's turn, Combat Readiness increase effects of all Heroes is not applied. The Law of Skuggiheim only applies to PvP."
+                "name": "斯库基海姆法则",
+                "description": "战斗开始时，施放者的速度此后固定，除施放者外所有英雄的速度最多被限制为施放者速度的90%。在施放者的回合，所有英雄的行动值提升效果不会生效。斯库基海姆法则仅适用于PvP。"
             },
             "S3": {
-                "name": "Checkmate",
-                "description": "Attacks all enemies, decreasing buff durations by 2 turns and a 100% chance each to inflict unable to counterattack and unable to be buffed for 2 turns. Penetrates the target's Defense. When Focus is full, consumes it all, increasing damage dealt. Damage dealt increases proportional to the caster's max Health."
+                "name": "将死",
+                "description": "攻击所有敌人，使强化效果持续时间减少2回合，并各有100%的几率施加2回合无法反击与无法强化。穿透目标的防御力。专注已满时，消耗全部专注以提升造成的伤害。造成的伤害按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -2776,17 +2776,17 @@
         "_name": "Haru",
         "skills": {
             "S1": {
-                "name": "Power Anchor",
-                "description": "Attacks the enemy with an anchor, and grants a barrier to all allies for 1 turn. Damage dealt and barrier strength increase proportional to the caster's max Health. At the start of the turn, when Focus is full, changes to Power Strike. Power Strike (Consume 5 Focus): Attacks the enemy, and grants an extra turn to the caster. Penetrates the target's Defense. Unaffected by elemental disadvantage. Damage dealt increases proportional to the caster's max Health. The changed attack does not trigger a Dual Attack."
+                "name": "强力船锚",
+                "description": "以船锚攻击敌人，并为所有友军施加1回合屏障。造成的伤害与屏障强度按施放者的最大生命值比例提升。回合开始时，若专注已满，变为强力打击。强力打击（消耗5专注）：攻击敌人，施放者获得额外回合。穿透目标的防御力。不受属性劣势影响。造成的伤害按施放者的最大生命值比例提升。变化后的攻击不会触发协攻。"
             },
             "S2": {
-                "name": "Anchor Pointer",
-                "description": "At the start of battle, gains 3 Focus, and has a 100% chance to grant indomitable to all allies for 1 turn. At the start of the turn, when the caster has a buff, dispels all debuffs from the caster and resets skill cooldown of Anchor Shot."
+                "name": "船锚指针",
+                "description": "战斗开始时，获得3专注，并有100%的几率为所有友军施加1回合不屈。回合开始时，若施放者拥有强化效果，解除施放者的所有弱化效果，并重置船锚射击的冷却时间。"
             },
             "S3": {
-                "name": "Anchor Shot",
-                "description": "Attacks the enemy with an anchor, absorbing some of the damage dealt as Health, and granting morale to all allies for 2 turns. When the target is granted a barrier, penetrates the target's Defense by 70%. Damage dealt increases proportional to the caster's Max Health. Damage dealt increases every time this skill is used, stacking up to 5 times.",
-                "soulburn_effect": "Increases Hit Chance by 100% when using this skill."
+                "name": "船锚射击",
+                "description": "以船锚攻击敌人，将部分造成的伤害吸收为生命值，并为所有友军施加2回合士气。目标拥有屏障时，穿透目标70%的防御力。造成的伤害按施放者的最大生命值比例提升。每次使用此技能，造成的伤害提升，最多叠加5次。",
+                "soulburn_effect": "使用此技能时，命中率提升100%。"
             }
         }
     },
@@ -2794,17 +2794,17 @@
         "_name": "Hasol",
         "skills": {
             "S1": {
-                "name": "Swift Cut",
-                "description": "Attacks the enemy, before recovering Health of the caster. Additionally inflicts 500 fixed damage regardless of whether the attack hits. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "迅捷斩击",
+                "description": "攻击敌人，然后恢复施放者的生命值。无论攻击是否命中，额外造成500点固定伤害。造成的伤害与恢复量按施放者的最大生命值比例提升。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Blade of Vengeance",
-                "description": "When an ally suffers a counterattack, decreases damage suffered by 25%. When more than one damage reduction effect is granted, only the strongest effect is applied. After an enemy counterattacks, increases Combat Readiness of the caster by 25% and increases the fixed damage of Swift Cut and Punishing Strike by 1500. The fixed damage increase can stack up to 5 times."
+                "name": "复仇之刃",
+                "description": "友军受到反击时，受到的伤害降低25%。获得多个伤害降低效果时，仅适用最强的效果。敌人反击后，使施放者的行动值提升25%，并使迅捷斩击与惩戒一击的固定伤害提升1500。固定伤害提升效果最多叠加5次。"
             },
             "S3": {
-                "name": "Punishing Strike",
-                "description": "Attacks all enemies with a secret skill and additionally inflicts 500 fixed damage regardless of whether the attack hits. Grants increased Defense to all allies for 3 turns, and grants immunity to the caster for 3 turns. Damage dealt increases proportional to the caster's max Health. After suffering a counterattack, decreases skill cooldown by 1 turn."
+                "name": "惩戒一击",
+                "description": "以秘技攻击所有敌人，无论攻击是否命中，额外造成500点固定伤害。为所有友军施加3回合防御力提升，为施放者施加3回合免疫。造成的伤害按施放者的最大生命值比例提升。受到反击后，使技能冷却时间减少1回合。"
             }
         }
     },
@@ -2812,17 +2812,17 @@
         "_name": "Haste",
         "skills": {
             "S1": {
-                "name": "Envoy's Scythe",
-                "description": "Attacks the enemy with an enormous scythe, with a 50% chance to decrease Defense for 2 turns."
+                "name": "使徒之镰",
+                "description": "以巨大镰刀攻击敌人，有50%的几率降低防御力2回合。"
             },
             "S2": {
-                "name": "Blood Rend",
-                "description": "Attacks the enemy with a scythe, inflicting unhealable and vampiric touch for 2 turns, and recovers Health of all allies proportional to damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "鲜血撕裂",
+                "description": "以镰刀攻击敌人，施加2回合无法恢复与吸血之触，并按造成的伤害比例恢复所有友军的生命值。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Vampiric Seal",
-                "description": "Attacks all enemies with Envoy's Scythe, dispelling two buffs before a 100% chance each to inflict two bleeding effects for 2 turns. A critical hit has a 85% chance to inflict decreased Defense for 2 turns. When there are three or fewer enemies, damage dealt increases with fewer enemies. This skill cannot trigger a counterattack."
+                "name": "吸血封印",
+                "description": "以使徒之镰攻击所有敌人，解除两个强化效果，然后各有100%的几率施加两层2回合出血。暴击时，有85%的几率施加2回合防御力降低。敌人在三名以下时，敌人越少，造成的伤害越高。此技能无法触发反击。"
             }
         }
     },
@@ -2830,17 +2830,17 @@
         "_name": "Hataan",
         "skills": {
             "S1": {
-                "name": "Knee Smash",
-                "description": "Smashes the enemy with their knee, with a 80% chance to decrease Hit Chance for 1 turn. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "膝撞",
+                "description": "以膝撞击敌人，有80%的几率降低命中率1回合。造成的伤害按施放者的速度比例提升。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S2": {
-                "name": "Wind Pressure",
-                "description": "Attacks the enemy with wind pressure. Activates Wind Pressure again when an enemy is defeated. Damage dealt increases proportional to the caster's Speed."
+                "name": "风压",
+                "description": "以风压攻击敌人。击败敌人时，再次发动风压。造成的伤害按施放者的速度比例提升。"
             },
             "S3": {
-                "name": "Unbeatable Will",
-                "description": "Releases energy to all allies, increasing Attack for 2 turns, before increasing Speed of the caster for 2 turns."
+                "name": "不败意志",
+                "description": "向所有友军释放能量，提升攻击力2回合，然后提升施放者的速度2回合。"
             }
         }
     },
@@ -2848,17 +2848,17 @@
         "_name": "Hazel",
         "skills": {
             "S1": {
-                "name": "Book of Fire",
-                "description": "Attacks with fire magic, with a 50% chance to make unhealable for 2 turns."
+                "name": "火之书",
+                "description": "以火魔法攻击，有50%的几率施加2回合无法恢复。"
             },
             "S2": {
-                "name": "Urgent Regen",
-                "description": "Heals the target proportional to the caster's Attack and the target's max Health, before increasing Combat Readiness of the caster by 15%. Amount recovered is doubled when the target's Health is 50% or less."
+                "name": "紧急再生",
+                "description": "按施放者的攻击力与目标的最大生命值比例治疗目标，然后使施放者的行动值提升15%。目标生命值在50%以下时，恢复量翻倍。"
             },
             "S3": {
-                "name": "Attack Command",
-                "description": "Uses strengthening magic to increase Attack of all allies for 2 turns before recovering Health and dispelling one debuff. Amount recovered is proportional to the caster's Attack and the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "攻击命令",
+                "description": "以强化魔法提升所有友军的攻击力2回合，然后恢复生命值并解除一个弱化效果。恢复量与施放者的攻击力及目标的最大生命值成比例。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             }
         }
     },

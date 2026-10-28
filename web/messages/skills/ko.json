@@ -2722,17 +2722,17 @@
         "_name": "Guider Aither",
         "skills": {
             "S1": {
-                "name": "Whispering Spirit",
-                "description": "Attacks the enemy with spirit power, with a 50% chance to decrease Speed for 2 turns."
+                "name": "속삭이는 정령",
+                "description": "정령의 힘으로 적을 공격하며, 50% 확률로 2턴 동안 속도를 감소시킨다."
             },
             "S2": {
-                "name": "Spirit's Protection",
-                "description": "Attacks the enemy with spirit power, before recovering Health of all allies and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's Attack."
+                "name": "정령의 가호",
+                "description": "정령의 힘으로 적을 공격한 뒤 모든 아군의 생명력을 회복하고 2턴 동안 보호막을 부여한다. 시전자의 공격력에 비례해 회복량과 보호막 강도가 증가한다."
             },
             "S3": {
-                "name": "Wave of Force",
-                "description": "Delivers a blow to the enemy with spirit power and dispels all buffs, before increasing Attack of the ally with the highest Attack for 2 turns and increasing Combat Readiness by 50%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "힘의 파동",
+                "description": "정령의 힘으로 적에게 일격을 가하고 강화 효과를 모두 해제한 뒤 2턴 동안 공격력이 가장 높은 아군의 공격력을 증가시키고 행동 게이지를 50% 증가시킨다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -2740,17 +2740,17 @@
         "_name": "Gunther",
         "skills": {
             "S1": {
-                "name": "Spirited Blow",
-                "description": "Attacks with an axe, with a 50% chance to cause bleeding for 2 turns."
+                "name": "기백의 일격",
+                "description": "도끼로 공격하며, 50% 확률로 2턴 동안 출혈을 건다."
             },
             "S2": {
-                "name": "Veteran",
-                "description": "Attack increases by 75%, and Critical Hit Resistance increases by 70%. When attacking, cannot trigger a critical hit."
+                "name": "베테랑",
+                "description": "공격력이 75%, 치명타 저항이 70% 증가한다. 공격 시 치명타가 발생하지 않는다."
             },
             "S3": {
-                "name": "Tenacious Strike",
-                "description": "Attacks with an axe, stunning for 1 turn and decreasing Defense for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "끈질긴 일격",
+                "description": "도끼로 공격해 1턴 동안 기절시키고 2턴 동안 방어력을 감소시킨다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -2758,17 +2758,17 @@
         "_name": "Harsetti",
         "skills": {
             "S1": {
-                "name": "Gambit",
-                "description": "Attacks the enemy, with a 75% chance to decrease Defense for 1 turn. When it is the caster's turn, uses En Passant as an extra attack. Damage dealt increases proportional to the caster's max Health. En Passant: Attacks all enemies, with a 60% chance to decrease Attack for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Effect Chance of Gambit increases to 100%, and decreases Defense for 2 turns."
+                "name": "갬빗",
+                "description": "적을 공격하며, 75% 확률로 1턴 동안 방어력을 감소시킨다. 시전자의 턴이면 추가 공격으로 앙파상을 사용한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 앙파상: 모든 적을 공격하며, 60% 확률로 1턴 동안 공격력을 감소시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "갬빗의 효과 발동 확률이 100%로 증가하고 2턴 동안 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "The Law of Skuggiheim",
-                "description": "At the start of battle, Speed of the caster is fixed going forward, and Speed of all Heroes except for the caster is limited to a maximum of 90% of the caster's Speed. On the caster's turn, Combat Readiness increase effects of all Heroes is not applied. The Law of Skuggiheim only applies to PvP."
+                "name": "스쿠기헤임의 법칙",
+                "description": "전투 시작 시 이후 시전자의 속도가 고정되며, 시전자를 제외한 모든 영웅의 속도는 시전자 속도의 최대 90%로 제한된다. 시전자의 턴에는 모든 영웅의 행동 게이지 증가 효과가 적용되지 않는다. 스쿠기헤임의 법칙은 PvP에서만 적용된다."
             },
             "S3": {
-                "name": "Checkmate",
-                "description": "Attacks all enemies, decreasing buff durations by 2 turns and a 100% chance each to inflict unable to counterattack and unable to be buffed for 2 turns. Penetrates the target's Defense. When Focus is full, consumes it all, increasing damage dealt. Damage dealt increases proportional to the caster's max Health."
+                "name": "체크메이트",
+                "description": "모든 적을 공격해 강화 효과의 지속 시간을 2턴 감소시키고 각각 100% 확률로 2턴 동안 반격 불가와 강화 불가를 건다. 대상의 방어력을 관통한다. 집중이 가득 차 있으면 모두 소모해 주는 피해가 증가한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -2776,17 +2776,17 @@
         "_name": "Haru",
         "skills": {
             "S1": {
-                "name": "Power Anchor",
-                "description": "Attacks the enemy with an anchor, and grants a barrier to all allies for 1 turn. Damage dealt and barrier strength increase proportional to the caster's max Health. At the start of the turn, when Focus is full, changes to Power Strike. Power Strike (Consume 5 Focus): Attacks the enemy, and grants an extra turn to the caster. Penetrates the target's Defense. Unaffected by elemental disadvantage. Damage dealt increases proportional to the caster's max Health. The changed attack does not trigger a Dual Attack."
+                "name": "파워 앵커",
+                "description": "닻으로 적을 공격하고 모든 아군에게 1턴 동안 보호막을 부여한다. 시전자의 최대 생명력에 비례해 주는 피해와 보호막 강도가 증가한다. 턴 시작 시 집중이 가득 차 있으면 파워 스트라이크로 바뀐다. 파워 스트라이크(집중 5 소모): 적을 공격하고 시전자는 추가 턴을 얻는다. 대상의 방어력을 관통한다. 속성 상성의 불리함에 영향을 받지 않는다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 바뀐 공격으로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Anchor Pointer",
-                "description": "At the start of battle, gains 3 Focus, and has a 100% chance to grant indomitable to all allies for 1 turn. At the start of the turn, when the caster has a buff, dispels all debuffs from the caster and resets skill cooldown of Anchor Shot."
+                "name": "앵커 포인터",
+                "description": "전투 시작 시 집중을 3 얻고, 100% 확률로 모든 아군에게 1턴 동안 불굴을 부여한다. 턴 시작 시 시전자에게 강화 효과가 있으면 시전자의 약화 효과를 모두 해제하고 앵커 샷의 재사용 대기 시간을 초기화한다."
             },
             "S3": {
-                "name": "Anchor Shot",
-                "description": "Attacks the enemy with an anchor, absorbing some of the damage dealt as Health, and granting morale to all allies for 2 turns. When the target is granted a barrier, penetrates the target's Defense by 70%. Damage dealt increases proportional to the caster's Max Health. Damage dealt increases every time this skill is used, stacking up to 5 times.",
-                "soulburn_effect": "Increases Hit Chance by 100% when using this skill."
+                "name": "앵커 샷",
+                "description": "닻으로 적을 공격해 준 피해의 일부를 생명력으로 흡수하고 모든 아군에게 2턴 동안 사기를 부여한다. 대상에게 보호막이 있으면 대상의 방어력을 70% 관통한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 이 스킬을 사용할 때마다 주는 피해가 증가하며, 최대 5회까지 중첩된다.",
+                "soulburn_effect": "이 스킬 사용 시 명중률이 100% 증가한다."
             }
         }
     },
@@ -2794,17 +2794,17 @@
         "_name": "Hasol",
         "skills": {
             "S1": {
-                "name": "Swift Cut",
-                "description": "Attacks the enemy, before recovering Health of the caster. Additionally inflicts 500 fixed damage regardless of whether the attack hits. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "신속한 베기",
+                "description": "적을 공격한 뒤 시전자의 생명력을 회복한다. 공격의 적중 여부와 관계없이 추가로 500의 고정 피해를 준다. 시전자의 최대 생명력에 비례해 주는 피해와 회복량이 증가한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Blade of Vengeance",
-                "description": "When an ally suffers a counterattack, decreases damage suffered by 25%. When more than one damage reduction effect is granted, only the strongest effect is applied. After an enemy counterattacks, increases Combat Readiness of the caster by 25% and increases the fixed damage of Swift Cut and Punishing Strike by 1500. The fixed damage increase can stack up to 5 times."
+                "name": "복수의 칼날",
+                "description": "아군이 반격을 받으면 받는 피해가 25% 감소한다. 피해 감소 효과가 여러 개 부여되면 가장 강한 효과만 적용된다. 적이 반격한 후 시전자의 행동 게이지를 25% 증가시키고 신속한 베기와 징벌의 일격의 고정 피해를 1500 증가시킨다. 고정 피해 증가 효과는 최대 5회까지 중첩된다."
             },
             "S3": {
-                "name": "Punishing Strike",
-                "description": "Attacks all enemies with a secret skill and additionally inflicts 500 fixed damage regardless of whether the attack hits. Grants increased Defense to all allies for 3 turns, and grants immunity to the caster for 3 turns. Damage dealt increases proportional to the caster's max Health. After suffering a counterattack, decreases skill cooldown by 1 turn."
+                "name": "징벌의 일격",
+                "description": "비기로 모든 적을 공격하고 공격의 적중 여부와 관계없이 추가로 500의 고정 피해를 준다. 모든 아군에게 3턴 동안 방어력 증가를, 시전자에게 3턴 동안 면역을 부여한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 반격을 받은 후 스킬 재사용 대기 시간을 1턴 감소시킨다."
             }
         }
     },
@@ -2812,17 +2812,17 @@
         "_name": "Haste",
         "skills": {
             "S1": {
-                "name": "Envoy's Scythe",
-                "description": "Attacks the enemy with an enormous scythe, with a 50% chance to decrease Defense for 2 turns."
+                "name": "사도의 낫",
+                "description": "거대한 낫으로 적을 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Blood Rend",
-                "description": "Attacks the enemy with a scythe, inflicting unhealable and vampiric touch for 2 turns, and recovers Health of all allies proportional to damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "피의 찢김",
+                "description": "낫으로 적을 공격해 2턴 동안 회복 불가와 흡혈의 손길을 걸고, 준 피해에 비례해 모든 아군의 생명력을 회복한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Vampiric Seal",
-                "description": "Attacks all enemies with Envoy's Scythe, dispelling two buffs before a 100% chance each to inflict two bleeding effects for 2 turns. A critical hit has a 85% chance to inflict decreased Defense for 2 turns. When there are three or fewer enemies, damage dealt increases with fewer enemies. This skill cannot trigger a counterattack."
+                "name": "흡혈의 봉인",
+                "description": "사도의 낫으로 모든 적을 공격해 강화 효과를 두 개 해제한 뒤 각각 100% 확률로 2턴 동안 출혈을 두 개 건다. 치명타가 발생하면 85% 확률로 2턴 동안 방어력 감소를 건다. 적이 세 명 이하이면 적이 적을수록 주는 피해가 증가한다. 이 스킬로는 반격을 유발할 수 없다."
             }
         }
     },
@@ -2830,17 +2830,17 @@
         "_name": "Hataan",
         "skills": {
             "S1": {
-                "name": "Knee Smash",
-                "description": "Smashes the enemy with their knee, with a 80% chance to decrease Hit Chance for 1 turn. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "무릎 차기",
+                "description": "무릎으로 적을 가격하며, 80% 확률로 1턴 동안 명중률을 감소시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S2": {
-                "name": "Wind Pressure",
-                "description": "Attacks the enemy with wind pressure. Activates Wind Pressure again when an enemy is defeated. Damage dealt increases proportional to the caster's Speed."
+                "name": "풍압",
+                "description": "풍압으로 적을 공격한다. 적을 처치하면 풍압을 다시 발동한다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Unbeatable Will",
-                "description": "Releases energy to all allies, increasing Attack for 2 turns, before increasing Speed of the caster for 2 turns."
+                "name": "불패의 의지",
+                "description": "모든 아군에게 기운을 방출해 2턴 동안 공격력을 증가시킨 뒤 2턴 동안 시전자의 속도를 증가시킨다."
             }
         }
     },
@@ -2848,17 +2848,17 @@
         "_name": "Hazel",
         "skills": {
             "S1": {
-                "name": "Book of Fire",
-                "description": "Attacks with fire magic, with a 50% chance to make unhealable for 2 turns."
+                "name": "불의 서",
+                "description": "불 마법으로 공격하며, 50% 확률로 2턴 동안 회복 불가를 건다."
             },
             "S2": {
-                "name": "Urgent Regen",
-                "description": "Heals the target proportional to the caster's Attack and the target's max Health, before increasing Combat Readiness of the caster by 15%. Amount recovered is doubled when the target's Health is 50% or less."
+                "name": "긴급 재생",
+                "description": "시전자의 공격력과 대상의 최대 생명력에 비례해 대상을 치유한 뒤 시전자의 행동 게이지를 15% 증가시킨다. 대상의 생명력이 50% 이하이면 회복량이 두 배가 된다."
             },
             "S3": {
-                "name": "Attack Command",
-                "description": "Uses strengthening magic to increase Attack of all allies for 2 turns before recovering Health and dispelling one debuff. Amount recovered is proportional to the caster's Attack and the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "공격 명령",
+                "description": "강화 마법으로 2턴 동안 모든 아군의 공격력을 증가시킨 뒤 생명력을 회복하고 약화 효과를 한 개 해제한다. 회복량은 시전자의 공격력과 대상의 최대 생명력에 비례한다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장된다."
             }
         }
     },
