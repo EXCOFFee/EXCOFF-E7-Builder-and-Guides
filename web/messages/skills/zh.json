@@ -1516,17 +1516,17 @@
         "_name": "Christy",
         "skills": {
             "S1": {
-                "name": "Sword of Protection",
-                "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "守护之剑",
+                "description": "攻击敌人，有75%的几率施加1回合挑衅。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Oath Shield",
-                "description": "After being attacked, when the caster does not have a debuff, increases Combat Readiness of the caster and the ally in the back row by 20%. Can only be activated once per turn. At the start of the first battle, increases Effect Resistance of the ally in the back row by 100% of the caster's Effect Resistance. The rate of this effect does not change after it is activated, and this effect is dispelled only when the ally in the back row is defeated. When the caster is in the back row, the effect is not activated."
+                "name": "誓约之盾",
+                "description": "受到攻击后，若施放者没有弱化效果，使施放者与后排友军的行动值提升20%。每回合只能发动一次。首场战斗开始时，使后排友军的效果抵抗提升施放者效果抵抗的100%。此效果的数值在发动后不会改变，且仅在后排友军被击败时解除。施放者位于后排时不发动此效果。"
             },
             "S3": {
-                "name": "Hymn of Courage",
-                "description": "Increases Attack of all allies for 2 turns. Increases Defense of the caster for 2 turns and recovers Health. Amount recovered increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "勇气赞歌",
+                "description": "提升所有友军的攻击力2回合。提升施放者的防御力2回合并恢复生命值。恢复量按施放者的最大生命值比例提升。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -1534,17 +1534,17 @@
         "_name": "Church of Ilryos Axe",
         "skills": {
             "S1": {
-                "name": "Disconnect",
-                "description": "Attacks the enemy with an axe and inflicts up to 10% injuries. Damage dealt increases proportional to the caster's max Health."
+                "name": "断绝",
+                "description": "以斧头攻击敌人，造成最多10%的负伤。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Attack Chain",
-                "description": "Attacks all enemies with a shockwave and inflicts up to 15% injuries before recovering Health of the caster. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "连锁攻击",
+                "description": "以冲击波攻击所有敌人，造成最多15%的负伤，然后恢复施放者的生命值。造成的伤害与恢复量按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Plagued Strike",
-                "description": "Attacks the enemy, dispelling all buffs. When the enemy is defeated, resets cooldown of this skill. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "瘟疫一击",
+                "description": "攻击敌人，解除所有强化效果。击败敌人时，重置此技能的冷却时间。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1552,17 +1552,17 @@
         "_name": "Cidd",
         "skills": {
             "S1": {
-                "name": "Relentless Strike",
-                "description": "Attacks the enemy with a dagger. Damage dealt increases proportional to the caster's Speed. When the caster is granted increased Speed, uses Whirlwind instead of Relentless Strike. Whirlwind: Attacks the enemy repeatedly, decreasing Defense for 1 turn. Damage dealt increases proportional to the caster's Speed."
+                "name": "无情一击",
+                "description": "以短剑攻击敌人。造成的伤害按施放者的速度比例提升。施放者拥有速度提升时，使用旋风代替无情一击。旋风：连续攻击敌人，降低其防御力1回合。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "Wind's Resolve",
-                "description": "A critical hit grants increased Speed to the caster for 1 turn and a 100% chance to grant arandom buff for 1 turn."
+                "name": "风之决意",
+                "description": "暴击时，为施放者施加1回合速度提升，并有100%的几率施加1回合随机强化效果。"
             },
             "S3": {
-                "name": "Hack",
-                "description": "Attacks the enemy by slashing at them with daggers, and when the target is defeated, grants an extra turn. When the caster is granted increased Speed, attacks using an elemental advantage. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "乱砍",
+                "description": "以短剑斩击敌人，击败目标时获得额外回合。施放者拥有速度提升时，以属性优势进行攻击。造成的伤害按施放者的速度比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1570,17 +1570,17 @@
         "_name": "Clarissa",
         "skills": {
             "S1": {
-                "name": "Harsh Lesson",
-                "description": "Attacks with a morning star, with a 50% chance to decrease Defense for 2 turns."
+                "name": "严厉教训",
+                "description": "以流星锤攻击，有50%的几率降低防御力2回合。"
             },
             "S2": {
-                "name": "Rage",
-                "description": "When an enemy is defeated by Harsh Lesson or Hysteric, grants rage to the caster for 3 turns and activates Kya-hahaha. Kya-hahaha (gains 1 Soul): Attacks all enemies by swinging an iron mace."
+                "name": "愤怒",
+                "description": "以严厉教训或歇斯底里击败敌人时，为施放者施加3回合激怒，并发动咯哈哈哈。咯哈哈哈（获得1魂）：挥舞铁锤攻击所有敌人。"
             },
             "S3": {
-                "name": "Hysteric",
-                "description": "Attacks all enemies by spinning before inflicting two bleeding effects for 2 turns and a 70% chance to inflict decreased Defense for 2 turns. When an enemy is defeated, resets skill cooldowns. When the caster is granted rage, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "歇斯底里",
+                "description": "旋转攻击所有敌人，然后施加两层2回合出血，并有70%的几率施加2回合防御力降低。击败敌人时，重置技能冷却时间。施放者拥有激怒时，提升造成的伤害。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1588,17 +1588,17 @@
         "_name": "Claudia",
         "skills": {
             "S1": {
-                "name": "View Obstruction",
-                "description": "Attacks the enemy with a sword, and has a 50% chance to decrease Hit Chance for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "遮蔽视线",
+                "description": "以剑攻击敌人，有50%的几率降低命中率2回合。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Slayer's Determination",
-                "description": "Increases Effectiveness by 30%. When suffering an attack that targets all allies, activates Retaliation against the attacker. Can only be activated once every 2 turns. Retaliation: Pierces through the enemy before attacking, decreasing Attack for 2 turns, and grants a barrier to the ally with the lowest Health for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "屠戮者的决心",
+                "description": "效果命中提升30%。受到以所有友军为目标的攻击时，对攻击者发动报复。每2回合只能发动一次。报复：贯穿敌人进行攻击，降低其攻击力2回合，并为生命值最低的友军施加2回合屏障。屏障强度按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Indomitable Resolve",
-                "description": "Reaffirms resolve, granting immunity to all allies for 2 turns, and recovers Health of the caster. Amount recovered increases proportional to the caster's max Health."
+                "name": "不屈决意",
+                "description": "坚定决心，为所有友军施加2回合免疫，并恢复施放者的生命值。恢复量按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -1606,17 +1606,17 @@
         "_name": "Closer Charles",
         "skills": {
             "S1": {
-                "name": "Elimination",
-                "description": "Attacks the enemy by sharply cutting them. When used on the caster's turn, if the caster is granted perception, uses Demolition instead of Elimination. Demolition: Attacks the enemy with a sword, absorbing some of the damage dealt as Health. Damage dealt increases proportional to the target's lost Health. When the enemy is defeated, decreases cooldown of Descent by 1 turn. This attack does not trigger a Dual Attack."
+                "name": "清除",
+                "description": "以锐利的斩击攻击敌人。在施放者的回合使用时，若施放者拥有洞察，使用摧毁代替清除。摧毁：以剑攻击敌人，并将部分造成的伤害吸收为生命值。造成的伤害按目标已损失的生命值比例提升。击败敌人时，使降临的冷却时间减少1回合。此攻击不会触发协攻。"
             },
             "S2": {
-                "name": "Closer",
-                "description": "At the start of the first battle, grants increased Evasion for 1 turn. After an ally except for the caster attacks, when the enemy's Health is less than 40%, increases Combat Readiness of the caster by 50% and grants perception for 2 turns."
+                "name": "终结者",
+                "description": "首场战斗开始时，施加1回合闪避提升。除施放者外的友军攻击后，若敌人生命值低于40%，使施放者的行动值提升50%，并施加2回合洞察。"
             },
             "S3": {
-                "name": "Descent",
-                "description": "Attacks all enemies after descending, increasing Attack of all allies for 2 turns before increasing Combat Readiness by 20%. Increases Evasion of the caster for 3 turns. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "降临",
+                "description": "降落后攻击所有敌人，提升所有友军的攻击力2回合，然后提升20%行动值。提升施放者的闪避3回合。此技能无法触发反击。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1624,17 +1624,17 @@
         "_name": "Coli",
         "skills": {
             "S1": {
-                "name": "Ambush",
-                "description": "Ambushes the enemy, with a 75% chance to steal one buff.",
-                "soulburn_effect": "Increases effect chance to 100% and steals two buffs."
+                "name": "伏击",
+                "description": "伏击敌人，有75%的几率夺取一个强化效果。",
+                "soulburn_effect": "效果几率提升至100%，并夺取两个强化效果。"
             },
             "S2": {
-                "name": "Accurate Strike",
-                "description": "Attacks the enemy with an unseen blade and grants stealth to the caster for 2 turns. At the end of the turn, detonates any bleeding effects and bombs inflicted on the target."
+                "name": "精准一击",
+                "description": "以无形之刃攻击敌人，并为施放者施加2回合隐身。回合结束时，引爆目标身上的所有出血与炸弹。"
             },
             "S3": {
-                "name": "Baptism of Fire",
-                "description": "Attacks the enemy with a dagger and bomb, decreasing buff durations by 1 turn, inflicting bleeding and planting a bomb for 2 turns, before increasing Combat Readiness of the caster by 50%. When the target is a Fire elemental Hero, ignores Effect Resistance and increases Combat Readiness of the caster by an additional 50%."
+                "name": "火之洗礼",
+                "description": "以短剑与炸弹攻击敌人，使强化效果持续时间减少1回合，施加2回合出血并安置炸弹，然后使施放者的行动值提升50%。目标为火属性英雄时，无视效果抵抗，并使施放者的行动值额外提升50%。"
             }
         }
     },
@@ -1642,17 +1642,17 @@
         "_name": "Command Model Laika",
         "skills": {
             "S1": {
-                "name": "Supporting Fire",
-                "description": "Attacks the enemy, increasing Combat Readiness of the caster and a random ally except for the caster by 15%."
+                "name": "支援射击",
+                "description": "攻击敌人，并使施放者与除施放者外随机一名友军的行动值提升15%。"
             },
             "S2": {
-                "name": "Strike Order",
-                "description": "Selects an enemy, with a 100% chance to target them for 2 turns. Grants increased Attack (Greater) to the ally with the highest Attack except for the caster for 2 turns before triggering a Dual Attack."
+                "name": "攻击命令",
+                "description": "指定一名敌人，有100%的几率施加2回合标记。为除施放者外攻击力最高的友军施加2回合攻击力提升（大），然后使其发动协攻。"
             },
             "S3": {
-                "name": "Volley Fire!",
-                "description": "Shoots out all wings to attack all enemies, with a 100% chance each to decrease Speed for 2 turns and put them to sleep for 1 turn, before granting immunity to all allies for 2 turns.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "齐射！",
+                "description": "射出所有羽翼攻击所有敌人，各有100%的几率降低速度2回合并使其睡眠1回合，然后为所有友军施加2回合免疫。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },

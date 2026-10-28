@@ -1516,17 +1516,17 @@
         "_name": "Christy",
         "skills": {
             "S1": {
-                "name": "Sword of Protection",
-                "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "守護の剣",
+                "description": "敵を攻撃し、75%の確率で1ターンの間挑発を付与する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Oath Shield",
-                "description": "After being attacked, when the caster does not have a debuff, increases Combat Readiness of the caster and the ally in the back row by 20%. Can only be activated once per turn. At the start of the first battle, increases Effect Resistance of the ally in the back row by 100% of the caster's Effect Resistance. The rate of this effect does not change after it is activated, and this effect is dispelled only when the ally in the back row is defeated. When the caster is in the back row, the effect is not activated."
+                "name": "誓いの盾",
+                "description": "攻撃された後、発動者に弱体効果がなければ、発動者と後列の味方の行動ゲージを20%増加させる。ターンごとに一度のみ発動できる。最初のバトル開始時、後列の味方の効果抵抗を発動者の効果抵抗の100%分アップさせる。この効果の数値は発動後に変化せず、後列の味方が倒れたときのみ解除される。発動者が後列にいる場合、効果は発動しない。"
             },
             "S3": {
-                "name": "Hymn of Courage",
-                "description": "Increases Attack of all allies for 2 turns. Increases Defense of the caster for 2 turns and recovers Health. Amount recovered increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "勇気の賛歌",
+                "description": "2ターンの間味方全員の攻撃力をアップさせる。2ターンの間発動者の防御力をアップさせ、HPを回復する。発動者の最大HPに比例して回復量がアップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -1534,17 +1534,17 @@
         "_name": "Church of Ilryos Axe",
         "skills": {
             "S1": {
-                "name": "Disconnect",
-                "description": "Attacks the enemy with an axe and inflicts up to 10% injuries. Damage dealt increases proportional to the caster's max Health."
+                "name": "断絶",
+                "description": "斧で敵を攻撃し、最大10%の負傷を与える。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Attack Chain",
-                "description": "Attacks all enemies with a shockwave and inflicts up to 15% injuries before recovering Health of the caster. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "連鎖攻撃",
+                "description": "衝撃波で敵全体を攻撃し、最大15%の負傷を与えた後、発動者のHPを回復する。発動者の最大HPに比例して与ダメージと回復量がアップする。"
             },
             "S3": {
-                "name": "Plagued Strike",
-                "description": "Attacks the enemy, dispelling all buffs. When the enemy is defeated, resets cooldown of this skill. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "疫病の一撃",
+                "description": "敵を攻撃し、強化効果をすべて解除する。敵を倒すと、このスキルのクールタイムをリセットする。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1552,17 +1552,17 @@
         "_name": "Cidd",
         "skills": {
             "S1": {
-                "name": "Relentless Strike",
-                "description": "Attacks the enemy with a dagger. Damage dealt increases proportional to the caster's Speed. When the caster is granted increased Speed, uses Whirlwind instead of Relentless Strike. Whirlwind: Attacks the enemy repeatedly, decreasing Defense for 1 turn. Damage dealt increases proportional to the caster's Speed."
+                "name": "容赦ない一撃",
+                "description": "短剣で敵を攻撃する。発動者のスピードに比例して与ダメージがアップする。発動者にスピードアップがあれば、容赦ない一撃の代わりにつむじ風を使用する。つむじ風：敵を連続で攻撃し、1ターンの間防御力をダウンさせる。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Wind's Resolve",
-                "description": "A critical hit grants increased Speed to the caster for 1 turn and a 100% chance to grant arandom buff for 1 turn."
+                "name": "風の決意",
+                "description": "クリティカルが発生すると、発動者に1ターンの間スピードアップを付与し、100%の確率で1ターンの間ランダムな強化効果を付与する。"
             },
             "S3": {
-                "name": "Hack",
-                "description": "Attacks the enemy by slashing at them with daggers, and when the target is defeated, grants an extra turn. When the caster is granted increased Speed, attacks using an elemental advantage. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "滅多斬り",
+                "description": "短剣で敵を斬りつけて攻撃し、対象を倒すと追加ターンを得る。発動者にスピードアップがあれば属性有利で攻撃する。発動者のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1570,17 +1570,17 @@
         "_name": "Clarissa",
         "skills": {
             "S1": {
-                "name": "Harsh Lesson",
-                "description": "Attacks with a morning star, with a 50% chance to decrease Defense for 2 turns."
+                "name": "厳しい教育",
+                "description": "モーニングスターで攻撃し、50%の確率で2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Rage",
-                "description": "When an enemy is defeated by Harsh Lesson or Hysteric, grants rage to the caster for 3 turns and activates Kya-hahaha. Kya-hahaha (gains 1 Soul): Attacks all enemies by swinging an iron mace."
+                "name": "憤怒",
+                "description": "厳しい教育またはヒステリーで敵を倒すと、発動者に3ターンの間激怒を付与し、キャハハハを発動する。キャハハハ（ソウル1獲得）：鉄の棍棒を振り回して敵全体を攻撃する。"
             },
             "S3": {
-                "name": "Hysteric",
-                "description": "Attacks all enemies by spinning before inflicting two bleeding effects for 2 turns and a 70% chance to inflict decreased Defense for 2 turns. When an enemy is defeated, resets skill cooldowns. When the caster is granted rage, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "ヒステリー",
+                "description": "回転しながら敵全体を攻撃した後、2ターンの間出血を二つ付与し、70%の確率で2ターンの間防御力ダウンを付与する。敵を倒すとスキルのクールタイムをリセットする。発動者に激怒があれば与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1588,17 +1588,17 @@
         "_name": "Claudia",
         "skills": {
             "S1": {
-                "name": "View Obstruction",
-                "description": "Attacks the enemy with a sword, and has a 50% chance to decrease Hit Chance for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "視界妨害",
+                "description": "剣で敵を攻撃し、50%の確率で2ターンの間命中率をダウンさせる。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Slayer's Determination",
-                "description": "Increases Effectiveness by 30%. When suffering an attack that targets all allies, activates Retaliation against the attacker. Can only be activated once every 2 turns. Retaliation: Pierces through the enemy before attacking, decreasing Attack for 2 turns, and grants a barrier to the ally with the lowest Health for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "殺戮者の決意",
+                "description": "効果命中が30%アップする。味方全体を対象とする攻撃を受けると、攻撃者に報復を発動する。2ターンごとに一度のみ発動できる。報復：敵を貫いて攻撃し、2ターンの間攻撃力をダウンさせ、HPが最も低い味方に2ターンの間バリアを付与する。発動者の最大HPに比例してバリアの強度がアップする。"
             },
             "S3": {
-                "name": "Indomitable Resolve",
-                "description": "Reaffirms resolve, granting immunity to all allies for 2 turns, and recovers Health of the caster. Amount recovered increases proportional to the caster's max Health."
+                "name": "不屈の決意",
+                "description": "決意を固め、味方全員に2ターンの間免疫を付与し、発動者のHPを回復する。発動者の最大HPに比例して回復量がアップする。"
             }
         }
     },
@@ -1606,17 +1606,17 @@
         "_name": "Closer Charles",
         "skills": {
             "S1": {
-                "name": "Elimination",
-                "description": "Attacks the enemy by sharply cutting them. When used on the caster's turn, if the caster is granted perception, uses Demolition instead of Elimination. Demolition: Attacks the enemy with a sword, absorbing some of the damage dealt as Health. Damage dealt increases proportional to the target's lost Health. When the enemy is defeated, decreases cooldown of Descent by 1 turn. This attack does not trigger a Dual Attack."
+                "name": "排除",
+                "description": "鋭く斬りつけて敵を攻撃する。発動者のターンに使用したとき、発動者に看破があれば、排除の代わりに破壊を使用する。破壊：剣で敵を攻撃し、与ダメージの一部をHPとして吸収する。対象の失ったHPに比例して与ダメージがアップする。敵を倒すと降下のクールタイムを1ターン短縮する。この攻撃では協攻が発動しない。"
             },
             "S2": {
-                "name": "Closer",
-                "description": "At the start of the first battle, grants increased Evasion for 1 turn. After an ally except for the caster attacks, when the enemy's Health is less than 40%, increases Combat Readiness of the caster by 50% and grants perception for 2 turns."
+                "name": "クローザー",
+                "description": "最初のバトル開始時、1ターンの間回避アップを付与する。発動者を除く味方が攻撃した後、敵のHPが40%未満なら、発動者の行動ゲージを50%増加させ、2ターンの間看破を付与する。"
             },
             "S3": {
-                "name": "Descent",
-                "description": "Attacks all enemies after descending, increasing Attack of all allies for 2 turns before increasing Combat Readiness by 20%. Increases Evasion of the caster for 3 turns. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "降下",
+                "description": "降下した後、敵全体を攻撃し、2ターンの間味方全員の攻撃力をアップさせた後、行動ゲージを20%増加させる。3ターンの間発動者の回避をアップさせる。このスキルでは反撃を誘発できない。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1624,17 +1624,17 @@
         "_name": "Coli",
         "skills": {
             "S1": {
-                "name": "Ambush",
-                "description": "Ambushes the enemy, with a 75% chance to steal one buff.",
-                "soulburn_effect": "Increases effect chance to 100% and steals two buffs."
+                "name": "奇襲",
+                "description": "敵を奇襲し、75%の確率で強化効果を一つ奪う。",
+                "soulburn_effect": "効果発動確率が100%にアップし、強化効果を二つ奪う。"
             },
             "S2": {
-                "name": "Accurate Strike",
-                "description": "Attacks the enemy with an unseen blade and grants stealth to the caster for 2 turns. At the end of the turn, detonates any bleeding effects and bombs inflicted on the target."
+                "name": "正確な一撃",
+                "description": "見えない刃で敵を攻撃し、発動者に2ターンの間隠密を付与する。ターン終了時、対象の出血と爆弾をすべて爆発させる。"
             },
             "S3": {
-                "name": "Baptism of Fire",
-                "description": "Attacks the enemy with a dagger and bomb, decreasing buff durations by 1 turn, inflicting bleeding and planting a bomb for 2 turns, before increasing Combat Readiness of the caster by 50%. When the target is a Fire elemental Hero, ignores Effect Resistance and increases Combat Readiness of the caster by an additional 50%."
+                "name": "炎の洗礼",
+                "description": "短剣と爆弾で敵を攻撃し、強化効果の持続時間を1ターン減少させ、2ターンの間出血と爆弾を付与した後、発動者の行動ゲージを50%増加させる。対象が火属性の英雄なら、効果抵抗を無視し、発動者の行動ゲージをさらに50%増加させる。"
             }
         }
     },
@@ -1642,17 +1642,17 @@
         "_name": "Command Model Laika",
         "skills": {
             "S1": {
-                "name": "Supporting Fire",
-                "description": "Attacks the enemy, increasing Combat Readiness of the caster and a random ally except for the caster by 15%."
+                "name": "支援射撃",
+                "description": "敵を攻撃し、発動者と、発動者を除くランダムな味方一人の行動ゲージを15%増加させる。"
             },
             "S2": {
-                "name": "Strike Order",
-                "description": "Selects an enemy, with a 100% chance to target them for 2 turns. Grants increased Attack (Greater) to the ally with the highest Attack except for the caster for 2 turns before triggering a Dual Attack."
+                "name": "攻撃命令",
+                "description": "敵を指定し、100%の確率で2ターンの間標的を付与する。発動者を除いて攻撃力が最も高い味方に2ターンの間攻撃力アップ（大）を付与した後、協攻させる。"
             },
             "S3": {
-                "name": "Volley Fire!",
-                "description": "Shoots out all wings to attack all enemies, with a 100% chance each to decrease Speed for 2 turns and put them to sleep for 1 turn, before granting immunity to all allies for 2 turns.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "一斉射撃！",
+                "description": "すべての翼を射出して敵全体を攻撃し、それぞれ100%の確率で2ターンの間スピードをダウンさせ、1ターンの間睡眠状態にした後、味方全員に2ターンの間免疫を付与する。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },

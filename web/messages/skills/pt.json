@@ -1516,17 +1516,17 @@
         "_name": "Christy",
         "skills": {
             "S1": {
-                "name": "Sword of Protection",
-                "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "Espada da proteção",
+                "description": "Ataca o inimigo, com 75% de chance de provocá-lo por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Oath Shield",
-                "description": "After being attacked, when the caster does not have a debuff, increases Combat Readiness of the caster and the ally in the back row by 20%. Can only be activated once per turn. At the start of the first battle, increases Effect Resistance of the ally in the back row by 100% of the caster's Effect Resistance. The rate of this effect does not change after it is activated, and this effect is dispelled only when the ally in the back row is defeated. When the caster is in the back row, the effect is not activated."
+                "name": "Escudo do juramento",
+                "description": "Após ser atacado, se o conjurador não tiver efeitos negativos, aumenta a Prontidão de Combate do conjurador e do aliado na fileira de trás em 20%. Só pode ser ativado uma vez por turno. No início da primeira batalha, aumenta a Resistência a Efeitos do aliado na fileira de trás em 100% da Resistência a Efeitos do conjurador. A taxa desse efeito não muda depois de ativada, e o efeito só é dissipado quando o aliado na fileira de trás é derrotado. Quando o conjurador está na fileira de trás, o efeito não é ativado."
             },
             "S3": {
-                "name": "Hymn of Courage",
-                "description": "Increases Attack of all allies for 2 turns. Increases Defense of the caster for 2 turns and recovers Health. Amount recovered increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Hino da coragem",
+                "description": "Aumenta o Ataque de todos os aliados por 2 turnos. Aumenta a Defesa do conjurador por 2 turnos e recupera Vida. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -1534,17 +1534,17 @@
         "_name": "Church of Ilryos Axe",
         "skills": {
             "S1": {
-                "name": "Disconnect",
-                "description": "Attacks the enemy with an axe and inflicts up to 10% injuries. Damage dealt increases proportional to the caster's max Health."
+                "name": "Desconectar",
+                "description": "Ataca o inimigo com um machado e causa até 10% de ferimentos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Attack Chain",
-                "description": "Attacks all enemies with a shockwave and inflicts up to 15% injuries before recovering Health of the caster. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "Ataque em cadeia",
+                "description": "Ataca todos os inimigos com uma onda de choque e causa até 15% de ferimentos, depois recupera a Vida do conjurador. O dano causado e a quantidade recuperada aumentam proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Plagued Strike",
-                "description": "Attacks the enemy, dispelling all buffs. When the enemy is defeated, resets cooldown of this skill. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Golpe pestilento",
+                "description": "Ataca o inimigo, dissipando todos os efeitos positivos. Ao derrotar o inimigo, reinicia a recarga desta habilidade. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1552,17 +1552,17 @@
         "_name": "Cidd",
         "skills": {
             "S1": {
-                "name": "Relentless Strike",
-                "description": "Attacks the enemy with a dagger. Damage dealt increases proportional to the caster's Speed. When the caster is granted increased Speed, uses Whirlwind instead of Relentless Strike. Whirlwind: Attacks the enemy repeatedly, decreasing Defense for 1 turn. Damage dealt increases proportional to the caster's Speed."
+                "name": "Golpe implacável",
+                "description": "Ataca o inimigo com uma adaga. O dano causado aumenta proporcionalmente à Velocidade do conjurador. Quando o conjurador tem Aumentar Velocidade, usa Redemoinho em vez de Golpe implacável. Redemoinho: ataca o inimigo repetidamente, diminuindo a Defesa por 1 turno. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Wind's Resolve",
-                "description": "A critical hit grants increased Speed to the caster for 1 turn and a 100% chance to grant arandom buff for 1 turn."
+                "name": "Determinação do vento",
+                "description": "Um acerto crítico concede Aumentar Velocidade ao conjurador por 1 turno e tem 100% de chance de conceder um efeito positivo aleatório por 1 turno."
             },
             "S3": {
-                "name": "Hack",
-                "description": "Attacks the enemy by slashing at them with daggers, and when the target is defeated, grants an extra turn. When the caster is granted increased Speed, attacks using an elemental advantage. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Retalhar",
+                "description": "Ataca o inimigo cortando-o com adagas e, ao derrotar o alvo, concede um turno extra. Quando o conjurador tem Aumentar Velocidade, ataca com vantagem elemental. O dano causado aumenta proporcionalmente à Velocidade do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1570,17 +1570,17 @@
         "_name": "Clarissa",
         "skills": {
             "S1": {
-                "name": "Harsh Lesson",
-                "description": "Attacks with a morning star, with a 50% chance to decrease Defense for 2 turns."
+                "name": "Lição dura",
+                "description": "Ataca com uma maça estrela, com 50% de chance de diminuir a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Rage",
-                "description": "When an enemy is defeated by Harsh Lesson or Hysteric, grants rage to the caster for 3 turns and activates Kya-hahaha. Kya-hahaha (gains 1 Soul): Attacks all enemies by swinging an iron mace."
+                "name": "Fúria",
+                "description": "Quando um inimigo é derrotado por Lição dura ou Histeria, concede fúria ao conjurador por 3 turnos e ativa Kya-hahaha. Kya-hahaha (ganha 1 de Alma): ataca todos os inimigos girando uma maça de ferro."
             },
             "S3": {
-                "name": "Hysteric",
-                "description": "Attacks all enemies by spinning before inflicting two bleeding effects for 2 turns and a 70% chance to inflict decreased Defense for 2 turns. When an enemy is defeated, resets skill cooldowns. When the caster is granted rage, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Histeria",
+                "description": "Ataca todos os inimigos girando, depois aplica dois efeitos de sangramento por 2 turnos e tem 70% de chance de aplicar Diminuir Defesa por 2 turnos. Ao derrotar um inimigo, reinicia as recargas de habilidades. Quando o conjurador tem fúria, o dano causado aumenta.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1588,17 +1588,17 @@
         "_name": "Claudia",
         "skills": {
             "S1": {
-                "name": "View Obstruction",
-                "description": "Attacks the enemy with a sword, and has a 50% chance to decrease Hit Chance for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Obstrução da visão",
+                "description": "Ataca o inimigo com uma espada e tem 50% de chance de diminuir a Precisão por 2 turnos.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Slayer's Determination",
-                "description": "Increases Effectiveness by 30%. When suffering an attack that targets all allies, activates Retaliation against the attacker. Can only be activated once every 2 turns. Retaliation: Pierces through the enemy before attacking, decreasing Attack for 2 turns, and grants a barrier to the ally with the lowest Health for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "Determinação da caçadora",
+                "description": "Aumenta a Eficácia em 30%. Ao sofrer um ataque que mira todos os aliados, ativa Retaliação contra o atacante. Só pode ser ativado uma vez a cada 2 turnos. Retaliação: atravessa o inimigo antes de atacar, diminuindo o Ataque por 2 turnos, e concede uma barreira ao aliado com menor Vida por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Indomitable Resolve",
-                "description": "Reaffirms resolve, granting immunity to all allies for 2 turns, and recovers Health of the caster. Amount recovered increases proportional to the caster's max Health."
+                "name": "Determinação indomável",
+                "description": "Reafirma sua determinação, concedendo imunidade a todos os aliados por 2 turnos, e recupera a Vida do conjurador. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -1606,17 +1606,17 @@
         "_name": "Closer Charles",
         "skills": {
             "S1": {
-                "name": "Elimination",
-                "description": "Attacks the enemy by sharply cutting them. When used on the caster's turn, if the caster is granted perception, uses Demolition instead of Elimination. Demolition: Attacks the enemy with a sword, absorbing some of the damage dealt as Health. Damage dealt increases proportional to the target's lost Health. When the enemy is defeated, decreases cooldown of Descent by 1 turn. This attack does not trigger a Dual Attack."
+                "name": "Eliminação",
+                "description": "Ataca o inimigo com um corte afiado. Quando usada no turno do conjurador, se o conjurador tiver percepção, usa Demolição em vez de Eliminação. Demolição: ataca o inimigo com uma espada, absorvendo parte do dano causado como Vida. O dano causado aumenta proporcionalmente à Vida perdida do alvo. Ao derrotar o inimigo, diminui a recarga de Descida em 1 turno. Este ataque não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Closer",
-                "description": "At the start of the first battle, grants increased Evasion for 1 turn. After an ally except for the caster attacks, when the enemy's Health is less than 40%, increases Combat Readiness of the caster by 50% and grants perception for 2 turns."
+                "name": "Finalizador",
+                "description": "No início da primeira batalha, concede Aumentar Evasão por 1 turno. Após um aliado, exceto o conjurador, atacar, quando a Vida do inimigo é menor que 40%, aumenta a Prontidão de Combate do conjurador em 50% e concede percepção por 2 turnos."
             },
             "S3": {
-                "name": "Descent",
-                "description": "Attacks all enemies after descending, increasing Attack of all allies for 2 turns before increasing Combat Readiness by 20%. Increases Evasion of the caster for 3 turns. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Descida",
+                "description": "Ataca todos os inimigos após descer, aumentando o Ataque de todos os aliados por 2 turnos, depois aumenta a Prontidão de Combate em 20%. Aumenta a Evasão do conjurador por 3 turnos. Esta habilidade não pode ativar contra-ataques.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1624,17 +1624,17 @@
         "_name": "Coli",
         "skills": {
             "S1": {
-                "name": "Ambush",
-                "description": "Ambushes the enemy, with a 75% chance to steal one buff.",
-                "soulburn_effect": "Increases effect chance to 100% and steals two buffs."
+                "name": "Emboscada",
+                "description": "Embosca o inimigo, com 75% de chance de roubar um efeito positivo.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100% e rouba dois efeitos positivos."
             },
             "S2": {
-                "name": "Accurate Strike",
-                "description": "Attacks the enemy with an unseen blade and grants stealth to the caster for 2 turns. At the end of the turn, detonates any bleeding effects and bombs inflicted on the target."
+                "name": "Golpe preciso",
+                "description": "Ataca o inimigo com uma lâmina invisível e concede furtividade ao conjurador por 2 turnos. No fim do turno, detona todos os sangramentos e bombas aplicados ao alvo."
             },
             "S3": {
-                "name": "Baptism of Fire",
-                "description": "Attacks the enemy with a dagger and bomb, decreasing buff durations by 1 turn, inflicting bleeding and planting a bomb for 2 turns, before increasing Combat Readiness of the caster by 50%. When the target is a Fire elemental Hero, ignores Effect Resistance and increases Combat Readiness of the caster by an additional 50%."
+                "name": "Batismo de fogo",
+                "description": "Ataca o inimigo com uma adaga e uma bomba, diminuindo a duração dos efeitos positivos em 1 turno, aplicando sangramento e plantando uma bomba por 2 turnos, depois aumenta a Prontidão de Combate do conjurador em 50%. Quando o alvo é um herói do elemento Fogo, ignora a Resistência a Efeitos e aumenta a Prontidão de Combate do conjurador em mais 50%."
             }
         }
     },
@@ -1642,17 +1642,17 @@
         "_name": "Command Model Laika",
         "skills": {
             "S1": {
-                "name": "Supporting Fire",
-                "description": "Attacks the enemy, increasing Combat Readiness of the caster and a random ally except for the caster by 15%."
+                "name": "Fogo de apoio",
+                "description": "Ataca o inimigo, aumentando em 15% a Prontidão de Combate do conjurador e de um aliado aleatório, exceto o conjurador."
             },
             "S2": {
-                "name": "Strike Order",
-                "description": "Selects an enemy, with a 100% chance to target them for 2 turns. Grants increased Attack (Greater) to the ally with the highest Attack except for the caster for 2 turns before triggering a Dual Attack."
+                "name": "Ordem de ataque",
+                "description": "Seleciona um inimigo, com 100% de chance de aplicar alvo por 2 turnos. Concede Aumentar Ataque (maior) ao aliado com maior Ataque, exceto o conjurador, por 2 turnos e o faz realizar um Ataque duplo."
             },
             "S3": {
-                "name": "Volley Fire!",
-                "description": "Shoots out all wings to attack all enemies, with a 100% chance each to decrease Speed for 2 turns and put them to sleep for 1 turn, before granting immunity to all allies for 2 turns.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Fogo em rajada!",
+                "description": "Lança todas as asas para atacar todos os inimigos, com 100% de chance cada de diminuir a Velocidade por 2 turnos e fazê-los dormir por 1 turno, depois concede imunidade a todos os aliados por 2 turnos.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
