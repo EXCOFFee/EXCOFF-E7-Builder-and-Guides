@@ -5564,17 +5564,17 @@
         "_name": "Sez",
         "skills": {
             "S1": {
-                "name": "Dark Shadow",
-                "description": "Attacks the enemy with dark energy, making them unhealable for 1 turn. Damage dealt increases proportional to the amount of the enemy's lost Health."
+                "name": "Sombra sombria",
+                "description": "Ataca o inimigo com energia sombria, aplicando impedimento de cura por 1 turno. O dano causado aumenta proporcionalmente à Vida perdida do inimigo."
             },
             "S2": {
-                "name": "Die Hard",
-                "description": "When attacked, damage suffered in one attack does not exceed 51% of max Health. After an ally except for the caster attacks, when the target's Health is 30% or less, activates Encroach. Encroach: Attacks all enemies by releasing dark energy, and increases Combat Readiness of the caster by 30%. Damage dealt increases proportional to the target's lost Health."
+                "name": "Duro de matar",
+                "description": "Ao ser atacado, o dano sofrido em um único ataque não ultrapassa 51% da Vida máxima. Após um aliado, exceto o conjurador, atacar, quando a Vida do alvo é 30% ou menos, ativa Invasão. Invasão: ataca todos os inimigos liberando energia sombria e aumenta a Prontidão de Combate do conjurador em 30%. O dano causado aumenta proporcionalmente à Vida perdida do alvo."
             },
             "S3": {
-                "name": "Conviction",
-                "description": "Inflicts lethal damage on the enemy. When the enemy is defeated, inflicts extinction, and inflicts additional damage proportional to the caster's Attack on all enemies except for the target. Damage dealt increases proportional to the target's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Convicção",
+                "description": "Causa dano letal ao inimigo. Ao derrotá-lo, aplica extinção e causa a todos os inimigos, exceto o alvo, dano adicional proporcional ao Ataque do conjurador. O dano causado aumenta proporcionalmente à Vida perdida do alvo.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -5582,17 +5582,17 @@
         "_name": "Shadow Knight Pyllis",
         "skills": {
             "S1": {
-                "name": "Weakening Blow",
-                "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "Golpe enfraquecedor",
+                "description": "Ataca o inimigo, com 75% de chance de provocá-lo por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S2": {
-                "name": "Will",
-                "description": "At the moment the caster is attacked, increases Defense of the caster. At the moment of every fourth attack suffered, increases Defense of all allies for 2 turns. The caster's increased Defense can stack up to 3 times."
+                "name": "Vontade",
+                "description": "No momento em que o conjurador é atacado, aumenta a Defesa do conjurador. A cada quarto ataque sofrido, aumenta a Defesa de todos os aliados por 2 turnos. O aumento de Defesa do conjurador acumula até 3 vezes."
             },
             "S3": {
-                "name": "Perceptive Slash",
-                "description": "Concentrates in order to dispel one debuff from all allies before attacking the enemy, provoking for 1 turn and granting all allies a barrier for 2 turns. Damage dealt and barrier strength increase proportional to the caster's Defense.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Corte perspicaz",
+                "description": "Concentra-se para dissipar um efeito negativo de todos os aliados antes de atacar o inimigo, provocando-o por 1 turno e concedendo uma barreira a todos os aliados por 2 turnos. O dano causado e a força da barreira aumentam proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -5600,17 +5600,17 @@
         "_name": "Shadow Rose",
         "skills": {
             "S1": {
-                "name": "Sequential Cutter",
-                "description": "Attacks the enemy with a sword. When the target's Health is 50% or more, has a 75% chance to inflict decreased Defense for 1 turn, and when the target's Health is less than 50%, has a 75% chance to inflict unhealable for 1 turn."
+                "name": "Corte sequencial",
+                "description": "Ataca o inimigo com uma espada. Quando a Vida do alvo é 50% ou mais, tem 75% de chance de aplicar Diminuir Defesa por 1 turno e, quando é menor que 50%, tem 75% de chance de aplicar impedimento de cura por 1 turno."
             },
             "S2": {
-                "name": "Spear of Darkness",
-                "description": "Leaps into the air and strikes at the enemy with a swordstorm, dispelling one buff and inflicting decreased Defense for 2 turns. Grants an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Lança das trevas",
+                "description": "Salta no ar e golpeia o inimigo com uma tempestade de espadas, dissipando um efeito positivo e aplicando Diminuir Defesa por 2 turnos. Concede um turno extra.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Goddess of Ruin",
-                "description": "After granting increased Attack to all allies for 2 turns, attacks all enemies with the Portent of Destruction, decreasing Combat Readiness by 25% and increasing Combat Readiness of all allies by 25%. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "Deusa da ruína",
+                "description": "Após conceder Aumentar Ataque a todos os aliados por 2 turnos, ataca todos os inimigos com o Presságio da destruição, diminuindo a Prontidão de Combate em 25% e aumentando a Prontidão de Combate de todos os aliados em 25%. Quando há três inimigos ou menos, o dano causado aumenta quanto menos inimigos houver."
             }
         }
     },
@@ -5618,17 +5618,17 @@
         "_name": "Shalltear",
         "skills": {
             "S1": {
-                "name": "Summon Household",
-                "description": "Summons different familiars to attack the enemy, inflicting injuries. The severity of injuries increases proportional to the damage dealt. Injuries decrease max Health of the target by up to 10% every time this skill is used.",
-                "soulburn_effect": "Increases damage dealt and injuries decrease max Health of the target by up to 20%."
+                "name": "Invocar servos",
+                "description": "Invoca diferentes familiares para atacar o inimigo, causando ferimentos. A gravidade dos ferimentos aumenta proporcionalmente ao dano causado. Os ferimentos diminuem a Vida máxima do alvo em até 10% cada vez que esta habilidade é usada.",
+                "soulburn_effect": "Aumenta o dano causado, e os ferimentos diminuem a Vida máxima do alvo em até 20%."
             },
             "S2": {
-                "name": "True Vampire",
-                "description": "Damage suffered in one attack does not exceed 51% of max Health. At the start of the turn, when the caster's Health is 60% or more, increases Attack for 1 turn. At the end of the turn, grants stealth for 1 turn."
+                "name": "Verdadeira vampira",
+                "description": "O dano sofrido em um único ataque não ultrapassa 51% da Vida máxima. No início do turno, quando a Vida do conjurador é 60% ou mais, aumenta o Ataque por 1 turno. No fim do turno, concede furtividade por 1 turno."
             },
             "S3": {
-                "name": "Purifying Javelin",
-                "description": "Dispels all buffs from the enemy and attacks with a gigantic javelin of white silver. Increases Hit Chance by 100% when using this skill. Ignores Effect Resistance of any targets with Attack lower than the caster's Attack."
+                "name": "Dardo purificador",
+                "description": "Dissipa todos os efeitos positivos do inimigo e ataca com um gigantesco dardo de prata branca. Aumenta a Precisão em 100% ao usar esta habilidade. Ignora a Resistência a Efeitos dos alvos com Ataque menor que o do conjurador."
             }
         }
     },
@@ -5636,17 +5636,17 @@
         "_name": "Sharun",
         "skills": {
             "S1": {
-                "name": "How Fragile",
-                "description": "Attacks the enemy, with a 100% chance to inflict venom for 1 turn. After attacking, when the target is inflicted with venom, increases skill cooldowns by 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Que frágil",
+                "description": "Ataca o inimigo, com 100% de chance de aplicar peçonha por 1 turno. Após atacar, quando o alvo tem peçonha, aumenta as recargas de habilidades em 1 turno.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S2": {
-                "name": "Just Trust Me",
-                "description": "At the end of an enemy's turn, for each buff granted to the enemy, has a 5% chance to increase Combat Readiness of the caster by 25%. At the end of the turn, grants a a barrier (proportional to the caster's max Health) to the ally with the highest Attack except for the caster for 2 turns and increases Combat Readiness by 25%."
+                "name": "Confie em mim",
+                "description": "No fim do turno de um inimigo, para cada efeito positivo do inimigo, tem 5% de chance de aumentar a Prontidão de Combate do conjurador em 25%. No fim do turno, concede uma barreira (proporcional à Vida máxima do conjurador) ao aliado com maior Ataque, exceto o conjurador, por 2 turnos e aumenta sua Prontidão de Combate em 25%."
             },
             "S3": {
-                "name": "May You Perish",
-                "description": "Attacks all enemies, decreasing buff durations by 2 turn before inflicting decreased Speed and two venom effects for 2 turns. Increases Combat Readiness of the caster by 50%."
+                "name": "Que você pereça",
+                "description": "Ataca todos os inimigos, diminuindo a duração dos efeitos positivos em 2 turnos, depois aplica Diminuir Velocidade e dois efeitos de peçonha por 2 turnos. Aumenta a Prontidão de Combate do conjurador em 50%."
             }
         }
     },
@@ -5654,17 +5654,17 @@
         "_name": "Shepherd Jena",
         "skills": {
             "S1": {
-                "name": "Cold Blow",
-                "description": "Attacks with a staff, with a 35% chance to stun for 1 turn."
+                "name": "Golpe gélido",
+                "description": "Ataca com um cajado, com 35% de chance de atordoar por 1 turno."
             },
             "S2": {
-                "name": "Coerce",
-                "description": "Casts weakening magic, with a 100% chance each to decrease buff durations of all enemies by 1 turn and inflict frostbite for 2 turns. Grants immunity to all allies for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Coagir",
+                "description": "Lança magia de enfraquecimento, com 100% de chance cada de diminuir a duração dos efeitos positivos de todos os inimigos em 1 turno e aplicar congelamento por 2 turnos. Concede imunidade a todos os aliados por 2 turnos.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S3": {
-                "name": "Punishing Light",
-                "description": "Attacks all enemies with frost magic, with a 75% chance to decrease Defense for 2 turns before a 100% chance to decrease Combat Readiness by a random amount between 20% and 40%."
+                "name": "Luz punitiva",
+                "description": "Ataca todos os inimigos com magia de gelo, com 75% de chance de diminuir a Defesa por 2 turnos, depois com 100% de chance diminui a Prontidão de Combate em uma quantidade aleatória entre 20% e 40%."
             }
         }
     },
@@ -5672,17 +5672,17 @@
         "_name": "Shepherd of the Dark Diene",
         "skills": {
             "S1": {
-                "name": "Crimson Claws",
-                "description": "After inflicting rupture on the enemy for 1 turn, attacks the enemy. A successful attack always results in a critical hit. Damage dealt increases proportional to the caster's max Health. When the caster is granted immortality, triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Garras carmesim",
+                "description": "Após aplicar ruptura ao inimigo por 1 turno, ataca o inimigo. Um ataque bem-sucedido sempre resulta em acerto crítico. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Quando o conjurador tem imortalidade, o aliado com maior Ataque realiza um Ataque duplo.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Noias's Guidance",
-                "description": "At the start of battle, grants immortality for 1 turn. When granted immortality, increases Effect Resistance by 200%. When someone uses a Soulburn, dispels all debuffs from the caster before activating Dark Moon. Dark Moon: Dispels two buffs from all enemies, before granting immortality to the caster for 3 turns and increases Combat Readiness by 50%."
+                "name": "Orientação de Noias",
+                "description": "No início da batalha, concede imortalidade por 1 turno. Quando tem imortalidade, aumenta a Resistência a Efeitos em 200%. Quando alguém usa Queima de Alma, dissipa todos os efeitos negativos do conjurador antes de ativar Lua sombria. Lua sombria: dissipa dois efeitos positivos de todos os inimigos, depois concede imortalidade ao conjurador por 3 turnos e aumenta a Prontidão de Combate em 50%."
             },
             "S3": {
-                "name": "Endless Darkness",
-                "description": "After inflicting seal on all enemies for 2 turns, attacks them and decreases Combat Readiness by 30%. A successful attack always results in a critical hit. When the caster is granted immortality, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health."
+                "name": "Escuridão sem fim",
+                "description": "Após selar todos os inimigos por 2 turnos, ataca-os e diminui a Prontidão de Combate em 30%. Um ataque bem-sucedido sempre resulta em acerto crítico. Quando o conjurador tem imortalidade, ignora a Resistência a Efeitos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -5690,17 +5690,17 @@
         "_name": "Shooting Star Achates",
         "skills": {
             "S1": {
-                "name": "Magic Design",
-                "description": "Attacks the enemy with a staff, with a 75% chance to inflict decreased Hit Chance for 1 turn."
+                "name": "Desenho mágico",
+                "description": "Ataca o inimigo com um cajado, com 75% de chance de aplicar Diminuir Precisão por 1 turno."
             },
             "S2": {
-                "name": "Resurrection Magic",
-                "description": "Revives a dead ally with magic and grants increased Attack and immortality for 1 turn. When the target is not dead, grants increased Attack and immortality for 3 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Magia da ressurreição",
+                "description": "Revive com magia um aliado morto e concede Aumentar Ataque e imortalidade por 1 turno. Quando o alvo não está morto, concede Aumentar Ataque e imortalidade por 3 turnos.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S3": {
-                "name": "Sparkling Star",
-                "description": "With recovery magic, dispels all debuffs from an ally and the caster and increases Health ratios to the higher of the two before additionally recovering Health proportional to the target's max Health. Health ratio increase effect is unaffected by increased or decreased healing effects."
+                "name": "Estrela cintilante",
+                "description": "Com magia de recuperação, dissipa todos os efeitos negativos de um aliado e do conjurador e eleva a proporção de Vida de ambos à maior das duas, depois recupera Vida adicional proporcionalmente à Vida máxima do alvo. O aumento da proporção de Vida não é afetado por efeitos de aumento ou redução de cura."
             }
         }
     },

@@ -5564,17 +5564,17 @@
         "_name": "Sez",
         "skills": {
             "S1": {
-                "name": "Dark Shadow",
-                "description": "Attacks the enemy with dark energy, making them unhealable for 1 turn. Damage dealt increases proportional to the amount of the enemy's lost Health."
+                "name": "다크 섀도우",
+                "description": "어둠의 기운으로 적을 공격해 1턴 동안 회복 불가를 건다. 적이 잃은 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Die Hard",
-                "description": "When attacked, damage suffered in one attack does not exceed 51% of max Health. After an ally except for the caster attacks, when the target's Health is 30% or less, activates Encroach. Encroach: Attacks all enemies by releasing dark energy, and increases Combat Readiness of the caster by 30%. Damage dealt increases proportional to the target's lost Health."
+                "name": "다이 하드",
+                "description": "공격받을 때 한 번의 공격으로 받는 피해가 최대 생명력의 51%를 넘지 않는다. 시전자를 제외한 아군이 공격한 후 대상의 생명력이 30% 이하이면 잠식을 발동한다. 잠식: 어둠의 기운을 해방해 모든 적을 공격하고 시전자의 행동 게이지를 30% 증가시킨다. 대상이 잃은 생명력에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Conviction",
-                "description": "Inflicts lethal damage on the enemy. When the enemy is defeated, inflicts extinction, and inflicts additional damage proportional to the caster's Attack on all enemies except for the target. Damage dealt increases proportional to the target's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "확신",
+                "description": "적에게 치명적인 피해를 준다. 적을 처치하면 소멸을 걸고, 대상을 제외한 모든 적에게 시전자의 공격력에 비례한 추가 피해를 준다. 대상이 잃은 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -5582,17 +5582,17 @@
         "_name": "Shadow Knight Pyllis",
         "skills": {
             "S1": {
-                "name": "Weakening Blow",
-                "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "약화의 일격",
+                "description": "적을 공격하며, 75% 확률로 1턴 동안 도발을 건다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Will",
-                "description": "At the moment the caster is attacked, increases Defense of the caster. At the moment of every fourth attack suffered, increases Defense of all allies for 2 turns. The caster's increased Defense can stack up to 3 times."
+                "name": "의지",
+                "description": "시전자가 공격받는 순간 시전자의 방어력이 증가한다. 공격을 네 번째로 받을 때마다 2턴 동안 모든 아군의 방어력을 증가시킨다. 시전자의 방어력 증가는 최대 3회까지 중첩된다."
             },
             "S3": {
-                "name": "Perceptive Slash",
-                "description": "Concentrates in order to dispel one debuff from all allies before attacking the enemy, provoking for 1 turn and granting all allies a barrier for 2 turns. Damage dealt and barrier strength increase proportional to the caster's Defense.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "통찰의 베기",
+                "description": "정신을 집중해 모든 아군의 약화 효과를 한 개 해제한 뒤 적을 공격해 1턴 동안 도발을 걸고, 모든 아군에게 2턴 동안 보호막을 부여한다. 시전자의 방어력에 비례해 주는 피해와 보호막 강도가 증가한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -5600,17 +5600,17 @@
         "_name": "Shadow Rose",
         "skills": {
             "S1": {
-                "name": "Sequential Cutter",
-                "description": "Attacks the enemy with a sword. When the target's Health is 50% or more, has a 75% chance to inflict decreased Defense for 1 turn, and when the target's Health is less than 50%, has a 75% chance to inflict unhealable for 1 turn."
+                "name": "연속 베기",
+                "description": "검으로 적을 공격한다. 대상의 생명력이 50% 이상이면 75% 확률로 1턴 동안 방어력 감소를, 50% 미만이면 75% 확률로 1턴 동안 회복 불가를 건다."
             },
             "S2": {
-                "name": "Spear of Darkness",
-                "description": "Leaps into the air and strikes at the enemy with a swordstorm, dispelling one buff and inflicting decreased Defense for 2 turns. Grants an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "어둠의 창",
+                "description": "공중으로 도약해 검풍으로 적을 내리쳐 강화 효과를 한 개 해제하고 2턴 동안 방어력 감소를 건다. 추가 턴을 얻는다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "Goddess of Ruin",
-                "description": "After granting increased Attack to all allies for 2 turns, attacks all enemies with the Portent of Destruction, decreasing Combat Readiness by 25% and increasing Combat Readiness of all allies by 25%. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "파멸의 여신",
+                "description": "모든 아군에게 2턴 동안 공격력 증가를 부여한 뒤 파멸의 전조로 모든 적을 공격해 행동 게이지를 25% 감소시키고 모든 아군의 행동 게이지를 25% 증가시킨다. 적이 세 명 이하이면 적이 적을수록 주는 피해가 증가한다."
             }
         }
     },
@@ -5618,17 +5618,17 @@
         "_name": "Shalltear",
         "skills": {
             "S1": {
-                "name": "Summon Household",
-                "description": "Summons different familiars to attack the enemy, inflicting injuries. The severity of injuries increases proportional to the damage dealt. Injuries decrease max Health of the target by up to 10% every time this skill is used.",
-                "soulburn_effect": "Increases damage dealt and injuries decrease max Health of the target by up to 20%."
+                "name": "권속 소환",
+                "description": "다양한 권속을 소환해 적을 공격하고 부상을 입힌다. 준 피해에 비례해 부상의 정도가 증가한다. 부상은 이 스킬을 사용할 때마다 대상의 최대 생명력을 최대 10% 감소시킨다.",
+                "soulburn_effect": "주는 피해가 증가하고, 부상이 대상의 최대 생명력을 최대 20% 감소시킨다."
             },
             "S2": {
-                "name": "True Vampire",
-                "description": "Damage suffered in one attack does not exceed 51% of max Health. At the start of the turn, when the caster's Health is 60% or more, increases Attack for 1 turn. At the end of the turn, grants stealth for 1 turn."
+                "name": "트루 뱀파이어",
+                "description": "한 번의 공격으로 받는 피해가 최대 생명력의 51%를 넘지 않는다. 턴 시작 시 시전자의 생명력이 60% 이상이면 1턴 동안 공격력을 증가시킨다. 턴 종료 시 1턴 동안 은신을 부여한다."
             },
             "S3": {
-                "name": "Purifying Javelin",
-                "description": "Dispels all buffs from the enemy and attacks with a gigantic javelin of white silver. Increases Hit Chance by 100% when using this skill. Ignores Effect Resistance of any targets with Attack lower than the caster's Attack."
+                "name": "청정투기창",
+                "description": "적의 강화 효과를 모두 해제하고 거대한 백은의 투창으로 공격한다. 이 스킬 사용 시 명중률이 100% 증가한다. 시전자보다 공격력이 낮은 대상의 효과 저항을 무시한다."
             }
         }
     },
@@ -5636,17 +5636,17 @@
         "_name": "Sharun",
         "skills": {
             "S1": {
-                "name": "How Fragile",
-                "description": "Attacks the enemy, with a 100% chance to inflict venom for 1 turn. After attacking, when the target is inflicted with venom, increases skill cooldowns by 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "약하구나",
+                "description": "적을 공격하며, 100% 확률로 1턴 동안 맹독을 건다. 공격 후 대상에게 맹독이 걸려 있으면 스킬 재사용 대기 시간을 1턴 증가시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S2": {
-                "name": "Just Trust Me",
-                "description": "At the end of an enemy's turn, for each buff granted to the enemy, has a 5% chance to increase Combat Readiness of the caster by 25%. At the end of the turn, grants a a barrier (proportional to the caster's max Health) to the ally with the highest Attack except for the caster for 2 turns and increases Combat Readiness by 25%."
+                "name": "날 믿어",
+                "description": "적의 턴 종료 시 적에게 부여된 강화 효과 하나당 5% 확률로 시전자의 행동 게이지를 25% 증가시킨다. 턴 종료 시 시전자를 제외하고 공격력이 가장 높은 아군에게 2턴 동안 보호막(시전자 최대 생명력 비례)을 부여하고 행동 게이지를 25% 증가시킨다."
             },
             "S3": {
-                "name": "May You Perish",
-                "description": "Attacks all enemies, decreasing buff durations by 2 turn before inflicting decreased Speed and two venom effects for 2 turns. Increases Combat Readiness of the caster by 50%."
+                "name": "사라져라",
+                "description": "모든 적을 공격해 강화 효과의 지속 시간을 2턴 감소시킨 뒤 2턴 동안 속도 감소와 맹독을 두 개 건다. 시전자의 행동 게이지를 50% 증가시킨다."
             }
         }
     },
@@ -5654,17 +5654,17 @@
         "_name": "Shepherd Jena",
         "skills": {
             "S1": {
-                "name": "Cold Blow",
-                "description": "Attacks with a staff, with a 35% chance to stun for 1 turn."
+                "name": "냉기의 일격",
+                "description": "지팡이로 공격하며, 35% 확률로 1턴 동안 기절시킨다."
             },
             "S2": {
-                "name": "Coerce",
-                "description": "Casts weakening magic, with a 100% chance each to decrease buff durations of all enemies by 1 turn and inflict frostbite for 2 turns. Grants immunity to all allies for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "강압",
+                "description": "약화 마법을 시전해 각각 100% 확률로 모든 적의 강화 효과 지속 시간을 1턴 감소시키고 2턴 동안 동상을 건다. 모든 아군에게 2턴 동안 면역을 부여한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Punishing Light",
-                "description": "Attacks all enemies with frost magic, with a 75% chance to decrease Defense for 2 turns before a 100% chance to decrease Combat Readiness by a random amount between 20% and 40%."
+                "name": "징벌의 빛",
+                "description": "서리 마법으로 모든 적을 공격하며, 75% 확률로 2턴 동안 방어력을 감소시킨 뒤 100% 확률로 행동 게이지를 20%~40% 사이에서 무작위로 감소시킨다."
             }
         }
     },
@@ -5672,17 +5672,17 @@
         "_name": "Shepherd of the Dark Diene",
         "skills": {
             "S1": {
-                "name": "Crimson Claws",
-                "description": "After inflicting rupture on the enemy for 1 turn, attacks the enemy. A successful attack always results in a critical hit. Damage dealt increases proportional to the caster's max Health. When the caster is granted immortality, triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "진홍의 발톱",
+                "description": "적에게 1턴 동안 파열을 건 뒤 적을 공격한다. 공격에 성공하면 반드시 치명타가 발생한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 시전자에게 불사가 있으면 공격력이 가장 높은 아군이 협공한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Noias's Guidance",
-                "description": "At the start of battle, grants immortality for 1 turn. When granted immortality, increases Effect Resistance by 200%. When someone uses a Soulburn, dispels all debuffs from the caster before activating Dark Moon. Dark Moon: Dispels two buffs from all enemies, before granting immortality to the caster for 3 turns and increases Combat Readiness by 50%."
+                "name": "노이아스의 인도",
+                "description": "전투 시작 시 1턴 동안 불사를 부여한다. 불사가 있으면 효과 저항이 200% 증가한다. 누군가 소울번을 사용하면 시전자의 약화 효과를 모두 해제한 뒤 어둠의 달을 발동한다. 어둠의 달: 모든 적의 강화 효과를 두 개 해제한 뒤 시전자에게 3턴 동안 불사를 부여하고 행동 게이지를 50% 증가시킨다."
             },
             "S3": {
-                "name": "Endless Darkness",
-                "description": "After inflicting seal on all enemies for 2 turns, attacks them and decreases Combat Readiness by 30%. A successful attack always results in a critical hit. When the caster is granted immortality, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health."
+                "name": "끝없는 어둠",
+                "description": "모든 적에게 2턴 동안 봉인을 건 뒤 공격하고 행동 게이지를 30% 감소시킨다. 공격에 성공하면 반드시 치명타가 발생한다. 시전자에게 불사가 있으면 효과 저항을 무시한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -5690,17 +5690,17 @@
         "_name": "Shooting Star Achates",
         "skills": {
             "S1": {
-                "name": "Magic Design",
-                "description": "Attacks the enemy with a staff, with a 75% chance to inflict decreased Hit Chance for 1 turn."
+                "name": "마법 설계",
+                "description": "지팡이로 적을 공격하며, 75% 확률로 1턴 동안 명중률 감소를 건다."
             },
             "S2": {
-                "name": "Resurrection Magic",
-                "description": "Revives a dead ally with magic and grants increased Attack and immortality for 1 turn. When the target is not dead, grants increased Attack and immortality for 3 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "부활 마법",
+                "description": "마법으로 사망한 아군을 부활시키고 1턴 동안 공격력 증가와 불사를 부여한다. 대상이 사망하지 않았으면 3턴 동안 공격력 증가와 불사를 부여한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Sparkling Star",
-                "description": "With recovery magic, dispels all debuffs from an ally and the caster and increases Health ratios to the higher of the two before additionally recovering Health proportional to the target's max Health. Health ratio increase effect is unaffected by increased or decreased healing effects."
+                "name": "반짝이는 별",
+                "description": "회복 마법으로 아군 한 명과 시전자의 약화 효과를 모두 해제하고, 둘 중 높은 쪽의 생명력 비율로 맞춘 뒤 대상의 최대 생명력에 비례해 생명력을 추가로 회복한다. 생명력 비율 증가 효과는 회복량 증가·감소 효과의 영향을 받지 않는다."
             }
         }
     },
