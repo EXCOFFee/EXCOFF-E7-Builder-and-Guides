@@ -4520,17 +4520,17 @@
         "_name": "Operator Sigret",
         "skills": {
             "S1": {
-                "name": "Incision",
-                "description": "Attacks the enemy with a scythe, before recovering Health of the ally with the lowest Health proportional to the caster's Attack."
+                "name": "Incisão",
+                "description": "Ataca o inimigo com uma foice, depois recupera a Vida do aliado com menor Vida proporcionalmente ao Ataque do conjurador."
             },
             "S2": {
-                "name": "Annihilation",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks the enemy by swiping consecutively with a scythe. When the enemy is defeated, grants an extra turn . Penetrates the target's Defense by 100%. When the target is granted a barrier, increases damage dealt."
+                "name": "Aniquilação",
+                "description": "Após conceder Aumentar Ataque ao conjurador por 2 turnos, ataca o inimigo golpeando consecutivamente com uma foice. Ao derrotar o inimigo, concede um turno extra. Penetra 100% da Defesa do alvo. Quando o alvo tem uma barreira, o dano causado aumenta."
             },
             "S3": {
-                "name": "Obliterate",
-                "description": "Calls in drones to attack all enemies, with a 100% chance each to decrease buff durations by 1 turn before decreasing Combat Readiness by 30%. Grants increased Attack to all allies for 2 turns. When the target is granted a barrier, ignores Effect Resistance.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Obliterar",
+                "description": "Convoca drones para atacar todos os inimigos, com 100% de chance cada de diminuir a duração dos efeitos positivos em 1 turno, depois diminui a Prontidão de Combate em 30%. Concede Aumentar Ataque a todos os aliados por 2 turnos. Quando o alvo tem uma barreira, ignora a Resistência a Efeitos.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -4538,17 +4538,17 @@
         "_name": "Orte",
         "skills": {
             "S1": {
-                "name": "Vital Point Slash",
-                "description": "Attacks the enemy with a sword. Damage dealt increases proportional to the caster's Speed."
+                "name": "Corte no ponto vital",
+                "description": "Ataca o inimigo com uma espada. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Overflowing Enthusiasm",
-                "description": "When the caster is at max Health at the start of the turn, grants perception to the caster for 1 turn. After attacking, if the caster has perception and when the enemy is not an Elite of Boss monster, increases Attack of the caster for 1 turn and activates the same skill as an extra attack. Effect after attacking can only be activated once every 1 turn(s)."
+                "name": "Entusiasmo transbordante",
+                "description": "Quando o conjurador está com Vida máxima no início do turno, concede percepção ao conjurador por 1 turno. Após atacar, se o conjurador tiver percepção e o inimigo não for um monstro Elite ou Chefe, aumenta o Ataque do conjurador por 1 turno e ativa a mesma habilidade como ataque extra. O efeito após atacar só pode ser ativado uma vez a cada 1 turno."
             },
             "S3": {
-                "name": "No Mercy for the Weak",
-                "description": "Attacks the enemy with a swift swordstorm. Penetrates the target's Defense by 30%. When the Speed of the Caster is greater than the Speed of the target, penetration rate increases proportional to the difference, op to a maximum of 70%. Damage dealt increases proportional to the Speed of the caster.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Sem piedade para os fracos",
+                "description": "Ataca o inimigo com uma tempestade de espadas veloz. Penetra 30% da Defesa do alvo. Quando a Velocidade do conjurador é maior que a do alvo, a taxa de penetração aumenta proporcionalmente à diferença, até um máximo de 70%. O dano causado aumenta proporcionalmente à Velocidade do conjurador.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -4556,17 +4556,17 @@
         "_name": "Otillie",
         "skills": {
             "S1": {
-                "name": "Dark Arrow",
-                "description": "Attacks with dark energy, with a 50% chance to make the enemy unhealable for 2 turns."
+                "name": "Flecha sombria",
+                "description": "Ataca com energia sombria, com 50% de chance de aplicar impedimento de cura ao inimigo por 2 turnos."
             },
             "S2": {
-                "name": "Area Defense",
-                "description": "All allies receive 30% less damage from attacks that target all allies. When more than one damage reduction effect is granted, only the strongest effect is applied."
+                "name": "Defesa de área",
+                "description": "Todos os aliados recebem 30% menos dano de ataques que miram todos os aliados. Quando mais de um efeito de redução de dano é concedido, só o mais forte é aplicado."
             },
             "S3": {
-                "name": "Mana Release",
-                "description": "Exhales powerful darkness to attack the enemy, decreasing Combat Readiness by 40%, before silencing and making them unable to be buffed for 2 turns.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Liberação de mana",
+                "description": "Exala uma escuridão poderosa para atacar o inimigo, diminuindo a Prontidão de Combate em 40%, depois aplica silêncio e impedimento de efeitos positivos por 2 turnos.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -4574,17 +4574,17 @@
         "_name": "Pavel",
         "skills": {
             "S1": {
-                "name": "Hurricane Sword",
-                "description": "Strikes the enemy with a gun, with a 75% chance to decrease Hit Chance for 1 turn. Damage dealt increases proportional to the caster's Speed."
+                "name": "Espada furacão",
+                "description": "Golpeia o inimigo com uma arma, com 75% de chance de diminuir a Precisão por 1 turno. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Storm Bullet",
-                "description": "Grants the caster increased Attack for 2 turns, before firing a strong blast of wind at all enemies. Damage dealt increases proportional to the caster's Speed. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Bala tempestuosa",
+                "description": "Concede Aumentar Ataque ao conjurador por 2 turnos, depois dispara uma forte rajada de vento contra todos os inimigos. O dano causado aumenta proporcionalmente à Velocidade do conjurador. Esta habilidade não pode ativar contra-ataques.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S3": {
-                "name": "Destructive Pursuit",
-                "description": "Swiftly cuts and shoots the enemy. When the target is not an Elite or Boss monster, ignores damage share. Damage dealt increases proportional to the caster's Speed."
+                "name": "Perseguição destrutiva",
+                "description": "Corta e atira rapidamente no inimigo. Quando o alvo não é um monstro Elite ou Chefe, ignora a divisão de dano. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             }
         }
     },
@@ -4592,17 +4592,17 @@
         "_name": "Peacemaker Furious",
         "skills": {
             "S1": {
-                "name": "Corner Them!",
-                "description": "Swiftly attacks the enemy. When used on the caster's turn, grants an extra attack with the same skill if the caster is buffed. Damage dealt increases proportional to the caster's Defense."
+                "name": "Encurralem-nos!",
+                "description": "Ataca o inimigo rapidamente. Quando usada no turno do conjurador, se ele tiver efeitos positivos, concede um ataque extra com a mesma habilidade. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S2": {
-                "name": "Set in Motion",
-                "description": "Increases Speed and Defense of all allies for 2 turns, before granting an extra turn to the caster.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Em movimento",
+                "description": "Aumenta a Velocidade e a Defesa de todos os aliados por 2 turnos, depois concede um turno extra ao conjurador.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             },
             "S3": {
-                "name": "Black Hole Cannon",
-                "description": "Attacks all enemies with a huge explosion, decreasing Combat Readiness by 30%. Penetrates the target's Defense by 60%. Damage dealt increases proportional to the caster's Defense. Removes 10 Soul from the enemy."
+                "name": "Canhão buraco negro",
+                "description": "Ataca todos os inimigos com uma enorme explosão, diminuindo a Prontidão de Combate em 30%. Penetra 60% da Defesa do alvo. O dano causado aumenta proporcionalmente à Defesa do conjurador. Remove 10 de Alma do inimigo."
             }
         }
     },
@@ -4610,17 +4610,17 @@
         "_name": "Pearlhorizon",
         "skills": {
             "S1": {
-                "name": "Chaos Strike",
-                "description": "Claws the enemy, with a 50% chance to decrease hit Chance for 2 turns."
+                "name": "Golpe do caos",
+                "description": "Arranha o inimigo, com 50% de chance de diminuir a Precisão por 2 turnos."
             },
             "S2": {
-                "name": "Hypnosis",
-                "description": "Attacks all enemies, with a 50% chance to put them to sleep for 1 turn. Increases Combat Readiness of the caster by 10% per sleep debuff inflicted."
+                "name": "Hipnose",
+                "description": "Ataca todos os inimigos, com 50% de chance de fazê-los dormir por 1 turno. Aumenta a Prontidão de Combate do conjurador em 10% para cada sono aplicado."
             },
             "S3": {
-                "name": "Nightmare",
-                "description": "Attacks the enemy and stuns them for 1 turn. When the enemy is asleep, deals additional damage equivalent to 20% of the *target's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Pesadelo",
+                "description": "Ataca o inimigo e o atordoa por 1 turno. Quando o inimigo está dormindo, causa dano adicional equivalente a 20% da Vida máxima do alvo.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -4628,17 +4628,17 @@
         "_name": "Peira",
         "skills": {
             "S1": {
-                "name": "Wolven Claw",
-                "description": "Slashes the enemy with sharp claws, with a 40% chance to stun for 1 turn. When the caster is granted a barrier, effect chance increases by 25%.",
-                "soulburn_effect": "Increase effect chance to 100%."
+                "name": "Garra de lobo",
+                "description": "Corta o inimigo com garras afiadas, com 40% de chance de atordoar por 1 turno. Quando o conjurador tem uma barreira, a chance do efeito aumenta 25%.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Punishing Blade",
-                "description": "Attacks all enemies with guardian spirits, decreasing buff durations by 1 turn before restricting and making them unable to be buffed for 2 turns. Grants an extra turn to the caster."
+                "name": "Lâmina punitiva",
+                "description": "Ataca todos os inimigos com espíritos guardiões, diminuindo a duração dos efeitos positivos em 1 turno, depois aplica restrição e impedimento de efeitos positivos por 2 turnos. Concede um turno extra ao conjurador."
             },
             "S3": {
-                "name": "Pack Hunt",
-                "description": "Using the power of the Goblet of Oath, increases Attack of all allies except for the caster for 2 turns, before granting stealth, escort, and a barrier to the caster for 3 turns. Barrier strength increases proportional to the caster's level."
+                "name": "Caçada em matilha",
+                "description": "Usando o poder do Cálice do Juramento, aumenta o Ataque de todos os aliados, exceto o conjurador, por 2 turnos, depois concede furtividade, escolta e uma barreira ao conjurador por 3 turnos. A força da barreira aumenta proporcionalmente ao nível do conjurador."
             }
         }
     },
@@ -4646,17 +4646,17 @@
         "_name": "Penelope",
         "skills": {
             "S1": {
-                "name": "Merciless Sword",
-                "description": "Attacks the enemy before increasing Attack of the caster by 15%. When an enemy is defeated, increases Combat Readiness of the caster by 75%. Increased Attack effect can stack up to 3 times.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Espada impiedosa",
+                "description": "Ataca o inimigo, depois aumenta o Ataque do conjurador em 15%. Ao derrotar um inimigo, aumenta a Prontidão de Combate do conjurador em 75%. O aumento de Ataque acumula até 3 vezes.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Preliminary Plans",
-                "description": "Decreases debuff duration of all allies by 1 turn before granting a barrier to the caster for 3 turns. Grants an extra turn to the caster. Barrier strength increases proportional to the caster's Attack."
+                "name": "Planos preliminares",
+                "description": "Diminui a duração dos efeitos negativos de todos os aliados em 1 turno, depois concede uma barreira ao conjurador por 3 turnos. Concede um turno extra ao conjurador. A força da barreira aumenta proporcionalmente ao Ataque do conjurador."
             },
             "S3": {
-                "name": "Disarm",
-                "description": "Inflicts resource reduction on the target by 100% before attacking the, with a 100% chance each to decrease Attack for 2 turns, and stun for 1 turn. Grants stealth to the caster for 2 turns."
+                "name": "Desarmar",
+                "description": "Aplica redução de recursos de 100% ao alvo antes de atacá-lo, com 100% de chance cada de diminuir o Ataque por 2 turnos e atordoar por 1 turno. Concede furtividade ao conjurador por 2 turnos."
             }
         }
     },

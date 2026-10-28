@@ -4520,17 +4520,17 @@
         "_name": "Operator Sigret",
         "skills": {
             "S1": {
-                "name": "Incision",
-                "description": "Attacks the enemy with a scythe, before recovering Health of the ally with the lowest Health proportional to the caster's Attack."
+                "name": "절개",
+                "description": "낫으로 적을 공격한 뒤 시전자의 공격력에 비례해 생명력이 가장 낮은 아군의 생명력을 회복한다."
             },
             "S2": {
-                "name": "Annihilation",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks the enemy by swiping consecutively with a scythe. When the enemy is defeated, grants an extra turn . Penetrates the target's Defense by 100%. When the target is granted a barrier, increases damage dealt."
+                "name": "섬멸",
+                "description": "시전자에게 2턴 동안 공격력 증가를 부여한 뒤 낫을 연속으로 휘둘러 적을 공격한다. 적을 처치하면 추가 턴을 얻는다. 대상의 방어력을 100% 관통한다. 대상에게 보호막이 있으면 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Obliterate",
-                "description": "Calls in drones to attack all enemies, with a 100% chance each to decrease buff durations by 1 turn before decreasing Combat Readiness by 30%. Grants increased Attack to all allies for 2 turns. When the target is granted a barrier, ignores Effect Resistance.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "말살",
+                "description": "드론을 불러 모든 적을 공격하며, 각각 100% 확률로 강화 효과의 지속 시간을 1턴 감소시킨 뒤 행동 게이지를 30% 감소시킨다. 모든 아군에게 2턴 동안 공격력 증가를 부여한다. 대상에게 보호막이 있으면 효과 저항을 무시한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -4538,17 +4538,17 @@
         "_name": "Orte",
         "skills": {
             "S1": {
-                "name": "Vital Point Slash",
-                "description": "Attacks the enemy with a sword. Damage dealt increases proportional to the caster's Speed."
+                "name": "급소 베기",
+                "description": "검으로 적을 공격한다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Overflowing Enthusiasm",
-                "description": "When the caster is at max Health at the start of the turn, grants perception to the caster for 1 turn. After attacking, if the caster has perception and when the enemy is not an Elite of Boss monster, increases Attack of the caster for 1 turn and activates the same skill as an extra attack. Effect after attacking can only be activated once every 1 turn(s)."
+                "name": "넘치는 열의",
+                "description": "턴 시작 시 시전자의 생명력이 최대이면 시전자에게 1턴 동안 간파를 부여한다. 공격 후 시전자에게 간파가 있고 적이 정예 또는 보스 몬스터가 아니면 1턴 동안 시전자의 공격력을 증가시키고 같은 스킬로 추가 공격한다. 공격 후의 효과는 1턴마다 한 번만 발동할 수 있다."
             },
             "S3": {
-                "name": "No Mercy for the Weak",
-                "description": "Attacks the enemy with a swift swordstorm. Penetrates the target's Defense by 30%. When the Speed of the Caster is greater than the Speed of the target, penetration rate increases proportional to the difference, op to a maximum of 70%. Damage dealt increases proportional to the Speed of the caster.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "약자에게 자비는 없다",
+                "description": "빠른 검풍으로 적을 공격한다. 대상의 방어력을 30% 관통한다. 시전자의 속도가 대상보다 높으면 그 차이에 비례해 관통률이 최대 70%까지 증가한다. 시전자의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -4556,17 +4556,17 @@
         "_name": "Otillie",
         "skills": {
             "S1": {
-                "name": "Dark Arrow",
-                "description": "Attacks with dark energy, with a 50% chance to make the enemy unhealable for 2 turns."
+                "name": "어둠의 화살",
+                "description": "어둠의 기운으로 공격하며, 50% 확률로 2턴 동안 적에게 회복 불가를 건다."
             },
             "S2": {
-                "name": "Area Defense",
-                "description": "All allies receive 30% less damage from attacks that target all allies. When more than one damage reduction effect is granted, only the strongest effect is applied."
+                "name": "광역 방어",
+                "description": "모든 아군이 모든 아군을 대상으로 하는 공격에서 받는 피해가 30% 감소한다. 피해 감소 효과가 여러 개 부여되면 가장 강한 효과만 적용된다."
             },
             "S3": {
-                "name": "Mana Release",
-                "description": "Exhales powerful darkness to attack the enemy, decreasing Combat Readiness by 40%, before silencing and making them unable to be buffed for 2 turns.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "마나 해방",
+                "description": "강력한 어둠을 내뿜어 적을 공격하고 행동 게이지를 40% 감소시킨 뒤 2턴 동안 침묵과 강화 불가를 건다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -4574,17 +4574,17 @@
         "_name": "Pavel",
         "skills": {
             "S1": {
-                "name": "Hurricane Sword",
-                "description": "Strikes the enemy with a gun, with a 75% chance to decrease Hit Chance for 1 turn. Damage dealt increases proportional to the caster's Speed."
+                "name": "허리케인 소드",
+                "description": "총으로 적을 가격하며, 75% 확률로 1턴 동안 명중률을 감소시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Storm Bullet",
-                "description": "Grants the caster increased Attack for 2 turns, before firing a strong blast of wind at all enemies. Damage dealt increases proportional to the caster's Speed. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "폭풍 탄환",
+                "description": "시전자에게 2턴 동안 공격력 증가를 부여한 뒤 모든 적에게 강력한 바람의 탄환을 발사한다. 시전자의 속도에 비례해 주는 피해가 증가한다. 이 스킬로는 반격을 유발할 수 없다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Destructive Pursuit",
-                "description": "Swiftly cuts and shoots the enemy. When the target is not an Elite or Boss monster, ignores damage share. Damage dealt increases proportional to the caster's Speed."
+                "name": "파괴의 추격",
+                "description": "재빠르게 적을 베고 사격한다. 대상이 정예 또는 보스 몬스터가 아니면 피해 분산을 무시한다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -4592,17 +4592,17 @@
         "_name": "Peacemaker Furious",
         "skills": {
             "S1": {
-                "name": "Corner Them!",
-                "description": "Swiftly attacks the enemy. When used on the caster's turn, grants an extra attack with the same skill if the caster is buffed. Damage dealt increases proportional to the caster's Defense."
+                "name": "몰아붙여라!",
+                "description": "재빠르게 적을 공격한다. 시전자의 턴에 사용할 때 시전자에게 강화 효과가 있으면 같은 스킬로 추가 공격한다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Set in Motion",
-                "description": "Increases Speed and Defense of all allies for 2 turns, before granting an extra turn to the caster.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "작전 개시",
+                "description": "2턴 동안 모든 아군의 속도와 방어력을 증가시킨 뒤 시전자는 추가 턴을 얻는다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장된다."
             },
             "S3": {
-                "name": "Black Hole Cannon",
-                "description": "Attacks all enemies with a huge explosion, decreasing Combat Readiness by 30%. Penetrates the target's Defense by 60%. Damage dealt increases proportional to the caster's Defense. Removes 10 Soul from the enemy."
+                "name": "블랙홀 캐논",
+                "description": "거대한 폭발로 모든 적을 공격해 행동 게이지를 30% 감소시킨다. 대상의 방어력을 60% 관통한다. 시전자의 방어력에 비례해 주는 피해가 증가한다. 적의 소울을 10 제거한다."
             }
         }
     },
@@ -4610,17 +4610,17 @@
         "_name": "Pearlhorizon",
         "skills": {
             "S1": {
-                "name": "Chaos Strike",
-                "description": "Claws the enemy, with a 50% chance to decrease hit Chance for 2 turns."
+                "name": "혼돈의 일격",
+                "description": "적을 할퀴며, 50% 확률로 2턴 동안 명중률을 감소시킨다."
             },
             "S2": {
-                "name": "Hypnosis",
-                "description": "Attacks all enemies, with a 50% chance to put them to sleep for 1 turn. Increases Combat Readiness of the caster by 10% per sleep debuff inflicted."
+                "name": "최면",
+                "description": "모든 적을 공격하며, 50% 확률로 1턴 동안 수면에 빠뜨린다. 건 수면 하나당 시전자의 행동 게이지를 10% 증가시킨다."
             },
             "S3": {
-                "name": "Nightmare",
-                "description": "Attacks the enemy and stuns them for 1 turn. When the enemy is asleep, deals additional damage equivalent to 20% of the *target's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "악몽",
+                "description": "적을 공격하고 1턴 동안 기절시킨다. 적이 수면 상태이면 대상 최대 생명력의 20%에 해당하는 추가 피해를 준다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -4628,17 +4628,17 @@
         "_name": "Peira",
         "skills": {
             "S1": {
-                "name": "Wolven Claw",
-                "description": "Slashes the enemy with sharp claws, with a 40% chance to stun for 1 turn. When the caster is granted a barrier, effect chance increases by 25%.",
-                "soulburn_effect": "Increase effect chance to 100%."
+                "name": "늑대 발톱",
+                "description": "날카로운 발톱으로 적을 베며, 40% 확률로 1턴 동안 기절시킨다. 시전자에게 보호막이 있으면 효과 발동 확률이 25% 증가한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Punishing Blade",
-                "description": "Attacks all enemies with guardian spirits, decreasing buff durations by 1 turn before restricting and making them unable to be buffed for 2 turns. Grants an extra turn to the caster."
+                "name": "징벌의 칼날",
+                "description": "수호령으로 모든 적을 공격해 강화 효과의 지속 시간을 1턴 감소시킨 뒤 2턴 동안 제약과 강화 불가를 건다. 시전자는 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Pack Hunt",
-                "description": "Using the power of the Goblet of Oath, increases Attack of all allies except for the caster for 2 turns, before granting stealth, escort, and a barrier to the caster for 3 turns. Barrier strength increases proportional to the caster's level."
+                "name": "무리 사냥",
+                "description": "맹세의 성배의 힘으로 2턴 동안 시전자를 제외한 모든 아군의 공격력을 증가시킨 뒤 시전자에게 3턴 동안 은신, 호위, 보호막을 부여한다. 시전자의 레벨에 비례해 보호막 강도가 증가한다."
             }
         }
     },
@@ -4646,17 +4646,17 @@
         "_name": "Penelope",
         "skills": {
             "S1": {
-                "name": "Merciless Sword",
-                "description": "Attacks the enemy before increasing Attack of the caster by 15%. When an enemy is defeated, increases Combat Readiness of the caster by 75%. Increased Attack effect can stack up to 3 times.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "무자비한 검",
+                "description": "적을 공격한 뒤 시전자의 공격력을 15% 증가시킨다. 적을 처치하면 시전자의 행동 게이지를 75% 증가시킨다. 공격력 증가 효과는 최대 3회까지 중첩된다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Preliminary Plans",
-                "description": "Decreases debuff duration of all allies by 1 turn before granting a barrier to the caster for 3 turns. Grants an extra turn to the caster. Barrier strength increases proportional to the caster's Attack."
+                "name": "사전 계획",
+                "description": "모든 아군의 약화 효과 지속 시간을 1턴 감소시킨 뒤 시전자에게 3턴 동안 보호막을 부여한다. 시전자는 추가 턴을 얻는다. 시전자의 공격력에 비례해 보호막 강도가 증가한다."
             },
             "S3": {
-                "name": "Disarm",
-                "description": "Inflicts resource reduction on the target by 100% before attacking the, with a 100% chance each to decrease Attack for 2 turns, and stun for 1 turn. Grants stealth to the caster for 2 turns."
+                "name": "무장 해제",
+                "description": "대상에게 100%의 자원 감소를 건 뒤 공격하며, 각각 100% 확률로 2턴 동안 공격력을 감소시키고 1턴 동안 기절시킨다. 시전자에게 2턴 동안 은신을 부여한다."
             }
         }
     },

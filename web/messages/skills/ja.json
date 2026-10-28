@@ -4520,17 +4520,17 @@
         "_name": "Operator Sigret",
         "skills": {
             "S1": {
-                "name": "Incision",
-                "description": "Attacks the enemy with a scythe, before recovering Health of the ally with the lowest Health proportional to the caster's Attack."
+                "name": "切開",
+                "description": "鎌で敵を攻撃した後、発動者の攻撃力に比例してHPが最も低い味方のHPを回復する。"
             },
             "S2": {
-                "name": "Annihilation",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks the enemy by swiping consecutively with a scythe. When the enemy is defeated, grants an extra turn . Penetrates the target's Defense by 100%. When the target is granted a barrier, increases damage dealt."
+                "name": "殲滅",
+                "description": "発動者に2ターンの間攻撃力アップを付与した後、鎌を連続で振るって敵を攻撃する。敵を倒すと追加ターンを得る。対象の防御力を100%貫通する。対象にバリアがあれば与ダメージがアップする。"
             },
             "S3": {
-                "name": "Obliterate",
-                "description": "Calls in drones to attack all enemies, with a 100% chance each to decrease buff durations by 1 turn before decreasing Combat Readiness by 30%. Grants increased Attack to all allies for 2 turns. When the target is granted a barrier, ignores Effect Resistance.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "抹殺",
+                "description": "ドローンを呼び出して敵全体を攻撃し、それぞれ100%の確率で強化効果の持続時間を1ターン減少させた後、行動ゲージを30%減少させる。味方全員に2ターンの間攻撃力アップを付与する。対象にバリアがあれば効果抵抗を無視する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -4538,17 +4538,17 @@
         "_name": "Orte",
         "skills": {
             "S1": {
-                "name": "Vital Point Slash",
-                "description": "Attacks the enemy with a sword. Damage dealt increases proportional to the caster's Speed."
+                "name": "急所斬り",
+                "description": "剣で敵を攻撃する。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Overflowing Enthusiasm",
-                "description": "When the caster is at max Health at the start of the turn, grants perception to the caster for 1 turn. After attacking, if the caster has perception and when the enemy is not an Elite of Boss monster, increases Attack of the caster for 1 turn and activates the same skill as an extra attack. Effect after attacking can only be activated once every 1 turn(s)."
+                "name": "溢れる熱意",
+                "description": "ターン開始時、発動者のHPが最大なら、発動者に1ターンの間看破を付与する。攻撃後、発動者に看破があり、敵がエリートまたはボスモンスターでない場合、1ターンの間発動者の攻撃力をアップさせ、同じスキルで追加攻撃する。攻撃後の効果は1ターンごとに一度のみ発動できる。"
             },
             "S3": {
-                "name": "No Mercy for the Weak",
-                "description": "Attacks the enemy with a swift swordstorm. Penetrates the target's Defense by 30%. When the Speed of the Caster is greater than the Speed of the target, penetration rate increases proportional to the difference, op to a maximum of 70%. Damage dealt increases proportional to the Speed of the caster.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "弱者に容赦なし",
+                "description": "素早い剣嵐で敵を攻撃する。対象の防御力を30%貫通する。発動者のスピードが対象より高い場合、その差に比例して貫通率が最大70%までアップする。発動者のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -4556,17 +4556,17 @@
         "_name": "Otillie",
         "skills": {
             "S1": {
-                "name": "Dark Arrow",
-                "description": "Attacks with dark energy, with a 50% chance to make the enemy unhealable for 2 turns."
+                "name": "闇の矢",
+                "description": "闇の気で攻撃し、50%の確率で2ターンの間敵に回復不可を付与する。"
             },
             "S2": {
-                "name": "Area Defense",
-                "description": "All allies receive 30% less damage from attacks that target all allies. When more than one damage reduction effect is granted, only the strongest effect is applied."
+                "name": "広域防御",
+                "description": "味方全員が、味方全体を対象とする攻撃から受けるダメージが30%減少する。ダメージ減少効果が複数付与された場合、最も強い効果のみ適用される。"
             },
             "S3": {
-                "name": "Mana Release",
-                "description": "Exhales powerful darkness to attack the enemy, decreasing Combat Readiness by 40%, before silencing and making them unable to be buffed for 2 turns.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "マナ解放",
+                "description": "強力な闇を吐き出して敵を攻撃し、行動ゲージを40%減少させた後、2ターンの間沈黙と強化不可を付与する。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -4574,17 +4574,17 @@
         "_name": "Pavel",
         "skills": {
             "S1": {
-                "name": "Hurricane Sword",
-                "description": "Strikes the enemy with a gun, with a 75% chance to decrease Hit Chance for 1 turn. Damage dealt increases proportional to the caster's Speed."
+                "name": "ハリケーンソード",
+                "description": "銃で敵を打ち、75%の確率で1ターンの間命中率をダウンさせる。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Storm Bullet",
-                "description": "Grants the caster increased Attack for 2 turns, before firing a strong blast of wind at all enemies. Damage dealt increases proportional to the caster's Speed. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "嵐の弾丸",
+                "description": "発動者に2ターンの間攻撃力アップを付与した後、敵全体に強力な風の弾を放つ。発動者のスピードに比例して与ダメージがアップする。このスキルでは反撃を誘発できない。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S3": {
-                "name": "Destructive Pursuit",
-                "description": "Swiftly cuts and shoots the enemy. When the target is not an Elite or Boss monster, ignores damage share. Damage dealt increases proportional to the caster's Speed."
+                "name": "破壊の追撃",
+                "description": "素早く敵を斬りつけて射撃する。対象がエリートまたはボスモンスターでない場合、ダメージ分散を無視する。発動者のスピードに比例して与ダメージがアップする。"
             }
         }
     },
@@ -4592,17 +4592,17 @@
         "_name": "Peacemaker Furious",
         "skills": {
             "S1": {
-                "name": "Corner Them!",
-                "description": "Swiftly attacks the enemy. When used on the caster's turn, grants an extra attack with the same skill if the caster is buffed. Damage dealt increases proportional to the caster's Defense."
+                "name": "追い詰めろ！",
+                "description": "素早く敵を攻撃する。発動者のターンに使用したとき、発動者に強化効果があれば、同じスキルで追加攻撃する。発動者の防御力に比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Set in Motion",
-                "description": "Increases Speed and Defense of all allies for 2 turns, before granting an extra turn to the caster.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "作戦開始",
+                "description": "2ターンの間味方全員のスピードと防御力をアップさせた後、発動者は追加ターンを得る。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             },
             "S3": {
-                "name": "Black Hole Cannon",
-                "description": "Attacks all enemies with a huge explosion, decreasing Combat Readiness by 30%. Penetrates the target's Defense by 60%. Damage dealt increases proportional to the caster's Defense. Removes 10 Soul from the enemy."
+                "name": "ブラックホールキャノン",
+                "description": "巨大な爆発で敵全体を攻撃し、行動ゲージを30%減少させる。対象の防御力を60%貫通する。発動者の防御力に比例して与ダメージがアップする。敵のソウルを10除去する。"
             }
         }
     },
@@ -4610,17 +4610,17 @@
         "_name": "Pearlhorizon",
         "skills": {
             "S1": {
-                "name": "Chaos Strike",
-                "description": "Claws the enemy, with a 50% chance to decrease hit Chance for 2 turns."
+                "name": "混沌の一撃",
+                "description": "敵を引っかき、50%の確率で2ターンの間命中率をダウンさせる。"
             },
             "S2": {
-                "name": "Hypnosis",
-                "description": "Attacks all enemies, with a 50% chance to put them to sleep for 1 turn. Increases Combat Readiness of the caster by 10% per sleep debuff inflicted."
+                "name": "催眠",
+                "description": "敵全体を攻撃し、50%の確率で1ターンの間睡眠状態にする。付与した睡眠一つにつき、発動者の行動ゲージを10%増加させる。"
             },
             "S3": {
-                "name": "Nightmare",
-                "description": "Attacks the enemy and stuns them for 1 turn. When the enemy is asleep, deals additional damage equivalent to 20% of the *target's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "悪夢",
+                "description": "敵を攻撃し、1ターンの間気絶させる。敵が睡眠状態なら、対象の最大HPの20%に相当する追加ダメージを与える。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -4628,17 +4628,17 @@
         "_name": "Peira",
         "skills": {
             "S1": {
-                "name": "Wolven Claw",
-                "description": "Slashes the enemy with sharp claws, with a 40% chance to stun for 1 turn. When the caster is granted a barrier, effect chance increases by 25%.",
-                "soulburn_effect": "Increase effect chance to 100%."
+                "name": "狼の爪",
+                "description": "鋭い爪で敵を切り裂き、40%の確率で1ターンの間気絶させる。発動者にバリアがあれば効果発動確率が25%アップする。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Punishing Blade",
-                "description": "Attacks all enemies with guardian spirits, decreasing buff durations by 1 turn before restricting and making them unable to be buffed for 2 turns. Grants an extra turn to the caster."
+                "name": "懲罰の刃",
+                "description": "守護霊で敵全体を攻撃し、強化効果の持続時間を1ターン減少させた後、2ターンの間制約と強化不可を付与する。発動者は追加ターンを得る。"
             },
             "S3": {
-                "name": "Pack Hunt",
-                "description": "Using the power of the Goblet of Oath, increases Attack of all allies except for the caster for 2 turns, before granting stealth, escort, and a barrier to the caster for 3 turns. Barrier strength increases proportional to the caster's level."
+                "name": "群れの狩り",
+                "description": "誓いの聖杯の力で、2ターンの間発動者を除く味方全員の攻撃力をアップさせた後、発動者に3ターンの間隠密、護衛、バリアを付与する。発動者のレベルに比例してバリアの強度がアップする。"
             }
         }
     },
@@ -4646,17 +4646,17 @@
         "_name": "Penelope",
         "skills": {
             "S1": {
-                "name": "Merciless Sword",
-                "description": "Attacks the enemy before increasing Attack of the caster by 15%. When an enemy is defeated, increases Combat Readiness of the caster by 75%. Increased Attack effect can stack up to 3 times.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "無慈悲な剣",
+                "description": "敵を攻撃した後、発動者の攻撃力を15%アップさせる。敵を倒すと、発動者の行動ゲージを75%増加させる。攻撃力アップ効果は最大3回まで重複する。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Preliminary Plans",
-                "description": "Decreases debuff duration of all allies by 1 turn before granting a barrier to the caster for 3 turns. Grants an extra turn to the caster. Barrier strength increases proportional to the caster's Attack."
+                "name": "事前計画",
+                "description": "味方全員の弱体効果の持続時間を1ターン減少させた後、発動者に3ターンの間バリアを付与する。発動者は追加ターンを得る。発動者の攻撃力に比例してバリアの強度がアップする。"
             },
             "S3": {
-                "name": "Disarm",
-                "description": "Inflicts resource reduction on the target by 100% before attacking the, with a 100% chance each to decrease Attack for 2 turns, and stun for 1 turn. Grants stealth to the caster for 2 turns."
+                "name": "武装解除",
+                "description": "対象に100%の資源減少を付与した後に攻撃し、それぞれ100%の確率で2ターンの間攻撃力をダウンさせ、1ターンの間気絶させる。発動者に2ターンの間隠密を付与する。"
             }
         }
     },
