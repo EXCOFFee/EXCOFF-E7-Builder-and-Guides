@@ -157,6 +157,7 @@ export default function ComparePage() {
                         <div>
                             <label className="block text-sm text-e7-gold mb-2">{t('builds.selectBuild1', 'Select Build 1')}</label>
                             <select
+                                aria-label={t('builds.selectBuild1', 'Select first build')}
                                 value={selectedBuild1}
                                 onChange={(e) => setSelectedBuild1(e.target.value)}
                                 className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
@@ -174,6 +175,7 @@ export default function ComparePage() {
                         <div>
                             <label className="block text-sm text-e7-gold mb-2">{t('builds.selectBuild2', 'Select Build 2')}</label>
                             <select
+                                aria-label={t('builds.selectBuild2', 'Select second build')}
                                 value={selectedBuild2}
                                 onChange={(e) => setSelectedBuild2(e.target.value)}
                                 className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
@@ -369,7 +371,7 @@ export default function ComparePage() {
                                                 <td className={`text-center font-bold ${comparison.winner === 1 ? 'text-green-400' : 'text-white'}`}>
                                                     {comparison.val1}
                                                 </td>
-                                                <td className={`text-center ${comparison.diff > 0 ? 'text-green-400' : comparison.diff < 0 ? 'text-red-400' : 'text-gray-500'}`}>
+                                                <td className={`text-center ${comparison.diff > 0 ? 'text-green-400' : comparison.diff < 0 ? 'text-red-400' : 'text-gray-400'}`}>
                                                     {comparison.diff > 0 ? '+' : ''}{comparison.diff}
                                                 </td>
                                                 <td className={`text-center font-bold ${comparison.winner === 2 ? 'text-green-400' : 'text-white'}`}>

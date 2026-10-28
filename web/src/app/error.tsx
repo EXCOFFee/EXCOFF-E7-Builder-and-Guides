@@ -32,7 +32,7 @@ export default function Error({
 
                 {/* Error digest for debugging */}
                 {error.digest && (
-                    <p className="text-xs text-slate-500 mb-6 font-mono">
+                    <p className="text-xs text-slate-400 mb-6 font-mono">
                         Error ID: {error.digest}
                     </p>
                 )}

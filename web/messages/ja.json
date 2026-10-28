@@ -1,5 +1,6 @@
 {
     "common": {
+        "skipToContent": "本文へスキップ",
         "appName": "EpicSevenHub",
         "appSubtitle": "E7 ビルド＆ガイド",
         "loading": "読み込み中...",
@@ -128,6 +129,7 @@
         "passiveSkill": "パッシブまたはサポートスキル",
         "searchBuilds": "ビルドを検索...",
         "allSets": "全セット",
+        "filterBySet": "セットで絞り込み",
         "noBuildsMatch": "フィルターに一致するビルドがありません",
         "popularSynergies": "人気シナジーヒーロー",
         "popularCounters": "人気カウンターヒーロー",

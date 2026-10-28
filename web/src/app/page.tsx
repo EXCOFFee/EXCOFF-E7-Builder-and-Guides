@@ -57,7 +57,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-e7-void overflow-hidden">
+    <div className="min-h-screen bg-e7-void overflow-hidden">
       {/* Hero Section */}
       <section className="relative py-20 md:py-28 px-4">
 
@@ -85,7 +85,7 @@ export default function Home() {
             {t('home.tagline', 'E7 Builds, Guides & Hero Wiki')}
           </p>
 
-          <p className="text-base md:text-lg text-neutral-500 mb-10 max-w-xl mx-auto">
+          <p className="text-base md:text-lg text-neutral-400 mb-10 max-w-xl mx-auto">
             {t('home.subtitle', 'Discover and publish your character builds and create game guides for the community')}
           </p>
 
@@ -118,7 +118,7 @@ export default function Home() {
           <h2 className="text-2xl md:text-3xl font-semibold text-center text-e7-gold mb-3">
             {t('home.whatYouFind', 'What will you find?')}
           </h2>
-          <p className="text-center text-neutral-500 mb-12 max-w-lg mx-auto">
+          <p className="text-center text-neutral-400 mb-12 max-w-lg mx-auto">
             {t('home.everythingYouNeed', 'Everything you need to master Epic Seven')}
           </p>
 
@@ -129,10 +129,10 @@ export default function Home() {
                   <h3 className="font-display text-base font-medium text-neutral-200 mb-2 group-hover:text-e7-gold transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-neutral-500 text-sm mb-2">
+                  <p className="text-neutral-400 text-sm mb-2">
                     {feature.desc}
                   </p>
-                  <p className="text-neutral-600 text-xs">
+                  <p className="text-neutral-400 text-xs">
                     {feature.details}
                   </p>
                 </div>
@@ -198,7 +198,7 @@ export default function Home() {
             />
             <span className="text-e7-gold font-bold">EXCOFF E7 HUB</span>
           </div>
-          <div className="text-center text-slate-500 text-sm">
+          <div className="text-center text-slate-400 text-sm">
             <p>{t('footer.notAffiliated', 'EpicSevenHub is not affiliated with Smilegate or Super Creative.')}</p>
             <p>{t('footer.copyright', 'Epic Seven and all its content are property of their respective owners.')}</p>
           </div>
@@ -245,6 +245,6 @@ export default function Home() {
           animation-delay: 1000ms;
         }
       `}</style>
-    </main>
+    </div>
   );
 }

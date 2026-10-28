@@ -32,9 +32,9 @@ export function ImageCarousel({ images, title }: ImageCarouselProps) {
     return (
         <div className="mb-6">
             {title && (
-                <h3 className="text-e7-gold font-semibold mb-2 uppercase tracking-wider">
+                <h2 className="text-e7-gold font-semibold mb-2 uppercase tracking-wider">
                     {title}
-                </h3>
+                </h2>
             )}
             <p className="text-xs text-gray-400 mb-3 italic">
                 {t('builds.clickToViewFull', 'Click on image to view full size')}

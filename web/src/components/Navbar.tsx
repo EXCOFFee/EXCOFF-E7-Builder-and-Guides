@@ -198,7 +198,7 @@ export function Navbar() {
                                 </div>
                                 <button
                                     onClick={handleLogout}
-                                    className="text-xs text-slate-500 hover:text-red-400 transition-colors px-2 py-1 rounded hover:bg-red-500/10"
+                                    className="text-xs text-slate-400 hover:text-red-400 transition-colors px-2 py-1 rounded hover:bg-red-500/10"
                                     title={t('nav.logout', 'Logout')}
                                 >
                                     {t('nav.logout', 'Logout')}

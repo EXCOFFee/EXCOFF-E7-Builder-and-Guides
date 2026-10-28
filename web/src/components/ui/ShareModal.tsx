@@ -177,7 +177,7 @@ export function ShareModal({ isOpen, onClose, title, url, description }: ShareMo
                         ))}
                     </div>
 
-                    <p className="mt-4 text-center text-gray-500 text-sm truncate" title={fullUrl}>
+                    <p className="mt-4 text-center text-gray-400 text-sm truncate" title={fullUrl}>
                         {fullUrl}
                     </p>
                 </div>

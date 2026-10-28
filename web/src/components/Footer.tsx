@@ -26,7 +26,7 @@ export function Footer() {
                         {t('footer.credits', 'Credits')}
                     </a>
                 </p>
-                <p className="text-xs text-slate-500">
+                <p className="text-xs text-slate-400">
                     {t('footer.disclaimer', 'Epic Seven © Smilegate & Super Creative. This site is not affiliated with the game developers.')}
                 </p>
             </div>

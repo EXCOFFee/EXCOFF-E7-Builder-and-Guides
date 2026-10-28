@@ -101,7 +101,7 @@ const TERMS: Record<string, string> = {
     'Seal': 'text-gray-400 font-bold',
     'Injury': 'text-orange-700 font-bold',
     'Injuries': 'text-orange-700 font-bold',
-    'Extinction': 'text-gray-500 font-bold',
+    'Extinction': 'text-gray-400 font-bold',
     'Venom': 'text-purple-500 font-bold',
     'Target': 'text-red-400 font-bold',
     'Blanco': 'text-red-400 font-bold', // Spanish Target
@@ -112,9 +112,9 @@ const TERMS: Record<string, string> = {
     'Curse': 'text-indigo-400 font-bold',
     'Collapse': 'text-red-400 font-bold',
     'Freezing': 'text-blue-200 font-bold',
-    'Omen': 'text-gray-500 font-bold',
+    'Omen': 'text-gray-400 font-bold',
     'Death Sentence': 'text-gray-900 font-bold',
-    'Fear': 'text-gray-500 font-bold',
+    'Fear': 'text-gray-400 font-bold',
     'Beguile': 'text-pink-400 font-bold',
     'Decreased Hit Chance': 'text-gray-400 font-bold',
 

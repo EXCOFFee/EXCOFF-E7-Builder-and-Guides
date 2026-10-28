@@ -177,7 +177,7 @@ const StatItem = ({ label, value, suffix = '', color = 'text-gray-300', large = 
     large?: boolean;
 }) => (
     <div className={`text-center p-3 bg-e7-void/50 rounded-lg border border-e7-gold/10 ${large ? 'py-4' : ''}`}>
-        <p className="text-gray-500 text-sm mb-1">{label}</p>
+        <p className="text-gray-400 text-sm mb-1">{label}</p>
         <p className={`${color} font-bold ${large ? 'text-xl' : 'text-lg'}`}>
             {formatNumber(value)}{suffix}
         </p>
@@ -431,7 +431,7 @@ export function HeroDetailClient({
                         <CardHeader className="border-b border-e7-gold/10">
                             <CardTitle className="text-e7-gold flex items-center gap-2">
                                 <span>{t('heroes.averageStats', 'Average Build Stats')}</span>
-                                <span className="text-slate-500 text-sm font-normal ml-2">
+                                <span className="text-slate-400 text-sm font-normal ml-2">
                                     ({t('heroes.fromBuilds', 'from {count} builds').replace('{count}', formatNumber(hero.guides_count))})
                                 </span>
                             </CardTitle>
@@ -620,7 +620,7 @@ export function HeroDetailClient({
                                         )}
 
                                         {!hasScaling && !skillDesc && (
-                                            <p className="text-gray-500 text-sm italic">Passive or support skill</p>
+                                            <p className="text-gray-400 text-sm italic">Passive or support skill</p>
                                         )}
                                     </div>
                                 );
@@ -631,7 +631,7 @@ export function HeroDetailClient({
 
                 {/* Last Updated */}
                 {hero.stats_updated_at && (
-                    <p className="text-center text-slate-600 text-xs mt-8">
+                    <p className="text-center text-slate-400 text-xs mt-8">
                         Stats last updated: {formatDate(hero.stats_updated_at, locale)}
                     </p>
                 )}
@@ -643,7 +643,7 @@ export function HeroDetailClient({
                             <CardTitle className="text-e7-gold flex items-center gap-2">
                                 <span>{t('heroes.communityBuilds', 'Community Builds')}</span>
                                 {builds.length > 0 && (
-                                    <span className="text-sm text-neutral-500 font-normal">({builds.length})</span>
+                                    <span className="text-sm text-neutral-400 font-normal">({builds.length})</span>
                                 )}
                             </CardTitle>
                             <Link href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}>
@@ -663,9 +663,9 @@ export function HeroDetailClient({
                                         value={buildSearch}
                                         onChange={(e) => setBuildSearch(e.target.value)}
                                         placeholder={t('heroes.searchBuilds', 'Search builds...')}
-                                        className="w-full px-3 py-2 pl-9 text-sm rounded-lg bg-e7-void border border-e7-gold/20 text-white placeholder-neutral-500 focus:border-e7-gold focus:outline-none"
+                                        className="w-full px-3 py-2 pl-9 text-sm rounded-lg bg-e7-void border border-e7-gold/20 text-white placeholder-neutral-400 focus:border-e7-gold focus:outline-none"
                                     />
-                                    <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                                     </svg>
                                 </div>
@@ -673,6 +673,7 @@ export function HeroDetailClient({
                                 {/* Set Filter */}
                                 {availableSets.length > 0 && (
                                     <select
+                                        aria-label={t('heroes.filterBySet', 'Filter by set')}
                                         value={buildSetFilter}
                                         onChange={(e) => setBuildSetFilter(e.target.value)}
                                         className="px-3 py-2 text-sm rounded-lg bg-e7-void border border-e7-gold/20 text-slate-200 focus:border-e7-gold focus:outline-none cursor-pointer min-w-[140px]"
@@ -686,6 +687,7 @@ export function HeroDetailClient({
 
                                 {/* Sort */}
                                 <select
+                                    aria-label={t('common.sortBy', 'Sort by')}
                                     value={buildSortBy}
                                     onChange={(e) => setBuildSortBy(e.target.value as typeof buildSortBy)}
                                     className="px-3 py-2 text-sm rounded-lg bg-e7-void border border-e7-gold/20 text-slate-200 focus:border-e7-gold focus:outline-none cursor-pointer min-w-[160px]"
@@ -767,7 +769,7 @@ export function HeroDetailClient({
                                                         </svg>
                                                         {build.views || 0}
                                                     </div>
-                                                    <div className="text-gray-500 text-xs">{build.user?.name || t('common.anonymous', 'Anonymous')}</div>
+                                                    <div className="text-gray-400 text-xs">{build.user?.name || t('common.anonymous', 'Anonymous')}</div>
                                                 </div>
                                             </div>
                                         </div>

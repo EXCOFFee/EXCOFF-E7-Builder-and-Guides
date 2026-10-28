@@ -181,7 +181,7 @@ export default function AdminReportsPage() {
                                                         </span>
                                                     </div>
                                                     <p className="text-white text-sm mb-1">{report.reason}</p>
-                                                    <p className="text-xs text-gray-500">
+                                                    <p className="text-xs text-gray-400">
                                                         Reportado por: {report.reporter.name} • {formatDate(report.created_at, "es")}
                                                     </p>
                                                 </div>

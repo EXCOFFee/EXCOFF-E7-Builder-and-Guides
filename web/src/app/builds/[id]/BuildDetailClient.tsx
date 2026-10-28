@@ -614,9 +614,9 @@ export function BuildDetailClient() {
                         {build.hero.skills && build.hero.skills.length >= 3 &&
                             (build.skill_1 || build.skill_2 || build.skill_3) ? (
                             <div className="mb-6">
-                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4">
+                                <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4">
                                     {t('builds.skillRecommendations', 'Skill Recommendations')}
-                                </h3>
+                                </h2>
                                 <div className="flex flex-wrap gap-6">
                                     {[0, 1, 2].map(idx => {
                                         const skillLevel = build[`skill_${idx + 1}` as keyof Build] as number || 0;
@@ -657,7 +657,7 @@ export function BuildDetailClient() {
                                                 {/* Tooltip */}
                                                 <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-black/90 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 border border-white/10">
                                                     {skill.name}
-                                                    {skillLevel === 0 && <span className="block text-gray-500 text-[10px]">{t('common.noUpgrade', 'No upgrade')}</span>}
+                                                    {skillLevel === 0 && <span className="block text-gray-400 text-[10px]">{t('common.noUpgrade', 'No upgrade')}</span>}
                                                 </div>
                                             </div>
                                         );
@@ -669,7 +669,7 @@ export function BuildDetailClient() {
                         {/* Min Stats */}
                         {build.min_stats && Object.keys(build.min_stats).length > 0 && (
                             <div className="mb-6">
-                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4">{t('builds.minStats', 'Min Stats')}</h3>
+                                <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4">{t('builds.minStats', 'Min Stats')}</h2>
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                     {Object.entries(build.min_stats).map(([stat, value]) => (
                                         <div key={stat} className="group bg-gradient-to-br from-e7-void/70 to-e7-panel/50 p-4 rounded-xl border border-e7-gold/20 backdrop-blur-sm hover:border-e7-gold/40 hover:shadow-lg hover:shadow-e7-gold/10 transition-all duration-300 hover:-translate-y-1">
@@ -684,7 +684,7 @@ export function BuildDetailClient() {
                         {/* Description */}
                         {build.description && (
                             <div className="mb-6 p-5 bg-gradient-to-br from-e7-void/50 to-e7-panel/30 rounded-xl border border-e7-gold/10 backdrop-blur-sm">
-                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-3">Description</h3>
+                                <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-3">Description</h2>
                                 <p className="text-gray-300 whitespace-pre-wrap leading-relaxed">{build.description}</p>
                             </div>
                         )}
@@ -784,7 +784,7 @@ export function BuildDetailClient() {
                     {/* Comments List */}
                     <div className="space-y-4">
                         {comments.length === 0 ? (
-                            <p className="text-gray-500">{t('guides.noComments', 'No comments yet.')}</p>
+                            <p className="text-gray-400">{t('guides.noComments', 'No comments yet.')}</p>
                         ) : (
                             comments.map((comment) => {
                                 const canEdit = currentUser && comment.user_id === currentUser.id &&
@@ -810,7 +810,7 @@ export function BuildDetailClient() {
                                                         <span className="text-white font-medium text-sm">
                                                             {comment.is_anonymous ? t('common.anonymous', 'Anonymous') : comment.user?.name}
                                                         </span>
-                                                        <span className="text-xs text-gray-500">
+                                                        <span className="text-xs text-gray-400">
                                                             {formatDate(comment.created_at, locale)}
                                                         </span>
                                                     </div>
@@ -925,7 +925,7 @@ export function BuildDetailClient() {
                                                                 <span className="text-white font-medium text-xs">
                                                                     {reply.is_anonymous ? t('common.anonymous', 'Anonymous') : reply.user?.name}
                                                                 </span>
-                                                                <span className="text-xs text-gray-500">
+                                                                <span className="text-xs text-gray-400">
                                                                     {formatDate(reply.created_at, locale)}
                                                                 </span>
                                                             </div>

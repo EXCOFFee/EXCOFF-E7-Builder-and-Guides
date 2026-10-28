@@ -578,7 +578,7 @@ export default function CreateBuildPage() {
                                 </label>
                                 <div className="grid grid-cols-4 gap-3">
                                     <div>
-                                        <label className="block text-xs text-gray-500 mb-1">ATK</label>
+                                        <label className="block text-xs text-gray-400 mb-1">ATK</label>
                                         <Input
                                             type="number"
                                             value={stats.atk}
@@ -588,7 +588,7 @@ export default function CreateBuildPage() {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-xs text-gray-500 mb-1">DEF</label>
+                                        <label className="block text-xs text-gray-400 mb-1">DEF</label>
                                         <Input
                                             type="number"
                                             value={stats.def}
@@ -598,7 +598,7 @@ export default function CreateBuildPage() {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-xs text-gray-500 mb-1">HP</label>
+                                        <label className="block text-xs text-gray-400 mb-1">HP</label>
                                         <Input
                                             type="number"
                                             value={stats.hp}
@@ -608,7 +608,7 @@ export default function CreateBuildPage() {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-xs text-gray-500 mb-1">SPD</label>
+                                        <label className="block text-xs text-gray-400 mb-1">SPD</label>
                                         <Input
                                             type="number"
                                             value={stats.spd}
@@ -618,7 +618,7 @@ export default function CreateBuildPage() {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-xs text-gray-500 mb-1">Crit %</label>
+                                        <label className="block text-xs text-gray-400 mb-1">Crit %</label>
                                         <Input
                                             type="number"
                                             value={stats.crit_chance}
@@ -628,7 +628,7 @@ export default function CreateBuildPage() {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-xs text-gray-500 mb-1">C.Dmg %</label>
+                                        <label className="block text-xs text-gray-400 mb-1">C.Dmg %</label>
                                         <Input
                                             type="number"
                                             value={stats.crit_dmg}
@@ -638,7 +638,7 @@ export default function CreateBuildPage() {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-xs text-gray-500 mb-1">EFF %</label>
+                                        <label className="block text-xs text-gray-400 mb-1">EFF %</label>
                                         <Input
                                             type="number"
                                             value={stats.eff}
@@ -648,7 +648,7 @@ export default function CreateBuildPage() {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-xs text-gray-500 mb-1">RES %</label>
+                                        <label className="block text-xs text-gray-400 mb-1">RES %</label>
                                         <Input
                                             type="number"
                                             value={stats.res}
@@ -692,7 +692,7 @@ export default function CreateBuildPage() {
                                     <label htmlFor="build-images" className="cursor-pointer flex flex-col items-center">
                                         <span className="text-3xl mb-2">📷</span>
                                         <span className="text-gray-400 text-sm">{t('builds.clickToUpload', 'Click to upload images')}</span>
-                                        <span className="text-gray-500 text-xs mt-1">{t('builds.maxImages', 'Maximum 5 images (PNG, JPG)')}</span>
+                                        <span className="text-gray-400 text-xs mt-1">{t('builds.maxImages', 'Maximum 5 images (PNG, JPG)')}</span>
                                     </label>
                                 </div>
                                 {/* Image previews */}
@@ -776,6 +776,7 @@ export default function CreateBuildPage() {
                             <div className="space-y-2">
                                 <label className="text-slate-300 text-sm font-medium">{t('language.selectLanguage', 'Language')}</label>
                                 <select
+                                    aria-label={t('language.selectLanguage', 'Language')}
                                     value={language}
                                     onChange={(e) => setLanguage(e.target.value)}
                                     className="w-full bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg px-4 py-3 focus:border-e7-gold focus:ring-e7-gold/30"
@@ -800,7 +801,7 @@ export default function CreateBuildPage() {
                                 />
                                 <label htmlFor="isAnonymous" className="text-slate-300 cursor-pointer">
                                     {t('builds.publishAnonymous', 'Publish anonymously')}
-                                    <span className="block text-xs text-slate-500">{t('builds.anonymousDescription', 'Your username will not appear on this build')}</span>
+                                    <span className="block text-xs text-slate-400">{t('builds.anonymousDescription', 'Your username will not appear on this build')}</span>
                                 </label>
                             </div>
 

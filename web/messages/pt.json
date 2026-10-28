@@ -1,5 +1,6 @@
 {
     "common": {
+        "skipToContent": "Pular para o conteúdo",
         "appName": "EpicSevenHub",
         "appSubtitle": "E7 Builds & Guias",
         "loading": "Carregando...",
@@ -128,6 +129,7 @@
         "passiveSkill": "Habilidade passiva ou de suporte",
         "searchBuilds": "Pesquisar builds...",
         "allSets": "Todos os Sets",
+        "filterBySet": "Filtrar por set",
         "noBuildsMatch": "Nenhuma build corresponde aos filtros",
         "popularSynergies": "Heróis de Sinergia Populares",
         "popularCounters": "Heróis Counter Populares",

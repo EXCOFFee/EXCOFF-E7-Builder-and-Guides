@@ -257,6 +257,7 @@ export default function EditGuildPostPage() {
                                         {t('guilds.server', 'Server')} *
                                     </label>
                                     <select
+                                        aria-label={t('guilds.server', 'Server')}
                                         value={server}
                                         onChange={(e) => setServer(e.target.value)}
                                         className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
@@ -275,6 +276,7 @@ export default function EditGuildPostPage() {
                                         {t('guilds.language', 'Language')} *
                                     </label>
                                     <select
+                                        aria-label={t('language.selectLanguage', 'Language')}
                                         value={language}
                                         onChange={(e) => setLanguage(e.target.value)}
                                         className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
@@ -378,7 +380,7 @@ export default function EditGuildPostPage() {
                                         {t('common.add', 'Add')}
                                     </Button>
                                 </div>
-                                <p className="text-xs text-gray-500 mb-2">
+                                <p className="text-xs text-gray-400 mb-2">
                                     {t('guilds.maxImages', 'Maximum 5 images total')}
                                 </p>
 
@@ -440,14 +442,14 @@ export default function EditGuildPostPage() {
                                 />
                                 <label htmlFor="isAnonymous" className="text-slate-300 cursor-pointer">
                                     <div className="font-medium">{t('guilds.publishAnonymously', 'Publish anonymously')}</div>
-                                    <div className="text-xs text-gray-500">{t('guilds.anonymousDesc', 'Your username will not appear in this post')}</div>
+                                    <div className="text-xs text-gray-400">{t('guilds.anonymousDesc', 'Your username will not appear in this post')}</div>
                                 </label>
                             </div>
 
                             {/* Contact Links */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    {t('guilds.contactLinks', 'Contact Links')} <span className="text-gray-500">({t('common.optional', 'optional')})</span>
+                                    {t('guilds.contactLinks', 'Contact Links')} <span className="text-gray-400">({t('common.optional', 'optional')})</span>
                                 </label>
                                 <div className="space-y-3">
                                     <div className="flex items-center gap-3">
@@ -478,7 +480,7 @@ export default function EditGuildPostPage() {
                                         />
                                     </div>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-2">{t('guilds.contactLinksDesc', 'Add contact links so members can reach you')}</p>
+                                <p className="text-xs text-gray-400 mt-2">{t('guilds.contactLinksDesc', 'Add contact links so members can reach you')}</p>
                             </div>
 
                             {/* Error message */}

@@ -57,7 +57,7 @@ export function SynergyCounterHeroCard({ hero, type }: SynergyCounterCardProps) 
                     <div className={`absolute inset-0 bg-gradient-to-br ${colors.glow} rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300`}></div>
                     <Image
                         src={imageUrl}
-                        alt={hero.name}
+                        alt="" // El nombre va escrito debajo: con alt el lector lo repetiría
                         width={96}
                         height={96}
                         className={`w-24 h-24 rounded-2xl ring-2 ${colors.ring} group-hover:ring-3 object-cover relative z-10 shadow-xl group-hover:scale-105 transition-all duration-300`}
@@ -126,10 +126,10 @@ export function SynergyCounterSection({ title, heroes, type }: SynergyCounterSec
 
     return (
         <div className="mb-6">
-            <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4 flex items-center gap-2">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4 flex items-center gap-2">
                 {title}
-                <span className="text-gray-500 text-base font-normal">({heroes.length})</span>
-            </h3>
+                <span className="text-gray-400 text-base font-normal">({heroes.length})</span>
+            </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {heroes.map(hero => (
                     <SynergyCounterHeroCard key={hero.id} hero={hero} type={type} />

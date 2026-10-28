@@ -140,11 +140,11 @@ export function ProConsSelector({
                             value={noteModal.currentNote}
                             onChange={(e) => setNoteModal({ ...noteModal, currentNote: e.target.value.slice(0, 200) })}
                             placeholder={t('builds.tagNotePlaceholder', 'Why this tag? (max 200 characters)')}
-                            className="w-full h-24 px-4 py-3 rounded-lg bg-e7-dark/50 border border-e7-gold/20 text-white placeholder-gray-500 resize-none focus:border-e7-gold/50 focus:outline-none"
+                            className="w-full h-24 px-4 py-3 rounded-lg bg-e7-dark/50 border border-e7-gold/20 text-white placeholder-gray-400 resize-none focus:border-e7-gold/50 focus:outline-none"
                             maxLength={200}
                         />
                         <div className="flex justify-between items-center mt-2">
-                            <span className="text-xs text-gray-500">
+                            <span className="text-xs text-gray-400">
                                 {noteModal.currentNote.length}/200
                             </span>
                             <div className="flex gap-2">
@@ -193,9 +193,10 @@ export function ProConsSelector({
                         onChange={(e) => setProsSearch(e.target.value)}
                         placeholder={t('builds.searchTags', 'Search tags...')}
                         disabled={disabled}
-                        className="flex-1 px-3 py-2 text-sm rounded-lg bg-e7-dark/50 border border-green-500/20 text-white placeholder-gray-500 focus:border-green-500/50 focus:outline-none"
+                        className="flex-1 px-3 py-2 text-sm rounded-lg bg-e7-dark/50 border border-green-500/20 text-white placeholder-gray-400 focus:border-green-500/50 focus:outline-none"
                     />
                     <select
+                        aria-label={t('guides.category', 'Category')}
                         value={prosCategory}
                         onChange={(e) => setProsCategory(e.target.value)}
                         disabled={disabled}
@@ -258,7 +259,7 @@ export function ProConsSelector({
                                 className={`px-3 py-1.5 text-sm rounded-full transition-all ${isSelected
                                     ? 'bg-green-600/40 border-2 border-green-400 text-green-200 scale-105'
                                     : isDisabledTag
-                                        ? 'bg-gray-800/30 border border-gray-600/30 text-gray-500 cursor-not-allowed'
+                                        ? 'bg-gray-800/30 border border-gray-600/30 text-gray-400 cursor-not-allowed'
                                         : 'bg-e7-dark/30 border border-green-500/30 text-gray-300 hover:border-green-500/60 hover:text-green-300'
                                     }`}
                             >
@@ -267,7 +268,7 @@ export function ProConsSelector({
                         );
                     })}
                     {filteredPros.length === 0 && (
-                        <span className="text-sm text-gray-500 p-2">{t('common.noResults', 'No results found')}</span>
+                        <span className="text-sm text-gray-400 p-2">{t('common.noResults', 'No results found')}</span>
                     )}
                 </div>
             </div>
@@ -297,9 +298,10 @@ export function ProConsSelector({
                         onChange={(e) => setConsSearch(e.target.value)}
                         placeholder={t('builds.searchTags', 'Search tags...')}
                         disabled={disabled}
-                        className="flex-1 px-3 py-2 text-sm rounded-lg bg-e7-dark/50 border border-red-500/20 text-white placeholder-gray-500 focus:border-red-500/50 focus:outline-none"
+                        className="flex-1 px-3 py-2 text-sm rounded-lg bg-e7-dark/50 border border-red-500/20 text-white placeholder-gray-400 focus:border-red-500/50 focus:outline-none"
                     />
                     <select
+                        aria-label={t('guides.category', 'Category')}
                         value={consCategory}
                         onChange={(e) => setConsCategory(e.target.value)}
                         disabled={disabled}
@@ -362,7 +364,7 @@ export function ProConsSelector({
                                 className={`px-3 py-1.5 text-sm rounded-full transition-all ${isSelected
                                     ? 'bg-red-600/40 border-2 border-red-400 text-red-200 scale-105'
                                     : isDisabledTag
-                                        ? 'bg-gray-800/30 border border-gray-600/30 text-gray-500 cursor-not-allowed'
+                                        ? 'bg-gray-800/30 border border-gray-600/30 text-gray-400 cursor-not-allowed'
                                         : 'bg-e7-dark/30 border border-red-500/30 text-gray-300 hover:border-red-500/60 hover:text-red-300'
                                     }`}
                             >
@@ -371,7 +373,7 @@ export function ProConsSelector({
                         );
                     })}
                     {filteredCons.length === 0 && (
-                        <span className="text-sm text-gray-500 p-2">{t('common.noResults', 'No results found')}</span>
+                        <span className="text-sm text-gray-400 p-2">{t('common.noResults', 'No results found')}</span>
                     )}
                 </div>
             </div>

@@ -107,9 +107,9 @@ export default function NewsPage() {
                                 value={searchInput}
                                 onChange={(e) => setSearchInput(e.target.value)}
                                 placeholder={t('news.searchPlaceholder', 'Search news...')}
-                                className="w-full px-4 py-2 pl-10 rounded-lg bg-e7-void border border-e7-gold/30 text-white placeholder-neutral-500 focus:border-e7-gold focus:outline-none"
+                                className="w-full px-4 py-2 pl-10 rounded-lg bg-e7-void border border-e7-gold/30 text-white placeholder-neutral-400 focus:border-e7-gold focus:outline-none"
                             />
-                            <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                             {searchInput && (
@@ -173,7 +173,7 @@ export default function NewsPage() {
                     >
                         <Image
                             src="/images/stove.jpg"
-                            alt="Stove"
+                            alt=""
                             width={20}
                             height={20}
                             className="rounded"
@@ -285,7 +285,7 @@ export default function NewsPage() {
                                             {/* Source Badge */}
                                             <div className={`absolute top-2 right-2 px-2 py-1 rounded text-xs font-semibold flex items-center gap-1.5 ${item.source === 'youtube'
                                                 ? 'bg-red-600 text-white'
-                                                : 'bg-orange-600 text-white'
+                                                : 'bg-orange-700 text-white'
                                                 }`}>
                                                 {item.source === 'youtube' ? (
                                                     <>
@@ -319,15 +319,15 @@ export default function NewsPage() {
 
                                         {/* Content */}
                                         <div className="p-4">
-                                            <h3 className="font-medium text-white group-hover:text-e7-gold transition-colors line-clamp-2 mb-2">
+                                            <h2 className="font-medium text-white group-hover:text-e7-gold transition-colors line-clamp-2 mb-2">
                                                 {item.title}
-                                            </h3>
+                                            </h2>
                                             {item.description && (
-                                                <p className="text-sm text-slate-500 line-clamp-2 mb-3">
+                                                <p className="text-sm text-slate-400 line-clamp-2 mb-3">
                                                     {item.description}
                                                 </p>
                                             )}
-                                            <div className="flex items-center justify-between text-xs text-gray-500">
+                                            <div className="flex items-center justify-between text-xs text-gray-400">
                                                 <span>
                                                     {formatDate(item.published_at, locale)}
                                                 </span>

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -22,9 +22,9 @@ export default function LoginPage() {
                     <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-e7-gold via-amber-500 to-purple-600 flex items-center justify-center shadow-lg shadow-e7-gold/30 animate-border-glow">
                         <span className="text-white font-bold text-3xl font-display">E7</span>
                     </div>
-                    <CardTitle className="text-3xl font-display text-gold-gradient tracking-wide">
+                    <h1 className="leading-none font-semibold text-3xl font-display text-gold-gradient tracking-wide">
                         Iniciar Sesión
-                    </CardTitle>
+                    </h1>
                     <p className="text-slate-400 text-sm mt-2">
                         Accede para crear builds y guías
                     </p>

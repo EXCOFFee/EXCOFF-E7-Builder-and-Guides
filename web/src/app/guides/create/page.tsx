@@ -245,7 +245,7 @@ export default function CreateGuidePage() {
                                     placeholder="https://youtube.com/watch?v=..."
                                     className="bg-e7-void border-e7-gold/30 text-white"
                                 />
-                                <p className="text-xs text-gray-500 mt-1">
+                                <p className="text-xs text-gray-400 mt-1">
                                     {t('guidesCreate.videoSupport', 'We support YouTube, Twitch and Bilibili')}
                                 </p>
                             </div>
@@ -273,7 +273,7 @@ export default function CreateGuidePage() {
                                     <div className="text-gray-400">
                                         📷 {t('guidesCreate.clickToUpload', 'Click to upload images')}
                                     </div>
-                                    <p className="text-xs text-gray-500 mt-1">
+                                    <p className="text-xs text-gray-400 mt-1">
                                         {t('guidesCreate.maxImages', 'Maximum 5 images (JPEG, PNG, GIF, WebP)')}
                                     </p>
                                 </div>
@@ -326,7 +326,7 @@ export default function CreateGuidePage() {
                                     className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none resize-none font-mono text-sm"
                                     required
                                 />
-                                <p className="text-xs text-gray-500 mt-1">
+                                <p className="text-xs text-gray-400 mt-1">
                                     {t('guidesCreate.markdownSupport', 'Supports Markdown: **bold**, *italic*, ## Headers, - Lists')}
                                 </p>
                             </div>
@@ -350,6 +350,7 @@ export default function CreateGuidePage() {
                             <div className="space-y-2">
                                 <label className="text-slate-300 text-sm font-medium">{t('language.selectLanguage', 'Language')}</label>
                                 <select
+                                    aria-label={t('language.selectLanguage', 'Language')}
                                     value={language}
                                     onChange={(e) => setLanguage(e.target.value)}
                                     className="w-full bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg px-4 py-3 focus:border-e7-gold focus:ring-e7-gold/30"
@@ -371,7 +372,7 @@ export default function CreateGuidePage() {
                                 />
                                 <label htmlFor="isAnonymous" className="text-slate-300 cursor-pointer">
                                     {t('guides.publishAnonymous', 'Publish anonymously')}
-                                    <span className="block text-xs text-slate-500">{t('guides.anonymousDescription', 'Your username will not appear on this guide')}</span>
+                                    <span className="block text-xs text-slate-400">{t('guides.anonymousDescription', 'Your username will not appear on this guide')}</span>
                                 </label>
                             </div>
 

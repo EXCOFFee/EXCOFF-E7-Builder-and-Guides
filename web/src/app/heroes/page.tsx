@@ -270,7 +270,7 @@ export default function HeroesPage() {
                         placeholder={t('heroes.searchPlaceholder', 'Search heroes...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-md bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-500 focus:border-e7-gold"
+                        className="max-w-md bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-400 focus:border-e7-gold"
                     />
 
                     {/* Element Filter */}
@@ -352,9 +352,9 @@ export default function HeroesPage() {
                     <div className="flex flex-col items-center justify-center py-20 px-4">
                         <div className="text-center max-w-md">
                             <div className="text-6xl mb-4">😔</div>
-                            <h3 className="text-xl font-bold text-red-400 mb-2">
+                            <h2 className="text-xl font-bold text-red-400 mb-2">
                                 {t('common.connectionError', 'No connection')}
-                            </h3>
+                            </h2>
                             <p className="text-gray-400 mb-6">
                                 {t('common.networkErrorMsg', 'Could not connect. Check your internet connection.')}
                             </p>
@@ -442,9 +442,9 @@ export default function HeroesPage() {
 
                                         {/* Hero Name Footer */}
                                         <div className="p-3 bg-gradient-to-t from-e7-dark/80 to-transparent -mt-8 relative z-10 pt-10">
-                                            <h3 className="text-slate-100 text-sm font-semibold truncate group-hover:text-e7-gold transition-colors duration-300 text-center">
+                                            <h2 className="text-slate-100 text-sm font-semibold truncate group-hover:text-e7-gold transition-colors duration-300 text-center">
                                                 {translateHeroName(hero.name)}
-                                            </h3>
+                                            </h2>
                                         </div>
                                     </div>
                                 </Link>

@@ -154,7 +154,7 @@ export function TierRatingSelector({
                                 disabled={disabled}
                                 maxLength={255}
                                 rows={3}
-                                className="w-full px-4 py-3 text-sm rounded-lg bg-e7-dark/50 border border-e7-gold/20 text-white placeholder-gray-500 focus:border-e7-gold/50 focus:outline-none resize-none"
+                                className="w-full px-4 py-3 text-sm rounded-lg bg-e7-dark/50 border border-e7-gold/20 text-white placeholder-gray-400 focus:border-e7-gold/50 focus:outline-none resize-none"
                             />
                         )}
                     </div>

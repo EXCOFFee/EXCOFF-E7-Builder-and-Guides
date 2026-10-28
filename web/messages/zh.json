@@ -1,5 +1,6 @@
 {
     "common": {
+        "skipToContent": "跳到主要内容",
         "appName": "EpicSevenHub",
         "appSubtitle": "E7 构建与攻略",
         "loading": "加载中...",
@@ -128,6 +129,7 @@
         "passiveSkill": "被动或辅助技能",
         "searchBuilds": "搜索配装...",
         "allSets": "所有套装",
+        "filterBySet": "按套装筛选",
         "noBuildsMatch": "没有符合筛选条件的配装",
         "popularSynergies": "热门协同英雄",
         "popularCounters": "热门克制英雄",

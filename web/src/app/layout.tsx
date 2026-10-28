@@ -135,8 +135,15 @@ export default async function RootLayout({
         suppressHydrationWarning
       >
         <Providers locale={locale} messages={messages}>
+          {/* Visible solo con foco de teclado: permite saltear la navegación (WCAG 2.4.1) */}
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-e7-gold focus:px-4 focus:py-2 focus:font-semibold focus:text-black"
+          >
+            {messages.common?.skipToContent ?? 'Skip to content'}
+          </a>
           <Navbar />
-          <main className="min-h-[calc(100vh-4rem)]">
+          <main id="main" tabIndex={-1} className="min-h-[calc(100vh-4rem)] outline-none">
             {children}
           </main>
           <Footer />

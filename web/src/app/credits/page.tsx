@@ -93,7 +93,7 @@ export default function CreditsPage() {
                 </div>
 
                 <div className="mt-12 text-center">
-                    <Link href="/" className="text-slate-500 hover:text-e7-gold transition-colors text-sm flex items-center justify-center gap-2">
+                    <Link href="/" className="text-slate-400 hover:text-e7-gold transition-colors text-sm flex items-center justify-center gap-2">
                         <ArrowLeft size={16} /> {t('common.backToHome', 'Back to Home')}
                     </Link>
                 </div>

@@ -601,7 +601,7 @@ export function GuideDetailClient() {
                     {/* Comments List */}
                     <div className="space-y-4">
                         {comments.length === 0 ? (
-                            <p className="text-gray-500">{t('guides.noComments', 'No comments yet.')}</p>
+                            <p className="text-gray-400">{t('guides.noComments', 'No comments yet.')}</p>
                         ) : (
                             comments.map((comment) => (
                                 <div key={comment.id} className="flex gap-3 p-4 bg-e7-void/50 rounded-lg">
@@ -621,7 +621,7 @@ export function GuideDetailClient() {
                                                 {comment.is_anonymous ? t('common.anonymous', 'Anonymous') : comment.user?.name}
                                             </span>
                                             <div className="flex items-center gap-2">
-                                                <span className="text-xs text-gray-500">
+                                                <span className="text-xs text-gray-400">
                                                     {formatDate(comment.created_at, locale)}
                                                 </span>
                                                 {canDeleteComment(comment) && (

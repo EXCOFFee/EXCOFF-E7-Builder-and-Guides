@@ -197,7 +197,7 @@ export function ImageWithSkeleton({
             {/* Error placeholder */}
             {hasError && (
                 <div className="absolute inset-0 bg-slate-800 flex items-center justify-center rounded-lg">
-                    <span className="text-slate-500 text-xs">⚠️</span>
+                    <span className="text-slate-400 text-xs">⚠️</span>
                 </div>
             )}
 

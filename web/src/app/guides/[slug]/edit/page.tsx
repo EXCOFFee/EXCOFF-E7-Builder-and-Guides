@@ -402,7 +402,7 @@ export default function EditGuidePage() {
                                                 >
                                                     ×
                                                 </button>
-                                                <span className="absolute bottom-1 left-1 text-xs bg-green-600 text-white px-1 rounded">New</span>
+                                                <span className="absolute bottom-1 left-1 text-xs bg-green-700 text-white px-1 rounded">New</span>
                                             </div>
                                         ))}
                                     </div>
@@ -431,13 +431,14 @@ export default function EditGuidePage() {
                                         {t('common.add', 'Add')}
                                     </Button>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-1">{t('guides.maxImages', 'Maximum 5 images')}</p>
+                                <p className="text-xs text-gray-400 mt-1">{t('guides.maxImages', 'Maximum 5 images')}</p>
                             </div>
 
                             {/* Language selector */}
                             <div className="space-y-2">
                                 <label className="text-slate-300 text-sm font-medium">{t('language.selectLanguage', 'Language')}</label>
                                 <select
+                                    aria-label={t('language.selectLanguage', 'Language')}
                                     value={language}
                                     onChange={(e) => setLanguage(e.target.value)}
                                     className="w-full bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg px-4 py-3 focus:border-e7-gold focus:ring-e7-gold/30"

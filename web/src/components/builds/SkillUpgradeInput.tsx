@@ -56,7 +56,7 @@ export function SkillUpgradeInput({
                     <h4 className={`font-bold truncate transition-colors ${value > 0 ? 'text-e7-gold' : 'text-gray-300'}`}>
                         {skillData.name}
                     </h4>
-                    <p className="text-xs text-gray-500 mt-0.5">
+                    <p className="text-xs text-gray-400 mt-0.5">
                         {t('builds.upgradeLevel', 'Upgrade Level')}
                     </p>
                 </div>
@@ -65,6 +65,7 @@ export function SkillUpgradeInput({
             {/* Level Selector */}
             <div className="relative">
                 <select
+                    aria-label={`${skillData.name} - ${t('builds.upgradeLevel', 'Upgrade Level')}`}
                     value={value}
                     onChange={(e) => onChange(Number(e.target.value))}
                     className={`
@@ -95,7 +96,7 @@ export function SkillUpgradeInput({
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className={`transition-colors ${value > 0 ? 'text-e7-gold' : 'text-gray-500'}`}
+                        className={`transition-colors ${value > 0 ? 'text-e7-gold' : 'text-gray-400'}`}
                     >
                         <path d="m6 9 6 6 6-6" />
                     </svg>
