@@ -107,6 +107,22 @@ class BuildUpdateTest extends TestCase
         }
     }
 
+    public function test_migration_moves_legacy_min_stats_keys(): void
+    {
+        $owner = User::factory()->create();
+        $legacy = $this->makeBuild($owner, ['min_stats' => ['atk' => 1000, 'chc' => 100, 'chd' => 250, 'efr' => 0]]);
+        $both = $this->makeBuild($owner, ['min_stats' => ['crit_chance' => 90, 'chc' => 100]]);
+        $clean = $this->makeBuild($owner, ['min_stats' => ['crit_chance' => 50]]);
+
+        $migration = require database_path('migrations/2026_10_28_000001_normalize_build_min_stats_keys.php');
+        $migration->up();
+        $migration->up(); // idempotente
+
+        $this->assertSame(['atk' => 1000, 'crit_chance' => 100, 'crit_dmg' => 250], $legacy->fresh()->min_stats);
+        $this->assertSame(['crit_chance' => 90], $both->fresh()->min_stats);
+        $this->assertSame(['crit_chance' => 50], $clean->fresh()->min_stats);
+    }
+
     public function test_edit_form_preserves_anonymous_flag(): void
     {
         $owner = User::factory()->create();
