@@ -634,17 +634,17 @@
         "_name": "Assassin Coli",
         "skills": {
             "S1": {
-                "name": "Ambush",
-                "description": "Attacks the enemy by ambushing them. When the caster is granted stealth, increases damage dealt and grants increased Speed to the caster for 1 turn. Damage dealt increases proportional to the caster's Speed."
+                "name": "奇襲",
+                "description": "敵を奇襲して攻撃する。発動者に隠密があれば与ダメージがアップし、発動者に1ターンの間スピードアップを付与する。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Cloak and Dagger",
-                "description": "When the caster does not have a debuff, has a 100% chance each to be granted increased Attack for 1 turn at the beginning of turn and stealth for 1 turn at the end of the turn."
+                "name": "外套と短剣",
+                "description": "発動者に弱体効果がなければ、それぞれ100%の確率で、ターン開始時に1ターンの間攻撃力アップを、ターン終了時に1ターンの間隠密を得る。"
             },
             "S3": {
-                "name": "Murder",
-                "description": "Attacks the enemy by moving silently, inflicting stun for 1 turn. When the enemy is defeated, inflicts silence on all enemies for 1 turn. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "暗殺",
+                "description": "音もなく動いて敵を攻撃し、1ターンの間気絶させる。敵を倒すと、敵全体に1ターンの間沈黙を付与する。発動者のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -652,17 +652,17 @@
         "_name": "Astromancer Elena",
         "skills": {
             "S1": {
-                "name": "Melody of Damnation",
-                "description": "Attacks the enemy with a punishing melody. When the target has a debuff, increases damage dealt."
+                "name": "破滅の旋律",
+                "description": "懲罰の旋律で敵を攻撃する。対象に弱体効果があれば与ダメージがアップする。"
             },
             "S2": {
-                "name": "Disciple of the Stars",
-                "description": "At the start of battle, grants Star's Blessing for 1 turn. When the caster is granted Star's Blessing, enemy Heroes cannot counterattack. After an ally except for the caster uses an attack that targets all enemies, activates Worship Me!. Worship Me! (gains 10 Soul): Increases Combat Readiness of the caster by 20%."
+                "name": "星の弟子",
+                "description": "バトル開始時、1ターンの間星の祝福を付与する。発動者に星の祝福があれば、敵の英雄は反撃できない。発動者を除く味方が敵全体を対象とする攻撃を使用した後、私を崇めなさい！を発動する。私を崇めなさい！（ソウル10獲得）：発動者の行動ゲージを20%増加させる。"
             },
             "S3": {
-                "name": "Enraged Star's Retribution",
-                "description": "Attacks all enemies with the energy of the enraged star, decreasing buff durations by 1 turn before making them unhealable and restricting for 2 turns. Grants Star's Blessing to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "怒れる星の報い",
+                "description": "怒れる星の気で敵全体を攻撃し、強化効果の持続時間を1ターン減少させた後、2ターンの間回復不可と制約を付与する。発動者に2ターンの間星の祝福を付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -688,17 +688,17 @@
         "_name": "Aube",
         "skills": {
             "S1": {
-                "name": "Coral Swell",
-                "description": "Attacks the enemy with coral magic and decreases Combat Readiness by 20%"
+                "name": "珊瑚のうねり",
+                "description": "珊瑚の魔法で敵を攻撃し、行動ゲージを20%減少させる。"
             },
             "S2": {
-                "name": "Film Fiesta",
-                "description": "Releases the moment engraved in the film, with a 100% chance to grant cascade to all allies. Grants skill nullifier once and an extra turn to the caster."
+                "name": "フィルムフィエスタ",
+                "description": "フィルムに刻まれた瞬間を解き放ち、100%の確率で味方全員に連鎖を付与する。発動者にスキルダメージ無効を一度付与し、追加ターンを得る。"
             },
             "S3": {
-                "name": "Eternal Moment",
-                "description": "Fixes all enemies in a frame, dispelling two buffs before a 100% chance each to inflict immobilize and restrict for 2 turns. Concealment will remain throughout the battle.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "永遠の瞬間",
+                "description": "敵全体をフレームに固定し、強化効果を二つ解除した後、それぞれ100%の確率で2ターンの間束縛と制約を付与する。隠蔽がバトル中ずっと維持される。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -706,17 +706,17 @@
         "_name": "Auxiliary Lots",
         "skills": {
             "S1": {
-                "name": "Black Magic",
-                "description": "Attacks with a magic sphere, increasing caster's Combat Readiness by 15%."
+                "name": "黒魔法",
+                "description": "魔法の球体で攻撃し、発動者の行動ゲージを15%増加させる。"
             },
             "S2": {
-                "name": "Mana Injection",
-                "description": "Injects an ally except for the caster with Mana, granting exploiting weak points and increased Attack for 2 turns before increasing Combat Readiness by 100%."
+                "name": "マナ注入",
+                "description": "発動者を除く味方一人にマナを注入し、2ターンの間弱点把握と攻撃力アップを付与した後、行動ゲージを100%増加させる。"
             },
             "S3": {
-                "name": "Desolation",
-                "description": "Attacks all enemies with powerful magic, with a 80% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "荒廃",
+                "description": "強力な魔法で敵全体を攻撃し、80%の確率で2ターンの間防御力をダウンさせる。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -724,17 +724,17 @@
         "_name": "Azalea",
         "skills": {
             "S1": {
-                "name": "Persistent Attack",
-                "description": "Stabs the enemy with a spear and recovers Health of the caster. Amount recovered increases proportional to the caster's max Health."
+                "name": "しつこい攻撃",
+                "description": "槍で敵を突き、発動者のHPを回復する。発動者の最大HPに比例して回復量がアップする。"
             },
             "S2": {
-                "name": "Challenging Blow",
-                "description": "Attacks the enemy, with a 100% chance each of provoking and making them unhealable for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "挑戦の一撃",
+                "description": "敵を攻撃し、それぞれ100%の確率で2ターンの間挑発と回復不可を付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Sweep",
-                "description": "Sweeps all enemies with a spear, with a 75% chance to decrease Speed and Defense for 2 turns."
+                "name": "薙ぎ払い",
+                "description": "槍で敵全体を薙ぎ払い、75%の確率で2ターンの間スピードと防御力をダウンさせる。"
             }
         }
     },
@@ -742,17 +742,17 @@
         "_name": "Baal & Sezan",
         "skills": {
             "S1": {
-                "name": "Ghost Haunt",
-                "description": "Summons an evil spirit to attack two enemies, with a 50% chance to inflict poison for 2 turns."
+                "name": "幽霊の出没",
+                "description": "悪霊を召喚して敵二体を攻撃し、50%の確率で2ターンの間持続ダメージを付与する。"
             },
             "S2": {
-                "name": "Dark Cloud",
-                "description": "Attacks all enemies by summoning a cloud of darkness. Damage dealt increases proportional to the number of debuffs inflicted on the target. When an enemy is defeated, resets cooldown of Last Requiem.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "暗黒の雲",
+                "description": "闇の雲を召喚して敵全体を攻撃する。対象に付与された弱体効果の数に比例して与ダメージがアップする。敵を倒すと、最後の鎮魂歌のクールタイムをリセットする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Last Requiem",
-                "description": "Baal & Sezan attack all enemies with offensive magic, with a 85% chance each to inflict decreased Defense, decreased Speed, and unhealable for 2 turns."
+                "name": "最後の鎮魂歌",
+                "description": "バアルとセザンが攻撃魔法で敵全体を攻撃し、それぞれ85%の確率で2ターンの間防御力ダウン、スピードダウン、回復不可を付与する。"
             }
         }
     },
@@ -760,17 +760,17 @@
         "_name": "Bad Cat Armin",
         "skills": {
             "S1": {
-                "name": "Are You Ready?!",
-                "description": "Attacks the enemy with a giant shield, with a 45% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health. When used on the caster's turn, Are You Ready?! changes into an attack that targets all enemies. The changed attack does not trigger a Dual Attack."
+                "name": "準備はいいニャ？！",
+                "description": "巨大な盾で敵を攻撃し、45%の確率で1ターンの間挑発を付与する。発動者の最大HPに比例して与ダメージがアップする。発動者のターンに使用すると、準備はいいニャ？！が敵全体を対象とする攻撃に変わる。変化した攻撃では協攻が発動しない。"
             },
             "S2": {
-                "name": "Catch 'Em!",
-                "description": "After being attacked, has a 50% chance to grant increased Critical Hit Damage to the foremost ally for 1 turn before making them counterattack. When attacked by an enemy inflicted with provoke or redirected provoke, doubles effect chance. Cannot be triggered by extra attacks or counterattacks."
+                "name": "捕まえるニャ！",
+                "description": "攻撃された後、50%の確率で最も前にいる味方に1ターンの間クリティカルダメージアップを付与し、反撃させる。挑発または転換挑発を受けている敵に攻撃されると、効果発動確率が倍になる。追加攻撃や反撃では発動しない。"
             },
             "S3": {
-                "name": "Is This It?! Nyahaha!",
-                "description": "Attacks the enemy with a huge explosion, provoking for 1 turn. Increases Defense of the caster for 2 turns, and grants a barrier to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's max Health.",
-                "soulburn_effect": "Provokes for 2 turns."
+                "name": "これで終わりニャ？！ニャハハ！",
+                "description": "巨大な爆発で敵を攻撃し、1ターンの間挑発を付与する。2ターンの間発動者の防御力をアップさせ、味方全員に2ターンの間バリアを付与する。発動者の最大HPに比例して与ダメージとバリアの強度がアップする。",
+                "soulburn_effect": "2ターンの間挑発を付与する。"
             }
         }
     },
@@ -778,17 +778,17 @@
         "_name": "Baiken",
         "skills": {
             "S1": {
-                "name": "Tatami Gaeshi",
-                "description": "Attacks the enemy repeatedly, with a 70% chance each to inflict two bleeding effects for 2 turns. A critical hit will reduce the caster's skill cooldowns by 1 turn."
+                "name": "畳返し",
+                "description": "敵を連続で攻撃し、それぞれ70%の確率で2ターンの間出血を二つ付与する。クリティカルが発生すると、発動者のスキルのクールタイムを1ターン短縮する。"
             },
             "S2": {
-                "name": "Tsurane Sanzu-watashi",
-                "description": "Attacks the enemy with expert swordsmanship and has a 80% chance each to inflict three bleeding effects for 2 turns. One bleeding effect ignores Effect Resistance. A critical hit will grant an extra turn."
+                "name": "連ね三途渡し",
+                "description": "熟練の剣術で敵を攻撃し、それぞれ80%の確率で2ターンの間出血を三つ付与する。出血一つは効果抵抗を無視する。クリティカルが発生すると追加ターンを得る。"
             },
             "S3": {
-                "name": "Garyo Tensei",
-                "description": "Delivers a deadly blow and detonates any bleeding effects inflicted on the target at the end of the turn. A critical hit will increase Combat Readiness of all allies by 25%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "画竜点睛",
+                "description": "致命の一撃を放ち、ターン終了時に対象の出血をすべて爆発させる。クリティカルが発生すると、味方全員の行動ゲージを25%増加させる。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },

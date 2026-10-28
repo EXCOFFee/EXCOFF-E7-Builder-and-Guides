@@ -634,17 +634,17 @@
         "_name": "Assassin Coli",
         "skills": {
             "S1": {
-                "name": "Ambush",
-                "description": "Attacks the enemy by ambushing them. When the caster is granted stealth, increases damage dealt and grants increased Speed to the caster for 1 turn. Damage dealt increases proportional to the caster's Speed."
+                "name": "伏击",
+                "description": "伏击敌人发动攻击。施放者拥有隐身时，提升造成的伤害，并为施放者施加1回合速度提升。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "Cloak and Dagger",
-                "description": "When the caster does not have a debuff, has a 100% chance each to be granted increased Attack for 1 turn at the beginning of turn and stealth for 1 turn at the end of the turn."
+                "name": "斗篷与短剑",
+                "description": "施放者没有弱化效果时，各有100%的几率在回合开始时获得1回合攻击力提升，在回合结束时获得1回合隐身。"
             },
             "S3": {
-                "name": "Murder",
-                "description": "Attacks the enemy by moving silently, inflicting stun for 1 turn. When the enemy is defeated, inflicts silence on all enemies for 1 turn. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "暗杀",
+                "description": "无声移动攻击敌人，使其眩晕1回合。击败敌人时，对所有敌人施加1回合沉默。造成的伤害按施放者的速度比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -652,17 +652,17 @@
         "_name": "Astromancer Elena",
         "skills": {
             "S1": {
-                "name": "Melody of Damnation",
-                "description": "Attacks the enemy with a punishing melody. When the target has a debuff, increases damage dealt."
+                "name": "毁灭旋律",
+                "description": "以惩戒的旋律攻击敌人。目标有弱化效果时，提升造成的伤害。"
             },
             "S2": {
-                "name": "Disciple of the Stars",
-                "description": "At the start of battle, grants Star's Blessing for 1 turn. When the caster is granted Star's Blessing, enemy Heroes cannot counterattack. After an ally except for the caster uses an attack that targets all enemies, activates Worship Me!. Worship Me! (gains 10 Soul): Increases Combat Readiness of the caster by 20%."
+                "name": "星辰门徒",
+                "description": "战斗开始时，施加1回合星之祝福。施放者拥有星之祝福时，敌方英雄无法反击。除施放者外的友军使用以所有敌人为目标的攻击后，发动崇拜我吧！。崇拜我吧！（获得10魂）：使施放者的行动值提升20%。"
             },
             "S3": {
-                "name": "Enraged Star's Retribution",
-                "description": "Attacks all enemies with the energy of the enraged star, decreasing buff durations by 1 turn before making them unhealable and restricting for 2 turns. Grants Star's Blessing to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "愤怒之星的惩戒",
+                "description": "以愤怒之星的力量攻击所有敌人，使强化效果持续时间减少1回合，然后施加2回合无法恢复与限制。为施放者施加2回合星之祝福。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -688,17 +688,17 @@
         "_name": "Aube",
         "skills": {
             "S1": {
-                "name": "Coral Swell",
-                "description": "Attacks the enemy with coral magic and decreases Combat Readiness by 20%"
+                "name": "珊瑚涌浪",
+                "description": "以珊瑚魔法攻击敌人，并降低20%行动值。"
             },
             "S2": {
-                "name": "Film Fiesta",
-                "description": "Releases the moment engraved in the film, with a 100% chance to grant cascade to all allies. Grants skill nullifier once and an extra turn to the caster."
+                "name": "胶片盛宴",
+                "description": "释放胶片中铭刻的瞬间，有100%的几率为所有友军施加连锁。为施放者施加一次技能伤害无效，并获得额外回合。"
             },
             "S3": {
-                "name": "Eternal Moment",
-                "description": "Fixes all enemies in a frame, dispelling two buffs before a 100% chance each to inflict immobilize and restrict for 2 turns. Concealment will remain throughout the battle.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "永恒瞬间",
+                "description": "将所有敌人定格于画框中，解除两个强化效果，然后各有100%的几率施加2回合定身与限制。隐蔽在整场战斗中持续。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -706,17 +706,17 @@
         "_name": "Auxiliary Lots",
         "skills": {
             "S1": {
-                "name": "Black Magic",
-                "description": "Attacks with a magic sphere, increasing caster's Combat Readiness by 15%."
+                "name": "黑魔法",
+                "description": "以魔法球攻击，并使施放者的行动值提升15%。"
             },
             "S2": {
-                "name": "Mana Injection",
-                "description": "Injects an ally except for the caster with Mana, granting exploiting weak points and increased Attack for 2 turns before increasing Combat Readiness by 100%."
+                "name": "魔力注入",
+                "description": "为除施放者外的一名友军注入魔力，施加2回合弱点洞察与攻击力提升，然后提升100%行动值。"
             },
             "S3": {
-                "name": "Desolation",
-                "description": "Attacks all enemies with powerful magic, with a 80% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "荒芜",
+                "description": "以强大的魔法攻击所有敌人，有80%的几率降低防御力2回合。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -724,17 +724,17 @@
         "_name": "Azalea",
         "skills": {
             "S1": {
-                "name": "Persistent Attack",
-                "description": "Stabs the enemy with a spear and recovers Health of the caster. Amount recovered increases proportional to the caster's max Health."
+                "name": "执着攻击",
+                "description": "以长枪刺击敌人，并恢复施放者的生命值。恢复量按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Challenging Blow",
-                "description": "Attacks the enemy, with a 100% chance each of provoking and making them unhealable for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "挑战一击",
+                "description": "攻击敌人，各有100%的几率施加2回合挑衅与无法恢复。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Sweep",
-                "description": "Sweeps all enemies with a spear, with a 75% chance to decrease Speed and Defense for 2 turns."
+                "name": "横扫",
+                "description": "以长枪横扫所有敌人，有75%的几率降低速度与防御力2回合。"
             }
         }
     },
@@ -742,17 +742,17 @@
         "_name": "Baal & Sezan",
         "skills": {
             "S1": {
-                "name": "Ghost Haunt",
-                "description": "Summons an evil spirit to attack two enemies, with a 50% chance to inflict poison for 2 turns."
+                "name": "幽灵作祟",
+                "description": "召唤恶灵攻击两名敌人，有50%的几率施加2回合持续伤害。"
             },
             "S2": {
-                "name": "Dark Cloud",
-                "description": "Attacks all enemies by summoning a cloud of darkness. Damage dealt increases proportional to the number of debuffs inflicted on the target. When an enemy is defeated, resets cooldown of Last Requiem.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "黑暗之云",
+                "description": "召唤黑暗之云攻击所有敌人。造成的伤害按目标身上弱化效果的数量比例提升。击败敌人时，重置最后的安魂曲的冷却时间。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Last Requiem",
-                "description": "Baal & Sezan attack all enemies with offensive magic, with a 85% chance each to inflict decreased Defense, decreased Speed, and unhealable for 2 turns."
+                "name": "最后的安魂曲",
+                "description": "巴尔与塞尚以攻击魔法攻击所有敌人，各有85%的几率施加2回合防御力降低、速度降低与无法恢复。"
             }
         }
     },
@@ -760,17 +760,17 @@
         "_name": "Bad Cat Armin",
         "skills": {
             "S1": {
-                "name": "Are You Ready?!",
-                "description": "Attacks the enemy with a giant shield, with a 45% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health. When used on the caster's turn, Are You Ready?! changes into an attack that targets all enemies. The changed attack does not trigger a Dual Attack."
+                "name": "准备好了喵？！",
+                "description": "以巨大盾牌攻击敌人，有45%的几率施加1回合挑衅。造成的伤害按施放者的最大生命值比例提升。在施放者的回合使用时，准备好了喵？！变为以所有敌人为目标的攻击。变化后的攻击不会触发协攻。"
             },
             "S2": {
-                "name": "Catch 'Em!",
-                "description": "After being attacked, has a 50% chance to grant increased Critical Hit Damage to the foremost ally for 1 turn before making them counterattack. When attacked by an enemy inflicted with provoke or redirected provoke, doubles effect chance. Cannot be triggered by extra attacks or counterattacks."
+                "name": "抓住他们喵！",
+                "description": "受到攻击后，有50%的几率为最前方的友军施加1回合暴击伤害提升，并使其反击。受到处于挑衅或转移挑衅状态的敌人攻击时，效果几率翻倍。无法由追加攻击或反击触发。"
             },
             "S3": {
-                "name": "Is This It?! Nyahaha!",
-                "description": "Attacks the enemy with a huge explosion, provoking for 1 turn. Increases Defense of the caster for 2 turns, and grants a barrier to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's max Health.",
-                "soulburn_effect": "Provokes for 2 turns."
+                "name": "就这样吗喵？！喵哈哈！",
+                "description": "以巨大爆炸攻击敌人，施加1回合挑衅。提升施放者的防御力2回合，并为所有友军施加2回合屏障。造成的伤害与屏障强度按施放者的最大生命值比例提升。",
+                "soulburn_effect": "施加2回合挑衅。"
             }
         }
     },
@@ -778,17 +778,17 @@
         "_name": "Baiken",
         "skills": {
             "S1": {
-                "name": "Tatami Gaeshi",
-                "description": "Attacks the enemy repeatedly, with a 70% chance each to inflict two bleeding effects for 2 turns. A critical hit will reduce the caster's skill cooldowns by 1 turn."
+                "name": "叠返",
+                "description": "连续攻击敌人，各有70%的几率施加两层2回合出血。暴击时，施放者的技能冷却时间减少1回合。"
             },
             "S2": {
-                "name": "Tsurane Sanzu-watashi",
-                "description": "Attacks the enemy with expert swordsmanship and has a 80% chance each to inflict three bleeding effects for 2 turns. One bleeding effect ignores Effect Resistance. A critical hit will grant an extra turn."
+                "name": "连·三途渡",
+                "description": "以精湛剑术攻击敌人，各有80%的几率施加三层2回合出血。其中一层出血无视效果抵抗。暴击时获得额外回合。"
             },
             "S3": {
-                "name": "Garyo Tensei",
-                "description": "Delivers a deadly blow and detonates any bleeding effects inflicted on the target at the end of the turn. A critical hit will increase Combat Readiness of all allies by 25%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "画龙点睛",
+                "description": "施展致命一击，并在回合结束时引爆目标身上的所有出血。暴击时，使所有友军的行动值提升25%。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },

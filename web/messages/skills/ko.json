@@ -634,17 +634,17 @@
         "_name": "Assassin Coli",
         "skills": {
             "S1": {
-                "name": "Ambush",
-                "description": "Attacks the enemy by ambushing them. When the caster is granted stealth, increases damage dealt and grants increased Speed to the caster for 1 turn. Damage dealt increases proportional to the caster's Speed."
+                "name": "기습",
+                "description": "적을 기습해 공격한다. 시전자에게 은신이 있으면 주는 피해가 증가하고 시전자에게 1턴 동안 속도 증가를 부여한다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Cloak and Dagger",
-                "description": "When the caster does not have a debuff, has a 100% chance each to be granted increased Attack for 1 turn at the beginning of turn and stealth for 1 turn at the end of the turn."
+                "name": "망토와 단검",
+                "description": "시전자에게 약화 효과가 없으면 각각 100% 확률로 턴 시작 시 1턴 동안 공격력 증가를, 턴 종료 시 1턴 동안 은신을 얻는다."
             },
             "S3": {
-                "name": "Murder",
-                "description": "Attacks the enemy by moving silently, inflicting stun for 1 turn. When the enemy is defeated, inflicts silence on all enemies for 1 turn. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "암살",
+                "description": "소리 없이 움직여 적을 공격하고 1턴 동안 기절시킨다. 적을 처치하면 모든 적에게 1턴 동안 침묵을 건다. 시전자의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -652,17 +652,17 @@
         "_name": "Astromancer Elena",
         "skills": {
             "S1": {
-                "name": "Melody of Damnation",
-                "description": "Attacks the enemy with a punishing melody. When the target has a debuff, increases damage dealt."
+                "name": "파멸의 선율",
+                "description": "징벌의 선율로 적을 공격한다. 대상에게 약화 효과가 있으면 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Disciple of the Stars",
-                "description": "At the start of battle, grants Star's Blessing for 1 turn. When the caster is granted Star's Blessing, enemy Heroes cannot counterattack. After an ally except for the caster uses an attack that targets all enemies, activates Worship Me!. Worship Me! (gains 10 Soul): Increases Combat Readiness of the caster by 20%."
+                "name": "별의 제자",
+                "description": "전투 시작 시 1턴 동안 별의 축복을 부여한다. 시전자에게 별의 축복이 있으면 적 영웅은 반격할 수 없다. 시전자를 제외한 아군이 모든 적을 대상으로 하는 공격을 사용한 후 나를 숭배하라!를 발동한다. 나를 숭배하라!(소울 10 획득): 시전자의 행동 게이지를 20% 증가시킨다."
             },
             "S3": {
-                "name": "Enraged Star's Retribution",
-                "description": "Attacks all enemies with the energy of the enraged star, decreasing buff durations by 1 turn before making them unhealable and restricting for 2 turns. Grants Star's Blessing to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "분노한 별의 응징",
+                "description": "분노한 별의 기운으로 모든 적을 공격해 강화 효과의 지속 시간을 1턴 감소시킨 뒤 2턴 동안 회복 불가와 제약을 건다. 시전자에게 2턴 동안 별의 축복을 부여한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -688,17 +688,17 @@
         "_name": "Aube",
         "skills": {
             "S1": {
-                "name": "Coral Swell",
-                "description": "Attacks the enemy with coral magic and decreases Combat Readiness by 20%"
+                "name": "산호 물결",
+                "description": "산호 마법으로 적을 공격하고 행동 게이지를 20% 감소시킨다."
             },
             "S2": {
-                "name": "Film Fiesta",
-                "description": "Releases the moment engraved in the film, with a 100% chance to grant cascade to all allies. Grants skill nullifier once and an extra turn to the caster."
+                "name": "필름 축제",
+                "description": "필름에 새겨진 순간을 풀어놓아 100% 확률로 모든 아군에게 연쇄를 부여한다. 시전자에게 스킬 피해 무효를 한 번 부여하고 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Eternal Moment",
-                "description": "Fixes all enemies in a frame, dispelling two buffs before a 100% chance each to inflict immobilize and restrict for 2 turns. Concealment will remain throughout the battle.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "영원의 순간",
+                "description": "모든 적을 프레임에 고정해 강화 효과를 두 개 해제한 뒤 각각 100% 확률로 2턴 동안 속박과 제약을 건다. 은폐가 전투 내내 유지된다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -706,17 +706,17 @@
         "_name": "Auxiliary Lots",
         "skills": {
             "S1": {
-                "name": "Black Magic",
-                "description": "Attacks with a magic sphere, increasing caster's Combat Readiness by 15%."
+                "name": "흑마법",
+                "description": "마법 구체로 공격하고 시전자의 행동 게이지를 15% 증가시킨다."
             },
             "S2": {
-                "name": "Mana Injection",
-                "description": "Injects an ally except for the caster with Mana, granting exploiting weak points and increased Attack for 2 turns before increasing Combat Readiness by 100%."
+                "name": "마나 주입",
+                "description": "시전자를 제외한 아군 한 명에게 마나를 주입해 2턴 동안 약점 파악과 공격력 증가를 부여한 뒤 행동 게이지를 100% 증가시킨다."
             },
             "S3": {
-                "name": "Desolation",
-                "description": "Attacks all enemies with powerful magic, with a 80% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "황폐",
+                "description": "강력한 마법으로 모든 적을 공격하며, 80% 확률로 2턴 동안 방어력을 감소시킨다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -724,17 +724,17 @@
         "_name": "Azalea",
         "skills": {
             "S1": {
-                "name": "Persistent Attack",
-                "description": "Stabs the enemy with a spear and recovers Health of the caster. Amount recovered increases proportional to the caster's max Health."
+                "name": "끈질긴 공격",
+                "description": "창으로 적을 찌르고 시전자의 생명력을 회복한다. 시전자의 최대 생명력에 비례해 회복량이 증가한다."
             },
             "S2": {
-                "name": "Challenging Blow",
-                "description": "Attacks the enemy, with a 100% chance each of provoking and making them unhealable for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "도전의 일격",
+                "description": "적을 공격하며, 각각 100% 확률로 2턴 동안 도발과 회복 불가를 건다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "Sweep",
-                "description": "Sweeps all enemies with a spear, with a 75% chance to decrease Speed and Defense for 2 turns."
+                "name": "휩쓸기",
+                "description": "창으로 모든 적을 휩쓸며, 75% 확률로 2턴 동안 속도와 방어력을 감소시킨다."
             }
         }
     },
@@ -742,17 +742,17 @@
         "_name": "Baal & Sezan",
         "skills": {
             "S1": {
-                "name": "Ghost Haunt",
-                "description": "Summons an evil spirit to attack two enemies, with a 50% chance to inflict poison for 2 turns."
+                "name": "유령 출몰",
+                "description": "악령을 소환해 적 두 명을 공격하며, 50% 확률로 2턴 동안 지속 피해를 건다."
             },
             "S2": {
-                "name": "Dark Cloud",
-                "description": "Attacks all enemies by summoning a cloud of darkness. Damage dealt increases proportional to the number of debuffs inflicted on the target. When an enemy is defeated, resets cooldown of Last Requiem.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "암흑 구름",
+                "description": "어둠의 구름을 소환해 모든 적을 공격한다. 대상에게 걸린 약화 효과의 수에 비례해 주는 피해가 증가한다. 적을 처치하면 마지막 진혼곡의 재사용 대기 시간을 초기화한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Last Requiem",
-                "description": "Baal & Sezan attack all enemies with offensive magic, with a 85% chance each to inflict decreased Defense, decreased Speed, and unhealable for 2 turns."
+                "name": "마지막 진혼곡",
+                "description": "바알과 세자르가 공격 마법으로 모든 적을 공격하며, 각각 85% 확률로 2턴 동안 방어력 감소, 속도 감소, 회복 불가를 건다."
             }
         }
     },
@@ -760,17 +760,17 @@
         "_name": "Bad Cat Armin",
         "skills": {
             "S1": {
-                "name": "Are You Ready?!",
-                "description": "Attacks the enemy with a giant shield, with a 45% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health. When used on the caster's turn, Are You Ready?! changes into an attack that targets all enemies. The changed attack does not trigger a Dual Attack."
+                "name": "준비됐냥?!",
+                "description": "거대한 방패로 적을 공격하며, 45% 확률로 1턴 동안 도발을 건다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 시전자의 턴에 사용하면 준비됐냥?!이 모든 적을 대상으로 하는 공격으로 바뀐다. 바뀐 공격으로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Catch 'Em!",
-                "description": "After being attacked, has a 50% chance to grant increased Critical Hit Damage to the foremost ally for 1 turn before making them counterattack. When attacked by an enemy inflicted with provoke or redirected provoke, doubles effect chance. Cannot be triggered by extra attacks or counterattacks."
+                "name": "잡아라냥!",
+                "description": "공격받은 후 50% 확률로 가장 앞에 있는 아군에게 1턴 동안 치명 피해 증가를 부여하고 반격하게 한다. 도발 또는 전환된 도발이 걸린 적에게 공격받으면 효과 발동 확률이 두 배가 된다. 추가 공격이나 반격으로는 발동하지 않는다."
             },
             "S3": {
-                "name": "Is This It?! Nyahaha!",
-                "description": "Attacks the enemy with a huge explosion, provoking for 1 turn. Increases Defense of the caster for 2 turns, and grants a barrier to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's max Health.",
-                "soulburn_effect": "Provokes for 2 turns."
+                "name": "이게 다냥?! 냐하하!",
+                "description": "거대한 폭발로 적을 공격하고 1턴 동안 도발을 건다. 2턴 동안 시전자의 방어력을 증가시키고 모든 아군에게 2턴 동안 보호막을 부여한다. 시전자의 최대 생명력에 비례해 주는 피해와 보호막 강도가 증가한다.",
+                "soulburn_effect": "2턴 동안 도발을 건다."
             }
         }
     },
@@ -778,17 +778,17 @@
         "_name": "Baiken",
         "skills": {
             "S1": {
-                "name": "Tatami Gaeshi",
-                "description": "Attacks the enemy repeatedly, with a 70% chance each to inflict two bleeding effects for 2 turns. A critical hit will reduce the caster's skill cooldowns by 1 turn."
+                "name": "다다미 뒤집기",
+                "description": "적을 연속으로 공격하며, 각각 70% 확률로 2턴 동안 출혈을 두 개 건다. 치명타가 발생하면 시전자의 스킬 재사용 대기 시간을 1턴 감소시킨다."
             },
             "S2": {
-                "name": "Tsurane Sanzu-watashi",
-                "description": "Attacks the enemy with expert swordsmanship and has a 80% chance each to inflict three bleeding effects for 2 turns. One bleeding effect ignores Effect Resistance. A critical hit will grant an extra turn."
+                "name": "연 삼도천 건너기",
+                "description": "능숙한 검술로 적을 공격하며, 각각 80% 확률로 2턴 동안 출혈을 세 개 건다. 출혈 하나는 효과 저항을 무시한다. 치명타가 발생하면 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Garyo Tensei",
-                "description": "Delivers a deadly blow and detonates any bleeding effects inflicted on the target at the end of the turn. A critical hit will increase Combat Readiness of all allies by 25%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "화룡점정",
+                "description": "치명적인 일격을 가하고 턴 종료 시 대상에게 걸린 출혈을 모두 폭발시킨다. 치명타가 발생하면 모든 아군의 행동 게이지를 25% 증가시킨다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },

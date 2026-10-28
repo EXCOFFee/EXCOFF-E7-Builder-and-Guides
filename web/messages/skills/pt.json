@@ -634,17 +634,17 @@
         "_name": "Assassin Coli",
         "skills": {
             "S1": {
-                "name": "Ambush",
-                "description": "Attacks the enemy by ambushing them. When the caster is granted stealth, increases damage dealt and grants increased Speed to the caster for 1 turn. Damage dealt increases proportional to the caster's Speed."
+                "name": "Emboscada",
+                "description": "Ataca o inimigo de emboscada. Quando o conjurador tem furtividade, aumenta o dano causado e concede Aumentar Velocidade ao conjurador por 1 turno. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Cloak and Dagger",
-                "description": "When the caster does not have a debuff, has a 100% chance each to be granted increased Attack for 1 turn at the beginning of turn and stealth for 1 turn at the end of the turn."
+                "name": "Capa e adaga",
+                "description": "Quando o conjurador não tem efeitos negativos, tem 100% de chance cada de receber Aumentar Ataque por 1 turno no início do turno e furtividade por 1 turno no fim do turno."
             },
             "S3": {
-                "name": "Murder",
-                "description": "Attacks the enemy by moving silently, inflicting stun for 1 turn. When the enemy is defeated, inflicts silence on all enemies for 1 turn. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Assassinato",
+                "description": "Ataca o inimigo movendo-se em silêncio, atordoando-o por 1 turno. Ao derrotar o inimigo, silencia todos os inimigos por 1 turno. O dano causado aumenta proporcionalmente à Velocidade do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -652,17 +652,17 @@
         "_name": "Astromancer Elena",
         "skills": {
             "S1": {
-                "name": "Melody of Damnation",
-                "description": "Attacks the enemy with a punishing melody. When the target has a debuff, increases damage dealt."
+                "name": "Melodia da danação",
+                "description": "Ataca o inimigo com uma melodia punitiva. Quando o alvo tem um efeito negativo, o dano causado aumenta."
             },
             "S2": {
-                "name": "Disciple of the Stars",
-                "description": "At the start of battle, grants Star's Blessing for 1 turn. When the caster is granted Star's Blessing, enemy Heroes cannot counterattack. After an ally except for the caster uses an attack that targets all enemies, activates Worship Me!. Worship Me! (gains 10 Soul): Increases Combat Readiness of the caster by 20%."
+                "name": "Discípula das estrelas",
+                "description": "No início da batalha, concede Bênção da estrela por 1 turno. Quando o conjurador tem Bênção da estrela, heróis inimigos não podem contra-atacar. Após um aliado, exceto o conjurador, usar um ataque que mira todos os inimigos, ativa Adorem-me!. Adorem-me! (ganha 10 de Alma): aumenta a Prontidão de Combate do conjurador em 20%."
             },
             "S3": {
-                "name": "Enraged Star's Retribution",
-                "description": "Attacks all enemies with the energy of the enraged star, decreasing buff durations by 1 turn before making them unhealable and restricting for 2 turns. Grants Star's Blessing to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Retribuição da estrela enfurecida",
+                "description": "Ataca todos os inimigos com a energia da estrela enfurecida, diminuindo a duração dos efeitos positivos em 1 turno, depois aplica impedimento de cura e restrição por 2 turnos. Concede Bênção da estrela ao conjurador por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -688,17 +688,17 @@
         "_name": "Aube",
         "skills": {
             "S1": {
-                "name": "Coral Swell",
-                "description": "Attacks the enemy with coral magic and decreases Combat Readiness by 20%"
+                "name": "Onda de coral",
+                "description": "Ataca o inimigo com magia de coral e diminui a Prontidão de Combate em 20%."
             },
             "S2": {
-                "name": "Film Fiesta",
-                "description": "Releases the moment engraved in the film, with a 100% chance to grant cascade to all allies. Grants skill nullifier once and an extra turn to the caster."
+                "name": "Festa do filme",
+                "description": "Libera o momento gravado no filme, com 100% de chance de conceder cascata a todos os aliados. Concede Anulação de habilidade uma vez e um turno extra ao conjurador."
             },
             "S3": {
-                "name": "Eternal Moment",
-                "description": "Fixes all enemies in a frame, dispelling two buffs before a 100% chance each to inflict immobilize and restrict for 2 turns. Concealment will remain throughout the battle.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Momento eterno",
+                "description": "Fixa todos os inimigos num quadro, dissipando dois efeitos positivos, depois com 100% de chance cada aplica imobilização e restrição por 2 turnos. Ocultação permanece durante toda a batalha.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -706,17 +706,17 @@
         "_name": "Auxiliary Lots",
         "skills": {
             "S1": {
-                "name": "Black Magic",
-                "description": "Attacks with a magic sphere, increasing caster's Combat Readiness by 15%."
+                "name": "Magia negra",
+                "description": "Ataca com uma esfera mágica, aumentando a Prontidão de Combate do conjurador em 15%."
             },
             "S2": {
-                "name": "Mana Injection",
-                "description": "Injects an ally except for the caster with Mana, granting exploiting weak points and increased Attack for 2 turns before increasing Combat Readiness by 100%."
+                "name": "Injeção de mana",
+                "description": "Injeta mana em um aliado, exceto o conjurador, concedendo Exploração de pontos fracos e Aumentar Ataque por 2 turnos, depois aumenta a Prontidão de Combate em 100%."
             },
             "S3": {
-                "name": "Desolation",
-                "description": "Attacks all enemies with powerful magic, with a 80% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Desolação",
+                "description": "Ataca todos os inimigos com magia poderosa, com 80% de chance de diminuir a Defesa por 2 turnos.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -724,17 +724,17 @@
         "_name": "Azalea",
         "skills": {
             "S1": {
-                "name": "Persistent Attack",
-                "description": "Stabs the enemy with a spear and recovers Health of the caster. Amount recovered increases proportional to the caster's max Health."
+                "name": "Ataque persistente",
+                "description": "Perfura o inimigo com uma lança e recupera a Vida do conjurador. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Challenging Blow",
-                "description": "Attacks the enemy, with a 100% chance each of provoking and making them unhealable for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Golpe desafiador",
+                "description": "Ataca o inimigo, com 100% de chance cada de provocá-lo e impedir que seja curado por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Sweep",
-                "description": "Sweeps all enemies with a spear, with a 75% chance to decrease Speed and Defense for 2 turns."
+                "name": "Varredura",
+                "description": "Varre todos os inimigos com uma lança, com 75% de chance de diminuir a Velocidade e a Defesa por 2 turnos."
             }
         }
     },
@@ -742,17 +742,17 @@
         "_name": "Baal & Sezan",
         "skills": {
             "S1": {
-                "name": "Ghost Haunt",
-                "description": "Summons an evil spirit to attack two enemies, with a 50% chance to inflict poison for 2 turns."
+                "name": "Assombração",
+                "description": "Invoca um espírito maligno para atacar dois inimigos, com 50% de chance de aplicar veneno por 2 turnos."
             },
             "S2": {
-                "name": "Dark Cloud",
-                "description": "Attacks all enemies by summoning a cloud of darkness. Damage dealt increases proportional to the number of debuffs inflicted on the target. When an enemy is defeated, resets cooldown of Last Requiem.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Nuvem sombria",
+                "description": "Ataca todos os inimigos invocando uma nuvem de escuridão. O dano causado aumenta proporcionalmente ao número de efeitos negativos aplicados ao alvo. Ao derrotar um inimigo, reinicia a recarga de Último réquiem.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Last Requiem",
-                "description": "Baal & Sezan attack all enemies with offensive magic, with a 85% chance each to inflict decreased Defense, decreased Speed, and unhealable for 2 turns."
+                "name": "Último réquiem",
+                "description": "Baal e Sezan atacam todos os inimigos com magia ofensiva, com 85% de chance cada de aplicar Diminuir Defesa, Diminuir Velocidade e impedimento de cura por 2 turnos."
             }
         }
     },
@@ -760,17 +760,17 @@
         "_name": "Bad Cat Armin",
         "skills": {
             "S1": {
-                "name": "Are You Ready?!",
-                "description": "Attacks the enemy with a giant shield, with a 45% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health. When used on the caster's turn, Are You Ready?! changes into an attack that targets all enemies. The changed attack does not trigger a Dual Attack."
+                "name": "Preparados?!",
+                "description": "Ataca o inimigo com um escudo gigante, com 45% de chance de provocá-lo por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Quando usada no turno do conjurador, Preparados?! passa a mirar todos os inimigos. O ataque alterado não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Catch 'Em!",
-                "description": "After being attacked, has a 50% chance to grant increased Critical Hit Damage to the foremost ally for 1 turn before making them counterattack. When attacked by an enemy inflicted with provoke or redirected provoke, doubles effect chance. Cannot be triggered by extra attacks or counterattacks."
+                "name": "Peguem eles!",
+                "description": "Após ser atacado, tem 50% de chance de conceder Aumentar Dano Crítico ao aliado mais à frente por 1 turno e fazê-lo contra-atacar. Quando atacado por um inimigo com provocação ou provocação redirecionada, a chance do efeito dobra. Não pode ser ativado por ataques extras nem contra-ataques."
             },
             "S3": {
-                "name": "Is This It?! Nyahaha!",
-                "description": "Attacks the enemy with a huge explosion, provoking for 1 turn. Increases Defense of the caster for 2 turns, and grants a barrier to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's max Health.",
-                "soulburn_effect": "Provokes for 2 turns."
+                "name": "É só isso?! Nyahaha!",
+                "description": "Ataca o inimigo com uma enorme explosão, provocando-o por 1 turno. Aumenta a Defesa do conjurador por 2 turnos e concede uma barreira a todos os aliados por 2 turnos. O dano causado e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Provoca por 2 turnos."
             }
         }
     },
@@ -779,16 +779,16 @@
         "skills": {
             "S1": {
                 "name": "Tatami Gaeshi",
-                "description": "Attacks the enemy repeatedly, with a 70% chance each to inflict two bleeding effects for 2 turns. A critical hit will reduce the caster's skill cooldowns by 1 turn."
+                "description": "Ataca o inimigo repetidamente, com 70% de chance cada de aplicar dois efeitos de sangramento por 2 turnos. Um acerto crítico reduz as recargas de habilidades do conjurador em 1 turno."
             },
             "S2": {
                 "name": "Tsurane Sanzu-watashi",
-                "description": "Attacks the enemy with expert swordsmanship and has a 80% chance each to inflict three bleeding effects for 2 turns. One bleeding effect ignores Effect Resistance. A critical hit will grant an extra turn."
+                "description": "Ataca o inimigo com esgrima magistral e tem 80% de chance cada de aplicar três efeitos de sangramento por 2 turnos. Um dos sangramentos ignora a Resistência a Efeitos. Um acerto crítico concede um turno extra."
             },
             "S3": {
                 "name": "Garyo Tensei",
-                "description": "Delivers a deadly blow and detonates any bleeding effects inflicted on the target at the end of the turn. A critical hit will increase Combat Readiness of all allies by 25%.",
-                "soulburn_effect": "Increases damage dealt."
+                "description": "Desfere um golpe mortal e detona todos os sangramentos aplicados ao alvo no fim do turno. Um acerto crítico aumenta a Prontidão de Combate de todos os aliados em 25%.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
