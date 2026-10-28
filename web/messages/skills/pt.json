@@ -3442,17 +3442,17 @@
         "_name": "Kise",
         "skills": {
             "S1": {
-                "name": "Full Moon Scythe",
-                "description": "Attacks the enemy with a scythe. When the target has a buff, increases damage dealt by 70%."
+                "name": "Foice da lua cheia",
+                "description": "Ataca o inimigo com uma foice. Quando o alvo tem um efeito positivo, aumenta o dano causado em 70%."
             },
             "S2": {
-                "name": "Dark Scar",
-                "description": "Attacks all enemies with a scythe. Penetrates the enemy's Defense by 30%, and by an additional 30% when the caster is stealthed."
+                "name": "Cicatriz sombria",
+                "description": "Ataca todos os inimigos com uma foice. Penetra 30% da Defesa do inimigo, e mais 30% quando o conjurador está furtivo."
             },
             "S3": {
-                "name": "Nocturne",
-                "description": "Leaps towards the enemy to attack and increases skill cooldowns by 1 turn twice. Grants stealth and a barrier (proportional to the caster's Attack) to the caster for 2 turns before increasing Combat Readiness by 50%. Damage dealt increases proportional to the caster's current Health ratio.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Noturno",
+                "description": "Salta em direção ao inimigo para atacar e aumenta as recargas de habilidades em 1 turno, duas vezes. Concede furtividade e uma barreira (proporcional ao Ataque do conjurador) ao conjurador por 2 turnos, depois aumenta a Prontidão de Combate em 50%. O dano causado aumenta proporcionalmente à proporção de Vida atual do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -3460,17 +3460,17 @@
         "_name": "Kitty Clarissa",
         "skills": {
             "S1": {
-                "name": "Get Away, Meow!",
-                "description": "Attacks with a morning star. Damage dealt increases proportional to the caster's max Health. When the caster is granted loveliness, triggers a Dual Attack from the ally with the highest Attack."
+                "name": "Saia daqui, miau!",
+                "description": "Ataca com uma maça estrela. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Quando o conjurador tem fofura, o aliado com maior Ataque realiza um Ataque duplo."
             },
             "S2": {
-                "name": "Meow I'm Angry!",
-                "description": "Attacks all enemies with a morning star while raging, with a 80% chance to decrease buff duration by 2 turns and make them unhealable for 2 turns. When the caster is granted loveliness, effect chance increases by 20%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Miau, estou brava!",
+                "description": "Ataca todos os inimigos com uma maça estrela enquanto se enfurece, com 80% de chance de diminuir a duração dos efeitos positivos em 2 turnos e impedir que sejam curados por 2 turnos. Quando o conjurador tem fofura, a chance do efeito aumenta 20%.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "I'm So Cute, Meow♥",
-                "description": "Wiggles tail cutely, decreasing debuff duration on all allies by 2 turns, and granting the caster immunity and loveliness for 3 turns. Grants the caster an extra turn."
+                "name": "Sou tão fofa, miau♥",
+                "description": "Balança a cauda com fofura, diminuindo a duração dos efeitos negativos de todos os aliados em 2 turnos e concedendo imunidade e fofura ao conjurador por 3 turnos. Concede um turno extra ao conjurador."
             }
         }
     },
@@ -3478,17 +3478,17 @@
         "_name": "Kizuna AI",
         "skills": {
             "S1": {
-                "name": "Aitan Beeeam! ☆",
-                "description": "Attacks by firing a heart at the enemy, before dispelling a debuff from an ally. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Dispels a debuff from all allies."
+                "name": "Raio Aitan! ☆",
+                "description": "Ataca disparando um coração no inimigo, depois dissipa um efeito negativo de um aliado. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Dissipa um efeito negativo de todos os aliados."
             },
             "S2": {
-                "name": "Crisis Avoidance ♪",
-                "description": "Recovers Health of the ally with the lowest Health proportional to the caster's max Health at the end of the turn."
+                "name": "Evitando crises ♪",
+                "description": "No fim do turno, recupera a Vida do aliado com menor Vida proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Super Intelligent AI",
-                "description": "Cheers on allies, granting increased Attack and a barrier (proportional to the caster's max Health) to all allies for 3 turns, before granting increased Speed to the caster for 2 turns."
+                "name": "IA superinteligente",
+                "description": "Torce pelos aliados, concedendo Aumentar Ataque e uma barreira (proporcional à Vida máxima do conjurador) a todos os aliados por 3 turnos, depois concede Aumentar Velocidade ao conjurador por 2 turnos."
             }
         }
     },
@@ -3496,17 +3496,17 @@
         "_name": "Kluri",
         "skills": {
             "S1": {
-                "name": "Light Step",
-                "description": "Strikes in the direction of the enemy, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Defense."
+                "name": "Passo leve",
+                "description": "Golpeia na direção do inimigo, aumentando a Prontidão de Combate do conjurador em 20%. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S2": {
-                "name": "Magic Resist",
-                "description": "Recovers 10% Health of the caster at the beginning of every turn."
+                "name": "Resistência mágica",
+                "description": "Recupera 10% da Vida do conjurador no início de cada turno."
             },
             "S3": {
-                "name": "Fortitude",
-                "description": "Has a 100% chance to provoke and decrease Defense the enemy for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Fortaleza",
+                "description": "Tem 100% de chance de provocar o inimigo e diminuir sua Defesa por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -3514,17 +3514,17 @@
         "_name": "Krau",
         "skills": {
             "S1": {
-                "name": "Swordstorm",
-                "description": "Attacks the enemy with a swordstorm, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "Tempestade de espadas",
+                "description": "Ataca o inimigo com uma tempestade de espadas, com 75% de chance de provocá-lo por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Charge",
-                "description": "Shoves the enemy with a shield, decreasing Combat Readiness by 50%, before granting increased Defense to all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "Investida",
+                "description": "Empurra o inimigo com um escudo, diminuindo a Prontidão de Combate em 50%, depois concede Aumentar Defesa a todos os aliados por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Summon Ziegfried",
-                "description": "Attacks the enemy by summoning the Guardian Ziegfried, and absorbs some of the damage dealt as Health. Penetrates Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's lost Health. When this skill is not on cooldown, grants 25% damage share from the damage received by the ally.",
-                "soulburn_effect": "Decreases damage dealt and attacks all enemies."
+                "name": "Invocar Ziegfried",
+                "description": "Ataca o inimigo invocando o Guardião Ziegfried e absorve parte do dano causado como Vida. Penetra a Defesa, mas não pode causar acerto crítico nem golpe pesado. O dano causado aumenta proporcionalmente à Vida perdida do conjurador. Quando esta habilidade não está em recarga, concede 25% de divisão do dano recebido pelo aliado.",
+                "soulburn_effect": "Diminui o dano causado e ataca todos os inimigos."
             }
         }
     },
@@ -3532,17 +3532,17 @@
         "_name": "Lady of the Scales",
         "skills": {
             "S1": {
-                "name": "Divine Punishment",
-                "description": "Attacks the enemy with divine lightning and has a 75% chance to inflict fear for 1 turn, before recovering Health of all allies proportional to the target's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%, and attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "Punição divina",
+                "description": "Ataca o inimigo com um relâmpago divino e tem 75% de chance de aplicar medo por 1 turno, depois recupera a Vida de todos os aliados proporcionalmente à Vida máxima do alvo.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100% e ataca todos os inimigos. Este ataque não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Scales of Equity",
-                "description": "At the start of battle, grants offering to the foremost ally. When the ally granted offering dies, recovers Health of all allies by 50%. When Combat Readiness of an enemy increases during battle, increases Combat Readiness of the caster by 50% of the amount of Combat Readiness increased. This effect will not be applied to the Combat Readiness increase effect triggered by the same skill."
+                "name": "Balança da equidade",
+                "description": "No início da batalha, concede oferenda ao aliado mais à frente. Quando o aliado com oferenda morre, recupera 50% da Vida de todos os aliados. Quando a Prontidão de Combate de um inimigo aumenta durante a batalha, aumenta a Prontidão de Combate do conjurador em 50% do aumento. Este efeito não se aplica ao aumento de Prontidão de Combate ativado pela mesma habilidade."
             },
             "S3": {
-                "name": "The Caress of Mercy",
-                "description": "With the Goddess's authority, dispels all debuffs from all allies before increasing Combat Readiness by 25%. Consumes 20% of the current Health of the ally granted offering, granting abundance to all other allies for 2 turns."
+                "name": "A carícia da misericórdia",
+                "description": "Com a autoridade da deusa, dissipa todos os efeitos negativos de todos os aliados, depois aumenta a Prontidão de Combate em 25%. Consome 20% da Vida atual do aliado com oferenda, concedendo abundância a todos os outros aliados por 2 turnos."
             }
         }
     },
@@ -3550,17 +3550,17 @@
         "_name": "Laia",
         "skills": {
             "S1": {
-                "name": "Sing with Me!",
-                "description": "Attacks the enemy with a sweet melody, and increases Combat Readiness of the caster by 15%. When The Spirit of Rock is unavailable due to cooldown count, triggers a Dual Attack from a random ally. Damage dealt increases proportional to the caster's max Health."
+                "name": "Cante comigo!",
+                "description": "Ataca o inimigo com uma melodia doce e aumenta a Prontidão de Combate do conjurador em 15%. Quando O espírito do rock está indisponível pela contagem de recarga, um aliado aleatório realiza um Ataque duplo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Sweet Cheers",
-                "description": "Dispels all debuffs from all allies and increases Combat Readiness by 25%, before decreasing skill cooldowns of all allies except for the caster by 1 turn."
+                "name": "Torcida doce",
+                "description": "Dissipa todos os efeitos negativos de todos os aliados e aumenta a Prontidão de Combate em 25%, depois diminui as recargas de habilidades de todos os aliados, exceto o conjurador, em 1 turno."
             },
             "S3": {
-                "name": "The Spirit of Rock",
-                "description": "Attacks the enemy with a bass. When the enemy is defeated, recovers Health of the caster and grants an extra turn. Penetrates the target's Defense, and cannot trigger a critical hit. Amount recovered and damage dealt increase proportional to the caster's max Health. Begins the first battle with full skill cooldown count, and when this skill is unavailable due to cooldown count, at the start of every turn, decreases all skill cooldowns by 1 turn.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "O espírito do rock",
+                "description": "Ataca o inimigo com um baixo. Ao derrotar o inimigo, recupera a Vida do conjurador e concede um turno extra. Penetra a Defesa do alvo e não pode causar acerto crítico. A quantidade recuperada e o dano causado aumentam proporcionalmente à Vida máxima do conjurador. Começa a primeira batalha com a recarga da habilidade completa e, quando esta habilidade está indisponível pela contagem de recarga, no início de cada turno, diminui todas as recargas de habilidades em 1 turno.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -3568,17 +3568,17 @@
         "_name": "Landy",
         "skills": {
             "S1": {
-                "name": "Fire",
-                "description": "Attacks the enemy with gunfire, and increases Combat Readiness of the caster by 15%. When the target has a buff, doubles the effects of Combat Readiness increase and Fighting Spirit gained."
+                "name": "Fogo",
+                "description": "Ataca o inimigo com disparos e aumenta a Prontidão de Combate do conjurador em 15%. Quando o alvo tem um efeito positivo, dobra o aumento de Prontidão de Combate e o Espírito de luta obtido."
             },
             "S2": {
-                "name": "The Chief Is on the Scene",
-                "description": "At the start of the first battle, gains 50 Fighting Spirit and grants stealth for 1 turn. At the start of the turn, gains 10 Fighting Spirit for each buff granted to an enemy, and when Fighting Spirit is full, resets skill cooldown. After attacking, increases Attack of the caster by 25%. This effect can stack up to 3 times."
+                "name": "A chefe chegou",
+                "description": "No início da primeira batalha, ganha 50 de Espírito de luta e concede furtividade por 1 turno. No início do turno, ganha 10 de Espírito de luta para cada efeito positivo de um inimigo e, quando o Espírito de luta está cheio, reinicia a recarga da habilidade. Após atacar, aumenta o Ataque do conjurador em 25%. Este efeito acumula até 3 vezes."
             },
             "S3": {
-                "name": "Full Burst",
-                "description": "Fires at all enemies to attack, and increases Combat Readiness of all allies by 25%, before granting a barrier (proportional to Attack) to the caster for 2 turns. When Fighting Spirit is full, consumes all Fighting Spirit to penetrate the target's Defense by 50%. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Rajada total",
+                "description": "Dispara contra todos os inimigos e aumenta a Prontidão de Combate de todos os aliados em 25%, depois concede uma barreira (proporcional ao Ataque) ao conjurador por 2 turnos. Quando o Espírito de luta está cheio, consome todo o Espírito de luta para penetrar 50% da Defesa do alvo. Esta habilidade não pode ativar contra-ataques.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },

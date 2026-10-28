@@ -3442,17 +3442,17 @@
         "_name": "Kise",
         "skills": {
             "S1": {
-                "name": "Full Moon Scythe",
-                "description": "Attacks the enemy with a scythe. When the target has a buff, increases damage dealt by 70%."
+                "name": "보름달의 낫",
+                "description": "낫으로 적을 공격한다. 대상에게 강화 효과가 있으면 주는 피해가 70% 증가한다."
             },
             "S2": {
-                "name": "Dark Scar",
-                "description": "Attacks all enemies with a scythe. Penetrates the enemy's Defense by 30%, and by an additional 30% when the caster is stealthed."
+                "name": "어둠의 상흔",
+                "description": "낫으로 모든 적을 공격한다. 적의 방어력을 30% 관통하며, 시전자가 은신 상태이면 추가로 30% 관통한다."
             },
             "S3": {
-                "name": "Nocturne",
-                "description": "Leaps towards the enemy to attack and increases skill cooldowns by 1 turn twice. Grants stealth and a barrier (proportional to the caster's Attack) to the caster for 2 turns before increasing Combat Readiness by 50%. Damage dealt increases proportional to the caster's current Health ratio.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "녹턴",
+                "description": "적에게 도약해 공격하고 스킬 재사용 대기 시간을 1턴씩 두 번 증가시킨다. 시전자에게 2턴 동안 은신과 보호막(시전자 공격력 비례)을 부여한 뒤 행동 게이지를 50% 증가시킨다. 시전자의 현재 생명력 비율에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -3460,17 +3460,17 @@
         "_name": "Kitty Clarissa",
         "skills": {
             "S1": {
-                "name": "Get Away, Meow!",
-                "description": "Attacks with a morning star. Damage dealt increases proportional to the caster's max Health. When the caster is granted loveliness, triggers a Dual Attack from the ally with the highest Attack."
+                "name": "저리 가라냥!",
+                "description": "모닝스타로 공격한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 시전자에게 사랑스러움이 있으면 공격력이 가장 높은 아군이 협공한다."
             },
             "S2": {
-                "name": "Meow I'm Angry!",
-                "description": "Attacks all enemies with a morning star while raging, with a 80% chance to decrease buff duration by 2 turns and make them unhealable for 2 turns. When the caster is granted loveliness, effect chance increases by 20%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "화났다냥!",
+                "description": "분노하며 모닝스타로 모든 적을 공격하며, 80% 확률로 강화 효과의 지속 시간을 2턴 감소시키고 2턴 동안 회복 불가를 건다. 시전자에게 사랑스러움이 있으면 효과 발동 확률이 20% 증가한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "I'm So Cute, Meow♥",
-                "description": "Wiggles tail cutely, decreasing debuff duration on all allies by 2 turns, and granting the caster immunity and loveliness for 3 turns. Grants the caster an extra turn."
+                "name": "너무 귀엽다냥♥",
+                "description": "귀엽게 꼬리를 흔들어 모든 아군의 약화 효과 지속 시간을 2턴 감소시키고, 시전자에게 3턴 동안 면역과 사랑스러움을 부여한다. 시전자는 추가 턴을 얻는다."
             }
         }
     },
@@ -3478,17 +3478,17 @@
         "_name": "Kizuna AI",
         "skills": {
             "S1": {
-                "name": "Aitan Beeeam! ☆",
-                "description": "Attacks by firing a heart at the enemy, before dispelling a debuff from an ally. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Dispels a debuff from all allies."
+                "name": "아이땅 빔! ☆",
+                "description": "적에게 하트를 발사해 공격한 뒤 아군 한 명의 약화 효과를 한 개 해제한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "모든 아군의 약화 효과를 한 개 해제한다."
             },
             "S2": {
-                "name": "Crisis Avoidance ♪",
-                "description": "Recovers Health of the ally with the lowest Health proportional to the caster's max Health at the end of the turn."
+                "name": "위기 회피 ♪",
+                "description": "턴 종료 시 시전자의 최대 생명력에 비례해 생명력이 가장 낮은 아군의 생명력을 회복한다."
             },
             "S3": {
-                "name": "Super Intelligent AI",
-                "description": "Cheers on allies, granting increased Attack and a barrier (proportional to the caster's max Health) to all allies for 3 turns, before granting increased Speed to the caster for 2 turns."
+                "name": "초지능 AI",
+                "description": "아군을 응원해 모든 아군에게 3턴 동안 공격력 증가와 보호막(시전자 최대 생명력 비례)을 부여한 뒤 시전자에게 2턴 동안 속도 증가를 부여한다."
             }
         }
     },
@@ -3496,17 +3496,17 @@
         "_name": "Kluri",
         "skills": {
             "S1": {
-                "name": "Light Step",
-                "description": "Strikes in the direction of the enemy, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Defense."
+                "name": "가벼운 발걸음",
+                "description": "적 방향으로 일격을 날리고 시전자의 행동 게이지를 20% 증가시킨다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Magic Resist",
-                "description": "Recovers 10% Health of the caster at the beginning of every turn."
+                "name": "마법 저항",
+                "description": "매 턴 시작 시 시전자의 생명력을 10% 회복한다."
             },
             "S3": {
-                "name": "Fortitude",
-                "description": "Has a 100% chance to provoke and decrease Defense the enemy for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "불굴",
+                "description": "100% 확률로 2턴 동안 적에게 도발과 방어력 감소를 건다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -3514,17 +3514,17 @@
         "_name": "Krau",
         "skills": {
             "S1": {
-                "name": "Swordstorm",
-                "description": "Attacks the enemy with a swordstorm, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "검풍",
+                "description": "검풍으로 적을 공격하며, 75% 확률로 1턴 동안 도발을 건다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Charge",
-                "description": "Shoves the enemy with a shield, decreasing Combat Readiness by 50%, before granting increased Defense to all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "돌격",
+                "description": "방패로 적을 밀쳐 행동 게이지를 50% 감소시킨 뒤 모든 아군에게 2턴 동안 방어력 증가를 부여한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Summon Ziegfried",
-                "description": "Attacks the enemy by summoning the Guardian Ziegfried, and absorbs some of the damage dealt as Health. Penetrates Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's lost Health. When this skill is not on cooldown, grants 25% damage share from the damage received by the ally.",
-                "soulburn_effect": "Decreases damage dealt and attacks all enemies."
+                "name": "지크프리트 소환",
+                "description": "수호신 지크프리트를 소환해 적을 공격하고 준 피해의 일부를 생명력으로 흡수한다. 방어력을 관통하지만 치명타나 강타가 발생하지 않는다. 시전자가 잃은 생명력에 비례해 주는 피해가 증가한다. 이 스킬이 재사용 대기 중이 아니면 아군이 받는 피해를 25% 분산한다.",
+                "soulburn_effect": "주는 피해가 감소하고 모든 적을 공격한다."
             }
         }
     },
@@ -3532,17 +3532,17 @@
         "_name": "Lady of the Scales",
         "skills": {
             "S1": {
-                "name": "Divine Punishment",
-                "description": "Attacks the enemy with divine lightning and has a 75% chance to inflict fear for 1 turn, before recovering Health of all allies proportional to the target's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%, and attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "신벌",
+                "description": "신성한 번개로 적을 공격하며, 75% 확률로 1턴 동안 공포를 건 뒤 대상의 최대 생명력에 비례해 모든 아군의 생명력을 회복한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가하고 모든 적을 공격한다. 이 공격으로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Scales of Equity",
-                "description": "At the start of battle, grants offering to the foremost ally. When the ally granted offering dies, recovers Health of all allies by 50%. When Combat Readiness of an enemy increases during battle, increases Combat Readiness of the caster by 50% of the amount of Combat Readiness increased. This effect will not be applied to the Combat Readiness increase effect triggered by the same skill."
+                "name": "공평의 저울",
+                "description": "전투 시작 시 가장 앞에 있는 아군에게 공물을 부여한다. 공물이 부여된 아군이 사망하면 모든 아군의 생명력을 50% 회복한다. 전투 중 적의 행동 게이지가 증가하면 증가량의 50%만큼 시전자의 행동 게이지를 증가시킨다. 이 효과는 같은 스킬로 발동한 행동 게이지 증가 효과에는 적용되지 않는다."
             },
             "S3": {
-                "name": "The Caress of Mercy",
-                "description": "With the Goddess's authority, dispels all debuffs from all allies before increasing Combat Readiness by 25%. Consumes 20% of the current Health of the ally granted offering, granting abundance to all other allies for 2 turns."
+                "name": "자비의 손길",
+                "description": "여신의 권능으로 모든 아군의 약화 효과를 모두 해제한 뒤 행동 게이지를 25% 증가시킨다. 공물이 부여된 아군의 현재 생명력을 20% 소모해 다른 모든 아군에게 2턴 동안 풍요를 부여한다."
             }
         }
     },
@@ -3550,17 +3550,17 @@
         "_name": "Laia",
         "skills": {
             "S1": {
-                "name": "Sing with Me!",
-                "description": "Attacks the enemy with a sweet melody, and increases Combat Readiness of the caster by 15%. When The Spirit of Rock is unavailable due to cooldown count, triggers a Dual Attack from a random ally. Damage dealt increases proportional to the caster's max Health."
+                "name": "같이 노래해!",
+                "description": "달콤한 선율로 적을 공격하고 시전자의 행동 게이지를 15% 증가시킨다. 재사용 대기 시간 때문에 록 스피릿을 사용할 수 없으면 무작위 아군이 협공한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Sweet Cheers",
-                "description": "Dispels all debuffs from all allies and increases Combat Readiness by 25%, before decreasing skill cooldowns of all allies except for the caster by 1 turn."
+                "name": "달콤한 응원",
+                "description": "모든 아군의 약화 효과를 모두 해제하고 행동 게이지를 25% 증가시킨 뒤, 시전자를 제외한 모든 아군의 스킬 재사용 대기 시간을 1턴 감소시킨다."
             },
             "S3": {
-                "name": "The Spirit of Rock",
-                "description": "Attacks the enemy with a bass. When the enemy is defeated, recovers Health of the caster and grants an extra turn. Penetrates the target's Defense, and cannot trigger a critical hit. Amount recovered and damage dealt increase proportional to the caster's max Health. Begins the first battle with full skill cooldown count, and when this skill is unavailable due to cooldown count, at the start of every turn, decreases all skill cooldowns by 1 turn.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "록 스피릿",
+                "description": "베이스로 적을 공격한다. 적을 처치하면 시전자의 생명력을 회복하고 추가 턴을 얻는다. 대상의 방어력을 관통하며 치명타가 발생하지 않는다. 시전자의 최대 생명력에 비례해 회복량과 주는 피해가 증가한다. 첫 번째 전투는 스킬 재사용 대기 시간이 가득 찬 상태로 시작하며, 재사용 대기 시간 때문에 이 스킬을 사용할 수 없으면 매 턴 시작 시 모든 스킬 재사용 대기 시간을 1턴 감소시킨다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -3568,17 +3568,17 @@
         "_name": "Landy",
         "skills": {
             "S1": {
-                "name": "Fire",
-                "description": "Attacks the enemy with gunfire, and increases Combat Readiness of the caster by 15%. When the target has a buff, doubles the effects of Combat Readiness increase and Fighting Spirit gained."
+                "name": "발사",
+                "description": "총격으로 적을 공격하고 시전자의 행동 게이지를 15% 증가시킨다. 대상에게 강화 효과가 있으면 행동 게이지 증가 효과와 획득하는 투지가 두 배가 된다."
             },
             "S2": {
-                "name": "The Chief Is on the Scene",
-                "description": "At the start of the first battle, gains 50 Fighting Spirit and grants stealth for 1 turn. At the start of the turn, gains 10 Fighting Spirit for each buff granted to an enemy, and when Fighting Spirit is full, resets skill cooldown. After attacking, increases Attack of the caster by 25%. This effect can stack up to 3 times."
+                "name": "대장 등장",
+                "description": "첫 번째 전투 시작 시 투지를 50 얻고 1턴 동안 은신을 부여한다. 턴 시작 시 적에게 부여된 강화 효과 하나당 투지를 10 얻으며, 투지가 가득 차면 스킬 재사용 대기 시간을 초기화한다. 공격 후 시전자의 공격력이 25% 증가한다. 이 효과는 최대 3회까지 중첩된다."
             },
             "S3": {
-                "name": "Full Burst",
-                "description": "Fires at all enemies to attack, and increases Combat Readiness of all allies by 25%, before granting a barrier (proportional to Attack) to the caster for 2 turns. When Fighting Spirit is full, consumes all Fighting Spirit to penetrate the target's Defense by 50%. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "풀 버스트",
+                "description": "모든 적에게 사격해 공격하고 모든 아군의 행동 게이지를 25% 증가시킨 뒤 시전자에게 2턴 동안 보호막(공격력 비례)을 부여한다. 투지가 가득 차 있으면 투지를 모두 소모해 대상의 방어력을 50% 관통한다. 이 스킬로는 반격을 유발할 수 없다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },

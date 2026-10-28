@@ -3442,17 +3442,17 @@
         "_name": "Kise",
         "skills": {
             "S1": {
-                "name": "Full Moon Scythe",
-                "description": "Attacks the enemy with a scythe. When the target has a buff, increases damage dealt by 70%."
+                "name": "满月之镰",
+                "description": "以镰刀攻击敌人。目标拥有强化效果时，造成的伤害提升70%。"
             },
             "S2": {
-                "name": "Dark Scar",
-                "description": "Attacks all enemies with a scythe. Penetrates the enemy's Defense by 30%, and by an additional 30% when the caster is stealthed."
+                "name": "黑暗伤痕",
+                "description": "以镰刀攻击所有敌人。穿透敌人30%的防御力，施放者处于隐身状态时额外穿透30%。"
             },
             "S3": {
-                "name": "Nocturne",
-                "description": "Leaps towards the enemy to attack and increases skill cooldowns by 1 turn twice. Grants stealth and a barrier (proportional to the caster's Attack) to the caster for 2 turns before increasing Combat Readiness by 50%. Damage dealt increases proportional to the caster's current Health ratio.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "夜曲",
+                "description": "跃向敌人发动攻击，使技能冷却时间增加1回合，共两次。为施放者施加2回合隐身与屏障（与施放者的攻击力成比例），然后提升50%行动值。造成的伤害按施放者当前生命值的比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -3460,17 +3460,17 @@
         "_name": "Kitty Clarissa",
         "skills": {
             "S1": {
-                "name": "Get Away, Meow!",
-                "description": "Attacks with a morning star. Damage dealt increases proportional to the caster's max Health. When the caster is granted loveliness, triggers a Dual Attack from the ally with the highest Attack."
+                "name": "走开喵！",
+                "description": "以流星锤攻击。造成的伤害按施放者的最大生命值比例提升。施放者拥有可爱时，攻击力最高的友军发动协攻。"
             },
             "S2": {
-                "name": "Meow I'm Angry!",
-                "description": "Attacks all enemies with a morning star while raging, with a 80% chance to decrease buff duration by 2 turns and make them unhealable for 2 turns. When the caster is granted loveliness, effect chance increases by 20%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "我生气了喵！",
+                "description": "愤怒地以流星锤攻击所有敌人，有80%的几率使强化效果持续时间减少2回合，并施加2回合无法恢复。施放者拥有可爱时，效果几率提升20%。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "I'm So Cute, Meow♥",
-                "description": "Wiggles tail cutely, decreasing debuff duration on all allies by 2 turns, and granting the caster immunity and loveliness for 3 turns. Grants the caster an extra turn."
+                "name": "我好可爱喵♥",
+                "description": "可爱地摇动尾巴，使所有友军的弱化效果持续时间减少2回合，并为施放者施加3回合免疫与可爱。施放者获得额外回合。"
             }
         }
     },
@@ -3478,17 +3478,17 @@
         "_name": "Kizuna AI",
         "skills": {
             "S1": {
-                "name": "Aitan Beeeam! ☆",
-                "description": "Attacks by firing a heart at the enemy, before dispelling a debuff from an ally. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Dispels a debuff from all allies."
+                "name": "爱酱光线！☆",
+                "description": "向敌人发射爱心进行攻击，然后解除一名友军的一个弱化效果。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "解除所有友军的一个弱化效果。"
             },
             "S2": {
-                "name": "Crisis Avoidance ♪",
-                "description": "Recovers Health of the ally with the lowest Health proportional to the caster's max Health at the end of the turn."
+                "name": "规避危机♪",
+                "description": "回合结束时，按施放者的最大生命值比例恢复生命值最低的友军的生命值。"
             },
             "S3": {
-                "name": "Super Intelligent AI",
-                "description": "Cheers on allies, granting increased Attack and a barrier (proportional to the caster's max Health) to all allies for 3 turns, before granting increased Speed to the caster for 2 turns."
+                "name": "超智能AI",
+                "description": "为友军加油，为所有友军施加3回合攻击力提升与屏障（与施放者的最大生命值成比例），然后为施放者施加2回合速度提升。"
             }
         }
     },
@@ -3496,17 +3496,17 @@
         "_name": "Kluri",
         "skills": {
             "S1": {
-                "name": "Light Step",
-                "description": "Strikes in the direction of the enemy, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Defense."
+                "name": "轻盈步伐",
+                "description": "朝敌人方向发动打击，并使施放者的行动值提升20%。造成的伤害按施放者的防御力比例提升。"
             },
             "S2": {
-                "name": "Magic Resist",
-                "description": "Recovers 10% Health of the caster at the beginning of every turn."
+                "name": "魔法抵抗",
+                "description": "每回合开始时，恢复施放者10%的生命值。"
             },
             "S3": {
-                "name": "Fortitude",
-                "description": "Has a 100% chance to provoke and decrease Defense the enemy for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "坚毅",
+                "description": "有100%的几率对敌人施加2回合挑衅与防御力降低。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -3514,17 +3514,17 @@
         "_name": "Krau",
         "skills": {
             "S1": {
-                "name": "Swordstorm",
-                "description": "Attacks the enemy with a swordstorm, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "剑暴",
+                "description": "以剑暴攻击敌人，有75%的几率施加1回合挑衅。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Charge",
-                "description": "Shoves the enemy with a shield, decreasing Combat Readiness by 50%, before granting increased Defense to all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "冲锋",
+                "description": "以盾牌推撞敌人，降低50%行动值，然后为所有友军施加2回合防御力提升。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Summon Ziegfried",
-                "description": "Attacks the enemy by summoning the Guardian Ziegfried, and absorbs some of the damage dealt as Health. Penetrates Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's lost Health. When this skill is not on cooldown, grants 25% damage share from the damage received by the ally.",
-                "soulburn_effect": "Decreases damage dealt and attacks all enemies."
+                "name": "召唤齐格弗里德",
+                "description": "召唤守护神齐格弗里德攻击敌人，并将部分造成的伤害吸收为生命值。穿透防御力，但无法造成暴击或重击。造成的伤害按施放者已损失的生命值比例提升。此技能不在冷却中时，分担友军受到伤害的25%。",
+                "soulburn_effect": "降低造成的伤害，并攻击所有敌人。"
             }
         }
     },
@@ -3532,17 +3532,17 @@
         "_name": "Lady of the Scales",
         "skills": {
             "S1": {
-                "name": "Divine Punishment",
-                "description": "Attacks the enemy with divine lightning and has a 75% chance to inflict fear for 1 turn, before recovering Health of all allies proportional to the target's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%, and attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "神罚",
+                "description": "以神圣雷电攻击敌人，有75%的几率施加1回合恐惧，然后按目标的最大生命值比例恢复所有友军的生命值。",
+                "soulburn_effect": "效果几率提升至100%，并攻击所有敌人。此攻击不会触发协攻。"
             },
             "S2": {
-                "name": "Scales of Equity",
-                "description": "At the start of battle, grants offering to the foremost ally. When the ally granted offering dies, recovers Health of all allies by 50%. When Combat Readiness of an enemy increases during battle, increases Combat Readiness of the caster by 50% of the amount of Combat Readiness increased. This effect will not be applied to the Combat Readiness increase effect triggered by the same skill."
+                "name": "公平之秤",
+                "description": "战斗开始时，为最前方的友军施加供品。拥有供品的友军阵亡时，恢复所有友军50%的生命值。战斗中敌人的行动值提升时，使施放者的行动值提升该提升量的50%。此效果不适用于由同一技能触发的行动值提升效果。"
             },
             "S3": {
-                "name": "The Caress of Mercy",
-                "description": "With the Goddess's authority, dispels all debuffs from all allies before increasing Combat Readiness by 25%. Consumes 20% of the current Health of the ally granted offering, granting abundance to all other allies for 2 turns."
+                "name": "慈悲之抚",
+                "description": "以女神的权能解除所有友军的所有弱化效果，然后提升25%行动值。消耗拥有供品的友军当前生命值的20%，为其他所有友军施加2回合丰饶。"
             }
         }
     },
@@ -3550,17 +3550,17 @@
         "_name": "Laia",
         "skills": {
             "S1": {
-                "name": "Sing with Me!",
-                "description": "Attacks the enemy with a sweet melody, and increases Combat Readiness of the caster by 15%. When The Spirit of Rock is unavailable due to cooldown count, triggers a Dual Attack from a random ally. Damage dealt increases proportional to the caster's max Health."
+                "name": "一起唱吧！",
+                "description": "以甜美的旋律攻击敌人，并使施放者的行动值提升15%。摇滚精神因冷却无法使用时，随机一名友军发动协攻。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Sweet Cheers",
-                "description": "Dispels all debuffs from all allies and increases Combat Readiness by 25%, before decreasing skill cooldowns of all allies except for the caster by 1 turn."
+                "name": "甜蜜应援",
+                "description": "解除所有友军的所有弱化效果，并提升25%行动值，然后使除施放者外所有友军的技能冷却时间减少1回合。"
             },
             "S3": {
-                "name": "The Spirit of Rock",
-                "description": "Attacks the enemy with a bass. When the enemy is defeated, recovers Health of the caster and grants an extra turn. Penetrates the target's Defense, and cannot trigger a critical hit. Amount recovered and damage dealt increase proportional to the caster's max Health. Begins the first battle with full skill cooldown count, and when this skill is unavailable due to cooldown count, at the start of every turn, decreases all skill cooldowns by 1 turn.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "摇滚精神",
+                "description": "以贝斯攻击敌人。击败敌人时，恢复施放者的生命值并获得额外回合。穿透目标的防御力，且无法造成暴击。恢复量与造成的伤害按施放者的最大生命值比例提升。首场战斗开始时技能处于完整冷却状态；此技能因冷却无法使用时，每回合开始时使所有技能冷却时间减少1回合。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -3568,17 +3568,17 @@
         "_name": "Landy",
         "skills": {
             "S1": {
-                "name": "Fire",
-                "description": "Attacks the enemy with gunfire, and increases Combat Readiness of the caster by 15%. When the target has a buff, doubles the effects of Combat Readiness increase and Fighting Spirit gained."
+                "name": "开火",
+                "description": "以枪击攻击敌人，并使施放者的行动值提升15%。目标拥有强化效果时，行动值提升效果与获得的斗志翻倍。"
             },
             "S2": {
-                "name": "The Chief Is on the Scene",
-                "description": "At the start of the first battle, gains 50 Fighting Spirit and grants stealth for 1 turn. At the start of the turn, gains 10 Fighting Spirit for each buff granted to an enemy, and when Fighting Spirit is full, resets skill cooldown. After attacking, increases Attack of the caster by 25%. This effect can stack up to 3 times."
+                "name": "老大驾到",
+                "description": "首场战斗开始时，获得50斗志，并施加1回合隐身。回合开始时，敌人身上每有一个强化效果，获得10斗志；斗志已满时，重置技能冷却时间。攻击后，施放者的攻击力提升25%。此效果最多叠加3次。"
             },
             "S3": {
-                "name": "Full Burst",
-                "description": "Fires at all enemies to attack, and increases Combat Readiness of all allies by 25%, before granting a barrier (proportional to Attack) to the caster for 2 turns. When Fighting Spirit is full, consumes all Fighting Spirit to penetrate the target's Defense by 50%. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "全弹发射",
+                "description": "向所有敌人射击，并使所有友军的行动值提升25%，然后为施放者施加2回合屏障（与攻击力成比例）。斗志已满时，消耗全部斗志穿透目标50%的防御力。此技能无法触发反击。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
