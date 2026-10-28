@@ -9,6 +9,7 @@ import { heroApi, buildApi } from '@/lib/api';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useTranslations } from '@/hooks/useTranslations';
+import type { HeroSkillMessages } from '@/i18n/config';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { PopularBuildStats } from '@/components/heroes/PopularBuildStats';
 import { appendImageVersion } from '@/lib/heroImages';
@@ -181,7 +182,7 @@ const StatItem = ({ label, value, suffix = '', color = 'text-gray-300', large = 
         </p>
     </div>
 );
-export function HeroDetailClient() {
+export function HeroDetailClient({ skillMessages }: { skillMessages: HeroSkillMessages | null }) {
     const params = useParams();
     const slug = params.slug as string;
     const { t, locale } = useTranslations();
@@ -530,13 +531,12 @@ export function HeroDetailClient() {
                                 };
 
                                 // Get localized text based on current locale
-                                const skillKeyPath = `skills.${hero.name}.skills.${skillKey}`;
-
-                                // Try to get translation, fallback to API data
-                                const skillName = t(`${skillKeyPath}.name`, s.name || `Skill ${skillKey}`);
-                                const skillDesc = t(`${skillKeyPath}.description`, s.description || '');
+                                // Traducción enviada por el servidor; si falta, texto de la API
+                                const translated = skillMessages?.[skillKey];
+                                const skillName = translated?.name || s.name || `Skill ${skillKey}`;
+                                const skillDesc = translated?.description || s.description || '';
                                 const skillSoulburn = s.soulburn
-                                    ? t(`${skillKeyPath}.soulburn_effect`, s.soulburn_effect || '')
+                                    ? translated?.soulburn_effect || s.soulburn_effect || ''
                                     : null;
 
                                 const hasScaling = s.rate || s.pow || s.selfHpScaling || s.selfAtkScaling || s.selfDefScaling || s.selfSpdScaling || s.penetration;

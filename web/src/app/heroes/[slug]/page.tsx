@@ -1,5 +1,6 @@
 import type { Metadata, ResolvingMetadata } from 'next';
 import { HeroDetailClient } from './HeroDetailClient';
+import { getHeroSkillMessages, getLocale } from '@/i18n/server';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -61,6 +62,22 @@ export async function generateMetadata(
     }
 }
 
-export default function HeroDetailPage() {
-    return <HeroDetailClient />;
+export default async function HeroDetailPage({ params }: PageProps) {
+    const { slug } = await params;
+    const locale = await getLocale();
+
+    // Misma petición que generateMetadata: Next la deduplica y la cachea 1 h
+    let skillMessages = null;
+    try {
+        const response = await fetch(`${API_URL}/heroes/${slug}`, { next: { revalidate: 3600 } });
+        if (response.ok) {
+            const data = await response.json();
+            const hero = data.data || data;
+            if (hero?.name) skillMessages = await getHeroSkillMessages(locale, hero.name);
+        }
+    } catch {
+        // Sin traducción: el cliente muestra el texto de la API
+    }
+
+    return <HeroDetailClient skillMessages={skillMessages} />;
 }

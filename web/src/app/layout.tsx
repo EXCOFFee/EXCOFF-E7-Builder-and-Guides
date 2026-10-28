@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { getLocale, getMessages } from "@/i18n/server";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -77,11 +78,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // El idioma sale de la cookie: el HTML inicial ya viene traducido (antes se renderizaba vacío
+  // hasta que el cliente cargaba los mensajes). Leer la cookie hace dinámicas las páginas.
+  const locale = await getLocale();
+  const messages = await getMessages(locale);
+
   // JSON-LD Structured Data for SEO
   const websiteSchema = {
     '@context': 'https://schema.org',
@@ -107,7 +113,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang={locale} className="dark" suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/images/icon_menu_orbis.png" />
@@ -128,7 +134,7 @@ export default function RootLayout({
         className={`${inter.variable} ${cinzel.variable} font-sans antialiased bg-e7-void text-slate-200 min-h-screen`}
         suppressHydrationWarning
       >
-        <Providers>
+        <Providers locale={locale} messages={messages}>
           <Navbar />
           <main className="min-h-[calc(100vh-4rem)]">
             {children}

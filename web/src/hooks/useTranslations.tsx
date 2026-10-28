@@ -1,200 +1,104 @@
 'use client';
 
-import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
-
-type Messages = Record<string, any>;
+import { createContext, ReactNode, useCallback, useContext, useEffect, useMemo, useTransition } from 'react';
+import { useRouter } from 'next/navigation';
+import {
+    DEFAULT_LOCALE,
+    isLocale,
+    LEGACY_LOCALE_STORAGE_KEY,
+    Locale,
+    LOCALE_COOKIE,
+    Messages,
+} from '@/i18n/config';
 
 interface TranslationContextType {
-    locale: string;
+    locale: Locale;
     messages: Messages;
     t: (key: string, fallback?: string) => string;
     setLocale: (locale: string) => void;
+    /** true mientras el servidor vuelve a renderizar con el idioma nuevo */
+    isChangingLocale: boolean;
 }
 
 const TranslationContext = createContext<TranslationContextType | null>(null);
 
-// Get nested value from object by dot notation
-function getNestedValue(obj: any, path: string): string | undefined {
-    return path.split('.').reduce((current, key) => current?.[key], obj);
+function getNestedValue(obj: Messages, path: string): string | undefined {
+    const value = path.split('.').reduce<unknown>(
+        (current, key) => (current as Record<string, unknown> | undefined)?.[key],
+        obj
+    );
+    return typeof value === 'string' ? value : undefined;
 }
 
-// All supported locales
-const SUPPORTED_LOCALES = ['en', 'es', 'ko', 'ja', 'zh', 'pt'];
-const DEFAULT_LOCALE = 'en';
-
-// Messages cache
-const messagesCache: Record<string, Messages> = {};
-
-// Load messages for a locale (including artifact translations)
-async function loadMessages(locale: string): Promise<Messages> {
-    const validLocale = SUPPORTED_LOCALES.includes(locale) ? locale : DEFAULT_LOCALE;
-
-    // Return cached if available
-    if (messagesCache[validLocale]) {
-        return messagesCache[validLocale];
-    }
-
+function saveLocale(locale: Locale): void {
+    document.cookie = `${LOCALE_COOKIE}=${locale};path=/;max-age=31536000;SameSite=Lax`;
     try {
-        // Load main messages
-        const mainMessages = await import(`../../messages/${validLocale}.json`);
-
-        // Load artifact translations
-        let artifactMessages = {};
-        try {
-            const artifacts = await import(`../../messages/artifacts/${validLocale}.json`);
-            artifactMessages = artifacts.default || {};
-        } catch (error) {
-            console.warn(`No artifact translations for ${validLocale}`);
-        }
-
-        // Load skill translations
-        let skillMessages = {};
-        try {
-            const skills = await import(`../../messages/skills/${validLocale}.json`);
-            skillMessages = skills.default || {};
-        } catch (error) {
-            console.warn(`No skill translations for ${validLocale}`);
-        }
-
-        // Load glossary translations
-        let glossaryMessages = {};
-        try {
-            const glossary = await import(`../../messages/glossary/${validLocale}.json`);
-            glossaryMessages = glossary.default || {};
-        } catch (error) {
-            console.warn(`No glossary translations for ${validLocale}`);
-        }
-
-        // Merge messages
-        const mergedMessages = {
-            ...mainMessages.default,
-            artifacts: artifactMessages,
-            skills: skillMessages,
-            glossary: glossaryMessages
-        };
-
-        messagesCache[validLocale] = mergedMessages;
-        return mergedMessages;
-    } catch (error) {
-        console.error(`Failed to load messages for ${validLocale}:`, error);
-        if (validLocale !== 'en') {
-            return loadMessages('en');
-        }
-        return {};
+        localStorage.setItem(LEGACY_LOCALE_STORAGE_KEY, locale);
+    } catch {
+        // localStorage bloqueado: la cookie alcanza
     }
 }
 
-// Get saved locale from localStorage (more reliable than cookies in Next.js)
-function getSavedLocale(): string {
-    if (typeof window === 'undefined') return DEFAULT_LOCALE;
+/**
+ * El idioma y los mensajes vienen del servidor (layout lee la cookie), así el HTML inicial
+ * ya sale traducido. Cambiar de idioma guarda la cookie y vuelve a pedir el render al servidor.
+ */
+export function TranslationProvider({
+    locale,
+    messages,
+    children,
+}: {
+    locale: Locale;
+    messages: Messages;
+    children: ReactNode;
+}) {
+    const router = useRouter();
+    const [isChangingLocale, startTransition] = useTransition();
 
-    // Try localStorage first
-    const fromStorage = localStorage.getItem('e7_locale');
-    if (fromStorage && SUPPORTED_LOCALES.includes(fromStorage)) {
-        return fromStorage;
-    }
+    const setLocale = useCallback(
+        (newLocale: string) => {
+            if (!isLocale(newLocale) || newLocale === locale) return;
+            saveLocale(newLocale);
+            startTransition(() => router.refresh());
+        },
+        [locale, router]
+    );
 
-    // Fallback to cookie
-    const match = document.cookie.match(/locale=([^;]+)/);
-    if (match && SUPPORTED_LOCALES.includes(match[1])) {
-        return match[1];
-    }
-
-    return DEFAULT_LOCALE;
-}
-
-// Save locale to both localStorage and cookie
-function saveLocale(locale: string): void {
-    if (typeof window === 'undefined') return;
-
-    localStorage.setItem('e7_locale', locale);
-    document.cookie = `locale=${locale};path=/;max-age=31536000;SameSite=Lax`;
-    console.log('[i18n] Locale saved:', locale);
-}
-
-export function TranslationProvider({ children }: { children: ReactNode }) {
-    const [locale, setLocaleState] = useState(DEFAULT_LOCALE);
-    const [messages, setMessages] = useState<Messages>({});
-    const [isLoaded, setIsLoaded] = useState(false);
-
-    // Load locale on mount
+    // Usuarios de antes de la cookie: el idioma solo estaba en localStorage
     useEffect(() => {
-        const savedLocale = getSavedLocale();
-        console.log('[i18n] Loading saved locale:', savedLocale);
-        setLocaleState(savedLocale);
-
-        loadMessages(savedLocale).then((msgs) => {
-            console.log('[i18n] Messages loaded:', Object.keys(msgs));
-            setMessages(msgs);
-            setIsLoaded(true);
-        });
-    }, []);
-
-    // Update HTML lang attribute when locale changes (SEO improvement)
-    useEffect(() => {
-        if (typeof document !== 'undefined') {
-            document.documentElement.lang = locale;
-        }
-    }, [locale]);
-
-    const setLocale = (newLocale: string) => {
-        console.log('[i18n] setLocale called with:', newLocale);
-
-        if (!SUPPORTED_LOCALES.includes(newLocale)) {
-            console.error('[i18n] Invalid locale:', newLocale);
+        if (document.cookie.includes(`${LOCALE_COOKIE}=`)) return;
+        let saved: string | null = null;
+        try {
+            saved = localStorage.getItem(LEGACY_LOCALE_STORAGE_KEY);
+        } catch {
             return;
         }
+        if (isLocale(saved) && saved !== locale) setLocale(saved);
+    }, [locale, setLocale]);
 
-        saveLocale(newLocale);
-        setLocaleState(newLocale);
-
-        loadMessages(newLocale).then((msgs) => {
-            console.log('[i18n] New messages loaded for:', newLocale);
-            setMessages(msgs);
-        });
-    };
-
-    const t = (key: string, fallback?: string): string => {
-        const value = getNestedValue(messages, key);
-        return value ?? fallback ?? key;
-    };
-
-    // Show loading with video while loading translations
-    if (!isLoaded) {
-        return (
-            <div className="min-h-screen bg-e7-void flex items-center justify-center">
-                <div className="text-center">
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-32 h-32 mx-auto"
-                    >
-                        <source src="/videos/RasRun.mp4" type="video/mp4" />
-                    </video>
-                    <p className="text-gray-400 mt-2">Loading...</p>
-                </div>
-            </div>
-        );
-    }
-
-    return (
-        <TranslationContext.Provider value={{ locale, messages, t, setLocale }}>
-            {children}
-        </TranslationContext.Provider>
+    const value = useMemo<TranslationContextType>(
+        () => ({
+            locale,
+            messages,
+            t: (key, fallback) => getNestedValue(messages, key) ?? fallback ?? key,
+            setLocale,
+            isChangingLocale,
+        }),
+        [locale, messages, setLocale, isChangingLocale]
     );
+
+    return <TranslationContext.Provider value={value}>{children}</TranslationContext.Provider>;
 }
 
-export function useTranslations() {
+export function useTranslations(): TranslationContextType {
     const context = useContext(TranslationContext);
     if (!context) {
-        console.warn('[i18n] useTranslations called outside of TranslationProvider');
         return {
             locale: DEFAULT_LOCALE,
             messages: {},
             t: (key: string, fallback?: string) => fallback ?? key,
-            setLocale: () => console.warn('[i18n] setLocale not available'),
+            setLocale: () => {},
+            isChangingLocale: false,
         };
     }
     return context;
