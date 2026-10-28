@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\HeroResource;
+use App\Http\Resources\HeroSummaryResource;
 use App\Models\Hero;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -30,11 +31,11 @@ class HeroController extends Controller
      */
     public function index(Request $request): AnonymousResourceCollection
     {
-        // Build cache key from query parameters
-        $cacheKey = 'heroes:index:' . md5(json_encode($request->query()));
-        
+        // Build cache key from query parameters (v2: summary columns only)
+        $cacheKey = 'heroes:index:v2:' . md5(json_encode($request->query()));
+
         $heroes = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($request) {
-            $query = Hero::query();
+            $query = Hero::query()->select(HeroSummaryResource::COLUMNS);
 
             // Filter by element
             if ($request->has('element')) {
@@ -59,7 +60,7 @@ class HeroController extends Controller
             return $query->orderBy('name')->paginate(500);
         });
 
-        return HeroResource::collection($heroes);
+        return HeroSummaryResource::collection($heroes);
     }
 
     /**
