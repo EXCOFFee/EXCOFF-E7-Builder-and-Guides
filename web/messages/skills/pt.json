@@ -2272,18 +2272,18 @@
         "_name": "Eternal Wanderer Ludwig",
         "skills": {
             "S1": {
-                "name": "How Trivial",
-                "description": "Attacks the enemy with mana, before increasing Attack of the caster for 1 turn.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn and grants an extra turn."
+                "name": "Que trivial",
+                "description": "Ataca o inimigo com mana, depois aumenta o Ataque do conjurador por 1 turno.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade e concede um turno extra."
             },
             "S2": {
-                "name": "Let's Have Some Fun",
-                "description": "Attacks the enemy with powerful mana, before granting increased Hit Chance for 2 turns and skill nullifier once to the caster.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn and grants an extra turn."
+                "name": "Vamos nos divertir",
+                "description": "Ataca o inimigo com mana poderosa, depois concede Aumentar Precisão por 2 turnos e Anulação de habilidade uma vez ao conjurador.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade e concede um turno extra."
             },
             "S3": {
-                "name": "Can You Handle This?",
-                "description": "Attacks all enemies with the essence of magical engineering. When someone uses a Soulburn, increases Combat Readiness of the caster by 20% and penetration rate of this skill by 30%. Penetration rate increase effect can stack up to 2 times."
+                "name": "Consegue lidar com isto?",
+                "description": "Ataca todos os inimigos com a essência da engenharia mágica. Quando alguém usa Queima de Alma, aumenta a Prontidão de Combate do conjurador em 20% e a taxa de penetração desta habilidade em 30%. O aumento da taxa de penetração acumula até 2 vezes."
             }
         }
     },
@@ -2291,17 +2291,17 @@
         "_name": "Eye of the Abyss Fumyr",
         "skills": {
             "S1": {
-                "name": "Elemental Magic",
-                "description": "Attacks the enemy with elemental magic, with a 40% chance to inflict stun for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Magia elemental",
+                "description": "Ataca o inimigo com magia elemental, com 40% de chance de atordoar por 1 turno.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Blue Despair",
-                "description": "Envelops all enemies with the energy of the deep sea, dispelling two buffs before decreasing Combat Readiness by 25%. Grants an extra turn."
+                "name": "Desespero azul",
+                "description": "Envolve todos os inimigos com a energia do mar profundo, dissipando dois efeitos positivos, depois diminui a Prontidão de Combate em 25%. Concede um turno extra."
             },
             "S3": {
-                "name": "Eye of the Abyss",
-                "description": "Pierces the foremost enemy Hero with light, inflicting detain, and when detain is inflicted, grants deterrence to the caster for 2 turns. Grants a barrier (proportional to level) and stealth to the caster for 2 turns."
+                "name": "Olho do abismo",
+                "description": "Perfura com luz o herói inimigo mais à frente, aplicando detenção e, quando a detenção é aplicada, concede dissuasão ao conjurador por 2 turnos. Concede uma barreira (proporcional ao nível) e furtividade ao conjurador por 2 turnos."
             }
         }
     },
@@ -2309,17 +2309,17 @@
         "_name": "Ezra",
         "skills": {
             "S1": {
-                "name": "Take This!",
-                "description": "Attacks the enemy with a sword, with a 75% chance to decrease Attack for 1 turn. A successful attack deals 1,000 fixed damage for each debuff inflicted on the target at the end of the turn.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Tome isto!",
+                "description": "Ataca o inimigo com uma espada, com 75% de chance de diminuir o Ataque por 1 turno. Um ataque bem-sucedido causa 1.000 de dano fixo para cada efeito negativo aplicado ao alvo no fim do turno.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Slayer's Bond",
-                "description": "When the foremost ally uses a non-attack skill, increase Combat Readiness of the caster by 20%. Can only be activated once every 2 turns."
+                "name": "Vínculo do caçador",
+                "description": "Quando o aliado mais à frente usa uma habilidade que não é de ataque, aumenta a Prontidão de Combate do conjurador em 20%. Só pode ser ativado uma vez a cada 2 turnos."
             },
             "S3": {
-                "name": "Leave Me Alone",
-                "description": "Attacks all enemies by wielding a sword, with a 100% chance to make them unhealable, restrict, and decrease Hit Chance for 2 turns. A successful attack deals 1,500 fixed damage for each debuff inflicted on the target at the end of the turn."
+                "name": "Me deixe em paz",
+                "description": "Ataca todos os inimigos brandindo uma espada, com 100% de chance de aplicar impedimento de cura, restrição e Diminuir Precisão por 2 turnos. Um ataque bem-sucedido causa 1.500 de dano fixo para cada efeito negativo aplicado ao alvo no fim do turno."
             }
         }
     },
@@ -2327,17 +2327,17 @@
         "_name": "Fairytale Tenebria",
         "skills": {
             "S1": {
-                "name": "One Pair",
-                "description": "Attacks the enemy with a mystical power, with a 75% chance each to inflict redirected provoke for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Um par",
+                "description": "Ataca o inimigo com um poder místico, com 75% de chance de aplicar provocação redirecionada por 1 turno.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Wild Card",
-                "description": "When an ally is attacked by an enemy inflicted with provoke or redirected provoke, activates Shuffle. Shuffle can only be activated once per turn. Shuffle: Attacks all enemies and inflicts a random debuff for 1 turn. A successful attack against a target inflicted with provoke or redirected provoke inflicts additional damage. Additional damage increases proportional to the target's max Health."
+                "name": "Curinga",
+                "description": "Quando um aliado é atacado por um inimigo com provocação ou provocação redirecionada, ativa Embaralhar. Embaralhar só pode ser ativado uma vez por turno. Embaralhar: ataca todos os inimigos e aplica um efeito negativo aleatório por 1 turno. Um ataque bem-sucedido contra um alvo com provocação ou provocação redirecionada causa dano adicional. O dano adicional aumenta proporcionalmente à Vida máxima do alvo."
             },
             "S3": {
-                "name": "Tea Party",
-                "description": "Lures all enemies in with a tea party and attacks, dispelling one buff, making them unable to be buffed for 2 turns, and inflicting redirected provoke for 1 turn."
+                "name": "Festa do chá",
+                "description": "Atrai todos os inimigos com uma festa do chá e ataca, dissipando um efeito positivo, impedindo que recebam efeitos positivos por 2 turnos e aplicando provocação redirecionada por 1 turno."
             }
         }
     },
@@ -2345,17 +2345,17 @@
         "_name": "Faithless Lidica",
         "skills": {
             "S1": {
-                "name": "Thorn",
-                "description": "Attacks the enemy with a sword, with a 75% chance to decrease Defense for 1 turn."
+                "name": "Espinho",
+                "description": "Ataca o inimigo com uma espada, com 75% de chance de diminuir a Defesa por 1 turno."
             },
             "S2": {
-                "name": "Larkspur",
-                "description": "Attacks all enemies by binding them with a sword, with a 100% chance to dispel two buffs and inflict laceration for 2 turns. Grants an extra turn to the caster. This skill cannot trigger a counterattack."
+                "name": "Esporinha",
+                "description": "Ataca todos os inimigos prendendo-os com uma espada, com 100% de chance de dissipar dois efeitos positivos e aplicar laceração por 2 turnos. Concede um turno extra ao conjurador. Esta habilidade não pode ativar contra-ataques."
             },
             "S3": {
-                "name": "Hysteria",
-                "description": "Attacks the enemy indiscriminately, fully increasing skill cooldowns. Grants skill nullifier once to all allies, and increases Combat Readiness of all allies by 25%. Grants stealth to the caster for 3 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Histeria",
+                "description": "Ataca o inimigo indiscriminadamente, enchendo completamente as recargas de habilidades. Concede Anulação de habilidade uma vez a todos os aliados e aumenta a Prontidão de Combate de todos os aliados em 25%. Concede furtividade ao conjurador por 3 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -2363,17 +2363,17 @@
         "_name": "Falconer Kluri",
         "skills": {
             "S1": {
-                "name": "Light Step",
-                "description": "Strikes in the direction of the enemy, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Defense."
+                "name": "Passo leve",
+                "description": "Golpeia na direção do inimigo, aumentando a Prontidão de Combate do conjurador em 20%. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S2": {
-                "name": "Magic Resist",
-                "description": "Recovers 10% Health of the caster at the beginning of every turn."
+                "name": "Resistência mágica",
+                "description": "Recupera 10% da Vida do conjurador no início de cada turno."
             },
             "S3": {
-                "name": "Fluri, Attack!",
-                "description": "Fluri flies towards the enemy, with a 75% chance to dispel all buffs, before a 100% chance to provoke and decrease Defense the enemy for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Fluri, ataque!",
+                "description": "Fluri voa em direção ao inimigo, com 75% de chance de dissipar todos os efeitos positivos, depois com 100% de chance provoca e diminui a Defesa do inimigo por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -2381,17 +2381,17 @@
         "_name": "Fallen Cecilia",
         "skills": {
             "S1": {
-                "name": "Mistake",
-                "description": "Attacks the enemy with a spear of revenge and has a 100% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Erro",
+                "description": "Ataca o inimigo com uma lança da vingança e tem 100% de chance de provocá-lo por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S2": {
-                "name": "Strong Instinct",
-                "description": "Grants 50% additional damage reduction to all allies. At the start of battle, grants a barrier to all allies for 2 turns, and at the end of the turn, grants a barrier to the ally with the lowest Health for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "Instinto forte",
+                "description": "Concede 50% de redução de dano adicional a todos os aliados. No início da batalha, concede uma barreira a todos os aliados por 2 turnos e, no fim do turno, concede uma barreira ao aliado com menor Vida por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Spear of Resentment",
-                "description": "Attacks all enemies in an explosion of spiteful emotions and dispels all buffs before transferring all debuffs inflicted on the caster. Grants skill nullifier once to all allies. Damage dealt increases proportional to the caster's max Health."
+                "name": "Lança do ressentimento",
+                "description": "Ataca todos os inimigos numa explosão de emoções rancorosas e dissipa todos os efeitos positivos, depois transfere todos os efeitos negativos aplicados ao conjurador. Concede Anulação de habilidade uma vez a todos os aliados. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -2399,17 +2399,17 @@
         "_name": "Fenne",
         "skills": {
             "S1": {
-                "name": "Intense Welcome",
-                "description": "After consuming 15% of the caster's current Health and inflicting injuries proportional to the consumption on the caster, attacks the enemy, recovering Health of all allies. When it is the caster's turn, if the caster is enraged, activates Embrace as an extra attack. Amount recovered increases proportional to the caster's max Health and Attack. Embrace: Attacks the enemy, and grants immunity to the caster for 1 turn. Damage dealt increases proportional to the caster's injuries.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "Recepção intensa",
+                "description": "Após consumir 15% da Vida atual do conjurador e aplicar ferimentos ao conjurador proporcionais ao consumo, ataca o inimigo, recuperando a Vida de todos os aliados. Quando é o turno do conjurador, se ele estiver enfurecido, ativa Abraço como ataque extra. A quantidade recuperada aumenta proporcionalmente à Vida máxima e ao Ataque do conjurador. Abraço: ataca o inimigo e concede imunidade ao conjurador por 1 turno. O dano causado aumenta proporcionalmente aos ferimentos do conjurador.",
+                "soulburn_effect": "Aumenta a quantidade recuperada."
             },
             "S2": {
-                "name": "Love=Pain",
-                "description": "Increases Critical Hit Chance by 30%. Attack and Speed increase proportional to the caster's injuries ratio. Upon receiving lethal damage, revives with 50% Health and grants a barrier to the caster for 2 turns. Barrier strength increases proportional to the caster's Attack. Can only be activated once per battle."
+                "name": "Amor=Dor",
+                "description": "Aumenta a Chance de Crítico em 30%. O Ataque e a Velocidade aumentam proporcionalmente à proporção de ferimentos do conjurador. Ao receber dano letal, revive com 50% de Vida e concede uma barreira ao conjurador por 2 turnos. A força da barreira aumenta proporcionalmente ao Ataque do conjurador. Só pode ser ativado uma vez por batalha."
             },
             "S3": {
-                "name": "Love Bite",
-                "description": "After consuming 15% of the caster's current Health and inflicting injuries proportional to the consumption on the caster, attacks the enemy, absorbing some of the damage dealt as Health. The caster becomes enraged for 2 turns. Damage dealt increases proportional to the caster's injuries inflicted."
+                "name": "Mordida de amor",
+                "description": "Após consumir 15% da Vida atual do conjurador e aplicar ferimentos ao conjurador proporcionais ao consumo, ataca o inimigo, absorvendo parte do dano causado como Vida. O conjurador fica enfurecido por 2 turnos. O dano causado aumenta proporcionalmente aos ferimentos aplicados ao conjurador."
             }
         }
     },

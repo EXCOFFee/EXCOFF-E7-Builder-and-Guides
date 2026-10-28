@@ -2272,18 +2272,18 @@
         "_name": "Eternal Wanderer Ludwig",
         "skills": {
             "S1": {
-                "name": "How Trivial",
-                "description": "Attacks the enemy with mana, before increasing Attack of the caster for 1 turn.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn and grants an extra turn."
+                "name": "真是无趣",
+                "description": "以魔力攻击敌人，然后提升施放者的攻击力1回合。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合，并获得额外回合。"
             },
             "S2": {
-                "name": "Let's Have Some Fun",
-                "description": "Attacks the enemy with powerful mana, before granting increased Hit Chance for 2 turns and skill nullifier once to the caster.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn and grants an extra turn."
+                "name": "来玩玩吧",
+                "description": "以强大的魔力攻击敌人，然后为施放者施加2回合命中率提升与一次技能伤害无效。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合，并获得额外回合。"
             },
             "S3": {
-                "name": "Can You Handle This?",
-                "description": "Attacks all enemies with the essence of magical engineering. When someone uses a Soulburn, increases Combat Readiness of the caster by 20% and penetration rate of this skill by 30%. Penetration rate increase effect can stack up to 2 times."
+                "name": "你能承受这个吗？",
+                "description": "以魔法工学的精髓攻击所有敌人。有人使用灵魂燃烧时，使施放者的行动值提升20%，此技能的穿透率提升30%。穿透率提升效果最多叠加2次。"
             }
         }
     },
@@ -2291,17 +2291,17 @@
         "_name": "Eye of the Abyss Fumyr",
         "skills": {
             "S1": {
-                "name": "Elemental Magic",
-                "description": "Attacks the enemy with elemental magic, with a 40% chance to inflict stun for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "元素魔法",
+                "description": "以元素魔法攻击敌人，有40%的几率使其眩晕1回合。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Blue Despair",
-                "description": "Envelops all enemies with the energy of the deep sea, dispelling two buffs before decreasing Combat Readiness by 25%. Grants an extra turn."
+                "name": "蔚蓝绝望",
+                "description": "以深海之力笼罩所有敌人，解除两个强化效果，然后降低25%行动值。获得额外回合。"
             },
             "S3": {
-                "name": "Eye of the Abyss",
-                "description": "Pierces the foremost enemy Hero with light, inflicting detain, and when detain is inflicted, grants deterrence to the caster for 2 turns. Grants a barrier (proportional to level) and stealth to the caster for 2 turns."
+                "name": "深渊之眼",
+                "description": "以光贯穿最前方的敌方英雄，施加拘留；拘留生效时，为施放者施加2回合威慑。为施放者施加2回合屏障（与等级成比例）与隐身。"
             }
         }
     },
@@ -2309,17 +2309,17 @@
         "_name": "Ezra",
         "skills": {
             "S1": {
-                "name": "Take This!",
-                "description": "Attacks the enemy with a sword, with a 75% chance to decrease Attack for 1 turn. A successful attack deals 1,000 fixed damage for each debuff inflicted on the target at the end of the turn.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "吃我一招！",
+                "description": "以剑攻击敌人，有75%的几率降低攻击力1回合。攻击成功时，回合结束时目标身上每有一个弱化效果，造成1,000点固定伤害。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Slayer's Bond",
-                "description": "When the foremost ally uses a non-attack skill, increase Combat Readiness of the caster by 20%. Can only be activated once every 2 turns."
+                "name": "屠戮者的羁绊",
+                "description": "最前方的友军使用非攻击技能时，使施放者的行动值提升20%。每2回合只能发动一次。"
             },
             "S3": {
-                "name": "Leave Me Alone",
-                "description": "Attacks all enemies by wielding a sword, with a 100% chance to make them unhealable, restrict, and decrease Hit Chance for 2 turns. A successful attack deals 1,500 fixed damage for each debuff inflicted on the target at the end of the turn."
+                "name": "别管我",
+                "description": "挥剑攻击所有敌人，有100%的几率施加2回合无法恢复、限制与命中率降低。攻击成功时，回合结束时目标身上每有一个弱化效果，造成1,500点固定伤害。"
             }
         }
     },
@@ -2327,17 +2327,17 @@
         "_name": "Fairytale Tenebria",
         "skills": {
             "S1": {
-                "name": "One Pair",
-                "description": "Attacks the enemy with a mystical power, with a 75% chance each to inflict redirected provoke for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "一对",
+                "description": "以神秘之力攻击敌人，有75%的几率施加1回合转移挑衅。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Wild Card",
-                "description": "When an ally is attacked by an enemy inflicted with provoke or redirected provoke, activates Shuffle. Shuffle can only be activated once per turn. Shuffle: Attacks all enemies and inflicts a random debuff for 1 turn. A successful attack against a target inflicted with provoke or redirected provoke inflicts additional damage. Additional damage increases proportional to the target's max Health."
+                "name": "百搭牌",
+                "description": "友军受到处于挑衅或转移挑衅状态的敌人攻击时，发动洗牌。洗牌每回合只能发动一次。洗牌：攻击所有敌人，并施加一个随机弱化效果1回合。对处于挑衅或转移挑衅状态的目标攻击成功时，造成追加伤害。追加伤害按目标的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Tea Party",
-                "description": "Lures all enemies in with a tea party and attacks, dispelling one buff, making them unable to be buffed for 2 turns, and inflicting redirected provoke for 1 turn."
+                "name": "茶会",
+                "description": "以茶会引诱所有敌人并发动攻击，解除一个强化效果，施加2回合无法强化与1回合转移挑衅。"
             }
         }
     },
@@ -2345,17 +2345,17 @@
         "_name": "Faithless Lidica",
         "skills": {
             "S1": {
-                "name": "Thorn",
-                "description": "Attacks the enemy with a sword, with a 75% chance to decrease Defense for 1 turn."
+                "name": "荆棘",
+                "description": "以剑攻击敌人，有75%的几率降低防御力1回合。"
             },
             "S2": {
-                "name": "Larkspur",
-                "description": "Attacks all enemies by binding them with a sword, with a 100% chance to dispel two buffs and inflict laceration for 2 turns. Grants an extra turn to the caster. This skill cannot trigger a counterattack."
+                "name": "飞燕草",
+                "description": "以剑束缚所有敌人进行攻击，有100%的几率解除两个强化效果，并施加2回合裂伤。施放者获得额外回合。此技能无法触发反击。"
             },
             "S3": {
-                "name": "Hysteria",
-                "description": "Attacks the enemy indiscriminately, fully increasing skill cooldowns. Grants skill nullifier once to all allies, and increases Combat Readiness of all allies by 25%. Grants stealth to the caster for 3 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "歇斯底里",
+                "description": "胡乱攻击敌人，使技能冷却时间回满。为所有友军施加一次技能伤害无效，并使所有友军的行动值提升25%。为施放者施加3回合隐身。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -2363,17 +2363,17 @@
         "_name": "Falconer Kluri",
         "skills": {
             "S1": {
-                "name": "Light Step",
-                "description": "Strikes in the direction of the enemy, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Defense."
+                "name": "轻盈步伐",
+                "description": "朝敌人方向发动打击，并使施放者的行动值提升20%。造成的伤害按施放者的防御力比例提升。"
             },
             "S2": {
-                "name": "Magic Resist",
-                "description": "Recovers 10% Health of the caster at the beginning of every turn."
+                "name": "魔法抵抗",
+                "description": "每回合开始时，恢复施放者10%的生命值。"
             },
             "S3": {
-                "name": "Fluri, Attack!",
-                "description": "Fluri flies towards the enemy, with a 75% chance to dispel all buffs, before a 100% chance to provoke and decrease Defense the enemy for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "弗露莉，攻击！",
+                "description": "弗露莉飞向敌人，有75%的几率解除所有强化效果，然后有100%的几率施加2回合挑衅与防御力降低。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -2381,17 +2381,17 @@
         "_name": "Fallen Cecilia",
         "skills": {
             "S1": {
-                "name": "Mistake",
-                "description": "Attacks the enemy with a spear of revenge and has a 100% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "过错",
+                "description": "以复仇之枪攻击敌人，有100%的几率施加1回合挑衅。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S2": {
-                "name": "Strong Instinct",
-                "description": "Grants 50% additional damage reduction to all allies. At the start of battle, grants a barrier to all allies for 2 turns, and at the end of the turn, grants a barrier to the ally with the lowest Health for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "强韧本能",
+                "description": "使所有友军受到的伤害额外降低50%。战斗开始时，为所有友军施加2回合屏障；回合结束时，为生命值最低的友军施加2回合屏障。屏障强度按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Spear of Resentment",
-                "description": "Attacks all enemies in an explosion of spiteful emotions and dispels all buffs before transferring all debuffs inflicted on the caster. Grants skill nullifier once to all allies. Damage dealt increases proportional to the caster's max Health."
+                "name": "怨恨之枪",
+                "description": "以怨恨情绪的爆发攻击所有敌人，解除所有强化效果，然后转移施放者身上的所有弱化效果。为所有友军施加一次技能伤害无效。造成的伤害按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -2399,17 +2399,17 @@
         "_name": "Fenne",
         "skills": {
             "S1": {
-                "name": "Intense Welcome",
-                "description": "After consuming 15% of the caster's current Health and inflicting injuries proportional to the consumption on the caster, attacks the enemy, recovering Health of all allies. When it is the caster's turn, if the caster is enraged, activates Embrace as an extra attack. Amount recovered increases proportional to the caster's max Health and Attack. Embrace: Attacks the enemy, and grants immunity to the caster for 1 turn. Damage dealt increases proportional to the caster's injuries.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "热烈欢迎",
+                "description": "消耗施放者当前生命值的15%，并按消耗量对施放者造成负伤，然后攻击敌人并恢复所有友军的生命值。在施放者的回合，若施放者处于激怒状态，以追加攻击发动拥抱。恢复量按施放者的最大生命值与攻击力比例提升。拥抱：攻击敌人，并为施放者施加1回合免疫。造成的伤害按施放者的负伤比例提升。",
+                "soulburn_effect": "提升恢复量。"
             },
             "S2": {
-                "name": "Love=Pain",
-                "description": "Increases Critical Hit Chance by 30%. Attack and Speed increase proportional to the caster's injuries ratio. Upon receiving lethal damage, revives with 50% Health and grants a barrier to the caster for 2 turns. Barrier strength increases proportional to the caster's Attack. Can only be activated once per battle."
+                "name": "爱=痛",
+                "description": "暴击率提升30%。攻击力与速度按施放者的负伤比例提升。受到致命伤害时，以50%生命值复活，并为施放者施加2回合屏障。屏障强度按施放者的攻击力比例提升。每场战斗只能发动一次。"
             },
             "S3": {
-                "name": "Love Bite",
-                "description": "After consuming 15% of the caster's current Health and inflicting injuries proportional to the consumption on the caster, attacks the enemy, absorbing some of the damage dealt as Health. The caster becomes enraged for 2 turns. Damage dealt increases proportional to the caster's injuries inflicted."
+                "name": "爱之啃咬",
+                "description": "消耗施放者当前生命值的15%，并按消耗量对施放者造成负伤，然后攻击敌人，并将部分造成的伤害吸收为生命值。施放者进入2回合激怒状态。造成的伤害按施放者受到的负伤比例提升。"
             }
         }
     },
