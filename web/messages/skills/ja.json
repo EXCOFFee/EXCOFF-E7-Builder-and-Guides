@@ -4970,17 +4970,17 @@
         "_name": "Researcher Carrot",
         "skills": {
             "S1": {
-                "name": "Swing",
-                "description": "Attacks with a staff, with a 75% chance to inflict burn for 1 turn, before detonating burn effects inflicted on the enemy at the end of the turn."
+                "name": "振り回し",
+                "description": "杖で攻撃し、75%の確率で1ターンの間火傷を付与した後、ターン終了時に敵の火傷を爆発させる。"
             },
             "S2": {
-                "name": "Flame Barrier",
-                "description": "After being attacked, grants increased Attack and a barrier (proportional to Attack) for 1 turn, and inflicts burn on the attacker for 1 turn."
+                "name": "炎の障壁",
+                "description": "攻撃された後、1ターンの間攻撃力アップとバリア（攻撃力に比例）を付与し、攻撃者に1ターンの間火傷を付与する。"
             },
             "S3": {
-                "name": "Flame Spurt",
-                "description": "Attacks all enemies with a powerful fire, dispelling two buffs before a 75% chance each to inflict two burn effects for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "炎の噴出",
+                "description": "強力な炎で敵全体を攻撃し、強化効果を二つ解除した後、それぞれ75%の確率で2ターンの間火傷を二つ付与する。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -4988,17 +4988,17 @@
         "_name": "Revna",
         "skills": {
             "S1": {
-                "name": "Infiltration",
-                "description": "Attacks the enemy with a sword, with a 75% chance to poison for 1 turn. When granted promotion, damage dealt increases proportional to the target's max Health."
+                "name": "潜入",
+                "description": "剣で敵を攻撃し、75%の確率で1ターンの間持続ダメージを付与する。昇進があれば、対象の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Ambition",
-                "description": "At the start of the turn, when an enemy's Health is 50% or less, has a 100% chance to grant exploiting weak points to the caster. When an enemy dies, grants promotion to the caster. Promotion can stack up to 6 times."
+                "name": "野望",
+                "description": "ターン開始時、敵のHPが50%以下なら、100%の確率で発動者に弱点把握を付与する。敵が死亡すると、発動者に昇進を付与する。昇進は最大6回まで重複する。"
             },
             "S3": {
-                "name": "Strike Target",
-                "description": "Attacks the enemy relentlessly, with a 100% chance to inflict target and decreased Speed for 2 turns. When granted promotion, damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "目標打撃",
+                "description": "敵を執拗に攻撃し、100%の確率で2ターンの間標的とスピードダウンを付与する。昇進があれば、対象の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -5024,17 +5024,17 @@
         "_name": "Righteous Thief Roozid",
         "skills": {
             "S1": {
-                "name": "Hemorrhage",
-                "description": "Cuts the enemy with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "出血",
+                "description": "双剣で敵を斬りつけ、50%の確率で2ターンの間スピードをダウンさせる。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Wind Slash",
-                "description": "Attacks with a swordstorm, with a 70% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "風斬り",
+                "description": "剣嵐で攻撃し、70%の確率で2ターンの間攻撃力をダウンさせる。発動者のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Moonlight Roar",
-                "description": "Increases Combat Readiness of all allies by 25% and grants increased Speed for 3 turns through the power of the moon. Grants an extra turn."
+                "name": "月光の咆哮",
+                "description": "月の力で味方全員の行動ゲージを25%増加させ、3ターンの間スピードアップを付与する。追加ターンを得る。"
             }
         }
     },
@@ -5042,17 +5042,17 @@
         "_name": "Rikoris",
         "skills": {
             "S1": {
-                "name": "Quick Pierce",
-                "description": "Attacks the enemy with a spear, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increase Speed, effect chance increases by 25%."
+                "name": "素早い突き",
+                "description": "槍で敵を攻撃し、50%の確率で2ターンの間防御力をダウンさせる。発動者にスピードアップがあれば、効果発動確率が25%アップする。"
             },
             "S2": {
-                "name": "Cheer",
-                "description": "Encourages all allies, decreasing skill cooldown by 1 turn and increasing Speed for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "激励",
+                "description": "味方全員を激励し、スキルのクールタイムを1ターン短縮し、2ターンの間スピードをアップさせる。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             },
             "S3": {
-                "name": "Flash Cut",
-                "description": "Decreases debuff duration of all allies by 1 turns, and attacks all enemies with a shockwave, with a 80% chance each to inflict decreased Speed and restrict for 2 turns."
+                "name": "閃光斬り",
+                "description": "味方全員の弱体効果の持続時間を1ターン減少させ、衝撃波で敵全体を攻撃し、それぞれ80%の確率で2ターンの間スピードダウンと制約を付与する。"
             }
         }
     },
@@ -5060,17 +5060,17 @@
         "_name": "Rima",
         "skills": {
             "S1": {
-                "name": "Quick Shot",
-                "description": "Attacks with a quick shot of an arrow. A critical hit will decrease the caster's skill cooldown by 1 turn."
+                "name": "速射",
+                "description": "矢を素早く放って攻撃する。クリティカルが発生すると、発動者のスキルのクールタイムを1ターン短縮する。"
             },
             "S2": {
-                "name": "Lullaby Arrow",
-                "description": "Shoots an arrow infused with a sleep toxin, with a 100% chance to put them to sleep for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "子守唄の矢",
+                "description": "睡眠毒を込めた矢を放ち、100%の確率で1ターンの間睡眠状態にする。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S3": {
-                "name": "War Hymn",
-                "description": "Encourages an ally except for the caster, decreasing skill cooldowns by 3 turns."
+                "name": "戦いの賛歌",
+                "description": "発動者を除く味方一人を激励し、スキルのクールタイムを3ターン短縮する。"
             }
         }
     },
@@ -5078,17 +5078,17 @@
         "_name": "Rimuru",
         "skills": {
             "S1": {
-                "name": "Okay, Shall I Get Started?",
-                "description": "Cuts the enemy to attack, granting a random buff to the caster for 1 turn."
+                "name": "さて、始めますか？",
+                "description": "敵を斬りつけて攻撃し、発動者に1ターンの間ランダムな強化効果を付与する。"
             },
             "S2": {
-                "name": "Analyze and Assess",
-                "description": "After attacking with a non-basic skill, copies two buffs when the target has a buff, regardless of whether the attack hits, and grants their effects to all allies. This effect is not applied to undispellable buffs. When an ally is attacked by an enemy who has a buff, activates Be Ready! against the attacker. Be Ready!: Quickly approaches the enemy and attacks, increasing Combat Readiness of the caster by 30%."
+                "name": "解析鑑定",
+                "description": "通常スキル以外のスキルで攻撃した後、対象に強化効果があれば、攻撃の命中に関係なく強化効果を二つ複製し、味方全員に付与する。この効果は解除不可の強化効果には適用されない。強化効果を持つ敵に味方が攻撃されると、攻撃者に覚悟しろ！を発動する。覚悟しろ！：素早く敵に接近して攻撃し、発動者の行動ゲージを30%増加させる。"
             },
             "S3": {
-                "name": "Devour It, Black Flame!",
-                "description": "Attacks the enemy with black flame, and a successful attack will inflict 5,000 additional damage. Additional damage increases proportional to the number of buffs granted to all allies, up to 10,000. When the target has a buff, inflicts decreased Defense on all enemies for 2 turns. Unaffected by elemental disadvantage.",
-                "soulburn_effect": "Cooldown of this skill is decreased by 2 turns."
+                "name": "喰らえ、黒炎！",
+                "description": "黒炎で敵を攻撃し、攻撃が成功すると5,000の追加ダメージを与える。味方全員に付与された強化効果の数に比例して、追加ダメージが最大10,000までアップする。対象に強化効果があれば、敵全体に2ターンの間防御力ダウンを付与する。属性の不利の影響を受けない。",
+                "soulburn_effect": "このスキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -5096,17 +5096,17 @@
         "_name": "Rin",
         "skills": {
             "S1": {
-                "name": "Ring Throw",
-                "description": "Throws rings at the enemy to attack, with a 75% chance to dispel one buff, and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's max Health."
+                "name": "リング投げ",
+                "description": "敵にリングを投げて攻撃し、75%の確率で強化効果を一つ解除し、発動者の行動ゲージを15%増加させる。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Dazzling Dance",
-                "description": "Dazzles the enemy with a dance, with a 75% chance to decrease Defense for 2 turns, before a 50% chance to use Ring Throw. Damage dealt increases proportional to the caster's max Health."
+                "name": "華麗な舞",
+                "description": "舞で敵を幻惑し、75%の確率で2ターンの間防御力をダウンさせた後、50%の確率でリング投げを使用する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Showtime",
-                "description": "With an elegant dance, recovers Health of all allies proportional to the target's max Health before granting two random buffs for 3 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "ショータイム",
+                "description": "優雅な舞で、対象の最大HPに比例して味方全員のHPを回復した後、3ターンの間ランダムな強化効果を二つ付与する。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },
@@ -5114,17 +5114,17 @@
         "_name": "Rinak",
         "skills": {
             "S1": {
-                "name": "Vital Point Slash",
-                "description": "Attacks the enemy with a dagger. Penetrates the target's Defense, and cannot trigger a critical hit. Damage dealt increases proportional to the caster's Speed."
+                "name": "急所斬り",
+                "description": "短剣で敵を攻撃する。対象の防御力を貫通し、クリティカルが発生しない。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Pickpocketing",
-                "description": "Swiftly attacks the enemy, dispelling all buffs before decreasing Combat Readiness by 40% and inflicting pilfer. Grants increased Attack to the caster for 2 turns and an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "スリ",
+                "description": "素早く敵を攻撃し、強化効果をすべて解除した後、行動ゲージを40%減少させ、窃盗を付与する。発動者に2ターンの間攻撃力アップを付与し、追加ターンを得る。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Clumsy Finish",
-                "description": "Nimbly attacks the enemy. Penetrates the target's Defense, and cannot trigger a critical hit. Damage dealt increases proportional to the caster's Speed. After attacking, activates a security sensor by a mistake, dispelling all buffs from the caster and inflicting stun for 1 turn, and deals 7000 fixed damage to all enemies. Ignores Effect Resistance."
+                "name": "ドジな仕上げ",
+                "description": "身軽に敵を攻撃する。対象の防御力を貫通し、クリティカルが発生しない。発動者のスピードに比例して与ダメージがアップする。攻撃後、うっかりセキュリティセンサーを作動させ、発動者の強化効果をすべて解除し、1ターンの間気絶状態になり、敵全体に7000の固定ダメージを与える。効果抵抗を無視する。"
             }
         }
     },

@@ -4970,17 +4970,17 @@
         "_name": "Researcher Carrot",
         "skills": {
             "S1": {
-                "name": "Swing",
-                "description": "Attacks with a staff, with a 75% chance to inflict burn for 1 turn, before detonating burn effects inflicted on the enemy at the end of the turn."
+                "name": "휘두르기",
+                "description": "지팡이로 공격하며, 75% 확률로 1턴 동안 화상을 건 뒤 턴 종료 시 적에게 걸린 화상을 폭발시킨다."
             },
             "S2": {
-                "name": "Flame Barrier",
-                "description": "After being attacked, grants increased Attack and a barrier (proportional to Attack) for 1 turn, and inflicts burn on the attacker for 1 turn."
+                "name": "화염 장벽",
+                "description": "공격받은 후 1턴 동안 공격력 증가와 보호막(공격력 비례)을 부여하고, 공격자에게 1턴 동안 화상을 건다."
             },
             "S3": {
-                "name": "Flame Spurt",
-                "description": "Attacks all enemies with a powerful fire, dispelling two buffs before a 75% chance each to inflict two burn effects for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "화염 분출",
+                "description": "강력한 불로 모든 적을 공격해 강화 효과를 두 개 해제한 뒤 각각 75% 확률로 2턴 동안 화상을 두 개 건다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -4988,17 +4988,17 @@
         "_name": "Revna",
         "skills": {
             "S1": {
-                "name": "Infiltration",
-                "description": "Attacks the enemy with a sword, with a 75% chance to poison for 1 turn. When granted promotion, damage dealt increases proportional to the target's max Health."
+                "name": "잠입",
+                "description": "검으로 적을 공격하며, 75% 확률로 1턴 동안 지속 피해를 건다. 승진이 있으면 대상의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Ambition",
-                "description": "At the start of the turn, when an enemy's Health is 50% or less, has a 100% chance to grant exploiting weak points to the caster. When an enemy dies, grants promotion to the caster. Promotion can stack up to 6 times."
+                "name": "야망",
+                "description": "턴 시작 시 적의 생명력이 50% 이하이면 100% 확률로 시전자에게 약점 파악을 부여한다. 적이 사망하면 시전자에게 승진을 부여한다. 승진은 최대 6회까지 중첩된다."
             },
             "S3": {
-                "name": "Strike Target",
-                "description": "Attacks the enemy relentlessly, with a 100% chance to inflict target and decreased Speed for 2 turns. When granted promotion, damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "목표 타격",
+                "description": "적을 집요하게 공격하며, 100% 확률로 2턴 동안 표적과 속도 감소를 건다. 승진이 있으면 대상의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -5024,17 +5024,17 @@
         "_name": "Righteous Thief Roozid",
         "skills": {
             "S1": {
-                "name": "Hemorrhage",
-                "description": "Cuts the enemy with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "출혈",
+                "description": "쌍검으로 적을 베며, 50% 확률로 2턴 동안 속도를 감소시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Wind Slash",
-                "description": "Attacks with a swordstorm, with a 70% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "바람 베기",
+                "description": "검풍으로 공격하며, 70% 확률로 2턴 동안 공격력을 감소시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Moonlight Roar",
-                "description": "Increases Combat Readiness of all allies by 25% and grants increased Speed for 3 turns through the power of the moon. Grants an extra turn."
+                "name": "달빛의 포효",
+                "description": "달의 힘으로 모든 아군의 행동 게이지를 25% 증가시키고 3턴 동안 속도 증가를 부여한다. 추가 턴을 얻는다."
             }
         }
     },
@@ -5042,17 +5042,17 @@
         "_name": "Rikoris",
         "skills": {
             "S1": {
-                "name": "Quick Pierce",
-                "description": "Attacks the enemy with a spear, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increase Speed, effect chance increases by 25%."
+                "name": "빠른 찌르기",
+                "description": "창으로 적을 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다. 시전자에게 속도 증가가 있으면 효과 발동 확률이 25% 증가한다."
             },
             "S2": {
-                "name": "Cheer",
-                "description": "Encourages all allies, decreasing skill cooldown by 1 turn and increasing Speed for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "격려",
+                "description": "모든 아군을 격려해 스킬 재사용 대기 시간을 1턴 감소시키고 2턴 동안 속도를 증가시킨다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장된다."
             },
             "S3": {
-                "name": "Flash Cut",
-                "description": "Decreases debuff duration of all allies by 1 turns, and attacks all enemies with a shockwave, with a 80% chance each to inflict decreased Speed and restrict for 2 turns."
+                "name": "섬광 베기",
+                "description": "모든 아군의 약화 효과 지속 시간을 1턴 감소시키고 충격파로 모든 적을 공격하며, 각각 80% 확률로 2턴 동안 속도 감소와 제약을 건다."
             }
         }
     },
@@ -5060,17 +5060,17 @@
         "_name": "Rima",
         "skills": {
             "S1": {
-                "name": "Quick Shot",
-                "description": "Attacks with a quick shot of an arrow. A critical hit will decrease the caster's skill cooldown by 1 turn."
+                "name": "속사",
+                "description": "화살을 빠르게 쏴 공격한다. 치명타가 발생하면 시전자의 스킬 재사용 대기 시간을 1턴 감소시킨다."
             },
             "S2": {
-                "name": "Lullaby Arrow",
-                "description": "Shoots an arrow infused with a sleep toxin, with a 100% chance to put them to sleep for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "자장가 화살",
+                "description": "수면 독이 깃든 화살을 쏘며, 100% 확률로 1턴 동안 수면에 빠뜨린다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S3": {
-                "name": "War Hymn",
-                "description": "Encourages an ally except for the caster, decreasing skill cooldowns by 3 turns."
+                "name": "전쟁의 찬가",
+                "description": "시전자를 제외한 아군 한 명을 격려해 스킬 재사용 대기 시간을 3턴 감소시킨다."
             }
         }
     },
@@ -5078,17 +5078,17 @@
         "_name": "Rimuru",
         "skills": {
             "S1": {
-                "name": "Okay, Shall I Get Started?",
-                "description": "Cuts the enemy to attack, granting a random buff to the caster for 1 turn."
+                "name": "자, 시작해 볼까?",
+                "description": "적을 베어 공격하고 시전자에게 1턴 동안 무작위 강화 효과를 부여한다."
             },
             "S2": {
-                "name": "Analyze and Assess",
-                "description": "After attacking with a non-basic skill, copies two buffs when the target has a buff, regardless of whether the attack hits, and grants their effects to all allies. This effect is not applied to undispellable buffs. When an ally is attacked by an enemy who has a buff, activates Be Ready! against the attacker. Be Ready!: Quickly approaches the enemy and attacks, increasing Combat Readiness of the caster by 30%."
+                "name": "해석 감정",
+                "description": "기본 스킬이 아닌 스킬로 공격한 후 대상에게 강화 효과가 있으면 공격의 적중 여부와 관계없이 강화 효과를 두 개 복제해 모든 아군에게 부여한다. 이 효과는 해제 불가 강화 효과에는 적용되지 않는다. 강화 효과가 있는 적에게 아군이 공격받으면 공격자에게 각오해라!를 발동한다. 각오해라!: 빠르게 적에게 다가가 공격하고 시전자의 행동 게이지를 30% 증가시킨다."
             },
             "S3": {
-                "name": "Devour It, Black Flame!",
-                "description": "Attacks the enemy with black flame, and a successful attack will inflict 5,000 additional damage. Additional damage increases proportional to the number of buffs granted to all allies, up to 10,000. When the target has a buff, inflicts decreased Defense on all enemies for 2 turns. Unaffected by elemental disadvantage.",
-                "soulburn_effect": "Cooldown of this skill is decreased by 2 turns."
+                "name": "삼켜라, 흑염!",
+                "description": "흑염으로 적을 공격하며, 공격에 성공하면 5,000의 추가 피해를 준다. 모든 아군에게 부여된 강화 효과의 수에 비례해 추가 피해가 최대 10,000까지 증가한다. 대상에게 강화 효과가 있으면 모든 적에게 2턴 동안 방어력 감소를 건다. 속성 상성의 불리함에 영향을 받지 않는다.",
+                "soulburn_effect": "이 스킬의 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -5096,17 +5096,17 @@
         "_name": "Rin",
         "skills": {
             "S1": {
-                "name": "Ring Throw",
-                "description": "Throws rings at the enemy to attack, with a 75% chance to dispel one buff, and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's max Health."
+                "name": "고리 던지기",
+                "description": "적에게 고리를 던져 공격하며, 75% 확률로 강화 효과를 한 개 해제하고 시전자의 행동 게이지를 15% 증가시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Dazzling Dance",
-                "description": "Dazzles the enemy with a dance, with a 75% chance to decrease Defense for 2 turns, before a 50% chance to use Ring Throw. Damage dealt increases proportional to the caster's max Health."
+                "name": "현란한 춤",
+                "description": "춤으로 적을 현혹하며, 75% 확률로 2턴 동안 방어력을 감소시킨 뒤 50% 확률로 고리 던지기를 사용한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Showtime",
-                "description": "With an elegant dance, recovers Health of all allies proportional to the target's max Health before granting two random buffs for 3 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "쇼타임",
+                "description": "우아한 춤으로 대상의 최대 생명력에 비례해 모든 아군의 생명력을 회복한 뒤 3턴 동안 무작위 강화 효과를 두 개 부여한다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장된다."
             }
         }
     },
@@ -5114,17 +5114,17 @@
         "_name": "Rinak",
         "skills": {
             "S1": {
-                "name": "Vital Point Slash",
-                "description": "Attacks the enemy with a dagger. Penetrates the target's Defense, and cannot trigger a critical hit. Damage dealt increases proportional to the caster's Speed."
+                "name": "급소 베기",
+                "description": "단검으로 적을 공격한다. 대상의 방어력을 관통하며 치명타가 발생하지 않는다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Pickpocketing",
-                "description": "Swiftly attacks the enemy, dispelling all buffs before decreasing Combat Readiness by 40% and inflicting pilfer. Grants increased Attack to the caster for 2 turns and an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "소매치기",
+                "description": "재빠르게 적을 공격해 강화 효과를 모두 해제한 뒤 행동 게이지를 40% 감소시키고 절도를 건다. 시전자에게 2턴 동안 공격력 증가를 부여하고 추가 턴을 얻는다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "Clumsy Finish",
-                "description": "Nimbly attacks the enemy. Penetrates the target's Defense, and cannot trigger a critical hit. Damage dealt increases proportional to the caster's Speed. After attacking, activates a security sensor by a mistake, dispelling all buffs from the caster and inflicting stun for 1 turn, and deals 7000 fixed damage to all enemies. Ignores Effect Resistance."
+                "name": "어설픈 마무리",
+                "description": "민첩하게 적을 공격한다. 대상의 방어력을 관통하며 치명타가 발생하지 않는다. 시전자의 속도에 비례해 주는 피해가 증가한다. 공격 후 실수로 보안 센서를 작동시켜 시전자의 강화 효과를 모두 해제하고 1턴 동안 기절하며, 모든 적에게 7000의 고정 피해를 준다. 효과 저항을 무시한다."
             }
         }
     },

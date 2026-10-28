@@ -4970,17 +4970,17 @@
         "_name": "Researcher Carrot",
         "skills": {
             "S1": {
-                "name": "Swing",
-                "description": "Attacks with a staff, with a 75% chance to inflict burn for 1 turn, before detonating burn effects inflicted on the enemy at the end of the turn."
+                "name": "挥击",
+                "description": "以法杖攻击，有75%的几率施加1回合灼伤，然后在回合结束时引爆敌人身上的灼伤。"
             },
             "S2": {
-                "name": "Flame Barrier",
-                "description": "After being attacked, grants increased Attack and a barrier (proportional to Attack) for 1 turn, and inflicts burn on the attacker for 1 turn."
+                "name": "火焰屏障",
+                "description": "受到攻击后，施加1回合攻击力提升与屏障（与攻击力成比例），并对攻击者施加1回合灼伤。"
             },
             "S3": {
-                "name": "Flame Spurt",
-                "description": "Attacks all enemies with a powerful fire, dispelling two buffs before a 75% chance each to inflict two burn effects for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "火焰喷涌",
+                "description": "以强力火焰攻击所有敌人，解除两个强化效果，然后各有75%的几率施加两层2回合灼伤。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -4988,17 +4988,17 @@
         "_name": "Revna",
         "skills": {
             "S1": {
-                "name": "Infiltration",
-                "description": "Attacks the enemy with a sword, with a 75% chance to poison for 1 turn. When granted promotion, damage dealt increases proportional to the target's max Health."
+                "name": "潜入",
+                "description": "以剑攻击敌人，有75%的几率施加1回合持续伤害。拥有晋升时，造成的伤害按目标的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Ambition",
-                "description": "At the start of the turn, when an enemy's Health is 50% or less, has a 100% chance to grant exploiting weak points to the caster. When an enemy dies, grants promotion to the caster. Promotion can stack up to 6 times."
+                "name": "野心",
+                "description": "回合开始时，若敌人生命值在50%以下，有100%的几率为施放者施加弱点洞察。敌人阵亡时，为施放者施加晋升。晋升最多叠加6次。"
             },
             "S3": {
-                "name": "Strike Target",
-                "description": "Attacks the enemy relentlessly, with a 100% chance to inflict target and decreased Speed for 2 turns. When granted promotion, damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "打击目标",
+                "description": "无情地攻击敌人，有100%的几率施加2回合标记与速度降低。拥有晋升时，造成的伤害按目标的最大生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -5024,17 +5024,17 @@
         "_name": "Righteous Thief Roozid",
         "skills": {
             "S1": {
-                "name": "Hemorrhage",
-                "description": "Cuts the enemy with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "出血",
+                "description": "以双剑斩击敌人，有50%的几率降低速度2回合。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "Wind Slash",
-                "description": "Attacks with a swordstorm, with a 70% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "风斩",
+                "description": "以剑暴攻击，有70%的几率降低攻击力2回合。造成的伤害按施放者的速度比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Moonlight Roar",
-                "description": "Increases Combat Readiness of all allies by 25% and grants increased Speed for 3 turns through the power of the moon. Grants an extra turn."
+                "name": "月光咆哮",
+                "description": "借助月亮之力，使所有友军的行动值提升25%，并施加3回合速度提升。获得额外回合。"
             }
         }
     },
@@ -5042,17 +5042,17 @@
         "_name": "Rikoris",
         "skills": {
             "S1": {
-                "name": "Quick Pierce",
-                "description": "Attacks the enemy with a spear, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increase Speed, effect chance increases by 25%."
+                "name": "快速刺击",
+                "description": "以长枪攻击敌人，有50%的几率降低防御力2回合。施放者拥有速度提升时，效果几率提升25%。"
             },
             "S2": {
-                "name": "Cheer",
-                "description": "Encourages all allies, decreasing skill cooldown by 1 turn and increasing Speed for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "鼓舞",
+                "description": "鼓舞所有友军，使技能冷却时间减少1回合，并提升速度2回合。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             },
             "S3": {
-                "name": "Flash Cut",
-                "description": "Decreases debuff duration of all allies by 1 turns, and attacks all enemies with a shockwave, with a 80% chance each to inflict decreased Speed and restrict for 2 turns."
+                "name": "闪光斩",
+                "description": "使所有友军的弱化效果持续时间减少1回合，并以冲击波攻击所有敌人，各有80%的几率施加2回合速度降低与限制。"
             }
         }
     },
@@ -5060,17 +5060,17 @@
         "_name": "Rima",
         "skills": {
             "S1": {
-                "name": "Quick Shot",
-                "description": "Attacks with a quick shot of an arrow. A critical hit will decrease the caster's skill cooldown by 1 turn."
+                "name": "速射",
+                "description": "快速射出箭矢攻击。暴击时，使施放者的技能冷却时间减少1回合。"
             },
             "S2": {
-                "name": "Lullaby Arrow",
-                "description": "Shoots an arrow infused with a sleep toxin, with a 100% chance to put them to sleep for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "摇篮曲之箭",
+                "description": "射出注入睡眠毒素的箭矢，有100%的几率使其睡眠1回合。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S3": {
-                "name": "War Hymn",
-                "description": "Encourages an ally except for the caster, decreasing skill cooldowns by 3 turns."
+                "name": "战争赞歌",
+                "description": "鼓舞除施放者外的一名友军，使技能冷却时间减少3回合。"
             }
         }
     },
@@ -5078,17 +5078,17 @@
         "_name": "Rimuru",
         "skills": {
             "S1": {
-                "name": "Okay, Shall I Get Started?",
-                "description": "Cuts the enemy to attack, granting a random buff to the caster for 1 turn."
+                "name": "那么，开始吧？",
+                "description": "斩击敌人，并为施放者施加1回合随机强化效果。"
             },
             "S2": {
-                "name": "Analyze and Assess",
-                "description": "After attacking with a non-basic skill, copies two buffs when the target has a buff, regardless of whether the attack hits, and grants their effects to all allies. This effect is not applied to undispellable buffs. When an ally is attacked by an enemy who has a buff, activates Be Ready! against the attacker. Be Ready!: Quickly approaches the enemy and attacks, increasing Combat Readiness of the caster by 30%."
+                "name": "解析鉴定",
+                "description": "以普通技能以外的技能攻击后，若目标拥有强化效果，无论攻击是否命中，复制两个强化效果并施加给所有友军。此效果不适用于无法解除的强化效果。友军受到拥有强化效果的敌人攻击时，对攻击者发动做好准备！。做好准备！：迅速接近敌人进行攻击，并使施放者的行动值提升30%。"
             },
             "S3": {
-                "name": "Devour It, Black Flame!",
-                "description": "Attacks the enemy with black flame, and a successful attack will inflict 5,000 additional damage. Additional damage increases proportional to the number of buffs granted to all allies, up to 10,000. When the target has a buff, inflicts decreased Defense on all enemies for 2 turns. Unaffected by elemental disadvantage.",
-                "soulburn_effect": "Cooldown of this skill is decreased by 2 turns."
+                "name": "吞噬吧，黑炎！",
+                "description": "以黑炎攻击敌人，攻击成功时追加造成5,000点伤害。追加伤害按所有友军身上强化效果的数量比例提升，最多10,000点。目标拥有强化效果时，对所有敌人施加2回合防御力降低。不受属性劣势影响。",
+                "soulburn_effect": "此技能的冷却时间减少2回合。"
             }
         }
     },
@@ -5096,17 +5096,17 @@
         "_name": "Rin",
         "skills": {
             "S1": {
-                "name": "Ring Throw",
-                "description": "Throws rings at the enemy to attack, with a 75% chance to dispel one buff, and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's max Health."
+                "name": "投掷圆环",
+                "description": "向敌人投掷圆环进行攻击，有75%的几率解除一个强化效果，并使施放者的行动值提升15%。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Dazzling Dance",
-                "description": "Dazzles the enemy with a dance, with a 75% chance to decrease Defense for 2 turns, before a 50% chance to use Ring Throw. Damage dealt increases proportional to the caster's max Health."
+                "name": "炫目之舞",
+                "description": "以舞蹈迷惑敌人，有75%的几率降低防御力2回合，然后有50%的几率使用投掷圆环。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Showtime",
-                "description": "With an elegant dance, recovers Health of all allies proportional to the target's max Health before granting two random buffs for 3 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "表演时间",
+                "description": "以优雅的舞蹈，按目标的最大生命值比例恢复所有友军的生命值，然后施加两个随机强化效果3回合。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             }
         }
     },
@@ -5114,17 +5114,17 @@
         "_name": "Rinak",
         "skills": {
             "S1": {
-                "name": "Vital Point Slash",
-                "description": "Attacks the enemy with a dagger. Penetrates the target's Defense, and cannot trigger a critical hit. Damage dealt increases proportional to the caster's Speed."
+                "name": "要害斩",
+                "description": "以短剑攻击敌人。穿透目标的防御力，且无法造成暴击。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "Pickpocketing",
-                "description": "Swiftly attacks the enemy, dispelling all buffs before decreasing Combat Readiness by 40% and inflicting pilfer. Grants increased Attack to the caster for 2 turns and an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "扒窃",
+                "description": "迅速攻击敌人，解除所有强化效果后降低40%行动值，并施加窃取。为施放者施加2回合攻击力提升，并获得额外回合。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Clumsy Finish",
-                "description": "Nimbly attacks the enemy. Penetrates the target's Defense, and cannot trigger a critical hit. Damage dealt increases proportional to the caster's Speed. After attacking, activates a security sensor by a mistake, dispelling all buffs from the caster and inflicting stun for 1 turn, and deals 7000 fixed damage to all enemies. Ignores Effect Resistance."
+                "name": "笨拙收尾",
+                "description": "敏捷地攻击敌人。穿透目标的防御力，且无法造成暴击。造成的伤害按施放者的速度比例提升。攻击后不小心触发安全感应器，解除施放者的所有强化效果并使其眩晕1回合，同时对所有敌人造成7000点固定伤害。无视效果抵抗。"
             }
         }
     },

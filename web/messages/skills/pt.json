@@ -4970,17 +4970,17 @@
         "_name": "Researcher Carrot",
         "skills": {
             "S1": {
-                "name": "Swing",
-                "description": "Attacks with a staff, with a 75% chance to inflict burn for 1 turn, before detonating burn effects inflicted on the enemy at the end of the turn."
+                "name": "Balanço",
+                "description": "Ataca com um cajado, com 75% de chance de aplicar queimadura por 1 turno, depois detona os efeitos de queimadura aplicados ao inimigo no fim do turno."
             },
             "S2": {
-                "name": "Flame Barrier",
-                "description": "After being attacked, grants increased Attack and a barrier (proportional to Attack) for 1 turn, and inflicts burn on the attacker for 1 turn."
+                "name": "Barreira de chamas",
+                "description": "Após ser atacado, concede Aumentar Ataque e uma barreira (proporcional ao Ataque) por 1 turno e aplica queimadura ao atacante por 1 turno."
             },
             "S3": {
-                "name": "Flame Spurt",
-                "description": "Attacks all enemies with a powerful fire, dispelling two buffs before a 75% chance each to inflict two burn effects for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Jorro de chamas",
+                "description": "Ataca todos os inimigos com fogo poderoso, dissipando dois efeitos positivos, depois com 75% de chance cada aplica dois efeitos de queimadura por 2 turnos.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -4988,17 +4988,17 @@
         "_name": "Revna",
         "skills": {
             "S1": {
-                "name": "Infiltration",
-                "description": "Attacks the enemy with a sword, with a 75% chance to poison for 1 turn. When granted promotion, damage dealt increases proportional to the target's max Health."
+                "name": "Infiltração",
+                "description": "Ataca o inimigo com uma espada, com 75% de chance de aplicar veneno por 1 turno. Quando tem promoção, o dano causado aumenta proporcionalmente à Vida máxima do alvo."
             },
             "S2": {
-                "name": "Ambition",
-                "description": "At the start of the turn, when an enemy's Health is 50% or less, has a 100% chance to grant exploiting weak points to the caster. When an enemy dies, grants promotion to the caster. Promotion can stack up to 6 times."
+                "name": "Ambição",
+                "description": "No início do turno, quando a Vida de um inimigo é 50% ou menos, tem 100% de chance de conceder Exploração de pontos fracos ao conjurador. Quando um inimigo morre, concede promoção ao conjurador. A promoção acumula até 6 vezes."
             },
             "S3": {
-                "name": "Strike Target",
-                "description": "Attacks the enemy relentlessly, with a 100% chance to inflict target and decreased Speed for 2 turns. When granted promotion, damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Atacar o alvo",
+                "description": "Ataca o inimigo implacavelmente, com 100% de chance de aplicar alvo e Diminuir Velocidade por 2 turnos. Quando tem promoção, o dano causado aumenta proporcionalmente à Vida máxima do alvo.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -5024,17 +5024,17 @@
         "_name": "Righteous Thief Roozid",
         "skills": {
             "S1": {
-                "name": "Hemorrhage",
-                "description": "Cuts the enemy with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "Hemorragia",
+                "description": "Corta o inimigo com duas espadas, com 50% de chance de diminuir a Velocidade por 2 turnos. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Wind Slash",
-                "description": "Attacks with a swordstorm, with a 70% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Corte do vento",
+                "description": "Ataca com uma tempestade de espadas, com 70% de chance de diminuir o Ataque por 2 turnos. O dano causado aumenta proporcionalmente à Velocidade do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Moonlight Roar",
-                "description": "Increases Combat Readiness of all allies by 25% and grants increased Speed for 3 turns through the power of the moon. Grants an extra turn."
+                "name": "Rugido do luar",
+                "description": "Pelo poder da lua, aumenta a Prontidão de Combate de todos os aliados em 25% e concede Aumentar Velocidade por 3 turnos. Concede um turno extra."
             }
         }
     },
@@ -5042,17 +5042,17 @@
         "_name": "Rikoris",
         "skills": {
             "S1": {
-                "name": "Quick Pierce",
-                "description": "Attacks the enemy with a spear, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increase Speed, effect chance increases by 25%."
+                "name": "Perfuração rápida",
+                "description": "Ataca o inimigo com uma lança, com 50% de chance de diminuir a Defesa por 2 turnos. Quando o conjurador tem Aumentar Velocidade, a chance do efeito aumenta 25%."
             },
             "S2": {
-                "name": "Cheer",
-                "description": "Encourages all allies, decreasing skill cooldown by 1 turn and increasing Speed for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Incentivo",
+                "description": "Encoraja todos os aliados, diminuindo a recarga das habilidades em 1 turno e aumentando a Velocidade por 2 turnos.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             },
             "S3": {
-                "name": "Flash Cut",
-                "description": "Decreases debuff duration of all allies by 1 turns, and attacks all enemies with a shockwave, with a 80% chance each to inflict decreased Speed and restrict for 2 turns."
+                "name": "Corte relâmpago",
+                "description": "Diminui a duração dos efeitos negativos de todos os aliados em 1 turno e ataca todos os inimigos com uma onda de choque, com 80% de chance cada de aplicar Diminuir Velocidade e restrição por 2 turnos."
             }
         }
     },
@@ -5060,17 +5060,17 @@
         "_name": "Rima",
         "skills": {
             "S1": {
-                "name": "Quick Shot",
-                "description": "Attacks with a quick shot of an arrow. A critical hit will decrease the caster's skill cooldown by 1 turn."
+                "name": "Tiro rápido",
+                "description": "Ataca com um tiro rápido de flecha. Um acerto crítico diminui a recarga das habilidades do conjurador em 1 turno."
             },
             "S2": {
-                "name": "Lullaby Arrow",
-                "description": "Shoots an arrow infused with a sleep toxin, with a 100% chance to put them to sleep for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Flecha de ninar",
+                "description": "Dispara uma flecha impregnada com toxina do sono, com 100% de chance de fazer o alvo dormir por 1 turno.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S3": {
-                "name": "War Hymn",
-                "description": "Encourages an ally except for the caster, decreasing skill cooldowns by 3 turns."
+                "name": "Hino de guerra",
+                "description": "Encoraja um aliado, exceto o conjurador, diminuindo as recargas de habilidades em 3 turnos."
             }
         }
     },
@@ -5078,17 +5078,17 @@
         "_name": "Rimuru",
         "skills": {
             "S1": {
-                "name": "Okay, Shall I Get Started?",
-                "description": "Cuts the enemy to attack, granting a random buff to the caster for 1 turn."
+                "name": "Bem, vamos começar?",
+                "description": "Corta o inimigo para atacar, concedendo um efeito positivo aleatório ao conjurador por 1 turno."
             },
             "S2": {
-                "name": "Analyze and Assess",
-                "description": "After attacking with a non-basic skill, copies two buffs when the target has a buff, regardless of whether the attack hits, and grants their effects to all allies. This effect is not applied to undispellable buffs. When an ally is attacked by an enemy who has a buff, activates Be Ready! against the attacker. Be Ready!: Quickly approaches the enemy and attacks, increasing Combat Readiness of the caster by 30%."
+                "name": "Analisar e avaliar",
+                "description": "Após atacar com uma habilidade que não é a básica, copia dois efeitos positivos quando o alvo tem um efeito positivo, independentemente de o ataque acertar, e concede seus efeitos a todos os aliados. Este efeito não se aplica a efeitos positivos indissipáveis. Quando um aliado é atacado por um inimigo que tem um efeito positivo, ativa Prepare-se! contra o atacante. Prepare-se!: aproxima-se rapidamente do inimigo e ataca, aumentando a Prontidão de Combate do conjurador em 30%."
             },
             "S3": {
-                "name": "Devour It, Black Flame!",
-                "description": "Attacks the enemy with black flame, and a successful attack will inflict 5,000 additional damage. Additional damage increases proportional to the number of buffs granted to all allies, up to 10,000. When the target has a buff, inflicts decreased Defense on all enemies for 2 turns. Unaffected by elemental disadvantage.",
-                "soulburn_effect": "Cooldown of this skill is decreased by 2 turns."
+                "name": "Devore, chama negra!",
+                "description": "Ataca o inimigo com chama negra, e um ataque bem-sucedido causa 5.000 de dano adicional. O dano adicional aumenta proporcionalmente ao número de efeitos positivos concedidos a todos os aliados, até 10.000. Quando o alvo tem um efeito positivo, aplica Diminuir Defesa a todos os inimigos por 2 turnos. Não é afetado por desvantagem elemental.",
+                "soulburn_effect": "A recarga desta habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -5096,17 +5096,17 @@
         "_name": "Rin",
         "skills": {
             "S1": {
-                "name": "Ring Throw",
-                "description": "Throws rings at the enemy to attack, with a 75% chance to dispel one buff, and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's max Health."
+                "name": "Arremesso de aros",
+                "description": "Arremessa aros no inimigo para atacar, com 75% de chance de dissipar um efeito positivo, e aumenta a Prontidão de Combate do conjurador em 15%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Dazzling Dance",
-                "description": "Dazzles the enemy with a dance, with a 75% chance to decrease Defense for 2 turns, before a 50% chance to use Ring Throw. Damage dealt increases proportional to the caster's max Health."
+                "name": "Dança deslumbrante",
+                "description": "Deslumbra o inimigo com uma dança, com 75% de chance de diminuir a Defesa por 2 turnos, depois com 50% de chance usa Arremesso de aros. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Showtime",
-                "description": "With an elegant dance, recovers Health of all allies proportional to the target's max Health before granting two random buffs for 3 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Hora do show",
+                "description": "Com uma dança elegante, recupera a Vida de todos os aliados proporcionalmente à Vida máxima do alvo, depois concede dois efeitos positivos aleatórios por 3 turnos.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -5114,17 +5114,17 @@
         "_name": "Rinak",
         "skills": {
             "S1": {
-                "name": "Vital Point Slash",
-                "description": "Attacks the enemy with a dagger. Penetrates the target's Defense, and cannot trigger a critical hit. Damage dealt increases proportional to the caster's Speed."
+                "name": "Corte no ponto vital",
+                "description": "Ataca o inimigo com uma adaga. Penetra a Defesa do alvo e não pode causar acerto crítico. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Pickpocketing",
-                "description": "Swiftly attacks the enemy, dispelling all buffs before decreasing Combat Readiness by 40% and inflicting pilfer. Grants increased Attack to the caster for 2 turns and an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Batedor de carteiras",
+                "description": "Ataca o inimigo rapidamente, dissipando todos os efeitos positivos antes de diminuir a Prontidão de Combate em 40% e aplicar furto. Concede Aumentar Ataque ao conjurador por 2 turnos e um turno extra.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Clumsy Finish",
-                "description": "Nimbly attacks the enemy. Penetrates the target's Defense, and cannot trigger a critical hit. Damage dealt increases proportional to the caster's Speed. After attacking, activates a security sensor by a mistake, dispelling all buffs from the caster and inflicting stun for 1 turn, and deals 7000 fixed damage to all enemies. Ignores Effect Resistance."
+                "name": "Final desastrado",
+                "description": "Ataca o inimigo com agilidade. Penetra a Defesa do alvo e não pode causar acerto crítico. O dano causado aumenta proporcionalmente à Velocidade do conjurador. Após atacar, ativa por engano um sensor de segurança, dissipando todos os efeitos positivos do conjurador e atordoando-o por 1 turno, e causa 7000 de dano fixo a todos os inimigos. Ignora a Resistência a Efeitos."
             }
         }
     },
