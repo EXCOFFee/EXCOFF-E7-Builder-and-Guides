@@ -1372,17 +1372,17 @@
         "_name": "Challenger Dominiel",
         "skills": {
             "S1": {
-                "name": "Electrocute",
-                "description": "Attacks the enemy with electricity. A critical hit will increase damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "感電",
+                "description": "電気で敵を攻撃する。クリティカルが発生すると与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Electric Charge",
-                "description": "Increases Critical Hit Chance by 30%. When an ally makes a critical hit, grants stackable increased Attack to the caster according to the number of critical hits made and increases Combat Readiness by 10% per critical hit. This stackable increased Attack is dispelled after attacking."
+                "name": "電気充電",
+                "description": "クリティカル率が30%アップする。味方がクリティカルを発生させると、クリティカルの回数に応じて発動者に累積攻撃力アップを付与し、クリティカル一回につき行動ゲージを10%増加させる。累積攻撃力アップは攻撃後に解除される。"
             },
             "S3": {
-                "name": "Supercharge",
-                "description": "Releases powerful electricity, granting increased Critical Hit Damage to all allies for 3 turns and increasing Combat Readiness by 25%. Grants an extra turn."
+                "name": "過充電",
+                "description": "強力な電気を放出し、味方全員に3ターンの間クリティカルダメージアップを付与し、行動ゲージを25%増加させる。追加ターンを得る。"
             }
         }
     },
@@ -1390,17 +1390,17 @@
         "_name": "Champion Zerato",
         "skills": {
             "S1": {
-                "name": "Earthen Rage",
-                "description": "Attacks two enemies including the target with an earthen blast, transferring two debuffs from the caster, and recovers Health proportional to max Health."
+                "name": "大地の怒り",
+                "description": "大地の爆発で対象を含む敵二体を攻撃し、発動者の弱体効果を二つ移し、最大HPに比例してHPを回復する。"
             },
             "S2": {
-                "name": "Iron Will",
-                "description": "Immune to stun, sleep, and decreased Hit Chance. After being attacked, when the caster has a debuff, has a 100% chance to counterattack."
+                "name": "鋼の意志",
+                "description": "気絶、睡眠、命中率ダウンを受けない。攻撃された後、発動者に弱体効果があれば、100%の確率で反撃する。"
             },
             "S3": {
-                "name": "Cataclysm",
-                "description": "Attacks all enemies by slamming rocks and has a 75% chance each to inflict decreased Defense and decreased Attack for 2 turns. Grants increased Defense to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "大変動",
+                "description": "岩を叩きつけて敵全体を攻撃し、それぞれ75%の確率で2ターンの間防御力ダウンと攻撃力ダウンを付与する。発動者に2ターンの間防御力アップを付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -1408,17 +1408,17 @@
         "_name": "Chaos Inquisitor",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Strikes the enemy with a blade, with a 50% chance each to dispel one buff twice."
+                "name": "強打",
+                "description": "刃で敵を斬りつけ、それぞれ50%の確率で強化効果を一つずつ二回解除する。"
             },
             "S2": {
-                "name": "Butcher Corps Gear",
-                "description": "Damage suffered in one attack does not exceed 35% of max Health."
+                "name": "屠殺者部隊の装備",
+                "description": "一回の攻撃で受けるダメージが最大HPの35%を超えない。"
             },
             "S3": {
-                "name": "Preach",
-                "description": "Attacks the enemy in the name of Chaos, with a 50% chance to activate Heavy Strike when the enemy is buffed. Damage dealt increases proportional to the caster's lost Health. Recovers Health proportional to damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "説教",
+                "description": "混沌の名のもとに敵を攻撃し、敵に強化効果があれば50%の確率で強打を発動する。発動者の失ったHPに比例して与ダメージがアップする。与ダメージに比例してHPを回復する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1426,17 +1426,17 @@
         "_name": "Chaos Sect Axe",
         "skills": {
             "S1": {
-                "name": "Disconnect",
-                "description": "Attacks the enemy with an axe and inflicts up to 10% injuries. Damage dealt increases proportional to the caster's max Health."
+                "name": "断絶",
+                "description": "斧で敵を攻撃し、最大10%の負傷を与える。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Attack Chain",
-                "description": "Attacks all enemies with a shockwave and inflicts up to 15% injuries before recovering Health of the caster. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "連鎖攻撃",
+                "description": "衝撃波で敵全体を攻撃し、最大15%の負傷を与えた後、発動者のHPを回復する。発動者の最大HPに比例して与ダメージと回復量がアップする。"
             },
             "S3": {
-                "name": "Vigorous Strike",
-                "description": "Attacks the enemy, dispelling all buffs before a 75% chance to increase skill cooldowns by 2 turns. When the enemy is defeated, resets cooldown of this skill. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "猛烈な一撃",
+                "description": "敵を攻撃し、強化効果をすべて解除した後、75%の確率でスキルのクールタイムを2ターン増加させる。敵を倒すと、このスキルのクールタイムをリセットする。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1444,17 +1444,17 @@
         "_name": "Charles",
         "skills": {
             "S1": {
-                "name": "Slash",
-                "description": "Attacks the enemy with a giant sword and has a 75% chance to dispel one buff. After attacking, has a 50% chance to activate Smash as an extra attack, and when the caster is granted three or more buffs, doubles effect chance."
+                "name": "斬撃",
+                "description": "巨大な剣で敵を攻撃し、75%の確率で強化効果を一つ解除する。攻撃後、50%の確率で追加攻撃として粉砕を発動し、発動者に強化効果が三つ以上あれば効果発動確率が倍になる。"
             },
             "S2": {
-                "name": "Smash",
-                "description": "Attacks the enemy repeatedly with a giant sword, absorbing some of the damage as Health, and increases Combat Readiness of all allies by 15%."
+                "name": "粉砕",
+                "description": "巨大な剣で敵を連続で攻撃し、ダメージの一部をHPとして吸収し、味方全員の行動ゲージを15%増加させる。"
             },
             "S3": {
-                "name": "Faithful Strike",
-                "description": "Attacks all enemies by discharging a sword blast, and grants increased Attack and increased Defense to all allies for 2 turns. Grants counterattack to the caster for 2 turns. When there are three or fewer enemies, damage dealt increases as enemies become fewer.",
-                "soulburn_effect": "Cooldown of this skill is decreased by 2 turns."
+                "name": "忠誠の一撃",
+                "description": "剣気を放って敵全体を攻撃し、味方全員に2ターンの間攻撃力アップと防御力アップを付与する。発動者に2ターンの間反撃を付与する。敵が三体以下の場合、敵が少ないほど与ダメージがアップする。",
+                "soulburn_effect": "このスキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -1462,17 +1462,17 @@
         "_name": "Charlotte",
         "skills": {
             "S1": {
-                "name": "Dual Swords",
-                "description": "Attacks the enemy with dual swords, and increases Combat Readiness of the caster by 25%. A successful attack always results in a critical hit. When this skill is used, if it was not triggered by a Dual Attack and the caster has a buff, Dual Swords changes into an attack that targets all enemies, and the amount of Fighting Spirit gained is doubled."
+                "name": "双剣",
+                "description": "双剣で敵を攻撃し、発動者の行動ゲージを25%増加させる。攻撃が成功すると必ずクリティカルが発生する。このスキルの使用時、協攻による発動ではなく発動者に強化効果があれば、双剣が敵全体を対象とする攻撃に変わり、獲得する闘志が倍になる。"
             },
             "S2": {
-                "name": "Will of the Swamp",
-                "description": "At the start of battle and at the end of the turn, grants a barrier (proportional to Attack) for 1 turn. When the caster has a buff and attacking, increases damage dealt by 50%, and when attacked, grants 50% damage reduction."
+                "name": "沼の意志",
+                "description": "バトル開始時とターン終了時、1ターンの間バリア（攻撃力に比例）を付与する。発動者に強化効果があれば、攻撃時に与ダメージが50%アップし、攻撃されたときにダメージを50%軽減する。"
             },
             "S3": {
-                "name": "Vortex",
-                "description": "Cuts all enemies while spinning, making them unhealable for 2 turns. Penetrates Defense of the target with the highest Defense. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Acquires 100 Fighting Spirit after using this skill."
+                "name": "渦巻き",
+                "description": "回転しながら敵全体を斬り、2ターンの間回復不可を付与する。防御力が最も高い対象の防御力を貫通する。攻撃が成功すると必ずクリティカルが発生する。",
+                "soulburn_effect": "このスキルの使用後、闘志を100獲得する。"
             }
         }
     },
@@ -1480,17 +1480,17 @@
         "_name": "Chloe",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Hammers the enemy. Damage dealt is increased when the enemy is inflicted with magic nail."
+                "name": "強打",
+                "description": "敵を打ちつける。敵に魔法の釘があれば与ダメージがアップする。"
             },
             "S2": {
-                "name": "Magic Bolt",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy, inflicting magic nail for 3 turns, and increases Combat Readiness of the caster by 50%. Ignores Effect Resistance."
+                "name": "魔法弾",
+                "description": "発動者に3ターンの間攻撃力アップを付与した後、敵を攻撃して3ターンの間魔法の釘を付与し、発動者の行動ゲージを50%増加させる。効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Hyper Strike",
-                "description": "Soars into the air and attacks the enemy, stunning for 1 turn. When the enemy is inflicted with magic nail, ignores Effect Resistance.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "ハイパーストライク",
+                "description": "空中に舞い上がって敵を攻撃し、1ターンの間気絶させる。敵に魔法の釘があれば効果抵抗を無視する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1498,17 +1498,17 @@
         "_name": "Choux",
         "skills": {
             "S1": {
-                "name": "Chop",
-                "description": "Attacks the enemy with a spear, before increasing Combat Readiness of the caster by 20%. A critical hit will double the amount of Focus gained. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "打ち下ろし",
+                "description": "槍で敵を攻撃した後、発動者の行動ゲージを20%増加させる。クリティカルが発生すると獲得する集中が倍になる。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Fwoooosh!",
-                "description": "Attacks the enemy by wildly swinging a spear, and absorbs some of the damage dealt as Health. Penetrates the enemy's Defense by 70%. When the caster's stacked Focus is 5, consumes all Focus, increasing damage dealt and resetting the cooldown of Fwoooosh!. Damage dealt increases proportional to the caster's max Health."
+                "name": "ヒュウウウン！",
+                "description": "槍を激しく振り回して敵を攻撃し、与ダメージの一部をHPとして吸収する。敵の防御力を70%貫通する。発動者の集中が5溜まると、集中をすべて消費して与ダメージがアップし、ヒュウウウン！のクールタイムをリセットする。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Help Me, Cream!",
-                "description": "Attacks all enemies by freezing them before calling for Cream. Grants increased Critical Hit Resistance to all allies for 2 turns, and grants immunity to the caster for 2 turns. Damage dealt increases proportional to the caster's max Health. When this skill is on cooldown, after an ally except for the caster is attacked, has a 20% chance to counterattack."
+                "name": "助けて、クリーム！",
+                "description": "敵全体を凍らせて攻撃した後、クリームを呼ぶ。味方全員に2ターンの間クリティカル抵抗アップを、発動者に2ターンの間免疫を付与する。発動者の最大HPに比例して与ダメージがアップする。このスキルがクールタイム中なら、発動者を除く味方が攻撃された後、20%の確率で反撃する。"
             }
         }
     },

@@ -1372,17 +1372,17 @@
         "_name": "Challenger Dominiel",
         "skills": {
             "S1": {
-                "name": "Electrocute",
-                "description": "Attacks the enemy with electricity. A critical hit will increase damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "电击",
+                "description": "以电流攻击敌人。暴击时提升造成的伤害。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "Electric Charge",
-                "description": "Increases Critical Hit Chance by 30%. When an ally makes a critical hit, grants stackable increased Attack to the caster according to the number of critical hits made and increases Combat Readiness by 10% per critical hit. This stackable increased Attack is dispelled after attacking."
+                "name": "电力充能",
+                "description": "暴击率提升30%。友军造成暴击时，按暴击次数为施放者施加可叠加的攻击力提升，且每次暴击使行动值提升10%。可叠加的攻击力提升在攻击后解除。"
             },
             "S3": {
-                "name": "Supercharge",
-                "description": "Releases powerful electricity, granting increased Critical Hit Damage to all allies for 3 turns and increasing Combat Readiness by 25%. Grants an extra turn."
+                "name": "超载",
+                "description": "释放强大电流，为所有友军施加3回合暴击伤害提升，并提升25%行动值。获得额外回合。"
             }
         }
     },
@@ -1390,17 +1390,17 @@
         "_name": "Champion Zerato",
         "skills": {
             "S1": {
-                "name": "Earthen Rage",
-                "description": "Attacks two enemies including the target with an earthen blast, transferring two debuffs from the caster, and recovers Health proportional to max Health."
+                "name": "大地之怒",
+                "description": "以大地爆炸攻击包括目标在内的两名敌人，转移施放者的两个弱化效果，并按最大生命值比例恢复生命值。"
             },
             "S2": {
-                "name": "Iron Will",
-                "description": "Immune to stun, sleep, and decreased Hit Chance. After being attacked, when the caster has a debuff, has a 100% chance to counterattack."
+                "name": "钢铁意志",
+                "description": "免疫眩晕、睡眠与命中率降低。受到攻击后，若施放者有弱化效果，有100%的几率反击。"
             },
             "S3": {
-                "name": "Cataclysm",
-                "description": "Attacks all enemies by slamming rocks and has a 75% chance each to inflict decreased Defense and decreased Attack for 2 turns. Grants increased Defense to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "大灾变",
+                "description": "砸下岩石攻击所有敌人，各有75%的几率施加2回合防御力降低与攻击力降低。为施放者施加2回合防御力提升。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -1408,17 +1408,17 @@
         "_name": "Chaos Inquisitor",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Strikes the enemy with a blade, with a 50% chance each to dispel one buff twice."
+                "name": "重击",
+                "description": "以利刃斩击敌人，各有50%的几率解除一个强化效果，共两次。"
             },
             "S2": {
-                "name": "Butcher Corps Gear",
-                "description": "Damage suffered in one attack does not exceed 35% of max Health."
+                "name": "屠夫军团装备",
+                "description": "单次攻击受到的伤害不超过最大生命值的35%。"
             },
             "S3": {
-                "name": "Preach",
-                "description": "Attacks the enemy in the name of Chaos, with a 50% chance to activate Heavy Strike when the enemy is buffed. Damage dealt increases proportional to the caster's lost Health. Recovers Health proportional to damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "布道",
+                "description": "以混沌之名攻击敌人，敌人拥有强化效果时，有50%的几率发动重击。造成的伤害按施放者已损失的生命值比例提升。按造成的伤害比例恢复生命值。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1426,17 +1426,17 @@
         "_name": "Chaos Sect Axe",
         "skills": {
             "S1": {
-                "name": "Disconnect",
-                "description": "Attacks the enemy with an axe and inflicts up to 10% injuries. Damage dealt increases proportional to the caster's max Health."
+                "name": "断绝",
+                "description": "以斧头攻击敌人，造成最多10%的负伤。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Attack Chain",
-                "description": "Attacks all enemies with a shockwave and inflicts up to 15% injuries before recovering Health of the caster. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "连锁攻击",
+                "description": "以冲击波攻击所有敌人，造成最多15%的负伤，然后恢复施放者的生命值。造成的伤害与恢复量按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Vigorous Strike",
-                "description": "Attacks the enemy, dispelling all buffs before a 75% chance to increase skill cooldowns by 2 turns. When the enemy is defeated, resets cooldown of this skill. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "猛烈一击",
+                "description": "攻击敌人，解除所有强化效果，然后有75%的几率使技能冷却时间增加2回合。击败敌人时，重置此技能的冷却时间。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1444,17 +1444,17 @@
         "_name": "Charles",
         "skills": {
             "S1": {
-                "name": "Slash",
-                "description": "Attacks the enemy with a giant sword and has a 75% chance to dispel one buff. After attacking, has a 50% chance to activate Smash as an extra attack, and when the caster is granted three or more buffs, doubles effect chance."
+                "name": "斩击",
+                "description": "以巨剑攻击敌人，有75%的几率解除一个强化效果。攻击后有50%的几率以追加攻击发动粉碎，施放者拥有三个以上强化效果时，效果几率翻倍。"
             },
             "S2": {
-                "name": "Smash",
-                "description": "Attacks the enemy repeatedly with a giant sword, absorbing some of the damage as Health, and increases Combat Readiness of all allies by 15%."
+                "name": "粉碎",
+                "description": "以巨剑连续攻击敌人，将部分伤害吸收为生命值，并使所有友军的行动值提升15%。"
             },
             "S3": {
-                "name": "Faithful Strike",
-                "description": "Attacks all enemies by discharging a sword blast, and grants increased Attack and increased Defense to all allies for 2 turns. Grants counterattack to the caster for 2 turns. When there are three or fewer enemies, damage dealt increases as enemies become fewer.",
-                "soulburn_effect": "Cooldown of this skill is decreased by 2 turns."
+                "name": "忠诚一击",
+                "description": "释放剑气攻击所有敌人，并为所有友军施加2回合攻击力提升与防御力提升。为施放者施加2回合反击。敌人在三名以下时，敌人越少，造成的伤害越高。",
+                "soulburn_effect": "此技能的冷却时间减少2回合。"
             }
         }
     },
@@ -1462,17 +1462,17 @@
         "_name": "Charlotte",
         "skills": {
             "S1": {
-                "name": "Dual Swords",
-                "description": "Attacks the enemy with dual swords, and increases Combat Readiness of the caster by 25%. A successful attack always results in a critical hit. When this skill is used, if it was not triggered by a Dual Attack and the caster has a buff, Dual Swords changes into an attack that targets all enemies, and the amount of Fighting Spirit gained is doubled."
+                "name": "双剑",
+                "description": "以双剑攻击敌人，并使施放者的行动值提升25%。攻击成功时必定暴击。使用此技能时，若并非由协攻触发且施放者拥有强化效果，双剑变为以所有敌人为目标的攻击，且获得的斗志翻倍。"
             },
             "S2": {
-                "name": "Will of the Swamp",
-                "description": "At the start of battle and at the end of the turn, grants a barrier (proportional to Attack) for 1 turn. When the caster has a buff and attacking, increases damage dealt by 50%, and when attacked, grants 50% damage reduction."
+                "name": "沼泽意志",
+                "description": "战斗开始时与回合结束时，施加1回合屏障（与攻击力成比例）。施放者拥有强化效果时，攻击时造成的伤害提升50%，受到攻击时伤害降低50%。"
             },
             "S3": {
-                "name": "Vortex",
-                "description": "Cuts all enemies while spinning, making them unhealable for 2 turns. Penetrates Defense of the target with the highest Defense. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Acquires 100 Fighting Spirit after using this skill."
+                "name": "漩涡",
+                "description": "旋转斩击所有敌人，施加2回合无法恢复。穿透防御力最高的目标的防御力。攻击成功时必定暴击。",
+                "soulburn_effect": "使用此技能后获得100斗志。"
             }
         }
     },
@@ -1480,17 +1480,17 @@
         "_name": "Chloe",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Hammers the enemy. Damage dealt is increased when the enemy is inflicted with magic nail."
+                "name": "重击",
+                "description": "重击敌人。敌人身上有魔法钉时，提升造成的伤害。"
             },
             "S2": {
-                "name": "Magic Bolt",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy, inflicting magic nail for 3 turns, and increases Combat Readiness of the caster by 50%. Ignores Effect Resistance."
+                "name": "魔法弹",
+                "description": "为施放者施加3回合攻击力提升后，攻击敌人并施加3回合魔法钉，使施放者的行动值提升50%。无视效果抵抗。"
             },
             "S3": {
-                "name": "Hyper Strike",
-                "description": "Soars into the air and attacks the enemy, stunning for 1 turn. When the enemy is inflicted with magic nail, ignores Effect Resistance.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "超级打击",
+                "description": "跃上空中攻击敌人，使其眩晕1回合。敌人身上有魔法钉时，无视效果抵抗。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1498,17 +1498,17 @@
         "_name": "Choux",
         "skills": {
             "S1": {
-                "name": "Chop",
-                "description": "Attacks the enemy with a spear, before increasing Combat Readiness of the caster by 20%. A critical hit will double the amount of Focus gained. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "劈砍",
+                "description": "以长枪攻击敌人，然后使施放者的行动值提升20%。暴击时获得的专注翻倍。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Fwoooosh!",
-                "description": "Attacks the enemy by wildly swinging a spear, and absorbs some of the damage dealt as Health. Penetrates the enemy's Defense by 70%. When the caster's stacked Focus is 5, consumes all Focus, increasing damage dealt and resetting the cooldown of Fwoooosh!. Damage dealt increases proportional to the caster's max Health."
+                "name": "呼呼呼！",
+                "description": "疯狂挥舞长枪攻击敌人，并将部分造成的伤害吸收为生命值。穿透敌人70%的防御力。施放者累积的专注达到5时，消耗全部专注，提升造成的伤害并重置呼呼呼！的冷却时间。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Help Me, Cream!",
-                "description": "Attacks all enemies by freezing them before calling for Cream. Grants increased Critical Hit Resistance to all allies for 2 turns, and grants immunity to the caster for 2 turns. Damage dealt increases proportional to the caster's max Health. When this skill is on cooldown, after an ally except for the caster is attacked, has a 20% chance to counterattack."
+                "name": "帮帮我，奶油！",
+                "description": "冰冻所有敌人进行攻击，然后呼唤奶油。为所有友军施加2回合暴击抵抗提升，为施放者施加2回合免疫。造成的伤害按施放者的最大生命值比例提升。此技能处于冷却中时，除施放者外的友军受到攻击后，有20%的几率反击。"
             }
         }
     },

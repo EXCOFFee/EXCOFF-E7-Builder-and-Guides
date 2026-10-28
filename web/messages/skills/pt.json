@@ -1372,17 +1372,17 @@
         "_name": "Challenger Dominiel",
         "skills": {
             "S1": {
-                "name": "Electrocute",
-                "description": "Attacks the enemy with electricity. A critical hit will increase damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Eletrocutar",
+                "description": "Ataca o inimigo com eletricidade. Um acerto crítico aumenta o dano causado.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Electric Charge",
-                "description": "Increases Critical Hit Chance by 30%. When an ally makes a critical hit, grants stackable increased Attack to the caster according to the number of critical hits made and increases Combat Readiness by 10% per critical hit. This stackable increased Attack is dispelled after attacking."
+                "name": "Carga elétrica",
+                "description": "Aumenta a Chance de Crítico em 30%. Quando um aliado causa um acerto crítico, concede ao conjurador Aumentar Ataque acumulável conforme o número de acertos críticos e aumenta a Prontidão de Combate em 10% por acerto crítico. Este Aumentar Ataque acumulável é dissipado após atacar."
             },
             "S3": {
-                "name": "Supercharge",
-                "description": "Releases powerful electricity, granting increased Critical Hit Damage to all allies for 3 turns and increasing Combat Readiness by 25%. Grants an extra turn."
+                "name": "Supercarga",
+                "description": "Libera eletricidade poderosa, concedendo Aumentar Dano Crítico a todos os aliados por 3 turnos e aumentando a Prontidão de Combate em 25%. Concede um turno extra."
             }
         }
     },
@@ -1390,17 +1390,17 @@
         "_name": "Champion Zerato",
         "skills": {
             "S1": {
-                "name": "Earthen Rage",
-                "description": "Attacks two enemies including the target with an earthen blast, transferring two debuffs from the caster, and recovers Health proportional to max Health."
+                "name": "Fúria da terra",
+                "description": "Ataca dois inimigos, incluindo o alvo, com uma explosão de terra, transferindo dois efeitos negativos do conjurador, e recupera Vida proporcionalmente à Vida máxima."
             },
             "S2": {
-                "name": "Iron Will",
-                "description": "Immune to stun, sleep, and decreased Hit Chance. After being attacked, when the caster has a debuff, has a 100% chance to counterattack."
+                "name": "Vontade de ferro",
+                "description": "Imune a atordoamento, sono e Diminuir Precisão. Após ser atacado, quando o conjurador tem um efeito negativo, tem 100% de chance de contra-atacar."
             },
             "S3": {
-                "name": "Cataclysm",
-                "description": "Attacks all enemies by slamming rocks and has a 75% chance each to inflict decreased Defense and decreased Attack for 2 turns. Grants increased Defense to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Cataclismo",
+                "description": "Ataca todos os inimigos arremessando rochas e tem 75% de chance cada de aplicar Diminuir Defesa e Diminuir Ataque por 2 turnos. Concede Aumentar Defesa ao conjurador por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -1408,17 +1408,17 @@
         "_name": "Chaos Inquisitor",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Strikes the enemy with a blade, with a 50% chance each to dispel one buff twice."
+                "name": "Golpe pesado",
+                "description": "Golpeia o inimigo com uma lâmina, com 50% de chance cada de dissipar um efeito positivo, duas vezes."
             },
             "S2": {
-                "name": "Butcher Corps Gear",
-                "description": "Damage suffered in one attack does not exceed 35% of max Health."
+                "name": "Equipamento da Tropa dos Carniceiros",
+                "description": "O dano sofrido em um único ataque não ultrapassa 35% da Vida máxima."
             },
             "S3": {
-                "name": "Preach",
-                "description": "Attacks the enemy in the name of Chaos, with a 50% chance to activate Heavy Strike when the enemy is buffed. Damage dealt increases proportional to the caster's lost Health. Recovers Health proportional to damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Pregação",
+                "description": "Ataca o inimigo em nome do Caos, com 50% de chance de ativar Golpe pesado quando o inimigo tem efeitos positivos. O dano causado aumenta proporcionalmente à Vida perdida do conjurador. Recupera Vida proporcionalmente ao dano causado.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1426,17 +1426,17 @@
         "_name": "Chaos Sect Axe",
         "skills": {
             "S1": {
-                "name": "Disconnect",
-                "description": "Attacks the enemy with an axe and inflicts up to 10% injuries. Damage dealt increases proportional to the caster's max Health."
+                "name": "Desconectar",
+                "description": "Ataca o inimigo com um machado e causa até 10% de ferimentos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Attack Chain",
-                "description": "Attacks all enemies with a shockwave and inflicts up to 15% injuries before recovering Health of the caster. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "Ataque em cadeia",
+                "description": "Ataca todos os inimigos com uma onda de choque e causa até 15% de ferimentos, depois recupera a Vida do conjurador. O dano causado e a quantidade recuperada aumentam proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Vigorous Strike",
-                "description": "Attacks the enemy, dispelling all buffs before a 75% chance to increase skill cooldowns by 2 turns. When the enemy is defeated, resets cooldown of this skill. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Golpe vigoroso",
+                "description": "Ataca o inimigo, dissipando todos os efeitos positivos, depois com 75% de chance aumenta as recargas de habilidades em 2 turnos. Ao derrotar o inimigo, reinicia a recarga desta habilidade. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1444,17 +1444,17 @@
         "_name": "Charles",
         "skills": {
             "S1": {
-                "name": "Slash",
-                "description": "Attacks the enemy with a giant sword and has a 75% chance to dispel one buff. After attacking, has a 50% chance to activate Smash as an extra attack, and when the caster is granted three or more buffs, doubles effect chance."
+                "name": "Talho",
+                "description": "Ataca o inimigo com uma espada gigante e tem 75% de chance de dissipar um efeito positivo. Após atacar, tem 50% de chance de ativar Esmagar como ataque extra e, quando o conjurador tem três ou mais efeitos positivos, a chance do efeito dobra."
             },
             "S2": {
-                "name": "Smash",
-                "description": "Attacks the enemy repeatedly with a giant sword, absorbing some of the damage as Health, and increases Combat Readiness of all allies by 15%."
+                "name": "Esmagar",
+                "description": "Ataca o inimigo repetidamente com uma espada gigante, absorvendo parte do dano como Vida, e aumenta a Prontidão de Combate de todos os aliados em 15%."
             },
             "S3": {
-                "name": "Faithful Strike",
-                "description": "Attacks all enemies by discharging a sword blast, and grants increased Attack and increased Defense to all allies for 2 turns. Grants counterattack to the caster for 2 turns. When there are three or fewer enemies, damage dealt increases as enemies become fewer.",
-                "soulburn_effect": "Cooldown of this skill is decreased by 2 turns."
+                "name": "Golpe leal",
+                "description": "Ataca todos os inimigos disparando uma rajada de espada e concede Aumentar Ataque e Aumentar Defesa a todos os aliados por 2 turnos. Concede contra-ataque ao conjurador por 2 turnos. Quando há três inimigos ou menos, o dano causado aumenta quanto menos inimigos houver.",
+                "soulburn_effect": "A recarga desta habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -1462,17 +1462,17 @@
         "_name": "Charlotte",
         "skills": {
             "S1": {
-                "name": "Dual Swords",
-                "description": "Attacks the enemy with dual swords, and increases Combat Readiness of the caster by 25%. A successful attack always results in a critical hit. When this skill is used, if it was not triggered by a Dual Attack and the caster has a buff, Dual Swords changes into an attack that targets all enemies, and the amount of Fighting Spirit gained is doubled."
+                "name": "Espadas duplas",
+                "description": "Ataca o inimigo com duas espadas e aumenta a Prontidão de Combate do conjurador em 25%. Um ataque bem-sucedido sempre resulta em acerto crítico. Ao usar esta habilidade, se não tiver sido ativada por Ataque duplo e o conjurador tiver um efeito positivo, Espadas duplas passa a mirar todos os inimigos e o Espírito de luta obtido dobra."
             },
             "S2": {
-                "name": "Will of the Swamp",
-                "description": "At the start of battle and at the end of the turn, grants a barrier (proportional to Attack) for 1 turn. When the caster has a buff and attacking, increases damage dealt by 50%, and when attacked, grants 50% damage reduction."
+                "name": "Vontade do pântano",
+                "description": "No início da batalha e no fim do turno, concede uma barreira (proporcional ao Ataque) por 1 turno. Quando o conjurador tem um efeito positivo, ao atacar aumenta o dano causado em 50% e, ao ser atacado, concede 50% de redução de dano."
             },
             "S3": {
-                "name": "Vortex",
-                "description": "Cuts all enemies while spinning, making them unhealable for 2 turns. Penetrates Defense of the target with the highest Defense. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Acquires 100 Fighting Spirit after using this skill."
+                "name": "Vórtice",
+                "description": "Corta todos os inimigos girando, impedindo que sejam curados por 2 turnos. Penetra a Defesa do alvo com maior Defesa. Um ataque bem-sucedido sempre resulta em acerto crítico.",
+                "soulburn_effect": "Adquire 100 de Espírito de luta após usar esta habilidade."
             }
         }
     },
@@ -1480,17 +1480,17 @@
         "_name": "Chloe",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Hammers the enemy. Damage dealt is increased when the enemy is inflicted with magic nail."
+                "name": "Golpe pesado",
+                "description": "Martela o inimigo. O dano causado aumenta quando o inimigo tem prego mágico."
             },
             "S2": {
-                "name": "Magic Bolt",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy, inflicting magic nail for 3 turns, and increases Combat Readiness of the caster by 50%. Ignores Effect Resistance."
+                "name": "Raio mágico",
+                "description": "Após conceder Aumentar Ataque ao conjurador por 3 turnos, ataca o inimigo, aplicando prego mágico por 3 turnos, e aumenta a Prontidão de Combate do conjurador em 50%. Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Hyper Strike",
-                "description": "Soars into the air and attacks the enemy, stunning for 1 turn. When the enemy is inflicted with magic nail, ignores Effect Resistance.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Hipergolpe",
+                "description": "Salta no ar e ataca o inimigo, atordoando-o por 1 turno. Quando o inimigo tem prego mágico, ignora a Resistência a Efeitos.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1498,17 +1498,17 @@
         "_name": "Choux",
         "skills": {
             "S1": {
-                "name": "Chop",
-                "description": "Attacks the enemy with a spear, before increasing Combat Readiness of the caster by 20%. A critical hit will double the amount of Focus gained. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Golpe cortante",
+                "description": "Ataca o inimigo com uma lança, depois aumenta a Prontidão de Combate do conjurador em 20%. Um acerto crítico dobra o Foco obtido. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Fwoooosh!",
-                "description": "Attacks the enemy by wildly swinging a spear, and absorbs some of the damage dealt as Health. Penetrates the enemy's Defense by 70%. When the caster's stacked Focus is 5, consumes all Focus, increasing damage dealt and resetting the cooldown of Fwoooosh!. Damage dealt increases proportional to the caster's max Health."
+                "name": "Fuuuuush!",
+                "description": "Ataca o inimigo girando a lança freneticamente e absorve parte do dano causado como Vida. Penetra 70% da Defesa do inimigo. Quando o Foco acumulado do conjurador é 5, consome todo o Foco, aumentando o dano causado e reiniciando a recarga de Fuuuuush!. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Help Me, Cream!",
-                "description": "Attacks all enemies by freezing them before calling for Cream. Grants increased Critical Hit Resistance to all allies for 2 turns, and grants immunity to the caster for 2 turns. Damage dealt increases proportional to the caster's max Health. When this skill is on cooldown, after an ally except for the caster is attacked, has a 20% chance to counterattack."
+                "name": "Me ajuda, Cream!",
+                "description": "Ataca todos os inimigos congelando-os, depois chama Cream. Concede Aumentar Resistência a Crítico a todos os aliados por 2 turnos e imunidade ao conjurador por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Quando esta habilidade está em recarga, após um aliado, exceto o conjurador, ser atacado, tem 20% de chance de contra-atacar."
             }
         }
     },
