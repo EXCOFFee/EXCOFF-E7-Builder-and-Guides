@@ -5276,17 +5276,17 @@
         "_name": "Ruele of Light",
         "skills": {
             "S1": {
-                "name": "Key to an Oath",
-                "description": "Attacks the enemy with a staff, before recovering Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Attacks the enemy before greatly healing all allies. Does not trigger a Dual Attack."
+                "name": "맹세의 열쇠",
+                "description": "지팡이로 적을 공격한 뒤 모든 아군의 생명력을 회복한다. 시전자의 최대 생명력에 비례해 주는 피해와 회복량이 증가한다.",
+                "soulburn_effect": "적을 공격한 뒤 모든 아군을 크게 회복한다. 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Light Pillar",
-                "description": "Summons Light Pillar, dispelling all debuffs from an ally and recovering their Health before granting them a barrier and damage limit for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "빛의 기둥",
+                "description": "빛의 기둥을 소환해 아군 한 명의 약화 효과를 모두 해제하고 생명력을 회복한 뒤 2턴 동안 보호막과 피해 한도를 부여한다. 시전자의 최대 생명력에 비례해 회복량과 보호막 강도가 증가한다."
             },
             "S3": {
-                "name": "Light Ascending",
-                "description": "Dispels all debuffs from an ally with healing magic before fully recovering Health and granting invincibility for 1 turn. When the target is already dead, revives them with 100% Health before the same effect is applied. At the start of the first battle, grants Spirit Lord's Protection to the caster."
+                "name": "빛의 승천",
+                "description": "치유 마법으로 아군 한 명의 약화 효과를 모두 해제한 뒤 생명력을 전부 회복하고 1턴 동안 무적을 부여한다. 대상이 이미 사망했으면 생명력 100%로 부활시킨 뒤 같은 효과를 적용한다. 첫 번째 전투 시작 시 시전자에게 정령왕의 가호를 부여한다."
             }
         }
     },
@@ -5294,17 +5294,17 @@
         "_name": "Ruiza",
         "skills": {
             "S1": {
-                "name": "Liquidation",
-                "description": "Attacks the enemy with a whip, and grants increased Speed to the caster for 1 turn. Deals additional damage equivalent to 50% of injuries inflicted on the target."
+                "name": "청산",
+                "description": "채찍으로 적을 공격하고 시전자에게 1턴 동안 속도 증가를 부여한다. 대상에게 입힌 부상의 50%에 해당하는 추가 피해를 준다."
             },
             "S2": {
-                "name": "Deflection",
-                "description": "Creates a gust of wind, dispelling two buffs from all enemies and decreasing Combat Readiness by 20%, before spreading the selected target's debuffs. Grants stealth to the caster for 2 turns."
+                "name": "편향",
+                "description": "돌풍을 일으켜 모든 적의 강화 효과를 두 개 해제하고 행동 게이지를 20% 감소시킨 뒤 선택한 대상의 약화 효과를 퍼뜨린다. 시전자에게 2턴 동안 은신을 부여한다."
             },
             "S3": {
-                "name": "Demolition",
-                "description": "Attacks the enemy by destroying the surroundings, dispelling all buffs from the target and decreasing Combat Readiness by 50% before a 100% chance each to inflict laceration and silence for 2 turns. Increases Combat Readiness of the caster by 50%. At the start of the first battle, grants stealth for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "파괴",
+                "description": "주변을 파괴해 적을 공격하고 대상의 강화 효과를 모두 해제하며 행동 게이지를 50% 감소시킨 뒤 각각 100% 확률로 2턴 동안 열상과 침묵을 건다. 시전자의 행동 게이지를 50% 증가시킨다. 첫 번째 전투 시작 시 2턴 동안 은신을 부여한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -5312,17 +5312,17 @@
         "_name": "Sage Baal & Sezan",
         "skills": {
             "S1": {
-                "name": "Evil Spirit's Call",
-                "description": "Summons an evil spirit to attack the enemy, with a 75% chance to put the enemy to sleep for 1 turn. When the target is asleep after the attack, increases the caster's Combat Readiness by 20%. This skill does not trigger a Dual Attack."
+                "name": "악령의 부름",
+                "description": "악령을 소환해 적을 공격하며, 75% 확률로 1턴 동안 수면에 빠뜨린다. 공격 후 대상이 수면 상태이면 시전자의 행동 게이지를 20% 증가시킨다. 이 스킬로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Cloud of Ruin",
-                "description": "Attacks all enemies by summoning storm clouds and has a 100% chance to dispel two buffs before inflicting sleep for 1 turn. When this skill is not on cooldown, at the end of an enemy's turn, increases Combat Readiness of the caster by 20%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "파멸의 구름",
+                "description": "폭풍 구름을 소환해 모든 적을 공격하며, 100% 확률로 강화 효과를 두 개 해제한 뒤 1턴 동안 수면을 건다. 이 스킬이 재사용 대기 중이 아니면 적의 턴 종료 시 시전자의 행동 게이지를 20% 증가시킨다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Eye of Death",
-                "description": "Attacks the enemy with the eyes of an evil spirit, and when the enemy is defeated, extends debuff durations of all remaining enemies by 1 turn. Penetrates the target's Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. Damage dealt increases when the target is inflicted with sleep."
+                "name": "죽음의 눈",
+                "description": "악령의 눈으로 적을 공격하며, 적을 처치하면 남은 모든 적의 약화 효과 지속 시간을 1턴 연장한다. 대상의 방어력을 관통하지만 치명타나 강타가 발생하지 않는다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 대상이 수면 상태이면 주는 피해가 증가한다."
             }
         }
     },
@@ -5330,17 +5330,17 @@
         "_name": "Salome",
         "skills": {
             "S1": {
-                "name": "Corrupted Divinity",
-                "description": "Attacks the enemy with a spear, and triggers a Dual Attack from the ally with the highest Attack. Damage dealt increases proportional to the caster's max Health."
+                "name": "타락한 신성",
+                "description": "창으로 적을 공격하고 공격력이 가장 높은 아군이 협공한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Salvation",
-                "description": "Releases divinity, granting skill nullifier once to the caster, and cloning a target Hero except for the caster for 1 turn. Grants an extra turn. Clone: Clones the target's appearance and abilities. While in the Clone state, separate skill cooldowns are applied. When dispelled, unique effects granted to the caster by the Clone skill are also dispelled."
+                "name": "구원",
+                "description": "신성을 해방해 시전자에게 스킬 피해 무효를 한 번 부여하고, 시전자를 제외한 대상 영웅을 1턴 동안 복제한다. 추가 턴을 얻는다. 복제: 대상의 외형과 능력을 복제한다. 복제 상태에서는 별도의 스킬 재사용 대기 시간이 적용된다. 해제되면 복제 스킬로 시전자에게 부여된 고유 효과도 해제된다."
             },
             "S3": {
-                "name": "Nggdrasil's Judgment",
-                "description": "After inflicting collapse on the enemy for 2 turns, attacks with the power of Nggdrasil, with a 100% chance to inflict decreased Defense for 2 turns, and deals additional damage to the target. Damage dealt and additional damage increase proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "닉드라실의 심판",
+                "description": "적에게 2턴 동안 붕괴를 건 뒤 닉드라실의 힘으로 공격하며, 100% 확률로 2턴 동안 방어력 감소를 걸고 대상에게 추가 피해를 준다. 시전자의 최대 생명력에 비례해 주는 피해와 추가 피해가 증가한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -5348,17 +5348,17 @@
         "_name": "Saria",
         "skills": {
             "S1": {
-                "name": "Spirit Burst",
-                "description": "Attacks two enemies with a burst and has a 75% chance to dispel one buff.",
-                "soulburn_effect": "Increases effect chance to 100% and ignores Effect Resistance."
+                "name": "정령 폭발",
+                "description": "폭발로 적 두 명을 공격하며, 75% 확률로 강화 효과를 한 개 해제한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가하고 효과 저항을 무시한다."
             },
             "S2": {
-                "name": "Guidance of Nature",
-                "description": "At the start of an ally's extra turn, gains 2 Focus and increases Combat Readiness of the caster by 30%. After using a skill, when Focus is full, activates Wings of Liberation. Wings of Liberation(consumes 5 Focus): Attacks all enemies by unleashing a spirit bird. Increases Hit Chance by 50% when using this skill, and is unaffected by elemental disadvantage."
+                "name": "자연의 인도",
+                "description": "아군의 추가 턴 시작 시 집중을 2 얻고 시전자의 행동 게이지를 30% 증가시킨다. 스킬 사용 후 집중이 가득 차 있으면 해방의 날개를 발동한다. 해방의 날개(집중 5 소모): 정령 새를 풀어 모든 적을 공격한다. 이 스킬 사용 시 명중률이 50% 증가하며 속성 상성의 불리함에 영향을 받지 않는다."
             },
             "S3": {
-                "name": "Blossoming Hope",
-                "description": "By kindling the light of hope, grants invincibility to all allies for 1 turn and increased Attack for 2 turns."
+                "name": "피어나는 희망",
+                "description": "희망의 빛을 밝혀 모든 아군에게 1턴 동안 무적을, 2턴 동안 공격력 증가를 부여한다."
             }
         }
     },
@@ -5366,17 +5366,17 @@
         "_name": "Savior Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, with a 85% chance to make them unable to be buffed for 1 turn."
+                "name": "발목 베기",
+                "description": "검으로 적을 공격하며, 85% 확률로 1턴 동안 강화 불가를 건다."
             },
             "S2": {
-                "name": "Power of the Four Seasons",
-                "description": "Evasion increases by 50%, and after successfully evading, counterattacks with Blade Gust. Blade Gust can only be activated once every 2 turns. Blade Gust (Gains 10 Soul): Attacks all enemies with a blade gust, dispelling one buff."
+                "name": "사계절의 힘",
+                "description": "회피가 50% 증가하며, 회피에 성공한 후 칼날 돌풍으로 반격한다. 칼날 돌풍은 2턴마다 한 번만 발동할 수 있다. 칼날 돌풍(소울 10 획득): 칼날 돌풍으로 모든 적을 공격해 강화 효과를 한 개 해제한다."
             },
             "S3": {
-                "name": "Smite of Salvation",
-                "description": "Attacks the enemy with a powerful blow and grants invincibility to all allies except for the caster for 1 turn. When the enemy is defeated, inflicts extinction. Penetrates the target's Defense by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "구원의 일격",
+                "description": "강력한 일격으로 적을 공격하고 시전자를 제외한 모든 아군에게 1턴 동안 무적을 부여한다. 적을 처치하면 소멸을 건다. 대상의 방어력을 50% 관통한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -5384,17 +5384,17 @@
         "_name": "Schniel",
         "skills": {
             "S1": {
-                "name": "Is This How You Do It",
-                "description": "Attacks the enemy, and increases Combat Readiness of the caster and the ally with the highest Attack except for the caster by 15%."
+                "name": "이렇게 하는 건가",
+                "description": "적을 공격하고 시전자와, 시전자를 제외하고 공격력이 가장 높은 아군의 행동 게이지를 15% 증가시킨다."
             },
             "S2": {
-                "name": "I Know a Thing About Poison",
-                "description": "At the start of the turn, dispels one debuff each from two allies. After an enemy uses a skill, when an ally is inflicted with poison or venom, dispels all debuffs from the caster and activates Cleanse. Cleanse: Dispels all debuffs from all allies and grants immunity and indomitable for 1 turn, before resetting skill cooldowns of the caster."
+                "name": "독에 대해선 좀 알지",
+                "description": "턴 시작 시 아군 두 명의 약화 효과를 각각 한 개 해제한다. 적이 스킬을 사용한 후 아군에게 지속 피해 또는 맹독이 걸려 있으면 시전자의 약화 효과를 모두 해제하고 정화를 발동한다. 정화: 모든 아군의 약화 효과를 모두 해제하고 1턴 동안 면역과 불굴을 부여한 뒤 시전자의 스킬 재사용 대기 시간을 초기화한다."
             },
             "S3": {
-                "name": "You May Walk Yourself Out",
-                "description": "Attacks all enemies, before granting increased Defense and a barrier (proportional to the caster's max Health) to all allies for 2 turns. Deals 5,000 additional damage regardless of whether the attack hits. When the caster is granted indomitable, greatly increases additional damage.",
-                "soulburn_effect": "Increases barrier strength."
+                "name": "알아서 나가 주시죠",
+                "description": "모든 적을 공격한 뒤 모든 아군에게 2턴 동안 방어력 증가와 보호막(시전자 최대 생명력 비례)을 부여한다. 공격의 적중 여부와 관계없이 5,000의 추가 피해를 준다. 시전자에게 불굴이 있으면 추가 피해가 크게 증가한다.",
+                "soulburn_effect": "보호막 강도가 증가한다."
             }
         }
     },
@@ -5402,17 +5402,17 @@
         "_name": "School Nurse Yulha",
         "skills": {
             "S1": {
-                "name": "This'll Sting!",
-                "description": "Attacks the enemy with a scalpel, with a 80% chance to inflict two bleeding effects for 2 turns. At the end of the turn, detonates bleeding effects inflicted on the target,",
-                "soulburn_effect": "Grants an extra attack with the same skill."
+                "name": "따끔할 거예요!",
+                "description": "메스로 적을 공격하며, 80% 확률로 2턴 동안 출혈을 두 개 건다. 턴 종료 시 대상에게 걸린 출혈을 폭발시킨다.",
+                "soulburn_effect": "같은 스킬로 추가 공격한다."
             },
             "S2": {
-                "name": "There, It'll Feel Better",
-                "description": "At the start of the first battle, increases Attack proportional to max Health. At the start of an ally's turn, dispels one debuff from the target and recovers Health proportional to the caster's max Health."
+                "name": "자, 이제 괜찮아질 거예요",
+                "description": "첫 번째 전투 시작 시 최대 생명력에 비례해 공격력이 증가한다. 아군의 턴 시작 시 대상의 약화 효과를 한 개 해제하고 시전자의 최대 생명력에 비례해 생명력을 회복한다."
             },
             "S3": {
-                "name": "It's Time to Be Reborn!",
-                "description": "Dispels all debuffs from an ally except for the caster before fully recovering Health. Grants superhumanization to the target for 3 turns and increases Combat Readiness by 50%. When the target is already dead, revives them with 100% Health before the same effect is applied. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "다시 태어날 시간이에요!",
+                "description": "시전자를 제외한 아군 한 명의 약화 효과를 모두 해제한 뒤 생명력을 전부 회복한다. 대상에게 3턴 동안 초인화를 부여하고 행동 게이지를 50% 증가시킨다. 대상이 이미 사망했으면 생명력 100%로 부활시킨 뒤 같은 효과를 적용한다. 이 스킬은 재사용 대기 시간 증가·감소 효과의 영향을 받지 않는다."
             }
         }
     },

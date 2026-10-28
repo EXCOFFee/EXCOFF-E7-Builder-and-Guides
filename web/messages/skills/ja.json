@@ -5276,17 +5276,17 @@
         "_name": "Ruele of Light",
         "skills": {
             "S1": {
-                "name": "Key to an Oath",
-                "description": "Attacks the enemy with a staff, before recovering Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Attacks the enemy before greatly healing all allies. Does not trigger a Dual Attack."
+                "name": "誓いの鍵",
+                "description": "杖で敵を攻撃した後、味方全員のHPを回復する。発動者の最大HPに比例して与ダメージと回復量がアップする。",
+                "soulburn_effect": "敵を攻撃した後、味方全員を大きく回復する。協攻が発動しない。"
             },
             "S2": {
-                "name": "Light Pillar",
-                "description": "Summons Light Pillar, dispelling all debuffs from an ally and recovering their Health before granting them a barrier and damage limit for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "光の柱",
+                "description": "光の柱を召喚し、味方一人の弱体効果をすべて解除してHPを回復した後、2ターンの間バリアとダメージ上限を付与する。発動者の最大HPに比例して回復量とバリアの強度がアップする。"
             },
             "S3": {
-                "name": "Light Ascending",
-                "description": "Dispels all debuffs from an ally with healing magic before fully recovering Health and granting invincibility for 1 turn. When the target is already dead, revives them with 100% Health before the same effect is applied. At the start of the first battle, grants Spirit Lord's Protection to the caster."
+                "name": "光の昇天",
+                "description": "癒しの魔法で味方一人の弱体効果をすべて解除した後、HPを全回復し、1ターンの間無敵を付与する。対象がすでに死亡していれば、HP100%で復活させた後、同じ効果を適用する。最初のバトル開始時、発動者に精霊王の加護を付与する。"
             }
         }
     },
@@ -5294,17 +5294,17 @@
         "_name": "Ruiza",
         "skills": {
             "S1": {
-                "name": "Liquidation",
-                "description": "Attacks the enemy with a whip, and grants increased Speed to the caster for 1 turn. Deals additional damage equivalent to 50% of injuries inflicted on the target."
+                "name": "清算",
+                "description": "鞭で敵を攻撃し、発動者に1ターンの間スピードアップを付与する。対象に与えた負傷の50%に相当する追加ダメージを与える。"
             },
             "S2": {
-                "name": "Deflection",
-                "description": "Creates a gust of wind, dispelling two buffs from all enemies and decreasing Combat Readiness by 20%, before spreading the selected target's debuffs. Grants stealth to the caster for 2 turns."
+                "name": "偏向",
+                "description": "突風を起こし、敵全体の強化効果を二つ解除し、行動ゲージを20%減少させた後、選択した対象の弱体効果を拡散させる。発動者に2ターンの間隠密を付与する。"
             },
             "S3": {
-                "name": "Demolition",
-                "description": "Attacks the enemy by destroying the surroundings, dispelling all buffs from the target and decreasing Combat Readiness by 50% before a 100% chance each to inflict laceration and silence for 2 turns. Increases Combat Readiness of the caster by 50%. At the start of the first battle, grants stealth for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "破壊",
+                "description": "周囲を破壊して敵を攻撃し、対象の強化効果をすべて解除し、行動ゲージを50%減少させた後、それぞれ100%の確率で2ターンの間裂傷と沈黙を付与する。発動者の行動ゲージを50%増加させる。最初のバトル開始時、2ターンの間隠密を付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -5312,17 +5312,17 @@
         "_name": "Sage Baal & Sezan",
         "skills": {
             "S1": {
-                "name": "Evil Spirit's Call",
-                "description": "Summons an evil spirit to attack the enemy, with a 75% chance to put the enemy to sleep for 1 turn. When the target is asleep after the attack, increases the caster's Combat Readiness by 20%. This skill does not trigger a Dual Attack."
+                "name": "悪霊の呼び声",
+                "description": "悪霊を召喚して敵を攻撃し、75%の確率で1ターンの間睡眠状態にする。攻撃後、対象が睡眠状態なら発動者の行動ゲージを20%増加させる。このスキルでは協攻が発動しない。"
             },
             "S2": {
-                "name": "Cloud of Ruin",
-                "description": "Attacks all enemies by summoning storm clouds and has a 100% chance to dispel two buffs before inflicting sleep for 1 turn. When this skill is not on cooldown, at the end of an enemy's turn, increases Combat Readiness of the caster by 20%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "破滅の雲",
+                "description": "嵐の雲を召喚して敵全体を攻撃し、100%の確率で強化効果を二つ解除した後、1ターンの間睡眠を付与する。このスキルがクールタイム中でなければ、敵のターン終了時、発動者の行動ゲージを20%増加させる。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S3": {
-                "name": "Eye of Death",
-                "description": "Attacks the enemy with the eyes of an evil spirit, and when the enemy is defeated, extends debuff durations of all remaining enemies by 1 turn. Penetrates the target's Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. Damage dealt increases when the target is inflicted with sleep."
+                "name": "死の眼",
+                "description": "悪霊の眼で敵を攻撃し、敵を倒すと、残りの敵全体の弱体効果の持続時間を1ターン延長する。対象の防御力を貫通するが、クリティカルや強打は発生しない。発動者の最大HPに比例して与ダメージがアップする。対象が睡眠状態なら与ダメージがアップする。"
             }
         }
     },
@@ -5330,17 +5330,17 @@
         "_name": "Salome",
         "skills": {
             "S1": {
-                "name": "Corrupted Divinity",
-                "description": "Attacks the enemy with a spear, and triggers a Dual Attack from the ally with the highest Attack. Damage dealt increases proportional to the caster's max Health."
+                "name": "堕落した神性",
+                "description": "槍で敵を攻撃し、攻撃力が最も高い味方が協攻する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Salvation",
-                "description": "Releases divinity, granting skill nullifier once to the caster, and cloning a target Hero except for the caster for 1 turn. Grants an extra turn. Clone: Clones the target's appearance and abilities. While in the Clone state, separate skill cooldowns are applied. When dispelled, unique effects granted to the caster by the Clone skill are also dispelled."
+                "name": "救済",
+                "description": "神性を解き放ち、発動者にスキルダメージ無効を一度付与し、発動者を除く対象の英雄を1ターンの間複製する。追加ターンを得る。複製：対象の外見と能力を複製する。複製状態の間は、別のスキルのクールタイムが適用される。解除されると、複製スキルで発動者に付与された固有効果も解除される。"
             },
             "S3": {
-                "name": "Nggdrasil's Judgment",
-                "description": "After inflicting collapse on the enemy for 2 turns, attacks with the power of Nggdrasil, with a 100% chance to inflict decreased Defense for 2 turns, and deals additional damage to the target. Damage dealt and additional damage increase proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "ニグドラシルの審判",
+                "description": "敵に2ターンの間崩壊を付与した後、ニグドラシルの力で攻撃し、100%の確率で2ターンの間防御力ダウンを付与し、対象に追加ダメージを与える。発動者の最大HPに比例して与ダメージと追加ダメージがアップする。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -5348,17 +5348,17 @@
         "_name": "Saria",
         "skills": {
             "S1": {
-                "name": "Spirit Burst",
-                "description": "Attacks two enemies with a burst and has a 75% chance to dispel one buff.",
-                "soulburn_effect": "Increases effect chance to 100% and ignores Effect Resistance."
+                "name": "精霊の爆発",
+                "description": "爆発で敵二体を攻撃し、75%の確率で強化効果を一つ解除する。",
+                "soulburn_effect": "効果発動確率が100%にアップし、効果抵抗を無視する。"
             },
             "S2": {
-                "name": "Guidance of Nature",
-                "description": "At the start of an ally's extra turn, gains 2 Focus and increases Combat Readiness of the caster by 30%. After using a skill, when Focus is full, activates Wings of Liberation. Wings of Liberation(consumes 5 Focus): Attacks all enemies by unleashing a spirit bird. Increases Hit Chance by 50% when using this skill, and is unaffected by elemental disadvantage."
+                "name": "自然の導き",
+                "description": "味方の追加ターン開始時、集中を2獲得し、発動者の行動ゲージを30%増加させる。スキル使用後、集中が満タンなら解放の翼を発動する。解放の翼（集中5消費）：精霊の鳥を解き放って敵全体を攻撃する。このスキルの使用時、命中率が50%アップし、属性の不利の影響を受けない。"
             },
             "S3": {
-                "name": "Blossoming Hope",
-                "description": "By kindling the light of hope, grants invincibility to all allies for 1 turn and increased Attack for 2 turns."
+                "name": "咲き誇る希望",
+                "description": "希望の光を灯し、味方全員に1ターンの間無敵を、2ターンの間攻撃力アップを付与する。"
             }
         }
     },
@@ -5366,17 +5366,17 @@
         "_name": "Savior Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, with a 85% chance to make them unable to be buffed for 1 turn."
+                "name": "足首斬り",
+                "description": "剣で敵を攻撃し、85%の確率で1ターンの間強化不可を付与する。"
             },
             "S2": {
-                "name": "Power of the Four Seasons",
-                "description": "Evasion increases by 50%, and after successfully evading, counterattacks with Blade Gust. Blade Gust can only be activated once every 2 turns. Blade Gust (Gains 10 Soul): Attacks all enemies with a blade gust, dispelling one buff."
+                "name": "四季の力",
+                "description": "回避が50%アップし、回避に成功した後、刃の疾風で反撃する。刃の疾風は2ターンごとに一度のみ発動できる。刃の疾風（ソウル10獲得）：刃の疾風で敵全体を攻撃し、強化効果を一つ解除する。"
             },
             "S3": {
-                "name": "Smite of Salvation",
-                "description": "Attacks the enemy with a powerful blow and grants invincibility to all allies except for the caster for 1 turn. When the enemy is defeated, inflicts extinction. Penetrates the target's Defense by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "救済の一撃",
+                "description": "強力な一撃で敵を攻撃し、発動者を除く味方全員に1ターンの間無敵を付与する。敵を倒すと消滅を付与する。対象の防御力を50%貫通する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -5384,17 +5384,17 @@
         "_name": "Schniel",
         "skills": {
             "S1": {
-                "name": "Is This How You Do It",
-                "description": "Attacks the enemy, and increases Combat Readiness of the caster and the ally with the highest Attack except for the caster by 15%."
+                "name": "こうやるのかしら",
+                "description": "敵を攻撃し、発動者と、発動者を除いて攻撃力が最も高い味方の行動ゲージを15%増加させる。"
             },
             "S2": {
-                "name": "I Know a Thing About Poison",
-                "description": "At the start of the turn, dispels one debuff each from two allies. After an enemy uses a skill, when an ally is inflicted with poison or venom, dispels all debuffs from the caster and activates Cleanse. Cleanse: Dispels all debuffs from all allies and grants immunity and indomitable for 1 turn, before resetting skill cooldowns of the caster."
+                "name": "毒には少し詳しいの",
+                "description": "ターン開始時、味方二人の弱体効果をそれぞれ一つ解除する。敵がスキルを使用した後、味方が持続ダメージまたは猛毒を受けていれば、発動者の弱体効果をすべて解除し、浄化を発動する。浄化：味方全員の弱体効果をすべて解除し、1ターンの間免疫と不屈を付与した後、発動者のスキルのクールタイムをリセットする。"
             },
             "S3": {
-                "name": "You May Walk Yourself Out",
-                "description": "Attacks all enemies, before granting increased Defense and a barrier (proportional to the caster's max Health) to all allies for 2 turns. Deals 5,000 additional damage regardless of whether the attack hits. When the caster is granted indomitable, greatly increases additional damage.",
-                "soulburn_effect": "Increases barrier strength."
+                "name": "お引き取りください",
+                "description": "敵全体を攻撃した後、味方全員に2ターンの間防御力アップとバリア（発動者の最大HPに比例）を付与する。攻撃の命中に関係なく、5,000の追加ダメージを与える。発動者に不屈があれば、追加ダメージが大幅にアップする。",
+                "soulburn_effect": "バリアの強度がアップする。"
             }
         }
     },
@@ -5402,17 +5402,17 @@
         "_name": "School Nurse Yulha",
         "skills": {
             "S1": {
-                "name": "This'll Sting!",
-                "description": "Attacks the enemy with a scalpel, with a 80% chance to inflict two bleeding effects for 2 turns. At the end of the turn, detonates bleeding effects inflicted on the target,",
-                "soulburn_effect": "Grants an extra attack with the same skill."
+                "name": "ちくっとしますよ！",
+                "description": "メスで敵を攻撃し、80%の確率で2ターンの間出血を二つ付与する。ターン終了時、対象の出血を爆発させる。",
+                "soulburn_effect": "同じスキルで追加攻撃する。"
             },
             "S2": {
-                "name": "There, It'll Feel Better",
-                "description": "At the start of the first battle, increases Attack proportional to max Health. At the start of an ally's turn, dispels one debuff from the target and recovers Health proportional to the caster's max Health."
+                "name": "はい、これで楽になりますよ",
+                "description": "最初のバトル開始時、最大HPに比例して攻撃力がアップする。味方のターン開始時、対象の弱体効果を一つ解除し、発動者の最大HPに比例してHPを回復する。"
             },
             "S3": {
-                "name": "It's Time to Be Reborn!",
-                "description": "Dispels all debuffs from an ally except for the caster before fully recovering Health. Grants superhumanization to the target for 3 turns and increases Combat Readiness by 50%. When the target is already dead, revives them with 100% Health before the same effect is applied. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "生まれ変わる時間です！",
+                "description": "発動者を除く味方一人の弱体効果をすべて解除した後、HPを全回復する。対象に3ターンの間超人化を付与し、行動ゲージを50%増加させる。対象がすでに死亡していれば、HP100%で復活させた後、同じ効果を適用する。このスキルはクールタイムの増減効果を受けない。"
             }
         }
     },

@@ -5276,17 +5276,17 @@
         "_name": "Ruele of Light",
         "skills": {
             "S1": {
-                "name": "Key to an Oath",
-                "description": "Attacks the enemy with a staff, before recovering Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Attacks the enemy before greatly healing all allies. Does not trigger a Dual Attack."
+                "name": "誓约之钥",
+                "description": "以法杖攻击敌人，然后恢复所有友军的生命值。造成的伤害与恢复量按施放者的最大生命值比例提升。",
+                "soulburn_effect": "攻击敌人，然后大幅治疗所有友军。不会触发协攻。"
             },
             "S2": {
-                "name": "Light Pillar",
-                "description": "Summons Light Pillar, dispelling all debuffs from an ally and recovering their Health before granting them a barrier and damage limit for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "光之柱",
+                "description": "召唤光之柱，解除一名友军的所有弱化效果并恢复其生命值，然后施加2回合屏障与伤害上限。恢复量与屏障强度按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Light Ascending",
-                "description": "Dispels all debuffs from an ally with healing magic before fully recovering Health and granting invincibility for 1 turn. When the target is already dead, revives them with 100% Health before the same effect is applied. At the start of the first battle, grants Spirit Lord's Protection to the caster."
+                "name": "光之升华",
+                "description": "以治愈魔法解除一名友军的所有弱化效果，然后完全恢复其生命值，并施加1回合无敌。目标已阵亡时，以100%生命值复活后再施加相同效果。首场战斗开始时，为施放者施加精灵王的守护。"
             }
         }
     },
@@ -5294,17 +5294,17 @@
         "_name": "Ruiza",
         "skills": {
             "S1": {
-                "name": "Liquidation",
-                "description": "Attacks the enemy with a whip, and grants increased Speed to the caster for 1 turn. Deals additional damage equivalent to 50% of injuries inflicted on the target."
+                "name": "清算",
+                "description": "以鞭子攻击敌人，并为施放者施加1回合速度提升。追加造成相当于目标负伤50%的伤害。"
             },
             "S2": {
-                "name": "Deflection",
-                "description": "Creates a gust of wind, dispelling two buffs from all enemies and decreasing Combat Readiness by 20%, before spreading the selected target's debuffs. Grants stealth to the caster for 2 turns."
+                "name": "偏转",
+                "description": "掀起狂风，解除所有敌人的两个强化效果，并降低20%行动值，然后扩散所选目标的弱化效果。为施放者施加2回合隐身。"
             },
             "S3": {
-                "name": "Demolition",
-                "description": "Attacks the enemy by destroying the surroundings, dispelling all buffs from the target and decreasing Combat Readiness by 50% before a 100% chance each to inflict laceration and silence for 2 turns. Increases Combat Readiness of the caster by 50%. At the start of the first battle, grants stealth for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "摧毁",
+                "description": "摧毁周围攻击敌人，解除目标的所有强化效果并降低50%行动值，然后各有100%的几率施加2回合裂伤与沉默。使施放者的行动值提升50%。首场战斗开始时，施加2回合隐身。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -5312,17 +5312,17 @@
         "_name": "Sage Baal & Sezan",
         "skills": {
             "S1": {
-                "name": "Evil Spirit's Call",
-                "description": "Summons an evil spirit to attack the enemy, with a 75% chance to put the enemy to sleep for 1 turn. When the target is asleep after the attack, increases the caster's Combat Readiness by 20%. This skill does not trigger a Dual Attack."
+                "name": "恶灵的召唤",
+                "description": "召唤恶灵攻击敌人，有75%的几率使其睡眠1回合。攻击后若目标处于睡眠状态，使施放者的行动值提升20%。此技能不会触发协攻。"
             },
             "S2": {
-                "name": "Cloud of Ruin",
-                "description": "Attacks all enemies by summoning storm clouds and has a 100% chance to dispel two buffs before inflicting sleep for 1 turn. When this skill is not on cooldown, at the end of an enemy's turn, increases Combat Readiness of the caster by 20%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "毁灭之云",
+                "description": "召唤暴风云攻击所有敌人，有100%的几率解除两个强化效果，然后施加1回合睡眠。此技能不在冷却中时，敌人回合结束时，使施放者的行动值提升20%。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S3": {
-                "name": "Eye of Death",
-                "description": "Attacks the enemy with the eyes of an evil spirit, and when the enemy is defeated, extends debuff durations of all remaining enemies by 1 turn. Penetrates the target's Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. Damage dealt increases when the target is inflicted with sleep."
+                "name": "死亡之眼",
+                "description": "以恶灵之眼攻击敌人，击败敌人时，使剩余所有敌人的弱化效果持续时间延长1回合。穿透目标的防御力，但无法造成暴击或重击。造成的伤害按施放者的最大生命值比例提升。目标处于睡眠状态时，提升造成的伤害。"
             }
         }
     },
@@ -5330,17 +5330,17 @@
         "_name": "Salome",
         "skills": {
             "S1": {
-                "name": "Corrupted Divinity",
-                "description": "Attacks the enemy with a spear, and triggers a Dual Attack from the ally with the highest Attack. Damage dealt increases proportional to the caster's max Health."
+                "name": "堕落神性",
+                "description": "以长枪攻击敌人，攻击力最高的友军发动协攻。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Salvation",
-                "description": "Releases divinity, granting skill nullifier once to the caster, and cloning a target Hero except for the caster for 1 turn. Grants an extra turn. Clone: Clones the target's appearance and abilities. While in the Clone state, separate skill cooldowns are applied. When dispelled, unique effects granted to the caster by the Clone skill are also dispelled."
+                "name": "救赎",
+                "description": "释放神性，为施放者施加一次技能伤害无效，并复制除施放者外的一名目标英雄1回合。获得额外回合。复制：复制目标的外观与能力。处于复制状态期间，适用独立的技能冷却时间。被解除时，通过复制技能施加给施放者的专属效果也会被解除。"
             },
             "S3": {
-                "name": "Nggdrasil's Judgment",
-                "description": "After inflicting collapse on the enemy for 2 turns, attacks with the power of Nggdrasil, with a 100% chance to inflict decreased Defense for 2 turns, and deals additional damage to the target. Damage dealt and additional damage increase proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "尼格德拉希尔的审判",
+                "description": "对敌人施加2回合崩溃后，以尼格德拉希尔之力攻击，有100%的几率施加2回合防御力降低，并对目标造成追加伤害。造成的伤害与追加伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -5348,17 +5348,17 @@
         "_name": "Saria",
         "skills": {
             "S1": {
-                "name": "Spirit Burst",
-                "description": "Attacks two enemies with a burst and has a 75% chance to dispel one buff.",
-                "soulburn_effect": "Increases effect chance to 100% and ignores Effect Resistance."
+                "name": "精灵爆发",
+                "description": "以爆发攻击两名敌人，有75%的几率解除一个强化效果。",
+                "soulburn_effect": "效果几率提升至100%，并无视效果抵抗。"
             },
             "S2": {
-                "name": "Guidance of Nature",
-                "description": "At the start of an ally's extra turn, gains 2 Focus and increases Combat Readiness of the caster by 30%. After using a skill, when Focus is full, activates Wings of Liberation. Wings of Liberation(consumes 5 Focus): Attacks all enemies by unleashing a spirit bird. Increases Hit Chance by 50% when using this skill, and is unaffected by elemental disadvantage."
+                "name": "自然的指引",
+                "description": "友军的额外回合开始时，获得2专注，并使施放者的行动值提升30%。使用技能后若专注已满，发动解放之翼。解放之翼（消耗5专注）：释放精灵鸟攻击所有敌人。使用此技能时，命中率提升50%，且不受属性劣势影响。"
             },
             "S3": {
-                "name": "Blossoming Hope",
-                "description": "By kindling the light of hope, grants invincibility to all allies for 1 turn and increased Attack for 2 turns."
+                "name": "绽放的希望",
+                "description": "点燃希望之光，为所有友军施加1回合无敌与2回合攻击力提升。"
             }
         }
     },
@@ -5366,17 +5366,17 @@
         "_name": "Savior Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, with a 85% chance to make them unable to be buffed for 1 turn."
+                "name": "斩踝",
+                "description": "以剑攻击敌人，有85%的几率施加1回合无法强化。"
             },
             "S2": {
-                "name": "Power of the Four Seasons",
-                "description": "Evasion increases by 50%, and after successfully evading, counterattacks with Blade Gust. Blade Gust can only be activated once every 2 turns. Blade Gust (Gains 10 Soul): Attacks all enemies with a blade gust, dispelling one buff."
+                "name": "四季之力",
+                "description": "闪避提升50%，成功闪避后，以刃之疾风反击。刃之疾风每2回合只能发动一次。刃之疾风（获得10魂）：以刃之疾风攻击所有敌人，并解除一个强化效果。"
             },
             "S3": {
-                "name": "Smite of Salvation",
-                "description": "Attacks the enemy with a powerful blow and grants invincibility to all allies except for the caster for 1 turn. When the enemy is defeated, inflicts extinction. Penetrates the target's Defense by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "救赎一击",
+                "description": "以强力一击攻击敌人，并为除施放者外的所有友军施加1回合无敌。击败敌人时施加湮灭。穿透目标50%的防御力。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -5384,17 +5384,17 @@
         "_name": "Schniel",
         "skills": {
             "S1": {
-                "name": "Is This How You Do It",
-                "description": "Attacks the enemy, and increases Combat Readiness of the caster and the ally with the highest Attack except for the caster by 15%."
+                "name": "是这样做的吗",
+                "description": "攻击敌人，并使施放者与除施放者外攻击力最高的友军的行动值提升15%。"
             },
             "S2": {
-                "name": "I Know a Thing About Poison",
-                "description": "At the start of the turn, dispels one debuff each from two allies. After an enemy uses a skill, when an ally is inflicted with poison or venom, dispels all debuffs from the caster and activates Cleanse. Cleanse: Dispels all debuffs from all allies and grants immunity and indomitable for 1 turn, before resetting skill cooldowns of the caster."
+                "name": "我对毒略知一二",
+                "description": "回合开始时，各解除两名友军的一个弱化效果。敌人使用技能后，若友军身上有持续伤害或剧毒，解除施放者的所有弱化效果，并发动净化。净化：解除所有友军的所有弱化效果，并施加1回合免疫与不屈，然后重置施放者的技能冷却时间。"
             },
             "S3": {
-                "name": "You May Walk Yourself Out",
-                "description": "Attacks all enemies, before granting increased Defense and a barrier (proportional to the caster's max Health) to all allies for 2 turns. Deals 5,000 additional damage regardless of whether the attack hits. When the caster is granted indomitable, greatly increases additional damage.",
-                "soulburn_effect": "Increases barrier strength."
+                "name": "请自行离开",
+                "description": "攻击所有敌人，然后为所有友军施加2回合防御力提升与屏障（与施放者的最大生命值成比例）。无论攻击是否命中，追加造成5,000点伤害。施放者拥有不屈时，大幅提升追加伤害。",
+                "soulburn_effect": "提升屏障强度。"
             }
         }
     },
@@ -5402,17 +5402,17 @@
         "_name": "School Nurse Yulha",
         "skills": {
             "S1": {
-                "name": "This'll Sting!",
-                "description": "Attacks the enemy with a scalpel, with a 80% chance to inflict two bleeding effects for 2 turns. At the end of the turn, detonates bleeding effects inflicted on the target,",
-                "soulburn_effect": "Grants an extra attack with the same skill."
+                "name": "会有点疼哦！",
+                "description": "以手术刀攻击敌人，有80%的几率施加两层2回合出血。回合结束时，引爆目标身上的出血。",
+                "soulburn_effect": "以相同技能追加攻击。"
             },
             "S2": {
-                "name": "There, It'll Feel Better",
-                "description": "At the start of the first battle, increases Attack proportional to max Health. At the start of an ally's turn, dispels one debuff from the target and recovers Health proportional to the caster's max Health."
+                "name": "好了，会好起来的",
+                "description": "首场战斗开始时，按最大生命值比例提升攻击力。友军回合开始时，解除目标的一个弱化效果，并按施放者的最大生命值比例恢复生命值。"
             },
             "S3": {
-                "name": "It's Time to Be Reborn!",
-                "description": "Dispels all debuffs from an ally except for the caster before fully recovering Health. Grants superhumanization to the target for 3 turns and increases Combat Readiness by 50%. When the target is already dead, revives them with 100% Health before the same effect is applied. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "重生的时候到了！",
+                "description": "解除除施放者外一名友军的所有弱化效果，然后完全恢复其生命值。为目标施加3回合超人化，并提升50%行动值。目标已阵亡时，以100%生命值复活后再施加相同效果。此技能不受冷却时间增减效果影响。"
             }
         }
     },

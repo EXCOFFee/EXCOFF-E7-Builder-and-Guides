@@ -5276,17 +5276,17 @@
         "_name": "Ruele of Light",
         "skills": {
             "S1": {
-                "name": "Key to an Oath",
-                "description": "Attacks the enemy with a staff, before recovering Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Attacks the enemy before greatly healing all allies. Does not trigger a Dual Attack."
+                "name": "Chave de um juramento",
+                "description": "Ataca o inimigo com um cajado, depois recupera a Vida de todos os aliados. O dano causado e a quantidade recuperada aumentam proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Ataca o inimigo e depois cura muito todos os aliados. Não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Light Pillar",
-                "description": "Summons Light Pillar, dispelling all debuffs from an ally and recovering their Health before granting them a barrier and damage limit for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "Pilar de luz",
+                "description": "Invoca o Pilar de luz, dissipando todos os efeitos negativos de um aliado e recuperando sua Vida, depois concede uma barreira e limite de dano por 2 turnos. A quantidade recuperada e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Light Ascending",
-                "description": "Dispels all debuffs from an ally with healing magic before fully recovering Health and granting invincibility for 1 turn. When the target is already dead, revives them with 100% Health before the same effect is applied. At the start of the first battle, grants Spirit Lord's Protection to the caster."
+                "name": "Ascensão da luz",
+                "description": "Com magia de cura, dissipa todos os efeitos negativos de um aliado, depois recupera totalmente sua Vida e concede invencibilidade por 1 turno. Quando o alvo já está morto, revive-o com 100% de Vida antes de aplicar o mesmo efeito. No início da primeira batalha, concede Proteção do senhor espiritual ao conjurador."
             }
         }
     },
@@ -5294,17 +5294,17 @@
         "_name": "Ruiza",
         "skills": {
             "S1": {
-                "name": "Liquidation",
-                "description": "Attacks the enemy with a whip, and grants increased Speed to the caster for 1 turn. Deals additional damage equivalent to 50% of injuries inflicted on the target."
+                "name": "Liquidação",
+                "description": "Ataca o inimigo com um chicote e concede Aumentar Velocidade ao conjurador por 1 turno. Causa dano adicional equivalente a 50% dos ferimentos aplicados ao alvo."
             },
             "S2": {
-                "name": "Deflection",
-                "description": "Creates a gust of wind, dispelling two buffs from all enemies and decreasing Combat Readiness by 20%, before spreading the selected target's debuffs. Grants stealth to the caster for 2 turns."
+                "name": "Deflexão",
+                "description": "Cria uma rajada de vento, dissipando dois efeitos positivos de todos os inimigos e diminuindo a Prontidão de Combate em 20%, depois espalha os efeitos negativos do alvo selecionado. Concede furtividade ao conjurador por 2 turnos."
             },
             "S3": {
-                "name": "Demolition",
-                "description": "Attacks the enemy by destroying the surroundings, dispelling all buffs from the target and decreasing Combat Readiness by 50% before a 100% chance each to inflict laceration and silence for 2 turns. Increases Combat Readiness of the caster by 50%. At the start of the first battle, grants stealth for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Demolição",
+                "description": "Ataca o inimigo destruindo os arredores, dissipando todos os efeitos positivos do alvo e diminuindo a Prontidão de Combate em 50%, depois com 100% de chance cada aplica laceração e silêncio por 2 turnos. Aumenta a Prontidão de Combate do conjurador em 50%. No início da primeira batalha, concede furtividade por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -5312,17 +5312,17 @@
         "_name": "Sage Baal & Sezan",
         "skills": {
             "S1": {
-                "name": "Evil Spirit's Call",
-                "description": "Summons an evil spirit to attack the enemy, with a 75% chance to put the enemy to sleep for 1 turn. When the target is asleep after the attack, increases the caster's Combat Readiness by 20%. This skill does not trigger a Dual Attack."
+                "name": "Chamado do espírito maligno",
+                "description": "Invoca um espírito maligno para atacar o inimigo, com 75% de chance de fazê-lo dormir por 1 turno. Se o alvo estiver dormindo após o ataque, aumenta a Prontidão de Combate do conjurador em 20%. Esta habilidade não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Cloud of Ruin",
-                "description": "Attacks all enemies by summoning storm clouds and has a 100% chance to dispel two buffs before inflicting sleep for 1 turn. When this skill is not on cooldown, at the end of an enemy's turn, increases Combat Readiness of the caster by 20%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Nuvem da ruína",
+                "description": "Ataca todos os inimigos invocando nuvens de tempestade e tem 100% de chance de dissipar dois efeitos positivos antes de aplicar sono por 1 turno. Quando esta habilidade não está em recarga, no fim do turno de um inimigo, aumenta a Prontidão de Combate do conjurador em 20%.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S3": {
-                "name": "Eye of Death",
-                "description": "Attacks the enemy with the eyes of an evil spirit, and when the enemy is defeated, extends debuff durations of all remaining enemies by 1 turn. Penetrates the target's Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. Damage dealt increases when the target is inflicted with sleep."
+                "name": "Olho da morte",
+                "description": "Ataca o inimigo com os olhos de um espírito maligno e, ao derrotá-lo, estende em 1 turno a duração dos efeitos negativos de todos os inimigos restantes. Penetra a Defesa do alvo, mas não pode causar acerto crítico nem golpe pesado. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. O dano causado aumenta quando o alvo está dormindo."
             }
         }
     },
@@ -5330,17 +5330,17 @@
         "_name": "Salome",
         "skills": {
             "S1": {
-                "name": "Corrupted Divinity",
-                "description": "Attacks the enemy with a spear, and triggers a Dual Attack from the ally with the highest Attack. Damage dealt increases proportional to the caster's max Health."
+                "name": "Divindade corrompida",
+                "description": "Ataca o inimigo com uma lança, e o aliado com maior Ataque realiza um Ataque duplo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Salvation",
-                "description": "Releases divinity, granting skill nullifier once to the caster, and cloning a target Hero except for the caster for 1 turn. Grants an extra turn. Clone: Clones the target's appearance and abilities. While in the Clone state, separate skill cooldowns are applied. When dispelled, unique effects granted to the caster by the Clone skill are also dispelled."
+                "name": "Salvação",
+                "description": "Libera divindade, concedendo Anulação de habilidade uma vez ao conjurador e clonando um herói alvo, exceto o conjurador, por 1 turno. Concede um turno extra. Clone: copia a aparência e as habilidades do alvo. Enquanto estiver no estado de Clone, recargas de habilidades separadas são aplicadas. Quando dissipado, os efeitos exclusivos concedidos ao conjurador pela habilidade Clone também são dissipados."
             },
             "S3": {
-                "name": "Nggdrasil's Judgment",
-                "description": "After inflicting collapse on the enemy for 2 turns, attacks with the power of Nggdrasil, with a 100% chance to inflict decreased Defense for 2 turns, and deals additional damage to the target. Damage dealt and additional damage increase proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Julgamento de Nggdrasil",
+                "description": "Após aplicar colapso ao inimigo por 2 turnos, ataca com o poder de Nggdrasil, com 100% de chance de aplicar Diminuir Defesa por 2 turnos, e causa dano adicional ao alvo. O dano causado e o dano adicional aumentam proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -5348,17 +5348,17 @@
         "_name": "Saria",
         "skills": {
             "S1": {
-                "name": "Spirit Burst",
-                "description": "Attacks two enemies with a burst and has a 75% chance to dispel one buff.",
-                "soulburn_effect": "Increases effect chance to 100% and ignores Effect Resistance."
+                "name": "Explosão espiritual",
+                "description": "Ataca dois inimigos com uma explosão e tem 75% de chance de dissipar um efeito positivo.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100% e ignora a Resistência a Efeitos."
             },
             "S2": {
-                "name": "Guidance of Nature",
-                "description": "At the start of an ally's extra turn, gains 2 Focus and increases Combat Readiness of the caster by 30%. After using a skill, when Focus is full, activates Wings of Liberation. Wings of Liberation(consumes 5 Focus): Attacks all enemies by unleashing a spirit bird. Increases Hit Chance by 50% when using this skill, and is unaffected by elemental disadvantage."
+                "name": "Orientação da natureza",
+                "description": "No início do turno extra de um aliado, ganha 2 de Foco e aumenta a Prontidão de Combate do conjurador em 30%. Após usar uma habilidade, quando o Foco está cheio, ativa Asas da libertação. Asas da libertação (consome 5 de Foco): ataca todos os inimigos liberando um pássaro espiritual. Aumenta a Precisão em 50% ao usar esta habilidade e não é afetada por desvantagem elemental."
             },
             "S3": {
-                "name": "Blossoming Hope",
-                "description": "By kindling the light of hope, grants invincibility to all allies for 1 turn and increased Attack for 2 turns."
+                "name": "Esperança florescente",
+                "description": "Acendendo a luz da esperança, concede invencibilidade a todos os aliados por 1 turno e Aumentar Ataque por 2 turnos."
             }
         }
     },
@@ -5366,17 +5366,17 @@
         "_name": "Savior Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, with a 85% chance to make them unable to be buffed for 1 turn."
+                "name": "Corte no tornozelo",
+                "description": "Ataca o inimigo com uma espada, com 85% de chance de impedir que receba efeitos positivos por 1 turno."
             },
             "S2": {
-                "name": "Power of the Four Seasons",
-                "description": "Evasion increases by 50%, and after successfully evading, counterattacks with Blade Gust. Blade Gust can only be activated once every 2 turns. Blade Gust (Gains 10 Soul): Attacks all enemies with a blade gust, dispelling one buff."
+                "name": "Poder das quatro estações",
+                "description": "A Evasão aumenta 50% e, após se esquivar com sucesso, contra-ataca com Rajada de lâminas. Rajada de lâminas só pode ser ativada uma vez a cada 2 turnos. Rajada de lâminas (ganha 10 de Alma): ataca todos os inimigos com uma rajada de lâminas, dissipando um efeito positivo."
             },
             "S3": {
-                "name": "Smite of Salvation",
-                "description": "Attacks the enemy with a powerful blow and grants invincibility to all allies except for the caster for 1 turn. When the enemy is defeated, inflicts extinction. Penetrates the target's Defense by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Golpe da salvação",
+                "description": "Ataca o inimigo com um golpe poderoso e concede invencibilidade a todos os aliados, exceto o conjurador, por 1 turno. Ao derrotar o inimigo, aplica extinção. Penetra 50% da Defesa do alvo.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -5384,17 +5384,17 @@
         "_name": "Schniel",
         "skills": {
             "S1": {
-                "name": "Is This How You Do It",
-                "description": "Attacks the enemy, and increases Combat Readiness of the caster and the ally with the highest Attack except for the caster by 15%."
+                "name": "É assim que se faz?",
+                "description": "Ataca o inimigo e aumenta em 15% a Prontidão de Combate do conjurador e do aliado com maior Ataque, exceto o conjurador."
             },
             "S2": {
-                "name": "I Know a Thing About Poison",
-                "description": "At the start of the turn, dispels one debuff each from two allies. After an enemy uses a skill, when an ally is inflicted with poison or venom, dispels all debuffs from the caster and activates Cleanse. Cleanse: Dispels all debuffs from all allies and grants immunity and indomitable for 1 turn, before resetting skill cooldowns of the caster."
+                "name": "Entendo um pouco de veneno",
+                "description": "No início do turno, dissipa um efeito negativo de cada um de dois aliados. Após um inimigo usar uma habilidade, quando um aliado tem veneno ou peçonha, dissipa todos os efeitos negativos do conjurador e ativa Purificar. Purificar: dissipa todos os efeitos negativos de todos os aliados e concede imunidade e indomável por 1 turno, depois reinicia as recargas de habilidades do conjurador."
             },
             "S3": {
-                "name": "You May Walk Yourself Out",
-                "description": "Attacks all enemies, before granting increased Defense and a barrier (proportional to the caster's max Health) to all allies for 2 turns. Deals 5,000 additional damage regardless of whether the attack hits. When the caster is granted indomitable, greatly increases additional damage.",
-                "soulburn_effect": "Increases barrier strength."
+                "name": "Pode sair sozinho",
+                "description": "Ataca todos os inimigos, depois concede Aumentar Defesa e uma barreira (proporcional à Vida máxima do conjurador) a todos os aliados por 2 turnos. Causa 5.000 de dano adicional independentemente de o ataque acertar. Quando o conjurador tem indomável, aumenta muito o dano adicional.",
+                "soulburn_effect": "Aumenta a força da barreira."
             }
         }
     },
@@ -5402,17 +5402,17 @@
         "_name": "School Nurse Yulha",
         "skills": {
             "S1": {
-                "name": "This'll Sting!",
-                "description": "Attacks the enemy with a scalpel, with a 80% chance to inflict two bleeding effects for 2 turns. At the end of the turn, detonates bleeding effects inflicted on the target,",
-                "soulburn_effect": "Grants an extra attack with the same skill."
+                "name": "Isto vai arder!",
+                "description": "Ataca o inimigo com um bisturi, com 80% de chance de aplicar dois efeitos de sangramento por 2 turnos. No fim do turno, detona os sangramentos aplicados ao alvo.",
+                "soulburn_effect": "Concede um ataque extra com a mesma habilidade."
             },
             "S2": {
-                "name": "There, It'll Feel Better",
-                "description": "At the start of the first battle, increases Attack proportional to max Health. At the start of an ally's turn, dispels one debuff from the target and recovers Health proportional to the caster's max Health."
+                "name": "Pronto, vai melhorar",
+                "description": "No início da primeira batalha, aumenta o Ataque proporcionalmente à Vida máxima. No início do turno de um aliado, dissipa um efeito negativo do alvo e recupera Vida proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "It's Time to Be Reborn!",
-                "description": "Dispels all debuffs from an ally except for the caster before fully recovering Health. Grants superhumanization to the target for 3 turns and increases Combat Readiness by 50%. When the target is already dead, revives them with 100% Health before the same effect is applied. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "Hora de renascer!",
+                "description": "Dissipa todos os efeitos negativos de um aliado, exceto o conjurador, depois recupera totalmente sua Vida. Concede super-humanização ao alvo por 3 turnos e aumenta a Prontidão de Combate em 50%. Quando o alvo já está morto, revive-o com 100% de Vida antes de aplicar o mesmo efeito. Esta habilidade não é afetada por efeitos de aumento ou redução de recarga."
             }
         }
     },
