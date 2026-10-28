@@ -170,5 +170,8 @@ export const authApi = {
     api.post('/logout'),
   getOAuthUrl: (provider: string) =>
     api.get(`/auth/${provider}`),
+  /** Exchanges the one-time code from the OAuth redirect for an API token (each code works once). */
+  exchangeCode: (code: string) =>
+    api.post<{ token: string }>('/auth/exchange', { code }),
 };
 

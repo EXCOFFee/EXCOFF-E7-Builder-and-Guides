@@ -51,6 +51,7 @@ Route::middleware('throttle:60,1')->group(function () {
 Route::middleware('throttle:30,1')->group(function () {
     Route::get('/auth/{provider}', [AuthController::class, 'redirectToProvider']);
     Route::get('/auth/{provider}/callback', [AuthController::class, 'handleProviderCallback']);
+    Route::post('/auth/exchange', [AuthController::class, 'exchangeCode']);
 });
 
 // Protected routes with rate limiting (30 requests per minute for authenticated users)
