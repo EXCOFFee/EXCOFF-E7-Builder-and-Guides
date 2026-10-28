@@ -2578,17 +2578,17 @@
         "_name": "Furious",
         "skills": {
             "S1": {
-                "name": "Quickdraw",
-                "description": "Fires a gun while dashing towards the enemy, with a 35% chance to burn for 2 turns."
+                "name": "Saque rápido",
+                "description": "Dispara uma arma enquanto avança contra o inimigo, com 35% de chance de aplicar queimadura por 2 turnos."
             },
             "S2": {
-                "name": "Morale Boost",
-                "description": "Raises morale of all allies, granting increased Critical Hit Chance for 2 turns, before granting an extra turn to the caster."
+                "name": "Moral elevada",
+                "description": "Eleva o moral de todos os aliados, concedendo Aumentar Chance de Crítico por 2 turnos, depois concede um turno extra ao conjurador."
             },
             "S3": {
-                "name": "Fatal Bullet",
-                "description": "Attacks the enemy with a fatal shot, with a 100% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Bala fatal",
+                "description": "Ataca o inimigo com um disparo fatal, com 100% de chance de diminuir a Defesa por 2 turnos.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -2596,17 +2596,17 @@
         "_name": "General Purrgis",
         "skills": {
             "S1": {
-                "name": "Heroic Strike",
-                "description": "Attacks the enemy with a great sword, with a 100% chance to inflict provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "Golpe heroico",
+                "description": "Ataca o inimigo com uma espada grande, com 100% de chance de provocá-lo por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Spearhead",
-                "description": "After being attacked, increases Combat Readiness of all allies by 15%."
+                "name": "Ponta de lança",
+                "description": "Após ser atacado, aumenta a Prontidão de Combate de todos os aliados em 15%."
             },
             "S3": {
-                "name": "Command to Charge",
-                "description": "Attacks all enemies by giving the order to charge, and has a 100% chance to inflict stun for 1 turn, before granting increased Attack to all allies for 2 turns. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Ordem de investida",
+                "description": "Ataca todos os inimigos dando a ordem de investida e tem 100% de chance de atordoar por 1 turno, depois concede Aumentar Ataque a todos os aliados por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -2614,17 +2614,17 @@
         "_name": "Genesis Ras",
         "skills": {
             "S1": {
-                "name": "Sacred Blade",
-                "description": "Attacks the enemy with a sword blast, and increases Combat Readiness of the caster by 25%. Damage dealt increases proportional to the caster's max Health."
+                "name": "Lâmina sagrada",
+                "description": "Ataca o inimigo com uma rajada de espada e aumenta a Prontidão de Combate do conjurador em 25%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Chains of Binding",
-                "description": "After inflicting seal and collapse on the enemy for 2 turns, attacks the enemy. A critical hit will grant an extra turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Correntes da contenção",
+                "description": "Após aplicar selo e colapso ao inimigo por 2 turnos, ataca o inimigo. Um acerto crítico concede um turno extra. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Goddess's Judgement",
-                "description": "Attacks all enemies with divinity and penetrates the target's Defense. Damage dealt increases proportional to the caster's max Health. Damage dealt increases with fewer enemies. At the start of the first battle, grants Sacred Covenant for 5 turns."
+                "name": "Julgamento da deusa",
+                "description": "Ataca todos os inimigos com divindade e penetra a Defesa do alvo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. O dano causado aumenta quanto menos inimigos houver. No início da primeira batalha, concede Pacto sagrado por 5 turnos."
             }
         }
     },
@@ -2632,17 +2632,17 @@
         "_name": "Glenn",
         "skills": {
             "S1": {
-                "name": "Quick Fire",
-                "description": "Rapidly shoots the enemy, with a 50% chance to decrease Defense for 2 turns."
+                "name": "Fogo rápido",
+                "description": "Atira rapidamente no inimigo, com 50% de chance de diminuir a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Precise Attack",
-                "description": "Fires a missile at the enemy, and when the enemy is defeated, inflicts extinction and grants torrent to the caster. Increases Hit Chance of this skill by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Ataque preciso",
+                "description": "Dispara um míssil contra o inimigo e, ao derrotá-lo, aplica extinção e concede torrente ao conjurador. Aumenta a Precisão desta habilidade em 50%.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Focused Fire",
-                "description": "Using an enhancement cube, grants the caster increased Attack (Greater) and increased Hit Chance for 2 turns. Grants an extra turn."
+                "name": "Fogo concentrado",
+                "description": "Usando um cubo de aprimoramento, concede ao conjurador Aumentar Ataque (maior) e Aumentar Precisão por 2 turnos. Concede um turno extra."
             }
         }
     },
@@ -2650,17 +2650,17 @@
         "_name": "Gloomyrain",
         "skills": {
             "S1": {
-                "name": "Wail",
-                "description": "Has a 15% chance of being granted an extra turn after attacking the enemy. When the caster is debuffed, the chance is doubled."
+                "name": "Lamento",
+                "description": "Tem 15% de chance de receber um turno extra após atacar o inimigo. Quando o conjurador tem efeitos negativos, a chance dobra."
             },
             "S2": {
-                "name": "Ill Will",
-                "description": "Increases Attack by 40% and Speed by 30% when the caster is debuffed. Grants immunity to stun, sleep, and provoke."
+                "name": "Má vontade",
+                "description": "Aumenta o Ataque em 40% e a Velocidade em 30% quando o conjurador tem efeitos negativos. Concede imunidade a atordoamento, sono e provocação."
             },
             "S3": {
-                "name": "Soul Destruction",
-                "description": "Attacks all enemies with magic, with a 100% chance to transfer all debuffs inflicted on the caster, and dispels all debuffs from the caster.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Destruição da alma",
+                "description": "Ataca todos os inimigos com magia, com 100% de chance de transferir todos os efeitos negativos aplicados ao conjurador, e dissipa todos os efeitos negativos do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -2668,17 +2668,17 @@
         "_name": "Godmother",
         "skills": {
             "S1": {
-                "name": "Gunshot",
-                "description": "Shoots the enemy with a pistol, with a 50% chance to target them for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Tiro",
+                "description": "Atira no inimigo com uma pistola, com 50% de chance de aplicar alvo por 2 turnos.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Rocket Launcher",
-                "description": "Attacks with a powerful missile, before a 100% chance each to decreases Hit Chance and Attack for 1 turn."
+                "name": "Lança-foguetes",
+                "description": "Ataca com um míssil poderoso, depois com 100% de chance cada diminui a Precisão e o Ataque por 1 turno."
             },
             "S3": {
-                "name": "Enhance Maneuverability",
-                "description": "Utilizes the power of an enhancement cube, granting all allies increased Speed and Effectiveness for 2 turns."
+                "name": "Aprimorar manobrabilidade",
+                "description": "Utiliza o poder de um cubo de aprimoramento, concedendo a todos os aliados Aumentar Velocidade e Aumentar Eficácia por 2 turnos."
             }
         }
     },
@@ -2686,17 +2686,17 @@
         "_name": "Great Chief Khawana",
         "skills": {
             "S1": {
-                "name": "Vertical Cut",
-                "description": "Cuts the enemy, with a 100% chance to restrict for 1 turn. Has a 100% chance to restrict for 2 turns when the target is a Light elemental enemy.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Corte vertical",
+                "description": "Corta o inimigo, com 100% de chance de aplicar restrição por 1 turno. Tem 100% de chance de aplicar restrição por 2 turnos quando o alvo é um inimigo do elemento Luz.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Motivation",
-                "description": "Increases Critical Hit Chance by 30%. When an ally is attacked by a Dual Attack, increases Attack of the caster by 25%. Increased Attack effect can stack up to 3 times."
+                "name": "Motivação",
+                "description": "Aumenta a Chance de Crítico em 30%. Quando um aliado é atingido por um Ataque duplo, aumenta o Ataque do conjurador em 25%. O aumento de Ataque acumula até 3 vezes."
             },
             "S3": {
-                "name": "Great Chief's Devotion",
-                "description": "With released power, dispels two debuffs from all allies and grants increased Speed and a barrier (proportional to the caster's Attack) for 2 turns. Grants an extra turn."
+                "name": "Devoção da grande chefe",
+                "description": "Com o poder liberado, dissipa dois efeitos negativos de todos os aliados e concede Aumentar Velocidade e uma barreira (proporcional ao Ataque do conjurador) por 2 turnos. Concede um turno extra."
             }
         }
     },
@@ -2704,17 +2704,17 @@
         "_name": "Guard Captain Krau",
         "skills": {
             "S1": {
-                "name": "Crimson Flame",
-                "description": "Attacks the enemy with a mystic blade, and increases Combat Readiness of the caster by 20%. A successful attack deals additional damage proportional to the caster's Defense. Damage dealt increases proportional to the caster's Defense."
+                "name": "Chama carmesim",
+                "description": "Ataca o inimigo com uma lâmina mística e aumenta a Prontidão de Combate do conjurador em 20%. Um ataque bem-sucedido causa dano adicional proporcional à Defesa do conjurador. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S2": {
-                "name": "Comet",
-                "description": "Attacks the enemy by pushing them away and inflicts stun for 1 turn before decreasing Combat Readiness by 50%. When the caster is granted vigor, ignores Effect Resistance. Damage dealt increases proportional to the caster's Defense."
+                "name": "Cometa",
+                "description": "Ataca o inimigo empurrando-o para longe e atordoa por 1 turno, depois diminui a Prontidão de Combate em 50%. Quando o conjurador tem vigor, ignora a Resistência a Efeitos. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S3": {
-                "name": "Scorching Flare",
-                "description": "After granting vigor to the caster for 3 turns, attacks all enemies by surrounding the area in flames, and absorbs some of the damage dealt as Health. Increases Combat Readiness of the caster by 50%. Cannot trigger a critical hit, and penetrates the target's Defense. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt and attacks a single target."
+                "name": "Labareda escaldante",
+                "description": "Após conceder vigor ao conjurador por 3 turnos, ataca todos os inimigos cercando a área com chamas e absorve parte do dano causado como Vida. Aumenta a Prontidão de Combate do conjurador em 50%. Não pode causar acerto crítico e penetra a Defesa do alvo. O dano causado aumenta proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado e ataca um único alvo."
             }
         }
     },

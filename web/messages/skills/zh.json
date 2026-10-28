@@ -2578,17 +2578,17 @@
         "_name": "Furious",
         "skills": {
             "S1": {
-                "name": "Quickdraw",
-                "description": "Fires a gun while dashing towards the enemy, with a 35% chance to burn for 2 turns."
+                "name": "快速拔枪",
+                "description": "冲向敌人并开枪射击，有35%的几率施加2回合灼伤。"
             },
             "S2": {
-                "name": "Morale Boost",
-                "description": "Raises morale of all allies, granting increased Critical Hit Chance for 2 turns, before granting an extra turn to the caster."
+                "name": "鼓舞士气",
+                "description": "鼓舞所有友军的士气，施加2回合暴击率提升，然后施放者获得额外回合。"
             },
             "S3": {
-                "name": "Fatal Bullet",
-                "description": "Attacks the enemy with a fatal shot, with a 100% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "致命子弹",
+                "description": "以致命一枪攻击敌人，有100%的几率降低防御力2回合。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -2596,17 +2596,17 @@
         "_name": "General Purrgis",
         "skills": {
             "S1": {
-                "name": "Heroic Strike",
-                "description": "Attacks the enemy with a great sword, with a 100% chance to inflict provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "英雄一击",
+                "description": "以大剑攻击敌人，有100%的几率施加1回合挑衅。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Spearhead",
-                "description": "After being attacked, increases Combat Readiness of all allies by 15%."
+                "name": "先锋",
+                "description": "受到攻击后，使所有友军的行动值提升15%。"
             },
             "S3": {
-                "name": "Command to Charge",
-                "description": "Attacks all enemies by giving the order to charge, and has a 100% chance to inflict stun for 1 turn, before granting increased Attack to all allies for 2 turns. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "冲锋命令",
+                "description": "下达冲锋命令攻击所有敌人，有100%的几率使其眩晕1回合，然后为所有友军施加2回合攻击力提升。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -2614,17 +2614,17 @@
         "_name": "Genesis Ras",
         "skills": {
             "S1": {
-                "name": "Sacred Blade",
-                "description": "Attacks the enemy with a sword blast, and increases Combat Readiness of the caster by 25%. Damage dealt increases proportional to the caster's max Health."
+                "name": "神圣之刃",
+                "description": "以剑气攻击敌人，并使施放者的行动值提升25%。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Chains of Binding",
-                "description": "After inflicting seal and collapse on the enemy for 2 turns, attacks the enemy. A critical hit will grant an extra turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "束缚之链",
+                "description": "对敌人施加2回合封印与崩溃，然后攻击敌人。暴击时获得额外回合。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Goddess's Judgement",
-                "description": "Attacks all enemies with divinity and penetrates the target's Defense. Damage dealt increases proportional to the caster's max Health. Damage dealt increases with fewer enemies. At the start of the first battle, grants Sacred Covenant for 5 turns."
+                "name": "女神的审判",
+                "description": "以神性攻击所有敌人，并穿透目标的防御力。造成的伤害按施放者的最大生命值比例提升。敌人越少，造成的伤害越高。首场战斗开始时，施加5回合神圣誓约。"
             }
         }
     },
@@ -2632,17 +2632,17 @@
         "_name": "Glenn",
         "skills": {
             "S1": {
-                "name": "Quick Fire",
-                "description": "Rapidly shoots the enemy, with a 50% chance to decrease Defense for 2 turns."
+                "name": "速射",
+                "description": "快速射击敌人，有50%的几率降低防御力2回合。"
             },
             "S2": {
-                "name": "Precise Attack",
-                "description": "Fires a missile at the enemy, and when the enemy is defeated, inflicts extinction and grants torrent to the caster. Increases Hit Chance of this skill by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "精准攻击",
+                "description": "向敌人发射导弹，击败敌人时施加湮灭，并为施放者施加激流。此技能的命中率提升50%。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Focused Fire",
-                "description": "Using an enhancement cube, grants the caster increased Attack (Greater) and increased Hit Chance for 2 turns. Grants an extra turn."
+                "name": "集中火力",
+                "description": "使用强化方块，为施放者施加2回合攻击力提升（大）与命中率提升。获得额外回合。"
             }
         }
     },
@@ -2650,17 +2650,17 @@
         "_name": "Gloomyrain",
         "skills": {
             "S1": {
-                "name": "Wail",
-                "description": "Has a 15% chance of being granted an extra turn after attacking the enemy. When the caster is debuffed, the chance is doubled."
+                "name": "恸哭",
+                "description": "攻击敌人后，有15%的几率获得额外回合。施放者有弱化效果时，几率翻倍。"
             },
             "S2": {
-                "name": "Ill Will",
-                "description": "Increases Attack by 40% and Speed by 30% when the caster is debuffed. Grants immunity to stun, sleep, and provoke."
+                "name": "恶意",
+                "description": "施放者有弱化效果时，攻击力提升40%，速度提升30%。免疫眩晕、睡眠与挑衅。"
             },
             "S3": {
-                "name": "Soul Destruction",
-                "description": "Attacks all enemies with magic, with a 100% chance to transfer all debuffs inflicted on the caster, and dispels all debuffs from the caster.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "灵魂毁灭",
+                "description": "以魔法攻击所有敌人，有100%的几率转移施放者身上的所有弱化效果，并解除施放者的所有弱化效果。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -2668,17 +2668,17 @@
         "_name": "Godmother",
         "skills": {
             "S1": {
-                "name": "Gunshot",
-                "description": "Shoots the enemy with a pistol, with a 50% chance to target them for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "枪击",
+                "description": "以手枪射击敌人，有50%的几率施加2回合标记。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Rocket Launcher",
-                "description": "Attacks with a powerful missile, before a 100% chance each to decreases Hit Chance and Attack for 1 turn."
+                "name": "火箭发射器",
+                "description": "以强力导弹攻击，然后各有100%的几率降低命中率与攻击力1回合。"
             },
             "S3": {
-                "name": "Enhance Maneuverability",
-                "description": "Utilizes the power of an enhancement cube, granting all allies increased Speed and Effectiveness for 2 turns."
+                "name": "强化机动性",
+                "description": "利用强化方块之力，为所有友军施加2回合速度提升与效果命中提升。"
             }
         }
     },
@@ -2686,17 +2686,17 @@
         "_name": "Great Chief Khawana",
         "skills": {
             "S1": {
-                "name": "Vertical Cut",
-                "description": "Cuts the enemy, with a 100% chance to restrict for 1 turn. Has a 100% chance to restrict for 2 turns when the target is a Light elemental enemy.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "纵斩",
+                "description": "斩击敌人，有100%的几率施加1回合限制。目标为光属性敌人时，有100%的几率施加2回合限制。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "Motivation",
-                "description": "Increases Critical Hit Chance by 30%. When an ally is attacked by a Dual Attack, increases Attack of the caster by 25%. Increased Attack effect can stack up to 3 times."
+                "name": "干劲",
+                "description": "暴击率提升30%。友军受到协攻时，施放者的攻击力提升25%。攻击力提升效果最多叠加3次。"
             },
             "S3": {
-                "name": "Great Chief's Devotion",
-                "description": "With released power, dispels two debuffs from all allies and grants increased Speed and a barrier (proportional to the caster's Attack) for 2 turns. Grants an extra turn."
+                "name": "大族长的奉献",
+                "description": "以释放的力量解除所有友军的两个弱化效果，并施加2回合速度提升与屏障（与施放者的攻击力成比例）。获得额外回合。"
             }
         }
     },
@@ -2704,17 +2704,17 @@
         "_name": "Guard Captain Krau",
         "skills": {
             "S1": {
-                "name": "Crimson Flame",
-                "description": "Attacks the enemy with a mystic blade, and increases Combat Readiness of the caster by 20%. A successful attack deals additional damage proportional to the caster's Defense. Damage dealt increases proportional to the caster's Defense."
+                "name": "猩红烈焰",
+                "description": "以神秘之刃攻击敌人，并使施放者的行动值提升20%。攻击成功时，追加造成与施放者防御力成比例的伤害。造成的伤害按施放者的防御力比例提升。"
             },
             "S2": {
-                "name": "Comet",
-                "description": "Attacks the enemy by pushing them away and inflicts stun for 1 turn before decreasing Combat Readiness by 50%. When the caster is granted vigor, ignores Effect Resistance. Damage dealt increases proportional to the caster's Defense."
+                "name": "彗星",
+                "description": "推开敌人进行攻击，使其眩晕1回合，然后降低50%行动值。施放者拥有斗志时，无视效果抵抗。造成的伤害按施放者的防御力比例提升。"
             },
             "S3": {
-                "name": "Scorching Flare",
-                "description": "After granting vigor to the caster for 3 turns, attacks all enemies by surrounding the area in flames, and absorbs some of the damage dealt as Health. Increases Combat Readiness of the caster by 50%. Cannot trigger a critical hit, and penetrates the target's Defense. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt and attacks a single target."
+                "name": "灼热烈焰",
+                "description": "为施放者施加3回合斗志后，以火焰包围周围攻击所有敌人，并将部分造成的伤害吸收为生命值。使施放者的行动值提升50%。无法造成暴击，并穿透目标的防御力。造成的伤害按施放者的防御力比例提升。",
+                "soulburn_effect": "提升造成的伤害，并攻击单一目标。"
             }
         }
     },

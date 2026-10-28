@@ -2578,17 +2578,17 @@
         "_name": "Furious",
         "skills": {
             "S1": {
-                "name": "Quickdraw",
-                "description": "Fires a gun while dashing towards the enemy, with a 35% chance to burn for 2 turns."
+                "name": "早撃ち",
+                "description": "敵に突進しながら銃を撃ち、35%の確率で2ターンの間火傷を付与する。"
             },
             "S2": {
-                "name": "Morale Boost",
-                "description": "Raises morale of all allies, granting increased Critical Hit Chance for 2 turns, before granting an extra turn to the caster."
+                "name": "士気高揚",
+                "description": "味方全員の士気を高め、2ターンの間クリティカル率アップを付与した後、発動者は追加ターンを得る。"
             },
             "S3": {
-                "name": "Fatal Bullet",
-                "description": "Attacks the enemy with a fatal shot, with a 100% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "致命の弾丸",
+                "description": "致命の一発で敵を攻撃し、100%の確率で2ターンの間防御力をダウンさせる。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -2596,17 +2596,17 @@
         "_name": "General Purrgis",
         "skills": {
             "S1": {
-                "name": "Heroic Strike",
-                "description": "Attacks the enemy with a great sword, with a 100% chance to inflict provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "英雄の一撃",
+                "description": "大剣で敵を攻撃し、100%の確率で1ターンの間挑発を付与する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Spearhead",
-                "description": "After being attacked, increases Combat Readiness of all allies by 15%."
+                "name": "先鋒",
+                "description": "攻撃された後、味方全員の行動ゲージを15%増加させる。"
             },
             "S3": {
-                "name": "Command to Charge",
-                "description": "Attacks all enemies by giving the order to charge, and has a 100% chance to inflict stun for 1 turn, before granting increased Attack to all allies for 2 turns. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "突撃命令",
+                "description": "突撃命令を下して敵全体を攻撃し、100%の確率で1ターンの間気絶させた後、味方全員に2ターンの間攻撃力アップを付与する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -2614,17 +2614,17 @@
         "_name": "Genesis Ras",
         "skills": {
             "S1": {
-                "name": "Sacred Blade",
-                "description": "Attacks the enemy with a sword blast, and increases Combat Readiness of the caster by 25%. Damage dealt increases proportional to the caster's max Health."
+                "name": "聖なる剣",
+                "description": "剣気で敵を攻撃し、発動者の行動ゲージを25%増加させる。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Chains of Binding",
-                "description": "After inflicting seal and collapse on the enemy for 2 turns, attacks the enemy. A critical hit will grant an extra turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "束縛の鎖",
+                "description": "敵に2ターンの間封印と崩壊を付与した後、敵を攻撃する。クリティカルが発生すると追加ターンを得る。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Goddess's Judgement",
-                "description": "Attacks all enemies with divinity and penetrates the target's Defense. Damage dealt increases proportional to the caster's max Health. Damage dealt increases with fewer enemies. At the start of the first battle, grants Sacred Covenant for 5 turns."
+                "name": "女神の審判",
+                "description": "神性で敵全体を攻撃し、対象の防御力を貫通する。発動者の最大HPに比例して与ダメージがアップする。敵が少ないほど与ダメージがアップする。最初のバトル開始時、5ターンの間聖なる誓約を付与する。"
             }
         }
     },
@@ -2632,17 +2632,17 @@
         "_name": "Glenn",
         "skills": {
             "S1": {
-                "name": "Quick Fire",
-                "description": "Rapidly shoots the enemy, with a 50% chance to decrease Defense for 2 turns."
+                "name": "速射",
+                "description": "素早く敵を射撃し、50%の確率で2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Precise Attack",
-                "description": "Fires a missile at the enemy, and when the enemy is defeated, inflicts extinction and grants torrent to the caster. Increases Hit Chance of this skill by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "精密攻撃",
+                "description": "敵にミサイルを発射し、敵を倒すと消滅を付与し、発動者に激流を付与する。このスキルの命中率が50%アップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Focused Fire",
-                "description": "Using an enhancement cube, grants the caster increased Attack (Greater) and increased Hit Chance for 2 turns. Grants an extra turn."
+                "name": "集中射撃",
+                "description": "強化キューブを使用し、発動者に2ターンの間攻撃力アップ（大）と命中率アップを付与する。追加ターンを得る。"
             }
         }
     },
@@ -2650,17 +2650,17 @@
         "_name": "Gloomyrain",
         "skills": {
             "S1": {
-                "name": "Wail",
-                "description": "Has a 15% chance of being granted an extra turn after attacking the enemy. When the caster is debuffed, the chance is doubled."
+                "name": "慟哭",
+                "description": "敵を攻撃した後、15%の確率で追加ターンを得る。発動者に弱体効果があれば確率が倍になる。"
             },
             "S2": {
-                "name": "Ill Will",
-                "description": "Increases Attack by 40% and Speed by 30% when the caster is debuffed. Grants immunity to stun, sleep, and provoke."
+                "name": "悪意",
+                "description": "発動者に弱体効果があれば、攻撃力が40%、スピードが30%アップする。気絶、睡眠、挑発を受けない。"
             },
             "S3": {
-                "name": "Soul Destruction",
-                "description": "Attacks all enemies with magic, with a 100% chance to transfer all debuffs inflicted on the caster, and dispels all debuffs from the caster.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "魂の破壊",
+                "description": "魔法で敵全体を攻撃し、100%の確率で発動者の弱体効果をすべて移し、発動者の弱体効果をすべて解除する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -2668,17 +2668,17 @@
         "_name": "Godmother",
         "skills": {
             "S1": {
-                "name": "Gunshot",
-                "description": "Shoots the enemy with a pistol, with a 50% chance to target them for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "銃撃",
+                "description": "拳銃で敵を撃ち、50%の確率で2ターンの間標的を付与する。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Rocket Launcher",
-                "description": "Attacks with a powerful missile, before a 100% chance each to decreases Hit Chance and Attack for 1 turn."
+                "name": "ロケットランチャー",
+                "description": "強力なミサイルで攻撃した後、それぞれ100%の確率で1ターンの間命中率と攻撃力をダウンさせる。"
             },
             "S3": {
-                "name": "Enhance Maneuverability",
-                "description": "Utilizes the power of an enhancement cube, granting all allies increased Speed and Effectiveness for 2 turns."
+                "name": "機動性強化",
+                "description": "強化キューブの力を利用し、味方全員に2ターンの間スピードアップと効果命中アップを付与する。"
             }
         }
     },
@@ -2686,17 +2686,17 @@
         "_name": "Great Chief Khawana",
         "skills": {
             "S1": {
-                "name": "Vertical Cut",
-                "description": "Cuts the enemy, with a 100% chance to restrict for 1 turn. Has a 100% chance to restrict for 2 turns when the target is a Light elemental enemy.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "縦斬り",
+                "description": "敵を斬り、100%の確率で1ターンの間制約を付与する。対象が光属性の敵なら、100%の確率で2ターンの間制約を付与する。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Motivation",
-                "description": "Increases Critical Hit Chance by 30%. When an ally is attacked by a Dual Attack, increases Attack of the caster by 25%. Increased Attack effect can stack up to 3 times."
+                "name": "意欲",
+                "description": "クリティカル率が30%アップする。味方が協攻を受けると、発動者の攻撃力が25%アップする。攻撃力アップ効果は最大3回まで重複する。"
             },
             "S3": {
-                "name": "Great Chief's Devotion",
-                "description": "With released power, dispels two debuffs from all allies and grants increased Speed and a barrier (proportional to the caster's Attack) for 2 turns. Grants an extra turn."
+                "name": "大族長の献身",
+                "description": "解放した力で、味方全員の弱体効果を二つ解除し、2ターンの間スピードアップとバリア（発動者の攻撃力に比例）を付与する。追加ターンを得る。"
             }
         }
     },
@@ -2704,17 +2704,17 @@
         "_name": "Guard Captain Krau",
         "skills": {
             "S1": {
-                "name": "Crimson Flame",
-                "description": "Attacks the enemy with a mystic blade, and increases Combat Readiness of the caster by 20%. A successful attack deals additional damage proportional to the caster's Defense. Damage dealt increases proportional to the caster's Defense."
+                "name": "真紅の炎",
+                "description": "神秘の刃で敵を攻撃し、発動者の行動ゲージを20%増加させる。攻撃が成功すると、発動者の防御力に比例した追加ダメージを与える。発動者の防御力に比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Comet",
-                "description": "Attacks the enemy by pushing them away and inflicts stun for 1 turn before decreasing Combat Readiness by 50%. When the caster is granted vigor, ignores Effect Resistance. Damage dealt increases proportional to the caster's Defense."
+                "name": "彗星",
+                "description": "敵を押し飛ばして攻撃し、1ターンの間気絶させた後、行動ゲージを50%減少させる。発動者に闘志があれば効果抵抗を無視する。発動者の防御力に比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Scorching Flare",
-                "description": "After granting vigor to the caster for 3 turns, attacks all enemies by surrounding the area in flames, and absorbs some of the damage dealt as Health. Increases Combat Readiness of the caster by 50%. Cannot trigger a critical hit, and penetrates the target's Defense. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt and attacks a single target."
+                "name": "灼熱の炎",
+                "description": "発動者に3ターンの間闘志を付与した後、周囲を炎で包んで敵全体を攻撃し、与ダメージの一部をHPとして吸収する。発動者の行動ゲージを50%増加させる。クリティカルが発生せず、対象の防御力を貫通する。発動者の防御力に比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップし、単体を攻撃する。"
             }
         }
     },

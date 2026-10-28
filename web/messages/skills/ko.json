@@ -2578,17 +2578,17 @@
         "_name": "Furious",
         "skills": {
             "S1": {
-                "name": "Quickdraw",
-                "description": "Fires a gun while dashing towards the enemy, with a 35% chance to burn for 2 turns."
+                "name": "속사",
+                "description": "적에게 돌진하며 총을 쏘며, 35% 확률로 2턴 동안 화상을 건다."
             },
             "S2": {
-                "name": "Morale Boost",
-                "description": "Raises morale of all allies, granting increased Critical Hit Chance for 2 turns, before granting an extra turn to the caster."
+                "name": "사기 진작",
+                "description": "모든 아군의 사기를 높여 2턴 동안 치명타 확률 증가를 부여한 뒤 시전자는 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Fatal Bullet",
-                "description": "Attacks the enemy with a fatal shot, with a 100% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "치명적인 탄환",
+                "description": "치명적인 사격으로 적을 공격하며, 100% 확률로 2턴 동안 방어력을 감소시킨다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -2596,17 +2596,17 @@
         "_name": "General Purrgis",
         "skills": {
             "S1": {
-                "name": "Heroic Strike",
-                "description": "Attacks the enemy with a great sword, with a 100% chance to inflict provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "영웅의 일격",
+                "description": "대검으로 적을 공격하며, 100% 확률로 1턴 동안 도발을 건다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Spearhead",
-                "description": "After being attacked, increases Combat Readiness of all allies by 15%."
+                "name": "선봉",
+                "description": "공격받은 후 모든 아군의 행동 게이지를 15% 증가시킨다."
             },
             "S3": {
-                "name": "Command to Charge",
-                "description": "Attacks all enemies by giving the order to charge, and has a 100% chance to inflict stun for 1 turn, before granting increased Attack to all allies for 2 turns. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "돌격 명령",
+                "description": "돌격 명령을 내려 모든 적을 공격하며, 100% 확률로 1턴 동안 기절시킨 뒤 모든 아군에게 2턴 동안 공격력 증가를 부여한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -2614,17 +2614,17 @@
         "_name": "Genesis Ras",
         "skills": {
             "S1": {
-                "name": "Sacred Blade",
-                "description": "Attacks the enemy with a sword blast, and increases Combat Readiness of the caster by 25%. Damage dealt increases proportional to the caster's max Health."
+                "name": "성스러운 검",
+                "description": "검기로 적을 공격하고 시전자의 행동 게이지를 25% 증가시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Chains of Binding",
-                "description": "After inflicting seal and collapse on the enemy for 2 turns, attacks the enemy. A critical hit will grant an extra turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "속박의 사슬",
+                "description": "적에게 2턴 동안 봉인과 붕괴를 건 뒤 적을 공격한다. 치명타가 발생하면 추가 턴을 얻는다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "Goddess's Judgement",
-                "description": "Attacks all enemies with divinity and penetrates the target's Defense. Damage dealt increases proportional to the caster's max Health. Damage dealt increases with fewer enemies. At the start of the first battle, grants Sacred Covenant for 5 turns."
+                "name": "여신의 심판",
+                "description": "신성으로 모든 적을 공격하고 대상의 방어력을 관통한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 적이 적을수록 주는 피해가 증가한다. 첫 번째 전투 시작 시 5턴 동안 성스러운 서약을 부여한다."
             }
         }
     },
@@ -2632,17 +2632,17 @@
         "_name": "Glenn",
         "skills": {
             "S1": {
-                "name": "Quick Fire",
-                "description": "Rapidly shoots the enemy, with a 50% chance to decrease Defense for 2 turns."
+                "name": "속사",
+                "description": "적을 빠르게 사격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Precise Attack",
-                "description": "Fires a missile at the enemy, and when the enemy is defeated, inflicts extinction and grants torrent to the caster. Increases Hit Chance of this skill by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "정밀 공격",
+                "description": "적에게 미사일을 발사하며, 적을 처치하면 소멸을 걸고 시전자에게 급류를 부여한다. 이 스킬의 명중률이 50% 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Focused Fire",
-                "description": "Using an enhancement cube, grants the caster increased Attack (Greater) and increased Hit Chance for 2 turns. Grants an extra turn."
+                "name": "집중 사격",
+                "description": "강화 큐브를 사용해 시전자에게 2턴 동안 공격력 증가(대)와 명중률 증가를 부여한다. 추가 턴을 얻는다."
             }
         }
     },
@@ -2650,17 +2650,17 @@
         "_name": "Gloomyrain",
         "skills": {
             "S1": {
-                "name": "Wail",
-                "description": "Has a 15% chance of being granted an extra turn after attacking the enemy. When the caster is debuffed, the chance is doubled."
+                "name": "통곡",
+                "description": "적을 공격한 후 15% 확률로 추가 턴을 얻는다. 시전자에게 약화 효과가 있으면 확률이 두 배가 된다."
             },
             "S2": {
-                "name": "Ill Will",
-                "description": "Increases Attack by 40% and Speed by 30% when the caster is debuffed. Grants immunity to stun, sleep, and provoke."
+                "name": "악의",
+                "description": "시전자에게 약화 효과가 있으면 공격력이 40%, 속도가 30% 증가한다. 기절, 수면, 도발에 면역이 된다."
             },
             "S3": {
-                "name": "Soul Destruction",
-                "description": "Attacks all enemies with magic, with a 100% chance to transfer all debuffs inflicted on the caster, and dispels all debuffs from the caster.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "영혼 파괴",
+                "description": "마법으로 모든 적을 공격하며, 100% 확률로 시전자에게 걸린 약화 효과를 모두 전이하고 시전자의 약화 효과를 모두 해제한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -2668,17 +2668,17 @@
         "_name": "Godmother",
         "skills": {
             "S1": {
-                "name": "Gunshot",
-                "description": "Shoots the enemy with a pistol, with a 50% chance to target them for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "총격",
+                "description": "권총으로 적을 쏘며, 50% 확률로 2턴 동안 표적을 건다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Rocket Launcher",
-                "description": "Attacks with a powerful missile, before a 100% chance each to decreases Hit Chance and Attack for 1 turn."
+                "name": "로켓 런처",
+                "description": "강력한 미사일로 공격한 뒤 각각 100% 확률로 1턴 동안 명중률과 공격력을 감소시킨다."
             },
             "S3": {
-                "name": "Enhance Maneuverability",
-                "description": "Utilizes the power of an enhancement cube, granting all allies increased Speed and Effectiveness for 2 turns."
+                "name": "기동성 강화",
+                "description": "강화 큐브의 힘을 이용해 모든 아군에게 2턴 동안 속도 증가와 효과 적중 증가를 부여한다."
             }
         }
     },
@@ -2686,17 +2686,17 @@
         "_name": "Great Chief Khawana",
         "skills": {
             "S1": {
-                "name": "Vertical Cut",
-                "description": "Cuts the enemy, with a 100% chance to restrict for 1 turn. Has a 100% chance to restrict for 2 turns when the target is a Light elemental enemy.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "세로 베기",
+                "description": "적을 베며, 100% 확률로 1턴 동안 제약을 건다. 대상이 빛 속성 적이면 100% 확률로 2턴 동안 제약을 건다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Motivation",
-                "description": "Increases Critical Hit Chance by 30%. When an ally is attacked by a Dual Attack, increases Attack of the caster by 25%. Increased Attack effect can stack up to 3 times."
+                "name": "의욕",
+                "description": "치명타 확률이 30% 증가한다. 아군이 협공을 받으면 시전자의 공격력이 25% 증가한다. 공격력 증가 효과는 최대 3회까지 중첩된다."
             },
             "S3": {
-                "name": "Great Chief's Devotion",
-                "description": "With released power, dispels two debuffs from all allies and grants increased Speed and a barrier (proportional to the caster's Attack) for 2 turns. Grants an extra turn."
+                "name": "대족장의 헌신",
+                "description": "해방된 힘으로 모든 아군의 약화 효과를 두 개 해제하고 2턴 동안 속도 증가와 보호막(시전자 공격력 비례)을 부여한다. 추가 턴을 얻는다."
             }
         }
     },
@@ -2704,17 +2704,17 @@
         "_name": "Guard Captain Krau",
         "skills": {
             "S1": {
-                "name": "Crimson Flame",
-                "description": "Attacks the enemy with a mystic blade, and increases Combat Readiness of the caster by 20%. A successful attack deals additional damage proportional to the caster's Defense. Damage dealt increases proportional to the caster's Defense."
+                "name": "진홍의 불꽃",
+                "description": "신비한 칼날로 적을 공격하고 시전자의 행동 게이지를 20% 증가시킨다. 공격에 성공하면 시전자의 방어력에 비례한 추가 피해를 준다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Comet",
-                "description": "Attacks the enemy by pushing them away and inflicts stun for 1 turn before decreasing Combat Readiness by 50%. When the caster is granted vigor, ignores Effect Resistance. Damage dealt increases proportional to the caster's Defense."
+                "name": "혜성",
+                "description": "적을 밀쳐 공격하고 1턴 동안 기절시킨 뒤 행동 게이지를 50% 감소시킨다. 시전자에게 투지가 있으면 효과 저항을 무시한다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Scorching Flare",
-                "description": "After granting vigor to the caster for 3 turns, attacks all enemies by surrounding the area in flames, and absorbs some of the damage dealt as Health. Increases Combat Readiness of the caster by 50%. Cannot trigger a critical hit, and penetrates the target's Defense. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt and attacks a single target."
+                "name": "작열하는 불꽃",
+                "description": "시전자에게 3턴 동안 투지를 부여한 뒤 주변을 불꽃으로 둘러싸 모든 적을 공격하고 준 피해의 일부를 생명력으로 흡수한다. 시전자의 행동 게이지를 50% 증가시킨다. 치명타가 발생하지 않으며 대상의 방어력을 관통한다. 시전자의 방어력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가하고 단일 대상을 공격한다."
             }
         }
     },
