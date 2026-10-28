@@ -21,17 +21,17 @@
         "_name": "Abyssal Yufine",
         "skills": {
             "S1": {
-                "name": "Dragon's Breath",
-                "description": "Attacks all enemies with a dragon's breath, with a 60% chance to inflict decreased Attack for 1 turn. Damage dealt increases proportional to the caster's Defense. When the caster is inflicted with trauma, activates Unbridled Outburst instead of Dragon's Breath. Unbridled Outburst: Attacks the enemy with a massive blade. Penetrates the target's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Sopro do dragão",
+                "description": "Ataca todos os inimigos com o sopro do dragão, com 60% de chance de aplicar Diminuir Ataque por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador. Quando o conjurador está com trauma, ativa Explosão desenfreada no lugar de Sopro do dragão. Explosão desenfreada: ataca o inimigo com uma lâmina enorme. Penetra a Defesa do alvo.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Inner Abyss",
-                "description": "When the enemy is not an Elite or Boss monster, reduces the effect of Combat Readiness increases granted to the enemy by 50%. When attacked, gains 20 Fighting Spirit and has a 30% chance to counterattack. At the start of the turn, when Fighting Spirit is full, dispels all debuffs from the caster."
+                "name": "Abismo interior",
+                "description": "Quando o inimigo não é um monstro Elite ou Chefe, reduz em 50% o efeito dos aumentos de Prontidão de Combate concedidos a ele. Ao ser atacado, ganha 20 de Espírito de Luta e tem 30% de chance de contra-atacar. No início do turno, com o Espírito de Luta cheio, dissipa todos os efeitos negativos do conjurador."
             },
             "S3": {
-                "name": "Frenzied Strike",
-                "description": "Inflicts trauma on the caster for 3 turns, before attacking all enemies, dispelling all buffs and decreasing Combat Readiness by 50%. Ignores Effect Resistance."
+                "name": "Golpe frenético",
+                "description": "Aplica trauma ao conjurador por 3 turnos e então ataca todos os inimigos, dissipando todos os efeitos positivos e diminuindo a Prontidão de Combate em 50%. Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -111,17 +111,17 @@
         "_name": "Afternoon Soak Flan",
         "skills": {
             "S1": {
-                "name": "Do Not Disturb",
-                "description": "Attacks the enemy with a gun, with a 40% chance to stun for 1 turn. A successful attack always results in a critical hit. When used on the caster's turn, uses It's a Whopper! instead of Do Not Disturb. It's a Whopper!: Attacks all enemies, and gains 1 Focus. A successful attack always results in a critical hit. This skill does not trigger a Dual Attack or counterattack."
+                "name": "Não perturbe",
+                "description": "Ataca o inimigo com uma arma, com 40% de chance de atordoar por 1 turno. Um ataque bem-sucedido é sempre crítico. Quando usado no turno do conjurador, usa Que peixão! no lugar de Não perturbe. Que peixão!: ataca todos os inimigos e ganha 1 de Foco. Um ataque bem-sucedido é sempre crítico. Esta habilidade não ativa Ataque duplo nem contra-ataque."
             },
             "S2": {
-                "name": "I’m Still On Vacation!",
-                "description": "At the start of the first battle, gains 3 Focus. Increases Evasion by 50%, and when Focus is 1 or higher, increases Evasion by an additional 50%. After an ally uses a basic skill, consumes 1 Focus, triggering a Dual Attack, and increases Combat Readiness of the caster by 25%."
+                "name": "Ainda estou de férias!",
+                "description": "No início da primeira batalha, ganha 3 de Foco. Aumenta a Evasão em 50% e, com Foco 1 ou mais, aumenta a Evasão em mais 50%. Depois que um aliado usa a habilidade básica, consome 1 de Foco para ativar um Ataque duplo e aumenta a Prontidão de Combate do conjurador em 25%."
             },
             "S3": {
-                "name": "In the Palm of My Hand",
-                "description": "Attacks the enemy, decreasing Defense for 2 turns, and increases Combat Readiness of all allies by 20%. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Na palma da minha mão",
+                "description": "Ataca o inimigo, diminuindo a Defesa por 2 turnos, e aumenta a Prontidão de Combate de todos os aliados em 20%. Um ataque bem-sucedido é sempre crítico.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -598,17 +598,17 @@
         "_name": "Assassin Cartuja",
         "skills": {
             "S1": {
-                "name": "Shred",
-                "description": "Attacks the enemy with sharp claws, with a 100% chance to inflict provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "Retalhar",
+                "description": "Ataca o inimigo com garras afiadas, com 100% de chance de aplicar provocação por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Battle Fever",
-                "description": "Increases Evasion by 50% and increases Evasion of all allies except for the caster by 20%. When successfully evading, increases Combat Readiness of the caster by 15%."
+                "name": "Febre de batalha",
+                "description": "Aumenta a Evasão em 50% e a Evasão de todos os aliados, exceto o conjurador, em 20%. Ao evitar um ataque, aumenta a Prontidão de Combate do conjurador em 15%."
             },
             "S3": {
-                "name": "Sudden Assault",
-                "description": "Attacks the enemy by quickly dashing towards them, inflicting decreased Defense for 2 turns and stun for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Investida súbita",
+                "description": "Ataca o inimigo avançando rapidamente, aplicando Diminuir Defesa por 2 turnos e atordoamento por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -670,17 +670,17 @@
         "_name": "Aubade Ludwig",
         "skills": {
             "S1": {
-                "name": "Moonlight",
-                "description": "Attacks the enemy with moonlight. When the caster is granted dawn, activates Light of Condemnation as an extra attack. Light of Condemnation can only be activated once per turn, during the caster's turn. Light of Condemnation (Acquire 5 Soul): Attacks all enemies and consumes all Soul regardless of whether the attack hits, inflicting 1,000 additional damage. Additional damage increases proportional to the amount of consumed Soul, up to 25,000."
+                "name": "Luar",
+                "description": "Ataca o inimigo com o luar. Quando o conjurador tem alvorada, ativa Luz da condenação como ataque extra. Luz da condenação só pode ser ativada uma vez por turno, durante o turno do conjurador. Luz da condenação (obtém 5 Almas): ataca todos os inimigos e consome todas as Almas, acertando ou não, causando 1.000 de dano adicional. O dano adicional aumenta proporcionalmente às Almas consumidas, até 25.000."
             },
             "S2": {
-                "name": "Night Greeting the Dawn",
-                "description": "Increases Defense by 30%. At the end of an ally's turn, when Soul is 10 or higher, increases Combat Readiness of the caster by 20%."
+                "name": "Noite que saúda a alvorada",
+                "description": "Aumenta a Defesa em 30%. No fim do turno de um aliado, com 10 Almas ou mais, aumenta a Prontidão de Combate do conjurador em 20%."
             },
             "S3": {
-                "name": "White Night",
-                "description": "Dispels two buffs from all enemies, and has a 85% chance each to inflict block for 2 turns and silence for 1 turn on all enemies. Grants dawn and a barrier (proportional to max Health) to the caster for 3 turns.",
-                "soulburn_effect": "Increases barrier strength."
+                "name": "Noite branca",
+                "description": "Dissipa dois efeitos positivos de todos os inimigos e tem 85% de chance, para cada um, de aplicar bloqueio por 2 turnos e silêncio por 1 turno a todos os inimigos. Concede alvorada e uma barreira (proporcional à Vida máxima) ao conjurador por 3 turnos.",
+                "soulburn_effect": "Aumenta a força da barreira."
             }
         }
     },
@@ -1912,17 +1912,17 @@
         "_name": "Disciplinary Prefect Aria",
         "skills": {
             "S1": {
-                "name": "Disciplinary Warning",
-                "description": "Attacks the enemy, increasing Combat Readiness of the caster by 15%. When Purge is on cooldown, activates Disciplinary Action as an extra attack. Damage dealt increases proportional to the caster's max Health. Disciplinary Action: Attacks the enemy, inflicting up to 10% injuries. A successful attack always results in a critical hit. Damage dealt increases proportional to the caster's max Health."
+                "name": "Advertência disciplinar",
+                "description": "Ataca o inimigo e aumenta a Prontidão de Combate do conjurador em 15%. Quando Expurgo está em recarga, ativa Ação disciplinar como ataque extra. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Ação disciplinar: ataca o inimigo, causando até 10% de ferimentos. Um ataque bem-sucedido é sempre crítico. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Unwavering Execution",
-                "description": "Increases Soulburn consumption of the enemy by 100%. At the start of the first battle, increases Effect Resistance proportional to max Health. The rate of the Effect Resistance increase effect does not change after it is activated. When the caster is not inflicted with a debuff, increases Effect Resistance of all allies by 40%."
+                "name": "Execução inabalável",
+                "description": "Aumenta em 100% o consumo de Queima de alma do inimigo. No início da primeira batalha, aumenta a Resistência a Efeitos proporcionalmente à Vida máxima. A taxa desse aumento não muda depois de ativada. Quando o conjurador não tem efeitos negativos, aumenta a Resistência a Efeitos de todos os aliados em 40%."
             },
             "S3": {
-                "name": "Purge",
-                "description": "Attacks the enemy with a merciless iron fist, granting a barrier to all allies for 2 turns before increasing Defense penetration of this skill by 35%. Penetration increase can stack up to 2 times. A successful attack always results in a critical hit. Damage dealt and barrier strength increase proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt and decreases cooldown of this skill by 1 turn."
+                "name": "Expurgo",
+                "description": "Ataca o inimigo com um punho de ferro implacável, concedendo uma barreira a todos os aliados por 2 turnos e aumentando a penetração de Defesa desta habilidade em 35%. O aumento de penetração acumula até 2 vezes. Um ataque bem-sucedido é sempre crítico. O dano causado e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado e reduz a recarga desta habilidade em 1 turno."
             }
         }
     },
@@ -2254,17 +2254,17 @@
         "_name": "Estelle",
         "skills": {
             "S1": {
-                "description": "Attacks the enemy, inflicting up to 10% injuries and recovering the caster's Health. A successful attack always results in a critical hit. Amount recovered and damage dealt increase proportional to the caster's max Health. When it is not the caster's turn, damage dealt and injuries are doubled. After attacking, when Fighting Spirit is full, consumes all Fighting Spirit to activate Wind of Protection. Wind of Protection (Acquire 10 Soul): Grants a barrier (proportional to the caster's max Health) to all allies for 2 turns, and increases Combat Readiness of the caster by 35%.",
-                "name": "Wind of Protection"
+                "description": "Ataca o inimigo, causando até 10% de ferimentos e recuperando a Vida do conjurador. Um ataque bem-sucedido é sempre crítico. A quantidade recuperada e o dano causado aumentam proporcionalmente à Vida máxima do conjurador. Fora do turno do conjurador, o dano causado e os ferimentos são dobrados. Após atacar, com o Espírito de Luta cheio, consome todo o Espírito de Luta para ativar Vento de proteção. Vento de proteção (obtém 10 Almas): concede uma barreira (proporcional à Vida máxima do conjurador) a todos os aliados por 2 turnos e aumenta a Prontidão de Combate do conjurador em 35%.",
+                "name": "Vento de proteção"
             },
             "S2": {
-                "name": "Protective Nature",
-                "description": "At the start of the first battle, gains 50 Fighting Spirit. Grants 40% damage sharing from the damage received by the ally. After an ally except for the caster is attacked, when the damage suffered is 20% or more of max Health, dispels all debuffs and counterattacks. Cannot be triggered by extra attacks or counterattacks."
+                "name": "Natureza protetora",
+                "description": "No início da primeira batalha, ganha 50 de Espírito de Luta. Assume 40% do dano recebido pelo aliado. Depois que um aliado, exceto o conjurador, é atacado, se o dano sofrido for 20% ou mais da Vida máxima, dissipa todos os efeitos negativos e contra-ataca. Não é ativado por ataques extras nem contra-ataques."
             },
             "S3": {
-                "name": "Dazzling Strike",
-                "description": "Attacks the enemy with a shield, inflicting up to 20% injuries, and recovering Health of the caster. Penetrates the target's Defense by 50%. A successful attack always results in a critical hit. Amount recovered and damage dealt increase proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Golpe deslumbrante",
+                "description": "Ataca o inimigo com um escudo, causando até 20% de ferimentos e recuperando a Vida do conjurador. Penetra 50% da Defesa do alvo. Um ataque bem-sucedido é sempre crítico. A quantidade recuperada e o dano causado aumentam proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -2542,17 +2542,17 @@
         "_name": "Frieren",
         "skills": {
             "S1": {
-                "name": "Ordinary Offensive Magic",
-                "description": "Attacks the enemy with magic, and grants immunity to the caster for 1 turn. When it is the caster's turn, activates Vollzanbel as an extra attack. Vollznabell (gain 1 Soul): Attacks all enemies with flame magic. Damage dealt increases proportional to the amount of the enemy's lost Health.",
-                "soulburn_effect": "Increases damage dealt of Ordinary Offensive Magic."
+                "name": "Magia ofensiva comum",
+                "description": "Ataca o inimigo com magia e concede imunidade ao conjurador por 1 turno. No turno do conjurador, ativa Vollzanbel como ataque extra. Vollzanbel (ganha 1 Alma): ataca todos os inimigos com magia de chamas. O dano causado aumenta proporcionalmente à Vida perdida do inimigo.",
+                "soulburn_effect": "Aumenta o dano causado por Magia ofensiva comum."
             },
             "S2": {
-                "name": "The Highest Form of Magic",
-                "description": "At the start of battle, grants 40% resource increase to all allies. During battle, when Soul is 4 or higher, grants Defensive Magic. After being attacked, increases Combat Readiness of all allies by 10%"
+                "name": "A forma suprema da magia",
+                "description": "No início da batalha, concede 40% de aumento de recursos a todos os aliados. Durante a batalha, com 4 Almas ou mais, concede Magia defensiva. Após ser atacado, aumenta a Prontidão de Combate de todos os aliados em 10%."
             },
             "S3": {
                 "name": "Judradjim",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks all enemies with lightning magic, dispelling all buffs. Increases Combat Readiness of the caster by 50%. Penetrates the target's Defense by 50%."
+                "description": "Após conceder Aumentar Ataque ao conjurador por 3 turnos, ataca todos os inimigos com magia de raio, dissipando todos os efeitos positivos. Aumenta a Prontidão de Combate do conjurador em 50%. Penetra 50% da Defesa do alvo."
             }
         }
     },
@@ -3784,16 +3784,16 @@
         "_name": "Lisette",
         "skills": {
             "S1": {
-                "name": "Light Source",
-                "description": "Attacks the enemy with light, and recovers Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "Fonte de luz",
+                "description": "Ataca o inimigo com luz e recupera a Vida de todos os aliados. O dano causado e a quantidade recuperada aumentam proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Devotion",
-                "description": "At the start of the first battle, grants four divinity effects. When an ally except for the caster dies, consumes one divinity to revive them as a Fragment of Life for 2 turns and increase Combat Readiness by 30%"
+                "name": "Devoção",
+                "description": "No início da primeira batalha, concede quatro efeitos de divindade. Quando um aliado, exceto o conjurador, morre, consome uma divindade para revivê-lo como Fragmento de vida por 2 turnos e aumenta a Prontidão de Combate em 30%."
             },
             "S3": {
-                "name": "Converged Time",
-                "description": "Reconstructs the world to fully recover Health of all allies and grants increased Speed for 3 turns. When the caster is granted divinity, grants time reversal to all allies except for the caster. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "Tempo convergente",
+                "description": "Reconstrói o mundo para recuperar totalmente a Vida de todos os aliados e concede Aumentar Velocidade por 3 turnos. Quando o conjurador tem divindade, concede reversão do tempo a todos os aliados, exceto o conjurador. Esta habilidade não é afetada por aumentos ou reduções de recarga."
             }
         }
     },
@@ -4250,17 +4250,17 @@
         "_name": "Monarch of the Sword Iseria",
         "skills": {
             "S1": {
-                "name": "Revelation",
-                "description": "Attacks the enemy with sword fragments. Penetrates the target's Defense. When triggered as a counterattack, activates Sword of Duty instead. Sword of Duty: After inflicting fracture on the caster, attacks the enemy with the ritual sword, and increases Combat Readiness of the caster and the foremost ally except for the caster by 25%. Inflicts additional damage proportional to the caster's Attack on the target and up to 25% injuries.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Revelação",
+                "description": "Ataca o inimigo com fragmentos de espada. Penetra a Defesa do alvo. Quando ativado como contra-ataque, ativa Espada do dever no lugar. Espada do dever: após aplicar fratura ao conjurador, ataca o inimigo com a espada ritual e aumenta em 25% a Prontidão de Combate do conjurador e do aliado mais à frente, exceto o conjurador. Causa ao alvo dano adicional proporcional ao Ataque do conjurador e até 25% de ferimentos.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Elbris's Successor",
-                "description": "Increases Hit Chance and Penetration Resistance by 70%. All counterattack chances of the caster are doubled, and when counterattacking, if the target is a Hero, triggers a counterattack from the foremost ally. After attacking, grants a barrier (proportional to Attack) to the caster for 2 turns."
+                "name": "Sucessora de Elbris",
+                "description": "Aumenta a Chance de Acerto e a Resistência a Penetração em 70%. Todas as chances de contra-ataque do conjurador são dobradas e, ao contra-atacar, se o alvo for um herói, ativa um contra-ataque do aliado mais à frente. Após atacar, concede ao conjurador uma barreira (proporcional ao Ataque) por 2 turnos."
             },
             "S3": {
-                "name": "Dawnbreaker",
-                "description": "After inflicting fracture on the caster and dispelling all debuffs, attacks all enemies with the power of the ritual sword. Inflicts additional damage proportional to the caster's Attack on the target and up to 25% injuries."
+                "name": "Rompe-alvorada",
+                "description": "Após aplicar fratura ao conjurador e dissipar todos os efeitos negativos, ataca todos os inimigos com o poder da espada ritual. Causa ao alvo dano adicional proporcional ao Ataque do conjurador e até 25% de ferimentos."
             }
         }
     },
@@ -4286,17 +4286,17 @@
         "_name": "Moon Bunny Dominiel",
         "skills": {
             "S1": {
-                "name": "Moonlight Wave",
-                "description": "Attacks the enemy with an ethereal moonlight wave and has a 75% chance to put them to sleep for 1 turn. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Onda de luar",
+                "description": "Ataca o inimigo com uma onda etérea de luar e tem 75% de chance de fazê-lo dormir por 1 turno. Esta habilidade não ativa Ataque duplo.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Flow Control",
-                "description": "At the start of an enemy's extra turn, dispels all debuffs from all allies before granting skill nullifier once and skill effect nullifier once, and increases Combat Readiness of the caster by 30%. Only activates when the enemy is a Hero."
+                "name": "Controle de fluxo",
+                "description": "No início de um turno extra do inimigo, dissipa todos os efeitos negativos de todos os aliados, concede Anulação de habilidade uma vez e Anulação de efeitos de habilidade uma vez, e aumenta a Prontidão de Combate do conjurador em 30%. Só é ativado quando o inimigo é um herói."
             },
             "S3": {
-                "name": "Divination",
-                "description": "In accordance with the divinations, grants vigor and a barrier (proportional to the caster's max Health) to all allies for 2 turns and increases Combat Readiness by 30%."
+                "name": "Adivinhação",
+                "description": "De acordo com as adivinhações, concede vigor e uma barreira (proporcional à Vida máxima do conjurador) a todos os aliados por 2 turnos e aumenta a Prontidão de Combate em 30%."
             }
         }
     },
@@ -4484,17 +4484,17 @@
         "_name": "Notos",
         "skills": {
             "S1": {
-                "name": "Divinity Release",
-                "description": "(Notos) Attacks the enemy with divinity and has a 75% chance to inflict decreased Defense for 1 turn. Damage dealt increases proportional to the caster's max Health. (God of Battle) Attacks the enemy and deals additional damage proportional to the caster's max Health. Damage dealt increases proportional to the caster's max Health."
+                "name": "Liberação divina",
+                "description": "(Notos) Ataca o inimigo com divindade e tem 75% de chance de aplicar Diminuir Defesa por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. (Deus da batalha) Ataca o inimigo e causa dano adicional proporcional à Vida máxima do conjurador. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Blaze of Battle",
-                "description": "(Notos) Unaffected by Combat Readiness increase and decrease effects. (God of Battle) Attacks the enemy with transcendent power. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Chama da batalha",
+                "description": "(Notos) Não é afetado por aumentos ou reduções de Prontidão de Combate. (Deus da batalha) Ataca o inimigo com poder transcendente. Penetra 50% da Defesa do alvo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "God’s Might",
-                "description": "Grants God of Battle to the caster for 3 turns and fully recovers Health. While God of Battle is maintained, changes the battlefield into the Sanctuary of Battle. Begins the first battle with a full skill cooldown count. Sanctuary of Battle In the Sanctuary of Battle, all Heroes are immune to buffs and debuffs."
+                "name": "Poder divino",
+                "description": "Concede Deus da batalha ao conjurador por 3 turnos e recupera totalmente a Vida. Enquanto Deus da batalha estiver ativo, transforma o campo de batalha no Santuário da batalha. Começa a primeira batalha com a recarga da habilidade completa. Santuário da batalha: no Santuário da batalha, todos os heróis são imunes a efeitos positivos e negativos."
             }
         }
     },
@@ -4664,17 +4664,17 @@
         "_name": "Perfumer Byblis",
         "skills": {
             "S1": {
-                "name": "Rose Breeze",
-                "description": "Attacks the enemy with scented paper, and has a 75% chance to inflict decreased Defense for 1 turn.",
-                "soulburn_effect": "Triggers a Dual Attack from the ally with the highest Attack."
+                "name": "Brisa de rosas",
+                "description": "Ataca o inimigo com papel perfumado e tem 75% de chance de aplicar Diminuir Defesa por 1 turno.",
+                "soulburn_effect": "O aliado com maior Ataque realiza um Ataque duplo."
             },
             "S2": {
                 "name": "Elixir de Belle Nuit",
-                "description": "At the start of an enemy's turn, grants lingering fragrance to all allies for 1 turn. When an ally's Health is 50% or less after being attacked, activates La Vie en Rose. La Vie en Rose: Dispels two debuffs from all allies and recovers Health before granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "description": "No início do turno de um inimigo, concede fragrância persistente a todos os aliados por 1 turno. Quando a Vida de um aliado fica em 50% ou menos após ser atacado, ativa La Vie en Rose. La Vie en Rose: dissipa dois efeitos negativos de todos os aliados e recupera Vida, depois concede uma barreira por 2 turnos. A quantidade recuperada e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
                 "name": "Aura de la Mort",
-                "description": "After granting increased Effectiveness to the caster for 3 turns, spreads the scent of death, inflicting redirected provoke on all enemies for 1 turn and a 100% chance to inflict two venom effects for 2 turns. At the end of the turn, detonates venom effects inflicted on the target."
+                "description": "Após conceder Aumentar Eficácia ao conjurador por 3 turnos, espalha o aroma da morte, aplicando provocação redirecionada a todos os inimigos por 1 turno e com 100% de chance de aplicar dois efeitos de peçonha por 2 turnos. No fim do turno, detona os efeitos de peçonha aplicados ao alvo."
             }
         }
     },
@@ -5006,17 +5006,17 @@
         "_name": "Rhianna and Luciella",
         "skills": {
             "S1": {
-                "name": "Half Moon Slash / Waning Moon Slash",
-                "description": "(Rhianna) Attacks the enemy with a dagger, inflicting erosion for 2 turns. A critical hit will detonate erosion effects inflicted on the target. (Luciella) After granting increased Attack to the caster for 1 turn, attacks the enemy with a dagger and absorbs some of the damage dealt as health."
+                "name": "Corte da meia-lua / Corte da lua minguante",
+                "description": "(Rhianna) Ataca o inimigo com uma adaga, aplicando erosão por 2 turnos. Um acerto crítico detona os efeitos de erosão no alvo. (Luciella) Após conceder Aumentar Ataque ao conjurador por 1 turno, ataca o inimigo com uma adaga e absorve parte do dano causado como Vida."
             },
             "S2": {
-                "name": "Hunter's Mark / Blade of Pursuit",
-                "description": "(Rhianna) Attacks the enemy, dispelling two buffs before inflicting bind and decreased Defense for 2 turns. Swaps with Luciella and grants an extra turn. After attacking, when the target has a debuff, Luciella activates Waning Moon Slash as an extra attack. (Luciella) After granting increased Attack to the caster for 3 turns, attacks the enemy. Swaps with Rhianna and grants an extra turn. After attacking, when the target's Health is 50% or less, Rhianna activates Half Moon Slash as an extra attack.",
-                "soulburn_effect": "(Rhianna) Ignores Effect Resistance. (Luciella) Increases damage dealt."
+                "name": "Marca do caçador / Lâmina da perseguição",
+                "description": "(Rhianna) Ataca o inimigo, dissipando dois efeitos positivos antes de aplicar amarra e Diminuir Defesa por 2 turnos. Troca de lugar com Luciella e concede um turno extra. Após atacar, se o alvo tiver um efeito negativo, Luciella ativa Corte da lua minguante como ataque extra. (Luciella) Após conceder Aumentar Ataque ao conjurador por 3 turnos, ataca o inimigo. Troca de lugar com Rhianna e concede um turno extra. Após atacar, se a Vida do alvo for 50% ou menos, Rhianna ativa Corte da meia-lua como ataque extra.",
+                "soulburn_effect": "(Rhianna) Ignora a Resistência a Efeitos. (Luciella) Aumenta o dano causado."
             },
             "S3": {
-                "name": "Pursuit of Death",
-                "description": "Rhianna and Luciella launch a coordinated attack. Luciella attacks all enemies and when the target is a Hero, ignores damage sharing. Rhianna dispels two buffs from all enemies, before inflicting fear for 1 turn. Grants a barrier (proportional to Attack) to the caster for 3 turns. One Butterfly's Afterdream will remain throughout the battle."
+                "name": "Perseguição da morte",
+                "description": "Rhianna e Luciella fazem um ataque coordenado. Luciella ataca todos os inimigos e, se o alvo for um herói, ignora a divisão de dano. Rhianna dissipa dois efeitos positivos de todos os inimigos e então aplica medo por 1 turno. Concede ao conjurador uma barreira (proporcional ao Ataque) por 3 turnos. Um Sonho Póstumo da Borboleta permanece durante toda a batalha."
             }
         }
     },
@@ -5780,17 +5780,17 @@
         "_name": "Silvertide Christy",
         "skills": {
             "S1": {
-                "name": "Sword of Protection",
-                "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "Espada da proteção",
+                "description": "Ataca o inimigo, com 75% de chance de provocá-lo por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Oath Shield",
-                "description": "After being attacked, when the caster does not have a debuff, increases Combat Readiness of the caster and the ally in the back row by 20%. Can only be activated once per turn. At the start of the first battle, increases Effect Resistance of the ally in the back row by 100% of the caster's Effect Resistance. The rate of this effect does not change after it is activated, and this effect is dispelled only when the ally in the back row is defeated. When the caster is in the back row, the effect is not activated."
+                "name": "Escudo do juramento",
+                "description": "Após ser atacado, se o conjurador não tiver efeitos negativos, aumenta a Prontidão de Combate do conjurador e do aliado na fileira de trás em 20%. Só pode ser ativado uma vez por turno. No início da primeira batalha, aumenta a Resistência a Efeitos do aliado na fileira de trás em 100% da Resistência a Efeitos do conjurador. A taxa desse efeito não muda depois de ativada, e o efeito só é dissipado quando o aliado na fileira de trás é derrotado. Quando o conjurador está na fileira de trás, o efeito não é ativado."
             },
             "S3": {
-                "name": "Dragon Knight's Cheer",
-                "description": "Increases Attack of all allies for 2 turns. Increases Defense and Effectiveness of the caster for 2 turns and recovers Health. Amount recovered increases proportional to the caster's Max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Incentivo do cavaleiro dragão",
+                "description": "Aumenta o Ataque de todos os aliados por 2 turnos. Aumenta a Defesa e a Eficácia do conjurador por 2 turnos e recupera Vida. A quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -5942,17 +5942,17 @@
         "_name": "Straze",
         "skills": {
             "S1": {
-                "name": "Powerful Strike",
-                "description": "Swings a sword to attack the enemy and increases Combat Readiness of the caster by 20%."
+                "name": "Golpe poderoso",
+                "description": "Brande a espada para atacar o inimigo e aumenta a Prontidão de Combate do conjurador em 20%."
             },
             "S2": {
-                "name": "Destructive Gaze",
-                "description": "Attacks all enemies with a wave of force and dispels all buffs. Ignores Effect Resistance of any targets with Attack lower than the caster's Attack. When there are three or fewer enemies, damage dealt increases with fewer enemies.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Olhar destrutivo",
+                "description": "Ataca todos os inimigos com uma onda de força e dissipa todos os efeitos positivos. Ignora a Resistência a Efeitos dos alvos com Ataque menor que o do conjurador. Quando há três inimigos ou menos, o dano causado aumenta quanto menos inimigos houver.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             },
             "S3": {
-                "name": "Star Extinction",
-                "description": "Attacks all enemies with a sword, and grants invincibility to the caster for 1 turn. Penetrates Defense of the target with the highest max Health. This skill cannot trigger a counterattack."
+                "name": "Extinção estelar",
+                "description": "Ataca todos os inimigos com uma espada e concede invencibilidade ao conjurador por 1 turno. Penetra a Defesa do alvo com maior Vida máxima. Esta habilidade não pode ativar contra-ataques."
             }
         }
     },
@@ -6086,17 +6086,17 @@
         "_name": "Swift Flagbearer Sigret",
         "skills": {
             "S1": {
-                "name": "Strike of Flagbearer",
-                "description": "Attacks the enemy with a flag, with a 75% chance to inflict silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness of the target by 25%."
+                "name": "Golpe do porta-estandarte",
+                "description": "Ataca o inimigo com uma bandeira, com 75% de chance de aplicar silêncio por 1 turno. Após atacar, se o alvo estiver silenciado, diminui a Prontidão de Combate dele em 25%."
             },
             "S2": {
-                "name": "Target Lock",
-                "description": "After dispelling all buffs from the enemy, has a 100% chance to inflict target for 2 turns, and makes all allies except for the caster attack with a basic skill. Increases Combat Readiness of the caster by 30%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Alvo travado",
+                "description": "Após dissipar todos os efeitos positivos do inimigo, tem 100% de chance de aplicar alvo por 2 turnos e faz todos os aliados, exceto o conjurador, atacarem com a habilidade básica. Aumenta a Prontidão de Combate do conjurador em 30%.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Flag of Victory",
-                "description": "Dispels two buffs from all enemies, before a 100% chance to inflict fear for 2 turns, and decrease Combat Readiness by 20%. Grants increased Speed to all allies for 2 turns. At the start of the first battle, grants increased Evasion to the caster for 2 turns."
+                "name": "Bandeira da vitória",
+                "description": "Dissipa dois efeitos positivos de todos os inimigos e então tem 100% de chance de aplicar medo por 2 turnos e diminuir a Prontidão de Combate em 20%. Concede Aumentar Velocidade a todos os aliados por 2 turnos. No início da primeira batalha, concede Aumentar Evasão ao conjurador por 2 turnos."
             }
         }
     },
@@ -6482,17 +6482,17 @@
         "_name": "Veronica",
         "skills": {
             "S1": {
-                "name": "Rapid Fire",
-                "description": "Attack the enemy by shooting, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 15%. At the end of the turn detonates bomb effects inflicted on the target."
+                "name": "Tiro rápido",
+                "description": "Ataca o inimigo com disparos e aumenta em 15% a Prontidão de Combate do aliado com maior Prontidão de Combate, exceto o conjurador. No fim do turno, detona os efeitos de bomba aplicados ao alvo."
             },
             "S2": {
-                "name": "Vampire Hunter",
-                "description": "At the start of the turn, dispels immortality from all enemies. Ignores Effect Resistance. At the end of someone's turn, when an enemy has immortality, increases Combat Readiness of the caster by 50%."
+                "name": "Caçadora de vampiros",
+                "description": "No início do turno, dissipa a imortalidade de todos os inimigos. Ignora a Resistência a Efeitos. No fim do turno de qualquer um, se um inimigo tiver imortalidade, aumenta a Prontidão de Combate do conjurador em 50%."
             },
             "S3": {
-                "name": "Chain Explosion",
-                "description": "Attacks the enemy, dispelling two buffs before inflicting decreased Defense and bomb for 2 turns. A critical hit will grant an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Explosão em cadeia",
+                "description": "Ataca o inimigo, dissipando dois efeitos positivos antes de aplicar Diminuir Defesa e bomba por 2 turnos. Um acerto crítico concede um turno extra.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -6770,17 +6770,17 @@
         "_name": "Yulha",
         "skills": {
             "S1": {
-                "name": "Cruel Touch",
-                "description": "Attacks the enemy, with a 100% chance to inflict redirected provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "Toque cruel",
+                "description": "Ataca o inimigo, com 100% de chance de aplicar provocação redirecionada por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Malicious Smile",
-                "description": "When attacked, reflects 40% of the damage suffered to the attacker. Reflected damage cannot be higher than the caster's max Health. After being attacked, when Health is 30% or less, dispels all debuffs from the caster and activates Murderous Intent. The effect after being attacked can only be activated once every 5 turns. Murderous Intent: Grants a barrier (proportional to max Health) to the caster for 3 turns and increases Combat Readiness by 25%."
+                "name": "Sorriso malicioso",
+                "description": "Ao ser atacado, devolve ao atacante 40% do dano sofrido. O dano refletido não pode ultrapassar a Vida máxima do conjurador. Após ser atacado, com Vida em 30% ou menos, dissipa todos os efeitos negativos do conjurador e ativa Intenção assassina. O efeito após ser atacado só pode ser ativado uma vez a cada 5 turnos. Intenção assassina: concede ao conjurador uma barreira (proporcional à Vida máxima) por 3 turnos e aumenta a Prontidão de Combate em 25%."
             },
             "S3": {
-                "name": "Symphony of Agony",
-                "description": "Attacks the enemy by unraveling Sphere of Sadism, and when the enemy is defeated, recovers Health of the caster proportional to max Health. When the target is not an Elite or Boss monster, ignores damage share. Penetrates the target's Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Sinfonia da agonia",
+                "description": "Ataca o inimigo desfazendo a Esfera do Sadismo e, ao derrotar o inimigo, recupera a Vida do conjurador proporcionalmente à Vida máxima. Quando o alvo não é um monstro Elite ou Chefe, ignora a divisão de dano. Penetra a Defesa do alvo, mas não pode causar acerto crítico nem golpe pesado. O dano causado aumenta proporcionalmente à Vida perdida do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },

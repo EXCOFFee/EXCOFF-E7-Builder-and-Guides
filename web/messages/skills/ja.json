@@ -21,17 +21,17 @@
         "_name": "Abyssal Yufine",
         "skills": {
             "S1": {
-                "name": "Dragon's Breath",
-                "description": "Attacks all enemies with a dragon's breath, with a 60% chance to inflict decreased Attack for 1 turn. Damage dealt increases proportional to the caster's Defense. When the caster is inflicted with trauma, activates Unbridled Outburst instead of Dragon's Breath. Unbridled Outburst: Attacks the enemy with a massive blade. Penetrates the target's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "竜の息吹",
+                "description": "竜の息吹で敵全体を攻撃し、60%の確率で1ターンの間攻撃力ダウンを付与する。発動者の防御力に比例して与ダメージがアップする。発動者がトラウマ状態の場合、竜の息吹の代わりに抑えきれぬ爆発を発動する。抑えきれぬ爆発：巨大な刃で敵を攻撃する。対象の防御力を貫通する。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Inner Abyss",
-                "description": "When the enemy is not an Elite or Boss monster, reduces the effect of Combat Readiness increases granted to the enemy by 50%. When attacked, gains 20 Fighting Spirit and has a 30% chance to counterattack. At the start of the turn, when Fighting Spirit is full, dispels all debuffs from the caster."
+                "name": "内なる深淵",
+                "description": "敵がエリートまたはボスモンスターでない場合、敵に付与される行動ゲージ増加効果を50%減少させる。攻撃されると闘志を20獲得し、30%の確率で反撃する。ターン開始時、闘志が最大なら発動者の弱体効果をすべて解除する。"
             },
             "S3": {
-                "name": "Frenzied Strike",
-                "description": "Inflicts trauma on the caster for 3 turns, before attacking all enemies, dispelling all buffs and decreasing Combat Readiness by 50%. Ignores Effect Resistance."
+                "name": "狂乱の一撃",
+                "description": "発動者に3ターンの間トラウマを付与してから敵全体を攻撃し、強化効果をすべて解除して行動ゲージを50%減少させる。効果抵抗を無視する。"
             }
         }
     },
@@ -111,17 +111,17 @@
         "_name": "Afternoon Soak Flan",
         "skills": {
             "S1": {
-                "name": "Do Not Disturb",
-                "description": "Attacks the enemy with a gun, with a 40% chance to stun for 1 turn. A successful attack always results in a critical hit. When used on the caster's turn, uses It's a Whopper! instead of Do Not Disturb. It's a Whopper!: Attacks all enemies, and gains 1 Focus. A successful attack always results in a critical hit. This skill does not trigger a Dual Attack or counterattack."
+                "name": "邪魔しないで",
+                "description": "銃で敵を攻撃し、40%の確率で1ターンの間気絶させる。攻撃が成功すると必ずクリティカルになる。発動者のターンに使うと、邪魔しないでの代わりに大物だ！を使用する。大物だ！：敵全体を攻撃し、集中を1獲得する。攻撃が成功すると必ずクリティカルになる。このスキルでは協攻や反撃が発動しない。"
             },
             "S2": {
-                "name": "I’m Still On Vacation!",
-                "description": "At the start of the first battle, gains 3 Focus. Increases Evasion by 50%, and when Focus is 1 or higher, increases Evasion by an additional 50%. After an ally uses a basic skill, consumes 1 Focus, triggering a Dual Attack, and increases Combat Readiness of the caster by 25%."
+                "name": "まだバカンス中なの！",
+                "description": "最初のバトル開始時、集中を3獲得する。回避が50%アップし、集中が1以上なら回避がさらに50%アップする。味方が通常スキルを使った後、集中を1消費して協攻し、発動者の行動ゲージを25%増加させる。"
             },
             "S3": {
-                "name": "In the Palm of My Hand",
-                "description": "Attacks the enemy, decreasing Defense for 2 turns, and increases Combat Readiness of all allies by 20%. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "手のひらの上",
+                "description": "敵を攻撃し、2ターンの間防御力をダウンさせ、味方全員の行動ゲージを20%増加させる。攻撃が成功すると必ずクリティカルになる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -598,17 +598,17 @@
         "_name": "Assassin Cartuja",
         "skills": {
             "S1": {
-                "name": "Shred",
-                "description": "Attacks the enemy with sharp claws, with a 100% chance to inflict provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "引き裂き",
+                "description": "鋭い爪で敵を攻撃し、100%の確率で1ターンの間挑発を付与する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Battle Fever",
-                "description": "Increases Evasion by 50% and increases Evasion of all allies except for the caster by 20%. When successfully evading, increases Combat Readiness of the caster by 15%."
+                "name": "戦闘の熱気",
+                "description": "回避が50%アップし、発動者を除く味方全員の回避が20%アップする。回避に成功すると、発動者の行動ゲージが15%増加する。"
             },
             "S3": {
-                "name": "Sudden Assault",
-                "description": "Attacks the enemy by quickly dashing towards them, inflicting decreased Defense for 2 turns and stun for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "急襲",
+                "description": "素早く突進して敵を攻撃し、2ターンの間防御力ダウンと1ターンの間気絶を付与する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -670,17 +670,17 @@
         "_name": "Aubade Ludwig",
         "skills": {
             "S1": {
-                "name": "Moonlight",
-                "description": "Attacks the enemy with moonlight. When the caster is granted dawn, activates Light of Condemnation as an extra attack. Light of Condemnation can only be activated once per turn, during the caster's turn. Light of Condemnation (Acquire 5 Soul): Attacks all enemies and consumes all Soul regardless of whether the attack hits, inflicting 1,000 additional damage. Additional damage increases proportional to the amount of consumed Soul, up to 25,000."
+                "name": "月光",
+                "description": "月光で敵を攻撃する。発動者に夜明けが付与されている場合、追加攻撃として断罪の光を発動する。断罪の光は発動者のターン中、ターンごとに一度のみ発動できる。断罪の光（ソウル5獲得）：敵全体を攻撃し、命中の可否にかかわらずソウルをすべて消費して1,000の追加ダメージを与える。追加ダメージは消費したソウルに比例し、最大25,000まで増加する。"
             },
             "S2": {
-                "name": "Night Greeting the Dawn",
-                "description": "Increases Defense by 30%. At the end of an ally's turn, when Soul is 10 or higher, increases Combat Readiness of the caster by 20%."
+                "name": "夜明けを迎える夜",
+                "description": "防御力が30%アップする。味方のターン終了時、ソウルが10以上なら発動者の行動ゲージが20%増加する。"
             },
             "S3": {
-                "name": "White Night",
-                "description": "Dispels two buffs from all enemies, and has a 85% chance each to inflict block for 2 turns and silence for 1 turn on all enemies. Grants dawn and a barrier (proportional to max Health) to the caster for 3 turns.",
-                "soulburn_effect": "Increases barrier strength."
+                "name": "白夜",
+                "description": "敵全体の強化効果を二つ解除し、それぞれ85%の確率で敵全体に2ターンの間遮断、1ターンの間沈黙を付与する。発動者に3ターンの間夜明けとバリア（最大HPに比例）を付与する。",
+                "soulburn_effect": "バリアの強度がアップする。"
             }
         }
     },
@@ -1912,17 +1912,17 @@
         "_name": "Disciplinary Prefect Aria",
         "skills": {
             "S1": {
-                "name": "Disciplinary Warning",
-                "description": "Attacks the enemy, increasing Combat Readiness of the caster by 15%. When Purge is on cooldown, activates Disciplinary Action as an extra attack. Damage dealt increases proportional to the caster's max Health. Disciplinary Action: Attacks the enemy, inflicting up to 10% injuries. A successful attack always results in a critical hit. Damage dealt increases proportional to the caster's max Health."
+                "name": "懲戒警告",
+                "description": "敵を攻撃し、発動者の行動ゲージを15%増加させる。粛清がクールタイム中の場合、追加攻撃として懲戒処分を発動する。発動者の最大HPに比例して与ダメージがアップする。懲戒処分：敵を攻撃し、最大10%の負傷を与える。攻撃が成功すると必ずクリティカルになる。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Unwavering Execution",
-                "description": "Increases Soulburn consumption of the enemy by 100%. At the start of the first battle, increases Effect Resistance proportional to max Health. The rate of the Effect Resistance increase effect does not change after it is activated. When the caster is not inflicted with a debuff, increases Effect Resistance of all allies by 40%."
+                "name": "揺るぎない執行",
+                "description": "敵のソウルバーン消費量が100%増加する。最初のバトル開始時、最大HPに比例して効果抵抗がアップする。効果抵抗アップの数値は発動後に変化しない。発動者が弱体効果を受けていない場合、味方全員の効果抵抗が40%アップする。"
             },
             "S3": {
-                "name": "Purge",
-                "description": "Attacks the enemy with a merciless iron fist, granting a barrier to all allies for 2 turns before increasing Defense penetration of this skill by 35%. Penetration increase can stack up to 2 times. A successful attack always results in a critical hit. Damage dealt and barrier strength increase proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt and decreases cooldown of this skill by 1 turn."
+                "name": "粛清",
+                "description": "無慈悲な鉄拳で敵を攻撃し、味方全員に2ターンの間バリアを付与した後、このスキルの防御力貫通を35%アップさせる。貫通アップは最大2回まで重複する。攻撃が成功すると必ずクリティカルになる。発動者の最大HPに比例して与ダメージとバリアの強度がアップする。",
+                "soulburn_effect": "与ダメージがアップし、このスキルのクールタイムが1ターン短縮される。"
             }
         }
     },
@@ -2254,17 +2254,17 @@
         "_name": "Estelle",
         "skills": {
             "S1": {
-                "description": "Attacks the enemy, inflicting up to 10% injuries and recovering the caster's Health. A successful attack always results in a critical hit. Amount recovered and damage dealt increase proportional to the caster's max Health. When it is not the caster's turn, damage dealt and injuries are doubled. After attacking, when Fighting Spirit is full, consumes all Fighting Spirit to activate Wind of Protection. Wind of Protection (Acquire 10 Soul): Grants a barrier (proportional to the caster's max Health) to all allies for 2 turns, and increases Combat Readiness of the caster by 35%.",
-                "name": "Wind of Protection"
+                "description": "敵を攻撃して最大10%の負傷を与え、発動者のHPを回復する。攻撃が成功すると必ずクリティカルになる。発動者の最大HPに比例して回復量と与ダメージがアップする。発動者のターンでない場合、与ダメージと負傷が倍になる。攻撃後、闘志が最大なら闘志をすべて消費して守護の風を発動する。守護の風（ソウル10獲得）：味方全員に2ターンの間バリア（発動者の最大HPに比例）を付与し、発動者の行動ゲージを35%増加させる。",
+                "name": "守護の風"
             },
             "S2": {
-                "name": "Protective Nature",
-                "description": "At the start of the first battle, gains 50 Fighting Spirit. Grants 40% damage sharing from the damage received by the ally. After an ally except for the caster is attacked, when the damage suffered is 20% or more of max Health, dispels all debuffs and counterattacks. Cannot be triggered by extra attacks or counterattacks."
+                "name": "守護の本性",
+                "description": "最初のバトル開始時、闘志を50獲得する。味方が受けるダメージの40%を分散して受ける。発動者を除く味方が攻撃された後、受けたダメージが最大HPの20%以上なら弱体効果をすべて解除して反撃する。追加攻撃や反撃では発動しない。"
             },
             "S3": {
-                "name": "Dazzling Strike",
-                "description": "Attacks the enemy with a shield, inflicting up to 20% injuries, and recovering Health of the caster. Penetrates the target's Defense by 50%. A successful attack always results in a critical hit. Amount recovered and damage dealt increase proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "眩い一撃",
+                "description": "盾で敵を攻撃して最大20%の負傷を与え、発動者のHPを回復する。対象の防御力を50%貫通する。攻撃が成功すると必ずクリティカルになる。発動者の最大HPに比例して回復量と与ダメージがアップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -2542,17 +2542,17 @@
         "_name": "Frieren",
         "skills": {
             "S1": {
-                "name": "Ordinary Offensive Magic",
-                "description": "Attacks the enemy with magic, and grants immunity to the caster for 1 turn. When it is the caster's turn, activates Vollzanbel as an extra attack. Vollznabell (gain 1 Soul): Attacks all enemies with flame magic. Damage dealt increases proportional to the amount of the enemy's lost Health.",
-                "soulburn_effect": "Increases damage dealt of Ordinary Offensive Magic."
+                "name": "一般攻撃魔法",
+                "description": "魔法で敵を攻撃し、発動者に1ターンの間免疫を付与する。発動者のターンなら、追加攻撃としてヴォルザンベルを発動する。ヴォルザンベル（ソウル1獲得）：炎の魔法で敵全体を攻撃する。敵の失ったHPに比例して与ダメージがアップする。",
+                "soulburn_effect": "一般攻撃魔法の与ダメージがアップする。"
             },
             "S2": {
-                "name": "The Highest Form of Magic",
-                "description": "At the start of battle, grants 40% resource increase to all allies. During battle, when Soul is 4 or higher, grants Defensive Magic. After being attacked, increases Combat Readiness of all allies by 10%"
+                "name": "魔法の極致",
+                "description": "バトル開始時、味方全員にリソース40%増加を付与する。バトル中、ソウルが4以上なら防御魔法を付与する。攻撃された後、味方全員の行動ゲージを10%増加させる。"
             },
             "S3": {
-                "name": "Judradjim",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks all enemies with lightning magic, dispelling all buffs. Increases Combat Readiness of the caster by 50%. Penetrates the target's Defense by 50%."
+                "name": "ユードラジーム",
+                "description": "発動者に3ターンの間攻撃力アップを付与した後、雷の魔法で敵全体を攻撃し、強化効果をすべて解除する。発動者の行動ゲージを50%増加させる。対象の防御力を50%貫通する。"
             }
         }
     },
@@ -3784,16 +3784,16 @@
         "_name": "Lisette",
         "skills": {
             "S1": {
-                "name": "Light Source",
-                "description": "Attacks the enemy with light, and recovers Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "光の源",
+                "description": "光で敵を攻撃し、味方全員のHPを回復する。発動者の最大HPに比例して与ダメージと回復量がアップする。"
             },
             "S2": {
-                "name": "Devotion",
-                "description": "At the start of the first battle, grants four divinity effects. When an ally except for the caster dies, consumes one divinity to revive them as a Fragment of Life for 2 turns and increase Combat Readiness by 30%"
+                "name": "献身",
+                "description": "最初のバトル開始時、神性効果を四つ付与する。発動者を除く味方が死亡すると、神性を一つ消費して2ターンの間生命の欠片として復活させ、行動ゲージを30%増加させる。"
             },
             "S3": {
-                "name": "Converged Time",
-                "description": "Reconstructs the world to fully recover Health of all allies and grants increased Speed for 3 turns. When the caster is granted divinity, grants time reversal to all allies except for the caster. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "収束する時",
+                "description": "世界を再構築して味方全員のHPを全回復し、3ターンの間スピードアップを付与する。発動者に神性が付与されている場合、発動者を除く味方全員に時間逆行を付与する。このスキルはクールタイムの増減効果を受けない。"
             }
         }
     },
@@ -4250,17 +4250,17 @@
         "_name": "Monarch of the Sword Iseria",
         "skills": {
             "S1": {
-                "name": "Revelation",
-                "description": "Attacks the enemy with sword fragments. Penetrates the target's Defense. When triggered as a counterattack, activates Sword of Duty instead. Sword of Duty: After inflicting fracture on the caster, attacks the enemy with the ritual sword, and increases Combat Readiness of the caster and the foremost ally except for the caster by 25%. Inflicts additional damage proportional to the caster's Attack on the target and up to 25% injuries.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "啓示",
+                "description": "剣の欠片で敵を攻撃する。対象の防御力を貫通する。反撃として発動した場合、代わりに義務の剣を発動する。義務の剣：発動者に亀裂を付与した後、儀式の剣で敵を攻撃し、発動者と発動者を除く最前列の味方の行動ゲージを25%増加させる。対象に発動者の攻撃力に比例した追加ダメージと最大25%の負傷を与える。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Elbris's Successor",
-                "description": "Increases Hit Chance and Penetration Resistance by 70%. All counterattack chances of the caster are doubled, and when counterattacking, if the target is a Hero, triggers a counterattack from the foremost ally. After attacking, grants a barrier (proportional to Attack) to the caster for 2 turns."
+                "name": "エルブリスの継承者",
+                "description": "命中率と貫通抵抗が70%アップする。発動者のすべての反撃確率が倍になり、反撃時に対象が英雄なら最前列の味方が反撃する。攻撃後、2ターンの間発動者にバリア（攻撃力に比例）を付与する。"
             },
             "S3": {
-                "name": "Dawnbreaker",
-                "description": "After inflicting fracture on the caster and dispelling all debuffs, attacks all enemies with the power of the ritual sword. Inflicts additional damage proportional to the caster's Attack on the target and up to 25% injuries."
+                "name": "夜明けを断つ剣",
+                "description": "発動者に亀裂を付与して弱体効果をすべて解除した後、儀式の剣の力で敵全体を攻撃する。対象に発動者の攻撃力に比例した追加ダメージと最大25%の負傷を与える。"
             }
         }
     },
@@ -4286,17 +4286,17 @@
         "_name": "Moon Bunny Dominiel",
         "skills": {
             "S1": {
-                "name": "Moonlight Wave",
-                "description": "Attacks the enemy with an ethereal moonlight wave and has a 75% chance to put them to sleep for 1 turn. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "月光の波動",
+                "description": "幻想的な月光の波動で敵を攻撃し、75%の確率で1ターンの間睡眠状態にする。このスキルでは協攻が発動しない。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Flow Control",
-                "description": "At the start of an enemy's extra turn, dispels all debuffs from all allies before granting skill nullifier once and skill effect nullifier once, and increases Combat Readiness of the caster by 30%. Only activates when the enemy is a Hero."
+                "name": "流れの制御",
+                "description": "敵の追加ターン開始時、味方全員の弱体効果をすべて解除した後、スキルダメージ無効を一度、スキル効果無効を一度付与し、発動者の行動ゲージを30%増加させる。敵が英雄の場合のみ発動する。"
             },
             "S3": {
-                "name": "Divination",
-                "description": "In accordance with the divinations, grants vigor and a barrier (proportional to the caster's max Health) to all allies for 2 turns and increases Combat Readiness by 30%."
+                "name": "占術",
+                "description": "占いに従い、味方全員に2ターンの間闘志とバリア（発動者の最大HPに比例）を付与し、行動ゲージを30%増加させる。"
             }
         }
     },
@@ -4484,17 +4484,17 @@
         "_name": "Notos",
         "skills": {
             "S1": {
-                "name": "Divinity Release",
-                "description": "(Notos) Attacks the enemy with divinity and has a 75% chance to inflict decreased Defense for 1 turn. Damage dealt increases proportional to the caster's max Health. (God of Battle) Attacks the enemy and deals additional damage proportional to the caster's max Health. Damage dealt increases proportional to the caster's max Health."
+                "name": "神性解放",
+                "description": "（ノトス）神性で敵を攻撃し、75%の確率で1ターンの間防御力ダウンを付与する。発動者の最大HPに比例して与ダメージがアップする。（戦いの神）敵を攻撃し、発動者の最大HPに比例した追加ダメージを与える。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Blaze of Battle",
-                "description": "(Notos) Unaffected by Combat Readiness increase and decrease effects. (God of Battle) Attacks the enemy with transcendent power. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "戦いの炎",
+                "description": "（ノトス）行動ゲージの増減効果を受けない。（戦いの神）超越的な力で敵を攻撃する。対象の防御力を50%貫通する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "God’s Might",
-                "description": "Grants God of Battle to the caster for 3 turns and fully recovers Health. While God of Battle is maintained, changes the battlefield into the Sanctuary of Battle. Begins the first battle with a full skill cooldown count. Sanctuary of Battle In the Sanctuary of Battle, all Heroes are immune to buffs and debuffs."
+                "name": "神の威力",
+                "description": "発動者に3ターンの間戦いの神を付与し、HPを全回復する。戦いの神が維持されている間、戦場を戦いの聖域に変える。最初のバトルはスキルのクールタイムが満タンの状態で始まる。戦いの聖域：戦いの聖域では、すべての英雄が強化効果と弱体効果を受けない。"
             }
         }
     },
@@ -4664,17 +4664,17 @@
         "_name": "Perfumer Byblis",
         "skills": {
             "S1": {
-                "name": "Rose Breeze",
-                "description": "Attacks the enemy with scented paper, and has a 75% chance to inflict decreased Defense for 1 turn.",
-                "soulburn_effect": "Triggers a Dual Attack from the ally with the highest Attack."
+                "name": "薔薇のそよ風",
+                "description": "香りのついた紙で敵を攻撃し、75%の確率で1ターンの間防御力ダウンを付与する。",
+                "soulburn_effect": "攻撃力が最も高い味方が協攻する。"
             },
             "S2": {
-                "name": "Elixir de Belle Nuit",
-                "description": "At the start of an enemy's turn, grants lingering fragrance to all allies for 1 turn. When an ally's Health is 50% or less after being attacked, activates La Vie en Rose. La Vie en Rose: Dispels two debuffs from all allies and recovers Health before granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "エリクシール・ド・ベル・ニュイ",
+                "description": "敵のターン開始時、味方全員に1ターンの間残り香を付与する。味方が攻撃された後HPが50%以下なら、ラ・ヴィ・アン・ローズを発動する。ラ・ヴィ・アン・ローズ：味方全員の弱体効果を二つ解除してHPを回復した後、2ターンの間バリアを付与する。発動者の最大HPに比例して回復量とバリアの強度がアップする。"
             },
             "S3": {
-                "name": "Aura de la Mort",
-                "description": "After granting increased Effectiveness to the caster for 3 turns, spreads the scent of death, inflicting redirected provoke on all enemies for 1 turn and a 100% chance to inflict two venom effects for 2 turns. At the end of the turn, detonates venom effects inflicted on the target."
+                "name": "オーラ・ド・ラ・モール",
+                "description": "発動者に3ターンの間効果命中アップを付与した後、死の香りを広げ、敵全体に1ターンの間転換挑発を付与し、100%の確率で2ターンの間猛毒を二つ付与する。ターン終了時、対象の猛毒を爆発させる。"
             }
         }
     },
@@ -5006,17 +5006,17 @@
         "_name": "Rhianna and Luciella",
         "skills": {
             "S1": {
-                "name": "Half Moon Slash / Waning Moon Slash",
-                "description": "(Rhianna) Attacks the enemy with a dagger, inflicting erosion for 2 turns. A critical hit will detonate erosion effects inflicted on the target. (Luciella) After granting increased Attack to the caster for 1 turn, attacks the enemy with a dagger and absorbs some of the damage dealt as health."
+                "name": "半月斬り / 欠け月斬り",
+                "description": "（リアナ）短剣で敵を攻撃し、2ターンの間侵食を付与する。クリティカルが発生すると対象の侵食を爆発させる。（ルシエラ）発動者に1ターンの間攻撃力アップを付与した後、短剣で敵を攻撃し、与ダメージの一部をHPとして吸収する。"
             },
             "S2": {
-                "name": "Hunter's Mark / Blade of Pursuit",
-                "description": "(Rhianna) Attacks the enemy, dispelling two buffs before inflicting bind and decreased Defense for 2 turns. Swaps with Luciella and grants an extra turn. After attacking, when the target has a debuff, Luciella activates Waning Moon Slash as an extra attack. (Luciella) After granting increased Attack to the caster for 3 turns, attacks the enemy. Swaps with Rhianna and grants an extra turn. After attacking, when the target's Health is 50% or less, Rhianna activates Half Moon Slash as an extra attack.",
-                "soulburn_effect": "(Rhianna) Ignores Effect Resistance. (Luciella) Increases damage dealt."
+                "name": "狩人の印 / 追跡の刃",
+                "description": "（リアナ）敵を攻撃し、強化効果を二つ解除した後、2ターンの間拘束と防御力ダウンを付与する。ルシエラと交代し、追加ターンを得る。攻撃後、対象に弱体効果があれば、ルシエラが追加攻撃として欠け月斬りを発動する。（ルシエラ）発動者に3ターンの間攻撃力アップを付与した後、敵を攻撃する。リアナと交代し、追加ターンを得る。攻撃後、対象のHPが50%以下なら、リアナが追加攻撃として半月斬りを発動する。",
+                "soulburn_effect": "（リアナ）効果抵抗を無視する。（ルシエラ）与ダメージがアップする。"
             },
             "S3": {
-                "name": "Pursuit of Death",
-                "description": "Rhianna and Luciella launch a coordinated attack. Luciella attacks all enemies and when the target is a Hero, ignores damage sharing. Rhianna dispels two buffs from all enemies, before inflicting fear for 1 turn. Grants a barrier (proportional to Attack) to the caster for 3 turns. One Butterfly's Afterdream will remain throughout the battle."
+                "name": "死の追跡",
+                "description": "リアナとルシエラが連携攻撃を行う。ルシエラは敵全体を攻撃し、対象が英雄ならダメージ分散を無視する。リアナは敵全体の強化効果を二つ解除した後、1ターンの間恐怖を付与する。発動者に3ターンの間バリア（攻撃力に比例）を付与する。蝶の残夢が一つ、バトル中ずっと残る。"
             }
         }
     },
@@ -5780,17 +5780,17 @@
         "_name": "Silvertide Christy",
         "skills": {
             "S1": {
-                "name": "Sword of Protection",
-                "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "守護の剣",
+                "description": "敵を攻撃し、75%の確率で1ターンの間挑発を付与する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Oath Shield",
-                "description": "After being attacked, when the caster does not have a debuff, increases Combat Readiness of the caster and the ally in the back row by 20%. Can only be activated once per turn. At the start of the first battle, increases Effect Resistance of the ally in the back row by 100% of the caster's Effect Resistance. The rate of this effect does not change after it is activated, and this effect is dispelled only when the ally in the back row is defeated. When the caster is in the back row, the effect is not activated."
+                "name": "誓いの盾",
+                "description": "攻撃された後、発動者に弱体効果がなければ、発動者と後列の味方の行動ゲージを20%増加させる。ターンごとに一度のみ発動できる。最初のバトル開始時、後列の味方の効果抵抗を発動者の効果抵抗の100%分アップさせる。この効果の数値は発動後に変化せず、後列の味方が倒れたときのみ解除される。発動者が後列にいる場合、効果は発動しない。"
             },
             "S3": {
-                "name": "Dragon Knight's Cheer",
-                "description": "Increases Attack of all allies for 2 turns. Increases Defense and Effectiveness of the caster for 2 turns and recovers Health. Amount recovered increases proportional to the caster's Max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "竜騎士の声援",
+                "description": "2ターンの間味方全員の攻撃力をアップさせる。2ターンの間発動者の防御力と効果命中をアップさせ、HPを回復する。発動者の最大HPに比例して回復量がアップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -5942,17 +5942,17 @@
         "_name": "Straze",
         "skills": {
             "S1": {
-                "name": "Powerful Strike",
-                "description": "Swings a sword to attack the enemy and increases Combat Readiness of the caster by 20%."
+                "name": "強力な一撃",
+                "description": "剣を振るって敵を攻撃し、発動者の行動ゲージを20%増加させる。"
             },
             "S2": {
-                "name": "Destructive Gaze",
-                "description": "Attacks all enemies with a wave of force and dispels all buffs. Ignores Effect Resistance of any targets with Attack lower than the caster's Attack. When there are three or fewer enemies, damage dealt increases with fewer enemies.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "破滅の眼差し",
+                "description": "力の波動で敵全体を攻撃し、強化効果をすべて解除する。発動者より攻撃力が低い対象の効果抵抗を無視する。敵が三体以下の場合、敵が少ないほど与ダメージがアップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             },
             "S3": {
-                "name": "Star Extinction",
-                "description": "Attacks all enemies with a sword, and grants invincibility to the caster for 1 turn. Penetrates Defense of the target with the highest max Health. This skill cannot trigger a counterattack."
+                "name": "星の消滅",
+                "description": "剣で敵全体を攻撃し、発動者に1ターンの間無敵を付与する。最大HPが最も高い対象の防御力を貫通する。このスキルでは反撃を誘発できない。"
             }
         }
     },
@@ -6086,17 +6086,17 @@
         "_name": "Swift Flagbearer Sigret",
         "skills": {
             "S1": {
-                "name": "Strike of Flagbearer",
-                "description": "Attacks the enemy with a flag, with a 75% chance to inflict silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness of the target by 25%."
+                "name": "旗手の一撃",
+                "description": "旗で敵を攻撃し、75%の確率で1ターンの間沈黙を付与する。攻撃後、対象が沈黙状態なら対象の行動ゲージを25%減少させる。"
             },
             "S2": {
-                "name": "Target Lock",
-                "description": "After dispelling all buffs from the enemy, has a 100% chance to inflict target for 2 turns, and makes all allies except for the caster attack with a basic skill. Increases Combat Readiness of the caster by 30%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "標的固定",
+                "description": "敵の強化効果をすべて解除した後、100%の確率で2ターンの間標的を付与し、発動者を除く味方全員に通常スキルで攻撃させる。発動者の行動ゲージを30%増加させる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Flag of Victory",
-                "description": "Dispels two buffs from all enemies, before a 100% chance to inflict fear for 2 turns, and decrease Combat Readiness by 20%. Grants increased Speed to all allies for 2 turns. At the start of the first battle, grants increased Evasion to the caster for 2 turns."
+                "name": "勝利の旗",
+                "description": "敵全体の強化効果を二つ解除した後、100%の確率で2ターンの間恐怖を付与し、行動ゲージを20%減少させる。味方全員に2ターンの間スピードアップを付与する。最初のバトル開始時、発動者に2ターンの間回避アップを付与する。"
             }
         }
     },
@@ -6482,17 +6482,17 @@
         "_name": "Veronica",
         "skills": {
             "S1": {
-                "name": "Rapid Fire",
-                "description": "Attack the enemy by shooting, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 15%. At the end of the turn detonates bomb effects inflicted on the target."
+                "name": "速射",
+                "description": "射撃で敵を攻撃し、発動者を除いて行動ゲージが最も高い味方の行動ゲージを15%増加させる。ターン終了時、対象の爆弾を爆発させる。"
             },
             "S2": {
-                "name": "Vampire Hunter",
-                "description": "At the start of the turn, dispels immortality from all enemies. Ignores Effect Resistance. At the end of someone's turn, when an enemy has immortality, increases Combat Readiness of the caster by 50%."
+                "name": "ヴァンパイアハンター",
+                "description": "ターン開始時、敵全体の不死を解除する。効果抵抗を無視する。誰かのターン終了時、敵に不死があれば発動者の行動ゲージを50%増加させる。"
             },
             "S3": {
-                "name": "Chain Explosion",
-                "description": "Attacks the enemy, dispelling two buffs before inflicting decreased Defense and bomb for 2 turns. A critical hit will grant an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "連鎖爆発",
+                "description": "敵を攻撃し、強化効果を二つ解除した後、2ターンの間防御力ダウンと爆弾を付与する。クリティカルが発生すると追加ターンを得る。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -6770,17 +6770,17 @@
         "_name": "Yulha",
         "skills": {
             "S1": {
-                "name": "Cruel Touch",
-                "description": "Attacks the enemy, with a 100% chance to inflict redirected provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "残酷な手",
+                "description": "敵を攻撃し、100%の確率で1ターンの間転換挑発を付与する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Malicious Smile",
-                "description": "When attacked, reflects 40% of the damage suffered to the attacker. Reflected damage cannot be higher than the caster's max Health. After being attacked, when Health is 30% or less, dispels all debuffs from the caster and activates Murderous Intent. The effect after being attacked can only be activated once every 5 turns. Murderous Intent: Grants a barrier (proportional to max Health) to the caster for 3 turns and increases Combat Readiness by 25%."
+                "name": "悪意の微笑み",
+                "description": "攻撃されると、受けたダメージの40%を攻撃者に反射する。反射ダメージは発動者の最大HPを超えない。攻撃された後HPが30%以下なら、発動者の弱体効果をすべて解除して殺意を発動する。攻撃された後の効果は5ターンごとに一度のみ発動できる。殺意：発動者に3ターンの間バリア（最大HPに比例）を付与し、行動ゲージを25%増加させる。"
             },
             "S3": {
-                "name": "Symphony of Agony",
-                "description": "Attacks the enemy by unraveling Sphere of Sadism, and when the enemy is defeated, recovers Health of the caster proportional to max Health. When the target is not an Elite or Boss monster, ignores damage share. Penetrates the target's Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "苦痛の交響曲",
+                "description": "加虐の球体を解き放って敵を攻撃し、敵を倒すと最大HPに比例して発動者のHPを回復する。対象がエリートまたはボスモンスターでない場合、ダメージ分散を無視する。対象の防御力を貫通するが、クリティカルや強打は発生しない。発動者の失ったHPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },

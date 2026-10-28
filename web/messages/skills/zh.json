@@ -21,17 +21,17 @@
         "_name": "Abyssal Yufine",
         "skills": {
             "S1": {
-                "name": "Dragon's Breath",
-                "description": "Attacks all enemies with a dragon's breath, with a 60% chance to inflict decreased Attack for 1 turn. Damage dealt increases proportional to the caster's Defense. When the caster is inflicted with trauma, activates Unbridled Outburst instead of Dragon's Breath. Unbridled Outburst: Attacks the enemy with a massive blade. Penetrates the target's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "龙之吐息",
+                "description": "以龙之吐息攻击所有敌人，有60%的几率施加1回合攻击力降低。造成的伤害按施放者的防御力比例提升。施放者处于创伤状态时，发动失控爆发代替龙之吐息。失控爆发：以巨大的刀刃攻击敌人。穿透目标的防御力。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "Inner Abyss",
-                "description": "When the enemy is not an Elite or Boss monster, reduces the effect of Combat Readiness increases granted to the enemy by 50%. When attacked, gains 20 Fighting Spirit and has a 30% chance to counterattack. At the start of the turn, when Fighting Spirit is full, dispels all debuffs from the caster."
+                "name": "内心深渊",
+                "description": "敌人不是精英或首领怪物时，使敌人获得的行动值提升效果降低50%。受到攻击时获得20点斗志，并有30%的几率反击。回合开始时若斗志已满，解除施放者的所有弱化效果。"
             },
             "S3": {
-                "name": "Frenzied Strike",
-                "description": "Inflicts trauma on the caster for 3 turns, before attacking all enemies, dispelling all buffs and decreasing Combat Readiness by 50%. Ignores Effect Resistance."
+                "name": "狂乱一击",
+                "description": "对施放者施加3回合创伤后攻击所有敌人，解除所有强化效果并降低50%行动值。无视效果抵抗。"
             }
         }
     },
@@ -111,17 +111,17 @@
         "_name": "Afternoon Soak Flan",
         "skills": {
             "S1": {
-                "name": "Do Not Disturb",
-                "description": "Attacks the enemy with a gun, with a 40% chance to stun for 1 turn. A successful attack always results in a critical hit. When used on the caster's turn, uses It's a Whopper! instead of Do Not Disturb. It's a Whopper!: Attacks all enemies, and gains 1 Focus. A successful attack always results in a critical hit. This skill does not trigger a Dual Attack or counterattack."
+                "name": "请勿打扰",
+                "description": "用枪攻击敌人，有40%的几率使其晕眩1回合。攻击成功时必定暴击。在施放者回合使用时，改为使用大鱼上钩！。大鱼上钩！：攻击所有敌人，并获得1点专注。攻击成功时必定暴击。此技能不会触发协攻或反击。"
             },
             "S2": {
-                "name": "I’m Still On Vacation!",
-                "description": "At the start of the first battle, gains 3 Focus. Increases Evasion by 50%, and when Focus is 1 or higher, increases Evasion by an additional 50%. After an ally uses a basic skill, consumes 1 Focus, triggering a Dual Attack, and increases Combat Readiness of the caster by 25%."
+                "name": "我还在度假！",
+                "description": "首场战斗开始时，获得3点专注。闪避提升50%，专注在1点以上时闪避额外提升50%。友军使用普通技能后，消耗1点专注发动协攻，并使施放者的行动值提升25%。"
             },
             "S3": {
-                "name": "In the Palm of My Hand",
-                "description": "Attacks the enemy, decreasing Defense for 2 turns, and increases Combat Readiness of all allies by 20%. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "尽在掌握",
+                "description": "攻击敌人，使其防御力降低2回合，并使所有友军的行动值提升20%。攻击成功时必定暴击。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -598,17 +598,17 @@
         "_name": "Assassin Cartuja",
         "skills": {
             "S1": {
-                "name": "Shred",
-                "description": "Attacks the enemy with sharp claws, with a 100% chance to inflict provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "撕裂",
+                "description": "用锋利的爪子攻击敌人，有100%的几率施加1回合挑衅。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Battle Fever",
-                "description": "Increases Evasion by 50% and increases Evasion of all allies except for the caster by 20%. When successfully evading, increases Combat Readiness of the caster by 15%."
+                "name": "战斗狂热",
+                "description": "闪避提升50%，除施放者外所有友军的闪避提升20%。闪避成功时，施放者的行动值提升15%。"
             },
             "S3": {
-                "name": "Sudden Assault",
-                "description": "Attacks the enemy by quickly dashing towards them, inflicting decreased Defense for 2 turns and stun for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "突袭",
+                "description": "迅速冲向敌人发动攻击，施加2回合防御力降低与1回合晕眩。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -670,17 +670,17 @@
         "_name": "Aubade Ludwig",
         "skills": {
             "S1": {
-                "name": "Moonlight",
-                "description": "Attacks the enemy with moonlight. When the caster is granted dawn, activates Light of Condemnation as an extra attack. Light of Condemnation can only be activated once per turn, during the caster's turn. Light of Condemnation (Acquire 5 Soul): Attacks all enemies and consumes all Soul regardless of whether the attack hits, inflicting 1,000 additional damage. Additional damage increases proportional to the amount of consumed Soul, up to 25,000."
+                "name": "月光",
+                "description": "以月光攻击敌人。施放者拥有黎明时，以追加攻击发动审判之光。审判之光仅能在施放者回合中每回合发动一次。审判之光（获得5点魂）：攻击所有敌人，无论是否命中都消耗所有魂，追加造成1,000点伤害。追加伤害随消耗的魂按比例提升，最多25,000点。"
             },
             "S2": {
-                "name": "Night Greeting the Dawn",
-                "description": "Increases Defense by 30%. At the end of an ally's turn, when Soul is 10 or higher, increases Combat Readiness of the caster by 20%."
+                "name": "迎接黎明之夜",
+                "description": "防御力提升30%。友军回合结束时，若魂在10点以上，施放者的行动值提升20%。"
             },
             "S3": {
-                "name": "White Night",
-                "description": "Dispels two buffs from all enemies, and has a 85% chance each to inflict block for 2 turns and silence for 1 turn on all enemies. Grants dawn and a barrier (proportional to max Health) to the caster for 3 turns.",
-                "soulburn_effect": "Increases barrier strength."
+                "name": "白夜",
+                "description": "解除所有敌人的两个强化效果，并各有85%的几率对所有敌人施加2回合隔绝与1回合沉默。为施放者施加3回合黎明与屏障（与最大生命值成比例）。",
+                "soulburn_effect": "提升屏障强度。"
             }
         }
     },
@@ -1912,17 +1912,17 @@
         "_name": "Disciplinary Prefect Aria",
         "skills": {
             "S1": {
-                "name": "Disciplinary Warning",
-                "description": "Attacks the enemy, increasing Combat Readiness of the caster by 15%. When Purge is on cooldown, activates Disciplinary Action as an extra attack. Damage dealt increases proportional to the caster's max Health. Disciplinary Action: Attacks the enemy, inflicting up to 10% injuries. A successful attack always results in a critical hit. Damage dealt increases proportional to the caster's max Health."
+                "name": "纪律警告",
+                "description": "攻击敌人，并使施放者的行动值提升15%。肃清处于冷却中时，以追加攻击发动纪律处分。造成的伤害按施放者的最大生命值比例提升。纪律处分：攻击敌人，造成最多10%的伤势。攻击成功时必定暴击。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Unwavering Execution",
-                "description": "Increases Soulburn consumption of the enemy by 100%. At the start of the first battle, increases Effect Resistance proportional to max Health. The rate of the Effect Resistance increase effect does not change after it is activated. When the caster is not inflicted with a debuff, increases Effect Resistance of all allies by 40%."
+                "name": "坚定执行",
+                "description": "敌人的魂燃消耗增加100%。首场战斗开始时，按最大生命值比例提升效果抵抗。该效果抵抗提升数值在发动后不会改变。施放者未受到弱化效果时，所有友军的效果抵抗提升40%。"
             },
             "S3": {
-                "name": "Purge",
-                "description": "Attacks the enemy with a merciless iron fist, granting a barrier to all allies for 2 turns before increasing Defense penetration of this skill by 35%. Penetration increase can stack up to 2 times. A successful attack always results in a critical hit. Damage dealt and barrier strength increase proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt and decreases cooldown of this skill by 1 turn."
+                "name": "肃清",
+                "description": "以无情的铁拳攻击敌人，为所有友军施加2回合屏障，并使此技能的防御穿透提升35%。穿透提升最多叠加2次。攻击成功时必定暴击。造成的伤害与屏障强度按施放者的最大生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害，并使此技能的冷却时间减少1回合。"
             }
         }
     },
@@ -2254,17 +2254,17 @@
         "_name": "Estelle",
         "skills": {
             "S1": {
-                "description": "Attacks the enemy, inflicting up to 10% injuries and recovering the caster's Health. A successful attack always results in a critical hit. Amount recovered and damage dealt increase proportional to the caster's max Health. When it is not the caster's turn, damage dealt and injuries are doubled. After attacking, when Fighting Spirit is full, consumes all Fighting Spirit to activate Wind of Protection. Wind of Protection (Acquire 10 Soul): Grants a barrier (proportional to the caster's max Health) to all allies for 2 turns, and increases Combat Readiness of the caster by 35%.",
-                "name": "Wind of Protection"
+                "description": "攻击敌人，造成最多10%的伤势并恢复施放者的生命值。攻击成功时必定暴击。恢复量与造成的伤害按施放者的最大生命值比例提升。非施放者回合时，造成的伤害与伤势翻倍。攻击后若斗志已满，消耗所有斗志发动守护之风。守护之风（获得10点魂）：为所有友军施加2回合屏障（与施放者最大生命值成比例），并使施放者的行动值提升35%。",
+                "name": "守护之风"
             },
             "S2": {
-                "name": "Protective Nature",
-                "description": "At the start of the first battle, gains 50 Fighting Spirit. Grants 40% damage sharing from the damage received by the ally. After an ally except for the caster is attacked, when the damage suffered is 20% or more of max Health, dispels all debuffs and counterattacks. Cannot be triggered by extra attacks or counterattacks."
+                "name": "守护天性",
+                "description": "首场战斗开始时，获得50点斗志。分担友军受到伤害的40%。除施放者外的友军受到攻击后，若受到的伤害达到最大生命值的20%以上，解除所有弱化效果并反击。追加攻击与反击不会触发。"
             },
             "S3": {
-                "name": "Dazzling Strike",
-                "description": "Attacks the enemy with a shield, inflicting up to 20% injuries, and recovering Health of the caster. Penetrates the target's Defense by 50%. A successful attack always results in a critical hit. Amount recovered and damage dealt increase proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "炫目一击",
+                "description": "以盾牌攻击敌人，造成最多20%的伤势并恢复施放者的生命值。穿透目标50%的防御力。攻击成功时必定暴击。恢复量与造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -2542,17 +2542,17 @@
         "_name": "Frieren",
         "skills": {
             "S1": {
-                "name": "Ordinary Offensive Magic",
-                "description": "Attacks the enemy with magic, and grants immunity to the caster for 1 turn. When it is the caster's turn, activates Vollzanbel as an extra attack. Vollznabell (gain 1 Soul): Attacks all enemies with flame magic. Damage dealt increases proportional to the amount of the enemy's lost Health.",
-                "soulburn_effect": "Increases damage dealt of Ordinary Offensive Magic."
+                "name": "普通攻击魔法",
+                "description": "以魔法攻击敌人，并为施放者施加1回合免疫。在施放者回合时，以追加攻击发动沃尔赞贝尔。沃尔赞贝尔（获得1点魂）：以火焰魔法攻击所有敌人。造成的伤害按敌人已损失的生命值比例提升。",
+                "soulburn_effect": "提升普通攻击魔法造成的伤害。"
             },
             "S2": {
-                "name": "The Highest Form of Magic",
-                "description": "At the start of battle, grants 40% resource increase to all allies. During battle, when Soul is 4 or higher, grants Defensive Magic. After being attacked, increases Combat Readiness of all allies by 10%"
+                "name": "魔法的极致",
+                "description": "战斗开始时，为所有友军施加资源提升40%。战斗中若魂在4点以上，施加防御魔法。受到攻击后，使所有友军的行动值提升10%。"
             },
             "S3": {
-                "name": "Judradjim",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks all enemies with lightning magic, dispelling all buffs. Increases Combat Readiness of the caster by 50%. Penetrates the target's Defense by 50%."
+                "name": "尤德拉吉姆",
+                "description": "为施放者施加3回合攻击力提升后，以雷电魔法攻击所有敌人，解除所有强化效果。使施放者的行动值提升50%。穿透目标50%的防御力。"
             }
         }
     },
@@ -3784,16 +3784,16 @@
         "_name": "Lisette",
         "skills": {
             "S1": {
-                "name": "Light Source",
-                "description": "Attacks the enemy with light, and recovers Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "光之源",
+                "description": "以光攻击敌人，并恢复所有友军的生命值。造成的伤害与恢复量按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Devotion",
-                "description": "At the start of the first battle, grants four divinity effects. When an ally except for the caster dies, consumes one divinity to revive them as a Fragment of Life for 2 turns and increase Combat Readiness by 30%"
+                "name": "献身",
+                "description": "首场战斗开始时，施加四层神性效果。除施放者外的友军死亡时，消耗一层神性使其以生命碎片的形态复活2回合，并提升30%行动值。"
             },
             "S3": {
-                "name": "Converged Time",
-                "description": "Reconstructs the world to fully recover Health of all allies and grants increased Speed for 3 turns. When the caster is granted divinity, grants time reversal to all allies except for the caster. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "汇聚之时",
+                "description": "重构世界，完全恢复所有友军的生命值，并施加3回合速度提升。施放者拥有神性时，为除施放者外的所有友军施加时间逆转。此技能不受冷却时间增减效果影响。"
             }
         }
     },
@@ -4250,17 +4250,17 @@
         "_name": "Monarch of the Sword Iseria",
         "skills": {
             "S1": {
-                "name": "Revelation",
-                "description": "Attacks the enemy with sword fragments. Penetrates the target's Defense. When triggered as a counterattack, activates Sword of Duty instead. Sword of Duty: After inflicting fracture on the caster, attacks the enemy with the ritual sword, and increases Combat Readiness of the caster and the foremost ally except for the caster by 25%. Inflicts additional damage proportional to the caster's Attack on the target and up to 25% injuries.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "启示",
+                "description": "以剑之碎片攻击敌人。穿透目标的防御力。作为反击触发时，改为发动职责之剑。职责之剑：对施放者施加裂痕后，以仪式之剑攻击敌人，并使施放者与除施放者外最前方友军的行动值提升25%。对目标追加造成与施放者攻击力成比例的伤害及最多25%的伤势。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "Elbris's Successor",
-                "description": "Increases Hit Chance and Penetration Resistance by 70%. All counterattack chances of the caster are doubled, and when counterattacking, if the target is a Hero, triggers a counterattack from the foremost ally. After attacking, grants a barrier (proportional to Attack) to the caster for 2 turns."
+                "name": "埃尔布里斯的继承者",
+                "description": "命中率与穿透抵抗提升70%。施放者的所有反击几率翻倍，反击时若目标为英雄，最前方的友军也会反击。攻击后，为施放者施加2回合屏障（与攻击力成比例）。"
             },
             "S3": {
-                "name": "Dawnbreaker",
-                "description": "After inflicting fracture on the caster and dispelling all debuffs, attacks all enemies with the power of the ritual sword. Inflicts additional damage proportional to the caster's Attack on the target and up to 25% injuries."
+                "name": "破晓之剑",
+                "description": "对施放者施加裂痕并解除所有弱化效果后，以仪式之剑的力量攻击所有敌人。对目标追加造成与施放者攻击力成比例的伤害及最多25%的伤势。"
             }
         }
     },
@@ -4286,17 +4286,17 @@
         "_name": "Moon Bunny Dominiel",
         "skills": {
             "S1": {
-                "name": "Moonlight Wave",
-                "description": "Attacks the enemy with an ethereal moonlight wave and has a 75% chance to put them to sleep for 1 turn. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "月光波动",
+                "description": "以缥缈的月光波动攻击敌人，有75%的几率使其睡眠1回合。此技能不会触发协攻。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Flow Control",
-                "description": "At the start of an enemy's extra turn, dispels all debuffs from all allies before granting skill nullifier once and skill effect nullifier once, and increases Combat Readiness of the caster by 30%. Only activates when the enemy is a Hero."
+                "name": "流向控制",
+                "description": "敌人的额外回合开始时，解除所有友军的所有弱化效果，施加一次技能伤害无效与一次技能效果无效，并使施放者的行动值提升30%。仅在敌人为英雄时发动。"
             },
             "S3": {
-                "name": "Divination",
-                "description": "In accordance with the divinations, grants vigor and a barrier (proportional to the caster's max Health) to all allies for 2 turns and increases Combat Readiness by 30%."
+                "name": "占卜",
+                "description": "依照占卜，为所有友军施加2回合斗志与屏障（与施放者最大生命值成比例），并提升30%行动值。"
             }
         }
     },
@@ -4484,17 +4484,17 @@
         "_name": "Notos",
         "skills": {
             "S1": {
-                "name": "Divinity Release",
-                "description": "(Notos) Attacks the enemy with divinity and has a 75% chance to inflict decreased Defense for 1 turn. Damage dealt increases proportional to the caster's max Health. (God of Battle) Attacks the enemy and deals additional damage proportional to the caster's max Health. Damage dealt increases proportional to the caster's max Health."
+                "name": "神性解放",
+                "description": "（诺托斯）以神性攻击敌人，有75%的几率施加1回合防御力降低。造成的伤害按施放者的最大生命值比例提升。（战斗之神）攻击敌人，并追加造成与施放者最大生命值成比例的伤害。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Blaze of Battle",
-                "description": "(Notos) Unaffected by Combat Readiness increase and decrease effects. (God of Battle) Attacks the enemy with transcendent power. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "战斗之焰",
+                "description": "（诺托斯）不受行动值提升与降低效果影响。（战斗之神）以超凡之力攻击敌人。穿透目标50%的防御力。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "God’s Might",
-                "description": "Grants God of Battle to the caster for 3 turns and fully recovers Health. While God of Battle is maintained, changes the battlefield into the Sanctuary of Battle. Begins the first battle with a full skill cooldown count. Sanctuary of Battle In the Sanctuary of Battle, all Heroes are immune to buffs and debuffs."
+                "name": "神之威能",
+                "description": "为施放者施加3回合战斗之神，并完全恢复生命值。战斗之神持续期间，将战场变为战斗圣域。首场战斗开始时技能处于完整冷却状态。战斗圣域：在战斗圣域中，所有英雄免疫强化与弱化效果。"
             }
         }
     },
@@ -4664,17 +4664,17 @@
         "_name": "Perfumer Byblis",
         "skills": {
             "S1": {
-                "name": "Rose Breeze",
-                "description": "Attacks the enemy with scented paper, and has a 75% chance to inflict decreased Defense for 1 turn.",
-                "soulburn_effect": "Triggers a Dual Attack from the ally with the highest Attack."
+                "name": "玫瑰微风",
+                "description": "以带香气的纸攻击敌人，有75%的几率施加1回合防御力降低。",
+                "soulburn_effect": "攻击力最高的友军发动协攻。"
             },
             "S2": {
-                "name": "Elixir de Belle Nuit",
-                "description": "At the start of an enemy's turn, grants lingering fragrance to all allies for 1 turn. When an ally's Health is 50% or less after being attacked, activates La Vie en Rose. La Vie en Rose: Dispels two debuffs from all allies and recovers Health before granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "美夜灵药",
+                "description": "敌人回合开始时，为所有友军施加1回合余香。友军受到攻击后生命值在50%以下时，发动玫瑰人生。玫瑰人生：解除所有友军的两个弱化效果并恢复生命值，然后施加2回合屏障。恢复量与屏障强度按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Aura de la Mort",
-                "description": "After granting increased Effectiveness to the caster for 3 turns, spreads the scent of death, inflicting redirected provoke on all enemies for 1 turn and a 100% chance to inflict two venom effects for 2 turns. At the end of the turn, detonates venom effects inflicted on the target."
+                "name": "死亡气息",
+                "description": "为施放者施加3回合效果命中提升后，散播死亡的香气，对所有敌人施加1回合转移挑衅，并有100%的几率施加两层2回合剧毒。回合结束时，引爆目标身上的剧毒。"
             }
         }
     },
@@ -5006,17 +5006,17 @@
         "_name": "Rhianna and Luciella",
         "skills": {
             "S1": {
-                "name": "Half Moon Slash / Waning Moon Slash",
-                "description": "(Rhianna) Attacks the enemy with a dagger, inflicting erosion for 2 turns. A critical hit will detonate erosion effects inflicted on the target. (Luciella) After granting increased Attack to the caster for 1 turn, attacks the enemy with a dagger and absorbs some of the damage dealt as health."
+                "name": "半月斩 / 残月斩",
+                "description": "（莉安娜）以短剑攻击敌人，施加2回合侵蚀。暴击时引爆目标身上的侵蚀。（露西艾拉）为施放者施加1回合攻击力提升后，以短剑攻击敌人，并将部分造成的伤害吸收为生命值。"
             },
             "S2": {
-                "name": "Hunter's Mark / Blade of Pursuit",
-                "description": "(Rhianna) Attacks the enemy, dispelling two buffs before inflicting bind and decreased Defense for 2 turns. Swaps with Luciella and grants an extra turn. After attacking, when the target has a debuff, Luciella activates Waning Moon Slash as an extra attack. (Luciella) After granting increased Attack to the caster for 3 turns, attacks the enemy. Swaps with Rhianna and grants an extra turn. After attacking, when the target's Health is 50% or less, Rhianna activates Half Moon Slash as an extra attack.",
-                "soulburn_effect": "(Rhianna) Ignores Effect Resistance. (Luciella) Increases damage dealt."
+                "name": "猎人印记 / 追猎之刃",
+                "description": "（莉安娜）攻击敌人，解除两个强化效果后施加2回合拘束与防御力降低。与露西艾拉交换并获得额外回合。攻击后若目标有弱化效果，露西艾拉以追加攻击发动残月斩。（露西艾拉）为施放者施加3回合攻击力提升后攻击敌人。与莉安娜交换并获得额外回合。攻击后若目标生命值在50%以下，莉安娜以追加攻击发动半月斩。",
+                "soulburn_effect": "（莉安娜）无视效果抵抗。（露西艾拉）提升造成的伤害。"
             },
             "S3": {
-                "name": "Pursuit of Death",
-                "description": "Rhianna and Luciella launch a coordinated attack. Luciella attacks all enemies and when the target is a Hero, ignores damage sharing. Rhianna dispels two buffs from all enemies, before inflicting fear for 1 turn. Grants a barrier (proportional to Attack) to the caster for 3 turns. One Butterfly's Afterdream will remain throughout the battle."
+                "name": "死亡追猎",
+                "description": "莉安娜与露西艾拉发动联合攻击。露西艾拉攻击所有敌人，若目标为英雄则无视伤害分担。莉安娜解除所有敌人的两个强化效果，然后施加1回合恐惧。为施放者施加3回合屏障（与攻击力成比例）。一个蝶之残梦将在整场战斗中保留。"
             }
         }
     },
@@ -5780,17 +5780,17 @@
         "_name": "Silvertide Christy",
         "skills": {
             "S1": {
-                "name": "Sword of Protection",
-                "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "守护之剑",
+                "description": "攻击敌人，有75%的几率施加1回合挑衅。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Oath Shield",
-                "description": "After being attacked, when the caster does not have a debuff, increases Combat Readiness of the caster and the ally in the back row by 20%. Can only be activated once per turn. At the start of the first battle, increases Effect Resistance of the ally in the back row by 100% of the caster's Effect Resistance. The rate of this effect does not change after it is activated, and this effect is dispelled only when the ally in the back row is defeated. When the caster is in the back row, the effect is not activated."
+                "name": "誓约之盾",
+                "description": "受到攻击后，若施放者没有弱化效果，使施放者与后排友军的行动值提升20%。每回合只能发动一次。首场战斗开始时，使后排友军的效果抵抗提升施放者效果抵抗的100%。此效果的数值在发动后不会改变，且仅在后排友军被击败时解除。施放者位于后排时不发动此效果。"
             },
             "S3": {
-                "name": "Dragon Knight's Cheer",
-                "description": "Increases Attack of all allies for 2 turns. Increases Defense and Effectiveness of the caster for 2 turns and recovers Health. Amount recovered increases proportional to the caster's Max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "龙骑士的鼓舞",
+                "description": "提升所有友军的攻击力2回合。提升施放者的防御力与效果命中2回合并恢复生命值。恢复量按施放者的最大生命值比例提升。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -5942,17 +5942,17 @@
         "_name": "Straze",
         "skills": {
             "S1": {
-                "name": "Powerful Strike",
-                "description": "Swings a sword to attack the enemy and increases Combat Readiness of the caster by 20%."
+                "name": "强力一击",
+                "description": "挥剑攻击敌人，并使施放者的行动值提升20%。"
             },
             "S2": {
-                "name": "Destructive Gaze",
-                "description": "Attacks all enemies with a wave of force and dispels all buffs. Ignores Effect Resistance of any targets with Attack lower than the caster's Attack. When there are three or fewer enemies, damage dealt increases with fewer enemies.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "毁灭凝视",
+                "description": "以力量波动攻击所有敌人，并解除所有强化效果。无视攻击力低于施放者的目标的效果抵抗。敌人在三名以下时，敌人越少，造成的伤害越高。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             },
             "S3": {
-                "name": "Star Extinction",
-                "description": "Attacks all enemies with a sword, and grants invincibility to the caster for 1 turn. Penetrates Defense of the target with the highest max Health. This skill cannot trigger a counterattack."
+                "name": "星辰湮灭",
+                "description": "以剑攻击所有敌人，并为施放者施加1回合无敌。穿透最大生命值最高的目标的防御力。此技能无法触发反击。"
             }
         }
     },
@@ -6086,17 +6086,17 @@
         "_name": "Swift Flagbearer Sigret",
         "skills": {
             "S1": {
-                "name": "Strike of Flagbearer",
-                "description": "Attacks the enemy with a flag, with a 75% chance to inflict silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness of the target by 25%."
+                "name": "旗手一击",
+                "description": "以旗帜攻击敌人，有75%的几率施加1回合沉默。攻击后若目标处于沉默状态，使其行动值降低25%。"
             },
             "S2": {
-                "name": "Target Lock",
-                "description": "After dispelling all buffs from the enemy, has a 100% chance to inflict target for 2 turns, and makes all allies except for the caster attack with a basic skill. Increases Combat Readiness of the caster by 30%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "锁定目标",
+                "description": "解除敌人的所有强化效果后，有100%的几率施加2回合标记，并使除施放者外的所有友军以普通技能攻击。使施放者的行动值提升30%。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Flag of Victory",
-                "description": "Dispels two buffs from all enemies, before a 100% chance to inflict fear for 2 turns, and decrease Combat Readiness by 20%. Grants increased Speed to all allies for 2 turns. At the start of the first battle, grants increased Evasion to the caster for 2 turns."
+                "name": "胜利之旗",
+                "description": "解除所有敌人的两个强化效果后，有100%的几率施加2回合恐惧，并降低20%行动值。为所有友军施加2回合速度提升。首场战斗开始时，为施放者施加2回合闪避提升。"
             }
         }
     },
@@ -6482,17 +6482,17 @@
         "_name": "Veronica",
         "skills": {
             "S1": {
-                "name": "Rapid Fire",
-                "description": "Attack the enemy by shooting, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 15%. At the end of the turn detonates bomb effects inflicted on the target."
+                "name": "速射",
+                "description": "以射击攻击敌人，并使除施放者外行动值最高的友军的行动值提升15%。回合结束时，引爆目标身上的炸弹。"
             },
             "S2": {
-                "name": "Vampire Hunter",
-                "description": "At the start of the turn, dispels immortality from all enemies. Ignores Effect Resistance. At the end of someone's turn, when an enemy has immortality, increases Combat Readiness of the caster by 50%."
+                "name": "吸血鬼猎人",
+                "description": "回合开始时，解除所有敌人的不死。无视效果抵抗。任意角色回合结束时，若敌人拥有不死，使施放者的行动值提升50%。"
             },
             "S3": {
-                "name": "Chain Explosion",
-                "description": "Attacks the enemy, dispelling two buffs before inflicting decreased Defense and bomb for 2 turns. A critical hit will grant an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "连锁爆炸",
+                "description": "攻击敌人，解除两个强化效果后施加2回合防御力降低与炸弹。暴击时获得额外回合。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -6770,17 +6770,17 @@
         "_name": "Yulha",
         "skills": {
             "S1": {
-                "name": "Cruel Touch",
-                "description": "Attacks the enemy, with a 100% chance to inflict redirected provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "残酷之触",
+                "description": "攻击敌人，有100%的几率施加1回合转移挑衅。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Malicious Smile",
-                "description": "When attacked, reflects 40% of the damage suffered to the attacker. Reflected damage cannot be higher than the caster's max Health. After being attacked, when Health is 30% or less, dispels all debuffs from the caster and activates Murderous Intent. The effect after being attacked can only be activated once every 5 turns. Murderous Intent: Grants a barrier (proportional to max Health) to the caster for 3 turns and increases Combat Readiness by 25%."
+                "name": "恶意微笑",
+                "description": "受到攻击时，将受到伤害的40%反射给攻击者。反射伤害不会超过施放者的最大生命值。受到攻击后若生命值在30%以下，解除施放者的所有弱化效果并发动杀意。受到攻击后的效果每5回合只能发动一次。杀意：为施放者施加3回合屏障（与最大生命值成比例），并提升25%行动值。"
             },
             "S3": {
-                "name": "Symphony of Agony",
-                "description": "Attacks the enemy by unraveling Sphere of Sadism, and when the enemy is defeated, recovers Health of the caster proportional to max Health. When the target is not an Elite or Boss monster, ignores damage share. Penetrates the target's Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "痛苦交响曲",
+                "description": "解开施虐之球攻击敌人，击败敌人时，按最大生命值比例恢复施放者的生命值。目标不是精英或首领怪物时，无视伤害分担。穿透目标的防御力，但无法造成暴击或重击。造成的伤害按施放者已损失的生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
