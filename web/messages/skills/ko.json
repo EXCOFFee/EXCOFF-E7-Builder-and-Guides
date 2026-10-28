@@ -1084,17 +1084,17 @@
         "_name": "Briar Witch Iseria",
         "skills": {
             "S1": {
-                "name": "Fallen Flower",
-                "description": "Throws swords at the enemy, with a 75% chance to decrease Defense for 1 turn. A successful attack deals additional damage proportional to the caster's Attack."
+                "name": "떨어진 꽃",
+                "description": "적에게 검을 던지며, 75% 확률로 1턴 동안 방어력을 감소시킨다. 공격에 성공하면 시전자의 공격력에 비례한 추가 피해를 준다."
             },
             "S2": {
-                "name": "Witch's Curse",
-                "description": "Increases Hit Chance by 50%. Allies and enemies cannot revive. Upon receiving lethal damage, grants immortality for 1 turn."
+                "name": "마녀의 저주",
+                "description": "명중률이 50% 증가한다. 아군과 적은 부활할 수 없다. 치명적인 피해를 받으면 1턴 동안 불사를 부여한다."
             },
             "S3": {
-                "name": "Cursed Thorn",
-                "description": "Attacks all enemies with a cursed thornbush, dispelling all buffs, with a 75% chance to decrease Defense for 2 turns and a 100% chance to make them unable to be buffed for 2 turns. A successful attack deals additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "저주받은 가시",
+                "description": "저주받은 가시덤불로 모든 적을 공격해 강화 효과를 모두 해제하며, 75% 확률로 2턴 동안 방어력을 감소시키고 100% 확률로 2턴 동안 강화 불가를 건다. 공격에 성공하면 시전자의 공격력에 비례한 추가 피해를 준다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -1102,17 +1102,17 @@
         "_name": "Brieg",
         "skills": {
             "S1": {
-                "name": "Shadow Swordsmanship",
-                "description": "Attacks the enemy, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's max Health. After attacking, when Fighting Spirit is full, consumes all Fighting Spirit to dispel all debuffs from the caster, and activates Limitless Sword Arts against the enemy with the highest Attack."
+                "name": "그림자 검술",
+                "description": "적을 공격하고 시전자의 행동 게이지를 20% 증가시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 공격 후 투지가 가득 차 있으면 투지를 모두 소모해 시전자의 약화 효과를 모두 해제하고, 공격력이 가장 높은 적에게 무한 검술을 발동한다."
             },
             "S2": {
-                "name": "Spirit Lord's Protection",
-                "description": "Grants a barrier to all allies for 3 turns, and perception to the caster for 3 turns. Grants an extra turn to the caster. Barrier strength increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases barrier strength."
+                "name": "정령왕의 가호",
+                "description": "모든 아군에게 3턴 동안 보호막을, 시전자에게 3턴 동안 간파를 부여한다. 시전자는 추가 턴을 얻는다. 시전자의 최대 생명력에 비례해 보호막 강도가 증가한다.",
+                "soulburn_effect": "보호막 강도가 증가한다."
             },
             "S3": {
-                "name": "Limitless Sword Arts",
-                "description": "Attacks the enemy with a sword, dispelling all buffs before decreasing Defense and Speed for 2 turns. Increases Effectiveness of this attack by 50% and damage dealt increases proportional to the caster's max Health."
+                "name": "무한 검술",
+                "description": "검으로 적을 공격해 강화 효과를 모두 해제한 뒤 2턴 동안 방어력과 속도를 감소시킨다. 이 공격의 효과 적중이 50% 증가하며, 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -1120,17 +1120,17 @@
         "_name": "Butcher Corps Inquisitor",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Strikes the enemy with a blade, with a 50% chance each to dispel one buff twice."
+                "name": "강타",
+                "description": "칼날로 적을 내리치며, 각각 50% 확률로 강화 효과를 한 개씩 두 번 해제한다."
             },
             "S2": {
-                "name": "Butcher Corps Gear",
-                "description": "Damage suffered in one attack does not exceed 35% of max Health."
+                "name": "도살자 부대 장비",
+                "description": "한 번의 공격으로 받는 피해가 최대 생명력의 35%를 넘지 않는다."
             },
             "S3": {
-                "name": "Hack",
-                "description": "Strikes indiscriminately at the enemy, dealing damage proportional to the caster's lost Health, and recovering Health proportional to the damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "난도질",
+                "description": "적을 마구잡이로 내리쳐 시전자가 잃은 생명력에 비례한 피해를 주고, 준 피해에 비례해 생명력을 회복한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -1138,17 +1138,17 @@
         "_name": "Byblis",
         "skills": {
             "S1": {
-                "name": "Floral Arrangement",
-                "description": "Attacks the enemy with a magical flower, with a 75% chance to silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness of the target by 20%.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "꽃꽂이",
+                "description": "마법의 꽃으로 적을 공격하며, 75% 확률로 1턴 동안 침묵을 건다. 공격 후 대상이 침묵 상태이면 대상의 행동 게이지를 20% 감소시킨다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Gardener's Secret",
-                "description": "When an ally suffers a counterattack, increases Combat Readiness of the caster by 20%, and activates I'm Warning You. I'm Warning You can only be activated once per turn. I'm Warning You: Attacks all enemies, decreasing buff durations by 2 turns and has a 80% chance to decrease Defense for 2 turns, before recovering Health of all allies. Amount recovered increases proportional to the target's max Health."
+                "name": "정원사의 비밀",
+                "description": "아군이 반격을 받으면 시전자의 행동 게이지를 20% 증가시키고 경고했어요를 발동한다. 경고했어요는 턴마다 한 번만 발동할 수 있다. 경고했어요: 모든 적을 공격해 강화 효과의 지속 시간을 2턴 감소시키고 80% 확률로 2턴 동안 방어력을 감소시킨 뒤 모든 아군의 생명력을 회복한다. 대상의 최대 생명력에 비례해 회복량이 증가한다."
             },
             "S3": {
-                "name": "A Larunda's Hospitality",
-                "description": "Attacks all enemies with a specially prepared gift, decreasing buff durations by 1 turn and decreasing Hit Chance for 2 turns, before removing 10 Soul. Grants a barrier to all allies for 2 turns. Barrier strength increases proportional to the target's Health."
+                "name": "라룬다의 환대",
+                "description": "특별히 준비한 선물로 모든 적을 공격해 강화 효과의 지속 시간을 1턴 감소시키고 2턴 동안 명중률을 감소시킨 뒤 소울을 10 제거한다. 모든 아군에게 2턴 동안 보호막을 부여한다. 대상의 생명력에 비례해 보호막 강도가 증가한다."
             }
         }
     },
@@ -1156,17 +1156,17 @@
         "_name": "Bystander Hwayoung",
         "skills": {
             "S1": {
-                "name": "Infernal Strike",
-                "description": "Attacks the enemy with kicks, and increases Combat Readiness of the caster by 20%."
+                "name": "지옥의 일격",
+                "description": "발차기로 적을 공격하고 시전자의 행동 게이지를 20% 증가시킨다."
             },
             "S2": {
-                "name": "Divine Vessel",
-                "description": "Immune to buffs and debuffs. At the start of the first battle, increases Defense proportional to Attack. The rate of the increase Defense effect does not change after it is activated. After an ally except for the caster is attacked, when the damage suffered is 40% or more of max Health, activates Sura: Reave the Skies against a random enemy. Can only be activated once every 3 turns."
+                "name": "신의 그릇",
+                "description": "강화 효과와 약화 효과에 면역이다. 첫 번째 전투 시작 시 공격력에 비례해 방어력이 증가한다. 방어력 증가 효과의 수치는 발동 후 변하지 않는다. 시전자를 제외한 아군이 공격받은 후 받은 피해가 최대 생명력의 40% 이상이면 무작위 적에게 수라: 하늘 가르기를 발동한다. 3턴마다 한 번만 발동할 수 있다."
             },
             "S3": {
-                "name": "Sura: Reave the Skies",
-                "description": "Attacks the enemy with a rage-filled strike. When the enemy is defeated, inflicts extinction. When the target is a Hero, ignores damage reduction and damage sharing effects. When the target is of the Light element, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "수라: 하늘 가르기",
+                "description": "분노가 담긴 일격으로 적을 공격한다. 적을 처치하면 소멸을 건다. 대상이 영웅이면 피해 감소와 피해 분산 효과를 무시한다. 대상이 빛 속성이면 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -1174,17 +1174,17 @@
         "_name": "Camilla",
         "skills": {
             "S1": {
-                "name": "Flashing Blade",
-                "description": "Attacks the enemy, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increased Attack, triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "번뜩이는 칼날",
+                "description": "적을 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다. 시전자에게 공격력 증가가 있으면 공격력이 가장 높은 아군이 협공한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Tactical Maneuver",
-                "description": "Increases Attack of the caster and the ally with the highest Attack except for the caster for 3 turns. Grants an extra turn to the caster."
+                "name": "전술 기동",
+                "description": "3턴 동안 시전자와, 시전자를 제외하고 공격력이 가장 높은 아군의 공격력을 증가시킨다. 시전자는 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Swift Execution",
-                "description": "Attacks the enemy and when the enemy is defeated, recovers the caster to max Health. Damage dealt increases proportional to the target's lost Health. When this skill is available according to cooldown count, decreases damage suffered by 30% when attacked. When more than one damage reduction effect is granted, only the strongest effect is applied."
+                "name": "신속한 처형",
+                "description": "적을 공격하며, 적을 처치하면 시전자의 생명력을 최대치까지 회복한다. 대상이 잃은 생명력에 비례해 주는 피해가 증가한다. 재사용 대기 시간상 이 스킬을 사용할 수 있으면 공격받을 때 받는 피해가 30% 감소한다. 피해 감소 효과가 여러 개 부여되면 가장 강한 효과만 적용된다."
             }
         }
     },
@@ -1192,17 +1192,17 @@
         "_name": "Captain Rikoris",
         "skills": {
             "S1": {
-                "name": "Quick Pierce",
-                "description": "Attacks the enemy with a spear, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increase Speed, effect chance increases by 25%."
+                "name": "빠른 찌르기",
+                "description": "창으로 적을 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다. 시전자에게 속도 증가가 있으면 효과 발동 확률이 25% 증가한다."
             },
             "S2": {
-                "name": "Cheer",
-                "description": "Encourages all allies, decreasing skill cooldown by 1 turn and increasing Speed for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "격려",
+                "description": "모든 아군을 격려해 스킬 재사용 대기 시간을 1턴 감소시키고 2턴 동안 속도를 증가시킨다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장된다."
             },
             "S3": {
-                "name": "Supreme Spear",
-                "description": "Decreases debuff duration of all allies by 2 turns, and attacks all enemies with spear art, with a 80% chance each to inflict decreased Speed and restrict for 2 turns."
+                "name": "지고의 창",
+                "description": "모든 아군의 약화 효과 지속 시간을 2턴 감소시키고, 창술로 모든 적을 공격하며, 각각 80% 확률로 2턴 동안 속도 감소와 제약을 건다."
             }
         }
     },
@@ -1210,17 +1210,17 @@
         "_name": "Carmainerose",
         "skills": {
             "S1": {
-                "name": "Vampirism",
-                "description": "Claws the enemy, before absorbing some of the damage as Health."
+                "name": "흡혈",
+                "description": "적을 할퀸 뒤 피해의 일부를 생명력으로 흡수한다."
             },
             "S2": {
-                "name": "Vengeful Strike",
-                "description": "Attacks the enemy, decreasing Combat Readiness by 55% before decreasing Speed of the enemy for 2 turns and increasing Speed of the caster for 2 turns."
+                "name": "복수의 일격",
+                "description": "적을 공격해 행동 게이지를 55% 감소시킨 뒤 2턴 동안 적의 속도를 감소시키고 2턴 동안 시전자의 속도를 증가시킨다."
             },
             "S3": {
-                "name": "Daze",
-                "description": "Attacks the enemy, dispelling all buffs, and increasing Attack and Defense of the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "현혹",
+                "description": "적을 공격해 강화 효과를 모두 해제하고, 2턴 동안 시전자의 공격력과 방어력을 증가시킨다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장된다."
             }
         }
     },

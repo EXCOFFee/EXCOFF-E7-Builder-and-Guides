@@ -1084,17 +1084,17 @@
         "_name": "Briar Witch Iseria",
         "skills": {
             "S1": {
-                "name": "Fallen Flower",
-                "description": "Throws swords at the enemy, with a 75% chance to decrease Defense for 1 turn. A successful attack deals additional damage proportional to the caster's Attack."
+                "name": "落花",
+                "description": "向敌人投掷剑刃，有75%的几率降低防御力1回合。攻击成功时，追加造成与施放者攻击力成比例的伤害。"
             },
             "S2": {
-                "name": "Witch's Curse",
-                "description": "Increases Hit Chance by 50%. Allies and enemies cannot revive. Upon receiving lethal damage, grants immortality for 1 turn."
+                "name": "魔女的诅咒",
+                "description": "命中率提升50%。友军与敌人无法复活。受到致命伤害时，施加1回合不死。"
             },
             "S3": {
-                "name": "Cursed Thorn",
-                "description": "Attacks all enemies with a cursed thornbush, dispelling all buffs, with a 75% chance to decrease Defense for 2 turns and a 100% chance to make them unable to be buffed for 2 turns. A successful attack deals additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "被诅咒的荆棘",
+                "description": "以被诅咒的荆棘丛攻击所有敌人，解除所有强化效果，有75%的几率降低防御力2回合，并有100%的几率施加2回合无法强化。攻击成功时，追加造成与施放者攻击力成比例的伤害。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -1102,17 +1102,17 @@
         "_name": "Brieg",
         "skills": {
             "S1": {
-                "name": "Shadow Swordsmanship",
-                "description": "Attacks the enemy, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's max Health. After attacking, when Fighting Spirit is full, consumes all Fighting Spirit to dispel all debuffs from the caster, and activates Limitless Sword Arts against the enemy with the highest Attack."
+                "name": "暗影剑术",
+                "description": "攻击敌人，并使施放者的行动值提升20%。造成的伤害按施放者的最大生命值比例提升。攻击后若斗志已满，消耗全部斗志解除施放者的所有弱化效果，并对攻击力最高的敌人发动无限剑术。"
             },
             "S2": {
-                "name": "Spirit Lord's Protection",
-                "description": "Grants a barrier to all allies for 3 turns, and perception to the caster for 3 turns. Grants an extra turn to the caster. Barrier strength increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases barrier strength."
+                "name": "精灵王的守护",
+                "description": "为所有友军施加3回合屏障，为施放者施加3回合洞察。施放者获得额外回合。屏障强度按施放者的最大生命值比例提升。",
+                "soulburn_effect": "提升屏障强度。"
             },
             "S3": {
-                "name": "Limitless Sword Arts",
-                "description": "Attacks the enemy with a sword, dispelling all buffs before decreasing Defense and Speed for 2 turns. Increases Effectiveness of this attack by 50% and damage dealt increases proportional to the caster's max Health."
+                "name": "无限剑术",
+                "description": "以剑攻击敌人，解除所有强化效果后降低防御力与速度2回合。此次攻击的效果命中提升50%，造成的伤害按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -1120,17 +1120,17 @@
         "_name": "Butcher Corps Inquisitor",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Strikes the enemy with a blade, with a 50% chance each to dispel one buff twice."
+                "name": "重击",
+                "description": "以利刃斩击敌人，各有50%的几率解除一个强化效果，共两次。"
             },
             "S2": {
-                "name": "Butcher Corps Gear",
-                "description": "Damage suffered in one attack does not exceed 35% of max Health."
+                "name": "屠夫军团装备",
+                "description": "单次攻击受到的伤害不超过最大生命值的35%。"
             },
             "S3": {
-                "name": "Hack",
-                "description": "Strikes indiscriminately at the enemy, dealing damage proportional to the caster's lost Health, and recovering Health proportional to the damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "乱砍",
+                "description": "胡乱砍击敌人，造成与施放者已损失生命值成比例的伤害，并按造成的伤害比例恢复生命值。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1138,17 +1138,17 @@
         "_name": "Byblis",
         "skills": {
             "S1": {
-                "name": "Floral Arrangement",
-                "description": "Attacks the enemy with a magical flower, with a 75% chance to silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness of the target by 20%.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "插花",
+                "description": "以魔法之花攻击敌人，有75%的几率施加1回合沉默。攻击后若目标处于沉默状态，使其行动值降低20%。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Gardener's Secret",
-                "description": "When an ally suffers a counterattack, increases Combat Readiness of the caster by 20%, and activates I'm Warning You. I'm Warning You can only be activated once per turn. I'm Warning You: Attacks all enemies, decreasing buff durations by 2 turns and has a 80% chance to decrease Defense for 2 turns, before recovering Health of all allies. Amount recovered increases proportional to the target's max Health."
+                "name": "园丁的秘密",
+                "description": "友军受到反击时，使施放者的行动值提升20%，并发动我警告过你。我警告过你每回合只能发动一次。我警告过你：攻击所有敌人，使强化效果持续时间减少2回合，并有80%的几率降低防御力2回合，然后恢复所有友军的生命值。恢复量按目标的最大生命值比例提升。"
             },
             "S3": {
-                "name": "A Larunda's Hospitality",
-                "description": "Attacks all enemies with a specially prepared gift, decreasing buff durations by 1 turn and decreasing Hit Chance for 2 turns, before removing 10 Soul. Grants a barrier to all allies for 2 turns. Barrier strength increases proportional to the target's Health."
+                "name": "拉伦达的款待",
+                "description": "以特别准备的礼物攻击所有敌人，使强化效果持续时间减少1回合，并降低命中率2回合，然后移除10魂。为所有友军施加2回合屏障。屏障强度按目标的生命值比例提升。"
             }
         }
     },
@@ -1156,17 +1156,17 @@
         "_name": "Bystander Hwayoung",
         "skills": {
             "S1": {
-                "name": "Infernal Strike",
-                "description": "Attacks the enemy with kicks, and increases Combat Readiness of the caster by 20%."
+                "name": "地狱一击",
+                "description": "以踢击攻击敌人，并使施放者的行动值提升20%。"
             },
             "S2": {
-                "name": "Divine Vessel",
-                "description": "Immune to buffs and debuffs. At the start of the first battle, increases Defense proportional to Attack. The rate of the increase Defense effect does not change after it is activated. After an ally except for the caster is attacked, when the damage suffered is 40% or more of max Health, activates Sura: Reave the Skies against a random enemy. Can only be activated once every 3 turns."
+                "name": "神之容器",
+                "description": "免疫强化与弱化效果。首场战斗开始时，按攻击力比例提升防御力。防御力提升效果的数值在发动后不会改变。除施放者外的友军受到攻击后，若受到的伤害达到最大生命值的40%以上，对随机一名敌人发动修罗：裂天。每3回合只能发动一次。"
             },
             "S3": {
-                "name": "Sura: Reave the Skies",
-                "description": "Attacks the enemy with a rage-filled strike. When the enemy is defeated, inflicts extinction. When the target is a Hero, ignores damage reduction and damage sharing effects. When the target is of the Light element, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "修罗：裂天",
+                "description": "以饱含怒火的一击攻击敌人。击败敌人时施加湮灭。目标为英雄时，无视伤害降低与伤害分担效果。目标为光属性时，提升造成的伤害。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1174,17 +1174,17 @@
         "_name": "Camilla",
         "skills": {
             "S1": {
-                "name": "Flashing Blade",
-                "description": "Attacks the enemy, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increased Attack, triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "闪光之刃",
+                "description": "攻击敌人，有50%的几率降低防御力2回合。施放者拥有攻击力提升时，攻击力最高的友军发动协攻。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Tactical Maneuver",
-                "description": "Increases Attack of the caster and the ally with the highest Attack except for the caster for 3 turns. Grants an extra turn to the caster."
+                "name": "战术机动",
+                "description": "提升施放者与除施放者外攻击力最高的友军的攻击力3回合。施放者获得额外回合。"
             },
             "S3": {
-                "name": "Swift Execution",
-                "description": "Attacks the enemy and when the enemy is defeated, recovers the caster to max Health. Damage dealt increases proportional to the target's lost Health. When this skill is available according to cooldown count, decreases damage suffered by 30% when attacked. When more than one damage reduction effect is granted, only the strongest effect is applied."
+                "name": "迅速处决",
+                "description": "攻击敌人，击败敌人时将施放者的生命值恢复至最大值。造成的伤害按目标已损失的生命值比例提升。此技能冷却完毕时，受到攻击时受到的伤害降低30%。获得多个伤害降低效果时，仅适用最强的效果。"
             }
         }
     },
@@ -1192,17 +1192,17 @@
         "_name": "Captain Rikoris",
         "skills": {
             "S1": {
-                "name": "Quick Pierce",
-                "description": "Attacks the enemy with a spear, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increase Speed, effect chance increases by 25%."
+                "name": "快速刺击",
+                "description": "以长枪攻击敌人，有50%的几率降低防御力2回合。施放者拥有速度提升时，效果几率提升25%。"
             },
             "S2": {
-                "name": "Cheer",
-                "description": "Encourages all allies, decreasing skill cooldown by 1 turn and increasing Speed for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "鼓舞",
+                "description": "鼓舞所有友军，使技能冷却时间减少1回合，并提升速度2回合。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             },
             "S3": {
-                "name": "Supreme Spear",
-                "description": "Decreases debuff duration of all allies by 2 turns, and attacks all enemies with spear art, with a 80% chance each to inflict decreased Speed and restrict for 2 turns."
+                "name": "至高之枪",
+                "description": "使所有友军的弱化效果持续时间减少2回合，并以枪术攻击所有敌人，各有80%的几率施加2回合速度降低与限制。"
             }
         }
     },
@@ -1210,17 +1210,17 @@
         "_name": "Carmainerose",
         "skills": {
             "S1": {
-                "name": "Vampirism",
-                "description": "Claws the enemy, before absorbing some of the damage as Health."
+                "name": "吸血",
+                "description": "抓击敌人，然后将部分伤害吸收为生命值。"
             },
             "S2": {
-                "name": "Vengeful Strike",
-                "description": "Attacks the enemy, decreasing Combat Readiness by 55% before decreasing Speed of the enemy for 2 turns and increasing Speed of the caster for 2 turns."
+                "name": "复仇一击",
+                "description": "攻击敌人，降低55%行动值，然后降低敌人的速度2回合，并提升施放者的速度2回合。"
             },
             "S3": {
-                "name": "Daze",
-                "description": "Attacks the enemy, dispelling all buffs, and increasing Attack and Defense of the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "迷惑",
+                "description": "攻击敌人，解除所有强化效果，并提升施放者的攻击力与防御力2回合。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             }
         }
     },

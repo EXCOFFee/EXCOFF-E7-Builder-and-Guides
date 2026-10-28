@@ -1084,17 +1084,17 @@
         "_name": "Briar Witch Iseria",
         "skills": {
             "S1": {
-                "name": "Fallen Flower",
-                "description": "Throws swords at the enemy, with a 75% chance to decrease Defense for 1 turn. A successful attack deals additional damage proportional to the caster's Attack."
+                "name": "散りゆく花",
+                "description": "敵に剣を投げ、75%の確率で1ターンの間防御力をダウンさせる。攻撃が成功すると、発動者の攻撃力に比例した追加ダメージを与える。"
             },
             "S2": {
-                "name": "Witch's Curse",
-                "description": "Increases Hit Chance by 50%. Allies and enemies cannot revive. Upon receiving lethal damage, grants immortality for 1 turn."
+                "name": "魔女の呪い",
+                "description": "命中率が50%アップする。味方と敵は復活できない。致命的なダメージを受けると、1ターンの間不死を付与する。"
             },
             "S3": {
-                "name": "Cursed Thorn",
-                "description": "Attacks all enemies with a cursed thornbush, dispelling all buffs, with a 75% chance to decrease Defense for 2 turns and a 100% chance to make them unable to be buffed for 2 turns. A successful attack deals additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "呪われた棘",
+                "description": "呪われた茨の茂みで敵全体を攻撃し、強化効果をすべて解除し、75%の確率で2ターンの間防御力をダウンさせ、100%の確率で2ターンの間強化不可を付与する。攻撃が成功すると、発動者の攻撃力に比例した追加ダメージを与える。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -1102,17 +1102,17 @@
         "_name": "Brieg",
         "skills": {
             "S1": {
-                "name": "Shadow Swordsmanship",
-                "description": "Attacks the enemy, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's max Health. After attacking, when Fighting Spirit is full, consumes all Fighting Spirit to dispel all debuffs from the caster, and activates Limitless Sword Arts against the enemy with the highest Attack."
+                "name": "影の剣術",
+                "description": "敵を攻撃し、発動者の行動ゲージを20%増加させる。発動者の最大HPに比例して与ダメージがアップする。攻撃後、闘志が満タンなら、闘志をすべて消費して発動者の弱体効果をすべて解除し、攻撃力が最も高い敵に無限剣術を発動する。"
             },
             "S2": {
-                "name": "Spirit Lord's Protection",
-                "description": "Grants a barrier to all allies for 3 turns, and perception to the caster for 3 turns. Grants an extra turn to the caster. Barrier strength increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases barrier strength."
+                "name": "精霊王の加護",
+                "description": "味方全員に3ターンの間バリアを、発動者に3ターンの間看破を付与する。発動者は追加ターンを得る。発動者の最大HPに比例してバリアの強度がアップする。",
+                "soulburn_effect": "バリアの強度がアップする。"
             },
             "S3": {
-                "name": "Limitless Sword Arts",
-                "description": "Attacks the enemy with a sword, dispelling all buffs before decreasing Defense and Speed for 2 turns. Increases Effectiveness of this attack by 50% and damage dealt increases proportional to the caster's max Health."
+                "name": "無限剣術",
+                "description": "剣で敵を攻撃し、強化効果をすべて解除した後、2ターンの間防御力とスピードをダウンさせる。この攻撃の効果命中が50%アップし、発動者の最大HPに比例して与ダメージがアップする。"
             }
         }
     },
@@ -1120,17 +1120,17 @@
         "_name": "Butcher Corps Inquisitor",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Strikes the enemy with a blade, with a 50% chance each to dispel one buff twice."
+                "name": "強打",
+                "description": "刃で敵を斬りつけ、それぞれ50%の確率で強化効果を一つずつ二回解除する。"
             },
             "S2": {
-                "name": "Butcher Corps Gear",
-                "description": "Damage suffered in one attack does not exceed 35% of max Health."
+                "name": "屠殺者部隊の装備",
+                "description": "一回の攻撃で受けるダメージが最大HPの35%を超えない。"
             },
             "S3": {
-                "name": "Hack",
-                "description": "Strikes indiscriminately at the enemy, dealing damage proportional to the caster's lost Health, and recovering Health proportional to the damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "滅多斬り",
+                "description": "敵を手当たり次第に斬りつけ、発動者の失ったHPに比例したダメージを与え、与ダメージに比例してHPを回復する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1138,17 +1138,17 @@
         "_name": "Byblis",
         "skills": {
             "S1": {
-                "name": "Floral Arrangement",
-                "description": "Attacks the enemy with a magical flower, with a 75% chance to silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness of the target by 20%.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "生け花",
+                "description": "魔法の花で敵を攻撃し、75%の確率で1ターンの間沈黙を付与する。攻撃後、対象が沈黙状態なら対象の行動ゲージを20%減少させる。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Gardener's Secret",
-                "description": "When an ally suffers a counterattack, increases Combat Readiness of the caster by 20%, and activates I'm Warning You. I'm Warning You can only be activated once per turn. I'm Warning You: Attacks all enemies, decreasing buff durations by 2 turns and has a 80% chance to decrease Defense for 2 turns, before recovering Health of all allies. Amount recovered increases proportional to the target's max Health."
+                "name": "庭師の秘密",
+                "description": "味方が反撃を受けると、発動者の行動ゲージを20%増加させ、警告しましたよを発動する。警告しましたよはターンごとに一度のみ発動できる。警告しましたよ：敵全体を攻撃し、強化効果の持続時間を2ターン減少させ、80%の確率で2ターンの間防御力をダウンさせた後、味方全員のHPを回復する。対象の最大HPに比例して回復量がアップする。"
             },
             "S3": {
-                "name": "A Larunda's Hospitality",
-                "description": "Attacks all enemies with a specially prepared gift, decreasing buff durations by 1 turn and decreasing Hit Chance for 2 turns, before removing 10 Soul. Grants a barrier to all allies for 2 turns. Barrier strength increases proportional to the target's Health."
+                "name": "ラルンダのもてなし",
+                "description": "特別に用意した贈り物で敵全体を攻撃し、強化効果の持続時間を1ターン減少させ、2ターンの間命中率をダウンさせた後、ソウルを10除去する。味方全員に2ターンの間バリアを付与する。対象のHPに比例してバリアの強度がアップする。"
             }
         }
     },
@@ -1156,17 +1156,17 @@
         "_name": "Bystander Hwayoung",
         "skills": {
             "S1": {
-                "name": "Infernal Strike",
-                "description": "Attacks the enemy with kicks, and increases Combat Readiness of the caster by 20%."
+                "name": "地獄の一撃",
+                "description": "蹴りで敵を攻撃し、発動者の行動ゲージを20%増加させる。"
             },
             "S2": {
-                "name": "Divine Vessel",
-                "description": "Immune to buffs and debuffs. At the start of the first battle, increases Defense proportional to Attack. The rate of the increase Defense effect does not change after it is activated. After an ally except for the caster is attacked, when the damage suffered is 40% or more of max Health, activates Sura: Reave the Skies against a random enemy. Can only be activated once every 3 turns."
+                "name": "神の器",
+                "description": "強化効果と弱体効果を受けない。最初のバトル開始時、攻撃力に比例して防御力がアップする。防御力アップ効果の数値は発動後に変化しない。発動者を除く味方が攻撃された後、受けたダメージが最大HPの40%以上なら、ランダムな敵に修羅：天裂きを発動する。3ターンごとに一度のみ発動できる。"
             },
             "S3": {
-                "name": "Sura: Reave the Skies",
-                "description": "Attacks the enemy with a rage-filled strike. When the enemy is defeated, inflicts extinction. When the target is a Hero, ignores damage reduction and damage sharing effects. When the target is of the Light element, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "修羅：天裂き",
+                "description": "怒りを込めた一撃で敵を攻撃する。敵を倒すと消滅を付与する。対象が英雄なら、ダメージ減少とダメージ分散効果を無視する。対象が光属性なら与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1174,17 +1174,17 @@
         "_name": "Camilla",
         "skills": {
             "S1": {
-                "name": "Flashing Blade",
-                "description": "Attacks the enemy, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increased Attack, triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "閃く刃",
+                "description": "敵を攻撃し、50%の確率で2ターンの間防御力をダウンさせる。発動者に攻撃力アップがあれば、攻撃力が最も高い味方が協攻する。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Tactical Maneuver",
-                "description": "Increases Attack of the caster and the ally with the highest Attack except for the caster for 3 turns. Grants an extra turn to the caster."
+                "name": "戦術機動",
+                "description": "3ターンの間、発動者と、発動者を除いて攻撃力が最も高い味方の攻撃力をアップさせる。発動者は追加ターンを得る。"
             },
             "S3": {
-                "name": "Swift Execution",
-                "description": "Attacks the enemy and when the enemy is defeated, recovers the caster to max Health. Damage dealt increases proportional to the target's lost Health. When this skill is available according to cooldown count, decreases damage suffered by 30% when attacked. When more than one damage reduction effect is granted, only the strongest effect is applied."
+                "name": "迅速な処刑",
+                "description": "敵を攻撃し、敵を倒すと発動者のHPを最大まで回復する。対象の失ったHPに比例して与ダメージがアップする。クールタイム上このスキルが使用可能なとき、攻撃されると受けるダメージが30%減少する。ダメージ減少効果が複数付与された場合、最も強い効果のみ適用される。"
             }
         }
     },
@@ -1192,17 +1192,17 @@
         "_name": "Captain Rikoris",
         "skills": {
             "S1": {
-                "name": "Quick Pierce",
-                "description": "Attacks the enemy with a spear, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increase Speed, effect chance increases by 25%."
+                "name": "素早い突き",
+                "description": "槍で敵を攻撃し、50%の確率で2ターンの間防御力をダウンさせる。発動者にスピードアップがあれば、効果発動確率が25%アップする。"
             },
             "S2": {
-                "name": "Cheer",
-                "description": "Encourages all allies, decreasing skill cooldown by 1 turn and increasing Speed for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "激励",
+                "description": "味方全員を激励し、スキルのクールタイムを1ターン短縮し、2ターンの間スピードをアップさせる。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             },
             "S3": {
-                "name": "Supreme Spear",
-                "description": "Decreases debuff duration of all allies by 2 turns, and attacks all enemies with spear art, with a 80% chance each to inflict decreased Speed and restrict for 2 turns."
+                "name": "至高の槍",
+                "description": "味方全員の弱体効果の持続時間を2ターン減少させ、槍術で敵全体を攻撃し、それぞれ80%の確率で2ターンの間スピードダウンと制約を付与する。"
             }
         }
     },
@@ -1210,17 +1210,17 @@
         "_name": "Carmainerose",
         "skills": {
             "S1": {
-                "name": "Vampirism",
-                "description": "Claws the enemy, before absorbing some of the damage as Health."
+                "name": "吸血",
+                "description": "敵を引っかいた後、ダメージの一部をHPとして吸収する。"
             },
             "S2": {
-                "name": "Vengeful Strike",
-                "description": "Attacks the enemy, decreasing Combat Readiness by 55% before decreasing Speed of the enemy for 2 turns and increasing Speed of the caster for 2 turns."
+                "name": "復讐の一撃",
+                "description": "敵を攻撃し、行動ゲージを55%減少させた後、2ターンの間敵のスピードをダウンさせ、2ターンの間発動者のスピードをアップさせる。"
             },
             "S3": {
-                "name": "Daze",
-                "description": "Attacks the enemy, dispelling all buffs, and increasing Attack and Defense of the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "幻惑",
+                "description": "敵を攻撃し、強化効果をすべて解除し、2ターンの間発動者の攻撃力と防御力をアップさせる。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },

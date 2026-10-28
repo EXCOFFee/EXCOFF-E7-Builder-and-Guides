@@ -1084,17 +1084,17 @@
         "_name": "Briar Witch Iseria",
         "skills": {
             "S1": {
-                "name": "Fallen Flower",
-                "description": "Throws swords at the enemy, with a 75% chance to decrease Defense for 1 turn. A successful attack deals additional damage proportional to the caster's Attack."
+                "name": "Flor caída",
+                "description": "Arremessa espadas no inimigo, com 75% de chance de diminuir a Defesa por 1 turno. Um ataque bem-sucedido causa dano adicional proporcional ao Ataque do conjurador."
             },
             "S2": {
-                "name": "Witch's Curse",
-                "description": "Increases Hit Chance by 50%. Allies and enemies cannot revive. Upon receiving lethal damage, grants immortality for 1 turn."
+                "name": "Maldição da bruxa",
+                "description": "Aumenta a Precisão em 50%. Aliados e inimigos não podem reviver. Ao receber dano letal, concede imortalidade por 1 turno."
             },
             "S3": {
-                "name": "Cursed Thorn",
-                "description": "Attacks all enemies with a cursed thornbush, dispelling all buffs, with a 75% chance to decrease Defense for 2 turns and a 100% chance to make them unable to be buffed for 2 turns. A successful attack deals additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Espinho amaldiçoado",
+                "description": "Ataca todos os inimigos com um arbusto de espinhos amaldiçoado, dissipando todos os efeitos positivos, com 75% de chance de diminuir a Defesa por 2 turnos e 100% de chance de impedir que recebam efeitos positivos por 2 turnos. Um ataque bem-sucedido causa dano adicional proporcional ao Ataque do conjurador.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -1102,17 +1102,17 @@
         "_name": "Brieg",
         "skills": {
             "S1": {
-                "name": "Shadow Swordsmanship",
-                "description": "Attacks the enemy, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's max Health. After attacking, when Fighting Spirit is full, consumes all Fighting Spirit to dispel all debuffs from the caster, and activates Limitless Sword Arts against the enemy with the highest Attack."
+                "name": "Esgrima das sombras",
+                "description": "Ataca o inimigo e aumenta a Prontidão de Combate do conjurador em 20%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Após atacar, quando o Espírito de luta está cheio, consome todo o Espírito de luta para dissipar todos os efeitos negativos do conjurador e ativa Artes da espada sem limites contra o inimigo com maior Ataque."
             },
             "S2": {
-                "name": "Spirit Lord's Protection",
-                "description": "Grants a barrier to all allies for 3 turns, and perception to the caster for 3 turns. Grants an extra turn to the caster. Barrier strength increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases barrier strength."
+                "name": "Proteção do senhor espiritual",
+                "description": "Concede uma barreira a todos os aliados por 3 turnos e percepção ao conjurador por 3 turnos. Concede um turno extra ao conjurador. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta a força da barreira."
             },
             "S3": {
-                "name": "Limitless Sword Arts",
-                "description": "Attacks the enemy with a sword, dispelling all buffs before decreasing Defense and Speed for 2 turns. Increases Effectiveness of this attack by 50% and damage dealt increases proportional to the caster's max Health."
+                "name": "Artes da espada sem limites",
+                "description": "Ataca o inimigo com uma espada, dissipando todos os efeitos positivos antes de diminuir a Defesa e a Velocidade por 2 turnos. Aumenta a Eficácia deste ataque em 50% e o dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -1120,17 +1120,17 @@
         "_name": "Butcher Corps Inquisitor",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Strikes the enemy with a blade, with a 50% chance each to dispel one buff twice."
+                "name": "Golpe pesado",
+                "description": "Golpeia o inimigo com uma lâmina, com 50% de chance cada de dissipar um efeito positivo, duas vezes."
             },
             "S2": {
-                "name": "Butcher Corps Gear",
-                "description": "Damage suffered in one attack does not exceed 35% of max Health."
+                "name": "Equipamento da Tropa dos Carniceiros",
+                "description": "O dano sofrido em um único ataque não ultrapassa 35% da Vida máxima."
             },
             "S3": {
-                "name": "Hack",
-                "description": "Strikes indiscriminately at the enemy, dealing damage proportional to the caster's lost Health, and recovering Health proportional to the damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Retalhar",
+                "description": "Golpeia o inimigo indiscriminadamente, causando dano proporcional à Vida perdida do conjurador e recuperando Vida proporcionalmente ao dano causado.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1138,17 +1138,17 @@
         "_name": "Byblis",
         "skills": {
             "S1": {
-                "name": "Floral Arrangement",
-                "description": "Attacks the enemy with a magical flower, with a 75% chance to silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness of the target by 20%.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Arranjo floral",
+                "description": "Ataca o inimigo com uma flor mágica, com 75% de chance de silenciá-lo por 1 turno. Após atacar, se o alvo estiver silenciado, diminui a Prontidão de Combate dele em 20%.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Gardener's Secret",
-                "description": "When an ally suffers a counterattack, increases Combat Readiness of the caster by 20%, and activates I'm Warning You. I'm Warning You can only be activated once per turn. I'm Warning You: Attacks all enemies, decreasing buff durations by 2 turns and has a 80% chance to decrease Defense for 2 turns, before recovering Health of all allies. Amount recovered increases proportional to the target's max Health."
+                "name": "Segredo da jardineira",
+                "description": "Quando um aliado sofre um contra-ataque, aumenta a Prontidão de Combate do conjurador em 20% e ativa Estou avisando. Estou avisando só pode ser ativado uma vez por turno. Estou avisando: ataca todos os inimigos, diminuindo a duração dos efeitos positivos em 2 turnos e com 80% de chance de diminuir a Defesa por 2 turnos, depois recupera a Vida de todos os aliados. A quantidade recuperada aumenta proporcionalmente à Vida máxima do alvo."
             },
             "S3": {
-                "name": "A Larunda's Hospitality",
-                "description": "Attacks all enemies with a specially prepared gift, decreasing buff durations by 1 turn and decreasing Hit Chance for 2 turns, before removing 10 Soul. Grants a barrier to all allies for 2 turns. Barrier strength increases proportional to the target's Health."
+                "name": "Hospitalidade de uma Larunda",
+                "description": "Ataca todos os inimigos com um presente especialmente preparado, diminuindo a duração dos efeitos positivos em 1 turno e diminuindo a Precisão por 2 turnos, depois remove 10 de Alma. Concede uma barreira a todos os aliados por 2 turnos. A força da barreira aumenta proporcionalmente à Vida do alvo."
             }
         }
     },
@@ -1156,17 +1156,17 @@
         "_name": "Bystander Hwayoung",
         "skills": {
             "S1": {
-                "name": "Infernal Strike",
-                "description": "Attacks the enemy with kicks, and increases Combat Readiness of the caster by 20%."
+                "name": "Golpe infernal",
+                "description": "Ataca o inimigo com chutes e aumenta a Prontidão de Combate do conjurador em 20%."
             },
             "S2": {
-                "name": "Divine Vessel",
-                "description": "Immune to buffs and debuffs. At the start of the first battle, increases Defense proportional to Attack. The rate of the increase Defense effect does not change after it is activated. After an ally except for the caster is attacked, when the damage suffered is 40% or more of max Health, activates Sura: Reave the Skies against a random enemy. Can only be activated once every 3 turns."
+                "name": "Receptáculo divino",
+                "description": "Imune a efeitos positivos e negativos. No início da primeira batalha, aumenta a Defesa proporcionalmente ao Ataque. A taxa do aumento de Defesa não muda depois de ativada. Após um aliado, exceto o conjurador, ser atacado, quando o dano sofrido for 40% ou mais da Vida máxima, ativa Sura: Rasgar os céus contra um inimigo aleatório. Só pode ser ativado uma vez a cada 3 turnos."
             },
             "S3": {
-                "name": "Sura: Reave the Skies",
-                "description": "Attacks the enemy with a rage-filled strike. When the enemy is defeated, inflicts extinction. When the target is a Hero, ignores damage reduction and damage sharing effects. When the target is of the Light element, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Sura: Rasgar os céus",
+                "description": "Ataca o inimigo com um golpe cheio de fúria. Ao derrotar o inimigo, aplica extinção. Quando o alvo é um herói, ignora efeitos de redução e divisão de dano. Quando o alvo é do elemento Luz, o dano causado aumenta.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1174,17 +1174,17 @@
         "_name": "Camilla",
         "skills": {
             "S1": {
-                "name": "Flashing Blade",
-                "description": "Attacks the enemy, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increased Attack, triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Lâmina reluzente",
+                "description": "Ataca o inimigo, com 50% de chance de diminuir a Defesa por 2 turnos. Quando o conjurador tem Aumentar Ataque, o aliado com maior Ataque realiza um Ataque duplo.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Tactical Maneuver",
-                "description": "Increases Attack of the caster and the ally with the highest Attack except for the caster for 3 turns. Grants an extra turn to the caster."
+                "name": "Manobra tática",
+                "description": "Aumenta o Ataque do conjurador e do aliado com maior Ataque, exceto o conjurador, por 3 turnos. Concede um turno extra ao conjurador."
             },
             "S3": {
-                "name": "Swift Execution",
-                "description": "Attacks the enemy and when the enemy is defeated, recovers the caster to max Health. Damage dealt increases proportional to the target's lost Health. When this skill is available according to cooldown count, decreases damage suffered by 30% when attacked. When more than one damage reduction effect is granted, only the strongest effect is applied."
+                "name": "Execução veloz",
+                "description": "Ataca o inimigo e, ao derrotá-lo, recupera a Vida do conjurador até o máximo. O dano causado aumenta proporcionalmente à Vida perdida do alvo. Quando esta habilidade está disponível pela contagem de recarga, diminui o dano sofrido em 30% ao ser atacado. Quando mais de um efeito de redução de dano é concedido, só o mais forte é aplicado."
             }
         }
     },
@@ -1192,17 +1192,17 @@
         "_name": "Captain Rikoris",
         "skills": {
             "S1": {
-                "name": "Quick Pierce",
-                "description": "Attacks the enemy with a spear, with a 50% chance to decrease Defense for 2 turns. When the caster is granted increase Speed, effect chance increases by 25%."
+                "name": "Perfuração rápida",
+                "description": "Ataca o inimigo com uma lança, com 50% de chance de diminuir a Defesa por 2 turnos. Quando o conjurador tem Aumentar Velocidade, a chance do efeito aumenta 25%."
             },
             "S2": {
-                "name": "Cheer",
-                "description": "Encourages all allies, decreasing skill cooldown by 1 turn and increasing Speed for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Incentivo",
+                "description": "Encoraja todos os aliados, diminuindo a recarga das habilidades em 1 turno e aumentando a Velocidade por 2 turnos.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             },
             "S3": {
-                "name": "Supreme Spear",
-                "description": "Decreases debuff duration of all allies by 2 turns, and attacks all enemies with spear art, with a 80% chance each to inflict decreased Speed and restrict for 2 turns."
+                "name": "Lança suprema",
+                "description": "Diminui a duração dos efeitos negativos de todos os aliados em 2 turnos e ataca todos os inimigos com a arte da lança, com 80% de chance cada de aplicar Diminuir Velocidade e restrição por 2 turnos."
             }
         }
     },
@@ -1210,17 +1210,17 @@
         "_name": "Carmainerose",
         "skills": {
             "S1": {
-                "name": "Vampirism",
-                "description": "Claws the enemy, before absorbing some of the damage as Health."
+                "name": "Vampirismo",
+                "description": "Arranha o inimigo, depois absorve parte do dano como Vida."
             },
             "S2": {
-                "name": "Vengeful Strike",
-                "description": "Attacks the enemy, decreasing Combat Readiness by 55% before decreasing Speed of the enemy for 2 turns and increasing Speed of the caster for 2 turns."
+                "name": "Golpe vingativo",
+                "description": "Ataca o inimigo, diminuindo a Prontidão de Combate em 55%, depois diminui a Velocidade do inimigo por 2 turnos e aumenta a Velocidade do conjurador por 2 turnos."
             },
             "S3": {
-                "name": "Daze",
-                "description": "Attacks the enemy, dispelling all buffs, and increasing Attack and Defense of the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Atordoar",
+                "description": "Ataca o inimigo, dissipando todos os efeitos positivos, e aumenta o Ataque e a Defesa do conjurador por 2 turnos.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
