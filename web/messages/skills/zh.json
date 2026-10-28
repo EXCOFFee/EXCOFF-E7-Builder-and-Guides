@@ -4178,17 +4178,17 @@
         "_name": "Midnight Gala Lilias",
         "skills": {
             "S1": {
-                "name": "Go, Kyla!",
-                "description": "Attacks the enemy with Kyla, and recovers Health. Amount recovered increases proportional to the caster's Attack. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "上吧，凯拉！",
+                "description": "以凯拉攻击敌人，并恢复生命值。恢复量按施放者的攻击力比例提升。攻击成功时必定暴击。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "Elaborate Scheme",
-                "description": "At the start of battle and at the end of the turn, grants damage limit to the caster for 1 turn. After attacking on the caster's turn, when the target's Health is 50% or less, activates Now or Never!. Now or Never!: Grants increased Attack to all allies except for the caster for 2 turns before increasing Combat Readiness by 20%, and increases Combat Readiness of the caster by 50%."
+                "name": "缜密计谋",
+                "description": "战斗开始时与回合结束时，为施放者施加1回合伤害上限。在施放者的回合攻击后，若目标生命值在50%以下，发动机不可失！。机不可失！：为除施放者外的所有友军施加2回合攻击力提升，然后提升20%行动值，并使施放者的行动值提升50%。"
             },
             "S3": {
-                "name": "Take the Lead",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy by exploiting their weakness. When the target is a Hero, ignores damage reduction and damage sharing effect. When the target's max Health is greater than the caster's max Health, penetrates Defense proportionally, up to 100%. A successful attack always results in a critical hit."
+                "name": "掌握主导权",
+                "description": "为施放者施加3回合攻击力提升后，利用敌人的弱点发动攻击。目标为英雄时，无视伤害降低与伤害分担效果。目标的最大生命值高于施放者时，按比例穿透防御力，最多100%。攻击成功时必定暴击。"
             }
         }
     },
@@ -4196,17 +4196,17 @@
         "_name": "Milim",
         "skills": {
             "S1": {
-                "name": "Dragon Dive",
-                "description": "Attacks the enemy, recovering Health proportional to damage dealt before increasing Attack of the caster for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "龙之俯冲",
+                "description": "攻击敌人，按造成的伤害比例恢复生命值，然后提升施放者的攻击力1回合。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Dragon Eye (Milim Eye)",
-                "description": "At the start of battle and at the end of the turn, has a 100% chance to grant Dragon Eye (Milim Eye) to the caster for 1 turn. At the start of the turn, when the caster is granted Dragon Eye (Milim Eye), dispels stealth from all enemies. Ignores Effect Resistance. After attacking, when Focus is full, activates Dragon Buster. Dragon Buster (consumes 5 Focus): Attacks all enemies with overwhelming mana and inflicts 10 Soul Removal."
+                "name": "龙眼（蜜莉姆之眼）",
+                "description": "战斗开始时与回合结束时，有100%的几率为施放者施加1回合龙眼（蜜莉姆之眼）。回合开始时，若施放者拥有龙眼（蜜莉姆之眼），解除所有敌人的隐身。无视效果抵抗。攻击后若专注已满，发动龙破。龙破（消耗5专注）：以压倒性的魔力攻击所有敌人，并移除10魂。"
             },
             "S3": {
-                "name": "Dragon Fear",
-                "description": "Attacks the enemy by releasing mana, and when the enemy is defeated, inflicts extinction. Grants increased Evasion to the caster for 3 turns. When the enemy is not an Elite or Boss monster, ignores damage share."
+                "name": "龙之威压",
+                "description": "释放魔力攻击敌人，击败敌人时施加湮灭。为施放者施加3回合闪避提升。敌人不是精英或首领怪物时，无视伤害分担。"
             }
         }
     },
@@ -4214,17 +4214,17 @@
         "_name": "Mirsa",
         "skills": {
             "S1": {
-                "name": "Double Edge",
-                "description": "Attacks with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "双刃",
+                "description": "以双剑攻击，有50%的几率降低速度2回合。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "Brush Off",
-                "description": "Increases Evasion chance by 50%. At the moment the caster is attacked, if the caster successfully evades, decreases cooldown of the caster by 1 turn and increases Speed for 2 turns."
+                "name": "化解",
+                "description": "闪避几率提升50%。施放者受到攻击的瞬间，若成功闪避，使施放者的冷却时间减少1回合，并提升速度2回合。"
             },
             "S3": {
-                "name": "Raid",
-                "description": "Ambushes the target, silencing them for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increase damage dealt."
+                "name": "急袭",
+                "description": "伏击目标，施加2回合沉默。造成的伤害按施放者的速度比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -4232,17 +4232,17 @@
         "_name": "Mistychain",
         "skills": {
             "S1": {
-                "name": "Vampirism",
-                "description": "Claws at the enemy, absorbing some of the damage to heal all allies."
+                "name": "吸血",
+                "description": "抓击敌人，吸收部分伤害治疗所有友军。"
             },
             "S2": {
-                "name": "Banshee's Curse",
-                "description": "Casts a spell at the enemy, with a 100% chance each to make them unhealable and decrease Attack for 2 turns."
+                "name": "女妖的诅咒",
+                "description": "对敌人施放咒语，各有100%的几率施加2回合无法恢复与攻击力降低。"
             },
             "S3": {
-                "name": "Life Drain",
-                "description": "Attacks by absorbing the enemy's life force. Some of the damage dealt is absorbed to heal all allies. When the enemy is defeated, grants revive for 2 turns to the ally with the lowest Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "生命汲取",
+                "description": "吸取敌人的生命力进行攻击。吸收部分造成的伤害治疗所有友军。击败敌人时，为生命值最低的友军施加2回合复活。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -4268,17 +4268,17 @@
         "_name": "Montmorancy",
         "skills": {
             "S1": {
-                "name": "Sleep Sorcery",
-                "description": "Attacks the enemy with water energy, with a 75% chance to put them to sleep for 1 turn."
+                "name": "睡眠魔法",
+                "description": "以水之力攻击敌人，有75%的几率使其睡眠1回合。"
             },
             "S2": {
-                "name": "Purification",
-                "description": "Dispels one debuff from all allies and heals debuffed allies. Amount recovered is proportional to the ally's max Health."
+                "name": "净化",
+                "description": "解除所有友军的一个弱化效果，并治疗身上有弱化效果的友军。恢复量与友军的最大生命值成比例。"
             },
             "S3": {
-                "name": "Watery Curtain",
-                "description": "Recover's ally's Health and grants immunity for 2 turns, before increasing the caster's Combat Readiness by 50%. Amount recovered increases proportional to the ally's max Health.",
-                "soulburn_effect": "Effect is granted to all allies."
+                "name": "水之帷幕",
+                "description": "恢复友军的生命值，并施加2回合免疫，然后使施放者的行动值提升50%。恢复量按友军的最大生命值比例提升。",
+                "soulburn_effect": "效果施加于所有友军。"
             }
         }
     },
@@ -4304,17 +4304,17 @@
         "_name": "Mort",
         "skills": {
             "S1": {
-                "name": "Extermination",
-                "description": "Attacks the enemy by piercing them, with a 50% chance to decrease Defense for 2 turns. Ignores Effect Resistance of any targets with Max Health lower than the caster's Max Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "歼灭",
+                "description": "贯穿敌人进行攻击，有50%的几率降低防御力2回合。无视最大生命值低于施放者的目标的效果抵抗。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Absolute Dignity",
-                "description": "Immune to debuffs which prevent movement. All Heroes except for the caster cannot counterattack. When an ally is attacked, has a 20% chance to counterattack, and when counterattacking, activates Sacred Blessing. Sacred Blessing: Grants a barrier (proportional to the caster's max Health) to all allies for 2 turns, and grants increased Speed to the caster for 2 turns."
+                "name": "绝对威严",
+                "description": "免疫妨碍行动的弱化效果。除施放者外的所有英雄无法反击。友军受到攻击时，有20%的几率反击，反击时发动神圣祝福。神圣祝福：为所有友军施加2回合屏障（与施放者的最大生命值成比例），并为施放者施加2回合速度提升。"
             },
             "S3": {
-                "name": "Advent: Mortelix",
-                "description": "Descends and attacks all enemies, inflicting fear for 2 turns, before recovering Health of the caster. Penetrates Defense of the enemy with the highest Max Health by 70%, and ignores Effect Resistance of any targets with Max Health lower than the caster's Max Health. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "降临：莫特里克斯",
+                "description": "降临并攻击所有敌人，施加2回合恐惧，然后恢复施放者的生命值。穿透最大生命值最高的敌人70%的防御力，并无视最大生命值低于施放者的目标的效果抵抗。造成的伤害与恢复量按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -4322,17 +4322,17 @@
         "_name": "Mucacha",
         "skills": {
             "S1": {
-                "name": "Ancient Spear Art",
-                "description": "Attacks with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "古代枪术",
+                "description": "以长枪攻击，并使施放者的行动值提升20%。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "Wild",
-                "description": "Increases Speed by 2% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+                "name": "野性",
+                "description": "施放者每次攻击敌人时，速度提升2%。效果最多叠加5次。"
             },
             "S3": {
-                "name": "Enlightened Blow",
-                "description": "Attacks with a fatal blow, with a 100% chance to decrease Defense for 2 turns, before increasing Speed of the caster for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "顿悟一击",
+                "description": "以致命一击攻击，有100%的几率降低防御力2回合，然后提升施放者的速度2回合。造成的伤害按施放者的速度比例提升。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -4340,17 +4340,17 @@
         "_name": "Mui",
         "skills": {
             "S1": {
-                "name": "Lash",
-                "description": "Attacks the enemy with a whip, with a 100% chance to inflict target for 1 turn."
+                "name": "鞭打",
+                "description": "以鞭子攻击敌人，有100%的几率施加1回合标记。"
             },
             "S2": {
-                "name": "Punishment",
-                "description": "Attacks all enemies by calling upon a trained monster, with a 50% chance each to inflict two bleeding effects for 2 turns and a 80% chance to inflict stun for 1 turn.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "惩罚",
+                "description": "召唤训练有素的怪物攻击所有敌人，各有50%的几率施加两层2回合出血，并有80%的几率使其眩晕1回合。",
+                "soulburn_effect": "所有技能冷却时间减少2回合。"
             },
             "S3": {
-                "name": "Grand Finale",
-                "description": "Drives monsters forward to attack all enemies and dispels two buffs. Grants increased Attack to all allies for 3 turns, and increases Combat Readiness of the caster by 30% per critical hit."
+                "name": "盛大终幕",
+                "description": "驱使怪物攻击所有敌人，并解除两个强化效果。为所有友军施加3回合攻击力提升，每造成一次暴击，使施放者的行动值提升30%。"
             }
         }
     },

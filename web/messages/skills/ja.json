@@ -4178,17 +4178,17 @@
         "_name": "Midnight Gala Lilias",
         "skills": {
             "S1": {
-                "name": "Go, Kyla!",
-                "description": "Attacks the enemy with Kyla, and recovers Health. Amount recovered increases proportional to the caster's Attack. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "行け、カイラ！",
+                "description": "カイラで敵を攻撃し、HPを回復する。発動者の攻撃力に比例して回復量がアップする。攻撃が成功すると必ずクリティカルが発生する。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Elaborate Scheme",
-                "description": "At the start of battle and at the end of the turn, grants damage limit to the caster for 1 turn. After attacking on the caster's turn, when the target's Health is 50% or less, activates Now or Never!. Now or Never!: Grants increased Attack to all allies except for the caster for 2 turns before increasing Combat Readiness by 20%, and increases Combat Readiness of the caster by 50%."
+                "name": "緻密な策略",
+                "description": "バトル開始時とターン終了時、発動者に1ターンの間ダメージ上限を付与する。発動者のターンに攻撃した後、対象のHPが50%以下なら、今しかない！を発動する。今しかない！：発動者を除く味方全員に2ターンの間攻撃力アップを付与した後、行動ゲージを20%増加させ、発動者の行動ゲージを50%増加させる。"
             },
             "S3": {
-                "name": "Take the Lead",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy by exploiting their weakness. When the target is a Hero, ignores damage reduction and damage sharing effect. When the target's max Health is greater than the caster's max Health, penetrates Defense proportionally, up to 100%. A successful attack always results in a critical hit."
+                "name": "主導権掌握",
+                "description": "発動者に3ターンの間攻撃力アップを付与した後、弱点を突いて敵を攻撃する。対象が英雄なら、ダメージ減少とダメージ分散効果を無視する。対象の最大HPが発動者より高い場合、それに比例して防御力を最大100%まで貫通する。攻撃が成功すると必ずクリティカルが発生する。"
             }
         }
     },
@@ -4196,17 +4196,17 @@
         "_name": "Milim",
         "skills": {
             "S1": {
-                "name": "Dragon Dive",
-                "description": "Attacks the enemy, recovering Health proportional to damage dealt before increasing Attack of the caster for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "ドラゴンダイブ",
+                "description": "敵を攻撃し、与ダメージに比例してHPを回復した後、1ターンの間発動者の攻撃力をアップさせる。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Dragon Eye (Milim Eye)",
-                "description": "At the start of battle and at the end of the turn, has a 100% chance to grant Dragon Eye (Milim Eye) to the caster for 1 turn. At the start of the turn, when the caster is granted Dragon Eye (Milim Eye), dispels stealth from all enemies. Ignores Effect Resistance. After attacking, when Focus is full, activates Dragon Buster. Dragon Buster (consumes 5 Focus): Attacks all enemies with overwhelming mana and inflicts 10 Soul Removal."
+                "name": "竜眼（ミリム・アイ）",
+                "description": "バトル開始時とターン終了時、100%の確率で発動者に1ターンの間竜眼（ミリム・アイ）を付与する。ターン開始時、発動者に竜眼（ミリム・アイ）があれば、敵全体の隠密を解除する。効果抵抗を無視する。攻撃後、集中が満タンならドラゴン・バスターを発動する。ドラゴン・バスター（集中5消費）：圧倒的なマナで敵全体を攻撃し、ソウルを10除去する。"
             },
             "S3": {
-                "name": "Dragon Fear",
-                "description": "Attacks the enemy by releasing mana, and when the enemy is defeated, inflicts extinction. Grants increased Evasion to the caster for 3 turns. When the enemy is not an Elite or Boss monster, ignores damage share."
+                "name": "ドラゴン・フィアー",
+                "description": "マナを解き放って敵を攻撃し、敵を倒すと消滅を付与する。発動者に3ターンの間回避アップを付与する。敵がエリートまたはボスモンスターでない場合、ダメージ分散を無視する。"
             }
         }
     },
@@ -4214,17 +4214,17 @@
         "_name": "Mirsa",
         "skills": {
             "S1": {
-                "name": "Double Edge",
-                "description": "Attacks with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "諸刃",
+                "description": "双剣で攻撃し、50%の確率で2ターンの間スピードをダウンさせる。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Brush Off",
-                "description": "Increases Evasion chance by 50%. At the moment the caster is attacked, if the caster successfully evades, decreases cooldown of the caster by 1 turn and increases Speed for 2 turns."
+                "name": "受け流し",
+                "description": "回避率が50%アップする。発動者が攻撃された瞬間、回避に成功すると、発動者のクールタイムを1ターン短縮し、2ターンの間スピードをアップさせる。"
             },
             "S3": {
-                "name": "Raid",
-                "description": "Ambushes the target, silencing them for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increase damage dealt."
+                "name": "急襲",
+                "description": "対象を奇襲し、2ターンの間沈黙を付与する。発動者のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -4232,17 +4232,17 @@
         "_name": "Mistychain",
         "skills": {
             "S1": {
-                "name": "Vampirism",
-                "description": "Claws at the enemy, absorbing some of the damage to heal all allies."
+                "name": "吸血",
+                "description": "敵を引っかき、ダメージの一部を吸収して味方全員を回復する。"
             },
             "S2": {
-                "name": "Banshee's Curse",
-                "description": "Casts a spell at the enemy, with a 100% chance each to make them unhealable and decrease Attack for 2 turns."
+                "name": "バンシーの呪い",
+                "description": "敵に呪文をかけ、それぞれ100%の確率で2ターンの間回復不可と攻撃力ダウンを付与する。"
             },
             "S3": {
-                "name": "Life Drain",
-                "description": "Attacks by absorbing the enemy's life force. Some of the damage dealt is absorbed to heal all allies. When the enemy is defeated, grants revive for 2 turns to the ally with the lowest Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "生命力吸収",
+                "description": "敵の生命力を吸収して攻撃する。与ダメージの一部を吸収して味方全員を回復する。敵を倒すと、HPが最も低い味方に2ターンの間復活を付与する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -4268,17 +4268,17 @@
         "_name": "Montmorancy",
         "skills": {
             "S1": {
-                "name": "Sleep Sorcery",
-                "description": "Attacks the enemy with water energy, with a 75% chance to put them to sleep for 1 turn."
+                "name": "睡眠魔法",
+                "description": "水の気で敵を攻撃し、75%の確率で1ターンの間睡眠状態にする。"
             },
             "S2": {
-                "name": "Purification",
-                "description": "Dispels one debuff from all allies and heals debuffed allies. Amount recovered is proportional to the ally's max Health."
+                "name": "浄化",
+                "description": "味方全員の弱体効果を一つ解除し、弱体効果を受けている味方を回復する。回復量は味方の最大HPに比例する。"
             },
             "S3": {
-                "name": "Watery Curtain",
-                "description": "Recover's ally's Health and grants immunity for 2 turns, before increasing the caster's Combat Readiness by 50%. Amount recovered increases proportional to the ally's max Health.",
-                "soulburn_effect": "Effect is granted to all allies."
+                "name": "水の帳",
+                "description": "味方のHPを回復し、2ターンの間免疫を付与した後、発動者の行動ゲージを50%増加させる。味方の最大HPに比例して回復量がアップする。",
+                "soulburn_effect": "味方全員に効果が付与される。"
             }
         }
     },
@@ -4304,17 +4304,17 @@
         "_name": "Mort",
         "skills": {
             "S1": {
-                "name": "Extermination",
-                "description": "Attacks the enemy by piercing them, with a 50% chance to decrease Defense for 2 turns. Ignores Effect Resistance of any targets with Max Health lower than the caster's Max Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "殲滅",
+                "description": "敵を貫いて攻撃し、50%の確率で2ターンの間防御力をダウンさせる。最大HPが発動者より低い対象の効果抵抗を無視する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Absolute Dignity",
-                "description": "Immune to debuffs which prevent movement. All Heroes except for the caster cannot counterattack. When an ally is attacked, has a 20% chance to counterattack, and when counterattacking, activates Sacred Blessing. Sacred Blessing: Grants a barrier (proportional to the caster's max Health) to all allies for 2 turns, and grants increased Speed to the caster for 2 turns."
+                "name": "絶対的威厳",
+                "description": "行動を妨げる弱体効果を受けない。発動者を除くすべての英雄は反撃できない。味方が攻撃されると、20%の確率で反撃し、反撃時に聖なる祝福を発動する。聖なる祝福：味方全員に2ターンの間バリア（発動者の最大HPに比例）を付与し、発動者に2ターンの間スピードアップを付与する。"
             },
             "S3": {
-                "name": "Advent: Mortelix",
-                "description": "Descends and attacks all enemies, inflicting fear for 2 turns, before recovering Health of the caster. Penetrates Defense of the enemy with the highest Max Health by 70%, and ignores Effect Resistance of any targets with Max Health lower than the caster's Max Health. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "降臨：モルテリクス",
+                "description": "降臨して敵全体を攻撃し、2ターンの間恐怖を付与した後、発動者のHPを回復する。最大HPが最も高い敵の防御力を70%貫通し、最大HPが発動者より低い対象の効果抵抗を無視する。発動者の最大HPに比例して与ダメージと回復量がアップする。"
             }
         }
     },
@@ -4322,17 +4322,17 @@
         "_name": "Mucacha",
         "skills": {
             "S1": {
-                "name": "Ancient Spear Art",
-                "description": "Attacks with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "古代槍術",
+                "description": "槍で攻撃し、発動者の行動ゲージを20%増加させる。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Wild",
-                "description": "Increases Speed by 2% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+                "name": "野生",
+                "description": "発動者が敵を攻撃するたびにスピードが2%アップする。効果は最大5回まで重複する。"
             },
             "S3": {
-                "name": "Enlightened Blow",
-                "description": "Attacks with a fatal blow, with a 100% chance to decrease Defense for 2 turns, before increasing Speed of the caster for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "悟りの一撃",
+                "description": "致命の一撃で攻撃し、100%の確率で2ターンの間防御力をダウンさせた後、2ターンの間発動者のスピードをアップさせる。発動者のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -4340,17 +4340,17 @@
         "_name": "Mui",
         "skills": {
             "S1": {
-                "name": "Lash",
-                "description": "Attacks the enemy with a whip, with a 100% chance to inflict target for 1 turn."
+                "name": "鞭打ち",
+                "description": "鞭で敵を攻撃し、100%の確率で1ターンの間標的を付与する。"
             },
             "S2": {
-                "name": "Punishment",
-                "description": "Attacks all enemies by calling upon a trained monster, with a 50% chance each to inflict two bleeding effects for 2 turns and a 80% chance to inflict stun for 1 turn.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "懲罰",
+                "description": "訓練されたモンスターを呼び出して敵全体を攻撃し、それぞれ50%の確率で2ターンの間出血を二つ付与し、80%の確率で1ターンの間気絶させる。",
+                "soulburn_effect": "すべてのスキルのクールタイムが2ターン短縮される。"
             },
             "S3": {
-                "name": "Grand Finale",
-                "description": "Drives monsters forward to attack all enemies and dispels two buffs. Grants increased Attack to all allies for 3 turns, and increases Combat Readiness of the caster by 30% per critical hit."
+                "name": "グランドフィナーレ",
+                "description": "モンスターを駆り立てて敵全体を攻撃し、強化効果を二つ解除する。味方全員に3ターンの間攻撃力アップを付与し、クリティカル一回につき発動者の行動ゲージを30%増加させる。"
             }
         }
     },

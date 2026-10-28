@@ -4178,17 +4178,17 @@
         "_name": "Midnight Gala Lilias",
         "skills": {
             "S1": {
-                "name": "Go, Kyla!",
-                "description": "Attacks the enemy with Kyla, and recovers Health. Amount recovered increases proportional to the caster's Attack. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Vai, Kyla!",
+                "description": "Ataca o inimigo com Kyla e recupera Vida. A quantidade recuperada aumenta proporcionalmente ao Ataque do conjurador. Um ataque bem-sucedido sempre resulta em acerto crítico.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Elaborate Scheme",
-                "description": "At the start of battle and at the end of the turn, grants damage limit to the caster for 1 turn. After attacking on the caster's turn, when the target's Health is 50% or less, activates Now or Never!. Now or Never!: Grants increased Attack to all allies except for the caster for 2 turns before increasing Combat Readiness by 20%, and increases Combat Readiness of the caster by 50%."
+                "name": "Plano elaborado",
+                "description": "No início da batalha e no fim do turno, concede limite de dano ao conjurador por 1 turno. Após atacar no turno do conjurador, quando a Vida do alvo é 50% ou menos, ativa Agora ou nunca!. Agora ou nunca!: concede Aumentar Ataque a todos os aliados, exceto o conjurador, por 2 turnos, depois aumenta a Prontidão de Combate deles em 20% e aumenta a Prontidão de Combate do conjurador em 50%."
             },
             "S3": {
-                "name": "Take the Lead",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy by exploiting their weakness. When the target is a Hero, ignores damage reduction and damage sharing effect. When the target's max Health is greater than the caster's max Health, penetrates Defense proportionally, up to 100%. A successful attack always results in a critical hit."
+                "name": "Tomar a dianteira",
+                "description": "Após conceder Aumentar Ataque ao conjurador por 3 turnos, ataca o inimigo explorando sua fraqueza. Quando o alvo é um herói, ignora efeitos de redução e divisão de dano. Quando a Vida máxima do alvo é maior que a do conjurador, penetra a Defesa proporcionalmente, até 100%. Um ataque bem-sucedido sempre resulta em acerto crítico."
             }
         }
     },
@@ -4196,17 +4196,17 @@
         "_name": "Milim",
         "skills": {
             "S1": {
-                "name": "Dragon Dive",
-                "description": "Attacks the enemy, recovering Health proportional to damage dealt before increasing Attack of the caster for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Mergulho do dragão",
+                "description": "Ataca o inimigo, recuperando Vida proporcionalmente ao dano causado, depois aumenta o Ataque do conjurador por 1 turno.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Dragon Eye (Milim Eye)",
-                "description": "At the start of battle and at the end of the turn, has a 100% chance to grant Dragon Eye (Milim Eye) to the caster for 1 turn. At the start of the turn, when the caster is granted Dragon Eye (Milim Eye), dispels stealth from all enemies. Ignores Effect Resistance. After attacking, when Focus is full, activates Dragon Buster. Dragon Buster (consumes 5 Focus): Attacks all enemies with overwhelming mana and inflicts 10 Soul Removal."
+                "name": "Olho do dragão (Olho de Milim)",
+                "description": "No início da batalha e no fim do turno, tem 100% de chance de conceder Olho do dragão (Olho de Milim) ao conjurador por 1 turno. No início do turno, quando o conjurador tem Olho do dragão (Olho de Milim), dissipa a furtividade de todos os inimigos. Ignora a Resistência a Efeitos. Após atacar, quando o Foco está cheio, ativa Dragon Buster. Dragon Buster (consome 5 de Foco): ataca todos os inimigos com mana avassaladora e aplica 10 de Remoção de Alma."
             },
             "S3": {
-                "name": "Dragon Fear",
-                "description": "Attacks the enemy by releasing mana, and when the enemy is defeated, inflicts extinction. Grants increased Evasion to the caster for 3 turns. When the enemy is not an Elite or Boss monster, ignores damage share."
+                "name": "Medo do dragão",
+                "description": "Ataca o inimigo liberando mana e, ao derrotá-lo, aplica extinção. Concede Aumentar Evasão ao conjurador por 3 turnos. Quando o inimigo não é um monstro Elite ou Chefe, ignora a divisão de dano."
             }
         }
     },
@@ -4214,17 +4214,17 @@
         "_name": "Mirsa",
         "skills": {
             "S1": {
-                "name": "Double Edge",
-                "description": "Attacks with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "Lâmina dupla",
+                "description": "Ataca com duas espadas, com 50% de chance de diminuir a Velocidade por 2 turnos. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Brush Off",
-                "description": "Increases Evasion chance by 50%. At the moment the caster is attacked, if the caster successfully evades, decreases cooldown of the caster by 1 turn and increases Speed for 2 turns."
+                "name": "Esquivar",
+                "description": "Aumenta a chance de Evasão em 50%. No momento em que o conjurador é atacado, se ele se esquivar com sucesso, diminui a recarga do conjurador em 1 turno e aumenta a Velocidade por 2 turnos."
             },
             "S3": {
-                "name": "Raid",
-                "description": "Ambushes the target, silencing them for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increase damage dealt."
+                "name": "Incursão",
+                "description": "Embosca o alvo, silenciando-o por 2 turnos. O dano causado aumenta proporcionalmente à Velocidade do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -4232,17 +4232,17 @@
         "_name": "Mistychain",
         "skills": {
             "S1": {
-                "name": "Vampirism",
-                "description": "Claws at the enemy, absorbing some of the damage to heal all allies."
+                "name": "Vampirismo",
+                "description": "Arranha o inimigo, absorvendo parte do dano para curar todos os aliados."
             },
             "S2": {
-                "name": "Banshee's Curse",
-                "description": "Casts a spell at the enemy, with a 100% chance each to make them unhealable and decrease Attack for 2 turns."
+                "name": "Maldição da banshee",
+                "description": "Lança um feitiço no inimigo, com 100% de chance cada de aplicar impedimento de cura e diminuir o Ataque por 2 turnos."
             },
             "S3": {
-                "name": "Life Drain",
-                "description": "Attacks by absorbing the enemy's life force. Some of the damage dealt is absorbed to heal all allies. When the enemy is defeated, grants revive for 2 turns to the ally with the lowest Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Dreno de vida",
+                "description": "Ataca absorvendo a força vital do inimigo. Parte do dano causado é absorvida para curar todos os aliados. Ao derrotar o inimigo, concede reviver por 2 turnos ao aliado com menor Vida.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -4268,17 +4268,17 @@
         "_name": "Montmorancy",
         "skills": {
             "S1": {
-                "name": "Sleep Sorcery",
-                "description": "Attacks the enemy with water energy, with a 75% chance to put them to sleep for 1 turn."
+                "name": "Feitiço do sono",
+                "description": "Ataca o inimigo com energia da água, com 75% de chance de fazê-lo dormir por 1 turno."
             },
             "S2": {
-                "name": "Purification",
-                "description": "Dispels one debuff from all allies and heals debuffed allies. Amount recovered is proportional to the ally's max Health."
+                "name": "Purificação",
+                "description": "Dissipa um efeito negativo de todos os aliados e cura os aliados com efeitos negativos. A quantidade recuperada é proporcional à Vida máxima do aliado."
             },
             "S3": {
-                "name": "Watery Curtain",
-                "description": "Recover's ally's Health and grants immunity for 2 turns, before increasing the caster's Combat Readiness by 50%. Amount recovered increases proportional to the ally's max Health.",
-                "soulburn_effect": "Effect is granted to all allies."
+                "name": "Cortina d'água",
+                "description": "Recupera a Vida de um aliado e concede imunidade por 2 turnos, depois aumenta a Prontidão de Combate do conjurador em 50%. A quantidade recuperada aumenta proporcionalmente à Vida máxima do aliado.",
+                "soulburn_effect": "O efeito é concedido a todos os aliados."
             }
         }
     },
@@ -4304,17 +4304,17 @@
         "_name": "Mort",
         "skills": {
             "S1": {
-                "name": "Extermination",
-                "description": "Attacks the enemy by piercing them, with a 50% chance to decrease Defense for 2 turns. Ignores Effect Resistance of any targets with Max Health lower than the caster's Max Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Extermínio",
+                "description": "Ataca o inimigo perfurando-o, com 50% de chance de diminuir a Defesa por 2 turnos. Ignora a Resistência a Efeitos dos alvos com Vida máxima menor que a do conjurador. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Absolute Dignity",
-                "description": "Immune to debuffs which prevent movement. All Heroes except for the caster cannot counterattack. When an ally is attacked, has a 20% chance to counterattack, and when counterattacking, activates Sacred Blessing. Sacred Blessing: Grants a barrier (proportional to the caster's max Health) to all allies for 2 turns, and grants increased Speed to the caster for 2 turns."
+                "name": "Dignidade absoluta",
+                "description": "Imune a efeitos negativos que impedem a movimentação. Nenhum herói, exceto o conjurador, pode contra-atacar. Quando um aliado é atacado, tem 20% de chance de contra-atacar e, ao contra-atacar, ativa Bênção sagrada. Bênção sagrada: concede uma barreira (proporcional à Vida máxima do conjurador) a todos os aliados por 2 turnos e concede Aumentar Velocidade ao conjurador por 2 turnos."
             },
             "S3": {
-                "name": "Advent: Mortelix",
-                "description": "Descends and attacks all enemies, inflicting fear for 2 turns, before recovering Health of the caster. Penetrates Defense of the enemy with the highest Max Health by 70%, and ignores Effect Resistance of any targets with Max Health lower than the caster's Max Health. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "Advento: Mortelix",
+                "description": "Desce e ataca todos os inimigos, aplicando medo por 2 turnos, depois recupera a Vida do conjurador. Penetra 70% da Defesa do inimigo com maior Vida máxima e ignora a Resistência a Efeitos dos alvos com Vida máxima menor que a do conjurador. O dano causado e a quantidade recuperada aumentam proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -4322,17 +4322,17 @@
         "_name": "Mucacha",
         "skills": {
             "S1": {
-                "name": "Ancient Spear Art",
-                "description": "Attacks with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "Arte antiga da lança",
+                "description": "Ataca com uma lança, aumentando a Prontidão de Combate do conjurador em 20%. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Wild",
-                "description": "Increases Speed by 2% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+                "name": "Selvagem",
+                "description": "Aumenta a Velocidade em 2% cada vez que o conjurador ataca um inimigo. O efeito acumula até 5 vezes."
             },
             "S3": {
-                "name": "Enlightened Blow",
-                "description": "Attacks with a fatal blow, with a 100% chance to decrease Defense for 2 turns, before increasing Speed of the caster for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Golpe iluminado",
+                "description": "Ataca com um golpe fatal, com 100% de chance de diminuir a Defesa por 2 turnos, depois aumenta a Velocidade do conjurador por 2 turnos. O dano causado aumenta proporcionalmente à Velocidade do conjurador.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -4340,17 +4340,17 @@
         "_name": "Mui",
         "skills": {
             "S1": {
-                "name": "Lash",
-                "description": "Attacks the enemy with a whip, with a 100% chance to inflict target for 1 turn."
+                "name": "Chicotada",
+                "description": "Ataca o inimigo com um chicote, com 100% de chance de aplicar alvo por 1 turno."
             },
             "S2": {
-                "name": "Punishment",
-                "description": "Attacks all enemies by calling upon a trained monster, with a 50% chance each to inflict two bleeding effects for 2 turns and a 80% chance to inflict stun for 1 turn.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "Punição",
+                "description": "Ataca todos os inimigos convocando um monstro treinado, com 50% de chance cada de aplicar dois efeitos de sangramento por 2 turnos e 80% de chance de atordoar por 1 turno.",
+                "soulburn_effect": "Todas as recargas de habilidades diminuem em 2 turnos."
             },
             "S3": {
-                "name": "Grand Finale",
-                "description": "Drives monsters forward to attack all enemies and dispels two buffs. Grants increased Attack to all allies for 3 turns, and increases Combat Readiness of the caster by 30% per critical hit."
+                "name": "Grande final",
+                "description": "Faz os monstros avançarem para atacar todos os inimigos e dissipa dois efeitos positivos. Concede Aumentar Ataque a todos os aliados por 3 turnos e aumenta a Prontidão de Combate do conjurador em 30% por acerto crítico."
             }
         }
     },

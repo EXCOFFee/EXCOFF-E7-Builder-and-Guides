@@ -4178,17 +4178,17 @@
         "_name": "Midnight Gala Lilias",
         "skills": {
             "S1": {
-                "name": "Go, Kyla!",
-                "description": "Attacks the enemy with Kyla, and recovers Health. Amount recovered increases proportional to the caster's Attack. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "가라, 카일라!",
+                "description": "카일라로 적을 공격하고 생명력을 회복한다. 시전자의 공격력에 비례해 회복량이 증가한다. 공격에 성공하면 반드시 치명타가 발생한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Elaborate Scheme",
-                "description": "At the start of battle and at the end of the turn, grants damage limit to the caster for 1 turn. After attacking on the caster's turn, when the target's Health is 50% or less, activates Now or Never!. Now or Never!: Grants increased Attack to all allies except for the caster for 2 turns before increasing Combat Readiness by 20%, and increases Combat Readiness of the caster by 50%."
+                "name": "치밀한 계략",
+                "description": "전투 시작 시와 턴 종료 시 시전자에게 1턴 동안 피해 한도를 부여한다. 시전자의 턴에 공격한 후 대상의 생명력이 50% 이하이면 지금이 기회다!를 발동한다. 지금이 기회다!: 시전자를 제외한 모든 아군에게 2턴 동안 공격력 증가를 부여한 뒤 행동 게이지를 20% 증가시키고, 시전자의 행동 게이지를 50% 증가시킨다."
             },
             "S3": {
-                "name": "Take the Lead",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy by exploiting their weakness. When the target is a Hero, ignores damage reduction and damage sharing effect. When the target's max Health is greater than the caster's max Health, penetrates Defense proportionally, up to 100%. A successful attack always results in a critical hit."
+                "name": "주도권 장악",
+                "description": "시전자에게 3턴 동안 공격력 증가를 부여한 뒤 약점을 파고들어 적을 공격한다. 대상이 영웅이면 피해 감소와 피해 분산 효과를 무시한다. 대상의 최대 생명력이 시전자보다 높으면 그에 비례해 방어력을 최대 100%까지 관통한다. 공격에 성공하면 반드시 치명타가 발생한다."
             }
         }
     },
@@ -4196,17 +4196,17 @@
         "_name": "Milim",
         "skills": {
             "S1": {
-                "name": "Dragon Dive",
-                "description": "Attacks the enemy, recovering Health proportional to damage dealt before increasing Attack of the caster for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "드래곤 다이브",
+                "description": "적을 공격하고 준 피해에 비례해 생명력을 회복한 뒤 1턴 동안 시전자의 공격력을 증가시킨다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Dragon Eye (Milim Eye)",
-                "description": "At the start of battle and at the end of the turn, has a 100% chance to grant Dragon Eye (Milim Eye) to the caster for 1 turn. At the start of the turn, when the caster is granted Dragon Eye (Milim Eye), dispels stealth from all enemies. Ignores Effect Resistance. After attacking, when Focus is full, activates Dragon Buster. Dragon Buster (consumes 5 Focus): Attacks all enemies with overwhelming mana and inflicts 10 Soul Removal."
+                "name": "용안 (밀림 아이)",
+                "description": "전투 시작 시와 턴 종료 시 100% 확률로 시전자에게 1턴 동안 용안(밀림 아이)을 부여한다. 턴 시작 시 시전자에게 용안(밀림 아이)이 있으면 모든 적의 은신을 해제한다. 효과 저항을 무시한다. 공격 후 집중이 가득 차 있으면 드래곤 버스터를 발동한다. 드래곤 버스터(집중 5 소모): 압도적인 마나로 모든 적을 공격하고 소울을 10 제거한다."
             },
             "S3": {
-                "name": "Dragon Fear",
-                "description": "Attacks the enemy by releasing mana, and when the enemy is defeated, inflicts extinction. Grants increased Evasion to the caster for 3 turns. When the enemy is not an Elite or Boss monster, ignores damage share."
+                "name": "드래곤 피어",
+                "description": "마나를 해방해 적을 공격하며, 적을 처치하면 소멸을 건다. 시전자에게 3턴 동안 회피 증가를 부여한다. 적이 정예 또는 보스 몬스터가 아니면 피해 분산을 무시한다."
             }
         }
     },
@@ -4214,17 +4214,17 @@
         "_name": "Mirsa",
         "skills": {
             "S1": {
-                "name": "Double Edge",
-                "description": "Attacks with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "양날",
+                "description": "쌍검으로 공격하며, 50% 확률로 2턴 동안 속도를 감소시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Brush Off",
-                "description": "Increases Evasion chance by 50%. At the moment the caster is attacked, if the caster successfully evades, decreases cooldown of the caster by 1 turn and increases Speed for 2 turns."
+                "name": "흘려 넘기기",
+                "description": "회피 확률이 50% 증가한다. 시전자가 공격받는 순간 회피에 성공하면 시전자의 재사용 대기 시간을 1턴 감소시키고 2턴 동안 속도를 증가시킨다."
             },
             "S3": {
-                "name": "Raid",
-                "description": "Ambushes the target, silencing them for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increase damage dealt."
+                "name": "급습",
+                "description": "대상을 기습해 2턴 동안 침묵을 건다. 시전자의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -4232,17 +4232,17 @@
         "_name": "Mistychain",
         "skills": {
             "S1": {
-                "name": "Vampirism",
-                "description": "Claws at the enemy, absorbing some of the damage to heal all allies."
+                "name": "흡혈",
+                "description": "적을 할퀴어 피해의 일부를 흡수해 모든 아군을 치유한다."
             },
             "S2": {
-                "name": "Banshee's Curse",
-                "description": "Casts a spell at the enemy, with a 100% chance each to make them unhealable and decrease Attack for 2 turns."
+                "name": "밴시의 저주",
+                "description": "적에게 주문을 걸어 각각 100% 확률로 2턴 동안 회복 불가와 공격력 감소를 건다."
             },
             "S3": {
-                "name": "Life Drain",
-                "description": "Attacks by absorbing the enemy's life force. Some of the damage dealt is absorbed to heal all allies. When the enemy is defeated, grants revive for 2 turns to the ally with the lowest Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "생명력 흡수",
+                "description": "적의 생명력을 흡수해 공격한다. 준 피해의 일부를 흡수해 모든 아군을 치유한다. 적을 처치하면 생명력이 가장 낮은 아군에게 2턴 동안 부활을 부여한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -4268,17 +4268,17 @@
         "_name": "Montmorancy",
         "skills": {
             "S1": {
-                "name": "Sleep Sorcery",
-                "description": "Attacks the enemy with water energy, with a 75% chance to put them to sleep for 1 turn."
+                "name": "수면 마법",
+                "description": "물의 기운으로 적을 공격하며, 75% 확률로 1턴 동안 수면에 빠뜨린다."
             },
             "S2": {
-                "name": "Purification",
-                "description": "Dispels one debuff from all allies and heals debuffed allies. Amount recovered is proportional to the ally's max Health."
+                "name": "정화",
+                "description": "모든 아군의 약화 효과를 한 개 해제하고 약화 효과가 걸린 아군을 치유한다. 회복량은 아군의 최대 생명력에 비례한다."
             },
             "S3": {
-                "name": "Watery Curtain",
-                "description": "Recover's ally's Health and grants immunity for 2 turns, before increasing the caster's Combat Readiness by 50%. Amount recovered increases proportional to the ally's max Health.",
-                "soulburn_effect": "Effect is granted to all allies."
+                "name": "물의 장막",
+                "description": "아군의 생명력을 회복하고 2턴 동안 면역을 부여한 뒤 시전자의 행동 게이지를 50% 증가시킨다. 아군의 최대 생명력에 비례해 회복량이 증가한다.",
+                "soulburn_effect": "모든 아군에게 효과가 부여된다."
             }
         }
     },
@@ -4304,17 +4304,17 @@
         "_name": "Mort",
         "skills": {
             "S1": {
-                "name": "Extermination",
-                "description": "Attacks the enemy by piercing them, with a 50% chance to decrease Defense for 2 turns. Ignores Effect Resistance of any targets with Max Health lower than the caster's Max Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "섬멸",
+                "description": "적을 꿰뚫어 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다. 최대 생명력이 시전자보다 낮은 대상의 효과 저항을 무시한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Absolute Dignity",
-                "description": "Immune to debuffs which prevent movement. All Heroes except for the caster cannot counterattack. When an ally is attacked, has a 20% chance to counterattack, and when counterattacking, activates Sacred Blessing. Sacred Blessing: Grants a barrier (proportional to the caster's max Health) to all allies for 2 turns, and grants increased Speed to the caster for 2 turns."
+                "name": "절대적 위엄",
+                "description": "행동을 막는 약화 효과에 면역이다. 시전자를 제외한 모든 영웅은 반격할 수 없다. 아군이 공격받으면 20% 확률로 반격하며, 반격 시 성스러운 축복을 발동한다. 성스러운 축복: 모든 아군에게 2턴 동안 보호막(시전자 최대 생명력 비례)을 부여하고, 시전자에게 2턴 동안 속도 증가를 부여한다."
             },
             "S3": {
-                "name": "Advent: Mortelix",
-                "description": "Descends and attacks all enemies, inflicting fear for 2 turns, before recovering Health of the caster. Penetrates Defense of the enemy with the highest Max Health by 70%, and ignores Effect Resistance of any targets with Max Health lower than the caster's Max Health. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "강림: 모르텔릭스",
+                "description": "강림해 모든 적을 공격하고 2턴 동안 공포를 건 뒤 시전자의 생명력을 회복한다. 최대 생명력이 가장 높은 적의 방어력을 70% 관통하며, 최대 생명력이 시전자보다 낮은 대상의 효과 저항을 무시한다. 시전자의 최대 생명력에 비례해 주는 피해와 회복량이 증가한다."
             }
         }
     },
@@ -4322,17 +4322,17 @@
         "_name": "Mucacha",
         "skills": {
             "S1": {
-                "name": "Ancient Spear Art",
-                "description": "Attacks with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "고대 창술",
+                "description": "창으로 공격하고 시전자의 행동 게이지를 20% 증가시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Wild",
-                "description": "Increases Speed by 2% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+                "name": "야생",
+                "description": "시전자가 적을 공격할 때마다 속도가 2% 증가한다. 효과는 최대 5회까지 중첩된다."
             },
             "S3": {
-                "name": "Enlightened Blow",
-                "description": "Attacks with a fatal blow, with a 100% chance to decrease Defense for 2 turns, before increasing Speed of the caster for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "깨달음의 일격",
+                "description": "치명적인 일격으로 공격하며, 100% 확률로 2턴 동안 방어력을 감소시킨 뒤 2턴 동안 시전자의 속도를 증가시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -4340,17 +4340,17 @@
         "_name": "Mui",
         "skills": {
             "S1": {
-                "name": "Lash",
-                "description": "Attacks the enemy with a whip, with a 100% chance to inflict target for 1 turn."
+                "name": "채찍질",
+                "description": "채찍으로 적을 공격하며, 100% 확률로 1턴 동안 표적을 건다."
             },
             "S2": {
-                "name": "Punishment",
-                "description": "Attacks all enemies by calling upon a trained monster, with a 50% chance each to inflict two bleeding effects for 2 turns and a 80% chance to inflict stun for 1 turn.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "징벌",
+                "description": "훈련된 몬스터를 불러 모든 적을 공격하며, 각각 50% 확률로 2턴 동안 출혈을 두 개 걸고 80% 확률로 1턴 동안 기절시킨다.",
+                "soulburn_effect": "모든 스킬 재사용 대기 시간이 2턴 감소한다."
             },
             "S3": {
-                "name": "Grand Finale",
-                "description": "Drives monsters forward to attack all enemies and dispels two buffs. Grants increased Attack to all allies for 3 turns, and increases Combat Readiness of the caster by 30% per critical hit."
+                "name": "그랜드 피날레",
+                "description": "몬스터를 몰아 모든 적을 공격하고 강화 효과를 두 개 해제한다. 모든 아군에게 3턴 동안 공격력 증가를 부여하고, 치명타 한 번당 시전자의 행동 게이지를 30% 증가시킨다."
             }
         }
     },
