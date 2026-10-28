@@ -1966,17 +1966,17 @@
         "_name": "Dominiel",
         "skills": {
             "S1": {
-                "name": "Hail",
-                "description": "Attacks the enemy by hurling ice fragments, with a 40% chance to inflict stun for 1 turn.",
-                "soulburn_effect": "Increases effect chance by 60%."
+                "name": "冰雹",
+                "description": "投掷冰块碎片攻击敌人，有40%的几率使其眩晕1回合。",
+                "soulburn_effect": "效果几率提升60%。"
             },
             "S2": {
-                "name": "Nixied's Grace",
-                "description": "When an ally suffers a critical hit, has a 35% chance to activate Blizzard Cape. Blizzard Cape: Using frost magic, grants a barrier (proportional to the target's max Health) and reflect to all allies for 2 turns."
+                "name": "妮克希德的恩宠",
+                "description": "友军受到暴击时，有35%的几率发动暴风雪斗篷。暴风雪斗篷：以冰霜魔法为所有友军施加2回合屏障（与目标的最大生命值成比例）与反射。"
             },
             "S3": {
-                "name": "Ice Spear",
-                "description": "Attacks all enemies with a large block of ice, with a 90% chance to stun for 1 turn and a 100% chance to decrease Combat Readiness by 15%. Increases Speed of the caster for 2 turns."
+                "name": "冰之枪",
+                "description": "以巨大冰块攻击所有敌人，有90%的几率使其眩晕1回合，并有100%的几率降低15%行动值。提升施放者的速度2回合。"
             }
         }
     },
@@ -1984,17 +1984,17 @@
         "_name": "Doris",
         "skills": {
             "S1": {
-                "name": "Mana Bullet",
-                "description": "Attacks with light energy, before a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "魔力弹",
+                "description": "以光之力攻击，然后有75%的几率降低命中率1回合。"
             },
             "S2": {
-                "name": "Celebration of Light",
-                "description": "Recites the Celebration of Light, recovering the Health of all allies and granting continuous healing and increased Defense for 2 turns. Amount recovered is proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "光之礼赞",
+                "description": "吟诵光之礼赞，恢复所有友军的生命值，并施加2回合持续恢复与防御力提升。恢复量与目标的最大生命值成比例。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             },
             "S3": {
-                "name": "Light Curtain",
-                "description": "Recovers an ally's Health and increases their Combat Readiness by 50% with light magic. Amount recovered is proportional to the target's max Health."
+                "name": "光之帷幕",
+                "description": "以光之魔法恢复一名友军的生命值，并提升其50%行动值。恢复量与目标的最大生命值成比例。"
             }
         }
     },
@@ -2002,17 +2002,17 @@
         "_name": "Dragon Bride Senya",
         "skills": {
             "S1": {
-                "name": "One Step",
-                "description": "Approaches and attacks the enemy with a spear, and increases Speed of the caster for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "一步",
+                "description": "接近敌人并以长枪攻击，提升施放者的速度1回合。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Bride's Resolve",
-                "description": "Increases max Health by 10%. When Health of the ally in the back row except for the caster is 50% or less after being attacked, dispels all debuffs from the caster and the ally in the back row, and activates Bridal Prayer. Bridal Prayer (Gains 10 Soul): Grants a barrier (proportional to the caster's max Health) to the caster and the ally in the back row for 3 turns, and grants Oath of Punishment to the caster for 3 turns before resetting skill cooldowns of the caster."
+                "name": "新娘的决意",
+                "description": "最大生命值提升10%。除施放者外的后排友军受到攻击后生命值在50%以下时，解除施放者与后排友军的所有弱化效果，并发动新娘的祈祷。新娘的祈祷（获得10魂）：为施放者与后排友军施加3回合屏障（与施放者的最大生命值成比例），为施放者施加3回合惩戒誓约，然后重置施放者的技能冷却时间。"
             },
             "S3": {
-                "name": "Overcoming Hardship",
-                "description": "Attacks the enemy by piercing them, and increases Combat Readiness of the caster and the ally in the back row by 30%. Penetrates Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. When the caster is granted Oath of Punishment, attacks all enemies.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "克服逆境",
+                "description": "贯穿敌人进行攻击，并使施放者与后排友军的行动值提升30%。穿透防御力，但无法造成暴击或重击。造成的伤害按施放者的最大生命值比例提升。施放者拥有惩戒誓约时，攻击所有敌人。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -2020,17 +2020,17 @@
         "_name": "Dragon King Sharun",
         "skills": {
             "S1": {
-                "name": "Turtle Flipping",
-                "description": "Attacks the enemy, with a 40% chance to stun for 1 turn. After attacking, when the target is stunned, increases Combat Readiness of the ally with the highest Attack except for the caster by 20%.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "翻转乌龟",
+                "description": "攻击敌人，有40%的几率使其眩晕1回合。攻击后若目标处于眩晕状态，使除施放者外攻击力最高的友军的行动值提升20%。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Lullaby for Waves",
-                "description": "At the end of someone's turn, when an ally is inflicted with a debuff which prevents movement, grants cascade to all allies and dispels all debuffs which prevent movement, before increasing Combat Readiness of the caster by 40%. Can only be activated once per turn."
+                "name": "海浪摇篮曲",
+                "description": "任意角色回合结束时，若友军身上有妨碍行动的弱化效果，为所有友军施加连锁，并解除所有妨碍行动的弱化效果，然后使施放者的行动值提升40%。每回合只能发动一次。"
             },
             "S3": {
-                "name": "Is It Going to Rain?",
-                "description": "Attacks all enemies with the power of the divine Dragon, decreasing buff durations by 2 turns before a 100% chance to inflict cannot buff and class debuff for 2 turns and decrease Combat Readiness by 20%."
+                "name": "要下雨了吗？",
+                "description": "以神龙之力攻击所有敌人，使强化效果持续时间减少2回合，然后有100%的几率施加2回合无法强化与职业弱化，并降低20%行动值。"
             }
         }
     },
@@ -2038,17 +2038,17 @@
         "_name": "Eaton",
         "skills": {
             "S1": {
-                "name": "Come Here",
-                "description": "Strongly knees the enemy to attack, with a 75% chance each to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Attacks all enemies."
+                "name": "过来",
+                "description": "以膝撞猛烈攻击敌人，有75%的几率施加1回合挑衅。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "攻击所有敌人。"
             },
             "S2": {
-                "name": "I Protect",
-                "description": "Receives 30% of damage taken by an ally in their place. Only the highest damage distribution effect will be applied. Increases max Health by 20%."
+                "name": "我来守护",
+                "description": "代替友军承受其受到伤害的30%。仅适用最高的伤害分担效果。最大生命值提升20%。"
             },
             "S3": {
-                "name": "I'm Tough",
-                "description": "Releases strong energy, dispelling all debuffs inflicted on the caster before granting a barrier and immunity for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "我很结实",
+                "description": "释放强大的力量，解除施放者身上的所有弱化效果，然后施加2回合屏障与免疫。屏障强度按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -2056,17 +2056,17 @@
         "_name": "Eda",
         "skills": {
             "S1": {
-                "name": "Icy Impact",
-                "description": "Attacks the enemy with shards of ice, with a 75% chance to decrease Defense for 1 turn."
+                "name": "冰霜冲击",
+                "description": "以冰片攻击敌人，有75%的几率降低防御力1回合。"
             },
             "S2": {
-                "name": "Cold Snap",
-                "description": "Attacks all enemies with an explosion of ice, dispelling two buffs before decreasing Combat Readiness by a random amount between 15% and 40%. Grants the caster skill nullifier once.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "寒潮",
+                "description": "以冰之爆炸攻击所有敌人，解除两个强化效果，然后使行动值随机降低15%至40%。为施放者施加一次技能伤害无效。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S3": {
-                "name": "Absolute Zero",
-                "description": "Attacks all enemies by unleashing power, with a 85% chance to inflict stun for 1 turn, and increases Combat Readiness of all allies by 20%. When this skill is not on cooldown, if an ally uses a non-attack skill, increases Combat Readiness of the caster by 20%."
+                "name": "绝对零度",
+                "description": "释放力量攻击所有敌人，有85%的几率使其眩晕1回合，并使所有友军的行动值提升20%。此技能不在冷却中时，若友军使用非攻击技能，使施放者的行动值提升20%。"
             }
         }
     },
@@ -2074,17 +2074,17 @@
         "_name": "Edward Elric",
         "skills": {
             "S1": {
-                "name": "I'll Take You On!",
-                "description": "Attacks the enemy with a transmuted blade, and grants a barrier to the caster for 1 turn. Damage dealt and barrier strength increase proportional to the caster's max Health."
+                "name": "我来对付你！",
+                "description": "以炼成的刀刃攻击敌人，并为施放者施加1回合屏障。造成的伤害与屏障强度按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Equivalent Exchange",
-                "description": "After being attacked, when the caster has a debuff, dispels one debuff and activates Rise!. Rise! can only be activated once per turn. Rise!: Attacks all enemies with ground thorns, dispelling one buff and inflicting a random debuff for 2 turns, before increasing Combat Readiness by 20%. Damage dealt increases proportional to the caster's max Health."
+                "name": "等价交换",
+                "description": "受到攻击后，若施放者有弱化效果，解除一个弱化效果并发动升起吧！。升起吧！每回合只能发动一次。升起吧！：以大地尖刺攻击所有敌人，解除一个强化效果，并施加一个随机弱化效果2回合，然后提升20%行动值。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "I'll Show You Our Difference!",
-                "description": "Attacks the enemy together with Alphonse, and increase Combat Readiness by 50%. When the enemy is not an Elite or Boss monster, damage sharing effects are ignored. Damage dealt increases proprotional to the caster's max Health. Damage dealt increases every time this skill is used and can stack up to 3 times.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "让你见识我们的差距！",
+                "description": "与阿尔冯斯一同攻击敌人，并提升50%行动值。敌人不是精英或首领怪物时，无视伤害分担效果。造成的伤害按施放者的最大生命值比例提升。每次使用此技能，造成的伤害提升，最多叠加3次。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -2092,17 +2092,17 @@
         "_name": "Elena",
         "skills": {
             "S1": {
-                "name": "Starlight's Will",
-                "description": "Attacks with the power of the stars, dispelling one debuff each from two allies.",
-                "soulburn_effect": "Dispels all debuffs from all allies."
+                "name": "星光意志",
+                "description": "以星辰之力攻击，并各解除两名友军的一个弱化效果。",
+                "soulburn_effect": "解除所有友军的所有弱化效果。"
             },
             "S2": {
-                "name": "Guardian's Authority",
-                "description": "When an ally suffers an attack that targets all allies, grants 30% damage reduction and activates Consecrated Ground. Consecrated Ground: Recovers Health of all allies proportional to the caster's max Health before increasing Combat Readiness of the caster by 30%."
+                "name": "守护者的权能",
+                "description": "友军受到以所有友军为目标的攻击时，使伤害降低30%，并发动神圣之地。神圣之地：按施放者的最大生命值比例恢复所有友军的生命值，然后使施放者的行动值提升30%。"
             },
             "S3": {
-                "name": "Eternally Shining Comet",
-                "description": "Attacks all enemies with a meteor shower, and dispels one debuff from all allies before granting invincibility for 1 turn and increased Effect Resistance for 2 turns."
+                "name": "永恒闪耀的彗星",
+                "description": "以流星雨攻击所有敌人，并解除所有友军的一个弱化效果，然后施加1回合无敌与2回合效果抵抗提升。"
             }
         }
     },

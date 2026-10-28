@@ -1966,17 +1966,17 @@
         "_name": "Dominiel",
         "skills": {
             "S1": {
-                "name": "Hail",
-                "description": "Attacks the enemy by hurling ice fragments, with a 40% chance to inflict stun for 1 turn.",
-                "soulburn_effect": "Increases effect chance by 60%."
+                "name": "우박",
+                "description": "얼음 조각을 던져 적을 공격하며, 40% 확률로 1턴 동안 기절시킨다.",
+                "soulburn_effect": "효과 발동 확률이 60% 증가한다."
             },
             "S2": {
-                "name": "Nixied's Grace",
-                "description": "When an ally suffers a critical hit, has a 35% chance to activate Blizzard Cape. Blizzard Cape: Using frost magic, grants a barrier (proportional to the target's max Health) and reflect to all allies for 2 turns."
+                "name": "닉시드의 은총",
+                "description": "아군이 치명타를 받으면 35% 확률로 눈보라 망토를 발동한다. 눈보라 망토: 서리 마법으로 모든 아군에게 2턴 동안 보호막(대상 최대 생명력 비례)과 반사를 부여한다."
             },
             "S3": {
-                "name": "Ice Spear",
-                "description": "Attacks all enemies with a large block of ice, with a 90% chance to stun for 1 turn and a 100% chance to decrease Combat Readiness by 15%. Increases Speed of the caster for 2 turns."
+                "name": "얼음 창",
+                "description": "거대한 얼음 덩어리로 모든 적을 공격하며, 90% 확률로 1턴 동안 기절시키고 100% 확률로 행동 게이지를 15% 감소시킨다. 2턴 동안 시전자의 속도를 증가시킨다."
             }
         }
     },
@@ -1984,17 +1984,17 @@
         "_name": "Doris",
         "skills": {
             "S1": {
-                "name": "Mana Bullet",
-                "description": "Attacks with light energy, before a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "마나 탄환",
+                "description": "빛의 기운으로 공격한 뒤 75% 확률로 1턴 동안 명중률을 감소시킨다."
             },
             "S2": {
-                "name": "Celebration of Light",
-                "description": "Recites the Celebration of Light, recovering the Health of all allies and granting continuous healing and increased Defense for 2 turns. Amount recovered is proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "빛의 찬미",
+                "description": "빛의 찬미를 읊어 모든 아군의 생명력을 회복하고 2턴 동안 지속 회복과 방어력 증가를 부여한다. 회복량은 대상의 최대 생명력에 비례한다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장된다."
             },
             "S3": {
-                "name": "Light Curtain",
-                "description": "Recovers an ally's Health and increases their Combat Readiness by 50% with light magic. Amount recovered is proportional to the target's max Health."
+                "name": "빛의 장막",
+                "description": "빛의 마법으로 아군 한 명의 생명력을 회복하고 행동 게이지를 50% 증가시킨다. 회복량은 대상의 최대 생명력에 비례한다."
             }
         }
     },
@@ -2002,17 +2002,17 @@
         "_name": "Dragon Bride Senya",
         "skills": {
             "S1": {
-                "name": "One Step",
-                "description": "Approaches and attacks the enemy with a spear, and increases Speed of the caster for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "한 걸음",
+                "description": "다가가 창으로 적을 공격하고 1턴 동안 시전자의 속도를 증가시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Bride's Resolve",
-                "description": "Increases max Health by 10%. When Health of the ally in the back row except for the caster is 50% or less after being attacked, dispels all debuffs from the caster and the ally in the back row, and activates Bridal Prayer. Bridal Prayer (Gains 10 Soul): Grants a barrier (proportional to the caster's max Health) to the caster and the ally in the back row for 3 turns, and grants Oath of Punishment to the caster for 3 turns before resetting skill cooldowns of the caster."
+                "name": "신부의 결의",
+                "description": "최대 생명력이 10% 증가한다. 시전자를 제외한 후열 아군이 공격받은 후 생명력이 50% 이하이면 시전자와 후열 아군의 약화 효과를 모두 해제하고 신부의 기도를 발동한다. 신부의 기도(소울 10 획득): 시전자와 후열 아군에게 3턴 동안 보호막(시전자 최대 생명력 비례)을 부여하고, 시전자에게 3턴 동안 징벌의 맹세를 부여한 뒤 시전자의 스킬 재사용 대기 시간을 초기화한다."
             },
             "S3": {
-                "name": "Overcoming Hardship",
-                "description": "Attacks the enemy by piercing them, and increases Combat Readiness of the caster and the ally in the back row by 30%. Penetrates Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. When the caster is granted Oath of Punishment, attacks all enemies.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "역경 극복",
+                "description": "적을 꿰뚫어 공격하고 시전자와 후열 아군의 행동 게이지를 30% 증가시킨다. 방어력을 관통하지만 치명타나 강타가 발생하지 않는다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 시전자에게 징벌의 맹세가 있으면 모든 적을 공격한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -2020,17 +2020,17 @@
         "_name": "Dragon King Sharun",
         "skills": {
             "S1": {
-                "name": "Turtle Flipping",
-                "description": "Attacks the enemy, with a 40% chance to stun for 1 turn. After attacking, when the target is stunned, increases Combat Readiness of the ally with the highest Attack except for the caster by 20%.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "거북이 뒤집기",
+                "description": "적을 공격하며, 40% 확률로 1턴 동안 기절시킨다. 공격 후 대상이 기절 상태이면 시전자를 제외하고 공격력이 가장 높은 아군의 행동 게이지를 20% 증가시킨다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Lullaby for Waves",
-                "description": "At the end of someone's turn, when an ally is inflicted with a debuff which prevents movement, grants cascade to all allies and dispels all debuffs which prevent movement, before increasing Combat Readiness of the caster by 40%. Can only be activated once per turn."
+                "name": "파도의 자장가",
+                "description": "누군가의 턴 종료 시 아군에게 행동을 막는 약화 효과가 걸려 있으면 모든 아군에게 연쇄를 부여하고 행동을 막는 약화 효과를 모두 해제한 뒤 시전자의 행동 게이지를 40% 증가시킨다. 턴당 한 번만 발동할 수 있다."
             },
             "S3": {
-                "name": "Is It Going to Rain?",
-                "description": "Attacks all enemies with the power of the divine Dragon, decreasing buff durations by 2 turns before a 100% chance to inflict cannot buff and class debuff for 2 turns and decrease Combat Readiness by 20%."
+                "name": "비가 오려나?",
+                "description": "신룡의 힘으로 모든 적을 공격해 강화 효과의 지속 시간을 2턴 감소시킨 뒤 100% 확률로 2턴 동안 강화 불가와 직업 약화를 걸고 행동 게이지를 20% 감소시킨다."
             }
         }
     },
@@ -2038,17 +2038,17 @@
         "_name": "Eaton",
         "skills": {
             "S1": {
-                "name": "Come Here",
-                "description": "Strongly knees the enemy to attack, with a 75% chance each to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Attacks all enemies."
+                "name": "이리 와",
+                "description": "무릎으로 적을 강하게 공격하며, 75% 확률로 1턴 동안 도발을 건다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "모든 적을 공격한다."
             },
             "S2": {
-                "name": "I Protect",
-                "description": "Receives 30% of damage taken by an ally in their place. Only the highest damage distribution effect will be applied. Increases max Health by 20%."
+                "name": "내가 지킨다",
+                "description": "아군이 받는 피해의 30%를 대신 받는다. 가장 높은 피해 분산 효과만 적용된다. 최대 생명력이 20% 증가한다."
             },
             "S3": {
-                "name": "I'm Tough",
-                "description": "Releases strong energy, dispelling all debuffs inflicted on the caster before granting a barrier and immunity for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "난 튼튼해",
+                "description": "강한 기운을 방출해 시전자에게 걸린 약화 효과를 모두 해제한 뒤 2턴 동안 보호막과 면역을 부여한다. 시전자의 최대 생명력에 비례해 보호막 강도가 증가한다."
             }
         }
     },
@@ -2056,17 +2056,17 @@
         "_name": "Eda",
         "skills": {
             "S1": {
-                "name": "Icy Impact",
-                "description": "Attacks the enemy with shards of ice, with a 75% chance to decrease Defense for 1 turn."
+                "name": "얼음 충격",
+                "description": "얼음 파편으로 적을 공격하며, 75% 확률로 1턴 동안 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Cold Snap",
-                "description": "Attacks all enemies with an explosion of ice, dispelling two buffs before decreasing Combat Readiness by a random amount between 15% and 40%. Grants the caster skill nullifier once.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "한파",
+                "description": "얼음 폭발로 모든 적을 공격해 강화 효과를 두 개 해제한 뒤 행동 게이지를 15%~40% 사이에서 무작위로 감소시킨다. 시전자에게 스킬 피해 무효를 한 번 부여한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Absolute Zero",
-                "description": "Attacks all enemies by unleashing power, with a 85% chance to inflict stun for 1 turn, and increases Combat Readiness of all allies by 20%. When this skill is not on cooldown, if an ally uses a non-attack skill, increases Combat Readiness of the caster by 20%."
+                "name": "절대 영도",
+                "description": "힘을 해방해 모든 적을 공격하며, 85% 확률로 1턴 동안 기절시키고 모든 아군의 행동 게이지를 20% 증가시킨다. 이 스킬이 재사용 대기 중이 아닐 때 아군이 공격이 아닌 스킬을 사용하면 시전자의 행동 게이지를 20% 증가시킨다."
             }
         }
     },
@@ -2074,17 +2074,17 @@
         "_name": "Edward Elric",
         "skills": {
             "S1": {
-                "name": "I'll Take You On!",
-                "description": "Attacks the enemy with a transmuted blade, and grants a barrier to the caster for 1 turn. Damage dealt and barrier strength increase proportional to the caster's max Health."
+                "name": "상대해 주지!",
+                "description": "연성한 칼날로 적을 공격하고 시전자에게 1턴 동안 보호막을 부여한다. 시전자의 최대 생명력에 비례해 주는 피해와 보호막 강도가 증가한다."
             },
             "S2": {
-                "name": "Equivalent Exchange",
-                "description": "After being attacked, when the caster has a debuff, dispels one debuff and activates Rise!. Rise! can only be activated once per turn. Rise!: Attacks all enemies with ground thorns, dispelling one buff and inflicting a random debuff for 2 turns, before increasing Combat Readiness by 20%. Damage dealt increases proportional to the caster's max Health."
+                "name": "등가 교환",
+                "description": "공격받은 후 시전자에게 약화 효과가 있으면 약화 효과를 한 개 해제하고 솟아라!를 발동한다. 솟아라!는 턴당 한 번만 발동할 수 있다. 솟아라!: 대지의 가시로 모든 적을 공격해 강화 효과를 한 개 해제하고 2턴 동안 무작위 약화 효과를 건 뒤 행동 게이지를 20% 증가시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "I'll Show You Our Difference!",
-                "description": "Attacks the enemy together with Alphonse, and increase Combat Readiness by 50%. When the enemy is not an Elite or Boss monster, damage sharing effects are ignored. Damage dealt increases proprotional to the caster's max Health. Damage dealt increases every time this skill is used and can stack up to 3 times.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "실력 차이를 보여 주지!",
+                "description": "알폰스와 함께 적을 공격하고 행동 게이지를 50% 증가시킨다. 적이 정예 또는 보스 몬스터가 아니면 피해 분산 효과를 무시한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 이 스킬을 사용할 때마다 주는 피해가 증가하며, 최대 3회까지 중첩된다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -2092,17 +2092,17 @@
         "_name": "Elena",
         "skills": {
             "S1": {
-                "name": "Starlight's Will",
-                "description": "Attacks with the power of the stars, dispelling one debuff each from two allies.",
-                "soulburn_effect": "Dispels all debuffs from all allies."
+                "name": "별빛의 의지",
+                "description": "별의 힘으로 공격하고 아군 두 명의 약화 효과를 각각 한 개 해제한다.",
+                "soulburn_effect": "모든 아군의 약화 효과를 모두 해제한다."
             },
             "S2": {
-                "name": "Guardian's Authority",
-                "description": "When an ally suffers an attack that targets all allies, grants 30% damage reduction and activates Consecrated Ground. Consecrated Ground: Recovers Health of all allies proportional to the caster's max Health before increasing Combat Readiness of the caster by 30%."
+                "name": "수호자의 권능",
+                "description": "아군이 모든 아군을 대상으로 하는 공격을 받으면 피해를 30% 감소시키고 신성한 땅을 발동한다. 신성한 땅: 시전자의 최대 생명력에 비례해 모든 아군의 생명력을 회복한 뒤 시전자의 행동 게이지를 30% 증가시킨다."
             },
             "S3": {
-                "name": "Eternally Shining Comet",
-                "description": "Attacks all enemies with a meteor shower, and dispels one debuff from all allies before granting invincibility for 1 turn and increased Effect Resistance for 2 turns."
+                "name": "영원히 빛나는 혜성",
+                "description": "유성우로 모든 적을 공격하고 모든 아군의 약화 효과를 한 개 해제한 뒤 1턴 동안 무적을, 2턴 동안 효과 저항 증가를 부여한다."
             }
         }
     },

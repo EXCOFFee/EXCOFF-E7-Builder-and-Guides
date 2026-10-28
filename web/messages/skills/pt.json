@@ -1966,17 +1966,17 @@
         "_name": "Dominiel",
         "skills": {
             "S1": {
-                "name": "Hail",
-                "description": "Attacks the enemy by hurling ice fragments, with a 40% chance to inflict stun for 1 turn.",
-                "soulburn_effect": "Increases effect chance by 60%."
+                "name": "Granizo",
+                "description": "Ataca o inimigo arremessando fragmentos de gelo, com 40% de chance de atordoar por 1 turno.",
+                "soulburn_effect": "Aumenta a chance do efeito em 60%."
             },
             "S2": {
-                "name": "Nixied's Grace",
-                "description": "When an ally suffers a critical hit, has a 35% chance to activate Blizzard Cape. Blizzard Cape: Using frost magic, grants a barrier (proportional to the target's max Health) and reflect to all allies for 2 turns."
+                "name": "Graça de Nixied",
+                "description": "Quando um aliado sofre um acerto crítico, tem 35% de chance de ativar Capa de nevasca. Capa de nevasca: usando magia de gelo, concede uma barreira (proporcional à Vida máxima do alvo) e reflexão a todos os aliados por 2 turnos."
             },
             "S3": {
-                "name": "Ice Spear",
-                "description": "Attacks all enemies with a large block of ice, with a 90% chance to stun for 1 turn and a 100% chance to decrease Combat Readiness by 15%. Increases Speed of the caster for 2 turns."
+                "name": "Lança de gelo",
+                "description": "Ataca todos os inimigos com um grande bloco de gelo, com 90% de chance de atordoar por 1 turno e 100% de chance de diminuir a Prontidão de Combate em 15%. Aumenta a Velocidade do conjurador por 2 turnos."
             }
         }
     },
@@ -1984,17 +1984,17 @@
         "_name": "Doris",
         "skills": {
             "S1": {
-                "name": "Mana Bullet",
-                "description": "Attacks with light energy, before a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "Projétil de mana",
+                "description": "Ataca com energia da luz, depois com 75% de chance diminui a Precisão por 1 turno."
             },
             "S2": {
-                "name": "Celebration of Light",
-                "description": "Recites the Celebration of Light, recovering the Health of all allies and granting continuous healing and increased Defense for 2 turns. Amount recovered is proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Celebração da luz",
+                "description": "Recita a Celebração da luz, recuperando a Vida de todos os aliados e concedendo cura contínua e Aumentar Defesa por 2 turnos. A quantidade recuperada é proporcional à Vida máxima do alvo.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             },
             "S3": {
-                "name": "Light Curtain",
-                "description": "Recovers an ally's Health and increases their Combat Readiness by 50% with light magic. Amount recovered is proportional to the target's max Health."
+                "name": "Cortina de luz",
+                "description": "Com magia da luz, recupera a Vida de um aliado e aumenta sua Prontidão de Combate em 50%. A quantidade recuperada é proporcional à Vida máxima do alvo."
             }
         }
     },
@@ -2002,17 +2002,17 @@
         "_name": "Dragon Bride Senya",
         "skills": {
             "S1": {
-                "name": "One Step",
-                "description": "Approaches and attacks the enemy with a spear, and increases Speed of the caster for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "Um passo",
+                "description": "Aproxima-se e ataca o inimigo com uma lança, e aumenta a Velocidade do conjurador por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Bride's Resolve",
-                "description": "Increases max Health by 10%. When Health of the ally in the back row except for the caster is 50% or less after being attacked, dispels all debuffs from the caster and the ally in the back row, and activates Bridal Prayer. Bridal Prayer (Gains 10 Soul): Grants a barrier (proportional to the caster's max Health) to the caster and the ally in the back row for 3 turns, and grants Oath of Punishment to the caster for 3 turns before resetting skill cooldowns of the caster."
+                "name": "Determinação da noiva",
+                "description": "Aumenta a Vida máxima em 10%. Quando a Vida do aliado na fileira de trás, exceto o conjurador, fica em 50% ou menos após ser atacado, dissipa todos os efeitos negativos do conjurador e do aliado na fileira de trás e ativa Prece nupcial. Prece nupcial (ganha 10 de Alma): concede uma barreira (proporcional à Vida máxima do conjurador) ao conjurador e ao aliado na fileira de trás por 3 turnos e concede Juramento de punição ao conjurador por 3 turnos, depois reinicia as recargas de habilidades do conjurador."
             },
             "S3": {
-                "name": "Overcoming Hardship",
-                "description": "Attacks the enemy by piercing them, and increases Combat Readiness of the caster and the ally in the back row by 30%. Penetrates Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. When the caster is granted Oath of Punishment, attacks all enemies.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Superando a adversidade",
+                "description": "Ataca o inimigo perfurando-o e aumenta a Prontidão de Combate do conjurador e do aliado na fileira de trás em 30%. Penetra a Defesa, mas não pode causar acerto crítico nem golpe pesado. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Quando o conjurador tem Juramento de punição, ataca todos os inimigos.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -2020,17 +2020,17 @@
         "_name": "Dragon King Sharun",
         "skills": {
             "S1": {
-                "name": "Turtle Flipping",
-                "description": "Attacks the enemy, with a 40% chance to stun for 1 turn. After attacking, when the target is stunned, increases Combat Readiness of the ally with the highest Attack except for the caster by 20%.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Virar a tartaruga",
+                "description": "Ataca o inimigo, com 40% de chance de atordoar por 1 turno. Após atacar, quando o alvo está atordoado, aumenta em 20% a Prontidão de Combate do aliado com maior Ataque, exceto o conjurador.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Lullaby for Waves",
-                "description": "At the end of someone's turn, when an ally is inflicted with a debuff which prevents movement, grants cascade to all allies and dispels all debuffs which prevent movement, before increasing Combat Readiness of the caster by 40%. Can only be activated once per turn."
+                "name": "Canção de ninar para as ondas",
+                "description": "No fim do turno de qualquer um, quando um aliado tem um efeito negativo que impede a movimentação, concede cascata a todos os aliados e dissipa todos os efeitos negativos que impedem a movimentação, depois aumenta a Prontidão de Combate do conjurador em 40%. Só pode ser ativado uma vez por turno."
             },
             "S3": {
-                "name": "Is It Going to Rain?",
-                "description": "Attacks all enemies with the power of the divine Dragon, decreasing buff durations by 2 turns before a 100% chance to inflict cannot buff and class debuff for 2 turns and decrease Combat Readiness by 20%."
+                "name": "Será que vai chover?",
+                "description": "Ataca todos os inimigos com o poder do Dragão divino, diminuindo a duração dos efeitos positivos em 2 turnos, depois com 100% de chance aplica impedimento de efeitos positivos e desventagem de classe por 2 turnos e diminui a Prontidão de Combate em 20%."
             }
         }
     },
@@ -2038,17 +2038,17 @@
         "_name": "Eaton",
         "skills": {
             "S1": {
-                "name": "Come Here",
-                "description": "Strongly knees the enemy to attack, with a 75% chance each to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Attacks all enemies."
+                "name": "Venha cá",
+                "description": "Acerta uma joelhada forte no inimigo, com 75% de chance de provocá-lo por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Ataca todos os inimigos."
             },
             "S2": {
-                "name": "I Protect",
-                "description": "Receives 30% of damage taken by an ally in their place. Only the highest damage distribution effect will be applied. Increases max Health by 20%."
+                "name": "Eu protejo",
+                "description": "Recebe no lugar de um aliado 30% do dano que ele sofreria. Só o efeito de distribuição de dano mais alto é aplicado. Aumenta a Vida máxima em 20%."
             },
             "S3": {
-                "name": "I'm Tough",
-                "description": "Releases strong energy, dispelling all debuffs inflicted on the caster before granting a barrier and immunity for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "Eu sou forte",
+                "description": "Libera uma energia forte, dissipando todos os efeitos negativos do conjurador, depois concede uma barreira e imunidade por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -2056,17 +2056,17 @@
         "_name": "Eda",
         "skills": {
             "S1": {
-                "name": "Icy Impact",
-                "description": "Attacks the enemy with shards of ice, with a 75% chance to decrease Defense for 1 turn."
+                "name": "Impacto gélido",
+                "description": "Ataca o inimigo com estilhaços de gelo, com 75% de chance de diminuir a Defesa por 1 turno."
             },
             "S2": {
-                "name": "Cold Snap",
-                "description": "Attacks all enemies with an explosion of ice, dispelling two buffs before decreasing Combat Readiness by a random amount between 15% and 40%. Grants the caster skill nullifier once.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Onda de frio",
+                "description": "Ataca todos os inimigos com uma explosão de gelo, dissipando dois efeitos positivos, depois diminui a Prontidão de Combate em uma quantidade aleatória entre 15% e 40%. Concede Anulação de habilidade uma vez ao conjurador.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S3": {
-                "name": "Absolute Zero",
-                "description": "Attacks all enemies by unleashing power, with a 85% chance to inflict stun for 1 turn, and increases Combat Readiness of all allies by 20%. When this skill is not on cooldown, if an ally uses a non-attack skill, increases Combat Readiness of the caster by 20%."
+                "name": "Zero absoluto",
+                "description": "Ataca todos os inimigos liberando poder, com 85% de chance de atordoar por 1 turno, e aumenta a Prontidão de Combate de todos os aliados em 20%. Quando esta habilidade não está em recarga, se um aliado usar uma habilidade que não é de ataque, aumenta a Prontidão de Combate do conjurador em 20%."
             }
         }
     },
@@ -2074,17 +2074,17 @@
         "_name": "Edward Elric",
         "skills": {
             "S1": {
-                "name": "I'll Take You On!",
-                "description": "Attacks the enemy with a transmuted blade, and grants a barrier to the caster for 1 turn. Damage dealt and barrier strength increase proportional to the caster's max Health."
+                "name": "Eu encaro você!",
+                "description": "Ataca o inimigo com uma lâmina transmutada e concede uma barreira ao conjurador por 1 turno. O dano causado e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Equivalent Exchange",
-                "description": "After being attacked, when the caster has a debuff, dispels one debuff and activates Rise!. Rise! can only be activated once per turn. Rise!: Attacks all enemies with ground thorns, dispelling one buff and inflicting a random debuff for 2 turns, before increasing Combat Readiness by 20%. Damage dealt increases proportional to the caster's max Health."
+                "name": "Troca equivalente",
+                "description": "Após ser atacado, quando o conjurador tem um efeito negativo, dissipa um efeito negativo e ativa Erga-se!. Erga-se! só pode ser ativado uma vez por turno. Erga-se!: ataca todos os inimigos com espinhos de terra, dissipando um efeito positivo e aplicando um efeito negativo aleatório por 2 turnos, depois aumenta a Prontidão de Combate em 20%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "I'll Show You Our Difference!",
-                "description": "Attacks the enemy together with Alphonse, and increase Combat Readiness by 50%. When the enemy is not an Elite or Boss monster, damage sharing effects are ignored. Damage dealt increases proprotional to the caster's max Health. Damage dealt increases every time this skill is used and can stack up to 3 times.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Vou mostrar nossa diferença!",
+                "description": "Ataca o inimigo junto com Alphonse e aumenta a Prontidão de Combate em 50%. Quando o inimigo não é um monstro Elite ou Chefe, os efeitos de divisão de dano são ignorados. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. O dano causado aumenta cada vez que esta habilidade é usada e acumula até 3 vezes.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -2092,17 +2092,17 @@
         "_name": "Elena",
         "skills": {
             "S1": {
-                "name": "Starlight's Will",
-                "description": "Attacks with the power of the stars, dispelling one debuff each from two allies.",
-                "soulburn_effect": "Dispels all debuffs from all allies."
+                "name": "Vontade da luz estelar",
+                "description": "Ataca com o poder das estrelas, dissipando um efeito negativo de cada um de dois aliados.",
+                "soulburn_effect": "Dissipa todos os efeitos negativos de todos os aliados."
             },
             "S2": {
-                "name": "Guardian's Authority",
-                "description": "When an ally suffers an attack that targets all allies, grants 30% damage reduction and activates Consecrated Ground. Consecrated Ground: Recovers Health of all allies proportional to the caster's max Health before increasing Combat Readiness of the caster by 30%."
+                "name": "Autoridade do guardião",
+                "description": "Quando um aliado sofre um ataque que mira todos os aliados, concede 30% de redução de dano e ativa Solo consagrado. Solo consagrado: recupera a Vida de todos os aliados proporcionalmente à Vida máxima do conjurador, depois aumenta a Prontidão de Combate do conjurador em 30%."
             },
             "S3": {
-                "name": "Eternally Shining Comet",
-                "description": "Attacks all enemies with a meteor shower, and dispels one debuff from all allies before granting invincibility for 1 turn and increased Effect Resistance for 2 turns."
+                "name": "Cometa eternamente brilhante",
+                "description": "Ataca todos os inimigos com uma chuva de meteoros e dissipa um efeito negativo de todos os aliados, depois concede invencibilidade por 1 turno e Aumentar Resistência a Efeitos por 2 turnos."
             }
         }
     },

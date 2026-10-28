@@ -1966,17 +1966,17 @@
         "_name": "Dominiel",
         "skills": {
             "S1": {
-                "name": "Hail",
-                "description": "Attacks the enemy by hurling ice fragments, with a 40% chance to inflict stun for 1 turn.",
-                "soulburn_effect": "Increases effect chance by 60%."
+                "name": "雹",
+                "description": "氷の欠片を投げつけて敵を攻撃し、40%の確率で1ターンの間気絶させる。",
+                "soulburn_effect": "効果発動確率が60%アップする。"
             },
             "S2": {
-                "name": "Nixied's Grace",
-                "description": "When an ally suffers a critical hit, has a 35% chance to activate Blizzard Cape. Blizzard Cape: Using frost magic, grants a barrier (proportional to the target's max Health) and reflect to all allies for 2 turns."
+                "name": "ニクシードの恩寵",
+                "description": "味方がクリティカルを受けると、35%の確率で吹雪のマントを発動する。吹雪のマント：霜の魔法で、味方全員に2ターンの間バリア（対象の最大HPに比例）と反射を付与する。"
             },
             "S3": {
-                "name": "Ice Spear",
-                "description": "Attacks all enemies with a large block of ice, with a 90% chance to stun for 1 turn and a 100% chance to decrease Combat Readiness by 15%. Increases Speed of the caster for 2 turns."
+                "name": "氷の槍",
+                "description": "巨大な氷塊で敵全体を攻撃し、90%の確率で1ターンの間気絶させ、100%の確率で行動ゲージを15%減少させる。2ターンの間発動者のスピードをアップさせる。"
             }
         }
     },
@@ -1984,17 +1984,17 @@
         "_name": "Doris",
         "skills": {
             "S1": {
-                "name": "Mana Bullet",
-                "description": "Attacks with light energy, before a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "マナ弾",
+                "description": "光の気で攻撃した後、75%の確率で1ターンの間命中率をダウンさせる。"
             },
             "S2": {
-                "name": "Celebration of Light",
-                "description": "Recites the Celebration of Light, recovering the Health of all allies and granting continuous healing and increased Defense for 2 turns. Amount recovered is proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "光の賛美",
+                "description": "光の賛美を唱え、味方全員のHPを回復し、2ターンの間持続回復と防御力アップを付与する。回復量は対象の最大HPに比例する。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             },
             "S3": {
-                "name": "Light Curtain",
-                "description": "Recovers an ally's Health and increases their Combat Readiness by 50% with light magic. Amount recovered is proportional to the target's max Health."
+                "name": "光の帳",
+                "description": "光の魔法で味方一人のHPを回復し、行動ゲージを50%増加させる。回復量は対象の最大HPに比例する。"
             }
         }
     },
@@ -2002,17 +2002,17 @@
         "_name": "Dragon Bride Senya",
         "skills": {
             "S1": {
-                "name": "One Step",
-                "description": "Approaches and attacks the enemy with a spear, and increases Speed of the caster for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "一歩",
+                "description": "接近して槍で敵を攻撃し、1ターンの間発動者のスピードをアップさせる。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Bride's Resolve",
-                "description": "Increases max Health by 10%. When Health of the ally in the back row except for the caster is 50% or less after being attacked, dispels all debuffs from the caster and the ally in the back row, and activates Bridal Prayer. Bridal Prayer (Gains 10 Soul): Grants a barrier (proportional to the caster's max Health) to the caster and the ally in the back row for 3 turns, and grants Oath of Punishment to the caster for 3 turns before resetting skill cooldowns of the caster."
+                "name": "花嫁の決意",
+                "description": "最大HPが10%アップする。発動者を除く後列の味方が攻撃された後HPが50%以下なら、発動者と後列の味方の弱体効果をすべて解除し、花嫁の祈りを発動する。花嫁の祈り（ソウル10獲得）：発動者と後列の味方に3ターンの間バリア（発動者の最大HPに比例）を付与し、発動者に3ターンの間懲罰の誓いを付与した後、発動者のスキルのクールタイムをリセットする。"
             },
             "S3": {
-                "name": "Overcoming Hardship",
-                "description": "Attacks the enemy by piercing them, and increases Combat Readiness of the caster and the ally in the back row by 30%. Penetrates Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. When the caster is granted Oath of Punishment, attacks all enemies.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "逆境の克服",
+                "description": "敵を貫いて攻撃し、発動者と後列の味方の行動ゲージを30%増加させる。防御力を貫通するが、クリティカルや強打は発生しない。発動者の最大HPに比例して与ダメージがアップする。発動者に懲罰の誓いがあれば、敵全体を攻撃する。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -2020,17 +2020,17 @@
         "_name": "Dragon King Sharun",
         "skills": {
             "S1": {
-                "name": "Turtle Flipping",
-                "description": "Attacks the enemy, with a 40% chance to stun for 1 turn. After attacking, when the target is stunned, increases Combat Readiness of the ally with the highest Attack except for the caster by 20%.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "亀ひっくり返し",
+                "description": "敵を攻撃し、40%の確率で1ターンの間気絶させる。攻撃後、対象が気絶状態なら、発動者を除いて攻撃力が最も高い味方の行動ゲージを20%増加させる。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Lullaby for Waves",
-                "description": "At the end of someone's turn, when an ally is inflicted with a debuff which prevents movement, grants cascade to all allies and dispels all debuffs which prevent movement, before increasing Combat Readiness of the caster by 40%. Can only be activated once per turn."
+                "name": "波の子守唄",
+                "description": "誰かのターン終了時、味方に行動を妨げる弱体効果があれば、味方全員に連鎖を付与し、行動を妨げる弱体効果をすべて解除した後、発動者の行動ゲージを40%増加させる。ターンごとに一度のみ発動できる。"
             },
             "S3": {
-                "name": "Is It Going to Rain?",
-                "description": "Attacks all enemies with the power of the divine Dragon, decreasing buff durations by 2 turns before a 100% chance to inflict cannot buff and class debuff for 2 turns and decrease Combat Readiness by 20%."
+                "name": "雨が降るかな？",
+                "description": "神竜の力で敵全体を攻撃し、強化効果の持続時間を2ターン減少させた後、100%の確率で2ターンの間強化不可と職業弱体を付与し、行動ゲージを20%減少させる。"
             }
         }
     },
@@ -2038,17 +2038,17 @@
         "_name": "Eaton",
         "skills": {
             "S1": {
-                "name": "Come Here",
-                "description": "Strongly knees the enemy to attack, with a 75% chance each to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Attacks all enemies."
+                "name": "こっちへ来い",
+                "description": "膝で敵を強く攻撃し、75%の確率で1ターンの間挑発を付与する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "敵全体を攻撃する。"
             },
             "S2": {
-                "name": "I Protect",
-                "description": "Receives 30% of damage taken by an ally in their place. Only the highest damage distribution effect will be applied. Increases max Health by 20%."
+                "name": "俺が守る",
+                "description": "味方が受けるダメージの30%を代わりに受ける。最も高いダメージ分散効果のみ適用される。最大HPが20%アップする。"
             },
             "S3": {
-                "name": "I'm Tough",
-                "description": "Releases strong energy, dispelling all debuffs inflicted on the caster before granting a barrier and immunity for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "俺は頑丈だ",
+                "description": "強い気を放ち、発動者の弱体効果をすべて解除した後、2ターンの間バリアと免疫を付与する。発動者の最大HPに比例してバリアの強度がアップする。"
             }
         }
     },
@@ -2056,17 +2056,17 @@
         "_name": "Eda",
         "skills": {
             "S1": {
-                "name": "Icy Impact",
-                "description": "Attacks the enemy with shards of ice, with a 75% chance to decrease Defense for 1 turn."
+                "name": "氷の衝撃",
+                "description": "氷の破片で敵を攻撃し、75%の確率で1ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Cold Snap",
-                "description": "Attacks all enemies with an explosion of ice, dispelling two buffs before decreasing Combat Readiness by a random amount between 15% and 40%. Grants the caster skill nullifier once.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "寒波",
+                "description": "氷の爆発で敵全体を攻撃し、強化効果を二つ解除した後、行動ゲージを15%～40%の間でランダムに減少させる。発動者にスキルダメージ無効を一度付与する。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S3": {
-                "name": "Absolute Zero",
-                "description": "Attacks all enemies by unleashing power, with a 85% chance to inflict stun for 1 turn, and increases Combat Readiness of all allies by 20%. When this skill is not on cooldown, if an ally uses a non-attack skill, increases Combat Readiness of the caster by 20%."
+                "name": "絶対零度",
+                "description": "力を解放して敵全体を攻撃し、85%の確率で1ターンの間気絶させ、味方全員の行動ゲージを20%増加させる。このスキルがクールタイム中でないとき、味方が攻撃以外のスキルを使用すると、発動者の行動ゲージを20%増加させる。"
             }
         }
     },
@@ -2074,17 +2074,17 @@
         "_name": "Edward Elric",
         "skills": {
             "S1": {
-                "name": "I'll Take You On!",
-                "description": "Attacks the enemy with a transmuted blade, and grants a barrier to the caster for 1 turn. Damage dealt and barrier strength increase proportional to the caster's max Health."
+                "name": "相手になってやる！",
+                "description": "錬成した刃で敵を攻撃し、発動者に1ターンの間バリアを付与する。発動者の最大HPに比例して与ダメージとバリアの強度がアップする。"
             },
             "S2": {
-                "name": "Equivalent Exchange",
-                "description": "After being attacked, when the caster has a debuff, dispels one debuff and activates Rise!. Rise! can only be activated once per turn. Rise!: Attacks all enemies with ground thorns, dispelling one buff and inflicting a random debuff for 2 turns, before increasing Combat Readiness by 20%. Damage dealt increases proportional to the caster's max Health."
+                "name": "等価交換",
+                "description": "攻撃された後、発動者に弱体効果があれば、弱体効果を一つ解除し、出でよ！を発動する。出でよ！はターンごとに一度のみ発動できる。出でよ！：大地の棘で敵全体を攻撃し、強化効果を一つ解除し、2ターンの間ランダムな弱体効果を付与した後、行動ゲージを20%増加させる。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "I'll Show You Our Difference!",
-                "description": "Attacks the enemy together with Alphonse, and increase Combat Readiness by 50%. When the enemy is not an Elite or Boss monster, damage sharing effects are ignored. Damage dealt increases proprotional to the caster's max Health. Damage dealt increases every time this skill is used and can stack up to 3 times.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "格の違いを見せてやる！",
+                "description": "アルフォンスと共に敵を攻撃し、行動ゲージを50%増加させる。敵がエリートまたはボスモンスターでない場合、ダメージ分散効果を無視する。発動者の最大HPに比例して与ダメージがアップする。このスキルを使用するたびに与ダメージがアップし、最大3回まで重複する。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -2092,17 +2092,17 @@
         "_name": "Elena",
         "skills": {
             "S1": {
-                "name": "Starlight's Will",
-                "description": "Attacks with the power of the stars, dispelling one debuff each from two allies.",
-                "soulburn_effect": "Dispels all debuffs from all allies."
+                "name": "星明かりの意志",
+                "description": "星の力で攻撃し、味方二人の弱体効果をそれぞれ一つ解除する。",
+                "soulburn_effect": "味方全員の弱体効果をすべて解除する。"
             },
             "S2": {
-                "name": "Guardian's Authority",
-                "description": "When an ally suffers an attack that targets all allies, grants 30% damage reduction and activates Consecrated Ground. Consecrated Ground: Recovers Health of all allies proportional to the caster's max Health before increasing Combat Readiness of the caster by 30%."
+                "name": "守護者の権能",
+                "description": "味方が味方全体を対象とする攻撃を受けると、ダメージを30%軽減し、聖なる大地を発動する。聖なる大地：発動者の最大HPに比例して味方全員のHPを回復した後、発動者の行動ゲージを30%増加させる。"
             },
             "S3": {
-                "name": "Eternally Shining Comet",
-                "description": "Attacks all enemies with a meteor shower, and dispels one debuff from all allies before granting invincibility for 1 turn and increased Effect Resistance for 2 turns."
+                "name": "永遠に輝く彗星",
+                "description": "流星群で敵全体を攻撃し、味方全員の弱体効果を一つ解除した後、1ターンの間無敵を、2ターンの間効果抵抗アップを付与する。"
             }
         }
     },
