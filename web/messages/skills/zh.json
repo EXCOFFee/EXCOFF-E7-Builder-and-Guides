@@ -940,17 +940,17 @@
         "_name": "Bernard",
         "skills": {
             "S1": {
-                "name": "Data Collection",
-                "description": "Attacks the enemy, and recovers Health of the ally with the lowest Health. When all allies are Earth elemental, recovers Health of all allies instead. Amount recovered increases proportional to the caster's Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "数据收集",
+                "description": "攻击敌人，并恢复生命值最低的友军的生命值。所有友军均为地属性时，改为恢复所有友军的生命值。恢复量按施放者的生命值比例提升。",
+                "soulburn_effect": "提升恢复量。"
             },
             "S2": {
-                "name": "Tool Utilization",
-                "description": "At the start of battle, grants a barrier to the caster for 2 turns, and at the end of the turn, grants a barrier to the ally with the lowest Health for 2 turns. Barrier strength increases proportional to the caster's Health."
+                "name": "工具运用",
+                "description": "战斗开始时，为施放者施加2回合屏障；回合结束时，为生命值最低的友军施加2回合屏障。屏障强度按施放者的生命值比例提升。"
             },
             "S3": {
-                "name": "Research Design",
-                "description": "Dispels all debuffs from all allies and grants immunity to all allies for 2 turns."
+                "name": "研究设计",
+                "description": "解除所有友军的所有弱化效果，并为所有友军施加2回合免疫。"
             }
         }
     },
@@ -958,17 +958,17 @@
         "_name": "Birgitta",
         "skills": {
             "S1": {
-                "name": "Baseless Rumor",
-                "description": "Attacks the enemy and decreases Combat Readiness by 15%. When the target is inflicted with block, doubles the amount of Combat Readiness decrease."
+                "name": "无端谣言",
+                "description": "攻击敌人，并降低15%行动值。目标处于封锁状态时，行动值降低量翻倍。"
             },
             "S2": {
-                "name": "Subterfuge",
-                "description": "Dispels two debuffs from an ally before granting swift attack and increasing Combat Readiness by 50%. Grants an extra turn."
+                "name": "计谋",
+                "description": "解除一名友军的两个弱化效果，然后施加迅捷攻击并提升50%行动值。获得额外回合。"
             },
             "S3": {
-                "name": "Nothing Personal, Kid",
-                "description": "Dispels all buffs from the enemy, before a 100% chance each to inflict bind and block for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "别往心里去，小鬼",
+                "description": "解除敌人的所有强化效果，然后各有100%的几率施加2回合拘束与封锁。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -976,17 +976,17 @@
         "_name": "Blaze Dingo",
         "skills": {
             "S1": {
-                "name": "Punishment",
-                "description": "Attacks an enemy with a sharp dagger, before recovering Health of the ally with the lowest Health proportional to damage dealt."
+                "name": "惩罚",
+                "description": "以锋利的短剑攻击敌人，然后按造成的伤害比例恢复生命值最低的友军的生命值。"
             },
             "S2": {
-                "name": "Divine Punishment",
-                "description": "Attacks all enemies with a giant gauntlet, with a 75% chance to inflict decreased Defense for 2 turns, before recovering Health of the ally with the lowest Health proportional to damage dealt. A critical hit will activate Punishment on a random enemy as an extra attack."
+                "name": "神罚",
+                "description": "以巨大的臂铠攻击所有敌人，有75%的几率施加2回合防御力降低，然后按造成的伤害比例恢复生命值最低的友军的生命值。暴击时，对随机一名敌人以追加攻击发动惩罚。"
             },
             "S3": {
-                "name": "Sacred Power",
-                "description": "With a sacred power, recovers Health of the target and the caster proportional to the caster's Attack and grants invincibility for 1 turn and increased Attack for 2 turns.",
-                "soulburn_effect": "Extends the duration of Sacred Power granted to the caster by 1 turn and grants an extra turn."
+                "name": "神圣之力",
+                "description": "以神圣之力，按施放者的攻击力比例恢复目标与施放者的生命值，并施加1回合无敌与2回合攻击力提升。",
+                "soulburn_effect": "施放者获得的神圣之力持续时间延长1回合，并获得额外回合。"
             }
         }
     },
@@ -994,17 +994,17 @@
         "_name": "Blood Blade Karin",
         "skills": {
             "S1": {
-                "name": "Sequential Cutter",
-                "description": "Attacks the target by quick-drawing with a sword. Absorbs some of the damage dealt as Health. Increases Combat Readiness of the caster by 15%, and when the enemy is defeated, increases by an additional 35%."
+                "name": "连续斩",
+                "description": "迅速拔剑攻击目标。将部分造成的伤害吸收为生命值。使施放者的行动值提升15%，击败敌人时额外提升35%。"
             },
             "S2": {
-                "name": "Cursed Sword",
-                "description": "As Health decreases, Attack, Defense, and Speed increase. At the start of the battle, grants immortality to the caster for 1 turn."
+                "name": "被诅咒之剑",
+                "description": "生命值越低，攻击力、防御力与速度越高。战斗开始时，为施放者施加1回合不死。"
             },
             "S3": {
-                "name": "Blade Art: Dragon",
-                "description": "Sacrifices 20% of the caster's current Health to attack all enemies, and grants increased Attack to the caster for 2 turns. When the target is defeated, grants an extra turn. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "剑术：龙",
+                "description": "牺牲施放者当前生命值的20%攻击所有敌人，并为施放者施加2回合攻击力提升。击败目标时获得额外回合。此技能无法触发反击。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1012,17 +1012,17 @@
         "_name": "Blood Moon Haste",
         "skills": {
             "S1": {
-                "name": "Blood Scythe",
-                "description": "Attacks by swinging a scythe, dispelling one buff. Damage dealt increases proportional to the caster's max Health. When dispelling the target's buff, activates Bloody Retribution as an extra attack. Bloody Retribution: Attacks the enemy with a scythe, and recovers Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "血之镰",
+                "description": "挥舞镰刀攻击，并解除一个强化效果。造成的伤害按施放者的最大生命值比例提升。解除目标的强化效果时，以追加攻击发动鲜血报复。鲜血报复：以镰刀攻击敌人，并恢复所有友军的生命值。造成的伤害与恢复量按施放者的最大生命值比例提升。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S2": {
-                "name": "Grudge",
-                "description": "When attacking, penetrates Defense, and cannot trigger a critical hit or a heavy blow. When an ally dies, grants a barrier (proportional to the caster's max Health) and immunity to all allies for 2 turns, and grants blood aura to the caster for 2 turns."
+                "name": "怨恨",
+                "description": "攻击时穿透防御力，且无法造成暴击或重击。友军阵亡时，为所有友军施加2回合屏障（与施放者的最大生命值成比例）与免疫，并为施放者施加2回合血之气息。"
             },
             "S3": {
-                "name": "Moon Slash",
-                "description": "Dispels all buffs from the enemy before attacking with a scythe. When the enemy is defeated, revives all dead allies before granting immortality for 1 turn. When the caster is granted blood aura, increases damage dealt by 100%. Damage dealt increases proportional to the caster's max Health."
+                "name": "月之斩",
+                "description": "解除敌人的所有强化效果后，以镰刀攻击。击败敌人时，复活所有阵亡友军，然后施加1回合不死。施放者拥有血之气息时，造成的伤害提升100%。造成的伤害按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -1030,17 +1030,17 @@
         "_name": "Blooming Lidica",
         "skills": {
             "S1": {
-                "name": "Twirling Thorns",
-                "description": "Attacks the enemy with a sword, with a 40% chance to stun for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "回旋荆棘",
+                "description": "以剑攻击敌人，有40%的几率使其眩晕1回合。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Seductive Scent",
-                "description": "Increases Speed proportional to the number of debuffs inflicted on all enemies, up to a maximum of 70%. After an ally except for the caster attacks, when the target has a debuff, activates Thorned Vine. Thorned Vine can only be activated once every 3 turns. Thorned Vine: Attacks all enemies, decreasing buff durations by 1 turn and making them unable to be buffed for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "诱惑芬芳",
+                "description": "按所有敌人身上弱化效果的数量比例提升速度，最多提升70%。除施放者外的友军攻击后，若目标有弱化效果，发动荆棘藤蔓。荆棘藤蔓每3回合只能发动一次。荆棘藤蔓：攻击所有敌人，使强化效果持续时间减少1回合，并施加2回合无法强化。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Fruit of Ecstasy",
-                "description": "Attacks the enemy with a flower, and grants skill nullifier once to all allies. Penetrates the target's Defense by 50%. When the caster's Speed is greater than the target's Speed, penetrates the target's Defense, with the penetration rate increasing proportional to the difference, up to a maximum of 100%. Damage dealt increases proportional to the caster's max Health. This attack cannot trigger a critical hit."
+                "name": "恍惚之果",
+                "description": "以花朵攻击敌人，并为所有友军施加一次技能伤害无效。穿透目标50%的防御力。施放者的速度高于目标时，按差值比例提升穿透率，最多达到100%。造成的伤害按施放者的最大生命值比例提升。此攻击无法造成暴击。"
             }
         }
     },
@@ -1048,17 +1048,17 @@
         "_name": "Bomb Model Kanna",
         "skills": {
             "S1": {
-                "name": "Quick Bombardment",
-                "description": "Rapidly fires to attack two enemies. Damage dealt increases proportional to the caster's Speed."
+                "name": "速射炮击",
+                "description": "快速射击攻击两名敌人。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "Stance Shift",
-                "description": "At the start of the turn, when Full Bombardment! is not on cooldown, takes a Shelling Stance. At the end of the turn, when Full Bombardment! is on cooldown, takes a Striking Stance. Can only take one stance at a time. Shelling Stance: Increases Effectiveness by 50%. Striking Stance: Increases Speed and Dual Attack chance by 15%."
+                "name": "姿态切换",
+                "description": "回合开始时，若全力炮击！不在冷却中，进入炮击姿态。回合结束时，若全力炮击！在冷却中，进入打击姿态。同一时间只能处于一种姿态。炮击姿态：效果命中提升50%。打击姿态：速度与协攻几率提升15%。"
             },
             "S3": {
-                "name": "Full Bombardment!",
-                "description": "Boosts firepower to attack all enemies, with a 100% chance to dispel one buff, before increasing Speed of all allies for 2 turns and increasing Attack of the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "全力炮击！",
+                "description": "提升火力攻击所有敌人，有100%的几率解除一个强化效果，然后提升所有友军的速度2回合，并提升施放者的攻击力2回合。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             }
         }
     },
@@ -1066,17 +1066,17 @@
         "_name": "Boss Arunka",
         "skills": {
             "S1": {
-                "name": "Road Sign Smash",
-                "description": "Attacks the enemy with a road sign and has a 75% chance to inflict decreased Defense for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Triggers a Dual Attack from the ally with the highest Attack."
+                "name": "路牌重击",
+                "description": "以路牌攻击敌人，有75%的几率施加1回合防御力降低。造成的伤害按施放者的防御力比例提升。",
+                "soulburn_effect": "攻击力最高的友军发动协攻。"
             },
             "S2": {
-                "name": "Vanguard of the Silent Expanse",
-                "description": "At the start of battle and at the end of the turn, when the caster is in the front row, grants Ferocious Stand for 1 turn. After being attacked, increases Combat Readiness by 25%."
+                "name": "寂静荒野的先锋",
+                "description": "战斗开始时与回合结束时，若施放者位于前排，施加1回合凶猛架势。受到攻击后，提升25%行动值。"
             },
             "S3": {
-                "name": "Coruscated Trajectory",
-                "description": "Attacks the enemy at an incredible velocity, dispelling all buffs before inflicting decreased Defense for 2 turns. Grants increased Defense and a barrier to the caster for 2 turns. Damage dealt and barrier strength increase proportional to the caster's Defense."
+                "name": "闪耀轨迹",
+                "description": "以惊人的速度攻击敌人，解除所有强化效果后施加2回合防御力降低。为施放者施加2回合防御力提升与屏障。造成的伤害与屏障强度按施放者的防御力比例提升。"
             }
         }
     },

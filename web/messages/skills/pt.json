@@ -940,17 +940,17 @@
         "_name": "Bernard",
         "skills": {
             "S1": {
-                "name": "Data Collection",
-                "description": "Attacks the enemy, and recovers Health of the ally with the lowest Health. When all allies are Earth elemental, recovers Health of all allies instead. Amount recovered increases proportional to the caster's Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "Coleta de dados",
+                "description": "Ataca o inimigo e recupera a Vida do aliado com menor Vida. Quando todos os aliados são do elemento Terra, recupera a Vida de todos os aliados. A quantidade recuperada aumenta proporcionalmente à Vida do conjurador.",
+                "soulburn_effect": "Aumenta a quantidade recuperada."
             },
             "S2": {
-                "name": "Tool Utilization",
-                "description": "At the start of battle, grants a barrier to the caster for 2 turns, and at the end of the turn, grants a barrier to the ally with the lowest Health for 2 turns. Barrier strength increases proportional to the caster's Health."
+                "name": "Uso de ferramentas",
+                "description": "No início da batalha, concede uma barreira ao conjurador por 2 turnos e, no fim do turno, concede uma barreira ao aliado com menor Vida por 2 turnos. A força da barreira aumenta proporcionalmente à Vida do conjurador."
             },
             "S3": {
-                "name": "Research Design",
-                "description": "Dispels all debuffs from all allies and grants immunity to all allies for 2 turns."
+                "name": "Desenho de pesquisa",
+                "description": "Dissipa todos os efeitos negativos de todos os aliados e concede imunidade a todos os aliados por 2 turnos."
             }
         }
     },
@@ -958,17 +958,17 @@
         "_name": "Birgitta",
         "skills": {
             "S1": {
-                "name": "Baseless Rumor",
-                "description": "Attacks the enemy and decreases Combat Readiness by 15%. When the target is inflicted with block, doubles the amount of Combat Readiness decrease."
+                "name": "Boato infundado",
+                "description": "Ataca o inimigo e diminui a Prontidão de Combate em 15%. Quando o alvo tem bloqueio, a redução de Prontidão de Combate dobra."
             },
             "S2": {
-                "name": "Subterfuge",
-                "description": "Dispels two debuffs from an ally before granting swift attack and increasing Combat Readiness by 50%. Grants an extra turn."
+                "name": "Subterfúgio",
+                "description": "Dissipa dois efeitos negativos de um aliado, depois concede Ataque veloz e aumenta a Prontidão de Combate em 50%. Concede um turno extra."
             },
             "S3": {
-                "name": "Nothing Personal, Kid",
-                "description": "Dispels all buffs from the enemy, before a 100% chance each to inflict bind and block for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Nada pessoal, garoto",
+                "description": "Dissipa todos os efeitos positivos do inimigo, depois com 100% de chance cada aplica amarra e bloqueio por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -976,17 +976,17 @@
         "_name": "Blaze Dingo",
         "skills": {
             "S1": {
-                "name": "Punishment",
-                "description": "Attacks an enemy with a sharp dagger, before recovering Health of the ally with the lowest Health proportional to damage dealt."
+                "name": "Punição",
+                "description": "Ataca um inimigo com uma adaga afiada, depois recupera a Vida do aliado com menor Vida proporcionalmente ao dano causado."
             },
             "S2": {
-                "name": "Divine Punishment",
-                "description": "Attacks all enemies with a giant gauntlet, with a 75% chance to inflict decreased Defense for 2 turns, before recovering Health of the ally with the lowest Health proportional to damage dealt. A critical hit will activate Punishment on a random enemy as an extra attack."
+                "name": "Punição divina",
+                "description": "Ataca todos os inimigos com uma manopla gigante, com 75% de chance de aplicar Diminuir Defesa por 2 turnos, depois recupera a Vida do aliado com menor Vida proporcionalmente ao dano causado. Um acerto crítico ativa Punição em um inimigo aleatório como ataque extra."
             },
             "S3": {
-                "name": "Sacred Power",
-                "description": "With a sacred power, recovers Health of the target and the caster proportional to the caster's Attack and grants invincibility for 1 turn and increased Attack for 2 turns.",
-                "soulburn_effect": "Extends the duration of Sacred Power granted to the caster by 1 turn and grants an extra turn."
+                "name": "Poder sagrado",
+                "description": "Com um poder sagrado, recupera a Vida do alvo e do conjurador proporcionalmente ao Ataque do conjurador e concede invencibilidade por 1 turno e Aumentar Ataque por 2 turnos.",
+                "soulburn_effect": "Estende em 1 turno a duração de Poder sagrado concedido ao conjurador e concede um turno extra."
             }
         }
     },
@@ -994,17 +994,17 @@
         "_name": "Blood Blade Karin",
         "skills": {
             "S1": {
-                "name": "Sequential Cutter",
-                "description": "Attacks the target by quick-drawing with a sword. Absorbs some of the damage dealt as Health. Increases Combat Readiness of the caster by 15%, and when the enemy is defeated, increases by an additional 35%."
+                "name": "Corte sequencial",
+                "description": "Ataca o alvo sacando a espada rapidamente. Absorve parte do dano causado como Vida. Aumenta a Prontidão de Combate do conjurador em 15% e, ao derrotar o inimigo, aumenta mais 35%."
             },
             "S2": {
-                "name": "Cursed Sword",
-                "description": "As Health decreases, Attack, Defense, and Speed increase. At the start of the battle, grants immortality to the caster for 1 turn."
+                "name": "Espada amaldiçoada",
+                "description": "Conforme a Vida diminui, o Ataque, a Defesa e a Velocidade aumentam. No início da batalha, concede imortalidade ao conjurador por 1 turno."
             },
             "S3": {
-                "name": "Blade Art: Dragon",
-                "description": "Sacrifices 20% of the caster's current Health to attack all enemies, and grants increased Attack to the caster for 2 turns. When the target is defeated, grants an extra turn. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Arte da lâmina: dragão",
+                "description": "Sacrifica 20% da Vida atual do conjurador para atacar todos os inimigos e concede Aumentar Ataque ao conjurador por 2 turnos. Ao derrotar o alvo, concede um turno extra. Esta habilidade não pode ativar contra-ataques.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1012,17 +1012,17 @@
         "_name": "Blood Moon Haste",
         "skills": {
             "S1": {
-                "name": "Blood Scythe",
-                "description": "Attacks by swinging a scythe, dispelling one buff. Damage dealt increases proportional to the caster's max Health. When dispelling the target's buff, activates Bloody Retribution as an extra attack. Bloody Retribution: Attacks the enemy with a scythe, and recovers Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Foice de sangue",
+                "description": "Ataca brandindo uma foice, dissipando um efeito positivo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Ao dissipar um efeito positivo do alvo, ativa Retribuição sangrenta como ataque extra. Retribuição sangrenta: ataca o inimigo com uma foice e recupera a Vida de todos os aliados. O dano causado e a quantidade recuperada aumentam proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S2": {
-                "name": "Grudge",
-                "description": "When attacking, penetrates Defense, and cannot trigger a critical hit or a heavy blow. When an ally dies, grants a barrier (proportional to the caster's max Health) and immunity to all allies for 2 turns, and grants blood aura to the caster for 2 turns."
+                "name": "Rancor",
+                "description": "Ao atacar, penetra a Defesa e não pode causar acerto crítico nem golpe pesado. Quando um aliado morre, concede uma barreira (proporcional à Vida máxima do conjurador) e imunidade a todos os aliados por 2 turnos, e concede aura de sangue ao conjurador por 2 turnos."
             },
             "S3": {
-                "name": "Moon Slash",
-                "description": "Dispels all buffs from the enemy before attacking with a scythe. When the enemy is defeated, revives all dead allies before granting immortality for 1 turn. When the caster is granted blood aura, increases damage dealt by 100%. Damage dealt increases proportional to the caster's max Health."
+                "name": "Corte lunar",
+                "description": "Dissipa todos os efeitos positivos do inimigo antes de atacar com uma foice. Ao derrotar o inimigo, revive todos os aliados mortos, depois concede imortalidade por 1 turno. Quando o conjurador tem aura de sangue, aumenta o dano causado em 100%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -1030,17 +1030,17 @@
         "_name": "Blooming Lidica",
         "skills": {
             "S1": {
-                "name": "Twirling Thorns",
-                "description": "Attacks the enemy with a sword, with a 40% chance to stun for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Espinhos rodopiantes",
+                "description": "Ataca o inimigo com uma espada, com 40% de chance de atordoar por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Seductive Scent",
-                "description": "Increases Speed proportional to the number of debuffs inflicted on all enemies, up to a maximum of 70%. After an ally except for the caster attacks, when the target has a debuff, activates Thorned Vine. Thorned Vine can only be activated once every 3 turns. Thorned Vine: Attacks all enemies, decreasing buff durations by 1 turn and making them unable to be buffed for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "Aroma sedutor",
+                "description": "Aumenta a Velocidade proporcionalmente ao número de efeitos negativos aplicados a todos os inimigos, até um máximo de 70%. Após um aliado, exceto o conjurador, atacar, quando o alvo tem um efeito negativo, ativa Vinha espinhosa. Vinha espinhosa só pode ser ativada uma vez a cada 3 turnos. Vinha espinhosa: ataca todos os inimigos, diminuindo a duração dos efeitos positivos em 1 turno e impedindo que recebam efeitos positivos por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Fruit of Ecstasy",
-                "description": "Attacks the enemy with a flower, and grants skill nullifier once to all allies. Penetrates the target's Defense by 50%. When the caster's Speed is greater than the target's Speed, penetrates the target's Defense, with the penetration rate increasing proportional to the difference, up to a maximum of 100%. Damage dealt increases proportional to the caster's max Health. This attack cannot trigger a critical hit."
+                "name": "Fruto do êxtase",
+                "description": "Ataca o inimigo com uma flor e concede Anulação de habilidade uma vez a todos os aliados. Penetra 50% da Defesa do alvo. Quando a Velocidade do conjurador é maior que a do alvo, penetra a Defesa do alvo, com a taxa de penetração aumentando proporcionalmente à diferença, até um máximo de 100%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Este ataque não pode causar acerto crítico."
             }
         }
     },
@@ -1048,17 +1048,17 @@
         "_name": "Bomb Model Kanna",
         "skills": {
             "S1": {
-                "name": "Quick Bombardment",
-                "description": "Rapidly fires to attack two enemies. Damage dealt increases proportional to the caster's Speed."
+                "name": "Bombardeio rápido",
+                "description": "Dispara rapidamente para atacar dois inimigos. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Stance Shift",
-                "description": "At the start of the turn, when Full Bombardment! is not on cooldown, takes a Shelling Stance. At the end of the turn, when Full Bombardment! is on cooldown, takes a Striking Stance. Can only take one stance at a time. Shelling Stance: Increases Effectiveness by 50%. Striking Stance: Increases Speed and Dual Attack chance by 15%."
+                "name": "Troca de postura",
+                "description": "No início do turno, quando Bombardeio total! não está em recarga, assume a Postura de bombardeio. No fim do turno, quando Bombardeio total! está em recarga, assume a Postura de ataque. Só pode assumir uma postura por vez. Postura de bombardeio: aumenta a Eficácia em 50%. Postura de ataque: aumenta a Velocidade e a chance de Ataque duplo em 15%."
             },
             "S3": {
-                "name": "Full Bombardment!",
-                "description": "Boosts firepower to attack all enemies, with a 100% chance to dispel one buff, before increasing Speed of all allies for 2 turns and increasing Attack of the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Bombardeio total!",
+                "description": "Aumenta o poder de fogo para atacar todos os inimigos, com 100% de chance de dissipar um efeito positivo, depois aumenta a Velocidade de todos os aliados por 2 turnos e o Ataque do conjurador por 2 turnos.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -1066,17 +1066,17 @@
         "_name": "Boss Arunka",
         "skills": {
             "S1": {
-                "name": "Road Sign Smash",
-                "description": "Attacks the enemy with a road sign and has a 75% chance to inflict decreased Defense for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Triggers a Dual Attack from the ally with the highest Attack."
+                "name": "Golpe de placa",
+                "description": "Ataca o inimigo com uma placa de trânsito e tem 75% de chance de aplicar Diminuir Defesa por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "O aliado com maior Ataque realiza um Ataque duplo."
             },
             "S2": {
-                "name": "Vanguard of the Silent Expanse",
-                "description": "At the start of battle and at the end of the turn, when the caster is in the front row, grants Ferocious Stand for 1 turn. After being attacked, increases Combat Readiness by 25%."
+                "name": "Vanguarda da vastidão silenciosa",
+                "description": "No início da batalha e no fim do turno, quando o conjurador está na fileira da frente, concede Postura feroz por 1 turno. Após ser atacado, aumenta a Prontidão de Combate em 25%."
             },
             "S3": {
-                "name": "Coruscated Trajectory",
-                "description": "Attacks the enemy at an incredible velocity, dispelling all buffs before inflicting decreased Defense for 2 turns. Grants increased Defense and a barrier to the caster for 2 turns. Damage dealt and barrier strength increase proportional to the caster's Defense."
+                "name": "Trajetória cintilante",
+                "description": "Ataca o inimigo a uma velocidade incrível, dissipando todos os efeitos positivos antes de aplicar Diminuir Defesa por 2 turnos. Concede Aumentar Defesa e uma barreira ao conjurador por 2 turnos. O dano causado e a força da barreira aumentam proporcionalmente à Defesa do conjurador."
             }
         }
     },
