@@ -3298,17 +3298,17 @@
         "_name": "Karin",
         "skills": {
             "S1": {
-                "name": "Sequential Cutter",
-                "description": "Attacks the enemy by quick-drawing with a sword. A critical hit will decrease skill cooldown by 1 turn."
+                "name": "連続斬り",
+                "description": "素早く剣を抜いて敵を攻撃する。クリティカルが発生すると、スキルのクールタイムを1ターン短縮する。"
             },
             "S2": {
-                "name": "Blade Art: Flash",
-                "description": "Attacks the enemy by rushing towards them. A critical hit will inflict decreased Defense on the target for 1 turn, and grants an extra turn."
+                "name": "剣術：閃光",
+                "description": "敵に突進して攻撃する。クリティカルが発生すると、対象に1ターンの間防御力ダウンを付与し、追加ターンを得る。"
             },
             "S3": {
-                "name": "Blade Art: Thunder",
-                "description": "Attacks the enemy by slashing at lightning speed. A critical hit will increase damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "剣術：雷電",
+                "description": "稲妻の速さで斬りつけて敵を攻撃する。クリティカルが発生すると与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -3316,17 +3316,17 @@
         "_name": "Kawerik",
         "skills": {
             "S1": {
-                "name": "Spatial Relocation",
-                "description": "Approaches the enemy through subspace and attacks, and increases Combat Readiness of the caster by 15%. When the caster is granted mana field, consumes 10 Fighting Spirit to attack a random enemy with the same skill as an extra attack."
+                "name": "空間移動",
+                "description": "亜空間を通って敵に接近して攻撃し、発動者の行動ゲージを15%増加させる。発動者にマナフィールドがあれば、闘志を10消費し、ランダムな敵に同じスキルで追加攻撃する。"
             },
             "S2": {
-                "name": "Dimensional Corridor",
-                "description": "Attacks the enemy in a dimensional corridor, with a 100% chance each to dispel two buffs before fully increasing skill cooldowns. A critical hit will grant an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "次元回廊",
+                "description": "次元回廊で敵を攻撃し、それぞれ100%の確率で強化効果を二つ解除した後、スキルのクールタイムを満タンにする。クリティカルが発生すると追加ターンを得る。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Dimensional Explosion",
-                "description": "Attacks all enemies with an explosion and grants increased Speed to the caster for 2 turns. Penetrates the target's Defense by 50%. At the start of the first battle, gains maximum Fighting Spirit, and when Fighting Spirit is 10 or more during battle, grants mana field."
+                "name": "次元爆発",
+                "description": "爆発で敵全体を攻撃し、発動者に2ターンの間スピードアップを付与する。対象の防御力を50%貫通する。最初のバトル開始時、闘志を最大まで獲得し、バトル中に闘志が10以上ならマナフィールドを付与する。"
             }
         }
     },
@@ -3334,17 +3334,17 @@
         "_name": "Kayron",
         "skills": {
             "S1": {
-                "name": "Void Slash",
-                "description": "Attacks the enemy with a sword, with a 50% chance to inflict decreased Hit Chance for 1 turn, dealing damage proportional to the caster's lost Health. When this skill is used, if it was not triggered by a Dual Attack and the caster has a buff, this skill changes into an attack that targets all enemies. The changed attack does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "虚無の斬撃",
+                "description": "剣で敵を攻撃し、50%の確率で1ターンの間命中率ダウンを付与し、発動者の失ったHPに比例したダメージを与える。このスキルの使用時、協攻による発動ではなく発動者に強化効果があれば、敵全体を対象とする攻撃に変わる。変化した攻撃では協攻が発動しない。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Immortal Will",
-                "description": "When the caster receives lethal damage, grants immortality for 1 turn and increased Evasion for 2 turns and resets skill cooldowns."
+                "name": "不滅の意志",
+                "description": "発動者が致命的なダメージを受けると、1ターンの間不死を、2ターンの間回避アップを付与し、スキルのクールタイムをリセットする。"
             },
             "S3": {
-                "name": "Apocalypse",
-                "description": "Attacks the enemy with the Archdemon's Might contained within the sword, before absorbing some of the damage dealt as Health and granting increased Attack to the caster for 2 turns. When the enemy is defeated, extends buff durations granted to the caster by 1 turn. Damage dealt increases proportional to the caster's lost Health."
+                "name": "終末",
+                "description": "剣に宿った大魔神の威力で敵を攻撃した後、与ダメージの一部をHPとして吸収し、発動者に2ターンの間攻撃力アップを付与する。敵を倒すと、発動者の強化効果の持続時間を1ターン延長する。発動者の失ったHPに比例して与ダメージがアップする。"
             }
         }
     },
@@ -3352,17 +3352,17 @@
         "_name": "Ken",
         "skills": {
             "S1": {
-                "name": "Knockout",
-                "description": "Attacks the enemy with a flurry of strikes and has a 50% chance to inflict decreased Defense for 2 turns. When granted vigor, additionally inflicts burn on the target for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "ノックアウト",
+                "description": "連打で敵を攻撃し、50%の確率で2ターンの間防御力ダウンを付与する。闘志があれば、対象にさらに2ターンの間火傷を付与する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Celestial Kick",
-                "description": "Attacks the enemy with a series of kicks, decreasing Defense for 2 turns before granting the caster increased Speed for 2 turns. When the caster is granted vigor, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "天の蹴り",
+                "description": "連続蹴りで敵を攻撃し、2ターンの間防御力をダウンさせた後、発動者に2ターンの間スピードアップを付与する。発動者に闘志があれば効果抵抗を無視する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S3": {
-                "name": "Phoenix Flurry",
-                "description": "Attacks with a flurry of strikes before delivering a powerful blow, decreasing Attack for 2 turns and stunning for 1 turn. Grants vigor to the caster for 3 turns. Damage dealt increases proportional to the caster's max Health. At the start of the first battle, gains 40 Fighting Spirit."
+                "name": "鳳凰連打",
+                "description": "連打の後に強力な一撃を放ち、2ターンの間攻撃力をダウンさせ、1ターンの間気絶させる。発動者に3ターンの間闘志を付与する。発動者の最大HPに比例して与ダメージがアップする。最初のバトル開始時、闘志を40獲得する。"
             }
         }
     },
@@ -3370,17 +3370,17 @@
         "_name": "Khawana",
         "skills": {
             "S1": {
-                "name": "Hey There!",
-                "description": "Attacks the enemy with sharp sickles, with a 50% chance each to inflict two bleeding effects for 2 turns. If the enemy is debuffed after the attack, a successful attack deals additional damage proportional to the caster's Attack."
+                "name": "やあ！",
+                "description": "鋭い鎌で敵を攻撃し、それぞれ50%の確率で2ターンの間出血を二つ付与する。攻撃後、敵に弱体効果があれば、攻撃成功時に発動者の攻撃力に比例した追加ダメージを与える。"
             },
             "S2": {
-                "name": "Casual Introduction",
-                "description": "Attacks all enemies with a flame guardian, before increasing Attack of all allies for 2 turns. Grants skill nullifier once to Fire elemental allies. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "気軽な紹介",
+                "description": "炎の守護霊で敵全体を攻撃した後、2ターンの間味方全員の攻撃力をアップさせる。火属性の味方にスキルダメージ無効を一度付与する。発動者のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S3": {
-                "name": "Rough Welcome",
-                "description": "Attacks the enemy with a flame guardian, dispelling two buffs before stunning for 1 turn. Increases Combat Readiness of Fire elemental allies by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "荒っぽい歓迎",
+                "description": "炎の守護霊で敵を攻撃し、強化効果を二つ解除した後、1ターンの間気絶させる。火属性の味方の行動ゲージを20%増加させる。発動者のスピードに比例して与ダメージがアップする。"
             }
         }
     },
@@ -3388,17 +3388,17 @@
         "_name": "Khawazu",
         "skills": {
             "S1": {
-                "name": "Flame Strike",
-                "description": "Attacks the enemy with a ball of flame and has a 50% chance to inflict decreased Defense for 2 turns. After attacking, has a 35% chance to activate Burning Vitality. Burning Vitality: Increases Combat Readiness of the caster by 20%.",
-                "soulburn_effect": "100% chance to decrease Defense."
+                "name": "火炎撃",
+                "description": "火の玉で敵を攻撃し、50%の確率で2ターンの間防御力ダウンを付与する。攻撃後、35%の確率で燃える活力を発動する。燃える活力：発動者の行動ゲージを20%増加させる。",
+                "soulburn_effect": "100%の確率で防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Composure",
-                "description": "After being attacked, when the caster has a debuff, dispels all debuffs and grants increased Attack for 2 turns."
+                "name": "沈着",
+                "description": "攻撃された後、発動者に弱体効果があれば、弱体効果をすべて解除し、2ターンの間攻撃力アップを付与する。"
             },
             "S3": {
-                "name": "Emberstorm",
-                "description": "Attacks with a fiery explosion, making the target unhealable and decreasing Defense for 2 turns each."
+                "name": "残り火の嵐",
+                "description": "炎の爆発で攻撃し、対象にそれぞれ2ターンの間回復不可と防御力ダウンを付与する。"
             }
         }
     },
@@ -3406,17 +3406,17 @@
         "_name": "Kikirat v2",
         "skills": {
             "S1": {
-                "name": "Auto-Fire",
-                "description": "Attacks with a gatling gun, with a 90% chance to dispel one buff. Damage dealt increases proportional to the caster's Defense."
+                "name": "自動射撃",
+                "description": "ガトリングガンで攻撃し、90%の確率で強化効果を一つ解除する。発動者の防御力に比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Defense Mode",
-                "description": "Increases Defense of the caster by 10% after attacking. Effect can only stack up to 5 times."
+                "name": "防御モード",
+                "description": "攻撃後、発動者の防御力が10%アップする。効果は最大5回まで重複する。"
             },
             "S3": {
-                "name": "Cleaning Mode",
-                "description": "Fires indiscriminately at all enemies, with a 75% chance to decrease Hit Chance for 1 turn, before triggering counterattacks from the caster for 2 turns. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "掃除モード",
+                "description": "敵全体に無差別射撃を行い、75%の確率で1ターンの間命中率をダウンさせた後、発動者に2ターンの間反撃を付与する。発動者の防御力に比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -3424,17 +3424,17 @@
         "_name": "Kiris",
         "skills": {
             "S1": {
-                "name": "Venomous Arrow",
-                "description": "Fires a poisoned arrow at the enemy, with a 50% chance to inflict poison for 2 turns."
+                "name": "毒矢",
+                "description": "敵に毒矢を放ち、50%の確率で2ターンの間持続ダメージを付与する。"
             },
             "S2": {
-                "name": "Corrosive Volley",
-                "description": "Fires a corrosive volley to all enemies, extending any debuff duration by 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "腐食射撃",
+                "description": "敵全体に腐食の矢を一斉に放ち、弱体効果の持続時間を1ターン延長する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Preparation",
-                "description": "Strengthens the casters next attack, granting an extra turn. Venomous Arrow: Increases effect chance to 100%, and poison effects can be stacked up to 3 times. Corrosive Volley: Extends debuff duration by 2 turns."
+                "name": "準備",
+                "description": "発動者の次の攻撃を強化し、追加ターンを得る。毒矢：効果発動確率が100%にアップし、持続ダメージを最大3回まで重複できる。腐食射撃：弱体効果の持続時間を2ターン延長する。"
             }
         }
     },

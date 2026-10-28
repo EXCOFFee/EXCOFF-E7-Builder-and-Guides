@@ -3298,17 +3298,17 @@
         "_name": "Karin",
         "skills": {
             "S1": {
-                "name": "Sequential Cutter",
-                "description": "Attacks the enemy by quick-drawing with a sword. A critical hit will decrease skill cooldown by 1 turn."
+                "name": "Corte sequencial",
+                "description": "Ataca o inimigo sacando a espada rapidamente. Um acerto crítico diminui a recarga da habilidade em 1 turno."
             },
             "S2": {
-                "name": "Blade Art: Flash",
-                "description": "Attacks the enemy by rushing towards them. A critical hit will inflict decreased Defense on the target for 1 turn, and grants an extra turn."
+                "name": "Arte da lâmina: lampejo",
+                "description": "Ataca o inimigo avançando contra ele. Um acerto crítico aplica Diminuir Defesa ao alvo por 1 turno e concede um turno extra."
             },
             "S3": {
-                "name": "Blade Art: Thunder",
-                "description": "Attacks the enemy by slashing at lightning speed. A critical hit will increase damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Arte da lâmina: trovão",
+                "description": "Ataca o inimigo cortando à velocidade do relâmpago. Um acerto crítico aumenta o dano causado.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -3316,17 +3316,17 @@
         "_name": "Kawerik",
         "skills": {
             "S1": {
-                "name": "Spatial Relocation",
-                "description": "Approaches the enemy through subspace and attacks, and increases Combat Readiness of the caster by 15%. When the caster is granted mana field, consumes 10 Fighting Spirit to attack a random enemy with the same skill as an extra attack."
+                "name": "Realocação espacial",
+                "description": "Aproxima-se do inimigo pelo subespaço e ataca, e aumenta a Prontidão de Combate do conjurador em 15%. Quando o conjurador tem campo de mana, consome 10 de Espírito de luta para atacar um inimigo aleatório com a mesma habilidade como ataque extra."
             },
             "S2": {
-                "name": "Dimensional Corridor",
-                "description": "Attacks the enemy in a dimensional corridor, with a 100% chance each to dispel two buffs before fully increasing skill cooldowns. A critical hit will grant an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Corredor dimensional",
+                "description": "Ataca o inimigo em um corredor dimensional, com 100% de chance cada de dissipar dois efeitos positivos, depois enche completamente as recargas de habilidades. Um acerto crítico concede um turno extra.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Dimensional Explosion",
-                "description": "Attacks all enemies with an explosion and grants increased Speed to the caster for 2 turns. Penetrates the target's Defense by 50%. At the start of the first battle, gains maximum Fighting Spirit, and when Fighting Spirit is 10 or more during battle, grants mana field."
+                "name": "Explosão dimensional",
+                "description": "Ataca todos os inimigos com uma explosão e concede Aumentar Velocidade ao conjurador por 2 turnos. Penetra 50% da Defesa do alvo. No início da primeira batalha, ganha Espírito de luta máximo e, quando o Espírito de luta é 10 ou mais durante a batalha, concede campo de mana."
             }
         }
     },
@@ -3334,17 +3334,17 @@
         "_name": "Kayron",
         "skills": {
             "S1": {
-                "name": "Void Slash",
-                "description": "Attacks the enemy with a sword, with a 50% chance to inflict decreased Hit Chance for 1 turn, dealing damage proportional to the caster's lost Health. When this skill is used, if it was not triggered by a Dual Attack and the caster has a buff, this skill changes into an attack that targets all enemies. The changed attack does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Corte do vazio",
+                "description": "Ataca o inimigo com uma espada, com 50% de chance de aplicar Diminuir Precisão por 1 turno, causando dano proporcional à Vida perdida do conjurador. Ao usar esta habilidade, se não tiver sido ativada por Ataque duplo e o conjurador tiver um efeito positivo, esta habilidade passa a mirar todos os inimigos. O ataque alterado não ativa Ataque duplo.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Immortal Will",
-                "description": "When the caster receives lethal damage, grants immortality for 1 turn and increased Evasion for 2 turns and resets skill cooldowns."
+                "name": "Vontade imortal",
+                "description": "Quando o conjurador recebe dano letal, concede imortalidade por 1 turno e Aumentar Evasão por 2 turnos e reinicia as recargas de habilidades."
             },
             "S3": {
-                "name": "Apocalypse",
-                "description": "Attacks the enemy with the Archdemon's Might contained within the sword, before absorbing some of the damage dealt as Health and granting increased Attack to the caster for 2 turns. When the enemy is defeated, extends buff durations granted to the caster by 1 turn. Damage dealt increases proportional to the caster's lost Health."
+                "name": "Apocalipse",
+                "description": "Ataca o inimigo com o Poder do Arquidemônio contido na espada, depois absorve parte do dano causado como Vida e concede Aumentar Ataque ao conjurador por 2 turnos. Ao derrotar o inimigo, estende em 1 turno a duração dos efeitos positivos do conjurador. O dano causado aumenta proporcionalmente à Vida perdida do conjurador."
             }
         }
     },
@@ -3352,17 +3352,17 @@
         "_name": "Ken",
         "skills": {
             "S1": {
-                "name": "Knockout",
-                "description": "Attacks the enemy with a flurry of strikes and has a 50% chance to inflict decreased Defense for 2 turns. When granted vigor, additionally inflicts burn on the target for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "Nocaute",
+                "description": "Ataca o inimigo com uma rajada de golpes e tem 50% de chance de aplicar Diminuir Defesa por 2 turnos. Quando tem vigor, aplica também queimadura ao alvo por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Celestial Kick",
-                "description": "Attacks the enemy with a series of kicks, decreasing Defense for 2 turns before granting the caster increased Speed for 2 turns. When the caster is granted vigor, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Chute celestial",
+                "description": "Ataca o inimigo com uma série de chutes, diminuindo a Defesa por 2 turnos, depois concede Aumentar Velocidade ao conjurador por 2 turnos. Quando o conjurador tem vigor, ignora a Resistência a Efeitos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S3": {
-                "name": "Phoenix Flurry",
-                "description": "Attacks with a flurry of strikes before delivering a powerful blow, decreasing Attack for 2 turns and stunning for 1 turn. Grants vigor to the caster for 3 turns. Damage dealt increases proportional to the caster's max Health. At the start of the first battle, gains 40 Fighting Spirit."
+                "name": "Rajada da fênix",
+                "description": "Ataca com uma rajada de golpes antes de desferir um golpe poderoso, diminuindo o Ataque por 2 turnos e atordoando por 1 turno. Concede vigor ao conjurador por 3 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. No início da primeira batalha, ganha 40 de Espírito de luta."
             }
         }
     },
@@ -3370,17 +3370,17 @@
         "_name": "Khawana",
         "skills": {
             "S1": {
-                "name": "Hey There!",
-                "description": "Attacks the enemy with sharp sickles, with a 50% chance each to inflict two bleeding effects for 2 turns. If the enemy is debuffed after the attack, a successful attack deals additional damage proportional to the caster's Attack."
+                "name": "Ei, você!",
+                "description": "Ataca o inimigo com foices afiadas, com 50% de chance cada de aplicar dois efeitos de sangramento por 2 turnos. Se o inimigo tiver efeitos negativos após o ataque, um ataque bem-sucedido causa dano adicional proporcional ao Ataque do conjurador."
             },
             "S2": {
-                "name": "Casual Introduction",
-                "description": "Attacks all enemies with a flame guardian, before increasing Attack of all allies for 2 turns. Grants skill nullifier once to Fire elemental allies. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Apresentação casual",
+                "description": "Ataca todos os inimigos com um guardião das chamas, depois aumenta o Ataque de todos os aliados por 2 turnos. Concede Anulação de habilidade uma vez aos aliados do elemento Fogo. O dano causado aumenta proporcionalmente à Velocidade do conjurador.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S3": {
-                "name": "Rough Welcome",
-                "description": "Attacks the enemy with a flame guardian, dispelling two buffs before stunning for 1 turn. Increases Combat Readiness of Fire elemental allies by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "Boas-vindas brutas",
+                "description": "Ataca o inimigo com um guardião das chamas, dissipando dois efeitos positivos antes de atordoar por 1 turno. Aumenta a Prontidão de Combate dos aliados do elemento Fogo em 20%. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             }
         }
     },
@@ -3388,17 +3388,17 @@
         "_name": "Khawazu",
         "skills": {
             "S1": {
-                "name": "Flame Strike",
-                "description": "Attacks the enemy with a ball of flame and has a 50% chance to inflict decreased Defense for 2 turns. After attacking, has a 35% chance to activate Burning Vitality. Burning Vitality: Increases Combat Readiness of the caster by 20%.",
-                "soulburn_effect": "100% chance to decrease Defense."
+                "name": "Golpe flamejante",
+                "description": "Ataca o inimigo com uma bola de fogo e tem 50% de chance de aplicar Diminuir Defesa por 2 turnos. Após atacar, tem 35% de chance de ativar Vitalidade ardente. Vitalidade ardente: aumenta a Prontidão de Combate do conjurador em 20%.",
+                "soulburn_effect": "100% de chance de diminuir a Defesa."
             },
             "S2": {
-                "name": "Composure",
-                "description": "After being attacked, when the caster has a debuff, dispels all debuffs and grants increased Attack for 2 turns."
+                "name": "Compostura",
+                "description": "Após ser atacado, quando o conjurador tem um efeito negativo, dissipa todos os efeitos negativos e concede Aumentar Ataque por 2 turnos."
             },
             "S3": {
-                "name": "Emberstorm",
-                "description": "Attacks with a fiery explosion, making the target unhealable and decreasing Defense for 2 turns each."
+                "name": "Tempestade de brasas",
+                "description": "Ataca com uma explosão de fogo, aplicando ao alvo impedimento de cura e Diminuir Defesa por 2 turnos cada."
             }
         }
     },
@@ -3406,17 +3406,17 @@
         "_name": "Kikirat v2",
         "skills": {
             "S1": {
-                "name": "Auto-Fire",
-                "description": "Attacks with a gatling gun, with a 90% chance to dispel one buff. Damage dealt increases proportional to the caster's Defense."
+                "name": "Fogo automático",
+                "description": "Ataca com uma metralhadora giratória, com 90% de chance de dissipar um efeito positivo. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S2": {
-                "name": "Defense Mode",
-                "description": "Increases Defense of the caster by 10% after attacking. Effect can only stack up to 5 times."
+                "name": "Modo de defesa",
+                "description": "Aumenta a Defesa do conjurador em 10% após atacar. O efeito acumula até 5 vezes."
             },
             "S3": {
-                "name": "Cleaning Mode",
-                "description": "Fires indiscriminately at all enemies, with a 75% chance to decrease Hit Chance for 1 turn, before triggering counterattacks from the caster for 2 turns. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Modo de limpeza",
+                "description": "Dispara indiscriminadamente contra todos os inimigos, com 75% de chance de diminuir a Precisão por 1 turno, depois concede contra-ataques ao conjurador por 2 turnos. O dano causado aumenta proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -3424,17 +3424,17 @@
         "_name": "Kiris",
         "skills": {
             "S1": {
-                "name": "Venomous Arrow",
-                "description": "Fires a poisoned arrow at the enemy, with a 50% chance to inflict poison for 2 turns."
+                "name": "Flecha venenosa",
+                "description": "Dispara uma flecha envenenada no inimigo, com 50% de chance de aplicar veneno por 2 turnos."
             },
             "S2": {
-                "name": "Corrosive Volley",
-                "description": "Fires a corrosive volley to all enemies, extending any debuff duration by 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Saraivada corrosiva",
+                "description": "Dispara uma saraivada corrosiva em todos os inimigos, estendendo a duração de todos os efeitos negativos em 1 turno.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Preparation",
-                "description": "Strengthens the casters next attack, granting an extra turn. Venomous Arrow: Increases effect chance to 100%, and poison effects can be stacked up to 3 times. Corrosive Volley: Extends debuff duration by 2 turns."
+                "name": "Preparação",
+                "description": "Fortalece o próximo ataque do conjurador, concedendo um turno extra. Flecha venenosa: aumenta a chance do efeito para 100%, e os venenos podem acumular até 3 vezes. Saraivada corrosiva: estende a duração dos efeitos negativos em 2 turnos."
             }
         }
     },

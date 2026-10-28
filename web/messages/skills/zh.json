@@ -3298,17 +3298,17 @@
         "_name": "Karin",
         "skills": {
             "S1": {
-                "name": "Sequential Cutter",
-                "description": "Attacks the enemy by quick-drawing with a sword. A critical hit will decrease skill cooldown by 1 turn."
+                "name": "连续斩",
+                "description": "迅速拔剑攻击敌人。暴击时，使技能冷却时间减少1回合。"
             },
             "S2": {
-                "name": "Blade Art: Flash",
-                "description": "Attacks the enemy by rushing towards them. A critical hit will inflict decreased Defense on the target for 1 turn, and grants an extra turn."
+                "name": "剑术：闪光",
+                "description": "冲向敌人发动攻击。暴击时，对目标施加1回合防御力降低，并获得额外回合。"
             },
             "S3": {
-                "name": "Blade Art: Thunder",
-                "description": "Attacks the enemy by slashing at lightning speed. A critical hit will increase damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "剑术：雷电",
+                "description": "以闪电般的速度斩击敌人。暴击时提升造成的伤害。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -3316,17 +3316,17 @@
         "_name": "Kawerik",
         "skills": {
             "S1": {
-                "name": "Spatial Relocation",
-                "description": "Approaches the enemy through subspace and attacks, and increases Combat Readiness of the caster by 15%. When the caster is granted mana field, consumes 10 Fighting Spirit to attack a random enemy with the same skill as an extra attack."
+                "name": "空间转移",
+                "description": "穿过亚空间接近敌人进行攻击，并使施放者的行动值提升15%。施放者拥有魔力领域时，消耗10斗志，以相同技能对随机一名敌人追加攻击。"
             },
             "S2": {
-                "name": "Dimensional Corridor",
-                "description": "Attacks the enemy in a dimensional corridor, with a 100% chance each to dispel two buffs before fully increasing skill cooldowns. A critical hit will grant an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "次元回廊",
+                "description": "在次元回廊中攻击敌人，各有100%的几率解除两个强化效果，然后使技能冷却时间回满。暴击时获得额外回合。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Dimensional Explosion",
-                "description": "Attacks all enemies with an explosion and grants increased Speed to the caster for 2 turns. Penetrates the target's Defense by 50%. At the start of the first battle, gains maximum Fighting Spirit, and when Fighting Spirit is 10 or more during battle, grants mana field."
+                "name": "次元爆炸",
+                "description": "以爆炸攻击所有敌人，并为施放者施加2回合速度提升。穿透目标50%的防御力。首场战斗开始时，获得最大斗志；战斗中斗志达到10以上时，施加魔力领域。"
             }
         }
     },
@@ -3334,17 +3334,17 @@
         "_name": "Kayron",
         "skills": {
             "S1": {
-                "name": "Void Slash",
-                "description": "Attacks the enemy with a sword, with a 50% chance to inflict decreased Hit Chance for 1 turn, dealing damage proportional to the caster's lost Health. When this skill is used, if it was not triggered by a Dual Attack and the caster has a buff, this skill changes into an attack that targets all enemies. The changed attack does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "虚空斩",
+                "description": "以剑攻击敌人，有50%的几率施加1回合命中率降低，造成与施放者已损失生命值成比例的伤害。使用此技能时，若并非由协攻触发且施放者拥有强化效果，此技能变为以所有敌人为目标的攻击。变化后的攻击不会触发协攻。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "Immortal Will",
-                "description": "When the caster receives lethal damage, grants immortality for 1 turn and increased Evasion for 2 turns and resets skill cooldowns."
+                "name": "不灭意志",
+                "description": "施放者受到致命伤害时，施加1回合不死与2回合闪避提升，并重置技能冷却时间。"
             },
             "S3": {
-                "name": "Apocalypse",
-                "description": "Attacks the enemy with the Archdemon's Might contained within the sword, before absorbing some of the damage dealt as Health and granting increased Attack to the caster for 2 turns. When the enemy is defeated, extends buff durations granted to the caster by 1 turn. Damage dealt increases proportional to the caster's lost Health."
+                "name": "末日",
+                "description": "以剑中蕴含的大魔神之威攻击敌人，然后将部分造成的伤害吸收为生命值，并为施放者施加2回合攻击力提升。击败敌人时，使施放者的强化效果持续时间延长1回合。造成的伤害按施放者已损失的生命值比例提升。"
             }
         }
     },
@@ -3352,17 +3352,17 @@
         "_name": "Ken",
         "skills": {
             "S1": {
-                "name": "Knockout",
-                "description": "Attacks the enemy with a flurry of strikes and has a 50% chance to inflict decreased Defense for 2 turns. When granted vigor, additionally inflicts burn on the target for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "击倒",
+                "description": "以连打攻击敌人，有50%的几率施加2回合防御力降低。拥有斗志时，额外对目标施加2回合灼伤。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Celestial Kick",
-                "description": "Attacks the enemy with a series of kicks, decreasing Defense for 2 turns before granting the caster increased Speed for 2 turns. When the caster is granted vigor, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "天之踢",
+                "description": "以连续踢击攻击敌人，降低其防御力2回合，然后为施放者施加2回合速度提升。施放者拥有斗志时，无视效果抵抗。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S3": {
-                "name": "Phoenix Flurry",
-                "description": "Attacks with a flurry of strikes before delivering a powerful blow, decreasing Attack for 2 turns and stunning for 1 turn. Grants vigor to the caster for 3 turns. Damage dealt increases proportional to the caster's max Health. At the start of the first battle, gains 40 Fighting Spirit."
+                "name": "凤凰连打",
+                "description": "连打后施以强力一击，降低攻击力2回合并使其眩晕1回合。为施放者施加3回合斗志。造成的伤害按施放者的最大生命值比例提升。首场战斗开始时，获得40斗志。"
             }
         }
     },
@@ -3370,17 +3370,17 @@
         "_name": "Khawana",
         "skills": {
             "S1": {
-                "name": "Hey There!",
-                "description": "Attacks the enemy with sharp sickles, with a 50% chance each to inflict two bleeding effects for 2 turns. If the enemy is debuffed after the attack, a successful attack deals additional damage proportional to the caster's Attack."
+                "name": "嘿！",
+                "description": "以锋利的镰刀攻击敌人，各有50%的几率施加两层2回合出血。攻击后若敌人有弱化效果，攻击成功时追加造成与施放者攻击力成比例的伤害。"
             },
             "S2": {
-                "name": "Casual Introduction",
-                "description": "Attacks all enemies with a flame guardian, before increasing Attack of all allies for 2 turns. Grants skill nullifier once to Fire elemental allies. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "随意介绍",
+                "description": "以火焰守护灵攻击所有敌人，然后提升所有友军的攻击力2回合。为火属性友军施加一次技能伤害无效。造成的伤害按施放者的速度比例提升。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S3": {
-                "name": "Rough Welcome",
-                "description": "Attacks the enemy with a flame guardian, dispelling two buffs before stunning for 1 turn. Increases Combat Readiness of Fire elemental allies by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "粗暴欢迎",
+                "description": "以火焰守护灵攻击敌人，解除两个强化效果后使其眩晕1回合。使火属性友军的行动值提升20%。造成的伤害按施放者的速度比例提升。"
             }
         }
     },
@@ -3388,17 +3388,17 @@
         "_name": "Khawazu",
         "skills": {
             "S1": {
-                "name": "Flame Strike",
-                "description": "Attacks the enemy with a ball of flame and has a 50% chance to inflict decreased Defense for 2 turns. After attacking, has a 35% chance to activate Burning Vitality. Burning Vitality: Increases Combat Readiness of the caster by 20%.",
-                "soulburn_effect": "100% chance to decrease Defense."
+                "name": "火焰打击",
+                "description": "以火球攻击敌人，有50%的几率施加2回合防御力降低。攻击后有35%的几率发动燃烧活力。燃烧活力：使施放者的行动值提升20%。",
+                "soulburn_effect": "有100%的几率降低防御力。"
             },
             "S2": {
-                "name": "Composure",
-                "description": "After being attacked, when the caster has a debuff, dispels all debuffs and grants increased Attack for 2 turns."
+                "name": "沉着",
+                "description": "受到攻击后，若施放者有弱化效果，解除所有弱化效果，并施加2回合攻击力提升。"
             },
             "S3": {
-                "name": "Emberstorm",
-                "description": "Attacks with a fiery explosion, making the target unhealable and decreasing Defense for 2 turns each."
+                "name": "余烬风暴",
+                "description": "以火焰爆炸攻击，对目标各施加2回合无法恢复与防御力降低。"
             }
         }
     },
@@ -3406,17 +3406,17 @@
         "_name": "Kikirat v2",
         "skills": {
             "S1": {
-                "name": "Auto-Fire",
-                "description": "Attacks with a gatling gun, with a 90% chance to dispel one buff. Damage dealt increases proportional to the caster's Defense."
+                "name": "自动射击",
+                "description": "以加特林机枪攻击，有90%的几率解除一个强化效果。造成的伤害按施放者的防御力比例提升。"
             },
             "S2": {
-                "name": "Defense Mode",
-                "description": "Increases Defense of the caster by 10% after attacking. Effect can only stack up to 5 times."
+                "name": "防御模式",
+                "description": "攻击后，施放者的防御力提升10%。效果最多叠加5次。"
             },
             "S3": {
-                "name": "Cleaning Mode",
-                "description": "Fires indiscriminately at all enemies, with a 75% chance to decrease Hit Chance for 1 turn, before triggering counterattacks from the caster for 2 turns. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "清扫模式",
+                "description": "对所有敌人进行无差别射击，有75%的几率降低命中率1回合，然后为施放者施加2回合反击。造成的伤害按施放者的防御力比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -3424,17 +3424,17 @@
         "_name": "Kiris",
         "skills": {
             "S1": {
-                "name": "Venomous Arrow",
-                "description": "Fires a poisoned arrow at the enemy, with a 50% chance to inflict poison for 2 turns."
+                "name": "毒箭",
+                "description": "向敌人射出毒箭，有50%的几率施加2回合持续伤害。"
             },
             "S2": {
-                "name": "Corrosive Volley",
-                "description": "Fires a corrosive volley to all enemies, extending any debuff duration by 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "腐蚀齐射",
+                "description": "向所有敌人齐射腐蚀之箭，使弱化效果持续时间延长1回合。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Preparation",
-                "description": "Strengthens the casters next attack, granting an extra turn. Venomous Arrow: Increases effect chance to 100%, and poison effects can be stacked up to 3 times. Corrosive Volley: Extends debuff duration by 2 turns."
+                "name": "准备",
+                "description": "强化施放者的下一次攻击，并获得额外回合。毒箭：效果几率提升至100%，持续伤害最多可叠加3次。腐蚀齐射：使弱化效果持续时间延长2回合。"
             }
         }
     },

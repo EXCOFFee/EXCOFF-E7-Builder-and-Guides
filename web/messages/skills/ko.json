@@ -3298,17 +3298,17 @@
         "_name": "Karin",
         "skills": {
             "S1": {
-                "name": "Sequential Cutter",
-                "description": "Attacks the enemy by quick-drawing with a sword. A critical hit will decrease skill cooldown by 1 turn."
+                "name": "연속 베기",
+                "description": "검을 빠르게 뽑아 적을 공격한다. 치명타가 발생하면 스킬 재사용 대기 시간을 1턴 감소시킨다."
             },
             "S2": {
-                "name": "Blade Art: Flash",
-                "description": "Attacks the enemy by rushing towards them. A critical hit will inflict decreased Defense on the target for 1 turn, and grants an extra turn."
+                "name": "검술: 섬광",
+                "description": "적에게 돌진해 공격한다. 치명타가 발생하면 대상에게 1턴 동안 방어력 감소를 걸고 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Blade Art: Thunder",
-                "description": "Attacks the enemy by slashing at lightning speed. A critical hit will increase damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "검술: 뇌전",
+                "description": "번개 같은 속도로 베어 적을 공격한다. 치명타가 발생하면 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -3316,17 +3316,17 @@
         "_name": "Kawerik",
         "skills": {
             "S1": {
-                "name": "Spatial Relocation",
-                "description": "Approaches the enemy through subspace and attacks, and increases Combat Readiness of the caster by 15%. When the caster is granted mana field, consumes 10 Fighting Spirit to attack a random enemy with the same skill as an extra attack."
+                "name": "공간 이동",
+                "description": "아공간을 통해 적에게 다가가 공격하고 시전자의 행동 게이지를 15% 증가시킨다. 시전자에게 마나 필드가 있으면 투지를 10 소모해 무작위 적에게 같은 스킬로 추가 공격한다."
             },
             "S2": {
-                "name": "Dimensional Corridor",
-                "description": "Attacks the enemy in a dimensional corridor, with a 100% chance each to dispel two buffs before fully increasing skill cooldowns. A critical hit will grant an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "차원 회랑",
+                "description": "차원 회랑에서 적을 공격하며, 각각 100% 확률로 강화 효과를 두 개 해제한 뒤 스킬 재사용 대기 시간을 가득 채운다. 치명타가 발생하면 추가 턴을 얻는다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "Dimensional Explosion",
-                "description": "Attacks all enemies with an explosion and grants increased Speed to the caster for 2 turns. Penetrates the target's Defense by 50%. At the start of the first battle, gains maximum Fighting Spirit, and when Fighting Spirit is 10 or more during battle, grants mana field."
+                "name": "차원 폭발",
+                "description": "폭발로 모든 적을 공격하고 시전자에게 2턴 동안 속도 증가를 부여한다. 대상의 방어력을 50% 관통한다. 첫 번째 전투 시작 시 투지를 최대로 얻으며, 전투 중 투지가 10 이상이면 마나 필드를 부여한다."
             }
         }
     },
@@ -3334,17 +3334,17 @@
         "_name": "Kayron",
         "skills": {
             "S1": {
-                "name": "Void Slash",
-                "description": "Attacks the enemy with a sword, with a 50% chance to inflict decreased Hit Chance for 1 turn, dealing damage proportional to the caster's lost Health. When this skill is used, if it was not triggered by a Dual Attack and the caster has a buff, this skill changes into an attack that targets all enemies. The changed attack does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "공허의 베기",
+                "description": "검으로 적을 공격하며, 50% 확률로 1턴 동안 명중률 감소를 걸고 시전자가 잃은 생명력에 비례한 피해를 준다. 이 스킬 사용 시 협공으로 발동한 것이 아니고 시전자에게 강화 효과가 있으면 모든 적을 대상으로 하는 공격으로 바뀐다. 바뀐 공격으로는 협공이 발동하지 않는다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Immortal Will",
-                "description": "When the caster receives lethal damage, grants immortality for 1 turn and increased Evasion for 2 turns and resets skill cooldowns."
+                "name": "불멸의 의지",
+                "description": "시전자가 치명적인 피해를 받으면 1턴 동안 불사를, 2턴 동안 회피 증가를 부여하고 스킬 재사용 대기 시간을 초기화한다."
             },
             "S3": {
-                "name": "Apocalypse",
-                "description": "Attacks the enemy with the Archdemon's Might contained within the sword, before absorbing some of the damage dealt as Health and granting increased Attack to the caster for 2 turns. When the enemy is defeated, extends buff durations granted to the caster by 1 turn. Damage dealt increases proportional to the caster's lost Health."
+                "name": "종말",
+                "description": "검에 깃든 대마신의 위력으로 적을 공격한 뒤 준 피해의 일부를 생명력으로 흡수하고 시전자에게 2턴 동안 공격력 증가를 부여한다. 적을 처치하면 시전자의 강화 효과 지속 시간을 1턴 연장한다. 시전자가 잃은 생명력에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -3352,17 +3352,17 @@
         "_name": "Ken",
         "skills": {
             "S1": {
-                "name": "Knockout",
-                "description": "Attacks the enemy with a flurry of strikes and has a 50% chance to inflict decreased Defense for 2 turns. When granted vigor, additionally inflicts burn on the target for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "녹아웃",
+                "description": "연타로 적을 공격하며, 50% 확률로 2턴 동안 방어력 감소를 건다. 투지가 있으면 대상에게 추가로 2턴 동안 화상을 건다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Celestial Kick",
-                "description": "Attacks the enemy with a series of kicks, decreasing Defense for 2 turns before granting the caster increased Speed for 2 turns. When the caster is granted vigor, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "천상의 발차기",
+                "description": "연속 발차기로 적을 공격해 2턴 동안 방어력을 감소시킨 뒤 시전자에게 2턴 동안 속도 증가를 부여한다. 시전자에게 투지가 있으면 효과 저항을 무시한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Phoenix Flurry",
-                "description": "Attacks with a flurry of strikes before delivering a powerful blow, decreasing Attack for 2 turns and stunning for 1 turn. Grants vigor to the caster for 3 turns. Damage dealt increases proportional to the caster's max Health. At the start of the first battle, gains 40 Fighting Spirit."
+                "name": "불사조 연타",
+                "description": "연타 후 강력한 일격을 가해 2턴 동안 공격력을 감소시키고 1턴 동안 기절시킨다. 시전자에게 3턴 동안 투지를 부여한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 첫 번째 전투 시작 시 투지를 40 얻는다."
             }
         }
     },
@@ -3370,17 +3370,17 @@
         "_name": "Khawana",
         "skills": {
             "S1": {
-                "name": "Hey There!",
-                "description": "Attacks the enemy with sharp sickles, with a 50% chance each to inflict two bleeding effects for 2 turns. If the enemy is debuffed after the attack, a successful attack deals additional damage proportional to the caster's Attack."
+                "name": "안녕!",
+                "description": "날카로운 낫으로 적을 공격하며, 각각 50% 확률로 2턴 동안 출혈을 두 개 건다. 공격 후 적에게 약화 효과가 있으면 공격 성공 시 시전자의 공격력에 비례한 추가 피해를 준다."
             },
             "S2": {
-                "name": "Casual Introduction",
-                "description": "Attacks all enemies with a flame guardian, before increasing Attack of all allies for 2 turns. Grants skill nullifier once to Fire elemental allies. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "가벼운 소개",
+                "description": "불꽃 수호령으로 모든 적을 공격한 뒤 2턴 동안 모든 아군의 공격력을 증가시킨다. 불 속성 아군에게 스킬 피해 무효를 한 번 부여한다. 시전자의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Rough Welcome",
-                "description": "Attacks the enemy with a flame guardian, dispelling two buffs before stunning for 1 turn. Increases Combat Readiness of Fire elemental allies by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "거친 환영",
+                "description": "불꽃 수호령으로 적을 공격해 강화 효과를 두 개 해제한 뒤 1턴 동안 기절시킨다. 불 속성 아군의 행동 게이지를 20% 증가시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -3388,17 +3388,17 @@
         "_name": "Khawazu",
         "skills": {
             "S1": {
-                "name": "Flame Strike",
-                "description": "Attacks the enemy with a ball of flame and has a 50% chance to inflict decreased Defense for 2 turns. After attacking, has a 35% chance to activate Burning Vitality. Burning Vitality: Increases Combat Readiness of the caster by 20%.",
-                "soulburn_effect": "100% chance to decrease Defense."
+                "name": "화염 일격",
+                "description": "화염구로 적을 공격하며, 50% 확률로 2턴 동안 방어력 감소를 건다. 공격 후 35% 확률로 불타는 활력을 발동한다. 불타는 활력: 시전자의 행동 게이지를 20% 증가시킨다.",
+                "soulburn_effect": "100% 확률로 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Composure",
-                "description": "After being attacked, when the caster has a debuff, dispels all debuffs and grants increased Attack for 2 turns."
+                "name": "침착",
+                "description": "공격받은 후 시전자에게 약화 효과가 있으면 약화 효과를 모두 해제하고 2턴 동안 공격력 증가를 부여한다."
             },
             "S3": {
-                "name": "Emberstorm",
-                "description": "Attacks with a fiery explosion, making the target unhealable and decreasing Defense for 2 turns each."
+                "name": "불씨 폭풍",
+                "description": "화염 폭발로 공격해 대상에게 각각 2턴 동안 회복 불가와 방어력 감소를 건다."
             }
         }
     },
@@ -3406,17 +3406,17 @@
         "_name": "Kikirat v2",
         "skills": {
             "S1": {
-                "name": "Auto-Fire",
-                "description": "Attacks with a gatling gun, with a 90% chance to dispel one buff. Damage dealt increases proportional to the caster's Defense."
+                "name": "자동 사격",
+                "description": "개틀링건으로 공격하며, 90% 확률로 강화 효과를 한 개 해제한다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Defense Mode",
-                "description": "Increases Defense of the caster by 10% after attacking. Effect can only stack up to 5 times."
+                "name": "방어 모드",
+                "description": "공격 후 시전자의 방어력이 10% 증가한다. 효과는 최대 5회까지 중첩된다."
             },
             "S3": {
-                "name": "Cleaning Mode",
-                "description": "Fires indiscriminately at all enemies, with a 75% chance to decrease Hit Chance for 1 turn, before triggering counterattacks from the caster for 2 turns. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "청소 모드",
+                "description": "모든 적에게 무차별 사격을 하며, 75% 확률로 1턴 동안 명중률을 감소시킨 뒤 시전자에게 2턴 동안 반격을 부여한다. 시전자의 방어력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -3424,17 +3424,17 @@
         "_name": "Kiris",
         "skills": {
             "S1": {
-                "name": "Venomous Arrow",
-                "description": "Fires a poisoned arrow at the enemy, with a 50% chance to inflict poison for 2 turns."
+                "name": "독화살",
+                "description": "적에게 독화살을 쏘며, 50% 확률로 2턴 동안 지속 피해를 건다."
             },
             "S2": {
-                "name": "Corrosive Volley",
-                "description": "Fires a corrosive volley to all enemies, extending any debuff duration by 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "부식 사격",
+                "description": "모든 적에게 부식 화살을 일제히 쏴 약화 효과의 지속 시간을 1턴 연장한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "Preparation",
-                "description": "Strengthens the casters next attack, granting an extra turn. Venomous Arrow: Increases effect chance to 100%, and poison effects can be stacked up to 3 times. Corrosive Volley: Extends debuff duration by 2 turns."
+                "name": "준비",
+                "description": "시전자의 다음 공격을 강화하고 추가 턴을 얻는다. 독화살: 효과 발동 확률이 100%로 증가하고 지속 피해를 최대 3회까지 중첩할 수 있다. 부식 사격: 약화 효과의 지속 시간을 2턴 연장한다."
             }
         }
     },
