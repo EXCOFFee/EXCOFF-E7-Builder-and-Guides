@@ -93,10 +93,7 @@ const nextConfig: NextConfig = {
         source: '/fonts/:path*',
         headers: cacheHeaders,
       },
-      {
-        source: '/_next/static/:path*',
-        headers: cacheHeaders,
-      },
+      // /_next/static ya lo cachea Next.js como immutable; un header propio rompe el modo dev
     ];
   },
 
