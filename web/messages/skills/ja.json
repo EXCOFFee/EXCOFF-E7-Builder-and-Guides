@@ -4826,17 +4826,17 @@
         "_name": "Ras",
         "skills": {
             "S1": {
-                "name": "X-Slash",
-                "description": "Attacks with a sword, with 75% chance to dispel a buff. Damage dealt increases proportional to the caster's max Health."
+                "name": "X斬り",
+                "description": "剣で攻撃し、75%の確率で強化効果を一つ解除する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Command Strike",
-                "description": "Attacks the enemy repeatedly, before triggering a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "指揮の一撃",
+                "description": "敵を連続で攻撃した後、攻撃力が最も高い味方に協攻させる。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             },
             "S3": {
-                "name": "Sword of the Heir",
-                "description": "Strongly attacks all enemies with a swordstorm, before increasing Defense of all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "継承者の剣",
+                "description": "剣の嵐で敵全体を強く攻撃した後、2ターンの間味方全員の防御力をアップさせる。発動者の最大HPに比例して与ダメージがアップする。"
             }
         }
     },
@@ -4844,17 +4844,17 @@
         "_name": "Ravi",
         "skills": {
             "S1": {
-                "name": "Slaughter",
-                "description": "Attacks the enemy with a double-edged axe, and absorbs some of the damage dealt as Health. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Greatly increases amount of damage dealt. Does not trigger a Dual Attack."
+                "name": "屠殺",
+                "description": "両刃の斧で敵を攻撃し、与ダメージの一部をHPとして吸収する。攻撃が成功すると必ずクリティカルが発生する。",
+                "soulburn_effect": "与ダメージが大幅にアップする。協攻が発動しない。"
             },
             "S2": {
-                "name": "Demon's Blood",
-                "description": "At the start of the first battle, gains 60 Fighting Spirit and increases Attack proportional to max Health. After being attacked, increases Combat Readiness by 15%, and after suffering a critical hit, dispels one debuff from the caster."
+                "name": "悪魔の血",
+                "description": "最初のバトル開始時、闘志を60獲得し、最大HPに比例して攻撃力がアップする。攻撃された後、行動ゲージを15%増加させ、クリティカルを受けた後、発動者の弱体効果を一つ解除する。"
             },
             "S3": {
-                "name": "Devil Drive",
-                "description": "Brutally attacks all enemies, inflicting up to 20% injuries before a 75% chance to stun for 1 turn. A successful attack always results in a critical hit."
+                "name": "デビルドライブ",
+                "description": "敵全体を残酷に攻撃し、最大20%の負傷を与えた後、75%の確率で1ターンの間気絶させる。攻撃が成功すると必ずクリティカルが発生する。"
             }
         }
     },
@@ -4862,17 +4862,17 @@
         "_name": "Ray",
         "skills": {
             "S1": {
-                "name": "Extreme Remedies",
-                "description": "Attacks by throwing a bottle, dispelling one debuff from an ally."
+                "name": "劇薬処方",
+                "description": "瓶を投げて攻撃し、味方一人の弱体効果を一つ解除する。"
             },
             "S2": {
-                "name": "Light of Rebirth",
-                "description": "Radiates light upon all allies, recovering Health and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the ally's max Health."
+                "name": "再生の光",
+                "description": "味方全員に光を照らし、HPを回復し、2ターンの間バリアを付与する。味方の最大HPに比例して回復量とバリアの強度がアップする。"
             },
             "S3": {
-                "name": "Invigorate",
-                "description": "By infusing vitality, dispels all debuffs from all allies and grants immunity for 2 turns before recovering Health proportional to the target's max Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "活力付与",
+                "description": "活力を注ぎ込み、味方全員の弱体効果をすべて解除し、2ターンの間免疫を付与した後、対象の最大HPに比例してHPを回復する。",
+                "soulburn_effect": "回復量がアップする。"
             }
         }
     },
@@ -4880,17 +4880,17 @@
         "_name": "Rem",
         "skills": {
             "S1": {
-                "name": "Leave it to Me.",
-                "description": "Attacks the enemy with a morning star, with a 50% chance to decrease Defense for 2 turns. When the caster is granted Demon Mode, grants the caster an extra attack with the same skill.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "お任せください。",
+                "description": "モーニングスターで敵を攻撃し、50%の確率で2ターンの間防御力をダウンさせる。発動者に鬼化があれば、同じスキルで追加攻撃する。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "A Maid's Pride",
-                "description": "When somebody dies, dispels all debuffs from the caster and grants Demon Mode for 2 turns. When an ally except for the caster is attacked, has a 20% chance to counterattack with Iron Strike. Iron Strike takes priority over a counterattack with a basic skill. Iron Strike: Attacks all enemies, decreasing buff durations by 1 turn and inflicting unhealable for 1 turn."
+                "name": "メイドの誇り",
+                "description": "誰かが死亡すると、発動者の弱体効果をすべて解除し、2ターンの間鬼化を付与する。発動者を除く味方が攻撃されると、20%の確率で鉄の一撃で反撃する。鉄の一撃は通常スキルでの反撃より優先される。鉄の一撃：敵全体を攻撃し、強化効果の持続時間を1ターン減少させ、1ターンの間回復不可を付与する。"
             },
             "S3": {
-                "name": "I Will Punish You!",
-                "description": "Increases Attack of the caster for 3 turns, before leaping up to attack all enemies and decrease Hit Chance for 2 turns. Increases Combat Readiness of the caster by 50%."
+                "name": "お仕置きです！",
+                "description": "3ターンの間発動者の攻撃力をアップさせた後、跳躍して敵全体を攻撃し、2ターンの間命中率をダウンさせる。発動者の行動ゲージを50%増加させる。"
             }
         }
     },
@@ -4898,17 +4898,17 @@
         "_name": "Remnant Violet",
         "skills": {
             "S1": {
-                "name": "Sword Flash",
-                "description": "Cuts the enemy, with a 75% chance to decrease Hit Chance for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "剣閃",
+                "description": "敵を斬りつけ、75%の確率で1ターンの間命中率をダウンさせる。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Concentration",
-                "description": "Increases Evasion by 50%, and when evading, gains 1 Focus. After attacking or being attacked, when Focus is 5, activates Massacre against a random enemy and consumes all Focus."
+                "name": "集中",
+                "description": "回避が50%アップし、回避すると集中を1獲得する。攻撃した後または攻撃された後、集中が5なら、ランダムな敵に虐殺を発動し、集中をすべて消費する。"
             },
             "S3": {
-                "name": "Massacre",
-                "description": "Increases Attack of the caster for 3 turns, before attacking the enemy with a sword, and increases Combat Readiness of the caster by 50%. Penetrates the target's Defense by 50%."
+                "name": "虐殺",
+                "description": "3ターンの間発動者の攻撃力をアップさせた後、剣で敵を攻撃し、発動者の行動ゲージを50%増加させる。対象の防御力を50%貫通する。"
             }
         }
     },
@@ -4916,17 +4916,17 @@
         "_name": "Renoa",
         "skills": {
             "S1": {
-                "name": "Instant Judgement",
-                "description": "Attacks the enemy with a pistol. Damage dealt increases proportional to the caster's Defense. At the start of the turn, when Focus is full, changes to Black Thorn. Black Thorn (Consumes 5 Focus): Attacks the enemy with thorns, and grants the maximum number of Dirge Bullets to the caster. Damage dealt increases proportional to the caster's Defense. The changed attack does not trigger a Dual Attack."
+                "name": "即決審判",
+                "description": "拳銃で敵を攻撃する。発動者の防御力に比例して与ダメージがアップする。ターン開始時、集中が満タンなら黒い棘に変わる。黒い棘（集中5消費）：棘で敵を攻撃し、発動者に挽歌の弾丸を最大数付与する。発動者の防御力に比例して与ダメージがアップする。変化した攻撃では協攻が発動しない。"
             },
             "S2": {
-                "name": "Black Rose",
-                "description": "Buffs and debuffs applied to the caster become Dirge Bullets. After using a skill on the caster's turn, when the caster has a Dirge Bullet, uses Dirge Bullet on a random enemy. Dirge Bullet (Gains 1 Focus): Attacks the enemy with a pistol. Damage dealt increases proportional to the caster's Defense. Damage dealt and attack count increase proportional to the number of Dirge Bullets granted."
+                "name": "黒薔薇",
+                "description": "発動者に適用される強化効果と弱体効果が挽歌の弾丸になる。発動者のターンにスキルを使用した後、発動者に挽歌の弾丸があれば、ランダムな敵に挽歌の弾丸を使用する。挽歌の弾丸（集中1獲得）：拳銃で敵を攻撃する。発動者の防御力に比例して与ダメージがアップする。付与された挽歌の弾丸の数に比例して与ダメージと攻撃回数がアップする。"
             },
             "S3": {
-                "name": "Flower of Devoured Fate",
-                "description": "Increases Combat Readiness of all allies by 50%, and grants three Dirge Bullets to the caster.",
-                "soulburn_effect": "The number of Dirge Bullets granted is doubled."
+                "name": "喰われた運命の花",
+                "description": "味方全員の行動ゲージを50%増加させ、発動者に挽歌の弾丸を三つ付与する。",
+                "soulburn_effect": "付与する挽歌の弾丸の数が倍になる。"
             }
         }
     },
@@ -4934,17 +4934,17 @@
         "_name": "Requiem Roana",
         "skills": {
             "S1": {
-                "name": "Touch of Darkness",
-                "description": "Attacks the enemy with magic, with a 75% chance to inflict decreased Defense for 1 turn. Cannot trigger a critical hit or a heavy blow, and a successful attack will inflict additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense for 2 turns."
+                "name": "闇の手",
+                "description": "魔法で敵を攻撃し、75%の確率で1ターンの間防御力ダウンを付与する。クリティカルや強打は発生せず、攻撃が成功すると発動者の攻撃力に比例した追加ダメージを与える。",
+                "soulburn_effect": "効果発動確率が100%にアップし、2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Boundless Obsession",
-                "description": "Reduces the effect of Combat Readiness increases provided by Speed by 50%. At the start of the foremost ally's turn except for the caster, increases Combat Readiness of the caster by 100%."
+                "name": "果てなき執着",
+                "description": "スピードによる行動ゲージ増加効果が50%減少する。発動者を除く最も前にいる味方のターン開始時、発動者の行動ゲージを100%増加させる。"
             },
             "S3": {
-                "name": "Eternal Lament",
-                "description": "Attacks all enemies with a horde of illusions, dispelling one buff before increasing cooldowns by 1 turn and decreasing Combat Readiness by 30%. Cannot trigger a critical hit or a heavy blow, but penetrates the target's Defense."
+                "name": "永遠の嘆き",
+                "description": "幻影の群れで敵全体を攻撃し、強化効果を一つ解除した後、クールタイムを1ターン増加させ、行動ゲージを30%減少させる。クリティカルや強打は発生しないが、対象の防御力を貫通する。"
             }
         }
     },
@@ -4952,17 +4952,17 @@
         "_name": "Requiemroar",
         "skills": {
             "S1": {
-                "name": "Insanity",
-                "description": "Claws the enemy, with a 75% chance to decrease Attack for 1 turn."
+                "name": "狂気",
+                "description": "敵を引っかき、75%の確率で1ターンの間攻撃力をダウンさせる。"
             },
             "S2": {
-                "name": "Blood Feast",
-                "description": "All allies absorb 10% of the damage they inflict as Health. Every time an enemy dies, all allies recover 20% Health and the caster's Combat Readiness increases by 10%. Effects upon enemy death can only be activated once per turn."
+                "name": "血の宴",
+                "description": "味方全員が与ダメージの10%をHPとして吸収する。敵が死亡するたびに、味方全員のHPを20%回復し、発動者の行動ゲージが10%増加する。敵の死亡による効果はターンごとに一度のみ発動できる。"
             },
             "S3": {
-                "name": "Dirge",
-                "description": "Attacks with magic, with a 100% chance to decrease Defense for 2 turns, and increases Combat Readiness of all allies by 20%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "挽歌",
+                "description": "魔法で攻撃し、100%の確率で2ターンの間防御力をダウンさせ、味方全員の行動ゲージを20%増加させる。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },

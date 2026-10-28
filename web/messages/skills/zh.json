@@ -4826,17 +4826,17 @@
         "_name": "Ras",
         "skills": {
             "S1": {
-                "name": "X-Slash",
-                "description": "Attacks with a sword, with 75% chance to dispel a buff. Damage dealt increases proportional to the caster's max Health."
+                "name": "X斩",
+                "description": "以剑攻击，有75%的几率解除一个强化效果。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Command Strike",
-                "description": "Attacks the enemy repeatedly, before triggering a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "指挥打击",
+                "description": "连续攻击敌人，然后使攻击力最高的友军发动协攻。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             },
             "S3": {
-                "name": "Sword of the Heir",
-                "description": "Strongly attacks all enemies with a swordstorm, before increasing Defense of all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "继承者之剑",
+                "description": "以剑之风暴猛烈攻击所有敌人，然后提升所有友军的防御力2回合。造成的伤害按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -4844,17 +4844,17 @@
         "_name": "Ravi",
         "skills": {
             "S1": {
-                "name": "Slaughter",
-                "description": "Attacks the enemy with a double-edged axe, and absorbs some of the damage dealt as Health. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Greatly increases amount of damage dealt. Does not trigger a Dual Attack."
+                "name": "屠戮",
+                "description": "以双刃斧攻击敌人，并将部分造成的伤害吸收为生命值。攻击成功时必定暴击。",
+                "soulburn_effect": "大幅提升造成的伤害。不会触发协攻。"
             },
             "S2": {
-                "name": "Demon's Blood",
-                "description": "At the start of the first battle, gains 60 Fighting Spirit and increases Attack proportional to max Health. After being attacked, increases Combat Readiness by 15%, and after suffering a critical hit, dispels one debuff from the caster."
+                "name": "恶魔之血",
+                "description": "首场战斗开始时，获得60斗志，并按最大生命值比例提升攻击力。受到攻击后，提升15%行动值；受到暴击后，解除施放者的一个弱化效果。"
             },
             "S3": {
-                "name": "Devil Drive",
-                "description": "Brutally attacks all enemies, inflicting up to 20% injuries before a 75% chance to stun for 1 turn. A successful attack always results in a critical hit."
+                "name": "恶魔驱动",
+                "description": "残暴地攻击所有敌人，造成最多20%的负伤，然后有75%的几率使其眩晕1回合。攻击成功时必定暴击。"
             }
         }
     },
@@ -4862,17 +4862,17 @@
         "_name": "Ray",
         "skills": {
             "S1": {
-                "name": "Extreme Remedies",
-                "description": "Attacks by throwing a bottle, dispelling one debuff from an ally."
+                "name": "猛药",
+                "description": "投掷药瓶攻击，并解除一名友军的一个弱化效果。"
             },
             "S2": {
-                "name": "Light of Rebirth",
-                "description": "Radiates light upon all allies, recovering Health and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the ally's max Health."
+                "name": "重生之光",
+                "description": "以光芒照耀所有友军，恢复生命值并施加2回合屏障。恢复量与屏障强度按友军的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Invigorate",
-                "description": "By infusing vitality, dispels all debuffs from all allies and grants immunity for 2 turns before recovering Health proportional to the target's max Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "注入活力",
+                "description": "注入活力，解除所有友军的所有弱化效果，并施加2回合免疫，然后按目标的最大生命值比例恢复生命值。",
+                "soulburn_effect": "提升恢复量。"
             }
         }
     },
@@ -4880,17 +4880,17 @@
         "_name": "Rem",
         "skills": {
             "S1": {
-                "name": "Leave it to Me.",
-                "description": "Attacks the enemy with a morning star, with a 50% chance to decrease Defense for 2 turns. When the caster is granted Demon Mode, grants the caster an extra attack with the same skill.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "交给我吧。",
+                "description": "以流星锤攻击敌人，有50%的几率降低防御力2回合。施放者拥有鬼化模式时，以相同技能追加攻击。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "A Maid's Pride",
-                "description": "When somebody dies, dispels all debuffs from the caster and grants Demon Mode for 2 turns. When an ally except for the caster is attacked, has a 20% chance to counterattack with Iron Strike. Iron Strike takes priority over a counterattack with a basic skill. Iron Strike: Attacks all enemies, decreasing buff durations by 1 turn and inflicting unhealable for 1 turn."
+                "name": "女仆的骄傲",
+                "description": "有人阵亡时，解除施放者的所有弱化效果，并施加2回合鬼化模式。除施放者外的友军受到攻击时，有20%的几率以钢铁一击反击。钢铁一击优先于普通技能反击。钢铁一击：攻击所有敌人，使强化效果持续时间减少1回合，并施加1回合无法恢复。"
             },
             "S3": {
-                "name": "I Will Punish You!",
-                "description": "Increases Attack of the caster for 3 turns, before leaping up to attack all enemies and decrease Hit Chance for 2 turns. Increases Combat Readiness of the caster by 50%."
+                "name": "我要惩罚你！",
+                "description": "提升施放者的攻击力3回合，然后跃起攻击所有敌人，并降低命中率2回合。使施放者的行动值提升50%。"
             }
         }
     },
@@ -4898,17 +4898,17 @@
         "_name": "Remnant Violet",
         "skills": {
             "S1": {
-                "name": "Sword Flash",
-                "description": "Cuts the enemy, with a 75% chance to decrease Hit Chance for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "剑闪",
+                "description": "斩击敌人，有75%的几率降低命中率1回合。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Concentration",
-                "description": "Increases Evasion by 50%, and when evading, gains 1 Focus. After attacking or being attacked, when Focus is 5, activates Massacre against a random enemy and consumes all Focus."
+                "name": "专注",
+                "description": "闪避提升50%，闪避时获得1专注。攻击或受到攻击后，若专注达到5，对随机一名敌人发动屠杀，并消耗全部专注。"
             },
             "S3": {
-                "name": "Massacre",
-                "description": "Increases Attack of the caster for 3 turns, before attacking the enemy with a sword, and increases Combat Readiness of the caster by 50%. Penetrates the target's Defense by 50%."
+                "name": "屠杀",
+                "description": "提升施放者的攻击力3回合，然后以剑攻击敌人，并使施放者的行动值提升50%。穿透目标50%的防御力。"
             }
         }
     },
@@ -4916,17 +4916,17 @@
         "_name": "Renoa",
         "skills": {
             "S1": {
-                "name": "Instant Judgement",
-                "description": "Attacks the enemy with a pistol. Damage dealt increases proportional to the caster's Defense. At the start of the turn, when Focus is full, changes to Black Thorn. Black Thorn (Consumes 5 Focus): Attacks the enemy with thorns, and grants the maximum number of Dirge Bullets to the caster. Damage dealt increases proportional to the caster's Defense. The changed attack does not trigger a Dual Attack."
+                "name": "即决审判",
+                "description": "以手枪攻击敌人。造成的伤害按施放者的防御力比例提升。回合开始时，若专注已满，变为黑色荆棘。黑色荆棘（消耗5专注）：以荆棘攻击敌人，并为施放者施加最大数量的挽歌子弹。造成的伤害按施放者的防御力比例提升。变化后的攻击不会触发协攻。"
             },
             "S2": {
-                "name": "Black Rose",
-                "description": "Buffs and debuffs applied to the caster become Dirge Bullets. After using a skill on the caster's turn, when the caster has a Dirge Bullet, uses Dirge Bullet on a random enemy. Dirge Bullet (Gains 1 Focus): Attacks the enemy with a pistol. Damage dealt increases proportional to the caster's Defense. Damage dealt and attack count increase proportional to the number of Dirge Bullets granted."
+                "name": "黑玫瑰",
+                "description": "施加于施放者的强化效果与弱化效果变为挽歌子弹。在施放者的回合使用技能后，若施放者拥有挽歌子弹，对随机一名敌人使用挽歌子弹。挽歌子弹（获得1专注）：以手枪攻击敌人。造成的伤害按施放者的防御力比例提升。造成的伤害与攻击次数按挽歌子弹的数量比例提升。"
             },
             "S3": {
-                "name": "Flower of Devoured Fate",
-                "description": "Increases Combat Readiness of all allies by 50%, and grants three Dirge Bullets to the caster.",
-                "soulburn_effect": "The number of Dirge Bullets granted is doubled."
+                "name": "被吞噬命运之花",
+                "description": "使所有友军的行动值提升50%，并为施放者施加三颗挽歌子弹。",
+                "soulburn_effect": "施加的挽歌子弹数量翻倍。"
             }
         }
     },
@@ -4934,17 +4934,17 @@
         "_name": "Requiem Roana",
         "skills": {
             "S1": {
-                "name": "Touch of Darkness",
-                "description": "Attacks the enemy with magic, with a 75% chance to inflict decreased Defense for 1 turn. Cannot trigger a critical hit or a heavy blow, and a successful attack will inflict additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense for 2 turns."
+                "name": "黑暗之触",
+                "description": "以魔法攻击敌人，有75%的几率施加1回合防御力降低。无法造成暴击或重击，攻击成功时追加造成与施放者攻击力成比例的伤害。",
+                "soulburn_effect": "效果几率提升至100%，并降低防御力2回合。"
             },
             "S2": {
-                "name": "Boundless Obsession",
-                "description": "Reduces the effect of Combat Readiness increases provided by Speed by 50%. At the start of the foremost ally's turn except for the caster, increases Combat Readiness of the caster by 100%."
+                "name": "无尽执念",
+                "description": "由速度带来的行动值提升效果降低50%。除施放者外最前方友军的回合开始时，使施放者的行动值提升100%。"
             },
             "S3": {
-                "name": "Eternal Lament",
-                "description": "Attacks all enemies with a horde of illusions, dispelling one buff before increasing cooldowns by 1 turn and decreasing Combat Readiness by 30%. Cannot trigger a critical hit or a heavy blow, but penetrates the target's Defense."
+                "name": "永恒哀叹",
+                "description": "以成群的幻象攻击所有敌人，解除一个强化效果，然后使冷却时间增加1回合，并降低30%行动值。无法造成暴击或重击，但会穿透目标的防御力。"
             }
         }
     },
@@ -4952,17 +4952,17 @@
         "_name": "Requiemroar",
         "skills": {
             "S1": {
-                "name": "Insanity",
-                "description": "Claws the enemy, with a 75% chance to decrease Attack for 1 turn."
+                "name": "疯狂",
+                "description": "抓击敌人，有75%的几率降低攻击力1回合。"
             },
             "S2": {
-                "name": "Blood Feast",
-                "description": "All allies absorb 10% of the damage they inflict as Health. Every time an enemy dies, all allies recover 20% Health and the caster's Combat Readiness increases by 10%. Effects upon enemy death can only be activated once per turn."
+                "name": "鲜血盛宴",
+                "description": "所有友军将造成伤害的10%吸收为生命值。每当敌人阵亡时，所有友军恢复20%的生命值，施放者的行动值提升10%。敌人阵亡所触发的效果每回合只能发动一次。"
             },
             "S3": {
-                "name": "Dirge",
-                "description": "Attacks with magic, with a 100% chance to decrease Defense for 2 turns, and increases Combat Readiness of all allies by 20%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "挽歌",
+                "description": "以魔法攻击，有100%的几率降低防御力2回合，并使所有友军的行动值提升20%。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },

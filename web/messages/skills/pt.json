@@ -4826,17 +4826,17 @@
         "_name": "Ras",
         "skills": {
             "S1": {
-                "name": "X-Slash",
-                "description": "Attacks with a sword, with 75% chance to dispel a buff. Damage dealt increases proportional to the caster's max Health."
+                "name": "Corte em X",
+                "description": "Ataca com uma espada, com 75% de chance de dissipar um efeito positivo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Command Strike",
-                "description": "Attacks the enemy repeatedly, before triggering a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Golpe de comando",
+                "description": "Ataca o inimigo repetidamente, depois faz o aliado com maior Ataque realizar um Ataque duplo.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             },
             "S3": {
-                "name": "Sword of the Heir",
-                "description": "Strongly attacks all enemies with a swordstorm, before increasing Defense of all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "Espada do herdeiro",
+                "description": "Ataca fortemente todos os inimigos com uma tempestade de espadas, depois aumenta a Defesa de todos os aliados por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -4844,17 +4844,17 @@
         "_name": "Ravi",
         "skills": {
             "S1": {
-                "name": "Slaughter",
-                "description": "Attacks the enemy with a double-edged axe, and absorbs some of the damage dealt as Health. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Greatly increases amount of damage dealt. Does not trigger a Dual Attack."
+                "name": "Massacre",
+                "description": "Ataca o inimigo com um machado de dois gumes e absorve parte do dano causado como Vida. Um ataque bem-sucedido sempre resulta em acerto crítico.",
+                "soulburn_effect": "Aumenta muito o dano causado. Não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Demon's Blood",
-                "description": "At the start of the first battle, gains 60 Fighting Spirit and increases Attack proportional to max Health. After being attacked, increases Combat Readiness by 15%, and after suffering a critical hit, dispels one debuff from the caster."
+                "name": "Sangue demoníaco",
+                "description": "No início da primeira batalha, ganha 60 de Espírito de luta e aumenta o Ataque proporcionalmente à Vida máxima. Após ser atacado, aumenta a Prontidão de Combate em 15% e, após sofrer um acerto crítico, dissipa um efeito negativo do conjurador."
             },
             "S3": {
-                "name": "Devil Drive",
-                "description": "Brutally attacks all enemies, inflicting up to 20% injuries before a 75% chance to stun for 1 turn. A successful attack always results in a critical hit."
+                "name": "Investida demoníaca",
+                "description": "Ataca brutalmente todos os inimigos, causando até 20% de ferimentos, depois com 75% de chance atordoa por 1 turno. Um ataque bem-sucedido sempre resulta em acerto crítico."
             }
         }
     },
@@ -4862,17 +4862,17 @@
         "_name": "Ray",
         "skills": {
             "S1": {
-                "name": "Extreme Remedies",
-                "description": "Attacks by throwing a bottle, dispelling one debuff from an ally."
+                "name": "Remédios extremos",
+                "description": "Ataca arremessando um frasco, dissipando um efeito negativo de um aliado."
             },
             "S2": {
-                "name": "Light of Rebirth",
-                "description": "Radiates light upon all allies, recovering Health and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the ally's max Health."
+                "name": "Luz do renascimento",
+                "description": "Irradia luz sobre todos os aliados, recuperando Vida e concedendo uma barreira por 2 turnos. A quantidade recuperada e a força da barreira aumentam proporcionalmente à Vida máxima do aliado."
             },
             "S3": {
-                "name": "Invigorate",
-                "description": "By infusing vitality, dispels all debuffs from all allies and grants immunity for 2 turns before recovering Health proportional to the target's max Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "Revigorar",
+                "description": "Infundindo vitalidade, dissipa todos os efeitos negativos de todos os aliados e concede imunidade por 2 turnos, depois recupera Vida proporcionalmente à Vida máxima do alvo.",
+                "soulburn_effect": "Aumenta a quantidade recuperada."
             }
         }
     },
@@ -4880,17 +4880,17 @@
         "_name": "Rem",
         "skills": {
             "S1": {
-                "name": "Leave it to Me.",
-                "description": "Attacks the enemy with a morning star, with a 50% chance to decrease Defense for 2 turns. When the caster is granted Demon Mode, grants the caster an extra attack with the same skill.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Deixe comigo.",
+                "description": "Ataca o inimigo com uma maça estrela, com 50% de chance de diminuir a Defesa por 2 turnos. Quando o conjurador tem Modo demônio, concede ao conjurador um ataque extra com a mesma habilidade.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "A Maid's Pride",
-                "description": "When somebody dies, dispels all debuffs from the caster and grants Demon Mode for 2 turns. When an ally except for the caster is attacked, has a 20% chance to counterattack with Iron Strike. Iron Strike takes priority over a counterattack with a basic skill. Iron Strike: Attacks all enemies, decreasing buff durations by 1 turn and inflicting unhealable for 1 turn."
+                "name": "O orgulho de uma criada",
+                "description": "Quando alguém morre, dissipa todos os efeitos negativos do conjurador e concede Modo demônio por 2 turnos. Quando um aliado, exceto o conjurador, é atacado, tem 20% de chance de contra-atacar com Golpe de ferro. Golpe de ferro tem prioridade sobre o contra-ataque com a habilidade básica. Golpe de ferro: ataca todos os inimigos, diminuindo a duração dos efeitos positivos em 1 turno e aplicando impedimento de cura por 1 turno."
             },
             "S3": {
-                "name": "I Will Punish You!",
-                "description": "Increases Attack of the caster for 3 turns, before leaping up to attack all enemies and decrease Hit Chance for 2 turns. Increases Combat Readiness of the caster by 50%."
+                "name": "Vou punir você!",
+                "description": "Aumenta o Ataque do conjurador por 3 turnos, depois salta para atacar todos os inimigos e diminui a Precisão por 2 turnos. Aumenta a Prontidão de Combate do conjurador em 50%."
             }
         }
     },
@@ -4898,17 +4898,17 @@
         "_name": "Remnant Violet",
         "skills": {
             "S1": {
-                "name": "Sword Flash",
-                "description": "Cuts the enemy, with a 75% chance to decrease Hit Chance for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Lampejo de espada",
+                "description": "Corta o inimigo, com 75% de chance de diminuir a Precisão por 1 turno.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Concentration",
-                "description": "Increases Evasion by 50%, and when evading, gains 1 Focus. After attacking or being attacked, when Focus is 5, activates Massacre against a random enemy and consumes all Focus."
+                "name": "Concentração",
+                "description": "Aumenta a Evasão em 50% e, ao se esquivar, ganha 1 de Foco. Após atacar ou ser atacado, quando o Foco é 5, ativa Massacre contra um inimigo aleatório e consome todo o Foco."
             },
             "S3": {
                 "name": "Massacre",
-                "description": "Increases Attack of the caster for 3 turns, before attacking the enemy with a sword, and increases Combat Readiness of the caster by 50%. Penetrates the target's Defense by 50%."
+                "description": "Aumenta o Ataque do conjurador por 3 turnos, depois ataca o inimigo com uma espada e aumenta a Prontidão de Combate do conjurador em 50%. Penetra 50% da Defesa do alvo."
             }
         }
     },
@@ -4916,17 +4916,17 @@
         "_name": "Renoa",
         "skills": {
             "S1": {
-                "name": "Instant Judgement",
-                "description": "Attacks the enemy with a pistol. Damage dealt increases proportional to the caster's Defense. At the start of the turn, when Focus is full, changes to Black Thorn. Black Thorn (Consumes 5 Focus): Attacks the enemy with thorns, and grants the maximum number of Dirge Bullets to the caster. Damage dealt increases proportional to the caster's Defense. The changed attack does not trigger a Dual Attack."
+                "name": "Julgamento instantâneo",
+                "description": "Ataca o inimigo com uma pistola. O dano causado aumenta proporcionalmente à Defesa do conjurador. No início do turno, quando o Foco está cheio, muda para Espinho negro. Espinho negro (consome 5 de Foco): ataca o inimigo com espinhos e concede o número máximo de Balas fúnebres ao conjurador. O dano causado aumenta proporcionalmente à Defesa do conjurador. O ataque alterado não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Black Rose",
-                "description": "Buffs and debuffs applied to the caster become Dirge Bullets. After using a skill on the caster's turn, when the caster has a Dirge Bullet, uses Dirge Bullet on a random enemy. Dirge Bullet (Gains 1 Focus): Attacks the enemy with a pistol. Damage dealt increases proportional to the caster's Defense. Damage dealt and attack count increase proportional to the number of Dirge Bullets granted."
+                "name": "Rosa negra",
+                "description": "Os efeitos positivos e negativos aplicados ao conjurador se tornam Balas fúnebres. Após usar uma habilidade no turno do conjurador, quando ele tem uma Bala fúnebre, usa Bala fúnebre em um inimigo aleatório. Bala fúnebre (ganha 1 de Foco): ataca o inimigo com uma pistola. O dano causado aumenta proporcionalmente à Defesa do conjurador. O dano causado e o número de ataques aumentam proporcionalmente ao número de Balas fúnebres concedidas."
             },
             "S3": {
-                "name": "Flower of Devoured Fate",
-                "description": "Increases Combat Readiness of all allies by 50%, and grants three Dirge Bullets to the caster.",
-                "soulburn_effect": "The number of Dirge Bullets granted is doubled."
+                "name": "Flor do destino devorado",
+                "description": "Aumenta a Prontidão de Combate de todos os aliados em 50% e concede três Balas fúnebres ao conjurador.",
+                "soulburn_effect": "O número de Balas fúnebres concedidas dobra."
             }
         }
     },
@@ -4934,17 +4934,17 @@
         "_name": "Requiem Roana",
         "skills": {
             "S1": {
-                "name": "Touch of Darkness",
-                "description": "Attacks the enemy with magic, with a 75% chance to inflict decreased Defense for 1 turn. Cannot trigger a critical hit or a heavy blow, and a successful attack will inflict additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense for 2 turns."
+                "name": "Toque das trevas",
+                "description": "Ataca o inimigo com magia, com 75% de chance de aplicar Diminuir Defesa por 1 turno. Não pode causar acerto crítico nem golpe pesado, e um ataque bem-sucedido causa dano adicional proporcional ao Ataque do conjurador.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100% e diminui a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Boundless Obsession",
-                "description": "Reduces the effect of Combat Readiness increases provided by Speed by 50%. At the start of the foremost ally's turn except for the caster, increases Combat Readiness of the caster by 100%."
+                "name": "Obsessão sem limites",
+                "description": "Reduz em 50% o efeito dos aumentos de Prontidão de Combate proporcionados pela Velocidade. No início do turno do aliado mais à frente, exceto o conjurador, aumenta a Prontidão de Combate do conjurador em 100%."
             },
             "S3": {
-                "name": "Eternal Lament",
-                "description": "Attacks all enemies with a horde of illusions, dispelling one buff before increasing cooldowns by 1 turn and decreasing Combat Readiness by 30%. Cannot trigger a critical hit or a heavy blow, but penetrates the target's Defense."
+                "name": "Lamento eterno",
+                "description": "Ataca todos os inimigos com uma horda de ilusões, dissipando um efeito positivo, depois aumenta as recargas em 1 turno e diminui a Prontidão de Combate em 30%. Não pode causar acerto crítico nem golpe pesado, mas penetra a Defesa do alvo."
             }
         }
     },
@@ -4952,17 +4952,17 @@
         "_name": "Requiemroar",
         "skills": {
             "S1": {
-                "name": "Insanity",
-                "description": "Claws the enemy, with a 75% chance to decrease Attack for 1 turn."
+                "name": "Insanidade",
+                "description": "Arranha o inimigo, com 75% de chance de diminuir o Ataque por 1 turno."
             },
             "S2": {
-                "name": "Blood Feast",
-                "description": "All allies absorb 10% of the damage they inflict as Health. Every time an enemy dies, all allies recover 20% Health and the caster's Combat Readiness increases by 10%. Effects upon enemy death can only be activated once per turn."
+                "name": "Banquete de sangue",
+                "description": "Todos os aliados absorvem como Vida 10% do dano que causam. Cada vez que um inimigo morre, todos os aliados recuperam 20% de Vida e a Prontidão de Combate do conjurador aumenta 10%. Os efeitos ao morrer um inimigo só podem ser ativados uma vez por turno."
             },
             "S3": {
-                "name": "Dirge",
-                "description": "Attacks with magic, with a 100% chance to decrease Defense for 2 turns, and increases Combat Readiness of all allies by 20%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Canto fúnebre",
+                "description": "Ataca com magia, com 100% de chance de diminuir a Defesa por 2 turnos, e aumenta a Prontidão de Combate de todos os aliados em 20%.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
