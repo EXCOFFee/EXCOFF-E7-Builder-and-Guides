@@ -2417,17 +2417,17 @@
         "_name": "Fenris",
         "skills": {
             "S1": {
-                "name": "Magic Arrow",
-                "description": "Attacks the enemy with a magic arrow, and increases Speed for 1 turn.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "마법 화살",
+                "description": "마법 화살로 적을 공격하고 1턴 동안 속도를 증가시킨다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Unwavering Will",
-                "description": "Starts the first battle with 50 Fighting Spirit. After an ally suffers an extra attack, counterattack, or Dual Attack, gains 50 Fighting Spirit and uses Soaring Arrow. The effect after being attacked can only be activated once every 2 turns. Soaring Arrow: Leaps backward and attacks all enemies, before dispelling two debuffs from all allies. Increases Combat Readiness of the caster by 30%."
+                "name": "흔들림 없는 의지",
+                "description": "첫 번째 전투를 투지 50으로 시작한다. 아군이 추가 공격, 반격, 협공을 받은 후 투지를 50 얻고 비상하는 화살을 사용한다. 공격받은 후의 효과는 2턴마다 한 번만 발동할 수 있다. 비상하는 화살: 뒤로 도약해 모든 적을 공격한 뒤 모든 아군의 약화 효과를 두 개 해제한다. 시전자의 행동 게이지를 30% 증가시킨다."
             },
             "S3": {
-                "name": "Strike of Fate",
-                "description": "After granting increased Attack (Greater) of the caster for 3 turns, attacks the enemy with an arrow of resolution, and increases Combat Readiness of all allies by 30%. When the enemy's max Health is greater than the caster's max Health, damage dealt increases proportionally, up to 70%."
+                "name": "운명의 일격",
+                "description": "시전자에게 3턴 동안 공격력 증가(대)를 부여한 뒤 결의의 화살로 적을 공격하고 모든 아군의 행동 게이지를 30% 증가시킨다. 적의 최대 생명력이 시전자보다 높으면 그에 비례해 주는 피해가 최대 70%까지 증가한다."
             }
         }
     },
@@ -2435,17 +2435,17 @@
         "_name": "Fern",
         "skills": {
             "S1": {
-                "name": "The Spell to Kill Demons",
-                "description": "After granting increased Attack to the caster for 1 turn, attacks the enemy with magic. When Focus is 3 or higher, decreases skill cooldowns by 1 turn. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack or counterattack."
+                "name": "마족을 죽이는 마법",
+                "description": "시전자에게 1턴 동안 공격력 증가를 부여한 뒤 마법으로 적을 공격한다. 집중이 3 이상이면 스킬 재사용 대기 시간을 1턴 감소시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "모든 적을 공격한다. 이 공격으로는 협공이나 반격이 발동하지 않는다."
             },
             "S2": {
-                "name": "Exceptional Magical Talent",
-                "description": "At the start of the first battle, gains 3 Focus. Increases Speed by 15% and Evasion by 20% for each Focus. When successfully evading, consumes 1 Focus and decreases skill cooldowns by 1 turn."
+                "name": "뛰어난 마법 재능",
+                "description": "첫 번째 전투 시작 시 집중을 3 얻는다. 집중 하나당 속도가 15%, 회피가 20% 증가한다. 회피에 성공하면 집중을 1 소모하고 스킬 재사용 대기 시간을 1턴 감소시킨다."
             },
             "S3": {
-                "name": "The Spell to Kill Demons - Release",
-                "description": "After granting increased Attack to the caster for 1 turn, attacks the enemy with The Spell to Kill Demons. Penetrates the enemy's Defense by 70%. Damage dealt increases proportional to the caster's Speed. Begins the first battle with a full skill cooldown count."
+                "name": "마족을 죽이는 마법 - 해방",
+                "description": "시전자에게 1턴 동안 공격력 증가를 부여한 뒤 마족을 죽이는 마법으로 적을 공격한다. 적의 방어력을 70% 관통한다. 시전자의 속도에 비례해 주는 피해가 증가한다. 첫 번째 전투는 스킬 재사용 대기 시간이 가득 찬 상태로 시작한다."
             }
         }
     },
@@ -2453,16 +2453,16 @@
         "_name": "Festive Eda",
         "skills": {
             "S1": {
-                "name": "I'm Embarrassed",
-                "description": "Attacks the enemy with bubbles, with a 40% chance to stun for 1 turn. When the caster is stealthed, increases effect chance by 25%."
+                "name": "부끄러워",
+                "description": "거품으로 적을 공격하며, 40% 확률로 1턴 동안 기절시킨다. 시전자가 은신 상태이면 효과 발동 확률이 25% 증가한다."
             },
             "S2": {
-                "name": "It's Okay, It Won't Show",
-                "description": "At the start of battle and at the end of the turn, grants stealth for 1 turn. At the start of the turn, when not stealthed, dispels all debuffs and grants Shyness for 1 turn. Effects at the start of the turn can only be activated once every 4 turns. After attacking, when granted Shyness activates Expected Outcome. Expected Outcome: Attacks all enemies, decreasing Combat Readiness by 50% and inflicting additional damage proportional to the caster's max Health."
+                "name": "괜찮아, 안 보일 거야",
+                "description": "전투 시작 시와 턴 종료 시 1턴 동안 은신을 부여한다. 턴 시작 시 은신 상태가 아니면 약화 효과를 모두 해제하고 1턴 동안 수줍음을 부여한다. 턴 시작 시의 효과는 4턴마다 한 번만 발동할 수 있다. 공격 후 수줍음이 있으면 예상된 결과를 발동한다. 예상된 결과: 모든 적을 공격해 행동 게이지를 50% 감소시키고 시전자의 최대 생명력에 비례한 추가 피해를 준다."
             },
             "S3": {
-                "name": "Let Me Give It a Try",
-                "description": "Attacks all enemies by collecting bubbles, dispelling two buffs before a 85% chance to inflict decreased Defense for 2 turns and a 100% chance to inflict silence for 1 turn."
+                "name": "한번 해볼게",
+                "description": "거품을 모아 모든 적을 공격해 강화 효과를 두 개 해제한 뒤 85% 확률로 2턴 동안 방어력 감소를, 100% 확률로 1턴 동안 침묵을 건다."
             }
         }
     },
@@ -2470,17 +2470,17 @@
         "_name": "Fighter Maya",
         "skills": {
             "S1": {
-                "name": "Strike of Provocation",
-                "description": "Attacks with a blunt weapon, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Provoke chance increases to 100%."
+                "name": "도발의 일격",
+                "description": "둔기로 공격하며, 75% 확률로 1턴 동안 도발을 건다. 시전자의 방어력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "도발 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Reclaim",
-                "description": "After being attacked, has a 100% chance to dispel one debuff and grant increased Defense for 2 turns."
+                "name": "되찾기",
+                "description": "공격받은 후 100% 확률로 약화 효과를 한 개 해제하고 2턴 동안 방어력 증가를 부여한다."
             },
             "S3": {
-                "name": "Finishing Attack",
-                "description": "Attacks the target with a powerful smash, and when the target's Health is 30% or less, increases damage dealt by 300%. Damage dealt increases proportional to the caster's Defense. When an enemy is defeated, grants an extra turn."
+                "name": "마무리 공격",
+                "description": "강력한 일격으로 대상을 공격하며, 대상의 생명력이 30% 이하이면 주는 피해가 300% 증가한다. 시전자의 방어력에 비례해 주는 피해가 증가한다. 적을 처치하면 추가 턴을 얻는다."
             }
         }
     },
@@ -2488,17 +2488,17 @@
         "_name": "Flan",
         "skills": {
             "S1": {
-                "name": "Communication Breakdown",
-                "description": "Attacks the enemy with a gun, with a 75% chance to inflict decreased Defense for 1 turn."
+                "name": "통신 두절",
+                "description": "총으로 적을 공격하며, 75% 확률로 1턴 동안 방어력 감소를 건다."
             },
             "S2": {
-                "name": "Data Monopoly",
-                "description": "Encourages an ally, granting increased Attack and increased Critical Hit Damage to the ally for 2 turns before increasing Combat Readiness by 40%."
+                "name": "정보 독점",
+                "description": "아군 한 명을 격려해 2턴 동안 공격력 증가와 치명 피해 증가를 부여한 뒤 행동 게이지를 40% 증가시킨다."
             },
             "S3": {
-                "name": "Advantageous Deal",
-                "description": "Drives a hard bargain against all enemies, increasing skill cooldown of all enemies by 1 turn and inflicting decreasing Defense for 2 turns before decreasing Combat Readiness by 15%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "유리한 거래",
+                "description": "모든 적과 까다로운 거래를 해 모든 적의 스킬 재사용 대기 시간을 1턴 증가시키고 2턴 동안 방어력 감소를 건 뒤 행동 게이지를 15% 감소시킨다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -2506,17 +2506,17 @@
         "_name": "Free Spirit Tieria",
         "skills": {
             "S1": {
-                "name": "Half Slash",
-                "description": "Attacks the enemy with an axe, with a 50% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the target's max Health."
+                "name": "반월 베기",
+                "description": "도끼로 적을 공격하며, 50% 확률로 2턴 동안 공격력을 감소시킨다. 대상의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Energy Wave",
-                "description": "Attacks all enemies with condensed energy, and absorbs some of the damage dealt as Health. Resets this skill's cooldown when an enemy is defeated."
+                "name": "에너지 파동",
+                "description": "응축된 에너지로 모든 적을 공격하고 준 피해의 일부를 생명력으로 흡수한다. 적을 처치하면 이 스킬의 재사용 대기 시간을 초기화한다."
             },
             "S3": {
-                "name": "Pursuit Cut",
-                "description": "Dashes towards the enemy to attack, and decreases Defense for 2 turns. A critical hit will grant immunity to the caster for 2 turns. Damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "추격 베기",
+                "description": "적에게 돌진해 공격하고 2턴 동안 방어력을 감소시킨다. 치명타가 발생하면 시전자에게 2턴 동안 면역을 부여한다. 대상의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -2524,17 +2524,17 @@
         "_name": "Frida",
         "skills": {
             "S1": {
-                "name": "Tube Throw",
-                "description": "Attacks the enemy by throwing a tube, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 15%.",
-                "soulburn_effect": "Uses Aqua Ride instead of Tube Throw. Aqua Ride: Dispels one debuff from all allies and grants a barrier (proportional to the caster's max Health) for 2 turns."
+                "name": "튜브 던지기",
+                "description": "튜브를 던져 적을 공격하고, 시전자를 제외하고 행동 게이지가 가장 높은 아군의 행동 게이지를 15% 증가시킨다.",
+                "soulburn_effect": "튜브 던지기 대신 아쿠아 라이드를 사용한다. 아쿠아 라이드: 모든 아군의 약화 효과를 한 개 해제하고 2턴 동안 보호막(시전자 최대 생명력 비례)을 부여한다."
             },
             "S2": {
-                "name": "Invitation to a Fantasy",
-                "description": "At the start of the first battle, grants Oasis All-Ride Pass to the caster and the foremost ally. When an ally uses a Soulburn, increases Combat Readiness of the caster by 20%."
+                "name": "환상으로의 초대",
+                "description": "첫 번째 전투 시작 시 시전자와 가장 앞에 있는 아군에게 오아시스 자유 이용권을 부여한다. 아군이 소울번을 사용하면 시전자의 행동 게이지를 20% 증가시킨다."
             },
             "S3": {
-                "name": "Oasis Land, Grand Opening!",
-                "description": "Dispels one debuff from all allies before increasing Combat Readiness by 25% and granting increased Attack and ignore sharing for 3 turns."
+                "name": "오아시스 랜드, 그랜드 오픈!",
+                "description": "모든 아군의 약화 효과를 한 개 해제한 뒤 행동 게이지를 25% 증가시키고 3턴 동안 공격력 증가와 분산 무시를 부여한다."
             }
         }
     },
@@ -2560,17 +2560,17 @@
         "_name": "Fumyr",
         "skills": {
             "S1": {
-                "name": "Substratal Experimentation",
-                "description": "Attacks the enemy with an elemental reaction, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 15%."
+                "name": "기질 실험",
+                "description": "원소 반응으로 적을 공격하고, 시전자를 제외하고 행동 게이지가 가장 높은 아군의 행동 게이지를 15% 증가시킨다."
             },
             "S2": {
-                "name": "Elemental Inquiry",
-                "description": "At the start of battle, gains 1 Focus for each ally's element. At the start of the turn, gains 1 Focus, and after attacking, when Focus is full, consumes all, activating Fruit of Knowledge. Fruit of Knowledge: Dispels all buffs from all enemies, and has a 100% chance to put them to sleep for 2 turns, before a 85% chance to decrease Defense for 2 turns."
+                "name": "원소 탐구",
+                "description": "전투 시작 시 아군의 속성마다 집중을 1 얻는다. 턴 시작 시 집중을 1 얻으며, 공격 후 집중이 가득 차 있으면 모두 소모해 지식의 열매를 발동한다. 지식의 열매: 모든 적의 강화 효과를 모두 해제하고 100% 확률로 2턴 동안 수면에 빠뜨린 뒤 85% 확률로 2턴 동안 방어력을 감소시킨다."
             },
             "S3": {
-                "name": "Sensory Dissection",
-                "description": "Attacks the enemy with an illusion, dispelling two buffs before increasing skill cooldowns by 1 turn and decreasing Combat Readiness by 40%. Inflicts 2,000 additional damage for each Focus.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "감각 해부",
+                "description": "환상으로 적을 공격해 강화 효과를 두 개 해제한 뒤 스킬 재사용 대기 시간을 1턴 증가시키고 행동 게이지를 40% 감소시킨다. 집중 하나당 2,000의 추가 피해를 준다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },

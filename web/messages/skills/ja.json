@@ -2417,17 +2417,17 @@
         "_name": "Fenris",
         "skills": {
             "S1": {
-                "name": "Magic Arrow",
-                "description": "Attacks the enemy with a magic arrow, and increases Speed for 1 turn.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "魔法の矢",
+                "description": "魔法の矢で敵を攻撃し、1ターンの間スピードをアップさせる。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Unwavering Will",
-                "description": "Starts the first battle with 50 Fighting Spirit. After an ally suffers an extra attack, counterattack, or Dual Attack, gains 50 Fighting Spirit and uses Soaring Arrow. The effect after being attacked can only be activated once every 2 turns. Soaring Arrow: Leaps backward and attacks all enemies, before dispelling two debuffs from all allies. Increases Combat Readiness of the caster by 30%."
+                "name": "揺るがぬ意志",
+                "description": "最初のバトルを闘志50で開始する。味方が追加攻撃、反撃、協攻を受けた後、闘志を50獲得し、飛翔の矢を使用する。攻撃された後の効果は2ターンごとに一度のみ発動できる。飛翔の矢：後方へ跳躍して敵全体を攻撃した後、味方全員の弱体効果を二つ解除する。発動者の行動ゲージを30%増加させる。"
             },
             "S3": {
-                "name": "Strike of Fate",
-                "description": "After granting increased Attack (Greater) of the caster for 3 turns, attacks the enemy with an arrow of resolution, and increases Combat Readiness of all allies by 30%. When the enemy's max Health is greater than the caster's max Health, damage dealt increases proportionally, up to 70%."
+                "name": "運命の一撃",
+                "description": "発動者に3ターンの間攻撃力アップ（大）を付与した後、決意の矢で敵を攻撃し、味方全員の行動ゲージを30%増加させる。敵の最大HPが発動者より高い場合、それに比例して与ダメージが最大70%までアップする。"
             }
         }
     },
@@ -2435,17 +2435,17 @@
         "_name": "Fern",
         "skills": {
             "S1": {
-                "name": "The Spell to Kill Demons",
-                "description": "After granting increased Attack to the caster for 1 turn, attacks the enemy with magic. When Focus is 3 or higher, decreases skill cooldowns by 1 turn. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack or counterattack."
+                "name": "人を殺す魔法",
+                "description": "発動者に1ターンの間攻撃力アップを付与した後、魔法で敵を攻撃する。集中が3以上ならスキルのクールタイムを1ターン短縮する。発動者のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "敵全体を攻撃する。この攻撃では協攻や反撃が発動しない。"
             },
             "S2": {
-                "name": "Exceptional Magical Talent",
-                "description": "At the start of the first battle, gains 3 Focus. Increases Speed by 15% and Evasion by 20% for each Focus. When successfully evading, consumes 1 Focus and decreases skill cooldowns by 1 turn."
+                "name": "卓越した魔法の才能",
+                "description": "最初のバトル開始時、集中を3獲得する。集中一つにつきスピードが15%、回避が20%アップする。回避に成功すると、集中を1消費し、スキルのクールタイムを1ターン短縮する。"
             },
             "S3": {
-                "name": "The Spell to Kill Demons - Release",
-                "description": "After granting increased Attack to the caster for 1 turn, attacks the enemy with The Spell to Kill Demons. Penetrates the enemy's Defense by 70%. Damage dealt increases proportional to the caster's Speed. Begins the first battle with a full skill cooldown count."
+                "name": "人を殺す魔法・解放",
+                "description": "発動者に1ターンの間攻撃力アップを付与した後、人を殺す魔法で敵を攻撃する。敵の防御力を70%貫通する。発動者のスピードに比例して与ダメージがアップする。最初のバトルはスキルのクールタイムが満タンの状態で始まる。"
             }
         }
     },
@@ -2453,16 +2453,16 @@
         "_name": "Festive Eda",
         "skills": {
             "S1": {
-                "name": "I'm Embarrassed",
-                "description": "Attacks the enemy with bubbles, with a 40% chance to stun for 1 turn. When the caster is stealthed, increases effect chance by 25%."
+                "name": "恥ずかしい",
+                "description": "泡で敵を攻撃し、40%の確率で1ターンの間気絶させる。発動者が隠密状態なら効果発動確率が25%アップする。"
             },
             "S2": {
-                "name": "It's Okay, It Won't Show",
-                "description": "At the start of battle and at the end of the turn, grants stealth for 1 turn. At the start of the turn, when not stealthed, dispels all debuffs and grants Shyness for 1 turn. Effects at the start of the turn can only be activated once every 4 turns. After attacking, when granted Shyness activates Expected Outcome. Expected Outcome: Attacks all enemies, decreasing Combat Readiness by 50% and inflicting additional damage proportional to the caster's max Health."
+                "name": "大丈夫、見えないから",
+                "description": "バトル開始時とターン終了時、1ターンの間隠密を付与する。ターン開始時、隠密状態でなければ、弱体効果をすべて解除し、1ターンの間恥じらいを付与する。ターン開始時の効果は4ターンごとに一度のみ発動できる。攻撃後、恥じらいがあれば予想通りの結果を発動する。予想通りの結果：敵全体を攻撃し、行動ゲージを50%減少させ、発動者の最大HPに比例した追加ダメージを与える。"
             },
             "S3": {
-                "name": "Let Me Give It a Try",
-                "description": "Attacks all enemies by collecting bubbles, dispelling two buffs before a 85% chance to inflict decreased Defense for 2 turns and a 100% chance to inflict silence for 1 turn."
+                "name": "やってみるね",
+                "description": "泡を集めて敵全体を攻撃し、強化効果を二つ解除した後、85%の確率で2ターンの間防御力ダウンを、100%の確率で1ターンの間沈黙を付与する。"
             }
         }
     },
@@ -2470,17 +2470,17 @@
         "_name": "Fighter Maya",
         "skills": {
             "S1": {
-                "name": "Strike of Provocation",
-                "description": "Attacks with a blunt weapon, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Provoke chance increases to 100%."
+                "name": "挑発の一撃",
+                "description": "鈍器で攻撃し、75%の確率で1ターンの間挑発を付与する。発動者の防御力に比例して与ダメージがアップする。",
+                "soulburn_effect": "挑発の確率が100%にアップする。"
             },
             "S2": {
-                "name": "Reclaim",
-                "description": "After being attacked, has a 100% chance to dispel one debuff and grant increased Defense for 2 turns."
+                "name": "奪還",
+                "description": "攻撃された後、100%の確率で弱体効果を一つ解除し、2ターンの間防御力アップを付与する。"
             },
             "S3": {
-                "name": "Finishing Attack",
-                "description": "Attacks the target with a powerful smash, and when the target's Health is 30% or less, increases damage dealt by 300%. Damage dealt increases proportional to the caster's Defense. When an enemy is defeated, grants an extra turn."
+                "name": "とどめの攻撃",
+                "description": "強力な一撃で対象を攻撃し、対象のHPが30%以下なら与ダメージが300%アップする。発動者の防御力に比例して与ダメージがアップする。敵を倒すと追加ターンを得る。"
             }
         }
     },
@@ -2488,17 +2488,17 @@
         "_name": "Flan",
         "skills": {
             "S1": {
-                "name": "Communication Breakdown",
-                "description": "Attacks the enemy with a gun, with a 75% chance to inflict decreased Defense for 1 turn."
+                "name": "通信途絶",
+                "description": "銃で敵を攻撃し、75%の確率で1ターンの間防御力ダウンを付与する。"
             },
             "S2": {
-                "name": "Data Monopoly",
-                "description": "Encourages an ally, granting increased Attack and increased Critical Hit Damage to the ally for 2 turns before increasing Combat Readiness by 40%."
+                "name": "情報独占",
+                "description": "味方一人を激励し、2ターンの間攻撃力アップとクリティカルダメージアップを付与した後、行動ゲージを40%増加させる。"
             },
             "S3": {
-                "name": "Advantageous Deal",
-                "description": "Drives a hard bargain against all enemies, increasing skill cooldown of all enemies by 1 turn and inflicting decreasing Defense for 2 turns before decreasing Combat Readiness by 15%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "有利な取引",
+                "description": "敵全体と厳しい取引を行い、敵全体のスキルのクールタイムを1ターン増加させ、2ターンの間防御力ダウンを付与した後、行動ゲージを15%減少させる。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -2506,17 +2506,17 @@
         "_name": "Free Spirit Tieria",
         "skills": {
             "S1": {
-                "name": "Half Slash",
-                "description": "Attacks the enemy with an axe, with a 50% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the target's max Health."
+                "name": "半月斬り",
+                "description": "斧で敵を攻撃し、50%の確率で2ターンの間攻撃力をダウンさせる。対象の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Energy Wave",
-                "description": "Attacks all enemies with condensed energy, and absorbs some of the damage dealt as Health. Resets this skill's cooldown when an enemy is defeated."
+                "name": "エネルギー波動",
+                "description": "凝縮したエネルギーで敵全体を攻撃し、与ダメージの一部をHPとして吸収する。敵を倒すと、このスキルのクールタイムをリセットする。"
             },
             "S3": {
-                "name": "Pursuit Cut",
-                "description": "Dashes towards the enemy to attack, and decreases Defense for 2 turns. A critical hit will grant immunity to the caster for 2 turns. Damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "追撃斬り",
+                "description": "敵に突進して攻撃し、2ターンの間防御力をダウンさせる。クリティカルが発生すると、発動者に2ターンの間免疫を付与する。対象の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -2524,17 +2524,17 @@
         "_name": "Frida",
         "skills": {
             "S1": {
-                "name": "Tube Throw",
-                "description": "Attacks the enemy by throwing a tube, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 15%.",
-                "soulburn_effect": "Uses Aqua Ride instead of Tube Throw. Aqua Ride: Dispels one debuff from all allies and grants a barrier (proportional to the caster's max Health) for 2 turns."
+                "name": "浮き輪投げ",
+                "description": "浮き輪を投げて敵を攻撃し、発動者を除いて行動ゲージが最も高い味方の行動ゲージを15%増加させる。",
+                "soulburn_effect": "浮き輪投げの代わりにアクアライドを使用する。アクアライド：味方全員の弱体効果を一つ解除し、2ターンの間バリア（発動者の最大HPに比例）を付与する。"
             },
             "S2": {
-                "name": "Invitation to a Fantasy",
-                "description": "At the start of the first battle, grants Oasis All-Ride Pass to the caster and the foremost ally. When an ally uses a Soulburn, increases Combat Readiness of the caster by 20%."
+                "name": "幻想への招待",
+                "description": "最初のバトル開始時、発動者と最も前にいる味方にオアシスフリーパスを付与する。味方がソウルバーンを使用すると、発動者の行動ゲージを20%増加させる。"
             },
             "S3": {
-                "name": "Oasis Land, Grand Opening!",
-                "description": "Dispels one debuff from all allies before increasing Combat Readiness by 25% and granting increased Attack and ignore sharing for 3 turns."
+                "name": "オアシスランド、グランドオープン！",
+                "description": "味方全員の弱体効果を一つ解除した後、行動ゲージを25%増加させ、3ターンの間攻撃力アップと分散無視を付与する。"
             }
         }
     },
@@ -2560,17 +2560,17 @@
         "_name": "Fumyr",
         "skills": {
             "S1": {
-                "name": "Substratal Experimentation",
-                "description": "Attacks the enemy with an elemental reaction, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 15%."
+                "name": "基質実験",
+                "description": "元素反応で敵を攻撃し、発動者を除いて行動ゲージが最も高い味方の行動ゲージを15%増加させる。"
             },
             "S2": {
-                "name": "Elemental Inquiry",
-                "description": "At the start of battle, gains 1 Focus for each ally's element. At the start of the turn, gains 1 Focus, and after attacking, when Focus is full, consumes all, activating Fruit of Knowledge. Fruit of Knowledge: Dispels all buffs from all enemies, and has a 100% chance to put them to sleep for 2 turns, before a 85% chance to decrease Defense for 2 turns."
+                "name": "元素探究",
+                "description": "バトル開始時、味方の属性ごとに集中を1獲得する。ターン開始時に集中を1獲得し、攻撃後、集中が満タンなら、すべて消費して知識の果実を発動する。知識の果実：敵全体の強化効果をすべて解除し、100%の確率で2ターンの間睡眠状態にした後、85%の確率で2ターンの間防御力をダウンさせる。"
             },
             "S3": {
-                "name": "Sensory Dissection",
-                "description": "Attacks the enemy with an illusion, dispelling two buffs before increasing skill cooldowns by 1 turn and decreasing Combat Readiness by 40%. Inflicts 2,000 additional damage for each Focus.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "感覚解剖",
+                "description": "幻影で敵を攻撃し、強化効果を二つ解除した後、スキルのクールタイムを1ターン増加させ、行動ゲージを40%減少させる。集中一つにつき2,000の追加ダメージを与える。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },

@@ -2417,17 +2417,17 @@
         "_name": "Fenris",
         "skills": {
             "S1": {
-                "name": "Magic Arrow",
-                "description": "Attacks the enemy with a magic arrow, and increases Speed for 1 turn.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Flecha mágica",
+                "description": "Ataca o inimigo com uma flecha mágica e aumenta a Velocidade por 1 turno.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Unwavering Will",
-                "description": "Starts the first battle with 50 Fighting Spirit. After an ally suffers an extra attack, counterattack, or Dual Attack, gains 50 Fighting Spirit and uses Soaring Arrow. The effect after being attacked can only be activated once every 2 turns. Soaring Arrow: Leaps backward and attacks all enemies, before dispelling two debuffs from all allies. Increases Combat Readiness of the caster by 30%."
+                "name": "Vontade inabalável",
+                "description": "Começa a primeira batalha com 50 de Espírito de luta. Após um aliado sofrer um ataque extra, contra-ataque ou Ataque duplo, ganha 50 de Espírito de luta e usa Flecha ascendente. O efeito após ser atacado só pode ser ativado uma vez a cada 2 turnos. Flecha ascendente: salta para trás e ataca todos os inimigos, depois dissipa dois efeitos negativos de todos os aliados. Aumenta a Prontidão de Combate do conjurador em 30%."
             },
             "S3": {
-                "name": "Strike of Fate",
-                "description": "After granting increased Attack (Greater) of the caster for 3 turns, attacks the enemy with an arrow of resolution, and increases Combat Readiness of all allies by 30%. When the enemy's max Health is greater than the caster's max Health, damage dealt increases proportionally, up to 70%."
+                "name": "Golpe do destino",
+                "description": "Após conceder Aumentar Ataque (maior) ao conjurador por 3 turnos, ataca o inimigo com uma flecha da determinação e aumenta a Prontidão de Combate de todos os aliados em 30%. Quando a Vida máxima do inimigo é maior que a do conjurador, o dano causado aumenta proporcionalmente, até 70%."
             }
         }
     },
@@ -2435,17 +2435,17 @@
         "_name": "Fern",
         "skills": {
             "S1": {
-                "name": "The Spell to Kill Demons",
-                "description": "After granting increased Attack to the caster for 1 turn, attacks the enemy with magic. When Focus is 3 or higher, decreases skill cooldowns by 1 turn. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack or counterattack."
+                "name": "O feitiço para matar demônios",
+                "description": "Após conceder Aumentar Ataque ao conjurador por 1 turno, ataca o inimigo com magia. Quando o Foco é 3 ou mais, diminui as recargas de habilidades em 1 turno. O dano causado aumenta proporcionalmente à Velocidade do conjurador.",
+                "soulburn_effect": "Ataca todos os inimigos. Este ataque não ativa Ataque duplo nem contra-ataque."
             },
             "S2": {
-                "name": "Exceptional Magical Talent",
-                "description": "At the start of the first battle, gains 3 Focus. Increases Speed by 15% and Evasion by 20% for each Focus. When successfully evading, consumes 1 Focus and decreases skill cooldowns by 1 turn."
+                "name": "Talento mágico excepcional",
+                "description": "No início da primeira batalha, ganha 3 de Foco. Aumenta a Velocidade em 15% e a Evasão em 20% para cada Foco. Ao se esquivar com sucesso, consome 1 de Foco e diminui as recargas de habilidades em 1 turno."
             },
             "S3": {
-                "name": "The Spell to Kill Demons - Release",
-                "description": "After granting increased Attack to the caster for 1 turn, attacks the enemy with The Spell to Kill Demons. Penetrates the enemy's Defense by 70%. Damage dealt increases proportional to the caster's Speed. Begins the first battle with a full skill cooldown count."
+                "name": "O feitiço para matar demônios - Liberação",
+                "description": "Após conceder Aumentar Ataque ao conjurador por 1 turno, ataca o inimigo com O feitiço para matar demônios. Penetra 70% da Defesa do inimigo. O dano causado aumenta proporcionalmente à Velocidade do conjurador. Começa a primeira batalha com a recarga da habilidade completa."
             }
         }
     },
@@ -2453,16 +2453,16 @@
         "_name": "Festive Eda",
         "skills": {
             "S1": {
-                "name": "I'm Embarrassed",
-                "description": "Attacks the enemy with bubbles, with a 40% chance to stun for 1 turn. When the caster is stealthed, increases effect chance by 25%."
+                "name": "Estou com vergonha",
+                "description": "Ataca o inimigo com bolhas, com 40% de chance de atordoar por 1 turno. Quando o conjurador está furtivo, aumenta a chance do efeito em 25%."
             },
             "S2": {
-                "name": "It's Okay, It Won't Show",
-                "description": "At the start of battle and at the end of the turn, grants stealth for 1 turn. At the start of the turn, when not stealthed, dispels all debuffs and grants Shyness for 1 turn. Effects at the start of the turn can only be activated once every 4 turns. After attacking, when granted Shyness activates Expected Outcome. Expected Outcome: Attacks all enemies, decreasing Combat Readiness by 50% and inflicting additional damage proportional to the caster's max Health."
+                "name": "Tudo bem, não vai aparecer",
+                "description": "No início da batalha e no fim do turno, concede furtividade por 1 turno. No início do turno, quando não está furtivo, dissipa todos os efeitos negativos e concede Timidez por 1 turno. Os efeitos do início do turno só podem ser ativados uma vez a cada 4 turnos. Após atacar, quando tem Timidez, ativa Resultado esperado. Resultado esperado: ataca todos os inimigos, diminuindo a Prontidão de Combate em 50% e causando dano adicional proporcional à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Let Me Give It a Try",
-                "description": "Attacks all enemies by collecting bubbles, dispelling two buffs before a 85% chance to inflict decreased Defense for 2 turns and a 100% chance to inflict silence for 1 turn."
+                "name": "Deixa eu tentar",
+                "description": "Ataca todos os inimigos reunindo bolhas, dissipando dois efeitos positivos, depois com 85% de chance aplica Diminuir Defesa por 2 turnos e com 100% de chance aplica silêncio por 1 turno."
             }
         }
     },
@@ -2470,17 +2470,17 @@
         "_name": "Fighter Maya",
         "skills": {
             "S1": {
-                "name": "Strike of Provocation",
-                "description": "Attacks with a blunt weapon, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Provoke chance increases to 100%."
+                "name": "Golpe de provocação",
+                "description": "Ataca com uma arma contundente, com 75% de chance de provocar por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "A chance de provocação aumenta para 100%."
             },
             "S2": {
-                "name": "Reclaim",
-                "description": "After being attacked, has a 100% chance to dispel one debuff and grant increased Defense for 2 turns."
+                "name": "Recuperar",
+                "description": "Após ser atacado, tem 100% de chance de dissipar um efeito negativo e conceder Aumentar Defesa por 2 turnos."
             },
             "S3": {
-                "name": "Finishing Attack",
-                "description": "Attacks the target with a powerful smash, and when the target's Health is 30% or less, increases damage dealt by 300%. Damage dealt increases proportional to the caster's Defense. When an enemy is defeated, grants an extra turn."
+                "name": "Ataque final",
+                "description": "Ataca o alvo com um golpe poderoso e, quando a Vida do alvo é 30% ou menos, aumenta o dano causado em 300%. O dano causado aumenta proporcionalmente à Defesa do conjurador. Ao derrotar um inimigo, concede um turno extra."
             }
         }
     },
@@ -2488,17 +2488,17 @@
         "_name": "Flan",
         "skills": {
             "S1": {
-                "name": "Communication Breakdown",
-                "description": "Attacks the enemy with a gun, with a 75% chance to inflict decreased Defense for 1 turn."
+                "name": "Falha de comunicação",
+                "description": "Ataca o inimigo com uma arma de fogo, com 75% de chance de aplicar Diminuir Defesa por 1 turno."
             },
             "S2": {
-                "name": "Data Monopoly",
-                "description": "Encourages an ally, granting increased Attack and increased Critical Hit Damage to the ally for 2 turns before increasing Combat Readiness by 40%."
+                "name": "Monopólio de dados",
+                "description": "Encoraja um aliado, concedendo Aumentar Ataque e Aumentar Dano Crítico por 2 turnos, depois aumenta sua Prontidão de Combate em 40%."
             },
             "S3": {
-                "name": "Advantageous Deal",
-                "description": "Drives a hard bargain against all enemies, increasing skill cooldown of all enemies by 1 turn and inflicting decreasing Defense for 2 turns before decreasing Combat Readiness by 15%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Negócio vantajoso",
+                "description": "Negocia duro contra todos os inimigos, aumentando a recarga das habilidades de todos os inimigos em 1 turno e aplicando Diminuir Defesa por 2 turnos, depois diminui a Prontidão de Combate em 15%.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -2506,17 +2506,17 @@
         "_name": "Free Spirit Tieria",
         "skills": {
             "S1": {
-                "name": "Half Slash",
-                "description": "Attacks the enemy with an axe, with a 50% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the target's max Health."
+                "name": "Meio corte",
+                "description": "Ataca o inimigo com um machado, com 50% de chance de diminuir o Ataque por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do alvo."
             },
             "S2": {
-                "name": "Energy Wave",
-                "description": "Attacks all enemies with condensed energy, and absorbs some of the damage dealt as Health. Resets this skill's cooldown when an enemy is defeated."
+                "name": "Onda de energia",
+                "description": "Ataca todos os inimigos com energia condensada e absorve parte do dano causado como Vida. Reinicia a recarga desta habilidade ao derrotar um inimigo."
             },
             "S3": {
-                "name": "Pursuit Cut",
-                "description": "Dashes towards the enemy to attack, and decreases Defense for 2 turns. A critical hit will grant immunity to the caster for 2 turns. Damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Corte de perseguição",
+                "description": "Avança contra o inimigo para atacar e diminui a Defesa por 2 turnos. Um acerto crítico concede imunidade ao conjurador por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do alvo.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -2524,17 +2524,17 @@
         "_name": "Frida",
         "skills": {
             "S1": {
-                "name": "Tube Throw",
-                "description": "Attacks the enemy by throwing a tube, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 15%.",
-                "soulburn_effect": "Uses Aqua Ride instead of Tube Throw. Aqua Ride: Dispels one debuff from all allies and grants a barrier (proportional to the caster's max Health) for 2 turns."
+                "name": "Arremesso de boia",
+                "description": "Ataca o inimigo arremessando uma boia e aumenta em 15% a Prontidão de Combate do aliado com maior Prontidão de Combate, exceto o conjurador.",
+                "soulburn_effect": "Usa Passeio aquático em vez de Arremesso de boia. Passeio aquático: dissipa um efeito negativo de todos os aliados e concede uma barreira (proporcional à Vida máxima do conjurador) por 2 turnos."
             },
             "S2": {
-                "name": "Invitation to a Fantasy",
-                "description": "At the start of the first battle, grants Oasis All-Ride Pass to the caster and the foremost ally. When an ally uses a Soulburn, increases Combat Readiness of the caster by 20%."
+                "name": "Convite à fantasia",
+                "description": "No início da primeira batalha, concede o Passe livre de Oasis ao conjurador e ao aliado mais à frente. Quando um aliado usa Queima de Alma, aumenta a Prontidão de Combate do conjurador em 20%."
             },
             "S3": {
-                "name": "Oasis Land, Grand Opening!",
-                "description": "Dispels one debuff from all allies before increasing Combat Readiness by 25% and granting increased Attack and ignore sharing for 3 turns."
+                "name": "Oasis Land, grande inauguração!",
+                "description": "Dissipa um efeito negativo de todos os aliados, depois aumenta a Prontidão de Combate em 25% e concede Aumentar Ataque e ignorar divisão por 3 turnos."
             }
         }
     },
@@ -2560,17 +2560,17 @@
         "_name": "Fumyr",
         "skills": {
             "S1": {
-                "name": "Substratal Experimentation",
-                "description": "Attacks the enemy with an elemental reaction, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 15%."
+                "name": "Experimentação substratal",
+                "description": "Ataca o inimigo com uma reação elemental e aumenta em 15% a Prontidão de Combate do aliado com maior Prontidão de Combate, exceto o conjurador."
             },
             "S2": {
-                "name": "Elemental Inquiry",
-                "description": "At the start of battle, gains 1 Focus for each ally's element. At the start of the turn, gains 1 Focus, and after attacking, when Focus is full, consumes all, activating Fruit of Knowledge. Fruit of Knowledge: Dispels all buffs from all enemies, and has a 100% chance to put them to sleep for 2 turns, before a 85% chance to decrease Defense for 2 turns."
+                "name": "Investigação elemental",
+                "description": "No início da batalha, ganha 1 de Foco para cada elemento dos aliados. No início do turno, ganha 1 de Foco e, após atacar, quando o Foco está cheio, consome todo o Foco, ativando Fruto do conhecimento. Fruto do conhecimento: dissipa todos os efeitos positivos de todos os inimigos e tem 100% de chance de fazê-los dormir por 2 turnos, depois com 85% de chance diminui a Defesa por 2 turnos."
             },
             "S3": {
-                "name": "Sensory Dissection",
-                "description": "Attacks the enemy with an illusion, dispelling two buffs before increasing skill cooldowns by 1 turn and decreasing Combat Readiness by 40%. Inflicts 2,000 additional damage for each Focus.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Dissecação sensorial",
+                "description": "Ataca o inimigo com uma ilusão, dissipando dois efeitos positivos, depois aumenta as recargas de habilidades em 1 turno e diminui a Prontidão de Combate em 40%. Causa 2.000 de dano adicional para cada Foco.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
