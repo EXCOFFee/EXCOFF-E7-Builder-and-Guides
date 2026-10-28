@@ -796,17 +796,17 @@
         "_name": "Basar",
         "skills": {
             "S1": {
-                "name": "Sand Wind",
-                "description": "Attacks the enemy with wind magic, with a 75% chance to transfer one debuff from the caster and inflict one random debuff for 2 turns."
+                "name": "모래 바람",
+                "description": "바람 마법으로 적을 공격하며, 75% 확률로 시전자의 약화 효과를 한 개 전이하고 2턴 동안 무작위 약화 효과를 한 개 건다."
             },
             "S2": {
-                "name": "Hurricane",
-                "description": "Attacks all enemies by releasing a hot sand hurricane, with a 75% chance each to inflict decreased Hit Chance and decreased Attack for 2 turns."
+                "name": "허리케인",
+                "description": "뜨거운 모래 폭풍을 일으켜 모든 적을 공격하며, 각각 75% 확률로 2턴 동안 명중률 감소와 공격력 감소를 건다."
             },
             "S3": {
-                "name": "Sandstorm",
-                "description": "Attacks all enemies with sand magic, dispelling all buffs and making them unable to be buffed for 2 turns, before decreasing Combat Readiness by 30%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "모래 폭풍",
+                "description": "모래 마법으로 모든 적을 공격해 강화 효과를 모두 해제하고 2턴 동안 강화 불가를 건 뒤 행동 게이지를 30% 감소시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -814,17 +814,17 @@
         "_name": "Bask",
         "skills": {
             "S1": {
-                "name": "Protective Strike",
-                "description": "Slashes with a sword, with a 75% chance to decrease Attack for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "수호의 일격",
+                "description": "검으로 베며, 75% 확률로 1턴 동안 공격력을 감소시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Shield Blow",
-                "description": "Attacks with a shield, with a 100% chance to dispel all buffs. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "방패 강타",
+                "description": "방패로 공격하며, 100% 확률로 강화 효과를 모두 해제한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             },
             "S3": {
-                "name": "Will of Protection",
-                "description": "Covers all allies with the Will of Protection, granting immunity for 3 turns, before granting a Barrier to the caster for 3 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "수호의 의지",
+                "description": "수호의 의지로 모든 아군을 감싸 3턴 동안 면역을 부여한 뒤 시전자에게 3턴 동안 보호막을 부여한다. 시전자의 최대 생명력에 비례해 보호막 강도가 증가한다."
             }
         }
     },
@@ -832,17 +832,17 @@
         "_name": "Batisse",
         "skills": {
             "S1": {
-                "name": "Brawl",
-                "description": "Hits the enemy in the face. When used against an enemy inflicted with decreased Attack, activates Rock Smash as an extra attack. Rock Smash: Attacks all enemies. This attack receives effects that are applied to the basic skill.",
-                "soulburn_effect": "Activates Rock Smash even when used against enemy without decreased Attack."
+                "name": "난투",
+                "description": "적의 얼굴을 가격한다. 공격력 감소가 걸린 적에게 사용하면 추가 공격으로 바위 부수기를 발동한다. 바위 부수기: 모든 적을 공격한다. 이 공격은 기본 스킬에 적용되는 효과를 받는다.",
+                "soulburn_effect": "공격력 감소가 없는 적에게 사용해도 바위 부수기를 발동한다."
             },
             "S2": {
-                "name": "Justified Provoke",
-                "description": "At the start of the turn, has a 100% chance to decrease Attack of the enemy with the highest Combat Readiness for 2 turns."
+                "name": "정당한 도발",
+                "description": "턴 시작 시 100% 확률로 행동 게이지가 가장 높은 적의 공격력을 2턴 동안 감소시킨다."
             },
             "S3": {
-                "name": "Certain Victory",
-                "description": "Attacks the enemy with blindingly fast speed. When used against an enemy with decreased Attack, decreases Defense for 2 turns."
+                "name": "필승",
+                "description": "눈부신 속도로 적을 공격한다. 공격력 감소가 걸린 적에게 사용하면 2턴 동안 방어력을 감소시킨다."
             }
         }
     },
@@ -850,17 +850,17 @@
         "_name": "Beehoo",
         "skills": {
             "S1": {
-                "name": "Scorching Flare",
-                "description": "Attacks the enemy with flames, burning for 1 turn. When used on the caster's turn, activates Incinerate instead of Scorching Flare. Incinerate: Attacks the enemy with an explosion of flames and burns for 1 turn, before detonating burn effects inflicted on the target at the end of the turn. This skill cannot trigger a Dual Attack."
+                "name": "작열하는 불꽃",
+                "description": "불꽃으로 적을 공격해 1턴 동안 화상을 건다. 시전자의 턴에 사용하면 작열하는 불꽃 대신 소각을 발동한다. 소각: 화염 폭발로 적을 공격해 1턴 동안 화상을 건 뒤 턴 종료 시 대상에게 걸린 화상을 폭발시킨다. 이 스킬로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Flame Keeper",
-                "description": "Increases Attack and Effectiveness by 30%. When attacking, cannot trigger a critical hit. Increases burn damage suffered by enemies by 30%. This skill effect does not stack with other passive skills of the same name."
+                "name": "불꽃의 수호자",
+                "description": "공격력과 효과 적중이 30% 증가한다. 공격 시 치명타가 발생하지 않는다. 적이 받는 화상 피해가 30% 증가한다. 이 스킬 효과는 같은 이름의 다른 패시브 스킬과 중첩되지 않는다."
             },
             "S3": {
-                "name": "Symphony of Radiance",
-                "description": "With light, dispels two buffs from all enemies and inflicts cannot buff and burn for 2 turns, before increasing Combat Readiness of the caster by 50%. Increases Combat Readiness of all allies except for the caster by 20%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "광휘의 교향곡",
+                "description": "빛으로 모든 적의 강화 효과를 두 개 해제하고 2턴 동안 강화 불가와 화상을 건 뒤 시전자의 행동 게이지를 50% 증가시킨다. 시전자를 제외한 모든 아군의 행동 게이지를 20% 증가시킨다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -868,17 +868,17 @@
         "_name": "Belian",
         "skills": {
             "S1": {
-                "name": "Light of Destruction",
-                "description": "Attacks all enemies with an energy ray and has a 65% chance to dispel one buff. When used on the caster's turn, has a 35% chance to activate Incursion as an extra attack. Damage dealt increases proportional to the caster's max Health. Incursion: Attacks all enemies and inflicts decreased Speed and decreased Hit Chance for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases chance of activating Incursion to 100%."
+                "name": "파멸의 빛",
+                "description": "에너지 광선으로 모든 적을 공격하며, 65% 확률로 강화 효과를 한 개 해제한다. 시전자의 턴에 사용하면 35% 확률로 추가 공격으로 침공을 발동한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 침공: 모든 적을 공격하고 1턴 동안 속도 감소와 명중률 감소를 건다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "침공 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Shackles of Suppression",
-                "description": "Decreases the amount of Soul acquired by the enemy by 100%. At the start of the turn, has a 100% chance to grant a random buff to the caster for 1 turn."
+                "name": "억압의 족쇄",
+                "description": "적이 획득하는 소울이 100% 감소한다. 턴 시작 시 100% 확률로 시전자에게 1턴 동안 무작위 강화 효과를 부여한다."
             },
             "S3": {
-                "name": "Apocalypse",
-                "description": "Attacks all enemies with the power of duties, decreasing Combat Readiness by a random amount between 20% and 40% and provokes for 1 turn. Increases Defense of the caster for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "종말",
+                "description": "사명의 힘으로 모든 적을 공격해 행동 게이지를 20%~40% 사이에서 무작위로 감소시키고 1턴 동안 도발을 건다. 2턴 동안 시전자의 방어력을 증가시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -886,17 +886,17 @@
         "_name": "Bellona",
         "skills": {
             "S1": {
-                "name": "Windbreak Fan",
-                "description": "Attacks the enemy with a fan. Damage dealt increases proportional to the target's max Health. When Focus is 5 or more, consumes all Focus and activates Razorwind Fan.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "바람막이 부채",
+                "description": "부채로 적을 공격한다. 대상의 최대 생명력에 비례해 주는 피해가 증가한다. 집중이 5 이상이면 집중을 모두 소모해 칼바람 부채를 발동한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Butterfly Fan",
-                "description": "Attacks all enemies by waving a fan, before granting immunity to the caster for 1 turn."
+                "name": "나비 부채",
+                "description": "부채를 흔들어 모든 적을 공격한 뒤 시전자에게 1턴 동안 면역을 부여한다."
             },
             "S3": {
-                "name": "Razorwind Fan",
-                "description": "Attacks all enemies by creating a powerful gust of wind, with a 100% chance to decrease Defense for 2 turns. Increases damage dealt when Razorwind Fan is triggered by Windbreak Fan."
+                "name": "칼바람 부채",
+                "description": "강력한 돌풍을 일으켜 모든 적을 공격하며, 100% 확률로 2턴 동안 방어력을 감소시킨다. 바람막이 부채로 칼바람 부채가 발동되면 주는 피해가 증가한다."
             }
         }
     },
@@ -904,17 +904,17 @@
         "_name": "Benevolent Romann",
         "skills": {
             "S1": {
-                "name": "Mana Arrow",
-                "description": "Attacks the enemy with concentrated mana, before a 35% chance to activate Mana Burst. Effect chance is doubled when the target is silenced. Mana Burst: Attacks all enemies, decreasing Combat Readiness by a random amount between 15% and 50%."
+                "name": "마나 화살",
+                "description": "집중된 마나로 적을 공격한 뒤 35% 확률로 마나 폭발을 발동한다. 대상이 침묵 상태이면 효과 발동 확률이 두 배가 된다. 마나 폭발: 모든 적을 공격해 행동 게이지를 15%~50% 사이에서 무작위로 감소시킨다."
             },
             "S2": {
-                "name": "High Mage's Might",
-                "description": "Immune to silence. Reduces the effect of decreased Combat Readiness debuffs inflicted on the caster by 100%."
+                "name": "대마법사의 위력",
+                "description": "침묵에 면역이다. 시전자가 받는 행동 게이지 감소 효과가 100% 감소한다."
             },
             "S3": {
-                "name": "Mana Fundamentals",
-                "description": "Attacks all enemies with condensed mana, dispelling two buffs before a 75% chance to decrease Defense and silence for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "마나의 기초",
+                "description": "응축된 마나로 모든 적을 공격해 강화 효과를 두 개 해제한 뒤 75% 확률로 2턴 동안 방어력 감소와 침묵을 건다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -922,17 +922,17 @@
         "_name": "Benimaru",
         "skills": {
             "S1": {
-                "name": "Move Out of the Way",
-                "description": "Cuts the enemy to attack. When the caster is granted Multilayer Barrier, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt"
+                "name": "비켜라",
+                "description": "적을 베어 공격한다. 시전자에게 다중결계가 있으면 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Universal Perception",
-                "description": "At the start of the first battle, gains 50 Fighting Spirit. At the start of an enemy's extra turn, dispels all debuffs from the caster and grants Multilayer Barrier for 2 turns before increasing Combat Readiness by 40%. The effect following an enemy's extra turn can only be activated once every 2 turns. After attacking, when Fighting Spirit is full, consumes all Fighting Spirit to activate Hell Flare. Hell Flare: Attacks all enemies with a dark flame sphere. Penetrates the target's Defense by 30%, and when the caster is granted Multilayer Barrier, penetrates the target's Defense by an additional 30%."
+                "name": "만능감지",
+                "description": "첫 번째 전투 시작 시 투지를 50 얻는다. 적의 추가 턴 시작 시 시전자의 약화 효과를 모두 해제하고 2턴 동안 다중결계를 부여한 뒤 행동 게이지를 40% 증가시킨다. 적의 추가 턴에 따른 효과는 2턴마다 한 번만 발동할 수 있다. 공격 후 투지가 가득 차 있으면 투지를 모두 소모해 헬 플레어를 발동한다. 헬 플레어: 검은 화염구로 모든 적을 공격한다. 대상의 방어력을 30% 관통하며, 시전자에게 다중결계가 있으면 대상의 방어력을 추가로 30% 관통한다."
             },
             "S3": {
-                "name": "Show No Mercy",
-                "description": "Attacks the enemy by slashing their soul, decreasing Defense for 2 turns, before increasing Combat Readiness of the ally with the highest Combat Readiness except for the caster by 15%. When the caster is granted Multilayer Barrier, acquired Fighting Spirit is doubled."
+                "name": "자비는 없다",
+                "description": "적의 영혼을 베어 공격해 2턴 동안 방어력을 감소시킨 뒤 시전자를 제외하고 행동 게이지가 가장 높은 아군의 행동 게이지를 15% 증가시킨다. 시전자에게 다중결계가 있으면 획득하는 투지가 두 배가 된다."
             }
         }
     },

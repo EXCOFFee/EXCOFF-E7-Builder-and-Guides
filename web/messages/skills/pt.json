@@ -796,17 +796,17 @@
         "_name": "Basar",
         "skills": {
             "S1": {
-                "name": "Sand Wind",
-                "description": "Attacks the enemy with wind magic, with a 75% chance to transfer one debuff from the caster and inflict one random debuff for 2 turns."
+                "name": "Vento de areia",
+                "description": "Ataca o inimigo com magia de vento, com 75% de chance de transferir um efeito negativo do conjurador e aplicar um efeito negativo aleatório por 2 turnos."
             },
             "S2": {
-                "name": "Hurricane",
-                "description": "Attacks all enemies by releasing a hot sand hurricane, with a 75% chance each to inflict decreased Hit Chance and decreased Attack for 2 turns."
+                "name": "Furacão",
+                "description": "Ataca todos os inimigos liberando um furacão de areia quente, com 75% de chance cada de aplicar Diminuir Precisão e Diminuir Ataque por 2 turnos."
             },
             "S3": {
-                "name": "Sandstorm",
-                "description": "Attacks all enemies with sand magic, dispelling all buffs and making them unable to be buffed for 2 turns, before decreasing Combat Readiness by 30%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Tempestade de areia",
+                "description": "Ataca todos os inimigos com magia de areia, dissipando todos os efeitos positivos e impedindo que recebam efeitos positivos por 2 turnos, depois diminui a Prontidão de Combate em 30%.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -814,17 +814,17 @@
         "_name": "Bask",
         "skills": {
             "S1": {
-                "name": "Protective Strike",
-                "description": "Slashes with a sword, with a 75% chance to decrease Attack for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "Golpe protetor",
+                "description": "Golpeia com uma espada, com 75% de chance de diminuir o Ataque por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Shield Blow",
-                "description": "Attacks with a shield, with a 100% chance to dispel all buffs. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Golpe de escudo",
+                "description": "Ataca com um escudo, com 100% de chance de dissipar todos os efeitos positivos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             },
             "S3": {
-                "name": "Will of Protection",
-                "description": "Covers all allies with the Will of Protection, granting immunity for 3 turns, before granting a Barrier to the caster for 3 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "Vontade de proteção",
+                "description": "Cobre todos os aliados com a Vontade de proteção, concedendo imunidade por 3 turnos, depois concede uma barreira ao conjurador por 3 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -832,17 +832,17 @@
         "_name": "Batisse",
         "skills": {
             "S1": {
-                "name": "Brawl",
-                "description": "Hits the enemy in the face. When used against an enemy inflicted with decreased Attack, activates Rock Smash as an extra attack. Rock Smash: Attacks all enemies. This attack receives effects that are applied to the basic skill.",
-                "soulburn_effect": "Activates Rock Smash even when used against enemy without decreased Attack."
+                "name": "Briga",
+                "description": "Acerta o inimigo no rosto. Quando usada contra um inimigo com Diminuir Ataque, ativa Esmaga-rocha como ataque extra. Esmaga-rocha: ataca todos os inimigos. Este ataque recebe os efeitos aplicados à habilidade básica.",
+                "soulburn_effect": "Ativa Esmaga-rocha mesmo contra inimigos sem Diminuir Ataque."
             },
             "S2": {
-                "name": "Justified Provoke",
-                "description": "At the start of the turn, has a 100% chance to decrease Attack of the enemy with the highest Combat Readiness for 2 turns."
+                "name": "Provocação justificada",
+                "description": "No início do turno, tem 100% de chance de diminuir o Ataque do inimigo com maior Prontidão de Combate por 2 turnos."
             },
             "S3": {
-                "name": "Certain Victory",
-                "description": "Attacks the enemy with blindingly fast speed. When used against an enemy with decreased Attack, decreases Defense for 2 turns."
+                "name": "Vitória certa",
+                "description": "Ataca o inimigo com velocidade ofuscante. Quando usada contra um inimigo com Diminuir Ataque, diminui a Defesa por 2 turnos."
             }
         }
     },
@@ -850,17 +850,17 @@
         "_name": "Beehoo",
         "skills": {
             "S1": {
-                "name": "Scorching Flare",
-                "description": "Attacks the enemy with flames, burning for 1 turn. When used on the caster's turn, activates Incinerate instead of Scorching Flare. Incinerate: Attacks the enemy with an explosion of flames and burns for 1 turn, before detonating burn effects inflicted on the target at the end of the turn. This skill cannot trigger a Dual Attack."
+                "name": "Labareda escaldante",
+                "description": "Ataca o inimigo com chamas, aplicando queimadura por 1 turno. Quando usada no turno do conjurador, ativa Incinerar em vez de Labareda escaldante. Incinerar: ataca o inimigo com uma explosão de chamas e aplica queimadura por 1 turno, depois detona os efeitos de queimadura aplicados ao alvo no fim do turno. Esta habilidade não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Flame Keeper",
-                "description": "Increases Attack and Effectiveness by 30%. When attacking, cannot trigger a critical hit. Increases burn damage suffered by enemies by 30%. This skill effect does not stack with other passive skills of the same name."
+                "name": "Guardião da chama",
+                "description": "Aumenta o Ataque e a Eficácia em 30%. Ao atacar, não pode causar acerto crítico. Aumenta em 30% o dano de queimadura sofrido pelos inimigos. Este efeito não se acumula com outras habilidades passivas de mesmo nome."
             },
             "S3": {
-                "name": "Symphony of Radiance",
-                "description": "With light, dispels two buffs from all enemies and inflicts cannot buff and burn for 2 turns, before increasing Combat Readiness of the caster by 50%. Increases Combat Readiness of all allies except for the caster by 20%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Sinfonia do esplendor",
+                "description": "Com luz, dissipa dois efeitos positivos de todos os inimigos e aplica impedimento de efeitos positivos e queimadura por 2 turnos, depois aumenta a Prontidão de Combate do conjurador em 50%. Aumenta a Prontidão de Combate de todos os aliados, exceto o conjurador, em 20%.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -868,17 +868,17 @@
         "_name": "Belian",
         "skills": {
             "S1": {
-                "name": "Light of Destruction",
-                "description": "Attacks all enemies with an energy ray and has a 65% chance to dispel one buff. When used on the caster's turn, has a 35% chance to activate Incursion as an extra attack. Damage dealt increases proportional to the caster's max Health. Incursion: Attacks all enemies and inflicts decreased Speed and decreased Hit Chance for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases chance of activating Incursion to 100%."
+                "name": "Luz da destruição",
+                "description": "Ataca todos os inimigos com um raio de energia e tem 65% de chance de dissipar um efeito positivo. Quando usada no turno do conjurador, tem 35% de chance de ativar Incursão como ataque extra. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Incursão: ataca todos os inimigos e aplica Diminuir Velocidade e Diminuir Precisão por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta a chance de ativar Incursão para 100%."
             },
             "S2": {
-                "name": "Shackles of Suppression",
-                "description": "Decreases the amount of Soul acquired by the enemy by 100%. At the start of the turn, has a 100% chance to grant a random buff to the caster for 1 turn."
+                "name": "Grilhões da supressão",
+                "description": "Diminui em 100% a quantidade de Alma adquirida pelo inimigo. No início do turno, tem 100% de chance de conceder um efeito positivo aleatório ao conjurador por 1 turno."
             },
             "S3": {
-                "name": "Apocalypse",
-                "description": "Attacks all enemies with the power of duties, decreasing Combat Readiness by a random amount between 20% and 40% and provokes for 1 turn. Increases Defense of the caster for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "Apocalipse",
+                "description": "Ataca todos os inimigos com o poder do dever, diminuindo a Prontidão de Combate em uma quantidade aleatória entre 20% e 40% e provocando por 1 turno. Aumenta a Defesa do conjurador por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -886,17 +886,17 @@
         "_name": "Bellona",
         "skills": {
             "S1": {
-                "name": "Windbreak Fan",
-                "description": "Attacks the enemy with a fan. Damage dealt increases proportional to the target's max Health. When Focus is 5 or more, consumes all Focus and activates Razorwind Fan.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Leque quebra-vento",
+                "description": "Ataca o inimigo com um leque. O dano causado aumenta proporcionalmente à Vida máxima do alvo. Quando o Foco é 5 ou mais, consome todo o Foco e ativa Leque navalha de vento.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Butterfly Fan",
-                "description": "Attacks all enemies by waving a fan, before granting immunity to the caster for 1 turn."
+                "name": "Leque borboleta",
+                "description": "Ataca todos os inimigos agitando um leque, depois concede imunidade ao conjurador por 1 turno."
             },
             "S3": {
-                "name": "Razorwind Fan",
-                "description": "Attacks all enemies by creating a powerful gust of wind, with a 100% chance to decrease Defense for 2 turns. Increases damage dealt when Razorwind Fan is triggered by Windbreak Fan."
+                "name": "Leque navalha de vento",
+                "description": "Ataca todos os inimigos criando uma poderosa rajada de vento, com 100% de chance de diminuir a Defesa por 2 turnos. O dano causado aumenta quando Leque navalha de vento é ativado por Leque quebra-vento."
             }
         }
     },
@@ -904,17 +904,17 @@
         "_name": "Benevolent Romann",
         "skills": {
             "S1": {
-                "name": "Mana Arrow",
-                "description": "Attacks the enemy with concentrated mana, before a 35% chance to activate Mana Burst. Effect chance is doubled when the target is silenced. Mana Burst: Attacks all enemies, decreasing Combat Readiness by a random amount between 15% and 50%."
+                "name": "Flecha de mana",
+                "description": "Ataca o inimigo com mana concentrada, depois tem 35% de chance de ativar Explosão de mana. A chance do efeito dobra quando o alvo está silenciado. Explosão de mana: ataca todos os inimigos, diminuindo a Prontidão de Combate em uma quantidade aleatória entre 15% e 50%."
             },
             "S2": {
-                "name": "High Mage's Might",
-                "description": "Immune to silence. Reduces the effect of decreased Combat Readiness debuffs inflicted on the caster by 100%."
+                "name": "Poder do grão-mago",
+                "description": "Imune a silêncio. Reduz em 100% o efeito dos efeitos negativos de redução de Prontidão de Combate aplicados ao conjurador."
             },
             "S3": {
-                "name": "Mana Fundamentals",
-                "description": "Attacks all enemies with condensed mana, dispelling two buffs before a 75% chance to decrease Defense and silence for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Fundamentos da mana",
+                "description": "Ataca todos os inimigos com mana condensada, dissipando dois efeitos positivos, depois tem 75% de chance de diminuir a Defesa e silenciar por 2 turnos.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -922,17 +922,17 @@
         "_name": "Benimaru",
         "skills": {
             "S1": {
-                "name": "Move Out of the Way",
-                "description": "Cuts the enemy to attack. When the caster is granted Multilayer Barrier, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt"
+                "name": "Saia do caminho",
+                "description": "Corta o inimigo para atacar. Quando o conjurador tem Barreira multicamada, o dano causado aumenta.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Universal Perception",
-                "description": "At the start of the first battle, gains 50 Fighting Spirit. At the start of an enemy's extra turn, dispels all debuffs from the caster and grants Multilayer Barrier for 2 turns before increasing Combat Readiness by 40%. The effect following an enemy's extra turn can only be activated once every 2 turns. After attacking, when Fighting Spirit is full, consumes all Fighting Spirit to activate Hell Flare. Hell Flare: Attacks all enemies with a dark flame sphere. Penetrates the target's Defense by 30%, and when the caster is granted Multilayer Barrier, penetrates the target's Defense by an additional 30%."
+                "name": "Percepção universal",
+                "description": "No início da primeira batalha, ganha 50 de Espírito de luta. No início de um turno extra do inimigo, dissipa todos os efeitos negativos do conjurador e concede Barreira multicamada por 2 turnos, depois aumenta a Prontidão de Combate em 40%. O efeito após o turno extra do inimigo só pode ser ativado uma vez a cada 2 turnos. Após atacar, quando o Espírito de luta está cheio, consome todo o Espírito de luta para ativar Chama infernal. Chama infernal: ataca todos os inimigos com uma esfera de chamas negras. Penetra 30% da Defesa do alvo e, quando o conjurador tem Barreira multicamada, penetra mais 30% da Defesa do alvo."
             },
             "S3": {
-                "name": "Show No Mercy",
-                "description": "Attacks the enemy by slashing their soul, decreasing Defense for 2 turns, before increasing Combat Readiness of the ally with the highest Combat Readiness except for the caster by 15%. When the caster is granted Multilayer Barrier, acquired Fighting Spirit is doubled."
+                "name": "Sem piedade",
+                "description": "Ataca o inimigo cortando sua alma, diminuindo a Defesa por 2 turnos, depois aumenta em 15% a Prontidão de Combate do aliado com maior Prontidão de Combate, exceto o conjurador. Quando o conjurador tem Barreira multicamada, o Espírito de luta adquirido dobra."
             }
         }
     },
