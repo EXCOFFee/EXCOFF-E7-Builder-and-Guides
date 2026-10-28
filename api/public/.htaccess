@@ -28,6 +28,12 @@
 # preflight OPTIONS. No poner Access-Control-Allow-Origin "*" para todo acá: con credenciales
 # el navegador rechaza "*" y duplica la cabecera que ya manda Laravel.
 
+# No anunciar la versión de PHP (también se quita en public/index.php)
+<IfModule mod_headers.c>
+    Header always unset X-Powered-By
+    Header unset X-Powered-By
+</IfModule>
+
 # Imágenes estáticas (las sirve Apache sin pasar por Laravel): públicas, las usa la exportación
 # de builds a imagen (html-to-image) desde el frontend.
 <IfModule mod_headers.c>

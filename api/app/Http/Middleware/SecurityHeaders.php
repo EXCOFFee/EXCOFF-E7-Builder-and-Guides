@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Security Headers Middleware
  * 
- * Adds security headers to all API responses.
+ * Adds security headers to every response (registered globally in bootstrap/app.php).
  * KISS: Simple, focused middleware that does one thing well.
  */
 class SecurityHeaders
@@ -29,8 +29,8 @@ class SecurityHeaders
         // Prevent MIME type sniffing
         $response->headers->set('X-Content-Type-Options', 'nosniff');
 
-        // Enable XSS filter in browsers
-        $response->headers->set('X-XSS-Protection', '1; mode=block');
+        // Auditor XSS viejo desactivado: "1; mode=block" podía filtrar información (OWASP recomienda 0)
+        $response->headers->set('X-XSS-Protection', '0');
 
         // Referrer policy for privacy
         $response->headers->set('Referrer-Policy', 'strict-origin-when-cross-origin');
