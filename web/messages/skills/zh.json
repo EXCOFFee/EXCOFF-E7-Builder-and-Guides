@@ -6500,17 +6500,17 @@
         "_name": "Victorika",
         "skills": {
             "S1": {
-                "name": "Hilag's Pride",
-                "description": "Attacks the enemy with a lance, with a 50% chance to inflict decreased Defense for 2 turns."
+                "name": "希拉格的骄傲",
+                "description": "以骑枪攻击敌人，有50%的几率施加2回合防御力降低。"
             },
             "S2": {
-                "name": "Maelstrom Waltz",
-                "description": "Attacks all enemies by infiltrating deep into enemy lines, and grants counterattack to the caster for 3 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "漩涡华尔兹",
+                "description": "深入敌阵攻击所有敌人，并为施放者施加3回合反击。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Promised Glory",
-                "description": "Attacks the enemy by rushing them down, and grants immunity to all allies for 2 turns. Damage dealt increases proportional to the target's max Health."
+                "name": "约定的荣耀",
+                "description": "向敌人冲锋发动攻击，并为所有友军施加2回合免疫。造成的伤害按目标的最大生命值比例提升。"
             }
         }
     },
@@ -6518,17 +6518,17 @@
         "_name": "Vigilante Leader Glenn",
         "skills": {
             "S1": {
-                "name": "Quick Fire",
-                "description": "Rapidly shoots the enemy, with a 50% chance to decrease Defense for 2 turns."
+                "name": "速射",
+                "description": "快速射击敌人，有50%的几率降低防御力2回合。"
             },
             "S2": {
-                "name": "Precise Attack",
-                "description": "Fires a missile at the enemy, and when the enemy is defeated, inflicts extinction and grants torrent to the caster. Increases Hit Chance of this skill by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "精准攻击",
+                "description": "向敌人发射导弹，击败敌人时施加湮灭，并为施放者施加激流。此技能的命中率提升50%。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Limiter Release",
-                "description": "Releases the limiter, granting increased Attack (Greater), increased Critical Hit Chance, and increased Hit Chance to the caster for 2 turns. Grants an extra turn."
+                "name": "解除限制器",
+                "description": "解除限制器，为施放者施加2回合攻击力提升（大）、暴击率提升与命中率提升。获得额外回合。"
             }
         }
     },
@@ -6536,17 +6536,17 @@
         "_name": "Vildred",
         "skills": {
             "S1": {
-                "name": "Sweep",
-                "description": "Rapidly attacks two enemies with a swordstorm. Damage dealt increases proportional to the caster's Speed."
+                "name": "横扫",
+                "description": "以剑暴迅速攻击两名敌人。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "Dancing Blade",
-                "description": "After an ally attacks, when the enemy's Health is 50% or less, grants increased Attack to the caster for 2 turns, and activates Dancing Blade. Dancing Blade: Attacks all enemies with a sword blast, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "舞剑",
+                "description": "友军攻击后，若敌人生命值在50%以下，为施放者施加2回合攻击力提升，并发动舞剑。舞剑：以剑气攻击所有敌人，并使施放者的行动值提升20%。造成的伤害按施放者的速度比例提升。"
             },
             "S3": {
-                "name": "Blade Ascent",
-                "description": "Attacks all enemies with a swordstorm, dealing damage proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "剑之升腾",
+                "description": "以剑暴攻击所有敌人，造成与施放者速度成比例的伤害。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -6554,17 +6554,17 @@
         "_name": "Violet",
         "skills": {
             "S1": {
-                "name": "Graceful Cut",
-                "description": "Attacks with a sword, with a 75% chance to decrease Attack for 1 turn. When it is not the caster's turn, increases Combat Readiness by 15% and gains double the amount of Focus.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Attack of the target for 2 turns."
+                "name": "优雅斩击",
+                "description": "以剑攻击，有75%的几率降低攻击力1回合。不是施放者的回合时，提升15%行动值，并获得双倍专注。",
+                "soulburn_effect": "效果几率提升至100%，并降低目标的攻击力2回合。"
             },
             "S2": {
-                "name": "Duel Accepted",
-                "description": "As preparation for a duel, dispels two debuffs from the caster and grants perception for 3 turns, before recovering 15% Health. Grants an extra turn."
+                "name": "接受决斗",
+                "description": "为决斗做准备，解除施放者的两个弱化效果，并施加3回合洞察，然后恢复15%的生命值。获得额外回合。"
             },
             "S3": {
-                "name": "Butterfly Cut",
-                "description": "Attacks the enemy by piercing them with a sword before consuming all Focus. Damage dealt increases proportional to the amount of Focus consumed, and when consumed Focus is 5, resets the cooldown of Butterfly Cut. When Butterfly Cut is not on cooldown, increases Evasion by 35%, and when evading, counterattacks with Graceful Cut."
+                "name": "蝶斩",
+                "description": "以剑贯穿敌人进行攻击，然后消耗全部专注。造成的伤害按消耗的专注比例提升；消耗的专注为5时，重置蝶斩的冷却时间。蝶斩不在冷却中时，闪避提升35%，闪避时以优雅斩击反击。"
             }
         }
     },
@@ -6572,17 +6572,17 @@
         "_name": "Vivian",
         "skills": {
             "S1": {
-                "name": "Vitality Drain",
-                "description": "Smashes the enemy with a rock, increasing the caster's Combat Readiness by 15%. A critical hit will increase the caster's Combat Readiness by an additional 10%."
+                "name": "活力汲取",
+                "description": "以岩石砸向敌人，使施放者的行动值提升15%。暴击时，施放者的行动值额外提升10%。"
             },
             "S2": {
-                "name": "Thunder God's Cry",
-                "description": "Attacks all enemies with a thunderstorm. When an enemy is defeated, activates Thunder God's Cry once more. Each subsequent Thunder God's Cry activated this way deals decreased damage, and can be activated up to 3 times.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "雷神之怒吼",
+                "description": "以雷暴攻击所有敌人。击败敌人时，再发动一次雷神之怒吼。以此方式发动的雷神之怒吼造成的伤害降低，最多可发动3次。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Mana Amplification",
-                "description": "Fully amplifies mana, granting immunity to all allies for 3 turns before granting increased Attack (Greater) to the caster for 3 turns while increasing Attack of all allies except for the caster for 3 turns."
+                "name": "魔力增幅",
+                "description": "将魔力完全增幅，为所有友军施加3回合免疫，然后为施放者施加3回合攻击力提升（大），并提升除施放者外所有友军的攻击力3回合。"
             }
         }
     },
@@ -6590,17 +6590,17 @@
         "_name": "Wanda",
         "skills": {
             "S1": {
-                "name": "Weak Point",
-                "description": "Shoots an arrow at the enemy, decreasing Combat Readiness by 15%. When the enemy is targeted, increases damage dealt."
+                "name": "弱点",
+                "description": "向敌人射出箭矢，降低15%行动值。敌人处于标记状态时，提升造成的伤害。"
             },
             "S2": {
-                "name": "Steady Aim",
-                "description": "Has a 100% chance to target a random enemy for 2 turns at the beginning of each turn."
+                "name": "稳定瞄准",
+                "description": "每回合开始时，有100%的几率对随机一名敌人施加2回合标记。"
             },
             "S3": {
-                "name": "Fatal Shot",
-                "description": "Attacks the enemy's vital points, with a 100% chance to stun for 2 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "致命一箭",
+                "description": "攻击敌人的要害，有100%的几率使其眩晕2回合。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -6608,17 +6608,17 @@
         "_name": "Wanderer Silk",
         "skills": {
             "S1": {
-                "name": "Basic Shot",
-                "description": "Attacks the enemy by shooting arrows, with a 50% chance to target for 2 turns."
+                "name": "基础射击",
+                "description": "射出箭矢攻击敌人，有50%的几率施加2回合标记。"
             },
             "S2": {
-                "name": "Concentrated Fire",
-                "description": "Fires arrows at the enemy to attack, dispelling one buff. When the caster has a buff, triggers a Dual Attack from the ally with the highest Attack."
+                "name": "集中射击",
+                "description": "向敌人射出箭矢进行攻击，并解除一个强化效果。施放者拥有强化效果时，攻击力最高的友军发动协攻。"
             },
             "S3": {
-                "name": "Shock Arrow",
-                "description": "Attacks the enemy by shooting lightning arrows, inflicting silence and decreased Attack for 2 turns and decreasing Combat Readiness by 100%. Grants a barrier (proportional to the caster's level) to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "冲击之箭",
+                "description": "射出雷电之箭攻击敌人，施加2回合沉默与攻击力降低，并降低100%行动值。为施放者施加2回合屏障（与施放者的等级成比例）。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -6626,17 +6626,17 @@
         "_name": "Wandering Prince Cidd",
         "skills": {
             "S1": {
-                "name": "Spiral Cut",
-                "description": "Attacks the enemy with a machete, with a 75% chance to decrease Defense for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100%, and decreases Defense of the target for 2 turns."
+                "name": "螺旋斩",
+                "description": "以弯刀攻击敌人，有75%的几率降低防御力1回合。",
+                "soulburn_effect": "效果几率提升至100%，并降低目标的防御力2回合。"
             },
             "S2": {
-                "name": "Natural Storyteller",
-                "description": "After an ally uses an attack that targets all enemies, activates Continuous Strike against the enemy with the highest Combat Readiness. Continuous Strike: Attacks the enemy, decreasing Combat Readiness by 20%, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 20%."
+                "name": "天生的说书人",
+                "description": "友军使用以所有敌人为目标的攻击后，对行动值最高的敌人发动连续打击。连续打击：攻击敌人，降低20%行动值，并使除施放者外行动值最高的友军的行动值提升20%。"
             },
             "S3": {
-                "name": "Narrative Retcon",
-                "description": "Plants a bomb on all enemies and decreases Speed for 2 turns. At the end of the turn, detonates bombs inflicted on the target."
+                "name": "改写故事",
+                "description": "对所有敌人安置炸弹，并降低速度2回合。回合结束时，引爆目标身上的炸弹。"
             }
         }
     },

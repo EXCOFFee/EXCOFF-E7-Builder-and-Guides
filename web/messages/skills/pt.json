@@ -6500,17 +6500,17 @@
         "_name": "Victorika",
         "skills": {
             "S1": {
-                "name": "Hilag's Pride",
-                "description": "Attacks the enemy with a lance, with a 50% chance to inflict decreased Defense for 2 turns."
+                "name": "Orgulho de Hilag",
+                "description": "Ataca o inimigo com uma lança de cavaleiro, com 50% de chance de aplicar Diminuir Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Maelstrom Waltz",
-                "description": "Attacks all enemies by infiltrating deep into enemy lines, and grants counterattack to the caster for 3 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Valsa do redemoinho",
+                "description": "Ataca todos os inimigos infiltrando-se nas linhas inimigas e concede contra-ataque ao conjurador por 3 turnos.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Promised Glory",
-                "description": "Attacks the enemy by rushing them down, and grants immunity to all allies for 2 turns. Damage dealt increases proportional to the target's max Health."
+                "name": "Glória prometida",
+                "description": "Ataca o inimigo investindo contra ele e concede imunidade a todos os aliados por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do alvo."
             }
         }
     },
@@ -6518,17 +6518,17 @@
         "_name": "Vigilante Leader Glenn",
         "skills": {
             "S1": {
-                "name": "Quick Fire",
-                "description": "Rapidly shoots the enemy, with a 50% chance to decrease Defense for 2 turns."
+                "name": "Fogo rápido",
+                "description": "Atira rapidamente no inimigo, com 50% de chance de diminuir a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Precise Attack",
-                "description": "Fires a missile at the enemy, and when the enemy is defeated, inflicts extinction and grants torrent to the caster. Increases Hit Chance of this skill by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Ataque preciso",
+                "description": "Dispara um míssil contra o inimigo e, ao derrotá-lo, aplica extinção e concede torrente ao conjurador. Aumenta a Precisão desta habilidade em 50%.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Limiter Release",
-                "description": "Releases the limiter, granting increased Attack (Greater), increased Critical Hit Chance, and increased Hit Chance to the caster for 2 turns. Grants an extra turn."
+                "name": "Liberação do limitador",
+                "description": "Libera o limitador, concedendo Aumentar Ataque (maior), Aumentar Chance de Crítico e Aumentar Precisão ao conjurador por 2 turnos. Concede um turno extra."
             }
         }
     },
@@ -6536,17 +6536,17 @@
         "_name": "Vildred",
         "skills": {
             "S1": {
-                "name": "Sweep",
-                "description": "Rapidly attacks two enemies with a swordstorm. Damage dealt increases proportional to the caster's Speed."
+                "name": "Varredura",
+                "description": "Ataca rapidamente dois inimigos com uma tempestade de espadas. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Dancing Blade",
-                "description": "After an ally attacks, when the enemy's Health is 50% or less, grants increased Attack to the caster for 2 turns, and activates Dancing Blade. Dancing Blade: Attacks all enemies with a sword blast, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "Lâmina dançante",
+                "description": "Após um aliado atacar, quando a Vida do inimigo é 50% ou menos, concede Aumentar Ataque ao conjurador por 2 turnos e ativa Lâmina dançante. Lâmina dançante: ataca todos os inimigos com uma rajada de espada e aumenta a Prontidão de Combate do conjurador em 20%. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S3": {
-                "name": "Blade Ascent",
-                "description": "Attacks all enemies with a swordstorm, dealing damage proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Ascensão da lâmina",
+                "description": "Ataca todos os inimigos com uma tempestade de espadas, causando dano proporcional à Velocidade do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -6554,17 +6554,17 @@
         "_name": "Violet",
         "skills": {
             "S1": {
-                "name": "Graceful Cut",
-                "description": "Attacks with a sword, with a 75% chance to decrease Attack for 1 turn. When it is not the caster's turn, increases Combat Readiness by 15% and gains double the amount of Focus.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Attack of the target for 2 turns."
+                "name": "Corte gracioso",
+                "description": "Ataca com uma espada, com 75% de chance de diminuir o Ataque por 1 turno. Quando não é o turno do conjurador, aumenta a Prontidão de Combate em 15% e ganha o dobro de Foco.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100% e diminui o Ataque do alvo por 2 turnos."
             },
             "S2": {
-                "name": "Duel Accepted",
-                "description": "As preparation for a duel, dispels two debuffs from the caster and grants perception for 3 turns, before recovering 15% Health. Grants an extra turn."
+                "name": "Duelo aceito",
+                "description": "Como preparação para um duelo, dissipa dois efeitos negativos do conjurador e concede percepção por 3 turnos, depois recupera 15% de Vida. Concede um turno extra."
             },
             "S3": {
-                "name": "Butterfly Cut",
-                "description": "Attacks the enemy by piercing them with a sword before consuming all Focus. Damage dealt increases proportional to the amount of Focus consumed, and when consumed Focus is 5, resets the cooldown of Butterfly Cut. When Butterfly Cut is not on cooldown, increases Evasion by 35%, and when evading, counterattacks with Graceful Cut."
+                "name": "Corte da borboleta",
+                "description": "Ataca o inimigo perfurando-o com uma espada, depois consome todo o Foco. O dano causado aumenta proporcionalmente ao Foco consumido e, quando o Foco consumido é 5, reinicia a recarga de Corte da borboleta. Quando Corte da borboleta não está em recarga, aumenta a Evasão em 35% e, ao se esquivar, contra-ataca com Corte gracioso."
             }
         }
     },
@@ -6572,17 +6572,17 @@
         "_name": "Vivian",
         "skills": {
             "S1": {
-                "name": "Vitality Drain",
-                "description": "Smashes the enemy with a rock, increasing the caster's Combat Readiness by 15%. A critical hit will increase the caster's Combat Readiness by an additional 10%."
+                "name": "Dreno de vitalidade",
+                "description": "Esmaga o inimigo com uma rocha, aumentando a Prontidão de Combate do conjurador em 15%. Um acerto crítico aumenta a Prontidão de Combate do conjurador em mais 10%."
             },
             "S2": {
-                "name": "Thunder God's Cry",
-                "description": "Attacks all enemies with a thunderstorm. When an enemy is defeated, activates Thunder God's Cry once more. Each subsequent Thunder God's Cry activated this way deals decreased damage, and can be activated up to 3 times.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Grito do deus do trovão",
+                "description": "Ataca todos os inimigos com uma tempestade de raios. Ao derrotar um inimigo, ativa Grito do deus do trovão mais uma vez. Cada Grito do deus do trovão ativado dessa forma causa menos dano e pode ser ativado até 3 vezes.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Mana Amplification",
-                "description": "Fully amplifies mana, granting immunity to all allies for 3 turns before granting increased Attack (Greater) to the caster for 3 turns while increasing Attack of all allies except for the caster for 3 turns."
+                "name": "Amplificação de mana",
+                "description": "Amplifica totalmente a mana, concedendo imunidade a todos os aliados por 3 turnos, depois concede Aumentar Ataque (maior) ao conjurador por 3 turnos e aumenta o Ataque de todos os aliados, exceto o conjurador, por 3 turnos."
             }
         }
     },
@@ -6590,17 +6590,17 @@
         "_name": "Wanda",
         "skills": {
             "S1": {
-                "name": "Weak Point",
-                "description": "Shoots an arrow at the enemy, decreasing Combat Readiness by 15%. When the enemy is targeted, increases damage dealt."
+                "name": "Ponto fraco",
+                "description": "Dispara uma flecha no inimigo, diminuindo a Prontidão de Combate em 15%. Quando o inimigo tem alvo, o dano causado aumenta."
             },
             "S2": {
-                "name": "Steady Aim",
-                "description": "Has a 100% chance to target a random enemy for 2 turns at the beginning of each turn."
+                "name": "Mira firme",
+                "description": "No início de cada turno, tem 100% de chance de aplicar alvo a um inimigo aleatório por 2 turnos."
             },
             "S3": {
-                "name": "Fatal Shot",
-                "description": "Attacks the enemy's vital points, with a 100% chance to stun for 2 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Tiro fatal",
+                "description": "Ataca os pontos vitais do inimigo, com 100% de chance de atordoar por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -6608,17 +6608,17 @@
         "_name": "Wanderer Silk",
         "skills": {
             "S1": {
-                "name": "Basic Shot",
-                "description": "Attacks the enemy by shooting arrows, with a 50% chance to target for 2 turns."
+                "name": "Tiro básico",
+                "description": "Ataca o inimigo disparando flechas, com 50% de chance de aplicar alvo por 2 turnos."
             },
             "S2": {
-                "name": "Concentrated Fire",
-                "description": "Fires arrows at the enemy to attack, dispelling one buff. When the caster has a buff, triggers a Dual Attack from the ally with the highest Attack."
+                "name": "Fogo concentrado",
+                "description": "Dispara flechas no inimigo para atacar, dissipando um efeito positivo. Quando o conjurador tem um efeito positivo, o aliado com maior Ataque realiza um Ataque duplo."
             },
             "S3": {
-                "name": "Shock Arrow",
-                "description": "Attacks the enemy by shooting lightning arrows, inflicting silence and decreased Attack for 2 turns and decreasing Combat Readiness by 100%. Grants a barrier (proportional to the caster's level) to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Flecha de choque",
+                "description": "Ataca o inimigo disparando flechas relâmpago, aplicando silêncio e Diminuir Ataque por 2 turnos e diminuindo a Prontidão de Combate em 100%. Concede uma barreira (proporcional ao nível do conjurador) ao conjurador por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -6626,17 +6626,17 @@
         "_name": "Wandering Prince Cidd",
         "skills": {
             "S1": {
-                "name": "Spiral Cut",
-                "description": "Attacks the enemy with a machete, with a 75% chance to decrease Defense for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100%, and decreases Defense of the target for 2 turns."
+                "name": "Corte em espiral",
+                "description": "Ataca o inimigo com um facão, com 75% de chance de diminuir a Defesa por 1 turno.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100% e diminui a Defesa do alvo por 2 turnos."
             },
             "S2": {
-                "name": "Natural Storyteller",
-                "description": "After an ally uses an attack that targets all enemies, activates Continuous Strike against the enemy with the highest Combat Readiness. Continuous Strike: Attacks the enemy, decreasing Combat Readiness by 20%, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 20%."
+                "name": "Contador nato",
+                "description": "Após um aliado usar um ataque que mira todos os inimigos, ativa Golpe contínuo contra o inimigo com maior Prontidão de Combate. Golpe contínuo: ataca o inimigo, diminuindo a Prontidão de Combate em 20%, e aumenta em 20% a Prontidão de Combate do aliado com maior Prontidão de Combate, exceto o conjurador."
             },
             "S3": {
-                "name": "Narrative Retcon",
-                "description": "Plants a bomb on all enemies and decreases Speed for 2 turns. At the end of the turn, detonates bombs inflicted on the target."
+                "name": "Reescrita da narrativa",
+                "description": "Planta uma bomba em todos os inimigos e diminui a Velocidade por 2 turnos. No fim do turno, detona as bombas aplicadas ao alvo."
             }
         }
     },

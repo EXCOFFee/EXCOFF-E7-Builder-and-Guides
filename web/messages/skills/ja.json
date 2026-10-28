@@ -6500,17 +6500,17 @@
         "_name": "Victorika",
         "skills": {
             "S1": {
-                "name": "Hilag's Pride",
-                "description": "Attacks the enemy with a lance, with a 50% chance to inflict decreased Defense for 2 turns."
+                "name": "ヒラグの誇り",
+                "description": "ランスで敵を攻撃し、50%の確率で2ターンの間防御力ダウンを付与する。"
             },
             "S2": {
-                "name": "Maelstrom Waltz",
-                "description": "Attacks all enemies by infiltrating deep into enemy lines, and grants counterattack to the caster for 3 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "渦潮のワルツ",
+                "description": "敵陣深くに潜入して敵全体を攻撃し、発動者に3ターンの間反撃を付与する。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Promised Glory",
-                "description": "Attacks the enemy by rushing them down, and grants immunity to all allies for 2 turns. Damage dealt increases proportional to the target's max Health."
+                "name": "約束された栄光",
+                "description": "敵に突撃して攻撃し、味方全員に2ターンの間免疫を付与する。対象の最大HPに比例して与ダメージがアップする。"
             }
         }
     },
@@ -6518,17 +6518,17 @@
         "_name": "Vigilante Leader Glenn",
         "skills": {
             "S1": {
-                "name": "Quick Fire",
-                "description": "Rapidly shoots the enemy, with a 50% chance to decrease Defense for 2 turns."
+                "name": "速射",
+                "description": "素早く敵を射撃し、50%の確率で2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Precise Attack",
-                "description": "Fires a missile at the enemy, and when the enemy is defeated, inflicts extinction and grants torrent to the caster. Increases Hit Chance of this skill by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "精密攻撃",
+                "description": "敵にミサイルを発射し、敵を倒すと消滅を付与し、発動者に激流を付与する。このスキルの命中率が50%アップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Limiter Release",
-                "description": "Releases the limiter, granting increased Attack (Greater), increased Critical Hit Chance, and increased Hit Chance to the caster for 2 turns. Grants an extra turn."
+                "name": "リミッター解除",
+                "description": "リミッターを解除し、発動者に2ターンの間攻撃力アップ（大）、クリティカル率アップ、命中率アップを付与する。追加ターンを得る。"
             }
         }
     },
@@ -6536,17 +6536,17 @@
         "_name": "Vildred",
         "skills": {
             "S1": {
-                "name": "Sweep",
-                "description": "Rapidly attacks two enemies with a swordstorm. Damage dealt increases proportional to the caster's Speed."
+                "name": "薙ぎ払い",
+                "description": "剣嵐で敵二体を素早く攻撃する。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Dancing Blade",
-                "description": "After an ally attacks, when the enemy's Health is 50% or less, grants increased Attack to the caster for 2 turns, and activates Dancing Blade. Dancing Blade: Attacks all enemies with a sword blast, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "舞う剣",
+                "description": "味方が攻撃した後、敵のHPが50%以下なら、発動者に2ターンの間攻撃力アップを付与し、舞う剣を発動する。舞う剣：剣気で敵全体を攻撃し、発動者の行動ゲージを20%増加させる。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Blade Ascent",
-                "description": "Attacks all enemies with a swordstorm, dealing damage proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "剣の昇天",
+                "description": "剣嵐で敵全体を攻撃し、発動者のスピードに比例したダメージを与える。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -6554,17 +6554,17 @@
         "_name": "Violet",
         "skills": {
             "S1": {
-                "name": "Graceful Cut",
-                "description": "Attacks with a sword, with a 75% chance to decrease Attack for 1 turn. When it is not the caster's turn, increases Combat Readiness by 15% and gains double the amount of Focus.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Attack of the target for 2 turns."
+                "name": "優雅な斬撃",
+                "description": "剣で攻撃し、75%の確率で1ターンの間攻撃力をダウンさせる。発動者のターンでない場合、行動ゲージを15%増加させ、集中を倍獲得する。",
+                "soulburn_effect": "効果発動確率が100%にアップし、2ターンの間対象の攻撃力をダウンさせる。"
             },
             "S2": {
-                "name": "Duel Accepted",
-                "description": "As preparation for a duel, dispels two debuffs from the caster and grants perception for 3 turns, before recovering 15% Health. Grants an extra turn."
+                "name": "決闘の受諾",
+                "description": "決闘の準備として、発動者の弱体効果を二つ解除し、3ターンの間看破を付与した後、HPを15%回復する。追加ターンを得る。"
             },
             "S3": {
-                "name": "Butterfly Cut",
-                "description": "Attacks the enemy by piercing them with a sword before consuming all Focus. Damage dealt increases proportional to the amount of Focus consumed, and when consumed Focus is 5, resets the cooldown of Butterfly Cut. When Butterfly Cut is not on cooldown, increases Evasion by 35%, and when evading, counterattacks with Graceful Cut."
+                "name": "蝶斬り",
+                "description": "剣で敵を貫いて攻撃した後、集中をすべて消費する。消費した集中に比例して与ダメージがアップし、消費した集中が5なら、蝶斬りのクールタイムをリセットする。蝶斬りがクールタイム中でなければ回避が35%アップし、回避すると優雅な斬撃で反撃する。"
             }
         }
     },
@@ -6572,17 +6572,17 @@
         "_name": "Vivian",
         "skills": {
             "S1": {
-                "name": "Vitality Drain",
-                "description": "Smashes the enemy with a rock, increasing the caster's Combat Readiness by 15%. A critical hit will increase the caster's Combat Readiness by an additional 10%."
+                "name": "活力吸収",
+                "description": "岩で敵を叩きつけ、発動者の行動ゲージを15%増加させる。クリティカルが発生すると、発動者の行動ゲージをさらに10%増加させる。"
             },
             "S2": {
-                "name": "Thunder God's Cry",
-                "description": "Attacks all enemies with a thunderstorm. When an enemy is defeated, activates Thunder God's Cry once more. Each subsequent Thunder God's Cry activated this way deals decreased damage, and can be activated up to 3 times.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "雷神の咆哮",
+                "description": "雷雨で敵全体を攻撃する。敵を倒すと、雷神の咆哮をもう一度発動する。こうして発動した雷神の咆哮は与ダメージがダウンし、最大3回まで発動できる。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Mana Amplification",
-                "description": "Fully amplifies mana, granting immunity to all allies for 3 turns before granting increased Attack (Greater) to the caster for 3 turns while increasing Attack of all allies except for the caster for 3 turns."
+                "name": "マナ増幅",
+                "description": "マナを最大まで増幅し、味方全員に3ターンの間免疫を付与した後、発動者に3ターンの間攻撃力アップ（大）を付与し、3ターンの間発動者を除く味方全員の攻撃力をアップさせる。"
             }
         }
     },
@@ -6590,17 +6590,17 @@
         "_name": "Wanda",
         "skills": {
             "S1": {
-                "name": "Weak Point",
-                "description": "Shoots an arrow at the enemy, decreasing Combat Readiness by 15%. When the enemy is targeted, increases damage dealt."
+                "name": "弱点",
+                "description": "敵に矢を放ち、行動ゲージを15%減少させる。敵に標的があれば与ダメージがアップする。"
             },
             "S2": {
-                "name": "Steady Aim",
-                "description": "Has a 100% chance to target a random enemy for 2 turns at the beginning of each turn."
+                "name": "狙い澄まし",
+                "description": "毎ターン開始時、100%の確率でランダムな敵に2ターンの間標的を付与する。"
             },
             "S3": {
-                "name": "Fatal Shot",
-                "description": "Attacks the enemy's vital points, with a 100% chance to stun for 2 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "致命の一撃",
+                "description": "敵の急所を攻撃し、100%の確率で2ターンの間気絶させる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -6608,17 +6608,17 @@
         "_name": "Wanderer Silk",
         "skills": {
             "S1": {
-                "name": "Basic Shot",
-                "description": "Attacks the enemy by shooting arrows, with a 50% chance to target for 2 turns."
+                "name": "基本射撃",
+                "description": "矢を放って敵を攻撃し、50%の確率で2ターンの間標的を付与する。"
             },
             "S2": {
-                "name": "Concentrated Fire",
-                "description": "Fires arrows at the enemy to attack, dispelling one buff. When the caster has a buff, triggers a Dual Attack from the ally with the highest Attack."
+                "name": "集中射撃",
+                "description": "敵に矢を放って攻撃し、強化効果を一つ解除する。発動者に強化効果があれば、攻撃力が最も高い味方が協攻する。"
             },
             "S3": {
-                "name": "Shock Arrow",
-                "description": "Attacks the enemy by shooting lightning arrows, inflicting silence and decreased Attack for 2 turns and decreasing Combat Readiness by 100%. Grants a barrier (proportional to the caster's level) to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "衝撃の矢",
+                "description": "雷の矢を放って敵を攻撃し、2ターンの間沈黙と攻撃力ダウンを付与し、行動ゲージを100%減少させる。発動者に2ターンの間バリア（発動者のレベルに比例）を付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -6626,17 +6626,17 @@
         "_name": "Wandering Prince Cidd",
         "skills": {
             "S1": {
-                "name": "Spiral Cut",
-                "description": "Attacks the enemy with a machete, with a 75% chance to decrease Defense for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100%, and decreases Defense of the target for 2 turns."
+                "name": "螺旋斬り",
+                "description": "マチェーテで敵を攻撃し、75%の確率で1ターンの間防御力をダウンさせる。",
+                "soulburn_effect": "効果発動確率が100%にアップし、2ターンの間対象の防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Natural Storyteller",
-                "description": "After an ally uses an attack that targets all enemies, activates Continuous Strike against the enemy with the highest Combat Readiness. Continuous Strike: Attacks the enemy, decreasing Combat Readiness by 20%, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 20%."
+                "name": "生まれついての語り部",
+                "description": "味方が敵全体を対象とする攻撃を使用した後、行動ゲージが最も高い敵に連続撃を発動する。連続撃：敵を攻撃し、行動ゲージを20%減少させ、発動者を除いて行動ゲージが最も高い味方の行動ゲージを20%増加させる。"
             },
             "S3": {
-                "name": "Narrative Retcon",
-                "description": "Plants a bomb on all enemies and decreases Speed for 2 turns. At the end of the turn, detonates bombs inflicted on the target."
+                "name": "物語の改変",
+                "description": "敵全体に爆弾を設置し、2ターンの間スピードをダウンさせる。ターン終了時、対象の爆弾を爆発させる。"
             }
         }
     },

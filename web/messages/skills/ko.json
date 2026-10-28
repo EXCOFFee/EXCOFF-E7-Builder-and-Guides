@@ -6500,17 +6500,17 @@
         "_name": "Victorika",
         "skills": {
             "S1": {
-                "name": "Hilag's Pride",
-                "description": "Attacks the enemy with a lance, with a 50% chance to inflict decreased Defense for 2 turns."
+                "name": "힐라그의 긍지",
+                "description": "랜스로 적을 공격하며, 50% 확률로 2턴 동안 방어력 감소를 건다."
             },
             "S2": {
-                "name": "Maelstrom Waltz",
-                "description": "Attacks all enemies by infiltrating deep into enemy lines, and grants counterattack to the caster for 3 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "소용돌이 왈츠",
+                "description": "적진 깊숙이 침투해 모든 적을 공격하고 시전자에게 3턴 동안 반격을 부여한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Promised Glory",
-                "description": "Attacks the enemy by rushing them down, and grants immunity to all allies for 2 turns. Damage dealt increases proportional to the target's max Health."
+                "name": "약속된 영광",
+                "description": "적에게 돌격해 공격하고 모든 아군에게 2턴 동안 면역을 부여한다. 대상의 최대 생명력에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -6518,17 +6518,17 @@
         "_name": "Vigilante Leader Glenn",
         "skills": {
             "S1": {
-                "name": "Quick Fire",
-                "description": "Rapidly shoots the enemy, with a 50% chance to decrease Defense for 2 turns."
+                "name": "속사",
+                "description": "적을 빠르게 사격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Precise Attack",
-                "description": "Fires a missile at the enemy, and when the enemy is defeated, inflicts extinction and grants torrent to the caster. Increases Hit Chance of this skill by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "정밀 공격",
+                "description": "적에게 미사일을 발사하며, 적을 처치하면 소멸을 걸고 시전자에게 급류를 부여한다. 이 스킬의 명중률이 50% 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Limiter Release",
-                "description": "Releases the limiter, granting increased Attack (Greater), increased Critical Hit Chance, and increased Hit Chance to the caster for 2 turns. Grants an extra turn."
+                "name": "리미터 해제",
+                "description": "리미터를 해제해 시전자에게 2턴 동안 공격력 증가(대), 치명타 확률 증가, 명중률 증가를 부여한다. 추가 턴을 얻는다."
             }
         }
     },
@@ -6536,17 +6536,17 @@
         "_name": "Vildred",
         "skills": {
             "S1": {
-                "name": "Sweep",
-                "description": "Rapidly attacks two enemies with a swordstorm. Damage dealt increases proportional to the caster's Speed."
+                "name": "휩쓸기",
+                "description": "검풍으로 적 두 명을 빠르게 공격한다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Dancing Blade",
-                "description": "After an ally attacks, when the enemy's Health is 50% or less, grants increased Attack to the caster for 2 turns, and activates Dancing Blade. Dancing Blade: Attacks all enemies with a sword blast, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "춤추는 검",
+                "description": "아군이 공격한 후 적의 생명력이 50% 이하이면 시전자에게 2턴 동안 공격력 증가를 부여하고 춤추는 검을 발동한다. 춤추는 검: 검기로 모든 적을 공격하고 시전자의 행동 게이지를 20% 증가시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Blade Ascent",
-                "description": "Attacks all enemies with a swordstorm, dealing damage proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "검의 승천",
+                "description": "검풍으로 모든 적을 공격해 시전자의 속도에 비례한 피해를 준다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -6554,17 +6554,17 @@
         "_name": "Violet",
         "skills": {
             "S1": {
-                "name": "Graceful Cut",
-                "description": "Attacks with a sword, with a 75% chance to decrease Attack for 1 turn. When it is not the caster's turn, increases Combat Readiness by 15% and gains double the amount of Focus.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Attack of the target for 2 turns."
+                "name": "우아한 베기",
+                "description": "검으로 공격하며, 75% 확률로 1턴 동안 공격력을 감소시킨다. 시전자의 턴이 아니면 행동 게이지를 15% 증가시키고 집중을 두 배로 얻는다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가하고 2턴 동안 대상의 공격력을 감소시킨다."
             },
             "S2": {
-                "name": "Duel Accepted",
-                "description": "As preparation for a duel, dispels two debuffs from the caster and grants perception for 3 turns, before recovering 15% Health. Grants an extra turn."
+                "name": "결투 수락",
+                "description": "결투를 준비하며 시전자의 약화 효과를 두 개 해제하고 3턴 동안 간파를 부여한 뒤 생명력을 15% 회복한다. 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Butterfly Cut",
-                "description": "Attacks the enemy by piercing them with a sword before consuming all Focus. Damage dealt increases proportional to the amount of Focus consumed, and when consumed Focus is 5, resets the cooldown of Butterfly Cut. When Butterfly Cut is not on cooldown, increases Evasion by 35%, and when evading, counterattacks with Graceful Cut."
+                "name": "나비 베기",
+                "description": "검으로 적을 꿰뚫어 공격한 뒤 집중을 모두 소모한다. 소모한 집중에 비례해 주는 피해가 증가하며, 소모한 집중이 5이면 나비 베기의 재사용 대기 시간을 초기화한다. 나비 베기가 재사용 대기 중이 아니면 회피가 35% 증가하며, 회피하면 우아한 베기로 반격한다."
             }
         }
     },
@@ -6572,17 +6572,17 @@
         "_name": "Vivian",
         "skills": {
             "S1": {
-                "name": "Vitality Drain",
-                "description": "Smashes the enemy with a rock, increasing the caster's Combat Readiness by 15%. A critical hit will increase the caster's Combat Readiness by an additional 10%."
+                "name": "활력 흡수",
+                "description": "바위로 적을 내리쳐 시전자의 행동 게이지를 15% 증가시킨다. 치명타가 발생하면 시전자의 행동 게이지를 추가로 10% 증가시킨다."
             },
             "S2": {
-                "name": "Thunder God's Cry",
-                "description": "Attacks all enemies with a thunderstorm. When an enemy is defeated, activates Thunder God's Cry once more. Each subsequent Thunder God's Cry activated this way deals decreased damage, and can be activated up to 3 times.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "뇌신의 포효",
+                "description": "뇌우로 모든 적을 공격한다. 적을 처치하면 뇌신의 포효를 한 번 더 발동한다. 이렇게 발동한 뇌신의 포효는 주는 피해가 감소하며, 최대 3회까지 발동할 수 있다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Mana Amplification",
-                "description": "Fully amplifies mana, granting immunity to all allies for 3 turns before granting increased Attack (Greater) to the caster for 3 turns while increasing Attack of all allies except for the caster for 3 turns."
+                "name": "마나 증폭",
+                "description": "마나를 최대로 증폭해 모든 아군에게 3턴 동안 면역을 부여한 뒤 시전자에게 3턴 동안 공격력 증가(대)를 부여하고, 3턴 동안 시전자를 제외한 모든 아군의 공격력을 증가시킨다."
             }
         }
     },
@@ -6590,17 +6590,17 @@
         "_name": "Wanda",
         "skills": {
             "S1": {
-                "name": "Weak Point",
-                "description": "Shoots an arrow at the enemy, decreasing Combat Readiness by 15%. When the enemy is targeted, increases damage dealt."
+                "name": "약점",
+                "description": "적에게 화살을 쏴 행동 게이지를 15% 감소시킨다. 적에게 표적이 걸려 있으면 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Steady Aim",
-                "description": "Has a 100% chance to target a random enemy for 2 turns at the beginning of each turn."
+                "name": "정조준",
+                "description": "매 턴 시작 시 100% 확률로 무작위 적에게 2턴 동안 표적을 건다."
             },
             "S3": {
-                "name": "Fatal Shot",
-                "description": "Attacks the enemy's vital points, with a 100% chance to stun for 2 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "치명적인 사격",
+                "description": "적의 급소를 공격하며, 100% 확률로 2턴 동안 기절시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -6608,17 +6608,17 @@
         "_name": "Wanderer Silk",
         "skills": {
             "S1": {
-                "name": "Basic Shot",
-                "description": "Attacks the enemy by shooting arrows, with a 50% chance to target for 2 turns."
+                "name": "기본 사격",
+                "description": "화살을 쏴 적을 공격하며, 50% 확률로 2턴 동안 표적을 건다."
             },
             "S2": {
-                "name": "Concentrated Fire",
-                "description": "Fires arrows at the enemy to attack, dispelling one buff. When the caster has a buff, triggers a Dual Attack from the ally with the highest Attack."
+                "name": "집중 사격",
+                "description": "적에게 화살을 쏴 공격하고 강화 효과를 한 개 해제한다. 시전자에게 강화 효과가 있으면 공격력이 가장 높은 아군이 협공한다."
             },
             "S3": {
-                "name": "Shock Arrow",
-                "description": "Attacks the enemy by shooting lightning arrows, inflicting silence and decreased Attack for 2 turns and decreasing Combat Readiness by 100%. Grants a barrier (proportional to the caster's level) to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "충격 화살",
+                "description": "번개 화살을 쏴 적을 공격해 2턴 동안 침묵과 공격력 감소를 걸고 행동 게이지를 100% 감소시킨다. 시전자에게 2턴 동안 보호막(시전자 레벨 비례)을 부여한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -6626,17 +6626,17 @@
         "_name": "Wandering Prince Cidd",
         "skills": {
             "S1": {
-                "name": "Spiral Cut",
-                "description": "Attacks the enemy with a machete, with a 75% chance to decrease Defense for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100%, and decreases Defense of the target for 2 turns."
+                "name": "나선 베기",
+                "description": "마체테로 적을 공격하며, 75% 확률로 1턴 동안 방어력을 감소시킨다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가하고 2턴 동안 대상의 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Natural Storyteller",
-                "description": "After an ally uses an attack that targets all enemies, activates Continuous Strike against the enemy with the highest Combat Readiness. Continuous Strike: Attacks the enemy, decreasing Combat Readiness by 20%, and increases Combat Readiness of the ally with the highest Combat Readiness except for the caster by 20%."
+                "name": "타고난 이야기꾼",
+                "description": "아군이 모든 적을 대상으로 하는 공격을 사용한 후 행동 게이지가 가장 높은 적에게 연속 일격을 발동한다. 연속 일격: 적을 공격해 행동 게이지를 20% 감소시키고, 시전자를 제외하고 행동 게이지가 가장 높은 아군의 행동 게이지를 20% 증가시킨다."
             },
             "S3": {
-                "name": "Narrative Retcon",
-                "description": "Plants a bomb on all enemies and decreases Speed for 2 turns. At the end of the turn, detonates bombs inflicted on the target."
+                "name": "이야기 개변",
+                "description": "모든 적에게 폭탄을 설치하고 2턴 동안 속도를 감소시킨다. 턴 종료 시 대상에게 걸린 폭탄을 폭발시킨다."
             }
         }
     },
