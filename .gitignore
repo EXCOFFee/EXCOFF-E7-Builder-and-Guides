@@ -113,3 +113,5 @@ api/public/images/skills/
 *_test.*
 check_*.php
 test_*.php
+# Deploy: datos del servidor (solo local)
+deploy/deploy.env
