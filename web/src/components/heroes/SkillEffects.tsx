@@ -1,60 +1,17 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { useTranslations } from '@/hooks/useTranslations';
 import { getSkillMechanics } from '@/utils/skillFormatter';
 import { getBuffIcon } from '@/utils/buffIconMapper';
+import { effectTextByName, useHeroEffects, type EffectsData } from '@/hooks/useHeroEffects';
+
+// Se reexporta: el detalle de héroe lo importa desde acá
+export { useHeroEffects };
 
 const CECILIA_SKILL_ICONS = 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/skill';
-
-interface EffectInfo {
-    name: string;
-    description: string;
-    type: 'buff' | 'debuff';
-    icon: string | null;
-}
-
-type HeroEffects = Record<string, Record<string, { buffs: string[]; debuffs: string[] }>>;
-
-interface EffectsData {
-    heroes: HeroEffects;
-    effects: Record<string, EffectInfo>;
-}
-
-let effectsPromise: Promise<EffectsData> | null = null;
-
-/**
- * Carga los datos de efectos (generados por scripts/generate-hero-effects.js) una sola vez,
- * con import dinámico para que no pesen en el bundle del resto de páginas.
- */
-function loadEffects(): Promise<EffectsData> {
-    effectsPromise ??= Promise.all([
-        import('@/data/hero-effects.json'),
-        import('@/data/effects.json'),
-    ]).then(([heroes, effects]) => ({
-        heroes: heroes.default as HeroEffects,
-        effects: effects.default as Record<string, EffectInfo>,
-    }));
-    return effectsPromise;
-}
-
-export function useHeroEffects(): EffectsData | null {
-    const [data, setData] = useState<EffectsData | null>(null);
-
-    useEffect(() => {
-        let active = true;
-        loadEffects().then((loaded) => {
-            if (active) setData(loaded);
-        });
-        return () => {
-            active = false;
-        };
-    }, []);
-
-    return data;
-}
 
 interface SkillEffectsProps {
     heroName: string;
@@ -76,27 +33,33 @@ export function SkillEffects({ heroName, skillKey, fallbackText, data }: SkillEf
 
     if (!data.heroes[heroName]) {
         const mechanics = getSkillMechanics(fallbackText)
-            .map((term) => ({ id: term, name: term, description: t(`glossary.${term}`, ''), icon: getBuffIcon(term), type: null }))
+            .map((term) => {
+                const text = effectTextByName(data, term);
+                return {
+                    id: term,
+                    name: text?.name ?? term,
+                    description: text?.description ?? t(`glossary.${term}`, ''),
+                    icon: getBuffIcon(term),
+                    type: null,
+                };
+            })
             .filter((effect) => effect.icon);
         return <EffectList effects={mechanics} />;
     }
 
     if (!skillEffects) return null;
 
+    // Texto de CeciliaBot (o su traducción por id). El glosario no lo pisa: tenía descripciones sin fuente.
     const effects = [...skillEffects.buffs, ...skillEffects.debuffs]
         .map((id) => ({ id, info: data.effects[id] }))
         .filter(({ info }) => info)
-        .map(({ id, info }) => {
-            // El glosario está indexado por el nombre en inglés sin aclaraciones como "(Undispellable)"
-            const glossaryKey = info.name.replace(/\s*\(.*\)\s*$/, '');
-            return {
-                id,
-                name: info.name,
-                description: t(`glossary.${glossaryKey}`, info.description),
-                icon: info.icon ? `/images/buff/${info.icon}` : null,
-                type: info.type,
-            };
-        });
+        .map(({ id, info }) => ({
+            id,
+            name: data.translations[id]?.name ?? info.name,
+            description: data.translations[id]?.description ?? info.description,
+            icon: info.icon ? `/images/buff/${info.icon}` : null,
+            type: info.type,
+        }));
 
     return <EffectList effects={effects} />;
 }

@@ -100,7 +100,7 @@
         "filterClass": "Class",
         "noResults": "No heroes found.",
         "loadingHeroes": "Loading heroes...",
-        "loadError": "Error loading heroes. Make sure the API is running.",
+        "loadError": "Could not load heroes. Please try again later.",
         "baseStats": "Base Stats (Lv.60 Fully Awakened)",
         "skills": "Skills & Damage Scaling",
         "createBuild": "Create Build",
@@ -139,7 +139,10 @@
         "popularCounters": "Popular Counter Heroes",
         "priorityStats": "Priority Stats",
         "statistics": "Statistics",
-        "builds": "builds"
+        "builds": "builds",
+        "loadingHero": "Loading hero data...",
+        "notFound": "Hero not found",
+        "statsUpdated": "Stats last updated: {date}"
     },
     "elements": {
         "fire": "Fire",
@@ -161,7 +164,7 @@
         "description": "Learn strategies and tips from the community",
         "searchPlaceholder": "Search guides...",
         "loadingGuides": "Loading guides...",
-        "loadError": "Error loading guides. Make sure the API is running.",
+        "loadError": "Could not load guides. Please try again later.",
         "allCategories": "All",
         "general": "General",
         "guildWar": "Guild War",
@@ -501,5 +504,11 @@
         "pt": "Português",
         "selectLanguage": "Language",
         "filterByLanguage": "Filter by Language"
+    },
+    "login": {
+        "title": "Sign in",
+        "subtitle": "Sign in to create builds and guides",
+        "continueWithGoogle": "Continue with Google",
+        "continueWithDiscord": "Continue with Discord"
     }
 }

@@ -275,7 +275,7 @@ export function HeroDetailClient({
                     >
                         <source src="/videos/RasRun.mp4" type="video/mp4" />
                     </video>
-                    <p className="text-gray-400 mt-2">Cargando datos del héroe...</p>
+                    <p className="text-gray-400 mt-2">{t('heroes.loadingHero', 'Loading hero data...')}</p>
                 </div>
             </div>
         );
@@ -285,9 +285,9 @@ export function HeroDetailClient({
         return (
             <div className="min-h-screen bg-e7-void flex items-center justify-center">
                 <div className="text-center">
-                    <p className="text-red-400 text-xl mb-4">Hero not found</p>
+                    <p className="text-red-400 text-xl mb-4">{t('heroes.notFound', 'Hero not found')}</p>
                     <Link href="/heroes" className="text-e7-gold hover:underline">
-                        ← Back to heroes
+                        ← {t('heroes.backToHeroes', 'Back to Heroes')}
                     </Link>
                 </div>
             </div>
@@ -609,7 +609,7 @@ export function HeroDetailClient({
                 {/* Last Updated */}
                 {hero.stats_updated_at && (
                     <p className="text-center text-slate-400 text-xs mt-8">
-                        Stats last updated: {formatDate(hero.stats_updated_at, locale)}
+                        {t('heroes.statsUpdated', 'Stats last updated: {date}').replace('{date}', formatDate(hero.stats_updated_at, locale))}
                     </p>
                 )}
 

@@ -41,7 +41,12 @@
         "viewFull": "Ver em tamanho completo",
         "optional": "opcional",
         "showMore": "Mostrar mais",
-        "showLess": "Mostrar menos"
+        "showLess": "Mostrar menos",
+        "clearFilters": "Limpar",
+        "confirmDelete": "Tem certeza de que deseja excluir isto?",
+        "retry": "Tentar novamente",
+        "connectionError": "Sem conexão",
+        "networkErrorMsg": "Não foi possível conectar. Verifique sua conexão com a internet."
     },
     "share": {
         "title": "Compartilhar",
@@ -96,7 +101,7 @@
         "filterClass": "Classe",
         "noResults": "Nenhum herói encontrado.",
         "loadingHeroes": "Carregando heróis...",
-        "loadError": "Erro ao carregar heróis. Certifique-se de que a API está rodando.",
+        "loadError": "Não foi possível carregar os heróis. Tente novamente mais tarde.",
         "baseStats": "Status Base (Nv.60 Totalmente Desperto)",
         "skills": "Habilidades e Multiplicadores",
         "createBuild": "Criar Build",
@@ -135,7 +140,10 @@
         "popularCounters": "Heróis Counter Populares",
         "priorityStats": "Stats Prioritárias",
         "statistics": "Estatísticas",
-        "builds": "builds"
+        "builds": "builds",
+        "loadingHero": "Carregando dados do herói...",
+        "notFound": "Herói não encontrado",
+        "statsUpdated": "Estatísticas atualizadas em {date}"
     },
     "elements": {
         "fire": "Fogo",
@@ -157,7 +165,7 @@
         "description": "Aprenda estratégias e dicas da comunidade",
         "searchPlaceholder": "Buscar guias...",
         "loadingGuides": "Carregando guias...",
-        "loadError": "Erro ao carregar guias. Certifique-se de que a API está rodando.",
+        "loadError": "Não foi possível carregar os guias. Tente novamente mais tarde.",
         "allCategories": "Todos",
         "general": "Geral",
         "guildWar": "Guerra de Guilda",
@@ -241,7 +249,18 @@
         "note": "Nota",
         "heroNotePlaceholder": "Papel, posicionamento ou outras notas...",
         "hasBuild": "Tem build",
-        "clickToAddBuild": "Clique para adicionar build"
+        "clickToAddBuild": "Clique para adicionar build",
+        "title": "Título",
+        "titlePlaceholder": "Título do seu guia...",
+        "category": "Categoria",
+        "relatedHero": "Herói relacionado (opcional)",
+        "noSpecificHero": "Nenhum herói específico",
+        "videoUrl": "URL do vídeo (opcional)",
+        "images": "Imagens (opcional)",
+        "description": "Breve descrição",
+        "descriptionPlaceholder": "Uma breve descrição do que este guia aborda...",
+        "content": "Conteúdo do guia",
+        "contentPlaceholder": "Escreva o conteúdo do seu guia aqui. Você pode usar formatação Markdown..."
     },
     "guilds": {
         "title": "Recrutamento de Guildas",
@@ -280,7 +299,8 @@
             "mystic_x3": "x3 Mystic",
             "mystic_x4": "x4 Mystic",
             "mystic_x5": "x5 Mystic",
-            "guild_buffs_24_7": "Buffs de Guilda 24/7"
+            "guild_buffs_24_7": "Buffs de Guilda 24/7",
+            "telegram": "Telegram"
         },
         "servers": {
             "global": "Global",
@@ -289,6 +309,23 @@
             "japan": "Japão",
             "korea": "Coreia",
             "china": "China"
+        },
+        "postDetails": "Detalhes da publicação",
+        "titleLabel": "Título",
+        "titlePlaceholder": "ex.: Guilda ativa procurando membros!",
+        "imageUrlPlaceholder": "Ou cole a URL da imagem...",
+        "createError": "Erro ao criar a publicação",
+        "createSubtitle": "Recrute membros para sua guilda",
+        "publishAnonymously": "Publicar anonimamente",
+        "anonymousDesc": "Seu nome de usuário não aparecerá nesta publicação",
+        "editPost": "Editar publicação da guilda",
+        "updateError": "Erro ao atualizar a publicação",
+        "contacts": {
+            "discordOptional": "Servidor do Discord (opcional)",
+            "whatsappOptional": "WhatsApp (opcional)",
+            "telegramOptional": "Telegram (opcional)",
+            "youtubeOptional": "YouTube/TikTok (opcional)",
+            "contactLinks": "Links de contato"
         }
     },
     "builds": {
@@ -416,7 +453,13 @@
         "searchTags": "Buscar tags...",
         "exportImage": "Exportar Imagem",
         "exporting": "Exportando...",
-        "exportError": "Erro ao exportar a imagem. Por favor tente novamente."
+        "exportError": "Erro ao exportar a imagem. Por favor tente novamente.",
+        "clickToViewFull": "Clique na imagem para ver em tamanho real",
+        "image": "Imagem",
+        "viewFull": "Ver em tamanho real",
+        "previous": "Anterior",
+        "next": "Próxima",
+        "goToImage": "Ir para a imagem"
     },
     "news": {
         "title": "Notícias de Epic Seven",
@@ -466,5 +509,11 @@
         "pt": "Português",
         "selectLanguage": "Idioma",
         "filterByLanguage": "Filtrar por Idioma"
+    },
+    "login": {
+        "title": "Entrar",
+        "subtitle": "Entre para criar builds e guias",
+        "continueWithGoogle": "Continuar com o Google",
+        "continueWithDiscord": "Continuar com o Discord"
     }
 }

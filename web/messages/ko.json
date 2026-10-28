@@ -41,7 +41,12 @@
         "viewFull": "전체 크기로 보기",
         "optional": "선택사항",
         "showMore": "더 보기",
-        "showLess": "접기"
+        "showLess": "접기",
+        "clearFilters": "초기화",
+        "confirmDelete": "정말 삭제하시겠습니까?",
+        "retry": "다시 시도",
+        "connectionError": "연결 없음",
+        "networkErrorMsg": "연결할 수 없습니다. 인터넷 연결을 확인하세요."
     },
     "share": {
         "title": "공유",
@@ -96,7 +101,7 @@
         "filterClass": "직업",
         "noResults": "영웅을 찾을 수 없습니다.",
         "loadingHeroes": "영웅 로딩 중...",
-        "loadError": "영웅 로딩 오류. API가 실행 중인지 확인하세요.",
+        "loadError": "영웅을 불러오지 못했습니다. 잠시 후 다시 시도하세요.",
         "baseStats": "기본 스탯 (Lv.60 완전 각성)",
         "skills": "스킬 및 계수",
         "createBuild": "빌드 만들기",
@@ -135,7 +140,10 @@
         "popularCounters": "인기 카운터 영웅",
         "priorityStats": "우선순위 스탯",
         "statistics": "스탯",
-        "builds": "빌드"
+        "builds": "빌드",
+        "loadingHero": "영웅 정보를 불러오는 중...",
+        "notFound": "영웅을 찾을 수 없습니다",
+        "statsUpdated": "통계 업데이트: {date}"
     },
     "elements": {
         "fire": "화염",
@@ -157,7 +165,7 @@
         "description": "커뮤니티의 전략과 팁을 배우세요",
         "searchPlaceholder": "가이드 검색...",
         "loadingGuides": "가이드 로딩 중...",
-        "loadError": "가이드 로딩 오류. API가 실행 중인지 확인하세요.",
+        "loadError": "가이드를 불러오지 못했습니다. 잠시 후 다시 시도하세요.",
         "allCategories": "전체",
         "general": "일반",
         "guildWar": "길드전",
@@ -241,7 +249,18 @@
         "note": "메모",
         "heroNotePlaceholder": "역할, 배치, 기타 메모...",
         "hasBuild": "빌드 있음",
-        "clickToAddBuild": "클릭하여 빌드 추가"
+        "clickToAddBuild": "클릭하여 빌드 추가",
+        "title": "제목",
+        "titlePlaceholder": "가이드 제목...",
+        "category": "카테고리",
+        "relatedHero": "관련 영웅 (선택)",
+        "noSpecificHero": "특정 영웅 없음",
+        "videoUrl": "영상 URL (선택)",
+        "images": "이미지 (선택)",
+        "description": "간단한 설명",
+        "descriptionPlaceholder": "이 가이드에서 다루는 내용을 간단히 설명하세요...",
+        "content": "가이드 내용",
+        "contentPlaceholder": "가이드 내용을 여기에 작성하세요. 마크다운 서식을 사용할 수 있습니다..."
     },
     "guilds": {
         "title": "길드 모집",
@@ -280,7 +299,8 @@
             "mystic_x3": "x3 미스틱",
             "mystic_x4": "x4 미스틱",
             "mystic_x5": "x5 미스틱",
-            "guild_buffs_24_7": "24/7 길드 버프"
+            "guild_buffs_24_7": "24/7 길드 버프",
+            "telegram": "텔레그램"
         },
         "servers": {
             "global": "글로벌",
@@ -289,6 +309,23 @@
             "japan": "일본",
             "korea": "한국",
             "china": "중국"
+        },
+        "postDetails": "게시글 정보",
+        "titleLabel": "제목",
+        "titlePlaceholder": "예: 활동적인 길드에서 길드원을 모집합니다!",
+        "imageUrlPlaceholder": "또는 이미지 URL 붙여넣기...",
+        "createError": "게시글 작성 중 오류",
+        "createSubtitle": "길드원을 모집하세요",
+        "publishAnonymously": "익명으로 게시",
+        "anonymousDesc": "이 게시글에 사용자 이름이 표시되지 않습니다",
+        "editPost": "길드 게시글 수정",
+        "updateError": "게시글 수정 중 오류",
+        "contacts": {
+            "discordOptional": "디스코드 서버 (선택)",
+            "whatsappOptional": "왓츠앱 (선택)",
+            "telegramOptional": "텔레그램 (선택)",
+            "youtubeOptional": "유튜브/틱톡 (선택)",
+            "contactLinks": "연락처 링크"
         }
     },
     "builds": {
@@ -416,7 +453,13 @@
         "searchTags": "태그 검색...",
         "exportImage": "이미지 내보내기",
         "exporting": "내보내는 중...",
-        "exportError": "이미지 내보내기 실패. 다시 시도해 주세요."
+        "exportError": "이미지 내보내기 실패. 다시 시도해 주세요.",
+        "clickToViewFull": "이미지를 클릭하면 원본 크기로 볼 수 있습니다",
+        "image": "이미지",
+        "viewFull": "원본 크기로 보기",
+        "previous": "이전",
+        "next": "다음",
+        "goToImage": "이미지로 이동"
     },
     "news": {
         "title": "에픽세븐 뉴스",
@@ -466,5 +509,11 @@
         "pt": "Português",
         "selectLanguage": "언어",
         "filterByLanguage": "언어로 필터링"
+    },
+    "login": {
+        "title": "로그인",
+        "subtitle": "로그인하고 빌드와 가이드를 만들어 보세요",
+        "continueWithGoogle": "Google로 계속하기",
+        "continueWithDiscord": "Discord로 계속하기"
     }
 }

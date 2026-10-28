@@ -173,7 +173,7 @@ export default function GuidesPage() {
                 {/* Error */}
                 {error && (
                     <div className="text-center text-red-400 py-20">
-                        <p>{t('guides.loadError', 'Error loading guides. Make sure the API is running.')}</p>
+                        <p>{t('guides.loadError', 'Could not load guides. Please try again later.')}</p>
                     </div>
                 )}
 
