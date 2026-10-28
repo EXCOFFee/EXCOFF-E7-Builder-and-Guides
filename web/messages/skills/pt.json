@@ -6338,17 +6338,17 @@
         "_name": "Tori",
         "skills": {
             "S1": {
-                "name": "Overreaction",
-                "description": "Attacks the enemy by whipping a ribbon, and grants a barrier to the caster for 1 turn. Barrier strength increases proportional to the caster's Attack.",
-                "soulburn_effect": "Greatly increases damage dealt and does not trigger a Dual Attack. When the caster is granted cascade, does not cost any Soul to activate Soulburn."
+                "name": "Reação exagerada",
+                "description": "Ataca o inimigo agitando uma fita e concede uma barreira ao conjurador por 1 turno. A força da barreira aumenta proporcionalmente ao Ataque do conjurador.",
+                "soulburn_effect": "Aumenta muito o dano causado e não ativa Ataque duplo. Quando o conjurador tem cascata, a Queima de Alma não custa Alma."
             },
             "S2": {
-                "name": "Delusional Runway",
-                "description": "Buffs granted to the caster are applied as undispellable. When attacked, damage suffered in one attack does not exceed 51% of max Health. At the start of the turn, has a 20% chance for each buff granted to the caster to grant cascade."
+                "name": "Passarela delirante",
+                "description": "Os efeitos positivos concedidos ao conjurador são aplicados como indissipáveis. Ao ser atacado, o dano sofrido em um único ataque não ultrapassa 51% da Vida máxima. No início do turno, tem 20% de chance, para cada efeito positivo do conjurador, de conceder cascata."
             },
             "S3": {
-                "name": "Heart Over Grace",
-                "description": "Throws chocolates filled with heartfelt sentiments, granting increased Attack and increased Speed to all allies for 3 turns. Grants increased Hit Chance to the caster for 3 turns. Grants an extra turn."
+                "name": "Coração acima da graça",
+                "description": "Arremessa chocolates cheios de sentimentos sinceros, concedendo Aumentar Ataque e Aumentar Velocidade a todos os aliados por 3 turnos. Concede Aumentar Precisão ao conjurador por 3 turnos. Concede um turno extra."
             }
         }
     },
@@ -6356,17 +6356,17 @@
         "_name": "Troublemaker Crozet",
         "skills": {
             "S1": {
-                "name": "Lunge",
-                "description": "Attacks the enemy in an act of faith, with a 40% chance to stun for 1 turn. When it is not the caster's turn, effect chance increases by 20%. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance by 60%."
+                "name": "Investida",
+                "description": "Ataca o inimigo num ato de fé, com 40% de chance de atordoar por 1 turno. Quando não é o turno do conjurador, a chance do efeito aumenta 20%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta a chance do efeito em 60%."
             },
             "S2": {
-                "name": "Chivalry",
-                "description": "Grants 40% damage share from the damage received by the ally in the back row. At the moment the ally in the back row is attacked, increases Combat Readiness of the caster by 15% and has a 35% chance to counterattack."
+                "name": "Cavalheirismo",
+                "description": "Concede 40% de divisão do dano recebido pelo aliado na fileira de trás. No momento em que o aliado na fileira de trás é atacado, aumenta a Prontidão de Combate do conjurador em 15% e tem 35% de chance de contra-atacar."
             },
             "S3": {
-                "name": "Oath of Protection",
-                "description": "Swears an oath of protection, dispelling all debuffs from the caster and an ally, before increasing Defense for 3 turns. Grants class enhancement to the ally for 3 turns."
+                "name": "Juramento de proteção",
+                "description": "Faz um juramento de proteção, dissipando todos os efeitos negativos do conjurador e de um aliado, depois aumenta a Defesa por 3 turnos. Concede aprimoramento de classe ao aliado por 3 turnos."
             }
         }
     },
@@ -6374,17 +6374,17 @@
         "_name": "Twisted Eidolon Kayron",
         "skills": {
             "S1": {
-                "name": "Sundering Slash",
-                "description": "Attacks the enemy with a sword, inflicting up to 10% injuries, before granting a barrier (proportional to the caster's max Health) to the caster for 1 turn. When triggered as a counterattack, changes into an attack that targets all enemies.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Corte dilacerante",
+                "description": "Ataca o inimigo com uma espada, causando até 10% de ferimentos, depois concede uma barreira (proporcional à Vida máxima do conjurador) ao conjurador por 1 turno. Quando ativada como contra-ataque, passa a mirar todos os inimigos.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Wandering Eidolon",
-                "description": "At the start of battle and at the end of the turn, grants counterattack for 1 turn. At the end of an enemy's turn, gains 10 Fighting Spirit, and when Fighting Spirit is full, dispels all debuffs before increasing Combat Readiness by 100%."
+                "name": "Eidolon errante",
+                "description": "No início da batalha e no fim do turno, concede contra-ataque por 1 turno. No fim do turno de um inimigo, ganha 10 de Espírito de luta e, quando o Espírito de luta está cheio, dissipa todos os efeitos negativos, depois aumenta a Prontidão de Combate em 100%."
             },
             "S3": {
-                "name": "Sword of Requiem",
-                "description": "Attacks all enemies by unleashing the power of the demonic sword, before consuming all Fighting Spirit. Inflicts 5,000 additional damage, regardless of whether the attack hits, and additional damage increases proportional to the amount of consumed Fighting Spirit, up to 15,000. When this skill is not on cooldown, when attacked, grants 30% damage reduction."
+                "name": "Espada do réquiem",
+                "description": "Ataca todos os inimigos liberando o poder da espada demoníaca, depois consome todo o Espírito de luta. Causa 5.000 de dano adicional independentemente de o ataque acertar, e o dano adicional aumenta proporcionalmente ao Espírito de luta consumido, até 15.000. Quando esta habilidade não está em recarga, ao ser atacado, concede 30% de redução de dano."
             }
         }
     },
@@ -6392,17 +6392,17 @@
         "_name": "Tywin",
         "skills": {
             "S1": {
-                "name": "Sword Storm",
-                "description": "Attacks the enemy with a sword blast, with a 75% chance to inflict decreased Defense for 2 turns. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Tempestade de espadas",
+                "description": "Ataca o inimigo com uma rajada de espada, com 75% de chance de aplicar Diminuir Defesa por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Tatical Command",
-                "description": "Immune to debuffs which prevent movement. When the ally in the back row has a debuff which prevents movement after being attacked, activates Commanding Shout on the target. Commanding Shout: Dispels all debuffs from the ally and grants immunity and a barrier (proportional to the caster's max Health) for 2 turns."
+                "name": "Comando tático",
+                "description": "Imune a efeitos negativos que impedem a movimentação. Quando o aliado na fileira de trás tem um efeito negativo que impede a movimentação após ser atacado, ativa Grito de comando nele. Grito de comando: dissipa todos os efeitos negativos do aliado e concede imunidade e uma barreira (proporcional à Vida máxima do conjurador) por 2 turnos."
             },
             "S3": {
-                "name": "All-Out Attack",
-                "description": "Attacks all enemies again after a swordstorm, with a 100% chance to decrease Defense for 2 turns, and increases Defense of all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "Ataque total",
+                "description": "Ataca todos os inimigos novamente após uma tempestade de espadas, com 100% de chance de diminuir a Defesa por 2 turnos, e aumenta a Defesa de todos os aliados por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -6410,17 +6410,17 @@
         "_name": "Unbound Knight Arowell",
         "skills": {
             "S1": {
-                "name": "Shield Thrust",
-                "description": "Attacks the enemy with a sword and shield, with a 75% chance each to dispel one buff twice. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Investida de escudo",
+                "description": "Ataca o inimigo com espada e escudo, com 75% de chance cada de dissipar um efeito positivo, duas vezes. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Escort",
-                "description": "At the start of battle and at the end of the caster's turn, grants escort to the caster for 1 turn. After an ally except for the caster is attacked by a Single Attack, increases Combat Readiness of the caster by 20%."
+                "name": "Escolta",
+                "description": "No início da batalha e no fim do turno do conjurador, concede escolta ao conjurador por 1 turno. Após um aliado, exceto o conjurador, ser atingido por um ataque individual, aumenta a Prontidão de Combate do conjurador em 20%."
             },
             "S3": {
-                "name": "Judgment of Light",
-                "description": "Attacks the enemy with a shield, dispelling all buffs and a 100% chance to stun for 1 turn, before granting a barrier and increased Defense to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's max Health."
+                "name": "Julgamento da luz",
+                "description": "Ataca o inimigo com um escudo, dissipando todos os efeitos positivos e com 100% de chance de atordoar por 1 turno, depois concede uma barreira e Aumentar Defesa a todos os aliados por 2 turnos. O dano causado e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -6428,17 +6428,17 @@
         "_name": "Uncharted Pioneer Politis",
         "skills": {
             "S1": {
-                "name": "Pulse Deployment",
-                "description": "Attacks all enemies with light, with a 65% chance to dispel one buff. Deals 1000 additional damage regardless of whether the attack hits."
+                "name": "Implantação de pulso",
+                "description": "Ataca todos os inimigos com luz, com 65% de chance de dissipar um efeito positivo. Causa 1000 de dano adicional independentemente de o ataque acertar."
             },
             "S2": {
-                "name": "Survivor's Mission",
-                "description": "At the start of battle, when in the front row, grants offense mission, and when in the back row, grants defense mission. When a mission is complete, dispels the mission and all debuffs from the caster, and activates Last Words of a Fallen Star. Last Words of a Fallen Star: Grants knowledge of the stars to all allies, and grants an extra turn to the caster."
+                "name": "Missão do sobrevivente",
+                "description": "No início da batalha, quando está na fileira da frente, concede missão de ataque e, quando está na fileira de trás, concede missão de defesa. Quando uma missão é concluída, dissipa a missão e todos os efeitos negativos do conjurador e ativa Últimas palavras de uma estrela caída. Últimas palavras de uma estrela caída: concede conhecimento das estrelas a todos os aliados e concede um turno extra ao conjurador."
             },
             "S3": {
-                "name": "Light Piercing the End",
-                "description": "Attacks all enemies with a drone, dispelling all buffs before increasing skill cooldowns by 1 turn. Deals 3000 additional damage regardless of whether the attack hits.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Luz que perfura o fim",
+                "description": "Ataca todos os inimigos com um drone, dissipando todos os efeitos positivos, depois aumenta as recargas de habilidades em 1 turno. Causa 3000 de dano adicional independentemente de o ataque acertar.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -6446,17 +6446,17 @@
         "_name": "Urban Shadow Choux",
         "skills": {
             "S1": {
-                "name": "Zippity Zap!",
-                "description": "Attacks the enemy with a spear, and increases Combat Readiness of the caster by 15%. When it is the caster's turn, gains 1 Focus. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt and deals additional damage equivalent to 40% of injuries inflicted on the target."
+                "name": "Zip-zap!",
+                "description": "Ataca o inimigo com uma lança e aumenta a Prontidão de Combate do conjurador em 15%. Quando é o turno do conjurador, ganha 1 de Foco. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado e causa dano adicional equivalente a 40% dos ferimentos aplicados ao alvo."
             },
             "S2": {
-                "name": "Wild Charge",
-                "description": "Increases Critical Hit Chance by 30%. At the start of the first battle, gains 1 Focus. At the start of the turn, gains 1 Focus and grants Bzzt! to the caster for 1 turn, and when Focus is full, resets cooldown of Operation: Cream Pastry."
+                "name": "Carga selvagem",
+                "description": "Aumenta a Chance de Crítico em 30%. No início da primeira batalha, ganha 1 de Foco. No início do turno, ganha 1 de Foco e concede Bzzt! ao conjurador por 1 turno e, quando o Foco está cheio, reinicia a recarga de Operação: doce de creme."
             },
             "S3": {
-                "name": "Operation: Cream Pastry",
-                "description": "Attacks the enemy using adaptable tactics, inflicting up to 25% injuries, and grants increased Speed to all allies for 2 turns. Penetrates the target's Defense by 50%. When Focus is full, consumes all to recover Health of the caster, and deals additional damage equivalent to 60% of injuries inflicted on the target. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "Operação: doce de creme",
+                "description": "Ataca o inimigo usando táticas adaptáveis, causando até 25% de ferimentos, e concede Aumentar Velocidade a todos os aliados por 2 turnos. Penetra 50% da Defesa do alvo. Quando o Foco está cheio, consome todo o Foco para recuperar a Vida do conjurador e causa dano adicional equivalente a 60% dos ferimentos aplicados ao alvo. O dano causado e a quantidade recuperada aumentam proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -6464,17 +6464,17 @@
         "_name": "Verdant Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, increasing Combat Readiness of the caster by 20%."
+                "name": "Corte no tornozelo",
+                "description": "Ataca o inimigo com uma espada, aumentando a Prontidão de Combate do conjurador em 20%."
             },
             "S2": {
-                "name": "Blade Gust",
-                "description": "Attacks all enemies with a blade gust, with an 80% chance to make them unable to be buffed for 2 turns. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "Rajada de lâminas",
+                "description": "Ataca todos os inimigos com uma rajada de lâminas, com 80% de chance de impedir que recebam efeitos positivos por 2 turnos. Quando há três inimigos ou menos, o dano causado aumenta quanto menos inimigos houver."
             },
             "S3": {
-                "name": "Gliding Slash",
-                "description": "Attacks the enemy repeatedly, granting increased Attack and Weakness Shared to the caster for 2 turns, before absorbing some of the damage dealt as Health. A critical hit has a 100% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Corte deslizante",
+                "description": "Ataca o inimigo repetidamente, concedendo Aumentar Ataque e Fraqueza compartilhada ao conjurador por 2 turnos, depois absorve parte do dano causado como Vida. Um acerto crítico tem 100% de chance de diminuir a Defesa por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },

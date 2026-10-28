@@ -6338,17 +6338,17 @@
         "_name": "Tori",
         "skills": {
             "S1": {
-                "name": "Overreaction",
-                "description": "Attacks the enemy by whipping a ribbon, and grants a barrier to the caster for 1 turn. Barrier strength increases proportional to the caster's Attack.",
-                "soulburn_effect": "Greatly increases damage dealt and does not trigger a Dual Attack. When the caster is granted cascade, does not cost any Soul to activate Soulburn."
+                "name": "反应过度",
+                "description": "挥舞缎带攻击敌人，并为施放者施加1回合屏障。屏障强度按施放者的攻击力比例提升。",
+                "soulburn_effect": "大幅提升造成的伤害，且不会触发协攻。施放者拥有连锁时，灵魂燃烧不消耗魂。"
             },
             "S2": {
-                "name": "Delusional Runway",
-                "description": "Buffs granted to the caster are applied as undispellable. When attacked, damage suffered in one attack does not exceed 51% of max Health. At the start of the turn, has a 20% chance for each buff granted to the caster to grant cascade."
+                "name": "妄想T台",
+                "description": "施加给施放者的强化效果变为无法解除。受到攻击时，单次攻击受到的伤害不超过最大生命值的51%。回合开始时，施放者身上每有一个强化效果，有20%的几率施加连锁。"
             },
             "S3": {
-                "name": "Heart Over Grace",
-                "description": "Throws chocolates filled with heartfelt sentiments, granting increased Attack and increased Speed to all allies for 3 turns. Grants increased Hit Chance to the caster for 3 turns. Grants an extra turn."
+                "name": "心意胜于优雅",
+                "description": "投掷饱含心意的巧克力，为所有友军施加3回合攻击力提升与速度提升。为施放者施加3回合命中率提升。获得额外回合。"
             }
         }
     },
@@ -6356,17 +6356,17 @@
         "_name": "Troublemaker Crozet",
         "skills": {
             "S1": {
-                "name": "Lunge",
-                "description": "Attacks the enemy in an act of faith, with a 40% chance to stun for 1 turn. When it is not the caster's turn, effect chance increases by 20%. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance by 60%."
+                "name": "突刺",
+                "description": "怀着信念攻击敌人，有40%的几率使其眩晕1回合。不是施放者的回合时，效果几率提升20%。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "效果几率提升60%。"
             },
             "S2": {
-                "name": "Chivalry",
-                "description": "Grants 40% damage share from the damage received by the ally in the back row. At the moment the ally in the back row is attacked, increases Combat Readiness of the caster by 15% and has a 35% chance to counterattack."
+                "name": "骑士精神",
+                "description": "分担后排友军受到伤害的40%。后排友军受到攻击的瞬间，使施放者的行动值提升15%，并有35%的几率反击。"
             },
             "S3": {
-                "name": "Oath of Protection",
-                "description": "Swears an oath of protection, dispelling all debuffs from the caster and an ally, before increasing Defense for 3 turns. Grants class enhancement to the ally for 3 turns."
+                "name": "守护誓言",
+                "description": "立下守护誓言，解除施放者与一名友军的所有弱化效果，然后提升防御力3回合。为该友军施加3回合职业强化。"
             }
         }
     },
@@ -6374,17 +6374,17 @@
         "_name": "Twisted Eidolon Kayron",
         "skills": {
             "S1": {
-                "name": "Sundering Slash",
-                "description": "Attacks the enemy with a sword, inflicting up to 10% injuries, before granting a barrier (proportional to the caster's max Health) to the caster for 1 turn. When triggered as a counterattack, changes into an attack that targets all enemies.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "裂断斩",
+                "description": "以剑攻击敌人，造成最多10%的负伤，然后为施放者施加1回合屏障（与施放者的最大生命值成比例）。作为反击发动时，变为以所有敌人为目标的攻击。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "Wandering Eidolon",
-                "description": "At the start of battle and at the end of the turn, grants counterattack for 1 turn. At the end of an enemy's turn, gains 10 Fighting Spirit, and when Fighting Spirit is full, dispels all debuffs before increasing Combat Readiness by 100%."
+                "name": "徘徊的幻灵",
+                "description": "战斗开始时与回合结束时，施加1回合反击。敌人回合结束时，获得10斗志；斗志已满时，解除所有弱化效果，然后提升100%行动值。"
             },
             "S3": {
-                "name": "Sword of Requiem",
-                "description": "Attacks all enemies by unleashing the power of the demonic sword, before consuming all Fighting Spirit. Inflicts 5,000 additional damage, regardless of whether the attack hits, and additional damage increases proportional to the amount of consumed Fighting Spirit, up to 15,000. When this skill is not on cooldown, when attacked, grants 30% damage reduction."
+                "name": "镇魂之剑",
+                "description": "释放魔剑之力攻击所有敌人，然后消耗全部斗志。无论攻击是否命中，追加造成5,000点伤害，追加伤害按消耗的斗志比例提升，最多15,000点。此技能不在冷却中时，受到攻击时伤害降低30%。"
             }
         }
     },
@@ -6392,17 +6392,17 @@
         "_name": "Tywin",
         "skills": {
             "S1": {
-                "name": "Sword Storm",
-                "description": "Attacks the enemy with a sword blast, with a 75% chance to inflict decreased Defense for 2 turns. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "剑暴",
+                "description": "以剑气攻击敌人，有75%的几率施加2回合防御力降低。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Tatical Command",
-                "description": "Immune to debuffs which prevent movement. When the ally in the back row has a debuff which prevents movement after being attacked, activates Commanding Shout on the target. Commanding Shout: Dispels all debuffs from the ally and grants immunity and a barrier (proportional to the caster's max Health) for 2 turns."
+                "name": "战术指挥",
+                "description": "免疫妨碍行动的弱化效果。后排友军受到攻击后若有妨碍行动的弱化效果，对该友军发动指挥呐喊。指挥呐喊：解除该友军的所有弱化效果，并施加2回合免疫与屏障（与施放者的最大生命值成比例）。"
             },
             "S3": {
-                "name": "All-Out Attack",
-                "description": "Attacks all enemies again after a swordstorm, with a 100% chance to decrease Defense for 2 turns, and increases Defense of all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "全面进攻",
+                "description": "剑暴之后再次攻击所有敌人，有100%的几率降低防御力2回合，并提升所有友军的防御力2回合。造成的伤害按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -6410,17 +6410,17 @@
         "_name": "Unbound Knight Arowell",
         "skills": {
             "S1": {
-                "name": "Shield Thrust",
-                "description": "Attacks the enemy with a sword and shield, with a 75% chance each to dispel one buff twice. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "盾击突刺",
+                "description": "以剑与盾攻击敌人，各有75%的几率解除一个强化效果，共两次。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Escort",
-                "description": "At the start of battle and at the end of the caster's turn, grants escort to the caster for 1 turn. After an ally except for the caster is attacked by a Single Attack, increases Combat Readiness of the caster by 20%."
+                "name": "护卫",
+                "description": "战斗开始时与施放者回合结束时，为施放者施加1回合护卫。除施放者外的友军受到单体攻击后，使施放者的行动值提升20%。"
             },
             "S3": {
-                "name": "Judgment of Light",
-                "description": "Attacks the enemy with a shield, dispelling all buffs and a 100% chance to stun for 1 turn, before granting a barrier and increased Defense to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's max Health."
+                "name": "光之审判",
+                "description": "以盾牌攻击敌人，解除所有强化效果，并有100%的几率使其眩晕1回合，然后为所有友军施加2回合屏障与防御力提升。造成的伤害与屏障强度按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -6428,17 +6428,17 @@
         "_name": "Uncharted Pioneer Politis",
         "skills": {
             "S1": {
-                "name": "Pulse Deployment",
-                "description": "Attacks all enemies with light, with a 65% chance to dispel one buff. Deals 1000 additional damage regardless of whether the attack hits."
+                "name": "脉冲展开",
+                "description": "以光攻击所有敌人，有65%的几率解除一个强化效果。无论攻击是否命中，追加造成1000点伤害。"
             },
             "S2": {
-                "name": "Survivor's Mission",
-                "description": "At the start of battle, when in the front row, grants offense mission, and when in the back row, grants defense mission. When a mission is complete, dispels the mission and all debuffs from the caster, and activates Last Words of a Fallen Star. Last Words of a Fallen Star: Grants knowledge of the stars to all allies, and grants an extra turn to the caster."
+                "name": "幸存者的任务",
+                "description": "战斗开始时，若位于前排，施加进攻任务；若位于后排，施加防御任务。任务完成时，解除任务与施放者的所有弱化效果，并发动陨星的遗言。陨星的遗言：为所有友军施加星辰知识，施放者获得额外回合。"
             },
             "S3": {
-                "name": "Light Piercing the End",
-                "description": "Attacks all enemies with a drone, dispelling all buffs before increasing skill cooldowns by 1 turn. Deals 3000 additional damage regardless of whether the attack hits.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "贯穿终焉之光",
+                "description": "以无人机攻击所有敌人，解除所有强化效果，然后使技能冷却时间增加1回合。无论攻击是否命中，追加造成3000点伤害。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -6446,17 +6446,17 @@
         "_name": "Urban Shadow Choux",
         "skills": {
             "S1": {
-                "name": "Zippity Zap!",
-                "description": "Attacks the enemy with a spear, and increases Combat Readiness of the caster by 15%. When it is the caster's turn, gains 1 Focus. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt and deals additional damage equivalent to 40% of injuries inflicted on the target."
+                "name": "滋滋！",
+                "description": "以长枪攻击敌人，并使施放者的行动值提升15%。在施放者的回合时，获得1专注。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害，并追加造成相当于目标负伤40%的伤害。"
             },
             "S2": {
-                "name": "Wild Charge",
-                "description": "Increases Critical Hit Chance by 30%. At the start of the first battle, gains 1 Focus. At the start of the turn, gains 1 Focus and grants Bzzt! to the caster for 1 turn, and when Focus is full, resets cooldown of Operation: Cream Pastry."
+                "name": "狂野冲锋",
+                "description": "暴击率提升30%。首场战斗开始时，获得1专注。回合开始时，获得1专注，并为施放者施加1回合滋滋！；专注已满时，重置作战：奶油酥饼的冷却时间。"
             },
             "S3": {
-                "name": "Operation: Cream Pastry",
-                "description": "Attacks the enemy using adaptable tactics, inflicting up to 25% injuries, and grants increased Speed to all allies for 2 turns. Penetrates the target's Defense by 50%. When Focus is full, consumes all to recover Health of the caster, and deals additional damage equivalent to 60% of injuries inflicted on the target. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "作战：奶油酥饼",
+                "description": "以随机应变的战术攻击敌人，造成最多25%的负伤，并为所有友军施加2回合速度提升。穿透目标50%的防御力。专注已满时，消耗全部专注恢复施放者的生命值，并追加造成相当于目标负伤60%的伤害。造成的伤害与恢复量按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -6464,17 +6464,17 @@
         "_name": "Verdant Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, increasing Combat Readiness of the caster by 20%."
+                "name": "斩踝",
+                "description": "以剑攻击敌人，并使施放者的行动值提升20%。"
             },
             "S2": {
-                "name": "Blade Gust",
-                "description": "Attacks all enemies with a blade gust, with an 80% chance to make them unable to be buffed for 2 turns. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "刃之疾风",
+                "description": "以刃之疾风攻击所有敌人，有80%的几率施加2回合无法强化。敌人在三名以下时，敌人越少，造成的伤害越高。"
             },
             "S3": {
-                "name": "Gliding Slash",
-                "description": "Attacks the enemy repeatedly, granting increased Attack and Weakness Shared to the caster for 2 turns, before absorbing some of the damage dealt as Health. A critical hit has a 100% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "滑翔斩",
+                "description": "连续攻击敌人，并为施放者施加2回合攻击力提升与弱点共享，然后将部分造成的伤害吸收为生命值。暴击时有100%的几率降低防御力2回合。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },

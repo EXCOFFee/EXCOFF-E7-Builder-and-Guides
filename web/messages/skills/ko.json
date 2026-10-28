@@ -6338,17 +6338,17 @@
         "_name": "Tori",
         "skills": {
             "S1": {
-                "name": "Overreaction",
-                "description": "Attacks the enemy by whipping a ribbon, and grants a barrier to the caster for 1 turn. Barrier strength increases proportional to the caster's Attack.",
-                "soulburn_effect": "Greatly increases damage dealt and does not trigger a Dual Attack. When the caster is granted cascade, does not cost any Soul to activate Soulburn."
+                "name": "과잉 반응",
+                "description": "리본을 휘둘러 적을 공격하고 시전자에게 1턴 동안 보호막을 부여한다. 시전자의 공격력에 비례해 보호막 강도가 증가한다.",
+                "soulburn_effect": "주는 피해가 크게 증가하며 협공이 발동하지 않는다. 시전자에게 연쇄가 있으면 소울번에 소울을 소모하지 않는다."
             },
             "S2": {
-                "name": "Delusional Runway",
-                "description": "Buffs granted to the caster are applied as undispellable. When attacked, damage suffered in one attack does not exceed 51% of max Health. At the start of the turn, has a 20% chance for each buff granted to the caster to grant cascade."
+                "name": "망상 런웨이",
+                "description": "시전자에게 부여되는 강화 효과는 해제 불가로 적용된다. 공격받을 때 한 번의 공격으로 받는 피해가 최대 생명력의 51%를 넘지 않는다. 턴 시작 시 시전자에게 부여된 강화 효과 하나당 20% 확률로 연쇄를 부여한다."
             },
             "S3": {
-                "name": "Heart Over Grace",
-                "description": "Throws chocolates filled with heartfelt sentiments, granting increased Attack and increased Speed to all allies for 3 turns. Grants increased Hit Chance to the caster for 3 turns. Grants an extra turn."
+                "name": "마음을 담아",
+                "description": "진심이 담긴 초콜릿을 던져 모든 아군에게 3턴 동안 공격력 증가와 속도 증가를 부여한다. 시전자에게 3턴 동안 명중률 증가를 부여한다. 추가 턴을 얻는다."
             }
         }
     },
@@ -6356,17 +6356,17 @@
         "_name": "Troublemaker Crozet",
         "skills": {
             "S1": {
-                "name": "Lunge",
-                "description": "Attacks the enemy in an act of faith, with a 40% chance to stun for 1 turn. When it is not the caster's turn, effect chance increases by 20%. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance by 60%."
+                "name": "찌르기",
+                "description": "신념을 담아 적을 공격하며, 40% 확률로 1턴 동안 기절시킨다. 시전자의 턴이 아니면 효과 발동 확률이 20% 증가한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "효과 발동 확률이 60% 증가한다."
             },
             "S2": {
-                "name": "Chivalry",
-                "description": "Grants 40% damage share from the damage received by the ally in the back row. At the moment the ally in the back row is attacked, increases Combat Readiness of the caster by 15% and has a 35% chance to counterattack."
+                "name": "기사도",
+                "description": "후열 아군이 받는 피해를 40% 분산한다. 후열 아군이 공격받는 순간 시전자의 행동 게이지를 15% 증가시키고 35% 확률로 반격한다."
             },
             "S3": {
-                "name": "Oath of Protection",
-                "description": "Swears an oath of protection, dispelling all debuffs from the caster and an ally, before increasing Defense for 3 turns. Grants class enhancement to the ally for 3 turns."
+                "name": "수호의 맹세",
+                "description": "수호의 맹세를 해 시전자와 아군 한 명의 약화 효과를 모두 해제한 뒤 3턴 동안 방어력을 증가시킨다. 아군에게 3턴 동안 직업 강화를 부여한다."
             }
         }
     },
@@ -6374,17 +6374,17 @@
         "_name": "Twisted Eidolon Kayron",
         "skills": {
             "S1": {
-                "name": "Sundering Slash",
-                "description": "Attacks the enemy with a sword, inflicting up to 10% injuries, before granting a barrier (proportional to the caster's max Health) to the caster for 1 turn. When triggered as a counterattack, changes into an attack that targets all enemies.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "분쇄 베기",
+                "description": "검으로 적을 공격해 최대 10%의 부상을 입힌 뒤 시전자에게 1턴 동안 보호막(시전자 최대 생명력 비례)을 부여한다. 반격으로 발동하면 모든 적을 대상으로 하는 공격으로 바뀐다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Wandering Eidolon",
-                "description": "At the start of battle and at the end of the turn, grants counterattack for 1 turn. At the end of an enemy's turn, gains 10 Fighting Spirit, and when Fighting Spirit is full, dispels all debuffs before increasing Combat Readiness by 100%."
+                "name": "방황하는 망령",
+                "description": "전투 시작 시와 턴 종료 시 1턴 동안 반격을 부여한다. 적의 턴 종료 시 투지를 10 얻으며, 투지가 가득 차면 약화 효과를 모두 해제한 뒤 행동 게이지를 100% 증가시킨다."
             },
             "S3": {
-                "name": "Sword of Requiem",
-                "description": "Attacks all enemies by unleashing the power of the demonic sword, before consuming all Fighting Spirit. Inflicts 5,000 additional damage, regardless of whether the attack hits, and additional damage increases proportional to the amount of consumed Fighting Spirit, up to 15,000. When this skill is not on cooldown, when attacked, grants 30% damage reduction."
+                "name": "진혼의 검",
+                "description": "마검의 힘을 해방해 모든 적을 공격한 뒤 투지를 모두 소모한다. 공격의 적중 여부와 관계없이 5,000의 추가 피해를 주며, 소모한 투지에 비례해 추가 피해가 최대 15,000까지 증가한다. 이 스킬이 재사용 대기 중이 아니면 공격받을 때 피해를 30% 감소시킨다."
             }
         }
     },
@@ -6392,17 +6392,17 @@
         "_name": "Tywin",
         "skills": {
             "S1": {
-                "name": "Sword Storm",
-                "description": "Attacks the enemy with a sword blast, with a 75% chance to inflict decreased Defense for 2 turns. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "검풍",
+                "description": "검기로 적을 공격하며, 75% 확률로 2턴 동안 방어력 감소를 건다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Tatical Command",
-                "description": "Immune to debuffs which prevent movement. When the ally in the back row has a debuff which prevents movement after being attacked, activates Commanding Shout on the target. Commanding Shout: Dispels all debuffs from the ally and grants immunity and a barrier (proportional to the caster's max Health) for 2 turns."
+                "name": "전술 지휘",
+                "description": "행동을 막는 약화 효과에 면역이다. 후열 아군이 공격받은 후 행동을 막는 약화 효과가 걸려 있으면 그 아군에게 지휘의 외침을 발동한다. 지휘의 외침: 아군의 약화 효과를 모두 해제하고 2턴 동안 면역과 보호막(시전자 최대 생명력 비례)을 부여한다."
             },
             "S3": {
-                "name": "All-Out Attack",
-                "description": "Attacks all enemies again after a swordstorm, with a 100% chance to decrease Defense for 2 turns, and increases Defense of all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "총공격",
+                "description": "검풍 후 모든 적을 다시 공격하며, 100% 확률로 2턴 동안 방어력을 감소시키고 2턴 동안 모든 아군의 방어력을 증가시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -6410,17 +6410,17 @@
         "_name": "Unbound Knight Arowell",
         "skills": {
             "S1": {
-                "name": "Shield Thrust",
-                "description": "Attacks the enemy with a sword and shield, with a 75% chance each to dispel one buff twice. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "방패 찌르기",
+                "description": "검과 방패로 적을 공격하며, 각각 75% 확률로 강화 효과를 한 개씩 두 번 해제한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Escort",
-                "description": "At the start of battle and at the end of the caster's turn, grants escort to the caster for 1 turn. After an ally except for the caster is attacked by a Single Attack, increases Combat Readiness of the caster by 20%."
+                "name": "호위",
+                "description": "전투 시작 시와 시전자의 턴 종료 시 시전자에게 1턴 동안 호위를 부여한다. 시전자를 제외한 아군이 단일 공격을 받은 후 시전자의 행동 게이지를 20% 증가시킨다."
             },
             "S3": {
-                "name": "Judgment of Light",
-                "description": "Attacks the enemy with a shield, dispelling all buffs and a 100% chance to stun for 1 turn, before granting a barrier and increased Defense to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's max Health."
+                "name": "빛의 심판",
+                "description": "방패로 적을 공격해 강화 효과를 모두 해제하고 100% 확률로 1턴 동안 기절시킨 뒤 모든 아군에게 2턴 동안 보호막과 방어력 증가를 부여한다. 시전자의 최대 생명력에 비례해 주는 피해와 보호막 강도가 증가한다."
             }
         }
     },
@@ -6428,17 +6428,17 @@
         "_name": "Uncharted Pioneer Politis",
         "skills": {
             "S1": {
-                "name": "Pulse Deployment",
-                "description": "Attacks all enemies with light, with a 65% chance to dispel one buff. Deals 1000 additional damage regardless of whether the attack hits."
+                "name": "펄스 전개",
+                "description": "빛으로 모든 적을 공격하며, 65% 확률로 강화 효과를 한 개 해제한다. 공격의 적중 여부와 관계없이 1000의 추가 피해를 준다."
             },
             "S2": {
-                "name": "Survivor's Mission",
-                "description": "At the start of battle, when in the front row, grants offense mission, and when in the back row, grants defense mission. When a mission is complete, dispels the mission and all debuffs from the caster, and activates Last Words of a Fallen Star. Last Words of a Fallen Star: Grants knowledge of the stars to all allies, and grants an extra turn to the caster."
+                "name": "생존자의 임무",
+                "description": "전투 시작 시 전열에 있으면 공격 임무를, 후열에 있으면 방어 임무를 부여한다. 임무를 완수하면 임무와 시전자의 약화 효과를 모두 해제하고 떨어진 별의 유언을 발동한다. 떨어진 별의 유언: 모든 아군에게 별의 지식을 부여하고 시전자는 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Light Piercing the End",
-                "description": "Attacks all enemies with a drone, dispelling all buffs before increasing skill cooldowns by 1 turn. Deals 3000 additional damage regardless of whether the attack hits.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "끝을 꿰뚫는 빛",
+                "description": "드론으로 모든 적을 공격해 강화 효과를 모두 해제한 뒤 스킬 재사용 대기 시간을 1턴 증가시킨다. 공격의 적중 여부와 관계없이 3000의 추가 피해를 준다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -6446,17 +6446,17 @@
         "_name": "Urban Shadow Choux",
         "skills": {
             "S1": {
-                "name": "Zippity Zap!",
-                "description": "Attacks the enemy with a spear, and increases Combat Readiness of the caster by 15%. When it is the caster's turn, gains 1 Focus. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt and deals additional damage equivalent to 40% of injuries inflicted on the target."
+                "name": "지지직!",
+                "description": "창으로 적을 공격하고 시전자의 행동 게이지를 15% 증가시킨다. 시전자의 턴이면 집중을 1 얻는다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가하고 대상에게 입힌 부상의 40%에 해당하는 추가 피해를 준다."
             },
             "S2": {
-                "name": "Wild Charge",
-                "description": "Increases Critical Hit Chance by 30%. At the start of the first battle, gains 1 Focus. At the start of the turn, gains 1 Focus and grants Bzzt! to the caster for 1 turn, and when Focus is full, resets cooldown of Operation: Cream Pastry."
+                "name": "거친 돌격",
+                "description": "치명타 확률이 30% 증가한다. 첫 번째 전투 시작 시 집중을 1 얻는다. 턴 시작 시 집중을 1 얻고 시전자에게 1턴 동안 지직!을 부여하며, 집중이 가득 차면 작전: 크림 페이스트리의 재사용 대기 시간을 초기화한다."
             },
             "S3": {
-                "name": "Operation: Cream Pastry",
-                "description": "Attacks the enemy using adaptable tactics, inflicting up to 25% injuries, and grants increased Speed to all allies for 2 turns. Penetrates the target's Defense by 50%. When Focus is full, consumes all to recover Health of the caster, and deals additional damage equivalent to 60% of injuries inflicted on the target. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "작전: 크림 페이스트리",
+                "description": "임기응변의 전술로 적을 공격해 최대 25%의 부상을 입히고 모든 아군에게 2턴 동안 속도 증가를 부여한다. 대상의 방어력을 50% 관통한다. 집중이 가득 차 있으면 모두 소모해 시전자의 생명력을 회복하고 대상에게 입힌 부상의 60%에 해당하는 추가 피해를 준다. 시전자의 최대 생명력에 비례해 주는 피해와 회복량이 증가한다."
             }
         }
     },
@@ -6464,17 +6464,17 @@
         "_name": "Verdant Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, increasing Combat Readiness of the caster by 20%."
+                "name": "발목 베기",
+                "description": "검으로 적을 공격하고 시전자의 행동 게이지를 20% 증가시킨다."
             },
             "S2": {
-                "name": "Blade Gust",
-                "description": "Attacks all enemies with a blade gust, with an 80% chance to make them unable to be buffed for 2 turns. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "칼날 돌풍",
+                "description": "칼날 돌풍으로 모든 적을 공격하며, 80% 확률로 2턴 동안 강화 불가를 건다. 적이 세 명 이하이면 적이 적을수록 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Gliding Slash",
-                "description": "Attacks the enemy repeatedly, granting increased Attack and Weakness Shared to the caster for 2 turns, before absorbing some of the damage dealt as Health. A critical hit has a 100% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "활공 베기",
+                "description": "적을 연속으로 공격하고 시전자에게 2턴 동안 공격력 증가와 약점 공유를 부여한 뒤 준 피해의 일부를 생명력으로 흡수한다. 치명타가 발생하면 100% 확률로 2턴 동안 방어력을 감소시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
