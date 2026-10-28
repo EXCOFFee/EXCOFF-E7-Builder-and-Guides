@@ -6032,17 +6032,17 @@
         "_name": "Surin",
         "skills": {
             "S1": {
-                "name": "Chain Dagger",
-                "description": "Attacks the enemy with a chain axe. When the enemy is inflicted with bleeding, inflicts two bleeding effects for 2 turns."
+                "name": "Adaga de corrente",
+                "description": "Ataca o inimigo com um machado de corrente. Quando o inimigo tem sangramento, aplica dois efeitos de sangramento por 2 turnos."
             },
             "S2": {
-                "name": "Edge Smash",
-                "description": "Attacks the enemy consecutively with a chain axe, inflicting two to four bleeding effects for 2 turns anddecreased Attack for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Golpe de lâmina",
+                "description": "Ataca o inimigo consecutivamente com um machado de corrente, aplicando de dois a quatro efeitos de sangramento por 2 turnos e Diminuir Ataque por 1 turno.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S3": {
-                "name": "Implosion",
-                "description": "Attacks the inner core of the enemy with a chain axe. Damage dealt increases proportional to the number of bleeding effects inflicted on the target and extends debuff durations by 1 turn. Increases Combat Readiness of the caster by 15% per bleeding effect inflicted on the target, by up to 75%."
+                "name": "Implosão",
+                "description": "Ataca o núcleo interno do inimigo com um machado de corrente. O dano causado aumenta proporcionalmente ao número de sangramentos aplicados ao alvo e estende a duração dos efeitos negativos em 1 turno. Aumenta a Prontidão de Combate do conjurador em 15% por sangramento aplicado ao alvo, até 75%."
             }
         }
     },
@@ -6050,17 +6050,17 @@
         "_name": "Suthan",
         "skills": {
             "S1": {
-                "name": "Shadow Tracking",
-                "description": "Attacks the enemy and has a 50% chance to burn for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Rastreamento das sombras",
+                "description": "Ataca o inimigo e tem 50% de chance de aplicar queimadura por 2 turnos.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Belated Bloom",
-                "description": "After attacking, increases Attack and Effectiveness of the caster by 5%. Can stack up to 10 times."
+                "name": "Florescer tardio",
+                "description": "Após atacar, aumenta o Ataque e a Eficácia do conjurador em 5%. Acumula até 10 vezes."
             },
             "S3": {
-                "name": "Shadow Release",
-                "description": "Releases mana to attack all enemies and has a 100% chance to make them unhealable for 2 turns and inflict two burn effects for 2 turns."
+                "name": "Liberação das sombras",
+                "description": "Libera mana para atacar todos os inimigos e tem 100% de chance de aplicar impedimento de cura por 2 turnos e dois efeitos de queimadura por 2 turnos."
             }
         }
     },
@@ -6068,16 +6068,16 @@
         "_name": "Sven",
         "skills": {
             "S1": {
-                "name": "Wicked Strike",
-                "description": "Attacks with dual-wielded swords, and when the caster's Health is 50% of less, activates Repelling Blow as an extra attack. Repelling Blow can only be activated once per turn of the caster. Repelling Blow (Acquire 1 Soul): Attacks the enemy repeatedly with dual-wielded swords. Damage dealt increases proportional to the caster's lost Health."
+                "name": "Golpe perverso",
+                "description": "Ataca com duas espadas e, quando a Vida do conjurador é 50% ou menos, ativa Golpe repelente como ataque extra. Golpe repelente só pode ser ativado uma vez por turno do conjurador. Golpe repelente (adquire 1 Alma): ataca o inimigo repetidamente com duas espadas. O dano causado aumenta proporcionalmente à Vida perdida do conjurador."
             },
             "S2": {
-                "name": "Potential",
-                "description": "Grants immortality for 1 turn and increases Attack for 2 turn when the caster receives lethal damage. Can only be activated once every 4 turns."
+                "name": "Potencial",
+                "description": "Quando o conjurador recebe dano letal, concede imortalidade por 1 turno e aumenta o Ataque por 2 turnos. Só pode ser ativado uma vez a cada 4 turnos."
             },
             "S3": {
-                "description": "Attacks all enemies and inflicts huge damage. Damage dealt increases proportional to the caster's lost Health.",
-                "soulburn_effect": "Increases damage dealt.",
+                "description": "Ataca todos os inimigos e causa dano enorme. O dano causado aumenta proporcionalmente à Vida perdida do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado.",
                 "name": ""
             }
         }
@@ -6104,17 +6104,17 @@
         "_name": "Sylvan Sage Vivian",
         "skills": {
             "S1": {
-                "name": "Mana Attunment",
-                "description": "Attacks the enemy with mana, before increasing Combat Readiness of the caster by 15% and increasing Attack by 20%. Increased Attack effect can stack up to 3 times. On the caster's turn, when Focus is full, activates the same skill as an extra attack.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "Sintonia de mana",
+                "description": "Ataca o inimigo com mana, depois aumenta a Prontidão de Combate do conjurador em 15% e o Ataque em 20%. O aumento de Ataque acumula até 3 vezes. No turno do conjurador, quando o Foco está cheio, ativa a mesma habilidade como ataque extra.",
+                "soulburn_effect": "Ataca todos os inimigos. Este ataque não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Insight",
-                "description": "At the start of the first battle, fully recovers Focus, and at the end of the turn, gains 1 Focus. When Focus is 3 or higher, immune to debuffs. When attacked, if expected damage suffered is equivalent to 30% or more of max Health, consumes 1 Focus, granting 70% damage reduction. Insight only applies to PVP."
+                "name": "Discernimento",
+                "description": "No início da primeira batalha, recupera totalmente o Foco e, no fim do turno, ganha 1 de Foco. Quando o Foco é 3 ou mais, fica imune a efeitos negativos. Ao ser atacado, se o dano esperado for equivalente a 30% ou mais da Vida máxima, consome 1 de Foco, concedendo 70% de redução de dano. Discernimento só se aplica ao PvP."
             },
             "S3": {
-                "name": "Nature's Judgment",
-                "description": "Attacks all enemies by bringing forth the power of nature, before decreasing skill cooldowns of all allies by 1 turn and recovering Health proportional to the caster's Attack."
+                "name": "Julgamento da natureza",
+                "description": "Ataca todos os inimigos invocando o poder da natureza, depois diminui as recargas de habilidades de todos os aliados em 1 turno e recupera Vida proporcionalmente ao Ataque do conjurador."
             }
         }
     },
@@ -6122,17 +6122,17 @@
         "_name": "Tactical Archetype Coli",
         "skills": {
             "S1": {
-                "name": "Sweep",
-                "description": "Attacks the enemy with a blade, with a 80% chance each to inflict two bleeding effects for 2 turns, and when the caster is granted overload, increases effect chance by 20%. At the end of the turn, detonates bleeding effects inflicted on the target.",
-                "soulburn_effect": "Inflicts one additional bleeding."
+                "name": "Varredura",
+                "description": "Ataca o inimigo com uma lâmina, com 80% de chance cada de aplicar dois efeitos de sangramento por 2 turnos e, quando o conjurador tem sobrecarga, a chance do efeito aumenta 20%. No fim do turno, detona os sangramentos aplicados ao alvo.",
+                "soulburn_effect": "Aplica um sangramento adicional."
             },
             "S2": {
-                "name": "Guard",
-                "description": "After an ally except for the caster uses a Single Attack, grants swift attack to the ally target, and activates Flank Strike against the enemy target. This effect is not activated by an extra attack, counterattack, or Dual Attack. Flank Strike: Attacks the enemy's flank, dispelling one buff and inflicting decreased Defense for 2 turns, before increasing Combat Readiness of the caster by 20%."
+                "name": "Guarda",
+                "description": "Após um aliado, exceto o conjurador, usar um ataque individual, concede Ataque veloz ao aliado alvo e ativa Ataque de flanco contra o inimigo alvo. Este efeito não é ativado por ataque extra, contra-ataque ou Ataque duplo. Ataque de flanco: ataca o flanco do inimigo, dissipando um efeito positivo e aplicando Diminuir Defesa por 2 turnos, depois aumenta a Prontidão de Combate do conjurador em 20%."
             },
             "S3": {
-                "name": "Assault",
-                "description": "After granting overload to the caster for 2 turns, attacks all enemies with maximum output, dispelling two buffs, and has a 100% chance each to inflict a bomb and frostbite for 2 turns. At the end of the turn, detonates bombs inflicted on the target."
+                "name": "Ataque",
+                "description": "Após conceder sobrecarga ao conjurador por 2 turnos, ataca todos os inimigos com potência máxima, dissipando dois efeitos positivos, e tem 100% de chance cada de aplicar uma bomba e congelamento por 2 turnos. No fim do turno, detona as bombas aplicadas ao alvo."
             }
         }
     },
@@ -6140,17 +6140,17 @@
         "_name": "Taeyou",
         "skills": {
             "S1": {
-                "name": "Full Moon Slash",
-                "description": "Attacks the enemy with a spear and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's Speed. When the caster is enraged, activates Tidal Crash as an extra attack. Tidal Crash can only be activated once per turn, during the caster's turn. Tidal Crash: Attacks the enemy by slashing downwards with a spear. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increase damage dealt by Full Moon Slash."
+                "name": "Corte da lua cheia",
+                "description": "Ataca o inimigo com uma lança e aumenta a Prontidão de Combate do conjurador em 15%. O dano causado aumenta proporcionalmente à Velocidade do conjurador. Quando o conjurador está enfurecido, ativa Colisão da maré como ataque extra. Colisão da maré só pode ser ativada uma vez por turno, durante o turno do conjurador. Colisão da maré: ataca o inimigo cortando para baixo com uma lança. O dano causado aumenta proporcionalmente à Velocidade do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado por Corte da lua cheia."
             },
             "S2": {
-                "name": "Azure Waves Of The Ocean",
-                "description": "After an enemy uses a non-attack skill, dispels all debuffs from the caster and becomes enraged for 3 turns and grants skill nullifier once to the caster. Can only be activated once every 3 turns."
+                "name": "Ondas azuis do oceano",
+                "description": "Após um inimigo usar uma habilidade que não é de ataque, dissipa todos os efeitos negativos do conjurador, que fica enfurecido por 3 turnos, e concede Anulação de habilidade uma vez ao conjurador. Só pode ser ativado uma vez a cada 3 turnos."
             },
             "S3": {
-                "name": "Tornado Sweep",
-                "description": "Attacks all enemies, dispelling all buffs, and increases skill cooldowns of the target with the highest Attack by 1 turn twice. Grants increased Attack and Speed to the caster for 2 turns. When the caster is enraged, ignores Effect Resistance."
+                "name": "Varredura do tornado",
+                "description": "Ataca todos os inimigos, dissipando todos os efeitos positivos, e aumenta as recargas de habilidades do alvo com maior Ataque em 1 turno, duas vezes. Concede Aumentar Ataque e Velocidade ao conjurador por 2 turnos. Quando o conjurador está enfurecido, ignora a Resistência a Efeitos."
             }
         }
     },
@@ -6158,17 +6158,17 @@
         "_name": "Talaz",
         "skills": {
             "S1": {
-                "name": "Casual Introduction",
-                "description": "Attacks the enemy and has a 60% chance to provoke for 1 turn."
+                "name": "Apresentação casual",
+                "description": "Ataca o inimigo e tem 60% de chance de provocá-lo por 1 turno."
             },
             "S2": {
-                "name": "Street Fighter",
-                "description": "When attacked, has a 40% chance to counterattack. After attacking with a basic skill, when Fighting Spirit is full, consumes all Fighting Spirit to increases Combat Readiness of the caster by 100% and fully decrease cooldown of Soulful Strike."
+                "name": "Lutador de rua",
+                "description": "Ao ser atacado, tem 40% de chance de contra-atacar. Após atacar com a habilidade básica, quando o Espírito de luta está cheio, consome todo o Espírito de luta para aumentar a Prontidão de Combate do conjurador em 100% e zerar a recarga de Golpe com alma."
             },
             "S3": {
-                "name": "Soulful Strike",
-                "description": "Attacks the enemy with full power, and increases Defense of the caster for 2 turns. When the target is inflicted with provoke or redirected provoke, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Golpe com alma",
+                "description": "Ataca o inimigo com toda a força e aumenta a Defesa do conjurador por 2 turnos. Quando o alvo tem provocação ou provocação redirecionada, o dano causado aumenta.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -6176,17 +6176,17 @@
         "_name": "Talia",
         "skills": {
             "S1": {
-                "name": "Ready to Pounce",
-                "description": "Attacks the enemy and has a 50% chance to decrease Defense for 2 turns."
+                "name": "Pronta para o bote",
+                "description": "Ataca o inimigo e tem 50% de chance de diminuir a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Casual Cheer",
-                "description": "Grants immunity to an ally and the caster for 2 turns, and grants a barrier to all allies for 2 turns. Barrier strength increases proportional to the caster's Attack."
+                "name": "Incentivo casual",
+                "description": "Concede imunidade a um aliado e ao conjurador por 2 turnos e concede uma barreira a todos os aliados por 2 turnos. A força da barreira aumenta proporcionalmente ao Ataque do conjurador."
             },
             "S3": {
-                "name": "Break Apart",
-                "description": "Attacks the enemy's vital point, with a 100% chance to dispel two buffs and make them unable to be buffed for 2 turns. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Despedaçar",
+                "description": "Ataca o ponto vital do inimigo, com 100% de chance de dissipar dois efeitos positivos e impedir que receba efeitos positivos por 2 turnos. Esta habilidade não pode ativar contra-ataques.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },

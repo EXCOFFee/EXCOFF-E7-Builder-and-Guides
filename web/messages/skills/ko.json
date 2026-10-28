@@ -6032,17 +6032,17 @@
         "_name": "Surin",
         "skills": {
             "S1": {
-                "name": "Chain Dagger",
-                "description": "Attacks the enemy with a chain axe. When the enemy is inflicted with bleeding, inflicts two bleeding effects for 2 turns."
+                "name": "체인 대거",
+                "description": "사슬 도끼로 적을 공격한다. 적에게 출혈이 걸려 있으면 2턴 동안 출혈을 두 개 건다."
             },
             "S2": {
-                "name": "Edge Smash",
-                "description": "Attacks the enemy consecutively with a chain axe, inflicting two to four bleeding effects for 2 turns anddecreased Attack for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "칼날 강타",
+                "description": "사슬 도끼로 적을 연속 공격해 2턴 동안 출혈을 두 개에서 네 개 걸고 1턴 동안 공격력 감소를 건다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Implosion",
-                "description": "Attacks the inner core of the enemy with a chain axe. Damage dealt increases proportional to the number of bleeding effects inflicted on the target and extends debuff durations by 1 turn. Increases Combat Readiness of the caster by 15% per bleeding effect inflicted on the target, by up to 75%."
+                "name": "내파",
+                "description": "사슬 도끼로 적의 핵심을 공격한다. 대상에게 걸린 출혈의 수에 비례해 주는 피해가 증가하며, 약화 효과의 지속 시간을 1턴 연장한다. 대상에게 걸린 출혈 하나당 시전자의 행동 게이지를 15%씩, 최대 75%까지 증가시킨다."
             }
         }
     },
@@ -6050,17 +6050,17 @@
         "_name": "Suthan",
         "skills": {
             "S1": {
-                "name": "Shadow Tracking",
-                "description": "Attacks the enemy and has a 50% chance to burn for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "그림자 추적",
+                "description": "적을 공격하며, 50% 확률로 2턴 동안 화상을 건다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Belated Bloom",
-                "description": "After attacking, increases Attack and Effectiveness of the caster by 5%. Can stack up to 10 times."
+                "name": "늦게 피는 꽃",
+                "description": "공격 후 시전자의 공격력과 효과 적중이 5% 증가한다. 최대 10회까지 중첩된다."
             },
             "S3": {
-                "name": "Shadow Release",
-                "description": "Releases mana to attack all enemies and has a 100% chance to make them unhealable for 2 turns and inflict two burn effects for 2 turns."
+                "name": "그림자 해방",
+                "description": "마나를 해방해 모든 적을 공격하며, 100% 확률로 2턴 동안 회복 불가를 걸고 2턴 동안 화상을 두 개 건다."
             }
         }
     },
@@ -6068,16 +6068,16 @@
         "_name": "Sven",
         "skills": {
             "S1": {
-                "name": "Wicked Strike",
-                "description": "Attacks with dual-wielded swords, and when the caster's Health is 50% of less, activates Repelling Blow as an extra attack. Repelling Blow can only be activated once per turn of the caster. Repelling Blow (Acquire 1 Soul): Attacks the enemy repeatedly with dual-wielded swords. Damage dealt increases proportional to the caster's lost Health."
+                "name": "사악한 일격",
+                "description": "쌍검으로 공격하며, 시전자의 생명력이 50% 이하이면 추가 공격으로 격퇴의 일격을 발동한다. 격퇴의 일격은 시전자의 턴마다 한 번만 발동할 수 있다. 격퇴의 일격(소울 1 획득): 쌍검으로 적을 연속 공격한다. 시전자가 잃은 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Potential",
-                "description": "Grants immortality for 1 turn and increases Attack for 2 turn when the caster receives lethal damage. Can only be activated once every 4 turns."
+                "name": "잠재력",
+                "description": "시전자가 치명적인 피해를 받으면 1턴 동안 불사를 부여하고 2턴 동안 공격력을 증가시킨다. 4턴마다 한 번만 발동할 수 있다."
             },
             "S3": {
-                "description": "Attacks all enemies and inflicts huge damage. Damage dealt increases proportional to the caster's lost Health.",
-                "soulburn_effect": "Increases damage dealt.",
+                "description": "모든 적을 공격해 막대한 피해를 준다. 시전자가 잃은 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다.",
                 "name": ""
             }
         }
@@ -6104,17 +6104,17 @@
         "_name": "Sylvan Sage Vivian",
         "skills": {
             "S1": {
-                "name": "Mana Attunment",
-                "description": "Attacks the enemy with mana, before increasing Combat Readiness of the caster by 15% and increasing Attack by 20%. Increased Attack effect can stack up to 3 times. On the caster's turn, when Focus is full, activates the same skill as an extra attack.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "마나 조율",
+                "description": "마나로 적을 공격한 뒤 시전자의 행동 게이지를 15% 증가시키고 공격력을 20% 증가시킨다. 공격력 증가 효과는 최대 3회까지 중첩된다. 시전자의 턴에 집중이 가득 차 있으면 같은 스킬로 추가 공격한다.",
+                "soulburn_effect": "모든 적을 공격한다. 이 공격으로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Insight",
-                "description": "At the start of the first battle, fully recovers Focus, and at the end of the turn, gains 1 Focus. When Focus is 3 or higher, immune to debuffs. When attacked, if expected damage suffered is equivalent to 30% or more of max Health, consumes 1 Focus, granting 70% damage reduction. Insight only applies to PVP."
+                "name": "통찰",
+                "description": "첫 번째 전투 시작 시 집중을 전부 회복하며, 턴 종료 시 집중을 1 얻는다. 집중이 3 이상이면 약화 효과에 면역이 된다. 공격받을 때 예상 피해가 최대 생명력의 30% 이상이면 집중을 1 소모해 피해를 70% 감소시킨다. 통찰은 PvP에서만 적용된다."
             },
             "S3": {
-                "name": "Nature's Judgment",
-                "description": "Attacks all enemies by bringing forth the power of nature, before decreasing skill cooldowns of all allies by 1 turn and recovering Health proportional to the caster's Attack."
+                "name": "자연의 심판",
+                "description": "자연의 힘을 불러내 모든 적을 공격한 뒤 모든 아군의 스킬 재사용 대기 시간을 1턴 감소시키고 시전자의 공격력에 비례해 생명력을 회복한다."
             }
         }
     },
@@ -6122,17 +6122,17 @@
         "_name": "Tactical Archetype Coli",
         "skills": {
             "S1": {
-                "name": "Sweep",
-                "description": "Attacks the enemy with a blade, with a 80% chance each to inflict two bleeding effects for 2 turns, and when the caster is granted overload, increases effect chance by 20%. At the end of the turn, detonates bleeding effects inflicted on the target.",
-                "soulburn_effect": "Inflicts one additional bleeding."
+                "name": "휩쓸기",
+                "description": "칼날로 적을 공격하며, 각각 80% 확률로 2턴 동안 출혈을 두 개 걸고, 시전자에게 과부하가 있으면 효과 발동 확률이 20% 증가한다. 턴 종료 시 대상에게 걸린 출혈을 폭발시킨다.",
+                "soulburn_effect": "출혈을 한 개 추가로 건다."
             },
             "S2": {
-                "name": "Guard",
-                "description": "After an ally except for the caster uses a Single Attack, grants swift attack to the ally target, and activates Flank Strike against the enemy target. This effect is not activated by an extra attack, counterattack, or Dual Attack. Flank Strike: Attacks the enemy's flank, dispelling one buff and inflicting decreased Defense for 2 turns, before increasing Combat Readiness of the caster by 20%."
+                "name": "경호",
+                "description": "시전자를 제외한 아군이 단일 공격을 사용한 후 그 아군에게 신속 공격을 부여하고 대상 적에게 측면 공격을 발동한다. 이 효과는 추가 공격, 반격, 협공으로는 발동하지 않는다. 측면 공격: 적의 측면을 공격해 강화 효과를 한 개 해제하고 2턴 동안 방어력 감소를 건 뒤 시전자의 행동 게이지를 20% 증가시킨다."
             },
             "S3": {
-                "name": "Assault",
-                "description": "After granting overload to the caster for 2 turns, attacks all enemies with maximum output, dispelling two buffs, and has a 100% chance each to inflict a bomb and frostbite for 2 turns. At the end of the turn, detonates bombs inflicted on the target."
+                "name": "강습",
+                "description": "시전자에게 2턴 동안 과부하를 부여한 뒤 최대 출력으로 모든 적을 공격해 강화 효과를 두 개 해제하고, 각각 100% 확률로 2턴 동안 폭탄과 동상을 건다. 턴 종료 시 대상에게 걸린 폭탄을 폭발시킨다."
             }
         }
     },
@@ -6140,17 +6140,17 @@
         "_name": "Taeyou",
         "skills": {
             "S1": {
-                "name": "Full Moon Slash",
-                "description": "Attacks the enemy with a spear and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's Speed. When the caster is enraged, activates Tidal Crash as an extra attack. Tidal Crash can only be activated once per turn, during the caster's turn. Tidal Crash: Attacks the enemy by slashing downwards with a spear. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increase damage dealt by Full Moon Slash."
+                "name": "보름달 베기",
+                "description": "창으로 적을 공격하고 시전자의 행동 게이지를 15% 증가시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다. 시전자가 격노 상태이면 추가 공격으로 해일 충돌을 발동한다. 해일 충돌은 시전자의 턴 동안 턴마다 한 번만 발동할 수 있다. 해일 충돌: 창으로 내리베어 적을 공격한다. 시전자의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "보름달 베기의 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Azure Waves Of The Ocean",
-                "description": "After an enemy uses a non-attack skill, dispels all debuffs from the caster and becomes enraged for 3 turns and grants skill nullifier once to the caster. Can only be activated once every 3 turns."
+                "name": "바다의 푸른 물결",
+                "description": "적이 공격이 아닌 스킬을 사용한 후 시전자의 약화 효과를 모두 해제하고 3턴 동안 격노 상태가 되며, 시전자에게 스킬 피해 무효를 한 번 부여한다. 3턴마다 한 번만 발동할 수 있다."
             },
             "S3": {
-                "name": "Tornado Sweep",
-                "description": "Attacks all enemies, dispelling all buffs, and increases skill cooldowns of the target with the highest Attack by 1 turn twice. Grants increased Attack and Speed to the caster for 2 turns. When the caster is enraged, ignores Effect Resistance."
+                "name": "토네이도 스윕",
+                "description": "모든 적을 공격해 강화 효과를 모두 해제하고, 공격력이 가장 높은 대상의 스킬 재사용 대기 시간을 1턴씩 두 번 증가시킨다. 시전자에게 2턴 동안 공격력 증가와 속도 증가를 부여한다. 시전자가 격노 상태이면 효과 저항을 무시한다."
             }
         }
     },
@@ -6158,17 +6158,17 @@
         "_name": "Talaz",
         "skills": {
             "S1": {
-                "name": "Casual Introduction",
-                "description": "Attacks the enemy and has a 60% chance to provoke for 1 turn."
+                "name": "가벼운 인사",
+                "description": "적을 공격하며, 60% 확률로 1턴 동안 도발을 건다."
             },
             "S2": {
-                "name": "Street Fighter",
-                "description": "When attacked, has a 40% chance to counterattack. After attacking with a basic skill, when Fighting Spirit is full, consumes all Fighting Spirit to increases Combat Readiness of the caster by 100% and fully decrease cooldown of Soulful Strike."
+                "name": "스트리트 파이터",
+                "description": "공격받으면 40% 확률로 반격한다. 기본 스킬로 공격한 후 투지가 가득 차 있으면 투지를 모두 소모해 시전자의 행동 게이지를 100% 증가시키고 혼신의 일격의 재사용 대기 시간을 모두 감소시킨다."
             },
             "S3": {
-                "name": "Soulful Strike",
-                "description": "Attacks the enemy with full power, and increases Defense of the caster for 2 turns. When the target is inflicted with provoke or redirected provoke, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "혼신의 일격",
+                "description": "온 힘을 다해 적을 공격하고 2턴 동안 시전자의 방어력을 증가시킨다. 대상에게 도발 또는 전환된 도발이 걸려 있으면 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -6176,17 +6176,17 @@
         "_name": "Talia",
         "skills": {
             "S1": {
-                "name": "Ready to Pounce",
-                "description": "Attacks the enemy and has a 50% chance to decrease Defense for 2 turns."
+                "name": "덮칠 준비",
+                "description": "적을 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Casual Cheer",
-                "description": "Grants immunity to an ally and the caster for 2 turns, and grants a barrier to all allies for 2 turns. Barrier strength increases proportional to the caster's Attack."
+                "name": "가벼운 응원",
+                "description": "아군 한 명과 시전자에게 2턴 동안 면역을 부여하고, 모든 아군에게 2턴 동안 보호막을 부여한다. 시전자의 공격력에 비례해 보호막 강도가 증가한다."
             },
             "S3": {
-                "name": "Break Apart",
-                "description": "Attacks the enemy's vital point, with a 100% chance to dispel two buffs and make them unable to be buffed for 2 turns. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "산산조각",
+                "description": "적의 급소를 공격하며, 100% 확률로 강화 효과를 두 개 해제하고 2턴 동안 강화 불가를 건다. 이 스킬로는 반격을 유발할 수 없다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },

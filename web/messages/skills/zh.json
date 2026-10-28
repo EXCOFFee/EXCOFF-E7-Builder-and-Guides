@@ -6032,17 +6032,17 @@
         "_name": "Surin",
         "skills": {
             "S1": {
-                "name": "Chain Dagger",
-                "description": "Attacks the enemy with a chain axe. When the enemy is inflicted with bleeding, inflicts two bleeding effects for 2 turns."
+                "name": "锁链短剑",
+                "description": "以链斧攻击敌人。敌人处于出血状态时，施加两层2回合出血。"
             },
             "S2": {
-                "name": "Edge Smash",
-                "description": "Attacks the enemy consecutively with a chain axe, inflicting two to four bleeding effects for 2 turns anddecreased Attack for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "利刃重击",
+                "description": "以链斧连续攻击敌人，施加两至四层2回合出血，并施加1回合攻击力降低。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S3": {
-                "name": "Implosion",
-                "description": "Attacks the inner core of the enemy with a chain axe. Damage dealt increases proportional to the number of bleeding effects inflicted on the target and extends debuff durations by 1 turn. Increases Combat Readiness of the caster by 15% per bleeding effect inflicted on the target, by up to 75%."
+                "name": "内爆",
+                "description": "以链斧攻击敌人的核心。造成的伤害按目标身上出血的数量比例提升，并使弱化效果持续时间延长1回合。目标身上每有一层出血，使施放者的行动值提升15%，最多75%。"
             }
         }
     },
@@ -6050,17 +6050,17 @@
         "_name": "Suthan",
         "skills": {
             "S1": {
-                "name": "Shadow Tracking",
-                "description": "Attacks the enemy and has a 50% chance to burn for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "暗影追踪",
+                "description": "攻击敌人，有50%的几率施加2回合灼伤。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Belated Bloom",
-                "description": "After attacking, increases Attack and Effectiveness of the caster by 5%. Can stack up to 10 times."
+                "name": "迟开之花",
+                "description": "攻击后，施放者的攻击力与效果命中提升5%。最多叠加10次。"
             },
             "S3": {
-                "name": "Shadow Release",
-                "description": "Releases mana to attack all enemies and has a 100% chance to make them unhealable for 2 turns and inflict two burn effects for 2 turns."
+                "name": "暗影解放",
+                "description": "释放魔力攻击所有敌人，有100%的几率施加2回合无法恢复与两层2回合灼伤。"
             }
         }
     },
@@ -6068,16 +6068,16 @@
         "_name": "Sven",
         "skills": {
             "S1": {
-                "name": "Wicked Strike",
-                "description": "Attacks with dual-wielded swords, and when the caster's Health is 50% of less, activates Repelling Blow as an extra attack. Repelling Blow can only be activated once per turn of the caster. Repelling Blow (Acquire 1 Soul): Attacks the enemy repeatedly with dual-wielded swords. Damage dealt increases proportional to the caster's lost Health."
+                "name": "邪恶一击",
+                "description": "以双剑攻击，施放者生命值在50%以下时，以追加攻击发动击退一击。击退一击在施放者的每个回合只能发动一次。击退一击（获得1魂）：以双剑连续攻击敌人。造成的伤害按施放者已损失的生命值比例提升。"
             },
             "S2": {
-                "name": "Potential",
-                "description": "Grants immortality for 1 turn and increases Attack for 2 turn when the caster receives lethal damage. Can only be activated once every 4 turns."
+                "name": "潜能",
+                "description": "施放者受到致命伤害时，施加1回合不死，并提升攻击力2回合。每4回合只能发动一次。"
             },
             "S3": {
-                "description": "Attacks all enemies and inflicts huge damage. Damage dealt increases proportional to the caster's lost Health.",
-                "soulburn_effect": "Increases damage dealt.",
+                "description": "攻击所有敌人，造成巨大伤害。造成的伤害按施放者已损失的生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。",
                 "name": ""
             }
         }
@@ -6104,17 +6104,17 @@
         "_name": "Sylvan Sage Vivian",
         "skills": {
             "S1": {
-                "name": "Mana Attunment",
-                "description": "Attacks the enemy with mana, before increasing Combat Readiness of the caster by 15% and increasing Attack by 20%. Increased Attack effect can stack up to 3 times. On the caster's turn, when Focus is full, activates the same skill as an extra attack.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "魔力调律",
+                "description": "以魔力攻击敌人，然后使施放者的行动值提升15%，并使攻击力提升20%。攻击力提升效果最多叠加3次。在施放者的回合，若专注已满，以相同技能追加攻击。",
+                "soulburn_effect": "攻击所有敌人。此攻击不会触发协攻。"
             },
             "S2": {
-                "name": "Insight",
-                "description": "At the start of the first battle, fully recovers Focus, and at the end of the turn, gains 1 Focus. When Focus is 3 or higher, immune to debuffs. When attacked, if expected damage suffered is equivalent to 30% or more of max Health, consumes 1 Focus, granting 70% damage reduction. Insight only applies to PVP."
+                "name": "洞察",
+                "description": "首场战斗开始时，专注完全恢复；回合结束时，获得1专注。专注达到3以上时，免疫弱化效果。受到攻击时，若预计受到的伤害达到最大生命值的30%以上，消耗1专注，使伤害降低70%。洞察仅适用于PvP。"
             },
             "S3": {
-                "name": "Nature's Judgment",
-                "description": "Attacks all enemies by bringing forth the power of nature, before decreasing skill cooldowns of all allies by 1 turn and recovering Health proportional to the caster's Attack."
+                "name": "自然的审判",
+                "description": "唤起自然之力攻击所有敌人，然后使所有友军的技能冷却时间减少1回合，并按施放者的攻击力比例恢复生命值。"
             }
         }
     },
@@ -6122,17 +6122,17 @@
         "_name": "Tactical Archetype Coli",
         "skills": {
             "S1": {
-                "name": "Sweep",
-                "description": "Attacks the enemy with a blade, with a 80% chance each to inflict two bleeding effects for 2 turns, and when the caster is granted overload, increases effect chance by 20%. At the end of the turn, detonates bleeding effects inflicted on the target.",
-                "soulburn_effect": "Inflicts one additional bleeding."
+                "name": "横扫",
+                "description": "以利刃攻击敌人，各有80%的几率施加两层2回合出血；施放者拥有过载时，效果几率提升20%。回合结束时，引爆目标身上的出血。",
+                "soulburn_effect": "额外施加一层出血。"
             },
             "S2": {
-                "name": "Guard",
-                "description": "After an ally except for the caster uses a Single Attack, grants swift attack to the ally target, and activates Flank Strike against the enemy target. This effect is not activated by an extra attack, counterattack, or Dual Attack. Flank Strike: Attacks the enemy's flank, dispelling one buff and inflicting decreased Defense for 2 turns, before increasing Combat Readiness of the caster by 20%."
+                "name": "护卫",
+                "description": "除施放者外的友军使用单体攻击后，为该友军施加迅捷攻击，并对目标敌人发动侧翼攻击。此效果不会由追加攻击、反击或协攻触发。侧翼攻击：攻击敌人的侧翼，解除一个强化效果，并施加2回合防御力降低，然后使施放者的行动值提升20%。"
             },
             "S3": {
-                "name": "Assault",
-                "description": "After granting overload to the caster for 2 turns, attacks all enemies with maximum output, dispelling two buffs, and has a 100% chance each to inflict a bomb and frostbite for 2 turns. At the end of the turn, detonates bombs inflicted on the target."
+                "name": "强袭",
+                "description": "为施放者施加2回合过载后，以最大输出攻击所有敌人，解除两个强化效果，并各有100%的几率施加2回合炸弹与冻伤。回合结束时，引爆目标身上的炸弹。"
             }
         }
     },
@@ -6140,17 +6140,17 @@
         "_name": "Taeyou",
         "skills": {
             "S1": {
-                "name": "Full Moon Slash",
-                "description": "Attacks the enemy with a spear and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's Speed. When the caster is enraged, activates Tidal Crash as an extra attack. Tidal Crash can only be activated once per turn, during the caster's turn. Tidal Crash: Attacks the enemy by slashing downwards with a spear. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increase damage dealt by Full Moon Slash."
+                "name": "满月斩",
+                "description": "以长枪攻击敌人，并使施放者的行动值提升15%。造成的伤害按施放者的速度比例提升。施放者处于激怒状态时，以追加攻击发动海啸冲击。海啸冲击在施放者的回合中每回合只能发动一次。海啸冲击：以长枪向下斩击敌人。造成的伤害按施放者的速度比例提升。",
+                "soulburn_effect": "提升满月斩造成的伤害。"
             },
             "S2": {
-                "name": "Azure Waves Of The Ocean",
-                "description": "After an enemy uses a non-attack skill, dispels all debuffs from the caster and becomes enraged for 3 turns and grants skill nullifier once to the caster. Can only be activated once every 3 turns."
+                "name": "大海的蔚蓝波涛",
+                "description": "敌人使用非攻击技能后，解除施放者的所有弱化效果，施放者进入3回合激怒状态，并为施放者施加一次技能伤害无效。每3回合只能发动一次。"
             },
             "S3": {
-                "name": "Tornado Sweep",
-                "description": "Attacks all enemies, dispelling all buffs, and increases skill cooldowns of the target with the highest Attack by 1 turn twice. Grants increased Attack and Speed to the caster for 2 turns. When the caster is enraged, ignores Effect Resistance."
+                "name": "龙卷横扫",
+                "description": "攻击所有敌人，解除所有强化效果，并使攻击力最高的目标的技能冷却时间增加1回合，共两次。为施放者施加2回合攻击力提升与速度提升。施放者处于激怒状态时，无视效果抵抗。"
             }
         }
     },
@@ -6158,17 +6158,17 @@
         "_name": "Talaz",
         "skills": {
             "S1": {
-                "name": "Casual Introduction",
-                "description": "Attacks the enemy and has a 60% chance to provoke for 1 turn."
+                "name": "随意介绍",
+                "description": "攻击敌人，有60%的几率施加1回合挑衅。"
             },
             "S2": {
-                "name": "Street Fighter",
-                "description": "When attacked, has a 40% chance to counterattack. After attacking with a basic skill, when Fighting Spirit is full, consumes all Fighting Spirit to increases Combat Readiness of the caster by 100% and fully decrease cooldown of Soulful Strike."
+                "name": "街头斗士",
+                "description": "受到攻击时，有40%的几率反击。以普通技能攻击后，若斗志已满，消耗全部斗志，使施放者的行动值提升100%，并完全减少全力一击的冷却时间。"
             },
             "S3": {
-                "name": "Soulful Strike",
-                "description": "Attacks the enemy with full power, and increases Defense of the caster for 2 turns. When the target is inflicted with provoke or redirected provoke, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "全力一击",
+                "description": "以全力攻击敌人，并提升施放者的防御力2回合。目标处于挑衅或转移挑衅状态时，提升造成的伤害。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -6176,17 +6176,17 @@
         "_name": "Talia",
         "skills": {
             "S1": {
-                "name": "Ready to Pounce",
-                "description": "Attacks the enemy and has a 50% chance to decrease Defense for 2 turns."
+                "name": "蓄势待发",
+                "description": "攻击敌人，有50%的几率降低防御力2回合。"
             },
             "S2": {
-                "name": "Casual Cheer",
-                "description": "Grants immunity to an ally and the caster for 2 turns, and grants a barrier to all allies for 2 turns. Barrier strength increases proportional to the caster's Attack."
+                "name": "随意应援",
+                "description": "为一名友军与施放者施加2回合免疫，并为所有友军施加2回合屏障。屏障强度按施放者的攻击力比例提升。"
             },
             "S3": {
-                "name": "Break Apart",
-                "description": "Attacks the enemy's vital point, with a 100% chance to dispel two buffs and make them unable to be buffed for 2 turns. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "粉碎",
+                "description": "攻击敌人的要害，有100%的几率解除两个强化效果，并施加2回合无法强化。此技能无法触发反击。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
