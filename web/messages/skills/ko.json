@@ -1228,17 +1228,17 @@
         "_name": "Carrot",
         "skills": {
             "S1": {
-                "name": "Swing",
-                "description": "Attacks with a staff, with a 75% chance to inflict burn for 1 turn, before detonating burn effects inflicted on the enemy at the end of the turn."
+                "name": "휘두르기",
+                "description": "지팡이로 공격하며, 75% 확률로 1턴 동안 화상을 건 뒤 턴 종료 시 적에게 걸린 화상을 폭발시킨다."
             },
             "S2": {
-                "name": "Flame Barrier",
-                "description": "After being attacked, grants increased Attack and a barrier (proportional to Attack) for 1 turn, and inflicts burn on the attacker for 1 turn."
+                "name": "화염 장벽",
+                "description": "공격받은 후 1턴 동안 공격력 증가와 보호막(공격력 비례)을 부여하고, 공격자에게 1턴 동안 화상을 건다."
             },
             "S3": {
-                "name": "Blaze Explosion",
-                "description": "Attacks all enemies with a powerful fire, dispelling two buffs before a 70% chance to burn for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "화염 폭발",
+                "description": "강력한 불로 모든 적을 공격해 강화 효과를 두 개 해제한 뒤 70% 확률로 2턴 동안 화상을 건다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -1246,17 +1246,17 @@
         "_name": "Cartuja",
         "skills": {
             "S1": {
-                "name": "Shred",
-                "description": "Attacks with sharp claws, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "찢어발기기",
+                "description": "날카로운 발톱으로 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Danger Zone",
-                "description": "At the moment of being attacked, increases Combat Readiness by 15%. When the caster's Health is 50% or less, increases Combat Readiness by an additional 10%."
+                "name": "위험 지대",
+                "description": "공격받는 순간 행동 게이지가 15% 증가한다. 시전자의 생명력이 50% 이하이면 행동 게이지가 추가로 10% 증가한다."
             },
             "S3": {
-                "name": "Predatory Roar",
-                "description": "Attacks all enemies with wild energy, with a 100% chance to decrease Attack for 2 turns. Recovers 50% of the caster's max Health before granting them increased Defense for 2 turns. Damage dealt increases proportional to the caster's max Health, with additional damage increase when the caster's Health is 75% or less.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "포식자의 포효",
+                "description": "야생의 기운으로 모든 적을 공격하며, 100% 확률로 2턴 동안 공격력을 감소시킨다. 시전자의 최대 생명력의 50%를 회복한 뒤 2턴 동안 방어력 증가를 부여한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가하며, 시전자의 생명력이 75% 이하이면 주는 피해가 추가로 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -1264,17 +1264,17 @@
         "_name": "Cecilia",
         "skills": {
             "S1": {
-                "name": "Deliverance",
-                "description": "Attacks with a spear, with a 50% chance to decrease Defense for 2 turns. When the target is inflicted with decreased Attack, effect chance increases by 25%. Damage dealt increases proportional to the caster's max Health."
+                "name": "구원",
+                "description": "창으로 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다. 대상에게 공격력 감소가 걸려 있으면 효과 발동 확률이 25% 증가한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Steel Cloudburst",
-                "description": "Attacks all enemies with a magical spear, with a 100% chance to decrease Attack for 2 turns, before dispelling one buff. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "강철 폭우",
+                "description": "마법의 창으로 모든 적을 공격하며, 100% 확률로 2턴 동안 공격력을 감소시킨 뒤 강화 효과를 한 개 해제한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             },
             "S3": {
-                "name": "Ruinous Retribution",
-                "description": "Attacks all enemies with a spear infused with dark energy, with a 100% chance to provoke for 1 turn, before granting immunity to all allies for 2 turns and a barrier to the caster for 2 turns. Damage dealt and barrier strength increases proportional to the caster's max Health."
+                "name": "파멸의 응징",
+                "description": "어둠의 기운이 깃든 창으로 모든 적을 공격하며, 100% 확률로 1턴 동안 도발을 건 뒤 모든 아군에게 2턴 동안 면역을, 시전자에게 2턴 동안 보호막을 부여한다. 시전자의 최대 생명력에 비례해 주는 피해와 보호막 강도가 증가한다."
             }
         }
     },
@@ -1282,17 +1282,17 @@
         "_name": "Celeste",
         "skills": {
             "S1": {
-                "name": "Precision Fire",
-                "description": "Attacks the enemy, before a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "정밀 사격",
+                "description": "적을 공격한 뒤 75% 확률로 1턴 동안 명중률을 감소시킨다."
             },
             "S2": {
-                "name": "Volley",
-                "description": "Shoots a volley of arrows at all enemies, with an 85% chance to decrease Combat Readiness by 20%. When the caster's Health is 80% or more, cooldown does not occur.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "일제 사격",
+                "description": "모든 적에게 화살을 일제히 쏘며, 85% 확률로 행동 게이지를 20% 감소시킨다. 시전자의 생명력이 80% 이상이면 재사용 대기 시간이 발생하지 않는다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Defcon",
-                "description": "Caster recovers 30% Health and is granted increased Attack for 2 turns and an extra turn."
+                "name": "데프콘",
+                "description": "시전자가 생명력을 30% 회복하고 2턴 동안 공격력 증가와 추가 턴을 얻는다."
             }
         }
     },
@@ -1300,17 +1300,17 @@
         "_name": "Celestial Mercedes",
         "skills": {
             "S1": {
-                "name": "Divine Bolt",
-                "description": "Attacks two enemies with shock magic. Damage dealt increases proportional to the target's max Health."
+                "name": "신성한 번개",
+                "description": "충격 마법으로 적 두 명을 공격한다. 대상의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Dimensional Rupture",
-                "description": "Attacks all enemies with a massive light sphere, and absorbs some of the damage dealt as Health. Damage dealt increases proportional to the enemy's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "차원 붕괴",
+                "description": "거대한 빛의 구체로 모든 적을 공격하고 준 피해의 일부를 생명력으로 흡수한다. 적의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Finale",
-                "description": "Attacks all enemies by releasing spells of The Last Spellbook, and grants increased Attack to the caster for 2 turns. Increases the caster's Combat Readiness by 25% for each critical hit made."
+                "name": "피날레",
+                "description": "마지막 마법서의 주문을 풀어 모든 적을 공격하고 시전자에게 2턴 동안 공격력 증가를 부여한다. 치명타가 발생할 때마다 시전자의 행동 게이지를 25% 증가시킨다."
             }
         }
     },
@@ -1318,17 +1318,17 @@
         "_name": "Celine",
         "skills": {
             "S1": {
-                "name": "Uppercut",
-                "description": "Attacks the enemy with a sheath, and grants stealth to the caster for 1 turn."
+                "name": "올려치기",
+                "description": "칼집으로 적을 공격하고 시전자에게 1턴 동안 은신을 부여한다."
             },
             "S2": {
-                "name": "Intuition",
-                "description": "At the start of the first battle, grants stealth for 2 turns. After an enemy uses a non-attack skill, dispels all debuffs from the caster and activates Blink against a random enemy. Blink (gains 10 Soul): Attacks the enemy in the blink of an eye, and increases Combat Readiness of the caster by 30%. Unaffected by elemental disadvantage."
+                "name": "직감",
+                "description": "첫 번째 전투 시작 시 2턴 동안 은신을 부여한다. 적이 공격이 아닌 스킬을 사용한 후 시전자의 약화 효과를 모두 해제하고 무작위 적에게 순보를 발동한다. 순보(소울 10 획득): 눈 깜짝할 사이에 적을 공격하고 시전자의 행동 게이지를 30% 증가시킨다. 속성 상성의 불리함에 영향을 받지 않는다."
             },
             "S3": {
-                "name": "Thunderclap",
-                "description": "Attacks the enemy repeatedly, and absorbs some of the damage dealt as Health. Grants increased Evasion and a barrier (proportional to Attack) to the caster for 2 turns. When the enemy is not an Elite or Boss monster, ignores damage sharing.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "천둥",
+                "description": "적을 연속으로 공격하고 준 피해의 일부를 생명력으로 흡수한다. 시전자에게 2턴 동안 회피 증가와 보호막(공격력 비례)을 부여한다. 적이 정예 또는 보스 몬스터가 아니면 피해 분산을 무시한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -1336,17 +1336,17 @@
         "_name": "Cerise",
         "skills": {
             "S1": {
-                "name": "Mystical Arrow",
-                "description": "Attacks the enemy by summoning a mana bow, before increasing Combat Readiness of the caster by 15%. When Frost Storm is on cooldown, triggers a Dual Attack from a random ally."
+                "name": "신비한 화살",
+                "description": "마나 활을 소환해 적을 공격한 뒤 시전자의 행동 게이지를 15% 증가시킨다. 서리 폭풍이 재사용 대기 중이면 무작위 아군이 협공한다."
             },
             "S2": {
-                "name": "Luminous Explosion",
-                "description": "Explodes a magical sphere, inflicting stun for 1 turn and cannot buff for 2 turns. Increases Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "빛의 폭발",
+                "description": "마법 구체를 폭발시켜 1턴 동안 기절시키고 2턴 동안 강화 불가를 건다. 시전자의 행동 게이지를 50% 증가시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "Frost Storm",
-                "description": "Attacks all enemies with a raging frost storm, decreasing buff durations by 1 turn before a 100% chance each to inflict decreased Speed and restrict for 2 turns. Grants invincibility to the caster for 1 turn. Attacks using an elemental advantage."
+                "name": "서리 폭풍",
+                "description": "맹렬한 서리 폭풍으로 모든 적을 공격해 강화 효과의 지속 시간을 1턴 감소시킨 뒤 각각 100% 확률로 2턴 동안 속도 감소와 제약을 건다. 시전자에게 1턴 동안 무적을 부여한다. 속성 우위로 공격한다."
             }
         }
     },
@@ -1354,17 +1354,17 @@
         "_name": "Cermia",
         "skills": {
             "S1": {
-                "name": "Playing with Fire",
-                "description": "Attacks the enemy with a flaming sword and has a 75% chance to inflict unhealable for 1 turn."
+                "name": "불장난",
+                "description": "불타는 검으로 적을 공격하며, 75% 확률로 1턴 동안 회복 불가를 건다."
             },
             "S2": {
-                "name": "Hot Streak!",
-                "description": "By releasing flames, grants increased Attack (Greater) to the caster for 2 turns and resets cooldown of All-In!. Grants an extra turn."
+                "name": "연승 행진!",
+                "description": "불꽃을 내뿜어 시전자에게 2턴 동안 공격력 증가(대)를 부여하고 올인!의 재사용 대기 시간을 초기화한다. 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "All-In!",
-                "description": "Attacks the enemy with a blazing inferno. Penetrates the target's Defense by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "올인!",
+                "description": "타오르는 업화로 적을 공격한다. 대상의 방어력을 50% 관통한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },

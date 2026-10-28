@@ -1228,17 +1228,17 @@
         "_name": "Carrot",
         "skills": {
             "S1": {
-                "name": "Swing",
-                "description": "Attacks with a staff, with a 75% chance to inflict burn for 1 turn, before detonating burn effects inflicted on the enemy at the end of the turn."
+                "name": "振り回し",
+                "description": "杖で攻撃し、75%の確率で1ターンの間火傷を付与した後、ターン終了時に敵の火傷を爆発させる。"
             },
             "S2": {
-                "name": "Flame Barrier",
-                "description": "After being attacked, grants increased Attack and a barrier (proportional to Attack) for 1 turn, and inflicts burn on the attacker for 1 turn."
+                "name": "炎の障壁",
+                "description": "攻撃された後、1ターンの間攻撃力アップとバリア（攻撃力に比例）を付与し、攻撃者に1ターンの間火傷を付与する。"
             },
             "S3": {
-                "name": "Blaze Explosion",
-                "description": "Attacks all enemies with a powerful fire, dispelling two buffs before a 70% chance to burn for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "火炎爆発",
+                "description": "強力な炎で敵全体を攻撃し、強化効果を二つ解除した後、70%の確率で2ターンの間火傷を付与する。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -1246,17 +1246,17 @@
         "_name": "Cartuja",
         "skills": {
             "S1": {
-                "name": "Shred",
-                "description": "Attacks with sharp claws, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "引き裂き",
+                "description": "鋭い爪で攻撃し、50%の確率で2ターンの間防御力をダウンさせる。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Danger Zone",
-                "description": "At the moment of being attacked, increases Combat Readiness by 15%. When the caster's Health is 50% or less, increases Combat Readiness by an additional 10%."
+                "name": "危険地帯",
+                "description": "攻撃された瞬間、行動ゲージが15%増加する。発動者のHPが50%以下なら、行動ゲージがさらに10%増加する。"
             },
             "S3": {
-                "name": "Predatory Roar",
-                "description": "Attacks all enemies with wild energy, with a 100% chance to decrease Attack for 2 turns. Recovers 50% of the caster's max Health before granting them increased Defense for 2 turns. Damage dealt increases proportional to the caster's max Health, with additional damage increase when the caster's Health is 75% or less.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "捕食者の咆哮",
+                "description": "野生の気で敵全体を攻撃し、100%の確率で2ターンの間攻撃力をダウンさせる。発動者の最大HPの50%を回復した後、2ターンの間防御力アップを付与する。発動者の最大HPに比例して与ダメージがアップし、発動者のHPが75%以下ならさらにアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1264,17 +1264,17 @@
         "_name": "Cecilia",
         "skills": {
             "S1": {
-                "name": "Deliverance",
-                "description": "Attacks with a spear, with a 50% chance to decrease Defense for 2 turns. When the target is inflicted with decreased Attack, effect chance increases by 25%. Damage dealt increases proportional to the caster's max Health."
+                "name": "救済",
+                "description": "槍で攻撃し、50%の確率で2ターンの間防御力をダウンさせる。対象が攻撃力ダウン状態なら効果発動確率が25%アップする。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Steel Cloudburst",
-                "description": "Attacks all enemies with a magical spear, with a 100% chance to decrease Attack for 2 turns, before dispelling one buff. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "鋼鉄の豪雨",
+                "description": "魔法の槍で敵全体を攻撃し、100%の確率で2ターンの間攻撃力をダウンさせた後、強化効果を一つ解除する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             },
             "S3": {
-                "name": "Ruinous Retribution",
-                "description": "Attacks all enemies with a spear infused with dark energy, with a 100% chance to provoke for 1 turn, before granting immunity to all allies for 2 turns and a barrier to the caster for 2 turns. Damage dealt and barrier strength increases proportional to the caster's max Health."
+                "name": "破滅の報い",
+                "description": "闇の気を宿した槍で敵全体を攻撃し、100%の確率で1ターンの間挑発を付与した後、味方全員に2ターンの間免疫を、発動者に2ターンの間バリアを付与する。発動者の最大HPに比例して与ダメージとバリアの強度がアップする。"
             }
         }
     },
@@ -1282,17 +1282,17 @@
         "_name": "Celeste",
         "skills": {
             "S1": {
-                "name": "Precision Fire",
-                "description": "Attacks the enemy, before a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "精密射撃",
+                "description": "敵を攻撃した後、75%の確率で1ターンの間命中率をダウンさせる。"
             },
             "S2": {
-                "name": "Volley",
-                "description": "Shoots a volley of arrows at all enemies, with an 85% chance to decrease Combat Readiness by 20%. When the caster's Health is 80% or more, cooldown does not occur.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "一斉射撃",
+                "description": "敵全体に矢を一斉に放ち、85%の確率で行動ゲージを20%減少させる。発動者のHPが80%以上ならクールタイムが発生しない。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Defcon",
-                "description": "Caster recovers 30% Health and is granted increased Attack for 2 turns and an extra turn."
+                "name": "デフコン",
+                "description": "発動者がHPを30%回復し、2ターンの間攻撃力アップと追加ターンを得る。"
             }
         }
     },
@@ -1300,17 +1300,17 @@
         "_name": "Celestial Mercedes",
         "skills": {
             "S1": {
-                "name": "Divine Bolt",
-                "description": "Attacks two enemies with shock magic. Damage dealt increases proportional to the target's max Health."
+                "name": "神聖な雷",
+                "description": "衝撃魔法で敵二体を攻撃する。対象の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Dimensional Rupture",
-                "description": "Attacks all enemies with a massive light sphere, and absorbs some of the damage dealt as Health. Damage dealt increases proportional to the enemy's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "次元崩壊",
+                "description": "巨大な光の球体で敵全体を攻撃し、与ダメージの一部をHPとして吸収する。敵の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Finale",
-                "description": "Attacks all enemies by releasing spells of The Last Spellbook, and grants increased Attack to the caster for 2 turns. Increases the caster's Combat Readiness by 25% for each critical hit made."
+                "name": "フィナーレ",
+                "description": "最後の魔導書の呪文を解き放って敵全体を攻撃し、発動者に2ターンの間攻撃力アップを付与する。クリティカルが発生するたびに、発動者の行動ゲージを25%増加させる。"
             }
         }
     },
@@ -1318,17 +1318,17 @@
         "_name": "Celine",
         "skills": {
             "S1": {
-                "name": "Uppercut",
-                "description": "Attacks the enemy with a sheath, and grants stealth to the caster for 1 turn."
+                "name": "アッパーカット",
+                "description": "鞘で敵を攻撃し、発動者に1ターンの間隠密を付与する。"
             },
             "S2": {
-                "name": "Intuition",
-                "description": "At the start of the first battle, grants stealth for 2 turns. After an enemy uses a non-attack skill, dispels all debuffs from the caster and activates Blink against a random enemy. Blink (gains 10 Soul): Attacks the enemy in the blink of an eye, and increases Combat Readiness of the caster by 30%. Unaffected by elemental disadvantage."
+                "name": "直感",
+                "description": "最初のバトル開始時、2ターンの間隠密を付与する。敵が攻撃以外のスキルを使用した後、発動者の弱体効果をすべて解除し、ランダムな敵に瞬歩を発動する。瞬歩（ソウル10獲得）：瞬く間に敵を攻撃し、発動者の行動ゲージを30%増加させる。属性の不利の影響を受けない。"
             },
             "S3": {
-                "name": "Thunderclap",
-                "description": "Attacks the enemy repeatedly, and absorbs some of the damage dealt as Health. Grants increased Evasion and a barrier (proportional to Attack) to the caster for 2 turns. When the enemy is not an Elite or Boss monster, ignores damage sharing.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "雷鳴",
+                "description": "敵を連続で攻撃し、与ダメージの一部をHPとして吸収する。発動者に2ターンの間回避アップとバリア（攻撃力に比例）を付与する。敵がエリートまたはボスモンスターでない場合、ダメージ分散を無視する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1336,17 +1336,17 @@
         "_name": "Cerise",
         "skills": {
             "S1": {
-                "name": "Mystical Arrow",
-                "description": "Attacks the enemy by summoning a mana bow, before increasing Combat Readiness of the caster by 15%. When Frost Storm is on cooldown, triggers a Dual Attack from a random ally."
+                "name": "神秘の矢",
+                "description": "マナの弓を召喚して敵を攻撃した後、発動者の行動ゲージを15%増加させる。霜の嵐がクールタイム中なら、ランダムな味方が協攻する。"
             },
             "S2": {
-                "name": "Luminous Explosion",
-                "description": "Explodes a magical sphere, inflicting stun for 1 turn and cannot buff for 2 turns. Increases Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "光の爆発",
+                "description": "魔法の球体を爆発させ、1ターンの間気絶させ、2ターンの間強化不可を付与する。発動者の行動ゲージを50%増加させる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Frost Storm",
-                "description": "Attacks all enemies with a raging frost storm, decreasing buff durations by 1 turn before a 100% chance each to inflict decreased Speed and restrict for 2 turns. Grants invincibility to the caster for 1 turn. Attacks using an elemental advantage."
+                "name": "霜の嵐",
+                "description": "激しい霜の嵐で敵全体を攻撃し、強化効果の持続時間を1ターン減少させた後、それぞれ100%の確率で2ターンの間スピードダウンと制約を付与する。発動者に1ターンの間無敵を付与する。属性有利で攻撃する。"
             }
         }
     },
@@ -1354,17 +1354,17 @@
         "_name": "Cermia",
         "skills": {
             "S1": {
-                "name": "Playing with Fire",
-                "description": "Attacks the enemy with a flaming sword and has a 75% chance to inflict unhealable for 1 turn."
+                "name": "火遊び",
+                "description": "燃える剣で敵を攻撃し、75%の確率で1ターンの間回復不可を付与する。"
             },
             "S2": {
-                "name": "Hot Streak!",
-                "description": "By releasing flames, grants increased Attack (Greater) to the caster for 2 turns and resets cooldown of All-In!. Grants an extra turn."
+                "name": "連勝街道！",
+                "description": "炎を放ち、発動者に2ターンの間攻撃力アップ（大）を付与し、オールイン！のクールタイムをリセットする。追加ターンを得る。"
             },
             "S3": {
-                "name": "All-In!",
-                "description": "Attacks the enemy with a blazing inferno. Penetrates the target's Defense by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "オールイン！",
+                "description": "燃え盛る業火で敵を攻撃する。対象の防御力を50%貫通する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },

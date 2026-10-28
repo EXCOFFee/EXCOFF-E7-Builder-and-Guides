@@ -1228,17 +1228,17 @@
         "_name": "Carrot",
         "skills": {
             "S1": {
-                "name": "Swing",
-                "description": "Attacks with a staff, with a 75% chance to inflict burn for 1 turn, before detonating burn effects inflicted on the enemy at the end of the turn."
+                "name": "Balanço",
+                "description": "Ataca com um cajado, com 75% de chance de aplicar queimadura por 1 turno, depois detona os efeitos de queimadura aplicados ao inimigo no fim do turno."
             },
             "S2": {
-                "name": "Flame Barrier",
-                "description": "After being attacked, grants increased Attack and a barrier (proportional to Attack) for 1 turn, and inflicts burn on the attacker for 1 turn."
+                "name": "Barreira de chamas",
+                "description": "Após ser atacado, concede Aumentar Ataque e uma barreira (proporcional ao Ataque) por 1 turno e aplica queimadura ao atacante por 1 turno."
             },
             "S3": {
-                "name": "Blaze Explosion",
-                "description": "Attacks all enemies with a powerful fire, dispelling two buffs before a 70% chance to burn for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Explosão flamejante",
+                "description": "Ataca todos os inimigos com fogo poderoso, dissipando dois efeitos positivos, depois com 70% de chance aplica queimadura por 2 turnos.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -1246,17 +1246,17 @@
         "_name": "Cartuja",
         "skills": {
             "S1": {
-                "name": "Shred",
-                "description": "Attacks with sharp claws, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "Dilacerar",
+                "description": "Ataca com garras afiadas, com 50% de chance de diminuir a Defesa por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Danger Zone",
-                "description": "At the moment of being attacked, increases Combat Readiness by 15%. When the caster's Health is 50% or less, increases Combat Readiness by an additional 10%."
+                "name": "Zona de perigo",
+                "description": "No momento em que é atacado, aumenta a Prontidão de Combate em 15%. Quando a Vida do conjurador é 50% ou menos, aumenta a Prontidão de Combate em mais 10%."
             },
             "S3": {
-                "name": "Predatory Roar",
-                "description": "Attacks all enemies with wild energy, with a 100% chance to decrease Attack for 2 turns. Recovers 50% of the caster's max Health before granting them increased Defense for 2 turns. Damage dealt increases proportional to the caster's max Health, with additional damage increase when the caster's Health is 75% or less.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Rugido predatório",
+                "description": "Ataca todos os inimigos com energia selvagem, com 100% de chance de diminuir o Ataque por 2 turnos. Recupera 50% da Vida máxima do conjurador, depois concede Aumentar Defesa por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador, com aumento adicional quando a Vida do conjurador é 75% ou menos.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1264,17 +1264,17 @@
         "_name": "Cecilia",
         "skills": {
             "S1": {
-                "name": "Deliverance",
-                "description": "Attacks with a spear, with a 50% chance to decrease Defense for 2 turns. When the target is inflicted with decreased Attack, effect chance increases by 25%. Damage dealt increases proportional to the caster's max Health."
+                "name": "Libertação",
+                "description": "Ataca com uma lança, com 50% de chance de diminuir a Defesa por 2 turnos. Quando o alvo tem Diminuir Ataque, a chance do efeito aumenta 25%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Steel Cloudburst",
-                "description": "Attacks all enemies with a magical spear, with a 100% chance to decrease Attack for 2 turns, before dispelling one buff. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Tempestade de aço",
+                "description": "Ataca todos os inimigos com uma lança mágica, com 100% de chance de diminuir o Ataque por 2 turnos, depois dissipa um efeito positivo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             },
             "S3": {
-                "name": "Ruinous Retribution",
-                "description": "Attacks all enemies with a spear infused with dark energy, with a 100% chance to provoke for 1 turn, before granting immunity to all allies for 2 turns and a barrier to the caster for 2 turns. Damage dealt and barrier strength increases proportional to the caster's max Health."
+                "name": "Retribuição ruinosa",
+                "description": "Ataca todos os inimigos com uma lança imbuída de energia sombria, com 100% de chance de provocar por 1 turno, depois concede imunidade a todos os aliados por 2 turnos e uma barreira ao conjurador por 2 turnos. O dano causado e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -1282,17 +1282,17 @@
         "_name": "Celeste",
         "skills": {
             "S1": {
-                "name": "Precision Fire",
-                "description": "Attacks the enemy, before a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "Disparo de precisão",
+                "description": "Ataca o inimigo, depois com 75% de chance diminui a Precisão por 1 turno."
             },
             "S2": {
-                "name": "Volley",
-                "description": "Shoots a volley of arrows at all enemies, with an 85% chance to decrease Combat Readiness by 20%. When the caster's Health is 80% or more, cooldown does not occur.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Saraivada",
+                "description": "Dispara uma saraivada de flechas em todos os inimigos, com 85% de chance de diminuir a Prontidão de Combate em 20%. Quando a Vida do conjurador é 80% ou mais, não entra em recarga.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
                 "name": "Defcon",
-                "description": "Caster recovers 30% Health and is granted increased Attack for 2 turns and an extra turn."
+                "description": "O conjurador recupera 30% de Vida e recebe Aumentar Ataque por 2 turnos e um turno extra."
             }
         }
     },
@@ -1300,17 +1300,17 @@
         "_name": "Celestial Mercedes",
         "skills": {
             "S1": {
-                "name": "Divine Bolt",
-                "description": "Attacks two enemies with shock magic. Damage dealt increases proportional to the target's max Health."
+                "name": "Raio divino",
+                "description": "Ataca dois inimigos com magia de choque. O dano causado aumenta proporcionalmente à Vida máxima do alvo."
             },
             "S2": {
-                "name": "Dimensional Rupture",
-                "description": "Attacks all enemies with a massive light sphere, and absorbs some of the damage dealt as Health. Damage dealt increases proportional to the enemy's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Ruptura dimensional",
+                "description": "Ataca todos os inimigos com uma enorme esfera de luz e absorve parte do dano causado como Vida. O dano causado aumenta proporcionalmente à Vida máxima do inimigo.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
                 "name": "Finale",
-                "description": "Attacks all enemies by releasing spells of The Last Spellbook, and grants increased Attack to the caster for 2 turns. Increases the caster's Combat Readiness by 25% for each critical hit made."
+                "description": "Ataca todos os inimigos liberando os feitiços do Último Grimório e concede Aumentar Ataque ao conjurador por 2 turnos. Aumenta a Prontidão de Combate do conjurador em 25% para cada acerto crítico."
             }
         }
     },
@@ -1318,17 +1318,17 @@
         "_name": "Celine",
         "skills": {
             "S1": {
-                "name": "Uppercut",
-                "description": "Attacks the enemy with a sheath, and grants stealth to the caster for 1 turn."
+                "name": "Gancho",
+                "description": "Ataca o inimigo com uma bainha e concede furtividade ao conjurador por 1 turno."
             },
             "S2": {
-                "name": "Intuition",
-                "description": "At the start of the first battle, grants stealth for 2 turns. After an enemy uses a non-attack skill, dispels all debuffs from the caster and activates Blink against a random enemy. Blink (gains 10 Soul): Attacks the enemy in the blink of an eye, and increases Combat Readiness of the caster by 30%. Unaffected by elemental disadvantage."
+                "name": "Intuição",
+                "description": "No início da primeira batalha, concede furtividade por 2 turnos. Após um inimigo usar uma habilidade que não é de ataque, dissipa todos os efeitos negativos do conjurador e ativa Lampejo contra um inimigo aleatório. Lampejo (ganha 10 de Alma): ataca o inimigo num piscar de olhos e aumenta a Prontidão de Combate do conjurador em 30%. Não é afetado por desvantagem elemental."
             },
             "S3": {
-                "name": "Thunderclap",
-                "description": "Attacks the enemy repeatedly, and absorbs some of the damage dealt as Health. Grants increased Evasion and a barrier (proportional to Attack) to the caster for 2 turns. When the enemy is not an Elite or Boss monster, ignores damage sharing.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Trovoada",
+                "description": "Ataca o inimigo repetidamente e absorve parte do dano causado como Vida. Concede Aumentar Evasão e uma barreira (proporcional ao Ataque) ao conjurador por 2 turnos. Quando o inimigo não é um monstro Elite ou Chefe, ignora a divisão de dano.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1336,17 +1336,17 @@
         "_name": "Cerise",
         "skills": {
             "S1": {
-                "name": "Mystical Arrow",
-                "description": "Attacks the enemy by summoning a mana bow, before increasing Combat Readiness of the caster by 15%. When Frost Storm is on cooldown, triggers a Dual Attack from a random ally."
+                "name": "Flecha mística",
+                "description": "Ataca o inimigo invocando um arco de mana, depois aumenta a Prontidão de Combate do conjurador em 15%. Quando Tempestade gélida está em recarga, um aliado aleatório realiza um Ataque duplo."
             },
             "S2": {
-                "name": "Luminous Explosion",
-                "description": "Explodes a magical sphere, inflicting stun for 1 turn and cannot buff for 2 turns. Increases Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Explosão luminosa",
+                "description": "Explode uma esfera mágica, atordoando por 1 turno e aplicando impedimento de efeitos positivos por 2 turnos. Aumenta a Prontidão de Combate do conjurador em 50%.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Frost Storm",
-                "description": "Attacks all enemies with a raging frost storm, decreasing buff durations by 1 turn before a 100% chance each to inflict decreased Speed and restrict for 2 turns. Grants invincibility to the caster for 1 turn. Attacks using an elemental advantage."
+                "name": "Tempestade gélida",
+                "description": "Ataca todos os inimigos com uma violenta tempestade gélida, diminuindo a duração dos efeitos positivos em 1 turno, depois com 100% de chance cada aplica Diminuir Velocidade e restrição por 2 turnos. Concede invencibilidade ao conjurador por 1 turno. Ataca com vantagem elemental."
             }
         }
     },
@@ -1354,17 +1354,17 @@
         "_name": "Cermia",
         "skills": {
             "S1": {
-                "name": "Playing with Fire",
-                "description": "Attacks the enemy with a flaming sword and has a 75% chance to inflict unhealable for 1 turn."
+                "name": "Brincando com fogo",
+                "description": "Ataca o inimigo com uma espada flamejante e tem 75% de chance de aplicar impedimento de cura por 1 turno."
             },
             "S2": {
-                "name": "Hot Streak!",
-                "description": "By releasing flames, grants increased Attack (Greater) to the caster for 2 turns and resets cooldown of All-In!. Grants an extra turn."
+                "name": "Maré de sorte!",
+                "description": "Liberando chamas, concede Aumentar Ataque (maior) ao conjurador por 2 turnos e reinicia a recarga de Tudo ou nada!. Concede um turno extra."
             },
             "S3": {
-                "name": "All-In!",
-                "description": "Attacks the enemy with a blazing inferno. Penetrates the target's Defense by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Tudo ou nada!",
+                "description": "Ataca o inimigo com um inferno ardente. Penetra 50% da Defesa do alvo.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },

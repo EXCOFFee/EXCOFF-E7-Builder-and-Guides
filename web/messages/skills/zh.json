@@ -1228,17 +1228,17 @@
         "_name": "Carrot",
         "skills": {
             "S1": {
-                "name": "Swing",
-                "description": "Attacks with a staff, with a 75% chance to inflict burn for 1 turn, before detonating burn effects inflicted on the enemy at the end of the turn."
+                "name": "挥击",
+                "description": "以法杖攻击，有75%的几率施加1回合灼伤，然后在回合结束时引爆敌人身上的灼伤。"
             },
             "S2": {
-                "name": "Flame Barrier",
-                "description": "After being attacked, grants increased Attack and a barrier (proportional to Attack) for 1 turn, and inflicts burn on the attacker for 1 turn."
+                "name": "火焰屏障",
+                "description": "受到攻击后，施加1回合攻击力提升与屏障（与攻击力成比例），并对攻击者施加1回合灼伤。"
             },
             "S3": {
-                "name": "Blaze Explosion",
-                "description": "Attacks all enemies with a powerful fire, dispelling two buffs before a 70% chance to burn for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "烈焰爆炸",
+                "description": "以强力火焰攻击所有敌人，解除两个强化效果，然后有70%的几率施加2回合灼伤。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -1246,17 +1246,17 @@
         "_name": "Cartuja",
         "skills": {
             "S1": {
-                "name": "Shred",
-                "description": "Attacks with sharp claws, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "撕裂",
+                "description": "以锋利的爪子攻击，有50%的几率降低防御力2回合。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Danger Zone",
-                "description": "At the moment of being attacked, increases Combat Readiness by 15%. When the caster's Health is 50% or less, increases Combat Readiness by an additional 10%."
+                "name": "危险地带",
+                "description": "受到攻击的瞬间，行动值提升15%。施放者生命值在50%以下时，行动值额外提升10%。"
             },
             "S3": {
-                "name": "Predatory Roar",
-                "description": "Attacks all enemies with wild energy, with a 100% chance to decrease Attack for 2 turns. Recovers 50% of the caster's max Health before granting them increased Defense for 2 turns. Damage dealt increases proportional to the caster's max Health, with additional damage increase when the caster's Health is 75% or less.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "掠食者咆哮",
+                "description": "以野性之力攻击所有敌人，有100%的几率降低攻击力2回合。恢复施放者最大生命值的50%，然后施加2回合防御力提升。造成的伤害按施放者的最大生命值比例提升，施放者生命值在75%以下时额外提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1264,17 +1264,17 @@
         "_name": "Cecilia",
         "skills": {
             "S1": {
-                "name": "Deliverance",
-                "description": "Attacks with a spear, with a 50% chance to decrease Defense for 2 turns. When the target is inflicted with decreased Attack, effect chance increases by 25%. Damage dealt increases proportional to the caster's max Health."
+                "name": "救赎",
+                "description": "以长枪攻击，有50%的几率降低防御力2回合。目标处于攻击力降低状态时，效果几率提升25%。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Steel Cloudburst",
-                "description": "Attacks all enemies with a magical spear, with a 100% chance to decrease Attack for 2 turns, before dispelling one buff. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "钢铁暴雨",
+                "description": "以魔法长枪攻击所有敌人，有100%的几率降低攻击力2回合，然后解除一个强化效果。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             },
             "S3": {
-                "name": "Ruinous Retribution",
-                "description": "Attacks all enemies with a spear infused with dark energy, with a 100% chance to provoke for 1 turn, before granting immunity to all allies for 2 turns and a barrier to the caster for 2 turns. Damage dealt and barrier strength increases proportional to the caster's max Health."
+                "name": "毁灭惩戒",
+                "description": "以注入黑暗之力的长枪攻击所有敌人，有100%的几率施加1回合挑衅，然后为所有友军施加2回合免疫，为施放者施加2回合屏障。造成的伤害与屏障强度按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -1282,17 +1282,17 @@
         "_name": "Celeste",
         "skills": {
             "S1": {
-                "name": "Precision Fire",
-                "description": "Attacks the enemy, before a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "精准射击",
+                "description": "攻击敌人，然后有75%的几率降低命中率1回合。"
             },
             "S2": {
-                "name": "Volley",
-                "description": "Shoots a volley of arrows at all enemies, with an 85% chance to decrease Combat Readiness by 20%. When the caster's Health is 80% or more, cooldown does not occur.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "齐射",
+                "description": "向所有敌人齐射箭矢，有85%的几率降低20%行动值。施放者生命值在80%以上时，不进入冷却。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Defcon",
-                "description": "Caster recovers 30% Health and is granted increased Attack for 2 turns and an extra turn."
+                "name": "戒备状态",
+                "description": "施放者恢复30%生命值，获得2回合攻击力提升与额外回合。"
             }
         }
     },
@@ -1300,17 +1300,17 @@
         "_name": "Celestial Mercedes",
         "skills": {
             "S1": {
-                "name": "Divine Bolt",
-                "description": "Attacks two enemies with shock magic. Damage dealt increases proportional to the target's max Health."
+                "name": "神圣雷击",
+                "description": "以冲击魔法攻击两名敌人。造成的伤害按目标的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Dimensional Rupture",
-                "description": "Attacks all enemies with a massive light sphere, and absorbs some of the damage dealt as Health. Damage dealt increases proportional to the enemy's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "次元崩裂",
+                "description": "以巨大光球攻击所有敌人，并将部分造成的伤害吸收为生命值。造成的伤害按敌人的最大生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Finale",
-                "description": "Attacks all enemies by releasing spells of The Last Spellbook, and grants increased Attack to the caster for 2 turns. Increases the caster's Combat Readiness by 25% for each critical hit made."
+                "name": "终曲",
+                "description": "释放最后的魔法书中的咒文攻击所有敌人，并为施放者施加2回合攻击力提升。每造成一次暴击，使施放者的行动值提升25%。"
             }
         }
     },
@@ -1318,17 +1318,17 @@
         "_name": "Celine",
         "skills": {
             "S1": {
-                "name": "Uppercut",
-                "description": "Attacks the enemy with a sheath, and grants stealth to the caster for 1 turn."
+                "name": "上勾击",
+                "description": "以剑鞘攻击敌人，并为施放者施加1回合隐身。"
             },
             "S2": {
-                "name": "Intuition",
-                "description": "At the start of the first battle, grants stealth for 2 turns. After an enemy uses a non-attack skill, dispels all debuffs from the caster and activates Blink against a random enemy. Blink (gains 10 Soul): Attacks the enemy in the blink of an eye, and increases Combat Readiness of the caster by 30%. Unaffected by elemental disadvantage."
+                "name": "直觉",
+                "description": "首场战斗开始时，施加2回合隐身。敌人使用非攻击技能后，解除施放者的所有弱化效果，并对随机一名敌人发动瞬步。瞬步（获得10魂）：在眨眼间攻击敌人，并使施放者的行动值提升30%。不受属性劣势影响。"
             },
             "S3": {
-                "name": "Thunderclap",
-                "description": "Attacks the enemy repeatedly, and absorbs some of the damage dealt as Health. Grants increased Evasion and a barrier (proportional to Attack) to the caster for 2 turns. When the enemy is not an Elite or Boss monster, ignores damage sharing.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "雷鸣",
+                "description": "连续攻击敌人，并将部分造成的伤害吸收为生命值。为施放者施加2回合闪避提升与屏障（与攻击力成比例）。敌人不是精英或首领怪物时，无视伤害分担。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1336,17 +1336,17 @@
         "_name": "Cerise",
         "skills": {
             "S1": {
-                "name": "Mystical Arrow",
-                "description": "Attacks the enemy by summoning a mana bow, before increasing Combat Readiness of the caster by 15%. When Frost Storm is on cooldown, triggers a Dual Attack from a random ally."
+                "name": "神秘之箭",
+                "description": "召唤魔力之弓攻击敌人，然后使施放者的行动值提升15%。冰霜风暴处于冷却中时，随机一名友军发动协攻。"
             },
             "S2": {
-                "name": "Luminous Explosion",
-                "description": "Explodes a magical sphere, inflicting stun for 1 turn and cannot buff for 2 turns. Increases Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "光之爆发",
+                "description": "引爆魔法球，使其眩晕1回合并施加2回合无法强化。使施放者的行动值提升50%。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Frost Storm",
-                "description": "Attacks all enemies with a raging frost storm, decreasing buff durations by 1 turn before a 100% chance each to inflict decreased Speed and restrict for 2 turns. Grants invincibility to the caster for 1 turn. Attacks using an elemental advantage."
+                "name": "冰霜风暴",
+                "description": "以猛烈的冰霜风暴攻击所有敌人，使强化效果持续时间减少1回合，然后各有100%的几率施加2回合速度降低与限制。为施放者施加1回合无敌。以属性优势进行攻击。"
             }
         }
     },
@@ -1354,17 +1354,17 @@
         "_name": "Cermia",
         "skills": {
             "S1": {
-                "name": "Playing with Fire",
-                "description": "Attacks the enemy with a flaming sword and has a 75% chance to inflict unhealable for 1 turn."
+                "name": "玩火",
+                "description": "以燃烧之剑攻击敌人，有75%的几率施加1回合无法恢复。"
             },
             "S2": {
-                "name": "Hot Streak!",
-                "description": "By releasing flames, grants increased Attack (Greater) to the caster for 2 turns and resets cooldown of All-In!. Grants an extra turn."
+                "name": "连胜势头！",
+                "description": "释放火焰，为施放者施加2回合攻击力提升（大），并重置孤注一掷！的冷却时间。获得额外回合。"
             },
             "S3": {
-                "name": "All-In!",
-                "description": "Attacks the enemy with a blazing inferno. Penetrates the target's Defense by 50%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "孤注一掷！",
+                "description": "以熊熊烈焰攻击敌人。穿透目标50%的防御力。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
