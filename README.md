@@ -1,160 +1,91 @@
 # EXCOFF E7 HUB
 
-![EXCOFF E7 HUB Banner]
+Wiki, builds y guías de la comunidad de **Epic Seven**: ficha de cada héroe (stats, skills con
+multiplicadores, imprints, sets y artefactos más usados), builds y guías publicadas por
+usuarios, gremios y noticias oficiales. En 6 idiomas (EN, ES, PT, KO, JA, ZH).
 
-**EXCOFF E7 HUB** es una plataforma web integral diseñada para la comunidad del juego móvil *Epic Seven*. Este proyecto centraliza información crítica, herramientas de optimización y funciones sociales en una interfaz moderna, rápida y responsiva.
+**Sitio:** https://excoffe7.com
 
-**Link:** [https://www.excoffe7.com]
-**Diseño:** Minimalista / Dark Mode
+## Cómo está armado
 
----
-
-## Stack Tecnológico
-
-Este es un proyecto **Full Stack** construido con una arquitectura moderna separando frontend y backend para máxima escalabilidad y rendimiento SEO.
-
-### Frontend (Cliente)
-*   **Framework:** [Next.js 16 (Canary)](https://nextjs.org/) & [React 19](https://react.dev/)
-*   **Lenguaje:** TypeScript
-*   **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/)
-*   **Estado & Data Fetching:** [TanStack Query (React Query)](https://tanstack.com/query/latest)
-*   **Internacionalización:** Soporte nativo para 6 idiomas (EN, ES, PT, KO, JA, ZH)
-
-### Backend (API)
-*   **Framework:** [Laravel 11](https://laravel.com/) (PHP)
-*   **Base de Datos:** MySQL
-*   **Autenticación:** Laravel Sanctum (SPA Auth)
-*   **Background Jobs:** Laravel Schedule & Commands (para scraping y mantenimiento)
-
----
-
-## Características Principales
-
-### 1. Base de Datos de Héroes (364 Héroes)
-Información detallada y siempre actualizada de cada unidad.
-*   **Stats Máximas:** Visualización de estadísticas al nivel 60/6 despertar.
-*   **Skill Multipliers:** Muestra los multiplicadores de daño reales (ATK, HP, DEF, SPD scaling) extraídos de los datos del juego.
-*   **Traducción Dinámica de Skills:** Sistema inteligente que sirve nombres, descripciones y efectos de soulburn en el idioma del usuario directamente desde la API.
-*   **Balance Patches:** Sistema automatizado para aplicar cambios de balance.
-*   **Memory Imprints:** Muestra imprints de devotion con valores exactos.
-*   **Integración de Builds:** Muestra las builds más populares de la comunidad.
-
-### 2. Sistema de Etiquetas (Pros y Contras)
-Un sistema de clasificación exhaustivo para definir las fortalezas y debilidades de cada build.
-*   **Cobertura Masiva:** Más de 160 etiquetas únicas categorizadas (Daño, Supervivencia, Control, PvE, Meta, etc.).
-*   **Mecánicas Avanzadas:** Etiquetas específicas para mecánicas complejas como "Ignora Distribución de Daño", "Penetración de Defensa", y "Escalado de Foco".
-*   **Multi-idioma:** Todas las etiquetas están completamente traducidas a los 6 idiomas soportados.
-
-### 3. Sistema de Balance Patches
-Mantén los datos del juego actualizados con los últimos cambios.
-*   **Archivos JSON:** Historial de parches para trazabilidad.
-*   **Comandos Artisan:** Herramientas CLI para aplicar actualizaciones masivas.
-*   **Override de Datos:** Sistema de prioridad para correcciones manuales sobre los datos base.
-
-### 4. Builds de la Comunidad
-Un sistema colaborativo para compartir y encontrar equipamiento.
-*   **Filtrado Avanzado:** Búsqueda por héroe, sets primarios/secundarios y autor.
-*   **Ordenamiento:** Algoritmos para ordenar por novedad, popularidad o valoración.
-*   **Urls Dinámicas:** Filtros sincronizados con la URL para compartir búsquedas.
-
-### 5. Buscador de Gremios
-Tablón de anuncios para reclutamiento y búsqueda de gremios.
-*   **Etiquetas:** Filtros rápidos por objetivos (Casual, Competitivo, Recompensas máximas).
-*   **Filtros Regionales:** Búsqueda por servidor e idioma.
-
-### 6. Centro de Guías y Noticias
-*   **Guías:** Artículos de estrategia creados por la comunidad con soporte multimedia.
-*   **Noticias:** Agregador automático de notas de parche (STOVE) y videos (YouTube).
-
----
-
-## Pipeline de Datos
-
-### Fuentes de Datos
-| Fuente | Datos | Actualización |
-|--------|-------|---------------|
-| **Fribbels Optimizer** | Stats base, multiplicadores, imprints | Automática via API |
-| **Recuperación JSON** | Traducciones base de skills | Script de importación |
-| **Balance Patches** | Correcciones post-parche | Manual via JSON |
-| **STOVE Oficial** | Noticias, eventos | Cron diario |
-
-### Comandos de Sincronización
-```bash
-# Importar datos base y aplicar parches
-php artisan import:hero-data
-
-# Importar traducciones de skills desde archivos recuperados
-php artisan import:skill-translations --force
-
-# Sincronizar noticias
-php artisan sync:news
+```
+web/   Next.js 16 + React 19 + Tailwind 4   → Vercel (se publica al hacer push a main)
+api/   Laravel 12 (PHP 8.2+) + MySQL         → Hostinger (se publica con deploy/deploy-api.sh)
+deploy/  script de deploy del backend por SSH
 ```
 
----
+- El frontend renderiza en el servidor en el idioma del usuario (cookie `locale`) y pide
+  los datos a la API (`NEXT_PUBLIC_API_URL`). Las traducciones de la interfaz, skills,
+  artefactos y glosario están en `web/messages/`.
+- La API usa Sanctum con tokens Bearer (30 días). El login es OAuth (Google y Discord): la
+  API redirige al frontend con un código de un solo uso que se canjea por el token.
+- Los datos de héroes y artefactos vienen de **Fribbels Epic 7 Optimizer** (stats,
+  multiplicadores, imprints) y de **CeciliaBot** (textos de skills, íconos). Un cron diario
+  (`data:sync`, 03:00) los mantiene al día sin pisar las correcciones manuales.
 
-## Arquitectura y Decisiones Técnicas
+## Desarrollo local
 
-### Server-Side Rendering (SSR) & SEO
-Utilizamos **Next.js App Router** para renderizar páginas críticas en el servidor, asegurando indexación correcta por motores de búsqueda.
+Requisitos: PHP 8.2+, Composer, MySQL 8, Node 22 y pnpm 10.
 
-### Sistema de Internacionalización (i18n)
-El proyecto fue diseñado desde cero para ser global.
-*   **Frontend:** Interfaz traducida mediante archivos JSON locales.
-*   **Datos Dinámicos:** La API entrega contenido (skills, nombres de héroes, etiquetas) traducido dinámicamente basado en el header `Accept-Language`.
-
-### Optimización de Rendimiento
-*   **Imágenes:** Uso de `next/image` para lazy loading y formatos modernos.
-*   **Prefetching:** Carga anticipada de datos al interactuar con elementos UI.
-*   **Caching:** Uso intensivo de caché en backend para consultas costosas.
-
-### Seguridad
-*   **Sanctum:** Autenticación SPA segura.
-*   **Sanitización:** Limpieza estricta de input de usuario.
-
----
-
-## Instalación Local
-
-### Prerrequisitos
-*   Node.js 18+
-*   PHP 8.2+
-*   Composer
-*   MySQL
-
-### 1. Backend (Laravel)
 ```bash
+# API
 cd api
 composer install
-cp .env.example .env
-php artisan key:generate
-# Configura tu base de datos en .env
-php artisan migrate --seed
-php artisan import:hero-data
-php artisan serve
-```
+cp .env.example .env && php artisan key:generate   # configurar DB_* en .env
+php artisan migrate                                 # las migraciones cargan héroes y artefactos
+php artisan serve                                   # http://localhost:8000
 
-### 2. Frontend (Next.js)
-```bash
+# Web (otra terminal)
 cd web
-npm install
-# Crea .env.local con: NEXT_PUBLIC_API_URL=http://localhost:8000/api
-npm run dev
+pnpm install
+echo "NEXT_PUBLIC_API_URL=http://localhost:8000/api" > .env.local
+pnpm dev                                            # http://localhost:3000
 ```
 
-Visita `http://localhost:3000`.
+Con `APP_ENV=local`, la API acepta `http://localhost:3000` en CORS (ver `api/config/cors.php`).
 
----
+## Verificaciones (las mismas que corre el CI)
 
-## Licencia
+```bash
+cd api && php vendor/bin/phpunit          # tests de la API
+cd web && pnpm typecheck && pnpm lint     # lint bloqueante: 0 errores y 0 advertencias
+cd web && pnpm build
+```
 
-Este proyecto está bajo la licencia MIT.
+En `web/scripts/qa/` hay chequeos con Playwright contra un `next start` local: CLS/LCP,
+peso de imágenes, accesibilidad (axe), formulario de builds, selector de idioma.
 
----
+## Deploy
 
-Hecho por EXCOFF para la comunidad de Epic Seven.
+- **Frontend:** push a `main` → Vercel publica solo.
+- **Backend:** `bash deploy/deploy-api.sh` muestra qué archivos de `api/` cambian respecto del
+  servidor; `--apply` los sube con backup, corre `composer install` si cambió el lock, migra
+  y limpia la caché; `--rollback <id>` vuelve atrás. Configuración en `deploy/deploy.env`
+  (no versionado, ver `deploy/deploy.env.example`).
+- Si un cambio toca API y web a la vez (por ejemplo el login), deployar el backend y hacer el
+  merge a `main` en el mismo momento.
 
-### Créditos
-*   **Fribbels Epic 7 Optimizer**
-*   **CeciliaBot**
-*   **EpicSevenDB**
-*   **Smilegate & Super Creative**
+## Agregar héroes o artefactos nuevos
+
+Con datos reales de Fribbels y CeciliaBot (nunca inventados): una migración de seed en
+`api/database/migrations/`, la entrada en `api/database/data/custom_heroes.json` o
+`custom_artifacts.json` (así `data:sync` no los pisa), el ícono del artefacto en
+`api/app/Models/Artifact.php` y las skills en `web/messages/skills/{idioma}.json`.
+
+## Comandos útiles de la API
+
+| Comando | Qué hace |
+|---|---|
+| `php artisan data:sync` | Sincroniza héroes y artefactos con Fribbels (lo corre el cron) |
+| `php artisan import:hero-data` | Importa stats y multiplicadores de Fribbels |
+| `php artisan heroes:import {slug}` | Trae un héroe nuevo desde CeciliaBot |
+| `php artisan heroes:sync-skill-descriptions` | Actualiza textos de skills desde CeciliaBot |
+| `php artisan skills:import-translations` | Carga en la base las traducciones de `web/messages/skills` |
+| `php artisan app:sync-news` | Trae noticias de STOVE y YouTube |
+| `php artisan stats:sync` | Trae sets y artefactos más usados por héroe (Fribbels Hero Library) |
+
+## Créditos y licencia
+
+Datos de [Fribbels Epic 7 Optimizer](https://github.com/fribbels/Fribbels-Epic-7-Optimizer),
+CeciliaBot y EpicSevenDB; Epic Seven © Smilegate & Super Creative. Detalle en
+[CREDITS.md](CREDITS.md). Código bajo licencia MIT ([LICENSE](LICENSE)).
