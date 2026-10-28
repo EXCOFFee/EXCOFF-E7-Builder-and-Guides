@@ -1804,17 +1804,17 @@
         "_name": "Death Dealer Ray",
         "skills": {
             "S1": {
-                "name": "Clinical Trial",
-                "description": "Attacks the enemy by throwing an experimental drug at them and has a 75% chance to put them to sleep for 1 turn. A successful attack deals additional damage equivalent to 40% of injuries inflicted on the target. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "임상 시험",
+                "description": "실험 약물을 던져 적을 공격하며, 75% 확률로 1턴 동안 수면에 빠뜨린다. 공격에 성공하면 대상에게 입힌 부상의 40%에 해당하는 추가 피해를 준다. 이 스킬로는 협공이 발동하지 않는다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Anatomical Mutation",
-                "description": "Grants increased Effectiveness and pestilence to all allies for 2 turns and increases Combat Readiness by 20%."
+                "name": "해부학적 변이",
+                "description": "모든 아군에게 2턴 동안 효과 적중 증가와 역병을 부여하고 행동 게이지를 20% 증가시킨다."
             },
             "S3": {
-                "name": "Cloud of Death",
-                "description": "Releases a miasma of fatal poison, dispelling two buffs from all enemies and a 100% chance to inflict sleep for 1 turn and venom for 2 turns. Grants an extra turn."
+                "name": "죽음의 구름",
+                "description": "치명적인 독기를 퍼뜨려 모든 적의 강화 효과를 두 개 해제하고, 100% 확률로 1턴 동안 수면을, 2턴 동안 맹독을 건다. 추가 턴을 얻는다."
             }
         }
     },
@@ -1822,17 +1822,17 @@
         "_name": "Desert Jewel Basar",
         "skills": {
             "S1": {
-                "name": "Desert Wind",
-                "description": "Attacks the enemy with wind and has a 35% chance to inflict stun for 1 turn, before recovering Health of all allies proportional to the target's max Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "사막의 바람",
+                "description": "바람으로 적을 공격하며, 35% 확률로 1턴 동안 기절시킨 뒤 대상의 최대 생명력에 비례해 모든 아군의 생명력을 회복한다.",
+                "soulburn_effect": "회복량이 증가한다."
             },
             "S2": {
-                "name": "Desert Cycle",
-                "description": "When attacked, grants 20% damage reduction. After an enemy uses a skill, when granted a barrier, activates Desert Storm. Desert Storm: Inflicts barrier inversion on all enemies before decreasing Combat Readiness by 20%. Increases Combat Readiness of the caster by 20%."
+                "name": "사막의 순환",
+                "description": "공격받으면 피해를 20% 감소시킨다. 적이 스킬을 사용한 후 보호막이 있으면 사막 폭풍을 발동한다. 사막 폭풍: 모든 적에게 보호막 반전을 건 뒤 행동 게이지를 20% 감소시킨다. 시전자의 행동 게이지를 20% 증가시킨다."
             },
             "S3": {
-                "name": "Bastet Roar",
-                "description": "Bastet roars, dispelling all debuffs from all allies and granting immunity for 2 turns before increasing Combat Readiness by 30%."
+                "name": "바스테트의 포효",
+                "description": "바스테트가 포효해 모든 아군의 약화 효과를 모두 해제하고 2턴 동안 면역을 부여한 뒤 행동 게이지를 30% 증가시킨다."
             }
         }
     },
@@ -1840,17 +1840,17 @@
         "_name": "Designer Lilibet",
         "skills": {
             "S1": {
-                "name": "Slice to Pieces",
-                "description": "Attacks the enemy with scissors, with a 75% chance to decrease Defense for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense for 2 turns."
+                "name": "갈기갈기 자르기",
+                "description": "가위로 적을 공격하며, 75% 확률로 1턴 동안 방어력을 감소시킨다. 시전자의 방어력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가하고 2턴 동안 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Emergency Stitching",
-                "description": "Starts the first battle with 50 Fighting Spirit. When an enemy's turn ends, gains 10 Fighting Spirit for each debuff inflicted on an ally, and when the caster's Fighting Spirit is full, consumes all Fighting Spirit to dispel all debuffs from the caster and grants increased Defense and immunity for 1 turn before increasing Combat Readiness by 40%."
+                "name": "긴급 수선",
+                "description": "첫 번째 전투를 투지 50으로 시작한다. 적의 턴이 끝나면 아군에게 걸린 약화 효과 하나당 투지를 10 얻으며, 시전자의 투지가 가득 차면 투지를 모두 소모해 시전자의 약화 효과를 모두 해제하고 1턴 동안 방어력 증가와 면역을 부여한 뒤 행동 게이지를 40% 증가시킨다."
             },
             "S3": {
-                "name": "Model Disqualification",
-                "description": "Decreases debuff durations of all allies by 2 turns and gets on stage to attack all enemies, increasing their skill cooldown by 1 turn, before increasing Combat Readiness of all allies by 15%. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's Defense."
+                "name": "모델 실격",
+                "description": "모든 아군의 약화 효과 지속 시간을 2턴 감소시키고 무대에 올라 모든 적을 공격해 스킬 재사용 대기 시간을 1턴 증가시킨 뒤 모든 아군의 행동 게이지를 15% 증가시킨다. 대상의 방어력을 50% 관통한다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -1858,17 +1858,17 @@
         "_name": "Destina",
         "skills": {
             "S1": {
-                "name": "Key to an Oath",
-                "description": "Attacks the enemy with a staff, before recovering Health of the ally with the lowest Health proportional to the caster's max Health.",
-                "soulburn_effect": "After attacking, greatly heals all allies. Does not trigger a Dual Attack."
+                "name": "맹세의 열쇠",
+                "description": "지팡이로 적을 공격한 뒤 시전자의 최대 생명력에 비례해 생명력이 가장 낮은 아군의 생명력을 회복한다.",
+                "soulburn_effect": "공격 후 모든 아군을 크게 회복한다. 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Regen",
-                "description": "Blesses an ally, dispelling two debuffs and recovering Health proportional to the caster's max Health before increasing Combat Readiness by 30%."
+                "name": "재생",
+                "description": "아군 한 명을 축복해 약화 효과를 두 개 해제하고 시전자의 최대 생명력에 비례해 생명력을 회복한 뒤 행동 게이지를 30% 증가시킨다."
             },
             "S3": {
-                "name": "Destina's Grace",
-                "description": "Through the benediction of a Spirit Lord, revives all dead allies to 30% Health. For allies that are not dead, dispels all debuffs before recovering Health proportional to the caster's max Health. At the start of the first battle, grants Spirit's Blessing to the caster for 3 turns."
+                "name": "데스티나의 은총",
+                "description": "정령왕의 축복으로 사망한 모든 아군을 생명력 30%로 부활시킨다. 사망하지 않은 아군은 약화 효과를 모두 해제한 뒤 시전자의 최대 생명력에 비례해 생명력을 회복한다. 첫 번째 전투 시작 시 시전자에게 3턴 동안 정령의 축복을 부여한다."
             }
         }
     },
@@ -1876,17 +1876,17 @@
         "_name": "Diene",
         "skills": {
             "S1": {
-                "name": "Light of Judgment",
-                "description": "Attacks the enemy with a ray of brilliant light, before increasing Combat Readiness of the caster by 15%. When the caster has a buff, doubles the effect."
+                "name": "심판의 빛",
+                "description": "찬란한 빛줄기로 적을 공격한 뒤 시전자의 행동 게이지를 15% 증가시킨다. 시전자에게 강화 효과가 있으면 효과가 두 배가 된다."
             },
             "S2": {
-                "name": "Blessings of the Goddess",
-                "description": "With the Blessings of the Goddess, grants increased Attack and a barrier (proportional to the target's max Health) to all allies for 2 turns before increasing Combat Readiness by 15%."
+                "name": "여신의 축복",
+                "description": "여신의 축복으로 모든 아군에게 2턴 동안 공격력 증가와 보호막(대상 최대 생명력 비례)을 부여한 뒤 행동 게이지를 15% 증가시킨다."
             },
             "S3": {
-                "name": "Saint's Prayer",
-                "description": "Through a miracle of the Goddess, dispels all debuffs from all allies before granting increased Defense and increased Penetration Resistance for 3 turns, and increases Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "성녀의 기도",
+                "description": "여신의 기적으로 모든 아군의 약화 효과를 모두 해제한 뒤 3턴 동안 방어력 증가와 관통 저항 증가를 부여하고, 시전자의 행동 게이지를 50% 증가시킨다.",
+                "soulburn_effect": "모든 스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -1894,17 +1894,17 @@
         "_name": "Dingo",
         "skills": {
             "S1": {
-                "name": "Prep Ingredients",
-                "description": "Attacks the enemy with a cleaver, with a 50% chance to inflict bleeding for 2 turns. Has a 30% chance to activate Quick Grill as an extra attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "재료 손질",
+                "description": "식칼로 적을 공격하며, 50% 확률로 2턴 동안 출혈을 건다. 30% 확률로 추가 공격으로 빠른 구이를 발동한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Quick Grill",
-                "description": "Attacks all enemies with the Glove Oven, before absorbing some of the damage dealt as Health. When the enemy is inflicted with bleed, has a 100% chance to inflict burn for 2 turns."
+                "name": "빠른 구이",
+                "description": "글러브 오븐으로 모든 적을 공격한 뒤 준 피해의 일부를 생명력으로 흡수한다. 적에게 출혈이 걸려 있으면 100% 확률로 2턴 동안 화상을 건다."
             },
             "S3": {
-                "name": "Free Dinner",
-                "description": "Provides all allies with a meal, dispelling all debuffs and increasing Critical Hit Chance for 2 turns before decreasing skill cooldown by 1 turn. Grants an extra turn to the caster. Every time an enemy dies, the cooldown for this skill decreases by 1 turn."
+                "name": "공짜 저녁",
+                "description": "모든 아군에게 식사를 대접해 약화 효과를 모두 해제하고 2턴 동안 치명타 확률을 증가시킨 뒤 스킬 재사용 대기 시간을 1턴 감소시킨다. 시전자는 추가 턴을 얻는다. 적이 사망할 때마다 이 스킬의 재사용 대기 시간이 1턴 감소한다."
             }
         }
     },
@@ -1930,17 +1930,17 @@
         "_name": "Dizzy",
         "skills": {
             "S1": {
-                "name": "I Used This to Catch Fish",
-                "description": "Attacks all enemies with the power of magic and has a 25% chance to inflict stun for 1 turn. Damage dealt increases when the target has a debuff."
+                "name": "이걸로 물고기를 잡았어요",
+                "description": "마법의 힘으로 모든 적을 공격하며, 25% 확률로 1턴 동안 기절시킨다. 대상에게 약화 효과가 있으면 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Gamma Ray",
-                "description": "Attacks all enemies with a powerful ray, extending the duration of debuffs by 1 turn, except for those which prevent the enemy from moving, before decreasing Combat Readiness by 50%."
+                "name": "감마 레이",
+                "description": "강력한 광선으로 모든 적을 공격해 행동을 막는 효과를 제외한 약화 효과의 지속 시간을 1턴 연장한 뒤 행동 게이지를 50% 감소시킨다."
             },
             "S3": {
-                "name": "Emotional Gamma Ray",
-                "description": "Unleashes a giant explosion to attack all enemies. The attack misses, but inflicts decreased Speed, decreased Attack, and decreased Hit Chance on all enemies for 2 turns regardless of whether the attack hits.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "감정적인 감마 레이",
+                "description": "거대한 폭발을 일으켜 모든 적을 공격한다. 공격은 빗나가지만, 공격의 적중 여부와 관계없이 모든 적에게 2턴 동안 속도 감소, 공격력 감소, 명중률 감소를 건다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -1948,17 +1948,17 @@
         "_name": "Doll Maker Pearlhorizon",
         "skills": {
             "S1": {
-                "name": "Chaos Strike",
-                "description": "Claws the enemy, with a 50% chance to decrease hit Chance for 2 turns."
+                "name": "혼돈의 일격",
+                "description": "적을 할퀴며, 50% 확률로 2턴 동안 명중률을 감소시킨다."
             },
             "S2": {
-                "name": "Hypnosis",
-                "description": "Attacks all enemies, with a 50% chance to put them to sleep for 1 turn. Increases Combat Readiness of the caster by 10% per sleep debuff inflicted."
+                "name": "최면",
+                "description": "모든 적을 공격하며, 50% 확률로 1턴 동안 수면에 빠뜨린다. 건 수면 하나당 시전자의 행동 게이지를 10% 증가시킨다."
             },
             "S3": {
-                "name": "Endless Nightmare",
-                "description": "Attacks the enemy and stuns them for 1 turn. When the enemy is asleep, decrease Defense for 2 turns and deals additional damage equivalent to 30% of the target's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "끝없는 악몽",
+                "description": "적을 공격하고 1턴 동안 기절시킨다. 적이 수면 상태이면 2턴 동안 방어력을 감소시키고 대상 최대 생명력의 30%에 해당하는 추가 피해를 준다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },

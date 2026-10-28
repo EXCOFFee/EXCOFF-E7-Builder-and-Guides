@@ -1804,17 +1804,17 @@
         "_name": "Death Dealer Ray",
         "skills": {
             "S1": {
-                "name": "Clinical Trial",
-                "description": "Attacks the enemy by throwing an experimental drug at them and has a 75% chance to put them to sleep for 1 turn. A successful attack deals additional damage equivalent to 40% of injuries inflicted on the target. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Ensaio clínico",
+                "description": "Ataca o inimigo arremessando uma droga experimental e tem 75% de chance de fazê-lo dormir por 1 turno. Um ataque bem-sucedido causa dano adicional equivalente a 40% dos ferimentos aplicados ao alvo. Esta habilidade não ativa Ataque duplo.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Anatomical Mutation",
-                "description": "Grants increased Effectiveness and pestilence to all allies for 2 turns and increases Combat Readiness by 20%."
+                "name": "Mutação anatômica",
+                "description": "Concede Aumentar Eficácia e pestilência a todos os aliados por 2 turnos e aumenta a Prontidão de Combate em 20%."
             },
             "S3": {
-                "name": "Cloud of Death",
-                "description": "Releases a miasma of fatal poison, dispelling two buffs from all enemies and a 100% chance to inflict sleep for 1 turn and venom for 2 turns. Grants an extra turn."
+                "name": "Nuvem da morte",
+                "description": "Libera um miasma de veneno fatal, dissipando dois efeitos positivos de todos os inimigos e com 100% de chance de aplicar sono por 1 turno e peçonha por 2 turnos. Concede um turno extra."
             }
         }
     },
@@ -1822,17 +1822,17 @@
         "_name": "Desert Jewel Basar",
         "skills": {
             "S1": {
-                "name": "Desert Wind",
-                "description": "Attacks the enemy with wind and has a 35% chance to inflict stun for 1 turn, before recovering Health of all allies proportional to the target's max Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "Vento do deserto",
+                "description": "Ataca o inimigo com vento e tem 35% de chance de atordoar por 1 turno, depois recupera a Vida de todos os aliados proporcionalmente à Vida máxima do alvo.",
+                "soulburn_effect": "Aumenta a quantidade recuperada."
             },
             "S2": {
-                "name": "Desert Cycle",
-                "description": "When attacked, grants 20% damage reduction. After an enemy uses a skill, when granted a barrier, activates Desert Storm. Desert Storm: Inflicts barrier inversion on all enemies before decreasing Combat Readiness by 20%. Increases Combat Readiness of the caster by 20%."
+                "name": "Ciclo do deserto",
+                "description": "Ao ser atacado, concede 20% de redução de dano. Após um inimigo usar uma habilidade, quando ele tem uma barreira, ativa Tempestade do deserto. Tempestade do deserto: aplica inversão de barreira a todos os inimigos, depois diminui a Prontidão de Combate em 20%. Aumenta a Prontidão de Combate do conjurador em 20%."
             },
             "S3": {
-                "name": "Bastet Roar",
-                "description": "Bastet roars, dispelling all debuffs from all allies and granting immunity for 2 turns before increasing Combat Readiness by 30%."
+                "name": "Rugido de Bastet",
+                "description": "Bastet ruge, dissipando todos os efeitos negativos de todos os aliados e concedendo imunidade por 2 turnos, depois aumenta a Prontidão de Combate em 30%."
             }
         }
     },
@@ -1840,17 +1840,17 @@
         "_name": "Designer Lilibet",
         "skills": {
             "S1": {
-                "name": "Slice to Pieces",
-                "description": "Attacks the enemy with scissors, with a 75% chance to decrease Defense for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense for 2 turns."
+                "name": "Cortar em pedaços",
+                "description": "Ataca o inimigo com uma tesoura, com 75% de chance de diminuir a Defesa por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100% e diminui a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Emergency Stitching",
-                "description": "Starts the first battle with 50 Fighting Spirit. When an enemy's turn ends, gains 10 Fighting Spirit for each debuff inflicted on an ally, and when the caster's Fighting Spirit is full, consumes all Fighting Spirit to dispel all debuffs from the caster and grants increased Defense and immunity for 1 turn before increasing Combat Readiness by 40%."
+                "name": "Costura de emergência",
+                "description": "Começa a primeira batalha com 50 de Espírito de luta. Quando o turno de um inimigo termina, ganha 10 de Espírito de luta para cada efeito negativo aplicado a um aliado e, quando o Espírito de luta do conjurador está cheio, consome todo o Espírito de luta para dissipar todos os efeitos negativos do conjurador e concede Aumentar Defesa e imunidade por 1 turno, depois aumenta a Prontidão de Combate em 40%."
             },
             "S3": {
-                "name": "Model Disqualification",
-                "description": "Decreases debuff durations of all allies by 2 turns and gets on stage to attack all enemies, increasing their skill cooldown by 1 turn, before increasing Combat Readiness of all allies by 15%. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's Defense."
+                "name": "Desclassificação da modelo",
+                "description": "Diminui a duração dos efeitos negativos de todos os aliados em 2 turnos e sobe ao palco para atacar todos os inimigos, aumentando a recarga de suas habilidades em 1 turno, depois aumenta a Prontidão de Combate de todos os aliados em 15%. Penetra 50% da Defesa do alvo. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             }
         }
     },
@@ -1858,17 +1858,17 @@
         "_name": "Destina",
         "skills": {
             "S1": {
-                "name": "Key to an Oath",
-                "description": "Attacks the enemy with a staff, before recovering Health of the ally with the lowest Health proportional to the caster's max Health.",
-                "soulburn_effect": "After attacking, greatly heals all allies. Does not trigger a Dual Attack."
+                "name": "Chave de um juramento",
+                "description": "Ataca o inimigo com um cajado, depois recupera a Vida do aliado com menor Vida proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Após atacar, cura muito todos os aliados. Não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Regen",
-                "description": "Blesses an ally, dispelling two debuffs and recovering Health proportional to the caster's max Health before increasing Combat Readiness by 30%."
+                "name": "Regeneração",
+                "description": "Abençoa um aliado, dissipando dois efeitos negativos e recuperando Vida proporcionalmente à Vida máxima do conjurador, depois aumenta a Prontidão de Combate em 30%."
             },
             "S3": {
-                "name": "Destina's Grace",
-                "description": "Through the benediction of a Spirit Lord, revives all dead allies to 30% Health. For allies that are not dead, dispels all debuffs before recovering Health proportional to the caster's max Health. At the start of the first battle, grants Spirit's Blessing to the caster for 3 turns."
+                "name": "Graça de Destina",
+                "description": "Pela bênção de um Senhor Espiritual, revive todos os aliados mortos com 30% de Vida. Para os aliados que não estão mortos, dissipa todos os efeitos negativos, depois recupera Vida proporcionalmente à Vida máxima do conjurador. No início da primeira batalha, concede Bênção espiritual ao conjurador por 3 turnos."
             }
         }
     },
@@ -1876,17 +1876,17 @@
         "_name": "Diene",
         "skills": {
             "S1": {
-                "name": "Light of Judgment",
-                "description": "Attacks the enemy with a ray of brilliant light, before increasing Combat Readiness of the caster by 15%. When the caster has a buff, doubles the effect."
+                "name": "Luz do julgamento",
+                "description": "Ataca o inimigo com um raio de luz brilhante, depois aumenta a Prontidão de Combate do conjurador em 15%. Quando o conjurador tem um efeito positivo, o efeito dobra."
             },
             "S2": {
-                "name": "Blessings of the Goddess",
-                "description": "With the Blessings of the Goddess, grants increased Attack and a barrier (proportional to the target's max Health) to all allies for 2 turns before increasing Combat Readiness by 15%."
+                "name": "Bênçãos da deusa",
+                "description": "Com as Bênçãos da deusa, concede Aumentar Ataque e uma barreira (proporcional à Vida máxima do alvo) a todos os aliados por 2 turnos, depois aumenta a Prontidão de Combate em 15%."
             },
             "S3": {
-                "name": "Saint's Prayer",
-                "description": "Through a miracle of the Goddess, dispels all debuffs from all allies before granting increased Defense and increased Penetration Resistance for 3 turns, and increases Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "Prece da santa",
+                "description": "Por um milagre da deusa, dissipa todos os efeitos negativos de todos os aliados, depois concede Aumentar Defesa e Aumentar Resistência a Penetração por 3 turnos, e aumenta a Prontidão de Combate do conjurador em 50%.",
+                "soulburn_effect": "Todas as recargas de habilidades diminuem em 2 turnos."
             }
         }
     },
@@ -1894,17 +1894,17 @@
         "_name": "Dingo",
         "skills": {
             "S1": {
-                "name": "Prep Ingredients",
-                "description": "Attacks the enemy with a cleaver, with a 50% chance to inflict bleeding for 2 turns. Has a 30% chance to activate Quick Grill as an extra attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Preparar ingredientes",
+                "description": "Ataca o inimigo com um cutelo, com 50% de chance de aplicar sangramento por 2 turnos. Tem 30% de chance de ativar Grelhado rápido como ataque extra.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Quick Grill",
-                "description": "Attacks all enemies with the Glove Oven, before absorbing some of the damage dealt as Health. When the enemy is inflicted with bleed, has a 100% chance to inflict burn for 2 turns."
+                "name": "Grelhado rápido",
+                "description": "Ataca todos os inimigos com o Forno-luva, depois absorve parte do dano causado como Vida. Quando o inimigo tem sangramento, tem 100% de chance de aplicar queimadura por 2 turnos."
             },
             "S3": {
-                "name": "Free Dinner",
-                "description": "Provides all allies with a meal, dispelling all debuffs and increasing Critical Hit Chance for 2 turns before decreasing skill cooldown by 1 turn. Grants an extra turn to the caster. Every time an enemy dies, the cooldown for this skill decreases by 1 turn."
+                "name": "Jantar grátis",
+                "description": "Oferece uma refeição a todos os aliados, dissipando todos os efeitos negativos e aumentando a Chance de Crítico por 2 turnos, depois diminui a recarga das habilidades em 1 turno. Concede um turno extra ao conjurador. Cada vez que um inimigo morre, a recarga desta habilidade diminui em 1 turno."
             }
         }
     },
@@ -1930,17 +1930,17 @@
         "_name": "Dizzy",
         "skills": {
             "S1": {
-                "name": "I Used This to Catch Fish",
-                "description": "Attacks all enemies with the power of magic and has a 25% chance to inflict stun for 1 turn. Damage dealt increases when the target has a debuff."
+                "name": "Eu usava isto para pescar",
+                "description": "Ataca todos os inimigos com o poder da magia e tem 25% de chance de atordoar por 1 turno. O dano causado aumenta quando o alvo tem um efeito negativo."
             },
             "S2": {
-                "name": "Gamma Ray",
-                "description": "Attacks all enemies with a powerful ray, extending the duration of debuffs by 1 turn, except for those which prevent the enemy from moving, before decreasing Combat Readiness by 50%."
+                "name": "Raio gama",
+                "description": "Ataca todos os inimigos com um raio poderoso, estendendo em 1 turno a duração dos efeitos negativos, exceto os que impedem a movimentação, depois diminui a Prontidão de Combate em 50%."
             },
             "S3": {
-                "name": "Emotional Gamma Ray",
-                "description": "Unleashes a giant explosion to attack all enemies. The attack misses, but inflicts decreased Speed, decreased Attack, and decreased Hit Chance on all enemies for 2 turns regardless of whether the attack hits.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Raio gama emocional",
+                "description": "Libera uma explosão gigante para atacar todos os inimigos. O ataque erra, mas aplica Diminuir Velocidade, Diminuir Ataque e Diminuir Precisão a todos os inimigos por 2 turnos, independentemente de o ataque acertar.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -1948,17 +1948,17 @@
         "_name": "Doll Maker Pearlhorizon",
         "skills": {
             "S1": {
-                "name": "Chaos Strike",
-                "description": "Claws the enemy, with a 50% chance to decrease hit Chance for 2 turns."
+                "name": "Golpe do caos",
+                "description": "Arranha o inimigo, com 50% de chance de diminuir a Precisão por 2 turnos."
             },
             "S2": {
-                "name": "Hypnosis",
-                "description": "Attacks all enemies, with a 50% chance to put them to sleep for 1 turn. Increases Combat Readiness of the caster by 10% per sleep debuff inflicted."
+                "name": "Hipnose",
+                "description": "Ataca todos os inimigos, com 50% de chance de fazê-los dormir por 1 turno. Aumenta a Prontidão de Combate do conjurador em 10% para cada sono aplicado."
             },
             "S3": {
-                "name": "Endless Nightmare",
-                "description": "Attacks the enemy and stuns them for 1 turn. When the enemy is asleep, decrease Defense for 2 turns and deals additional damage equivalent to 30% of the target's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Pesadelo sem fim",
+                "description": "Ataca o inimigo e o atordoa por 1 turno. Quando o inimigo está dormindo, diminui a Defesa por 2 turnos e causa dano adicional equivalente a 30% da Vida máxima do alvo.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },

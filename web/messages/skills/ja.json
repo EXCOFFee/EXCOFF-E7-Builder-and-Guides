@@ -1804,17 +1804,17 @@
         "_name": "Death Dealer Ray",
         "skills": {
             "S1": {
-                "name": "Clinical Trial",
-                "description": "Attacks the enemy by throwing an experimental drug at them and has a 75% chance to put them to sleep for 1 turn. A successful attack deals additional damage equivalent to 40% of injuries inflicted on the target. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "臨床試験",
+                "description": "実験薬を投げて敵を攻撃し、75%の確率で1ターンの間睡眠状態にする。攻撃が成功すると、対象に与えた負傷の40%に相当する追加ダメージを与える。このスキルでは協攻が発動しない。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Anatomical Mutation",
-                "description": "Grants increased Effectiveness and pestilence to all allies for 2 turns and increases Combat Readiness by 20%."
+                "name": "解剖学的変異",
+                "description": "味方全員に2ターンの間効果命中アップと疫病を付与し、行動ゲージを20%増加させる。"
             },
             "S3": {
-                "name": "Cloud of Death",
-                "description": "Releases a miasma of fatal poison, dispelling two buffs from all enemies and a 100% chance to inflict sleep for 1 turn and venom for 2 turns. Grants an extra turn."
+                "name": "死の雲",
+                "description": "致命的な毒気を放ち、敵全体の強化効果を二つ解除し、100%の確率で1ターンの間睡眠を、2ターンの間猛毒を付与する。追加ターンを得る。"
             }
         }
     },
@@ -1822,17 +1822,17 @@
         "_name": "Desert Jewel Basar",
         "skills": {
             "S1": {
-                "name": "Desert Wind",
-                "description": "Attacks the enemy with wind and has a 35% chance to inflict stun for 1 turn, before recovering Health of all allies proportional to the target's max Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "砂漠の風",
+                "description": "風で敵を攻撃し、35%の確率で1ターンの間気絶させた後、対象の最大HPに比例して味方全員のHPを回復する。",
+                "soulburn_effect": "回復量がアップする。"
             },
             "S2": {
-                "name": "Desert Cycle",
-                "description": "When attacked, grants 20% damage reduction. After an enemy uses a skill, when granted a barrier, activates Desert Storm. Desert Storm: Inflicts barrier inversion on all enemies before decreasing Combat Readiness by 20%. Increases Combat Readiness of the caster by 20%."
+                "name": "砂漠の循環",
+                "description": "攻撃されると、ダメージを20%軽減する。敵がスキルを使用した後、バリアがあれば砂漠の嵐を発動する。砂漠の嵐：敵全体にバリア反転を付与した後、行動ゲージを20%減少させる。発動者の行動ゲージを20%増加させる。"
             },
             "S3": {
-                "name": "Bastet Roar",
-                "description": "Bastet roars, dispelling all debuffs from all allies and granting immunity for 2 turns before increasing Combat Readiness by 30%."
+                "name": "バステトの咆哮",
+                "description": "バステトが咆哮し、味方全員の弱体効果をすべて解除し、2ターンの間免疫を付与した後、行動ゲージを30%増加させる。"
             }
         }
     },
@@ -1840,17 +1840,17 @@
         "_name": "Designer Lilibet",
         "skills": {
             "S1": {
-                "name": "Slice to Pieces",
-                "description": "Attacks the enemy with scissors, with a 75% chance to decrease Defense for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense for 2 turns."
+                "name": "切り刻む",
+                "description": "ハサミで敵を攻撃し、75%の確率で1ターンの間防御力をダウンさせる。発動者の防御力に比例して与ダメージがアップする。",
+                "soulburn_effect": "効果発動確率が100%にアップし、2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Emergency Stitching",
-                "description": "Starts the first battle with 50 Fighting Spirit. When an enemy's turn ends, gains 10 Fighting Spirit for each debuff inflicted on an ally, and when the caster's Fighting Spirit is full, consumes all Fighting Spirit to dispel all debuffs from the caster and grants increased Defense and immunity for 1 turn before increasing Combat Readiness by 40%."
+                "name": "緊急縫製",
+                "description": "最初のバトルを闘志50で開始する。敵のターンが終わると、味方に付与された弱体効果一つにつき闘志を10獲得し、発動者の闘志が満タンになると、闘志をすべて消費して発動者の弱体効果をすべて解除し、1ターンの間防御力アップと免疫を付与した後、行動ゲージを40%増加させる。"
             },
             "S3": {
-                "name": "Model Disqualification",
-                "description": "Decreases debuff durations of all allies by 2 turns and gets on stage to attack all enemies, increasing their skill cooldown by 1 turn, before increasing Combat Readiness of all allies by 15%. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's Defense."
+                "name": "モデル失格",
+                "description": "味方全員の弱体効果の持続時間を2ターン減少させ、ステージに上がって敵全体を攻撃し、スキルのクールタイムを1ターン増加させた後、味方全員の行動ゲージを15%増加させる。対象の防御力を50%貫通する。発動者の防御力に比例して与ダメージがアップする。"
             }
         }
     },
@@ -1858,17 +1858,17 @@
         "_name": "Destina",
         "skills": {
             "S1": {
-                "name": "Key to an Oath",
-                "description": "Attacks the enemy with a staff, before recovering Health of the ally with the lowest Health proportional to the caster's max Health.",
-                "soulburn_effect": "After attacking, greatly heals all allies. Does not trigger a Dual Attack."
+                "name": "誓いの鍵",
+                "description": "杖で敵を攻撃した後、発動者の最大HPに比例してHPが最も低い味方のHPを回復する。",
+                "soulburn_effect": "攻撃後、味方全員を大きく回復する。協攻が発動しない。"
             },
             "S2": {
-                "name": "Regen",
-                "description": "Blesses an ally, dispelling two debuffs and recovering Health proportional to the caster's max Health before increasing Combat Readiness by 30%."
+                "name": "再生",
+                "description": "味方一人を祝福し、弱体効果を二つ解除し、発動者の最大HPに比例してHPを回復した後、行動ゲージを30%増加させる。"
             },
             "S3": {
-                "name": "Destina's Grace",
-                "description": "Through the benediction of a Spirit Lord, revives all dead allies to 30% Health. For allies that are not dead, dispels all debuffs before recovering Health proportional to the caster's max Health. At the start of the first battle, grants Spirit's Blessing to the caster for 3 turns."
+                "name": "デスティナの恩寵",
+                "description": "精霊王の祝福により、死亡した味方全員をHP30%で復活させる。死亡していない味方は、弱体効果をすべて解除した後、発動者の最大HPに比例してHPを回復する。最初のバトル開始時、発動者に3ターンの間精霊の祝福を付与する。"
             }
         }
     },
@@ -1876,17 +1876,17 @@
         "_name": "Diene",
         "skills": {
             "S1": {
-                "name": "Light of Judgment",
-                "description": "Attacks the enemy with a ray of brilliant light, before increasing Combat Readiness of the caster by 15%. When the caster has a buff, doubles the effect."
+                "name": "審判の光",
+                "description": "輝く光線で敵を攻撃した後、発動者の行動ゲージを15%増加させる。発動者に強化効果があれば、効果が倍になる。"
             },
             "S2": {
-                "name": "Blessings of the Goddess",
-                "description": "With the Blessings of the Goddess, grants increased Attack and a barrier (proportional to the target's max Health) to all allies for 2 turns before increasing Combat Readiness by 15%."
+                "name": "女神の祝福",
+                "description": "女神の祝福により、味方全員に2ターンの間攻撃力アップとバリア（対象の最大HPに比例）を付与した後、行動ゲージを15%増加させる。"
             },
             "S3": {
-                "name": "Saint's Prayer",
-                "description": "Through a miracle of the Goddess, dispels all debuffs from all allies before granting increased Defense and increased Penetration Resistance for 3 turns, and increases Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "聖女の祈り",
+                "description": "女神の奇跡により、味方全員の弱体効果をすべて解除した後、3ターンの間防御力アップと貫通抵抗アップを付与し、発動者の行動ゲージを50%増加させる。",
+                "soulburn_effect": "すべてのスキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -1894,17 +1894,17 @@
         "_name": "Dingo",
         "skills": {
             "S1": {
-                "name": "Prep Ingredients",
-                "description": "Attacks the enemy with a cleaver, with a 50% chance to inflict bleeding for 2 turns. Has a 30% chance to activate Quick Grill as an extra attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "下ごしらえ",
+                "description": "包丁で敵を攻撃し、50%の確率で2ターンの間出血を付与する。30%の確率で追加攻撃として早焼きを発動する。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Quick Grill",
-                "description": "Attacks all enemies with the Glove Oven, before absorbing some of the damage dealt as Health. When the enemy is inflicted with bleed, has a 100% chance to inflict burn for 2 turns."
+                "name": "早焼き",
+                "description": "グローブオーブンで敵全体を攻撃した後、与ダメージの一部をHPとして吸収する。敵が出血状態なら、100%の確率で2ターンの間火傷を付与する。"
             },
             "S3": {
-                "name": "Free Dinner",
-                "description": "Provides all allies with a meal, dispelling all debuffs and increasing Critical Hit Chance for 2 turns before decreasing skill cooldown by 1 turn. Grants an extra turn to the caster. Every time an enemy dies, the cooldown for this skill decreases by 1 turn."
+                "name": "無料のディナー",
+                "description": "味方全員に食事を振る舞い、弱体効果をすべて解除し、2ターンの間クリティカル率をアップさせた後、スキルのクールタイムを1ターン短縮する。発動者は追加ターンを得る。敵が死亡するたびに、このスキルのクールタイムが1ターン短縮される。"
             }
         }
     },
@@ -1930,17 +1930,17 @@
         "_name": "Dizzy",
         "skills": {
             "S1": {
-                "name": "I Used This to Catch Fish",
-                "description": "Attacks all enemies with the power of magic and has a 25% chance to inflict stun for 1 turn. Damage dealt increases when the target has a debuff."
+                "name": "これで魚を獲っていました",
+                "description": "魔法の力で敵全体を攻撃し、25%の確率で1ターンの間気絶させる。対象に弱体効果があれば与ダメージがアップする。"
             },
             "S2": {
-                "name": "Gamma Ray",
-                "description": "Attacks all enemies with a powerful ray, extending the duration of debuffs by 1 turn, except for those which prevent the enemy from moving, before decreasing Combat Readiness by 50%."
+                "name": "ガンマレイ",
+                "description": "強力な光線で敵全体を攻撃し、行動を妨げる効果を除く弱体効果の持続時間を1ターン延長した後、行動ゲージを50%減少させる。"
             },
             "S3": {
-                "name": "Emotional Gamma Ray",
-                "description": "Unleashes a giant explosion to attack all enemies. The attack misses, but inflicts decreased Speed, decreased Attack, and decreased Hit Chance on all enemies for 2 turns regardless of whether the attack hits.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "感情的なガンマレイ",
+                "description": "巨大な爆発を起こして敵全体を攻撃する。攻撃は外れるが、攻撃の命中に関係なく、敵全体に2ターンの間スピードダウン、攻撃力ダウン、命中率ダウンを付与する。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -1948,17 +1948,17 @@
         "_name": "Doll Maker Pearlhorizon",
         "skills": {
             "S1": {
-                "name": "Chaos Strike",
-                "description": "Claws the enemy, with a 50% chance to decrease hit Chance for 2 turns."
+                "name": "混沌の一撃",
+                "description": "敵を引っかき、50%の確率で2ターンの間命中率をダウンさせる。"
             },
             "S2": {
-                "name": "Hypnosis",
-                "description": "Attacks all enemies, with a 50% chance to put them to sleep for 1 turn. Increases Combat Readiness of the caster by 10% per sleep debuff inflicted."
+                "name": "催眠",
+                "description": "敵全体を攻撃し、50%の確率で1ターンの間睡眠状態にする。付与した睡眠一つにつき、発動者の行動ゲージを10%増加させる。"
             },
             "S3": {
-                "name": "Endless Nightmare",
-                "description": "Attacks the enemy and stuns them for 1 turn. When the enemy is asleep, decrease Defense for 2 turns and deals additional damage equivalent to 30% of the target's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "終わらない悪夢",
+                "description": "敵を攻撃し、1ターンの間気絶させる。敵が睡眠状態なら、2ターンの間防御力をダウンさせ、対象の最大HPの30%に相当する追加ダメージを与える。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },

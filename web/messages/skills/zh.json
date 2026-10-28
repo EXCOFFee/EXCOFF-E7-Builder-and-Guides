@@ -1804,17 +1804,17 @@
         "_name": "Death Dealer Ray",
         "skills": {
             "S1": {
-                "name": "Clinical Trial",
-                "description": "Attacks the enemy by throwing an experimental drug at them and has a 75% chance to put them to sleep for 1 turn. A successful attack deals additional damage equivalent to 40% of injuries inflicted on the target. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "临床试验",
+                "description": "投掷实验药物攻击敌人，有75%的几率使其睡眠1回合。攻击成功时，追加造成相当于目标负伤40%的伤害。此技能不会触发协攻。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Anatomical Mutation",
-                "description": "Grants increased Effectiveness and pestilence to all allies for 2 turns and increases Combat Readiness by 20%."
+                "name": "解剖变异",
+                "description": "为所有友军施加2回合效果命中提升与瘟疫，并提升20%行动值。"
             },
             "S3": {
-                "name": "Cloud of Death",
-                "description": "Releases a miasma of fatal poison, dispelling two buffs from all enemies and a 100% chance to inflict sleep for 1 turn and venom for 2 turns. Grants an extra turn."
+                "name": "死亡之云",
+                "description": "释放致命毒雾，解除所有敌人的两个强化效果，并有100%的几率施加1回合睡眠与2回合剧毒。获得额外回合。"
             }
         }
     },
@@ -1822,17 +1822,17 @@
         "_name": "Desert Jewel Basar",
         "skills": {
             "S1": {
-                "name": "Desert Wind",
-                "description": "Attacks the enemy with wind and has a 35% chance to inflict stun for 1 turn, before recovering Health of all allies proportional to the target's max Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "沙漠之风",
+                "description": "以风攻击敌人，有35%的几率使其眩晕1回合，然后按目标的最大生命值比例恢复所有友军的生命值。",
+                "soulburn_effect": "提升恢复量。"
             },
             "S2": {
-                "name": "Desert Cycle",
-                "description": "When attacked, grants 20% damage reduction. After an enemy uses a skill, when granted a barrier, activates Desert Storm. Desert Storm: Inflicts barrier inversion on all enemies before decreasing Combat Readiness by 20%. Increases Combat Readiness of the caster by 20%."
+                "name": "沙漠循环",
+                "description": "受到攻击时，伤害降低20%。敌人使用技能后，若其拥有屏障，发动沙漠风暴。沙漠风暴：对所有敌人施加屏障反转，然后降低20%行动值。使施放者的行动值提升20%。"
             },
             "S3": {
-                "name": "Bastet Roar",
-                "description": "Bastet roars, dispelling all debuffs from all allies and granting immunity for 2 turns before increasing Combat Readiness by 30%."
+                "name": "芭丝特咆哮",
+                "description": "芭丝特咆哮，解除所有友军的所有弱化效果，并施加2回合免疫，然后提升30%行动值。"
             }
         }
     },
@@ -1840,17 +1840,17 @@
         "_name": "Designer Lilibet",
         "skills": {
             "S1": {
-                "name": "Slice to Pieces",
-                "description": "Attacks the enemy with scissors, with a 75% chance to decrease Defense for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense for 2 turns."
+                "name": "剪成碎片",
+                "description": "以剪刀攻击敌人，有75%的几率降低防御力1回合。造成的伤害按施放者的防御力比例提升。",
+                "soulburn_effect": "效果几率提升至100%，并降低防御力2回合。"
             },
             "S2": {
-                "name": "Emergency Stitching",
-                "description": "Starts the first battle with 50 Fighting Spirit. When an enemy's turn ends, gains 10 Fighting Spirit for each debuff inflicted on an ally, and when the caster's Fighting Spirit is full, consumes all Fighting Spirit to dispel all debuffs from the caster and grants increased Defense and immunity for 1 turn before increasing Combat Readiness by 40%."
+                "name": "紧急缝补",
+                "description": "首场战斗以50斗志开始。敌人回合结束时，友军身上每有一个弱化效果，获得10斗志；施放者斗志已满时，消耗全部斗志解除施放者的所有弱化效果，并施加1回合防御力提升与免疫，然后提升40%行动值。"
             },
             "S3": {
-                "name": "Model Disqualification",
-                "description": "Decreases debuff durations of all allies by 2 turns and gets on stage to attack all enemies, increasing their skill cooldown by 1 turn, before increasing Combat Readiness of all allies by 15%. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's Defense."
+                "name": "模特失格",
+                "description": "使所有友军的弱化效果持续时间减少2回合，登上舞台攻击所有敌人，使其技能冷却时间增加1回合，然后使所有友军的行动值提升15%。穿透目标50%的防御力。造成的伤害按施放者的防御力比例提升。"
             }
         }
     },
@@ -1858,17 +1858,17 @@
         "_name": "Destina",
         "skills": {
             "S1": {
-                "name": "Key to an Oath",
-                "description": "Attacks the enemy with a staff, before recovering Health of the ally with the lowest Health proportional to the caster's max Health.",
-                "soulburn_effect": "After attacking, greatly heals all allies. Does not trigger a Dual Attack."
+                "name": "誓约之钥",
+                "description": "以法杖攻击敌人，然后按施放者的最大生命值比例恢复生命值最低的友军的生命值。",
+                "soulburn_effect": "攻击后，大幅治疗所有友军。不会触发协攻。"
             },
             "S2": {
-                "name": "Regen",
-                "description": "Blesses an ally, dispelling two debuffs and recovering Health proportional to the caster's max Health before increasing Combat Readiness by 30%."
+                "name": "再生",
+                "description": "祝福一名友军，解除两个弱化效果，并按施放者的最大生命值比例恢复生命值，然后提升30%行动值。"
             },
             "S3": {
-                "name": "Destina's Grace",
-                "description": "Through the benediction of a Spirit Lord, revives all dead allies to 30% Health. For allies that are not dead, dispels all debuffs before recovering Health proportional to the caster's max Health. At the start of the first battle, grants Spirit's Blessing to the caster for 3 turns."
+                "name": "迪丝蒂娜的恩宠",
+                "description": "借由精灵王的祝福，以30%生命值复活所有阵亡友军。对于未阵亡的友军，解除所有弱化效果，然后按施放者的最大生命值比例恢复生命值。首场战斗开始时，为施放者施加3回合精灵祝福。"
             }
         }
     },
@@ -1876,17 +1876,17 @@
         "_name": "Diene",
         "skills": {
             "S1": {
-                "name": "Light of Judgment",
-                "description": "Attacks the enemy with a ray of brilliant light, before increasing Combat Readiness of the caster by 15%. When the caster has a buff, doubles the effect."
+                "name": "审判之光",
+                "description": "以璀璨光束攻击敌人，然后使施放者的行动值提升15%。施放者拥有强化效果时，效果翻倍。"
             },
             "S2": {
-                "name": "Blessings of the Goddess",
-                "description": "With the Blessings of the Goddess, grants increased Attack and a barrier (proportional to the target's max Health) to all allies for 2 turns before increasing Combat Readiness by 15%."
+                "name": "女神的祝福",
+                "description": "借由女神的祝福，为所有友军施加2回合攻击力提升与屏障（与目标的最大生命值成比例），然后提升15%行动值。"
             },
             "S3": {
-                "name": "Saint's Prayer",
-                "description": "Through a miracle of the Goddess, dispels all debuffs from all allies before granting increased Defense and increased Penetration Resistance for 3 turns, and increases Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "圣女的祈祷",
+                "description": "借由女神的奇迹，解除所有友军的所有弱化效果，然后施加3回合防御力提升与穿透抵抗提升，并使施放者的行动值提升50%。",
+                "soulburn_effect": "所有技能冷却时间减少2回合。"
             }
         }
     },
@@ -1894,17 +1894,17 @@
         "_name": "Dingo",
         "skills": {
             "S1": {
-                "name": "Prep Ingredients",
-                "description": "Attacks the enemy with a cleaver, with a 50% chance to inflict bleeding for 2 turns. Has a 30% chance to activate Quick Grill as an extra attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "备料",
+                "description": "以菜刀攻击敌人，有50%的几率施加2回合出血。有30%的几率以追加攻击发动快速烧烤。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Quick Grill",
-                "description": "Attacks all enemies with the Glove Oven, before absorbing some of the damage dealt as Health. When the enemy is inflicted with bleed, has a 100% chance to inflict burn for 2 turns."
+                "name": "快速烧烤",
+                "description": "以手套烤箱攻击所有敌人，然后将部分造成的伤害吸收为生命值。敌人处于出血状态时，有100%的几率施加2回合灼伤。"
             },
             "S3": {
-                "name": "Free Dinner",
-                "description": "Provides all allies with a meal, dispelling all debuffs and increasing Critical Hit Chance for 2 turns before decreasing skill cooldown by 1 turn. Grants an extra turn to the caster. Every time an enemy dies, the cooldown for this skill decreases by 1 turn."
+                "name": "免费晚餐",
+                "description": "为所有友军提供餐点，解除所有弱化效果，并提升暴击率2回合，然后使技能冷却时间减少1回合。施放者获得额外回合。每当敌人阵亡时，此技能的冷却时间减少1回合。"
             }
         }
     },
@@ -1930,17 +1930,17 @@
         "_name": "Dizzy",
         "skills": {
             "S1": {
-                "name": "I Used This to Catch Fish",
-                "description": "Attacks all enemies with the power of magic and has a 25% chance to inflict stun for 1 turn. Damage dealt increases when the target has a debuff."
+                "name": "我用这个抓过鱼",
+                "description": "以魔法之力攻击所有敌人，有25%的几率使其眩晕1回合。目标有弱化效果时，提升造成的伤害。"
             },
             "S2": {
-                "name": "Gamma Ray",
-                "description": "Attacks all enemies with a powerful ray, extending the duration of debuffs by 1 turn, except for those which prevent the enemy from moving, before decreasing Combat Readiness by 50%."
+                "name": "伽马射线",
+                "description": "以强力射线攻击所有敌人，使妨碍行动以外的弱化效果持续时间延长1回合，然后降低50%行动值。"
             },
             "S3": {
-                "name": "Emotional Gamma Ray",
-                "description": "Unleashes a giant explosion to attack all enemies. The attack misses, but inflicts decreased Speed, decreased Attack, and decreased Hit Chance on all enemies for 2 turns regardless of whether the attack hits.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "情绪化伽马射线",
+                "description": "引发巨大爆炸攻击所有敌人。攻击未命中，但无论攻击是否命中，都会对所有敌人施加2回合速度降低、攻击力降低与命中率降低。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -1948,17 +1948,17 @@
         "_name": "Doll Maker Pearlhorizon",
         "skills": {
             "S1": {
-                "name": "Chaos Strike",
-                "description": "Claws the enemy, with a 50% chance to decrease hit Chance for 2 turns."
+                "name": "混沌一击",
+                "description": "抓击敌人，有50%的几率降低命中率2回合。"
             },
             "S2": {
-                "name": "Hypnosis",
-                "description": "Attacks all enemies, with a 50% chance to put them to sleep for 1 turn. Increases Combat Readiness of the caster by 10% per sleep debuff inflicted."
+                "name": "催眠",
+                "description": "攻击所有敌人，有50%的几率使其睡眠1回合。每施加一个睡眠，使施放者的行动值提升10%。"
             },
             "S3": {
-                "name": "Endless Nightmare",
-                "description": "Attacks the enemy and stuns them for 1 turn. When the enemy is asleep, decrease Defense for 2 turns and deals additional damage equivalent to 30% of the target's max Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "无尽噩梦",
+                "description": "攻击敌人，使其眩晕1回合。敌人处于睡眠状态时，降低其防御力2回合，并追加造成相当于目标最大生命值30%的伤害。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
