@@ -5870,17 +5870,17 @@
         "_name": "Specimen Sez",
         "skills": {
             "S1": {
-                "name": "Dreamy Iron Mace",
-                "description": "Attacks with an iron mace, with a 50% chance to stun for 1 turn. When the target is stunned after the attack, increases Combat Readiness of the caster by 25%. Increases Effectiveness of this attack by 50%."
+                "name": "Maça de ferro sonhadora",
+                "description": "Ataca com uma maça de ferro, com 50% de chance de atordoar por 1 turno. Se o alvo estiver atordoado após o ataque, aumenta a Prontidão de Combate do conjurador em 25%. Aumenta a Eficácia deste ataque em 50%."
             },
             "S2": {
-                "name": "Evil Claws",
-                "description": "Attacks all enemies with evil claws, with a 80% chance to stun for 1 turn, before granting increased Attack to the caster for 2 turns and increasing the caster's Combat Readiness by 50%. Increases Effectiveness of this attack by 50%.,",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Garras malignas",
+                "description": "Ataca todos os inimigos com garras malignas, com 80% de chance de atordoar por 1 turno, depois concede Aumentar Ataque ao conjurador por 2 turnos e aumenta a Prontidão de Combate do conjurador em 50%. Aumenta a Eficácia deste ataque em 50%.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Light Storm",
-                "description": "Attacks the enemy with a light storm, and absorbs some of the damage dealt as Health. When the enemy is defeated, inflicts extinction and resets cooldown of this skill. Penetrates the target's Defense by 30%, but when the enemy is inflicted with stun, penetrates by 100%. When this skill is not on cooldown, increases Evasion by 50%."
+                "name": "Tempestade de luz",
+                "description": "Ataca o inimigo com uma tempestade de luz e absorve parte do dano causado como Vida. Ao derrotar o inimigo, aplica extinção e reinicia a recarga desta habilidade. Penetra 30% da Defesa do alvo, mas, quando o inimigo está atordoado, penetra 100%. Quando esta habilidade não está em recarga, aumenta a Evasão em 50%."
             }
         }
     },
@@ -5888,17 +5888,17 @@
         "_name": "Specter Tenebria",
         "skills": {
             "S1": {
-                "name": "Poison Blast",
-                "description": "Attacks the enemy with an explosion of poison energy and has a 70% chance to inflict poison for 2 turns. This skill cannot trigger a counterattack. When Endless Nightmare is on cooldown, attacks two enemies including the target.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Explosão venenosa",
+                "description": "Ataca o inimigo com uma explosão de energia venenosa e tem 70% de chance de aplicar veneno por 2 turnos. Esta habilidade não pode ativar contra-ataques. Quando Pesadelo sem fim está em recarga, ataca dois inimigos, incluindo o alvo.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Nightmare Illusion",
-                "description": "Illusion will remain throughout the battle. Increases Attack and Defense of the caster by 10% every time somebody dies. Effect can only stack up to 5 times."
+                "name": "Ilusão de pesadelo",
+                "description": "Ilusão permanece durante toda a batalha. Aumenta o Ataque e a Defesa do conjurador em 10% cada vez que alguém morre. O efeito acumula até 5 vezes."
             },
             "S3": {
-                "name": "Endless Nightmare",
-                "description": "Attacks the enemy with a nightmare crystal, inflicting stun for 1 turn. When the enemy is defeated, decreases Combat Readiness of all remaining enemies by 50%. Damage dealt increases proportional to the number of debuffs inflicted on the target."
+                "name": "Pesadelo sem fim",
+                "description": "Ataca o inimigo com um cristal de pesadelo, atordoando-o por 1 turno. Ao derrotar o inimigo, diminui a Prontidão de Combate de todos os inimigos restantes em 50%. O dano causado aumenta proporcionalmente ao número de efeitos negativos aplicados ao alvo."
             }
         }
     },
@@ -5906,17 +5906,17 @@
         "_name": "Spirit Eye Celine",
         "skills": {
             "S1": {
-                "name": "Mighty Strike",
-                "description": "Attacks the enemy with a sheath. When this skill is used, if it was not triggered by a Dual Attack and the caster has a buff, uses Nimble Sword instead. Nimble Sword: After granting increased Attack to the caster for 1 turn, swiftly attacks the enemy, and absorbs some of the damage dealt as Health. Penetrates the target's Defense by 50%. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Golpe poderoso",
+                "description": "Ataca o inimigo com uma bainha. Ao usar esta habilidade, se não tiver sido ativada por Ataque duplo e o conjurador tiver um efeito positivo, usa Espada ágil no lugar. Espada ágil: após conceder Aumentar Ataque ao conjurador por 1 turno, ataca o inimigo rapidamente e absorve parte do dano causado como Vida. Penetra 50% da Defesa do alvo. Esta habilidade não ativa Ataque duplo.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Sixth Sense",
-                "description": "When attacked, damage suffered in one attack does not exceed 51% of max Health. When someone dies, decreases skill cooldowns by 1 turn and gains 5 Soul. Effects upon death are only activated upon a Hero's death."
+                "name": "Sexto sentido",
+                "description": "Ao ser atacado, o dano sofrido em um único ataque não ultrapassa 51% da Vida máxima. Quando alguém morre, diminui as recargas de habilidades em 1 turno e ganha 5 de Alma. Os efeitos ao morrer só são ativados com a morte de um herói."
             },
             "S3": {
-                "name": "Spirit Gate: Burning Possession",
-                "description": "Opens the gate of the spirits to revive all dead allies. Dispels all debuffs from all allies before granting immortality for 1 turn, and grants possession to the caster for 3 turns."
+                "name": "Portal espiritual: possessão ardente",
+                "description": "Abre o portal dos espíritos para reviver todos os aliados mortos. Dissipa todos os efeitos negativos de todos os aliados, depois concede imortalidade por 1 turno e concede possessão ao conjurador por 3 turnos."
             }
         }
     },
@@ -5924,17 +5924,17 @@
         "_name": "Stark",
         "skills": {
             "S1": {
-                "name": "Vanguard's Strike",
-                "description": "Attacks the enemy with an axe and inflicts provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "Golpe da vanguarda",
+                "description": "Ataca o inimigo com um machado e aplica provocação por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Master's Lessons",
-                "description": "When an ally is attacked, gains 10 Fighting Spirit, and when Fighting Spirit is full, activates Warrior's Strike on the attacker. Warrior's Strike (consumes 100 Fighting Spirit): Attacks the enemy consecutively, and increases Combat Readiness of the caster by 50% before resetting cooldown of Lightning Strike. Damage dealt increases proportional to the caster's max Health."
+                "name": "Lições do mestre",
+                "description": "Quando um aliado é atacado, ganha 10 de Espírito de luta e, quando o Espírito de luta está cheio, ativa Golpe do guerreiro contra o atacante. Golpe do guerreiro (consome 100 de Espírito de luta): ataca o inimigo consecutivamente e aumenta a Prontidão de Combate do conjurador em 50%, depois reinicia a recarga de Golpe relâmpago. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Lightning Strike",
-                "description": "Attacks the enemy by slamming down with an axe. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's max Health. Damage dealt increases every time this skill is used, stacking up to 3 times.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Golpe relâmpago",
+                "description": "Ataca o inimigo golpeando de cima com um machado. Penetra 50% da Defesa do alvo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. O dano causado aumenta cada vez que esta habilidade é usada, acumulando até 3 vezes.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -5961,16 +5961,16 @@
         "skills": {
             "S1": {
                 "name": "Lan Na Zha",
-                "description": "Attacks the enemy with a spear, decreasing Combat Readiness by 20%. A successful attack always results in a critical hit. When this skill is used, if it was not triggered by a Dual Attack and the caster is granted possession, activates Roaring Spiritfall instead. Roaring Spiritfall: Increases Attack of the caster for 2 turns, before attacking the enemy by striking from above. A successful attack always results in a critical hit. This skill does not trigger a Dual Attack."
+                "description": "Ataca o inimigo com uma lança, diminuindo a Prontidão de Combate em 20%. Um ataque bem-sucedido sempre resulta em acerto crítico. Ao usar esta habilidade, se não tiver sido ativada por Ataque duplo e o conjurador tiver possessão, ativa Queda espiritual estrondosa no lugar. Queda espiritual estrondosa: aumenta o Ataque do conjurador por 2 turnos, depois ataca o inimigo golpeando de cima. Um ataque bem-sucedido sempre resulta em acerto crítico. Esta habilidade não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Spirit Invocation",
-                "description": "Starts the first battle with 60 Fighting Spirit. When Combat Readiness of an enemy is decreased, gains Fighting Spirit equal to the amount of Combat Readiness reduced, and at the end of a turn, when Fighting Spirit is full, consumes all Fighting Spirit, increasing Combat Readiness of the caster by 100% and granting possession for 2 turns."
+                "name": "Invocação espiritual",
+                "description": "Começa a primeira batalha com 60 de Espírito de luta. Quando a Prontidão de Combate de um inimigo diminui, ganha Espírito de luta igual à quantidade reduzida e, no fim de um turno, quando o Espírito de luta está cheio, consome todo o Espírito de luta, aumentando a Prontidão de Combate do conjurador em 100% e concedendo possessão por 2 turnos."
             },
             "S3": {
-                "name": "Azure Phantom",
-                "description": "Unleashes power, dispelling two buffs from all enemies and a 85% chance to decrease Defense for 2 turns, before granting invincibility to the caster for 1 turn. When the caster is granted possession, extends buff durations of the caster by 1 turn and grants an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Fantasma azul",
+                "description": "Libera poder, dissipando dois efeitos positivos de todos os inimigos e com 85% de chance diminui a Defesa por 2 turnos, depois concede invencibilidade ao conjurador por 1 turno. Quando o conjurador tem possessão, estende em 1 turno a duração dos efeitos positivos do conjurador e concede um turno extra.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -5978,17 +5978,17 @@
         "_name": "Summer Break Charlotte",
         "skills": {
             "S1": {
-                "name": "Caught A Big One",
-                "description": "Attacks the enemy with two meaty fish and has a 75% chance to decrease Defense for 1 turn. When activated as a Dual Attack, this attack changes into an attack that targets all enemies. The changed attack does not trigger a counterattack, and increases Combat Readiness of all allies by 20%.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack or counterattack."
+                "name": "Peguei um dos grandes",
+                "description": "Ataca o inimigo com dois peixes carnudos e tem 75% de chance de diminuir a Defesa por 1 turno. Quando ativada como Ataque duplo, passa a mirar todos os inimigos. O ataque alterado não ativa contra-ataques e aumenta a Prontidão de Combate de todos os aliados em 20%.",
+                "soulburn_effect": "Ataca todos os inimigos. Este ataque não ativa Ataque duplo nem contra-ataque."
             },
             "S2": {
-                "name": "An Adult's Responsibility",
-                "description": "Increases Critical Hit Chance by 30%. At the start of the first battle, gains 60 Fighting Spirit and grants enhanced Dual Attack to the caster. At the end of every 4 ally turns, grants enhanced Dual Attack to the caster."
+                "name": "A responsabilidade de um adulto",
+                "description": "Aumenta a Chance de Crítico em 30%. No início da primeira batalha, ganha 60 de Espírito de luta e concede Ataque duplo aprimorado ao conjurador. A cada 4 turnos aliados concluídos, concede Ataque duplo aprimorado ao conjurador."
             },
             "S3": {
-                "name": "Whale, Hello There",
-                "description": "Dispels all debuffs from the caster, and attacks the enemy with a pod of killer whales, stunning for 1 turn, before increasing Speed of all allies for 2 turns. Penetrates the target's Defense by 50%."
+                "name": "Olá, baleia",
+                "description": "Dissipa todos os efeitos negativos do conjurador e ataca o inimigo com um grupo de orcas, atordoando por 1 turno, depois aumenta a Velocidade de todos os aliados por 2 turnos. Penetra 50% da Defesa do alvo."
             }
         }
     },
@@ -5996,17 +5996,17 @@
         "_name": "Summer's Disciple Alexa",
         "skills": {
             "S1": {
-                "name": "Fell",
-                "description": "Attacks the enemy by cutting with dual-wielded swords. A critical hit will activate Lightning Bolt as an extra attack. Lightning Bolt can only be activated once per turn of the caster. Lightning Bolt (Acquire 1 Soul): Rapidly attacks the enemy by cutting with dual-wielded swords."
+                "name": "Abater",
+                "description": "Ataca o inimigo cortando com duas espadas. Um acerto crítico ativa Relâmpago como ataque extra. Relâmpago só pode ser ativado uma vez por turno do conjurador. Relâmpago (adquire 1 Alma): ataca rapidamente o inimigo cortando com duas espadas."
             },
             "S2": {
-                "name": "Cold Edge",
-                "description": "Attacks the enemy with a cold blade, with a 100% chance to inflict two poison effects for 2 turns, and increases the caster's Combat Readiness by 30%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Lâmina fria",
+                "description": "Ataca o inimigo com uma lâmina fria, com 100% de chance de aplicar dois efeitos de veneno por 2 turnos, e aumenta a Prontidão de Combate do conjurador em 30%.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Glistening Summer Strike",
-                "description": "Attacks the enemy with a powerful spike, and increases Attack of the caster for 3 turns. Damage dealt increases proportional to the number of debuffs inflicted on the target."
+                "name": "Golpe reluzente de verão",
+                "description": "Ataca o inimigo com uma cortada poderosa e aumenta o Ataque do conjurador por 3 turnos. O dano causado aumenta proporcionalmente ao número de efeitos negativos aplicados ao alvo."
             }
         }
     },
@@ -6014,17 +6014,17 @@
         "_name": "Summertime Iseria",
         "skills": {
             "S1": {
-                "name": "Are you the Culprit?",
-                "description": "Attacks the enemy with swords, with a 75% chance each to dispel one buff twice.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Você é o culpado?",
+                "description": "Ataca o inimigo com espadas, com 75% de chance cada de dissipar um efeito positivo, duas vezes.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Suppression Attempt",
-                "description": "Attack increases by 50%. When attacking, cannot trigger a critical hit. Does not cost any Souls to activate the caster's first Soulburn. After an ally except for the caster uses an attack that targets all enemies, activates Suppress!. Can only be activated once every 3 turns. Suppress!: Increases Combat Readiness of all allies by 15% and plants a bomb on two random enemies for 2 turns."
+                "name": "Tentativa de contenção",
+                "description": "O Ataque aumenta 50%. Ao atacar, não pode causar acerto crítico. A primeira Queima de Alma do conjurador não custa Alma. Após um aliado, exceto o conjurador, usar um ataque que mira todos os inimigos, ativa Conter!. Só pode ser ativado uma vez a cada 3 turnos. Conter!: aumenta a Prontidão de Combate de todos os aliados em 15% e planta uma bomba em dois inimigos aleatórios por 2 turnos."
             },
             "S3": {
-                "name": "Sword of Flowers!",
-                "description": "Attacks all enemies with swords of flowers, decreasing Attack for 2 turns and increases Speed of the caster for 2 turns. At the end of the turn, detonates bombs inflicted on the enemy."
+                "name": "Espada das flores!",
+                "description": "Ataca todos os inimigos com espadas de flores, diminuindo o Ataque por 2 turnos, e aumenta a Velocidade do conjurador por 2 turnos. No fim do turno, detona as bombas aplicadas ao inimigo."
             }
         }
     },

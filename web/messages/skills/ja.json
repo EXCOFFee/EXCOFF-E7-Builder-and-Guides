@@ -5870,17 +5870,17 @@
         "_name": "Specimen Sez",
         "skills": {
             "S1": {
-                "name": "Dreamy Iron Mace",
-                "description": "Attacks with an iron mace, with a 50% chance to stun for 1 turn. When the target is stunned after the attack, increases Combat Readiness of the caster by 25%. Increases Effectiveness of this attack by 50%."
+                "name": "夢見る鉄棍",
+                "description": "鉄の棍棒で攻撃し、50%の確率で1ターンの間気絶させる。攻撃後、対象が気絶状態なら、発動者の行動ゲージを25%増加させる。この攻撃の効果命中が50%アップする。"
             },
             "S2": {
-                "name": "Evil Claws",
-                "description": "Attacks all enemies with evil claws, with a 80% chance to stun for 1 turn, before granting increased Attack to the caster for 2 turns and increasing the caster's Combat Readiness by 50%. Increases Effectiveness of this attack by 50%.,",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "邪悪な爪",
+                "description": "邪悪な爪で敵全体を攻撃し、80%の確率で1ターンの間気絶させた後、発動者に2ターンの間攻撃力アップを付与し、発動者の行動ゲージを50%増加させる。この攻撃の効果命中が50%アップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Light Storm",
-                "description": "Attacks the enemy with a light storm, and absorbs some of the damage dealt as Health. When the enemy is defeated, inflicts extinction and resets cooldown of this skill. Penetrates the target's Defense by 30%, but when the enemy is inflicted with stun, penetrates by 100%. When this skill is not on cooldown, increases Evasion by 50%."
+                "name": "光の嵐",
+                "description": "光の嵐で敵を攻撃し、与ダメージの一部をHPとして吸収する。敵を倒すと消滅を付与し、このスキルのクールタイムをリセットする。対象の防御力を30%貫通するが、敵が気絶状態なら100%貫通する。このスキルがクールタイム中でなければ、回避が50%アップする。"
             }
         }
     },
@@ -5888,17 +5888,17 @@
         "_name": "Specter Tenebria",
         "skills": {
             "S1": {
-                "name": "Poison Blast",
-                "description": "Attacks the enemy with an explosion of poison energy and has a 70% chance to inflict poison for 2 turns. This skill cannot trigger a counterattack. When Endless Nightmare is on cooldown, attacks two enemies including the target.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "毒の爆発",
+                "description": "毒の気の爆発で敵を攻撃し、70%の確率で2ターンの間持続ダメージを付与する。このスキルでは反撃を誘発できない。終わらない悪夢がクールタイム中なら、対象を含む敵二体を攻撃する。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Nightmare Illusion",
-                "description": "Illusion will remain throughout the battle. Increases Attack and Defense of the caster by 10% every time somebody dies. Effect can only stack up to 5 times."
+                "name": "悪夢の幻影",
+                "description": "幻影がバトル中ずっと維持される。誰かが死亡するたびに、発動者の攻撃力と防御力が10%アップする。効果は最大5回まで重複する。"
             },
             "S3": {
-                "name": "Endless Nightmare",
-                "description": "Attacks the enemy with a nightmare crystal, inflicting stun for 1 turn. When the enemy is defeated, decreases Combat Readiness of all remaining enemies by 50%. Damage dealt increases proportional to the number of debuffs inflicted on the target."
+                "name": "終わらない悪夢",
+                "description": "悪夢の結晶で敵を攻撃し、1ターンの間気絶させる。敵を倒すと、残りの敵全体の行動ゲージを50%減少させる。対象に付与された弱体効果の数に比例して与ダメージがアップする。"
             }
         }
     },
@@ -5906,17 +5906,17 @@
         "_name": "Spirit Eye Celine",
         "skills": {
             "S1": {
-                "name": "Mighty Strike",
-                "description": "Attacks the enemy with a sheath. When this skill is used, if it was not triggered by a Dual Attack and the caster has a buff, uses Nimble Sword instead. Nimble Sword: After granting increased Attack to the caster for 1 turn, swiftly attacks the enemy, and absorbs some of the damage dealt as Health. Penetrates the target's Defense by 50%. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "強力な一撃",
+                "description": "鞘で敵を攻撃する。このスキルの使用時、協攻による発動ではなく発動者に強化効果があれば、代わりに軽やかな剣を使用する。軽やかな剣：発動者に1ターンの間攻撃力アップを付与した後、素早く敵を攻撃し、与ダメージの一部をHPとして吸収する。対象の防御力を50%貫通する。このスキルでは協攻が発動しない。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Sixth Sense",
-                "description": "When attacked, damage suffered in one attack does not exceed 51% of max Health. When someone dies, decreases skill cooldowns by 1 turn and gains 5 Soul. Effects upon death are only activated upon a Hero's death."
+                "name": "第六感",
+                "description": "攻撃されたとき、一回の攻撃で受けるダメージが最大HPの51%を超えない。誰かが死亡すると、スキルのクールタイムを1ターン短縮し、ソウルを5獲得する。死亡による効果は英雄が死亡したときのみ発動する。"
             },
             "S3": {
-                "name": "Spirit Gate: Burning Possession",
-                "description": "Opens the gate of the spirits to revive all dead allies. Dispels all debuffs from all allies before granting immortality for 1 turn, and grants possession to the caster for 3 turns."
+                "name": "精霊門：炎の憑依",
+                "description": "精霊の門を開き、死亡した味方全員を復活させる。味方全員の弱体効果をすべて解除した後、1ターンの間不死を付与し、発動者に3ターンの間憑依を付与する。"
             }
         }
     },
@@ -5924,17 +5924,17 @@
         "_name": "Stark",
         "skills": {
             "S1": {
-                "name": "Vanguard's Strike",
-                "description": "Attacks the enemy with an axe and inflicts provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "先鋒の一撃",
+                "description": "斧で敵を攻撃し、1ターンの間挑発を付与する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Master's Lessons",
-                "description": "When an ally is attacked, gains 10 Fighting Spirit, and when Fighting Spirit is full, activates Warrior's Strike on the attacker. Warrior's Strike (consumes 100 Fighting Spirit): Attacks the enemy consecutively, and increases Combat Readiness of the caster by 50% before resetting cooldown of Lightning Strike. Damage dealt increases proportional to the caster's max Health."
+                "name": "師の教え",
+                "description": "味方が攻撃されると闘志を10獲得し、闘志が満タンになると攻撃者に戦士の一撃を発動する。戦士の一撃（闘志100消費）：敵を連続で攻撃し、発動者の行動ゲージを50%増加させた後、落雷撃のクールタイムをリセットする。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Lightning Strike",
-                "description": "Attacks the enemy by slamming down with an axe. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's max Health. Damage dealt increases every time this skill is used, stacking up to 3 times.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "落雷撃",
+                "description": "斧を振り下ろして敵を攻撃する。対象の防御力を50%貫通する。発動者の最大HPに比例して与ダメージがアップする。このスキルを使用するたびに与ダメージがアップし、最大3回まで重複する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -5960,17 +5960,17 @@
         "_name": "Successor Taeyou",
         "skills": {
             "S1": {
-                "name": "Lan Na Zha",
-                "description": "Attacks the enemy with a spear, decreasing Combat Readiness by 20%. A successful attack always results in a critical hit. When this skill is used, if it was not triggered by a Dual Attack and the caster is granted possession, activates Roaring Spiritfall instead. Roaring Spiritfall: Increases Attack of the caster for 2 turns, before attacking the enemy by striking from above. A successful attack always results in a critical hit. This skill does not trigger a Dual Attack."
+                "name": "ランナザ",
+                "description": "槍で敵を攻撃し、行動ゲージを20%減少させる。攻撃が成功すると必ずクリティカルが発生する。このスキルの使用時、協攻による発動ではなく発動者に憑依があれば、代わりに咆哮する霊降を発動する。咆哮する霊降：2ターンの間発動者の攻撃力をアップさせた後、上から打ち下ろして敵を攻撃する。攻撃が成功すると必ずクリティカルが発生する。このスキルでは協攻が発動しない。"
             },
             "S2": {
-                "name": "Spirit Invocation",
-                "description": "Starts the first battle with 60 Fighting Spirit. When Combat Readiness of an enemy is decreased, gains Fighting Spirit equal to the amount of Combat Readiness reduced, and at the end of a turn, when Fighting Spirit is full, consumes all Fighting Spirit, increasing Combat Readiness of the caster by 100% and granting possession for 2 turns."
+                "name": "精霊降臨",
+                "description": "最初のバトルを闘志60で開始する。敵の行動ゲージが減少すると、減少量と同じだけ闘志を獲得し、ターン終了時、闘志が満タンなら、闘志をすべて消費して発動者の行動ゲージを100%増加させ、2ターンの間憑依を付与する。"
             },
             "S3": {
-                "name": "Azure Phantom",
-                "description": "Unleashes power, dispelling two buffs from all enemies and a 85% chance to decrease Defense for 2 turns, before granting invincibility to the caster for 1 turn. When the caster is granted possession, extends buff durations of the caster by 1 turn and grants an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "蒼き幻影",
+                "description": "力を解き放ち、敵全体の強化効果を二つ解除し、85%の確率で2ターンの間防御力をダウンさせた後、発動者に1ターンの間無敵を付与する。発動者に憑依があれば、発動者の強化効果の持続時間を1ターン延長し、追加ターンを得る。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -5978,17 +5978,17 @@
         "_name": "Summer Break Charlotte",
         "skills": {
             "S1": {
-                "name": "Caught A Big One",
-                "description": "Attacks the enemy with two meaty fish and has a 75% chance to decrease Defense for 1 turn. When activated as a Dual Attack, this attack changes into an attack that targets all enemies. The changed attack does not trigger a counterattack, and increases Combat Readiness of all allies by 20%.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack or counterattack."
+                "name": "大物が釣れた",
+                "description": "肉厚な魚二匹で敵を攻撃し、75%の確率で1ターンの間防御力をダウンさせる。協攻として発動すると、敵全体を対象とする攻撃に変わる。変化した攻撃では反撃を誘発できず、味方全員の行動ゲージを20%増加させる。",
+                "soulburn_effect": "敵全体を攻撃する。この攻撃では協攻や反撃が発動しない。"
             },
             "S2": {
-                "name": "An Adult's Responsibility",
-                "description": "Increases Critical Hit Chance by 30%. At the start of the first battle, gains 60 Fighting Spirit and grants enhanced Dual Attack to the caster. At the end of every 4 ally turns, grants enhanced Dual Attack to the caster."
+                "name": "大人の責任",
+                "description": "クリティカル率が30%アップする。最初のバトル開始時、闘志を60獲得し、発動者に強化協攻を付与する。味方のターンが4回終わるたびに、発動者に強化協攻を付与する。"
             },
             "S3": {
-                "name": "Whale, Hello There",
-                "description": "Dispels all debuffs from the caster, and attacks the enemy with a pod of killer whales, stunning for 1 turn, before increasing Speed of all allies for 2 turns. Penetrates the target's Defense by 50%."
+                "name": "クジラさん、こんにちは",
+                "description": "発動者の弱体効果をすべて解除し、シャチの群れで敵を攻撃し、1ターンの間気絶させた後、2ターンの間味方全員のスピードをアップさせる。対象の防御力を50%貫通する。"
             }
         }
     },
@@ -5996,17 +5996,17 @@
         "_name": "Summer's Disciple Alexa",
         "skills": {
             "S1": {
-                "name": "Fell",
-                "description": "Attacks the enemy by cutting with dual-wielded swords. A critical hit will activate Lightning Bolt as an extra attack. Lightning Bolt can only be activated once per turn of the caster. Lightning Bolt (Acquire 1 Soul): Rapidly attacks the enemy by cutting with dual-wielded swords."
+                "name": "斬り倒し",
+                "description": "双剣で敵を斬って攻撃する。クリティカルが発生すると、追加攻撃として稲妻の一撃を発動する。稲妻の一撃は発動者のターンごとに一度のみ発動できる。稲妻の一撃（ソウル1獲得）：双剣で敵を素早く斬って攻撃する。"
             },
             "S2": {
-                "name": "Cold Edge",
-                "description": "Attacks the enemy with a cold blade, with a 100% chance to inflict two poison effects for 2 turns, and increases the caster's Combat Readiness by 30%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "冷たい刃",
+                "description": "冷たい刃で敵を攻撃し、100%の確率で2ターンの間持続ダメージを二つ付与し、発動者の行動ゲージを30%増加させる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Glistening Summer Strike",
-                "description": "Attacks the enemy with a powerful spike, and increases Attack of the caster for 3 turns. Damage dealt increases proportional to the number of debuffs inflicted on the target."
+                "name": "きらめく夏の一撃",
+                "description": "強力なスパイクで敵を攻撃し、3ターンの間発動者の攻撃力をアップさせる。対象に付与された弱体効果の数に比例して与ダメージがアップする。"
             }
         }
     },
@@ -6014,17 +6014,17 @@
         "_name": "Summertime Iseria",
         "skills": {
             "S1": {
-                "name": "Are you the Culprit?",
-                "description": "Attacks the enemy with swords, with a 75% chance each to dispel one buff twice.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "あなたが犯人？",
+                "description": "剣で敵を攻撃し、それぞれ75%の確率で強化効果を一つずつ二回解除する。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Suppression Attempt",
-                "description": "Attack increases by 50%. When attacking, cannot trigger a critical hit. Does not cost any Souls to activate the caster's first Soulburn. After an ally except for the caster uses an attack that targets all enemies, activates Suppress!. Can only be activated once every 3 turns. Suppress!: Increases Combat Readiness of all allies by 15% and plants a bomb on two random enemies for 2 turns."
+                "name": "鎮圧の試み",
+                "description": "攻撃力が50%アップする。攻撃時、クリティカルが発生しない。発動者の最初のソウルバーンはソウルを消費しない。発動者を除く味方が敵全体を対象とする攻撃を使用した後、鎮圧！を発動する。3ターンごとに一度のみ発動できる。鎮圧！：味方全員の行動ゲージを15%増加させ、ランダムな敵二体に2ターンの間爆弾を設置する。"
             },
             "S3": {
-                "name": "Sword of Flowers!",
-                "description": "Attacks all enemies with swords of flowers, decreasing Attack for 2 turns and increases Speed of the caster for 2 turns. At the end of the turn, detonates bombs inflicted on the enemy."
+                "name": "花の剣！",
+                "description": "花の剣で敵全体を攻撃し、2ターンの間攻撃力をダウンさせ、2ターンの間発動者のスピードをアップさせる。ターン終了時、敵の爆弾を爆発させる。"
             }
         }
     },
