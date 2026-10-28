@@ -6194,17 +6194,17 @@
         "_name": "Tamarinne",
         "skills": {
             "S1": {
-                "name": "Serene Tune",
-                "description": "(Tamarinne) Attacks an enemy with a serene melody before recovering Health of the ally with the lowest Health proportional to the target's max Health. Decreases cooldown of Shining Star☆ by 1 turn. (Idol) Attacks all enemies with a beautiful voice and dispels all buffs. Triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Greatly recovers Health of all allies after attacking."
+                "name": "Melodia serena",
+                "description": "(Tamarinne) Ataca um inimigo com uma melodia serena, depois recupera a Vida do aliado com menor Vida proporcionalmente à Vida máxima do alvo. Diminui a recarga de Estrela brilhante☆ em 1 turno. (Ídolo) Ataca todos os inimigos com uma bela voz e dissipa todos os efeitos positivos. O aliado com maior Ataque realiza um Ataque duplo.",
+                "soulburn_effect": "Após atacar, recupera muito a Vida de todos os aliados."
             },
             "S2": {
-                "name": "Song of the Forest",
-                "description": "(Tamarinne) With a peaceful melody, recovers Health of all allies proportional to the caster's max Health. Decreases cooldown of Shining Star☆ by 1 turn. (Idol) With a powerful performance, grants increased Attack to all allies for 2 turns, increases Combat Readiness by 50%, and recovers Health proportional to the caster's max Health."
+                "name": "Canção da floresta",
+                "description": "(Tamarinne) Com uma melodia pacífica, recupera a Vida de todos os aliados proporcionalmente à Vida máxima do conjurador. Diminui a recarga de Estrela brilhante☆ em 1 turno. (Ídolo) Com uma apresentação poderosa, concede Aumentar Ataque a todos os aliados por 2 turnos, aumenta a Prontidão de Combate em 50% e recupera Vida proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Shining Star☆",
-                "description": "Before performing, dispels all debuffs inflicted on all allies and recovers the caster to max Health and grants an extra turn. The caster becomes an idol for 3 turns and performs a concert. Begins the first battle with full cooldown count."
+                "name": "Estrela brilhante☆",
+                "description": "Antes de se apresentar, dissipa todos os efeitos negativos aplicados a todos os aliados, recupera a Vida do conjurador até o máximo e concede um turno extra. O conjurador se torna uma ídolo por 3 turnos e faz um show. Começa a primeira batalha com a recarga completa."
             }
         }
     },
@@ -6212,17 +6212,17 @@
         "_name": "Taranor Guard",
         "skills": {
             "S1": {
-                "name": "Spear Art",
-                "description": "Knocks the enemy into the air with a spear, with a 75% chance to decrease Defense for 1 turn."
+                "name": "Arte da lança",
+                "description": "Lança o inimigo ao ar com uma lança, com 75% de chance de diminuir a Defesa por 1 turno."
             },
             "S2": {
-                "name": "Discipline",
-                "description": "Increases the chance of Dual Attack by 10%. Combat Readiness of all allies increases by 25% and the caster is granted increased Attack when a Dual Attack is triggered."
+                "name": "Disciplina",
+                "description": "Aumenta a chance de Ataque duplo em 10%. Quando um Ataque duplo é ativado, a Prontidão de Combate de todos os aliados aumenta 25% e o conjurador recebe Aumentar Ataque."
             },
             "S3": {
-                "name": "Pierce",
-                "description": "Pierces the enemy's weak point with a spear, decreasing Combat Readiness by 50%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Perfurar",
+                "description": "Perfura o ponto fraco do inimigo com uma lança, diminuindo a Prontidão de Combate em 50%.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -6230,17 +6230,17 @@
         "_name": "Taranor Royal Guard",
         "skills": {
             "S1": {
-                "name": "Sword of the Kingdom",
-                "description": "Attacks with a sword, with a 50% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "Espada do reino",
+                "description": "Ataca com uma espada, com 50% de chance de provocar por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Shield Deflect",
-                "description": "The caster reflects 50% of the damage suffered from a critical hit to the attacker. Reflected damage can't be higher than caster's max Health."
+                "name": "Desvio de escudo",
+                "description": "O conjurador reflete ao atacante 50% do dano sofrido de um acerto crítico. O dano refletido não pode ultrapassar a Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Strike",
-                "description": "Jumps towards the enemy and attacks them, dispelling all buffs and absorbing all damage as Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Investida",
+                "description": "Salta em direção ao inimigo e o ataca, dissipando todos os efeitos positivos e absorvendo todo o dano como Vida. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -6248,17 +6248,17 @@
         "_name": "Tempest Surin",
         "skills": {
             "S1": {
-                "name": "Lunge",
-                "description": "Attacks the enemy by diving at them with a chain axe, with a 50% chance each to inflict two bleeding effects for 2 turns. Damage dealt increases proportional to the caster's lost Health."
+                "name": "Investida",
+                "description": "Ataca o inimigo mergulhando contra ele com um machado de corrente, com 50% de chance cada de aplicar dois efeitos de sangramento por 2 turnos. O dano causado aumenta proporcionalmente à Vida perdida do conjurador."
             },
             "S2": {
-                "name": "Swift Movement",
-                "description": "When attacked, damage suffered in one attack does not exceed 51% of max Health. At the end of an enemy's turn, when the caster's Health is 70% or less, dispels all debuffs from the caster and grants stealth and vampirism for 1 turn before increasing Combat Readiness by 30%."
+                "name": "Movimento veloz",
+                "description": "Ao ser atacado, o dano sofrido em um único ataque não ultrapassa 51% da Vida máxima. No fim do turno de um inimigo, quando a Vida do conjurador é 70% ou menos, dissipa todos os efeitos negativos do conjurador e concede furtividade e vampirismo por 1 turno, depois aumenta a Prontidão de Combate em 30%."
             },
             "S3": {
-                "name": "Moonlight Shadow",
-                "description": "Attacks all enemies, with a 100% chance each to make them unable to be buffed for 2 turns and inflict silence for 1 turn. Damage dealt increases proportional to the amount of the caster's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Sombra do luar",
+                "description": "Ataca todos os inimigos, com 100% de chance cada de impedir que recebam efeitos positivos por 2 turnos e aplicar silêncio por 1 turno. O dano causado aumenta proporcionalmente à Vida perdida do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -6266,17 +6266,17 @@
         "_name": "Tenebria",
         "skills": {
             "S1": {
-                "name": "Dark Explosion",
-                "description": "Attacks two enemies with an explosion of dark energy, with a 70% chance to put them to sleep for 1 turn. When an enemy is put to sleep, the caster's Combat Readiness increases by 25%. This skill does not trigger a Dual Attack."
+                "name": "Explosão sombria",
+                "description": "Ataca dois inimigos com uma explosão de energia sombria, com 70% de chance de fazê-los dormir por 1 turno. Quando um inimigo adormece, a Prontidão de Combate do conjurador aumenta 25%. Esta habilidade não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Ominous Thunder",
-                "description": "Summons ominous thunder to attack all enemies, dispelling one buff before decreasing Combat Readiness by 30% and before decreasing Speed and making them unable to be buffed for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Trovão sinistro",
+                "description": "Invoca um trovão sinistro para atacar todos os inimigos, dissipando um efeito positivo, depois diminui a Prontidão de Combate em 30% e diminui a Velocidade e impede que recebam efeitos positivos por 2 turnos.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Nightmare",
-                "description": "Attacks all enemies by dropping the Moon of Nightmare, inflicting decreased Defense for 2 turns and a 85% chance to put them to sleep for 1 turn, before granting increased Attack to the caster for 2 turns."
+                "name": "Pesadelo",
+                "description": "Ataca todos os inimigos fazendo cair a Lua do Pesadelo, aplicando Diminuir Defesa por 2 turnos e com 85% de chance de fazê-los dormir por 1 turno, depois concede Aumentar Ataque ao conjurador por 2 turnos."
             }
         }
     },
@@ -6284,17 +6284,17 @@
         "_name": "Tidal Rift Elvira",
         "skills": {
             "S1": {
-                "name": "Rift Cleave",
-                "description": "Has a 85% chance to inflict seal on the enemy for 2 turns before attacking. When used on the caster's turn, has a 40% chance to activate Twisted Strike as an extra attack. Twisted Strike: Attacks all enemies, absorbing some of the damage dealt as Health, and has a 35% chance to inflict fear for 1 turn. When the caster is granted engulf, effect chance is doubled.",
-                "soulburn_effect": "Increases chance of activating Twisted Strike to 100%."
+                "name": "Fenda cortante",
+                "description": "Tem 85% de chance de selar o inimigo por 2 turnos antes de atacar. Quando usada no turno do conjurador, tem 40% de chance de ativar Golpe distorcido como ataque extra. Golpe distorcido: ataca todos os inimigos, absorvendo parte do dano causado como Vida, e tem 35% de chance de aplicar medo por 1 turno. Quando o conjurador tem engolimento, a chance do efeito dobra.",
+                "soulburn_effect": "Aumenta a chance de ativar Golpe distorcido para 100%."
             },
             "S2": {
-                "name": "Craving Affection",
-                "description": "At the start of battle, grants engulf. When attacking, penetrates the target's Defense, and cannot trigger a critical hit or heavy blow. After an ally uses a skill, for each debuff inflicted on all enemies, has a 25% chance to increase Combat Readiness by 15%"
+                "name": "Desejo de afeto",
+                "description": "No início da batalha, concede engolimento. Ao atacar, penetra a Defesa do alvo e não pode causar acerto crítico nem golpe pesado. Após um aliado usar uma habilidade, para cada efeito negativo aplicado a todos os inimigos, tem 25% de chance de aumentar a Prontidão de Combate em 15%."
             },
             "S3": {
-                "name": "Wave of Curses",
-                "description": "Has a 35% chance to inflict curse on all enemies except for the target for 2 turns before attacking the enemy, and increases Combat Readiness of the caster by 50%. When the caster is granted engulf, effect chance is doubled."
+                "name": "Onda de maldições",
+                "description": "Tem 35% de chance de aplicar maldição a todos os inimigos, exceto o alvo, por 2 turnos antes de atacar o inimigo, e aumenta a Prontidão de Combate do conjurador em 50%. Quando o conjurador tem engolimento, a chance do efeito dobra."
             }
         }
     },
@@ -6302,17 +6302,17 @@
         "_name": "Tieria",
         "skills": {
             "S1": {
-                "name": "Demon Cutter",
-                "description": "Attacks with an axe, with a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "Cortador de demônios",
+                "description": "Ataca com um machado, com 75% de chance de diminuir a Precisão por 1 turno."
             },
             "S2": {
-                "name": "Dance of Sands",
-                "description": "A successful attack increases the Combat Readiness of all allies except for the caster by 15%."
+                "name": "Dança das areias",
+                "description": "Um ataque bem-sucedido aumenta a Prontidão de Combate de todos os aliados, exceto o conjurador, em 15%."
             },
             "S3": {
-                "name": "Soul Break",
-                "description": "Strikes the enemy strongly, dealing damage proportional to the target's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Quebra de alma",
+                "description": "Golpeia o inimigo com força, causando dano proporcional à Vida máxima do alvo.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -6320,17 +6320,17 @@
         "_name": "Top Model Luluca",
         "skills": {
             "S1": {
-                "name": "Energy Blast",
-                "description": "Attacks the enemy with the suit's energy. Has a 40% chance to grant an extra attack with the same skill. When the enemy is not an Elite or Boss monster, ignores damage share."
+                "name": "Rajada de energia",
+                "description": "Ataca o inimigo com a energia do traje. Tem 40% de chance de conceder um ataque extra com a mesma habilidade. Quando o inimigo não é um monstro Elite ou Chefe, ignora a divisão de dano."
             },
             "S2": {
-                "name": "Victory Pose",
-                "description": "By manifesting the suit's power, increases Combat Readiness of all allies by 20%, and grants increased Speed to the caster for 2 turns. Grants an extra turn."
+                "name": "Pose de vitória",
+                "description": "Manifestando o poder do traje, aumenta a Prontidão de Combate de todos os aliados em 20% e concede Aumentar Velocidade ao conjurador por 2 turnos. Concede um turno extra."
             },
             "S3": {
-                "name": "Demolish",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy, and when the enemy is defeated, inflicts extinction. Grants stealth and a barrier (proportional to Attack) to the caster for 2 turns. Penetrates the target's Defense by 50%. When the Speed of the caster is greater than the Speed of the target, penetration rate increases proportional to the difference, up to a maximum of 100%.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "Demolir",
+                "description": "Após conceder Aumentar Ataque ao conjurador por 3 turnos, ataca o inimigo e, ao derrotá-lo, aplica extinção. Concede furtividade e uma barreira (proporcional ao Ataque) ao conjurador por 2 turnos. Penetra 50% da Defesa do alvo. Quando a Velocidade do conjurador é maior que a do alvo, a taxa de penetração aumenta proporcionalmente à diferença, até um máximo de 100%.",
+                "soulburn_effect": "Todas as recargas de habilidades diminuem em 2 turnos."
             }
         }
     },

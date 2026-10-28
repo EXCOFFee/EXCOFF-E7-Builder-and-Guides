@@ -6194,17 +6194,17 @@
         "_name": "Tamarinne",
         "skills": {
             "S1": {
-                "name": "Serene Tune",
-                "description": "(Tamarinne) Attacks an enemy with a serene melody before recovering Health of the ally with the lowest Health proportional to the target's max Health. Decreases cooldown of Shining Star☆ by 1 turn. (Idol) Attacks all enemies with a beautiful voice and dispels all buffs. Triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Greatly recovers Health of all allies after attacking."
+                "name": "고요한 선율",
+                "description": "(타마린느) 고요한 선율로 적을 공격한 뒤 대상의 최대 생명력에 비례해 생명력이 가장 낮은 아군의 생명력을 회복한다. 샤이닝 스타☆의 재사용 대기 시간을 1턴 감소시킨다. (아이돌) 아름다운 목소리로 모든 적을 공격하고 강화 효과를 모두 해제한다. 공격력이 가장 높은 아군이 협공한다.",
+                "soulburn_effect": "공격 후 모든 아군의 생명력을 크게 회복한다."
             },
             "S2": {
-                "name": "Song of the Forest",
-                "description": "(Tamarinne) With a peaceful melody, recovers Health of all allies proportional to the caster's max Health. Decreases cooldown of Shining Star☆ by 1 turn. (Idol) With a powerful performance, grants increased Attack to all allies for 2 turns, increases Combat Readiness by 50%, and recovers Health proportional to the caster's max Health."
+                "name": "숲의 노래",
+                "description": "(타마린느) 평화로운 선율로 시전자의 최대 생명력에 비례해 모든 아군의 생명력을 회복한다. 샤이닝 스타☆의 재사용 대기 시간을 1턴 감소시킨다. (아이돌) 강렬한 공연으로 모든 아군에게 2턴 동안 공격력 증가를 부여하고 행동 게이지를 50% 증가시키며, 시전자의 최대 생명력에 비례해 생명력을 회복한다."
             },
             "S3": {
-                "name": "Shining Star☆",
-                "description": "Before performing, dispels all debuffs inflicted on all allies and recovers the caster to max Health and grants an extra turn. The caster becomes an idol for 3 turns and performs a concert. Begins the first battle with full cooldown count."
+                "name": "샤이닝 스타☆",
+                "description": "공연 전 모든 아군에게 걸린 약화 효과를 모두 해제하고 시전자의 생명력을 최대치까지 회복한 뒤 추가 턴을 얻는다. 시전자는 3턴 동안 아이돌이 되어 콘서트를 연다. 첫 번째 전투는 재사용 대기 시간이 가득 찬 상태로 시작한다."
             }
         }
     },
@@ -6212,17 +6212,17 @@
         "_name": "Taranor Guard",
         "skills": {
             "S1": {
-                "name": "Spear Art",
-                "description": "Knocks the enemy into the air with a spear, with a 75% chance to decrease Defense for 1 turn."
+                "name": "창술",
+                "description": "창으로 적을 공중에 띄우며, 75% 확률로 1턴 동안 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Discipline",
-                "description": "Increases the chance of Dual Attack by 10%. Combat Readiness of all allies increases by 25% and the caster is granted increased Attack when a Dual Attack is triggered."
+                "name": "규율",
+                "description": "협공 확률이 10% 증가한다. 협공이 발동하면 모든 아군의 행동 게이지가 25% 증가하고 시전자는 공격력 증가를 얻는다."
             },
             "S3": {
-                "name": "Pierce",
-                "description": "Pierces the enemy's weak point with a spear, decreasing Combat Readiness by 50%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "관통",
+                "description": "창으로 적의 약점을 꿰뚫어 행동 게이지를 50% 감소시킨다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -6230,17 +6230,17 @@
         "_name": "Taranor Royal Guard",
         "skills": {
             "S1": {
-                "name": "Sword of the Kingdom",
-                "description": "Attacks with a sword, with a 50% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "왕국의 검",
+                "description": "검으로 공격하며, 50% 확률로 1턴 동안 도발을 건다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Shield Deflect",
-                "description": "The caster reflects 50% of the damage suffered from a critical hit to the attacker. Reflected damage can't be higher than caster's max Health."
+                "name": "방패 반사",
+                "description": "시전자가 치명타로 받은 피해의 50%를 공격자에게 반사한다. 반사 피해는 시전자의 최대 생명력을 넘을 수 없다."
             },
             "S3": {
-                "name": "Strike",
-                "description": "Jumps towards the enemy and attacks them, dispelling all buffs and absorbing all damage as Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "돌격",
+                "description": "적에게 뛰어들어 공격해 강화 효과를 모두 해제하고 준 피해를 모두 생명력으로 흡수한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -6248,17 +6248,17 @@
         "_name": "Tempest Surin",
         "skills": {
             "S1": {
-                "name": "Lunge",
-                "description": "Attacks the enemy by diving at them with a chain axe, with a 50% chance each to inflict two bleeding effects for 2 turns. Damage dealt increases proportional to the caster's lost Health."
+                "name": "돌진",
+                "description": "사슬 도끼로 적에게 뛰어들어 공격하며, 각각 50% 확률로 2턴 동안 출혈을 두 개 건다. 시전자가 잃은 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Swift Movement",
-                "description": "When attacked, damage suffered in one attack does not exceed 51% of max Health. At the end of an enemy's turn, when the caster's Health is 70% or less, dispels all debuffs from the caster and grants stealth and vampirism for 1 turn before increasing Combat Readiness by 30%."
+                "name": "재빠른 움직임",
+                "description": "공격받을 때 한 번의 공격으로 받는 피해가 최대 생명력의 51%를 넘지 않는다. 적의 턴 종료 시 시전자의 생명력이 70% 이하이면 시전자의 약화 효과를 모두 해제하고 1턴 동안 은신과 흡혈을 부여한 뒤 행동 게이지를 30% 증가시킨다."
             },
             "S3": {
-                "name": "Moonlight Shadow",
-                "description": "Attacks all enemies, with a 100% chance each to make them unable to be buffed for 2 turns and inflict silence for 1 turn. Damage dealt increases proportional to the amount of the caster's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "달빛 그림자",
+                "description": "모든 적을 공격하며, 각각 100% 확률로 2턴 동안 강화 불가를, 1턴 동안 침묵을 건다. 시전자가 잃은 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -6266,17 +6266,17 @@
         "_name": "Tenebria",
         "skills": {
             "S1": {
-                "name": "Dark Explosion",
-                "description": "Attacks two enemies with an explosion of dark energy, with a 70% chance to put them to sleep for 1 turn. When an enemy is put to sleep, the caster's Combat Readiness increases by 25%. This skill does not trigger a Dual Attack."
+                "name": "암흑 폭발",
+                "description": "어둠의 기운의 폭발로 적 두 명을 공격하며, 70% 확률로 1턴 동안 수면에 빠뜨린다. 적이 수면에 빠지면 시전자의 행동 게이지가 25% 증가한다. 이 스킬로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Ominous Thunder",
-                "description": "Summons ominous thunder to attack all enemies, dispelling one buff before decreasing Combat Readiness by 30% and before decreasing Speed and making them unable to be buffed for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "불길한 천둥",
+                "description": "불길한 천둥을 불러 모든 적을 공격해 강화 효과를 한 개 해제한 뒤 행동 게이지를 30% 감소시키고 2턴 동안 속도 감소와 강화 불가를 건다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Nightmare",
-                "description": "Attacks all enemies by dropping the Moon of Nightmare, inflicting decreased Defense for 2 turns and a 85% chance to put them to sleep for 1 turn, before granting increased Attack to the caster for 2 turns."
+                "name": "악몽",
+                "description": "악몽의 달을 떨어뜨려 모든 적을 공격하고 2턴 동안 방어력 감소를 걸며, 85% 확률로 1턴 동안 수면에 빠뜨린 뒤 시전자에게 2턴 동안 공격력 증가를 부여한다."
             }
         }
     },
@@ -6284,17 +6284,17 @@
         "_name": "Tidal Rift Elvira",
         "skills": {
             "S1": {
-                "name": "Rift Cleave",
-                "description": "Has a 85% chance to inflict seal on the enemy for 2 turns before attacking. When used on the caster's turn, has a 40% chance to activate Twisted Strike as an extra attack. Twisted Strike: Attacks all enemies, absorbing some of the damage dealt as Health, and has a 35% chance to inflict fear for 1 turn. When the caster is granted engulf, effect chance is doubled.",
-                "soulburn_effect": "Increases chance of activating Twisted Strike to 100%."
+                "name": "균열 가르기",
+                "description": "공격 전 85% 확률로 2턴 동안 적에게 봉인을 건다. 시전자의 턴에 사용하면 40% 확률로 추가 공격으로 뒤틀린 일격을 발동한다. 뒤틀린 일격: 모든 적을 공격해 준 피해의 일부를 생명력으로 흡수하며, 35% 확률로 1턴 동안 공포를 건다. 시전자에게 삼킴이 있으면 효과 발동 확률이 두 배가 된다.",
+                "soulburn_effect": "뒤틀린 일격 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Craving Affection",
-                "description": "At the start of battle, grants engulf. When attacking, penetrates the target's Defense, and cannot trigger a critical hit or heavy blow. After an ally uses a skill, for each debuff inflicted on all enemies, has a 25% chance to increase Combat Readiness by 15%"
+                "name": "애정 갈망",
+                "description": "전투 시작 시 삼킴을 부여한다. 공격 시 대상의 방어력을 관통하며 치명타나 강타가 발생하지 않는다. 아군이 스킬을 사용한 후 모든 적에게 걸린 약화 효과 하나당 25% 확률로 행동 게이지를 15% 증가시킨다."
             },
             "S3": {
-                "name": "Wave of Curses",
-                "description": "Has a 35% chance to inflict curse on all enemies except for the target for 2 turns before attacking the enemy, and increases Combat Readiness of the caster by 50%. When the caster is granted engulf, effect chance is doubled."
+                "name": "저주의 파도",
+                "description": "적을 공격하기 전 35% 확률로 대상을 제외한 모든 적에게 2턴 동안 저주를 걸고, 시전자의 행동 게이지를 50% 증가시킨다. 시전자에게 삼킴이 있으면 효과 발동 확률이 두 배가 된다."
             }
         }
     },
@@ -6302,17 +6302,17 @@
         "_name": "Tieria",
         "skills": {
             "S1": {
-                "name": "Demon Cutter",
-                "description": "Attacks with an axe, with a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "악마 베기",
+                "description": "도끼로 공격하며, 75% 확률로 1턴 동안 명중률을 감소시킨다."
             },
             "S2": {
-                "name": "Dance of Sands",
-                "description": "A successful attack increases the Combat Readiness of all allies except for the caster by 15%."
+                "name": "모래의 춤",
+                "description": "공격에 성공하면 시전자를 제외한 모든 아군의 행동 게이지를 15% 증가시킨다."
             },
             "S3": {
-                "name": "Soul Break",
-                "description": "Strikes the enemy strongly, dealing damage proportional to the target's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "영혼 파괴",
+                "description": "적을 강하게 내리쳐 대상의 최대 생명력에 비례한 피해를 준다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -6320,17 +6320,17 @@
         "_name": "Top Model Luluca",
         "skills": {
             "S1": {
-                "name": "Energy Blast",
-                "description": "Attacks the enemy with the suit's energy. Has a 40% chance to grant an extra attack with the same skill. When the enemy is not an Elite or Boss monster, ignores damage share."
+                "name": "에너지 블래스트",
+                "description": "슈트의 에너지로 적을 공격한다. 40% 확률로 같은 스킬로 추가 공격한다. 적이 정예 또는 보스 몬스터가 아니면 피해 분산을 무시한다."
             },
             "S2": {
-                "name": "Victory Pose",
-                "description": "By manifesting the suit's power, increases Combat Readiness of all allies by 20%, and grants increased Speed to the caster for 2 turns. Grants an extra turn."
+                "name": "승리의 포즈",
+                "description": "슈트의 힘을 발현해 모든 아군의 행동 게이지를 20% 증가시키고 시전자에게 2턴 동안 속도 증가를 부여한다. 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Demolish",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy, and when the enemy is defeated, inflicts extinction. Grants stealth and a barrier (proportional to Attack) to the caster for 2 turns. Penetrates the target's Defense by 50%. When the Speed of the caster is greater than the Speed of the target, penetration rate increases proportional to the difference, up to a maximum of 100%.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "분쇄",
+                "description": "시전자에게 3턴 동안 공격력 증가를 부여한 뒤 적을 공격하며, 적을 처치하면 소멸을 건다. 시전자에게 2턴 동안 은신과 보호막(공격력 비례)을 부여한다. 대상의 방어력을 50% 관통한다. 시전자의 속도가 대상보다 높으면 그 차이에 비례해 관통률이 최대 100%까지 증가한다.",
+                "soulburn_effect": "모든 스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },

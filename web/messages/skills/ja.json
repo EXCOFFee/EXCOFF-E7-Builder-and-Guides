@@ -6194,17 +6194,17 @@
         "_name": "Tamarinne",
         "skills": {
             "S1": {
-                "name": "Serene Tune",
-                "description": "(Tamarinne) Attacks an enemy with a serene melody before recovering Health of the ally with the lowest Health proportional to the target's max Health. Decreases cooldown of Shining Star☆ by 1 turn. (Idol) Attacks all enemies with a beautiful voice and dispels all buffs. Triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Greatly recovers Health of all allies after attacking."
+                "name": "穏やかな旋律",
+                "description": "（タマリエ）穏やかな旋律で敵を攻撃した後、対象の最大HPに比例してHPが最も低い味方のHPを回復する。シャイニングスター☆のクールタイムを1ターン短縮する。（アイドル）美しい歌声で敵全体を攻撃し、強化効果をすべて解除する。攻撃力が最も高い味方が協攻する。",
+                "soulburn_effect": "攻撃後、味方全員のHPを大きく回復する。"
             },
             "S2": {
-                "name": "Song of the Forest",
-                "description": "(Tamarinne) With a peaceful melody, recovers Health of all allies proportional to the caster's max Health. Decreases cooldown of Shining Star☆ by 1 turn. (Idol) With a powerful performance, grants increased Attack to all allies for 2 turns, increases Combat Readiness by 50%, and recovers Health proportional to the caster's max Health."
+                "name": "森の歌",
+                "description": "（タマリエ）穏やかな旋律で、発動者の最大HPに比例して味方全員のHPを回復する。シャイニングスター☆のクールタイムを1ターン短縮する。（アイドル）力強いパフォーマンスで、味方全員に2ターンの間攻撃力アップを付与し、行動ゲージを50%増加させ、発動者の最大HPに比例してHPを回復する。"
             },
             "S3": {
-                "name": "Shining Star☆",
-                "description": "Before performing, dispels all debuffs inflicted on all allies and recovers the caster to max Health and grants an extra turn. The caster becomes an idol for 3 turns and performs a concert. Begins the first battle with full cooldown count."
+                "name": "シャイニングスター☆",
+                "description": "パフォーマンスの前に、味方全員の弱体効果をすべて解除し、発動者のHPを最大まで回復し、追加ターンを得る。発動者は3ターンの間アイドルになり、コンサートを行う。最初のバトルはクールタイムが満タンの状態で始まる。"
             }
         }
     },
@@ -6212,17 +6212,17 @@
         "_name": "Taranor Guard",
         "skills": {
             "S1": {
-                "name": "Spear Art",
-                "description": "Knocks the enemy into the air with a spear, with a 75% chance to decrease Defense for 1 turn."
+                "name": "槍術",
+                "description": "槍で敵を宙に打ち上げ、75%の確率で1ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Discipline",
-                "description": "Increases the chance of Dual Attack by 10%. Combat Readiness of all allies increases by 25% and the caster is granted increased Attack when a Dual Attack is triggered."
+                "name": "規律",
+                "description": "協攻の確率が10%アップする。協攻が発動すると、味方全員の行動ゲージが25%増加し、発動者は攻撃力アップを得る。"
             },
             "S3": {
-                "name": "Pierce",
-                "description": "Pierces the enemy's weak point with a spear, decreasing Combat Readiness by 50%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "貫通",
+                "description": "槍で敵の弱点を貫き、行動ゲージを50%減少させる。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -6230,17 +6230,17 @@
         "_name": "Taranor Royal Guard",
         "skills": {
             "S1": {
-                "name": "Sword of the Kingdom",
-                "description": "Attacks with a sword, with a 50% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "王国の剣",
+                "description": "剣で攻撃し、50%の確率で1ターンの間挑発を付与する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Shield Deflect",
-                "description": "The caster reflects 50% of the damage suffered from a critical hit to the attacker. Reflected damage can't be higher than caster's max Health."
+                "name": "盾の反射",
+                "description": "発動者はクリティカルで受けたダメージの50%を攻撃者に反射する。反射ダメージは発動者の最大HPを超えない。"
             },
             "S3": {
-                "name": "Strike",
-                "description": "Jumps towards the enemy and attacks them, dispelling all buffs and absorbing all damage as Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "突撃",
+                "description": "敵に飛びかかって攻撃し、強化効果をすべて解除し、与ダメージをすべてHPとして吸収する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -6248,17 +6248,17 @@
         "_name": "Tempest Surin",
         "skills": {
             "S1": {
-                "name": "Lunge",
-                "description": "Attacks the enemy by diving at them with a chain axe, with a 50% chance each to inflict two bleeding effects for 2 turns. Damage dealt increases proportional to the caster's lost Health."
+                "name": "突進",
+                "description": "鎖斧で敵に飛び込んで攻撃し、それぞれ50%の確率で2ターンの間出血を二つ付与する。発動者の失ったHPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Swift Movement",
-                "description": "When attacked, damage suffered in one attack does not exceed 51% of max Health. At the end of an enemy's turn, when the caster's Health is 70% or less, dispels all debuffs from the caster and grants stealth and vampirism for 1 turn before increasing Combat Readiness by 30%."
+                "name": "素早い動き",
+                "description": "攻撃されたとき、一回の攻撃で受けるダメージが最大HPの51%を超えない。敵のターン終了時、発動者のHPが70%以下なら、発動者の弱体効果をすべて解除し、1ターンの間隠密と吸血を付与した後、行動ゲージを30%増加させる。"
             },
             "S3": {
-                "name": "Moonlight Shadow",
-                "description": "Attacks all enemies, with a 100% chance each to make them unable to be buffed for 2 turns and inflict silence for 1 turn. Damage dealt increases proportional to the amount of the caster's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "月光の影",
+                "description": "敵全体を攻撃し、それぞれ100%の確率で2ターンの間強化不可を、1ターンの間沈黙を付与する。発動者の失ったHPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -6266,17 +6266,17 @@
         "_name": "Tenebria",
         "skills": {
             "S1": {
-                "name": "Dark Explosion",
-                "description": "Attacks two enemies with an explosion of dark energy, with a 70% chance to put them to sleep for 1 turn. When an enemy is put to sleep, the caster's Combat Readiness increases by 25%. This skill does not trigger a Dual Attack."
+                "name": "暗黒爆発",
+                "description": "闇の気の爆発で敵二体を攻撃し、70%の確率で1ターンの間睡眠状態にする。敵が睡眠状態になると、発動者の行動ゲージが25%増加する。このスキルでは協攻が発動しない。"
             },
             "S2": {
-                "name": "Ominous Thunder",
-                "description": "Summons ominous thunder to attack all enemies, dispelling one buff before decreasing Combat Readiness by 30% and before decreasing Speed and making them unable to be buffed for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "不吉な雷",
+                "description": "不吉な雷を呼び出して敵全体を攻撃し、強化効果を一つ解除した後、行動ゲージを30%減少させ、2ターンの間スピードダウンと強化不可を付与する。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Nightmare",
-                "description": "Attacks all enemies by dropping the Moon of Nightmare, inflicting decreased Defense for 2 turns and a 85% chance to put them to sleep for 1 turn, before granting increased Attack to the caster for 2 turns."
+                "name": "悪夢",
+                "description": "悪夢の月を落として敵全体を攻撃し、2ターンの間防御力ダウンを付与し、85%の確率で1ターンの間睡眠状態にした後、発動者に2ターンの間攻撃力アップを付与する。"
             }
         }
     },
@@ -6284,17 +6284,17 @@
         "_name": "Tidal Rift Elvira",
         "skills": {
             "S1": {
-                "name": "Rift Cleave",
-                "description": "Has a 85% chance to inflict seal on the enemy for 2 turns before attacking. When used on the caster's turn, has a 40% chance to activate Twisted Strike as an extra attack. Twisted Strike: Attacks all enemies, absorbing some of the damage dealt as Health, and has a 35% chance to inflict fear for 1 turn. When the caster is granted engulf, effect chance is doubled.",
-                "soulburn_effect": "Increases chance of activating Twisted Strike to 100%."
+                "name": "裂け目の斬撃",
+                "description": "攻撃前、85%の確率で2ターンの間敵に封印を付与する。発動者のターンに使用すると、40%の確率で追加攻撃として歪んだ一撃を発動する。歪んだ一撃：敵全体を攻撃し、与ダメージの一部をHPとして吸収し、35%の確率で1ターンの間恐怖を付与する。発動者に呑込があれば効果発動確率が倍になる。",
+                "soulburn_effect": "歪んだ一撃の発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Craving Affection",
-                "description": "At the start of battle, grants engulf. When attacking, penetrates the target's Defense, and cannot trigger a critical hit or heavy blow. After an ally uses a skill, for each debuff inflicted on all enemies, has a 25% chance to increase Combat Readiness by 15%"
+                "name": "愛情への渇望",
+                "description": "バトル開始時、呑込を付与する。攻撃時、対象の防御力を貫通し、クリティカルや強打は発生しない。味方がスキルを使用した後、敵全体に付与された弱体効果一つにつき、25%の確率で行動ゲージを15%増加させる。"
             },
             "S3": {
-                "name": "Wave of Curses",
-                "description": "Has a 35% chance to inflict curse on all enemies except for the target for 2 turns before attacking the enemy, and increases Combat Readiness of the caster by 50%. When the caster is granted engulf, effect chance is doubled."
+                "name": "呪いの波",
+                "description": "敵を攻撃する前に、35%の確率で対象を除く敵全体に2ターンの間呪いを付与し、発動者の行動ゲージを50%増加させる。発動者に呑込があれば効果発動確率が倍になる。"
             }
         }
     },
@@ -6302,17 +6302,17 @@
         "_name": "Tieria",
         "skills": {
             "S1": {
-                "name": "Demon Cutter",
-                "description": "Attacks with an axe, with a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "悪魔斬り",
+                "description": "斧で攻撃し、75%の確率で1ターンの間命中率をダウンさせる。"
             },
             "S2": {
-                "name": "Dance of Sands",
-                "description": "A successful attack increases the Combat Readiness of all allies except for the caster by 15%."
+                "name": "砂の舞",
+                "description": "攻撃が成功すると、発動者を除く味方全員の行動ゲージを15%増加させる。"
             },
             "S3": {
-                "name": "Soul Break",
-                "description": "Strikes the enemy strongly, dealing damage proportional to the target's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "ソウルブレイク",
+                "description": "敵を強く打ちつけ、対象の最大HPに比例したダメージを与える。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -6320,17 +6320,17 @@
         "_name": "Top Model Luluca",
         "skills": {
             "S1": {
-                "name": "Energy Blast",
-                "description": "Attacks the enemy with the suit's energy. Has a 40% chance to grant an extra attack with the same skill. When the enemy is not an Elite or Boss monster, ignores damage share."
+                "name": "エナジーブラスト",
+                "description": "スーツのエネルギーで敵を攻撃する。40%の確率で同じスキルで追加攻撃する。敵がエリートまたはボスモンスターでない場合、ダメージ分散を無視する。"
             },
             "S2": {
-                "name": "Victory Pose",
-                "description": "By manifesting the suit's power, increases Combat Readiness of all allies by 20%, and grants increased Speed to the caster for 2 turns. Grants an extra turn."
+                "name": "勝利のポーズ",
+                "description": "スーツの力を発現し、味方全員の行動ゲージを20%増加させ、発動者に2ターンの間スピードアップを付与する。追加ターンを得る。"
             },
             "S3": {
-                "name": "Demolish",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy, and when the enemy is defeated, inflicts extinction. Grants stealth and a barrier (proportional to Attack) to the caster for 2 turns. Penetrates the target's Defense by 50%. When the Speed of the caster is greater than the Speed of the target, penetration rate increases proportional to the difference, up to a maximum of 100%.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "粉砕",
+                "description": "発動者に3ターンの間攻撃力アップを付与した後、敵を攻撃し、敵を倒すと消滅を付与する。発動者に2ターンの間隠密とバリア（攻撃力に比例）を付与する。対象の防御力を50%貫通する。発動者のスピードが対象より高い場合、その差に比例して貫通率が最大100%までアップする。",
+                "soulburn_effect": "すべてのスキルのクールタイムが2ターン短縮される。"
             }
         }
     },

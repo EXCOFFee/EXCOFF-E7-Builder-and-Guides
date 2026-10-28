@@ -6194,17 +6194,17 @@
         "_name": "Tamarinne",
         "skills": {
             "S1": {
-                "name": "Serene Tune",
-                "description": "(Tamarinne) Attacks an enemy with a serene melody before recovering Health of the ally with the lowest Health proportional to the target's max Health. Decreases cooldown of Shining Star☆ by 1 turn. (Idol) Attacks all enemies with a beautiful voice and dispels all buffs. Triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Greatly recovers Health of all allies after attacking."
+                "name": "宁静旋律",
+                "description": "（塔玛林尔）以宁静的旋律攻击敌人，然后按目标的最大生命值比例恢复生命值最低的友军的生命值。使闪耀之星☆的冷却时间减少1回合。（偶像）以美妙的歌声攻击所有敌人，并解除所有强化效果。攻击力最高的友军发动协攻。",
+                "soulburn_effect": "攻击后，大幅恢复所有友军的生命值。"
             },
             "S2": {
-                "name": "Song of the Forest",
-                "description": "(Tamarinne) With a peaceful melody, recovers Health of all allies proportional to the caster's max Health. Decreases cooldown of Shining Star☆ by 1 turn. (Idol) With a powerful performance, grants increased Attack to all allies for 2 turns, increases Combat Readiness by 50%, and recovers Health proportional to the caster's max Health."
+                "name": "森林之歌",
+                "description": "（塔玛林尔）以平和的旋律，按施放者的最大生命值比例恢复所有友军的生命值。使闪耀之星☆的冷却时间减少1回合。（偶像）以强劲的表演，为所有友军施加2回合攻击力提升，提升50%行动值，并按施放者的最大生命值比例恢复生命值。"
             },
             "S3": {
-                "name": "Shining Star☆",
-                "description": "Before performing, dispels all debuffs inflicted on all allies and recovers the caster to max Health and grants an extra turn. The caster becomes an idol for 3 turns and performs a concert. Begins the first battle with full cooldown count."
+                "name": "闪耀之星☆",
+                "description": "表演前，解除所有友军身上的所有弱化效果，将施放者的生命值恢复至最大值，并获得额外回合。施放者成为3回合偶像，举办演唱会。首场战斗开始时处于完整冷却状态。"
             }
         }
     },
@@ -6212,17 +6212,17 @@
         "_name": "Taranor Guard",
         "skills": {
             "S1": {
-                "name": "Spear Art",
-                "description": "Knocks the enemy into the air with a spear, with a 75% chance to decrease Defense for 1 turn."
+                "name": "枪术",
+                "description": "以长枪将敌人挑向空中，有75%的几率降低防御力1回合。"
             },
             "S2": {
-                "name": "Discipline",
-                "description": "Increases the chance of Dual Attack by 10%. Combat Readiness of all allies increases by 25% and the caster is granted increased Attack when a Dual Attack is triggered."
+                "name": "纪律",
+                "description": "协攻几率提升10%。触发协攻时，所有友军的行动值提升25%，施放者获得攻击力提升。"
             },
             "S3": {
-                "name": "Pierce",
-                "description": "Pierces the enemy's weak point with a spear, decreasing Combat Readiness by 50%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "贯穿",
+                "description": "以长枪贯穿敌人的弱点，降低50%行动值。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -6230,17 +6230,17 @@
         "_name": "Taranor Royal Guard",
         "skills": {
             "S1": {
-                "name": "Sword of the Kingdom",
-                "description": "Attacks with a sword, with a 50% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "王国之剑",
+                "description": "以剑攻击，有50%的几率施加1回合挑衅。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Shield Deflect",
-                "description": "The caster reflects 50% of the damage suffered from a critical hit to the attacker. Reflected damage can't be higher than caster's max Health."
+                "name": "盾反",
+                "description": "施放者将受到暴击伤害的50%反射给攻击者。反射伤害不会超过施放者的最大生命值。"
             },
             "S3": {
-                "name": "Strike",
-                "description": "Jumps towards the enemy and attacks them, dispelling all buffs and absorbing all damage as Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "突击",
+                "description": "跃向敌人发动攻击，解除所有强化效果，并将全部伤害吸收为生命值。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -6248,17 +6248,17 @@
         "_name": "Tempest Surin",
         "skills": {
             "S1": {
-                "name": "Lunge",
-                "description": "Attacks the enemy by diving at them with a chain axe, with a 50% chance each to inflict two bleeding effects for 2 turns. Damage dealt increases proportional to the caster's lost Health."
+                "name": "突进",
+                "description": "以链斧扑向敌人发动攻击，各有50%的几率施加两层2回合出血。造成的伤害按施放者已损失的生命值比例提升。"
             },
             "S2": {
-                "name": "Swift Movement",
-                "description": "When attacked, damage suffered in one attack does not exceed 51% of max Health. At the end of an enemy's turn, when the caster's Health is 70% or less, dispels all debuffs from the caster and grants stealth and vampirism for 1 turn before increasing Combat Readiness by 30%."
+                "name": "迅捷身法",
+                "description": "受到攻击时，单次攻击受到的伤害不超过最大生命值的51%。敌人回合结束时，若施放者生命值在70%以下，解除施放者的所有弱化效果，并施加1回合隐身与吸血，然后提升30%行动值。"
             },
             "S3": {
-                "name": "Moonlight Shadow",
-                "description": "Attacks all enemies, with a 100% chance each to make them unable to be buffed for 2 turns and inflict silence for 1 turn. Damage dealt increases proportional to the amount of the caster's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "月光之影",
+                "description": "攻击所有敌人，各有100%的几率施加2回合无法强化与1回合沉默。造成的伤害按施放者已损失的生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -6266,17 +6266,17 @@
         "_name": "Tenebria",
         "skills": {
             "S1": {
-                "name": "Dark Explosion",
-                "description": "Attacks two enemies with an explosion of dark energy, with a 70% chance to put them to sleep for 1 turn. When an enemy is put to sleep, the caster's Combat Readiness increases by 25%. This skill does not trigger a Dual Attack."
+                "name": "黑暗爆炸",
+                "description": "以黑暗能量的爆炸攻击两名敌人，有70%的几率使其睡眠1回合。敌人陷入睡眠时，施放者的行动值提升25%。此技能不会触发协攻。"
             },
             "S2": {
-                "name": "Ominous Thunder",
-                "description": "Summons ominous thunder to attack all enemies, dispelling one buff before decreasing Combat Readiness by 30% and before decreasing Speed and making them unable to be buffed for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "不祥之雷",
+                "description": "召唤不祥之雷攻击所有敌人，解除一个强化效果，然后降低30%行动值，并施加2回合速度降低与无法强化。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Nightmare",
-                "description": "Attacks all enemies by dropping the Moon of Nightmare, inflicting decreased Defense for 2 turns and a 85% chance to put them to sleep for 1 turn, before granting increased Attack to the caster for 2 turns."
+                "name": "噩梦",
+                "description": "坠下噩梦之月攻击所有敌人，施加2回合防御力降低，并有85%的几率使其睡眠1回合，然后为施放者施加2回合攻击力提升。"
             }
         }
     },
@@ -6284,17 +6284,17 @@
         "_name": "Tidal Rift Elvira",
         "skills": {
             "S1": {
-                "name": "Rift Cleave",
-                "description": "Has a 85% chance to inflict seal on the enemy for 2 turns before attacking. When used on the caster's turn, has a 40% chance to activate Twisted Strike as an extra attack. Twisted Strike: Attacks all enemies, absorbing some of the damage dealt as Health, and has a 35% chance to inflict fear for 1 turn. When the caster is granted engulf, effect chance is doubled.",
-                "soulburn_effect": "Increases chance of activating Twisted Strike to 100%."
+                "name": "裂隙斩",
+                "description": "攻击前，有85%的几率对敌人施加2回合封印。在施放者的回合使用时，有40%的几率以追加攻击发动扭曲一击。扭曲一击：攻击所有敌人，将部分造成的伤害吸收为生命值，并有35%的几率施加1回合恐惧。施放者拥有吞噬时，效果几率翻倍。",
+                "soulburn_effect": "扭曲一击的发动几率提升至100%。"
             },
             "S2": {
-                "name": "Craving Affection",
-                "description": "At the start of battle, grants engulf. When attacking, penetrates the target's Defense, and cannot trigger a critical hit or heavy blow. After an ally uses a skill, for each debuff inflicted on all enemies, has a 25% chance to increase Combat Readiness by 15%"
+                "name": "渴望爱意",
+                "description": "战斗开始时，施加吞噬。攻击时穿透目标的防御力，且无法造成暴击或重击。友军使用技能后，所有敌人身上每有一个弱化效果，有25%的几率使行动值提升15%。"
             },
             "S3": {
-                "name": "Wave of Curses",
-                "description": "Has a 35% chance to inflict curse on all enemies except for the target for 2 turns before attacking the enemy, and increases Combat Readiness of the caster by 50%. When the caster is granted engulf, effect chance is doubled."
+                "name": "诅咒之浪",
+                "description": "攻击敌人前，有35%的几率对除目标外的所有敌人施加2回合诅咒，并使施放者的行动值提升50%。施放者拥有吞噬时，效果几率翻倍。"
             }
         }
     },
@@ -6302,17 +6302,17 @@
         "_name": "Tieria",
         "skills": {
             "S1": {
-                "name": "Demon Cutter",
-                "description": "Attacks with an axe, with a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "斩魔",
+                "description": "以斧头攻击，有75%的几率降低命中率1回合。"
             },
             "S2": {
-                "name": "Dance of Sands",
-                "description": "A successful attack increases the Combat Readiness of all allies except for the caster by 15%."
+                "name": "沙之舞",
+                "description": "攻击成功时，使除施放者外所有友军的行动值提升15%。"
             },
             "S3": {
-                "name": "Soul Break",
-                "description": "Strikes the enemy strongly, dealing damage proportional to the target's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "灵魂粉碎",
+                "description": "猛击敌人，造成与目标最大生命值成比例的伤害。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -6320,17 +6320,17 @@
         "_name": "Top Model Luluca",
         "skills": {
             "S1": {
-                "name": "Energy Blast",
-                "description": "Attacks the enemy with the suit's energy. Has a 40% chance to grant an extra attack with the same skill. When the enemy is not an Elite or Boss monster, ignores damage share."
+                "name": "能量冲击",
+                "description": "以战衣的能量攻击敌人。有40%的几率以相同技能追加攻击。敌人不是精英或首领怪物时，无视伤害分担。"
             },
             "S2": {
-                "name": "Victory Pose",
-                "description": "By manifesting the suit's power, increases Combat Readiness of all allies by 20%, and grants increased Speed to the caster for 2 turns. Grants an extra turn."
+                "name": "胜利姿势",
+                "description": "发挥战衣的力量，使所有友军的行动值提升20%，并为施放者施加2回合速度提升。获得额外回合。"
             },
             "S3": {
-                "name": "Demolish",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy, and when the enemy is defeated, inflicts extinction. Grants stealth and a barrier (proportional to Attack) to the caster for 2 turns. Penetrates the target's Defense by 50%. When the Speed of the caster is greater than the Speed of the target, penetration rate increases proportional to the difference, up to a maximum of 100%.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "粉碎",
+                "description": "为施放者施加3回合攻击力提升后攻击敌人，击败敌人时施加湮灭。为施放者施加2回合隐身与屏障（与攻击力成比例）。穿透目标50%的防御力。施放者的速度高于目标时，按差值比例提升穿透率，最多达到100%。",
+                "soulburn_effect": "所有技能冷却时间减少2回合。"
             }
         }
     },
