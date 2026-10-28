@@ -205,8 +205,6 @@ class UserBuildController extends Controller
             'artifact_id' => 'nullable|exists:artifacts,id',
             'synergy_heroes' => 'nullable',
             'counter_heroes' => 'nullable',
-            'images' => 'nullable|array',
-            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:5120',
             'language' => 'nullable|string|max:5',
             'is_anonymous' => 'nullable|boolean',
             'skill_1' => 'nullable|integer|min:0|max:7',
@@ -224,7 +222,8 @@ class UserBuildController extends Controller
             // Pros/Cons tags (JSON string or array)
             'pro_tags' => 'nullable',
             'con_tags' => 'nullable',
-        ]);
+        ] + ImageService::rules());
+        unset($validated['images']);
 
         // Parse min_stats if JSON string
         if (isset($validated['min_stats']) && is_string($validated['min_stats'])) {
@@ -251,17 +250,8 @@ class UserBuildController extends Controller
         // Convert '1'/'0' string to boolean (FormData sends as string)
         $validated['is_anonymous'] = filter_var($validated['is_anonymous'] ?? false, FILTER_VALIDATE_BOOLEAN);
 
-        // Handle image uploads using ImageService (SOLID: dependency injection)
-        $imagePaths = [];
-        if ($request->hasFile('images')) {
-            $result = $this->imageService->processMultiple(
-                $request->file('images'),
-                'builds',
-                5
-            );
-            $imagePaths = $result['urls'];
-        }
-        $validated['images'] = $imagePaths;
+        // Handle image uploads using ImageService (422 if any image is rejected)
+        $validated['images'] = $this->imageService->storeUploads($request->file('images'), 'builds');
 
         $build = $request->user()->builds()->create($validated);
 
@@ -311,7 +301,8 @@ class UserBuildController extends Controller
             // Pros/Cons tags (JSON string or array)
             'pro_tags' => 'nullable',
             'con_tags' => 'nullable',
-        ]);
+        ] + ImageService::rules());
+        unset($validated['images']);
 
         // Parse tags if JSON string
         if (isset($validated['pro_tags']) && is_string($validated['pro_tags'])) {
@@ -334,29 +325,15 @@ class UserBuildController extends Controller
             $validated['is_anonymous'] = filter_var($validated['is_anonymous'], FILTER_VALIDATE_BOOLEAN);
         }
 
-        // Handle new image uploads using ImageService
-        $imagePaths = [];
-        if ($request->hasFile('images')) {
-            $result = $this->imageService->processMultiple(
-                $request->file('images'),
-                'builds',
-                5
-            );
-            $imagePaths = $result['urls'];
-        }
-        
-        // Add existing image URLs
-        $imageUrls = $request->input('image_urls');
-        if (is_string($imageUrls)) {
-            $imageUrls = json_decode($imageUrls, true) ?? [];
-        }
-        if (!empty($imageUrls) && is_array($imageUrls)) {
-            $imagePaths = array_merge($imagePaths, $imageUrls);
-        }
-        
+        // New uploads (validated by content) + images already on this server; external URLs are dropped
+        $imagePaths = array_merge(
+            $this->imageService->storeUploads($request->file('images'), 'builds'),
+            $this->imageService->filterOwnedUrls($request->input('image_urls'))
+        );
+
         // Limit to 5 and update if any images
         if (!empty($imagePaths)) {
-            $validated['images'] = array_slice($imagePaths, 0, 5);
+            $validated['images'] = array_slice($imagePaths, 0, ImageService::MAX_IMAGES);
         }
         
         if ($minStats !== null) {

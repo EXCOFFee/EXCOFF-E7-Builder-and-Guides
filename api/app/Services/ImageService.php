@@ -6,6 +6,7 @@ namespace App\Services;
 
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Str;
+use Illuminate\Validation\ValidationException;
 
 /**
  * Image Validation and Processing Service
@@ -35,6 +36,74 @@ class ImageService
         'image/gif',
         'image/webp',
     ];
+
+    /**
+     * Maximum images per build/guide/guild post
+     */
+    public const MAX_IMAGES = 5;
+
+    /**
+     * Validation rules for an `images[]` upload field.
+     * `image` + `mimes` inspect the file contents, so a script renamed to .jpg is rejected
+     * before anything is written to disk.
+     *
+     * @return array<string, string>
+     */
+    public static function rules(): array
+    {
+        return [
+            'images' => 'nullable|array|max:' . self::MAX_IMAGES,
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif,webp|max:5120',
+        ];
+    }
+
+    /**
+     * Store uploaded images and return their public URLs.
+     * Throws a 422 validation error if any file fails the content/dimension checks.
+     *
+     * @param array<UploadedFile>|null $files
+     * @return string[]
+     *
+     * @throws ValidationException
+     */
+    public function storeUploads(?array $files, string $directory): array
+    {
+        if (empty($files)) {
+            return [];
+        }
+
+        $result = $this->processMultiple($files, $directory, self::MAX_IMAGES);
+
+        if (!empty($result['errors'])) {
+            throw ValidationException::withMessages(['images' => $result['errors']]);
+        }
+
+        return $result['urls'];
+    }
+
+    /**
+     * Keep only URLs of images already uploaded to this server's public storage.
+     * Accepts the JSON string that FormData sends or an array.
+     *
+     * @return string[]
+     */
+    public function filterOwnedUrls(mixed $urls): array
+    {
+        if (is_string($urls)) {
+            $urls = json_decode($urls, true);
+        }
+
+        if (!is_array($urls)) {
+            return [];
+        }
+
+        $prefix = rtrim(config('app.url'), '/') . '/storage/';
+
+        return array_values(array_filter(
+            $urls,
+            fn ($url) => is_string($url) && str_starts_with($url, $prefix) && !str_contains($url, '..')
+        ));
+    }
 
     /**
      * Validate and store an uploaded image.

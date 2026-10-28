@@ -1,0 +1,21 @@
+# Archivos subidos por usuarios: solo se sirven como estáticos, nunca se ejecutan.
+# public/storage es un symlink a esta carpeta, así que estas reglas aplican a /storage/*.
+
+# No interpretar scripts aunque alguno llegue a guardarse aquí
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8 .phar .phps .pht .cgi .pl .py .sh
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .php8 .phar .phps .pht
+
+# Negar acceso directo a cualquier formato ejecutable o de configuración
+<FilesMatch "(?i)\.(php\d?|phtml|phar|phps|pht|cgi|pl|py|sh|htaccess|htpasswd|ini)$">
+    Require all denied
+</FilesMatch>
+
+Options -ExecCGI -Indexes
+
+# Los navegadores no deben adivinar el tipo de un archivo subido
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
