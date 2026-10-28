@@ -54,6 +54,19 @@ interface SelfDevotion {
     };
 }
 
+/** Build publicada en la web, tal como la devuelve GET /api/heroes/{slug}/builds */
+interface HeroBuildSummary {
+    id: number;
+    title: string;
+    description?: string | null;
+    primary_set?: string | null;
+    secondary_set?: string | null;
+    views?: number;
+    likes?: number;
+    created_at?: string;
+    user?: { name?: string } | null;
+}
+
 export interface Hero {
     id: number;
     code: string;
@@ -80,14 +93,6 @@ const ELEMENT_COLORS: Record<string, string> = {
     earth: 'bg-gradient-to-r from-green-700 to-green-500 text-white',
     light: 'bg-gradient-to-r from-amber-600 to-yellow-500 text-white',
     dark: 'bg-gradient-to-r from-purple-800 to-violet-600 text-white',
-};
-
-const ELEMENT_ICONS: Record<string, string> = {
-    fire: '🔥',
-    ice: '❄️',
-    earth: '🌿',
-    light: '☀️',
-    dark: '🌙',
 };
 
 // Element to image mapping
@@ -118,31 +123,8 @@ const CLASS_IMAGES: Record<string, string> = {
     soul_weaver: '/images/classes/ClassSoul_Waver.png',
 };
 
-const SET_ICONS: Record<string, string> = {
-    Speed: '⚡',
-    Attack: '⚔️',
-    Critical: '🎯',
-    Destruction: '💥',
-    Defense: '🛡️',
-    Health: '❤️',
-    Hit: '🎪',
-    Resist: '🔰',
-    Lifesteal: '🧛',
-    Counter: '↩️',
-    Immunity: '✨',
-    Rage: '😤',
-    Unity: '🤝',
-    Penetration: '🔱',
-    Revenge: '⚡',
-    Injury: '💀',
-    Torrent: '🌊',
-    Protection: '🛡️',
-    Warfare: '⚔️',
-    Pursuit: '🏃',
-};
-
 // Set code to local image URL mapping (for Fribbels data)
-import { SET_CODE_IMAGES as SET_IMAGE_URLS, SET_IMAGES as SET_IMAGES_LOWERCASE } from '@/lib/sets';
+import { SET_IMAGES as SET_IMAGES_LOWERCASE } from '@/lib/sets';
 
 
 
@@ -162,11 +144,6 @@ const IMPRINT_TYPES: Record<string, { name: string; color: string }> = {
 };
 
 const IMPRINT_GRADES = ['B', 'A', 'S', 'SS', 'SSS'] as const;
-
-// Get artifact image URL from Fribbels/SmileGate
-const getArtifactImageUrl = (artifactCode: string): string => {
-    return `https://raw.githubusercontent.com/fribbels/Fribbels-Epic-7-Optimizer/main/data/cachedimages/${artifactCode}.png`;
-};
 
 // StatItem component for displaying stats
 const StatItem = ({ label, value, suffix = '', color = 'text-gray-300', large = false }: {
@@ -224,7 +201,7 @@ export function HeroDetailClient({
         enabled: !!hero?.id,
     });
 
-    const builds = buildsData?.data || [];
+    const builds = useMemo<HeroBuildSummary[]>(() => buildsData?.data || [], [buildsData]);
 
     // Builds filter states
     const [buildSearch, setBuildSearch] = useState('');
@@ -234,7 +211,7 @@ export function HeroDetailClient({
     // Get unique sets from builds
     const availableSets = useMemo(() => {
         const sets = new Set<string>();
-        builds.forEach((build: any) => {
+        builds.forEach((build) => {
             if (build.primary_set) sets.add(build.primary_set);
             if (build.secondary_set) sets.add(build.secondary_set);
         });
@@ -248,7 +225,7 @@ export function HeroDetailClient({
         // Search filter
         if (buildSearch.trim()) {
             const search = buildSearch.toLowerCase();
-            result = result.filter((build: any) =>
+            result = result.filter((build) =>
                 build.title?.toLowerCase().includes(search) ||
                 build.description?.toLowerCase().includes(search) ||
                 build.user?.name?.toLowerCase().includes(search)
@@ -257,7 +234,7 @@ export function HeroDetailClient({
 
         // Set filter
         if (buildSetFilter) {
-            result = result.filter((build: any) =>
+            result = result.filter((build) =>
                 build.primary_set === buildSetFilter || build.secondary_set === buildSetFilter
             );
         }
@@ -265,20 +242,20 @@ export function HeroDetailClient({
         // Sort
         switch (buildSortBy) {
             case 'views_desc':
-                result.sort((a: any, b: any) => (b.views || 0) - (a.views || 0));
+                result.sort((a, b) => (b.views || 0) - (a.views || 0));
                 break;
             case 'views_asc':
-                result.sort((a: any, b: any) => (a.views || 0) - (b.views || 0));
+                result.sort((a, b) => (a.views || 0) - (b.views || 0));
                 break;
             case 'likes_desc':
-                result.sort((a: any, b: any) => (b.likes || 0) - (a.likes || 0));
+                result.sort((a, b) => (b.likes || 0) - (a.likes || 0));
                 break;
             case 'likes_asc':
-                result.sort((a: any, b: any) => (a.likes || 0) - (b.likes || 0));
+                result.sort((a, b) => (a.likes || 0) - (b.likes || 0));
                 break;
             case 'newest':
             default:
-                result.sort((a: any, b: any) => new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime());
+                result.sort((a, b) => new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime());
                 break;
         }
 
@@ -719,7 +696,7 @@ export function HeroDetailClient({
                             </div>
                         ) : (
                             <div className="space-y-4">
-                                {filteredBuilds.slice(0, 5).map((build: any) => (
+                                {filteredBuilds.slice(0, 5).map((build) => (
                                     <Link key={build.id} href={`/builds/${build.id}`}>
                                         <div className="bg-e7-void/50 rounded-lg p-4 border border-e7-gold/10 hover:border-e7-gold/40 transition-all cursor-pointer">
                                             <div className="flex justify-between items-start">

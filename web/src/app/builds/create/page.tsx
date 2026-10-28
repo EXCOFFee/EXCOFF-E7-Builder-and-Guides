@@ -11,11 +11,13 @@ import { TierRatingSelector, TIER_CATEGORIES, TierCategory } from '@/components/
 import { ProConsSelector, TagWithNote } from '@/components/ui/pro-cons-selector';
 import { HeroSelectorWithNotes, HeroWithNote } from '@/components/builds/HeroSelectorWithNotes';
 import { useQuery } from '@tanstack/react-query';
-import { heroApi, buildApi } from '@/lib/api';
+import { heroApi } from '@/lib/api';
 import Image from 'next/image';
 import { useTranslations } from '@/hooks/useTranslations';
 
 import { SETS, SET_IMAGES, SET_NAMES } from '@/lib/sets';
+import { useRequireAuth } from '@/hooks/useAuth';
+import { useNavigateFresh } from '@/hooks/useNavigateFresh';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -50,6 +52,7 @@ interface Artifact {
 
 export default function CreateBuildPage() {
     const router = useRouter();
+    const navigateFresh = useNavigateFresh();
     const searchParams = useSearchParams();
     const { t, locale } = useTranslations();
     const preselectedHeroId = searchParams.get('hero_id');
@@ -57,7 +60,7 @@ export default function CreateBuildPage() {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const isAuthenticated = useRequireAuth();
 
     // Form state
     const [heroId, setHeroId] = useState<number | null>(preselectedHeroId ? parseInt(preselectedHeroId) : null);
@@ -111,24 +114,6 @@ export default function CreateBuildPage() {
     const heroDropdownRef = useRef<HTMLDivElement>(null);
     const artifactDropdownRef = useRef<HTMLDivElement>(null);
 
-    // Check authentication
-    useEffect(() => {
-        const token = localStorage.getItem('auth_token');
-        if (!token) {
-            localStorage.setItem('return_url', window.location.pathname + window.location.search);
-            router.push('/login');
-        } else {
-            setIsAuthenticated(true);
-        }
-    }, [router]);
-
-    // Set preselected hero
-    useEffect(() => {
-        if (preselectedHeroId && !heroId) {
-            setHeroId(parseInt(preselectedHeroId));
-        }
-    }, [preselectedHeroId, heroId]);
-
     // Click outside to close dropdowns
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -175,22 +160,23 @@ export default function CreateBuildPage() {
     );
     const selectedArtifact = artifacts.find(a => a.id === artifactId);
 
-    // Auto-fill stats with hero base stats when hero changes
-    useEffect(() => {
-        if (selectedHero?.base_stats) {
-            const baseStats = selectedHero.base_stats;
-            setStats({
-                atk: baseStats.atk?.toString() || '',
-                def: baseStats.def?.toString() || '',
-                hp: baseStats.hp?.toString() || '',
-                spd: baseStats.spd?.toString() || '',
-                crit_chance: baseStats.crit_chance?.toString() || '',
-                crit_dmg: baseStats.crit_dmg?.toString() || '',
-                eff: baseStats.eff?.toString() || '',
-                res: baseStats.res?.toString() || ''
-            });
-        }
-    }, [selectedHero]);
+    // Stats base del héroe al elegirlo. Se ajusta en render y solo cuando cambia el héroe
+    // (no cada vez que se recarga la lista), así no pisa lo que el usuario ya escribió.
+    const [statsFilledFor, setStatsFilledFor] = useState<number | null>(null);
+    if (selectedHero?.base_stats && selectedHero.id !== statsFilledFor) {
+        setStatsFilledFor(selectedHero.id);
+        const baseStats = selectedHero.base_stats;
+        setStats({
+            atk: baseStats.atk?.toString() || '',
+            def: baseStats.def?.toString() || '',
+            hp: baseStats.hp?.toString() || '',
+            spd: baseStats.spd?.toString() || '',
+            crit_chance: baseStats.crit_chance?.toString() || '',
+            crit_dmg: baseStats.crit_dmg?.toString() || '',
+            eff: baseStats.eff?.toString() || '',
+            res: baseStats.res?.toString() || ''
+        });
+    }
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -289,12 +275,11 @@ export default function CreateBuildPage() {
                 }
             }
 
-            // Use window.location for full page refresh to ensure data is reloaded
             const selectedHero = heroes.find(h => h.id === heroId);
             if (selectedHero) {
-                window.location.href = `/heroes/${selectedHero.slug}`;
+                navigateFresh(`/heroes/${selectedHero.slug}`);
             } else {
-                window.location.href = '/heroes';
+                navigateFresh('/heroes');
             }
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Error desconocido');
@@ -730,7 +715,6 @@ export default function CreateBuildPage() {
                                 availableHeroes={heroes.filter(h => h.id !== heroId)}
                                 onChange={setSynergyHeroes}
                                 type="synergy"
-                                maxHeroes={5}
                             />
 
                             {/* Counter Heroes */}
@@ -741,7 +725,6 @@ export default function CreateBuildPage() {
                                 availableHeroes={heroes.filter(h => h.id !== heroId)}
                                 onChange={setCounterHeroes}
                                 type="counter"
-                                maxHeroes={5}
                             />
 
                             {/* Tier Ratings (D-S) */}

@@ -1,14 +1,13 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { ImageCarousel } from '@/components/ui/image-carousel';
-import { StarRating } from '@/components/ui/star-rating';
-import { TierRatingDisplay, TierCategory } from '@/components/ui/tier-rating-selector';
+import { TierRatingDisplay } from '@/components/ui/tier-rating-selector';
 import { ProConsDisplay } from '@/components/ui/pro-cons-selector';
 import { SynergyCounterSection, HeroWithNote } from '@/components/builds/SynergyCounterCard';
 import { ExportBuildImage } from '@/components/builds/ExportBuildImage';
@@ -20,14 +19,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 import { SET_IMAGES } from '@/lib/sets';
 import { formatDate } from '@/lib/utils';
-
-const ELEMENT_COLORS: Record<string, string> = {
-    fire: 'bg-red-500',
-    ice: 'bg-blue-500',
-    earth: 'bg-green-500',
-    light: 'bg-yellow-400',
-    dark: 'bg-purple-600',
-};
+import { useNavigateFresh } from '@/hooks/useNavigateFresh';
 
 // Element to image mapping
 const ELEMENT_IMAGES: Record<string, string> = {
@@ -118,7 +110,7 @@ interface CurrentUser {
 
 export function BuildDetailClient() {
     const params = useParams();
-    const router = useRouter();
+    const navigateFresh = useNavigateFresh();
     const queryClient = useQueryClient();
     const { t, locale } = useTranslations();
     const buildId = params.id as string;
@@ -128,7 +120,6 @@ export function BuildDetailClient() {
     const [hasLiked, setHasLiked] = useState(false);
     const [likeCount, setLikeCount] = useState(0);
     const [isAnonymous, setIsAnonymous] = useState(false);
-    const [userRating, setUserRating] = useState<number | null>(null);
     // Reply and edit state
     const [replyingTo, setReplyingTo] = useState<number | null>(null);
     const [replyContent, setReplyContent] = useState('');
@@ -168,12 +159,12 @@ export function BuildDetailClient() {
         },
     });
 
-    // Sync likeCount when build loads
-    useEffect(() => {
-        if (build?.likes !== undefined) {
-            setLikeCount(build.likes);
-        }
-    }, [build?.likes]);
+    // Cuando el servidor trae otro número de likes, se adopta (ajuste en render, sin efecto)
+    const [syncedLikes, setSyncedLikes] = useState<number | undefined>(undefined);
+    if (build?.likes !== undefined && build.likes !== syncedLikes) {
+        setSyncedLikes(build.likes);
+        setLikeCount(build.likes);
+    }
 
     // Check if user liked this build
     useEffect(() => {
@@ -259,30 +250,6 @@ export function BuildDetailClient() {
             if (context?.previousBuild) {
                 setLikeCount(context.previousBuild.likes);
             }
-        },
-    });
-
-    // Rating mutation
-    const rateMutation = useMutation({
-        mutationFn: async (rating: number) => {
-            const token = localStorage.getItem('auth_token');
-            const response = await fetch(`${API_URL}/builds/${buildId}/rate`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`,
-                },
-                body: JSON.stringify({ rating }),
-            });
-            return response.json();
-        },
-        onSuccess: (data) => {
-            setUserRating(data.user_rating);
-            // Update rating locally
-            queryClient.setQueryData(['build', buildId], (oldData: Build | undefined) => {
-                if (!oldData) return oldData;
-                return { ...oldData, avg_rating: data.avg_rating, rating_count: data.rating_count };
-            });
         },
     });
 
@@ -407,8 +374,7 @@ export function BuildDetailClient() {
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['builds'] });
-            // Use window.location for full page refresh
-            window.location.href = '/builds';
+            navigateFresh('/builds');
         },
         onError: (error: Error) => {
             alert(`Error al eliminar: ${error.message}`);

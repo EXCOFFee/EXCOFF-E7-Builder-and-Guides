@@ -15,7 +15,7 @@ let esSkills = {};
 
 try {
     esSkills = JSON.parse(fs.readFileSync(esSkillsPath, 'utf8'));
-} catch (e) {
+} catch {
     esSkills = {};
 }
 

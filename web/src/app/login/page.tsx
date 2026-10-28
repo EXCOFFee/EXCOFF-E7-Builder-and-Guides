@@ -12,6 +12,8 @@ export default function LoginPage() {
 
     const handleOAuthLogin = (provider: 'google' | 'discord') => {
         setIsLoading(provider);
+        // El OAuth empieza en la API (otro dominio): hace falta una navegación completa, no el router
+        // eslint-disable-next-line @next/next/no-location-assign-relative-destination
         window.location.href = `${API_URL}/auth/${provider}`;
     };
 

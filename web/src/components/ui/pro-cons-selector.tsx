@@ -2,17 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { useTranslations } from '@/hooks/useTranslations';
-import {
-    PROS_TAGS,
-    CONS_TAGS,
-    TAG_CATEGORIES,
-    Tag,
-    TagType,
-    getTagLabel,
-    getCategoryLabel,
-    MAX_PROS,
-    MAX_CONS,
-} from '@/lib/pros-cons-tags';
+import { PROS_TAGS, CONS_TAGS, TAG_CATEGORIES, getTagLabel, getCategoryLabel, MAX_PROS, MAX_CONS } from '@/lib/pros-cons-tags';
 
 // Tag with optional note
 export interface TagWithNote {

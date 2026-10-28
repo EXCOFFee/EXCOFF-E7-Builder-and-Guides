@@ -86,7 +86,6 @@ jobs:
       - name: Typecheck
         run: pnpm typecheck
 
-      # No bloquea todavía: hay errores de lint previos; pasar a bloqueante cuando estén limpios
+      # Bloqueante: el script usa --max-warnings 0, cualquier error o advertencia nueva falla el CI
       - name: Lint
         run: pnpm lint
-        continue-on-error: true

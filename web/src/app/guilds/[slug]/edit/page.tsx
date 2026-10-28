@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslations } from '@/hooks/useTranslations';
+import { useNavigateFresh } from '@/hooks/useNavigateFresh';
+import { previewUrl } from '@/lib/objectUrl';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -50,6 +52,7 @@ const LANGUAGE_LABELS: Record<string, string> = {
 export default function EditGuildPostPage() {
     const params = useParams();
     const router = useRouter();
+    const navigateFresh = useNavigateFresh();
     const { t } = useTranslations();
     const slug = params.slug as string;
 
@@ -198,8 +201,7 @@ export default function EditGuildPostPage() {
             }
 
             const result = await response.json();
-            // Use window.location for full page refresh
-            window.location.href = `/guilds/${result.data.slug}`;
+            navigateFresh(`/guilds/${result.data.slug}`);
         } catch (err) {
             setError(err instanceof Error ? err.message : t('common.unknownError', 'Unknown error'));
         } finally {
@@ -389,8 +391,9 @@ export default function EditGuildPostPage() {
                                     <div className="flex flex-wrap gap-2 mb-2">
                                         {imageFiles.map((file, index) => (
                                             <div key={`file-${index}`} className="relative">
+                                                {/* eslint-disable-next-line @next/next/no-img-element -- previsualización en el formulario (blob: o imagen ya subida), no pasa por next/image */}
                                                 <img
-                                                    src={URL.createObjectURL(file)}
+                                                    src={previewUrl(file)}
                                                     alt=""
                                                     className="w-16 h-16 object-cover rounded border border-e7-gold/30"
                                                 />

@@ -28,7 +28,6 @@ interface HeroSelectorWithNotesProps {
     availableHeroes: HeroData[];
     onChange: (heroes: HeroWithNote[]) => void;
     type: 'synergy' | 'counter';
-    maxHeroes?: number;
     disabled?: boolean;
 }
 
@@ -54,7 +53,6 @@ export function HeroSelectorWithNotes({
     availableHeroes,
     onChange,
     type,
-    maxHeroes,
     disabled = false,
 }: HeroSelectorWithNotesProps) {
     const { t } = useTranslations();

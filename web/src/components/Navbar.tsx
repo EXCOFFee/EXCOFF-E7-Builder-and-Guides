@@ -89,10 +89,12 @@ export function Navbar() {
         };
     }, []);
 
-    // Close mobile menu on route change
-    useEffect(() => {
+    // Cerrar el menú móvil al cambiar de ruta (ajuste en render, sin efecto)
+    const [menuPathname, setMenuPathname] = useState(pathname);
+    if (pathname !== menuPathname) {
+        setMenuPathname(pathname);
         setMobileMenuOpen(false);
-    }, [pathname]);
+    }
 
     const handleLogout = async () => {
         const token = localStorage.getItem('auth_token');

@@ -65,7 +65,6 @@ export function ShareButton({ title, url, description, className = '' }: ShareBu
                 onClose={() => setIsOpen(false)}
                 title={title}
                 url={url}
-                description={description}
             />
         </>
     );

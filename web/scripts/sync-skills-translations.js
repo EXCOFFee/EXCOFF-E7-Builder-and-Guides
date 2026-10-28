@@ -19,7 +19,7 @@ for (const lang of languages) {
 
     try {
         langSkills = JSON.parse(fs.readFileSync(langPath, 'utf8'));
-    } catch (e) {
+    } catch {
         langSkills = {};
     }
 

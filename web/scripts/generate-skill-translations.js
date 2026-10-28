@@ -34,7 +34,7 @@ function fetchCeciliaBotHero(slug) {
                 try {
                     const parsed = JSON.parse(data);
                     resolve(parsed);
-                } catch (e) {
+                } catch {
                     resolve(null);
                 }
             });

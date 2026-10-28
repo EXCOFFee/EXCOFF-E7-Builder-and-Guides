@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -9,8 +9,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useQuery } from '@tanstack/react-query';
 import { heroApi, artifactApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
-import Image from 'next/image';
 import { TeamCompositionSelector, Team } from '@/components/guides/TeamCompositionSelector';
+import { useRequireAuth } from '@/hooks/useAuth';
+import { useNavigateFresh } from '@/hooks/useNavigateFresh';
+import { previewUrl } from '@/lib/objectUrl';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -41,10 +43,11 @@ interface Artifact {
 
 export default function CreateGuidePage() {
     const router = useRouter();
+    const navigateFresh = useNavigateFresh();
     const { t } = useTranslations();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const isAuthenticated = useRequireAuth();
 
     // Form state
     const [title, setTitle] = useState('');
@@ -73,17 +76,6 @@ export default function CreateGuidePage() {
     };
 
     // Get search params for pre-selection (removed - no longer needed)
-
-    // Check authentication
-    useEffect(() => {
-        const token = localStorage.getItem('auth_token');
-        if (!token) {
-            localStorage.setItem('return_url', window.location.pathname + window.location.search);
-            router.push('/login');
-        } else {
-            setIsAuthenticated(true);
-        }
-    }, [router]);
 
     // Removed preselected hero logic - no longer using hero_id field
 
@@ -165,8 +157,7 @@ export default function CreateGuidePage() {
             }
 
             const guide = await response.json();
-            // Use window.location for full page refresh
-            window.location.href = `/guides/${guide.slug}`;
+            navigateFresh(`/guides/${guide.slug}`);
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Error desconocido');
         } finally {
@@ -281,8 +272,9 @@ export default function CreateGuidePage() {
                                     <div className="flex flex-wrap gap-2 mt-3">
                                         {images.map((file, index) => (
                                             <div key={index} className="relative">
+                                                {/* eslint-disable-next-line @next/next/no-img-element -- previsualización en el formulario (blob: o imagen ya subida), no pasa por next/image */}
                                                 <img
-                                                    src={URL.createObjectURL(file)}
+                                                    src={previewUrl(file)}
                                                     alt=""
                                                     className="w-20 h-20 object-cover rounded border border-e7-gold/30"
                                                 />

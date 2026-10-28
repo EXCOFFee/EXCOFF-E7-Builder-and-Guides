@@ -1,14 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { ImageCarousel } from '@/components/ui/image-carousel';
 import { useTranslations } from '@/hooks/useTranslations';
-import { formatDate } from '@/lib/utils';
+import { formatDate } from '@/lib/utils';
+import { useNavigateFresh } from '@/hooks/useNavigateFresh';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -78,7 +79,7 @@ interface CurrentUser {
 
 export default function GuildPostDetailPage() {
     const params = useParams();
-    const router = useRouter();
+    const navigateFresh = useNavigateFresh();
     const queryClient = useQueryClient();
     const { t, locale } = useTranslations();
     const slug = params.slug as string;
@@ -142,7 +143,7 @@ export default function GuildPostDetailPage() {
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['guilds'] });
-            window.location.href = '/guilds';
+            navigateFresh('/guilds');
         },
         onError: (error: Error) => {
             alert(`Error al eliminar: ${error.message}`);

@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,6 +10,9 @@ import { useQuery } from '@tanstack/react-query';
 import { heroApi, guideApi, artifactApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
 import { TeamCompositionSelector, Team } from '@/components/guides/TeamCompositionSelector';
+import { useRequireAuth } from '@/hooks/useAuth';
+import { useNavigateFresh } from '@/hooks/useNavigateFresh';
+import { previewUrl } from '@/lib/objectUrl';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -55,6 +57,7 @@ interface Guide {
 
 export default function EditGuidePage() {
     const router = useRouter();
+    const navigateFresh = useNavigateFresh();
     const params = useParams();
     const slug = params.slug as string;
     const { t } = useTranslations();
@@ -62,7 +65,7 @@ export default function EditGuidePage() {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const isAuthenticated = useRequireAuth();
 
     // Form state
     const [title, setTitle] = useState('');
@@ -90,17 +93,6 @@ export default function EditGuidePage() {
         pt: 'Português',
     };
 
-    // Check authentication
-    useEffect(() => {
-        const token = localStorage.getItem('auth_token');
-        if (!token) {
-            localStorage.setItem('return_url', window.location.pathname);
-            router.push('/login');
-        } else {
-            setIsAuthenticated(true);
-        }
-    }, [router]);
-
     // Fetch existing guide data
     const { data: guideData, isLoading: loadingGuide } = useQuery({
         queryKey: ['guide', slug],
@@ -111,20 +103,21 @@ export default function EditGuidePage() {
         enabled: isAuthenticated && !!slug,
     });
 
-    // Pre-fill form when guide loads
-    useEffect(() => {
-        if (guideData) {
-            const guide = guideData as Guide;
-            setTitle(guide.title || '');
-            setCategory(guide.category || 'general');
-            setDescription(guide.description || '');
-            setContent(guide.gameplay_content || '');
-            setVideoUrl(guide.video_url || '');
-            setImages(guide.images || []);
-            setTeams(guide.teams || []);
-            setLanguage(guide.language || 'en');
-        }
-    }, [guideData]);
+    // Rellenar el formulario una sola vez, cuando llegan los datos (ajuste en render, sin efecto).
+    // Como efecto se repetía con cada recarga de la consulta y pisaba lo que el usuario editaba.
+    const [prefilled, setPrefilled] = useState(false);
+    if (guideData && !prefilled) {
+        setPrefilled(true);
+        const guide = guideData as Guide;
+        setTitle(guide.title || '');
+        setCategory(guide.category || 'general');
+        setDescription(guide.description || '');
+        setContent(guide.gameplay_content || '');
+        setVideoUrl(guide.video_url || '');
+        setImages(guide.images || []);
+        setTeams(guide.teams || []);
+        setLanguage(guide.language || 'en');
+    }
 
     // Fetch heroes for selector
     const { data: heroesData } = useQuery({
@@ -208,8 +201,7 @@ export default function EditGuidePage() {
             }
 
             const updated = await response.json();
-            // Use window.location for full page refresh
-            window.location.href = `/guides/${updated.slug || slug}`;
+            navigateFresh(`/guides/${updated.slug || slug}`);
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Error desconocido');
         } finally {
@@ -343,6 +335,7 @@ export default function EditGuidePage() {
                                     <div className="grid grid-cols-3 gap-2 mb-4">
                                         {images.map((img, idx) => (
                                             <div key={idx} className="relative group">
+                                                {/* eslint-disable-next-line @next/next/no-img-element -- previsualización en el formulario (blob: o imagen ya subida), no pasa por next/image */}
                                                 <img
                                                     src={img}
                                                     alt={`Image ${idx + 1}`}
@@ -390,8 +383,9 @@ export default function EditGuidePage() {
                                     <div className="grid grid-cols-3 gap-2 mb-4">
                                         {imageFiles.map((file, idx) => (
                                             <div key={`new-${idx}`} className="relative group">
+                                                {/* eslint-disable-next-line @next/next/no-img-element -- previsualización en el formulario (blob: o imagen ya subida), no pasa por next/image */}
                                                 <img
-                                                    src={URL.createObjectURL(file)}
+                                                    src={previewUrl(file)}
                                                     alt=""
                                                     className="w-full h-24 object-cover rounded border border-green-500/50"
                                                 />

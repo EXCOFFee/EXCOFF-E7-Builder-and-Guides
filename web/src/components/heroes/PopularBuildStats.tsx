@@ -177,11 +177,12 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                 <div key={setData.set} className="flex items-center gap-4">
                                     <div className="w-10 h-10 rounded-lg bg-e7-dark/60 flex items-center justify-center border border-e7-gold/20">
                                         {SET_IMAGES[setData.set.toLowerCase()] ? (
-                                            <img
+                                            <Image
                                                 src={SET_IMAGES[setData.set.toLowerCase()]}
-                                                alt={setData.set}
+                                                alt=""
                                                 width={32}
                                                 height={32}
+                                                unoptimized
                                                 className="w-8 h-8"
                                             />
                                         ) : (
@@ -215,11 +216,12 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                 <div key={setData.set} className="flex items-center gap-4">
                                     <div className="w-10 h-10 rounded-lg bg-e7-dark/60 flex items-center justify-center border border-e7-gold/20">
                                         {SET_IMAGES[setData.set.toLowerCase()] ? (
-                                            <img
+                                            <Image
                                                 src={SET_IMAGES[setData.set.toLowerCase()]}
-                                                alt={setData.set}
+                                                alt=""
                                                 width={32}
                                                 height={32}
+                                                unoptimized
                                                 className="w-8 h-8"
                                             />
                                         ) : (
@@ -340,7 +342,7 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                 <span>✓</span> {t('builds.pros', 'Pros')}
                             </h3>
                             {stats.pro_tags?.length > 0 ? (
-                                stats.pro_tags.map((tag, index) => (
+                                stats.pro_tags.map((tag) => (
                                     <div
                                         key={tag.tag}
                                         className="flex items-center justify-between px-4 py-3 rounded-lg bg-gradient-to-r from-green-900/40 to-green-800/20 border border-green-500/30 hover:border-green-400/50 transition-colors"
@@ -365,7 +367,7 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                 <span>✗</span> {t('builds.cons', 'Cons')}
                             </h3>
                             {stats.con_tags?.length > 0 ? (
-                                stats.con_tags.map((tag, index) => (
+                                stats.con_tags.map((tag) => (
                                     <div
                                         key={tag.tag}
                                         className="flex items-center justify-between px-4 py-3 rounded-lg bg-gradient-to-r from-red-900/40 to-red-800/20 border border-red-500/30 hover:border-red-400/50 transition-colors"

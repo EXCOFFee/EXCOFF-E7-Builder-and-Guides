@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { useTranslations } from '@/hooks/useTranslations';
-import { SET_IMAGES, formatSetName } from '@/lib/sets';
+import { SET_IMAGES } from '@/lib/sets';
 import { appendImageVersion } from '@/lib/heroImages';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';

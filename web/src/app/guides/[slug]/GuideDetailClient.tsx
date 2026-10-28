@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
@@ -13,6 +13,7 @@ import { TeamCompositionDisplay, Team } from '@/components/guides/TeamCompositio
 import { ShareButton } from '@/components/ui/ShareButton';
 import { appendImageVersion } from '@/lib/heroImages';
 import { formatDate } from '@/lib/utils';
+import { useNavigateFresh } from '@/hooks/useNavigateFresh';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -111,7 +112,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 
 export function GuideDetailClient() {
     const params = useParams();
-    const router = useRouter();
+    const navigateFresh = useNavigateFresh();
     const queryClient = useQueryClient();
     const { t, locale } = useTranslations();
     const slug = params.slug as string;
@@ -153,12 +154,12 @@ export function GuideDetailClient() {
         },
     });
 
-    // Sync likeCount when guide loads
-    useEffect(() => {
-        if (guide?.likes !== undefined) {
-            setLikeCount(guide.likes);
-        }
-    }, [guide?.likes]);
+    // Cuando el servidor trae otro número de likes, se adopta (ajuste en render, sin efecto)
+    const [syncedLikes, setSyncedLikes] = useState<number | undefined>(undefined);
+    if (guide?.likes !== undefined && guide.likes !== syncedLikes) {
+        setSyncedLikes(guide.likes);
+        setLikeCount(guide.likes);
+    }
 
     // Fetch comments
     const { data: commentsData } = useQuery({
@@ -280,7 +281,7 @@ export function GuideDetailClient() {
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['guides'] });
-            window.location.href = '/guides';
+            navigateFresh('/guides');
         },
         onError: (error: Error) => {
             alert(`Error al eliminar: ${error.message}`);

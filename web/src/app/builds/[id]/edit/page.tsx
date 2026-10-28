@@ -17,6 +17,9 @@ import { useTranslations } from '@/hooks/useTranslations';
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 import { SETS, SET_IMAGES, SET_NAMES } from '@/lib/sets';
+import { useRequireAuth } from '@/hooks/useAuth';
+import { useNavigateFresh } from '@/hooks/useNavigateFresh';
+import { previewUrl } from '@/lib/objectUrl';
 
 interface Build {
     id: number;
@@ -80,13 +83,14 @@ interface Artifact {
 
 export default function EditBuildPage() {
     const router = useRouter();
+    const navigateFresh = useNavigateFresh();
     const params = useParams();
     const buildId = params.id as string;
     const { t, locale } = useTranslations();
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const isAuthenticated = useRequireAuth();
 
     // Form state
     const [title, setTitle] = useState('');
@@ -136,17 +140,6 @@ export default function EditBuildPage() {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
-    // Check authentication
-    useEffect(() => {
-        const token = localStorage.getItem('auth_token');
-        if (!token) {
-            localStorage.setItem('return_url', window.location.pathname);
-            router.push('/login');
-        } else {
-            setIsAuthenticated(true);
-        }
-    }, [router]);
-
     // Fetch existing build data
     const { data: buildData, isLoading } = useQuery({
         queryKey: ['build', buildId, locale],
@@ -186,72 +179,73 @@ export default function EditBuildPage() {
     );
     const selectedArtifact = artifacts.find(a => a.id === artifactId);
 
-    // Pre-fill form when build loads
-    useEffect(() => {
-        if (buildData) {
-            const build = buildData as Build;
-            setTitle(build.title || '');
-            setDescription(build.description || '');
-            setPrimarySet(build.primary_set || '');
-            setSecondarySet(build.secondary_set || '');
-            if (build.min_stats) {
-                setMinStats(build.min_stats);
-            }
-            if (build.images && build.images.length > 0) {
-                setExistingImages(build.images);
-            }
-            if (build.artifact) {
-                setArtifactId(build.artifact.id);
-            }
-            // Pre-fill synergy/counter heroes (handle both old number[] and new HeroWithNote[] format)
-            if (build.synergy_heroes && build.synergy_heroes.length > 0) {
-                if (typeof build.synergy_heroes[0] === 'number') {
-                    setSynergyHeroes((build.synergy_heroes as unknown as number[]).map(id => ({ id })));
-                } else {
-                    setSynergyHeroes(build.synergy_heroes as unknown as HeroWithNote[]);
-                }
-            }
-            if (build.counter_heroes && build.counter_heroes.length > 0) {
-                if (typeof build.counter_heroes[0] === 'number') {
-                    setCounterHeroes((build.counter_heroes as unknown as number[]).map(id => ({ id })));
-                } else {
-                    setCounterHeroes(build.counter_heroes as unknown as HeroWithNote[]);
-                }
-            }
-            if (build.skill_1 !== undefined || build.skill_2 !== undefined || build.skill_3 !== undefined) {
-                setSkillLevels([build.skill_1 || 0, build.skill_2 || 0, build.skill_3 || 0]);
-            }
-            // Pre-fill tier ratings
-            const ratings: Partial<Record<TierCategory, number | null>> = {};
-            const reasons: Partial<Record<TierCategory, string>> = {};
-            if (build.rating_pve) { ratings.pve = build.rating_pve; if (build.reason_pve) reasons.pve = build.reason_pve; }
-            if (build.rating_arena) { ratings.arena = build.rating_arena; if (build.reason_arena) reasons.arena = build.reason_arena; }
-            if (build.rating_gw) { ratings.gw = build.rating_gw; if (build.reason_gw) reasons.gw = build.reason_gw; }
-            if (build.rating_rta) { ratings.rta = build.rating_rta; if (build.reason_rta) reasons.rta = build.reason_rta; }
-            setTierRatings(ratings);
-            setTierReasons(reasons);
-
-            // Pre-fill pros/cons tags (handle both old string[] and new TagWithNote[] format)
-            if (build.pro_tags) {
-                if (typeof build.pro_tags[0] === 'string') {
-                    setProTags((build.pro_tags as string[]).map(id => ({ id })));
-                } else {
-                    setProTags(build.pro_tags as TagWithNote[]);
-                }
-            }
-            if (build.con_tags) {
-                if (typeof build.con_tags[0] === 'string') {
-                    setConTags((build.con_tags as string[]).map(id => ({ id })));
-                } else {
-                    setConTags(build.con_tags as TagWithNote[]);
-                }
-            }
-            // Pre-fill language
-            if (build.language) {
-                setLanguage(build.language);
+    // Rellenar el formulario una sola vez, cuando llegan los datos (ajuste en render, sin efecto).
+    // Como efecto se repetía con cada recarga de la consulta y pisaba lo que el usuario editaba.
+    const [prefilled, setPrefilled] = useState(false);
+    if (buildData && !prefilled) {
+        setPrefilled(true);
+        const build = buildData as Build;
+        setTitle(build.title || '');
+        setDescription(build.description || '');
+        setPrimarySet(build.primary_set || '');
+        setSecondarySet(build.secondary_set || '');
+        if (build.min_stats) {
+            setMinStats(build.min_stats);
+        }
+        if (build.images && build.images.length > 0) {
+            setExistingImages(build.images);
+        }
+        if (build.artifact) {
+            setArtifactId(build.artifact.id);
+        }
+        // Pre-fill synergy/counter heroes (handle both old number[] and new HeroWithNote[] format)
+        if (build.synergy_heroes && build.synergy_heroes.length > 0) {
+            if (typeof build.synergy_heroes[0] === 'number') {
+                setSynergyHeroes((build.synergy_heroes as unknown as number[]).map(id => ({ id })));
+            } else {
+                setSynergyHeroes(build.synergy_heroes as unknown as HeroWithNote[]);
             }
         }
-    }, [buildData]);
+        if (build.counter_heroes && build.counter_heroes.length > 0) {
+            if (typeof build.counter_heroes[0] === 'number') {
+                setCounterHeroes((build.counter_heroes as unknown as number[]).map(id => ({ id })));
+            } else {
+                setCounterHeroes(build.counter_heroes as unknown as HeroWithNote[]);
+            }
+        }
+        if (build.skill_1 !== undefined || build.skill_2 !== undefined || build.skill_3 !== undefined) {
+            setSkillLevels([build.skill_1 || 0, build.skill_2 || 0, build.skill_3 || 0]);
+        }
+        // Pre-fill tier ratings
+        const ratings: Partial<Record<TierCategory, number | null>> = {};
+        const reasons: Partial<Record<TierCategory, string>> = {};
+        if (build.rating_pve) { ratings.pve = build.rating_pve; if (build.reason_pve) reasons.pve = build.reason_pve; }
+        if (build.rating_arena) { ratings.arena = build.rating_arena; if (build.reason_arena) reasons.arena = build.reason_arena; }
+        if (build.rating_gw) { ratings.gw = build.rating_gw; if (build.reason_gw) reasons.gw = build.reason_gw; }
+        if (build.rating_rta) { ratings.rta = build.rating_rta; if (build.reason_rta) reasons.rta = build.reason_rta; }
+        setTierRatings(ratings);
+        setTierReasons(reasons);
+
+        // Pre-fill pros/cons tags (handle both old string[] and new TagWithNote[] format)
+        if (build.pro_tags) {
+            if (typeof build.pro_tags[0] === 'string') {
+                setProTags((build.pro_tags as string[]).map(id => ({ id })));
+            } else {
+                setProTags(build.pro_tags as TagWithNote[]);
+            }
+        }
+        if (build.con_tags) {
+            if (typeof build.con_tags[0] === 'string') {
+                setConTags((build.con_tags as string[]).map(id => ({ id })));
+            } else {
+                setConTags(build.con_tags as TagWithNote[]);
+            }
+        }
+        // Pre-fill language
+        if (build.language) {
+            setLanguage(build.language);
+        }
+    }
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -346,8 +340,7 @@ export default function EditBuildPage() {
                 }
             }
 
-            // Use window.location for full page refresh
-            window.location.href = `/builds/${buildId}`;
+            navigateFresh(`/builds/${buildId}`);
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Error desconocido');
         } finally {
@@ -642,8 +635,9 @@ export default function EditBuildPage() {
                                     <div className="flex flex-wrap gap-2 mb-2">
                                         {imageFiles.map((file, index) => (
                                             <div key={`file-${index}`} className="relative">
+                                                {/* eslint-disable-next-line @next/next/no-img-element -- previsualización en el formulario (blob: o imagen ya subida), no pasa por next/image */}
                                                 <img
-                                                    src={URL.createObjectURL(file)}
+                                                    src={previewUrl(file)}
                                                     alt=""
                                                     className="w-16 h-16 object-cover rounded border border-e7-gold/30"
                                                 />
@@ -664,6 +658,7 @@ export default function EditBuildPage() {
                                     <div className="flex flex-wrap gap-2">
                                         {existingImages.map((url, index) => (
                                             <div key={`existing-${index}`} className="relative">
+                                                {/* eslint-disable-next-line @next/next/no-img-element -- previsualización en el formulario (blob: o imagen ya subida), no pasa por next/image */}
                                                 <img
                                                     src={url}
                                                     alt=""
@@ -690,7 +685,6 @@ export default function EditBuildPage() {
                                 availableHeroes={heroes.filter(h => h.id !== build?.hero?.id)}
                                 onChange={setSynergyHeroes}
                                 type="synergy"
-                                maxHeroes={5}
                             />
 
                             {/* Counter Heroes */}
@@ -701,7 +695,6 @@ export default function EditBuildPage() {
                                 availableHeroes={heroes.filter(h => h.id !== build?.hero?.id)}
                                 onChange={setCounterHeroes}
                                 type="counter"
-                                maxHeroes={5}
                             />
 
                             {/* Tier Ratings */}

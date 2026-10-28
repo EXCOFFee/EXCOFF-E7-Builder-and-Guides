@@ -12,9 +12,6 @@ import { appendImageVersion } from '@/lib/heroImages';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
-const ELEMENTS = ['fire', 'ice', 'earth', 'light', 'dark'];
-const CLASSES = ['knight', 'warrior', 'thief', 'ranger', 'mage', 'soul_weaver'];
-
 // Element to image mapping
 const ELEMENT_IMAGES: Record<string, string> = {
     fire: '/images/elements/ElementFire.png',
@@ -30,15 +27,6 @@ const ELEMENT_NAMES: Record<string, string> = {
     earth: 'Earth',
     light: 'Light',
     dark: 'Dark',
-};
-
-// Element colors for indicator dots
-const ELEMENT_COLORS: Record<string, string> = {
-    fire: 'bg-red-500',
-    ice: 'bg-blue-500',
-    earth: 'bg-green-500',
-    light: 'bg-yellow-400',
-    dark: 'bg-purple-600',
 };
 
 // Class to image mapping

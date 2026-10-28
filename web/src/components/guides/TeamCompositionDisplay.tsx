@@ -160,7 +160,7 @@ export function TeamCompositionDisplay({ teams }: TeamCompositionDisplayProps) {
                                         {/* Note */}
                                         {teamHero.note && (
                                             <p className="text-sm text-slate-400 text-center italic mt-3 border-t border-cyan-500/10 pt-3">
-                                                "{teamHero.note}"
+                                                &ldquo;{teamHero.note}&rdquo;
                                             </p>
                                         )}
                                     </div>
