@@ -1,0 +1,5319 @@
+{
+    "_meta": {
+        "description": "Snapshot used by 2026_10_27_000002_sync_hero_data_with_fribbels. Imprint grades, skill multipliers and lv60 stats from Fribbels herodata.json. Do not edit: future changes go in a new migration.",
+        "generated_at": "2026-10-27",
+        "skipped": {
+            "diene": "Fribbels stats identical to Ivana (suspected data error), stats not applied"
+        }
+    },
+    "heroes": [
+        {
+            "slug": "abigail",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "abyssal-yufine",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "def_rate"
+            }
+        },
+        {
+            "slug": "achates",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "adin",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "adlay",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "adventurer-ras",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "afternoon-soak-flan",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "ainos",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "ainos-20",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "ains",
+            "self_devotion": {
+                "grades": {
+                    "A": 55,
+                    "B": 44,
+                    "C": 33,
+                    "D": 22,
+                    "S": 66,
+                    "SS": 77,
+                    "SSS": 88
+                },
+                "type": "def"
+            }
+        },
+        {
+            "slug": "ainz-ooal-gown",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "aither",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "aki",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 0.2,
+                    "targets": 1
+                },
+                "S2": {},
+                "S3": {
+                    "pow": 1.1,
+                    "rate": 0.2,
+                    "targets": 1
+                }
+            }
+        },
+        {
+            "slug": "albedo",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "alencia",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "alexa",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "ambitious-tywin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "amid",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "amiki",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "angel-of-light-angelica",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "angelica",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "aram",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "aramintha",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "arbiter-vildred",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 0.95,
+                    "rate": 0.975,
+                    "targets": 2
+                },
+                "S2": {},
+                "S3": {
+                    "pow": 0.85,
+                    "rate": 1.15,
+                    "targets": 3
+                }
+            }
+        },
+        {
+            "slug": "archdemons-shadow",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "argent-waves-hwayoung",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "aria",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "def_rate"
+            }
+        },
+        {
+            "slug": "armin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "def_rate"
+            }
+        },
+        {
+            "slug": "arowell",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "arunka",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "assassin-cartuja",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "assassin-cidd",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "assassin-coli",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "astromancer-elena",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "auxiliary-lots",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "azalea",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "baal-sezan",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "bad-cat-armin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "baiken",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "basar",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "bask",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "batisse",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "belian",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "bellona",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "benevolent-romann",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "benimaru",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "bernard",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "birgitta",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "blaze-dingo",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "blood-blade-karin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "blood-moon-haste",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "blooming-lidica",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "bomb-model-kanna",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "boss-arunka",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "def_rate"
+            }
+        },
+        {
+            "slug": "briar-witch-iseria",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "brieg",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "butcher-corps-inquisitor",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "byblis",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "bystander-hwayoung",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "camilla",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "captain-rikoris",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "carmainerose",
+            "self_devotion": {
+                "grades": {
+                    "A": 55,
+                    "B": 44,
+                    "C": 33,
+                    "D": 22,
+                    "S": 66,
+                    "SS": 77,
+                    "SSS": 88
+                },
+                "type": "def"
+            }
+        },
+        {
+            "slug": "carrot",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "cartuja",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "cecilia",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "celeste",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "celestial-mercedes",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 1,
+                    "selfHpScaling": 0.02,
+                    "targets": 2
+                },
+                "S2": {
+                    "pow": 0.9,
+                    "rate": 0.9,
+                    "selfHpScaling": 0.04,
+                    "targets": 3
+                },
+                "S3": {
+                    "pow": 0.8,
+                    "rate": 1.2,
+                    "targets": 3
+                }
+            }
+        },
+        {
+            "slug": "celine",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "cerise",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "cermia",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "challenger-dominiel",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            },
+            "base_stats": {
+                "atk": 1187,
+                "def": 627,
+                "hp": 4491,
+                "spd": 101,
+                "crit_chance": 57,
+                "crit_dmg": 160,
+                "eff": 0,
+                "res": 0
+            }
+        },
+        {
+            "slug": "champion-zerato",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 0.95,
+                    "rate": 1,
+                    "targets": 2
+                },
+                "S2": {
+                    "pow": 0.95,
+                    "rate": 1,
+                    "targets": 1
+                },
+                "S3": {
+                    "pow": 1,
+                    "rate": 1,
+                    "targets": 3
+                }
+            }
+        },
+        {
+            "slug": "chaos-inquisitor",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "chaos-sect-axe",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "charles",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "charlotte",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 0.9,
+                    "targets": 1
+                },
+                "S2": {
+                    "pow": 1,
+                    "targets": 1
+                },
+                "S3": {
+                    "pow": 0.9,
+                    "rate": 0.85,
+                    "targets": 3
+                }
+            }
+        },
+        {
+            "slug": "chloe",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "choux",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "christy",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "church-of-ilryos-axe",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "cidd",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "clarissa",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.06,
+                    "B": 0.05,
+                    "C": 0.03,
+                    "S": 0.07,
+                    "SS": 0.08,
+                    "SSS": 0.09
+                },
+                "type": "coop"
+            }
+        },
+        {
+            "slug": "claudia",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "closer-charles",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "coli",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "command-model-laika",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "commander-lorina",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "commander-pavel",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "conqueror-lilias",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "corvus",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "crescent-moon-rin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "crimson-armin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "def_rate"
+            }
+        },
+        {
+            "slug": "crozet",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "def_rate"
+            }
+        },
+        {
+            "slug": "dark-corvus",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "death-dealer-ray",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "desert-jewel-basar",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "designer-lilibet",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "destina",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "diene",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "dingo",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "disciplinary-prefect-aria",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "dizzy",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "doll-maker-pearlhorizon",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "dominiel",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "doris",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "dragon-king-sharun",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "eaton",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "eda",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "edward-elric",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "elena",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "eligos",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "elphelt",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "elson",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "elvira",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "emilia",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "empyrean-ilynav",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "enott",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "ervalen",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "estelle",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 1,
+                    "selfHpScaling": 0.16,
+                    "targets": 1
+                },
+                "S2": {},
+                "S3": {
+                    "penetration": 0.5,
+                    "pow": 1,
+                    "rate": 0.5,
+                    "selfHpScaling": 0.14,
+                    "targets": 1
+                }
+            }
+        },
+        {
+            "slug": "eternal-wanderer-ludwig",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "ezra",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "fairytale-tenebria",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "faithless-lidica",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "falconer-kluri",
+            "self_devotion": {
+                "grades": {
+                    "A": 55,
+                    "B": 44,
+                    "C": 33,
+                    "D": 22,
+                    "S": 66,
+                    "SS": 77,
+                    "SSS": 88
+                },
+                "type": "def"
+            }
+        },
+        {
+            "slug": "fallen-cecilia",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "fenne",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "fenris",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "fern",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "festive-eda",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "fighter-maya",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "def_rate"
+            }
+        },
+        {
+            "slug": "flan",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "free-spirit-tieria",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "frida",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "frieren",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "fumyr",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "furious",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "general-purrgis",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "genesis-ras",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "glenn",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "gloomyrain",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "godmother",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "great-chief-khawana",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "guard-captain-krau",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "def_rate"
+            }
+        },
+        {
+            "slug": "guider-aither",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "gunther",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.04,
+                    "B": 0.03,
+                    "C": 0.02,
+                    "D": 0.01,
+                    "S": 0.05,
+                    "SS": 0.06,
+                    "SSS": 0.07
+                },
+                "type": "coop"
+            }
+        },
+        {
+            "slug": "harsetti",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "haste",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "hataan",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "hazel",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "hecate",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "helen",
+            "self_devotion": {
+                "grades": {
+                    "A": 55,
+                    "B": 44,
+                    "C": 33,
+                    "D": 22,
+                    "S": 66,
+                    "SS": 77,
+                    "SSS": 88
+                },
+                "type": "def"
+            }
+        },
+        {
+            "slug": "helga",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "hellion-lua",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "holiday-yufine",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "holy-flame-adin",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "hurado",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "ian",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "ilynav",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "immortal-wukong",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "inferno-khawazu",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "infinite-horizon-achates",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "inheritor-amiki",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "iseria",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "januta",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "jecht",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "jena",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "jenua",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "judith",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "juni",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "kane",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "karin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "kawerik",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 1.2,
+                    "targets": 1
+                },
+                "S2": {
+                    "pow": 1,
+                    "rate": 1.4,
+                    "targets": 1
+                },
+                "S3": {
+                    "penetration": 0.5,
+                    "pow": 0.95,
+                    "rate": 1.1,
+                    "targets": 3
+                }
+            }
+        },
+        {
+            "slug": "kayron",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "ken",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "khawana",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "khawazu",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "kikirat-v2",
+            "self_devotion": {
+                "grades": {
+                    "A": 55,
+                    "B": 44,
+                    "C": 33,
+                    "D": 22,
+                    "S": 66,
+                    "SS": 77,
+                    "SSS": 88
+                },
+                "type": "def"
+            }
+        },
+        {
+            "slug": "kiris",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "kise",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 1.1,
+                    "targets": 1
+                },
+                "S2": {
+                    "penetration": 0.3,
+                    "pow": 1,
+                    "rate": 1,
+                    "targets": 3
+                },
+                "S3": {
+                    "pow": 1,
+                    "rate": 1.6,
+                    "targets": 1
+                }
+            }
+        },
+        {
+            "slug": "kitty-clarissa",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "kizuna-ai",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "kluri",
+            "self_devotion": {
+                "grades": {
+                    "A": 55,
+                    "B": 44,
+                    "C": 33,
+                    "D": 22,
+                    "S": 66,
+                    "SS": 77,
+                    "SSS": 88
+                },
+                "type": "def"
+            }
+        },
+        {
+            "slug": "krau",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "lady-of-the-scales",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "laia",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "last-piece-karin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "leah",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "lena",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "leo",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "lethe",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "lidica",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "lilias",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "lilibet",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "lilka",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "lionheart-cermia",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "little-queen-charlotte",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 1.2,
+                    "targets": 1
+                },
+                "S2": {
+                    "pow": 1,
+                    "targets": 1
+                },
+                "S3": {
+                    "penetration": 0.5,
+                    "pow": 1,
+                    "rate": 1.65,
+                    "targets": 1
+                }
+            }
+        },
+        {
+            "slug": "lone-crescent-bellona",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 1,
+                    "targets": 1
+                },
+                "S2": {
+                    "pow": 1,
+                    "rate": 0.8,
+                    "targets": 1
+                },
+                "S3": {
+                    "pow": 1,
+                    "rate": 1.6,
+                    "targets": 1
+                }
+            }
+        },
+        {
+            "slug": "lone-wolf-peira",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "lorina",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "lots",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "lua",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "lucy",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "ludwig",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "luluca",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "luna",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "magic-scholar-doris",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "maid-chloe",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "martial-artist-ken",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 0.95,
+                    "rate": 1,
+                    "targets": 1
+                },
+                "S2": {
+                    "pow": 1,
+                    "rate": 0.95,
+                    "targets": 1
+                },
+                "S3": {
+                    "pow": 1,
+                    "rate": 1.1,
+                    "targets": 3
+                }
+            }
+        },
+        {
+            "slug": "mascot-hazel",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "maya",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "def_rate"
+            }
+        },
+        {
+            "slug": "mediator-kawerik",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "melany",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "melissa",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "mercedes",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "mercenary-helga",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "milim",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "mirsa",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "mistychain",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "monarch-of-the-sword-iseria",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "penetration": 1,
+                    "pow": 1,
+                    "rate": 0.3,
+                    "targets": 1
+                },
+                "S2": {},
+                "S3": {
+                    "pow": 1,
+                    "rate": 0.3,
+                    "targets": 3
+                }
+            }
+        },
+        {
+            "slug": "montmorancy",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "mort",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "mucacha",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "mui",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "muse-rima",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "muwi",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "nahkwol",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "navy-captain-landy",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "nemunas",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "new-kid-adin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "new-moon-luna",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "notos",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 0.9,
+                    "rate": 0.5,
+                    "selfHpScaling": 0.1,
+                    "targets": 1
+                },
+                "S2": {
+                    "penetration": 0.5,
+                    "pow": 0.9,
+                    "rate": 0.6,
+                    "targets": 1
+                },
+                "S3": {}
+            }
+        },
+        {
+            "slug": "ocean-breeze-luluca",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "operator-sigret",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "orte",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "otillie",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "pavel",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "peacemaker-furious",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "pearlhorizon",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "peira",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "penelope",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "perfumer-byblis",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            },
+            "base_stats": {
+                "atk": 640,
+                "def": 720,
+                "hp": 5340,
+                "spd": 106,
+                "crit_chance": 15,
+                "crit_dmg": 150,
+                "eff": 18,
+                "res": 0
+            }
+        },
+        {
+            "slug": "pernilla",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "pirate-captain-flan",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            },
+            "base_stats": {
+                "atk": 1182,
+                "def": 571,
+                "hp": 5299,
+                "spd": 114,
+                "crit_chance": 15,
+                "crit_dmg": 150,
+                "eff": 18,
+                "res": 0
+            }
+        },
+        {
+            "slug": "purrgis",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "pyllis",
+            "self_devotion": {
+                "grades": {
+                    "A": 55,
+                    "B": 44,
+                    "C": 33,
+                    "D": 22,
+                    "S": 66,
+                    "SS": 77,
+                    "SSS": 88
+                },
+                "type": "def"
+            }
+        },
+        {
+            "slug": "ragnvald",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "ram",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "ras",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "ravi",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "def_rate"
+            }
+        },
+        {
+            "slug": "ray",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "rem",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "remnant-violet",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "requiem-roana",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "requiemroar",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "researcher-carrot",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "revna",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "righteous-thief-roozid",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            },
+            "base_stats": {
+                "atk": 1081,
+                "def": 494,
+                "hp": 5402,
+                "spd": 120,
+                "crit_chance": 23,
+                "crit_dmg": 150,
+                "eff": 0,
+                "res": 0
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 0.9,
+                    "selfSpdScaling": 0.00075,
+                    "targets": 1
+                },
+                "S2": {
+                    "pow": 1,
+                    "rate": 1.6,
+                    "selfSpdScaling": 0.0015,
+                    "targets": 1
+                },
+                "S3": {}
+            }
+        },
+        {
+            "slug": "rikoris",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "rima",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "rimuru",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "rin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "rinak",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "riza-hawkeye",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "roaming-warrior-leo",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "roana",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "robin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "romann",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "roozid",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            },
+            "base_stats": {
+                "atk": 1081,
+                "def": 494,
+                "hp": 4572,
+                "spd": 111,
+                "crit_chance": 23,
+                "crit_dmg": 150,
+                "eff": 0,
+                "res": 0
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 0.9,
+                    "selfSpdScaling": 0.00075,
+                    "targets": 1
+                },
+                "S2": {
+                    "pow": 1,
+                    "rate": 1.6,
+                    "selfSpdScaling": 0.0015,
+                    "targets": 1
+                },
+                "S3": {}
+            }
+        },
+        {
+            "slug": "rose",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "def_rate"
+            }
+        },
+        {
+            "slug": "roy-mustang",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "ruele-of-light",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "ruiza",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            },
+            "base_stats": {
+                "atk": 993,
+                "def": 611,
+                "hp": 6002,
+                "spd": 120,
+                "crit_chance": 15,
+                "crit_dmg": 150,
+                "eff": 0,
+                "res": 0
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 0.95,
+                    "rate": 1,
+                    "targets": 1
+                },
+                "S2": {},
+                "S3": {
+                    "pow": 1,
+                    "rate": 1.8,
+                    "targets": 1
+                }
+            }
+        },
+        {
+            "slug": "sage-baal-sezan",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "salome",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 0.9,
+                    "rate": 0.7,
+                    "selfHpScaling": 0.1,
+                    "targets": 1
+                },
+                "S2": {},
+                "S3": {
+                    "pow": 1,
+                    "rate": 0.7,
+                    "selfHpScaling": 0.15,
+                    "targets": 1
+                }
+            }
+        },
+        {
+            "slug": "saria",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "schniel",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 1,
+                    "targets": 1
+                },
+                "S2": {},
+                "S3": {
+                    "pow": 1.1,
+                    "rate": 1,
+                    "targets": 3
+                }
+            }
+        },
+        {
+            "slug": "school-nurse-yulha",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "sea-phantom-politis",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "sealed-eye-surin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "seaside-bellona",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "senya",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "serene-purity-adin",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "serila",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "setsuka",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "sez",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "shadow-knight-pyllis",
+            "self_devotion": {
+                "grades": {
+                    "A": 55,
+                    "B": 44,
+                    "C": 33,
+                    "D": 22,
+                    "S": 66,
+                    "SS": 77,
+                    "SSS": 88
+                },
+                "type": "def"
+            }
+        },
+        {
+            "slug": "shadow-rose",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "shalltear",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "sharun",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "shepherd-jena",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "shepherd-of-the-dark-diene",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "shooting-star-achates",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "shuna",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "sigret",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "silk",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "silver-blade-aramintha",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "silvertide-christy",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "sinful-angelica",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "sol",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "solitaria-of-the-snow",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "sonia",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "specimen-sez",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "specter-tenebria",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "spirit-eye-celine",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "stark",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "straze",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "successor-taeyou",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "summer-break-charlotte",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "summers-disciple-alexa",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "summertime-iseria",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "surin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "suthan",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "sven",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "sylvan-sage-vivian",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "tactical-archetype-coli",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            },
+            "base_stats": {
+                "atk": 1057,
+                "def": 532,
+                "hp": 5542,
+                "spd": 118,
+                "crit_chance": 15,
+                "crit_dmg": 150,
+                "eff": 30,
+                "res": 0
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 1,
+                    "targets": 1
+                },
+                "S2": {
+                    "pow": 1,
+                    "rate": 1,
+                    "targets": 1
+                },
+                "S3": {
+                    "pow": 1,
+                    "rate": 0.9,
+                    "targets": 3
+                }
+            }
+        },
+        {
+            "slug": "taeyou",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "talaz",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "talia",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.1,
+                    "C": 0.08,
+                    "D": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "tamarinne",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "taranor-guard",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.08,
+                    "C": 0.06,
+                    "D": 0.04,
+                    "S": 0.1,
+                    "SS": 0.11,
+                    "SSS": 0.12
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "taranor-royal-guard",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "tempest-surin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "tenebria",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "acc"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 1.2,
+                    "targets": 2
+                },
+                "S2": {
+                    "pow": 1,
+                    "rate": 1,
+                    "targets": 3
+                },
+                "S3": {
+                    "pow": 1.05,
+                    "rate": 1.1,
+                    "targets": 3
+                }
+            }
+        },
+        {
+            "slug": "tieria",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "top-model-luluca",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 1,
+                    "targets": 1
+                },
+                "S2": {},
+                "S3": {
+                    "pow": 1,
+                    "rate": 0.7,
+                    "targets": 1
+                }
+            }
+        },
+        {
+            "slug": "tori",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "troublemaker-crozet",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "twisted-eidolon-kayron",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "tywin",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "unbound-knight-arowell",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            },
+            "base_stats": {
+                "atk": 758,
+                "def": 672,
+                "hp": 6818,
+                "spd": 95,
+                "crit_chance": 15,
+                "crit_dmg": 150,
+                "eff": 0,
+                "res": 27
+            }
+        },
+        {
+            "slug": "urban-shadow-choux",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "verdant-adin",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "veronica",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "victorika",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "vigilante-leader-glenn",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "vildred",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 0.95,
+                    "rate": 0.9,
+                    "selfSpdScaling": 0.00075,
+                    "targets": 2
+                },
+                "S2": {
+                    "pow": 1,
+                    "rate": 0.5,
+                    "selfSpdScaling": 0.001125,
+                    "targets": 3
+                },
+                "S3": {
+                    "pow": 1,
+                    "rate": 0.85,
+                    "selfSpdScaling": 0.001125,
+                    "targets": 3
+                }
+            }
+        },
+        {
+            "slug": "violet",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "vivian",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "wanda",
+            "self_devotion": {
+                "grades": {
+                    "A": 105,
+                    "B": 84,
+                    "C": 63,
+                    "D": 42,
+                    "S": 126,
+                    "SS": 147,
+                    "SSS": 168
+                },
+                "type": "att"
+            }
+        },
+        {
+            "slug": "wanderer-silk",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "wandering-prince-cidd",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "watcher-schuri",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.07,
+                    "C": 0.05,
+                    "S": 0.11,
+                    "SS": 0.13,
+                    "SSS": 0.15
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "westwind-executioner-schuri",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "acc"
+            }
+        },
+        {
+            "slug": "witch-of-the-mere-tenebria",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "wretched-rose",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.15,
+                    "B": 0.12,
+                    "C": 0.08,
+                    "S": 0.18,
+                    "SS": 0.21,
+                    "SSS": 0.24
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "yoonryoung",
+            "self_devotion": {
+                "grades": {
+                    "A": 575,
+                    "B": 460,
+                    "C": 345,
+                    "D": 230,
+                    "S": 690,
+                    "SS": 805,
+                    "SSS": 920
+                },
+                "type": "max_hp"
+            }
+        },
+        {
+            "slug": "young-senya",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.14,
+                    "B": 0.09,
+                    "S": 0.19,
+                    "SS": 0.23,
+                    "SSS": 0.27
+                },
+                "type": "res"
+            }
+        },
+        {
+            "slug": "yufine",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.09,
+                    "B": 0.06,
+                    "S": 0.12,
+                    "SS": 0.15,
+                    "SSS": 0.18
+                },
+                "type": "cri"
+            }
+        },
+        {
+            "slug": "yulha",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "max_hp_rate"
+            }
+        },
+        {
+            "slug": "yuna",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "att_rate"
+            }
+        },
+        {
+            "slug": "zealot-carmainerose",
+            "self_devotion": {
+                "grades": {
+                    "A": 55,
+                    "B": 44,
+                    "C": 33,
+                    "D": 22,
+                    "S": 66,
+                    "SS": 77,
+                    "SSS": 88
+                },
+                "type": "def"
+            }
+        },
+        {
+            "slug": "zeno",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.11,
+                    "B": 0.07,
+                    "S": 0.15,
+                    "SS": 0.18,
+                    "SSS": 0.21
+                },
+                "type": "def_rate"
+            },
+            "multipliers": {
+                "S1": {
+                    "pow": 1,
+                    "rate": 1,
+                    "selfDefScaling": 1,
+                    "targets": 1
+                },
+                "S2": {
+                    "pow": 1,
+                    "targets": 1
+                },
+                "S3": {
+                    "pow": 1,
+                    "rate": 1,
+                    "selfDefScaling": 1.6,
+                    "targets": 3
+                }
+            }
+        },
+        {
+            "slug": "zerato",
+            "self_devotion": {
+                "grades": {
+                    "A": 0.12,
+                    "B": 0.09,
+                    "C": 0.06,
+                    "S": 0.14,
+                    "SS": 0.16,
+                    "SSS": 0.18
+                },
+                "type": "att_rate"
+            }
+        }
+    ]
+}
