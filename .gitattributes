@@ -1,0 +1,2 @@
+# Los scripts de shell tienen que quedar en LF aunque core.autocrlf=true
+*.sh text eol=lf
