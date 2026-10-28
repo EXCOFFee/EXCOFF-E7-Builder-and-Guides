@@ -4682,17 +4682,17 @@
         "_name": "Pernilla",
         "skills": {
             "S1": {
-                "name": "Skyward Slash",
-                "description": "Attacks the enemy with a sword, with a 50% chance to decrease Defense for 2 turns. When Ragnvald is on the ally team, triggers a Dual Attack from Ragnvald.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "하늘 베기",
+                "description": "검으로 적을 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다. 아군에 라그발드가 있으면 라그발드가 협공한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Coldhearted Judgment",
-                "description": "Dispels two debuffs from the target and the caster and grants a barrier for 2 turns. Barrier strength increases proportional to the caster's Attack. If the target was Ragnvald, grants an extra turn to the caster and extends the caster's buff durations by 1 turn."
+                "name": "냉철한 심판",
+                "description": "대상과 시전자의 약화 효과를 두 개 해제하고 2턴 동안 보호막을 부여한다. 시전자의 공격력에 비례해 보호막 강도가 증가한다. 대상이 라그발드이면 시전자는 추가 턴을 얻고 시전자의 강화 효과 지속 시간이 1턴 연장된다."
             },
             "S3": {
-                "name": "Chase",
-                "description": "Attacks the enemy with a sword, with a 100% chance to decrease Speed for 2 turns, and increases Speed of all allies for 2 turns."
+                "name": "추격",
+                "description": "검으로 적을 공격하며, 100% 확률로 2턴 동안 속도를 감소시키고 2턴 동안 모든 아군의 속도를 증가시킨다."
             }
         }
     },
@@ -4700,17 +4700,17 @@
         "_name": "Pirate Captain Flan",
         "skills": {
             "S1": {
-                "name": "Execution",
-                "description": "Attacks the enemy with a gun, stealing one buff. At the end of the turn, detonates bomb effects inflicted on the target.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "처형",
+                "description": "총으로 적을 공격해 강화 효과를 한 개 빼앗는다. 턴 종료 시 대상에게 걸린 폭탄을 폭발시킨다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Scourge of the Sea",
-                "description": "When attacked, grants 30% damage reduction. After an ally attacks, when the target does not have a buff, activates Hunt. Hunt: By raising morale, grants swift attack to all allies and increases Combat Readiness by 15%."
+                "name": "바다의 재앙",
+                "description": "공격받으면 피해를 30% 감소시킨다. 아군이 공격한 후 대상에게 강화 효과가 없으면 사냥을 발동한다. 사냥: 사기를 높여 모든 아군에게 신속 공격을 부여하고 행동 게이지를 15% 증가시킨다."
             },
             "S3": {
-                "name": "Full Burst",
-                "description": "Attacks all enemies with a barrage of cannon fire, stealing one buff before a 85% chance to decrease Defense for 2 turns, and a 100% chance to plant a bomb for 2 turns, and decreases Combat Readiness by 20%."
+                "name": "풀 버스트",
+                "description": "포격을 퍼부어 모든 적을 공격하고 강화 효과를 한 개 빼앗은 뒤 85% 확률로 2턴 동안 방어력을 감소시키고 100% 확률로 2턴 동안 폭탄을 설치하며, 행동 게이지를 20% 감소시킨다."
             }
         }
     },
@@ -4718,17 +4718,17 @@
         "_name": "Politis",
         "skills": {
             "S1": {
-                "name": "Call of the Stars",
-                "description": "Summons dolls to attack the enemy, with a 25% chance to stun for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "별의 부름",
+                "description": "인형을 소환해 적을 공격하며, 25% 확률로 1턴 동안 기절시킨다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Astral Guide",
-                "description": "When the enemy is not an Elite or Boss monster, reduces the effect of Combat Readiness increases granted to the enemy by 50%. When an enemy uses a non-attack skill, activates Tranquility. Tranquility: Attacks all enemies, decreasing buff durations by 1 turn, before increasing Combat Readiness of the caster by 30%."
+                "name": "별의 인도",
+                "description": "적이 정예 또는 보스 몬스터가 아니면 적이 받는 행동 게이지 증가 효과가 50% 감소한다. 적이 공격이 아닌 스킬을 사용하면 고요를 발동한다. 고요: 모든 적을 공격해 강화 효과의 지속 시간을 1턴 감소시킨 뒤 시전자의 행동 게이지를 30% 증가시킨다."
             },
             "S3": {
-                "name": "Starfall",
-                "description": "Attacks all enemies with alien technology, with a 75% chance each to inflict decreased Hit Chance and cannot buff for 2 turns."
+                "name": "별똥별",
+                "description": "외계 기술로 모든 적을 공격하며, 각각 75% 확률로 2턴 동안 명중률 감소와 강화 불가를 건다."
             }
         }
     },
@@ -4736,17 +4736,17 @@
         "_name": "Purrgis",
         "skills": {
             "S1": {
-                "name": "Falling Strike",
-                "description": "Attacks the enemy with a great sword, with a 50% chance each to inflict decreased Speed for 2 turns and decrease Combat Readiness by 20%. Damage dealt increases proportional to the caster's max Health."
+                "name": "낙하 일격",
+                "description": "대검으로 적을 공격하며, 각각 50% 확률로 2턴 동안 속도 감소를 걸고 행동 게이지를 20% 감소시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Get Lost!",
-                "description": "When attacked, has a 30% chance to counterattack. When counterattacking, activates Get Lost!. Get Lost! (gains 1 Soul): Attacks all enemies with a great sword. Inflicts the same debuffs as Falling Strike before a 15% chance to inflict stun for 1 turn. Damage dealt increases proportional to the caster's max Health. This attack receives effects that are applied to the basic skill."
+                "name": "꺼져라!",
+                "description": "공격받으면 30% 확률로 반격한다. 반격 시 꺼져라!를 발동한다. 꺼져라!(소울 1 획득): 대검으로 모든 적을 공격한다. 낙하 일격과 같은 약화 효과를 건 뒤 15% 확률로 1턴 동안 기절시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 이 공격은 기본 스킬에 적용되는 효과를 받는다."
             },
             "S3": {
-                "name": "Final Blow",
-                "description": "Attacks all enemies with a powerful ground pound, and has a 50% chance to inflict stun for 1 turn. When the target's Health is 30% or less, increases effect chance by 50%. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "최후의 일격",
+                "description": "강력하게 땅을 내리쳐 모든 적을 공격하며, 50% 확률로 1턴 동안 기절시킨다. 대상의 생명력이 30% 이하이면 효과 발동 확률이 50% 증가한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -4754,17 +4754,17 @@
         "_name": "Pyllis",
         "skills": {
             "S1": {
-                "name": "Weakening Blow",
-                "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "약화의 일격",
+                "description": "적을 공격하며, 75% 확률로 1턴 동안 도발을 건다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Will",
-                "description": "At the moment the caster is attacked, increases Defense of the caster. At the moment of every fourth attack suffered, increases Defense of all allies for 2 turns. The caster's increased Defense can stack up to 3 times."
+                "name": "의지",
+                "description": "시전자가 공격받는 순간 시전자의 방어력이 증가한다. 공격을 네 번째로 받을 때마다 2턴 동안 모든 아군의 방어력을 증가시킨다. 시전자의 방어력 증가는 최대 3회까지 중첩된다."
             },
             "S3": {
-                "name": "Guard",
-                "description": "Attacks the enemy before provoking for 1 turn, and grants a barrier to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's Defense.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "수호",
+                "description": "적을 공격하고 1턴 동안 도발을 걸며, 모든 아군에게 2턴 동안 보호막을 부여한다. 시전자의 방어력에 비례해 주는 피해와 보호막 강도가 증가한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -4772,17 +4772,17 @@
         "_name": "Ragnvald",
         "skills": {
             "S1": {
-                "name": "Leap Cut",
-                "description": "Attacks the enemy with a sword, and recovers Health of the caster. When Pernilla is on the ally team, triggers a Dual Attack from Pernilla. Amount recovered increases proportional to the caster's Attack."
+                "name": "도약 베기",
+                "description": "검으로 적을 공격하고 시전자의 생명력을 회복한다. 아군에 페르닐라가 있으면 페르닐라가 협공한다. 시전자의 공격력에 비례해 회복량이 증가한다."
             },
             "S2": {
-                "name": "Power of Bonds",
-                "description": "At the end of the turn, increases Combat Readiness of the caster by 15%. At the start of battle, when Pernilla is on the ally team, increases Effectiveness and Effect Resistance of the caster and Pernilla by 100%. The rate of this effect does not change after it is activated."
+                "name": "유대의 힘",
+                "description": "턴 종료 시 시전자의 행동 게이지를 15% 증가시킨다. 전투 시작 시 아군에 페르닐라가 있으면 시전자와 페르닐라의 효과 적중과 효과 저항이 100% 증가한다. 이 효과의 수치는 발동 후 변하지 않는다."
             },
             "S3": {
-                "name": "Desperate",
-                "description": "Attacks the enemy with a sword, dispelling two buffs and decreasing Defense for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "필사",
+                "description": "검으로 적을 공격해 강화 효과를 두 개 해제하고 2턴 동안 방어력을 감소시킨다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -4790,17 +4790,17 @@
         "_name": "Ram",
         "skills": {
             "S1": {
-                "name": "How Boring.",
-                "description": "Attacks the enemy with wind, with a 75% chance to decrease Attack for 1 turn. When the caster is buffed, effect chance increases by 25%.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "따분하네.",
+                "description": "바람으로 적을 공격하며, 75% 확률로 1턴 동안 공격력을 감소시킨다. 시전자에게 강화 효과가 있으면 효과 발동 확률이 25% 증가한다.",
+                "soulburn_effect": "모든 적을 공격한다. 이 공격으로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "What Are You Looking At?",
-                "description": "Increases Attack by 30%. Reduces the effect of decreased Combat Readiness debuffs inflicted on the caster by 100%."
+                "name": "뭘 보는 거야?",
+                "description": "공격력이 30% 증가한다. 시전자가 받는 행동 게이지 감소 효과가 100% 감소한다."
             },
             "S3": {
-                "name": "El Fura",
-                "description": "Attacks the enemy with a gust of wind, decreasing Defense for 2 turns, and grants increased Attack (Greater) to the caster for 2 turns."
+                "name": "엘 후라",
+                "description": "돌풍으로 적을 공격해 2턴 동안 방어력을 감소시키고, 시전자에게 2턴 동안 공격력 증가(대)를 부여한다."
             }
         }
     },
@@ -4808,17 +4808,17 @@
         "_name": "Ran",
         "skills": {
             "S1": {
-                "name": "Tempest",
-                "description": "Attacks the enemy with a swordstorm. Penetrates the target's Defense by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "폭풍",
+                "description": "검풍으로 적을 공격한다. 대상의 방어력을 20% 관통한다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Mental Focus",
-                "description": "Grants immunity to all allies for 2 turns, before granting skill nullifier once to the caster and increased Attack to the caster for 2 turns. Grants an extra turn."
+                "name": "정신 집중",
+                "description": "모든 아군에게 2턴 동안 면역을 부여한 뒤 시전자에게 스킬 피해 무효를 한 번, 2턴 동안 공격력 증가를 부여한다. 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Instant Blade",
-                "description": "Attacks all enemies with a sword, dispelling two buffs before a 100% chance to inflict frostbite and restrict for 2 turns, and a critical hit will have a 85% chance to inflict decreased Defense for 2 turns. Damage dealt increases proportional to the caster and the target's Speed.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "순간의 칼날",
+                "description": "검으로 모든 적을 공격해 강화 효과를 두 개 해제한 뒤 100% 확률로 2턴 동안 동상과 제약을 걸며, 치명타가 발생하면 85% 확률로 2턴 동안 방어력 감소를 건다. 시전자와 대상의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },

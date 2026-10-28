@@ -4682,17 +4682,17 @@
         "_name": "Pernilla",
         "skills": {
             "S1": {
-                "name": "Skyward Slash",
-                "description": "Attacks the enemy with a sword, with a 50% chance to decrease Defense for 2 turns. When Ragnvald is on the ally team, triggers a Dual Attack from Ragnvald.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Corte ao céu",
+                "description": "Ataca o inimigo com uma espada, com 50% de chance de diminuir a Defesa por 2 turnos. Quando Ragnvald está na equipe aliada, Ragnvald realiza um Ataque duplo.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Coldhearted Judgment",
-                "description": "Dispels two debuffs from the target and the caster and grants a barrier for 2 turns. Barrier strength increases proportional to the caster's Attack. If the target was Ragnvald, grants an extra turn to the caster and extends the caster's buff durations by 1 turn."
+                "name": "Julgamento implacável",
+                "description": "Dissipa dois efeitos negativos do alvo e do conjurador e concede uma barreira por 2 turnos. A força da barreira aumenta proporcionalmente ao Ataque do conjurador. Se o alvo for Ragnvald, concede um turno extra ao conjurador e estende em 1 turno a duração dos efeitos positivos do conjurador."
             },
             "S3": {
-                "name": "Chase",
-                "description": "Attacks the enemy with a sword, with a 100% chance to decrease Speed for 2 turns, and increases Speed of all allies for 2 turns."
+                "name": "Perseguição",
+                "description": "Ataca o inimigo com uma espada, com 100% de chance de diminuir a Velocidade por 2 turnos, e aumenta a Velocidade de todos os aliados por 2 turnos."
             }
         }
     },
@@ -4700,17 +4700,17 @@
         "_name": "Pirate Captain Flan",
         "skills": {
             "S1": {
-                "name": "Execution",
-                "description": "Attacks the enemy with a gun, stealing one buff. At the end of the turn, detonates bomb effects inflicted on the target.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Execução",
+                "description": "Ataca o inimigo com uma arma de fogo, roubando um efeito positivo. No fim do turno, detona as bombas aplicadas ao alvo.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Scourge of the Sea",
-                "description": "When attacked, grants 30% damage reduction. After an ally attacks, when the target does not have a buff, activates Hunt. Hunt: By raising morale, grants swift attack to all allies and increases Combat Readiness by 15%."
+                "name": "Flagelo dos mares",
+                "description": "Ao ser atacado, concede 30% de redução de dano. Após um aliado atacar, quando o alvo não tem efeitos positivos, ativa Caçada. Caçada: elevando o moral, concede Ataque veloz a todos os aliados e aumenta a Prontidão de Combate em 15%."
             },
             "S3": {
-                "name": "Full Burst",
-                "description": "Attacks all enemies with a barrage of cannon fire, stealing one buff before a 85% chance to decrease Defense for 2 turns, and a 100% chance to plant a bomb for 2 turns, and decreases Combat Readiness by 20%."
+                "name": "Rajada total",
+                "description": "Ataca todos os inimigos com uma barragem de canhões, roubando um efeito positivo, depois com 85% de chance diminui a Defesa por 2 turnos e com 100% de chance planta uma bomba por 2 turnos, e diminui a Prontidão de Combate em 20%."
             }
         }
     },
@@ -4718,17 +4718,17 @@
         "_name": "Politis",
         "skills": {
             "S1": {
-                "name": "Call of the Stars",
-                "description": "Summons dolls to attack the enemy, with a 25% chance to stun for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Chamado das estrelas",
+                "description": "Invoca bonecas para atacar o inimigo, com 25% de chance de atordoar por 1 turno.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Astral Guide",
-                "description": "When the enemy is not an Elite or Boss monster, reduces the effect of Combat Readiness increases granted to the enemy by 50%. When an enemy uses a non-attack skill, activates Tranquility. Tranquility: Attacks all enemies, decreasing buff durations by 1 turn, before increasing Combat Readiness of the caster by 30%."
+                "name": "Guia astral",
+                "description": "Quando o inimigo não é um monstro Elite ou Chefe, reduz em 50% o efeito dos aumentos de Prontidão de Combate concedidos ao inimigo. Quando um inimigo usa uma habilidade que não é de ataque, ativa Tranquilidade. Tranquilidade: ataca todos os inimigos, diminuindo a duração dos efeitos positivos em 1 turno, depois aumenta a Prontidão de Combate do conjurador em 30%."
             },
             "S3": {
-                "name": "Starfall",
-                "description": "Attacks all enemies with alien technology, with a 75% chance each to inflict decreased Hit Chance and cannot buff for 2 turns."
+                "name": "Chuva de estrelas",
+                "description": "Ataca todos os inimigos com tecnologia alienígena, com 75% de chance cada de aplicar Diminuir Precisão e impedimento de efeitos positivos por 2 turnos."
             }
         }
     },
@@ -4736,17 +4736,17 @@
         "_name": "Purrgis",
         "skills": {
             "S1": {
-                "name": "Falling Strike",
-                "description": "Attacks the enemy with a great sword, with a 50% chance each to inflict decreased Speed for 2 turns and decrease Combat Readiness by 20%. Damage dealt increases proportional to the caster's max Health."
+                "name": "Golpe descendente",
+                "description": "Ataca o inimigo com uma espada grande, com 50% de chance cada de aplicar Diminuir Velocidade por 2 turnos e diminuir a Prontidão de Combate em 20%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Get Lost!",
-                "description": "When attacked, has a 30% chance to counterattack. When counterattacking, activates Get Lost!. Get Lost! (gains 1 Soul): Attacks all enemies with a great sword. Inflicts the same debuffs as Falling Strike before a 15% chance to inflict stun for 1 turn. Damage dealt increases proportional to the caster's max Health. This attack receives effects that are applied to the basic skill."
+                "name": "Some daqui!",
+                "description": "Ao ser atacado, tem 30% de chance de contra-atacar. Ao contra-atacar, ativa Some daqui!. Some daqui! (ganha 1 de Alma): ataca todos os inimigos com uma espada grande. Aplica os mesmos efeitos negativos de Golpe descendente, depois com 15% de chance atordoa por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Este ataque recebe os efeitos aplicados à habilidade básica."
             },
             "S3": {
-                "name": "Final Blow",
-                "description": "Attacks all enemies with a powerful ground pound, and has a 50% chance to inflict stun for 1 turn. When the target's Health is 30% or less, increases effect chance by 50%. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Golpe final",
+                "description": "Ataca todos os inimigos com um poderoso golpe no chão e tem 50% de chance de atordoar por 1 turno. Quando a Vida do alvo é 30% ou menos, a chance do efeito aumenta 50%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -4754,17 +4754,17 @@
         "_name": "Pyllis",
         "skills": {
             "S1": {
-                "name": "Weakening Blow",
-                "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "Golpe enfraquecedor",
+                "description": "Ataca o inimigo, com 75% de chance de provocá-lo por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S2": {
-                "name": "Will",
-                "description": "At the moment the caster is attacked, increases Defense of the caster. At the moment of every fourth attack suffered, increases Defense of all allies for 2 turns. The caster's increased Defense can stack up to 3 times."
+                "name": "Vontade",
+                "description": "No momento em que o conjurador é atacado, aumenta a Defesa do conjurador. A cada quarto ataque sofrido, aumenta a Defesa de todos os aliados por 2 turnos. O aumento de Defesa do conjurador acumula até 3 vezes."
             },
             "S3": {
-                "name": "Guard",
-                "description": "Attacks the enemy before provoking for 1 turn, and grants a barrier to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's Defense.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Guarda",
+                "description": "Ataca o inimigo e o provoca por 1 turno, e concede uma barreira a todos os aliados por 2 turnos. O dano causado e a força da barreira aumentam proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -4772,17 +4772,17 @@
         "_name": "Ragnvald",
         "skills": {
             "S1": {
-                "name": "Leap Cut",
-                "description": "Attacks the enemy with a sword, and recovers Health of the caster. When Pernilla is on the ally team, triggers a Dual Attack from Pernilla. Amount recovered increases proportional to the caster's Attack."
+                "name": "Corte saltado",
+                "description": "Ataca o inimigo com uma espada e recupera a Vida do conjurador. Quando Pernilla está na equipe aliada, Pernilla realiza um Ataque duplo. A quantidade recuperada aumenta proporcionalmente ao Ataque do conjurador."
             },
             "S2": {
-                "name": "Power of Bonds",
-                "description": "At the end of the turn, increases Combat Readiness of the caster by 15%. At the start of battle, when Pernilla is on the ally team, increases Effectiveness and Effect Resistance of the caster and Pernilla by 100%. The rate of this effect does not change after it is activated."
+                "name": "Poder dos laços",
+                "description": "No fim do turno, aumenta a Prontidão de Combate do conjurador em 15%. No início da batalha, quando Pernilla está na equipe aliada, aumenta a Eficácia e a Resistência a Efeitos do conjurador e de Pernilla em 100%. A taxa desse efeito não muda depois de ativada."
             },
             "S3": {
-                "name": "Desperate",
-                "description": "Attacks the enemy with a sword, dispelling two buffs and decreasing Defense for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Desesperado",
+                "description": "Ataca o inimigo com uma espada, dissipando dois efeitos positivos e diminuindo a Defesa por 2 turnos.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -4790,17 +4790,17 @@
         "_name": "Ram",
         "skills": {
             "S1": {
-                "name": "How Boring.",
-                "description": "Attacks the enemy with wind, with a 75% chance to decrease Attack for 1 turn. When the caster is buffed, effect chance increases by 25%.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "Que tédio.",
+                "description": "Ataca o inimigo com vento, com 75% de chance de diminuir o Ataque por 1 turno. Quando o conjurador tem efeitos positivos, a chance do efeito aumenta 25%.",
+                "soulburn_effect": "Ataca todos os inimigos. Este ataque não ativa Ataque duplo."
             },
             "S2": {
-                "name": "What Are You Looking At?",
-                "description": "Increases Attack by 30%. Reduces the effect of decreased Combat Readiness debuffs inflicted on the caster by 100%."
+                "name": "Está olhando o quê?",
+                "description": "Aumenta o Ataque em 30%. Reduz em 100% o efeito dos efeitos negativos de redução de Prontidão de Combate aplicados ao conjurador."
             },
             "S3": {
                 "name": "El Fura",
-                "description": "Attacks the enemy with a gust of wind, decreasing Defense for 2 turns, and grants increased Attack (Greater) to the caster for 2 turns."
+                "description": "Ataca o inimigo com uma rajada de vento, diminuindo a Defesa por 2 turnos, e concede Aumentar Ataque (maior) ao conjurador por 2 turnos."
             }
         }
     },
@@ -4808,17 +4808,17 @@
         "_name": "Ran",
         "skills": {
             "S1": {
-                "name": "Tempest",
-                "description": "Attacks the enemy with a swordstorm. Penetrates the target's Defense by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "Tempestade",
+                "description": "Ataca o inimigo com uma tempestade de espadas. Penetra 20% da Defesa do alvo. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Mental Focus",
-                "description": "Grants immunity to all allies for 2 turns, before granting skill nullifier once to the caster and increased Attack to the caster for 2 turns. Grants an extra turn."
+                "name": "Foco mental",
+                "description": "Concede imunidade a todos os aliados por 2 turnos, depois concede Anulação de habilidade uma vez e Aumentar Ataque por 2 turnos ao conjurador. Concede um turno extra."
             },
             "S3": {
-                "name": "Instant Blade",
-                "description": "Attacks all enemies with a sword, dispelling two buffs before a 100% chance to inflict frostbite and restrict for 2 turns, and a critical hit will have a 85% chance to inflict decreased Defense for 2 turns. Damage dealt increases proportional to the caster and the target's Speed.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Lâmina instantânea",
+                "description": "Ataca todos os inimigos com uma espada, dissipando dois efeitos positivos, depois com 100% de chance aplica congelamento e restrição por 2 turnos, e um acerto crítico tem 85% de chance de aplicar Diminuir Defesa por 2 turnos. O dano causado aumenta proporcionalmente à Velocidade do conjurador e do alvo.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },

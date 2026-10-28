@@ -4682,17 +4682,17 @@
         "_name": "Pernilla",
         "skills": {
             "S1": {
-                "name": "Skyward Slash",
-                "description": "Attacks the enemy with a sword, with a 50% chance to decrease Defense for 2 turns. When Ragnvald is on the ally team, triggers a Dual Attack from Ragnvald.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "天への斬撃",
+                "description": "剣で敵を攻撃し、50%の確率で2ターンの間防御力をダウンさせる。味方にラグヴァルドがいれば、ラグヴァルドが協攻する。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Coldhearted Judgment",
-                "description": "Dispels two debuffs from the target and the caster and grants a barrier for 2 turns. Barrier strength increases proportional to the caster's Attack. If the target was Ragnvald, grants an extra turn to the caster and extends the caster's buff durations by 1 turn."
+                "name": "冷徹な審判",
+                "description": "対象と発動者の弱体効果を二つ解除し、2ターンの間バリアを付与する。発動者の攻撃力に比例してバリアの強度がアップする。対象がラグヴァルドなら、発動者は追加ターンを得て、発動者の強化効果の持続時間が1ターン延長される。"
             },
             "S3": {
-                "name": "Chase",
-                "description": "Attacks the enemy with a sword, with a 100% chance to decrease Speed for 2 turns, and increases Speed of all allies for 2 turns."
+                "name": "追撃",
+                "description": "剣で敵を攻撃し、100%の確率で2ターンの間スピードをダウンさせ、2ターンの間味方全員のスピードをアップさせる。"
             }
         }
     },
@@ -4700,17 +4700,17 @@
         "_name": "Pirate Captain Flan",
         "skills": {
             "S1": {
-                "name": "Execution",
-                "description": "Attacks the enemy with a gun, stealing one buff. At the end of the turn, detonates bomb effects inflicted on the target.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "処刑",
+                "description": "銃で敵を攻撃し、強化効果を一つ奪う。ターン終了時、対象の爆弾を爆発させる。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Scourge of the Sea",
-                "description": "When attacked, grants 30% damage reduction. After an ally attacks, when the target does not have a buff, activates Hunt. Hunt: By raising morale, grants swift attack to all allies and increases Combat Readiness by 15%."
+                "name": "海の災厄",
+                "description": "攻撃されると、ダメージを30%軽減する。味方が攻撃した後、対象に強化効果がなければ、狩りを発動する。狩り：士気を高め、味方全員に迅速攻撃を付与し、行動ゲージを15%増加させる。"
             },
             "S3": {
-                "name": "Full Burst",
-                "description": "Attacks all enemies with a barrage of cannon fire, stealing one buff before a 85% chance to decrease Defense for 2 turns, and a 100% chance to plant a bomb for 2 turns, and decreases Combat Readiness by 20%."
+                "name": "フルバースト",
+                "description": "砲撃を浴びせて敵全体を攻撃し、強化効果を一つ奪った後、85%の確率で2ターンの間防御力をダウンさせ、100%の確率で2ターンの間爆弾を設置し、行動ゲージを20%減少させる。"
             }
         }
     },
@@ -4718,17 +4718,17 @@
         "_name": "Politis",
         "skills": {
             "S1": {
-                "name": "Call of the Stars",
-                "description": "Summons dolls to attack the enemy, with a 25% chance to stun for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "星の呼び声",
+                "description": "人形を召喚して敵を攻撃し、25%の確率で1ターンの間気絶させる。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Astral Guide",
-                "description": "When the enemy is not an Elite or Boss monster, reduces the effect of Combat Readiness increases granted to the enemy by 50%. When an enemy uses a non-attack skill, activates Tranquility. Tranquility: Attacks all enemies, decreasing buff durations by 1 turn, before increasing Combat Readiness of the caster by 30%."
+                "name": "星の導き",
+                "description": "敵がエリートまたはボスモンスターでない場合、敵が受ける行動ゲージ増加効果が50%減少する。敵が攻撃以外のスキルを使用すると、静寂を発動する。静寂：敵全体を攻撃し、強化効果の持続時間を1ターン減少させた後、発動者の行動ゲージを30%増加させる。"
             },
             "S3": {
-                "name": "Starfall",
-                "description": "Attacks all enemies with alien technology, with a 75% chance each to inflict decreased Hit Chance and cannot buff for 2 turns."
+                "name": "流れ星",
+                "description": "異星の技術で敵全体を攻撃し、それぞれ75%の確率で2ターンの間命中率ダウンと強化不可を付与する。"
             }
         }
     },
@@ -4736,17 +4736,17 @@
         "_name": "Purrgis",
         "skills": {
             "S1": {
-                "name": "Falling Strike",
-                "description": "Attacks the enemy with a great sword, with a 50% chance each to inflict decreased Speed for 2 turns and decrease Combat Readiness by 20%. Damage dealt increases proportional to the caster's max Health."
+                "name": "落下の一撃",
+                "description": "大剣で敵を攻撃し、それぞれ50%の確率で2ターンの間スピードダウンを付与し、行動ゲージを20%減少させる。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Get Lost!",
-                "description": "When attacked, has a 30% chance to counterattack. When counterattacking, activates Get Lost!. Get Lost! (gains 1 Soul): Attacks all enemies with a great sword. Inflicts the same debuffs as Falling Strike before a 15% chance to inflict stun for 1 turn. Damage dealt increases proportional to the caster's max Health. This attack receives effects that are applied to the basic skill."
+                "name": "失せろ！",
+                "description": "攻撃されると、30%の確率で反撃する。反撃時、失せろ！を発動する。失せろ！（ソウル1獲得）：大剣で敵全体を攻撃する。落下の一撃と同じ弱体効果を付与した後、15%の確率で1ターンの間気絶させる。発動者の最大HPに比例して与ダメージがアップする。この攻撃は通常スキルに適用される効果を受ける。"
             },
             "S3": {
-                "name": "Final Blow",
-                "description": "Attacks all enemies with a powerful ground pound, and has a 50% chance to inflict stun for 1 turn. When the target's Health is 30% or less, increases effect chance by 50%. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "最後の一撃",
+                "description": "強力に地面を叩きつけて敵全体を攻撃し、50%の確率で1ターンの間気絶させる。対象のHPが30%以下なら効果発動確率が50%アップする。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -4754,17 +4754,17 @@
         "_name": "Pyllis",
         "skills": {
             "S1": {
-                "name": "Weakening Blow",
-                "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "弱体化の一撃",
+                "description": "敵を攻撃し、75%の確率で1ターンの間挑発を付与する。発動者の防御力に比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Will",
-                "description": "At the moment the caster is attacked, increases Defense of the caster. At the moment of every fourth attack suffered, increases Defense of all allies for 2 turns. The caster's increased Defense can stack up to 3 times."
+                "name": "意志",
+                "description": "発動者が攻撃された瞬間、発動者の防御力がアップする。攻撃を四回受けるたびに、2ターンの間味方全員の防御力をアップさせる。発動者の防御力アップは最大3回まで重複する。"
             },
             "S3": {
-                "name": "Guard",
-                "description": "Attacks the enemy before provoking for 1 turn, and grants a barrier to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's Defense.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "守護",
+                "description": "敵を攻撃し、1ターンの間挑発を付与し、味方全員に2ターンの間バリアを付与する。発動者の防御力に比例して与ダメージとバリアの強度がアップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -4772,17 +4772,17 @@
         "_name": "Ragnvald",
         "skills": {
             "S1": {
-                "name": "Leap Cut",
-                "description": "Attacks the enemy with a sword, and recovers Health of the caster. When Pernilla is on the ally team, triggers a Dual Attack from Pernilla. Amount recovered increases proportional to the caster's Attack."
+                "name": "跳躍斬り",
+                "description": "剣で敵を攻撃し、発動者のHPを回復する。味方にペルニラがいれば、ペルニラが協攻する。発動者の攻撃力に比例して回復量がアップする。"
             },
             "S2": {
-                "name": "Power of Bonds",
-                "description": "At the end of the turn, increases Combat Readiness of the caster by 15%. At the start of battle, when Pernilla is on the ally team, increases Effectiveness and Effect Resistance of the caster and Pernilla by 100%. The rate of this effect does not change after it is activated."
+                "name": "絆の力",
+                "description": "ターン終了時、発動者の行動ゲージを15%増加させる。バトル開始時、味方にペルニラがいれば、発動者とペルニラの効果命中と効果抵抗が100%アップする。この効果の数値は発動後に変化しない。"
             },
             "S3": {
-                "name": "Desperate",
-                "description": "Attacks the enemy with a sword, dispelling two buffs and decreasing Defense for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "必死",
+                "description": "剣で敵を攻撃し、強化効果を二つ解除し、2ターンの間防御力をダウンさせる。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -4790,17 +4790,17 @@
         "_name": "Ram",
         "skills": {
             "S1": {
-                "name": "How Boring.",
-                "description": "Attacks the enemy with wind, with a 75% chance to decrease Attack for 1 turn. When the caster is buffed, effect chance increases by 25%.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "退屈ね。",
+                "description": "風で敵を攻撃し、75%の確率で1ターンの間攻撃力をダウンさせる。発動者に強化効果があれば効果発動確率が25%アップする。",
+                "soulburn_effect": "敵全体を攻撃する。この攻撃では協攻が発動しない。"
             },
             "S2": {
-                "name": "What Are You Looking At?",
-                "description": "Increases Attack by 30%. Reduces the effect of decreased Combat Readiness debuffs inflicted on the caster by 100%."
+                "name": "何を見てるの？",
+                "description": "攻撃力が30%アップする。発動者が受ける行動ゲージ減少効果が100%減少する。"
             },
             "S3": {
-                "name": "El Fura",
-                "description": "Attacks the enemy with a gust of wind, decreasing Defense for 2 turns, and grants increased Attack (Greater) to the caster for 2 turns."
+                "name": "エル・フーラ",
+                "description": "突風で敵を攻撃し、2ターンの間防御力をダウンさせ、発動者に2ターンの間攻撃力アップ（大）を付与する。"
             }
         }
     },
@@ -4808,17 +4808,17 @@
         "_name": "Ran",
         "skills": {
             "S1": {
-                "name": "Tempest",
-                "description": "Attacks the enemy with a swordstorm. Penetrates the target's Defense by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "嵐",
+                "description": "剣嵐で敵を攻撃する。対象の防御力を20%貫通する。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Mental Focus",
-                "description": "Grants immunity to all allies for 2 turns, before granting skill nullifier once to the caster and increased Attack to the caster for 2 turns. Grants an extra turn."
+                "name": "精神集中",
+                "description": "味方全員に2ターンの間免疫を付与した後、発動者にスキルダメージ無効を一度、2ターンの間攻撃力アップを付与する。追加ターンを得る。"
             },
             "S3": {
-                "name": "Instant Blade",
-                "description": "Attacks all enemies with a sword, dispelling two buffs before a 100% chance to inflict frostbite and restrict for 2 turns, and a critical hit will have a 85% chance to inflict decreased Defense for 2 turns. Damage dealt increases proportional to the caster and the target's Speed.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "刹那の刃",
+                "description": "剣で敵全体を攻撃し、強化効果を二つ解除した後、100%の確率で2ターンの間凍傷と制約を付与し、クリティカルが発生すると、85%の確率で2ターンの間防御力ダウンを付与する。発動者と対象のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },

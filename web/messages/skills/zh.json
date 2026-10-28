@@ -4682,17 +4682,17 @@
         "_name": "Pernilla",
         "skills": {
             "S1": {
-                "name": "Skyward Slash",
-                "description": "Attacks the enemy with a sword, with a 50% chance to decrease Defense for 2 turns. When Ragnvald is on the ally team, triggers a Dual Attack from Ragnvald.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "斩天",
+                "description": "以剑攻击敌人，有50%的几率降低防御力2回合。友军中有拉格瓦尔德时，拉格瓦尔德发动协攻。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Coldhearted Judgment",
-                "description": "Dispels two debuffs from the target and the caster and grants a barrier for 2 turns. Barrier strength increases proportional to the caster's Attack. If the target was Ragnvald, grants an extra turn to the caster and extends the caster's buff durations by 1 turn."
+                "name": "冷酷审判",
+                "description": "解除目标与施放者的两个弱化效果，并施加2回合屏障。屏障强度按施放者的攻击力比例提升。若目标为拉格瓦尔德，施放者获得额外回合，且施放者的强化效果持续时间延长1回合。"
             },
             "S3": {
-                "name": "Chase",
-                "description": "Attacks the enemy with a sword, with a 100% chance to decrease Speed for 2 turns, and increases Speed of all allies for 2 turns."
+                "name": "追击",
+                "description": "以剑攻击敌人，有100%的几率降低速度2回合，并提升所有友军的速度2回合。"
             }
         }
     },
@@ -4700,17 +4700,17 @@
         "_name": "Pirate Captain Flan",
         "skills": {
             "S1": {
-                "name": "Execution",
-                "description": "Attacks the enemy with a gun, stealing one buff. At the end of the turn, detonates bomb effects inflicted on the target.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "处决",
+                "description": "以枪攻击敌人，并夺取一个强化效果。回合结束时，引爆目标身上的炸弹。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Scourge of the Sea",
-                "description": "When attacked, grants 30% damage reduction. After an ally attacks, when the target does not have a buff, activates Hunt. Hunt: By raising morale, grants swift attack to all allies and increases Combat Readiness by 15%."
+                "name": "海之灾祸",
+                "description": "受到攻击时，伤害降低30%。友军攻击后，若目标没有强化效果，发动狩猎。狩猎：鼓舞士气，为所有友军施加迅捷攻击，并提升15%行动值。"
             },
             "S3": {
-                "name": "Full Burst",
-                "description": "Attacks all enemies with a barrage of cannon fire, stealing one buff before a 85% chance to decrease Defense for 2 turns, and a 100% chance to plant a bomb for 2 turns, and decreases Combat Readiness by 20%."
+                "name": "全弹发射",
+                "description": "以炮火齐射攻击所有敌人，夺取一个强化效果，然后有85%的几率降低防御力2回合，并有100%的几率安置2回合炸弹，同时降低20%行动值。"
             }
         }
     },
@@ -4718,17 +4718,17 @@
         "_name": "Politis",
         "skills": {
             "S1": {
-                "name": "Call of the Stars",
-                "description": "Summons dolls to attack the enemy, with a 25% chance to stun for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "星辰的召唤",
+                "description": "召唤人偶攻击敌人，有25%的几率使其眩晕1回合。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Astral Guide",
-                "description": "When the enemy is not an Elite or Boss monster, reduces the effect of Combat Readiness increases granted to the enemy by 50%. When an enemy uses a non-attack skill, activates Tranquility. Tranquility: Attacks all enemies, decreasing buff durations by 1 turn, before increasing Combat Readiness of the caster by 30%."
+                "name": "星辰指引",
+                "description": "敌人不是精英或首领怪物时，敌人获得的行动值提升效果降低50%。敌人使用非攻击技能时，发动宁静。宁静：攻击所有敌人，使强化效果持续时间减少1回合，然后使施放者的行动值提升30%。"
             },
             "S3": {
-                "name": "Starfall",
-                "description": "Attacks all enemies with alien technology, with a 75% chance each to inflict decreased Hit Chance and cannot buff for 2 turns."
+                "name": "星落",
+                "description": "以外星科技攻击所有敌人，各有75%的几率施加2回合命中率降低与无法强化。"
             }
         }
     },
@@ -4736,17 +4736,17 @@
         "_name": "Purrgis",
         "skills": {
             "S1": {
-                "name": "Falling Strike",
-                "description": "Attacks the enemy with a great sword, with a 50% chance each to inflict decreased Speed for 2 turns and decrease Combat Readiness by 20%. Damage dealt increases proportional to the caster's max Health."
+                "name": "坠落一击",
+                "description": "以大剑攻击敌人，各有50%的几率施加2回合速度降低，并降低20%行动值。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Get Lost!",
-                "description": "When attacked, has a 30% chance to counterattack. When counterattacking, activates Get Lost!. Get Lost! (gains 1 Soul): Attacks all enemies with a great sword. Inflicts the same debuffs as Falling Strike before a 15% chance to inflict stun for 1 turn. Damage dealt increases proportional to the caster's max Health. This attack receives effects that are applied to the basic skill."
+                "name": "滚开！",
+                "description": "受到攻击时，有30%的几率反击。反击时发动滚开！。滚开！（获得1魂）：以大剑攻击所有敌人。施加与坠落一击相同的弱化效果，然后有15%的几率使其眩晕1回合。造成的伤害按施放者的最大生命值比例提升。此攻击适用普通技能的效果。"
             },
             "S3": {
-                "name": "Final Blow",
-                "description": "Attacks all enemies with a powerful ground pound, and has a 50% chance to inflict stun for 1 turn. When the target's Health is 30% or less, increases effect chance by 50%. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "最后一击",
+                "description": "以强力的地面重击攻击所有敌人，有50%的几率使其眩晕1回合。目标生命值在30%以下时，效果几率提升50%。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -4754,17 +4754,17 @@
         "_name": "Pyllis",
         "skills": {
             "S1": {
-                "name": "Weakening Blow",
-                "description": "Attacks the enemy, with a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "削弱一击",
+                "description": "攻击敌人，有75%的几率施加1回合挑衅。造成的伤害按施放者的防御力比例提升。"
             },
             "S2": {
-                "name": "Will",
-                "description": "At the moment the caster is attacked, increases Defense of the caster. At the moment of every fourth attack suffered, increases Defense of all allies for 2 turns. The caster's increased Defense can stack up to 3 times."
+                "name": "意志",
+                "description": "施放者受到攻击的瞬间，提升施放者的防御力。每受到第四次攻击时，提升所有友军的防御力2回合。施放者的防御力提升最多叠加3次。"
             },
             "S3": {
-                "name": "Guard",
-                "description": "Attacks the enemy before provoking for 1 turn, and grants a barrier to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's Defense.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "守护",
+                "description": "攻击敌人并施加1回合挑衅，并为所有友军施加2回合屏障。造成的伤害与屏障强度按施放者的防御力比例提升。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -4772,17 +4772,17 @@
         "_name": "Ragnvald",
         "skills": {
             "S1": {
-                "name": "Leap Cut",
-                "description": "Attacks the enemy with a sword, and recovers Health of the caster. When Pernilla is on the ally team, triggers a Dual Attack from Pernilla. Amount recovered increases proportional to the caster's Attack."
+                "name": "跃斩",
+                "description": "以剑攻击敌人，并恢复施放者的生命值。友军中有佩尔妮拉时，佩尔妮拉发动协攻。恢复量按施放者的攻击力比例提升。"
             },
             "S2": {
-                "name": "Power of Bonds",
-                "description": "At the end of the turn, increases Combat Readiness of the caster by 15%. At the start of battle, when Pernilla is on the ally team, increases Effectiveness and Effect Resistance of the caster and Pernilla by 100%. The rate of this effect does not change after it is activated."
+                "name": "羁绊之力",
+                "description": "回合结束时，使施放者的行动值提升15%。战斗开始时，若友军中有佩尔妮拉，施放者与佩尔妮拉的效果命中与效果抵抗提升100%。此效果的数值在发动后不会改变。"
             },
             "S3": {
-                "name": "Desperate",
-                "description": "Attacks the enemy with a sword, dispelling two buffs and decreasing Defense for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "拼死",
+                "description": "以剑攻击敌人，解除两个强化效果，并降低防御力2回合。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -4790,17 +4790,17 @@
         "_name": "Ram",
         "skills": {
             "S1": {
-                "name": "How Boring.",
-                "description": "Attacks the enemy with wind, with a 75% chance to decrease Attack for 1 turn. When the caster is buffed, effect chance increases by 25%.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "真无聊。",
+                "description": "以风攻击敌人，有75%的几率降低攻击力1回合。施放者拥有强化效果时，效果几率提升25%。",
+                "soulburn_effect": "攻击所有敌人。此攻击不会触发协攻。"
             },
             "S2": {
-                "name": "What Are You Looking At?",
-                "description": "Increases Attack by 30%. Reduces the effect of decreased Combat Readiness debuffs inflicted on the caster by 100%."
+                "name": "看什么看？",
+                "description": "攻击力提升30%。施放者受到的行动值降低效果减少100%。"
             },
             "S3": {
-                "name": "El Fura",
-                "description": "Attacks the enemy with a gust of wind, decreasing Defense for 2 turns, and grants increased Attack (Greater) to the caster for 2 turns."
+                "name": "艾尔·芙拉",
+                "description": "以狂风攻击敌人，降低其防御力2回合，并为施放者施加2回合攻击力提升（大）。"
             }
         }
     },
@@ -4808,17 +4808,17 @@
         "_name": "Ran",
         "skills": {
             "S1": {
-                "name": "Tempest",
-                "description": "Attacks the enemy with a swordstorm. Penetrates the target's Defense by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "暴风",
+                "description": "以剑暴攻击敌人。穿透目标20%的防御力。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "Mental Focus",
-                "description": "Grants immunity to all allies for 2 turns, before granting skill nullifier once to the caster and increased Attack to the caster for 2 turns. Grants an extra turn."
+                "name": "精神集中",
+                "description": "为所有友军施加2回合免疫，然后为施放者施加一次技能伤害无效与2回合攻击力提升。获得额外回合。"
             },
             "S3": {
-                "name": "Instant Blade",
-                "description": "Attacks all enemies with a sword, dispelling two buffs before a 100% chance to inflict frostbite and restrict for 2 turns, and a critical hit will have a 85% chance to inflict decreased Defense for 2 turns. Damage dealt increases proportional to the caster and the target's Speed.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "刹那之刃",
+                "description": "以剑攻击所有敌人，解除两个强化效果，然后有100%的几率施加2回合冻伤与限制；暴击时，有85%的几率施加2回合防御力降低。造成的伤害按施放者与目标的速度比例提升。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
