@@ -33,24 +33,47 @@ const cacheHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  // Image optimization - allow external images with high quality
+  // Optimización de imágenes. El plan Hobby de Vercel tiene una cuota mensual de
+  // transformaciones compartida por todo el equipo, por eso:
+  // - solo se optimizan las imágenes pesadas (retratos, artefactos, imágenes de guías);
+  //   los íconos chicos usan `unoptimized`
+  // - cada transformación se cachea 31 días, un solo formato y una sola calidad
+  // - DISABLE_IMAGE_OPTIMIZATION=1 en Vercel la apaga sin tocar código si se agota la cuota
   images: {
-    unoptimized: false,
-    // Define image sizes for responsive loading
+    unoptimized: process.env.DISABLE_IMAGE_OPTIMIZATION === '1',
+    minimumCacheTTL: 2678400,
+    formats: ['image/webp'],
+    qualities: [75],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Pocos anchos: cada ancho distinto es una transformación más por imagen. Así un retrato
+    // tiene como máximo 64/128/256/384/640 y un artefacto 64/128/256 (~2.800/mes en el peor caso).
+    imageSizes: [64, 128, 256, 384],
+    // Rutas acotadas: un dominio abierto permitiría gastar la cuota con imágenes ajenas
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'raw.githubusercontent.com',
+        pathname: '/CeciliaBot/**',
       },
       {
         protocol: 'https',
-        hostname: '*.hostingersite.com',
+        hostname: 'raw.githubusercontent.com',
+        pathname: '/fribbels/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'epic7db.com',
+        pathname: '/images/**',
       },
       {
         protocol: 'https',
         hostname: 'moccasin-sparrow-217730.hostingersite.com',
+        pathname: '/storage/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'moccasin-sparrow-217730.hostingersite.com',
+        pathname: '/images/**',
       },
       {
         protocol: 'https',

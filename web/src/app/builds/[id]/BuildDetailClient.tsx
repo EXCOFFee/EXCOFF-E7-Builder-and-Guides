@@ -464,7 +464,6 @@ export function BuildDetailClient() {
                                 width={200}
                                 height={200}
                                 className="rounded-2xl ring-2 ring-e7-gold/60 relative z-10 shadow-2xl transform group-hover:scale-105 transition-transform duration-300"
-                                unoptimized
                             />
                             <Image
                                 src={ELEMENT_IMAGES[build.hero.element] || '/images/elements/ElementFire.png'}
@@ -603,7 +602,6 @@ export function BuildDetailClient() {
                                         width={96}
                                         height={96}
                                         className="rounded-xl ring-2 ring-e7-gold/40 relative z-10 shadow-xl group-hover:scale-110 transition-transform duration-300"
-                                        unoptimized
                                     />
                                 </div>
                                 <span className="text-2xl text-white font-semibold group-hover:text-e7-text-gold transition-colors duration-300">{build.artifact.name}</span>

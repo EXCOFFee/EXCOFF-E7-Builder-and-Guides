@@ -50,8 +50,9 @@ export function ImageCarousel({ images, title }: ImageCarouselProps) {
                         src={images[currentIndex]}
                         alt={`${t('builds.image', 'Image')} ${currentIndex + 1}`}
                         fill
+                        // Subidas de usuarios de hasta ~2 MB: optimizadas acá, el Lightbox muestra el original
+                        sizes="(min-width: 1152px) 1152px, 100vw"
                         className="object-contain group-hover:scale-105 transition-transform duration-300"
-                        unoptimized
                         priority
                     />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
@@ -109,8 +110,8 @@ export function ImageCarousel({ images, title }: ImageCarouselProps) {
                                 src={img}
                                 alt={`Thumbnail ${idx + 1}`}
                                 fill
+                                sizes="80px"
                                 className="object-cover"
-                                unoptimized
                             />
                         </button>
                     ))}

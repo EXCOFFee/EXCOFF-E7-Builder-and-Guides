@@ -376,7 +376,7 @@ export default function HeroesPage() {
                                 {t('heroes.noResults', 'No heroes found.')}
                             </p>
                         ) : (
-                            heroes.map((hero) => (
+                            heroes.map((hero, index) => (
                                 <Link key={hero.id} href={`/heroes/${hero.slug}`}>
                                     <div className="bg-e7-panel rounded-lg overflow-hidden border border-white/6 hover:border-e7-gold/30 transition-colors h-full group">
                                         {/* Hero Image Container */}
@@ -385,14 +385,15 @@ export default function HeroesPage() {
                                                 <Image
                                                     src={hero.image_url}
                                                     alt={hero.name}
-                                                    width={256}
-                                                    height={256}
+                                                    // Ancho fijo sin `sizes`: dos variantes por héroe (256/384 px), cuota acotada
+                                                    width={192}
+                                                    height={192}
                                                     className="w-full h-full object-cover"
                                                     style={{
                                                         objectPosition: HERO_POSITION_OVERRIDE[hero.slug] || 'center',
                                                     }}
-                                                    unoptimized
-                                                    priority={false}
+                                                    // La primera fila (hasta 5 columnas en xl) es el LCP de la página
+                                                    priority={index < 5}
                                                 />
                                             ) : (
                                                 <div className="w-full h-full flex items-center justify-center">

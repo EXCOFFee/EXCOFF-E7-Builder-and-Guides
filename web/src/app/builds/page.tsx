@@ -401,7 +401,6 @@ export default function BuildsPage() {
                                                     width={80}
                                                     height={80}
                                                     className="w-full h-full object-cover object-top"
-                                                    unoptimized
                                                 />
                                             </div>
                                             <Image
@@ -469,7 +468,6 @@ export default function BuildsPage() {
                                                     width={72}
                                                     height={72}
                                                     className="rounded-xl ring-2 ring-e7-gold/30"
-                                                    unoptimized
                                                 />
                                                 <span className="text-lg text-slate-300 font-medium">{build.artifact.name}</span>
                                             </div>

@@ -363,7 +363,6 @@ export function GuideDetailClient() {
                                     width={80}
                                     height={80}
                                     className="rounded-xl ring-2 ring-e7-gold/50 relative z-10 shadow-xl transform group-hover:scale-105 transition-transform duration-300"
-                                    unoptimized
                                 />
                             </div>
                             <div>
@@ -513,7 +512,6 @@ export function GuideDetailClient() {
                                             width={64}
                                             height={64}
                                             className="rounded-2xl ring-2 ring-purple-500/60 relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300"
-                                            unoptimized
                                         />
                                     </div>
                                     <span className="text-purple-200 font-semibold text-lg group-hover:text-purple-100 transition-colors duration-300">{hero.name}</span>
@@ -544,7 +542,6 @@ export function GuideDetailClient() {
                                             width={64}
                                             height={64}
                                             className="rounded-lg ring-2 ring-amber-500/60 relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300"
-                                            unoptimized
                                         />
                                     </div>
                                     <span className="text-amber-200 font-semibold text-lg group-hover:text-amber-100 transition-colors duration-300">{artifact.name}</span>

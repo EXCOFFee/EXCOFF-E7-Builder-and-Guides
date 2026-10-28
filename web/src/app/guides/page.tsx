@@ -216,8 +216,8 @@ export default function GuidesPage() {
                                                     src={guide.images[0]}
                                                     alt={guide.title}
                                                     fill
+                                                    sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw"
                                                     className="object-cover group-hover:scale-105 transition-transform"
-                                                    unoptimized
                                                 />
                                             </div>
                                         ) : (

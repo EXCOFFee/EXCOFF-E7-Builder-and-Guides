@@ -342,7 +342,7 @@ export function HeroDetailClient({
                                         width={320}
                                         height={320}
                                         className="w-full h-full object-cover"
-                                        unoptimized
+                                        priority
                                     />
                                 ) : (
                                     <div className="w-full h-full flex items-center justify-center bg-e7-void">

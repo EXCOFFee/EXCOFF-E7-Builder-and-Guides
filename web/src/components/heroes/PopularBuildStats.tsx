@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslations } from '@/hooks/useTranslations';
 import { SET_IMAGES } from '@/lib/sets';
@@ -72,6 +73,24 @@ interface PopularBuildStatsProps {
     heroSlug: string;
     /** Datos ya pedidos en el servidor: evitan el placeholder y el salto de layout al cargar */
     initialStats?: HeroBuildStats | null;
+}
+
+/** Ícono de artefacto (los de epic7db pesan ~130 KB a 378 px y se muestran a 80 px). */
+function ArtifactThumb({ src, alt }: { src?: string | null; alt: string }) {
+    const [failed, setFailed] = useState(false);
+    if (!src || failed) {
+        return <div className="w-full h-full flex items-center justify-center text-purple-400 text-3xl">?</div>;
+    }
+    return (
+        <Image
+            src={src}
+            alt={alt}
+            width={80}
+            height={112}
+            className="w-full h-full object-contain"
+            onError={() => setFailed(true)}
+        />
+    );
 }
 
 /**
@@ -161,6 +180,8 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                             <img
                                                 src={SET_IMAGES[setData.set.toLowerCase()]}
                                                 alt={setData.set}
+                                                width={32}
+                                                height={32}
                                                 className="w-8 h-8"
                                             />
                                         ) : (
@@ -197,6 +218,8 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                             <img
                                                 src={SET_IMAGES[setData.set.toLowerCase()]}
                                                 alt={setData.set}
+                                                width={32}
+                                                height={32}
                                                 className="w-8 h-8"
                                             />
                                         ) : (
@@ -378,23 +401,7 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                 className="flex items-center gap-5 px-8 py-5 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-800/20 border border-purple-500/40 hover:border-purple-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/20 min-w-[280px]"
                             >
                                 <div className="relative w-20 h-28 rounded-lg ring-2 ring-purple-500/40 overflow-hidden bg-purple-900/50 flex-shrink-0">
-                                    {artifact.icon ? (
-                                        <img
-                                            src={artifact.icon}
-                                            alt={artifact.name}
-                                            className="w-full h-full object-contain"
-                                            onError={(e) => {
-                                                const target = e.target as HTMLImageElement;
-                                                target.style.display = 'none';
-                                                const parent = target.parentElement;
-                                                if (parent) {
-                                                    parent.innerHTML = '<div class="w-full h-full flex items-center justify-center text-purple-400 text-3xl">?</div>';
-                                                }
-                                            }}
-                                        />
-                                    ) : (
-                                        <div className="w-full h-full flex items-center justify-center text-purple-400 text-3xl">?</div>
-                                    )}
+                                    <ArtifactThumb src={artifact.icon} alt={artifact.name} />
                                 </div>
                                 <div>
                                     <div className="text-xl font-display text-gray-200">{artifact.name}</div>
@@ -426,7 +433,6 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                     width={120}
                                     height={120}
                                     className="rounded-xl ring-2 ring-green-500/40 w-[120px] h-[120px] object-cover"
-                                    unoptimized
                                 />
                                 <div>
                                     <div className="text-lg font-display text-gray-200">{hero.name}</div>
@@ -458,7 +464,6 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                     width={120}
                                     height={120}
                                     className="rounded-xl ring-2 ring-red-500/40 w-[120px] h-[120px] object-cover"
-                                    unoptimized
                                 />
                                 <div>
                                     <div className="text-lg font-display text-gray-200">{hero.name}</div>
