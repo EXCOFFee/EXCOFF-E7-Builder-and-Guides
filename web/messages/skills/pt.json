@@ -3,17 +3,17 @@
         "_name": "Abigail",
         "skills": {
             "S1": {
-                "name": "Ambush",
-                "description": "Attacks the enemy with bloodied wings, and increases Combat Readiness of the caster by 15%. When used on the caster's turn, has a 35% chance to activate Might as an extra effect. Damage dealt increases proportional to the caster's max Health. Might: Increases Combat Readiness of all allies by 15%.",
-                "soulburn_effect": "Increase chance to activate Might to 100%."
+                "name": "Emboscada",
+                "description": "Ataca o inimigo com asas ensanguentadas e aumenta a Prontidão de Combate do conjurador em 15%. Quando usada no turno do conjurador, tem 35% de chance de ativar Poderio como efeito extra. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Poderio: aumenta a Prontidão de Combate de todos os aliados em 15%.",
+                "soulburn_effect": "Aumenta a chance de ativar Poderio para 100%."
             },
             "S2": {
-                "name": "Blood Banquet",
-                "description": "At the start of the turn, curses the enemy with the highest Attack for 1 turn. When the ally in the back row except for the caster receives lethal damage, consumes 30% of the caster's current Health, dispelling all debuffs from the target, before granting immortality and vampirism for 1 turn. Can only be activated once every 4 turns."
+                "name": "Banquete de sangue",
+                "description": "No início do turno, amaldiçoa o inimigo com maior Ataque por 1 turno. Quando o aliado na fileira de trás, exceto o conjurador, recebe dano letal, consome 30% da Vida atual do conjurador, dissipando todos os efeitos negativos do alvo antes de conceder imortalidade e vampirismo por 1 turno. Só pode ser ativado uma vez a cada 4 turnos."
             },
             "S3": {
-                "name": "Scarlet Garden",
-                "description": "After dispelling all buffs from the enemy, attacks with a field of bloody thorns, inflicting injuries. Increases Effectiveness of this attack by 50% and damage dealt increases proportional to the caster's max Health. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 25% every time this skill is used."
+                "name": "Jardim escarlate",
+                "description": "Após dissipar todos os efeitos positivos do inimigo, ataca com um campo de espinhos sangrentos, causando ferimentos. Aumenta a Eficácia deste ataque em 50% e o dano causado aumenta proporcionalmente à Vida máxima do conjurador. A gravidade dos ferimentos aumenta proporcionalmente ao dano causado. Os ferimentos diminuem a Vida máxima do alvo em até 25% cada vez que esta habilidade é usada."
             }
         }
     },
@@ -39,17 +39,17 @@
         "_name": "Achates",
         "skills": {
             "S1": {
-                "name": "Magic Design",
-                "description": "Attacks the enemy with a staff, with a 50% chance to inflict decreased Attack for 2 turns."
+                "name": "Desenho mágico",
+                "description": "Ataca o inimigo com um cajado, com 50% de chance de aplicar Diminuir Ataque por 2 turnos."
             },
             "S2": {
-                "name": "Rapid Cure",
-                "description": "Recovers Health of an ally proportional to the caster's max Health and grants invincibility for 1 turn before decreasing skill cooldowns by 1 turn."
+                "name": "Cura rápida",
+                "description": "Recupera a Vida de um aliado proporcionalmente à Vida máxima do conjurador e concede invencibilidade por 1 turno, depois diminui as recargas de habilidades em 1 turno."
             },
             "S3": {
-                "name": "Curing Prayer",
-                "description": "With the power of healing, dispels one debuff from all allies before recovering Health proportional to the caster's max Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "Prece curativa",
+                "description": "Com o poder da cura, dissipa um efeito negativo de todos os aliados antes de recuperar Vida proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta a quantidade recuperada."
             }
         }
     },
@@ -57,17 +57,17 @@
         "_name": "Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, increasing Combat Readiness of the caster by 20%."
+                "name": "Corte no tornozelo",
+                "description": "Ataca o inimigo com uma espada, aumentando a Prontidão de Combate do conjurador em 20%."
             },
             "S2": {
-                "name": "Blade Gust",
-                "description": "Attacks all enemies with a blade gust, with an 80% chance to make them unable to be buffed for 2 turns. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "Rajada de lâminas",
+                "description": "Ataca todos os inimigos com uma rajada de lâminas, com 80% de chance de impedir que recebam efeitos positivos por 2 turnos. Quando há três inimigos ou menos, o dano causado aumenta quanto menos inimigos houver."
             },
             "S3": {
-                "name": "Lightning Bolt",
-                "description": "Attacks the enemy repeatedly, granting increased Attack and Weakness Shared to the caster for 2 turns. A critical hit has a 400% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Raio",
+                "description": "Ataca o inimigo repetidamente, concedendo Aumentar Ataque e Fraqueza compartilhada ao conjurador por 2 turnos. Um acerto crítico tem 400% de chance de diminuir a Defesa por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -75,17 +75,17 @@
         "_name": "Adlay",
         "skills": {
             "S1": {
-                "name": "Mana Release",
-                "description": "Attacks with the power of a magical tome, with a 35% chance to stun for 1 turn."
+                "name": "Liberação de mana",
+                "description": "Ataca com o poder de um tomo mágico, com 35% de chance de atordoar por 1 turno."
             },
             "S2": {
-                "name": "Heroism",
-                "description": "Combat Readiness increases by 12% every time an ally except for the caster is attacked, and the caster's skill cooldown is reset when an ally dies."
+                "name": "Heroísmo",
+                "description": "A Prontidão de Combate aumenta 12% cada vez que um aliado, exceto o conjurador, é atacado, e a recarga das habilidades do conjurador é reiniciada quando um aliado morre."
             },
             "S3": {
-                "name": "Mana Seal",
-                "description": "Deals huge damage to all enemies with a sealing spell, with a 85% chance to dispel one buff, before a 85% chance to increase skill cooldowns by 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Selo de mana",
+                "description": "Causa dano enorme a todos os inimigos com um feitiço de selamento, com 85% de chance de dissipar um efeito positivo, depois com 85% de chance de aumentar as recargas de habilidades em 1 turno.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -93,17 +93,17 @@
         "_name": "Adventurer Ras",
         "skills": {
             "S1": {
-                "name": "X-Slash",
-                "description": "Attacks with a sword, with 75% chance to dispel a buff. Damage dealt increases proportional to the caster's max Health."
+                "name": "Corte em X",
+                "description": "Ataca com uma espada, com 75% de chance de dissipar um efeito positivo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Command Strike",
-                "description": "Attacks the enemy repeatedly, before triggering a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Golpe de comando",
+                "description": "Ataca o inimigo repetidamente, depois faz o aliado com maior Ataque realizar um Ataque duplo.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             },
             "S3": {
-                "name": "Purifying Flame",
-                "description": "Strongly attacks all enemies with a swordstorm, before recovering Health of the caster, and increases Defense of all allies for 2 turns. Amount recovered and damage dealt increase proportional to the caster's max Health."
+                "name": "Chama purificadora",
+                "description": "Ataca fortemente todos os inimigos com uma tempestade de espadas, depois recupera a Vida do conjurador e aumenta a Defesa de todos os aliados por 2 turnos. A quantidade recuperada e o dano causado aumentam proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -129,17 +129,17 @@
         "_name": "Ainos",
         "skills": {
             "S1": {
-                "name": "Silent Fire",
-                "description": "Silently shoots the enemy, with a 75% chance to decrease Defense for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense of the target for 2 turns."
+                "name": "Fogo silencioso",
+                "description": "Atira silenciosamente no inimigo, com 75% de chance de diminuir a Defesa por 1 turno.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100% e diminui a Defesa do alvo por 2 turnos."
             },
             "S2": {
-                "name": "Maneuver Support",
-                "description": "At the end of the turn, increases Combat Readiness of the ally except for the caster with the highest Attack by 20% and dispels one debuff from an ally."
+                "name": "Apoio tático",
+                "description": "No fim do turno, aumenta em 20% a Prontidão de Combate do aliado com maior Ataque, exceto o conjurador, e dissipa um efeito negativo de um aliado."
             },
             "S3": {
-                "name": "Firepower Cube",
-                "description": "Throws an firepower cube to attack all enemies, before healing all allies and granting increased Attack and Speed for 2 turns. Amount recovered increases proportional to the target's max Health."
+                "name": "Cubo de poder de fogo",
+                "description": "Lança um cubo de poder de fogo para atacar todos os inimigos, depois cura todos os aliados e concede Aumentar Ataque e Velocidade por 2 turnos. A quantidade recuperada aumenta proporcionalmente à Vida máxima do alvo."
             }
         }
     },
@@ -147,17 +147,17 @@
         "_name": "Ainos 2.0",
         "skills": {
             "S1": {
-                "name": "Silent Fire",
-                "description": "Silently shoots the enemy, with a 75% chance to decrease Defense for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense of the target for 2 turns."
+                "name": "Fogo silencioso",
+                "description": "Atira silenciosamente no inimigo, com 75% de chance de diminuir a Defesa por 1 turno.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100% e diminui a Defesa do alvo por 2 turnos."
             },
             "S2": {
-                "name": "Maneuver Support",
-                "description": "At the end of the turn, increases Combat Readiness of the ally except for the caster with the highest Attack by 20% and dispels one debuff from an ally."
+                "name": "Apoio tático",
+                "description": "No fim do turno, aumenta em 20% a Prontidão de Combate do aliado com maior Ataque, exceto o conjurador, e dissipa um efeito negativo de um aliado."
             },
             "S3": {
-                "name": "Enhanced Firepower Cube",
-                "description": "Throws an enhanced firepower cube before exploding it to attack all enemies. Recovers Health of all allies and increases Attack and Speed for 2 turns. Amount recovered increases proportional to the target's max Health. This skill cannot trigger a counterattack."
+                "name": "Cubo de poder de fogo aprimorado",
+                "description": "Lança um cubo de poder de fogo aprimorado e o explode para atacar todos os inimigos. Recupera a Vida de todos os aliados e aumenta o Ataque e a Velocidade por 2 turnos. A quantidade recuperada aumenta proporcionalmente à Vida máxima do alvo. Esta habilidade não pode ativar contra-ataques."
             }
         }
     },
@@ -165,17 +165,17 @@
         "_name": "Ains",
         "skills": {
             "S1": {
-                "name": "Gazelle Punch",
-                "description": "Punches the enemy, with a 50% chance to use Satisfying Strike instead of Gazelle Strike. Satisfying Strike: Attacks the enemy, a successful hit always results in a critical hit."
+                "name": "Soco gazela",
+                "description": "Soca o inimigo, com 50% de chance de usar Golpe satisfatório em vez de Golpe gazela. Golpe satisfatório: ataca o inimigo; um acerto bem-sucedido sempre resulta em acerto crítico."
             },
             "S2": {
-                "name": "Gash",
-                "description": "When attacked, has a 50% chance to counterattack."
+                "name": "Talho",
+                "description": "Ao ser atacado, tem 50% de chance de contra-atacar."
             },
             "S3": {
-                "name": "Ram",
-                "description": "Punches the enemy, with a 100% chance to stun for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Investida",
+                "description": "Soca o inimigo, com 100% de chance de atordoar por 2 turnos.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -183,17 +183,17 @@
         "_name": "Ainz Ooal Gown",
         "skills": {
             "S1": {
-                "name": "Lightning of Judgment",
-                "description": "Attacks all enemies with lightning, with a 25% chance to stun for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Relâmpago do julgamento",
+                "description": "Ataca todos os inimigos com relâmpagos, com 25% de chance de atordoar por 1 turno.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Overlord of Death",
-                "description": "Increases damage suffered from Light elemental enemies by 30%. When an ally is attacked, has a 35% chance to activate Mana Barrier. Mana Barrier can only be activated once every 3 turns. Mana Barrier: Grants a barrier to all allies for 2 turns, and the caster adopts a counterattacking stance for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "Soberano da morte",
+                "description": "Aumenta em 30% o dano sofrido de inimigos do elemento Luz. Quando um aliado é atacado, tem 35% de chance de ativar Barreira de mana. Barreira de mana só pode ser ativada uma vez a cada 3 turnos. Barreira de mana: concede uma barreira a todos os aliados por 2 turnos, e o conjurador assume postura de contra-ataque por 2 turnos. A força da barreira aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "The Goal of All Life Is Death",
-                "description": "Dispels all buffs from the enemy before silencing for 1 turn and a 100% chance to inflict death sentence. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "O objetivo de toda vida é a morte",
+                "description": "Dissipa todos os efeitos positivos do inimigo antes de silenciá-lo por 1 turno, com 100% de chance de aplicar sentença de morte. Esta habilidade não é afetada por efeitos de aumento ou redução de recarga."
             }
         }
     },
@@ -201,17 +201,17 @@
         "_name": "Aither",
         "skills": {
             "S1": {
-                "name": "Whispering Spirit",
-                "description": "Attacks the enemy with spirit power, with a 50% chance to decrease Speed for 2 turns."
+                "name": "Espírito sussurrante",
+                "description": "Ataca o inimigo com poder espiritual, com 50% de chance de diminuir a Velocidade por 2 turnos."
             },
             "S2": {
-                "name": "Guard",
-                "description": "With water energy, recovers Health of an ally proportional to the target's max Health and dispels two debuffs, before increasing Combat Readiness of the caster by 20%.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "Guarda",
+                "description": "Com a energia da água, recupera a Vida de um aliado proporcionalmente à Vida máxima do alvo e dissipa dois efeitos negativos, depois aumenta a Prontidão de Combate do conjurador em 20%.",
+                "soulburn_effect": "Aumenta a quantidade recuperada."
             },
             "S3": {
-                "name": "Spirit's Call",
-                "description": "Recovers Health of all allies and grants a barrier for 2 turns with spirit power. Amount recovered and barrier strength increases proportional to the target's max Health."
+                "name": "Chamado do espírito",
+                "description": "Com poder espiritual, recupera a Vida de todos os aliados e concede uma barreira por 2 turnos. A quantidade recuperada e a força da barreira aumentam proporcionalmente à Vida máxima do alvo."
             }
         }
     },
@@ -219,18 +219,18 @@
         "_name": "Aki",
         "skills": {
             "S1": {
-                "name": "Baptism of Fire",
-                "description": "Attacks the enemy with a blaze, with a 100% chance to inflict burn for 1 turn. At the end of the turn, detonates burn effects inflicted on the target.",
-                "soulburn_effect": "Extends duration of burn by 3 turns, and ignores Effect Resistance. This attack does not trigger a Dual Attack."
+                "name": "Batismo de fogo",
+                "description": "Ataca o inimigo com uma labareda, com 100% de chance de aplicar queimadura por 1 turno. No fim do turno, detona os efeitos de queimadura aplicados ao alvo.",
+                "soulburn_effect": "Estende a duração da queimadura em 3 turnos e ignora a Resistência a Efeitos. Este ataque não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Final Radiance",
-                "description": "Increases Attack by 50%. Cannot receive recover Health effects and damage sharing effects. When attacked, damage suffered in one attack does not exceed 51% of max Health. When using Soulburn, if Health exceeds 51%, consumes 51% Health instead of Soul, and grants an extra turn"
+                "name": "Brilho final",
+                "description": "Aumenta o Ataque em 50%. Não pode receber efeitos de recuperação de Vida nem de divisão de dano. Ao ser atacado, o dano sofrido em um único ataque não ultrapassa 51% da Vida máxima. Ao usar Queima de Alma, se a Vida estiver acima de 51%, consome 51% da Vida em vez de Alma e concede um turno extra."
             },
             "S3": {
-                "name": "Karmic Flame",
-                "description": "Attacks the enemy, dispelling all buffs before inflicting decreased Defense for 2 turns and a 100% chance each to inflict two burn effects for 2 turns. At the end of the turn, detonates burn effects inflicted on the target.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Chama cármica",
+                "description": "Ataca o inimigo, dissipando todos os efeitos positivos antes de aplicar Diminuir Defesa por 2 turnos e, com 100% de chance cada, dois efeitos de queimadura por 2 turnos. No fim do turno, detona os efeitos de queimadura aplicados ao alvo.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -238,17 +238,17 @@
         "_name": "Albedo",
         "skills": {
             "S1": {
-                "name": "No Need for Words",
-                "description": "Attacks the enemy with a bardiche, before increasing Combat Readiness of the caster by 20%. A successful attack deals additional damage proportional to the caster's max Health. Damage dealt increases proportional to the caster's max Health."
+                "name": "Palavras são desnecessárias",
+                "description": "Ataca o inimigo com uma bardiche, depois aumenta a Prontidão de Combate do conjurador em 20%. Um ataque bem-sucedido causa dano adicional proporcional à Vida máxima do conjurador. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Aegis Unfold",
-                "description": "When an ally suffers a critical hit, decreases damage suffered by 20%. When an ally except for the caster suffers a critical hit, counterattacks with Let's Go, Bicorn!. Let's Go, Bicorn! can only be activated once every 2 turns. When more than one damage reduction effect is granted, only the strongest effect is applied. Let's Go, Bicorn!: Attacks all enemies, dispelling one buff, before increasing Speed of the caster for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "Égide desdobrada",
+                "description": "Quando um aliado sofre um acerto crítico, diminui o dano sofrido em 20%. Quando um aliado, exceto o conjurador, sofre um acerto crítico, contra-ataca com Vamos, Bicorne!. Vamos, Bicorne! só pode ser ativado uma vez a cada 2 turnos. Quando mais de um efeito de redução de dano é concedido, só o mais forte é aplicado. Vamos, Bicorne!: ataca todos os inimigos, dissipando um efeito positivo, depois aumenta a Velocidade do conjurador por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Rage of Nazarick",
-                "description": "Fiercely attacks the wicked enemy, with a 100% chance each to dispel all buffs from the target, make them unable to be buffed, and decrease Defense for 2 turns. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Fúria de Nazarick",
+                "description": "Ataca ferozmente o inimigo perverso, com 100% de chance cada de dissipar todos os efeitos positivos do alvo, impedir que receba efeitos positivos e diminuir a Defesa por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -256,17 +256,17 @@
         "_name": "Alencia",
         "skills": {
             "S1": {
-                "name": "Eradicate",
-                "description": "Attacks the enemy by battering them, with a 75% chance to decrease Defense for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100% and ignores Effect Resistance."
+                "name": "Erradicar",
+                "description": "Ataca o inimigo golpeando-o, com 75% de chance de diminuir a Defesa por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100% e ignora a Resistência a Efeitos."
             },
             "S2": {
-                "name": "Noble Blood",
-                "description": "Increases Critical Hit Chance by 20%. At the start of the turn, has a 100% chance to grant Mind's Eye to the caster for 1 turn. After using Eradicate, when the caster is granted Mind's Eye, activates Trample as an extra skill. Trample: Attacks the enemy by striking from above, and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's max Health."
+                "name": "Sangue nobre",
+                "description": "Aumenta a Chance de Crítico em 20%. No início do turno, tem 100% de chance de conceder Olho da mente ao conjurador por 1 turno. Após usar Erradicar, quando o conjurador tem Olho da mente, ativa Pisotear como habilidade extra. Pisotear: ataca o inimigo golpeando de cima e aumenta a Prontidão de Combate do conjurador em 15%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Genesis",
-                "description": "Attacks all enemies with Dragon's Might, dispelling all buffs, and grants increased Defense to all allies for 2 turns. Increases Combat Readiness of the caster by 50%. Damage dealt increases proportional to the caster's max Health."
+                "name": "Gênese",
+                "description": "Ataca todos os inimigos com o Poderio do Dragão, dissipando todos os efeitos positivos, e concede Aumentar Defesa a todos os aliados por 2 turnos. Aumenta a Prontidão de Combate do conjurador em 50%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -274,17 +274,17 @@
         "_name": "Alexa",
         "skills": {
             "S1": {
-                "name": "Fell",
-                "description": "Attacks the enemy by cutting with dual-wielded swords. A critical hit will activate Lightning Bolt as an extra attack. Lightning Bolt can only be activated once per turn of the caster. Lightning Bolt (Acquire 1 Soul): Rapidly attacks the enemy by cutting with dual-wielded swords."
+                "name": "Abater",
+                "description": "Ataca o inimigo cortando com duas espadas. Um acerto crítico ativa Relâmpago como ataque extra. Relâmpago só pode ser ativado uma vez por turno do conjurador. Relâmpago (adquire 1 Alma): ataca rapidamente o inimigo cortando com duas espadas."
             },
             "S2": {
-                "name": "Cold Edge",
-                "description": "Attacks the enemy with a cold blade, with a 100% chance to inflict two poison effects for 2 turns, and increases the caster's Combat Readiness by 30%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Lâmina fria",
+                "description": "Ataca o inimigo com uma lâmina fria, com 100% de chance de aplicar dois efeitos de veneno por 2 turnos, e aumenta a Prontidão de Combate do conjurador em 30%.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Crushing Blow",
-                "description": "Attacks the enemy continuously, dealing damage proportional to the number of debuffs inflicted on the enemy."
+                "name": "Golpe esmagador",
+                "description": "Ataca o inimigo continuamente, causando dano proporcional ao número de efeitos negativos aplicados ao inimigo."
             }
         }
     },
@@ -292,17 +292,17 @@
         "_name": "Ambitious Tywin",
         "skills": {
             "S1": {
-                "name": "Icy Sword Storm",
-                "description": "Attacks with a sword, with a 75% chance to inflict provoke for 1 turn. Inflicts 4 Soul Removal on the enemy. When the caster is granted rage, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health."
+                "name": "Tempestade de espadas gélida",
+                "description": "Ataca com uma espada, com 75% de chance de aplicar provocação por 1 turno. Aplica 4 de Remoção de Alma ao inimigo. Quando o conjurador tem fúria, ignora a Resistência a Efeitos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Battle Command",
-                "description": "After being attacked, when an ally has a debuff, has a 100% chance to dispel one debuff each from all allies and grant rage to the caster for 1 turn."
+                "name": "Comando de batalha",
+                "description": "Após ser atacado, quando um aliado tem um efeito negativo, tem 100% de chance de dissipar um efeito negativo de cada aliado e conceder fúria ao conjurador por 1 turno."
             },
             "S3": {
-                "name": "Flash",
-                "description": "Attacks all enemies with an instant swordstorm, with a 80% chance each to stun for 1 turn and decrease Defense for 2 turns. When the caster is enraged, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Lampejo",
+                "description": "Ataca todos os inimigos com uma tempestade de espadas instantânea, com 80% de chance cada de atordoar por 1 turno e diminuir a Defesa por 2 turnos. Quando o conjurador está enfurecido, ignora a Resistência a Efeitos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -310,17 +310,17 @@
         "_name": "Amid",
         "skills": {
             "S1": {
-                "name": "Zephyr",
-                "description": "Attacks the enemy with a fan, and increases Combat Readiness of the caster by 15%.",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "Zéfiro",
+                "description": "Ataca o inimigo com um leque e aumenta a Prontidão de Combate do conjurador em 15%.",
+                "soulburn_effect": "O aumento de Prontidão de Combate é aplicado a todos os aliados."
             },
             "S2": {
-                "name": "Forest Blessing",
-                "description": "Grants skill nullifier once to all allies and increases Combat Readiness by 25%. Grants an extra turn to the caster."
+                "name": "Bênção da floresta",
+                "description": "Concede Anulação de habilidade uma vez a todos os aliados e aumenta a Prontidão de Combate em 25%. Concede um turno extra ao conjurador."
             },
             "S3": {
-                "name": "Touch of Hope",
-                "description": "With Elven magic, dispels two debuffs from an ally except for the caster and grants Swift Attack. Increases Attack of the target for 2 turns."
+                "name": "Toque da esperança",
+                "description": "Com magia élfica, dissipa dois efeitos negativos de um aliado, exceto o conjurador, e concede Ataque veloz. Aumenta o Ataque do alvo por 2 turnos."
             }
         }
     },

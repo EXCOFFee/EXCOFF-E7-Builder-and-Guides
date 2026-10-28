@@ -3,17 +3,17 @@
         "_name": "Abigail",
         "skills": {
             "S1": {
-                "name": "Ambush",
-                "description": "Attacks the enemy with bloodied wings, and increases Combat Readiness of the caster by 15%. When used on the caster's turn, has a 35% chance to activate Might as an extra effect. Damage dealt increases proportional to the caster's max Health. Might: Increases Combat Readiness of all allies by 15%.",
-                "soulburn_effect": "Increase chance to activate Might to 100%."
+                "name": "기습",
+                "description": "피에 물든 날개로 적을 공격하고 시전자의 행동 게이지를 15% 증가시킨다. 시전자의 턴에 사용하면 35% 확률로 추가 효과로 위력을 발동한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 위력: 모든 아군의 행동 게이지를 15% 증가시킨다.",
+                "soulburn_effect": "위력 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Blood Banquet",
-                "description": "At the start of the turn, curses the enemy with the highest Attack for 1 turn. When the ally in the back row except for the caster receives lethal damage, consumes 30% of the caster's current Health, dispelling all debuffs from the target, before granting immortality and vampirism for 1 turn. Can only be activated once every 4 turns."
+                "name": "피의 연회",
+                "description": "턴 시작 시 공격력이 가장 높은 적에게 1턴 동안 저주를 건다. 시전자를 제외한 후열 아군이 치명적인 피해를 받으면 시전자의 현재 생명력을 30% 소모해 대상의 약화 효과를 모두 해제한 뒤 1턴 동안 불사와 흡혈을 부여한다. 4턴마다 한 번만 발동할 수 있다."
             },
             "S3": {
-                "name": "Scarlet Garden",
-                "description": "After dispelling all buffs from the enemy, attacks with a field of bloody thorns, inflicting injuries. Increases Effectiveness of this attack by 50% and damage dealt increases proportional to the caster's max Health. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 25% every time this skill is used."
+                "name": "진홍의 정원",
+                "description": "적의 강화 효과를 모두 해제한 뒤 피의 가시밭으로 공격해 부상을 입힌다. 이 공격의 효과 적중이 50% 증가하며, 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 준 피해에 비례해 부상의 정도가 증가한다. 부상은 이 스킬을 사용할 때마다 대상의 최대 생명력을 최대 25% 감소시킨다."
             }
         }
     },
@@ -39,17 +39,17 @@
         "_name": "Achates",
         "skills": {
             "S1": {
-                "name": "Magic Design",
-                "description": "Attacks the enemy with a staff, with a 50% chance to inflict decreased Attack for 2 turns."
+                "name": "마법 설계",
+                "description": "지팡이로 적을 공격하며, 50% 확률로 2턴 동안 공격력 감소를 건다."
             },
             "S2": {
-                "name": "Rapid Cure",
-                "description": "Recovers Health of an ally proportional to the caster's max Health and grants invincibility for 1 turn before decreasing skill cooldowns by 1 turn."
+                "name": "신속한 치유",
+                "description": "시전자의 최대 생명력에 비례해 아군 한 명의 생명력을 회복하고 1턴 동안 무적을 부여한 뒤 스킬 재사용 대기 시간을 1턴 감소시킨다."
             },
             "S3": {
-                "name": "Curing Prayer",
-                "description": "With the power of healing, dispels one debuff from all allies before recovering Health proportional to the caster's max Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "치유의 기도",
+                "description": "치유의 힘으로 모든 아군의 약화 효과를 한 개 해제한 뒤 시전자의 최대 생명력에 비례해 생명력을 회복한다.",
+                "soulburn_effect": "회복량이 증가한다."
             }
         }
     },
@@ -57,17 +57,17 @@
         "_name": "Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, increasing Combat Readiness of the caster by 20%."
+                "name": "발목 베기",
+                "description": "검으로 적을 공격하고 시전자의 행동 게이지를 20% 증가시킨다."
             },
             "S2": {
-                "name": "Blade Gust",
-                "description": "Attacks all enemies with a blade gust, with an 80% chance to make them unable to be buffed for 2 turns. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "칼날 돌풍",
+                "description": "칼날 돌풍으로 모든 적을 공격하며, 80% 확률로 2턴 동안 강화 불가를 건다. 적이 세 명 이하이면 적이 적을수록 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Lightning Bolt",
-                "description": "Attacks the enemy repeatedly, granting increased Attack and Weakness Shared to the caster for 2 turns. A critical hit has a 400% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "낙뢰",
+                "description": "적을 연속으로 공격하고 시전자에게 2턴 동안 공격력 증가와 약점 공유를 부여한다. 치명타가 발생하면 400% 확률로 2턴 동안 방어력을 감소시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -75,17 +75,17 @@
         "_name": "Adlay",
         "skills": {
             "S1": {
-                "name": "Mana Release",
-                "description": "Attacks with the power of a magical tome, with a 35% chance to stun for 1 turn."
+                "name": "마나 해방",
+                "description": "마법서의 힘으로 공격하며, 35% 확률로 1턴 동안 기절시킨다."
             },
             "S2": {
-                "name": "Heroism",
-                "description": "Combat Readiness increases by 12% every time an ally except for the caster is attacked, and the caster's skill cooldown is reset when an ally dies."
+                "name": "영웅심",
+                "description": "시전자를 제외한 아군이 공격받을 때마다 행동 게이지가 12% 증가하며, 아군이 사망하면 시전자의 스킬 재사용 대기 시간이 초기화된다."
             },
             "S3": {
-                "name": "Mana Seal",
-                "description": "Deals huge damage to all enemies with a sealing spell, with a 85% chance to dispel one buff, before a 85% chance to increase skill cooldowns by 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "마나 봉인",
+                "description": "봉인 주문으로 모든 적에게 막대한 피해를 주며, 85% 확률로 강화 효과를 한 개 해제한 뒤 85% 확률로 스킬 재사용 대기 시간을 1턴 증가시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -93,17 +93,17 @@
         "_name": "Adventurer Ras",
         "skills": {
             "S1": {
-                "name": "X-Slash",
-                "description": "Attacks with a sword, with 75% chance to dispel a buff. Damage dealt increases proportional to the caster's max Health."
+                "name": "X 베기",
+                "description": "검으로 공격하며, 75% 확률로 강화 효과를 한 개 해제한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Command Strike",
-                "description": "Attacks the enemy repeatedly, before triggering a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "지휘 일격",
+                "description": "적을 연속으로 공격한 뒤 공격력이 가장 높은 아군이 협공하게 한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             },
             "S3": {
-                "name": "Purifying Flame",
-                "description": "Strongly attacks all enemies with a swordstorm, before recovering Health of the caster, and increases Defense of all allies for 2 turns. Amount recovered and damage dealt increase proportional to the caster's max Health."
+                "name": "정화의 불꽃",
+                "description": "검의 폭풍으로 모든 적을 강하게 공격한 뒤 시전자의 생명력을 회복하고 2턴 동안 모든 아군의 방어력을 증가시킨다. 시전자의 최대 생명력에 비례해 회복량과 주는 피해가 증가한다."
             }
         }
     },
@@ -129,17 +129,17 @@
         "_name": "Ainos",
         "skills": {
             "S1": {
-                "name": "Silent Fire",
-                "description": "Silently shoots the enemy, with a 75% chance to decrease Defense for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense of the target for 2 turns."
+                "name": "침묵의 사격",
+                "description": "조용히 적을 사격하며, 75% 확률로 1턴 동안 방어력을 감소시킨다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가하고 2턴 동안 대상의 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Maneuver Support",
-                "description": "At the end of the turn, increases Combat Readiness of the ally except for the caster with the highest Attack by 20% and dispels one debuff from an ally."
+                "name": "기동 지원",
+                "description": "턴 종료 시 시전자를 제외하고 공격력이 가장 높은 아군의 행동 게이지를 20% 증가시키고, 아군 한 명의 약화 효과를 한 개 해제한다."
             },
             "S3": {
-                "name": "Firepower Cube",
-                "description": "Throws an firepower cube to attack all enemies, before healing all allies and granting increased Attack and Speed for 2 turns. Amount recovered increases proportional to the target's max Health."
+                "name": "화력 큐브",
+                "description": "화력 큐브를 던져 모든 적을 공격한 뒤 모든 아군을 치유하고 2턴 동안 공격력 증가와 속도 증가를 부여한다. 대상의 최대 생명력에 비례해 회복량이 증가한다."
             }
         }
     },
@@ -147,17 +147,17 @@
         "_name": "Ainos 2.0",
         "skills": {
             "S1": {
-                "name": "Silent Fire",
-                "description": "Silently shoots the enemy, with a 75% chance to decrease Defense for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense of the target for 2 turns."
+                "name": "침묵의 사격",
+                "description": "조용히 적을 사격하며, 75% 확률로 1턴 동안 방어력을 감소시킨다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가하고 2턴 동안 대상의 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Maneuver Support",
-                "description": "At the end of the turn, increases Combat Readiness of the ally except for the caster with the highest Attack by 20% and dispels one debuff from an ally."
+                "name": "기동 지원",
+                "description": "턴 종료 시 시전자를 제외하고 공격력이 가장 높은 아군의 행동 게이지를 20% 증가시키고, 아군 한 명의 약화 효과를 한 개 해제한다."
             },
             "S3": {
-                "name": "Enhanced Firepower Cube",
-                "description": "Throws an enhanced firepower cube before exploding it to attack all enemies. Recovers Health of all allies and increases Attack and Speed for 2 turns. Amount recovered increases proportional to the target's max Health. This skill cannot trigger a counterattack."
+                "name": "강화 화력 큐브",
+                "description": "강화 화력 큐브를 던져 폭발시켜 모든 적을 공격한다. 모든 아군의 생명력을 회복하고 2턴 동안 공격력과 속도를 증가시킨다. 대상의 최대 생명력에 비례해 회복량이 증가한다. 이 스킬로는 반격을 유발할 수 없다."
             }
         }
     },
@@ -165,17 +165,17 @@
         "_name": "Ains",
         "skills": {
             "S1": {
-                "name": "Gazelle Punch",
-                "description": "Punches the enemy, with a 50% chance to use Satisfying Strike instead of Gazelle Strike. Satisfying Strike: Attacks the enemy, a successful hit always results in a critical hit."
+                "name": "가젤 펀치",
+                "description": "적에게 주먹을 날리며, 50% 확률로 가젤 일격 대신 통쾌한 일격을 사용한다. 통쾌한 일격: 적을 공격하며, 적중하면 반드시 치명타가 발생한다."
             },
             "S2": {
-                "name": "Gash",
-                "description": "When attacked, has a 50% chance to counterattack."
+                "name": "베어 가르기",
+                "description": "공격받으면 50% 확률로 반격한다."
             },
             "S3": {
-                "name": "Ram",
-                "description": "Punches the enemy, with a 100% chance to stun for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "들이받기",
+                "description": "적에게 주먹을 날리며, 100% 확률로 2턴 동안 기절시킨다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -183,17 +183,17 @@
         "_name": "Ainz Ooal Gown",
         "skills": {
             "S1": {
-                "name": "Lightning of Judgment",
-                "description": "Attacks all enemies with lightning, with a 25% chance to stun for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "심판의 낙뢰",
+                "description": "번개로 모든 적을 공격하며, 25% 확률로 1턴 동안 기절시킨다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Overlord of Death",
-                "description": "Increases damage suffered from Light elemental enemies by 30%. When an ally is attacked, has a 35% chance to activate Mana Barrier. Mana Barrier can only be activated once every 3 turns. Mana Barrier: Grants a barrier to all allies for 2 turns, and the caster adopts a counterattacking stance for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "죽음의 지배자",
+                "description": "빛 속성 적에게 받는 피해가 30% 증가한다. 아군이 공격받으면 35% 확률로 마나 배리어를 발동한다. 마나 배리어는 3턴마다 한 번만 발동할 수 있다. 마나 배리어: 2턴 동안 모든 아군에게 보호막을 부여하고, 시전자는 2턴 동안 반격 태세를 취한다. 시전자의 최대 생명력에 비례해 보호막 강도가 증가한다."
             },
             "S3": {
-                "name": "The Goal of All Life Is Death",
-                "description": "Dispels all buffs from the enemy before silencing for 1 turn and a 100% chance to inflict death sentence. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "모든 생명의 끝은 죽음이다",
+                "description": "적의 강화 효과를 모두 해제한 뒤 1턴 동안 침묵을 걸고, 100% 확률로 사형 선고를 건다. 이 스킬은 재사용 대기 시간 증가·감소 효과의 영향을 받지 않는다."
             }
         }
     },
@@ -201,17 +201,17 @@
         "_name": "Aither",
         "skills": {
             "S1": {
-                "name": "Whispering Spirit",
-                "description": "Attacks the enemy with spirit power, with a 50% chance to decrease Speed for 2 turns."
+                "name": "속삭이는 정령",
+                "description": "정령의 힘으로 적을 공격하며, 50% 확률로 2턴 동안 속도를 감소시킨다."
             },
             "S2": {
-                "name": "Guard",
-                "description": "With water energy, recovers Health of an ally proportional to the target's max Health and dispels two debuffs, before increasing Combat Readiness of the caster by 20%.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "가호",
+                "description": "물의 기운으로 대상의 최대 생명력에 비례해 아군 한 명의 생명력을 회복하고 약화 효과를 두 개 해제한 뒤 시전자의 행동 게이지를 20% 증가시킨다.",
+                "soulburn_effect": "회복량이 증가한다."
             },
             "S3": {
-                "name": "Spirit's Call",
-                "description": "Recovers Health of all allies and grants a barrier for 2 turns with spirit power. Amount recovered and barrier strength increases proportional to the target's max Health."
+                "name": "정령의 부름",
+                "description": "정령의 힘으로 모든 아군의 생명력을 회복하고 2턴 동안 보호막을 부여한다. 대상의 최대 생명력에 비례해 회복량과 보호막 강도가 증가한다."
             }
         }
     },
@@ -219,18 +219,18 @@
         "_name": "Aki",
         "skills": {
             "S1": {
-                "name": "Baptism of Fire",
-                "description": "Attacks the enemy with a blaze, with a 100% chance to inflict burn for 1 turn. At the end of the turn, detonates burn effects inflicted on the target.",
-                "soulburn_effect": "Extends duration of burn by 3 turns, and ignores Effect Resistance. This attack does not trigger a Dual Attack."
+                "name": "불의 세례",
+                "description": "화염으로 적을 공격하며, 100% 확률로 1턴 동안 화상을 건다. 턴 종료 시 대상에게 걸린 화상을 폭발시킨다.",
+                "soulburn_effect": "화상 지속 시간이 3턴 연장되고 효과 저항을 무시한다. 이 공격으로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Final Radiance",
-                "description": "Increases Attack by 50%. Cannot receive recover Health effects and damage sharing effects. When attacked, damage suffered in one attack does not exceed 51% of max Health. When using Soulburn, if Health exceeds 51%, consumes 51% Health instead of Soul, and grants an extra turn"
+                "name": "마지막 광휘",
+                "description": "공격력이 50% 증가한다. 생명력 회복 효과와 피해 분산 효과를 받을 수 없다. 공격받을 때 한 번의 공격으로 받는 피해가 최대 생명력의 51%를 넘지 않는다. 소울번 사용 시 생명력이 51%를 넘으면 소울 대신 생명력을 51% 소모하고 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Karmic Flame",
-                "description": "Attacks the enemy, dispelling all buffs before inflicting decreased Defense for 2 turns and a 100% chance each to inflict two burn effects for 2 turns. At the end of the turn, detonates burn effects inflicted on the target.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "업화",
+                "description": "적을 공격해 강화 효과를 모두 해제한 뒤 2턴 동안 방어력 감소를 걸고, 각각 100% 확률로 2턴 동안 화상을 두 개 건다. 턴 종료 시 대상에게 걸린 화상을 폭발시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -238,17 +238,17 @@
         "_name": "Albedo",
         "skills": {
             "S1": {
-                "name": "No Need for Words",
-                "description": "Attacks the enemy with a bardiche, before increasing Combat Readiness of the caster by 20%. A successful attack deals additional damage proportional to the caster's max Health. Damage dealt increases proportional to the caster's max Health."
+                "name": "말은 필요 없다",
+                "description": "바르디슈로 적을 공격한 뒤 시전자의 행동 게이지를 20% 증가시킨다. 공격에 성공하면 시전자의 최대 생명력에 비례한 추가 피해를 준다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Aegis Unfold",
-                "description": "When an ally suffers a critical hit, decreases damage suffered by 20%. When an ally except for the caster suffers a critical hit, counterattacks with Let's Go, Bicorn!. Let's Go, Bicorn! can only be activated once every 2 turns. When more than one damage reduction effect is granted, only the strongest effect is applied. Let's Go, Bicorn!: Attacks all enemies, dispelling one buff, before increasing Speed of the caster for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "아이기스 전개",
+                "description": "아군이 치명타를 받으면 받는 피해가 20% 감소한다. 시전자를 제외한 아군이 치명타를 받으면 가자, 바이콘!으로 반격한다. 가자, 바이콘!은 2턴마다 한 번만 발동할 수 있다. 피해 감소 효과가 여러 개 부여되면 가장 강한 효과만 적용된다. 가자, 바이콘!: 모든 적을 공격해 강화 효과를 한 개 해제한 뒤 2턴 동안 시전자의 속도를 증가시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Rage of Nazarick",
-                "description": "Fiercely attacks the wicked enemy, with a 100% chance each to dispel all buffs from the target, make them unable to be buffed, and decrease Defense for 2 turns. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "나자릭의 분노",
+                "description": "사악한 적을 맹렬히 공격하며, 각각 100% 확률로 대상의 강화 효과를 모두 해제하고 2턴 동안 강화 불가와 방어력 감소를 건다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -256,17 +256,17 @@
         "_name": "Alencia",
         "skills": {
             "S1": {
-                "name": "Eradicate",
-                "description": "Attacks the enemy by battering them, with a 75% chance to decrease Defense for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100% and ignores Effect Resistance."
+                "name": "근절",
+                "description": "적을 내리쳐 공격하며, 75% 확률로 1턴 동안 방어력을 감소시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가하고 효과 저항을 무시한다."
             },
             "S2": {
-                "name": "Noble Blood",
-                "description": "Increases Critical Hit Chance by 20%. At the start of the turn, has a 100% chance to grant Mind's Eye to the caster for 1 turn. After using Eradicate, when the caster is granted Mind's Eye, activates Trample as an extra skill. Trample: Attacks the enemy by striking from above, and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's max Health."
+                "name": "고귀한 혈통",
+                "description": "치명타 확률이 20% 증가한다. 턴 시작 시 100% 확률로 시전자에게 1턴 동안 심안을 부여한다. 근절 사용 후 시전자에게 심안이 있으면 추가 스킬로 짓밟기를 발동한다. 짓밟기: 위에서 내리쳐 적을 공격하고 시전자의 행동 게이지를 15% 증가시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Genesis",
-                "description": "Attacks all enemies with Dragon's Might, dispelling all buffs, and grants increased Defense to all allies for 2 turns. Increases Combat Readiness of the caster by 50%. Damage dealt increases proportional to the caster's max Health."
+                "name": "창세",
+                "description": "용의 위력으로 모든 적을 공격해 강화 효과를 모두 해제하고, 모든 아군에게 2턴 동안 방어력 증가를 부여한다. 시전자의 행동 게이지를 50% 증가시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -274,17 +274,17 @@
         "_name": "Alexa",
         "skills": {
             "S1": {
-                "name": "Fell",
-                "description": "Attacks the enemy by cutting with dual-wielded swords. A critical hit will activate Lightning Bolt as an extra attack. Lightning Bolt can only be activated once per turn of the caster. Lightning Bolt (Acquire 1 Soul): Rapidly attacks the enemy by cutting with dual-wielded swords."
+                "name": "베어 넘기기",
+                "description": "쌍검으로 적을 베어 공격한다. 치명타가 발생하면 추가 공격으로 번개 일격을 발동한다. 번개 일격은 시전자의 턴마다 한 번만 발동할 수 있다. 번개 일격(소울 1 획득): 쌍검으로 적을 빠르게 베어 공격한다."
             },
             "S2": {
-                "name": "Cold Edge",
-                "description": "Attacks the enemy with a cold blade, with a 100% chance to inflict two poison effects for 2 turns, and increases the caster's Combat Readiness by 30%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "차가운 칼날",
+                "description": "차가운 칼날로 적을 공격하며, 100% 확률로 2턴 동안 지속 피해를 두 개 건다. 시전자의 행동 게이지를 30% 증가시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "Crushing Blow",
-                "description": "Attacks the enemy continuously, dealing damage proportional to the number of debuffs inflicted on the enemy."
+                "name": "분쇄의 일격",
+                "description": "적을 연속으로 공격하며, 적에게 걸린 약화 효과의 수에 비례한 피해를 준다."
             }
         }
     },
@@ -292,17 +292,17 @@
         "_name": "Ambitious Tywin",
         "skills": {
             "S1": {
-                "name": "Icy Sword Storm",
-                "description": "Attacks with a sword, with a 75% chance to inflict provoke for 1 turn. Inflicts 4 Soul Removal on the enemy. When the caster is granted rage, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health."
+                "name": "얼음 검풍",
+                "description": "검으로 공격하며, 75% 확률로 1턴 동안 도발을 건다. 적의 소울을 4 제거한다. 시전자에게 격노가 있으면 효과 저항을 무시한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Battle Command",
-                "description": "After being attacked, when an ally has a debuff, has a 100% chance to dispel one debuff each from all allies and grant rage to the caster for 1 turn."
+                "name": "전투 지휘",
+                "description": "공격받은 후 아군에게 약화 효과가 있으면 100% 확률로 모든 아군의 약화 효과를 각각 한 개 해제하고 시전자에게 1턴 동안 격노를 부여한다."
             },
             "S3": {
-                "name": "Flash",
-                "description": "Attacks all enemies with an instant swordstorm, with a 80% chance each to stun for 1 turn and decrease Defense for 2 turns. When the caster is enraged, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "섬광",
+                "description": "순간적인 검풍으로 모든 적을 공격하며, 각각 80% 확률로 1턴 동안 기절시키고 2턴 동안 방어력을 감소시킨다. 시전자가 격노 상태이면 효과 저항을 무시한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -310,17 +310,17 @@
         "_name": "Amid",
         "skills": {
             "S1": {
-                "name": "Zephyr",
-                "description": "Attacks the enemy with a fan, and increases Combat Readiness of the caster by 15%.",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "산들바람",
+                "description": "부채로 적을 공격하고 시전자의 행동 게이지를 15% 증가시킨다.",
+                "soulburn_effect": "행동 게이지 증가 효과가 모든 아군에게 적용된다."
             },
             "S2": {
-                "name": "Forest Blessing",
-                "description": "Grants skill nullifier once to all allies and increases Combat Readiness by 25%. Grants an extra turn to the caster."
+                "name": "숲의 축복",
+                "description": "모든 아군에게 스킬 피해 무효를 한 번 부여하고 행동 게이지를 25% 증가시킨다. 시전자는 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Touch of Hope",
-                "description": "With Elven magic, dispels two debuffs from an ally except for the caster and grants Swift Attack. Increases Attack of the target for 2 turns."
+                "name": "희망의 손길",
+                "description": "엘프의 마법으로 시전자를 제외한 아군 한 명의 약화 효과를 두 개 해제하고 신속 공격을 부여한다. 2턴 동안 대상의 공격력을 증가시킨다."
             }
         }
     },

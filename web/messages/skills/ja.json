@@ -3,17 +3,17 @@
         "_name": "Abigail",
         "skills": {
             "S1": {
-                "name": "Ambush",
-                "description": "Attacks the enemy with bloodied wings, and increases Combat Readiness of the caster by 15%. When used on the caster's turn, has a 35% chance to activate Might as an extra effect. Damage dealt increases proportional to the caster's max Health. Might: Increases Combat Readiness of all allies by 15%.",
-                "soulburn_effect": "Increase chance to activate Might to 100%."
+                "name": "奇襲",
+                "description": "血に染まった翼で敵を攻撃し、発動者の行動ゲージを15%増加させる。発動者のターンに使用すると、35%の確率で追加効果として威力を発動する。発動者の最大HPに比例して与ダメージがアップする。威力：味方全員の行動ゲージを15%増加させる。",
+                "soulburn_effect": "威力の発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Blood Banquet",
-                "description": "At the start of the turn, curses the enemy with the highest Attack for 1 turn. When the ally in the back row except for the caster receives lethal damage, consumes 30% of the caster's current Health, dispelling all debuffs from the target, before granting immortality and vampirism for 1 turn. Can only be activated once every 4 turns."
+                "name": "血の宴",
+                "description": "ターン開始時、攻撃力が最も高い敵に1ターンの間呪いを付与する。発動者を除く後列の味方が致命的なダメージを受けると、発動者の現在HPを30%消費し、対象の弱体効果をすべて解除した後、1ターンの間不死と吸血を付与する。4ターンごとに一度のみ発動できる。"
             },
             "S3": {
-                "name": "Scarlet Garden",
-                "description": "After dispelling all buffs from the enemy, attacks with a field of bloody thorns, inflicting injuries. Increases Effectiveness of this attack by 50% and damage dealt increases proportional to the caster's max Health. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 25% every time this skill is used."
+                "name": "真紅の庭園",
+                "description": "敵の強化効果をすべて解除した後、血の茨の原で攻撃し、負傷を与える。この攻撃の効果命中が50%アップし、発動者の最大HPに比例して与ダメージがアップする。与ダメージに比例して負傷の程度がアップする。負傷はこのスキルを使用するたびに対象の最大HPを最大25%減少させる。"
             }
         }
     },
@@ -39,17 +39,17 @@
         "_name": "Achates",
         "skills": {
             "S1": {
-                "name": "Magic Design",
-                "description": "Attacks the enemy with a staff, with a 50% chance to inflict decreased Attack for 2 turns."
+                "name": "魔法設計",
+                "description": "杖で敵を攻撃し、50%の確率で2ターンの間攻撃力ダウンを付与する。"
             },
             "S2": {
-                "name": "Rapid Cure",
-                "description": "Recovers Health of an ally proportional to the caster's max Health and grants invincibility for 1 turn before decreasing skill cooldowns by 1 turn."
+                "name": "迅速な治癒",
+                "description": "発動者の最大HPに比例して味方一人のHPを回復し、1ターンの間無敵を付与した後、スキルのクールタイムを1ターン短縮する。"
             },
             "S3": {
-                "name": "Curing Prayer",
-                "description": "With the power of healing, dispels one debuff from all allies before recovering Health proportional to the caster's max Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "癒しの祈り",
+                "description": "癒しの力で味方全員の弱体効果を一つ解除した後、発動者の最大HPに比例してHPを回復する。",
+                "soulburn_effect": "回復量がアップする。"
             }
         }
     },
@@ -57,17 +57,17 @@
         "_name": "Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, increasing Combat Readiness of the caster by 20%."
+                "name": "足首斬り",
+                "description": "剣で敵を攻撃し、発動者の行動ゲージを20%増加させる。"
             },
             "S2": {
-                "name": "Blade Gust",
-                "description": "Attacks all enemies with a blade gust, with an 80% chance to make them unable to be buffed for 2 turns. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "刃の疾風",
+                "description": "刃の疾風で敵全体を攻撃し、80%の確率で2ターンの間強化不可を付与する。敵が三体以下の場合、敵が少ないほど与ダメージがアップする。"
             },
             "S3": {
-                "name": "Lightning Bolt",
-                "description": "Attacks the enemy repeatedly, granting increased Attack and Weakness Shared to the caster for 2 turns. A critical hit has a 400% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "落雷",
+                "description": "敵を連続で攻撃し、発動者に2ターンの間攻撃力アップと弱点共有を付与する。クリティカルが発生すると、400%の確率で2ターンの間防御力をダウンさせる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -75,17 +75,17 @@
         "_name": "Adlay",
         "skills": {
             "S1": {
-                "name": "Mana Release",
-                "description": "Attacks with the power of a magical tome, with a 35% chance to stun for 1 turn."
+                "name": "マナ解放",
+                "description": "魔導書の力で攻撃し、35%の確率で1ターンの間気絶させる。"
             },
             "S2": {
-                "name": "Heroism",
-                "description": "Combat Readiness increases by 12% every time an ally except for the caster is attacked, and the caster's skill cooldown is reset when an ally dies."
+                "name": "英雄心",
+                "description": "発動者を除く味方が攻撃されるたびに行動ゲージが12%増加し、味方が死亡すると発動者のスキルのクールタイムがリセットされる。"
             },
             "S3": {
-                "name": "Mana Seal",
-                "description": "Deals huge damage to all enemies with a sealing spell, with a 85% chance to dispel one buff, before a 85% chance to increase skill cooldowns by 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "マナ封印",
+                "description": "封印の呪文で敵全体に大ダメージを与え、85%の確率で強化効果を一つ解除した後、85%の確率でスキルのクールタイムを1ターン増加させる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -93,17 +93,17 @@
         "_name": "Adventurer Ras",
         "skills": {
             "S1": {
-                "name": "X-Slash",
-                "description": "Attacks with a sword, with 75% chance to dispel a buff. Damage dealt increases proportional to the caster's max Health."
+                "name": "X斬り",
+                "description": "剣で攻撃し、75%の確率で強化効果を一つ解除する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Command Strike",
-                "description": "Attacks the enemy repeatedly, before triggering a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "指揮の一撃",
+                "description": "敵を連続で攻撃した後、攻撃力が最も高い味方に協攻させる。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             },
             "S3": {
-                "name": "Purifying Flame",
-                "description": "Strongly attacks all enemies with a swordstorm, before recovering Health of the caster, and increases Defense of all allies for 2 turns. Amount recovered and damage dealt increase proportional to the caster's max Health."
+                "name": "浄化の炎",
+                "description": "剣の嵐で敵全体を強く攻撃した後、発動者のHPを回復し、2ターンの間味方全員の防御力をアップさせる。発動者の最大HPに比例して回復量と与ダメージがアップする。"
             }
         }
     },
@@ -129,17 +129,17 @@
         "_name": "Ainos",
         "skills": {
             "S1": {
-                "name": "Silent Fire",
-                "description": "Silently shoots the enemy, with a 75% chance to decrease Defense for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense of the target for 2 turns."
+                "name": "静かな射撃",
+                "description": "静かに敵を射撃し、75%の確率で1ターンの間防御力をダウンさせる。",
+                "soulburn_effect": "効果発動確率が100%にアップし、2ターンの間対象の防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Maneuver Support",
-                "description": "At the end of the turn, increases Combat Readiness of the ally except for the caster with the highest Attack by 20% and dispels one debuff from an ally."
+                "name": "機動支援",
+                "description": "ターン終了時、発動者を除いて攻撃力が最も高い味方の行動ゲージを20%増加させ、味方一人の弱体効果を一つ解除する。"
             },
             "S3": {
-                "name": "Firepower Cube",
-                "description": "Throws an firepower cube to attack all enemies, before healing all allies and granting increased Attack and Speed for 2 turns. Amount recovered increases proportional to the target's max Health."
+                "name": "火力キューブ",
+                "description": "火力キューブを投げて敵全体を攻撃した後、味方全員を回復し、2ターンの間攻撃力アップとスピードアップを付与する。対象の最大HPに比例して回復量がアップする。"
             }
         }
     },
@@ -147,17 +147,17 @@
         "_name": "Ainos 2.0",
         "skills": {
             "S1": {
-                "name": "Silent Fire",
-                "description": "Silently shoots the enemy, with a 75% chance to decrease Defense for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100% and decreases Defense of the target for 2 turns."
+                "name": "静かな射撃",
+                "description": "静かに敵を射撃し、75%の確率で1ターンの間防御力をダウンさせる。",
+                "soulburn_effect": "効果発動確率が100%にアップし、2ターンの間対象の防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Maneuver Support",
-                "description": "At the end of the turn, increases Combat Readiness of the ally except for the caster with the highest Attack by 20% and dispels one debuff from an ally."
+                "name": "機動支援",
+                "description": "ターン終了時、発動者を除いて攻撃力が最も高い味方の行動ゲージを20%増加させ、味方一人の弱体効果を一つ解除する。"
             },
             "S3": {
-                "name": "Enhanced Firepower Cube",
-                "description": "Throws an enhanced firepower cube before exploding it to attack all enemies. Recovers Health of all allies and increases Attack and Speed for 2 turns. Amount recovered increases proportional to the target's max Health. This skill cannot trigger a counterattack."
+                "name": "強化火力キューブ",
+                "description": "強化火力キューブを投げて爆発させ、敵全体を攻撃する。味方全員のHPを回復し、2ターンの間攻撃力とスピードをアップさせる。対象の最大HPに比例して回復量がアップする。このスキルでは反撃を誘発できない。"
             }
         }
     },
@@ -165,17 +165,17 @@
         "_name": "Ains",
         "skills": {
             "S1": {
-                "name": "Gazelle Punch",
-                "description": "Punches the enemy, with a 50% chance to use Satisfying Strike instead of Gazelle Strike. Satisfying Strike: Attacks the enemy, a successful hit always results in a critical hit."
+                "name": "ガゼルパンチ",
+                "description": "敵を殴り、50%の確率でガゼルストライクの代わりに痛快な一撃を使用する。痛快な一撃：敵を攻撃し、命中すると必ずクリティカルが発生する。"
             },
             "S2": {
-                "name": "Gash",
-                "description": "When attacked, has a 50% chance to counterattack."
+                "name": "切り裂き",
+                "description": "攻撃されると、50%の確率で反撃する。"
             },
             "S3": {
-                "name": "Ram",
-                "description": "Punches the enemy, with a 100% chance to stun for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "突進",
+                "description": "敵を殴り、100%の確率で2ターンの間気絶させる。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -183,17 +183,17 @@
         "_name": "Ainz Ooal Gown",
         "skills": {
             "S1": {
-                "name": "Lightning of Judgment",
-                "description": "Attacks all enemies with lightning, with a 25% chance to stun for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "審判の雷",
+                "description": "雷で敵全体を攻撃し、25%の確率で1ターンの間気絶させる。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Overlord of Death",
-                "description": "Increases damage suffered from Light elemental enemies by 30%. When an ally is attacked, has a 35% chance to activate Mana Barrier. Mana Barrier can only be activated once every 3 turns. Mana Barrier: Grants a barrier to all allies for 2 turns, and the caster adopts a counterattacking stance for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "死の支配者",
+                "description": "光属性の敵から受けるダメージが30%アップする。味方が攻撃されると、35%の確率でマナバリアを発動する。マナバリアは3ターンごとに一度のみ発動できる。マナバリア：2ターンの間味方全員にバリアを付与し、発動者は2ターンの間反撃態勢をとる。発動者の最大HPに比例してバリアの強度がアップする。"
             },
             "S3": {
-                "name": "The Goal of All Life Is Death",
-                "description": "Dispels all buffs from the enemy before silencing for 1 turn and a 100% chance to inflict death sentence. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "全ての生ある者の目指すところは死である",
+                "description": "敵の強化効果をすべて解除した後、1ターンの間沈黙を付与し、100%の確率で死の宣告を付与する。このスキルはクールタイムの増減効果を受けない。"
             }
         }
     },
@@ -201,17 +201,17 @@
         "_name": "Aither",
         "skills": {
             "S1": {
-                "name": "Whispering Spirit",
-                "description": "Attacks the enemy with spirit power, with a 50% chance to decrease Speed for 2 turns."
+                "name": "囁く精霊",
+                "description": "精霊の力で敵を攻撃し、50%の確率で2ターンの間スピードをダウンさせる。"
             },
             "S2": {
-                "name": "Guard",
-                "description": "With water energy, recovers Health of an ally proportional to the target's max Health and dispels two debuffs, before increasing Combat Readiness of the caster by 20%.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "加護",
+                "description": "水の気で対象の最大HPに比例して味方一人のHPを回復し、弱体効果を二つ解除した後、発動者の行動ゲージを20%増加させる。",
+                "soulburn_effect": "回復量がアップする。"
             },
             "S3": {
-                "name": "Spirit's Call",
-                "description": "Recovers Health of all allies and grants a barrier for 2 turns with spirit power. Amount recovered and barrier strength increases proportional to the target's max Health."
+                "name": "精霊の呼び声",
+                "description": "精霊の力で味方全員のHPを回復し、2ターンの間バリアを付与する。対象の最大HPに比例して回復量とバリアの強度がアップする。"
             }
         }
     },
@@ -219,18 +219,18 @@
         "_name": "Aki",
         "skills": {
             "S1": {
-                "name": "Baptism of Fire",
-                "description": "Attacks the enemy with a blaze, with a 100% chance to inflict burn for 1 turn. At the end of the turn, detonates burn effects inflicted on the target.",
-                "soulburn_effect": "Extends duration of burn by 3 turns, and ignores Effect Resistance. This attack does not trigger a Dual Attack."
+                "name": "炎の洗礼",
+                "description": "炎で敵を攻撃し、100%の確率で1ターンの間火傷を付与する。ターン終了時、対象の火傷を爆発させる。",
+                "soulburn_effect": "火傷の持続時間が3ターン延長され、効果抵抗を無視する。この攻撃では協攻が発動しない。"
             },
             "S2": {
-                "name": "Final Radiance",
-                "description": "Increases Attack by 50%. Cannot receive recover Health effects and damage sharing effects. When attacked, damage suffered in one attack does not exceed 51% of max Health. When using Soulburn, if Health exceeds 51%, consumes 51% Health instead of Soul, and grants an extra turn"
+                "name": "最後の輝き",
+                "description": "攻撃力が50%アップする。HP回復効果とダメージ分散効果を受けられない。攻撃されたとき、一回の攻撃で受けるダメージが最大HPの51%を超えない。ソウルバーン使用時、HPが51%を超えていれば、ソウルの代わりにHPを51%消費し、追加ターンを得る。"
             },
             "S3": {
-                "name": "Karmic Flame",
-                "description": "Attacks the enemy, dispelling all buffs before inflicting decreased Defense for 2 turns and a 100% chance each to inflict two burn effects for 2 turns. At the end of the turn, detonates burn effects inflicted on the target.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "業火",
+                "description": "敵を攻撃し、強化効果をすべて解除した後、2ターンの間防御力ダウンを付与し、それぞれ100%の確率で2ターンの間火傷を二つ付与する。ターン終了時、対象の火傷を爆発させる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -238,17 +238,17 @@
         "_name": "Albedo",
         "skills": {
             "S1": {
-                "name": "No Need for Words",
-                "description": "Attacks the enemy with a bardiche, before increasing Combat Readiness of the caster by 20%. A successful attack deals additional damage proportional to the caster's max Health. Damage dealt increases proportional to the caster's max Health."
+                "name": "言葉は不要",
+                "description": "バルディッシュで敵を攻撃した後、発動者の行動ゲージを20%増加させる。攻撃が成功すると、発動者の最大HPに比例した追加ダメージを与える。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Aegis Unfold",
-                "description": "When an ally suffers a critical hit, decreases damage suffered by 20%. When an ally except for the caster suffers a critical hit, counterattacks with Let's Go, Bicorn!. Let's Go, Bicorn! can only be activated once every 2 turns. When more than one damage reduction effect is granted, only the strongest effect is applied. Let's Go, Bicorn!: Attacks all enemies, dispelling one buff, before increasing Speed of the caster for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "イージス展開",
+                "description": "味方がクリティカルを受けると、受けるダメージが20%減少する。発動者を除く味方がクリティカルを受けると、行くわよ、バイコーン！で反撃する。行くわよ、バイコーン！は2ターンごとに一度のみ発動できる。ダメージ減少効果が複数付与された場合、最も強い効果のみ適用される。行くわよ、バイコーン！：敵全体を攻撃し、強化効果を一つ解除した後、2ターンの間発動者のスピードをアップさせる。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Rage of Nazarick",
-                "description": "Fiercely attacks the wicked enemy, with a 100% chance each to dispel all buffs from the target, make them unable to be buffed, and decrease Defense for 2 turns. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "ナザリックの怒り",
+                "description": "邪悪な敵を激しく攻撃し、それぞれ100%の確率で対象の強化効果をすべて解除し、2ターンの間強化不可と防御力ダウンを付与する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -256,17 +256,17 @@
         "_name": "Alencia",
         "skills": {
             "S1": {
-                "name": "Eradicate",
-                "description": "Attacks the enemy by battering them, with a 75% chance to decrease Defense for 1 turn. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100% and ignores Effect Resistance."
+                "name": "根絶",
+                "description": "敵を打ちのめして攻撃し、75%の確率で1ターンの間防御力をダウンさせる。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "効果発動確率が100%にアップし、効果抵抗を無視する。"
             },
             "S2": {
-                "name": "Noble Blood",
-                "description": "Increases Critical Hit Chance by 20%. At the start of the turn, has a 100% chance to grant Mind's Eye to the caster for 1 turn. After using Eradicate, when the caster is granted Mind's Eye, activates Trample as an extra skill. Trample: Attacks the enemy by striking from above, and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's max Health."
+                "name": "高貴な血統",
+                "description": "クリティカル率が20%アップする。ターン開始時、100%の確率で発動者に1ターンの間心眼を付与する。根絶の使用後、発動者に心眼があれば、追加スキルとして踏みつけを発動する。踏みつけ：上から打ち下ろして敵を攻撃し、発動者の行動ゲージを15%増加させる。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Genesis",
-                "description": "Attacks all enemies with Dragon's Might, dispelling all buffs, and grants increased Defense to all allies for 2 turns. Increases Combat Readiness of the caster by 50%. Damage dealt increases proportional to the caster's max Health."
+                "name": "創世",
+                "description": "竜の威力で敵全体を攻撃し、強化効果をすべて解除し、味方全員に2ターンの間防御力アップを付与する。発動者の行動ゲージを50%増加させる。発動者の最大HPに比例して与ダメージがアップする。"
             }
         }
     },
@@ -274,17 +274,17 @@
         "_name": "Alexa",
         "skills": {
             "S1": {
-                "name": "Fell",
-                "description": "Attacks the enemy by cutting with dual-wielded swords. A critical hit will activate Lightning Bolt as an extra attack. Lightning Bolt can only be activated once per turn of the caster. Lightning Bolt (Acquire 1 Soul): Rapidly attacks the enemy by cutting with dual-wielded swords."
+                "name": "斬り倒し",
+                "description": "双剣で敵を斬って攻撃する。クリティカルが発生すると、追加攻撃として稲妻の一撃を発動する。稲妻の一撃は発動者のターンごとに一度のみ発動できる。稲妻の一撃（ソウル1獲得）：双剣で敵を素早く斬って攻撃する。"
             },
             "S2": {
-                "name": "Cold Edge",
-                "description": "Attacks the enemy with a cold blade, with a 100% chance to inflict two poison effects for 2 turns, and increases the caster's Combat Readiness by 30%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "冷たい刃",
+                "description": "冷たい刃で敵を攻撃し、100%の確率で2ターンの間持続ダメージを二つ付与し、発動者の行動ゲージを30%増加させる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Crushing Blow",
-                "description": "Attacks the enemy continuously, dealing damage proportional to the number of debuffs inflicted on the enemy."
+                "name": "粉砕の一撃",
+                "description": "敵を連続で攻撃し、敵に付与された弱体効果の数に比例したダメージを与える。"
             }
         }
     },
@@ -292,17 +292,17 @@
         "_name": "Ambitious Tywin",
         "skills": {
             "S1": {
-                "name": "Icy Sword Storm",
-                "description": "Attacks with a sword, with a 75% chance to inflict provoke for 1 turn. Inflicts 4 Soul Removal on the enemy. When the caster is granted rage, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health."
+                "name": "氷の剣嵐",
+                "description": "剣で攻撃し、75%の確率で1ターンの間挑発を付与する。敵のソウルを4除去する。発動者に激怒があれば効果抵抗を無視する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Battle Command",
-                "description": "After being attacked, when an ally has a debuff, has a 100% chance to dispel one debuff each from all allies and grant rage to the caster for 1 turn."
+                "name": "戦闘指揮",
+                "description": "攻撃された後、味方に弱体効果があれば、100%の確率で味方全員の弱体効果をそれぞれ一つ解除し、発動者に1ターンの間激怒を付与する。"
             },
             "S3": {
-                "name": "Flash",
-                "description": "Attacks all enemies with an instant swordstorm, with a 80% chance each to stun for 1 turn and decrease Defense for 2 turns. When the caster is enraged, ignores Effect Resistance. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "閃光",
+                "description": "瞬間的な剣嵐で敵全体を攻撃し、それぞれ80%の確率で1ターンの間気絶させ、2ターンの間防御力をダウンさせる。発動者が激怒状態なら効果抵抗を無視する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -310,17 +310,17 @@
         "_name": "Amid",
         "skills": {
             "S1": {
-                "name": "Zephyr",
-                "description": "Attacks the enemy with a fan, and increases Combat Readiness of the caster by 15%.",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "そよ風",
+                "description": "扇で敵を攻撃し、発動者の行動ゲージを15%増加させる。",
+                "soulburn_effect": "行動ゲージ増加効果が味方全員に適用される。"
             },
             "S2": {
-                "name": "Forest Blessing",
-                "description": "Grants skill nullifier once to all allies and increases Combat Readiness by 25%. Grants an extra turn to the caster."
+                "name": "森の祝福",
+                "description": "味方全員にスキルダメージ無効を一度付与し、行動ゲージを25%増加させる。発動者は追加ターンを得る。"
             },
             "S3": {
-                "name": "Touch of Hope",
-                "description": "With Elven magic, dispels two debuffs from an ally except for the caster and grants Swift Attack. Increases Attack of the target for 2 turns."
+                "name": "希望の手",
+                "description": "エルフの魔法で発動者を除く味方一人の弱体効果を二つ解除し、迅速攻撃を付与する。2ターンの間対象の攻撃力をアップさせる。"
             }
         }
     },
