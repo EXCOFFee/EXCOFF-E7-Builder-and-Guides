@@ -4358,17 +4358,17 @@
         "_name": "Muse Rima",
         "skills": {
             "S1": {
-                "name": "Quick Shot",
-                "description": "Attacks with a quick shot of an arrow. A critical hit will decrease the caster's skill cooldown by 1 turn."
+                "name": "速射",
+                "description": "快速射出箭矢攻击。暴击时，使施放者的技能冷却时间减少1回合。"
             },
             "S2": {
-                "name": "Lullaby Arrow",
-                "description": "Shoots an arrow infused with a sleep toxin, with a 100% chance to put them to sleep for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "摇篮曲之箭",
+                "description": "射出注入睡眠毒素的箭矢，有100%的几率使其睡眠1回合。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S3": {
-                "name": "Hopeful Hymn",
-                "description": "Encourages an ally except for the caster, decreasing skill cooldowns by 3 turns and increasing Attack for 2 turns."
+                "name": "希望赞歌",
+                "description": "鼓舞除施放者外的一名友军，使技能冷却时间减少3回合，并提升攻击力2回合。"
             }
         }
     },
@@ -4376,17 +4376,17 @@
         "_name": "Muwi",
         "skills": {
             "S1": {
-                "name": "Leap Strike",
-                "description": "Leaps to attack the enemy, with a 50% chance to inflict bleeding for 2 turns."
+                "name": "跃击",
+                "description": "跃起攻击敌人，有50%的几率施加2回合出血。"
             },
             "S2": {
-                "name": "Coldhearted Management",
-                "description": "After the foremost ally is attacked, counterattacks with Blade Flurry, and when all allies are Ice elemental heroes, increases Combat Readiness of all allies by 10%. Blade Flurry takes priority over a counterattack with a basic skill and can only be activated once every 2 turns. Blade Flurry: Attacks the enemy with a swordstorm, decreasing Attack for 2 turns."
+                "name": "冷酷管理",
+                "description": "最前方的友军受到攻击后，以刃之乱舞反击；所有友军均为冰属性英雄时，使所有友军的行动值提升10%。刃之乱舞优先于普通技能反击，且每2回合只能发动一次。刃之乱舞：以剑暴攻击敌人，降低其攻击力2回合。"
             },
             "S3": {
-                "name": "Wind Cutter",
-                "description": "Attacks all enemies with a sword, with a 75% chance to decrease Defense for 2 turns. Increases Attack of the caster for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "风切",
+                "description": "以剑攻击所有敌人，有75%的几率降低防御力2回合。提升施放者的攻击力2回合。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -4394,17 +4394,17 @@
         "_name": "Nahkwol",
         "skills": {
             "S1": {
-                "name": "Phantom Brush",
-                "description": "Attacks the enemy with a brush, with a 75% chance to silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness by 20%."
+                "name": "幻影之笔",
+                "description": "以毛笔攻击敌人，有75%的几率施加1回合沉默。攻击后若目标处于沉默状态，降低20%行动值。"
             },
             "S2": {
-                "name": "Forbidden Incantation",
-                "description": "Seals the enemy for 2 turns before attacking, and increases Speed of the caster for 2 turns."
+                "name": "禁忌咒文",
+                "description": "对敌人施加2回合封印后发动攻击，并提升施放者的速度2回合。"
             },
             "S3": {
-                "name": "Spiritual Devouring",
-                "description": "Attacks all enemies with a powerful spell, dispelling all buffs before inflicting bind for 2 turns and increasing skill cooldowns by 1 turn. Grants an extra turn to the caster.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "灵魂吞噬",
+                "description": "以强力咒文攻击所有敌人，解除所有强化效果后施加2回合拘束，并使技能冷却时间增加1回合。施放者获得额外回合。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -4412,17 +4412,17 @@
         "_name": "Navy Captain Landy",
         "skills": {
             "S1": {
-                "name": "Precision Targeting",
-                "description": "Attacks the enemy with gunfire, and increases Combat Readiness of the caster by 25%. After attacking, has a 40% chance to activate Salvo Fire as an extra attack. Salvo Fire: Attacks all enemies by firing off artillery, and recovers Health of the caster proportional to Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "精准瞄准",
+                "description": "以枪击攻击敌人，并使施放者的行动值提升25%。攻击后有40%的几率以追加攻击发动齐射炮击。齐射炮击：以炮击攻击所有敌人，并按攻击力比例恢复施放者的生命值。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Ruler of the Sea",
-                "description": "Immune to debuffs which prevent movement and increases Critical Hit Resistance by 70%. At the start of battle, increases Critical Hit Resistance of all allies except for the caster for 2 turns. After attacking, increases Attack of the caster by 10%. This effect can stack up to 5 times."
+                "name": "海洋支配者",
+                "description": "免疫妨碍行动的弱化效果，暴击抵抗提升70%。战斗开始时，提升除施放者外所有友军的暴击抵抗2回合。攻击后，施放者的攻击力提升10%。此效果最多叠加5次。"
             },
             "S3": {
-                "name": "Mobilize the Warship!",
-                "description": "After increasing Attack of the caster for 3 turns, attacks all enemies with a warship, stunning for 1 turn. Penetrates the target's Defense by 60%."
+                "name": "战舰出击！",
+                "description": "提升施放者的攻击力3回合后，以战舰攻击所有敌人，使其眩晕1回合。穿透目标60%的防御力。"
             }
         }
     },
@@ -4430,17 +4430,17 @@
         "_name": "Nemunas",
         "skills": {
             "S1": {
-                "name": "Cover Fire",
-                "description": "Decreases enemy's Combat Readiness by 15% after attacking them."
+                "name": "掩护射击",
+                "description": "攻击敌人后，使其行动值降低15%。"
             },
             "S2": {
-                "name": "Shock Arrow",
-                "description": "Powerfully shoots an arrow at the enemy, decreasing Hit Chance for 2 turns and Combat Readiness by 30%. Damage dealt increases proportional to the enemy's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "冲击之箭",
+                "description": "向敌人强力射出箭矢，降低其命中率2回合，并降低30%行动值。造成的伤害按敌人的最大生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "A Girl's Determination",
-                "description": "Encourages all allies, dispelling one debuff, and increases Attack of the caster for 2 turns."
+                "name": "少女的决心",
+                "description": "鼓舞所有友军，解除一个弱化效果，并提升施放者的攻击力2回合。"
             }
         }
     },
@@ -4448,17 +4448,17 @@
         "_name": "New Kid Adin",
         "skills": {
             "S1": {
-                "name": "An Opening!",
-                "description": "Attacks the enemy with a bamboo sword, inflicting injuries. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 10% every time this skill is used. When the caster is granted vigor, a successful attack will inflict additional damage equivalent to 50% of injuries inflicted on the target.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "有破绽！",
+                "description": "以竹刀攻击敌人，造成负伤。负伤程度按造成的伤害比例提升。每次使用此技能，负伤会使目标的最大生命值最多降低10%。施放者拥有斗志时，攻击成功时追加造成相当于目标负伤50%的伤害。",
+                "soulburn_effect": "攻击所有敌人。此攻击不会触发协攻。"
             },
             "S2": {
-                "name": "You Started This!",
-                "description": "Increases Evasion by 50%, and when successfully evading, grants vigor to the caster for 1 turn and counterattacks. Counterattack can only be activated once per turn. At the end of someone's turn, when the caster is granted vigor, increases Combat Readiness of the caster by 20%."
+                "name": "是你先动手的！",
+                "description": "闪避提升50%，成功闪避时，为施放者施加1回合斗志并反击。反击每回合只能发动一次。任意角色回合结束时，若施放者拥有斗志，使施放者的行动值提升20%。"
             },
             "S3": {
-                "name": "Scattering Petals, Falling Leaves",
-                "description": "After increasing Attack of the caster for 3 turns, attacks the enemy with an exceptional technique, inflicting injuries. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 30% every time this skill is used. When the caster is granted vigor, a successful attack deals additional damage equivalent to 100% of injuries inflicted on the target."
+                "name": "落英缤纷",
+                "description": "提升施放者的攻击力3回合后，以卓越的技艺攻击敌人，造成负伤。负伤程度按造成的伤害比例提升。每次使用此技能，负伤会使目标的最大生命值最多降低30%。施放者拥有斗志时，攻击成功时追加造成相当于目标负伤100%的伤害。"
             }
         }
     },
@@ -4466,17 +4466,17 @@
         "_name": "New Moon Luna",
         "skills": {
             "S1": {
-                "name": "Radiant Strike",
-                "description": "Attacks the enemy with a spear, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's max Health."
+                "name": "璀璨一击",
+                "description": "以长枪攻击敌人，并使施放者的行动值提升20%。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Demon-Sealing Spear",
-                "description": "Attacks the enemy by thrusting down a spear, inflicting decreased Defense for 1 turn, and increases Combat Readiness of the caster by 50%. A successful attack will inflict additional damage on all enemies. Damage dealt and additional damage increase proportional to the caster's max Health."
+                "name": "封魔之枪",
+                "description": "以长枪向下刺击敌人，施加1回合防御力降低，并使施放者的行动值提升50%。攻击成功时，对所有敌人造成追加伤害。造成的伤害与追加伤害按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Moon's Judgment",
-                "description": "Using mana, dispels all buffs from all enemies before sealing and making them unable to be buffed for 2 turns. At the start of the first battle, grants skill effect nullifier once to the caster.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "月之审判",
+                "description": "运用魔力解除所有敌人的所有强化效果，然后施加2回合封印与无法强化。首场战斗开始时，为施放者施加一次技能效果无效。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -4502,17 +4502,17 @@
         "_name": "Ocean Breeze Luluca",
         "skills": {
             "S1": {
-                "name": "Order's In, Just Wait!",
-                "description": "Attacks the enemy with overflowing energy, and increases Combat Readiness of the ally with the highest Combat Readiness except the caster by 15%",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "已下单，请稍等！",
+                "description": "以满溢的能量攻击敌人，并使除施放者外行动值最高的友军的行动值提升15%。",
+                "soulburn_effect": "行动值提升效果适用于所有友军。"
             },
             "S2": {
-                "name": "One Luluca's Special!",
-                "description": "After an enemy uses a non-attack skill, gains 2 Focus and increases Combat Readiness of the caster by 25%. Can only be activated once every 2 turns. After using a skill, when Focus is full, consumes all Focus and activates Luluca's Special Delivery. Luluca's Special Delivery: Attacks all enemies who are interrupting her delivery, dispelling two buffs and an 85% chance to inflict silence for 1 turn and a 100% chance to decrease Hit Chance for 2 turns, before decreasing skill cooldowns of the caster by 1 turn."
+                "name": "一份露露卡特制！",
+                "description": "敌人使用非攻击技能后，获得2专注，并使施放者的行动值提升25%。每2回合只能发动一次。使用技能后若专注已满，消耗全部专注发动露露卡特快配送。露露卡特快配送：攻击所有妨碍配送的敌人，解除两个强化效果，有85%的几率施加1回合沉默，并有100%的几率施加2回合命中率降低，然后使施放者的技能冷却时间减少1回合。"
             },
             "S3": {
-                "name": "This One's On Me",
-                "description": "With quality customer service, dispels two debuffs from all allies and grants increased Defense for 2 turns and an ice cream."
+                "name": "这份算我请客",
+                "description": "以优质服务解除所有友军的两个弱化效果，并施加2回合防御力提升与冰淇淋。"
             }
         }
     },

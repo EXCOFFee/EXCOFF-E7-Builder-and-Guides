@@ -4358,17 +4358,17 @@
         "_name": "Muse Rima",
         "skills": {
             "S1": {
-                "name": "Quick Shot",
-                "description": "Attacks with a quick shot of an arrow. A critical hit will decrease the caster's skill cooldown by 1 turn."
+                "name": "속사",
+                "description": "화살을 빠르게 쏴 공격한다. 치명타가 발생하면 시전자의 스킬 재사용 대기 시간을 1턴 감소시킨다."
             },
             "S2": {
-                "name": "Lullaby Arrow",
-                "description": "Shoots an arrow infused with a sleep toxin, with a 100% chance to put them to sleep for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "자장가 화살",
+                "description": "수면 독이 깃든 화살을 쏘며, 100% 확률로 1턴 동안 수면에 빠뜨린다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Hopeful Hymn",
-                "description": "Encourages an ally except for the caster, decreasing skill cooldowns by 3 turns and increasing Attack for 2 turns."
+                "name": "희망의 찬가",
+                "description": "시전자를 제외한 아군 한 명을 격려해 스킬 재사용 대기 시간을 3턴 감소시키고 2턴 동안 공격력을 증가시킨다."
             }
         }
     },
@@ -4376,17 +4376,17 @@
         "_name": "Muwi",
         "skills": {
             "S1": {
-                "name": "Leap Strike",
-                "description": "Leaps to attack the enemy, with a 50% chance to inflict bleeding for 2 turns."
+                "name": "도약 일격",
+                "description": "도약해 적을 공격하며, 50% 확률로 2턴 동안 출혈을 건다."
             },
             "S2": {
-                "name": "Coldhearted Management",
-                "description": "After the foremost ally is attacked, counterattacks with Blade Flurry, and when all allies are Ice elemental heroes, increases Combat Readiness of all allies by 10%. Blade Flurry takes priority over a counterattack with a basic skill and can only be activated once every 2 turns. Blade Flurry: Attacks the enemy with a swordstorm, decreasing Attack for 2 turns."
+                "name": "냉정한 관리",
+                "description": "가장 앞에 있는 아군이 공격받은 후 칼날 난무로 반격하며, 모든 아군이 물 속성 영웅이면 모든 아군의 행동 게이지를 10% 증가시킨다. 칼날 난무는 기본 스킬 반격보다 우선하며 2턴마다 한 번만 발동할 수 있다. 칼날 난무: 검풍으로 적을 공격해 2턴 동안 공격력을 감소시킨다."
             },
             "S3": {
-                "name": "Wind Cutter",
-                "description": "Attacks all enemies with a sword, with a 75% chance to decrease Defense for 2 turns. Increases Attack of the caster for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "바람 가르기",
+                "description": "검으로 모든 적을 공격하며, 75% 확률로 2턴 동안 방어력을 감소시킨다. 2턴 동안 시전자의 공격력을 증가시킨다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -4394,17 +4394,17 @@
         "_name": "Nahkwol",
         "skills": {
             "S1": {
-                "name": "Phantom Brush",
-                "description": "Attacks the enemy with a brush, with a 75% chance to silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness by 20%."
+                "name": "환영의 붓",
+                "description": "붓으로 적을 공격하며, 75% 확률로 1턴 동안 침묵을 건다. 공격 후 대상이 침묵 상태이면 행동 게이지를 20% 감소시킨다."
             },
             "S2": {
-                "name": "Forbidden Incantation",
-                "description": "Seals the enemy for 2 turns before attacking, and increases Speed of the caster for 2 turns."
+                "name": "금지된 주문",
+                "description": "적에게 2턴 동안 봉인을 건 뒤 공격하고 2턴 동안 시전자의 속도를 증가시킨다."
             },
             "S3": {
-                "name": "Spiritual Devouring",
-                "description": "Attacks all enemies with a powerful spell, dispelling all buffs before inflicting bind for 2 turns and increasing skill cooldowns by 1 turn. Grants an extra turn to the caster.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "영혼 포식",
+                "description": "강력한 주문으로 모든 적을 공격해 강화 효과를 모두 해제한 뒤 2턴 동안 구속을 걸고 스킬 재사용 대기 시간을 1턴 증가시킨다. 시전자는 추가 턴을 얻는다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -4412,17 +4412,17 @@
         "_name": "Navy Captain Landy",
         "skills": {
             "S1": {
-                "name": "Precision Targeting",
-                "description": "Attacks the enemy with gunfire, and increases Combat Readiness of the caster by 25%. After attacking, has a 40% chance to activate Salvo Fire as an extra attack. Salvo Fire: Attacks all enemies by firing off artillery, and recovers Health of the caster proportional to Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "정밀 조준",
+                "description": "총격으로 적을 공격하고 시전자의 행동 게이지를 25% 증가시킨다. 공격 후 40% 확률로 추가 공격으로 일제 포격을 발동한다. 일제 포격: 포격으로 모든 적을 공격하고 공격력에 비례해 시전자의 생명력을 회복한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Ruler of the Sea",
-                "description": "Immune to debuffs which prevent movement and increases Critical Hit Resistance by 70%. At the start of battle, increases Critical Hit Resistance of all allies except for the caster for 2 turns. After attacking, increases Attack of the caster by 10%. This effect can stack up to 5 times."
+                "name": "바다의 지배자",
+                "description": "행동을 막는 약화 효과에 면역이며 치명타 저항이 70% 증가한다. 전투 시작 시 2턴 동안 시전자를 제외한 모든 아군의 치명타 저항을 증가시킨다. 공격 후 시전자의 공격력이 10% 증가한다. 이 효과는 최대 5회까지 중첩된다."
             },
             "S3": {
-                "name": "Mobilize the Warship!",
-                "description": "After increasing Attack of the caster for 3 turns, attacks all enemies with a warship, stunning for 1 turn. Penetrates the target's Defense by 60%."
+                "name": "전함 출격!",
+                "description": "3턴 동안 시전자의 공격력을 증가시킨 뒤 전함으로 모든 적을 공격하고 1턴 동안 기절시킨다. 대상의 방어력을 60% 관통한다."
             }
         }
     },
@@ -4430,17 +4430,17 @@
         "_name": "Nemunas",
         "skills": {
             "S1": {
-                "name": "Cover Fire",
-                "description": "Decreases enemy's Combat Readiness by 15% after attacking them."
+                "name": "엄호 사격",
+                "description": "적을 공격한 뒤 적의 행동 게이지를 15% 감소시킨다."
             },
             "S2": {
-                "name": "Shock Arrow",
-                "description": "Powerfully shoots an arrow at the enemy, decreasing Hit Chance for 2 turns and Combat Readiness by 30%. Damage dealt increases proportional to the enemy's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "충격 화살",
+                "description": "적에게 강력하게 화살을 쏴 2턴 동안 명중률을 감소시키고 행동 게이지를 30% 감소시킨다. 적의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "A Girl's Determination",
-                "description": "Encourages all allies, dispelling one debuff, and increases Attack of the caster for 2 turns."
+                "name": "소녀의 결심",
+                "description": "모든 아군을 격려해 약화 효과를 한 개 해제하고 2턴 동안 시전자의 공격력을 증가시킨다."
             }
         }
     },
@@ -4448,17 +4448,17 @@
         "_name": "New Kid Adin",
         "skills": {
             "S1": {
-                "name": "An Opening!",
-                "description": "Attacks the enemy with a bamboo sword, inflicting injuries. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 10% every time this skill is used. When the caster is granted vigor, a successful attack will inflict additional damage equivalent to 50% of injuries inflicted on the target.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "빈틈이다!",
+                "description": "죽도로 적을 공격해 부상을 입힌다. 준 피해에 비례해 부상의 정도가 증가한다. 부상은 이 스킬을 사용할 때마다 대상의 최대 생명력을 최대 10% 감소시킨다. 시전자에게 투지가 있으면 공격 성공 시 대상에게 입힌 부상의 50%에 해당하는 추가 피해를 준다.",
+                "soulburn_effect": "모든 적을 공격한다. 이 공격으로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "You Started This!",
-                "description": "Increases Evasion by 50%, and when successfully evading, grants vigor to the caster for 1 turn and counterattacks. Counterattack can only be activated once per turn. At the end of someone's turn, when the caster is granted vigor, increases Combat Readiness of the caster by 20%."
+                "name": "먼저 시작한 건 너야!",
+                "description": "회피가 50% 증가하며, 회피에 성공하면 시전자에게 1턴 동안 투지를 부여하고 반격한다. 반격은 턴당 한 번만 발동할 수 있다. 누군가의 턴 종료 시 시전자에게 투지가 있으면 시전자의 행동 게이지를 20% 증가시킨다."
             },
             "S3": {
-                "name": "Scattering Petals, Falling Leaves",
-                "description": "After increasing Attack of the caster for 3 turns, attacks the enemy with an exceptional technique, inflicting injuries. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 30% every time this skill is used. When the caster is granted vigor, a successful attack deals additional damage equivalent to 100% of injuries inflicted on the target."
+                "name": "흩날리는 꽃잎, 떨어지는 잎",
+                "description": "3턴 동안 시전자의 공격력을 증가시킨 뒤 뛰어난 기술로 적을 공격해 부상을 입힌다. 준 피해에 비례해 부상의 정도가 증가한다. 부상은 이 스킬을 사용할 때마다 대상의 최대 생명력을 최대 30% 감소시킨다. 시전자에게 투지가 있으면 공격 성공 시 대상에게 입힌 부상의 100%에 해당하는 추가 피해를 준다."
             }
         }
     },
@@ -4466,17 +4466,17 @@
         "_name": "New Moon Luna",
         "skills": {
             "S1": {
-                "name": "Radiant Strike",
-                "description": "Attacks the enemy with a spear, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's max Health."
+                "name": "찬란한 일격",
+                "description": "창으로 적을 공격하고 시전자의 행동 게이지를 20% 증가시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Demon-Sealing Spear",
-                "description": "Attacks the enemy by thrusting down a spear, inflicting decreased Defense for 1 turn, and increases Combat Readiness of the caster by 50%. A successful attack will inflict additional damage on all enemies. Damage dealt and additional damage increase proportional to the caster's max Health."
+                "name": "봉마의 창",
+                "description": "창을 내리꽂아 적을 공격하고 1턴 동안 방어력 감소를 건 뒤 시전자의 행동 게이지를 50% 증가시킨다. 공격에 성공하면 모든 적에게 추가 피해를 준다. 시전자의 최대 생명력에 비례해 주는 피해와 추가 피해가 증가한다."
             },
             "S3": {
-                "name": "Moon's Judgment",
-                "description": "Using mana, dispels all buffs from all enemies before sealing and making them unable to be buffed for 2 turns. At the start of the first battle, grants skill effect nullifier once to the caster.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "달의 심판",
+                "description": "마나를 사용해 모든 적의 강화 효과를 모두 해제한 뒤 2턴 동안 봉인과 강화 불가를 건다. 첫 번째 전투 시작 시 시전자에게 스킬 효과 무효를 한 번 부여한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -4502,17 +4502,17 @@
         "_name": "Ocean Breeze Luluca",
         "skills": {
             "S1": {
-                "name": "Order's In, Just Wait!",
-                "description": "Attacks the enemy with overflowing energy, and increases Combat Readiness of the ally with the highest Combat Readiness except the caster by 15%",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "주문 들어갑니다, 기다려 주세요!",
+                "description": "넘치는 에너지로 적을 공격하고, 시전자를 제외하고 행동 게이지가 가장 높은 아군의 행동 게이지를 15% 증가시킨다.",
+                "soulburn_effect": "행동 게이지 증가 효과가 모든 아군에게 적용된다."
             },
             "S2": {
-                "name": "One Luluca's Special!",
-                "description": "After an enemy uses a non-attack skill, gains 2 Focus and increases Combat Readiness of the caster by 25%. Can only be activated once every 2 turns. After using a skill, when Focus is full, consumes all Focus and activates Luluca's Special Delivery. Luluca's Special Delivery: Attacks all enemies who are interrupting her delivery, dispelling two buffs and an 85% chance to inflict silence for 1 turn and a 100% chance to decrease Hit Chance for 2 turns, before decreasing skill cooldowns of the caster by 1 turn."
+                "name": "루루카 스페셜 하나!",
+                "description": "적이 공격이 아닌 스킬을 사용한 후 집중을 2 얻고 시전자의 행동 게이지를 25% 증가시킨다. 2턴마다 한 번만 발동할 수 있다. 스킬 사용 후 집중이 가득 차 있으면 집중을 모두 소모해 루루카의 특급 배달을 발동한다. 루루카의 특급 배달: 배달을 방해하는 모든 적을 공격해 강화 효과를 두 개 해제하고, 85% 확률로 1턴 동안 침묵을, 100% 확률로 2턴 동안 명중률 감소를 건 뒤 시전자의 스킬 재사용 대기 시간을 1턴 감소시킨다."
             },
             "S3": {
-                "name": "This One's On Me",
-                "description": "With quality customer service, dispels two debuffs from all allies and grants increased Defense for 2 turns and an ice cream."
+                "name": "이건 서비스예요",
+                "description": "품격 있는 서비스로 모든 아군의 약화 효과를 두 개 해제하고 2턴 동안 방어력 증가와 아이스크림을 부여한다."
             }
         }
     },

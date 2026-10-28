@@ -4358,17 +4358,17 @@
         "_name": "Muse Rima",
         "skills": {
             "S1": {
-                "name": "Quick Shot",
-                "description": "Attacks with a quick shot of an arrow. A critical hit will decrease the caster's skill cooldown by 1 turn."
+                "name": "速射",
+                "description": "矢を素早く放って攻撃する。クリティカルが発生すると、発動者のスキルのクールタイムを1ターン短縮する。"
             },
             "S2": {
-                "name": "Lullaby Arrow",
-                "description": "Shoots an arrow infused with a sleep toxin, with a 100% chance to put them to sleep for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "子守唄の矢",
+                "description": "睡眠毒を込めた矢を放ち、100%の確率で1ターンの間睡眠状態にする。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S3": {
-                "name": "Hopeful Hymn",
-                "description": "Encourages an ally except for the caster, decreasing skill cooldowns by 3 turns and increasing Attack for 2 turns."
+                "name": "希望の賛歌",
+                "description": "発動者を除く味方一人を激励し、スキルのクールタイムを3ターン短縮し、2ターンの間攻撃力をアップさせる。"
             }
         }
     },
@@ -4376,17 +4376,17 @@
         "_name": "Muwi",
         "skills": {
             "S1": {
-                "name": "Leap Strike",
-                "description": "Leaps to attack the enemy, with a 50% chance to inflict bleeding for 2 turns."
+                "name": "跳躍の一撃",
+                "description": "跳躍して敵を攻撃し、50%の確率で2ターンの間出血を付与する。"
             },
             "S2": {
-                "name": "Coldhearted Management",
-                "description": "After the foremost ally is attacked, counterattacks with Blade Flurry, and when all allies are Ice elemental heroes, increases Combat Readiness of all allies by 10%. Blade Flurry takes priority over a counterattack with a basic skill and can only be activated once every 2 turns. Blade Flurry: Attacks the enemy with a swordstorm, decreasing Attack for 2 turns."
+                "name": "冷徹な管理",
+                "description": "最も前にいる味方が攻撃された後、刃の乱舞で反撃し、味方全員が水属性の英雄なら、味方全員の行動ゲージを10%増加させる。刃の乱舞は通常スキルでの反撃より優先され、2ターンごとに一度のみ発動できる。刃の乱舞：剣嵐で敵を攻撃し、2ターンの間攻撃力をダウンさせる。"
             },
             "S3": {
-                "name": "Wind Cutter",
-                "description": "Attacks all enemies with a sword, with a 75% chance to decrease Defense for 2 turns. Increases Attack of the caster for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "風切り",
+                "description": "剣で敵全体を攻撃し、75%の確率で2ターンの間防御力をダウンさせる。2ターンの間発動者の攻撃力をアップさせる。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -4394,17 +4394,17 @@
         "_name": "Nahkwol",
         "skills": {
             "S1": {
-                "name": "Phantom Brush",
-                "description": "Attacks the enemy with a brush, with a 75% chance to silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness by 20%."
+                "name": "幻影の筆",
+                "description": "筆で敵を攻撃し、75%の確率で1ターンの間沈黙を付与する。攻撃後、対象が沈黙状態なら行動ゲージを20%減少させる。"
             },
             "S2": {
-                "name": "Forbidden Incantation",
-                "description": "Seals the enemy for 2 turns before attacking, and increases Speed of the caster for 2 turns."
+                "name": "禁じられた呪文",
+                "description": "敵に2ターンの間封印を付与した後に攻撃し、2ターンの間発動者のスピードをアップさせる。"
             },
             "S3": {
-                "name": "Spiritual Devouring",
-                "description": "Attacks all enemies with a powerful spell, dispelling all buffs before inflicting bind for 2 turns and increasing skill cooldowns by 1 turn. Grants an extra turn to the caster.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "魂の捕食",
+                "description": "強力な呪文で敵全体を攻撃し、強化効果をすべて解除した後、2ターンの間拘束を付与し、スキルのクールタイムを1ターン増加させる。発動者は追加ターンを得る。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -4412,17 +4412,17 @@
         "_name": "Navy Captain Landy",
         "skills": {
             "S1": {
-                "name": "Precision Targeting",
-                "description": "Attacks the enemy with gunfire, and increases Combat Readiness of the caster by 25%. After attacking, has a 40% chance to activate Salvo Fire as an extra attack. Salvo Fire: Attacks all enemies by firing off artillery, and recovers Health of the caster proportional to Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "精密照準",
+                "description": "銃撃で敵を攻撃し、発動者の行動ゲージを25%増加させる。攻撃後、40%の確率で追加攻撃として一斉砲撃を発動する。一斉砲撃：砲撃で敵全体を攻撃し、攻撃力に比例して発動者のHPを回復する。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Ruler of the Sea",
-                "description": "Immune to debuffs which prevent movement and increases Critical Hit Resistance by 70%. At the start of battle, increases Critical Hit Resistance of all allies except for the caster for 2 turns. After attacking, increases Attack of the caster by 10%. This effect can stack up to 5 times."
+                "name": "海の支配者",
+                "description": "行動を妨げる弱体効果を受けず、クリティカル抵抗が70%アップする。バトル開始時、2ターンの間発動者を除く味方全員のクリティカル抵抗をアップさせる。攻撃後、発動者の攻撃力が10%アップする。この効果は最大5回まで重複する。"
             },
             "S3": {
-                "name": "Mobilize the Warship!",
-                "description": "After increasing Attack of the caster for 3 turns, attacks all enemies with a warship, stunning for 1 turn. Penetrates the target's Defense by 60%."
+                "name": "戦艦出撃！",
+                "description": "3ターンの間発動者の攻撃力をアップさせた後、戦艦で敵全体を攻撃し、1ターンの間気絶させる。対象の防御力を60%貫通する。"
             }
         }
     },
@@ -4430,17 +4430,17 @@
         "_name": "Nemunas",
         "skills": {
             "S1": {
-                "name": "Cover Fire",
-                "description": "Decreases enemy's Combat Readiness by 15% after attacking them."
+                "name": "援護射撃",
+                "description": "敵を攻撃した後、敵の行動ゲージを15%減少させる。"
             },
             "S2": {
-                "name": "Shock Arrow",
-                "description": "Powerfully shoots an arrow at the enemy, decreasing Hit Chance for 2 turns and Combat Readiness by 30%. Damage dealt increases proportional to the enemy's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "衝撃の矢",
+                "description": "敵に強力な矢を放ち、2ターンの間命中率をダウンさせ、行動ゲージを30%減少させる。敵の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "A Girl's Determination",
-                "description": "Encourages all allies, dispelling one debuff, and increases Attack of the caster for 2 turns."
+                "name": "少女の決意",
+                "description": "味方全員を激励し、弱体効果を一つ解除し、2ターンの間発動者の攻撃力をアップさせる。"
             }
         }
     },
@@ -4448,17 +4448,17 @@
         "_name": "New Kid Adin",
         "skills": {
             "S1": {
-                "name": "An Opening!",
-                "description": "Attacks the enemy with a bamboo sword, inflicting injuries. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 10% every time this skill is used. When the caster is granted vigor, a successful attack will inflict additional damage equivalent to 50% of injuries inflicted on the target.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "隙あり！",
+                "description": "竹刀で敵を攻撃し、負傷を与える。与ダメージに比例して負傷の程度がアップする。負傷はこのスキルを使用するたびに対象の最大HPを最大10%減少させる。発動者に闘志があれば、攻撃成功時に対象に与えた負傷の50%に相当する追加ダメージを与える。",
+                "soulburn_effect": "敵全体を攻撃する。この攻撃では協攻が発動しない。"
             },
             "S2": {
-                "name": "You Started This!",
-                "description": "Increases Evasion by 50%, and when successfully evading, grants vigor to the caster for 1 turn and counterattacks. Counterattack can only be activated once per turn. At the end of someone's turn, when the caster is granted vigor, increases Combat Readiness of the caster by 20%."
+                "name": "先に仕掛けたのはそっちだ！",
+                "description": "回避が50%アップし、回避に成功すると、発動者に1ターンの間闘志を付与し、反撃する。反撃はターンごとに一度のみ発動できる。誰かのターン終了時、発動者に闘志があれば発動者の行動ゲージを20%増加させる。"
             },
             "S3": {
-                "name": "Scattering Petals, Falling Leaves",
-                "description": "After increasing Attack of the caster for 3 turns, attacks the enemy with an exceptional technique, inflicting injuries. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 30% every time this skill is used. When the caster is granted vigor, a successful attack deals additional damage equivalent to 100% of injuries inflicted on the target."
+                "name": "散る花びら、落ちる葉",
+                "description": "3ターンの間発動者の攻撃力をアップさせた後、卓越した技で敵を攻撃し、負傷を与える。与ダメージに比例して負傷の程度がアップする。負傷はこのスキルを使用するたびに対象の最大HPを最大30%減少させる。発動者に闘志があれば、攻撃成功時に対象に与えた負傷の100%に相当する追加ダメージを与える。"
             }
         }
     },
@@ -4466,17 +4466,17 @@
         "_name": "New Moon Luna",
         "skills": {
             "S1": {
-                "name": "Radiant Strike",
-                "description": "Attacks the enemy with a spear, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's max Health."
+                "name": "輝く一撃",
+                "description": "槍で敵を攻撃し、発動者の行動ゲージを20%増加させる。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Demon-Sealing Spear",
-                "description": "Attacks the enemy by thrusting down a spear, inflicting decreased Defense for 1 turn, and increases Combat Readiness of the caster by 50%. A successful attack will inflict additional damage on all enemies. Damage dealt and additional damage increase proportional to the caster's max Health."
+                "name": "封魔の槍",
+                "description": "槍を突き下ろして敵を攻撃し、1ターンの間防御力ダウンを付与し、発動者の行動ゲージを50%増加させる。攻撃が成功すると、敵全体に追加ダメージを与える。発動者の最大HPに比例して与ダメージと追加ダメージがアップする。"
             },
             "S3": {
-                "name": "Moon's Judgment",
-                "description": "Using mana, dispels all buffs from all enemies before sealing and making them unable to be buffed for 2 turns. At the start of the first battle, grants skill effect nullifier once to the caster.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "月の審判",
+                "description": "マナを使い、敵全体の強化効果をすべて解除した後、2ターンの間封印と強化不可を付与する。最初のバトル開始時、発動者にスキル効果無効を一度付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -4502,17 +4502,17 @@
         "_name": "Ocean Breeze Luluca",
         "skills": {
             "S1": {
-                "name": "Order's In, Just Wait!",
-                "description": "Attacks the enemy with overflowing energy, and increases Combat Readiness of the ally with the highest Combat Readiness except the caster by 15%",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "ご注文承りました、お待ちください！",
+                "description": "あふれるエネルギーで敵を攻撃し、発動者を除いて行動ゲージが最も高い味方の行動ゲージを15%増加させる。",
+                "soulburn_effect": "行動ゲージ増加効果が味方全員に適用される。"
             },
             "S2": {
-                "name": "One Luluca's Special!",
-                "description": "After an enemy uses a non-attack skill, gains 2 Focus and increases Combat Readiness of the caster by 25%. Can only be activated once every 2 turns. After using a skill, when Focus is full, consumes all Focus and activates Luluca's Special Delivery. Luluca's Special Delivery: Attacks all enemies who are interrupting her delivery, dispelling two buffs and an 85% chance to inflict silence for 1 turn and a 100% chance to decrease Hit Chance for 2 turns, before decreasing skill cooldowns of the caster by 1 turn."
+                "name": "ルルカスペシャルひとつ！",
+                "description": "敵が攻撃以外のスキルを使用した後、集中を2獲得し、発動者の行動ゲージを25%増加させる。2ターンごとに一度のみ発動できる。スキル使用後、集中が満タンなら、集中をすべて消費してルルカの特急配達を発動する。ルルカの特急配達：配達を邪魔する敵全体を攻撃し、強化効果を二つ解除し、85%の確率で1ターンの間沈黙を、100%の確率で2ターンの間命中率ダウンを付与した後、発動者のスキルのクールタイムを1ターン短縮する。"
             },
             "S3": {
-                "name": "This One's On Me",
-                "description": "With quality customer service, dispels two debuffs from all allies and grants increased Defense for 2 turns and an ice cream."
+                "name": "これはサービスです",
+                "description": "上質なサービスで味方全員の弱体効果を二つ解除し、2ターンの間防御力アップとアイスクリームを付与する。"
             }
         }
     },

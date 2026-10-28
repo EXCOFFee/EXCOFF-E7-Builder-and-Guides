@@ -4358,17 +4358,17 @@
         "_name": "Muse Rima",
         "skills": {
             "S1": {
-                "name": "Quick Shot",
-                "description": "Attacks with a quick shot of an arrow. A critical hit will decrease the caster's skill cooldown by 1 turn."
+                "name": "Tiro rápido",
+                "description": "Ataca com um tiro rápido de flecha. Um acerto crítico diminui a recarga das habilidades do conjurador em 1 turno."
             },
             "S2": {
-                "name": "Lullaby Arrow",
-                "description": "Shoots an arrow infused with a sleep toxin, with a 100% chance to put them to sleep for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Flecha de ninar",
+                "description": "Dispara uma flecha impregnada com toxina do sono, com 100% de chance de fazer o alvo dormir por 1 turno.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S3": {
-                "name": "Hopeful Hymn",
-                "description": "Encourages an ally except for the caster, decreasing skill cooldowns by 3 turns and increasing Attack for 2 turns."
+                "name": "Hino da esperança",
+                "description": "Encoraja um aliado, exceto o conjurador, diminuindo as recargas de habilidades em 3 turnos e aumentando o Ataque por 2 turnos."
             }
         }
     },
@@ -4376,17 +4376,17 @@
         "_name": "Muwi",
         "skills": {
             "S1": {
-                "name": "Leap Strike",
-                "description": "Leaps to attack the enemy, with a 50% chance to inflict bleeding for 2 turns."
+                "name": "Golpe saltado",
+                "description": "Salta para atacar o inimigo, com 50% de chance de aplicar sangramento por 2 turnos."
             },
             "S2": {
-                "name": "Coldhearted Management",
-                "description": "After the foremost ally is attacked, counterattacks with Blade Flurry, and when all allies are Ice elemental heroes, increases Combat Readiness of all allies by 10%. Blade Flurry takes priority over a counterattack with a basic skill and can only be activated once every 2 turns. Blade Flurry: Attacks the enemy with a swordstorm, decreasing Attack for 2 turns."
+                "name": "Gestão sem coração",
+                "description": "Após o aliado mais à frente ser atacado, contra-ataca com Rajada de lâminas e, quando todos os aliados são heróis do elemento Gelo, aumenta a Prontidão de Combate de todos os aliados em 10%. Rajada de lâminas tem prioridade sobre o contra-ataque com a habilidade básica e só pode ser ativada uma vez a cada 2 turnos. Rajada de lâminas: ataca o inimigo com uma tempestade de espadas, diminuindo o Ataque por 2 turnos."
             },
             "S3": {
-                "name": "Wind Cutter",
-                "description": "Attacks all enemies with a sword, with a 75% chance to decrease Defense for 2 turns. Increases Attack of the caster for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Cortador de vento",
+                "description": "Ataca todos os inimigos com uma espada, com 75% de chance de diminuir a Defesa por 2 turnos. Aumenta o Ataque do conjurador por 2 turnos.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -4394,17 +4394,17 @@
         "_name": "Nahkwol",
         "skills": {
             "S1": {
-                "name": "Phantom Brush",
-                "description": "Attacks the enemy with a brush, with a 75% chance to silence for 1 turn. After attacking, if the target is inflicted with silence, decreases Combat Readiness by 20%."
+                "name": "Pincel fantasma",
+                "description": "Ataca o inimigo com um pincel, com 75% de chance de silenciá-lo por 1 turno. Após atacar, se o alvo estiver silenciado, diminui a Prontidão de Combate em 20%."
             },
             "S2": {
-                "name": "Forbidden Incantation",
-                "description": "Seals the enemy for 2 turns before attacking, and increases Speed of the caster for 2 turns."
+                "name": "Encantamento proibido",
+                "description": "Sela o inimigo por 2 turnos antes de atacar e aumenta a Velocidade do conjurador por 2 turnos."
             },
             "S3": {
-                "name": "Spiritual Devouring",
-                "description": "Attacks all enemies with a powerful spell, dispelling all buffs before inflicting bind for 2 turns and increasing skill cooldowns by 1 turn. Grants an extra turn to the caster.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Devoração espiritual",
+                "description": "Ataca todos os inimigos com um feitiço poderoso, dissipando todos os efeitos positivos antes de aplicar amarra por 2 turnos e aumentar as recargas de habilidades em 1 turno. Concede um turno extra ao conjurador.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -4412,17 +4412,17 @@
         "_name": "Navy Captain Landy",
         "skills": {
             "S1": {
-                "name": "Precision Targeting",
-                "description": "Attacks the enemy with gunfire, and increases Combat Readiness of the caster by 25%. After attacking, has a 40% chance to activate Salvo Fire as an extra attack. Salvo Fire: Attacks all enemies by firing off artillery, and recovers Health of the caster proportional to Attack.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Mira de precisão",
+                "description": "Ataca o inimigo com disparos e aumenta a Prontidão de Combate do conjurador em 25%. Após atacar, tem 40% de chance de ativar Salva como ataque extra. Salva: ataca todos os inimigos disparando a artilharia e recupera a Vida do conjurador proporcionalmente ao Ataque.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Ruler of the Sea",
-                "description": "Immune to debuffs which prevent movement and increases Critical Hit Resistance by 70%. At the start of battle, increases Critical Hit Resistance of all allies except for the caster for 2 turns. After attacking, increases Attack of the caster by 10%. This effect can stack up to 5 times."
+                "name": "Soberana dos mares",
+                "description": "Imune a efeitos negativos que impedem a movimentação e aumenta a Resistência a Crítico em 70%. No início da batalha, aumenta a Resistência a Crítico de todos os aliados, exceto o conjurador, por 2 turnos. Após atacar, aumenta o Ataque do conjurador em 10%. Este efeito acumula até 5 vezes."
             },
             "S3": {
-                "name": "Mobilize the Warship!",
-                "description": "After increasing Attack of the caster for 3 turns, attacks all enemies with a warship, stunning for 1 turn. Penetrates the target's Defense by 60%."
+                "name": "Mobilizar o navio de guerra!",
+                "description": "Após aumentar o Ataque do conjurador por 3 turnos, ataca todos os inimigos com um navio de guerra, atordoando por 1 turno. Penetra 60% da Defesa do alvo."
             }
         }
     },
@@ -4430,17 +4430,17 @@
         "_name": "Nemunas",
         "skills": {
             "S1": {
-                "name": "Cover Fire",
-                "description": "Decreases enemy's Combat Readiness by 15% after attacking them."
+                "name": "Fogo de cobertura",
+                "description": "Diminui a Prontidão de Combate do inimigo em 15% após atacá-lo."
             },
             "S2": {
-                "name": "Shock Arrow",
-                "description": "Powerfully shoots an arrow at the enemy, decreasing Hit Chance for 2 turns and Combat Readiness by 30%. Damage dealt increases proportional to the enemy's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Flecha de choque",
+                "description": "Dispara com força uma flecha no inimigo, diminuindo a Precisão por 2 turnos e a Prontidão de Combate em 30%. O dano causado aumenta proporcionalmente à Vida máxima do inimigo.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "A Girl's Determination",
-                "description": "Encourages all allies, dispelling one debuff, and increases Attack of the caster for 2 turns."
+                "name": "A determinação de uma garota",
+                "description": "Encoraja todos os aliados, dissipando um efeito negativo, e aumenta o Ataque do conjurador por 2 turnos."
             }
         }
     },
@@ -4448,17 +4448,17 @@
         "_name": "New Kid Adin",
         "skills": {
             "S1": {
-                "name": "An Opening!",
-                "description": "Attacks the enemy with a bamboo sword, inflicting injuries. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 10% every time this skill is used. When the caster is granted vigor, a successful attack will inflict additional damage equivalent to 50% of injuries inflicted on the target.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "Uma brecha!",
+                "description": "Ataca o inimigo com uma espada de bambu, causando ferimentos. A gravidade dos ferimentos aumenta proporcionalmente ao dano causado. Os ferimentos diminuem a Vida máxima do alvo em até 10% cada vez que esta habilidade é usada. Quando o conjurador tem vigor, um ataque bem-sucedido causa dano adicional equivalente a 50% dos ferimentos aplicados ao alvo.",
+                "soulburn_effect": "Ataca todos os inimigos. Este ataque não ativa Ataque duplo."
             },
             "S2": {
-                "name": "You Started This!",
-                "description": "Increases Evasion by 50%, and when successfully evading, grants vigor to the caster for 1 turn and counterattacks. Counterattack can only be activated once per turn. At the end of someone's turn, when the caster is granted vigor, increases Combat Readiness of the caster by 20%."
+                "name": "Você começou!",
+                "description": "Aumenta a Evasão em 50% e, ao se esquivar com sucesso, concede vigor ao conjurador por 1 turno e contra-ataca. O contra-ataque só pode ser ativado uma vez por turno. No fim do turno de qualquer um, quando o conjurador tem vigor, aumenta a Prontidão de Combate do conjurador em 20%."
             },
             "S3": {
-                "name": "Scattering Petals, Falling Leaves",
-                "description": "After increasing Attack of the caster for 3 turns, attacks the enemy with an exceptional technique, inflicting injuries. The severity of injuries increases proportional to damage dealt. Injuries decrease max Health of the target by up to 30% every time this skill is used. When the caster is granted vigor, a successful attack deals additional damage equivalent to 100% of injuries inflicted on the target."
+                "name": "Pétalas dispersas, folhas caindo",
+                "description": "Após aumentar o Ataque do conjurador por 3 turnos, ataca o inimigo com uma técnica excepcional, causando ferimentos. A gravidade dos ferimentos aumenta proporcionalmente ao dano causado. Os ferimentos diminuem a Vida máxima do alvo em até 30% cada vez que esta habilidade é usada. Quando o conjurador tem vigor, um ataque bem-sucedido causa dano adicional equivalente a 100% dos ferimentos aplicados ao alvo."
             }
         }
     },
@@ -4466,17 +4466,17 @@
         "_name": "New Moon Luna",
         "skills": {
             "S1": {
-                "name": "Radiant Strike",
-                "description": "Attacks the enemy with a spear, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's max Health."
+                "name": "Golpe radiante",
+                "description": "Ataca o inimigo com uma lança e aumenta a Prontidão de Combate do conjurador em 20%. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Demon-Sealing Spear",
-                "description": "Attacks the enemy by thrusting down a spear, inflicting decreased Defense for 1 turn, and increases Combat Readiness of the caster by 50%. A successful attack will inflict additional damage on all enemies. Damage dealt and additional damage increase proportional to the caster's max Health."
+                "name": "Lança selamonstros",
+                "description": "Ataca o inimigo cravando uma lança para baixo, aplicando Diminuir Defesa por 1 turno, e aumenta a Prontidão de Combate do conjurador em 50%. Um ataque bem-sucedido causa dano adicional a todos os inimigos. O dano causado e o dano adicional aumentam proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Moon's Judgment",
-                "description": "Using mana, dispels all buffs from all enemies before sealing and making them unable to be buffed for 2 turns. At the start of the first battle, grants skill effect nullifier once to the caster.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Julgamento da lua",
+                "description": "Usando mana, dissipa todos os efeitos positivos de todos os inimigos, depois aplica selo e impedimento de efeitos positivos por 2 turnos. No início da primeira batalha, concede Anulação de efeitos de habilidade uma vez ao conjurador.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -4502,17 +4502,17 @@
         "_name": "Ocean Breeze Luluca",
         "skills": {
             "S1": {
-                "name": "Order's In, Just Wait!",
-                "description": "Attacks the enemy with overflowing energy, and increases Combat Readiness of the ally with the highest Combat Readiness except the caster by 15%",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "Pedido feito, é só esperar!",
+                "description": "Ataca o inimigo com energia transbordante e aumenta em 15% a Prontidão de Combate do aliado com maior Prontidão de Combate, exceto o conjurador.",
+                "soulburn_effect": "O aumento de Prontidão de Combate é aplicado a todos os aliados."
             },
             "S2": {
-                "name": "One Luluca's Special!",
-                "description": "After an enemy uses a non-attack skill, gains 2 Focus and increases Combat Readiness of the caster by 25%. Can only be activated once every 2 turns. After using a skill, when Focus is full, consumes all Focus and activates Luluca's Special Delivery. Luluca's Special Delivery: Attacks all enemies who are interrupting her delivery, dispelling two buffs and an 85% chance to inflict silence for 1 turn and a 100% chance to decrease Hit Chance for 2 turns, before decreasing skill cooldowns of the caster by 1 turn."
+                "name": "Um especial da Luluca!",
+                "description": "Após um inimigo usar uma habilidade que não é de ataque, ganha 2 de Foco e aumenta a Prontidão de Combate do conjurador em 25%. Só pode ser ativado uma vez a cada 2 turnos. Após usar uma habilidade, quando o Foco está cheio, consome todo o Foco e ativa Entrega especial da Luluca. Entrega especial da Luluca: ataca todos os inimigos que atrapalham sua entrega, dissipando dois efeitos positivos, com 85% de chance de silenciar por 1 turno e 100% de chance de diminuir a Precisão por 2 turnos, depois diminui as recargas de habilidades do conjurador em 1 turno."
             },
             "S3": {
-                "name": "This One's On Me",
-                "description": "With quality customer service, dispels two debuffs from all allies and grants increased Defense for 2 turns and an ice cream."
+                "name": "Essa é por minha conta",
+                "description": "Com atendimento de qualidade, dissipa dois efeitos negativos de todos os aliados e concede Aumentar Defesa por 2 turnos e um sorvete."
             }
         }
     },
