@@ -2866,17 +2866,17 @@
         "_name": "Hecate",
         "skills": {
             "S1": {
-                "name": "Reaper's Scythe",
-                "description": "Attacks the enemy with Sigurd Scythe, before increasing Combat Readiness of the caster by 20%. When used on the caster's turn, activates Final Deliverance as an extra attack. Final Deliverance: Attacks all enemies, before granting stealth to the caster for 1 turn and decreasing skill cooldowns by 2 turns."
+                "name": "死神之镰",
+                "description": "以西格德镰刀攻击敌人，然后使施放者的行动值提升20%。在施放者的回合使用时，以追加攻击发动最终救赎。最终救赎：攻击所有敌人，然后为施放者施加1回合隐身，并使技能冷却时间减少2回合。"
             },
             "S2": {
-                "name": "Death's Dominion",
-                "description": "All Heroes cannot revive and cannot be granted immortality. When attacking, penetrates the target's Defense by 100%, and cannot trigger a critical hit or a heavy blow."
+                "name": "死亡支配",
+                "description": "所有英雄无法复活，也无法获得不死。攻击时穿透目标100%的防御力，且无法造成暴击或重击。"
             },
             "S3": {
-                "name": "Inescapable Demise",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy by releasing the force of the netherworld. When the target is a hero, ignores damage share. Begins the first battle with a full skill cooldown count.",
-                "soulburn_effect": "Grants increased Attack (Greater) for 3 turns."
+                "name": "无可逃避的终焉",
+                "description": "为施放者施加3回合攻击力提升后，释放冥界之力攻击敌人。目标为英雄时，无视伤害分担。首场战斗开始时技能处于完整冷却状态。",
+                "soulburn_effect": "施加3回合攻击力提升（大）。"
             }
         }
     },
@@ -2884,17 +2884,17 @@
         "_name": "Helen",
         "skills": {
             "S1": {
-                "name": "Blunt Strike",
-                "description": "Attacks the enemy before increasing Combat Readiness of a random ally except for the caster by 15%. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "钝击",
+                "description": "攻击敌人，然后使除施放者外随机一名友军的行动值提升15%。造成的伤害按施放者的防御力比例提升。",
+                "soulburn_effect": "行动值提升效果适用于所有友军。"
             },
             "S2": {
-                "name": "Wild Swing",
-                "description": "Attacks the enemy before increasing Defense of the caster for 2 turns and recovers Health. Damage dealt increases proportional to the caster's Defense, and amount recovered increases proportional to the caster's max Health."
+                "name": "狂野挥击",
+                "description": "攻击敌人，然后提升施放者的防御力2回合并恢复生命值。造成的伤害按施放者的防御力比例提升，恢复量按施放者的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Sword of Grace",
-                "description": "Adopts a counterattacking stance for 3 turns, and grants increased Speed and a barrier to all allies except for the caster for 2 turns. Barrier strength increases proportional to the caster's Defense. After suffering an attack that targets all allies, decreases skill cooldown by 2 turns."
+                "name": "恩宠之剑",
+                "description": "进入3回合反击姿态，并为除施放者外的所有友军施加2回合速度提升与屏障。屏障强度按施放者的防御力比例提升。受到以所有友军为目标的攻击后，使技能冷却时间减少2回合。"
             }
         }
     },
@@ -2902,17 +2902,17 @@
         "_name": "Helga",
         "skills": {
             "S1": {
-                "name": "Armor Rend",
-                "description": "Attacks with an axe, with a 50% chance to decrease Defense for 2 turns."
+                "name": "破甲",
+                "description": "以斧头攻击，有50%的几率降低防御力2回合。"
             },
             "S2": {
-                "name": "Attack Chain",
-                "description": "Strongly slams the enemy with an axe, with a 75% chance to decrease Defense for 2 turns. A critical hit will extend any buffs granted to the caster by 1 turn."
+                "name": "连锁攻击",
+                "description": "以斧头猛击敌人，有75%的几率降低防御力2回合。暴击时，施放者的强化效果持续时间延长1回合。"
             },
             "S3": {
-                "name": "Cry of Victory",
-                "description": "Encourages allies, increasing Attack for 2 turns before increasing Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "胜利呐喊",
+                "description": "鼓舞友军，提升攻击力2回合，然后使施放者的行动值提升50%。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             }
         }
     },
@@ -2920,17 +2920,17 @@
         "_name": "Hellion Lua",
         "skills": {
             "S1": {
-                "name": "Lua Attack",
-                "description": "Attacks the enemy and has a 100% chance to provoke for 1 turn."
+                "name": "露亚攻击",
+                "description": "攻击敌人，有100%的几率施加1回合挑衅。"
             },
             "S2": {
-                "name": "Lua Squad",
-                "description": "After being attacked by a Hero, increases Combat Readiness of all allies by 10% and makes all allies granted with challenge counterattack."
+                "name": "露亚小队",
+                "description": "受到英雄攻击后，使所有友军的行动值提升10%，并使所有拥有挑战的友军发动反击。"
             },
             "S3": {
-                "name": "Lua's Challenge",
-                "description": "Grants challenge to all allies, before increasing Defense of the caster for 2 turns. Decreases buff durations of all enemies by 1 turn and has a 100% chance to provoke for 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "露亚的挑战",
+                "description": "为所有友军施加挑战，然后提升施放者的防御力2回合。使所有敌人的强化效果持续时间减少1回合，并有100%的几率施加1回合挑衅。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -2938,17 +2938,17 @@
         "_name": "Holiday Yufine",
         "skills": {
             "S1": {
-                "name": "Just One Bite! ♡",
-                "description": "Attacks the enemy by tearing up a food market, with a 100% chance to burn for 1 turn. When used on the caster's turn, Just One Bite! ♡ becomes an attack that targets all enemies. Changed attack is unaffected by elemental disadvantage and does not trigger a Dual Attack."
+                "name": "就一口！♡",
+                "description": "扫荡美食市集攻击敌人，有100%的几率施加1回合灼伤。在施放者的回合使用时，就一口！♡变为以所有敌人为目标的攻击。变化后的攻击不受属性劣势影响，且不会触发协攻。"
             },
             "S2": {
-                "name": "Let's Eat Together!",
-                "description": "Reduces the effect of decreased Combat Readiness debuffs inflicted on all allies by 50%. This skill effect does not stack with other passive skills of the same name. Increase Evasion by 35%, and when Health is 50% or more, increases Evasion by an additional 35%."
+                "name": "一起吃吧！",
+                "description": "所有友军受到的行动值降低效果减少50%。此技能效果不与其他同名被动技能叠加。闪避提升35%，生命值在50%以上时，闪避额外提升35%。"
             },
             "S3": {
-                "name": "Yufine's ☆ Special",
-                "description": "Dispels two debuffs from all allies and attacks all enemies in the middle of a night market. Increased Attack of all allies for 2 turns and Combat Readiness by 25%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "优菲涅☆特制",
+                "description": "解除所有友军的两个弱化效果，并在夜市中央攻击所有敌人。提升所有友军的攻击力2回合，并提升25%行动值。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -2956,17 +2956,17 @@
         "_name": "Holy Flame Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, recovering Health of the ally with the lowest Health. Amount recovered increases proportional to damage dealt."
+                "name": "斩踝",
+                "description": "以剑攻击敌人，并恢复生命值最低的友军的生命值。恢复量按造成的伤害比例提升。"
             },
             "S2": {
-                "name": "Defensive Spirit",
-                "description": "After suffering an attack that targets all allies, when the caster has a debuff, has a 100% chance to counterattack with Fiery Blade Gust. Fiery Blade Gust takes priority over a counterattack with a basic skill. This effect can only be activated once every 2 turns. Fiery Blade Gust: Attacks all enemies with a blade gust, and increases Speed of the caster for 1 turn."
+                "name": "守护精神",
+                "description": "受到以所有友军为目标的攻击后，若施放者有弱化效果，有100%的几率以烈焰刃之疾风反击。烈焰刃之疾风优先于普通技能反击。此效果每2回合只能发动一次。烈焰刃之疾风：以刃之疾风攻击所有敌人，并提升施放者的速度1回合。"
             },
             "S3": {
-                "name": "Explosive Cut",
-                "description": "Attacks the enemy repeatedly, decreasing Speed of the target for 2 turns and a 100% chance to decrease Defense of the target for 2 turns. Grants Willful Flame to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Reistance."
+                "name": "爆裂斩",
+                "description": "连续攻击敌人，降低目标的速度2回合，并有100%的几率降低目标的防御力2回合。为施放者施加2回合意志之焰。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -2974,17 +2974,17 @@
         "_name": "Hurado",
         "skills": {
             "S1": {
-                "name": "Staff Strike",
-                "description": "Attacks with a staff, with a 50% chance to silence for 1 turn."
+                "name": "杖击",
+                "description": "以法杖攻击，有50%的几率施加1回合沉默。"
             },
             "S2": {
-                "name": "Dark Magic",
-                "description": "Decreases amount recovered of all enemies by 50%, and increases the caster's Combat Readiness by 20%. When the enemy uses a non-attack skill."
+                "name": "黑暗魔法",
+                "description": "所有敌人的恢复量降低50%；敌人使用非攻击技能时，使施放者的行动值提升20%。"
             },
             "S3": {
-                "name": "Dark Explosion",
-                "description": "Attacks all enemies with dark magic, with a 100% chance to dispel all buff before decreasing Combat Readiness by 15%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "黑暗爆炸",
+                "description": "以黑暗魔法攻击所有敌人，有100%的几率解除所有强化效果，然后降低15%行动值。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -2992,17 +2992,17 @@
         "_name": "Hwayoung",
         "skills": {
             "S1": {
-                "name": "Supersonic Kick",
-                "description": "Attacks the enemy with a kick and deals additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Grants an extra attack with the same skill."
+                "name": "超音速踢",
+                "description": "以踢击攻击敌人，并追加造成与施放者攻击力成比例的伤害。",
+                "soulburn_effect": "以相同技能追加攻击。"
             },
             "S2": {
-                "name": "Prairie Hawk",
-                "description": "Increases Evasion by 50%. When attacking, cannot trigger a critical hit or a heavy blow. At the start of the turn, increases Attack for 1 turn."
+                "name": "草原之鹰",
+                "description": "闪避提升50%。攻击时无法造成暴击或重击。回合开始时，提升攻击力1回合。"
             },
             "S3": {
-                "name": "Monarch's Flaming Strike",
-                "description": "Dispels all debuffs from the caster, and attacks the enemy with a secret technique before granting immunity and a barrier (proportional to Attack) to the caster for 2 turns. When the caster's Attack is greater than the target's Attack, penetrates Defense proportionally, up to 100%."
+                "name": "君主的烈焰一击",
+                "description": "解除施放者的所有弱化效果，并以秘技攻击敌人，然后为施放者施加2回合免疫与屏障（与攻击力成比例）。施放者的攻击力高于目标时，按比例穿透防御力，最多100%。"
             }
         }
     },

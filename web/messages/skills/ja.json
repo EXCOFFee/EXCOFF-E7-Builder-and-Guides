@@ -2866,17 +2866,17 @@
         "_name": "Hecate",
         "skills": {
             "S1": {
-                "name": "Reaper's Scythe",
-                "description": "Attacks the enemy with Sigurd Scythe, before increasing Combat Readiness of the caster by 20%. When used on the caster's turn, activates Final Deliverance as an extra attack. Final Deliverance: Attacks all enemies, before granting stealth to the caster for 1 turn and decreasing skill cooldowns by 2 turns."
+                "name": "死神の鎌",
+                "description": "シグルドの鎌で敵を攻撃した後、発動者の行動ゲージを20%増加させる。発動者のターンに使用すると、追加攻撃として最後の救済を発動する。最後の救済：敵全体を攻撃した後、発動者に1ターンの間隠密を付与し、スキルのクールタイムを2ターン短縮する。"
             },
             "S2": {
-                "name": "Death's Dominion",
-                "description": "All Heroes cannot revive and cannot be granted immortality. When attacking, penetrates the target's Defense by 100%, and cannot trigger a critical hit or a heavy blow."
+                "name": "死の支配",
+                "description": "すべての英雄は復活できず、不死を付与されない。攻撃時、対象の防御力を100%貫通し、クリティカルや強打は発生しない。"
             },
             "S3": {
-                "name": "Inescapable Demise",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy by releasing the force of the netherworld. When the target is a hero, ignores damage share. Begins the first battle with a full skill cooldown count.",
-                "soulburn_effect": "Grants increased Attack (Greater) for 3 turns."
+                "name": "逃れられぬ終焉",
+                "description": "発動者に3ターンの間攻撃力アップを付与した後、冥界の力を解き放って敵を攻撃する。対象が英雄ならダメージ分散を無視する。最初のバトルはスキルのクールタイムが満タンの状態で始まる。",
+                "soulburn_effect": "3ターンの間攻撃力アップ（大）を付与する。"
             }
         }
     },
@@ -2884,17 +2884,17 @@
         "_name": "Helen",
         "skills": {
             "S1": {
-                "name": "Blunt Strike",
-                "description": "Attacks the enemy before increasing Combat Readiness of a random ally except for the caster by 15%. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "鈍い一撃",
+                "description": "敵を攻撃した後、発動者を除くランダムな味方一人の行動ゲージを15%増加させる。発動者の防御力に比例して与ダメージがアップする。",
+                "soulburn_effect": "行動ゲージ増加効果が味方全員に適用される。"
             },
             "S2": {
-                "name": "Wild Swing",
-                "description": "Attacks the enemy before increasing Defense of the caster for 2 turns and recovers Health. Damage dealt increases proportional to the caster's Defense, and amount recovered increases proportional to the caster's max Health."
+                "name": "荒々しい振り",
+                "description": "敵を攻撃した後、2ターンの間発動者の防御力をアップさせ、HPを回復する。発動者の防御力に比例して与ダメージがアップし、発動者の最大HPに比例して回復量がアップする。"
             },
             "S3": {
-                "name": "Sword of Grace",
-                "description": "Adopts a counterattacking stance for 3 turns, and grants increased Speed and a barrier to all allies except for the caster for 2 turns. Barrier strength increases proportional to the caster's Defense. After suffering an attack that targets all allies, decreases skill cooldown by 2 turns."
+                "name": "恩寵の剣",
+                "description": "3ターンの間反撃態勢をとり、発動者を除く味方全員に2ターンの間スピードアップとバリアを付与する。発動者の防御力に比例してバリアの強度がアップする。味方全体を対象とする攻撃を受けた後、スキルのクールタイムを2ターン短縮する。"
             }
         }
     },
@@ -2902,17 +2902,17 @@
         "_name": "Helga",
         "skills": {
             "S1": {
-                "name": "Armor Rend",
-                "description": "Attacks with an axe, with a 50% chance to decrease Defense for 2 turns."
+                "name": "鎧裂き",
+                "description": "斧で攻撃し、50%の確率で2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Attack Chain",
-                "description": "Strongly slams the enemy with an axe, with a 75% chance to decrease Defense for 2 turns. A critical hit will extend any buffs granted to the caster by 1 turn."
+                "name": "連鎖攻撃",
+                "description": "斧で敵を強く叩きつけ、75%の確率で2ターンの間防御力をダウンさせる。クリティカルが発生すると、発動者の強化効果の持続時間が1ターン延長される。"
             },
             "S3": {
-                "name": "Cry of Victory",
-                "description": "Encourages allies, increasing Attack for 2 turns before increasing Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "勝利の雄叫び",
+                "description": "味方を激励し、2ターンの間攻撃力をアップさせた後、発動者の行動ゲージを50%増加させる。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },
@@ -2920,17 +2920,17 @@
         "_name": "Hellion Lua",
         "skills": {
             "S1": {
-                "name": "Lua Attack",
-                "description": "Attacks the enemy and has a 100% chance to provoke for 1 turn."
+                "name": "ルアアタック",
+                "description": "敵を攻撃し、100%の確率で1ターンの間挑発を付与する。"
             },
             "S2": {
-                "name": "Lua Squad",
-                "description": "After being attacked by a Hero, increases Combat Readiness of all allies by 10% and makes all allies granted with challenge counterattack."
+                "name": "ルア分隊",
+                "description": "英雄に攻撃された後、味方全員の行動ゲージを10%増加させ、挑戦を付与された味方全員に反撃させる。"
             },
             "S3": {
-                "name": "Lua's Challenge",
-                "description": "Grants challenge to all allies, before increasing Defense of the caster for 2 turns. Decreases buff durations of all enemies by 1 turn and has a 100% chance to provoke for 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "ルアの挑戦",
+                "description": "味方全員に挑戦を付与した後、2ターンの間発動者の防御力をアップさせる。敵全体の強化効果の持続時間を1ターン減少させ、100%の確率で1ターンの間挑発を付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -2938,17 +2938,17 @@
         "_name": "Holiday Yufine",
         "skills": {
             "S1": {
-                "name": "Just One Bite! ♡",
-                "description": "Attacks the enemy by tearing up a food market, with a 100% chance to burn for 1 turn. When used on the caster's turn, Just One Bite! ♡ becomes an attack that targets all enemies. Changed attack is unaffected by elemental disadvantage and does not trigger a Dual Attack."
+                "name": "ひと口だけ！♡",
+                "description": "屋台街を荒らして敵を攻撃し、100%の確率で1ターンの間火傷を付与する。発動者のターンに使用すると、ひと口だけ！♡が敵全体を対象とする攻撃に変わる。変化した攻撃は属性の不利の影響を受けず、協攻が発動しない。"
             },
             "S2": {
-                "name": "Let's Eat Together!",
-                "description": "Reduces the effect of decreased Combat Readiness debuffs inflicted on all allies by 50%. This skill effect does not stack with other passive skills of the same name. Increase Evasion by 35%, and when Health is 50% or more, increases Evasion by an additional 35%."
+                "name": "一緒に食べよう！",
+                "description": "味方全員が受ける行動ゲージ減少効果が50%減少する。このスキル効果は同名の他のパッシブスキルと重複しない。回避が35%アップし、HPが50%以上なら回避がさらに35%アップする。"
             },
             "S3": {
-                "name": "Yufine's ☆ Special",
-                "description": "Dispels two debuffs from all allies and attacks all enemies in the middle of a night market. Increased Attack of all allies for 2 turns and Combat Readiness by 25%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "ユピネ☆スペシャル",
+                "description": "味方全員の弱体効果を二つ解除し、夜市の真ん中で敵全体を攻撃する。2ターンの間味方全員の攻撃力をアップさせ、行動ゲージを25%増加させる。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -2956,17 +2956,17 @@
         "_name": "Holy Flame Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, recovering Health of the ally with the lowest Health. Amount recovered increases proportional to damage dealt."
+                "name": "足首斬り",
+                "description": "剣で敵を攻撃し、HPが最も低い味方のHPを回復する。与ダメージに比例して回復量がアップする。"
             },
             "S2": {
-                "name": "Defensive Spirit",
-                "description": "After suffering an attack that targets all allies, when the caster has a debuff, has a 100% chance to counterattack with Fiery Blade Gust. Fiery Blade Gust takes priority over a counterattack with a basic skill. This effect can only be activated once every 2 turns. Fiery Blade Gust: Attacks all enemies with a blade gust, and increases Speed of the caster for 1 turn."
+                "name": "守護の精神",
+                "description": "味方全体を対象とする攻撃を受けた後、発動者に弱体効果があれば、100%の確率で炎刃の疾風で反撃する。炎刃の疾風は通常スキルでの反撃より優先される。この効果は2ターンごとに一度のみ発動できる。炎刃の疾風：刃の疾風で敵全体を攻撃し、1ターンの間発動者のスピードをアップさせる。"
             },
             "S3": {
-                "name": "Explosive Cut",
-                "description": "Attacks the enemy repeatedly, decreasing Speed of the target for 2 turns and a 100% chance to decrease Defense of the target for 2 turns. Grants Willful Flame to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Reistance."
+                "name": "爆裂斬り",
+                "description": "敵を連続で攻撃し、2ターンの間対象のスピードをダウンさせ、100%の確率で2ターンの間対象の防御力をダウンさせる。発動者に2ターンの間意志の炎を付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -2974,17 +2974,17 @@
         "_name": "Hurado",
         "skills": {
             "S1": {
-                "name": "Staff Strike",
-                "description": "Attacks with a staff, with a 50% chance to silence for 1 turn."
+                "name": "杖打ち",
+                "description": "杖で攻撃し、50%の確率で1ターンの間沈黙を付与する。"
             },
             "S2": {
-                "name": "Dark Magic",
-                "description": "Decreases amount recovered of all enemies by 50%, and increases the caster's Combat Readiness by 20%. When the enemy uses a non-attack skill."
+                "name": "暗黒魔法",
+                "description": "敵全体の回復量が50%減少し、敵が攻撃以外のスキルを使用すると、発動者の行動ゲージを20%増加させる。"
             },
             "S3": {
-                "name": "Dark Explosion",
-                "description": "Attacks all enemies with dark magic, with a 100% chance to dispel all buff before decreasing Combat Readiness by 15%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "暗黒爆発",
+                "description": "暗黒魔法で敵全体を攻撃し、100%の確率で強化効果をすべて解除した後、行動ゲージを15%減少させる。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -2992,17 +2992,17 @@
         "_name": "Hwayoung",
         "skills": {
             "S1": {
-                "name": "Supersonic Kick",
-                "description": "Attacks the enemy with a kick and deals additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Grants an extra attack with the same skill."
+                "name": "超音速キック",
+                "description": "蹴りで敵を攻撃し、発動者の攻撃力に比例した追加ダメージを与える。",
+                "soulburn_effect": "同じスキルで追加攻撃する。"
             },
             "S2": {
-                "name": "Prairie Hawk",
-                "description": "Increases Evasion by 50%. When attacking, cannot trigger a critical hit or a heavy blow. At the start of the turn, increases Attack for 1 turn."
+                "name": "草原の鷹",
+                "description": "回避が50%アップする。攻撃時、クリティカルや強打は発生しない。ターン開始時、1ターンの間攻撃力をアップさせる。"
             },
             "S3": {
-                "name": "Monarch's Flaming Strike",
-                "description": "Dispels all debuffs from the caster, and attacks the enemy with a secret technique before granting immunity and a barrier (proportional to Attack) to the caster for 2 turns. When the caster's Attack is greater than the target's Attack, penetrates Defense proportionally, up to 100%."
+                "name": "君主の炎撃",
+                "description": "発動者の弱体効果をすべて解除し、秘技で敵を攻撃した後、発動者に2ターンの間免疫とバリア（攻撃力に比例）を付与する。発動者の攻撃力が対象より高い場合、それに比例して防御力を最大100%まで貫通する。"
             }
         }
     },

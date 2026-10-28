@@ -2866,17 +2866,17 @@
         "_name": "Hecate",
         "skills": {
             "S1": {
-                "name": "Reaper's Scythe",
-                "description": "Attacks the enemy with Sigurd Scythe, before increasing Combat Readiness of the caster by 20%. When used on the caster's turn, activates Final Deliverance as an extra attack. Final Deliverance: Attacks all enemies, before granting stealth to the caster for 1 turn and decreasing skill cooldowns by 2 turns."
+                "name": "Foice do ceifador",
+                "description": "Ataca o inimigo com a Foice de Sigurd, depois aumenta a Prontidão de Combate do conjurador em 20%. Quando usada no turno do conjurador, ativa Libertação final como ataque extra. Libertação final: ataca todos os inimigos, depois concede furtividade ao conjurador por 1 turno e diminui as recargas de habilidades em 2 turnos."
             },
             "S2": {
-                "name": "Death's Dominion",
-                "description": "All Heroes cannot revive and cannot be granted immortality. When attacking, penetrates the target's Defense by 100%, and cannot trigger a critical hit or a heavy blow."
+                "name": "Domínio da morte",
+                "description": "Nenhum herói pode reviver nem receber imortalidade. Ao atacar, penetra 100% da Defesa do alvo e não pode causar acerto crítico nem golpe pesado."
             },
             "S3": {
-                "name": "Inescapable Demise",
-                "description": "After granting increased Attack to the caster for 3 turns, attacks the enemy by releasing the force of the netherworld. When the target is a hero, ignores damage share. Begins the first battle with a full skill cooldown count.",
-                "soulburn_effect": "Grants increased Attack (Greater) for 3 turns."
+                "name": "Fim inescapável",
+                "description": "Após conceder Aumentar Ataque ao conjurador por 3 turnos, ataca o inimigo liberando a força do submundo. Quando o alvo é um herói, ignora a divisão de dano. Começa a primeira batalha com a recarga da habilidade completa.",
+                "soulburn_effect": "Concede Aumentar Ataque (maior) por 3 turnos."
             }
         }
     },
@@ -2884,17 +2884,17 @@
         "_name": "Helen",
         "skills": {
             "S1": {
-                "name": "Blunt Strike",
-                "description": "Attacks the enemy before increasing Combat Readiness of a random ally except for the caster by 15%. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "Golpe contundente",
+                "description": "Ataca o inimigo, depois aumenta em 15% a Prontidão de Combate de um aliado aleatório, exceto o conjurador. O dano causado aumenta proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "O aumento de Prontidão de Combate é aplicado a todos os aliados."
             },
             "S2": {
-                "name": "Wild Swing",
-                "description": "Attacks the enemy before increasing Defense of the caster for 2 turns and recovers Health. Damage dealt increases proportional to the caster's Defense, and amount recovered increases proportional to the caster's max Health."
+                "name": "Golpe selvagem",
+                "description": "Ataca o inimigo, depois aumenta a Defesa do conjurador por 2 turnos e recupera Vida. O dano causado aumenta proporcionalmente à Defesa do conjurador, e a quantidade recuperada aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Sword of Grace",
-                "description": "Adopts a counterattacking stance for 3 turns, and grants increased Speed and a barrier to all allies except for the caster for 2 turns. Barrier strength increases proportional to the caster's Defense. After suffering an attack that targets all allies, decreases skill cooldown by 2 turns."
+                "name": "Espada da graça",
+                "description": "Assume postura de contra-ataque por 3 turnos e concede Aumentar Velocidade e uma barreira a todos os aliados, exceto o conjurador, por 2 turnos. A força da barreira aumenta proporcionalmente à Defesa do conjurador. Após sofrer um ataque que mira todos os aliados, diminui a recarga da habilidade em 2 turnos."
             }
         }
     },
@@ -2902,17 +2902,17 @@
         "_name": "Helga",
         "skills": {
             "S1": {
-                "name": "Armor Rend",
-                "description": "Attacks with an axe, with a 50% chance to decrease Defense for 2 turns."
+                "name": "Rasgar armadura",
+                "description": "Ataca com um machado, com 50% de chance de diminuir a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Attack Chain",
-                "description": "Strongly slams the enemy with an axe, with a 75% chance to decrease Defense for 2 turns. A critical hit will extend any buffs granted to the caster by 1 turn."
+                "name": "Ataque em cadeia",
+                "description": "Golpeia o inimigo com força com um machado, com 75% de chance de diminuir a Defesa por 2 turnos. Um acerto crítico estende em 1 turno os efeitos positivos concedidos ao conjurador."
             },
             "S3": {
-                "name": "Cry of Victory",
-                "description": "Encourages allies, increasing Attack for 2 turns before increasing Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Grito de vitória",
+                "description": "Encoraja os aliados, aumentando o Ataque por 2 turnos, depois aumenta a Prontidão de Combate do conjurador em 50%.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -2920,17 +2920,17 @@
         "_name": "Hellion Lua",
         "skills": {
             "S1": {
-                "name": "Lua Attack",
-                "description": "Attacks the enemy and has a 100% chance to provoke for 1 turn."
+                "name": "Ataque Lua",
+                "description": "Ataca o inimigo e tem 100% de chance de provocá-lo por 1 turno."
             },
             "S2": {
-                "name": "Lua Squad",
-                "description": "After being attacked by a Hero, increases Combat Readiness of all allies by 10% and makes all allies granted with challenge counterattack."
+                "name": "Esquadrão Lua",
+                "description": "Após ser atacado por um herói, aumenta a Prontidão de Combate de todos os aliados em 10% e faz todos os aliados com desafio contra-atacarem."
             },
             "S3": {
-                "name": "Lua's Challenge",
-                "description": "Grants challenge to all allies, before increasing Defense of the caster for 2 turns. Decreases buff durations of all enemies by 1 turn and has a 100% chance to provoke for 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Desafio de Lua",
+                "description": "Concede desafio a todos os aliados, depois aumenta a Defesa do conjurador por 2 turnos. Diminui a duração dos efeitos positivos de todos os inimigos em 1 turno e tem 100% de chance de provocar por 1 turno.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -2938,17 +2938,17 @@
         "_name": "Holiday Yufine",
         "skills": {
             "S1": {
-                "name": "Just One Bite! ♡",
-                "description": "Attacks the enemy by tearing up a food market, with a 100% chance to burn for 1 turn. When used on the caster's turn, Just One Bite! ♡ becomes an attack that targets all enemies. Changed attack is unaffected by elemental disadvantage and does not trigger a Dual Attack."
+                "name": "Só uma mordida! ♡",
+                "description": "Ataca o inimigo destruindo uma feira de comida, com 100% de chance de aplicar queimadura por 1 turno. Quando usada no turno do conjurador, Só uma mordida! ♡ passa a mirar todos os inimigos. O ataque alterado não é afetado por desvantagem elemental e não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Let's Eat Together!",
-                "description": "Reduces the effect of decreased Combat Readiness debuffs inflicted on all allies by 50%. This skill effect does not stack with other passive skills of the same name. Increase Evasion by 35%, and when Health is 50% or more, increases Evasion by an additional 35%."
+                "name": "Vamos comer juntos!",
+                "description": "Reduz em 50% o efeito dos efeitos negativos de redução de Prontidão de Combate aplicados a todos os aliados. Este efeito não se acumula com outras habilidades passivas de mesmo nome. Aumenta a Evasão em 35% e, quando a Vida é 50% ou mais, aumenta a Evasão em mais 35%."
             },
             "S3": {
-                "name": "Yufine's ☆ Special",
-                "description": "Dispels two debuffs from all allies and attacks all enemies in the middle of a night market. Increased Attack of all allies for 2 turns and Combat Readiness by 25%.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Especial ☆ da Yufine",
+                "description": "Dissipa dois efeitos negativos de todos os aliados e ataca todos os inimigos no meio de um mercado noturno. Aumenta o Ataque de todos os aliados por 2 turnos e a Prontidão de Combate em 25%.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -2956,17 +2956,17 @@
         "_name": "Holy Flame Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, recovering Health of the ally with the lowest Health. Amount recovered increases proportional to damage dealt."
+                "name": "Corte no tornozelo",
+                "description": "Ataca o inimigo com uma espada, recuperando a Vida do aliado com menor Vida. A quantidade recuperada aumenta proporcionalmente ao dano causado."
             },
             "S2": {
-                "name": "Defensive Spirit",
-                "description": "After suffering an attack that targets all allies, when the caster has a debuff, has a 100% chance to counterattack with Fiery Blade Gust. Fiery Blade Gust takes priority over a counterattack with a basic skill. This effect can only be activated once every 2 turns. Fiery Blade Gust: Attacks all enemies with a blade gust, and increases Speed of the caster for 1 turn."
+                "name": "Espírito defensivo",
+                "description": "Após sofrer um ataque que mira todos os aliados, quando o conjurador tem um efeito negativo, tem 100% de chance de contra-atacar com Rajada de lâminas ígneas. Rajada de lâminas ígneas tem prioridade sobre o contra-ataque com a habilidade básica. Este efeito só pode ser ativado uma vez a cada 2 turnos. Rajada de lâminas ígneas: ataca todos os inimigos com uma rajada de lâminas e aumenta a Velocidade do conjurador por 1 turno."
             },
             "S3": {
-                "name": "Explosive Cut",
-                "description": "Attacks the enemy repeatedly, decreasing Speed of the target for 2 turns and a 100% chance to decrease Defense of the target for 2 turns. Grants Willful Flame to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Reistance."
+                "name": "Corte explosivo",
+                "description": "Ataca o inimigo repetidamente, diminuindo a Velocidade do alvo por 2 turnos e com 100% de chance de diminuir a Defesa do alvo por 2 turnos. Concede Chama obstinada ao conjurador por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -2974,17 +2974,17 @@
         "_name": "Hurado",
         "skills": {
             "S1": {
-                "name": "Staff Strike",
-                "description": "Attacks with a staff, with a 50% chance to silence for 1 turn."
+                "name": "Golpe de cajado",
+                "description": "Ataca com um cajado, com 50% de chance de silenciar por 1 turno."
             },
             "S2": {
-                "name": "Dark Magic",
-                "description": "Decreases amount recovered of all enemies by 50%, and increases the caster's Combat Readiness by 20%. When the enemy uses a non-attack skill."
+                "name": "Magia sombria",
+                "description": "Diminui em 50% a quantidade recuperada por todos os inimigos e, quando o inimigo usa uma habilidade que não é de ataque, aumenta a Prontidão de Combate do conjurador em 20%."
             },
             "S3": {
-                "name": "Dark Explosion",
-                "description": "Attacks all enemies with dark magic, with a 100% chance to dispel all buff before decreasing Combat Readiness by 15%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Explosão sombria",
+                "description": "Ataca todos os inimigos com magia sombria, com 100% de chance de dissipar todos os efeitos positivos, depois diminui a Prontidão de Combate em 15%.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -2992,17 +2992,17 @@
         "_name": "Hwayoung",
         "skills": {
             "S1": {
-                "name": "Supersonic Kick",
-                "description": "Attacks the enemy with a kick and deals additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Grants an extra attack with the same skill."
+                "name": "Chute supersônico",
+                "description": "Ataca o inimigo com um chute e causa dano adicional proporcional ao Ataque do conjurador.",
+                "soulburn_effect": "Concede um ataque extra com a mesma habilidade."
             },
             "S2": {
-                "name": "Prairie Hawk",
-                "description": "Increases Evasion by 50%. When attacking, cannot trigger a critical hit or a heavy blow. At the start of the turn, increases Attack for 1 turn."
+                "name": "Falcão da pradaria",
+                "description": "Aumenta a Evasão em 50%. Ao atacar, não pode causar acerto crítico nem golpe pesado. No início do turno, aumenta o Ataque por 1 turno."
             },
             "S3": {
-                "name": "Monarch's Flaming Strike",
-                "description": "Dispels all debuffs from the caster, and attacks the enemy with a secret technique before granting immunity and a barrier (proportional to Attack) to the caster for 2 turns. When the caster's Attack is greater than the target's Attack, penetrates Defense proportionally, up to 100%."
+                "name": "Golpe flamejante da monarca",
+                "description": "Dissipa todos os efeitos negativos do conjurador e ataca o inimigo com uma técnica secreta, depois concede imunidade e uma barreira (proporcional ao Ataque) ao conjurador por 2 turnos. Quando o Ataque do conjurador é maior que o do alvo, penetra a Defesa proporcionalmente, até 100%."
             }
         }
     },
