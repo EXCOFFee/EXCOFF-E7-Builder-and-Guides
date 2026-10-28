@@ -6806,17 +6806,17 @@
         "_name": "Zahhak",
         "skills": {
             "S1": {
-                "name": "Vulnerability Exposed",
-                "description": "Attacks the enemy with a longsword. Increases Hit Chance and Critical Hit Chance of this skill by 50%. When the target has a buff, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "弱点露呈",
+                "description": "ロングソードで敵を攻撃する。このスキルの命中率とクリティカル率が50%アップする。対象に強化効果があれば与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Elaborate Plan",
-                "description": "Dispels two debuffs from an ally before increasing Combat Readiness of the ally by 30%. Grants increased Attack and increased Hit Chance to the caster for 3 turns. Grants an extra turn."
+                "name": "緻密な計画",
+                "description": "味方一人の弱体効果を二つ解除した後、その味方の行動ゲージを30%増加させる。発動者に3ターンの間攻撃力アップと命中率アップを付与する。追加ターンを得る。"
             },
             "S3": {
-                "name": "Execute",
-                "description": "Attacks the enemy, inflicting up to 35% injuries, before granting invincibility to the caster for 1 turn. Increases Critical Hit Chance and Hit Chance of this skill by 50%."
+                "name": "処刑",
+                "description": "敵を攻撃し、最大35%の負傷を与えた後、発動者に1ターンの間無敵を付与する。このスキルのクリティカル率と命中率が50%アップする。"
             }
         }
     },
@@ -6824,17 +6824,17 @@
         "_name": "Zealot Carmainerose",
         "skills": {
             "S1": {
-                "name": "Vampirism",
-                "description": "Claws the enemy, before absorbing some of the damage as Health."
+                "name": "吸血",
+                "description": "敵を引っかいた後、ダメージの一部をHPとして吸収する。"
             },
             "S2": {
-                "name": "Vengeful Strike",
-                "description": "Attacks the enemy, decreasing Combat Readiness by 55% before decreasing Speed of the enemy for 2 turns and increasing Speed of the caster for 2 turns."
+                "name": "復讐の一撃",
+                "description": "敵を攻撃し、行動ゲージを55%減少させた後、2ターンの間敵のスピードをダウンさせ、2ターンの間発動者のスピードをアップさせる。"
             },
             "S3": {
-                "name": "Spiteful Annihilation",
-                "description": "Attacks the enemy, dispelling all buffs and making them unable to be buffed for 2 turns, before increasing Attack and Defense of the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "怨恨の殲滅",
+                "description": "敵を攻撃し、強化効果をすべて解除し、2ターンの間強化不可を付与した後、2ターンの間発動者の攻撃力と防御力をアップさせる。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },
@@ -6842,17 +6842,17 @@
         "_name": "Zeno",
         "skills": {
             "S1": {
-                "name": "Black Thorn",
-                "description": "Attacks the enemy with thorns, inflicting frostbite for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "黒い棘",
+                "description": "棘で敵を攻撃し、1ターンの間凍傷を付与する。発動者の防御力に比例して与ダメージがアップする。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Star's Armor",
-                "description": "Decreases the enemy's Evasion by 50%. At the start of the turn, when an enemy is inflicted with frostbite, grants rage and increased Defense to the caster for 2 turns."
+                "name": "星の鎧",
+                "description": "敵の回避が50%ダウンする。ターン開始時、敵が凍傷状態なら、発動者に2ターンの間激怒と防御力アップを付与する。"
             },
             "S3": {
-                "name": "Ancient Beast",
-                "description": "Summons an ancient beast to attack all enemies, dispelling two buffs before inflicting rupture and cannot buff for 2 turns. Damage dealt increases proportional to the caster's Defense. When the caster is granted rage, ignores Effect Resistance."
+                "name": "古代の獣",
+                "description": "古代の獣を召喚して敵全体を攻撃し、強化効果を二つ解除した後、2ターンの間破裂と強化不可を付与する。発動者の防御力に比例して与ダメージがアップする。発動者に激怒があれば効果抵抗を無視する。"
             }
         }
     },
@@ -6860,17 +6860,17 @@
         "_name": "Zerato",
         "skills": {
             "S1": {
-                "name": "Ice Shard",
-                "description": "Attacks an enemy with an ice pick, with a 50% chance to decrease Speed for 2 turns."
+                "name": "氷の欠片",
+                "description": "アイスピックで敵を攻撃し、50%の確率で2ターンの間スピードをダウンさせる。"
             },
             "S2": {
-                "name": "Ice Pick",
-                "description": "Attacks the enemy repeatedly, before increasing Combat Readiness of the caster by 50%. When the target has a debuff, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "アイスピック",
+                "description": "敵を連続で攻撃した後、発動者の行動ゲージを50%増加させる。対象に弱体効果があれば与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Iceberg",
-                "description": "Attacks all enemies with a giant iceberg, with a 75% chance to stun for 1 turn."
+                "name": "氷山",
+                "description": "巨大な氷山で敵全体を攻撃し、75%の確率で1ターンの間気絶させる。"
             }
         }
     },
@@ -6878,17 +6878,17 @@
         "_name": "Zio",
         "skills": {
             "S1": {
-                "name": "Let Me Destroy You",
-                "description": "Attacks the enemy with a spear, before increasing Attack of the caster for 1 turn. When the caster is deified, activates Disappear as an extra attack. Disappear can only be activated once per turn, during the caster's turn. Disappear: Attacks the enemy with a swordstorm, and when the enemy is defeated, increases Combat Readiness of the caster by 50%. Penetrates the target's Defense by 50%."
+                "name": "壊してあげよう",
+                "description": "槍で敵を攻撃した後、1ターンの間発動者の攻撃力をアップさせる。発動者が神格化状態なら、追加攻撃として消えろを発動する。消えろは発動者のターン中、ターンごとに一度のみ発動できる。消えろ：剣嵐で敵を攻撃し、敵を倒すと発動者の行動ゲージを50%増加させる。対象の防御力を50%貫通する。"
             },
             "S2": {
-                "name": "Supreme Authority",
-                "description": "At the start of the first battle, increases Combat Readiness by 30%. Unaffected by effects that reduce Combat Readiness increases the caster receives."
+                "name": "至高の権威",
+                "description": "最初のバトル開始時、行動ゲージを30%増加させる。発動者が受ける行動ゲージ増加効果を減少させる効果の影響を受けない。"
             },
             "S3": {
-                "name": "Bow Down Before Me",
-                "description": "Attacks the enemy, dispelling two buffs before silencing for 1 turn and decreasing Combat Readiness by 40%. Grants deify to the caster for 3 turns. Penetrates the target's Defense by 100% and cannot trigger a critical hit. When the target is a Hero, damage dealt increases proportional to the target's current Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "我が前にひれ伏せ",
+                "description": "敵を攻撃し、強化効果を二つ解除した後、1ターンの間沈黙を付与し、行動ゲージを40%減少させる。発動者に3ターンの間神格化を付与する。対象の防御力を100%貫通し、クリティカルが発生しない。対象が英雄なら、対象の現在HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     }

@@ -6806,17 +6806,17 @@
         "_name": "Zahhak",
         "skills": {
             "S1": {
-                "name": "Vulnerability Exposed",
-                "description": "Attacks the enemy with a longsword. Increases Hit Chance and Critical Hit Chance of this skill by 50%. When the target has a buff, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Vulnerabilidade exposta",
+                "description": "Ataca o inimigo com uma espada longa. Aumenta a Precisão e a Chance de Crítico desta habilidade em 50%. Quando o alvo tem um efeito positivo, o dano causado aumenta.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Elaborate Plan",
-                "description": "Dispels two debuffs from an ally before increasing Combat Readiness of the ally by 30%. Grants increased Attack and increased Hit Chance to the caster for 3 turns. Grants an extra turn."
+                "name": "Plano elaborado",
+                "description": "Dissipa dois efeitos negativos de um aliado, depois aumenta sua Prontidão de Combate em 30%. Concede Aumentar Ataque e Aumentar Precisão ao conjurador por 3 turnos. Concede um turno extra."
             },
             "S3": {
-                "name": "Execute",
-                "description": "Attacks the enemy, inflicting up to 35% injuries, before granting invincibility to the caster for 1 turn. Increases Critical Hit Chance and Hit Chance of this skill by 50%."
+                "name": "Executar",
+                "description": "Ataca o inimigo, causando até 35% de ferimentos, depois concede invencibilidade ao conjurador por 1 turno. Aumenta a Chance de Crítico e a Precisão desta habilidade em 50%."
             }
         }
     },
@@ -6824,17 +6824,17 @@
         "_name": "Zealot Carmainerose",
         "skills": {
             "S1": {
-                "name": "Vampirism",
-                "description": "Claws the enemy, before absorbing some of the damage as Health."
+                "name": "Vampirismo",
+                "description": "Arranha o inimigo, depois absorve parte do dano como Vida."
             },
             "S2": {
-                "name": "Vengeful Strike",
-                "description": "Attacks the enemy, decreasing Combat Readiness by 55% before decreasing Speed of the enemy for 2 turns and increasing Speed of the caster for 2 turns."
+                "name": "Golpe vingativo",
+                "description": "Ataca o inimigo, diminuindo a Prontidão de Combate em 55%, depois diminui a Velocidade do inimigo por 2 turnos e aumenta a Velocidade do conjurador por 2 turnos."
             },
             "S3": {
-                "name": "Spiteful Annihilation",
-                "description": "Attacks the enemy, dispelling all buffs and making them unable to be buffed for 2 turns, before increasing Attack and Defense of the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Aniquilação rancorosa",
+                "description": "Ataca o inimigo, dissipando todos os efeitos positivos e impedindo que receba efeitos positivos por 2 turnos, depois aumenta o Ataque e a Defesa do conjurador por 2 turnos.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -6842,17 +6842,17 @@
         "_name": "Zeno",
         "skills": {
             "S1": {
-                "name": "Black Thorn",
-                "description": "Attacks the enemy with thorns, inflicting frostbite for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Espinho negro",
+                "description": "Ataca o inimigo com espinhos, aplicando congelamento por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Star's Armor",
-                "description": "Decreases the enemy's Evasion by 50%. At the start of the turn, when an enemy is inflicted with frostbite, grants rage and increased Defense to the caster for 2 turns."
+                "name": "Armadura estelar",
+                "description": "Diminui a Evasão do inimigo em 50%. No início do turno, quando um inimigo tem congelamento, concede fúria e Aumentar Defesa ao conjurador por 2 turnos."
             },
             "S3": {
-                "name": "Ancient Beast",
-                "description": "Summons an ancient beast to attack all enemies, dispelling two buffs before inflicting rupture and cannot buff for 2 turns. Damage dealt increases proportional to the caster's Defense. When the caster is granted rage, ignores Effect Resistance."
+                "name": "Fera antiga",
+                "description": "Invoca uma fera antiga para atacar todos os inimigos, dissipando dois efeitos positivos antes de aplicar ruptura e impedimento de efeitos positivos por 2 turnos. O dano causado aumenta proporcionalmente à Defesa do conjurador. Quando o conjurador tem fúria, ignora a Resistência a Efeitos."
             }
         }
     },
@@ -6860,17 +6860,17 @@
         "_name": "Zerato",
         "skills": {
             "S1": {
-                "name": "Ice Shard",
-                "description": "Attacks an enemy with an ice pick, with a 50% chance to decrease Speed for 2 turns."
+                "name": "Estilhaço de gelo",
+                "description": "Ataca um inimigo com um picador de gelo, com 50% de chance de diminuir a Velocidade por 2 turnos."
             },
             "S2": {
-                "name": "Ice Pick",
-                "description": "Attacks the enemy repeatedly, before increasing Combat Readiness of the caster by 50%. When the target has a debuff, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Picador de gelo",
+                "description": "Ataca o inimigo repetidamente, depois aumenta a Prontidão de Combate do conjurador em 50%. Quando o alvo tem um efeito negativo, o dano causado aumenta.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
                 "name": "Iceberg",
-                "description": "Attacks all enemies with a giant iceberg, with a 75% chance to stun for 1 turn."
+                "description": "Ataca todos os inimigos com um iceberg gigante, com 75% de chance de atordoar por 1 turno."
             }
         }
     },
@@ -6878,17 +6878,17 @@
         "_name": "Zio",
         "skills": {
             "S1": {
-                "name": "Let Me Destroy You",
-                "description": "Attacks the enemy with a spear, before increasing Attack of the caster for 1 turn. When the caster is deified, activates Disappear as an extra attack. Disappear can only be activated once per turn, during the caster's turn. Disappear: Attacks the enemy with a swordstorm, and when the enemy is defeated, increases Combat Readiness of the caster by 50%. Penetrates the target's Defense by 50%."
+                "name": "Deixe-me destruir você",
+                "description": "Ataca o inimigo com uma lança, depois aumenta o Ataque do conjurador por 1 turno. Quando o conjurador está deificado, ativa Desaparecer como ataque extra. Desaparecer só pode ser ativado uma vez por turno, durante o turno do conjurador. Desaparecer: ataca o inimigo com uma tempestade de espadas e, ao derrotá-lo, aumenta a Prontidão de Combate do conjurador em 50%. Penetra 50% da Defesa do alvo."
             },
             "S2": {
-                "name": "Supreme Authority",
-                "description": "At the start of the first battle, increases Combat Readiness by 30%. Unaffected by effects that reduce Combat Readiness increases the caster receives."
+                "name": "Autoridade suprema",
+                "description": "No início da primeira batalha, aumenta a Prontidão de Combate em 30%. Não é afetado por efeitos que reduzem os aumentos de Prontidão de Combate recebidos pelo conjurador."
             },
             "S3": {
-                "name": "Bow Down Before Me",
-                "description": "Attacks the enemy, dispelling two buffs before silencing for 1 turn and decreasing Combat Readiness by 40%. Grants deify to the caster for 3 turns. Penetrates the target's Defense by 100% and cannot trigger a critical hit. When the target is a Hero, damage dealt increases proportional to the target's current Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Curve-se diante de mim",
+                "description": "Ataca o inimigo, dissipando dois efeitos positivos antes de silenciar por 1 turno e diminuir a Prontidão de Combate em 40%. Concede deificação ao conjurador por 3 turnos. Penetra 100% da Defesa do alvo e não pode causar acerto crítico. Quando o alvo é um herói, o dano causado aumenta proporcionalmente à Vida atual do alvo.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     }

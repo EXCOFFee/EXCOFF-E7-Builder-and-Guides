@@ -6806,17 +6806,17 @@
         "_name": "Zahhak",
         "skills": {
             "S1": {
-                "name": "Vulnerability Exposed",
-                "description": "Attacks the enemy with a longsword. Increases Hit Chance and Critical Hit Chance of this skill by 50%. When the target has a buff, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "暴露弱点",
+                "description": "以长剑攻击敌人。此技能的命中率与暴击率提升50%。目标拥有强化效果时，提升造成的伤害。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "Elaborate Plan",
-                "description": "Dispels two debuffs from an ally before increasing Combat Readiness of the ally by 30%. Grants increased Attack and increased Hit Chance to the caster for 3 turns. Grants an extra turn."
+                "name": "缜密计划",
+                "description": "解除一名友军的两个弱化效果，然后使该友军的行动值提升30%。为施放者施加3回合攻击力提升与命中率提升。获得额外回合。"
             },
             "S3": {
-                "name": "Execute",
-                "description": "Attacks the enemy, inflicting up to 35% injuries, before granting invincibility to the caster for 1 turn. Increases Critical Hit Chance and Hit Chance of this skill by 50%."
+                "name": "处决",
+                "description": "攻击敌人，造成最多35%的负伤，然后为施放者施加1回合无敌。此技能的暴击率与命中率提升50%。"
             }
         }
     },
@@ -6824,17 +6824,17 @@
         "_name": "Zealot Carmainerose",
         "skills": {
             "S1": {
-                "name": "Vampirism",
-                "description": "Claws the enemy, before absorbing some of the damage as Health."
+                "name": "吸血",
+                "description": "抓击敌人，然后将部分伤害吸收为生命值。"
             },
             "S2": {
-                "name": "Vengeful Strike",
-                "description": "Attacks the enemy, decreasing Combat Readiness by 55% before decreasing Speed of the enemy for 2 turns and increasing Speed of the caster for 2 turns."
+                "name": "复仇一击",
+                "description": "攻击敌人，降低55%行动值，然后降低敌人的速度2回合，并提升施放者的速度2回合。"
             },
             "S3": {
-                "name": "Spiteful Annihilation",
-                "description": "Attacks the enemy, dispelling all buffs and making them unable to be buffed for 2 turns, before increasing Attack and Defense of the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "怨恨歼灭",
+                "description": "攻击敌人，解除所有强化效果并施加2回合无法强化，然后提升施放者的攻击力与防御力2回合。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             }
         }
     },
@@ -6842,17 +6842,17 @@
         "_name": "Zeno",
         "skills": {
             "S1": {
-                "name": "Black Thorn",
-                "description": "Attacks the enemy with thorns, inflicting frostbite for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "黑色荆棘",
+                "description": "以荆棘攻击敌人，施加1回合冻伤。造成的伤害按施放者的防御力比例提升。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Star's Armor",
-                "description": "Decreases the enemy's Evasion by 50%. At the start of the turn, when an enemy is inflicted with frostbite, grants rage and increased Defense to the caster for 2 turns."
+                "name": "星辰铠甲",
+                "description": "敌人的闪避降低50%。回合开始时，若敌人处于冻伤状态，为施放者施加2回合激怒与防御力提升。"
             },
             "S3": {
-                "name": "Ancient Beast",
-                "description": "Summons an ancient beast to attack all enemies, dispelling two buffs before inflicting rupture and cannot buff for 2 turns. Damage dealt increases proportional to the caster's Defense. When the caster is granted rage, ignores Effect Resistance."
+                "name": "远古巨兽",
+                "description": "召唤远古巨兽攻击所有敌人，解除两个强化效果后施加2回合破裂与无法强化。造成的伤害按施放者的防御力比例提升。施放者拥有激怒时，无视效果抵抗。"
             }
         }
     },
@@ -6860,17 +6860,17 @@
         "_name": "Zerato",
         "skills": {
             "S1": {
-                "name": "Ice Shard",
-                "description": "Attacks an enemy with an ice pick, with a 50% chance to decrease Speed for 2 turns."
+                "name": "冰之碎片",
+                "description": "以冰锥攻击敌人，有50%的几率降低速度2回合。"
             },
             "S2": {
-                "name": "Ice Pick",
-                "description": "Attacks the enemy repeatedly, before increasing Combat Readiness of the caster by 50%. When the target has a debuff, increases damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "冰锥",
+                "description": "连续攻击敌人，然后使施放者的行动值提升50%。目标有弱化效果时，提升造成的伤害。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Iceberg",
-                "description": "Attacks all enemies with a giant iceberg, with a 75% chance to stun for 1 turn."
+                "name": "冰山",
+                "description": "以巨大冰山攻击所有敌人，有75%的几率使其眩晕1回合。"
             }
         }
     },
@@ -6878,17 +6878,17 @@
         "_name": "Zio",
         "skills": {
             "S1": {
-                "name": "Let Me Destroy You",
-                "description": "Attacks the enemy with a spear, before increasing Attack of the caster for 1 turn. When the caster is deified, activates Disappear as an extra attack. Disappear can only be activated once per turn, during the caster's turn. Disappear: Attacks the enemy with a swordstorm, and when the enemy is defeated, increases Combat Readiness of the caster by 50%. Penetrates the target's Defense by 50%."
+                "name": "让我毁灭你",
+                "description": "以长枪攻击敌人，然后提升施放者的攻击力1回合。施放者处于神格化状态时，以追加攻击发动消失吧。消失吧在施放者的回合中每回合只能发动一次。消失吧：以剑暴攻击敌人，击败敌人时使施放者的行动值提升50%。穿透目标50%的防御力。"
             },
             "S2": {
-                "name": "Supreme Authority",
-                "description": "At the start of the first battle, increases Combat Readiness by 30%. Unaffected by effects that reduce Combat Readiness increases the caster receives."
+                "name": "至高权威",
+                "description": "首场战斗开始时，提升30%行动值。不受降低施放者行动值提升效果的效果影响。"
             },
             "S3": {
-                "name": "Bow Down Before Me",
-                "description": "Attacks the enemy, dispelling two buffs before silencing for 1 turn and decreasing Combat Readiness by 40%. Grants deify to the caster for 3 turns. Penetrates the target's Defense by 100% and cannot trigger a critical hit. When the target is a Hero, damage dealt increases proportional to the target's current Health.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "在我面前跪下",
+                "description": "攻击敌人，解除两个强化效果后施加1回合沉默，并降低40%行动值。为施放者施加3回合神格化。穿透目标100%的防御力，且无法造成暴击。目标为英雄时，造成的伤害按目标当前生命值比例提升。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     }
