@@ -1660,17 +1660,17 @@
         "_name": "Commander Lorina",
         "skills": {
             "S1": {
-                "name": "Sharp Blow",
-                "description": "Knocks the enemy into the air with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the target's max Health."
+                "name": "날카로운 일격",
+                "description": "창으로 적을 공중에 띄우고 시전자의 행동 게이지를 20% 증가시킨다. 대상의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Spiritual Armament",
-                "description": "Increases Effect Resistance by 50%. Increases Attack by 15% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+                "name": "정신 무장",
+                "description": "효과 저항이 50% 증가한다. 시전자가 적을 공격할 때마다 공격력이 15% 증가한다. 효과는 최대 5회까지 중첩된다."
             },
             "S3": {
-                "name": "Spiral Breakthrough",
-                "description": "Attacks the enemy by piercing them with a spear, decreasing Combat Readiness by 15%. Damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "나선 돌파",
+                "description": "창으로 적을 꿰뚫어 공격하고 행동 게이지를 15% 감소시킨다. 대상의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -1678,17 +1678,17 @@
         "_name": "Commander Pavel",
         "skills": {
             "S1": {
-                "name": "How Sloppy",
-                "description": "Attacks the enemy with a gunblade, with a 75% chance to decrease Attack for 1 turn."
+                "name": "엉성하군",
+                "description": "건블레이드로 적을 공격하며, 75% 확률로 1턴 동안 공격력을 감소시킨다."
             },
             "S2": {
-                "name": "Obstacle Elimination",
-                "description": "At the start of the first battle, gains 60 Fighting Spirit. After an ally except for the caster makes a critical hit, gains 20 Fighting Spirit, and when Fighting Spirit is full, activates Begone!. This effect is not activated by an extra attack, counterattack, or Dual Attack. Begone! (consumes 100 Fighting Spirit): Grants increased Attack to the caster for 2 turns, and attacks all enemies with gunfire, before increasing Combat Readiness of the caster by 100%."
+                "name": "장애물 제거",
+                "description": "첫 번째 전투 시작 시 투지를 60 얻는다. 시전자를 제외한 아군이 치명타를 발생시킨 후 투지를 20 얻으며, 투지가 가득 차면 꺼져라!를 발동한다. 이 효과는 추가 공격, 반격, 협공으로는 발동하지 않는다. 꺼져라!(투지 100 소모): 시전자에게 2턴 동안 공격력 증가를 부여하고 총격으로 모든 적을 공격한 뒤 시전자의 행동 게이지를 100% 증가시킨다."
             },
             "S3": {
-                "name": "Die, You Fly",
-                "description": "Attacks the enemy with a pistol. When the target is not an Elite or Boss monster, ignores damage share. When the caster's Attack is greater than the target's Attack, penetrates Defense proportionally, up to 70%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "죽어라, 날파리",
+                "description": "권총으로 적을 공격한다. 대상이 정예 또는 보스 몬스터가 아니면 피해 분산을 무시한다. 시전자의 공격력이 대상보다 높으면 그에 비례해 방어력을 최대 70%까지 관통한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -1696,17 +1696,17 @@
         "_name": "Conqueror Lilias",
         "skills": {
             "S1": {
-                "name": "Kneel Down",
-                "description": "Attacks the enemy with a sword, triggering a Dual Attack from a random ally."
+                "name": "무릎 꿇어라",
+                "description": "검으로 적을 공격하고 무작위 아군이 협공한다."
             },
             "S2": {
-                "name": "Cover!",
-                "description": "Distracts the enemy, with a 100% chance to inflict redirected provoke and decreased Defense for 1 turn. Grants a barrier (proportional to the target's max Health) to the caster and the ally except for the caster with the highest max Health for 2 turns.",
-                "soulburn_effect": "Extends duration of debuffs inflicted by this skill by 1 turn."
+                "name": "엄호!",
+                "description": "적의 주의를 끌어 100% 확률로 1턴 동안 전환된 도발과 방어력 감소를 건다. 시전자와, 시전자를 제외하고 최대 생명력이 가장 높은 아군에게 2턴 동안 보호막(대상 최대 생명력 비례)을 부여한다.",
+                "soulburn_effect": "이 스킬로 거는 약화 효과의 지속 시간이 1턴 연장된다."
             },
             "S3": {
-                "name": "For Honor!",
-                "description": "Encourages the Perland Army, granting vigor to all allies for 2 turns and increasing Combat Readiness by 15%. Decreases buff durations of all enemies by 1 turn and has a 100% chance to inflict decreased Attack for 2 turns. Grants an extra turn."
+                "name": "명예를 위하여!",
+                "description": "펄랜드군을 격려해 모든 아군에게 2턴 동안 투지를 부여하고 행동 게이지를 15% 증가시킨다. 모든 적의 강화 효과 지속 시간을 1턴 감소시키고 100% 확률로 2턴 동안 공격력 감소를 건다. 추가 턴을 얻는다."
             }
         }
     },
@@ -1714,17 +1714,17 @@
         "_name": "Corvus",
         "skills": {
             "S1": {
-                "name": "Shield Slam",
-                "description": "Attacks the enemy by shoving them with a shield, with a 75% chance to transfer one debuff. When the caster is granted indomitable, increases damage dealt and inflicts stun on the target for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "방패 밀치기",
+                "description": "방패로 적을 밀쳐 공격하며, 75% 확률로 약화 효과를 한 개 전이한다. 시전자에게 불굴이 있으면 주는 피해가 증가하고 대상을 1턴 동안 기절시킨다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Macerate",
-                "description": "Attacks all enemies with an iron mace, decreasing Combat Readiness by 30%. If the target's Combat Readiness decreases to 0, inflicts stun for 1 turn. When the caster is granted indomitable, doubles the effect of Combat Readiness decrease. Damage dealt increases proportional to the caster's Defense."
+                "name": "짓이기기",
+                "description": "쇠몽둥이로 모든 적을 공격해 행동 게이지를 30% 감소시킨다. 대상의 행동 게이지가 0이 되면 1턴 동안 기절시킨다. 시전자에게 불굴이 있으면 행동 게이지 감소 효과가 두 배가 된다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Fury's Advent",
-                "description": "By discharging Fighting Spirit, grants indomitable for 3 turns and recovers Health proportional to max Health before granting an extra turn. At the start of the first battle, gains 50 Fighting Spirit. When attacked, gains 10 Fighting Spirit.",
-                "soulburn_effect": "Recovers Health proportional to max Health."
+                "name": "분노의 강림",
+                "description": "투지를 방출해 3턴 동안 불굴을 부여하고 최대 생명력에 비례해 생명력을 회복한 뒤 추가 턴을 얻는다. 첫 번째 전투 시작 시 투지를 50 얻는다. 공격받으면 투지를 10 얻는다.",
+                "soulburn_effect": "최대 생명력에 비례해 생명력을 회복한다."
             }
         }
     },
@@ -1732,17 +1732,17 @@
         "_name": "Crescent Moon Rin",
         "skills": {
             "S1": {
-                "name": "Heckle",
-                "description": "Attacks the enemy with a ring, with a 40% chance to stun for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "야유",
+                "description": "고리로 적을 공격하며, 40% 확률로 1턴 동안 기절시킨다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Eyecatcher",
-                "description": "Attacks the enemy with a lavish dance and steals two buffs, granting their effects to all allies, before stunning the target for 1 turn. When the target had no prior buffs, decreases cooldown of this skill by 1 turn."
+                "name": "시선 강탈",
+                "description": "화려한 춤으로 적을 공격해 강화 효과를 두 개 빼앗아 모든 아군에게 부여한 뒤 대상을 1턴 동안 기절시킨다. 대상에게 강화 효과가 없었으면 이 스킬의 재사용 대기 시간을 1턴 감소시킨다."
             },
             "S3": {
-                "name": "Curtain Call",
-                "description": "Attacks the enemy by crossing her rings and dispels all buffs from the target, before granting increased Critical Hit Damage to all allies for 2 turns. A critical hit will grant an extra turn."
+                "name": "커튼콜",
+                "description": "고리를 교차시켜 적을 공격하고 대상의 강화 효과를 모두 해제한 뒤 모든 아군에게 2턴 동안 치명 피해 증가를 부여한다. 치명타가 발생하면 추가 턴을 얻는다."
             }
         }
     },
@@ -1750,17 +1750,17 @@
         "_name": "Crimson Armin",
         "skills": {
             "S1": {
-                "name": "Takedown",
-                "description": "Attacks the enemy with a large shield, with a 100% chance to inflict provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "제압",
+                "description": "큰 방패로 적을 공격하며, 100% 확률로 1턴 동안 도발을 건다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Security State",
-                "description": "When an ally is attacked, grants 20% damage reduction."
+                "name": "경계 태세",
+                "description": "아군이 공격받으면 피해를 20% 감소시킨다."
             },
             "S3": {
-                "name": "Shield of Holy Spirit",
-                "description": "Covers all allies with an aura of holy spirit, granting immunity for 2 turns and invincibility for 1 turn.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "성령의 방패",
+                "description": "성령의 기운으로 모든 아군을 감싸 2턴 동안 면역을, 1턴 동안 무적을 부여한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -1768,17 +1768,17 @@
         "_name": "Crozet",
         "skills": {
             "S1": {
-                "name": "Rush",
-                "description": "Attacks with a sword, with a 75% chance to decrease Attack for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "돌진",
+                "description": "검으로 공격하며, 75% 확률로 1턴 동안 공격력을 감소시킨다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Mark of Protection",
-                "description": "After an ally is attacked, when the ally's Health is 50% or less, grants a barrier (proportional to the target's max Health) and increased Defense to the target for 2 turns."
+                "name": "수호의 증표",
+                "description": "아군이 공격받은 후 그 아군의 생명력이 50% 이하이면 대상에게 2턴 동안 보호막(대상 최대 생명력 비례)과 방어력 증가를 부여한다."
             },
             "S3": {
-                "name": "Breakthrough",
-                "description": "Attacks all enemies with a swordstorm, decreasing their Combat Readiness by 50%, before a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "돌파",
+                "description": "검풍으로 모든 적을 공격해 행동 게이지를 50% 감소시킨 뒤 75% 확률로 1턴 동안 도발을 건다. 시전자의 방어력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -1786,17 +1786,17 @@
         "_name": "Dark Corvus",
         "skills": {
             "S1": {
-                "name": "Shield Bash",
-                "description": "Attacks the enemy with a shield, with a 100% chance to provoke for 1 turn, before recovering the caster's Health. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "방패 강타",
+                "description": "방패로 적을 공격하며, 100% 확률로 1턴 동안 도발을 건 뒤 시전자의 생명력을 회복한다. 시전자의 최대 생명력에 비례해 주는 피해와 회복량이 증가한다."
             },
             "S2": {
-                "name": "Ruin's Advent",
-                "description": "Immune to debuffs which prevent movement. After being attacked, has a 100% chance to decrease skill cooldowns by 1 turn. After suffering a critical hit, has a 100% chance to decrease skill cooldowns by an additional 1 turn."
+                "name": "파멸의 강림",
+                "description": "행동을 막는 약화 효과에 면역이다. 공격받은 후 100% 확률로 스킬 재사용 대기 시간을 1턴 감소시킨다. 치명타를 받은 후 100% 확률로 스킬 재사용 대기 시간을 추가로 1턴 감소시킨다."
             },
             "S3": {
-                "name": "Devil's Descent",
-                "description": "Attacks the enemy with a lethal hit, and absorbs some of the damage as Health, and when the enemy is defeated, inflicts extinction. When the target is a Hero, ignores damage sharing. Penetrates Defense, and cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. Begins the first battle with full skill cooldown count.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "악마의 강림",
+                "description": "치명적인 일격으로 적을 공격하고 피해의 일부를 생명력으로 흡수하며, 적을 처치하면 소멸을 건다. 대상이 영웅이면 피해 분산을 무시한다. 방어력을 관통하며 치명타나 강타가 발생하지 않는다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 첫 번째 전투는 스킬 재사용 대기 시간이 가득 찬 상태로 시작한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },

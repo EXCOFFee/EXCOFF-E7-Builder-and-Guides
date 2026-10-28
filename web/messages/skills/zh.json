@@ -1660,17 +1660,17 @@
         "_name": "Commander Lorina",
         "skills": {
             "S1": {
-                "name": "Sharp Blow",
-                "description": "Knocks the enemy into the air with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the target's max Health."
+                "name": "锐利一击",
+                "description": "以长枪将敌人挑向空中，并使施放者的行动值提升20%。造成的伤害按目标的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Spiritual Armament",
-                "description": "Increases Effect Resistance by 50%. Increases Attack by 15% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+                "name": "精神武装",
+                "description": "效果抵抗提升50%。施放者每次攻击敌人时，攻击力提升15%。效果最多叠加5次。"
             },
             "S3": {
-                "name": "Spiral Breakthrough",
-                "description": "Attacks the enemy by piercing them with a spear, decreasing Combat Readiness by 15%. Damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "螺旋突破",
+                "description": "以长枪贯穿敌人进行攻击，并降低15%行动值。造成的伤害按目标的最大生命值比例提升。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -1678,17 +1678,17 @@
         "_name": "Commander Pavel",
         "skills": {
             "S1": {
-                "name": "How Sloppy",
-                "description": "Attacks the enemy with a gunblade, with a 75% chance to decrease Attack for 1 turn."
+                "name": "真是马虎",
+                "description": "以枪刃攻击敌人，有75%的几率降低攻击力1回合。"
             },
             "S2": {
-                "name": "Obstacle Elimination",
-                "description": "At the start of the first battle, gains 60 Fighting Spirit. After an ally except for the caster makes a critical hit, gains 20 Fighting Spirit, and when Fighting Spirit is full, activates Begone!. This effect is not activated by an extra attack, counterattack, or Dual Attack. Begone! (consumes 100 Fighting Spirit): Grants increased Attack to the caster for 2 turns, and attacks all enemies with gunfire, before increasing Combat Readiness of the caster by 100%."
+                "name": "清除障碍",
+                "description": "首场战斗开始时，获得60斗志。除施放者外的友军造成暴击后，获得20斗志；斗志已满时，发动滚开！。此效果不会由追加攻击、反击或协攻触发。滚开！（消耗100斗志）：为施放者施加2回合攻击力提升，以枪击攻击所有敌人，然后使施放者的行动值提升100%。"
             },
             "S3": {
-                "name": "Die, You Fly",
-                "description": "Attacks the enemy with a pistol. When the target is not an Elite or Boss monster, ignores damage share. When the caster's Attack is greater than the target's Attack, penetrates Defense proportionally, up to 70%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "去死吧，苍蝇",
+                "description": "以手枪攻击敌人。目标不是精英或首领怪物时，无视伤害分担。施放者的攻击力高于目标时，按比例穿透防御力，最多70%。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1696,17 +1696,17 @@
         "_name": "Conqueror Lilias",
         "skills": {
             "S1": {
-                "name": "Kneel Down",
-                "description": "Attacks the enemy with a sword, triggering a Dual Attack from a random ally."
+                "name": "跪下",
+                "description": "以剑攻击敌人，随机一名友军发动协攻。"
             },
             "S2": {
-                "name": "Cover!",
-                "description": "Distracts the enemy, with a 100% chance to inflict redirected provoke and decreased Defense for 1 turn. Grants a barrier (proportional to the target's max Health) to the caster and the ally except for the caster with the highest max Health for 2 turns.",
-                "soulburn_effect": "Extends duration of debuffs inflicted by this skill by 1 turn."
+                "name": "掩护！",
+                "description": "吸引敌人的注意力，有100%的几率施加1回合转移挑衅与防御力降低。为施放者与除施放者外最大生命值最高的友军施加2回合屏障（与目标的最大生命值成比例）。",
+                "soulburn_effect": "此技能施加的弱化效果持续时间延长1回合。"
             },
             "S3": {
-                "name": "For Honor!",
-                "description": "Encourages the Perland Army, granting vigor to all allies for 2 turns and increasing Combat Readiness by 15%. Decreases buff durations of all enemies by 1 turn and has a 100% chance to inflict decreased Attack for 2 turns. Grants an extra turn."
+                "name": "为了荣誉！",
+                "description": "鼓舞珀兰德军，为所有友军施加2回合斗志，并提升15%行动值。使所有敌人的强化效果持续时间减少1回合，并有100%的几率施加2回合攻击力降低。获得额外回合。"
             }
         }
     },
@@ -1714,17 +1714,17 @@
         "_name": "Corvus",
         "skills": {
             "S1": {
-                "name": "Shield Slam",
-                "description": "Attacks the enemy by shoving them with a shield, with a 75% chance to transfer one debuff. When the caster is granted indomitable, increases damage dealt and inflicts stun on the target for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "盾牌猛推",
+                "description": "以盾牌推撞敌人进行攻击，有75%的几率转移一个弱化效果。施放者拥有不屈时，提升造成的伤害，并使目标眩晕1回合。造成的伤害按施放者的防御力比例提升。"
             },
             "S2": {
-                "name": "Macerate",
-                "description": "Attacks all enemies with an iron mace, decreasing Combat Readiness by 30%. If the target's Combat Readiness decreases to 0, inflicts stun for 1 turn. When the caster is granted indomitable, doubles the effect of Combat Readiness decrease. Damage dealt increases proportional to the caster's Defense."
+                "name": "碾碎",
+                "description": "以铁锤攻击所有敌人，降低30%行动值。目标的行动值降至0时，使其眩晕1回合。施放者拥有不屈时，行动值降低效果翻倍。造成的伤害按施放者的防御力比例提升。"
             },
             "S3": {
-                "name": "Fury's Advent",
-                "description": "By discharging Fighting Spirit, grants indomitable for 3 turns and recovers Health proportional to max Health before granting an extra turn. At the start of the first battle, gains 50 Fighting Spirit. When attacked, gains 10 Fighting Spirit.",
-                "soulburn_effect": "Recovers Health proportional to max Health."
+                "name": "愤怒降临",
+                "description": "释放斗志，施加3回合不屈，并按最大生命值比例恢复生命值，然后获得额外回合。首场战斗开始时，获得50斗志。受到攻击时，获得10斗志。",
+                "soulburn_effect": "按最大生命值比例恢复生命值。"
             }
         }
     },
@@ -1732,17 +1732,17 @@
         "_name": "Crescent Moon Rin",
         "skills": {
             "S1": {
-                "name": "Heckle",
-                "description": "Attacks the enemy with a ring, with a 40% chance to stun for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "起哄",
+                "description": "以圆环攻击敌人，有40%的几率使其眩晕1回合。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Eyecatcher",
-                "description": "Attacks the enemy with a lavish dance and steals two buffs, granting their effects to all allies, before stunning the target for 1 turn. When the target had no prior buffs, decreases cooldown of this skill by 1 turn."
+                "name": "吸睛",
+                "description": "以华丽的舞蹈攻击敌人，夺取两个强化效果并施加给所有友军，然后使目标眩晕1回合。目标原本没有强化效果时，使此技能的冷却时间减少1回合。"
             },
             "S3": {
-                "name": "Curtain Call",
-                "description": "Attacks the enemy by crossing her rings and dispels all buffs from the target, before granting increased Critical Hit Damage to all allies for 2 turns. A critical hit will grant an extra turn."
+                "name": "谢幕",
+                "description": "交叉圆环攻击敌人，解除目标的所有强化效果，然后为所有友军施加2回合暴击伤害提升。暴击时获得额外回合。"
             }
         }
     },
@@ -1750,17 +1750,17 @@
         "_name": "Crimson Armin",
         "skills": {
             "S1": {
-                "name": "Takedown",
-                "description": "Attacks the enemy with a large shield, with a 100% chance to inflict provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "压制",
+                "description": "以大盾攻击敌人，有100%的几率施加1回合挑衅。造成的伤害按施放者的防御力比例提升。"
             },
             "S2": {
-                "name": "Security State",
-                "description": "When an ally is attacked, grants 20% damage reduction."
+                "name": "警戒状态",
+                "description": "友军受到攻击时，使其受到的伤害降低20%。"
             },
             "S3": {
-                "name": "Shield of Holy Spirit",
-                "description": "Covers all allies with an aura of holy spirit, granting immunity for 2 turns and invincibility for 1 turn.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "圣灵之盾",
+                "description": "以圣灵之气笼罩所有友军，施加2回合免疫与1回合无敌。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -1768,17 +1768,17 @@
         "_name": "Crozet",
         "skills": {
             "S1": {
-                "name": "Rush",
-                "description": "Attacks with a sword, with a 75% chance to decrease Attack for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "突进",
+                "description": "以剑攻击，有75%的几率降低攻击力1回合。造成的伤害按施放者的防御力比例提升。"
             },
             "S2": {
-                "name": "Mark of Protection",
-                "description": "After an ally is attacked, when the ally's Health is 50% or less, grants a barrier (proportional to the target's max Health) and increased Defense to the target for 2 turns."
+                "name": "守护印记",
+                "description": "友军受到攻击后，若该友军生命值在50%以下，为目标施加2回合屏障（与目标的最大生命值成比例）与防御力提升。"
             },
             "S3": {
-                "name": "Breakthrough",
-                "description": "Attacks all enemies with a swordstorm, decreasing their Combat Readiness by 50%, before a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "突破",
+                "description": "以剑暴攻击所有敌人，降低其50%行动值，然后有75%的几率施加1回合挑衅。造成的伤害按施放者的防御力比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -1786,17 +1786,17 @@
         "_name": "Dark Corvus",
         "skills": {
             "S1": {
-                "name": "Shield Bash",
-                "description": "Attacks the enemy with a shield, with a 100% chance to provoke for 1 turn, before recovering the caster's Health. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "盾击",
+                "description": "以盾牌攻击敌人，有100%的几率施加1回合挑衅，然后恢复施放者的生命值。造成的伤害与恢复量按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Ruin's Advent",
-                "description": "Immune to debuffs which prevent movement. After being attacked, has a 100% chance to decrease skill cooldowns by 1 turn. After suffering a critical hit, has a 100% chance to decrease skill cooldowns by an additional 1 turn."
+                "name": "毁灭降临",
+                "description": "免疫妨碍行动的弱化效果。受到攻击后，有100%的几率使技能冷却时间减少1回合。受到暴击后，有100%的几率使技能冷却时间额外减少1回合。"
             },
             "S3": {
-                "name": "Devil's Descent",
-                "description": "Attacks the enemy with a lethal hit, and absorbs some of the damage as Health, and when the enemy is defeated, inflicts extinction. When the target is a Hero, ignores damage sharing. Penetrates Defense, and cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. Begins the first battle with full skill cooldown count.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "恶魔降临",
+                "description": "以致命一击攻击敌人，将部分伤害吸收为生命值，击败敌人时施加湮灭。目标为英雄时，无视伤害分担。穿透防御力，且无法造成暴击或重击。造成的伤害按施放者的最大生命值比例提升。首场战斗开始时技能处于完整冷却状态。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },

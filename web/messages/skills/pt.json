@@ -1660,17 +1660,17 @@
         "_name": "Commander Lorina",
         "skills": {
             "S1": {
-                "name": "Sharp Blow",
-                "description": "Knocks the enemy into the air with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the target's max Health."
+                "name": "Golpe afiado",
+                "description": "Lança o inimigo para o alto com uma lança, aumentando a Prontidão de Combate do conjurador em 20%. O dano causado aumenta proporcionalmente à Vida máxima do alvo."
             },
             "S2": {
-                "name": "Spiritual Armament",
-                "description": "Increases Effect Resistance by 50%. Increases Attack by 15% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+                "name": "Armamento espiritual",
+                "description": "Aumenta a Resistência a Efeitos em 50%. Aumenta o Ataque em 15% cada vez que o conjurador ataca um inimigo. O efeito acumula até 5 vezes."
             },
             "S3": {
-                "name": "Spiral Breakthrough",
-                "description": "Attacks the enemy by piercing them with a spear, decreasing Combat Readiness by 15%. Damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Ruptura em espiral",
+                "description": "Ataca o inimigo perfurando-o com uma lança, diminuindo a Prontidão de Combate em 15%. O dano causado aumenta proporcionalmente à Vida máxima do alvo.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -1678,17 +1678,17 @@
         "_name": "Commander Pavel",
         "skills": {
             "S1": {
-                "name": "How Sloppy",
-                "description": "Attacks the enemy with a gunblade, with a 75% chance to decrease Attack for 1 turn."
+                "name": "Que desleixo",
+                "description": "Ataca o inimigo com uma pistola-espada, com 75% de chance de diminuir o Ataque por 1 turno."
             },
             "S2": {
-                "name": "Obstacle Elimination",
-                "description": "At the start of the first battle, gains 60 Fighting Spirit. After an ally except for the caster makes a critical hit, gains 20 Fighting Spirit, and when Fighting Spirit is full, activates Begone!. This effect is not activated by an extra attack, counterattack, or Dual Attack. Begone! (consumes 100 Fighting Spirit): Grants increased Attack to the caster for 2 turns, and attacks all enemies with gunfire, before increasing Combat Readiness of the caster by 100%."
+                "name": "Eliminação de obstáculos",
+                "description": "No início da primeira batalha, ganha 60 de Espírito de luta. Após um aliado, exceto o conjurador, causar um acerto crítico, ganha 20 de Espírito de luta e, quando o Espírito de luta está cheio, ativa Suma daqui!. Este efeito não é ativado por ataque extra, contra-ataque ou Ataque duplo. Suma daqui! (consome 100 de Espírito de luta): concede Aumentar Ataque ao conjurador por 2 turnos e ataca todos os inimigos com disparos, depois aumenta a Prontidão de Combate do conjurador em 100%."
             },
             "S3": {
-                "name": "Die, You Fly",
-                "description": "Attacks the enemy with a pistol. When the target is not an Elite or Boss monster, ignores damage share. When the caster's Attack is greater than the target's Attack, penetrates Defense proportionally, up to 70%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Morra, sua mosca",
+                "description": "Ataca o inimigo com uma pistola. Quando o alvo não é um monstro Elite ou Chefe, ignora a divisão de dano. Quando o Ataque do conjurador é maior que o do alvo, penetra a Defesa proporcionalmente, até 70%.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1696,17 +1696,17 @@
         "_name": "Conqueror Lilias",
         "skills": {
             "S1": {
-                "name": "Kneel Down",
-                "description": "Attacks the enemy with a sword, triggering a Dual Attack from a random ally."
+                "name": "Ajoelhe-se",
+                "description": "Ataca o inimigo com uma espada, e um aliado aleatório realiza um Ataque duplo."
             },
             "S2": {
-                "name": "Cover!",
-                "description": "Distracts the enemy, with a 100% chance to inflict redirected provoke and decreased Defense for 1 turn. Grants a barrier (proportional to the target's max Health) to the caster and the ally except for the caster with the highest max Health for 2 turns.",
-                "soulburn_effect": "Extends duration of debuffs inflicted by this skill by 1 turn."
+                "name": "Cobertura!",
+                "description": "Distrai o inimigo, com 100% de chance de aplicar provocação redirecionada e Diminuir Defesa por 1 turno. Concede uma barreira (proporcional à Vida máxima do alvo) ao conjurador e ao aliado com maior Vida máxima, exceto o conjurador, por 2 turnos.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos negativos aplicados por esta habilidade."
             },
             "S3": {
-                "name": "For Honor!",
-                "description": "Encourages the Perland Army, granting vigor to all allies for 2 turns and increasing Combat Readiness by 15%. Decreases buff durations of all enemies by 1 turn and has a 100% chance to inflict decreased Attack for 2 turns. Grants an extra turn."
+                "name": "Pela honra!",
+                "description": "Encoraja o Exército de Perland, concedendo vigor a todos os aliados por 2 turnos e aumentando a Prontidão de Combate em 15%. Diminui a duração dos efeitos positivos de todos os inimigos em 1 turno e tem 100% de chance de aplicar Diminuir Ataque por 2 turnos. Concede um turno extra."
             }
         }
     },
@@ -1714,17 +1714,17 @@
         "_name": "Corvus",
         "skills": {
             "S1": {
-                "name": "Shield Slam",
-                "description": "Attacks the enemy by shoving them with a shield, with a 75% chance to transfer one debuff. When the caster is granted indomitable, increases damage dealt and inflicts stun on the target for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "Pancada de escudo",
+                "description": "Ataca o inimigo empurrando-o com um escudo, com 75% de chance de transferir um efeito negativo. Quando o conjurador tem indomável, aumenta o dano causado e atordoa o alvo por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S2": {
-                "name": "Macerate",
-                "description": "Attacks all enemies with an iron mace, decreasing Combat Readiness by 30%. If the target's Combat Readiness decreases to 0, inflicts stun for 1 turn. When the caster is granted indomitable, doubles the effect of Combat Readiness decrease. Damage dealt increases proportional to the caster's Defense."
+                "name": "Esmagar",
+                "description": "Ataca todos os inimigos com uma maça de ferro, diminuindo a Prontidão de Combate em 30%. Se a Prontidão de Combate do alvo cair para 0, atordoa por 1 turno. Quando o conjurador tem indomável, a redução de Prontidão de Combate dobra. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S3": {
-                "name": "Fury's Advent",
-                "description": "By discharging Fighting Spirit, grants indomitable for 3 turns and recovers Health proportional to max Health before granting an extra turn. At the start of the first battle, gains 50 Fighting Spirit. When attacked, gains 10 Fighting Spirit.",
-                "soulburn_effect": "Recovers Health proportional to max Health."
+                "name": "Advento da fúria",
+                "description": "Liberando Espírito de luta, concede indomável por 3 turnos e recupera Vida proporcionalmente à Vida máxima, depois concede um turno extra. No início da primeira batalha, ganha 50 de Espírito de luta. Ao ser atacado, ganha 10 de Espírito de luta.",
+                "soulburn_effect": "Recupera Vida proporcionalmente à Vida máxima."
             }
         }
     },
@@ -1732,17 +1732,17 @@
         "_name": "Crescent Moon Rin",
         "skills": {
             "S1": {
-                "name": "Heckle",
-                "description": "Attacks the enemy with a ring, with a 40% chance to stun for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Provocação",
+                "description": "Ataca o inimigo com um aro, com 40% de chance de atordoar por 1 turno.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Eyecatcher",
-                "description": "Attacks the enemy with a lavish dance and steals two buffs, granting their effects to all allies, before stunning the target for 1 turn. When the target had no prior buffs, decreases cooldown of this skill by 1 turn."
+                "name": "Chamariz",
+                "description": "Ataca o inimigo com uma dança luxuosa e rouba dois efeitos positivos, concedendo seus efeitos a todos os aliados, depois atordoa o alvo por 1 turno. Quando o alvo não tinha efeitos positivos, diminui a recarga desta habilidade em 1 turno."
             },
             "S3": {
-                "name": "Curtain Call",
-                "description": "Attacks the enemy by crossing her rings and dispels all buffs from the target, before granting increased Critical Hit Damage to all allies for 2 turns. A critical hit will grant an extra turn."
+                "name": "Chamada final",
+                "description": "Ataca o inimigo cruzando seus aros e dissipa todos os efeitos positivos do alvo, depois concede Aumentar Dano Crítico a todos os aliados por 2 turnos. Um acerto crítico concede um turno extra."
             }
         }
     },
@@ -1750,17 +1750,17 @@
         "_name": "Crimson Armin",
         "skills": {
             "S1": {
-                "name": "Takedown",
-                "description": "Attacks the enemy with a large shield, with a 100% chance to inflict provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "Derrubada",
+                "description": "Ataca o inimigo com um grande escudo, com 100% de chance de provocá-lo por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S2": {
-                "name": "Security State",
-                "description": "When an ally is attacked, grants 20% damage reduction."
+                "name": "Estado de segurança",
+                "description": "Quando um aliado é atacado, concede 20% de redução de dano."
             },
             "S3": {
-                "name": "Shield of Holy Spirit",
-                "description": "Covers all allies with an aura of holy spirit, granting immunity for 2 turns and invincibility for 1 turn.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Escudo do Espírito Santo",
+                "description": "Cobre todos os aliados com uma aura do espírito santo, concedendo imunidade por 2 turnos e invencibilidade por 1 turno.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -1768,17 +1768,17 @@
         "_name": "Crozet",
         "skills": {
             "S1": {
-                "name": "Rush",
-                "description": "Attacks with a sword, with a 75% chance to decrease Attack for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "Investida",
+                "description": "Ataca com uma espada, com 75% de chance de diminuir o Ataque por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S2": {
-                "name": "Mark of Protection",
-                "description": "After an ally is attacked, when the ally's Health is 50% or less, grants a barrier (proportional to the target's max Health) and increased Defense to the target for 2 turns."
+                "name": "Marca da proteção",
+                "description": "Após um aliado ser atacado, quando a Vida desse aliado for 50% ou menos, concede uma barreira (proporcional à Vida máxima do alvo) e Aumentar Defesa ao alvo por 2 turnos."
             },
             "S3": {
-                "name": "Breakthrough",
-                "description": "Attacks all enemies with a swordstorm, decreasing their Combat Readiness by 50%, before a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Avanço",
+                "description": "Ataca todos os inimigos com uma tempestade de espadas, diminuindo a Prontidão de Combate deles em 50%, depois com 75% de chance provoca por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -1786,17 +1786,17 @@
         "_name": "Dark Corvus",
         "skills": {
             "S1": {
-                "name": "Shield Bash",
-                "description": "Attacks the enemy with a shield, with a 100% chance to provoke for 1 turn, before recovering the caster's Health. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "Golpe de escudo",
+                "description": "Ataca o inimigo com um escudo, com 100% de chance de provocá-lo por 1 turno, depois recupera a Vida do conjurador. O dano causado e a quantidade recuperada aumentam proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Ruin's Advent",
-                "description": "Immune to debuffs which prevent movement. After being attacked, has a 100% chance to decrease skill cooldowns by 1 turn. After suffering a critical hit, has a 100% chance to decrease skill cooldowns by an additional 1 turn."
+                "name": "Advento da ruína",
+                "description": "Imune a efeitos negativos que impedem a movimentação. Após ser atacado, tem 100% de chance de diminuir as recargas de habilidades em 1 turno. Após sofrer um acerto crítico, tem 100% de chance de diminuir as recargas de habilidades em mais 1 turno."
             },
             "S3": {
-                "name": "Devil's Descent",
-                "description": "Attacks the enemy with a lethal hit, and absorbs some of the damage as Health, and when the enemy is defeated, inflicts extinction. When the target is a Hero, ignores damage sharing. Penetrates Defense, and cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. Begins the first battle with full skill cooldown count.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Descida do demônio",
+                "description": "Ataca o inimigo com um golpe letal, absorve parte do dano como Vida e, ao derrotar o inimigo, aplica extinção. Quando o alvo é um herói, ignora a divisão de dano. Penetra a Defesa e não pode causar acerto crítico nem golpe pesado. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Começa a primeira batalha com a recarga da habilidade completa.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },

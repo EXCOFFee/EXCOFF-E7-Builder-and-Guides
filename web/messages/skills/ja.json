@@ -1660,17 +1660,17 @@
         "_name": "Commander Lorina",
         "skills": {
             "S1": {
-                "name": "Sharp Blow",
-                "description": "Knocks the enemy into the air with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the target's max Health."
+                "name": "鋭い一撃",
+                "description": "槍で敵を宙に打ち上げ、発動者の行動ゲージを20%増加させる。対象の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Spiritual Armament",
-                "description": "Increases Effect Resistance by 50%. Increases Attack by 15% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+                "name": "精神武装",
+                "description": "効果抵抗が50%アップする。発動者が敵を攻撃するたびに攻撃力が15%アップする。効果は最大5回まで重複する。"
             },
             "S3": {
-                "name": "Spiral Breakthrough",
-                "description": "Attacks the enemy by piercing them with a spear, decreasing Combat Readiness by 15%. Damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "螺旋突破",
+                "description": "槍で敵を貫いて攻撃し、行動ゲージを15%減少させる。対象の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -1678,17 +1678,17 @@
         "_name": "Commander Pavel",
         "skills": {
             "S1": {
-                "name": "How Sloppy",
-                "description": "Attacks the enemy with a gunblade, with a 75% chance to decrease Attack for 1 turn."
+                "name": "だらしない",
+                "description": "ガンブレードで敵を攻撃し、75%の確率で1ターンの間攻撃力をダウンさせる。"
             },
             "S2": {
-                "name": "Obstacle Elimination",
-                "description": "At the start of the first battle, gains 60 Fighting Spirit. After an ally except for the caster makes a critical hit, gains 20 Fighting Spirit, and when Fighting Spirit is full, activates Begone!. This effect is not activated by an extra attack, counterattack, or Dual Attack. Begone! (consumes 100 Fighting Spirit): Grants increased Attack to the caster for 2 turns, and attacks all enemies with gunfire, before increasing Combat Readiness of the caster by 100%."
+                "name": "障害物の排除",
+                "description": "最初のバトル開始時、闘志を60獲得する。発動者を除く味方がクリティカルを発生させた後、闘志を20獲得し、闘志が満タンになると消えろ！を発動する。この効果は追加攻撃、反撃、協攻では発動しない。消えろ！（闘志100消費）：発動者に2ターンの間攻撃力アップを付与し、銃撃で敵全体を攻撃した後、発動者の行動ゲージを100%増加させる。"
             },
             "S3": {
-                "name": "Die, You Fly",
-                "description": "Attacks the enemy with a pistol. When the target is not an Elite or Boss monster, ignores damage share. When the caster's Attack is greater than the target's Attack, penetrates Defense proportionally, up to 70%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "死ね、羽虫",
+                "description": "拳銃で敵を攻撃する。対象がエリートまたはボスモンスターでない場合、ダメージ分散を無視する。発動者の攻撃力が対象より高い場合、それに比例して防御力を最大70%まで貫通する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1696,17 +1696,17 @@
         "_name": "Conqueror Lilias",
         "skills": {
             "S1": {
-                "name": "Kneel Down",
-                "description": "Attacks the enemy with a sword, triggering a Dual Attack from a random ally."
+                "name": "跪け",
+                "description": "剣で敵を攻撃し、ランダムな味方が協攻する。"
             },
             "S2": {
-                "name": "Cover!",
-                "description": "Distracts the enemy, with a 100% chance to inflict redirected provoke and decreased Defense for 1 turn. Grants a barrier (proportional to the target's max Health) to the caster and the ally except for the caster with the highest max Health for 2 turns.",
-                "soulburn_effect": "Extends duration of debuffs inflicted by this skill by 1 turn."
+                "name": "援護！",
+                "description": "敵の注意を引きつけ、100%の確率で1ターンの間転換挑発と防御力ダウンを付与する。発動者と、発動者を除いて最大HPが最も高い味方に2ターンの間バリア（対象の最大HPに比例）を付与する。",
+                "soulburn_effect": "このスキルで付与する弱体効果の持続時間が1ターン延長される。"
             },
             "S3": {
-                "name": "For Honor!",
-                "description": "Encourages the Perland Army, granting vigor to all allies for 2 turns and increasing Combat Readiness by 15%. Decreases buff durations of all enemies by 1 turn and has a 100% chance to inflict decreased Attack for 2 turns. Grants an extra turn."
+                "name": "名誉のために！",
+                "description": "パーランド軍を鼓舞し、味方全員に2ターンの間闘志を付与し、行動ゲージを15%増加させる。敵全体の強化効果の持続時間を1ターン減少させ、100%の確率で2ターンの間攻撃力ダウンを付与する。追加ターンを得る。"
             }
         }
     },
@@ -1714,17 +1714,17 @@
         "_name": "Corvus",
         "skills": {
             "S1": {
-                "name": "Shield Slam",
-                "description": "Attacks the enemy by shoving them with a shield, with a 75% chance to transfer one debuff. When the caster is granted indomitable, increases damage dealt and inflicts stun on the target for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "シールドスラム",
+                "description": "盾で敵を押しのけて攻撃し、75%の確率で弱体効果を一つ移す。発動者に不屈があれば、与ダメージがアップし、対象を1ターンの間気絶させる。発動者の防御力に比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Macerate",
-                "description": "Attacks all enemies with an iron mace, decreasing Combat Readiness by 30%. If the target's Combat Readiness decreases to 0, inflicts stun for 1 turn. When the caster is granted indomitable, doubles the effect of Combat Readiness decrease. Damage dealt increases proportional to the caster's Defense."
+                "name": "叩き潰し",
+                "description": "鉄の棍棒で敵全体を攻撃し、行動ゲージを30%減少させる。対象の行動ゲージが0になると、1ターンの間気絶させる。発動者に不屈があれば、行動ゲージ減少効果が倍になる。発動者の防御力に比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Fury's Advent",
-                "description": "By discharging Fighting Spirit, grants indomitable for 3 turns and recovers Health proportional to max Health before granting an extra turn. At the start of the first battle, gains 50 Fighting Spirit. When attacked, gains 10 Fighting Spirit.",
-                "soulburn_effect": "Recovers Health proportional to max Health."
+                "name": "憤怒の降臨",
+                "description": "闘志を放出し、3ターンの間不屈を付与し、最大HPに比例してHPを回復した後、追加ターンを得る。最初のバトル開始時、闘志を50獲得する。攻撃されると闘志を10獲得する。",
+                "soulburn_effect": "最大HPに比例してHPを回復する。"
             }
         }
     },
@@ -1732,17 +1732,17 @@
         "_name": "Crescent Moon Rin",
         "skills": {
             "S1": {
-                "name": "Heckle",
-                "description": "Attacks the enemy with a ring, with a 40% chance to stun for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "野次",
+                "description": "リングで敵を攻撃し、40%の確率で1ターンの間気絶させる。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Eyecatcher",
-                "description": "Attacks the enemy with a lavish dance and steals two buffs, granting their effects to all allies, before stunning the target for 1 turn. When the target had no prior buffs, decreases cooldown of this skill by 1 turn."
+                "name": "視線奪取",
+                "description": "華麗な踊りで敵を攻撃し、強化効果を二つ奪って味方全員に付与した後、対象を1ターンの間気絶させる。対象に強化効果がなかった場合、このスキルのクールタイムを1ターン短縮する。"
             },
             "S3": {
-                "name": "Curtain Call",
-                "description": "Attacks the enemy by crossing her rings and dispels all buffs from the target, before granting increased Critical Hit Damage to all allies for 2 turns. A critical hit will grant an extra turn."
+                "name": "カーテンコール",
+                "description": "リングを交差させて敵を攻撃し、対象の強化効果をすべて解除した後、味方全員に2ターンの間クリティカルダメージアップを付与する。クリティカルが発生すると追加ターンを得る。"
             }
         }
     },
@@ -1750,17 +1750,17 @@
         "_name": "Crimson Armin",
         "skills": {
             "S1": {
-                "name": "Takedown",
-                "description": "Attacks the enemy with a large shield, with a 100% chance to inflict provoke for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "制圧",
+                "description": "大きな盾で敵を攻撃し、100%の確率で1ターンの間挑発を付与する。発動者の防御力に比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Security State",
-                "description": "When an ally is attacked, grants 20% damage reduction."
+                "name": "警戒態勢",
+                "description": "味方が攻撃されると、ダメージを20%軽減する。"
             },
             "S3": {
-                "name": "Shield of Holy Spirit",
-                "description": "Covers all allies with an aura of holy spirit, granting immunity for 2 turns and invincibility for 1 turn.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "聖霊の盾",
+                "description": "聖霊のオーラで味方全員を包み、2ターンの間免疫を、1ターンの間無敵を付与する。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -1768,17 +1768,17 @@
         "_name": "Crozet",
         "skills": {
             "S1": {
-                "name": "Rush",
-                "description": "Attacks with a sword, with a 75% chance to decrease Attack for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "突進",
+                "description": "剣で攻撃し、75%の確率で1ターンの間攻撃力をダウンさせる。発動者の防御力に比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Mark of Protection",
-                "description": "After an ally is attacked, when the ally's Health is 50% or less, grants a barrier (proportional to the target's max Health) and increased Defense to the target for 2 turns."
+                "name": "守護の証",
+                "description": "味方が攻撃された後、その味方のHPが50%以下なら、対象に2ターンの間バリア（対象の最大HPに比例）と防御力アップを付与する。"
             },
             "S3": {
-                "name": "Breakthrough",
-                "description": "Attacks all enemies with a swordstorm, decreasing their Combat Readiness by 50%, before a 75% chance to provoke for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "突破",
+                "description": "剣嵐で敵全体を攻撃し、行動ゲージを50%減少させた後、75%の確率で1ターンの間挑発を付与する。発動者の防御力に比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -1786,17 +1786,17 @@
         "_name": "Dark Corvus",
         "skills": {
             "S1": {
-                "name": "Shield Bash",
-                "description": "Attacks the enemy with a shield, with a 100% chance to provoke for 1 turn, before recovering the caster's Health. Damage dealt and amount recovered increase proportional to the caster's max Health."
+                "name": "シールドバッシュ",
+                "description": "盾で敵を攻撃し、100%の確率で1ターンの間挑発を付与した後、発動者のHPを回復する。発動者の最大HPに比例して与ダメージと回復量がアップする。"
             },
             "S2": {
-                "name": "Ruin's Advent",
-                "description": "Immune to debuffs which prevent movement. After being attacked, has a 100% chance to decrease skill cooldowns by 1 turn. After suffering a critical hit, has a 100% chance to decrease skill cooldowns by an additional 1 turn."
+                "name": "破滅の降臨",
+                "description": "行動を妨げる弱体効果を受けない。攻撃された後、100%の確率でスキルのクールタイムを1ターン短縮する。クリティカルを受けた後、100%の確率でスキルのクールタイムをさらに1ターン短縮する。"
             },
             "S3": {
-                "name": "Devil's Descent",
-                "description": "Attacks the enemy with a lethal hit, and absorbs some of the damage as Health, and when the enemy is defeated, inflicts extinction. When the target is a Hero, ignores damage sharing. Penetrates Defense, and cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health. Begins the first battle with full skill cooldown count.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "悪魔の降臨",
+                "description": "致命の一撃で敵を攻撃し、ダメージの一部をHPとして吸収し、敵を倒すと消滅を付与する。対象が英雄ならダメージ分散を無視する。防御力を貫通し、クリティカルや強打は発生しない。発動者の最大HPに比例して与ダメージがアップする。最初のバトルはスキルのクールタイムが満タンの状態で始まる。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
