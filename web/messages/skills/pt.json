@@ -328,17 +328,17 @@
         "_name": "Amiki",
         "skills": {
             "S1": {
-                "name": "Divine Punishment",
-                "description": "Attacks the enemy with a sword, and has a 75% chance to provoke for 1 turn. Cannot trigger a critical hit, and penetrates the target's Defense by 30%. After attacking, when the caster's Health is 30% or less, grants an extra attack with the same skill."
+                "name": "Punição divina",
+                "description": "Ataca o inimigo com uma espada e tem 75% de chance de provocá-lo por 1 turno. Não pode causar acerto crítico e penetra 30% da Defesa do alvo. Após atacar, quando a Vida do conjurador é 30% ou menos, concede um ataque extra com a mesma habilidade."
             },
             "S2": {
-                "name": "Desperate Resolve",
-                "description": "Grants immortality for 1 turn and increased Attack for 2 turns to the caster. Upon receiving lethal damage when the skill is available according to cooldown count, grants the same effects to the caster and fully increases cooldown of this skill."
+                "name": "Determinação desesperada",
+                "description": "Concede imortalidade por 1 turno e Aumentar Ataque por 2 turnos ao conjurador. Ao receber dano letal quando a habilidade estiver disponível pela contagem de recarga, concede os mesmos efeitos ao conjurador e enche completamente a recarga desta habilidade."
             },
             "S3": {
-                "name": "Avenger's Sword",
-                "description": "Slash the enemy consecutively to attack. Cannot trigger a critical hit. Penetrates the target's Defense by 30%, and when the caster's Health is 30% or less, penetrates by 70%. When the caster is immortal, grants an extra turn.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Espada do vingador",
+                "description": "Corta o inimigo consecutivamente para atacar. Não pode causar acerto crítico. Penetra 30% da Defesa do alvo e, quando a Vida do conjurador é 30% ou menos, penetra 70%. Quando o conjurador está imortal, concede um turno extra.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -346,17 +346,17 @@
         "_name": "Angel of Light Angelica",
         "skills": {
             "S1": {
-                "name": "Ritualistic Touch",
-                "description": "Attacks the enemy with fragments of a shimmering star, with a 75% chance to silence for 1 turn. When the target is silenced after attacking, decreases Combat Readiness of the target by 25%.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Toque ritual",
+                "description": "Ataca o inimigo com fragmentos de uma estrela cintilante, com 75% de chance de silenciá-lo por 1 turno. Se o alvo estiver silenciado após o ataque, diminui a Prontidão de Combate dele em 25%.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Guardian of Light",
-                "description": "Immune to stun, and after every attack suffered by an ally except for the caster, increases Combat Readiness of the caster by 8% each. When suffering an attack that targets all allies, has a 100% chance to activate Guardian Angel. Guardian Angel: Dispels one debuff from all allies before granting skill nullifier once."
+                "name": "Guardiã da luz",
+                "description": "Imune a atordoamento e, após cada ataque sofrido por um aliado, exceto o conjurador, aumenta a Prontidão de Combate do conjurador em 8% a cada vez. Ao sofrer um ataque que mira todos os aliados, tem 100% de chance de ativar Anjo da guarda. Anjo da guarda: dissipa um efeito negativo de todos os aliados antes de conceder Anulação de habilidade uma vez."
             },
             "S3": {
-                "name": "Judgement of Angels",
-                "description": "With holy light, dispels two buffs from all enemies before a 100% chance to inflict cannot buff for 2 turns and silence for 1 turn."
+                "name": "Julgamento dos anjos",
+                "description": "Com luz sagrada, dissipa dois efeitos positivos de todos os inimigos, depois tem 100% de chance de aplicar impedimento de efeitos positivos por 2 turnos e silêncio por 1 turno."
             }
         }
     },
@@ -364,17 +364,17 @@
         "_name": "Angelic Montmorancy",
         "skills": {
             "S1": {
-                "name": "Sleep Sorcery",
-                "description": "Attacks the enemy with water energy, with a 75% chance to put them to sleep for 1 turn."
+                "name": "Feitiço do sono",
+                "description": "Ataca o inimigo com energia da água, com 75% de chance de fazê-lo dormir por 1 turno."
             },
             "S2": {
-                "name": "Purification",
-                "description": "Dispels one debuff from all allies and recovers Health of allies inflicted with debuffs proportional to the target's max Health"
+                "name": "Purificação",
+                "description": "Dissipa um efeito negativo de todos os aliados e recupera a Vida dos aliados com efeitos negativos proporcionalmente à Vida máxima do alvo."
             },
             "S3": {
-                "name": "Earnest Prayer",
-                "description": "Dispels two debuffs from an ally before recovering Health proportional to the target's max Health and grants immunity for 2 turns. Decreases skill cooldown of the caster by 1 turn.",
-                "soulburn_effect": "Effect is granted to all allies."
+                "name": "Prece fervorosa",
+                "description": "Dissipa dois efeitos negativos de um aliado, depois recupera Vida proporcionalmente à Vida máxima do alvo e concede imunidade por 2 turnos. Diminui a recarga das habilidades do conjurador em 1 turno.",
+                "soulburn_effect": "O efeito é concedido a todos os aliados."
             }
         }
     },
@@ -382,17 +382,17 @@
         "_name": "Angelica",
         "skills": {
             "S1": {
-                "name": "Holy Strike",
-                "description": "Attacks with a staff, with a 25% chance to stun for 1 turn."
+                "name": "Golpe sagrado",
+                "description": "Ataca com um cajado, com 25% de chance de atordoar por 1 turno."
             },
             "S2": {
-                "name": "Origin of Life",
-                "description": "With the power of healing, recovers Health of the target and the ally with the lowest Health proportional to the caster's max Health."
+                "name": "Origem da vida",
+                "description": "Com o poder da cura, recupera a Vida do alvo e do aliado com menor Vida proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Guide of the Goddess",
-                "description": "Recovers Health of all allies and grants immunity and a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 2 turns."
+                "name": "Guia da deusa",
+                "description": "Recupera a Vida de todos os aliados e concede imunidade e uma barreira por 2 turnos. A quantidade recuperada e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Estende em 2 turnos a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -400,17 +400,17 @@
         "_name": "Apocalypse Ravi",
         "skills": {
             "S1": {
-                "name": "Spectral Axe",
-                "description": "Attacks the enemy with an axe, inflicting up to 10% injuries before absorbing some of the damage dealt as Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Greatly increases damage dealt. Does not trigger a Dual Attack."
+                "name": "Machado espectral",
+                "description": "Ataca o inimigo com um machado, causando até 10% de ferimentos, depois absorve parte do dano causado como Vida. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta muito o dano causado. Não ativa Ataque duplo."
             },
             "S2": {
-                "name": "War God's Might",
-                "description": "Increases Penetration Resistance by 30%. At the start of the first battle, gains 50 Fighting Spirit. After being attacked, consumes 10 Fighting Spirit, increasing Combat Readiness of the caster by 15% and recovering Health proportional to the caster's max Health."
+                "name": "Poder do deus da guerra",
+                "description": "Aumenta a Resistência a Penetração em 30%. No início da primeira batalha, ganha 50 de Espírito de luta. Após ser atacado, consome 10 de Espírito de luta, aumentando a Prontidão de Combate do conjurador em 15% e recuperando Vida proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Deliverance: Soul Exchange",
-                "description": "Attacks the enemy with divine judgment. When the enemy is defeated, revives one random dead ally with 30% Health and increases Combat Readiness by 100% before granting skill nullifier once. Damage dealt increases proportional to the caster's max Health. When an ally dies, grants War God to the caster and resets cooldown of this skill."
+                "name": "Libertação: troca de almas",
+                "description": "Ataca o inimigo com julgamento divino. Ao derrotar o inimigo, revive um aliado morto aleatório com 30% de Vida e aumenta a Prontidão de Combate em 100%, depois concede Anulação de habilidade uma vez. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Quando um aliado morre, concede Deus da guerra ao conjurador e reinicia a recarga desta habilidade."
             }
         }
     },
@@ -418,17 +418,17 @@
         "_name": "Aram",
         "skills": {
             "S1": {
-                "name": "Atten-Tion!",
-                "description": "Attacks the enemy by whipping up the sand and has a 35% chance to inflict stun for 1 turn, before recovering Health of all allies proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Sen-tido!",
+                "description": "Ataca o inimigo levantando a areia e tem 35% de chance de atordoar por 1 turno, depois recupera a Vida de todos os aliados proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Coastal Discipline",
-                "description": "At the start of the first battle, if an enemy takes the first turn, grants immunity to all allies for 3 turns, and if an ally takes the first turn, grants increased Effectiveness to all allies for 3 turns. After suffering an attack that targets all allies, activates Warming Up. Warming Up (gains 10 Soul): Grants vigor and increased Speed to all allies for 2 turns."
+                "name": "Disciplina costeira",
+                "description": "No início da primeira batalha, se um inimigo agir primeiro, concede imunidade a todos os aliados por 3 turnos; se um aliado agir primeiro, concede Aumentar Eficácia a todos os aliados por 3 turnos. Após sofrer um ataque que mira todos os aliados, ativa Aquecimento. Aquecimento (ganha 10 de Alma): concede vigor e Aumentar Velocidade a todos os aliados por 2 turnos."
             },
             "S3": {
-                "name": "Rapid Rescue",
-                "description": "Fires a rescue line launcher, granting exploiting weak points to an ally except for the caster and resetting skill cooldowns before increasing Combat Readiness by 100%. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "Resgate rápido",
+                "description": "Dispara um lançador de cabo de resgate, concedendo Exploração de pontos fracos a um aliado, exceto o conjurador, e reiniciando as recargas de habilidades, depois aumenta a Prontidão de Combate em 100%. Esta habilidade não é afetada por efeitos de aumento ou redução de recarga."
             }
         }
     },
@@ -436,17 +436,17 @@
         "_name": "Aramintha",
         "skills": {
             "S1": {
-                "name": "Ignite",
-                "description": "Attacks the enemy with an explosion of flames, with a 50% chance to burn for 2 turns."
+                "name": "Ignição",
+                "description": "Ataca o inimigo com uma explosão de chamas, com 50% de chance de aplicar queimadura por 2 turnos."
             },
             "S2": {
-                "name": "Catalyst",
-                "description": "Attacks all enemies with a catalytic explosion, dispelling two buffs and making them unhealable for 2 turns, before increasing Attack of all allies for 2 turns. For each unhealable inflicted, increases Combat Readiness of the caster by 30%."
+                "name": "Catalisador",
+                "description": "Ataca todos os inimigos com uma explosão catalítica, dissipando dois efeitos positivos e impedindo que sejam curados por 2 turnos, depois aumenta o Ataque de todos os aliados por 2 turnos. Para cada impedimento de cura aplicado, aumenta a Prontidão de Combate do conjurador em 30%."
             },
             "S3": {
-                "name": "Fire Pillar",
-                "description": "Attacks all enemies with a massive fire pillar, with a 100% chance each to inflict two burn effects for 2 turns and a 70% chance to inflict stun for 1 turn. Grants a barrier (proportional to the caster's Attack) to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Pilar de fogo",
+                "description": "Ataca todos os inimigos com um enorme pilar de fogo, com 100% de chance cada de aplicar dois efeitos de queimadura por 2 turnos e 70% de chance de atordoar por 1 turno. Concede ao conjurador uma barreira (proporcional ao Ataque do conjurador) por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -454,17 +454,17 @@
         "_name": "Arbiter Vildred",
         "skills": {
             "S1": {
-                "name": "Sweep",
-                "description": "Attacks two enemies with a swordstorm, transferring two debuffs from the caster. When a critical hit is made, ignores Effect Resistance."
+                "name": "Varredura",
+                "description": "Ataca dois inimigos com uma tempestade de espadas, transferindo dois efeitos negativos do conjurador. Um acerto crítico ignora a Resistência a Efeitos."
             },
             "S2": {
-                "name": "Dark Contract",
-                "description": "At the start of the turn, when Focus is full, resets skill cooldown of Dark Blade. Upon dying, revives to 100% Health, before increasing Combat Readiness by 100% and gaining maximum Focus."
+                "name": "Contrato sombrio",
+                "description": "No início do turno, quando o Foco está cheio, reinicia a recarga de Lâmina sombria. Ao morrer, revive com 100% de Vida, depois aumenta a Prontidão de Combate em 100% e ganha Foco máximo."
             },
             "S3": {
-                "name": "Dark Blade",
-                "description": "After increasing Attack of the caster for 2 turns, attacks all enemies before inflicting decreased Hit Chance for 2 turns, and when an enemy is defeated, resets cooldown. When Focus is full, consumes it all, increasing damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Lâmina sombria",
+                "description": "Após aumentar o Ataque do conjurador por 2 turnos, ataca todos os inimigos e aplica Diminuir Precisão por 2 turnos; ao derrotar um inimigo, reinicia a recarga. Quando o Foco está cheio, consome todo o Foco, aumentando o dano causado.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },

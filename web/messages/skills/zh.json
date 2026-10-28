@@ -328,17 +328,17 @@
         "_name": "Amiki",
         "skills": {
             "S1": {
-                "name": "Divine Punishment",
-                "description": "Attacks the enemy with a sword, and has a 75% chance to provoke for 1 turn. Cannot trigger a critical hit, and penetrates the target's Defense by 30%. After attacking, when the caster's Health is 30% or less, grants an extra attack with the same skill."
+                "name": "神罚",
+                "description": "以剑攻击敌人，有75%的几率施加1回合挑衅。无法造成暴击，穿透目标30%的防御力。攻击后若施放者生命值在30%以下，以相同技能追加攻击。"
             },
             "S2": {
-                "name": "Desperate Resolve",
-                "description": "Grants immortality for 1 turn and increased Attack for 2 turns to the caster. Upon receiving lethal damage when the skill is available according to cooldown count, grants the same effects to the caster and fully increases cooldown of this skill."
+                "name": "决死觉悟",
+                "description": "为施放者施加1回合不死与2回合攻击力提升。技能冷却完毕时受到致命伤害，为施放者施加相同效果，并使此技能冷却时间回满。"
             },
             "S3": {
-                "name": "Avenger's Sword",
-                "description": "Slash the enemy consecutively to attack. Cannot trigger a critical hit. Penetrates the target's Defense by 30%, and when the caster's Health is 30% or less, penetrates by 70%. When the caster is immortal, grants an extra turn.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "复仇者之剑",
+                "description": "连续斩击敌人。无法造成暴击。穿透目标30%的防御力，施放者生命值在30%以下时穿透70%。施放者处于不死状态时获得额外回合。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -346,17 +346,17 @@
         "_name": "Angel of Light Angelica",
         "skills": {
             "S1": {
-                "name": "Ritualistic Touch",
-                "description": "Attacks the enemy with fragments of a shimmering star, with a 75% chance to silence for 1 turn. When the target is silenced after attacking, decreases Combat Readiness of the target by 25%.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "仪式之触",
+                "description": "以闪耀星辰的碎片攻击敌人，有75%的几率施加1回合沉默。攻击后若目标处于沉默状态，使其行动值降低25%。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Guardian of Light",
-                "description": "Immune to stun, and after every attack suffered by an ally except for the caster, increases Combat Readiness of the caster by 8% each. When suffering an attack that targets all allies, has a 100% chance to activate Guardian Angel. Guardian Angel: Dispels one debuff from all allies before granting skill nullifier once."
+                "name": "光之守护者",
+                "description": "免疫眩晕，除施放者外的友军每次受到攻击后，施放者的行动值各提升8%。受到以所有友军为目标的攻击时，有100%的几率发动守护天使。守护天使：解除所有友军的一个弱化效果，然后施加一次技能伤害无效。"
             },
             "S3": {
-                "name": "Judgement of Angels",
-                "description": "With holy light, dispels two buffs from all enemies before a 100% chance to inflict cannot buff for 2 turns and silence for 1 turn."
+                "name": "天使的审判",
+                "description": "以神圣之光解除所有敌人的两个强化效果，然后有100%的几率施加2回合无法强化与1回合沉默。"
             }
         }
     },
@@ -364,17 +364,17 @@
         "_name": "Angelic Montmorancy",
         "skills": {
             "S1": {
-                "name": "Sleep Sorcery",
-                "description": "Attacks the enemy with water energy, with a 75% chance to put them to sleep for 1 turn."
+                "name": "睡眠魔法",
+                "description": "以水之力攻击敌人，有75%的几率使其睡眠1回合。"
             },
             "S2": {
-                "name": "Purification",
-                "description": "Dispels one debuff from all allies and recovers Health of allies inflicted with debuffs proportional to the target's max Health"
+                "name": "净化",
+                "description": "解除所有友军的一个弱化效果，并按目标的最大生命值比例恢复身上有弱化效果的友军的生命值。"
             },
             "S3": {
-                "name": "Earnest Prayer",
-                "description": "Dispels two debuffs from an ally before recovering Health proportional to the target's max Health and grants immunity for 2 turns. Decreases skill cooldown of the caster by 1 turn.",
-                "soulburn_effect": "Effect is granted to all allies."
+                "name": "恳切祈祷",
+                "description": "解除一名友军的两个弱化效果，然后按目标的最大生命值比例恢复生命值，并施加2回合免疫。使施放者的技能冷却时间减少1回合。",
+                "soulburn_effect": "效果施加于所有友军。"
             }
         }
     },
@@ -382,17 +382,17 @@
         "_name": "Angelica",
         "skills": {
             "S1": {
-                "name": "Holy Strike",
-                "description": "Attacks with a staff, with a 25% chance to stun for 1 turn."
+                "name": "神圣一击",
+                "description": "以法杖攻击，有25%的几率使其眩晕1回合。"
             },
             "S2": {
-                "name": "Origin of Life",
-                "description": "With the power of healing, recovers Health of the target and the ally with the lowest Health proportional to the caster's max Health."
+                "name": "生命之源",
+                "description": "以治愈之力，按施放者的最大生命值比例恢复目标与生命值最低的友军的生命值。"
             },
             "S3": {
-                "name": "Guide of the Goddess",
-                "description": "Recovers Health of all allies and grants immunity and a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 2 turns."
+                "name": "女神的指引",
+                "description": "恢复所有友军的生命值，并施加2回合免疫与屏障。恢复量与屏障强度按施放者的最大生命值比例提升。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长2回合。"
             }
         }
     },
@@ -400,17 +400,17 @@
         "_name": "Apocalypse Ravi",
         "skills": {
             "S1": {
-                "name": "Spectral Axe",
-                "description": "Attacks the enemy with an axe, inflicting up to 10% injuries before absorbing some of the damage dealt as Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Greatly increases damage dealt. Does not trigger a Dual Attack."
+                "name": "亡灵之斧",
+                "description": "以斧头攻击敌人，造成最多10%的负伤，然后将部分造成的伤害吸收为生命值。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "大幅提升造成的伤害。不会触发协攻。"
             },
             "S2": {
-                "name": "War God's Might",
-                "description": "Increases Penetration Resistance by 30%. At the start of the first battle, gains 50 Fighting Spirit. After being attacked, consumes 10 Fighting Spirit, increasing Combat Readiness of the caster by 15% and recovering Health proportional to the caster's max Health."
+                "name": "战神之威",
+                "description": "穿透抵抗提升30%。首场战斗开始时，获得50斗志。受到攻击后，消耗10斗志，使施放者的行动值提升15%，并按施放者的最大生命值比例恢复生命值。"
             },
             "S3": {
-                "name": "Deliverance: Soul Exchange",
-                "description": "Attacks the enemy with divine judgment. When the enemy is defeated, revives one random dead ally with 30% Health and increases Combat Readiness by 100% before granting skill nullifier once. Damage dealt increases proportional to the caster's max Health. When an ally dies, grants War God to the caster and resets cooldown of this skill."
+                "name": "救赎：灵魂交换",
+                "description": "以神之审判攻击敌人。击败敌人时，以30%生命值复活随机一名阵亡友军，并提升100%行动值，然后施加一次技能伤害无效。造成的伤害按施放者的最大生命值比例提升。友军阵亡时，为施放者施加战神，并重置此技能的冷却时间。"
             }
         }
     },
@@ -418,17 +418,17 @@
         "_name": "Aram",
         "skills": {
             "S1": {
-                "name": "Atten-Tion!",
-                "description": "Attacks the enemy by whipping up the sand and has a 35% chance to inflict stun for 1 turn, before recovering Health of all allies proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "立正！",
+                "description": "扬起沙尘攻击敌人，有35%的几率使其眩晕1回合，然后按施放者的最大生命值比例恢复所有友军的生命值。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Coastal Discipline",
-                "description": "At the start of the first battle, if an enemy takes the first turn, grants immunity to all allies for 3 turns, and if an ally takes the first turn, grants increased Effectiveness to all allies for 3 turns. After suffering an attack that targets all allies, activates Warming Up. Warming Up (gains 10 Soul): Grants vigor and increased Speed to all allies for 2 turns."
+                "name": "海岸纪律",
+                "description": "首场战斗开始时，若敌人先行动，为所有友军施加3回合免疫；若友军先行动，为所有友军施加3回合效果命中提升。受到以所有友军为目标的攻击后，发动热身运动。热身运动（获得10魂）：为所有友军施加2回合斗志与速度提升。"
             },
             "S3": {
-                "name": "Rapid Rescue",
-                "description": "Fires a rescue line launcher, granting exploiting weak points to an ally except for the caster and resetting skill cooldowns before increasing Combat Readiness by 100%. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "快速救援",
+                "description": "发射救援绳索发射器，为除施放者外的一名友军施加弱点洞察，并重置技能冷却时间，然后提升100%行动值。此技能不受冷却时间增减效果影响。"
             }
         }
     },
@@ -436,17 +436,17 @@
         "_name": "Aramintha",
         "skills": {
             "S1": {
-                "name": "Ignite",
-                "description": "Attacks the enemy with an explosion of flames, with a 50% chance to burn for 2 turns."
+                "name": "点燃",
+                "description": "以火焰爆炸攻击敌人，有50%的几率施加2回合灼伤。"
             },
             "S2": {
-                "name": "Catalyst",
-                "description": "Attacks all enemies with a catalytic explosion, dispelling two buffs and making them unhealable for 2 turns, before increasing Attack of all allies for 2 turns. For each unhealable inflicted, increases Combat Readiness of the caster by 30%."
+                "name": "催化剂",
+                "description": "以催化爆炸攻击所有敌人，解除两个强化效果并施加2回合无法恢复，然后提升所有友军的攻击力2回合。每施加一个无法恢复，使施放者的行动值提升30%。"
             },
             "S3": {
-                "name": "Fire Pillar",
-                "description": "Attacks all enemies with a massive fire pillar, with a 100% chance each to inflict two burn effects for 2 turns and a 70% chance to inflict stun for 1 turn. Grants a barrier (proportional to the caster's Attack) to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "火柱",
+                "description": "以巨大火柱攻击所有敌人，各有100%的几率施加两层2回合灼伤，并有70%的几率使其眩晕1回合。为施放者施加2回合屏障（与施放者的攻击力成比例）。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -454,17 +454,17 @@
         "_name": "Arbiter Vildred",
         "skills": {
             "S1": {
-                "name": "Sweep",
-                "description": "Attacks two enemies with a swordstorm, transferring two debuffs from the caster. When a critical hit is made, ignores Effect Resistance."
+                "name": "横扫",
+                "description": "以剑暴攻击两名敌人，并转移施放者的两个弱化效果。暴击时无视效果抵抗。"
             },
             "S2": {
-                "name": "Dark Contract",
-                "description": "At the start of the turn, when Focus is full, resets skill cooldown of Dark Blade. Upon dying, revives to 100% Health, before increasing Combat Readiness by 100% and gaining maximum Focus."
+                "name": "黑暗契约",
+                "description": "回合开始时，若专注已满，重置黑暗之刃的冷却时间。阵亡时以100%生命值复活，然后提升100%行动值并获得最大专注。"
             },
             "S3": {
-                "name": "Dark Blade",
-                "description": "After increasing Attack of the caster for 2 turns, attacks all enemies before inflicting decreased Hit Chance for 2 turns, and when an enemy is defeated, resets cooldown. When Focus is full, consumes it all, increasing damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "黑暗之刃",
+                "description": "提升施放者的攻击力2回合后，攻击所有敌人并施加2回合命中率降低；击败敌人时重置冷却时间。专注已满时，消耗全部专注以提升造成的伤害。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },

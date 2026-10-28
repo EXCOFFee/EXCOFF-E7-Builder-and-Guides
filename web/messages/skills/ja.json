@@ -328,17 +328,17 @@
         "_name": "Amiki",
         "skills": {
             "S1": {
-                "name": "Divine Punishment",
-                "description": "Attacks the enemy with a sword, and has a 75% chance to provoke for 1 turn. Cannot trigger a critical hit, and penetrates the target's Defense by 30%. After attacking, when the caster's Health is 30% or less, grants an extra attack with the same skill."
+                "name": "神罰",
+                "description": "剣で敵を攻撃し、75%の確率で1ターンの間挑発を付与する。クリティカルが発生せず、対象の防御力を30%貫通する。攻撃後、発動者のHPが30%以下なら、同じスキルで追加攻撃する。"
             },
             "S2": {
-                "name": "Desperate Resolve",
-                "description": "Grants immortality for 1 turn and increased Attack for 2 turns to the caster. Upon receiving lethal damage when the skill is available according to cooldown count, grants the same effects to the caster and fully increases cooldown of this skill."
+                "name": "決死の覚悟",
+                "description": "発動者に1ターンの間不死を、2ターンの間攻撃力アップを付与する。クールタイム上スキルが使用可能なときに致命的なダメージを受けると、発動者に同じ効果を付与し、このスキルのクールタイムを満タンにする。"
             },
             "S3": {
-                "name": "Avenger's Sword",
-                "description": "Slash the enemy consecutively to attack. Cannot trigger a critical hit. Penetrates the target's Defense by 30%, and when the caster's Health is 30% or less, penetrates by 70%. When the caster is immortal, grants an extra turn.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "復讐者の剣",
+                "description": "敵を連続で斬って攻撃する。クリティカルが発生しない。対象の防御力を30%貫通し、発動者のHPが30%以下なら70%貫通する。発動者が不死状態なら追加ターンを得る。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -346,17 +346,17 @@
         "_name": "Angel of Light Angelica",
         "skills": {
             "S1": {
-                "name": "Ritualistic Touch",
-                "description": "Attacks the enemy with fragments of a shimmering star, with a 75% chance to silence for 1 turn. When the target is silenced after attacking, decreases Combat Readiness of the target by 25%.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "儀式の手",
+                "description": "きらめく星の欠片で敵を攻撃し、75%の確率で1ターンの間沈黙を付与する。攻撃後、対象が沈黙状態なら対象の行動ゲージを25%減少させる。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Guardian of Light",
-                "description": "Immune to stun, and after every attack suffered by an ally except for the caster, increases Combat Readiness of the caster by 8% each. When suffering an attack that targets all allies, has a 100% chance to activate Guardian Angel. Guardian Angel: Dispels one debuff from all allies before granting skill nullifier once."
+                "name": "光の守護者",
+                "description": "気絶を受けず、発動者を除く味方が攻撃されるたびに、発動者の行動ゲージをそれぞれ8%増加させる。味方全体を対象とする攻撃を受けると、100%の確率で守護天使を発動する。守護天使：味方全員の弱体効果を一つ解除した後、スキルダメージ無効を一度付与する。"
             },
             "S3": {
-                "name": "Judgement of Angels",
-                "description": "With holy light, dispels two buffs from all enemies before a 100% chance to inflict cannot buff for 2 turns and silence for 1 turn."
+                "name": "天使の審判",
+                "description": "聖なる光で敵全体の強化効果を二つ解除した後、100%の確率で2ターンの間強化不可を、1ターンの間沈黙を付与する。"
             }
         }
     },
@@ -364,17 +364,17 @@
         "_name": "Angelic Montmorancy",
         "skills": {
             "S1": {
-                "name": "Sleep Sorcery",
-                "description": "Attacks the enemy with water energy, with a 75% chance to put them to sleep for 1 turn."
+                "name": "睡眠魔法",
+                "description": "水の気で敵を攻撃し、75%の確率で1ターンの間睡眠状態にする。"
             },
             "S2": {
-                "name": "Purification",
-                "description": "Dispels one debuff from all allies and recovers Health of allies inflicted with debuffs proportional to the target's max Health"
+                "name": "浄化",
+                "description": "味方全員の弱体効果を一つ解除し、対象の最大HPに比例して弱体効果を受けている味方のHPを回復する。"
             },
             "S3": {
-                "name": "Earnest Prayer",
-                "description": "Dispels two debuffs from an ally before recovering Health proportional to the target's max Health and grants immunity for 2 turns. Decreases skill cooldown of the caster by 1 turn.",
-                "soulburn_effect": "Effect is granted to all allies."
+                "name": "切実な祈り",
+                "description": "味方一人の弱体効果を二つ解除した後、対象の最大HPに比例してHPを回復し、2ターンの間免疫を付与する。発動者のスキルのクールタイムを1ターン短縮する。",
+                "soulburn_effect": "味方全員に効果が付与される。"
             }
         }
     },
@@ -382,17 +382,17 @@
         "_name": "Angelica",
         "skills": {
             "S1": {
-                "name": "Holy Strike",
-                "description": "Attacks with a staff, with a 25% chance to stun for 1 turn."
+                "name": "神聖な一撃",
+                "description": "杖で攻撃し、25%の確率で1ターンの間気絶させる。"
             },
             "S2": {
-                "name": "Origin of Life",
-                "description": "With the power of healing, recovers Health of the target and the ally with the lowest Health proportional to the caster's max Health."
+                "name": "生命の源",
+                "description": "癒しの力で、発動者の最大HPに比例して対象とHPが最も低い味方のHPを回復する。"
             },
             "S3": {
-                "name": "Guide of the Goddess",
-                "description": "Recovers Health of all allies and grants immunity and a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 2 turns."
+                "name": "女神の導き",
+                "description": "味方全員のHPを回復し、2ターンの間免疫とバリアを付与する。発動者の最大HPに比例して回復量とバリアの強度がアップする。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が2ターン延長される。"
             }
         }
     },
@@ -400,17 +400,17 @@
         "_name": "Apocalypse Ravi",
         "skills": {
             "S1": {
-                "name": "Spectral Axe",
-                "description": "Attacks the enemy with an axe, inflicting up to 10% injuries before absorbing some of the damage dealt as Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Greatly increases damage dealt. Does not trigger a Dual Attack."
+                "name": "亡霊の斧",
+                "description": "斧で敵を攻撃し、最大10%の負傷を与えた後、与ダメージの一部をHPとして吸収する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージが大幅にアップする。協攻が発動しない。"
             },
             "S2": {
-                "name": "War God's Might",
-                "description": "Increases Penetration Resistance by 30%. At the start of the first battle, gains 50 Fighting Spirit. After being attacked, consumes 10 Fighting Spirit, increasing Combat Readiness of the caster by 15% and recovering Health proportional to the caster's max Health."
+                "name": "戦神の威力",
+                "description": "貫通抵抗が30%アップする。最初のバトル開始時、闘志を50獲得する。攻撃された後、闘志を10消費し、発動者の行動ゲージを15%増加させ、発動者の最大HPに比例してHPを回復する。"
             },
             "S3": {
-                "name": "Deliverance: Soul Exchange",
-                "description": "Attacks the enemy with divine judgment. When the enemy is defeated, revives one random dead ally with 30% Health and increases Combat Readiness by 100% before granting skill nullifier once. Damage dealt increases proportional to the caster's max Health. When an ally dies, grants War God to the caster and resets cooldown of this skill."
+                "name": "救済：魂の交換",
+                "description": "神の審判で敵を攻撃する。敵を倒すと、ランダムな死亡した味方一人をHP30%で復活させ、行動ゲージを100%増加させた後、スキルダメージ無効を一度付与する。発動者の最大HPに比例して与ダメージがアップする。味方が死亡すると、発動者に戦神を付与し、このスキルのクールタイムをリセットする。"
             }
         }
     },
@@ -418,17 +418,17 @@
         "_name": "Aram",
         "skills": {
             "S1": {
-                "name": "Atten-Tion!",
-                "description": "Attacks the enemy by whipping up the sand and has a 35% chance to inflict stun for 1 turn, before recovering Health of all allies proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "気をつけ！",
+                "description": "砂を巻き上げて敵を攻撃し、35%の確率で1ターンの間気絶させた後、発動者の最大HPに比例して味方全員のHPを回復する。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Coastal Discipline",
-                "description": "At the start of the first battle, if an enemy takes the first turn, grants immunity to all allies for 3 turns, and if an ally takes the first turn, grants increased Effectiveness to all allies for 3 turns. After suffering an attack that targets all allies, activates Warming Up. Warming Up (gains 10 Soul): Grants vigor and increased Speed to all allies for 2 turns."
+                "name": "海岸の規律",
+                "description": "最初のバトル開始時、敵が先にターンを得た場合は味方全員に3ターンの間免疫を、味方が先にターンを得た場合は味方全員に3ターンの間効果命中アップを付与する。味方全体を対象とする攻撃を受けた後、準備運動を発動する。準備運動（ソウル10獲得）：味方全員に2ターンの間闘志とスピードアップを付与する。"
             },
             "S3": {
-                "name": "Rapid Rescue",
-                "description": "Fires a rescue line launcher, granting exploiting weak points to an ally except for the caster and resetting skill cooldowns before increasing Combat Readiness by 100%. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "迅速救助",
+                "description": "救助用ロープランチャーを発射し、発動者を除く味方一人に弱点把握を付与してスキルのクールタイムをリセットした後、行動ゲージを100%増加させる。このスキルはクールタイムの増減効果を受けない。"
             }
         }
     },
@@ -436,17 +436,17 @@
         "_name": "Aramintha",
         "skills": {
             "S1": {
-                "name": "Ignite",
-                "description": "Attacks the enemy with an explosion of flames, with a 50% chance to burn for 2 turns."
+                "name": "点火",
+                "description": "炎の爆発で敵を攻撃し、50%の確率で2ターンの間火傷を付与する。"
             },
             "S2": {
-                "name": "Catalyst",
-                "description": "Attacks all enemies with a catalytic explosion, dispelling two buffs and making them unhealable for 2 turns, before increasing Attack of all allies for 2 turns. For each unhealable inflicted, increases Combat Readiness of the caster by 30%."
+                "name": "触媒",
+                "description": "触媒の爆発で敵全体を攻撃し、強化効果を二つ解除して2ターンの間回復不可を付与した後、2ターンの間味方全員の攻撃力をアップさせる。付与した回復不可一つにつき、発動者の行動ゲージを30%増加させる。"
             },
             "S3": {
-                "name": "Fire Pillar",
-                "description": "Attacks all enemies with a massive fire pillar, with a 100% chance each to inflict two burn effects for 2 turns and a 70% chance to inflict stun for 1 turn. Grants a barrier (proportional to the caster's Attack) to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "火柱",
+                "description": "巨大な火柱で敵全体を攻撃し、それぞれ100%の確率で2ターンの間火傷を二つ付与し、70%の確率で1ターンの間気絶させる。発動者に2ターンの間バリア（発動者の攻撃力に比例）を付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -454,17 +454,17 @@
         "_name": "Arbiter Vildred",
         "skills": {
             "S1": {
-                "name": "Sweep",
-                "description": "Attacks two enemies with a swordstorm, transferring two debuffs from the caster. When a critical hit is made, ignores Effect Resistance."
+                "name": "薙ぎ払い",
+                "description": "剣嵐で敵二体を攻撃し、発動者の弱体効果を二つ移す。クリティカルが発生すると効果抵抗を無視する。"
             },
             "S2": {
-                "name": "Dark Contract",
-                "description": "At the start of the turn, when Focus is full, resets skill cooldown of Dark Blade. Upon dying, revives to 100% Health, before increasing Combat Readiness by 100% and gaining maximum Focus."
+                "name": "闇の契約",
+                "description": "ターン開始時、集中が満タンなら闇の剣のクールタイムをリセットする。死亡するとHP100%で復活した後、行動ゲージを100%増加させ、集中を最大まで獲得する。"
             },
             "S3": {
-                "name": "Dark Blade",
-                "description": "After increasing Attack of the caster for 2 turns, attacks all enemies before inflicting decreased Hit Chance for 2 turns, and when an enemy is defeated, resets cooldown. When Focus is full, consumes it all, increasing damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "闇の剣",
+                "description": "2ターンの間発動者の攻撃力をアップさせた後、敵全体を攻撃し、2ターンの間命中率ダウンを付与する。敵を倒すとクールタイムをリセットする。集中が満タンなら、すべて消費して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },

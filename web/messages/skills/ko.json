@@ -328,17 +328,17 @@
         "_name": "Amiki",
         "skills": {
             "S1": {
-                "name": "Divine Punishment",
-                "description": "Attacks the enemy with a sword, and has a 75% chance to provoke for 1 turn. Cannot trigger a critical hit, and penetrates the target's Defense by 30%. After attacking, when the caster's Health is 30% or less, grants an extra attack with the same skill."
+                "name": "신벌",
+                "description": "검으로 적을 공격하며, 75% 확률로 1턴 동안 도발을 건다. 치명타가 발생하지 않으며 대상의 방어력을 30% 관통한다. 공격 후 시전자의 생명력이 30% 이하이면 같은 스킬로 추가 공격한다."
             },
             "S2": {
-                "name": "Desperate Resolve",
-                "description": "Grants immortality for 1 turn and increased Attack for 2 turns to the caster. Upon receiving lethal damage when the skill is available according to cooldown count, grants the same effects to the caster and fully increases cooldown of this skill."
+                "name": "필사의 각오",
+                "description": "시전자에게 1턴 동안 불사를, 2턴 동안 공격력 증가를 부여한다. 재사용 대기 시간상 스킬을 사용할 수 있을 때 치명적인 피해를 받으면 시전자에게 같은 효과를 부여하고 이 스킬의 재사용 대기 시간을 가득 채운다."
             },
             "S3": {
-                "name": "Avenger's Sword",
-                "description": "Slash the enemy consecutively to attack. Cannot trigger a critical hit. Penetrates the target's Defense by 30%, and when the caster's Health is 30% or less, penetrates by 70%. When the caster is immortal, grants an extra turn.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "복수자의 검",
+                "description": "적을 연속으로 베어 공격한다. 치명타가 발생하지 않는다. 대상의 방어력을 30% 관통하며, 시전자의 생명력이 30% 이하이면 70% 관통한다. 시전자가 불사 상태이면 추가 턴을 얻는다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -346,17 +346,17 @@
         "_name": "Angel of Light Angelica",
         "skills": {
             "S1": {
-                "name": "Ritualistic Touch",
-                "description": "Attacks the enemy with fragments of a shimmering star, with a 75% chance to silence for 1 turn. When the target is silenced after attacking, decreases Combat Readiness of the target by 25%.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "의식의 손길",
+                "description": "반짝이는 별의 조각으로 적을 공격하며, 75% 확률로 1턴 동안 침묵을 건다. 공격 후 대상이 침묵 상태이면 대상의 행동 게이지를 25% 감소시킨다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Guardian of Light",
-                "description": "Immune to stun, and after every attack suffered by an ally except for the caster, increases Combat Readiness of the caster by 8% each. When suffering an attack that targets all allies, has a 100% chance to activate Guardian Angel. Guardian Angel: Dispels one debuff from all allies before granting skill nullifier once."
+                "name": "빛의 수호자",
+                "description": "기절에 면역이며, 시전자를 제외한 아군이 공격받을 때마다 시전자의 행동 게이지를 각각 8% 증가시킨다. 모든 아군을 대상으로 하는 공격을 받으면 100% 확률로 수호천사를 발동한다. 수호천사: 모든 아군의 약화 효과를 한 개 해제한 뒤 스킬 피해 무효를 한 번 부여한다."
             },
             "S3": {
-                "name": "Judgement of Angels",
-                "description": "With holy light, dispels two buffs from all enemies before a 100% chance to inflict cannot buff for 2 turns and silence for 1 turn."
+                "name": "천사의 심판",
+                "description": "성스러운 빛으로 모든 적의 강화 효과를 두 개 해제한 뒤 100% 확률로 2턴 동안 강화 불가를, 1턴 동안 침묵을 건다."
             }
         }
     },
@@ -364,17 +364,17 @@
         "_name": "Angelic Montmorancy",
         "skills": {
             "S1": {
-                "name": "Sleep Sorcery",
-                "description": "Attacks the enemy with water energy, with a 75% chance to put them to sleep for 1 turn."
+                "name": "수면 마법",
+                "description": "물의 기운으로 적을 공격하며, 75% 확률로 1턴 동안 수면에 빠뜨린다."
             },
             "S2": {
-                "name": "Purification",
-                "description": "Dispels one debuff from all allies and recovers Health of allies inflicted with debuffs proportional to the target's max Health"
+                "name": "정화",
+                "description": "모든 아군의 약화 효과를 한 개 해제하고, 대상의 최대 생명력에 비례해 약화 효과가 걸린 아군의 생명력을 회복한다."
             },
             "S3": {
-                "name": "Earnest Prayer",
-                "description": "Dispels two debuffs from an ally before recovering Health proportional to the target's max Health and grants immunity for 2 turns. Decreases skill cooldown of the caster by 1 turn.",
-                "soulburn_effect": "Effect is granted to all allies."
+                "name": "간절한 기도",
+                "description": "아군 한 명의 약화 효과를 두 개 해제한 뒤 대상의 최대 생명력에 비례해 생명력을 회복하고 2턴 동안 면역을 부여한다. 시전자의 스킬 재사용 대기 시간을 1턴 감소시킨다.",
+                "soulburn_effect": "모든 아군에게 효과가 부여된다."
             }
         }
     },
@@ -382,17 +382,17 @@
         "_name": "Angelica",
         "skills": {
             "S1": {
-                "name": "Holy Strike",
-                "description": "Attacks with a staff, with a 25% chance to stun for 1 turn."
+                "name": "신성한 일격",
+                "description": "지팡이로 공격하며, 25% 확률로 1턴 동안 기절시킨다."
             },
             "S2": {
-                "name": "Origin of Life",
-                "description": "With the power of healing, recovers Health of the target and the ally with the lowest Health proportional to the caster's max Health."
+                "name": "생명의 근원",
+                "description": "치유의 힘으로 시전자의 최대 생명력에 비례해 대상과 생명력이 가장 낮은 아군의 생명력을 회복한다."
             },
             "S3": {
-                "name": "Guide of the Goddess",
-                "description": "Recovers Health of all allies and grants immunity and a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 2 turns."
+                "name": "여신의 인도",
+                "description": "모든 아군의 생명력을 회복하고 2턴 동안 면역과 보호막을 부여한다. 시전자의 최대 생명력에 비례해 회복량과 보호막 강도가 증가한다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 2턴 연장된다."
             }
         }
     },
@@ -400,17 +400,17 @@
         "_name": "Apocalypse Ravi",
         "skills": {
             "S1": {
-                "name": "Spectral Axe",
-                "description": "Attacks the enemy with an axe, inflicting up to 10% injuries before absorbing some of the damage dealt as Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Greatly increases damage dealt. Does not trigger a Dual Attack."
+                "name": "망령의 도끼",
+                "description": "도끼로 적을 공격해 최대 10%의 부상을 입힌 뒤 준 피해의 일부를 생명력으로 흡수한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 크게 증가한다. 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "War God's Might",
-                "description": "Increases Penetration Resistance by 30%. At the start of the first battle, gains 50 Fighting Spirit. After being attacked, consumes 10 Fighting Spirit, increasing Combat Readiness of the caster by 15% and recovering Health proportional to the caster's max Health."
+                "name": "전쟁신의 위력",
+                "description": "관통 저항이 30% 증가한다. 첫 번째 전투 시작 시 투지를 50 얻는다. 공격받은 후 투지를 10 소모해 시전자의 행동 게이지를 15% 증가시키고, 시전자의 최대 생명력에 비례해 생명력을 회복한다."
             },
             "S3": {
-                "name": "Deliverance: Soul Exchange",
-                "description": "Attacks the enemy with divine judgment. When the enemy is defeated, revives one random dead ally with 30% Health and increases Combat Readiness by 100% before granting skill nullifier once. Damage dealt increases proportional to the caster's max Health. When an ally dies, grants War God to the caster and resets cooldown of this skill."
+                "name": "구원: 영혼 교환",
+                "description": "신의 심판으로 적을 공격한다. 적을 처치하면 무작위 사망한 아군 한 명을 생명력 30%로 부활시키고 행동 게이지를 100% 증가시킨 뒤 스킬 피해 무효를 한 번 부여한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 아군이 사망하면 시전자에게 전쟁신을 부여하고 이 스킬의 재사용 대기 시간을 초기화한다."
             }
         }
     },
@@ -418,17 +418,17 @@
         "_name": "Aram",
         "skills": {
             "S1": {
-                "name": "Atten-Tion!",
-                "description": "Attacks the enemy by whipping up the sand and has a 35% chance to inflict stun for 1 turn, before recovering Health of all allies proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "차렷!",
+                "description": "모래를 흩날려 적을 공격하며, 35% 확률로 1턴 동안 기절시킨 뒤 시전자의 최대 생명력에 비례해 모든 아군의 생명력을 회복한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Coastal Discipline",
-                "description": "At the start of the first battle, if an enemy takes the first turn, grants immunity to all allies for 3 turns, and if an ally takes the first turn, grants increased Effectiveness to all allies for 3 turns. After suffering an attack that targets all allies, activates Warming Up. Warming Up (gains 10 Soul): Grants vigor and increased Speed to all allies for 2 turns."
+                "name": "해안 규율",
+                "description": "첫 번째 전투 시작 시 적이 먼저 턴을 가지면 모든 아군에게 3턴 동안 면역을, 아군이 먼저 턴을 가지면 모든 아군에게 3턴 동안 효과 적중 증가를 부여한다. 모든 아군을 대상으로 하는 공격을 받은 후 준비 운동을 발동한다. 준비 운동(소울 10 획득): 모든 아군에게 2턴 동안 투지와 속도 증가를 부여한다."
             },
             "S3": {
-                "name": "Rapid Rescue",
-                "description": "Fires a rescue line launcher, granting exploiting weak points to an ally except for the caster and resetting skill cooldowns before increasing Combat Readiness by 100%. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "신속 구조",
+                "description": "구조용 로프 발사기를 쏴 시전자를 제외한 아군 한 명에게 약점 파악을 부여하고 스킬 재사용 대기 시간을 초기화한 뒤 행동 게이지를 100% 증가시킨다. 이 스킬은 재사용 대기 시간 증가·감소 효과의 영향을 받지 않는다."
             }
         }
     },
@@ -436,17 +436,17 @@
         "_name": "Aramintha",
         "skills": {
             "S1": {
-                "name": "Ignite",
-                "description": "Attacks the enemy with an explosion of flames, with a 50% chance to burn for 2 turns."
+                "name": "점화",
+                "description": "화염 폭발로 적을 공격하며, 50% 확률로 2턴 동안 화상을 건다."
             },
             "S2": {
-                "name": "Catalyst",
-                "description": "Attacks all enemies with a catalytic explosion, dispelling two buffs and making them unhealable for 2 turns, before increasing Attack of all allies for 2 turns. For each unhealable inflicted, increases Combat Readiness of the caster by 30%."
+                "name": "촉매",
+                "description": "촉매 폭발로 모든 적을 공격해 강화 효과를 두 개 해제하고 2턴 동안 회복 불가를 건 뒤 2턴 동안 모든 아군의 공격력을 증가시킨다. 회복 불가를 건 수만큼 시전자의 행동 게이지를 각각 30% 증가시킨다."
             },
             "S3": {
-                "name": "Fire Pillar",
-                "description": "Attacks all enemies with a massive fire pillar, with a 100% chance each to inflict two burn effects for 2 turns and a 70% chance to inflict stun for 1 turn. Grants a barrier (proportional to the caster's Attack) to the caster for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "불기둥",
+                "description": "거대한 불기둥으로 모든 적을 공격하며, 각각 100% 확률로 2턴 동안 화상을 두 개 걸고 70% 확률로 1턴 동안 기절시킨다. 시전자에게 2턴 동안 보호막(시전자 공격력 비례)을 부여한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -454,17 +454,17 @@
         "_name": "Arbiter Vildred",
         "skills": {
             "S1": {
-                "name": "Sweep",
-                "description": "Attacks two enemies with a swordstorm, transferring two debuffs from the caster. When a critical hit is made, ignores Effect Resistance."
+                "name": "휩쓸기",
+                "description": "검풍으로 적 두 명을 공격하며, 시전자의 약화 효과를 두 개 전이한다. 치명타가 발생하면 효과 저항을 무시한다."
             },
             "S2": {
-                "name": "Dark Contract",
-                "description": "At the start of the turn, when Focus is full, resets skill cooldown of Dark Blade. Upon dying, revives to 100% Health, before increasing Combat Readiness by 100% and gaining maximum Focus."
+                "name": "어둠의 계약",
+                "description": "턴 시작 시 집중이 가득 차 있으면 어둠의 검의 재사용 대기 시간을 초기화한다. 사망하면 생명력 100%로 부활한 뒤 행동 게이지를 100% 증가시키고 집중을 최대로 얻는다."
             },
             "S3": {
-                "name": "Dark Blade",
-                "description": "After increasing Attack of the caster for 2 turns, attacks all enemies before inflicting decreased Hit Chance for 2 turns, and when an enemy is defeated, resets cooldown. When Focus is full, consumes it all, increasing damage dealt.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "어둠의 검",
+                "description": "2턴 동안 시전자의 공격력을 증가시킨 뒤 모든 적을 공격하고 2턴 동안 명중률 감소를 걸며, 적을 처치하면 재사용 대기 시간을 초기화한다. 집중이 가득 차 있으면 모두 소모해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
