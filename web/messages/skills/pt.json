@@ -3730,17 +3730,17 @@
         "_name": "Lilibet",
         "skills": {
             "S1": {
-                "name": "Slice-Slice",
-                "description": "Attacks the enemy by slashing from above, and increases Combat Readiness of the caster by 20%."
+                "name": "Corta-corta",
+                "description": "Ataca o inimigo cortando de cima e aumenta a Prontidão de Combate do conjurador em 20%."
             },
             "S2": {
-                "name": "Snip-Snip",
-                "description": "Attacks the enemy mercilessly, with a 100% chance to dispel all buffs. A critical hit will grant an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Tesourada",
+                "description": "Ataca o inimigo sem piedade, com 100% de chance de dissipar todos os efeitos positivos. Um acerto crítico concede um turno extra.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Soul Cutter",
-                "description": "Attacks the enemy by slashing them with Cho & Mal, before granting skill nullifier once to the caster, and when the enemy is defeated, inflicts extinction. Penetrates the target's Defense. Increase Hit Chance of this skill by 20%."
+                "name": "Cortador de almas",
+                "description": "Ataca o inimigo cortando-o com Cho & Mal, depois concede Anulação de habilidade uma vez ao conjurador e, ao derrotar o inimigo, aplica extinção. Penetra a Defesa do alvo. Aumenta a Precisão desta habilidade em 20%."
             }
         }
     },
@@ -3748,17 +3748,17 @@
         "_name": "Lilka",
         "skills": {
             "S1": {
-                "name": "Pinpoint Fire",
-                "description": "Attacks the enemy and has a 50% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increase effect chance to 100%."
+                "name": "Disparo certeiro",
+                "description": "Ataca o inimigo e tem 50% de chance de diminuir a Defesa por 2 turnos.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Technical Support",
-                "description": "Increases Attack of the caster and the ally with the highest Attack except for the caster for 2 turns and Combat Readiness by 30%. When Combat Readiness of the ally with the highest Attack except for the caster is 35% or less, increases Combat Readiness of the targeted ally by an additional 50%."
+                "name": "Suporte técnico",
+                "description": "Aumenta o Ataque do conjurador e do aliado com maior Ataque, exceto o conjurador, por 2 turnos e a Prontidão de Combate em 30%. Quando a Prontidão de Combate do aliado com maior Ataque, exceto o conjurador, é 35% ou menos, aumenta a Prontidão de Combate desse aliado em mais 50%."
             },
             "S3": {
-                "name": "Ace in the Hole",
-                "description": "Attacks the enemy with a grenade, with a 100% each to decrease Attack and Speed for 2 turns. When the target is of the Ice element, increases Speed of all allies for 2 turns."
+                "name": "Trunfo na manga",
+                "description": "Ataca o inimigo com uma granada, com 100% de chance cada de diminuir o Ataque e a Velocidade por 2 turnos. Quando o alvo é do elemento Gelo, aumenta a Velocidade de todos os aliados por 2 turnos."
             }
         }
     },
@@ -3766,17 +3766,17 @@
         "_name": "Lionheart Cermia",
         "skills": {
             "S1": {
-                "name": "Can You Handle The Heat?",
-                "description": "Attacks the enemy with a sword, and grants increased Speed to the caster for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Aguenta o calor?",
+                "description": "Ataca o inimigo com uma espada e concede Aumentar Velocidade ao conjurador por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "It's Far From Over!",
-                "description": "After an ally suffers an extra attack, counterattack, or Dual Attack, dispels all debuffs inflicted on the caster and activates Shine!. Shine!: Emits light, granting increased Defense and immunity to the caster for 3 turns and increases Combat Readiness by 50% before resetting skill cooldowns."
+                "name": "Ainda não acabou!",
+                "description": "Após um aliado sofrer um ataque extra, contra-ataque ou Ataque duplo, dissipa todos os efeitos negativos aplicados ao conjurador e ativa Brilhe!. Brilhe!: emite luz, concedendo Aumentar Defesa e imunidade ao conjurador por 3 turnos e aumentando a Prontidão de Combate em 50%, depois reinicia as recargas de habilidades."
             },
             "S3": {
-                "name": "I Am The Victor!",
-                "description": "Attacks all enemies with a sword blast, before granting an extra turn. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's Defense. Begins the first battle with full cooldown count."
+                "name": "Eu sou a vencedora!",
+                "description": "Ataca todos os inimigos com uma rajada de espada, depois concede um turno extra. Penetra 50% da Defesa do alvo. O dano causado aumenta proporcionalmente à Defesa do conjurador. Começa a primeira batalha com a recarga completa."
             }
         }
     },
@@ -3801,17 +3801,17 @@
         "_name": "Little Queen Charlotte",
         "skills": {
             "S1": {
-                "name": "Judgment",
-                "description": "Attacks with a giant sword before granting the caster immunity for 1 turn. A successful attack always results in a critical hit."
+                "name": "Julgamento",
+                "description": "Ataca com uma espada gigante, depois concede imunidade ao conjurador por 1 turno. Um ataque bem-sucedido sempre resulta em acerto crítico."
             },
             "S2": {
-                "name": "A Queen's Dignity",
-                "description": "Immune to debuffs which prevent movement. When an ally is attacked, grants 20% damage reduction. After every attack suffered by an ally, increases Combat Readiness of the caster by 10%."
+                "name": "Dignidade da rainha",
+                "description": "Imune a efeitos negativos que impedem a movimentação. Quando um aliado é atacado, concede 20% de redução de dano. Após cada ataque sofrido por um aliado, aumenta a Prontidão de Combate do conjurador em 10%."
             },
             "S3": {
-                "name": "The Will of La Mare",
-                "description": "Attacks the enemy by slamming down with a sword, absorbing some of the damage dealt as Health, and when the enemy is defeated, inflicts extinction. A successful attack always results in a critical hit, and deals additional damage proportional to the caster's Attack to all enemies except for the target. Penetrates the target's Defense by 50%. When the target is of the Dark element, increases damage dealt.",
-                "soulburn_effect": "Increases Hit Chance by 100% when using this skill."
+                "name": "A vontade de La Mare",
+                "description": "Ataca o inimigo golpeando de cima com uma espada, absorvendo parte do dano causado como Vida e, ao derrotar o inimigo, aplica extinção. Um ataque bem-sucedido sempre resulta em acerto crítico e causa a todos os inimigos, exceto o alvo, dano adicional proporcional ao Ataque do conjurador. Penetra 50% da Defesa do alvo. Quando o alvo é do elemento Trevas, o dano causado aumenta.",
+                "soulburn_effect": "Aumenta a Precisão em 100% ao usar esta habilidade."
             }
         }
     },
@@ -3819,17 +3819,17 @@
         "_name": "Lone Crescent Bellona",
         "skills": {
             "S1": {
-                "name": "Delicate Crescent",
-                "description": "Attacks the enemy with a fan, absorbing some of the damage dealt as Health, and inflicts up to 10% injuries. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases damage dealt, and injuries can be inflicted up to 20%."
+                "name": "Crescente delicado",
+                "description": "Ataca o inimigo com um leque, absorvendo parte do dano causado como Vida, e causa até 10% de ferimentos. Um ataque bem-sucedido sempre resulta em acerto crítico.",
+                "soulburn_effect": "Aumenta o dano causado, e os ferimentos podem chegar a 20%."
             },
             "S2": {
-                "name": "Waxing Crescent",
-                "description": "For every surviving ally, increases Evasion by 15%. When an ally is attacked, gains 20 Fighting Spirit, and when Fighting Spirit is full, activates All Eyes on Me. All Eyes on Me (consumes 100 Fighting Spirit): Attacks all enemies, inflicting up to 15% injuries, and increases Combat Readiness of the caster by 30%. A successful attack always results in a critical hit."
+                "name": "Crescente que cresce",
+                "description": "Para cada aliado vivo, aumenta a Evasão em 15%. Quando um aliado é atacado, ganha 20 de Espírito de luta e, quando o Espírito de luta está cheio, ativa Todos os olhos em mim. Todos os olhos em mim (consome 100 de Espírito de luta): ataca todos os inimigos, causando até 15% de ferimentos, e aumenta a Prontidão de Combate do conjurador em 30%. Um ataque bem-sucedido sempre resulta em acerto crítico."
             },
             "S3": {
-                "name": "Quixotic Crescent",
-                "description": "After granting vigor to the caster for 3 turns, attacks the enemy by moving unpredictably, and grants immunity to the caster for 2 turns. A successful attack always results in a critical hit."
+                "name": "Crescente quixotesco",
+                "description": "Após conceder vigor ao conjurador por 3 turnos, ataca o inimigo movendo-se de forma imprevisível e concede imunidade ao conjurador por 2 turnos. Um ataque bem-sucedido sempre resulta em acerto crítico."
             }
         }
     },
@@ -3837,17 +3837,17 @@
         "_name": "Lone Wolf Peira",
         "skills": {
             "S1": {
-                "name": "Bash",
-                "description": "Attack the enemy, with a 75% chance to decrease Defense for 1 turn. A successful attack deals additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "Pancada",
+                "description": "Ataca o inimigo, com 75% de chance de diminuir a Defesa por 1 turno. Um ataque bem-sucedido causa dano adicional proporcional ao Ataque do conjurador.",
+                "soulburn_effect": "Ataca todos os inimigos. Este ataque não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Time to Rampage",
-                "description": "Increases Evasion by 50%. At the start of the turn, increases Attack by 20%, and can stack up to 5 times. At the end of the turn, increases Combat Readiness of all allies by 10%."
+                "name": "Hora da fúria",
+                "description": "Aumenta a Evasão em 50%. No início do turno, aumenta o Ataque em 20%, acumulando até 5 vezes. No fim do turno, aumenta a Prontidão de Combate de todos os aliados em 10%."
             },
             "S3": {
-                "name": "Hound the Indolent",
-                "description": "Dispels two debuffs from all allies before granting rampage to Dark elemental allies for 3 turns. Grants swift attack to all allies except for the caster. Grants an extra turn."
+                "name": "Caçar os indolentes",
+                "description": "Dissipa dois efeitos negativos de todos os aliados, depois concede fúria desenfreada aos aliados do elemento Trevas por 3 turnos. Concede Ataque veloz a todos os aliados, exceto o conjurador. Concede um turno extra."
             }
         }
     },
@@ -3855,17 +3855,17 @@
         "_name": "Lorina",
         "skills": {
             "S1": {
-                "name": "Sharp Blow",
-                "description": "Knocks the enemy into the air with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the target's max Health."
+                "name": "Golpe afiado",
+                "description": "Lança o inimigo para o alto com uma lança, aumentando a Prontidão de Combate do conjurador em 20%. O dano causado aumenta proporcionalmente à Vida máxima do alvo."
             },
             "S2": {
-                "name": "Spiritual Armament",
-                "description": "Increases Effect Resistance by 50%. Increases Attack by 15% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+                "name": "Armamento espiritual",
+                "description": "Aumenta a Resistência a Efeitos em 50%. Aumenta o Ataque em 15% cada vez que o conjurador ataca um inimigo. O efeito acumula até 5 vezes."
             },
             "S3": {
-                "name": "Resolve",
-                "description": "After leaping into the air, attacks the enemy with a strike from above. Damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Determinação",
+                "description": "Após saltar no ar, ataca o inimigo com um golpe de cima. O dano causado aumenta proporcionalmente à Vida máxima do alvo.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -3873,17 +3873,17 @@
         "_name": "Lots",
         "skills": {
             "S1": {
-                "name": "Holy Light",
-                "description": "Attacks with a light sphere, with a 75% chance to decrease Attack for 1 turn."
+                "name": "Luz sagrada",
+                "description": "Ataca com uma esfera de luz, com 75% de chance de diminuir o Ataque por 1 turno."
             },
             "S2": {
-                "name": "Regen",
-                "description": "With recovery magic, recovers Health of an ally proportional to the target's max Health and increases Combat Readiness by 100%. Increases Combat Readiness of the caster by 30%."
+                "name": "Regeneração",
+                "description": "Com magia de recuperação, recupera a Vida de um aliado proporcionalmente à Vida máxima do alvo e aumenta sua Prontidão de Combate em 100%. Aumenta a Prontidão de Combate do conjurador em 30%."
             },
             "S3": {
-                "name": "Serenity",
-                "description": "With strengthening magic, increases Combat Readiness of all allies by 20% before granting continuous healing for 3 turns and recovering Health proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 2 turns."
+                "name": "Serenidade",
+                "description": "Com magia de fortalecimento, aumenta a Prontidão de Combate de todos os aliados em 20%, depois concede cura contínua por 3 turnos e recupera Vida proporcionalmente à Vida máxima do alvo.",
+                "soulburn_effect": "Estende em 2 turnos a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },

@@ -3730,17 +3730,17 @@
         "_name": "Lilibet",
         "skills": {
             "S1": {
-                "name": "Slice-Slice",
-                "description": "Attacks the enemy by slashing from above, and increases Combat Readiness of the caster by 20%."
+                "name": "咔嚓咔嚓",
+                "description": "从上方斩击敌人，并使施放者的行动值提升20%。"
             },
             "S2": {
-                "name": "Snip-Snip",
-                "description": "Attacks the enemy mercilessly, with a 100% chance to dispel all buffs. A critical hit will grant an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "咔嚓",
+                "description": "无情地攻击敌人，有100%的几率解除所有强化效果。暴击时获得额外回合。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Soul Cutter",
-                "description": "Attacks the enemy by slashing them with Cho & Mal, before granting skill nullifier once to the caster, and when the enemy is defeated, inflicts extinction. Penetrates the target's Defense. Increase Hit Chance of this skill by 20%."
+                "name": "灵魂切割",
+                "description": "以小初与小末斩击敌人，然后为施放者施加一次技能伤害无效，击败敌人时施加湮灭。穿透目标的防御力。此技能的命中率提升20%。"
             }
         }
     },
@@ -3748,17 +3748,17 @@
         "_name": "Lilka",
         "skills": {
             "S1": {
-                "name": "Pinpoint Fire",
-                "description": "Attacks the enemy and has a 50% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increase effect chance to 100%."
+                "name": "精准点射",
+                "description": "攻击敌人，有50%的几率降低防御力2回合。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Technical Support",
-                "description": "Increases Attack of the caster and the ally with the highest Attack except for the caster for 2 turns and Combat Readiness by 30%. When Combat Readiness of the ally with the highest Attack except for the caster is 35% or less, increases Combat Readiness of the targeted ally by an additional 50%."
+                "name": "技术支援",
+                "description": "提升施放者与除施放者外攻击力最高的友军的攻击力2回合，并提升30%行动值。除施放者外攻击力最高的友军行动值在35%以下时，使该友军的行动值额外提升50%。"
             },
             "S3": {
-                "name": "Ace in the Hole",
-                "description": "Attacks the enemy with a grenade, with a 100% each to decrease Attack and Speed for 2 turns. When the target is of the Ice element, increases Speed of all allies for 2 turns."
+                "name": "王牌",
+                "description": "以手榴弹攻击敌人，各有100%的几率降低攻击力与速度2回合。目标为冰属性时，提升所有友军的速度2回合。"
             }
         }
     },
@@ -3766,17 +3766,17 @@
         "_name": "Lionheart Cermia",
         "skills": {
             "S1": {
-                "name": "Can You Handle The Heat?",
-                "description": "Attacks the enemy with a sword, and grants increased Speed to the caster for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "受得了这热度吗？",
+                "description": "以剑攻击敌人，并为施放者施加1回合速度提升。造成的伤害按施放者的防御力比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "It's Far From Over!",
-                "description": "After an ally suffers an extra attack, counterattack, or Dual Attack, dispels all debuffs inflicted on the caster and activates Shine!. Shine!: Emits light, granting increased Defense and immunity to the caster for 3 turns and increases Combat Readiness by 50% before resetting skill cooldowns."
+                "name": "还没结束！",
+                "description": "友军受到追加攻击、反击或协攻后，解除施放者身上的所有弱化效果，并发动闪耀吧！。闪耀吧！：释放光芒，为施放者施加3回合防御力提升与免疫，并提升50%行动值，然后重置技能冷却时间。"
             },
             "S3": {
-                "name": "I Am The Victor!",
-                "description": "Attacks all enemies with a sword blast, before granting an extra turn. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's Defense. Begins the first battle with full cooldown count."
+                "name": "胜者是我！",
+                "description": "以剑气攻击所有敌人，然后获得额外回合。穿透目标50%的防御力。造成的伤害按施放者的防御力比例提升。首场战斗开始时处于完整冷却状态。"
             }
         }
     },
@@ -3801,17 +3801,17 @@
         "_name": "Little Queen Charlotte",
         "skills": {
             "S1": {
-                "name": "Judgment",
-                "description": "Attacks with a giant sword before granting the caster immunity for 1 turn. A successful attack always results in a critical hit."
+                "name": "审判",
+                "description": "以巨剑攻击，然后为施放者施加1回合免疫。攻击成功时必定暴击。"
             },
             "S2": {
-                "name": "A Queen's Dignity",
-                "description": "Immune to debuffs which prevent movement. When an ally is attacked, grants 20% damage reduction. After every attack suffered by an ally, increases Combat Readiness of the caster by 10%."
+                "name": "女王的风范",
+                "description": "免疫妨碍行动的弱化效果。友军受到攻击时，使伤害降低20%。友军每次受到攻击后，使施放者的行动值提升10%。"
             },
             "S3": {
-                "name": "The Will of La Mare",
-                "description": "Attacks the enemy by slamming down with a sword, absorbing some of the damage dealt as Health, and when the enemy is defeated, inflicts extinction. A successful attack always results in a critical hit, and deals additional damage proportional to the caster's Attack to all enemies except for the target. Penetrates the target's Defense by 50%. When the target is of the Dark element, increases damage dealt.",
-                "soulburn_effect": "Increases Hit Chance by 100% when using this skill."
+                "name": "拉玛雷的意志",
+                "description": "以剑向下猛击敌人，将部分造成的伤害吸收为生命值，击败敌人时施加湮灭。攻击成功时必定暴击，并对除目标外的所有敌人追加造成与施放者攻击力成比例的伤害。穿透目标50%的防御力。目标为暗属性时，提升造成的伤害。",
+                "soulburn_effect": "使用此技能时，命中率提升100%。"
             }
         }
     },
@@ -3819,17 +3819,17 @@
         "_name": "Lone Crescent Bellona",
         "skills": {
             "S1": {
-                "name": "Delicate Crescent",
-                "description": "Attacks the enemy with a fan, absorbing some of the damage dealt as Health, and inflicts up to 10% injuries. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases damage dealt, and injuries can be inflicted up to 20%."
+                "name": "纤细新月",
+                "description": "以扇子攻击敌人，将部分造成的伤害吸收为生命值，并造成最多10%的负伤。攻击成功时必定暴击。",
+                "soulburn_effect": "提升造成的伤害，负伤最多可达20%。"
             },
             "S2": {
-                "name": "Waxing Crescent",
-                "description": "For every surviving ally, increases Evasion by 15%. When an ally is attacked, gains 20 Fighting Spirit, and when Fighting Spirit is full, activates All Eyes on Me. All Eyes on Me (consumes 100 Fighting Spirit): Attacks all enemies, inflicting up to 15% injuries, and increases Combat Readiness of the caster by 30%. A successful attack always results in a critical hit."
+                "name": "渐盈新月",
+                "description": "每有一名存活的友军，闪避提升15%。友军受到攻击时，获得20斗志；斗志已满时，发动全都看着我。全都看着我（消耗100斗志）：攻击所有敌人，造成最多15%的负伤，并使施放者的行动值提升30%。攻击成功时必定暴击。"
             },
             "S3": {
-                "name": "Quixotic Crescent",
-                "description": "After granting vigor to the caster for 3 turns, attacks the enemy by moving unpredictably, and grants immunity to the caster for 2 turns. A successful attack always results in a critical hit."
+                "name": "变幻新月",
+                "description": "为施放者施加3回合斗志后，以难以预测的动作攻击敌人，并为施放者施加2回合免疫。攻击成功时必定暴击。"
             }
         }
     },
@@ -3837,17 +3837,17 @@
         "_name": "Lone Wolf Peira",
         "skills": {
             "S1": {
-                "name": "Bash",
-                "description": "Attack the enemy, with a 75% chance to decrease Defense for 1 turn. A successful attack deals additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "痛击",
+                "description": "攻击敌人，有75%的几率降低防御力1回合。攻击成功时，追加造成与施放者攻击力成比例的伤害。",
+                "soulburn_effect": "攻击所有敌人。此攻击不会触发协攻。"
             },
             "S2": {
-                "name": "Time to Rampage",
-                "description": "Increases Evasion by 50%. At the start of the turn, increases Attack by 20%, and can stack up to 5 times. At the end of the turn, increases Combat Readiness of all allies by 10%."
+                "name": "暴走时间",
+                "description": "闪避提升50%。回合开始时，攻击力提升20%，最多叠加5次。回合结束时，使所有友军的行动值提升10%。"
             },
             "S3": {
-                "name": "Hound the Indolent",
-                "description": "Dispels two debuffs from all allies before granting rampage to Dark elemental allies for 3 turns. Grants swift attack to all allies except for the caster. Grants an extra turn."
+                "name": "追猎懒惰者",
+                "description": "解除所有友军的两个弱化效果，然后为暗属性友军施加3回合暴走。为除施放者外的所有友军施加迅捷攻击。获得额外回合。"
             }
         }
     },
@@ -3855,17 +3855,17 @@
         "_name": "Lorina",
         "skills": {
             "S1": {
-                "name": "Sharp Blow",
-                "description": "Knocks the enemy into the air with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the target's max Health."
+                "name": "锐利一击",
+                "description": "以长枪将敌人挑向空中，并使施放者的行动值提升20%。造成的伤害按目标的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Spiritual Armament",
-                "description": "Increases Effect Resistance by 50%. Increases Attack by 15% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+                "name": "精神武装",
+                "description": "效果抵抗提升50%。施放者每次攻击敌人时，攻击力提升15%。效果最多叠加5次。"
             },
             "S3": {
-                "name": "Resolve",
-                "description": "After leaping into the air, attacks the enemy with a strike from above. Damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "决意",
+                "description": "跃向空中后，从上方猛击敌人。造成的伤害按目标的最大生命值比例提升。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -3873,17 +3873,17 @@
         "_name": "Lots",
         "skills": {
             "S1": {
-                "name": "Holy Light",
-                "description": "Attacks with a light sphere, with a 75% chance to decrease Attack for 1 turn."
+                "name": "神圣之光",
+                "description": "以光球攻击，有75%的几率降低攻击力1回合。"
             },
             "S2": {
-                "name": "Regen",
-                "description": "With recovery magic, recovers Health of an ally proportional to the target's max Health and increases Combat Readiness by 100%. Increases Combat Readiness of the caster by 30%."
+                "name": "再生",
+                "description": "以恢复魔法按目标的最大生命值比例恢复一名友军的生命值，并提升其100%行动值。使施放者的行动值提升30%。"
             },
             "S3": {
-                "name": "Serenity",
-                "description": "With strengthening magic, increases Combat Readiness of all allies by 20% before granting continuous healing for 3 turns and recovering Health proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 2 turns."
+                "name": "宁静",
+                "description": "以强化魔法使所有友军的行动值提升20%，然后施加3回合持续恢复，并按目标的最大生命值比例恢复生命值。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长2回合。"
             }
         }
     },

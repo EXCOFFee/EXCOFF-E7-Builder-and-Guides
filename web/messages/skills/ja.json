@@ -3730,17 +3730,17 @@
         "_name": "Lilibet",
         "skills": {
             "S1": {
-                "name": "Slice-Slice",
-                "description": "Attacks the enemy by slashing from above, and increases Combat Readiness of the caster by 20%."
+                "name": "チョキチョキ",
+                "description": "上から斬りつけて敵を攻撃し、発動者の行動ゲージを20%増加させる。"
             },
             "S2": {
-                "name": "Snip-Snip",
-                "description": "Attacks the enemy mercilessly, with a 100% chance to dispel all buffs. A critical hit will grant an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "チョッキン",
+                "description": "敵を容赦なく攻撃し、100%の確率で強化効果をすべて解除する。クリティカルが発生すると追加ターンを得る。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Soul Cutter",
-                "description": "Attacks the enemy by slashing them with Cho & Mal, before granting skill nullifier once to the caster, and when the enemy is defeated, inflicts extinction. Penetrates the target's Defense. Increase Hit Chance of this skill by 20%."
+                "name": "魂の切断",
+                "description": "チョ＆マルで敵を斬りつけて攻撃した後、発動者にスキルダメージ無効を一度付与し、敵を倒すと消滅を付与する。対象の防御力を貫通する。このスキルの命中率が20%アップする。"
             }
         }
     },
@@ -3748,17 +3748,17 @@
         "_name": "Lilka",
         "skills": {
             "S1": {
-                "name": "Pinpoint Fire",
-                "description": "Attacks the enemy and has a 50% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increase effect chance to 100%."
+                "name": "ピンポイント射撃",
+                "description": "敵を攻撃し、50%の確率で2ターンの間防御力をダウンさせる。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Technical Support",
-                "description": "Increases Attack of the caster and the ally with the highest Attack except for the caster for 2 turns and Combat Readiness by 30%. When Combat Readiness of the ally with the highest Attack except for the caster is 35% or less, increases Combat Readiness of the targeted ally by an additional 50%."
+                "name": "技術支援",
+                "description": "2ターンの間、発動者と、発動者を除いて攻撃力が最も高い味方の攻撃力をアップさせ、行動ゲージを30%増加させる。発動者を除いて攻撃力が最も高い味方の行動ゲージが35%以下なら、その味方の行動ゲージをさらに50%増加させる。"
             },
             "S3": {
-                "name": "Ace in the Hole",
-                "description": "Attacks the enemy with a grenade, with a 100% each to decrease Attack and Speed for 2 turns. When the target is of the Ice element, increases Speed of all allies for 2 turns."
+                "name": "奥の手",
+                "description": "手榴弾で敵を攻撃し、それぞれ100%の確率で2ターンの間攻撃力とスピードをダウンさせる。対象が水属性なら、2ターンの間味方全員のスピードをアップさせる。"
             }
         }
     },
@@ -3766,17 +3766,17 @@
         "_name": "Lionheart Cermia",
         "skills": {
             "S1": {
-                "name": "Can You Handle The Heat?",
-                "description": "Attacks the enemy with a sword, and grants increased Speed to the caster for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "この熱さに耐えられる？",
+                "description": "剣で敵を攻撃し、発動者に1ターンの間スピードアップを付与する。発動者の防御力に比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "It's Far From Over!",
-                "description": "After an ally suffers an extra attack, counterattack, or Dual Attack, dispels all debuffs inflicted on the caster and activates Shine!. Shine!: Emits light, granting increased Defense and immunity to the caster for 3 turns and increases Combat Readiness by 50% before resetting skill cooldowns."
+                "name": "まだ終わらない！",
+                "description": "味方が追加攻撃、反撃、協攻を受けた後、発動者の弱体効果をすべて解除し、輝け！を発動する。輝け！：光を放ち、発動者に3ターンの間防御力アップと免疫を付与し、行動ゲージを50%増加させた後、スキルのクールタイムをリセットする。"
             },
             "S3": {
-                "name": "I Am The Victor!",
-                "description": "Attacks all enemies with a sword blast, before granting an extra turn. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's Defense. Begins the first battle with full cooldown count."
+                "name": "勝者は私よ！",
+                "description": "剣気で敵全体を攻撃した後、追加ターンを得る。対象の防御力を50%貫通する。発動者の防御力に比例して与ダメージがアップする。最初のバトルはクールタイムが満タンの状態で始まる。"
             }
         }
     },
@@ -3801,17 +3801,17 @@
         "_name": "Little Queen Charlotte",
         "skills": {
             "S1": {
-                "name": "Judgment",
-                "description": "Attacks with a giant sword before granting the caster immunity for 1 turn. A successful attack always results in a critical hit."
+                "name": "審判",
+                "description": "巨大な剣で攻撃した後、発動者に1ターンの間免疫を付与する。攻撃が成功すると必ずクリティカルが発生する。"
             },
             "S2": {
-                "name": "A Queen's Dignity",
-                "description": "Immune to debuffs which prevent movement. When an ally is attacked, grants 20% damage reduction. After every attack suffered by an ally, increases Combat Readiness of the caster by 10%."
+                "name": "女王の品格",
+                "description": "行動を妨げる弱体効果を受けない。味方が攻撃されると、ダメージを20%軽減する。味方が攻撃されるたびに、発動者の行動ゲージを10%増加させる。"
             },
             "S3": {
-                "name": "The Will of La Mare",
-                "description": "Attacks the enemy by slamming down with a sword, absorbing some of the damage dealt as Health, and when the enemy is defeated, inflicts extinction. A successful attack always results in a critical hit, and deals additional damage proportional to the caster's Attack to all enemies except for the target. Penetrates the target's Defense by 50%. When the target is of the Dark element, increases damage dealt.",
-                "soulburn_effect": "Increases Hit Chance by 100% when using this skill."
+                "name": "ラ・マーレの意志",
+                "description": "剣を振り下ろして敵を攻撃し、与ダメージの一部をHPとして吸収し、敵を倒すと消滅を付与する。攻撃が成功すると必ずクリティカルが発生し、対象を除く敵全体に発動者の攻撃力に比例した追加ダメージを与える。対象の防御力を50%貫通する。対象が闇属性なら与ダメージがアップする。",
+                "soulburn_effect": "このスキルの使用時、命中率が100%アップする。"
             }
         }
     },
@@ -3819,17 +3819,17 @@
         "_name": "Lone Crescent Bellona",
         "skills": {
             "S1": {
-                "name": "Delicate Crescent",
-                "description": "Attacks the enemy with a fan, absorbing some of the damage dealt as Health, and inflicts up to 10% injuries. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases damage dealt, and injuries can be inflicted up to 20%."
+                "name": "繊細な三日月",
+                "description": "扇で敵を攻撃し、与ダメージの一部をHPとして吸収し、最大10%の負傷を与える。攻撃が成功すると必ずクリティカルが発生する。",
+                "soulburn_effect": "与ダメージがアップし、負傷を最大20%まで与えられる。"
             },
             "S2": {
-                "name": "Waxing Crescent",
-                "description": "For every surviving ally, increases Evasion by 15%. When an ally is attacked, gains 20 Fighting Spirit, and when Fighting Spirit is full, activates All Eyes on Me. All Eyes on Me (consumes 100 Fighting Spirit): Attacks all enemies, inflicting up to 15% injuries, and increases Combat Readiness of the caster by 30%. A successful attack always results in a critical hit."
+                "name": "満ちゆく三日月",
+                "description": "生存している味方一人につき回避が15%アップする。味方が攻撃されると闘志を20獲得し、闘志が満タンになると皆、私を見てを発動する。皆、私を見て（闘志100消費）：敵全体を攻撃し、最大15%の負傷を与え、発動者の行動ゲージを30%増加させる。攻撃が成功すると必ずクリティカルが発生する。"
             },
             "S3": {
-                "name": "Quixotic Crescent",
-                "description": "After granting vigor to the caster for 3 turns, attacks the enemy by moving unpredictably, and grants immunity to the caster for 2 turns. A successful attack always results in a critical hit."
+                "name": "気まぐれな三日月",
+                "description": "発動者に3ターンの間闘志を付与した後、予測不能な動きで敵を攻撃し、発動者に2ターンの間免疫を付与する。攻撃が成功すると必ずクリティカルが発生する。"
             }
         }
     },
@@ -3837,17 +3837,17 @@
         "_name": "Lone Wolf Peira",
         "skills": {
             "S1": {
-                "name": "Bash",
-                "description": "Attack the enemy, with a 75% chance to decrease Defense for 1 turn. A successful attack deals additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "殴打",
+                "description": "敵を攻撃し、75%の確率で1ターンの間防御力をダウンさせる。攻撃が成功すると、発動者の攻撃力に比例した追加ダメージを与える。",
+                "soulburn_effect": "敵全体を攻撃する。この攻撃では協攻が発動しない。"
             },
             "S2": {
-                "name": "Time to Rampage",
-                "description": "Increases Evasion by 50%. At the start of the turn, increases Attack by 20%, and can stack up to 5 times. At the end of the turn, increases Combat Readiness of all allies by 10%."
+                "name": "暴走の時間",
+                "description": "回避が50%アップする。ターン開始時、攻撃力が20%アップし、最大5回まで重複する。ターン終了時、味方全員の行動ゲージを10%増加させる。"
             },
             "S3": {
-                "name": "Hound the Indolent",
-                "description": "Dispels two debuffs from all allies before granting rampage to Dark elemental allies for 3 turns. Grants swift attack to all allies except for the caster. Grants an extra turn."
+                "name": "怠け者狩り",
+                "description": "味方全員の弱体効果を二つ解除した後、闇属性の味方に3ターンの間暴走を付与する。発動者を除く味方全員に迅速攻撃を付与する。追加ターンを得る。"
             }
         }
     },
@@ -3855,17 +3855,17 @@
         "_name": "Lorina",
         "skills": {
             "S1": {
-                "name": "Sharp Blow",
-                "description": "Knocks the enemy into the air with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the target's max Health."
+                "name": "鋭い一撃",
+                "description": "槍で敵を宙に打ち上げ、発動者の行動ゲージを20%増加させる。対象の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Spiritual Armament",
-                "description": "Increases Effect Resistance by 50%. Increases Attack by 15% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+                "name": "精神武装",
+                "description": "効果抵抗が50%アップする。発動者が敵を攻撃するたびに攻撃力が15%アップする。効果は最大5回まで重複する。"
             },
             "S3": {
-                "name": "Resolve",
-                "description": "After leaping into the air, attacks the enemy with a strike from above. Damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "決意",
+                "description": "空中に跳躍した後、上から打ち下ろして敵を攻撃する。対象の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -3873,17 +3873,17 @@
         "_name": "Lots",
         "skills": {
             "S1": {
-                "name": "Holy Light",
-                "description": "Attacks with a light sphere, with a 75% chance to decrease Attack for 1 turn."
+                "name": "聖なる光",
+                "description": "光の球体で攻撃し、75%の確率で1ターンの間攻撃力をダウンさせる。"
             },
             "S2": {
-                "name": "Regen",
-                "description": "With recovery magic, recovers Health of an ally proportional to the target's max Health and increases Combat Readiness by 100%. Increases Combat Readiness of the caster by 30%."
+                "name": "再生",
+                "description": "回復魔法で、対象の最大HPに比例して味方一人のHPを回復し、行動ゲージを100%増加させる。発動者の行動ゲージを30%増加させる。"
             },
             "S3": {
-                "name": "Serenity",
-                "description": "With strengthening magic, increases Combat Readiness of all allies by 20% before granting continuous healing for 3 turns and recovering Health proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 2 turns."
+                "name": "平穏",
+                "description": "強化魔法で味方全員の行動ゲージを20%増加させた後、3ターンの間持続回復を付与し、対象の最大HPに比例してHPを回復する。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が2ターン延長される。"
             }
         }
     },

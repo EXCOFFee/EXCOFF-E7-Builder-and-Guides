@@ -3730,17 +3730,17 @@
         "_name": "Lilibet",
         "skills": {
             "S1": {
-                "name": "Slice-Slice",
-                "description": "Attacks the enemy by slashing from above, and increases Combat Readiness of the caster by 20%."
+                "name": "싹둑싹둑",
+                "description": "위에서 베어 적을 공격하고 시전자의 행동 게이지를 20% 증가시킨다."
             },
             "S2": {
-                "name": "Snip-Snip",
-                "description": "Attacks the enemy mercilessly, with a 100% chance to dispel all buffs. A critical hit will grant an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "싹뚝",
+                "description": "적을 무자비하게 공격하며, 100% 확률로 강화 효과를 모두 해제한다. 치명타가 발생하면 추가 턴을 얻는다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "Soul Cutter",
-                "description": "Attacks the enemy by slashing them with Cho & Mal, before granting skill nullifier once to the caster, and when the enemy is defeated, inflicts extinction. Penetrates the target's Defense. Increase Hit Chance of this skill by 20%."
+                "name": "영혼 절단",
+                "description": "초와 말로 적을 베어 공격한 뒤 시전자에게 스킬 피해 무효를 한 번 부여하며, 적을 처치하면 소멸을 건다. 대상의 방어력을 관통한다. 이 스킬의 명중률이 20% 증가한다."
             }
         }
     },
@@ -3748,17 +3748,17 @@
         "_name": "Lilka",
         "skills": {
             "S1": {
-                "name": "Pinpoint Fire",
-                "description": "Attacks the enemy and has a 50% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increase effect chance to 100%."
+                "name": "정밀 사격",
+                "description": "적을 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Technical Support",
-                "description": "Increases Attack of the caster and the ally with the highest Attack except for the caster for 2 turns and Combat Readiness by 30%. When Combat Readiness of the ally with the highest Attack except for the caster is 35% or less, increases Combat Readiness of the targeted ally by an additional 50%."
+                "name": "기술 지원",
+                "description": "2턴 동안 시전자와, 시전자를 제외하고 공격력이 가장 높은 아군의 공격력을 증가시키고 행동 게이지를 30% 증가시킨다. 시전자를 제외하고 공격력이 가장 높은 아군의 행동 게이지가 35% 이하이면 그 아군의 행동 게이지를 추가로 50% 증가시킨다."
             },
             "S3": {
-                "name": "Ace in the Hole",
-                "description": "Attacks the enemy with a grenade, with a 100% each to decrease Attack and Speed for 2 turns. When the target is of the Ice element, increases Speed of all allies for 2 turns."
+                "name": "비장의 한 수",
+                "description": "수류탄으로 적을 공격하며, 각각 100% 확률로 2턴 동안 공격력과 속도를 감소시킨다. 대상이 물 속성이면 2턴 동안 모든 아군의 속도를 증가시킨다."
             }
         }
     },
@@ -3766,17 +3766,17 @@
         "_name": "Lionheart Cermia",
         "skills": {
             "S1": {
-                "name": "Can You Handle The Heat?",
-                "description": "Attacks the enemy with a sword, and grants increased Speed to the caster for 1 turn. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "이 열기를 견딜 수 있어?",
+                "description": "검으로 적을 공격하고 시전자에게 1턴 동안 속도 증가를 부여한다. 시전자의 방어력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S2": {
-                "name": "It's Far From Over!",
-                "description": "After an ally suffers an extra attack, counterattack, or Dual Attack, dispels all debuffs inflicted on the caster and activates Shine!. Shine!: Emits light, granting increased Defense and immunity to the caster for 3 turns and increases Combat Readiness by 50% before resetting skill cooldowns."
+                "name": "아직 끝나지 않았어!",
+                "description": "아군이 추가 공격, 반격, 협공을 받은 후 시전자에게 걸린 약화 효과를 모두 해제하고 빛나라!를 발동한다. 빛나라!: 빛을 내뿜어 시전자에게 3턴 동안 방어력 증가와 면역을 부여하고 행동 게이지를 50% 증가시킨 뒤 스킬 재사용 대기 시간을 초기화한다."
             },
             "S3": {
-                "name": "I Am The Victor!",
-                "description": "Attacks all enemies with a sword blast, before granting an extra turn. Penetrates the target's Defense by 50%. Damage dealt increases proportional to the caster's Defense. Begins the first battle with full cooldown count."
+                "name": "내가 승자다!",
+                "description": "검기로 모든 적을 공격한 뒤 추가 턴을 얻는다. 대상의 방어력을 50% 관통한다. 시전자의 방어력에 비례해 주는 피해가 증가한다. 첫 번째 전투는 재사용 대기 시간이 가득 찬 상태로 시작한다."
             }
         }
     },
@@ -3801,17 +3801,17 @@
         "_name": "Little Queen Charlotte",
         "skills": {
             "S1": {
-                "name": "Judgment",
-                "description": "Attacks with a giant sword before granting the caster immunity for 1 turn. A successful attack always results in a critical hit."
+                "name": "심판",
+                "description": "거대한 검으로 공격한 뒤 시전자에게 1턴 동안 면역을 부여한다. 공격에 성공하면 반드시 치명타가 발생한다."
             },
             "S2": {
-                "name": "A Queen's Dignity",
-                "description": "Immune to debuffs which prevent movement. When an ally is attacked, grants 20% damage reduction. After every attack suffered by an ally, increases Combat Readiness of the caster by 10%."
+                "name": "여왕의 품격",
+                "description": "행동을 막는 약화 효과에 면역이다. 아군이 공격받으면 피해를 20% 감소시킨다. 아군이 공격받을 때마다 시전자의 행동 게이지를 10% 증가시킨다."
             },
             "S3": {
-                "name": "The Will of La Mare",
-                "description": "Attacks the enemy by slamming down with a sword, absorbing some of the damage dealt as Health, and when the enemy is defeated, inflicts extinction. A successful attack always results in a critical hit, and deals additional damage proportional to the caster's Attack to all enemies except for the target. Penetrates the target's Defense by 50%. When the target is of the Dark element, increases damage dealt.",
-                "soulburn_effect": "Increases Hit Chance by 100% when using this skill."
+                "name": "라 마레의 의지",
+                "description": "검을 내리찍어 적을 공격하고 준 피해의 일부를 생명력으로 흡수하며, 적을 처치하면 소멸을 건다. 공격에 성공하면 반드시 치명타가 발생하고, 대상을 제외한 모든 적에게 시전자의 공격력에 비례한 추가 피해를 준다. 대상의 방어력을 50% 관통한다. 대상이 어둠 속성이면 주는 피해가 증가한다.",
+                "soulburn_effect": "이 스킬 사용 시 명중률이 100% 증가한다."
             }
         }
     },
@@ -3819,17 +3819,17 @@
         "_name": "Lone Crescent Bellona",
         "skills": {
             "S1": {
-                "name": "Delicate Crescent",
-                "description": "Attacks the enemy with a fan, absorbing some of the damage dealt as Health, and inflicts up to 10% injuries. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases damage dealt, and injuries can be inflicted up to 20%."
+                "name": "섬세한 초승달",
+                "description": "부채로 적을 공격해 준 피해의 일부를 생명력으로 흡수하고 최대 10%의 부상을 입힌다. 공격에 성공하면 반드시 치명타가 발생한다.",
+                "soulburn_effect": "주는 피해가 증가하고 부상을 최대 20%까지 입힐 수 있다."
             },
             "S2": {
-                "name": "Waxing Crescent",
-                "description": "For every surviving ally, increases Evasion by 15%. When an ally is attacked, gains 20 Fighting Spirit, and when Fighting Spirit is full, activates All Eyes on Me. All Eyes on Me (consumes 100 Fighting Spirit): Attacks all enemies, inflicting up to 15% injuries, and increases Combat Readiness of the caster by 30%. A successful attack always results in a critical hit."
+                "name": "차오르는 초승달",
+                "description": "살아 있는 아군 한 명당 회피가 15% 증가한다. 아군이 공격받으면 투지를 20 얻으며, 투지가 가득 차면 모두 나를 봐를 발동한다. 모두 나를 봐(투지 100 소모): 모든 적을 공격해 최대 15%의 부상을 입히고 시전자의 행동 게이지를 30% 증가시킨다. 공격에 성공하면 반드시 치명타가 발생한다."
             },
             "S3": {
-                "name": "Quixotic Crescent",
-                "description": "After granting vigor to the caster for 3 turns, attacks the enemy by moving unpredictably, and grants immunity to the caster for 2 turns. A successful attack always results in a critical hit."
+                "name": "변덕스러운 초승달",
+                "description": "시전자에게 3턴 동안 투지를 부여한 뒤 예측할 수 없게 움직여 적을 공격하고 시전자에게 2턴 동안 면역을 부여한다. 공격에 성공하면 반드시 치명타가 발생한다."
             }
         }
     },
@@ -3837,17 +3837,17 @@
         "_name": "Lone Wolf Peira",
         "skills": {
             "S1": {
-                "name": "Bash",
-                "description": "Attack the enemy, with a 75% chance to decrease Defense for 1 turn. A successful attack deals additional damage proportional to the caster's Attack.",
-                "soulburn_effect": "Attacks all enemies. This attack does not trigger a Dual Attack."
+                "name": "강타",
+                "description": "적을 공격하며, 75% 확률로 1턴 동안 방어력을 감소시킨다. 공격에 성공하면 시전자의 공격력에 비례한 추가 피해를 준다.",
+                "soulburn_effect": "모든 적을 공격한다. 이 공격으로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Time to Rampage",
-                "description": "Increases Evasion by 50%. At the start of the turn, increases Attack by 20%, and can stack up to 5 times. At the end of the turn, increases Combat Readiness of all allies by 10%."
+                "name": "폭주의 시간",
+                "description": "회피가 50% 증가한다. 턴 시작 시 공격력이 20% 증가하며, 최대 5회까지 중첩된다. 턴 종료 시 모든 아군의 행동 게이지를 10% 증가시킨다."
             },
             "S3": {
-                "name": "Hound the Indolent",
-                "description": "Dispels two debuffs from all allies before granting rampage to Dark elemental allies for 3 turns. Grants swift attack to all allies except for the caster. Grants an extra turn."
+                "name": "게으른 자 사냥",
+                "description": "모든 아군의 약화 효과를 두 개 해제한 뒤 어둠 속성 아군에게 3턴 동안 폭주를 부여한다. 시전자를 제외한 모든 아군에게 신속 공격을 부여한다. 추가 턴을 얻는다."
             }
         }
     },
@@ -3855,17 +3855,17 @@
         "_name": "Lorina",
         "skills": {
             "S1": {
-                "name": "Sharp Blow",
-                "description": "Knocks the enemy into the air with a spear, increasing Combat Readiness of the caster by 20%. Damage dealt increases proportional to the target's max Health."
+                "name": "날카로운 일격",
+                "description": "창으로 적을 공중에 띄우고 시전자의 행동 게이지를 20% 증가시킨다. 대상의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Spiritual Armament",
-                "description": "Increases Effect Resistance by 50%. Increases Attack by 15% each time the caster attacks an enemy. Effect can only stack up to 5 times."
+                "name": "정신 무장",
+                "description": "효과 저항이 50% 증가한다. 시전자가 적을 공격할 때마다 공격력이 15% 증가한다. 효과는 최대 5회까지 중첩된다."
             },
             "S3": {
-                "name": "Resolve",
-                "description": "After leaping into the air, attacks the enemy with a strike from above. Damage dealt increases proportional to the target's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "결의",
+                "description": "공중으로 도약한 뒤 위에서 내리쳐 적을 공격한다. 대상의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -3873,17 +3873,17 @@
         "_name": "Lots",
         "skills": {
             "S1": {
-                "name": "Holy Light",
-                "description": "Attacks with a light sphere, with a 75% chance to decrease Attack for 1 turn."
+                "name": "성스러운 빛",
+                "description": "빛의 구체로 공격하며, 75% 확률로 1턴 동안 공격력을 감소시킨다."
             },
             "S2": {
-                "name": "Regen",
-                "description": "With recovery magic, recovers Health of an ally proportional to the target's max Health and increases Combat Readiness by 100%. Increases Combat Readiness of the caster by 30%."
+                "name": "재생",
+                "description": "회복 마법으로 대상의 최대 생명력에 비례해 아군 한 명의 생명력을 회복하고 행동 게이지를 100% 증가시킨다. 시전자의 행동 게이지를 30% 증가시킨다."
             },
             "S3": {
-                "name": "Serenity",
-                "description": "With strengthening magic, increases Combat Readiness of all allies by 20% before granting continuous healing for 3 turns and recovering Health proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 2 turns."
+                "name": "평온",
+                "description": "강화 마법으로 모든 아군의 행동 게이지를 20% 증가시킨 뒤 3턴 동안 지속 회복을 부여하고 대상의 최대 생명력에 비례해 생명력을 회복한다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 2턴 연장된다."
             }
         }
     },
