@@ -55,6 +55,18 @@ class SyncFribbelsData extends Command
         'soul-weaver' => 'soul_weaver',
     ];
 
+    /**
+     * Skill keys Fribbels owns (damage multipliers). Everything else in a skill
+     * (name, description, cooldown, soulburn, passive) comes from CeciliaBot/custom data.
+     */
+    private const SCALING_KEYS = ['rate', 'pow', 'targets', 'selfHpScaling', 'selfDefScaling', 'selfSpdScaling', 'penetration'];
+
+    /**
+     * Heroes whose Fribbels stats are known to be wrong and must not be applied.
+     * diene: Fribbels lists stats identical to Ivana's (suspected copy error, audit 2026-10-27).
+     */
+    private const SKIP_FRIBBELS_STATS = ['diene'];
+
     public function handle(): int
     {
         $this->info('🔄 Starting E7-Hub data synchronization...');
@@ -105,13 +117,21 @@ class SyncFribbelsData extends Command
             $updated = 0;
             $skipped = 0;
 
+            $failed = 0;
             foreach ($heroesData as $heroData) {
-                $result = $this->upsertHero($heroData, $force);
+                // One bad record must not abort the rest of the sync
+                try {
+                    $result = $this->upsertHero($heroData, $force);
+                } catch (\Throwable $e) {
+                    $result = 'failed';
+                    report($e);
+                }
 
                 match ($result) {
                     'created' => $created++,
                     'updated' => $updated++,
                     'skipped' => $skipped++,
+                    'failed' => $failed++,
                 };
 
                 $bar->advance();
@@ -119,7 +139,7 @@ class SyncFribbelsData extends Command
 
             $bar->finish();
             $this->newLine();
-            $this->info("Heroes: {$created} created, {$updated} updated, {$skipped} skipped");
+            $this->info("Heroes: {$created} created, {$updated} updated, {$skipped} skipped, {$failed} failed");
 
         } catch (\Exception $e) {
             $this->error('Error syncing heroes: ' . $e->getMessage());
@@ -128,8 +148,12 @@ class SyncFribbelsData extends Command
 
     /**
      * Upsert a single hero record.
+     *
+     * Fribbels data (authoritative = false) only refreshes stats, imprint, element, class and
+     * skill multipliers of an existing hero: names, slugs, images and skill texts are kept.
+     * Curated data from custom_heroes.json (authoritative = true) replaces the record.
      */
-    private function upsertHero(array $data, bool $force): string
+    private function upsertHero(array $data, bool $force, bool $authoritative = false): string
     {
         // Use _id for DB lookup (maintains compatibility with existing records)
         $code = $data['_id'] ?? $data['id'] ?? null;
@@ -143,8 +167,10 @@ class SyncFribbelsData extends Command
         // Calculate hash for change detection
         $dataHash = hash('sha256', json_encode($data));
 
-        // Check if hero exists
-        $existingHero = Hero::where('code', $code)->first();
+        // Check if hero exists. Some heroes were seeded with the numeric game code (c6024)
+        // or a different code, so also match by that code and by slug.
+        $existingHero = Hero::where('code', $code)->first()
+            ?? Hero::where('code', $imageCode)->orWhere('slug', $code)->first();
 
         if ($existingHero && !$force && $existingHero->data_hash === $dataHash) {
             return 'skipped';
@@ -214,12 +240,63 @@ class SyncFribbelsData extends Command
         ];
 
         if ($existingHero) {
+            if (!$authoritative) {
+                $heroData = $this->preserveCuratedHeroFields($existingHero, $heroData, $code);
+            }
             $existingHero->update($heroData);
             return 'updated';
         }
 
         Hero::create($heroData);
         return 'created';
+    }
+
+    /**
+     * Keep what Fribbels does not own on an existing hero: identity (code, name, slug, image),
+     * skill texts/cooldowns/soulburn, and stats flagged as wrong in Fribbels.
+     *
+     * @param array<string, mixed> $heroData
+     * @return array<string, mixed>
+     */
+    private function preserveCuratedHeroFields(Hero $existing, array $heroData, string $code): array
+    {
+        unset($heroData['code'], $heroData['name'], $heroData['slug'], $heroData['image_url']);
+
+        if (in_array($code, self::SKIP_FRIBBELS_STATS, true)) {
+            unset($heroData['base_stats']);
+        }
+
+        $heroData['skills'] = $this->mergeScaling($existing->skills ?? [], $heroData['skills'] ?? []);
+
+        return $heroData;
+    }
+
+    /**
+     * Copy only the Fribbels multiplier keys into the existing skills.
+     *
+     * @param array<string, mixed> $existingSkills
+     * @param array<string, mixed>|null $fribbelsSkills
+     * @return array<string, mixed>
+     */
+    private function mergeScaling(array $existingSkills, ?array $fribbelsSkills): array
+    {
+        if (empty($existingSkills)) {
+            return $fribbelsSkills ?? [];
+        }
+
+        foreach ($fribbelsSkills ?? [] as $skillKey => $fribbelsSkill) {
+            if (!isset($existingSkills[$skillKey]) || !is_array($existingSkills[$skillKey]) || !is_array($fribbelsSkill)) {
+                continue;
+            }
+            foreach (self::SCALING_KEYS as $key) {
+                unset($existingSkills[$skillKey][$key]);
+                if (isset($fribbelsSkill[$key]) && $fribbelsSkill[$key] !== 0) {
+                    $existingSkills[$skillKey][$key] = $fribbelsSkill[$key];
+                }
+            }
+        }
+
+        return $existingSkills;
     }
 
     /**
@@ -299,7 +376,9 @@ class SyncFribbelsData extends Command
             ->first();
 
         if ($existing) {
-            $existing->update($artifactData);
+            // Fribbels has no artifact skill text and its image guess may not exist yet:
+            // only refresh class and rarity, keep code/name/slug/description/image of the record
+            $existing->update(['class' => $artifactClass, 'rarity' => $artifactData['rarity']]);
             return 'updated';
         }
 
@@ -358,7 +437,8 @@ class SyncFribbelsData extends Command
             $skipped = 0;
 
             foreach ($customHeroes as $heroData) {
-                $result = $this->upsertHero($heroData, $force);
+                // custom_heroes.json is curated (texts + stats): it replaces the whole record
+                $result = $this->upsertHero($heroData, $force, authoritative: true);
 
                 match ($result) {
                     'created' => $created++,
@@ -422,6 +502,10 @@ class SyncFribbelsData extends Command
                     ->first();
 
                 if ($existing) {
+                    // Without a curated image keep the current one: the epic7db guess often 404s
+                    if (empty($artifactData['image_url']) && !empty($existing->image_url)) {
+                        unset($data['image_url']);
+                    }
                     $existing->update($data);
                     $updated++;
                 } else {

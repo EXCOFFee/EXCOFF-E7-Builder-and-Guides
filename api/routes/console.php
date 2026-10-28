@@ -19,8 +19,12 @@ Artisan::command('inspire', function () {
 |
 */
 
-// Sync hero and artifact data daily at 3:00 AM
+// Sync hero and artifact data daily at 3:00 AM (production only, one run at a time,
+// output kept in storage/logs/data-sync.log to check what each run changed)
 Schedule::command('data:sync')->dailyAt('03:00')
+    ->environments(['production'])
+    ->withoutOverlapping(60)
+    ->appendOutputTo(storage_path('logs/data-sync.log'))
     ->onSuccess(function () {
         info('Data sync completed successfully');
     })
