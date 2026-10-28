@@ -5420,17 +5420,17 @@
         "_name": "Schuri",
         "skills": {
             "S1": {
-                "name": "Rapid Fire",
-                "description": "Attacks the enemy with a pistol. Damage dealt increases proportional to the target's max Health. A critical hit will double the amount of Focus gained."
+                "name": "Fogo rápido",
+                "description": "Ataca o inimigo com uma pistola. O dano causado aumenta proporcionalmente à Vida máxima do alvo. Um acerto crítico dobra o Foco obtido."
             },
             "S2": {
-                "name": "Explosive Gentleman",
-                "description": "At the start of the first battle, gains 3 Focus. After making a critical hit, increases Combat Readiness of all allies except for the caster by 25%."
+                "name": "Cavalheiro explosivo",
+                "description": "No início da primeira batalha, ganha 3 de Foco. Após causar um acerto crítico, aumenta a Prontidão de Combate de todos os aliados, exceto o conjurador, em 25%."
             },
             "S3": {
-                "name": "Rifle Shot",
-                "description": "Attacks all enemies with a rifle and decreases Combat Readiness by 30%. When Focus is full, consumes it all, increasing damage dealt and ignoring Effect Resistance.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Tiro de rifle",
+                "description": "Ataca todos os inimigos com um rifle e diminui a Prontidão de Combate em 30%. Quando o Foco está cheio, consome todo o Foco, aumentando o dano causado e ignorando a Resistência a Efeitos.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -5438,17 +5438,17 @@
         "_name": "Sea Phantom Politis",
         "skills": {
             "S1": {
-                "name": "Graceful Gesture",
-                "description": "Attacks the enemy with phantoms, dispelling one buff. When the caster is enraged, triggers a Dual Attack from the ally with the highest Attack."
+                "name": "Gesto gracioso",
+                "description": "Ataca o inimigo com fantasmas, dissipando um efeito positivo. Quando o conjurador está enfurecido, o aliado com maior Ataque realiza um Ataque duplo."
             },
             "S2": {
-                "name": "Phantom's Waltz",
-                "description": "Decreases the amount of resources gained by the enemy by 50%. At the start of battle and at the end of the turn, has a 100% chance to grant stealth for 1 turn."
+                "name": "Valsa do fantasma",
+                "description": "Diminui em 50% os recursos obtidos pelo inimigo. No início da batalha e no fim do turno, tem 100% de chance de conceder furtividade por 1 turno."
             },
             "S3": {
-                "name": "Fanatic Ball",
-                "description": "Hosts a ball, making all allies enraged for 2 turns. Dispels two buffs from all enemies and decreases Speed for 2 turns before decreasing Combat Readiness by 20%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Baile fanático",
+                "description": "Organiza um baile, enfurecendo todos os aliados por 2 turnos. Dissipa dois efeitos positivos de todos os inimigos e diminui a Velocidade por 2 turnos, depois diminui a Prontidão de Combate em 20%.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -5456,17 +5456,17 @@
         "_name": "Sealed Eye Surin",
         "skills": {
             "S1": {
-                "name": "Repel",
-                "description": "Attacks the enemy with a chain axe, with a 75% chance to inflict decreased Defense for 1 turn. When the caster is granted rage, activates Eradication as an extra attack. Eradication: Attacks the enemy, inflicting bleed for 2 turns, and at the end of the turn, detonates bleed effects inflicted on the target. Ignores Effect Resistance."
+                "name": "Repelir",
+                "description": "Ataca o inimigo com um machado de corrente, com 75% de chance de aplicar Diminuir Defesa por 1 turno. Quando o conjurador tem fúria, ativa Erradicação como ataque extra. Erradicação: ataca o inimigo, aplicando sangramento por 2 turnos e, no fim do turno, detona os sangramentos aplicados ao alvo. Ignora a Resistência a Efeitos."
             },
             "S2": {
-                "name": "Abyss Observer",
-                "description": "At the start of battle and at the end of the turn, grants stealth to the caster for 1 turn. At the end of someone's turn, when an enemy is inflicted with provoke or redirected provoke, grants rage to the caster for 2 turns and increases Combat Readiness by 30%."
+                "name": "Observadora do abismo",
+                "description": "No início da batalha e no fim do turno, concede furtividade ao conjurador por 1 turno. No fim do turno de qualquer um, quando um inimigo tem provocação ou provocação redirecionada, concede fúria ao conjurador por 2 turnos e aumenta a Prontidão de Combate em 30%."
             },
             "S3": {
-                "name": "Unexpected Accident",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks all enemies by staging an accident, inflicting three bleeding effects for 1 turn. When the target is inflicted with provoke or redirected provoke, extends duration of bleed inflicted on the target by 1 turn. When the caster is granted rage, ignores Effect Resistance.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Acidente inesperado",
+                "description": "Após conceder Aumentar Ataque ao conjurador por 2 turnos, ataca todos os inimigos encenando um acidente, aplicando três efeitos de sangramento por 1 turno. Quando o alvo tem provocação ou provocação redirecionada, estende em 1 turno a duração do sangramento aplicado ao alvo. Quando o conjurador tem fúria, ignora a Resistência a Efeitos.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -5474,17 +5474,17 @@
         "_name": "Seaside Bellona",
         "skills": {
             "S1": {
-                "name": "Watch Out",
-                "description": "Attacks the enemy with a fan, with a 75% chance to target the enemy for 2 turns."
+                "name": "Cuidado",
+                "description": "Ataca o inimigo com um leque, com 75% de chance de aplicar alvo ao inimigo por 2 turnos."
             },
             "S2": {
-                "name": "I'm with My Friends",
-                "description": "For every surviving ally, decreases damage suffered by 10%. When more than one damage reduction effect of the same kind is granted, only the strongest effect is applied. When an ally is attacked, gains 1 Focus, and when the caster's stacked Focus is 5, consumes all Focus and activates You're Not Cute. You're Not Cute: Attacks all enemies with a fan, with a 75% chance to decrease Defense for 2 turns."
+                "name": "Estou com meus amigos",
+                "description": "Para cada aliado vivo, diminui o dano sofrido em 10%. Quando mais de um efeito de redução de dano do mesmo tipo é concedido, só o mais forte é aplicado. Quando um aliado é atacado, ganha 1 de Foco e, quando o Foco acumulado do conjurador é 5, consome todo o Foco e ativa Você não é fofo. Você não é fofo: ataca todos os inimigos com um leque, com 75% de chance de diminuir a Defesa por 2 turnos."
             },
             "S3": {
-                "name": "Haven't I Warned You?",
-                "description": "Attacks all enemies with a spray of water, dispelling all buffs before a 100% chance each to inflict cannot buff and unhealable for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Eu não avisei?",
+                "description": "Ataca todos os inimigos com um jato de água, dissipando todos os efeitos positivos, depois com 100% de chance cada aplica impedimento de efeitos positivos e impedimento de cura por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -5492,17 +5492,17 @@
         "_name": "Senya",
         "skills": {
             "S1": {
-                "name": "Spear of Vengeance",
-                "description": "Attacks the enemy with a spear, with a 75% chance to provoke for 1 turn. When it is not the caster's turn, effect chance increases by 25%."
+                "name": "Lança da vingança",
+                "description": "Ataca o inimigo com uma lança, com 75% de chance de provocá-lo por 1 turno. Quando não é o turno do conjurador, a chance do efeito aumenta 25%."
             },
             "S2": {
-                "name": "Indomitable Spirit",
-                "description": "Increases Attack by 30% and Critical Hit Resistance by 50%. When attacking, cannot trigger a critical hit or a heavy blow. When attacked, if the caster suffers a non-critical hit, inflicts damage on the attacker proportional to the caster's Attack, before activating Grace of the Battlefield. Grace of the Battlefield: Grants a barrier (proportional to the caster's Attack) to all allies for 2 turns, and grants increased Speed of the caster for 2 turns."
+                "name": "Espírito indomável",
+                "description": "Aumenta o Ataque em 30% e a Resistência a Crítico em 50%. Ao atacar, não pode causar acerto crítico nem golpe pesado. Ao ser atacado, se o conjurador sofrer um acerto não crítico, causa ao atacante dano proporcional ao Ataque do conjurador, depois ativa Graça do campo de batalha. Graça do campo de batalha: concede uma barreira (proporcional ao Ataque do conjurador) a todos os aliados por 2 turnos e concede Aumentar Velocidade ao conjurador por 2 turnos."
             },
             "S3": {
-                "name": "Dragon Slayer's Strike",
-                "description": "Attacks all enemies by striking downwards with a spear and has a 100% chance to decrease Hit Chance for 2 turns and a 85% chance to provoke for 1 turn. Adopts a counterattacking stance for 3 turns.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Golpe da matadora de dragões",
+                "description": "Ataca todos os inimigos golpeando para baixo com uma lança e tem 100% de chance de diminuir a Precisão por 2 turnos e 85% de chance de provocar por 1 turno. Assume postura de contra-ataque por 3 turnos.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -5510,17 +5510,17 @@
         "_name": "Serene Purity Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, with a 50% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Corte no tornozelo",
+                "description": "Ataca o inimigo com uma espada, com 50% de chance de diminuir a Defesa por 2 turnos.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Crystal Clear Soul",
-                "description": "When the ally with the highest Attack starts their turn, gains 1 Focus. After attacking on the caster's turn, when Focus is full, consumes all Focus, activating Glacial Strike. Glacial Strike: Attacks all enemies, with a 50% chance to decrease Defense for 2 turns, and grants Torrent to the ally with the highest Attack."
+                "name": "Alma cristalina",
+                "description": "Quando o aliado com maior Ataque inicia seu turno, ganha 1 de Foco. Após atacar no turno do conjurador, quando o Foco está cheio, consome todo o Foco, ativando Golpe glacial. Golpe glacial: ataca todos os inimigos, com 50% de chance de diminuir a Defesa por 2 turnos, e concede torrente ao aliado com maior Ataque."
             },
             "S3": {
-                "name": "Frozen Winter Cut",
-                "description": "Attacks the enemy repeatedly, with a 100% chance to decrease Speed for 2 turns, and increases Speed of all allies for 2 turns."
+                "name": "Corte do inverno congelado",
+                "description": "Ataca o inimigo repetidamente, com 100% de chance de diminuir a Velocidade por 2 turnos, e aumenta a Velocidade de todos os aliados por 2 turnos."
             }
         }
     },
@@ -5528,17 +5528,17 @@
         "_name": "Serila",
         "skills": {
             "S1": {
-                "name": "Seduction",
-                "description": "Attacks with a flame of seduction, with a 50% chance to decrease Defense for 2 turns."
+                "name": "Sedução",
+                "description": "Ataca com uma chama da sedução, com 50% de chance de diminuir a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Spirit Absorb",
-                "description": "Attacks the enemy, with a 75% chance to decrease Attack for 2 turns, and when the enemy is defeated, resets skill cooldowns. Grants increased Attack to the caster for 2 turns and absorbs some of the damage dealt as Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Absorção espiritual",
+                "description": "Ataca o inimigo, com 75% de chance de diminuir o Ataque por 2 turnos e, ao derrotar o inimigo, reinicia as recargas de habilidades. Concede Aumentar Ataque ao conjurador por 2 turnos e absorve parte do dano causado como Vida.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Flame Kiss",
-                "description": "Attacks the enemy with the flame of Chatty, the magic lantern, with a 100% chance each to inflict two burn effects for 2 turns."
+                "name": "Beijo de chama",
+                "description": "Ataca o inimigo com a chama de Chatty, a lanterna mágica, com 100% de chance cada de aplicar dois efeitos de queimadura por 2 turnos."
             }
         }
     },
@@ -5546,17 +5546,17 @@
         "_name": "Setsuka",
         "skills": {
             "S1": {
-                "name": "Horizontal Slash",
-                "description": "Attacks the enemy with a sword, and absorbs some of the damage dealt as Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Corte horizontal",
+                "description": "Ataca o inimigo com uma espada e absorve parte do dano causado como Vida. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Surpressed Desire",
-                "description": "Increases Evasion of all allies by 30%, and when an ally except for the caster evades, counterattacks. After attacking, when Fighting Spirit is full, consumes all, granting Demon Blade Unleashed to the caster for 1 turn before activating Blade Art: Bewitching Blossom. Blade Art: Bewitching Blossom: Consumes all Health to attack all enemies, and increases Combat Readiness of the caster by 50%. Damage dealt increases proportional to the caster's lost Health."
+                "name": "Desejo reprimido",
+                "description": "Aumenta a Evasão de todos os aliados em 30% e, quando um aliado, exceto o conjurador, se esquiva, contra-ataca. Após atacar, quando o Espírito de luta está cheio, consome tudo, concedendo Lâmina demoníaca liberada ao conjurador por 1 turno antes de ativar Arte da lâmina: Flor encantadora. Arte da lâmina: Flor encantadora: consome toda a Vida para atacar todos os inimigos e aumenta a Prontidão de Combate do conjurador em 50%. O dano causado aumenta proporcionalmente à Vida perdida do conjurador."
             },
             "S3": {
-                "name": "Rouge Aroma",
-                "description": "Dispels all buffs from all enemies before inflicting beguile and inflicting decreased Hit Chance for 2 turns. Ignores Effect Resistance of targets with less max Health than the caster."
+                "name": "Aroma de rouge",
+                "description": "Dissipa todos os efeitos positivos de todos os inimigos, depois aplica sedução e Diminuir Precisão por 2 turnos. Ignora a Resistência a Efeitos dos alvos com Vida máxima menor que a do conjurador."
             }
         }
     },

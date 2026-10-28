@@ -5420,17 +5420,17 @@
         "_name": "Schuri",
         "skills": {
             "S1": {
-                "name": "Rapid Fire",
-                "description": "Attacks the enemy with a pistol. Damage dealt increases proportional to the target's max Health. A critical hit will double the amount of Focus gained."
+                "name": "速射",
+                "description": "拳銃で敵を攻撃する。対象の最大HPに比例して与ダメージがアップする。クリティカルが発生すると獲得する集中が倍になる。"
             },
             "S2": {
-                "name": "Explosive Gentleman",
-                "description": "At the start of the first battle, gains 3 Focus. After making a critical hit, increases Combat Readiness of all allies except for the caster by 25%."
+                "name": "爆発する紳士",
+                "description": "最初のバトル開始時、集中を3獲得する。クリティカルを発生させた後、発動者を除く味方全員の行動ゲージを25%増加させる。"
             },
             "S3": {
-                "name": "Rifle Shot",
-                "description": "Attacks all enemies with a rifle and decreases Combat Readiness by 30%. When Focus is full, consumes it all, increasing damage dealt and ignoring Effect Resistance.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "ライフルショット",
+                "description": "ライフルで敵全体を攻撃し、行動ゲージを30%減少させる。集中が満タンなら、すべて消費して与ダメージがアップし、効果抵抗を無視する。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -5438,17 +5438,17 @@
         "_name": "Sea Phantom Politis",
         "skills": {
             "S1": {
-                "name": "Graceful Gesture",
-                "description": "Attacks the enemy with phantoms, dispelling one buff. When the caster is enraged, triggers a Dual Attack from the ally with the highest Attack."
+                "name": "優雅な仕草",
+                "description": "幻影で敵を攻撃し、強化効果を一つ解除する。発動者が激怒状態なら、攻撃力が最も高い味方が協攻する。"
             },
             "S2": {
-                "name": "Phantom's Waltz",
-                "description": "Decreases the amount of resources gained by the enemy by 50%. At the start of battle and at the end of the turn, has a 100% chance to grant stealth for 1 turn."
+                "name": "幻影のワルツ",
+                "description": "敵が獲得する資源が50%減少する。バトル開始時とターン終了時、100%の確率で1ターンの間隠密を付与する。"
             },
             "S3": {
-                "name": "Fanatic Ball",
-                "description": "Hosts a ball, making all allies enraged for 2 turns. Dispels two buffs from all enemies and decreases Speed for 2 turns before decreasing Combat Readiness by 20%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "狂乱の舞踏会",
+                "description": "舞踏会を開き、味方全員を2ターンの間激怒状態にする。敵全体の強化効果を二つ解除し、2ターンの間スピードをダウンさせた後、行動ゲージを20%減少させる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -5456,17 +5456,17 @@
         "_name": "Sealed Eye Surin",
         "skills": {
             "S1": {
-                "name": "Repel",
-                "description": "Attacks the enemy with a chain axe, with a 75% chance to inflict decreased Defense for 1 turn. When the caster is granted rage, activates Eradication as an extra attack. Eradication: Attacks the enemy, inflicting bleed for 2 turns, and at the end of the turn, detonates bleed effects inflicted on the target. Ignores Effect Resistance."
+                "name": "撃退",
+                "description": "鎖斧で敵を攻撃し、75%の確率で1ターンの間防御力ダウンを付与する。発動者に激怒があれば、追加攻撃として根絶を発動する。根絶：敵を攻撃し、2ターンの間出血を付与し、ターン終了時に対象の出血を爆発させる。効果抵抗を無視する。"
             },
             "S2": {
-                "name": "Abyss Observer",
-                "description": "At the start of battle and at the end of the turn, grants stealth to the caster for 1 turn. At the end of someone's turn, when an enemy is inflicted with provoke or redirected provoke, grants rage to the caster for 2 turns and increases Combat Readiness by 30%."
+                "name": "深淵の観測者",
+                "description": "バトル開始時とターン終了時、発動者に1ターンの間隠密を付与する。誰かのターン終了時、敵に挑発または転換挑発があれば、発動者に2ターンの間激怒を付与し、行動ゲージを30%増加させる。"
             },
             "S3": {
-                "name": "Unexpected Accident",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks all enemies by staging an accident, inflicting three bleeding effects for 1 turn. When the target is inflicted with provoke or redirected provoke, extends duration of bleed inflicted on the target by 1 turn. When the caster is granted rage, ignores Effect Resistance.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "予期せぬ事故",
+                "description": "発動者に2ターンの間攻撃力アップを付与した後、事故を装って敵全体を攻撃し、1ターンの間出血を三つ付与する。対象に挑発または転換挑発があれば、対象の出血の持続時間を1ターン延長する。発動者に激怒があれば効果抵抗を無視する。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -5474,17 +5474,17 @@
         "_name": "Seaside Bellona",
         "skills": {
             "S1": {
-                "name": "Watch Out",
-                "description": "Attacks the enemy with a fan, with a 75% chance to target the enemy for 2 turns."
+                "name": "気をつけて",
+                "description": "扇で敵を攻撃し、75%の確率で2ターンの間標的を付与する。"
             },
             "S2": {
-                "name": "I'm with My Friends",
-                "description": "For every surviving ally, decreases damage suffered by 10%. When more than one damage reduction effect of the same kind is granted, only the strongest effect is applied. When an ally is attacked, gains 1 Focus, and when the caster's stacked Focus is 5, consumes all Focus and activates You're Not Cute. You're Not Cute: Attacks all enemies with a fan, with a 75% chance to decrease Defense for 2 turns."
+                "name": "友達と一緒だから",
+                "description": "生存している味方一人につき、受けるダメージが10%減少する。同じ種類のダメージ減少効果が複数付与された場合、最も強い効果のみ適用される。味方が攻撃されると集中を1獲得し、発動者の集中が5溜まると、集中をすべて消費してかわいくないを発動する。かわいくない：扇で敵全体を攻撃し、75%の確率で2ターンの間防御力をダウンさせる。"
             },
             "S3": {
-                "name": "Haven't I Warned You?",
-                "description": "Attacks all enemies with a spray of water, dispelling all buffs before a 100% chance each to inflict cannot buff and unhealable for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "警告したでしょ？",
+                "description": "水しぶきで敵全体を攻撃し、強化効果をすべて解除した後、それぞれ100%の確率で2ターンの間強化不可と回復不可を付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -5492,17 +5492,17 @@
         "_name": "Senya",
         "skills": {
             "S1": {
-                "name": "Spear of Vengeance",
-                "description": "Attacks the enemy with a spear, with a 75% chance to provoke for 1 turn. When it is not the caster's turn, effect chance increases by 25%."
+                "name": "復讐の槍",
+                "description": "槍で敵を攻撃し、75%の確率で1ターンの間挑発を付与する。発動者のターンでない場合、効果発動確率が25%アップする。"
             },
             "S2": {
-                "name": "Indomitable Spirit",
-                "description": "Increases Attack by 30% and Critical Hit Resistance by 50%. When attacking, cannot trigger a critical hit or a heavy blow. When attacked, if the caster suffers a non-critical hit, inflicts damage on the attacker proportional to the caster's Attack, before activating Grace of the Battlefield. Grace of the Battlefield: Grants a barrier (proportional to the caster's Attack) to all allies for 2 turns, and grants increased Speed of the caster for 2 turns."
+                "name": "不屈の精神",
+                "description": "攻撃力が30%、クリティカル抵抗が50%アップする。攻撃時、クリティカルや強打は発生しない。攻撃されたとき、発動者がクリティカル以外の攻撃を受けると、発動者の攻撃力に比例したダメージを攻撃者に与えた後、戦場の恩寵を発動する。戦場の恩寵：味方全員に2ターンの間バリア（発動者の攻撃力に比例）を付与し、発動者に2ターンの間スピードアップを付与する。"
             },
             "S3": {
-                "name": "Dragon Slayer's Strike",
-                "description": "Attacks all enemies by striking downwards with a spear and has a 100% chance to decrease Hit Chance for 2 turns and a 85% chance to provoke for 1 turn. Adopts a counterattacking stance for 3 turns.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "竜殺しの一撃",
+                "description": "槍を振り下ろして敵全体を攻撃し、100%の確率で2ターンの間命中率をダウンさせ、85%の確率で1ターンの間挑発を付与する。3ターンの間反撃態勢をとる。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -5510,17 +5510,17 @@
         "_name": "Serene Purity Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, with a 50% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "足首斬り",
+                "description": "剣で敵を攻撃し、50%の確率で2ターンの間防御力をダウンさせる。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Crystal Clear Soul",
-                "description": "When the ally with the highest Attack starts their turn, gains 1 Focus. After attacking on the caster's turn, when Focus is full, consumes all Focus, activating Glacial Strike. Glacial Strike: Attacks all enemies, with a 50% chance to decrease Defense for 2 turns, and grants Torrent to the ally with the highest Attack."
+                "name": "澄んだ魂",
+                "description": "攻撃力が最も高い味方がターンを開始すると、集中を1獲得する。発動者のターンに攻撃した後、集中が満タンなら、集中をすべて消費して氷河の一撃を発動する。氷河の一撃：敵全体を攻撃し、50%の確率で2ターンの間防御力をダウンさせ、攻撃力が最も高い味方に激流を付与する。"
             },
             "S3": {
-                "name": "Frozen Winter Cut",
-                "description": "Attacks the enemy repeatedly, with a 100% chance to decrease Speed for 2 turns, and increases Speed of all allies for 2 turns."
+                "name": "凍てつく冬の斬撃",
+                "description": "敵を連続で攻撃し、100%の確率で2ターンの間スピードをダウンさせ、2ターンの間味方全員のスピードをアップさせる。"
             }
         }
     },
@@ -5528,17 +5528,17 @@
         "_name": "Serila",
         "skills": {
             "S1": {
-                "name": "Seduction",
-                "description": "Attacks with a flame of seduction, with a 50% chance to decrease Defense for 2 turns."
+                "name": "誘惑",
+                "description": "誘惑の炎で攻撃し、50%の確率で2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Spirit Absorb",
-                "description": "Attacks the enemy, with a 75% chance to decrease Attack for 2 turns, and when the enemy is defeated, resets skill cooldowns. Grants increased Attack to the caster for 2 turns and absorbs some of the damage dealt as Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "魂の吸収",
+                "description": "敵を攻撃し、75%の確率で2ターンの間攻撃力をダウンさせ、敵を倒すとスキルのクールタイムをリセットする。発動者に2ターンの間攻撃力アップを付与し、与ダメージの一部をHPとして吸収する。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Flame Kiss",
-                "description": "Attacks the enemy with the flame of Chatty, the magic lantern, with a 100% chance each to inflict two burn effects for 2 turns."
+                "name": "炎の口づけ",
+                "description": "魔法のランタン、チャティの炎で敵を攻撃し、それぞれ100%の確率で2ターンの間火傷を二つ付与する。"
             }
         }
     },
@@ -5546,17 +5546,17 @@
         "_name": "Setsuka",
         "skills": {
             "S1": {
-                "name": "Horizontal Slash",
-                "description": "Attacks the enemy with a sword, and absorbs some of the damage dealt as Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "横斬り",
+                "description": "剣で敵を攻撃し、与ダメージの一部をHPとして吸収する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Surpressed Desire",
-                "description": "Increases Evasion of all allies by 30%, and when an ally except for the caster evades, counterattacks. After attacking, when Fighting Spirit is full, consumes all, granting Demon Blade Unleashed to the caster for 1 turn before activating Blade Art: Bewitching Blossom. Blade Art: Bewitching Blossom: Consumes all Health to attack all enemies, and increases Combat Readiness of the caster by 50%. Damage dealt increases proportional to the caster's lost Health."
+                "name": "抑えられた欲望",
+                "description": "味方全員の回避が30%アップし、発動者を除く味方が回避すると反撃する。攻撃後、闘志が満タンなら、すべて消費して発動者に1ターンの間妖刀解放を付与した後、剣術：妖花を発動する。剣術：妖花：HPをすべて消費して敵全体を攻撃し、発動者の行動ゲージを50%増加させる。発動者の失ったHPに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Rouge Aroma",
-                "description": "Dispels all buffs from all enemies before inflicting beguile and inflicting decreased Hit Chance for 2 turns. Ignores Effect Resistance of targets with less max Health than the caster."
+                "name": "紅の香り",
+                "description": "敵全体の強化効果をすべて解除した後、2ターンの間魅惑と命中率ダウンを付与する。最大HPが発動者より低い対象の効果抵抗を無視する。"
             }
         }
     },

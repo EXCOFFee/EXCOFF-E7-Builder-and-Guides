@@ -5420,17 +5420,17 @@
         "_name": "Schuri",
         "skills": {
             "S1": {
-                "name": "Rapid Fire",
-                "description": "Attacks the enemy with a pistol. Damage dealt increases proportional to the target's max Health. A critical hit will double the amount of Focus gained."
+                "name": "速射",
+                "description": "以手枪攻击敌人。造成的伤害按目标的最大生命值比例提升。暴击时获得的专注翻倍。"
             },
             "S2": {
-                "name": "Explosive Gentleman",
-                "description": "At the start of the first battle, gains 3 Focus. After making a critical hit, increases Combat Readiness of all allies except for the caster by 25%."
+                "name": "爆炸绅士",
+                "description": "首场战斗开始时，获得3专注。造成暴击后，使除施放者外所有友军的行动值提升25%。"
             },
             "S3": {
-                "name": "Rifle Shot",
-                "description": "Attacks all enemies with a rifle and decreases Combat Readiness by 30%. When Focus is full, consumes it all, increasing damage dealt and ignoring Effect Resistance.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "步枪射击",
+                "description": "以步枪攻击所有敌人，并降低30%行动值。专注已满时，消耗全部专注，提升造成的伤害并无视效果抵抗。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -5438,17 +5438,17 @@
         "_name": "Sea Phantom Politis",
         "skills": {
             "S1": {
-                "name": "Graceful Gesture",
-                "description": "Attacks the enemy with phantoms, dispelling one buff. When the caster is enraged, triggers a Dual Attack from the ally with the highest Attack."
+                "name": "优雅举止",
+                "description": "以幻影攻击敌人，并解除一个强化效果。施放者处于激怒状态时，攻击力最高的友军发动协攻。"
             },
             "S2": {
-                "name": "Phantom's Waltz",
-                "description": "Decreases the amount of resources gained by the enemy by 50%. At the start of battle and at the end of the turn, has a 100% chance to grant stealth for 1 turn."
+                "name": "幻影华尔兹",
+                "description": "敌人获得的资源降低50%。战斗开始时与回合结束时，有100%的几率施加1回合隐身。"
             },
             "S3": {
-                "name": "Fanatic Ball",
-                "description": "Hosts a ball, making all allies enraged for 2 turns. Dispels two buffs from all enemies and decreases Speed for 2 turns before decreasing Combat Readiness by 20%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "狂热舞会",
+                "description": "举办舞会，使所有友军进入2回合激怒状态。解除所有敌人的两个强化效果，并降低速度2回合，然后降低20%行动值。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -5456,17 +5456,17 @@
         "_name": "Sealed Eye Surin",
         "skills": {
             "S1": {
-                "name": "Repel",
-                "description": "Attacks the enemy with a chain axe, with a 75% chance to inflict decreased Defense for 1 turn. When the caster is granted rage, activates Eradication as an extra attack. Eradication: Attacks the enemy, inflicting bleed for 2 turns, and at the end of the turn, detonates bleed effects inflicted on the target. Ignores Effect Resistance."
+                "name": "击退",
+                "description": "以链斧攻击敌人，有75%的几率施加1回合防御力降低。施放者拥有激怒时，以追加攻击发动根除。根除：攻击敌人，施加2回合出血，并在回合结束时引爆目标身上的出血。无视效果抵抗。"
             },
             "S2": {
-                "name": "Abyss Observer",
-                "description": "At the start of battle and at the end of the turn, grants stealth to the caster for 1 turn. At the end of someone's turn, when an enemy is inflicted with provoke or redirected provoke, grants rage to the caster for 2 turns and increases Combat Readiness by 30%."
+                "name": "深渊观察者",
+                "description": "战斗开始时与回合结束时，为施放者施加1回合隐身。任意角色回合结束时，若敌人处于挑衅或转移挑衅状态，为施放者施加2回合激怒，并提升30%行动值。"
             },
             "S3": {
-                "name": "Unexpected Accident",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks all enemies by staging an accident, inflicting three bleeding effects for 1 turn. When the target is inflicted with provoke or redirected provoke, extends duration of bleed inflicted on the target by 1 turn. When the caster is granted rage, ignores Effect Resistance.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "意外事故",
+                "description": "为施放者施加2回合攻击力提升后，制造意外攻击所有敌人，施加三层1回合出血。目标处于挑衅或转移挑衅状态时，使目标身上出血的持续时间延长1回合。施放者拥有激怒时，无视效果抵抗。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -5474,17 +5474,17 @@
         "_name": "Seaside Bellona",
         "skills": {
             "S1": {
-                "name": "Watch Out",
-                "description": "Attacks the enemy with a fan, with a 75% chance to target the enemy for 2 turns."
+                "name": "小心",
+                "description": "以扇子攻击敌人，有75%的几率施加2回合标记。"
             },
             "S2": {
-                "name": "I'm with My Friends",
-                "description": "For every surviving ally, decreases damage suffered by 10%. When more than one damage reduction effect of the same kind is granted, only the strongest effect is applied. When an ally is attacked, gains 1 Focus, and when the caster's stacked Focus is 5, consumes all Focus and activates You're Not Cute. You're Not Cute: Attacks all enemies with a fan, with a 75% chance to decrease Defense for 2 turns."
+                "name": "我和朋友们在一起",
+                "description": "每有一名存活的友军，受到的伤害降低10%。获得多个同类伤害降低效果时，仅适用最强的效果。友军受到攻击时，获得1专注；施放者累积的专注达到5时，消耗全部专注发动一点都不可爱。一点都不可爱：以扇子攻击所有敌人，有75%的几率降低防御力2回合。"
             },
             "S3": {
-                "name": "Haven't I Warned You?",
-                "description": "Attacks all enemies with a spray of water, dispelling all buffs before a 100% chance each to inflict cannot buff and unhealable for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "我不是警告过你吗？",
+                "description": "以水流攻击所有敌人，解除所有强化效果，然后各有100%的几率施加2回合无法强化与无法恢复。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -5492,17 +5492,17 @@
         "_name": "Senya",
         "skills": {
             "S1": {
-                "name": "Spear of Vengeance",
-                "description": "Attacks the enemy with a spear, with a 75% chance to provoke for 1 turn. When it is not the caster's turn, effect chance increases by 25%."
+                "name": "复仇之枪",
+                "description": "以长枪攻击敌人，有75%的几率施加1回合挑衅。不是施放者的回合时，效果几率提升25%。"
             },
             "S2": {
-                "name": "Indomitable Spirit",
-                "description": "Increases Attack by 30% and Critical Hit Resistance by 50%. When attacking, cannot trigger a critical hit or a heavy blow. When attacked, if the caster suffers a non-critical hit, inflicts damage on the attacker proportional to the caster's Attack, before activating Grace of the Battlefield. Grace of the Battlefield: Grants a barrier (proportional to the caster's Attack) to all allies for 2 turns, and grants increased Speed of the caster for 2 turns."
+                "name": "不屈精神",
+                "description": "攻击力提升30%，暴击抵抗提升50%。攻击时无法造成暴击或重击。受到攻击时，若施放者受到非暴击攻击，对攻击者造成与施放者攻击力成比例的伤害，然后发动战场恩宠。战场恩宠：为所有友军施加2回合屏障（与施放者的攻击力成比例），并为施放者施加2回合速度提升。"
             },
             "S3": {
-                "name": "Dragon Slayer's Strike",
-                "description": "Attacks all enemies by striking downwards with a spear and has a 100% chance to decrease Hit Chance for 2 turns and a 85% chance to provoke for 1 turn. Adopts a counterattacking stance for 3 turns.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "屠龙者一击",
+                "description": "以长枪向下猛击攻击所有敌人，有100%的几率降低命中率2回合，并有85%的几率施加1回合挑衅。进入3回合反击姿态。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -5510,17 +5510,17 @@
         "_name": "Serene Purity Adin",
         "skills": {
             "S1": {
-                "name": "Ankle Cut",
-                "description": "Attacks the enemy with a sword, with a 50% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "斩踝",
+                "description": "以剑攻击敌人，有50%的几率降低防御力2回合。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Crystal Clear Soul",
-                "description": "When the ally with the highest Attack starts their turn, gains 1 Focus. After attacking on the caster's turn, when Focus is full, consumes all Focus, activating Glacial Strike. Glacial Strike: Attacks all enemies, with a 50% chance to decrease Defense for 2 turns, and grants Torrent to the ally with the highest Attack."
+                "name": "澄澈之魂",
+                "description": "攻击力最高的友军开始其回合时，获得1专注。在施放者的回合攻击后，若专注已满，消耗全部专注发动冰川一击。冰川一击：攻击所有敌人，有50%的几率降低防御力2回合，并为攻击力最高的友军施加激流。"
             },
             "S3": {
-                "name": "Frozen Winter Cut",
-                "description": "Attacks the enemy repeatedly, with a 100% chance to decrease Speed for 2 turns, and increases Speed of all allies for 2 turns."
+                "name": "冰封寒冬斩",
+                "description": "连续攻击敌人，有100%的几率降低速度2回合，并提升所有友军的速度2回合。"
             }
         }
     },
@@ -5528,17 +5528,17 @@
         "_name": "Serila",
         "skills": {
             "S1": {
-                "name": "Seduction",
-                "description": "Attacks with a flame of seduction, with a 50% chance to decrease Defense for 2 turns."
+                "name": "诱惑",
+                "description": "以诱惑之焰攻击，有50%的几率降低防御力2回合。"
             },
             "S2": {
-                "name": "Spirit Absorb",
-                "description": "Attacks the enemy, with a 75% chance to decrease Attack for 2 turns, and when the enemy is defeated, resets skill cooldowns. Grants increased Attack to the caster for 2 turns and absorbs some of the damage dealt as Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "灵魂吸收",
+                "description": "攻击敌人，有75%的几率降低攻击力2回合，击败敌人时重置技能冷却时间。为施放者施加2回合攻击力提升，并将部分造成的伤害吸收为生命值。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Flame Kiss",
-                "description": "Attacks the enemy with the flame of Chatty, the magic lantern, with a 100% chance each to inflict two burn effects for 2 turns."
+                "name": "火焰之吻",
+                "description": "以魔法灯笼查蒂的火焰攻击敌人，各有100%的几率施加两层2回合灼伤。"
             }
         }
     },
@@ -5546,17 +5546,17 @@
         "_name": "Setsuka",
         "skills": {
             "S1": {
-                "name": "Horizontal Slash",
-                "description": "Attacks the enemy with a sword, and absorbs some of the damage dealt as Health. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "横斩",
+                "description": "以剑攻击敌人，并将部分造成的伤害吸收为生命值。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "Surpressed Desire",
-                "description": "Increases Evasion of all allies by 30%, and when an ally except for the caster evades, counterattacks. After attacking, when Fighting Spirit is full, consumes all, granting Demon Blade Unleashed to the caster for 1 turn before activating Blade Art: Bewitching Blossom. Blade Art: Bewitching Blossom: Consumes all Health to attack all enemies, and increases Combat Readiness of the caster by 50%. Damage dealt increases proportional to the caster's lost Health."
+                "name": "压抑的欲望",
+                "description": "所有友军的闪避提升30%，除施放者外的友军闪避时进行反击。攻击后若斗志已满，消耗全部斗志，为施放者施加1回合妖刀解放，然后发动剑术：妖花。剑术：妖花：消耗全部生命值攻击所有敌人，并使施放者的行动值提升50%。造成的伤害按施放者已损失的生命值比例提升。"
             },
             "S3": {
-                "name": "Rouge Aroma",
-                "description": "Dispels all buffs from all enemies before inflicting beguile and inflicting decreased Hit Chance for 2 turns. Ignores Effect Resistance of targets with less max Health than the caster."
+                "name": "胭脂香气",
+                "description": "解除所有敌人的所有强化效果，然后施加2回合魅惑与命中率降低。无视最大生命值低于施放者的目标的效果抵抗。"
             }
         }
     },
