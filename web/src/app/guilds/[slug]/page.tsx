@@ -8,7 +8,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { ImageCarousel } from '@/components/ui/image-carousel';
 import { useTranslations } from '@/hooks/useTranslations';
-import { formatDate } from '@/lib/utils';
+import { formatDate } from '@/lib/utils';
 import { useNavigateFresh } from '@/hooks/useNavigateFresh';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
