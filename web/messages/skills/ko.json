@@ -5132,17 +5132,17 @@
         "_name": "Riza Hawkeye",
         "skills": {
             "S1": {
-                "name": "Stand Back!",
-                "description": "Attacks the enemy by firing a pistol and has a 50% chance to target them for 2 turns. When the caster is granted Hawk's Eye, after attacking, increases Combat Readiness of the foremost ally by 20%."
+                "name": "물러서!",
+                "description": "권총을 쏴 적을 공격하며, 50% 확률로 2턴 동안 표적을 건다. 시전자에게 매의 눈이 있으면 공격 후 가장 앞에 있는 아군의 행동 게이지를 20% 증가시킨다."
             },
             "S2": {
-                "name": "Devoted Support",
-                "description": "When the foremost ally is attacked by a Single Attack, decreases damage suffered by 30%. When more than one damage reduction effect is granted, only the strongest effect is applied. When the foremost ally's Health is 50% or less after being attacked, dispels all debuffs from the foremost ally and the caster, and grants Hawk's Eye to the caster for 2 turns. Dispelling debuffs and Hawk's Eye effects can only be activated once every 3 turns."
+                "name": "헌신적인 지원",
+                "description": "가장 앞에 있는 아군이 단일 공격을 받으면 받는 피해가 30% 감소한다. 피해 감소 효과가 여러 개 부여되면 가장 강한 효과만 적용된다. 가장 앞에 있는 아군이 공격받은 후 생명력이 50% 이하이면 그 아군과 시전자의 약화 효과를 모두 해제하고 시전자에게 2턴 동안 매의 눈을 부여한다. 약화 효과 해제와 매의 눈 효과는 3턴마다 한 번만 발동할 수 있다."
             },
             "S3": {
-                "name": "All Out!",
-                "description": "Attacks the enemy with focused fire, dispelling all buffs and decreasing Combat Readiness by 50%, before granting immunity for 2 turns and exploiting weak points once to the caster and the foremost ally.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "전력 사격!",
+                "description": "집중 사격으로 적을 공격해 강화 효과를 모두 해제하고 행동 게이지를 50% 감소시킨 뒤 시전자와 가장 앞에 있는 아군에게 2턴 동안 면역을, 약점 파악을 한 번 부여한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -5150,17 +5150,17 @@
         "_name": "Roaming Warrior Leo",
         "skills": {
             "S1": {
-                "name": "Fire Slingshot",
-                "description": "Attacks the enemy with a slingshot, with a 50% chance to inflict decreased Attack for 2 turns. When the enemy has a debuff, increases damage dealt."
+                "name": "불꽃 새총",
+                "description": "새총으로 적을 공격하며, 50% 확률로 2턴 동안 공격력 감소를 건다. 적에게 약화 효과가 있으면 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Fire Shockbomb",
-                "description": "Fires a shockbomb at the enemy, with a 100% chance to decrease Defense for 2 turns. Decreases skill cooldown of Go, Racoo! by 1 turn. At the end of the turn, detonates bombs inflicted on the enemy."
+                "name": "충격탄 발사",
+                "description": "적에게 충격탄을 발사하며, 100% 확률로 2턴 동안 방어력을 감소시킨다. 가라, 라쿠!의 재사용 대기 시간을 1턴 감소시킨다. 턴 종료 시 적에게 걸린 폭탄을 폭발시킨다."
             },
             "S3": {
-                "name": "Go, Racoo!",
-                "description": "Attacks all enemies with Racoo's help, decreasing buff durations by 1 turn before a 100% chance each to inflict decreased Speed and a bomb for 2 turns. Grants skill nullifier once to the caster.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "가라, 라쿠!",
+                "description": "라쿠의 도움으로 모든 적을 공격해 강화 효과의 지속 시간을 1턴 감소시킨 뒤 각각 100% 확률로 2턴 동안 속도 감소와 폭탄을 건다. 시전자에게 스킬 피해 무효를 한 번 부여한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -5168,17 +5168,17 @@
         "_name": "Roana",
         "skills": {
             "S1": {
-                "name": "Soul Purification",
-                "description": "Attacks the enemy with a noble power, and grants a barrier (proportional to the caster's max Health) to the ally with the lowest Health for 2 turns.",
-                "soulburn_effect": "Grants a barrier to all allies for 2 turns after attacking."
+                "name": "영혼 정화",
+                "description": "고귀한 힘으로 적을 공격하고 생명력이 가장 낮은 아군에게 2턴 동안 보호막(시전자 최대 생명력 비례)을 부여한다.",
+                "soulburn_effect": "공격 후 모든 아군에게 2턴 동안 보호막을 부여한다."
             },
             "S2": {
-                "name": "Vigilant Eye",
-                "description": "When an ally is attacked by an extra attack, counterattack, or Dual Attack, recovers Health of all allies proportional to the caster's max Health and the number of attacked allies, and increases Combat Readiness of each by 5% per attacked ally."
+                "name": "경계의 눈",
+                "description": "아군이 추가 공격, 반격, 협공을 받으면 시전자의 최대 생명력과 공격받은 아군 수에 비례해 모든 아군의 생명력을 회복하고, 공격받은 아군 한 명당 각각의 행동 게이지를 5% 증가시킨다."
             },
             "S3": {
-                "name": "Noble Rekos",
-                "description": "With the grace of Rekos, recovers the Health of all allies and grants a barrier and revive for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "고귀한 레코스",
+                "description": "레코스의 은총으로 모든 아군의 생명력을 회복하고 2턴 동안 보호막과 부활을 부여한다. 시전자의 최대 생명력에 비례해 회복량과 보호막 강도가 증가한다."
             }
         }
     },
@@ -5186,17 +5186,17 @@
         "_name": "Robin",
         "skills": {
             "S1": {
-                "name": "Neutralize",
-                "description": "Attacks the enemy with a dagger and has a 100% chance to inflict bleed for 2 turns."
+                "name": "무력화",
+                "description": "단검으로 적을 공격하며, 100% 확률로 2턴 동안 출혈을 건다."
             },
             "S2": {
-                "name": "Clear The Back",
-                "description": "Attacks all enemies with a grenade launcher, dispelling two buffs before a 100% chance each to inflict three burn effects for 1 turn. Increases Combat Readiness of the caster by 50%."
+                "name": "후방 정리",
+                "description": "유탄 발사기로 모든 적을 공격해 강화 효과를 두 개 해제한 뒤 각각 100% 확률로 1턴 동안 화상을 세 개 건다. 시전자의 행동 게이지를 50% 증가시킨다."
             },
             "S3": {
-                "name": "Say Hello To My Little Friends",
-                "description": "Attacks all enemies with her secret weapon and extends durations of debuffs except for those which prevent movement by 1 turn before a 100% chance to inflict decreased Defense for 2 turns. When this skill is not on cooldown, at the start of an ally's extra turn, grants swift attack to the caster and increases Combat Readiness by 25%.",
-                "soulburn_effect": "At the end of the turn, detonates bleed and burn effects inflicted on the target."
+                "name": "내 작은 친구들에게 인사해",
+                "description": "비장의 무기로 모든 적을 공격해 행동을 막는 효과를 제외한 약화 효과의 지속 시간을 1턴 연장한 뒤 100% 확률로 2턴 동안 방어력 감소를 건다. 이 스킬이 재사용 대기 중이 아니면 아군의 추가 턴 시작 시 시전자에게 신속 공격을 부여하고 행동 게이지를 25% 증가시킨다.",
+                "soulburn_effect": "턴 종료 시 대상에게 걸린 출혈과 화상을 폭발시킨다."
             }
         }
     },
@@ -5204,17 +5204,17 @@
         "_name": "Romann",
         "skills": {
             "S1": {
-                "name": "Gravity Arrow",
-                "description": "Shoots gravity arrows at the enemy, decreasing Combat Readiness by 10%, and increasing Combat Readiness of the caster by 10%."
+                "name": "중력 화살",
+                "description": "적에게 중력 화살을 쏴 행동 게이지를 10% 감소시키고 시전자의 행동 게이지를 10% 증가시킨다."
             },
             "S2": {
-                "name": "Gravitation",
-                "description": "Attacks all enemies with a magic circle, with a 50% chance each to decrease Combat Readiness by 20% four times.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "중력장",
+                "description": "마법진으로 모든 적을 공격하며, 각각 50% 확률로 행동 게이지를 20%씩 네 번 감소시킨다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             },
             "S3": {
-                "name": "Event Horizon",
-                "description": "Shoots a powerful gravity sphere to attack all enemies, dispelling all buffs before inflicting restrict and two poison effects for 2 turns. Increases Combat Readiness of the caster by 50%."
+                "name": "사건의 지평선",
+                "description": "강력한 중력 구체를 쏴 모든 적을 공격해 강화 효과를 모두 해제한 뒤 2턴 동안 제약과 지속 피해를 두 개 건다. 시전자의 행동 게이지를 50% 증가시킨다."
             }
         }
     },
@@ -5222,17 +5222,17 @@
         "_name": "Roozid",
         "skills": {
             "S1": {
-                "name": "Hemorrhage",
-                "description": "Cuts the enemy with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "출혈",
+                "description": "쌍검으로 적을 베며, 50% 확률로 2턴 동안 속도를 감소시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Wind Slash",
-                "description": "Attacks with a swordstorm, with a 70% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "바람 베기",
+                "description": "검풍으로 공격하며, 70% 확률로 2턴 동안 공격력을 감소시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Divine Response",
-                "description": "Corrects stance, increasing Combat Readiness of all allies by 20% and granting increased Speed for 2 turns."
+                "name": "신의 응답",
+                "description": "자세를 바로잡아 모든 아군의 행동 게이지를 20% 증가시키고 2턴 동안 속도 증가를 부여한다."
             }
         }
     },
@@ -5240,17 +5240,17 @@
         "_name": "Rose",
         "skills": {
             "S1": {
-                "name": "Sequential Cutter",
-                "description": "Attacks the enemy with a sword. When the caster's Health is 50% or more, has a 75% chance to inflict provoke for 1 turn, and when the caster's Health is less than 50%, grants increased Defense to the caster for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "연속 베기",
+                "description": "검으로 적을 공격한다. 시전자의 생명력이 50% 이상이면 75% 확률로 1턴 동안 도발을 걸고, 50% 미만이면 시전자에게 1턴 동안 방어력 증가를 부여한다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Shield of Light",
-                "description": "Covers an ally with the Shield of Light, dispelling two debuffs and granting a barrier (proportional to the caster's Defense) for 2 turns before increasing Combat Readiness by 20%."
+                "name": "빛의 방패",
+                "description": "빛의 방패로 아군 한 명을 감싸 약화 효과를 두 개 해제하고 2턴 동안 보호막(시전자 방어력 비례)을 부여한 뒤 행동 게이지를 20% 증가시킨다."
             },
             "S3": {
-                "name": "Goddess of Victory",
-                "description": "Gives blessing to all allies, increasing Attack for 2 turns, and Combat Readiness by 25%. Grants increased Defense to the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "승리의 여신",
+                "description": "모든 아군을 축복해 2턴 동안 공격력을 증가시키고 행동 게이지를 25% 증가시킨다. 시전자에게 2턴 동안 방어력 증가를 부여한다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장된다."
             }
         }
     },
@@ -5258,17 +5258,17 @@
         "_name": "Roy Mustang",
         "skills": {
             "S1": {
-                "name": "Ignite",
-                "description": "Attacks the enemy with flames, and increases Combat Readiness of the caster by 15%. When used on the caster's turn, if the caster is granted Flame Alchemist, activates Heat Wave instead of Ignite. Heat Wave: Attacks the enemy with a huge flame, and increases Combat Readiness of the caster by 30%. Penetrates the target's Defense by 50%. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "점화",
+                "description": "불꽃으로 적을 공격하고 시전자의 행동 게이지를 15% 증가시킨다. 시전자의 턴에 사용할 때 시전자에게 불꽃의 연금술사가 있으면 점화 대신 열파를 발동한다. 열파: 거대한 불꽃으로 적을 공격하고 시전자의 행동 게이지를 30% 증가시킨다. 대상의 방어력을 50% 관통한다. 이 스킬로는 협공이 발동하지 않는다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Hero of Ishval",
-                "description": "At the start of the first battle, gains 40 Fighting Spirit and grants Flame Alchemist. Damage suffered in one attack does not exceed 51% of max Health."
+                "name": "이슈발의 영웅",
+                "description": "첫 번째 전투 시작 시 투지를 40 얻고 불꽃의 연금술사를 부여한다. 한 번의 공격으로 받는 피해가 최대 생명력의 51%를 넘지 않는다."
             },
             "S3": {
-                "name": "Scorching Heat",
-                "description": "After increasing Attack of the caster for 2 turns, attacks all enemies with a consecutive barrage of flames, and grants Flame Alchemist to the caster. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "작열하는 열기",
+                "description": "2턴 동안 시전자의 공격력을 증가시킨 뒤 연속된 불꽃으로 모든 적을 공격하고 시전자에게 불꽃의 연금술사를 부여한다. 적이 세 명 이하이면 적이 적을수록 주는 피해가 증가한다."
             }
         }
     },

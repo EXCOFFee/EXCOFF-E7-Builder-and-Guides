@@ -5132,17 +5132,17 @@
         "_name": "Riza Hawkeye",
         "skills": {
             "S1": {
-                "name": "Stand Back!",
-                "description": "Attacks the enemy by firing a pistol and has a 50% chance to target them for 2 turns. When the caster is granted Hawk's Eye, after attacking, increases Combat Readiness of the foremost ally by 20%."
+                "name": "退后！",
+                "description": "开枪攻击敌人，有50%的几率施加2回合标记。施放者拥有鹰眼时，攻击后使最前方友军的行动值提升20%。"
             },
             "S2": {
-                "name": "Devoted Support",
-                "description": "When the foremost ally is attacked by a Single Attack, decreases damage suffered by 30%. When more than one damage reduction effect is granted, only the strongest effect is applied. When the foremost ally's Health is 50% or less after being attacked, dispels all debuffs from the foremost ally and the caster, and grants Hawk's Eye to the caster for 2 turns. Dispelling debuffs and Hawk's Eye effects can only be activated once every 3 turns."
+                "name": "全力支援",
+                "description": "最前方的友军受到单体攻击时，受到的伤害降低30%。获得多个伤害降低效果时，仅适用最强的效果。最前方的友军受到攻击后生命值在50%以下时，解除该友军与施放者的所有弱化效果，并为施放者施加2回合鹰眼。解除弱化效果与鹰眼效果每3回合只能发动一次。"
             },
             "S3": {
-                "name": "All Out!",
-                "description": "Attacks the enemy with focused fire, dispelling all buffs and decreasing Combat Readiness by 50%, before granting immunity for 2 turns and exploiting weak points once to the caster and the foremost ally.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "全力射击！",
+                "description": "以集中火力攻击敌人，解除所有强化效果并降低50%行动值，然后为施放者与最前方的友军施加2回合免疫与一次弱点洞察。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -5150,17 +5150,17 @@
         "_name": "Roaming Warrior Leo",
         "skills": {
             "S1": {
-                "name": "Fire Slingshot",
-                "description": "Attacks the enemy with a slingshot, with a 50% chance to inflict decreased Attack for 2 turns. When the enemy has a debuff, increases damage dealt."
+                "name": "火焰弹弓",
+                "description": "以弹弓攻击敌人，有50%的几率施加2回合攻击力降低。敌人有弱化效果时，提升造成的伤害。"
             },
             "S2": {
-                "name": "Fire Shockbomb",
-                "description": "Fires a shockbomb at the enemy, with a 100% chance to decrease Defense for 2 turns. Decreases skill cooldown of Go, Racoo! by 1 turn. At the end of the turn, detonates bombs inflicted on the enemy."
+                "name": "发射震撼弹",
+                "description": "向敌人发射震撼弹，有100%的几率降低防御力2回合。使上吧，拉酷！的冷却时间减少1回合。回合结束时，引爆敌人身上的炸弹。"
             },
             "S3": {
-                "name": "Go, Racoo!",
-                "description": "Attacks all enemies with Racoo's help, decreasing buff durations by 1 turn before a 100% chance each to inflict decreased Speed and a bomb for 2 turns. Grants skill nullifier once to the caster.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "上吧，拉酷！",
+                "description": "在拉酷的帮助下攻击所有敌人，使强化效果持续时间减少1回合，然后各有100%的几率施加2回合速度降低与炸弹。为施放者施加一次技能伤害无效。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -5168,17 +5168,17 @@
         "_name": "Roana",
         "skills": {
             "S1": {
-                "name": "Soul Purification",
-                "description": "Attacks the enemy with a noble power, and grants a barrier (proportional to the caster's max Health) to the ally with the lowest Health for 2 turns.",
-                "soulburn_effect": "Grants a barrier to all allies for 2 turns after attacking."
+                "name": "灵魂净化",
+                "description": "以高贵之力攻击敌人，并为生命值最低的友军施加2回合屏障（与施放者的最大生命值成比例）。",
+                "soulburn_effect": "攻击后，为所有友军施加2回合屏障。"
             },
             "S2": {
-                "name": "Vigilant Eye",
-                "description": "When an ally is attacked by an extra attack, counterattack, or Dual Attack, recovers Health of all allies proportional to the caster's max Health and the number of attacked allies, and increases Combat Readiness of each by 5% per attacked ally."
+                "name": "警戒之眼",
+                "description": "友军受到追加攻击、反击或协攻时，按施放者的最大生命值与受到攻击的友军数量比例恢复所有友军的生命值，并且每有一名友军受到攻击，各友军的行动值提升5%。"
             },
             "S3": {
-                "name": "Noble Rekos",
-                "description": "With the grace of Rekos, recovers the Health of all allies and grants a barrier and revive for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "高贵的雷科斯",
+                "description": "借由雷科斯的恩宠，恢复所有友军的生命值，并施加2回合屏障与复活。恢复量与屏障强度按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -5186,17 +5186,17 @@
         "_name": "Robin",
         "skills": {
             "S1": {
-                "name": "Neutralize",
-                "description": "Attacks the enemy with a dagger and has a 100% chance to inflict bleed for 2 turns."
+                "name": "无力化",
+                "description": "以短剑攻击敌人，有100%的几率施加2回合出血。"
             },
             "S2": {
-                "name": "Clear The Back",
-                "description": "Attacks all enemies with a grenade launcher, dispelling two buffs before a 100% chance each to inflict three burn effects for 1 turn. Increases Combat Readiness of the caster by 50%."
+                "name": "清理后方",
+                "description": "以榴弹发射器攻击所有敌人，解除两个强化效果，然后各有100%的几率施加三层1回合灼伤。使施放者的行动值提升50%。"
             },
             "S3": {
-                "name": "Say Hello To My Little Friends",
-                "description": "Attacks all enemies with her secret weapon and extends durations of debuffs except for those which prevent movement by 1 turn before a 100% chance to inflict decreased Defense for 2 turns. When this skill is not on cooldown, at the start of an ally's extra turn, grants swift attack to the caster and increases Combat Readiness by 25%.",
-                "soulburn_effect": "At the end of the turn, detonates bleed and burn effects inflicted on the target."
+                "name": "跟我的小朋友们打个招呼",
+                "description": "以秘密武器攻击所有敌人，使妨碍行动以外的弱化效果持续时间延长1回合，然后有100%的几率施加2回合防御力降低。此技能不在冷却中时，友军的额外回合开始时，为施放者施加迅捷攻击，并提升25%行动值。",
+                "soulburn_effect": "回合结束时，引爆目标身上的出血与灼伤。"
             }
         }
     },
@@ -5204,17 +5204,17 @@
         "_name": "Romann",
         "skills": {
             "S1": {
-                "name": "Gravity Arrow",
-                "description": "Shoots gravity arrows at the enemy, decreasing Combat Readiness by 10%, and increasing Combat Readiness of the caster by 10%."
+                "name": "重力之箭",
+                "description": "向敌人射出重力之箭，降低10%行动值，并使施放者的行动值提升10%。"
             },
             "S2": {
-                "name": "Gravitation",
-                "description": "Attacks all enemies with a magic circle, with a 50% chance each to decrease Combat Readiness by 20% four times.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "引力",
+                "description": "以魔法阵攻击所有敌人，各有50%的几率降低20%行动值，共四次。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             },
             "S3": {
-                "name": "Event Horizon",
-                "description": "Shoots a powerful gravity sphere to attack all enemies, dispelling all buffs before inflicting restrict and two poison effects for 2 turns. Increases Combat Readiness of the caster by 50%."
+                "name": "事件视界",
+                "description": "射出强力重力球攻击所有敌人，解除所有强化效果后施加2回合限制与两层持续伤害。使施放者的行动值提升50%。"
             }
         }
     },
@@ -5222,17 +5222,17 @@
         "_name": "Roozid",
         "skills": {
             "S1": {
-                "name": "Hemorrhage",
-                "description": "Cuts the enemy with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "出血",
+                "description": "以双剑斩击敌人，有50%的几率降低速度2回合。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "Wind Slash",
-                "description": "Attacks with a swordstorm, with a 70% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "风斩",
+                "description": "以剑暴攻击，有70%的几率降低攻击力2回合。造成的伤害按施放者的速度比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Divine Response",
-                "description": "Corrects stance, increasing Combat Readiness of all allies by 20% and granting increased Speed for 2 turns."
+                "name": "神之回应",
+                "description": "调整姿态，使所有友军的行动值提升20%，并施加2回合速度提升。"
             }
         }
     },
@@ -5240,17 +5240,17 @@
         "_name": "Rose",
         "skills": {
             "S1": {
-                "name": "Sequential Cutter",
-                "description": "Attacks the enemy with a sword. When the caster's Health is 50% or more, has a 75% chance to inflict provoke for 1 turn, and when the caster's Health is less than 50%, grants increased Defense to the caster for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "连续斩",
+                "description": "以剑攻击敌人。施放者生命值在50%以上时，有75%的几率施加1回合挑衅；低于50%时，为施放者施加1回合防御力提升。造成的伤害按施放者的防御力比例提升。"
             },
             "S2": {
-                "name": "Shield of Light",
-                "description": "Covers an ally with the Shield of Light, dispelling two debuffs and granting a barrier (proportional to the caster's Defense) for 2 turns before increasing Combat Readiness by 20%."
+                "name": "光之盾",
+                "description": "以光之盾笼罩一名友军，解除两个弱化效果，并施加2回合屏障（与施放者的防御力成比例），然后提升20%行动值。"
             },
             "S3": {
-                "name": "Goddess of Victory",
-                "description": "Gives blessing to all allies, increasing Attack for 2 turns, and Combat Readiness by 25%. Grants increased Defense to the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "胜利女神",
+                "description": "祝福所有友军，提升攻击力2回合，并提升25%行动值。为施放者施加2回合防御力提升。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             }
         }
     },
@@ -5258,17 +5258,17 @@
         "_name": "Roy Mustang",
         "skills": {
             "S1": {
-                "name": "Ignite",
-                "description": "Attacks the enemy with flames, and increases Combat Readiness of the caster by 15%. When used on the caster's turn, if the caster is granted Flame Alchemist, activates Heat Wave instead of Ignite. Heat Wave: Attacks the enemy with a huge flame, and increases Combat Readiness of the caster by 30%. Penetrates the target's Defense by 50%. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "点燃",
+                "description": "以火焰攻击敌人，并使施放者的行动值提升15%。在施放者的回合使用时，若施放者拥有焰之炼金术师，发动热浪代替点燃。热浪：以巨大的火焰攻击敌人，并使施放者的行动值提升30%。穿透目标50%的防御力。此技能不会触发协攻。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Hero of Ishval",
-                "description": "At the start of the first battle, gains 40 Fighting Spirit and grants Flame Alchemist. Damage suffered in one attack does not exceed 51% of max Health."
+                "name": "伊修巴尔的英雄",
+                "description": "首场战斗开始时，获得40斗志，并施加焰之炼金术师。单次攻击受到的伤害不超过最大生命值的51%。"
             },
             "S3": {
-                "name": "Scorching Heat",
-                "description": "After increasing Attack of the caster for 2 turns, attacks all enemies with a consecutive barrage of flames, and grants Flame Alchemist to the caster. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "灼热",
+                "description": "提升施放者的攻击力2回合后，以连续的火焰攻击所有敌人，并为施放者施加焰之炼金术师。敌人在三名以下时，敌人越少，造成的伤害越高。"
             }
         }
     },

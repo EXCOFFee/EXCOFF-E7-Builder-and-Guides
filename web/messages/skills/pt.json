@@ -5132,17 +5132,17 @@
         "_name": "Riza Hawkeye",
         "skills": {
             "S1": {
-                "name": "Stand Back!",
-                "description": "Attacks the enemy by firing a pistol and has a 50% chance to target them for 2 turns. When the caster is granted Hawk's Eye, after attacking, increases Combat Readiness of the foremost ally by 20%."
+                "name": "Afaste-se!",
+                "description": "Ataca o inimigo disparando uma pistola e tem 50% de chance de aplicar alvo por 2 turnos. Quando o conjurador tem Olho de Falcão, após atacar, aumenta a Prontidão de Combate do aliado mais à frente em 20%."
             },
             "S2": {
-                "name": "Devoted Support",
-                "description": "When the foremost ally is attacked by a Single Attack, decreases damage suffered by 30%. When more than one damage reduction effect is granted, only the strongest effect is applied. When the foremost ally's Health is 50% or less after being attacked, dispels all debuffs from the foremost ally and the caster, and grants Hawk's Eye to the caster for 2 turns. Dispelling debuffs and Hawk's Eye effects can only be activated once every 3 turns."
+                "name": "Apoio dedicado",
+                "description": "Quando o aliado mais à frente é atingido por um ataque individual, diminui o dano sofrido em 30%. Quando mais de um efeito de redução de dano é concedido, só o mais forte é aplicado. Quando a Vida do aliado mais à frente fica em 50% ou menos após ser atacado, dissipa todos os efeitos negativos dele e do conjurador e concede Olho de Falcão ao conjurador por 2 turnos. Os efeitos de dissipar e de Olho de Falcão só podem ser ativados uma vez a cada 3 turnos."
             },
             "S3": {
-                "name": "All Out!",
-                "description": "Attacks the enemy with focused fire, dispelling all buffs and decreasing Combat Readiness by 50%, before granting immunity for 2 turns and exploiting weak points once to the caster and the foremost ally.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Fogo total!",
+                "description": "Ataca o inimigo com fogo concentrado, dissipando todos os efeitos positivos e diminuindo a Prontidão de Combate em 50%, depois concede imunidade por 2 turnos e Exploração de pontos fracos uma vez ao conjurador e ao aliado mais à frente.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -5150,17 +5150,17 @@
         "_name": "Roaming Warrior Leo",
         "skills": {
             "S1": {
-                "name": "Fire Slingshot",
-                "description": "Attacks the enemy with a slingshot, with a 50% chance to inflict decreased Attack for 2 turns. When the enemy has a debuff, increases damage dealt."
+                "name": "Estilingue de fogo",
+                "description": "Ataca o inimigo com um estilingue, com 50% de chance de aplicar Diminuir Ataque por 2 turnos. Quando o inimigo tem um efeito negativo, o dano causado aumenta."
             },
             "S2": {
-                "name": "Fire Shockbomb",
-                "description": "Fires a shockbomb at the enemy, with a 100% chance to decrease Defense for 2 turns. Decreases skill cooldown of Go, Racoo! by 1 turn. At the end of the turn, detonates bombs inflicted on the enemy."
+                "name": "Disparar bomba de choque",
+                "description": "Dispara uma bomba de choque no inimigo, com 100% de chance de diminuir a Defesa por 2 turnos. Diminui a recarga de Vai, Racoo! em 1 turno. No fim do turno, detona as bombas aplicadas ao inimigo."
             },
             "S3": {
-                "name": "Go, Racoo!",
-                "description": "Attacks all enemies with Racoo's help, decreasing buff durations by 1 turn before a 100% chance each to inflict decreased Speed and a bomb for 2 turns. Grants skill nullifier once to the caster.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Vai, Racoo!",
+                "description": "Ataca todos os inimigos com a ajuda de Racoo, diminuindo a duração dos efeitos positivos em 1 turno, depois com 100% de chance cada aplica Diminuir Velocidade e uma bomba por 2 turnos. Concede Anulação de habilidade uma vez ao conjurador.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -5168,17 +5168,17 @@
         "_name": "Roana",
         "skills": {
             "S1": {
-                "name": "Soul Purification",
-                "description": "Attacks the enemy with a noble power, and grants a barrier (proportional to the caster's max Health) to the ally with the lowest Health for 2 turns.",
-                "soulburn_effect": "Grants a barrier to all allies for 2 turns after attacking."
+                "name": "Purificação da alma",
+                "description": "Ataca o inimigo com um poder nobre e concede uma barreira (proporcional à Vida máxima do conjurador) ao aliado com menor Vida por 2 turnos.",
+                "soulburn_effect": "Concede uma barreira a todos os aliados por 2 turnos após atacar."
             },
             "S2": {
-                "name": "Vigilant Eye",
-                "description": "When an ally is attacked by an extra attack, counterattack, or Dual Attack, recovers Health of all allies proportional to the caster's max Health and the number of attacked allies, and increases Combat Readiness of each by 5% per attacked ally."
+                "name": "Olhar vigilante",
+                "description": "Quando um aliado é atingido por um ataque extra, contra-ataque ou Ataque duplo, recupera a Vida de todos os aliados proporcionalmente à Vida máxima do conjurador e ao número de aliados atacados, e aumenta a Prontidão de Combate de cada um em 5% por aliado atacado."
             },
             "S3": {
-                "name": "Noble Rekos",
-                "description": "With the grace of Rekos, recovers the Health of all allies and grants a barrier and revive for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "Nobre Rekos",
+                "description": "Com a graça de Rekos, recupera a Vida de todos os aliados e concede uma barreira e reviver por 2 turnos. A quantidade recuperada e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -5186,17 +5186,17 @@
         "_name": "Robin",
         "skills": {
             "S1": {
-                "name": "Neutralize",
-                "description": "Attacks the enemy with a dagger and has a 100% chance to inflict bleed for 2 turns."
+                "name": "Neutralizar",
+                "description": "Ataca o inimigo com uma adaga e tem 100% de chance de aplicar sangramento por 2 turnos."
             },
             "S2": {
-                "name": "Clear The Back",
-                "description": "Attacks all enemies with a grenade launcher, dispelling two buffs before a 100% chance each to inflict three burn effects for 1 turn. Increases Combat Readiness of the caster by 50%."
+                "name": "Limpar a retaguarda",
+                "description": "Ataca todos os inimigos com um lança-granadas, dissipando dois efeitos positivos, depois com 100% de chance cada aplica três efeitos de queimadura por 1 turno. Aumenta a Prontidão de Combate do conjurador em 50%."
             },
             "S3": {
-                "name": "Say Hello To My Little Friends",
-                "description": "Attacks all enemies with her secret weapon and extends durations of debuffs except for those which prevent movement by 1 turn before a 100% chance to inflict decreased Defense for 2 turns. When this skill is not on cooldown, at the start of an ally's extra turn, grants swift attack to the caster and increases Combat Readiness by 25%.",
-                "soulburn_effect": "At the end of the turn, detonates bleed and burn effects inflicted on the target."
+                "name": "Digam olá aos meus amiguinhos",
+                "description": "Ataca todos os inimigos com sua arma secreta e estende em 1 turno a duração dos efeitos negativos, exceto os que impedem a movimentação, depois com 100% de chance aplica Diminuir Defesa por 2 turnos. Quando esta habilidade não está em recarga, no início do turno extra de um aliado, concede Ataque veloz ao conjurador e aumenta a Prontidão de Combate em 25%.",
+                "soulburn_effect": "No fim do turno, detona os sangramentos e queimaduras aplicados ao alvo."
             }
         }
     },
@@ -5204,17 +5204,17 @@
         "_name": "Romann",
         "skills": {
             "S1": {
-                "name": "Gravity Arrow",
-                "description": "Shoots gravity arrows at the enemy, decreasing Combat Readiness by 10%, and increasing Combat Readiness of the caster by 10%."
+                "name": "Flecha gravitacional",
+                "description": "Dispara flechas gravitacionais no inimigo, diminuindo a Prontidão de Combate em 10% e aumentando a Prontidão de Combate do conjurador em 10%."
             },
             "S2": {
-                "name": "Gravitation",
-                "description": "Attacks all enemies with a magic circle, with a 50% chance each to decrease Combat Readiness by 20% four times.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Gravitação",
+                "description": "Ataca todos os inimigos com um círculo mágico, com 50% de chance cada de diminuir a Prontidão de Combate em 20%, quatro vezes.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             },
             "S3": {
-                "name": "Event Horizon",
-                "description": "Shoots a powerful gravity sphere to attack all enemies, dispelling all buffs before inflicting restrict and two poison effects for 2 turns. Increases Combat Readiness of the caster by 50%."
+                "name": "Horizonte de eventos",
+                "description": "Dispara uma poderosa esfera gravitacional para atacar todos os inimigos, dissipando todos os efeitos positivos antes de aplicar restrição e dois efeitos de veneno por 2 turnos. Aumenta a Prontidão de Combate do conjurador em 50%."
             }
         }
     },
@@ -5222,17 +5222,17 @@
         "_name": "Roozid",
         "skills": {
             "S1": {
-                "name": "Hemorrhage",
-                "description": "Cuts the enemy with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "Hemorragia",
+                "description": "Corta o inimigo com duas espadas, com 50% de chance de diminuir a Velocidade por 2 turnos. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Wind Slash",
-                "description": "Attacks with a swordstorm, with a 70% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Corte do vento",
+                "description": "Ataca com uma tempestade de espadas, com 70% de chance de diminuir o Ataque por 2 turnos. O dano causado aumenta proporcionalmente à Velocidade do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Divine Response",
-                "description": "Corrects stance, increasing Combat Readiness of all allies by 20% and granting increased Speed for 2 turns."
+                "name": "Resposta divina",
+                "description": "Corrige a postura, aumentando a Prontidão de Combate de todos os aliados em 20% e concedendo Aumentar Velocidade por 2 turnos."
             }
         }
     },
@@ -5240,17 +5240,17 @@
         "_name": "Rose",
         "skills": {
             "S1": {
-                "name": "Sequential Cutter",
-                "description": "Attacks the enemy with a sword. When the caster's Health is 50% or more, has a 75% chance to inflict provoke for 1 turn, and when the caster's Health is less than 50%, grants increased Defense to the caster for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "Corte sequencial",
+                "description": "Ataca o inimigo com uma espada. Quando a Vida do conjurador é 50% ou mais, tem 75% de chance de provocar por 1 turno e, quando é menor que 50%, concede Aumentar Defesa ao conjurador por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S2": {
-                "name": "Shield of Light",
-                "description": "Covers an ally with the Shield of Light, dispelling two debuffs and granting a barrier (proportional to the caster's Defense) for 2 turns before increasing Combat Readiness by 20%."
+                "name": "Escudo da luz",
+                "description": "Cobre um aliado com o Escudo da Luz, dissipando dois efeitos negativos e concedendo uma barreira (proporcional à Defesa do conjurador) por 2 turnos, depois aumenta a Prontidão de Combate em 20%."
             },
             "S3": {
-                "name": "Goddess of Victory",
-                "description": "Gives blessing to all allies, increasing Attack for 2 turns, and Combat Readiness by 25%. Grants increased Defense to the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Deusa da vitória",
+                "description": "Abençoa todos os aliados, aumentando o Ataque por 2 turnos e a Prontidão de Combate em 25%. Concede Aumentar Defesa ao conjurador por 2 turnos.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -5258,17 +5258,17 @@
         "_name": "Roy Mustang",
         "skills": {
             "S1": {
-                "name": "Ignite",
-                "description": "Attacks the enemy with flames, and increases Combat Readiness of the caster by 15%. When used on the caster's turn, if the caster is granted Flame Alchemist, activates Heat Wave instead of Ignite. Heat Wave: Attacks the enemy with a huge flame, and increases Combat Readiness of the caster by 30%. Penetrates the target's Defense by 50%. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Ignição",
+                "description": "Ataca o inimigo com chamas e aumenta a Prontidão de Combate do conjurador em 15%. Quando usada no turno do conjurador, se ele tiver Alquimista das Chamas, ativa Onda de calor em vez de Ignição. Onda de calor: ataca o inimigo com uma chama enorme e aumenta a Prontidão de Combate do conjurador em 30%. Penetra 50% da Defesa do alvo. Esta habilidade não ativa Ataque duplo.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Hero of Ishval",
-                "description": "At the start of the first battle, gains 40 Fighting Spirit and grants Flame Alchemist. Damage suffered in one attack does not exceed 51% of max Health."
+                "name": "Herói de Ishval",
+                "description": "No início da primeira batalha, ganha 40 de Espírito de luta e concede Alquimista das Chamas. O dano sofrido em um único ataque não ultrapassa 51% da Vida máxima."
             },
             "S3": {
-                "name": "Scorching Heat",
-                "description": "After increasing Attack of the caster for 2 turns, attacks all enemies with a consecutive barrage of flames, and grants Flame Alchemist to the caster. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "Calor escaldante",
+                "description": "Após aumentar o Ataque do conjurador por 2 turnos, ataca todos os inimigos com uma sequência de chamas e concede Alquimista das Chamas ao conjurador. Quando há três inimigos ou menos, o dano causado aumenta quanto menos inimigos houver."
             }
         }
     },

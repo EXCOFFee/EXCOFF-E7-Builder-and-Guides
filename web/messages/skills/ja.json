@@ -5132,17 +5132,17 @@
         "_name": "Riza Hawkeye",
         "skills": {
             "S1": {
-                "name": "Stand Back!",
-                "description": "Attacks the enemy by firing a pistol and has a 50% chance to target them for 2 turns. When the caster is granted Hawk's Eye, after attacking, increases Combat Readiness of the foremost ally by 20%."
+                "name": "下がって！",
+                "description": "拳銃を撃って敵を攻撃し、50%の確率で2ターンの間標的を付与する。発動者に鷹の目があれば、攻撃後、最も前にいる味方の行動ゲージを20%増加させる。"
             },
             "S2": {
-                "name": "Devoted Support",
-                "description": "When the foremost ally is attacked by a Single Attack, decreases damage suffered by 30%. When more than one damage reduction effect is granted, only the strongest effect is applied. When the foremost ally's Health is 50% or less after being attacked, dispels all debuffs from the foremost ally and the caster, and grants Hawk's Eye to the caster for 2 turns. Dispelling debuffs and Hawk's Eye effects can only be activated once every 3 turns."
+                "name": "献身的な支援",
+                "description": "最も前にいる味方が単体攻撃を受けると、受けるダメージが30%減少する。ダメージ減少効果が複数付与された場合、最も強い効果のみ適用される。最も前にいる味方が攻撃された後HPが50%以下なら、その味方と発動者の弱体効果をすべて解除し、発動者に2ターンの間鷹の目を付与する。弱体解除と鷹の目の効果は3ターンごとに一度のみ発動できる。"
             },
             "S3": {
-                "name": "All Out!",
-                "description": "Attacks the enemy with focused fire, dispelling all buffs and decreasing Combat Readiness by 50%, before granting immunity for 2 turns and exploiting weak points once to the caster and the foremost ally.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "全力射撃！",
+                "description": "集中射撃で敵を攻撃し、強化効果をすべて解除し、行動ゲージを50%減少させた後、発動者と最も前にいる味方に2ターンの間免疫を、弱点把握を一度付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -5150,17 +5150,17 @@
         "_name": "Roaming Warrior Leo",
         "skills": {
             "S1": {
-                "name": "Fire Slingshot",
-                "description": "Attacks the enemy with a slingshot, with a 50% chance to inflict decreased Attack for 2 turns. When the enemy has a debuff, increases damage dealt."
+                "name": "炎のパチンコ",
+                "description": "パチンコで敵を攻撃し、50%の確率で2ターンの間攻撃力ダウンを付与する。敵に弱体効果があれば与ダメージがアップする。"
             },
             "S2": {
-                "name": "Fire Shockbomb",
-                "description": "Fires a shockbomb at the enemy, with a 100% chance to decrease Defense for 2 turns. Decreases skill cooldown of Go, Racoo! by 1 turn. At the end of the turn, detonates bombs inflicted on the enemy."
+                "name": "衝撃弾発射",
+                "description": "敵に衝撃弾を発射し、100%の確率で2ターンの間防御力をダウンさせる。行け、ラクー！のクールタイムを1ターン短縮する。ターン終了時、敵の爆弾を爆発させる。"
             },
             "S3": {
-                "name": "Go, Racoo!",
-                "description": "Attacks all enemies with Racoo's help, decreasing buff durations by 1 turn before a 100% chance each to inflict decreased Speed and a bomb for 2 turns. Grants skill nullifier once to the caster.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "行け、ラクー！",
+                "description": "ラクーの助けで敵全体を攻撃し、強化効果の持続時間を1ターン減少させた後、それぞれ100%の確率で2ターンの間スピードダウンと爆弾を付与する。発動者にスキルダメージ無効を一度付与する。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -5168,17 +5168,17 @@
         "_name": "Roana",
         "skills": {
             "S1": {
-                "name": "Soul Purification",
-                "description": "Attacks the enemy with a noble power, and grants a barrier (proportional to the caster's max Health) to the ally with the lowest Health for 2 turns.",
-                "soulburn_effect": "Grants a barrier to all allies for 2 turns after attacking."
+                "name": "魂の浄化",
+                "description": "高貴な力で敵を攻撃し、HPが最も低い味方に2ターンの間バリア（発動者の最大HPに比例）を付与する。",
+                "soulburn_effect": "攻撃後、味方全員に2ターンの間バリアを付与する。"
             },
             "S2": {
-                "name": "Vigilant Eye",
-                "description": "When an ally is attacked by an extra attack, counterattack, or Dual Attack, recovers Health of all allies proportional to the caster's max Health and the number of attacked allies, and increases Combat Readiness of each by 5% per attacked ally."
+                "name": "警戒の目",
+                "description": "味方が追加攻撃、反撃、協攻を受けると、発動者の最大HPと攻撃された味方の数に比例して味方全員のHPを回復し、攻撃された味方一人につきそれぞれの行動ゲージを5%増加させる。"
             },
             "S3": {
-                "name": "Noble Rekos",
-                "description": "With the grace of Rekos, recovers the Health of all allies and grants a barrier and revive for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "高貴なるレコス",
+                "description": "レコスの恩寵で味方全員のHPを回復し、2ターンの間バリアと復活を付与する。発動者の最大HPに比例して回復量とバリアの強度がアップする。"
             }
         }
     },
@@ -5186,17 +5186,17 @@
         "_name": "Robin",
         "skills": {
             "S1": {
-                "name": "Neutralize",
-                "description": "Attacks the enemy with a dagger and has a 100% chance to inflict bleed for 2 turns."
+                "name": "無力化",
+                "description": "短剣で敵を攻撃し、100%の確率で2ターンの間出血を付与する。"
             },
             "S2": {
-                "name": "Clear The Back",
-                "description": "Attacks all enemies with a grenade launcher, dispelling two buffs before a 100% chance each to inflict three burn effects for 1 turn. Increases Combat Readiness of the caster by 50%."
+                "name": "後方掃討",
+                "description": "グレネードランチャーで敵全体を攻撃し、強化効果を二つ解除した後、それぞれ100%の確率で1ターンの間火傷を三つ付与する。発動者の行動ゲージを50%増加させる。"
             },
             "S3": {
-                "name": "Say Hello To My Little Friends",
-                "description": "Attacks all enemies with her secret weapon and extends durations of debuffs except for those which prevent movement by 1 turn before a 100% chance to inflict decreased Defense for 2 turns. When this skill is not on cooldown, at the start of an ally's extra turn, grants swift attack to the caster and increases Combat Readiness by 25%.",
-                "soulburn_effect": "At the end of the turn, detonates bleed and burn effects inflicted on the target."
+                "name": "私の小さなお友達に挨拶して",
+                "description": "秘密兵器で敵全体を攻撃し、行動を妨げる効果を除く弱体効果の持続時間を1ターン延長した後、100%の確率で2ターンの間防御力ダウンを付与する。このスキルがクールタイム中でなければ、味方の追加ターン開始時、発動者に迅速攻撃を付与し、行動ゲージを25%増加させる。",
+                "soulburn_effect": "ターン終了時、対象の出血と火傷を爆発させる。"
             }
         }
     },
@@ -5204,17 +5204,17 @@
         "_name": "Romann",
         "skills": {
             "S1": {
-                "name": "Gravity Arrow",
-                "description": "Shoots gravity arrows at the enemy, decreasing Combat Readiness by 10%, and increasing Combat Readiness of the caster by 10%."
+                "name": "重力の矢",
+                "description": "敵に重力の矢を放ち、行動ゲージを10%減少させ、発動者の行動ゲージを10%増加させる。"
             },
             "S2": {
-                "name": "Gravitation",
-                "description": "Attacks all enemies with a magic circle, with a 50% chance each to decrease Combat Readiness by 20% four times.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "重力場",
+                "description": "魔法陣で敵全体を攻撃し、それぞれ50%の確率で行動ゲージを20%ずつ四回減少させる。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             },
             "S3": {
-                "name": "Event Horizon",
-                "description": "Shoots a powerful gravity sphere to attack all enemies, dispelling all buffs before inflicting restrict and two poison effects for 2 turns. Increases Combat Readiness of the caster by 50%."
+                "name": "事象の地平線",
+                "description": "強力な重力球を放って敵全体を攻撃し、強化効果をすべて解除した後、2ターンの間制約と持続ダメージを二つ付与する。発動者の行動ゲージを50%増加させる。"
             }
         }
     },
@@ -5222,17 +5222,17 @@
         "_name": "Roozid",
         "skills": {
             "S1": {
-                "name": "Hemorrhage",
-                "description": "Cuts the enemy with dual-wielded swords, with a 50% chance to decrease Speed for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "出血",
+                "description": "双剣で敵を斬りつけ、50%の確率で2ターンの間スピードをダウンさせる。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Wind Slash",
-                "description": "Attacks with a swordstorm, with a 70% chance to decrease Attack for 2 turns. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "風斬り",
+                "description": "剣嵐で攻撃し、70%の確率で2ターンの間攻撃力をダウンさせる。発動者のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Divine Response",
-                "description": "Corrects stance, increasing Combat Readiness of all allies by 20% and granting increased Speed for 2 turns."
+                "name": "神の応答",
+                "description": "構えを正し、味方全員の行動ゲージを20%増加させ、2ターンの間スピードアップを付与する。"
             }
         }
     },
@@ -5240,17 +5240,17 @@
         "_name": "Rose",
         "skills": {
             "S1": {
-                "name": "Sequential Cutter",
-                "description": "Attacks the enemy with a sword. When the caster's Health is 50% or more, has a 75% chance to inflict provoke for 1 turn, and when the caster's Health is less than 50%, grants increased Defense to the caster for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "連続斬り",
+                "description": "剣で敵を攻撃する。発動者のHPが50%以上なら75%の確率で1ターンの間挑発を付与し、50%未満なら発動者に1ターンの間防御力アップを付与する。発動者の防御力に比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Shield of Light",
-                "description": "Covers an ally with the Shield of Light, dispelling two debuffs and granting a barrier (proportional to the caster's Defense) for 2 turns before increasing Combat Readiness by 20%."
+                "name": "光の盾",
+                "description": "光の盾で味方一人を包み、弱体効果を二つ解除し、2ターンの間バリア（発動者の防御力に比例）を付与した後、行動ゲージを20%増加させる。"
             },
             "S3": {
-                "name": "Goddess of Victory",
-                "description": "Gives blessing to all allies, increasing Attack for 2 turns, and Combat Readiness by 25%. Grants increased Defense to the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "勝利の女神",
+                "description": "味方全員を祝福し、2ターンの間攻撃力をアップさせ、行動ゲージを25%増加させる。発動者に2ターンの間防御力アップを付与する。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },
@@ -5258,17 +5258,17 @@
         "_name": "Roy Mustang",
         "skills": {
             "S1": {
-                "name": "Ignite",
-                "description": "Attacks the enemy with flames, and increases Combat Readiness of the caster by 15%. When used on the caster's turn, if the caster is granted Flame Alchemist, activates Heat Wave instead of Ignite. Heat Wave: Attacks the enemy with a huge flame, and increases Combat Readiness of the caster by 30%. Penetrates the target's Defense by 50%. This skill does not trigger a Dual Attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "点火",
+                "description": "炎で敵を攻撃し、発動者の行動ゲージを15%増加させる。発動者のターンに使用したとき、発動者に焔の錬金術師があれば、点火の代わりに熱波を発動する。熱波：巨大な炎で敵を攻撃し、発動者の行動ゲージを30%増加させる。対象の防御力を50%貫通する。このスキルでは協攻が発動しない。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Hero of Ishval",
-                "description": "At the start of the first battle, gains 40 Fighting Spirit and grants Flame Alchemist. Damage suffered in one attack does not exceed 51% of max Health."
+                "name": "イシュヴァールの英雄",
+                "description": "最初のバトル開始時、闘志を40獲得し、焔の錬金術師を付与する。一回の攻撃で受けるダメージが最大HPの51%を超えない。"
             },
             "S3": {
-                "name": "Scorching Heat",
-                "description": "After increasing Attack of the caster for 2 turns, attacks all enemies with a consecutive barrage of flames, and grants Flame Alchemist to the caster. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "灼熱",
+                "description": "2ターンの間発動者の攻撃力をアップさせた後、連続する炎で敵全体を攻撃し、発動者に焔の錬金術師を付与する。敵が三体以下の場合、敵が少ないほど与ダメージがアップする。"
             }
         }
     },
