@@ -3891,17 +3891,17 @@
         "_name": "Lua",
         "skills": {
             "S1": {
-                "name": "Folding Fan",
-                "description": "Attacks the enemy with a fan, with a 50% chance to decrease Defense for 2 turns."
+                "name": "折扇",
+                "description": "以扇子攻击敌人，有50%的几率降低防御力2回合。"
             },
             "S2": {
-                "name": "Butterfly Reverie",
-                "description": "Attacks the enemy with light, dispelling two buffs before putting them to sleep for 1 turn. Grants an extra turn to the caster."
+                "name": "蝴蝶幻梦",
+                "description": "以光攻击敌人，解除两个强化效果后使其睡眠1回合。施放者获得额外回合。"
             },
             "S3": {
-                "name": "Sweet Talk",
-                "description": "Dispels one buff from all enemies before increasing skill cooldowns by 1 turn and inflicting beguile. Increases Speed of all allies for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "甜言蜜语",
+                "description": "解除所有敌人的一个强化效果，然后使技能冷却时间增加1回合，并施加魅惑。提升所有友军的速度2回合。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -3909,17 +3909,17 @@
         "_name": "Lucy",
         "skills": {
             "S1": {
-                "name": "Paper Throw",
-                "description": "Throws paper to attack the enemy, with a 50% chance to restrict for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "掷纸",
+                "description": "投掷纸张攻击敌人，有50%的几率施加2回合限制。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Paper Whirlwind",
-                "description": "Attacks all enemies, with a 100% chance each to restrict and decrease Speed for 2 turns."
+                "name": "纸张旋风",
+                "description": "攻击所有敌人，各有100%的几率施加2回合限制与速度降低。"
             },
             "S3": {
-                "name": "Paper Barrier",
-                "description": "Uses many sheets of paper to recover Health of all allies and grant a barrier for 2 turns, before decreasing debuff durations by 1 turn. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "纸张屏障",
+                "description": "使用大量纸张恢复所有友军的生命值，并施加2回合屏障，然后使弱化效果持续时间减少1回合。恢复量与屏障强度按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -3927,17 +3927,17 @@
         "_name": "Ludwig",
         "skills": {
             "S1": {
-                "name": "Starlight",
-                "description": "Attacks the enemy with magic, before a 75% chance to steal one buff. After attacking, when the caster has a buff, increases Combat Readiness by 15%."
+                "name": "星光",
+                "description": "以魔法攻击敌人，然后有75%的几率夺取一个强化效果。攻击后若施放者拥有强化效果，提升15%行动值。"
             },
             "S2": {
-                "name": "Moonlight Blow",
-                "description": "Attacks the enemy with light, decreasing buff durations by 1 turn before a 100% chance to stun for 1 turn. Grants invincibility to the caster for 1 turn and increases Combat Readiness by 50%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "月光一击",
+                "description": "以光攻击敌人，使强化效果持续时间减少1回合，然后有100%的几率使其眩晕1回合。为施放者施加1回合无敌，并提升50%行动值。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Call of the Full Moon",
-                "description": "Attacks all enemies with Nocturne magic, and when an enemy is defeated, extends the caster's buff durations by 1 turn. Penetrates the target's Defense by 30%. When the caster is invincible, penetrates the target's Defense by an additional 30%."
+                "name": "满月的召唤",
+                "description": "以夜曲魔法攻击所有敌人，击败敌人时，使施放者的强化效果持续时间延长1回合。穿透目标30%的防御力。施放者处于无敌状态时，额外穿透目标30%的防御力。"
             }
         }
     },
@@ -3945,17 +3945,17 @@
         "_name": "Luluca",
         "skills": {
             "S1": {
-                "name": "Wild Wave",
-                "description": "Attacks with intense elemental force, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health."
+                "name": "狂澜",
+                "description": "以强烈的元素之力攻击，有50%的几率降低防御力2回合。造成的伤害按敌人已损失的生命值比例提升。"
             },
             "S2": {
-                "name": "Rekos's Blessing",
-                "description": "With the blessing of the stars, grants increased Defense and a barrier (proportional to the caster's Attack) to all allies for 2 turns.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "雷科斯的祝福",
+                "description": "借由星辰的祝福，为所有友军施加2回合防御力提升与屏障（与施放者的攻击力成比例）。",
+                "soulburn_effect": "所有技能冷却时间减少2回合。"
             },
             "S3": {
-                "name": "Wave of Vengeance",
-                "description": "Attacks all enemies with the power of ruin, with a 100% chance to decrease Defense for 2 turns, before increasing the caster's Attack. Increased Attack can stack up to 3 times."
+                "name": "复仇之浪",
+                "description": "以毁灭之力攻击所有敌人，有100%的几率降低防御力2回合，然后提升施放者的攻击力。攻击力提升最多叠加3次。"
             }
         }
     },
@@ -3963,17 +3963,17 @@
         "_name": "Luna",
         "skills": {
             "S1": {
-                "name": "Infinity Slash",
-                "description": "Stabs the target a random number of times. Skill cooldown decreases by 1-3 turns and damage dealt increases according to the number of attacks.",
-                "soulburn_effect": "Increases the number of attacks to max."
+                "name": "无限斩",
+                "description": "随机次数刺击目标。根据攻击次数，技能冷却时间减少1至3回合，并提升造成的伤害。",
+                "soulburn_effect": "攻击次数提升至最大。"
             },
             "S2": {
-                "name": "Dragon Knight's Will",
-                "description": "Increases Critical Hit Chance and Critical Hit Resistance by 30%. When the caster's Health is 50% or more, increases Attack by 30%, and when the caster's Health is less than 50%, increases Defense by 30%."
+                "name": "龙骑士的意志",
+                "description": "暴击率与暴击抵抗提升30%。施放者生命值在50%以上时，攻击力提升30%；低于50%时，防御力提升30%。"
             },
             "S3": {
-                "name": "Ragnar Spear",
-                "description": "Soars into the air and attacks the enemy by hurling a spear, with a 100% chance to inflict decreased Defense for 2 turns. Penetrates the target's Defense by 50% and attacks using an elemental advantage. When the enemy is defeated, gains an additional 5 Soul."
+                "name": "拉格纳之枪",
+                "description": "跃上空中投掷长枪攻击敌人，有100%的几率施加2回合防御力降低。穿透目标50%的防御力，并以属性优势进行攻击。击败敌人时，额外获得5魂。"
             }
         }
     },
@@ -3981,17 +3981,17 @@
         "_name": "Magic Scholar Doris",
         "skills": {
             "S1": {
-                "name": "Mana Bullet",
-                "description": "Attacks with light energy, before a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "魔力弹",
+                "description": "以光之力攻击，然后有75%的几率降低命中率1回合。"
             },
             "S2": {
-                "name": "Celebration of Light",
-                "description": "Recites the Celebration of Light, recovering the Health of all allies and granting continuous healing and increased Defense for 2 turns. Amount recovered is proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "光之礼赞",
+                "description": "吟诵光之礼赞，恢复所有友军的生命值，并施加2回合持续恢复与防御力提升。恢复量与目标的最大生命值成比例。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             },
             "S3": {
-                "name": "Primal Light",
-                "description": "Dispels one debuff from an ally with light magic, before recovering their Health and increasing their Combat Readiness by 50% with light magic. Amount recovered is proportional to the target's max Health."
+                "name": "原初之光",
+                "description": "以光之魔法解除一名友军的一个弱化效果，然后恢复其生命值，并提升其50%行动值。恢复量与目标的最大生命值成比例。"
             }
         }
     },
@@ -3999,17 +3999,17 @@
         "_name": "Maid Chloe",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Attacks with a hammer, with a 40% chance to stun for 1 turn, before increasing Combat Readiness of the caster by 15%. After attacking, when the target is inflicted with stun, increases Combat Readiness of all allies except for the caster by 15%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "重击",
+                "description": "以锤子攻击，有40%的几率使其眩晕1回合，然后使施放者的行动值提升15%。攻击后若目标处于眩晕状态，使除施放者外所有友军的行动值提升15%。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Maid's Cheer",
-                "description": "Grants 50% additional damage reduction to all allies. At the start of the turn, recovers Health of two allies with the lowest Health proportional to the caster's max Health."
+                "name": "女仆的应援",
+                "description": "使所有友军受到的伤害额外降低50%。回合开始时，按施放者的最大生命值比例恢复生命值最低的两名友军的生命值。"
             },
             "S3": {
-                "name": "VIP Treatment",
-                "description": "Entertains all allies with VIP Treatment, reviving all dead allies to 30% Health. For allies that are not dead, dispels two debuffs and grants revive for 3 turns, before granting increased Defense of all allies for 3 turns."
+                "name": "VIP待遇",
+                "description": "以VIP待遇款待所有友军，以30%生命值复活所有阵亡友军。对于未阵亡的友军，解除两个弱化效果，并施加3回合复活，然后为所有友军施加3回合防御力提升。"
             }
         }
     },
@@ -4017,17 +4017,17 @@
         "_name": "Martial Artist Ken",
         "skills": {
             "S1": {
-                "name": "Knockout",
-                "description": "Attacks the enemy with a flurry of strikes, with a 100% chance to inflict provoke for 1 turn. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "击倒",
+                "description": "以连打攻击敌人，有100%的几率施加1回合挑衅。攻击成功时必定暴击。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "Dragon Flame",
-                "description": "At the start of battle, grants vigor for 3 turns. When an ally except for the caster suffers a critical hit, counterattacks, and when the caster suffers a critical hit, counterattacks with Dragon Flame. Dragon Flame (gains 1 Soul): Attacks the enemy with a kick and penetrates the target's Defense by 50%. A successful attack always results in a critical hit, and damage dealt increases proportional to the caster's lost Health."
+                "name": "龙之焰",
+                "description": "战斗开始时，施加3回合斗志。除施放者外的友军受到暴击时进行反击；施放者受到暴击时，以龙之焰反击。龙之焰（获得1魂）：以踢击攻击敌人，并穿透目标50%的防御力。攻击成功时必定暴击，造成的伤害按施放者已损失的生命值比例提升。"
             },
             "S3": {
-                "name": "The Coming of Asura",
-                "description": "Attacks all enemies with a powerful ground pound, with a 80% chance to decrease Defense for 2 turns, and increases Attack of the caster for 2 turns. A successful attack always results in a critical hit."
+                "name": "阿修罗降临",
+                "description": "以强力的地面重击攻击所有敌人，有80%的几率降低防御力2回合，并提升施放者的攻击力2回合。攻击成功时必定暴击。"
             }
         }
     },

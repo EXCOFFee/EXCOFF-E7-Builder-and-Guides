@@ -3891,17 +3891,17 @@
         "_name": "Lua",
         "skills": {
             "S1": {
-                "name": "Folding Fan",
-                "description": "Attacks the enemy with a fan, with a 50% chance to decrease Defense for 2 turns."
+                "name": "扇子",
+                "description": "扇で敵を攻撃し、50%の確率で2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Butterfly Reverie",
-                "description": "Attacks the enemy with light, dispelling two buffs before putting them to sleep for 1 turn. Grants an extra turn to the caster."
+                "name": "胡蝶の夢想",
+                "description": "光で敵を攻撃し、強化効果を二つ解除した後、1ターンの間睡眠状態にする。発動者は追加ターンを得る。"
             },
             "S3": {
-                "name": "Sweet Talk",
-                "description": "Dispels one buff from all enemies before increasing skill cooldowns by 1 turn and inflicting beguile. Increases Speed of all allies for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "甘い囁き",
+                "description": "敵全体の強化効果を一つ解除した後、スキルのクールタイムを1ターン増加させ、魅惑を付与する。2ターンの間味方全員のスピードをアップさせる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -3909,17 +3909,17 @@
         "_name": "Lucy",
         "skills": {
             "S1": {
-                "name": "Paper Throw",
-                "description": "Throws paper to attack the enemy, with a 50% chance to restrict for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "紙投げ",
+                "description": "紙を投げて敵を攻撃し、50%の確率で2ターンの間制約を付与する。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Paper Whirlwind",
-                "description": "Attacks all enemies, with a 100% chance each to restrict and decrease Speed for 2 turns."
+                "name": "紙の竜巻",
+                "description": "敵全体を攻撃し、それぞれ100%の確率で2ターンの間制約とスピードダウンを付与する。"
             },
             "S3": {
-                "name": "Paper Barrier",
-                "description": "Uses many sheets of paper to recover Health of all allies and grant a barrier for 2 turns, before decreasing debuff durations by 1 turn. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "紙の障壁",
+                "description": "多くの紙を使い、味方全員のHPを回復し、2ターンの間バリアを付与した後、弱体効果の持続時間を1ターン減少させる。発動者の最大HPに比例して回復量とバリアの強度がアップする。"
             }
         }
     },
@@ -3927,17 +3927,17 @@
         "_name": "Ludwig",
         "skills": {
             "S1": {
-                "name": "Starlight",
-                "description": "Attacks the enemy with magic, before a 75% chance to steal one buff. After attacking, when the caster has a buff, increases Combat Readiness by 15%."
+                "name": "星明かり",
+                "description": "魔法で敵を攻撃した後、75%の確率で強化効果を一つ奪う。攻撃後、発動者に強化効果があれば行動ゲージを15%増加させる。"
             },
             "S2": {
-                "name": "Moonlight Blow",
-                "description": "Attacks the enemy with light, decreasing buff durations by 1 turn before a 100% chance to stun for 1 turn. Grants invincibility to the caster for 1 turn and increases Combat Readiness by 50%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "月光の一撃",
+                "description": "光で敵を攻撃し、強化効果の持続時間を1ターン減少させた後、100%の確率で1ターンの間気絶させる。発動者に1ターンの間無敵を付与し、行動ゲージを50%増加させる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Call of the Full Moon",
-                "description": "Attacks all enemies with Nocturne magic, and when an enemy is defeated, extends the caster's buff durations by 1 turn. Penetrates the target's Defense by 30%. When the caster is invincible, penetrates the target's Defense by an additional 30%."
+                "name": "満月の呼び声",
+                "description": "ノクターン魔法で敵全体を攻撃し、敵を倒すと発動者の強化効果の持続時間を1ターン延長する。対象の防御力を30%貫通する。発動者が無敵状態なら、対象の防御力をさらに30%貫通する。"
             }
         }
     },
@@ -3945,17 +3945,17 @@
         "_name": "Luluca",
         "skills": {
             "S1": {
-                "name": "Wild Wave",
-                "description": "Attacks with intense elemental force, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health."
+                "name": "荒波",
+                "description": "強烈な元素の力で攻撃し、50%の確率で2ターンの間防御力をダウンさせる。敵の失ったHPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Rekos's Blessing",
-                "description": "With the blessing of the stars, grants increased Defense and a barrier (proportional to the caster's Attack) to all allies for 2 turns.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "レコスの祝福",
+                "description": "星の祝福により、味方全員に2ターンの間防御力アップとバリア（発動者の攻撃力に比例）を付与する。",
+                "soulburn_effect": "すべてのスキルのクールタイムが2ターン短縮される。"
             },
             "S3": {
-                "name": "Wave of Vengeance",
-                "description": "Attacks all enemies with the power of ruin, with a 100% chance to decrease Defense for 2 turns, before increasing the caster's Attack. Increased Attack can stack up to 3 times."
+                "name": "復讐の波",
+                "description": "破滅の力で敵全体を攻撃し、100%の確率で2ターンの間防御力をダウンさせた後、発動者の攻撃力をアップさせる。攻撃力アップは最大3回まで重複する。"
             }
         }
     },
@@ -3963,17 +3963,17 @@
         "_name": "Luna",
         "skills": {
             "S1": {
-                "name": "Infinity Slash",
-                "description": "Stabs the target a random number of times. Skill cooldown decreases by 1-3 turns and damage dealt increases according to the number of attacks.",
-                "soulburn_effect": "Increases the number of attacks to max."
+                "name": "無限斬り",
+                "description": "対象をランダムな回数突く。攻撃回数に応じて、スキルのクールタイムが1～3ターン短縮され、与ダメージがアップする。",
+                "soulburn_effect": "攻撃回数が最大になる。"
             },
             "S2": {
-                "name": "Dragon Knight's Will",
-                "description": "Increases Critical Hit Chance and Critical Hit Resistance by 30%. When the caster's Health is 50% or more, increases Attack by 30%, and when the caster's Health is less than 50%, increases Defense by 30%."
+                "name": "竜騎士の意志",
+                "description": "クリティカル率とクリティカル抵抗が30%アップする。発動者のHPが50%以上なら攻撃力が30%アップし、50%未満なら防御力が30%アップする。"
             },
             "S3": {
-                "name": "Ragnar Spear",
-                "description": "Soars into the air and attacks the enemy by hurling a spear, with a 100% chance to inflict decreased Defense for 2 turns. Penetrates the target's Defense by 50% and attacks using an elemental advantage. When the enemy is defeated, gains an additional 5 Soul."
+                "name": "ラグナスピア",
+                "description": "空中に舞い上がり、槍を投げつけて敵を攻撃し、100%の確率で2ターンの間防御力ダウンを付与する。対象の防御力を50%貫通し、属性有利で攻撃する。敵を倒すと、さらにソウルを5獲得する。"
             }
         }
     },
@@ -3981,17 +3981,17 @@
         "_name": "Magic Scholar Doris",
         "skills": {
             "S1": {
-                "name": "Mana Bullet",
-                "description": "Attacks with light energy, before a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "マナ弾",
+                "description": "光の気で攻撃した後、75%の確率で1ターンの間命中率をダウンさせる。"
             },
             "S2": {
-                "name": "Celebration of Light",
-                "description": "Recites the Celebration of Light, recovering the Health of all allies and granting continuous healing and increased Defense for 2 turns. Amount recovered is proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "光の賛美",
+                "description": "光の賛美を唱え、味方全員のHPを回復し、2ターンの間持続回復と防御力アップを付与する。回復量は対象の最大HPに比例する。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             },
             "S3": {
-                "name": "Primal Light",
-                "description": "Dispels one debuff from an ally with light magic, before recovering their Health and increasing their Combat Readiness by 50% with light magic. Amount recovered is proportional to the target's max Health."
+                "name": "原初の光",
+                "description": "光の魔法で味方一人の弱体効果を一つ解除した後、HPを回復し、行動ゲージを50%増加させる。回復量は対象の最大HPに比例する。"
             }
         }
     },
@@ -3999,17 +3999,17 @@
         "_name": "Maid Chloe",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Attacks with a hammer, with a 40% chance to stun for 1 turn, before increasing Combat Readiness of the caster by 15%. After attacking, when the target is inflicted with stun, increases Combat Readiness of all allies except for the caster by 15%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "強打",
+                "description": "ハンマーで攻撃し、40%の確率で1ターンの間気絶させた後、発動者の行動ゲージを15%増加させる。攻撃後、対象が気絶状態なら、発動者を除く味方全員の行動ゲージを15%増加させる。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Maid's Cheer",
-                "description": "Grants 50% additional damage reduction to all allies. At the start of the turn, recovers Health of two allies with the lowest Health proportional to the caster's max Health."
+                "name": "メイドの応援",
+                "description": "味方全員が受けるダメージをさらに50%軽減する。ターン開始時、発動者の最大HPに比例して、HPが最も低い味方二人のHPを回復する。"
             },
             "S3": {
-                "name": "VIP Treatment",
-                "description": "Entertains all allies with VIP Treatment, reviving all dead allies to 30% Health. For allies that are not dead, dispels two debuffs and grants revive for 3 turns, before granting increased Defense of all allies for 3 turns."
+                "name": "VIP待遇",
+                "description": "味方全員をVIP待遇でもてなし、死亡した味方全員をHP30%で復活させる。死亡していない味方は、弱体効果を二つ解除し、3ターンの間復活を付与した後、味方全員に3ターンの間防御力アップを付与する。"
             }
         }
     },
@@ -4017,17 +4017,17 @@
         "_name": "Martial Artist Ken",
         "skills": {
             "S1": {
-                "name": "Knockout",
-                "description": "Attacks the enemy with a flurry of strikes, with a 100% chance to inflict provoke for 1 turn. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "ノックアウト",
+                "description": "連打で敵を攻撃し、100%の確率で1ターンの間挑発を付与する。攻撃が成功すると必ずクリティカルが発生する。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Dragon Flame",
-                "description": "At the start of battle, grants vigor for 3 turns. When an ally except for the caster suffers a critical hit, counterattacks, and when the caster suffers a critical hit, counterattacks with Dragon Flame. Dragon Flame (gains 1 Soul): Attacks the enemy with a kick and penetrates the target's Defense by 50%. A successful attack always results in a critical hit, and damage dealt increases proportional to the caster's lost Health."
+                "name": "竜の炎",
+                "description": "バトル開始時、3ターンの間闘志を付与する。発動者を除く味方がクリティカルを受けると反撃し、発動者がクリティカルを受けると竜の炎で反撃する。竜の炎（ソウル1獲得）：蹴りで敵を攻撃し、対象の防御力を50%貫通する。攻撃が成功すると必ずクリティカルが発生し、発動者の失ったHPに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "The Coming of Asura",
-                "description": "Attacks all enemies with a powerful ground pound, with a 80% chance to decrease Defense for 2 turns, and increases Attack of the caster for 2 turns. A successful attack always results in a critical hit."
+                "name": "阿修羅の降臨",
+                "description": "強力に地面を叩きつけて敵全体を攻撃し、80%の確率で2ターンの間防御力をダウンさせ、2ターンの間発動者の攻撃力をアップさせる。攻撃が成功すると必ずクリティカルが発生する。"
             }
         }
     },

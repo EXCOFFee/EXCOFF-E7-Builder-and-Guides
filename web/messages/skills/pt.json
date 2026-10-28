@@ -3891,17 +3891,17 @@
         "_name": "Lua",
         "skills": {
             "S1": {
-                "name": "Folding Fan",
-                "description": "Attacks the enemy with a fan, with a 50% chance to decrease Defense for 2 turns."
+                "name": "Leque dobrável",
+                "description": "Ataca o inimigo com um leque, com 50% de chance de diminuir a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Butterfly Reverie",
-                "description": "Attacks the enemy with light, dispelling two buffs before putting them to sleep for 1 turn. Grants an extra turn to the caster."
+                "name": "Devaneio da borboleta",
+                "description": "Ataca o inimigo com luz, dissipando dois efeitos positivos antes de fazê-lo dormir por 1 turno. Concede um turno extra ao conjurador."
             },
             "S3": {
-                "name": "Sweet Talk",
-                "description": "Dispels one buff from all enemies before increasing skill cooldowns by 1 turn and inflicting beguile. Increases Speed of all allies for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Conversa doce",
+                "description": "Dissipa um efeito positivo de todos os inimigos, depois aumenta as recargas de habilidades em 1 turno e aplica sedução. Aumenta a Velocidade de todos os aliados por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -3909,17 +3909,17 @@
         "_name": "Lucy",
         "skills": {
             "S1": {
-                "name": "Paper Throw",
-                "description": "Throws paper to attack the enemy, with a 50% chance to restrict for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Arremesso de papel",
+                "description": "Arremessa papel para atacar o inimigo, com 50% de chance de aplicar restrição por 2 turnos.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Paper Whirlwind",
-                "description": "Attacks all enemies, with a 100% chance each to restrict and decrease Speed for 2 turns."
+                "name": "Redemoinho de papel",
+                "description": "Ataca todos os inimigos, com 100% de chance cada de aplicar restrição e diminuir a Velocidade por 2 turnos."
             },
             "S3": {
-                "name": "Paper Barrier",
-                "description": "Uses many sheets of paper to recover Health of all allies and grant a barrier for 2 turns, before decreasing debuff durations by 1 turn. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "Barreira de papel",
+                "description": "Usa muitas folhas de papel para recuperar a Vida de todos os aliados e conceder uma barreira por 2 turnos, depois diminui a duração dos efeitos negativos em 1 turno. A quantidade recuperada e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -3927,17 +3927,17 @@
         "_name": "Ludwig",
         "skills": {
             "S1": {
-                "name": "Starlight",
-                "description": "Attacks the enemy with magic, before a 75% chance to steal one buff. After attacking, when the caster has a buff, increases Combat Readiness by 15%."
+                "name": "Luz estelar",
+                "description": "Ataca o inimigo com magia, depois com 75% de chance rouba um efeito positivo. Após atacar, quando o conjurador tem um efeito positivo, aumenta a Prontidão de Combate em 15%."
             },
             "S2": {
-                "name": "Moonlight Blow",
-                "description": "Attacks the enemy with light, decreasing buff durations by 1 turn before a 100% chance to stun for 1 turn. Grants invincibility to the caster for 1 turn and increases Combat Readiness by 50%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Golpe do luar",
+                "description": "Ataca o inimigo com luz, diminuindo a duração dos efeitos positivos em 1 turno, depois com 100% de chance atordoa por 1 turno. Concede invencibilidade ao conjurador por 1 turno e aumenta a Prontidão de Combate em 50%.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Call of the Full Moon",
-                "description": "Attacks all enemies with Nocturne magic, and when an enemy is defeated, extends the caster's buff durations by 1 turn. Penetrates the target's Defense by 30%. When the caster is invincible, penetrates the target's Defense by an additional 30%."
+                "name": "Chamado da lua cheia",
+                "description": "Ataca todos os inimigos com magia Noturna e, ao derrotar um inimigo, estende em 1 turno a duração dos efeitos positivos do conjurador. Penetra 30% da Defesa do alvo. Quando o conjurador está invencível, penetra mais 30% da Defesa do alvo."
             }
         }
     },
@@ -3945,17 +3945,17 @@
         "_name": "Luluca",
         "skills": {
             "S1": {
-                "name": "Wild Wave",
-                "description": "Attacks with intense elemental force, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health."
+                "name": "Onda selvagem",
+                "description": "Ataca com intensa força elemental, com 50% de chance de diminuir a Defesa por 2 turnos. O dano causado aumenta proporcionalmente à Vida perdida do inimigo."
             },
             "S2": {
-                "name": "Rekos's Blessing",
-                "description": "With the blessing of the stars, grants increased Defense and a barrier (proportional to the caster's Attack) to all allies for 2 turns.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "Bênção de Rekos",
+                "description": "Com a bênção das estrelas, concede Aumentar Defesa e uma barreira (proporcional ao Ataque do conjurador) a todos os aliados por 2 turnos.",
+                "soulburn_effect": "Todas as recargas de habilidades diminuem em 2 turnos."
             },
             "S3": {
-                "name": "Wave of Vengeance",
-                "description": "Attacks all enemies with the power of ruin, with a 100% chance to decrease Defense for 2 turns, before increasing the caster's Attack. Increased Attack can stack up to 3 times."
+                "name": "Onda da vingança",
+                "description": "Ataca todos os inimigos com o poder da ruína, com 100% de chance de diminuir a Defesa por 2 turnos, depois aumenta o Ataque do conjurador. O aumento de Ataque acumula até 3 vezes."
             }
         }
     },
@@ -3963,17 +3963,17 @@
         "_name": "Luna",
         "skills": {
             "S1": {
-                "name": "Infinity Slash",
-                "description": "Stabs the target a random number of times. Skill cooldown decreases by 1-3 turns and damage dealt increases according to the number of attacks.",
-                "soulburn_effect": "Increases the number of attacks to max."
+                "name": "Corte infinito",
+                "description": "Perfura o alvo um número aleatório de vezes. A recarga da habilidade diminui em 1-3 turnos e o dano causado aumenta conforme o número de ataques.",
+                "soulburn_effect": "Aumenta o número de ataques ao máximo."
             },
             "S2": {
-                "name": "Dragon Knight's Will",
-                "description": "Increases Critical Hit Chance and Critical Hit Resistance by 30%. When the caster's Health is 50% or more, increases Attack by 30%, and when the caster's Health is less than 50%, increases Defense by 30%."
+                "name": "Vontade do cavaleiro dragão",
+                "description": "Aumenta a Chance de Crítico e a Resistência a Crítico em 30%. Quando a Vida do conjurador é 50% ou mais, aumenta o Ataque em 30% e, quando é menor que 50%, aumenta a Defesa em 30%."
             },
             "S3": {
-                "name": "Ragnar Spear",
-                "description": "Soars into the air and attacks the enemy by hurling a spear, with a 100% chance to inflict decreased Defense for 2 turns. Penetrates the target's Defense by 50% and attacks using an elemental advantage. When the enemy is defeated, gains an additional 5 Soul."
+                "name": "Lança de Ragnar",
+                "description": "Salta no ar e ataca o inimigo arremessando uma lança, com 100% de chance de aplicar Diminuir Defesa por 2 turnos. Penetra 50% da Defesa do alvo e ataca com vantagem elemental. Ao derrotar o inimigo, ganha mais 5 de Alma."
             }
         }
     },
@@ -3981,17 +3981,17 @@
         "_name": "Magic Scholar Doris",
         "skills": {
             "S1": {
-                "name": "Mana Bullet",
-                "description": "Attacks with light energy, before a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "Projétil de mana",
+                "description": "Ataca com energia da luz, depois com 75% de chance diminui a Precisão por 1 turno."
             },
             "S2": {
-                "name": "Celebration of Light",
-                "description": "Recites the Celebration of Light, recovering the Health of all allies and granting continuous healing and increased Defense for 2 turns. Amount recovered is proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Celebração da luz",
+                "description": "Recita a Celebração da luz, recuperando a Vida de todos os aliados e concedendo cura contínua e Aumentar Defesa por 2 turnos. A quantidade recuperada é proporcional à Vida máxima do alvo.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             },
             "S3": {
-                "name": "Primal Light",
-                "description": "Dispels one debuff from an ally with light magic, before recovering their Health and increasing their Combat Readiness by 50% with light magic. Amount recovered is proportional to the target's max Health."
+                "name": "Luz primordial",
+                "description": "Com magia da luz, dissipa um efeito negativo de um aliado, depois recupera sua Vida e aumenta sua Prontidão de Combate em 50%. A quantidade recuperada é proporcional à Vida máxima do alvo."
             }
         }
     },
@@ -3999,17 +3999,17 @@
         "_name": "Maid Chloe",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Attacks with a hammer, with a 40% chance to stun for 1 turn, before increasing Combat Readiness of the caster by 15%. After attacking, when the target is inflicted with stun, increases Combat Readiness of all allies except for the caster by 15%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Golpe pesado",
+                "description": "Ataca com um martelo, com 40% de chance de atordoar por 1 turno, depois aumenta a Prontidão de Combate do conjurador em 15%. Após atacar, quando o alvo está atordoado, aumenta a Prontidão de Combate de todos os aliados, exceto o conjurador, em 15%.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Maid's Cheer",
-                "description": "Grants 50% additional damage reduction to all allies. At the start of the turn, recovers Health of two allies with the lowest Health proportional to the caster's max Health."
+                "name": "Incentivo da criada",
+                "description": "Concede 50% de redução de dano adicional a todos os aliados. No início do turno, recupera a Vida dos dois aliados com menor Vida proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "VIP Treatment",
-                "description": "Entertains all allies with VIP Treatment, reviving all dead allies to 30% Health. For allies that are not dead, dispels two debuffs and grants revive for 3 turns, before granting increased Defense of all allies for 3 turns."
+                "name": "Tratamento VIP",
+                "description": "Recebe todos os aliados com Tratamento VIP, revivendo todos os aliados mortos com 30% de Vida. Para os aliados que não estão mortos, dissipa dois efeitos negativos e concede reviver por 3 turnos, depois concede Aumentar Defesa a todos os aliados por 3 turnos."
             }
         }
     },
@@ -4017,17 +4017,17 @@
         "_name": "Martial Artist Ken",
         "skills": {
             "S1": {
-                "name": "Knockout",
-                "description": "Attacks the enemy with a flurry of strikes, with a 100% chance to inflict provoke for 1 turn. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Nocaute",
+                "description": "Ataca o inimigo com uma rajada de golpes, com 100% de chance de provocá-lo por 1 turno. Um ataque bem-sucedido sempre resulta em acerto crítico.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Dragon Flame",
-                "description": "At the start of battle, grants vigor for 3 turns. When an ally except for the caster suffers a critical hit, counterattacks, and when the caster suffers a critical hit, counterattacks with Dragon Flame. Dragon Flame (gains 1 Soul): Attacks the enemy with a kick and penetrates the target's Defense by 50%. A successful attack always results in a critical hit, and damage dealt increases proportional to the caster's lost Health."
+                "name": "Chama do dragão",
+                "description": "No início da batalha, concede vigor por 3 turnos. Quando um aliado, exceto o conjurador, sofre um acerto crítico, contra-ataca e, quando o conjurador sofre um acerto crítico, contra-ataca com Chama do dragão. Chama do dragão (ganha 1 de Alma): ataca o inimigo com um chute e penetra 50% da Defesa do alvo. Um ataque bem-sucedido sempre resulta em acerto crítico, e o dano causado aumenta proporcionalmente à Vida perdida do conjurador."
             },
             "S3": {
-                "name": "The Coming of Asura",
-                "description": "Attacks all enemies with a powerful ground pound, with a 80% chance to decrease Defense for 2 turns, and increases Attack of the caster for 2 turns. A successful attack always results in a critical hit."
+                "name": "A vinda de Asura",
+                "description": "Ataca todos os inimigos com um poderoso golpe no chão, com 80% de chance de diminuir a Defesa por 2 turnos, e aumenta o Ataque do conjurador por 2 turnos. Um ataque bem-sucedido sempre resulta em acerto crítico."
             }
         }
     },

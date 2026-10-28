@@ -3891,17 +3891,17 @@
         "_name": "Lua",
         "skills": {
             "S1": {
-                "name": "Folding Fan",
-                "description": "Attacks the enemy with a fan, with a 50% chance to decrease Defense for 2 turns."
+                "name": "접부채",
+                "description": "부채로 적을 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Butterfly Reverie",
-                "description": "Attacks the enemy with light, dispelling two buffs before putting them to sleep for 1 turn. Grants an extra turn to the caster."
+                "name": "나비의 몽상",
+                "description": "빛으로 적을 공격해 강화 효과를 두 개 해제한 뒤 1턴 동안 수면에 빠뜨린다. 시전자는 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Sweet Talk",
-                "description": "Dispels one buff from all enemies before increasing skill cooldowns by 1 turn and inflicting beguile. Increases Speed of all allies for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "달콤한 속삭임",
+                "description": "모든 적의 강화 효과를 한 개 해제한 뒤 스킬 재사용 대기 시간을 1턴 증가시키고 현혹을 건다. 2턴 동안 모든 아군의 속도를 증가시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -3909,17 +3909,17 @@
         "_name": "Lucy",
         "skills": {
             "S1": {
-                "name": "Paper Throw",
-                "description": "Throws paper to attack the enemy, with a 50% chance to restrict for 2 turns.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "종이 던지기",
+                "description": "종이를 던져 적을 공격하며, 50% 확률로 2턴 동안 제약을 건다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Paper Whirlwind",
-                "description": "Attacks all enemies, with a 100% chance each to restrict and decrease Speed for 2 turns."
+                "name": "종이 회오리",
+                "description": "모든 적을 공격하며, 각각 100% 확률로 2턴 동안 제약과 속도 감소를 건다."
             },
             "S3": {
-                "name": "Paper Barrier",
-                "description": "Uses many sheets of paper to recover Health of all allies and grant a barrier for 2 turns, before decreasing debuff durations by 1 turn. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "종이 장벽",
+                "description": "많은 종이를 사용해 모든 아군의 생명력을 회복하고 2턴 동안 보호막을 부여한 뒤 약화 효과의 지속 시간을 1턴 감소시킨다. 시전자의 최대 생명력에 비례해 회복량과 보호막 강도가 증가한다."
             }
         }
     },
@@ -3927,17 +3927,17 @@
         "_name": "Ludwig",
         "skills": {
             "S1": {
-                "name": "Starlight",
-                "description": "Attacks the enemy with magic, before a 75% chance to steal one buff. After attacking, when the caster has a buff, increases Combat Readiness by 15%."
+                "name": "별빛",
+                "description": "마법으로 적을 공격한 뒤 75% 확률로 강화 효과를 한 개 빼앗는다. 공격 후 시전자에게 강화 효과가 있으면 행동 게이지를 15% 증가시킨다."
             },
             "S2": {
-                "name": "Moonlight Blow",
-                "description": "Attacks the enemy with light, decreasing buff durations by 1 turn before a 100% chance to stun for 1 turn. Grants invincibility to the caster for 1 turn and increases Combat Readiness by 50%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "월광의 일격",
+                "description": "빛으로 적을 공격해 강화 효과의 지속 시간을 1턴 감소시킨 뒤 100% 확률로 1턴 동안 기절시킨다. 시전자에게 1턴 동안 무적을 부여하고 행동 게이지를 50% 증가시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "Call of the Full Moon",
-                "description": "Attacks all enemies with Nocturne magic, and when an enemy is defeated, extends the caster's buff durations by 1 turn. Penetrates the target's Defense by 30%. When the caster is invincible, penetrates the target's Defense by an additional 30%."
+                "name": "보름달의 부름",
+                "description": "녹턴 마법으로 모든 적을 공격하며, 적을 처치하면 시전자의 강화 효과 지속 시간을 1턴 연장한다. 대상의 방어력을 30% 관통한다. 시전자가 무적 상태이면 대상의 방어력을 추가로 30% 관통한다."
             }
         }
     },
@@ -3945,17 +3945,17 @@
         "_name": "Luluca",
         "skills": {
             "S1": {
-                "name": "Wild Wave",
-                "description": "Attacks with intense elemental force, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health."
+                "name": "거친 파도",
+                "description": "강렬한 원소의 힘으로 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다. 적이 잃은 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Rekos's Blessing",
-                "description": "With the blessing of the stars, grants increased Defense and a barrier (proportional to the caster's Attack) to all allies for 2 turns.",
-                "soulburn_effect": "All skill cooldowns decreased by 2 turns."
+                "name": "레코스의 축복",
+                "description": "별의 축복으로 모든 아군에게 2턴 동안 방어력 증가와 보호막(시전자 공격력 비례)을 부여한다.",
+                "soulburn_effect": "모든 스킬 재사용 대기 시간이 2턴 감소한다."
             },
             "S3": {
-                "name": "Wave of Vengeance",
-                "description": "Attacks all enemies with the power of ruin, with a 100% chance to decrease Defense for 2 turns, before increasing the caster's Attack. Increased Attack can stack up to 3 times."
+                "name": "복수의 파도",
+                "description": "파멸의 힘으로 모든 적을 공격하며, 100% 확률로 2턴 동안 방어력을 감소시킨 뒤 시전자의 공격력을 증가시킨다. 공격력 증가는 최대 3회까지 중첩된다."
             }
         }
     },
@@ -3963,17 +3963,17 @@
         "_name": "Luna",
         "skills": {
             "S1": {
-                "name": "Infinity Slash",
-                "description": "Stabs the target a random number of times. Skill cooldown decreases by 1-3 turns and damage dealt increases according to the number of attacks.",
-                "soulburn_effect": "Increases the number of attacks to max."
+                "name": "무한 베기",
+                "description": "대상을 무작위 횟수만큼 찌른다. 공격 횟수에 따라 스킬 재사용 대기 시간이 1~3턴 감소하고 주는 피해가 증가한다.",
+                "soulburn_effect": "공격 횟수가 최대가 된다."
             },
             "S2": {
-                "name": "Dragon Knight's Will",
-                "description": "Increases Critical Hit Chance and Critical Hit Resistance by 30%. When the caster's Health is 50% or more, increases Attack by 30%, and when the caster's Health is less than 50%, increases Defense by 30%."
+                "name": "용기사의 의지",
+                "description": "치명타 확률과 치명타 저항이 30% 증가한다. 시전자의 생명력이 50% 이상이면 공격력이 30% 증가하고, 50% 미만이면 방어력이 30% 증가한다."
             },
             "S3": {
-                "name": "Ragnar Spear",
-                "description": "Soars into the air and attacks the enemy by hurling a spear, with a 100% chance to inflict decreased Defense for 2 turns. Penetrates the target's Defense by 50% and attacks using an elemental advantage. When the enemy is defeated, gains an additional 5 Soul."
+                "name": "라그나 스피어",
+                "description": "공중으로 날아올라 창을 던져 적을 공격하며, 100% 확률로 2턴 동안 방어력 감소를 건다. 대상의 방어력을 50% 관통하며 속성 우위로 공격한다. 적을 처치하면 소울을 추가로 5 얻는다."
             }
         }
     },
@@ -3981,17 +3981,17 @@
         "_name": "Magic Scholar Doris",
         "skills": {
             "S1": {
-                "name": "Mana Bullet",
-                "description": "Attacks with light energy, before a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "마나 탄환",
+                "description": "빛의 기운으로 공격한 뒤 75% 확률로 1턴 동안 명중률을 감소시킨다."
             },
             "S2": {
-                "name": "Celebration of Light",
-                "description": "Recites the Celebration of Light, recovering the Health of all allies and granting continuous healing and increased Defense for 2 turns. Amount recovered is proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "빛의 찬미",
+                "description": "빛의 찬미를 읊어 모든 아군의 생명력을 회복하고 2턴 동안 지속 회복과 방어력 증가를 부여한다. 회복량은 대상의 최대 생명력에 비례한다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장된다."
             },
             "S3": {
-                "name": "Primal Light",
-                "description": "Dispels one debuff from an ally with light magic, before recovering their Health and increasing their Combat Readiness by 50% with light magic. Amount recovered is proportional to the target's max Health."
+                "name": "태초의 빛",
+                "description": "빛의 마법으로 아군 한 명의 약화 효과를 한 개 해제한 뒤 생명력을 회복하고 행동 게이지를 50% 증가시킨다. 회복량은 대상의 최대 생명력에 비례한다."
             }
         }
     },
@@ -3999,17 +3999,17 @@
         "_name": "Maid Chloe",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Attacks with a hammer, with a 40% chance to stun for 1 turn, before increasing Combat Readiness of the caster by 15%. After attacking, when the target is inflicted with stun, increases Combat Readiness of all allies except for the caster by 15%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "강타",
+                "description": "망치로 공격하며, 40% 확률로 1턴 동안 기절시킨 뒤 시전자의 행동 게이지를 15% 증가시킨다. 공격 후 대상이 기절 상태이면 시전자를 제외한 모든 아군의 행동 게이지를 15% 증가시킨다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Maid's Cheer",
-                "description": "Grants 50% additional damage reduction to all allies. At the start of the turn, recovers Health of two allies with the lowest Health proportional to the caster's max Health."
+                "name": "메이드의 응원",
+                "description": "모든 아군이 받는 피해를 추가로 50% 감소시킨다. 턴 시작 시 시전자의 최대 생명력에 비례해 생명력이 가장 낮은 아군 두 명의 생명력을 회복한다."
             },
             "S3": {
-                "name": "VIP Treatment",
-                "description": "Entertains all allies with VIP Treatment, reviving all dead allies to 30% Health. For allies that are not dead, dispels two debuffs and grants revive for 3 turns, before granting increased Defense of all allies for 3 turns."
+                "name": "VIP 대접",
+                "description": "모든 아군을 VIP 대접해 사망한 모든 아군을 생명력 30%로 부활시킨다. 사망하지 않은 아군은 약화 효과를 두 개 해제하고 3턴 동안 부활을 부여한 뒤 모든 아군에게 3턴 동안 방어력 증가를 부여한다."
             }
         }
     },
@@ -4017,17 +4017,17 @@
         "_name": "Martial Artist Ken",
         "skills": {
             "S1": {
-                "name": "Knockout",
-                "description": "Attacks the enemy with a flurry of strikes, with a 100% chance to inflict provoke for 1 turn. A successful attack always results in a critical hit.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "녹아웃",
+                "description": "연타로 적을 공격하며, 100% 확률로 1턴 동안 도발을 건다. 공격에 성공하면 반드시 치명타가 발생한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Dragon Flame",
-                "description": "At the start of battle, grants vigor for 3 turns. When an ally except for the caster suffers a critical hit, counterattacks, and when the caster suffers a critical hit, counterattacks with Dragon Flame. Dragon Flame (gains 1 Soul): Attacks the enemy with a kick and penetrates the target's Defense by 50%. A successful attack always results in a critical hit, and damage dealt increases proportional to the caster's lost Health."
+                "name": "용의 불꽃",
+                "description": "전투 시작 시 3턴 동안 투지를 부여한다. 시전자를 제외한 아군이 치명타를 받으면 반격하고, 시전자가 치명타를 받으면 용의 불꽃으로 반격한다. 용의 불꽃(소울 1 획득): 발차기로 적을 공격하고 대상의 방어력을 50% 관통한다. 공격에 성공하면 반드시 치명타가 발생하며, 시전자가 잃은 생명력에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "The Coming of Asura",
-                "description": "Attacks all enemies with a powerful ground pound, with a 80% chance to decrease Defense for 2 turns, and increases Attack of the caster for 2 turns. A successful attack always results in a critical hit."
+                "name": "아수라의 강림",
+                "description": "강력하게 땅을 내리쳐 모든 적을 공격하며, 80% 확률로 2턴 동안 방어력을 감소시키고 2턴 동안 시전자의 공격력을 증가시킨다. 공격에 성공하면 반드시 치명타가 발생한다."
             }
         }
     },
