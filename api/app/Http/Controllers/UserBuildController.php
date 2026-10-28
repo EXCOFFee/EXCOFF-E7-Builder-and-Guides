@@ -82,7 +82,8 @@ class UserBuildController extends Controller
             }
 
             // Filter by minimum stats (supports: min_speed, min_atk, min_hp, min_crit, min_cdmg, min_eff)
-            $statFilters = ['speed' => 'spd', 'atk' => 'atk', 'hp' => 'hp', 'crit' => 'crit', 'cdmg' => 'cdmg', 'eff' => 'eff'];
+            // Claves tal como las guarda el formulario de builds en min_stats
+            $statFilters = ['speed' => 'spd', 'atk' => 'atk', 'hp' => 'hp', 'crit' => 'crit_chance', 'cdmg' => 'crit_dmg', 'eff' => 'eff'];
             foreach ($statFilters as $param => $jsonKey) {
                 $minKey = "min_{$param}";
                 if ($request->has($minKey) && is_numeric($request->$minKey)) {
@@ -331,11 +332,12 @@ class UserBuildController extends Controller
             $this->imageService->filterOwnedUrls($request->input('image_urls'))
         );
 
-        // Limit to 5 and update if any images
-        if (!empty($imagePaths)) {
+        // Si el cliente manda las imágenes (image_urls y/o archivos), esa lista reemplaza a la anterior,
+        // aunque quede vacía: así el formulario puede quitar todas. Sin esos campos, no se tocan.
+        if ($request->has('image_urls') || $request->hasFile('images')) {
             $validated['images'] = array_slice($imagePaths, 0, ImageService::MAX_IMAGES);
         }
-        
+
         if ($minStats !== null) {
             $validated['min_stats'] = $minStats;
         }
