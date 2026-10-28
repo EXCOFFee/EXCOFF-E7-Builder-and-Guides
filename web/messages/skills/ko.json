@@ -472,17 +472,17 @@
         "_name": "Archdemon's Shadow",
         "skills": {
             "S1": {
-                "name": "Touch of Chaos",
-                "description": "Has a 100% chance to seal the enemy for 2 turns, before attacking with lightning.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "혼돈의 손길",
+                "description": "100% 확률로 2턴 동안 적에게 봉인을 건 뒤 번개로 공격한다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S2": {
-                "name": "Twisted Power",
-                "description": "Damage suffered from a critical hit decreases by 30%. When more than one damage reduction effect is granted, only the strongest effect is applied. After using a basic skill, when the target is sealed, increases Attack of the caster for 1 turn before activating Burst. Burst: Attacks all enemies, and increases Combat Readiness of the caster by 25% before gaining 1 Focus. A successful attack deals additional damage proportional to the caster's Attack."
+                "name": "뒤틀린 힘",
+                "description": "치명타로 받는 피해가 30% 감소한다. 피해 감소 효과가 여러 개 부여되면 가장 강한 효과만 적용된다. 기본 스킬 사용 후 대상이 봉인 상태이면 1턴 동안 시전자의 공격력을 증가시킨 뒤 폭발을 발동한다. 폭발: 모든 적을 공격하고 시전자의 행동 게이지를 25% 증가시킨 뒤 집중을 1 얻는다. 공격에 성공하면 시전자의 공격력에 비례한 추가 피해를 준다."
             },
             "S3": {
-                "name": "Dissolution",
-                "description": "Attacks all enemies with the power of Ilryos, with a 80% chance to decrease Defense for 2 turns, and a 100% chance each to inflict two burn effects for 2 turns. Grants the caster an extra turn. This skill cannot trigger a counterattack."
+                "name": "용해",
+                "description": "일리오스의 힘으로 모든 적을 공격하며, 80% 확률로 2턴 동안 방어력을 감소시키고 각각 100% 확률로 2턴 동안 화상을 두 개 건다. 시전자는 추가 턴을 얻는다. 이 스킬로는 반격을 유발할 수 없다."
             }
         }
     },
@@ -490,17 +490,17 @@
         "_name": "Architect Laika",
         "skills": {
             "S1": {
-                "name": "Removing Variables.",
-                "description": "Attacks the enemy, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "변수 제거.",
+                "description": "적을 공격하고 시전자의 행동 게이지를 20% 증가시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Laying the Groundwork",
-                "description": "Confirms the target, with a 100% chance each to dispel two buffs from the enemy and inflict target for 2 turns, before granting increased Attack and immunity to the caster for 2 turns. After using this skill, when the enemy is inflicted with target, grants an extra turn to the caster.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "사전 작업",
+                "description": "목표를 확인해 각각 100% 확률로 적의 강화 효과를 두 개 해제하고 2턴 동안 표적을 건 뒤 시전자에게 2턴 동안 공격력 증가와 면역을 부여한다. 이 스킬 사용 후 적에게 표적이 걸려 있으면 시전자는 추가 턴을 얻는다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "Eliminating the Target.",
-                "description": "With everything going as planned, attacks all enemies, and when the enemy is defeated, inflicts extinction. When the target is not an Elite or Boss monster, ignores damage sharing. When the enemy is inflicted with target, penetrates Defense by 80%. Damage dealt increases proportional to the caster's Speed."
+                "name": "목표 제거.",
+                "description": "모든 것이 계획대로 진행되며 모든 적을 공격하고, 적을 처치하면 소멸을 건다. 대상이 정예 또는 보스 몬스터가 아니면 피해 분산을 무시한다. 적에게 표적이 걸려 있으면 방어력을 80% 관통한다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -508,17 +508,17 @@
         "_name": "Argent Waves Hwayoung",
         "skills": {
             "S1": {
-                "name": "Lightning Kicks",
-                "description": "Attacks the enemy with kicks and dispels one buff."
+                "name": "번개 발차기",
+                "description": "발차기로 적을 공격하고 강화 효과를 한 개 해제한다."
             },
             "S2": {
-                "name": "Advent of the Sura",
-                "description": "After an ally uses a non-attack skill, activates Swallow Kick on the enemy with the highest Defense. Swallow Kick: After granting increased Attack to the caster for 2 turns, attacks the enemy by leaping forward, and increases Combat Readiness of the caster by 20%. Penetrates the target's Defense by 50%. When the caster is granted vigor, grants an extra turn."
+                "name": "수라 강림",
+                "description": "아군이 공격이 아닌 스킬을 사용한 후 방어력이 가장 높은 적에게 제비 차기를 발동한다. 제비 차기: 시전자에게 2턴 동안 공격력 증가를 부여한 뒤 앞으로 도약해 적을 공격하고 시전자의 행동 게이지를 20% 증가시킨다. 대상의 방어력을 50% 관통한다. 시전자에게 투지가 있으면 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Argent Flash",
-                "description": "Attacks all enemies with a water scooter, and increases Combat Readiness of the ally in the back row by 50%. Grants vigor to the caster for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "은빛 섬광",
+                "description": "수상 스쿠터로 모든 적을 공격하고 후열 아군의 행동 게이지를 50% 증가시킨다. 시전자에게 2턴 동안 투지를 부여한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -526,17 +526,17 @@
         "_name": "Aria",
         "skills": {
             "S1": {
-                "name": "Shadow Call",
-                "description": "Attacks two enemies with shadows, with a 50% chance to decrease Hit Chance for 1 turn. When it is not the caster's turn, increases effect chance by 20%. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "그림자 소환",
+                "description": "그림자로 적 두 명을 공격하며, 50% 확률로 1턴 동안 명중률을 감소시킨다. 시전자의 턴이 아니면 효과 발동 확률이 20% 증가한다. 시전자의 방어력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Guide of Darkness",
-                "description": "Increases Critical Hit Chance by 30%. After using a skill, when Focus is full, consumes all Focus to activate Dark Shadow Phantom. Dark Shadow Phantom: Attacks all enemies, dispelling two buffs and decreasing Combat Readiness by 30%. Damage dealt increases proportional to the caster's Defense."
+                "name": "어둠의 인도자",
+                "description": "치명타 확률이 30% 증가한다. 스킬 사용 후 집중이 가득 차 있으면 집중을 모두 소모해 어둠의 환영을 발동한다. 어둠의 환영: 모든 적을 공격해 강화 효과를 두 개 해제하고 행동 게이지를 30% 감소시킨다. 시전자의 방어력에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "The Umbral Hour",
-                "description": "Using the power of the shadows, increases Defense of the caster and adopts a counterattacking stance for 2 turns. Grants stealth and a barrier to all allies except for the caster for 2 turns. Barrier strength increases proportional to the caster's Defense."
+                "name": "그림자의 시간",
+                "description": "그림자의 힘으로 2턴 동안 시전자의 방어력을 증가시키고 반격 태세를 취한다. 시전자를 제외한 모든 아군에게 2턴 동안 은신과 보호막을 부여한다. 시전자의 방어력에 비례해 보호막 강도가 증가한다."
             }
         }
     },
@@ -544,17 +544,17 @@
         "_name": "Armin",
         "skills": {
             "S1": {
-                "name": "Takedown",
-                "description": "Attacks the enemy with a shield, with a 35% chance to stun for 1 turn. Damage dealt increases proportional to the caster's Defense. When it is not the caster's turn, this attack changes into an attack that targets all enemies."
+                "name": "제압",
+                "description": "방패로 적을 공격하며, 35% 확률로 1턴 동안 기절시킨다. 시전자의 방어력에 비례해 주는 피해가 증가한다. 시전자의 턴이 아니면 이 공격은 모든 적을 대상으로 하는 공격으로 바뀐다."
             },
             "S2": {
-                "name": "Protect",
-                "description": "When attacked, has a 25% chance to counterattack. When an ally is attacked by a Single Attack, grants 30% damage reduction."
+                "name": "보호",
+                "description": "공격받으면 25% 확률로 반격한다. 아군이 단일 공격을 받으면 피해를 30% 감소시킨다."
             },
             "S3": {
-                "name": "Shield Wall",
-                "description": "With the Shield of Light, dispels one debuff from all allies, and grants increased Defense to the caster for 2 turns, and grants a barrier (proportional to the caster's Defense) to all allies for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "방패의 벽",
+                "description": "빛의 방패로 모든 아군의 약화 효과를 한 개 해제하고, 시전자에게 2턴 동안 방어력 증가를, 모든 아군에게 2턴 동안 보호막(시전자 방어력 비례)을 부여한다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장된다."
             }
         }
     },
@@ -562,17 +562,17 @@
         "_name": "Arowell",
         "skills": {
             "S1": {
-                "name": "Shield Thrust",
-                "description": "Attacks the enemy with a sword and shield, with a 75% chance each to dispel one buff twice. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "방패 찌르기",
+                "description": "검과 방패로 적을 공격하며, 각각 75% 확률로 강화 효과를 한 개씩 두 번 해제한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Escort",
-                "description": "At the start of battle and at the end of the caster's turn, grants escort to the caster for 1 turn. After an ally except for the caster is attacked by a Single Attack, increases Combat Readiness of the caster by 20%."
+                "name": "호위",
+                "description": "전투 시작 시와 시전자의 턴 종료 시 시전자에게 1턴 동안 호위를 부여한다. 시전자를 제외한 아군이 단일 공격을 받은 후 시전자의 행동 게이지를 20% 증가시킨다."
             },
             "S3": {
-                "name": "Defensive Position",
-                "description": "Attacks the enemy, with a 100% chance to stun for 1 turn, and grants a barrier and increased Defense to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's max Health."
+                "name": "방어 진형",
+                "description": "적을 공격하며, 100% 확률로 1턴 동안 기절시키고, 모든 아군에게 2턴 동안 보호막과 방어력 증가를 부여한다. 시전자의 최대 생명력에 비례해 주는 피해와 보호막 강도가 증가한다."
             }
         }
     },
@@ -580,17 +580,17 @@
         "_name": "Arunka",
         "skills": {
             "S1": {
-                "name": "Dagger Throw",
-                "description": "Throws daggers at the enemy, with a 50% chance each to inflict two bleeding effects for 2 turns. A successful attack has a 50% chance to activate Expose as an extra attack. Expose can only be activated once per turn, during the caster's turn. Expose: Attacks the enemy, and recovers Health of the caster. Amount recovered increases proportional to the caster's Attack.",
-                "soulburn_effect": "Has a 100% chance to activate Expose."
+                "name": "단검 투척",
+                "description": "적에게 단검을 던지며, 각각 50% 확률로 2턴 동안 출혈을 두 개 건다. 공격에 성공하면 50% 확률로 추가 공격으로 폭로를 발동한다. 폭로는 시전자의 턴 동안 턴마다 한 번만 발동할 수 있다. 폭로: 적을 공격하고 시전자의 생명력을 회복한다. 시전자의 공격력에 비례해 회복량이 증가한다.",
+                "soulburn_effect": "100% 확률로 폭로를 발동한다."
             },
             "S2": {
-                "name": "Wild Instinct",
-                "description": "Attack increases by 30%. When attacking, cannot trigger a critical hit. At the end of an enemy's turn, when the target is granted a barrier, increases Combat Readiness of the caster by 10%."
+                "name": "야생의 본능",
+                "description": "공격력이 30% 증가한다. 공격 시 치명타가 발생하지 않는다. 적의 턴 종료 시 대상에게 보호막이 있으면 시전자의 행동 게이지를 10% 증가시킨다."
             },
             "S3": {
-                "name": "A Thrashing In The Prairie",
-                "description": "Runs up to the enemy to attack. When the enemy is defeated, inflicts extinction and resets cooldown of this skill. Penetrates the target's Defense by 70% and when the target is granted a barrier, increases damage dealt."
+                "name": "초원의 난타",
+                "description": "적에게 달려가 공격한다. 적을 처치하면 소멸을 걸고 이 스킬의 재사용 대기 시간을 초기화한다. 대상의 방어력을 70% 관통하며, 대상에게 보호막이 있으면 주는 피해가 증가한다."
             }
         }
     },
@@ -616,17 +616,17 @@
         "_name": "Assassin Cidd",
         "skills": {
             "S1": {
-                "name": "Slice",
-                "description": "Attacks with an axe, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "베기",
+                "description": "도끼로 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Swift Action",
-                "description": "When somebody dies, caster is granted increased Attack for 1 turn and Combat Readiness increases by 30%."
+                "name": "신속한 행동",
+                "description": "누군가 사망하면 시전자는 1턴 동안 공격력 증가를 얻고 행동 게이지가 30% 증가한다."
             },
             "S3": {
-                "name": "Execution",
-                "description": "Attacks the enemy with a powerful ground pound, inflicting silence for 1 turn and decreasing Combat Readiness by 50%, before granting increased Evasion to the caster for 2 turns. Damage dealt increases proportional to the caster and enemy's Speed. Inflicts 20 Soul Removal on the enemy.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "처형",
+                "description": "강력하게 땅을 내리쳐 적을 공격해 1턴 동안 침묵을 걸고 행동 게이지를 50% 감소시킨 뒤 시전자에게 2턴 동안 회피 증가를 부여한다. 시전자와 적의 속도에 비례해 주는 피해가 증가한다. 적의 소울을 20 제거한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },

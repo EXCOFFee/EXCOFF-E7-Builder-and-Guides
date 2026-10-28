@@ -472,17 +472,17 @@
         "_name": "Archdemon's Shadow",
         "skills": {
             "S1": {
-                "name": "Touch of Chaos",
-                "description": "Has a 100% chance to seal the enemy for 2 turns, before attacking with lightning.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Toque do caos",
+                "description": "Tem 100% de chance de selar o inimigo por 2 turnos, depois ataca com relâmpagos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S2": {
-                "name": "Twisted Power",
-                "description": "Damage suffered from a critical hit decreases by 30%. When more than one damage reduction effect is granted, only the strongest effect is applied. After using a basic skill, when the target is sealed, increases Attack of the caster for 1 turn before activating Burst. Burst: Attacks all enemies, and increases Combat Readiness of the caster by 25% before gaining 1 Focus. A successful attack deals additional damage proportional to the caster's Attack."
+                "name": "Poder distorcido",
+                "description": "O dano sofrido de acertos críticos diminui 30%. Quando mais de um efeito de redução de dano é concedido, só o mais forte é aplicado. Após usar a habilidade básica, quando o alvo está selado, aumenta o Ataque do conjurador por 1 turno antes de ativar Explosão. Explosão: ataca todos os inimigos e aumenta a Prontidão de Combate do conjurador em 25%, depois ganha 1 de Foco. Um ataque bem-sucedido causa dano adicional proporcional ao Ataque do conjurador."
             },
             "S3": {
-                "name": "Dissolution",
-                "description": "Attacks all enemies with the power of Ilryos, with a 80% chance to decrease Defense for 2 turns, and a 100% chance each to inflict two burn effects for 2 turns. Grants the caster an extra turn. This skill cannot trigger a counterattack."
+                "name": "Dissolução",
+                "description": "Ataca todos os inimigos com o poder de Ilryos, com 80% de chance de diminuir a Defesa por 2 turnos e 100% de chance cada de aplicar dois efeitos de queimadura por 2 turnos. Concede um turno extra ao conjurador. Esta habilidade não pode ativar contra-ataques."
             }
         }
     },
@@ -490,17 +490,17 @@
         "_name": "Architect Laika",
         "skills": {
             "S1": {
-                "name": "Removing Variables.",
-                "description": "Attacks the enemy, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "Removendo variáveis.",
+                "description": "Ataca o inimigo e aumenta a Prontidão de Combate do conjurador em 20%. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Laying the Groundwork",
-                "description": "Confirms the target, with a 100% chance each to dispel two buffs from the enemy and inflict target for 2 turns, before granting increased Attack and immunity to the caster for 2 turns. After using this skill, when the enemy is inflicted with target, grants an extra turn to the caster.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Preparando o terreno",
+                "description": "Confirma o alvo, com 100% de chance cada de dissipar dois efeitos positivos do inimigo e aplicar alvo por 2 turnos, depois concede Aumentar Ataque e imunidade ao conjurador por 2 turnos. Após usar esta habilidade, quando o inimigo tem alvo, concede um turno extra ao conjurador.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Eliminating the Target.",
-                "description": "With everything going as planned, attacks all enemies, and when the enemy is defeated, inflicts extinction. When the target is not an Elite or Boss monster, ignores damage sharing. When the enemy is inflicted with target, penetrates Defense by 80%. Damage dealt increases proportional to the caster's Speed."
+                "name": "Eliminando o alvo.",
+                "description": "Com tudo saindo conforme o planejado, ataca todos os inimigos e, ao derrotar um inimigo, aplica extinção. Quando o alvo não é um monstro Elite ou Chefe, ignora a divisão de dano. Quando o inimigo tem alvo, penetra 80% da Defesa. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             }
         }
     },
@@ -508,17 +508,17 @@
         "_name": "Argent Waves Hwayoung",
         "skills": {
             "S1": {
-                "name": "Lightning Kicks",
-                "description": "Attacks the enemy with kicks and dispels one buff."
+                "name": "Chutes relâmpago",
+                "description": "Ataca o inimigo com chutes e dissipa um efeito positivo."
             },
             "S2": {
-                "name": "Advent of the Sura",
-                "description": "After an ally uses a non-attack skill, activates Swallow Kick on the enemy with the highest Defense. Swallow Kick: After granting increased Attack to the caster for 2 turns, attacks the enemy by leaping forward, and increases Combat Readiness of the caster by 20%. Penetrates the target's Defense by 50%. When the caster is granted vigor, grants an extra turn."
+                "name": "Advento do Sura",
+                "description": "Após um aliado usar uma habilidade que não é de ataque, ativa Chute da andorinha contra o inimigo com maior Defesa. Chute da andorinha: após conceder Aumentar Ataque ao conjurador por 2 turnos, ataca o inimigo saltando para a frente e aumenta a Prontidão de Combate do conjurador em 20%. Penetra 50% da Defesa do alvo. Quando o conjurador tem vigor, concede um turno extra."
             },
             "S3": {
-                "name": "Argent Flash",
-                "description": "Attacks all enemies with a water scooter, and increases Combat Readiness of the ally in the back row by 50%. Grants vigor to the caster for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Lampejo prateado",
+                "description": "Ataca todos os inimigos com um jet ski e aumenta a Prontidão de Combate do aliado na fileira de trás em 50%. Concede vigor ao conjurador por 2 turnos.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -526,17 +526,17 @@
         "_name": "Aria",
         "skills": {
             "S1": {
-                "name": "Shadow Call",
-                "description": "Attacks two enemies with shadows, with a 50% chance to decrease Hit Chance for 1 turn. When it is not the caster's turn, increases effect chance by 20%. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Chamado das sombras",
+                "description": "Ataca dois inimigos com sombras, com 50% de chance de diminuir a Precisão por 1 turno. Quando não é o turno do conjurador, aumenta a chance do efeito em 20%. O dano causado aumenta proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Guide of Darkness",
-                "description": "Increases Critical Hit Chance by 30%. After using a skill, when Focus is full, consumes all Focus to activate Dark Shadow Phantom. Dark Shadow Phantom: Attacks all enemies, dispelling two buffs and decreasing Combat Readiness by 30%. Damage dealt increases proportional to the caster's Defense."
+                "name": "Guia das trevas",
+                "description": "Aumenta a Chance de Crítico em 30%. Após usar uma habilidade, quando o Foco está cheio, consome todo o Foco para ativar Fantasma das sombras. Fantasma das sombras: ataca todos os inimigos, dissipando dois efeitos positivos e diminuindo a Prontidão de Combate em 30%. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S3": {
-                "name": "The Umbral Hour",
-                "description": "Using the power of the shadows, increases Defense of the caster and adopts a counterattacking stance for 2 turns. Grants stealth and a barrier to all allies except for the caster for 2 turns. Barrier strength increases proportional to the caster's Defense."
+                "name": "A hora umbral",
+                "description": "Usando o poder das sombras, aumenta a Defesa do conjurador e assume postura de contra-ataque por 2 turnos. Concede furtividade e uma barreira a todos os aliados, exceto o conjurador, por 2 turnos. A força da barreira aumenta proporcionalmente à Defesa do conjurador."
             }
         }
     },
@@ -544,17 +544,17 @@
         "_name": "Armin",
         "skills": {
             "S1": {
-                "name": "Takedown",
-                "description": "Attacks the enemy with a shield, with a 35% chance to stun for 1 turn. Damage dealt increases proportional to the caster's Defense. When it is not the caster's turn, this attack changes into an attack that targets all enemies."
+                "name": "Derrubada",
+                "description": "Ataca o inimigo com um escudo, com 35% de chance de atordoar por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador. Quando não é o turno do conjurador, este ataque passa a mirar todos os inimigos."
             },
             "S2": {
-                "name": "Protect",
-                "description": "When attacked, has a 25% chance to counterattack. When an ally is attacked by a Single Attack, grants 30% damage reduction."
+                "name": "Proteger",
+                "description": "Ao ser atacado, tem 25% de chance de contra-atacar. Quando um aliado é atingido por um ataque individual, concede 30% de redução de dano."
             },
             "S3": {
-                "name": "Shield Wall",
-                "description": "With the Shield of Light, dispels one debuff from all allies, and grants increased Defense to the caster for 2 turns, and grants a barrier (proportional to the caster's Defense) to all allies for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Muralha de escudos",
+                "description": "Com o Escudo da Luz, dissipa um efeito negativo de todos os aliados, concede Aumentar Defesa ao conjurador por 2 turnos e concede uma barreira (proporcional à Defesa do conjurador) a todos os aliados por 2 turnos.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -562,17 +562,17 @@
         "_name": "Arowell",
         "skills": {
             "S1": {
-                "name": "Shield Thrust",
-                "description": "Attacks the enemy with a sword and shield, with a 75% chance each to dispel one buff twice. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Investida de escudo",
+                "description": "Ataca o inimigo com espada e escudo, com 75% de chance cada de dissipar um efeito positivo, duas vezes. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Escort",
-                "description": "At the start of battle and at the end of the caster's turn, grants escort to the caster for 1 turn. After an ally except for the caster is attacked by a Single Attack, increases Combat Readiness of the caster by 20%."
+                "name": "Escolta",
+                "description": "No início da batalha e no fim do turno do conjurador, concede escolta ao conjurador por 1 turno. Após um aliado, exceto o conjurador, ser atingido por um ataque individual, aumenta a Prontidão de Combate do conjurador em 20%."
             },
             "S3": {
-                "name": "Defensive Position",
-                "description": "Attacks the enemy, with a 100% chance to stun for 1 turn, and grants a barrier and increased Defense to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's max Health."
+                "name": "Posição defensiva",
+                "description": "Ataca o inimigo, com 100% de chance de atordoar por 1 turno, e concede uma barreira e Aumentar Defesa a todos os aliados por 2 turnos. O dano causado e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -580,17 +580,17 @@
         "_name": "Arunka",
         "skills": {
             "S1": {
-                "name": "Dagger Throw",
-                "description": "Throws daggers at the enemy, with a 50% chance each to inflict two bleeding effects for 2 turns. A successful attack has a 50% chance to activate Expose as an extra attack. Expose can only be activated once per turn, during the caster's turn. Expose: Attacks the enemy, and recovers Health of the caster. Amount recovered increases proportional to the caster's Attack.",
-                "soulburn_effect": "Has a 100% chance to activate Expose."
+                "name": "Arremesso de adagas",
+                "description": "Arremessa adagas no inimigo, com 50% de chance cada de aplicar dois efeitos de sangramento por 2 turnos. Um ataque bem-sucedido tem 50% de chance de ativar Exposição como ataque extra. Exposição só pode ser ativada uma vez por turno, durante o turno do conjurador. Exposição: ataca o inimigo e recupera a Vida do conjurador. A quantidade recuperada aumenta proporcionalmente ao Ataque do conjurador.",
+                "soulburn_effect": "Tem 100% de chance de ativar Exposição."
             },
             "S2": {
-                "name": "Wild Instinct",
-                "description": "Attack increases by 30%. When attacking, cannot trigger a critical hit. At the end of an enemy's turn, when the target is granted a barrier, increases Combat Readiness of the caster by 10%."
+                "name": "Instinto selvagem",
+                "description": "O Ataque aumenta 30%. Ao atacar, não pode causar acerto crítico. No fim do turno de um inimigo, quando o alvo tem uma barreira, aumenta a Prontidão de Combate do conjurador em 10%."
             },
             "S3": {
-                "name": "A Thrashing In The Prairie",
-                "description": "Runs up to the enemy to attack. When the enemy is defeated, inflicts extinction and resets cooldown of this skill. Penetrates the target's Defense by 70% and when the target is granted a barrier, increases damage dealt."
+                "name": "Surra na pradaria",
+                "description": "Corre até o inimigo para atacar. Ao derrotar o inimigo, aplica extinção e reinicia a recarga desta habilidade. Penetra 70% da Defesa do alvo e, quando o alvo tem uma barreira, o dano causado aumenta."
             }
         }
     },
@@ -616,17 +616,17 @@
         "_name": "Assassin Cidd",
         "skills": {
             "S1": {
-                "name": "Slice",
-                "description": "Attacks with an axe, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "Fatiar",
+                "description": "Ataca com um machado, com 50% de chance de diminuir a Defesa por 2 turnos. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "Swift Action",
-                "description": "When somebody dies, caster is granted increased Attack for 1 turn and Combat Readiness increases by 30%."
+                "name": "Ação rápida",
+                "description": "Quando alguém morre, o conjurador recebe Aumentar Ataque por 1 turno e a Prontidão de Combate aumenta 30%."
             },
             "S3": {
-                "name": "Execution",
-                "description": "Attacks the enemy with a powerful ground pound, inflicting silence for 1 turn and decreasing Combat Readiness by 50%, before granting increased Evasion to the caster for 2 turns. Damage dealt increases proportional to the caster and enemy's Speed. Inflicts 20 Soul Removal on the enemy.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Execução",
+                "description": "Ataca o inimigo com um poderoso golpe no chão, aplicando silêncio por 1 turno e diminuindo a Prontidão de Combate em 50%, depois concede Aumentar Evasão ao conjurador por 2 turnos. O dano causado aumenta proporcionalmente à Velocidade do conjurador e do inimigo. Aplica 20 de Remoção de Alma ao inimigo.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },

@@ -472,17 +472,17 @@
         "_name": "Archdemon's Shadow",
         "skills": {
             "S1": {
-                "name": "Touch of Chaos",
-                "description": "Has a 100% chance to seal the enemy for 2 turns, before attacking with lightning.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "混沌之触",
+                "description": "有100%的几率对敌人施加2回合封印，然后以雷电攻击。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S2": {
-                "name": "Twisted Power",
-                "description": "Damage suffered from a critical hit decreases by 30%. When more than one damage reduction effect is granted, only the strongest effect is applied. After using a basic skill, when the target is sealed, increases Attack of the caster for 1 turn before activating Burst. Burst: Attacks all enemies, and increases Combat Readiness of the caster by 25% before gaining 1 Focus. A successful attack deals additional damage proportional to the caster's Attack."
+                "name": "扭曲之力",
+                "description": "受到暴击时的伤害降低30%。获得多个伤害降低效果时，仅适用最强的效果。使用普通技能后，若目标处于封印状态，提升施放者的攻击力1回合，然后发动爆发。爆发：攻击所有敌人，并使施放者的行动值提升25%，然后获得1专注。攻击成功时，追加造成与施放者攻击力成比例的伤害。"
             },
             "S3": {
-                "name": "Dissolution",
-                "description": "Attacks all enemies with the power of Ilryos, with a 80% chance to decrease Defense for 2 turns, and a 100% chance each to inflict two burn effects for 2 turns. Grants the caster an extra turn. This skill cannot trigger a counterattack."
+                "name": "溶解",
+                "description": "以伊利欧斯之力攻击所有敌人，有80%的几率降低防御力2回合，并各有100%的几率施加两层2回合灼伤。施放者获得额外回合。此技能无法触发反击。"
             }
         }
     },
@@ -490,17 +490,17 @@
         "_name": "Architect Laika",
         "skills": {
             "S1": {
-                "name": "Removing Variables.",
-                "description": "Attacks the enemy, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "排除变数。",
+                "description": "攻击敌人，并使施放者的行动值提升20%。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "Laying the Groundwork",
-                "description": "Confirms the target, with a 100% chance each to dispel two buffs from the enemy and inflict target for 2 turns, before granting increased Attack and immunity to the caster for 2 turns. After using this skill, when the enemy is inflicted with target, grants an extra turn to the caster.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "铺垫工作",
+                "description": "确认目标，各有100%的几率解除敌人的两个强化效果并施加2回合标记，然后为施放者施加2回合攻击力提升与免疫。使用此技能后，若敌人处于标记状态，施放者获得额外回合。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Eliminating the Target.",
-                "description": "With everything going as planned, attacks all enemies, and when the enemy is defeated, inflicts extinction. When the target is not an Elite or Boss monster, ignores damage sharing. When the enemy is inflicted with target, penetrates Defense by 80%. Damage dealt increases proportional to the caster's Speed."
+                "name": "清除目标。",
+                "description": "一切按计划进行，攻击所有敌人，击败敌人时施加湮灭。目标不是精英或首领怪物时，无视伤害分担。敌人处于标记状态时，穿透80%的防御力。造成的伤害按施放者的速度比例提升。"
             }
         }
     },
@@ -508,17 +508,17 @@
         "_name": "Argent Waves Hwayoung",
         "skills": {
             "S1": {
-                "name": "Lightning Kicks",
-                "description": "Attacks the enemy with kicks and dispels one buff."
+                "name": "闪电踢",
+                "description": "以踢击攻击敌人，并解除一个强化效果。"
             },
             "S2": {
-                "name": "Advent of the Sura",
-                "description": "After an ally uses a non-attack skill, activates Swallow Kick on the enemy with the highest Defense. Swallow Kick: After granting increased Attack to the caster for 2 turns, attacks the enemy by leaping forward, and increases Combat Readiness of the caster by 20%. Penetrates the target's Defense by 50%. When the caster is granted vigor, grants an extra turn."
+                "name": "修罗降临",
+                "description": "友军使用非攻击技能后，对防御力最高的敌人发动燕子踢。燕子踢：为施放者施加2回合攻击力提升后，向前跃起攻击敌人，并使施放者的行动值提升20%。穿透目标50%的防御力。施放者拥有斗志时获得额外回合。"
             },
             "S3": {
-                "name": "Argent Flash",
-                "description": "Attacks all enemies with a water scooter, and increases Combat Readiness of the ally in the back row by 50%. Grants vigor to the caster for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "银色闪光",
+                "description": "以水上摩托攻击所有敌人，并使后排友军的行动值提升50%。为施放者施加2回合斗志。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -526,17 +526,17 @@
         "_name": "Aria",
         "skills": {
             "S1": {
-                "name": "Shadow Call",
-                "description": "Attacks two enemies with shadows, with a 50% chance to decrease Hit Chance for 1 turn. When it is not the caster's turn, increases effect chance by 20%. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "暗影召唤",
+                "description": "以暗影攻击两名敌人，有50%的几率降低其命中率1回合。不是施放者的回合时，效果几率提升20%。造成的伤害按施放者的防御力比例提升。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Guide of Darkness",
-                "description": "Increases Critical Hit Chance by 30%. After using a skill, when Focus is full, consumes all Focus to activate Dark Shadow Phantom. Dark Shadow Phantom: Attacks all enemies, dispelling two buffs and decreasing Combat Readiness by 30%. Damage dealt increases proportional to the caster's Defense."
+                "name": "黑暗引导者",
+                "description": "暴击率提升30%。使用技能后，若专注已满，消耗全部专注发动暗影幻象。暗影幻象：攻击所有敌人，解除两个强化效果，并降低30%行动值。造成的伤害按施放者的防御力比例提升。"
             },
             "S3": {
-                "name": "The Umbral Hour",
-                "description": "Using the power of the shadows, increases Defense of the caster and adopts a counterattacking stance for 2 turns. Grants stealth and a barrier to all allies except for the caster for 2 turns. Barrier strength increases proportional to the caster's Defense."
+                "name": "暗影时刻",
+                "description": "借助暗影之力，提升施放者的防御力并进入反击姿态2回合。为除施放者外的所有友军施加2回合隐身与屏障。屏障强度按施放者的防御力比例提升。"
             }
         }
     },
@@ -544,17 +544,17 @@
         "_name": "Armin",
         "skills": {
             "S1": {
-                "name": "Takedown",
-                "description": "Attacks the enemy with a shield, with a 35% chance to stun for 1 turn. Damage dealt increases proportional to the caster's Defense. When it is not the caster's turn, this attack changes into an attack that targets all enemies."
+                "name": "压制",
+                "description": "以盾牌攻击敌人，有35%的几率使其眩晕1回合。造成的伤害按施放者的防御力比例提升。不是施放者的回合时，此攻击变为以所有敌人为目标的攻击。"
             },
             "S2": {
-                "name": "Protect",
-                "description": "When attacked, has a 25% chance to counterattack. When an ally is attacked by a Single Attack, grants 30% damage reduction."
+                "name": "保护",
+                "description": "受到攻击时，有25%的几率反击。友军受到单体攻击时，使其受到的伤害降低30%。"
             },
             "S3": {
-                "name": "Shield Wall",
-                "description": "With the Shield of Light, dispels one debuff from all allies, and grants increased Defense to the caster for 2 turns, and grants a barrier (proportional to the caster's Defense) to all allies for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "盾墙",
+                "description": "以光之盾解除所有友军的一个弱化效果，为施放者施加2回合防御力提升，并为所有友军施加2回合屏障（与施放者的防御力成比例）。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             }
         }
     },
@@ -562,17 +562,17 @@
         "_name": "Arowell",
         "skills": {
             "S1": {
-                "name": "Shield Thrust",
-                "description": "Attacks the enemy with a sword and shield, with a 75% chance each to dispel one buff twice. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "盾击突刺",
+                "description": "以剑与盾攻击敌人，各有75%的几率解除一个强化效果，共两次。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "效果几率提升至100%。"
             },
             "S2": {
-                "name": "Escort",
-                "description": "At the start of battle and at the end of the caster's turn, grants escort to the caster for 1 turn. After an ally except for the caster is attacked by a Single Attack, increases Combat Readiness of the caster by 20%."
+                "name": "护卫",
+                "description": "战斗开始时与施放者回合结束时，为施放者施加1回合护卫。除施放者外的友军受到单体攻击后，使施放者的行动值提升20%。"
             },
             "S3": {
-                "name": "Defensive Position",
-                "description": "Attacks the enemy, with a 100% chance to stun for 1 turn, and grants a barrier and increased Defense to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's max Health."
+                "name": "防御阵形",
+                "description": "攻击敌人，有100%的几率使其眩晕1回合，并为所有友军施加2回合屏障与防御力提升。造成的伤害与屏障强度按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -580,17 +580,17 @@
         "_name": "Arunka",
         "skills": {
             "S1": {
-                "name": "Dagger Throw",
-                "description": "Throws daggers at the enemy, with a 50% chance each to inflict two bleeding effects for 2 turns. A successful attack has a 50% chance to activate Expose as an extra attack. Expose can only be activated once per turn, during the caster's turn. Expose: Attacks the enemy, and recovers Health of the caster. Amount recovered increases proportional to the caster's Attack.",
-                "soulburn_effect": "Has a 100% chance to activate Expose."
+                "name": "投掷短剑",
+                "description": "向敌人投掷短剑，各有50%的几率施加两层2回合出血。攻击成功时，有50%的几率以追加攻击发动揭露。揭露在施放者的回合中每回合只能发动一次。揭露：攻击敌人，并恢复施放者的生命值。恢复量按施放者的攻击力比例提升。",
+                "soulburn_effect": "有100%的几率发动揭露。"
             },
             "S2": {
-                "name": "Wild Instinct",
-                "description": "Attack increases by 30%. When attacking, cannot trigger a critical hit. At the end of an enemy's turn, when the target is granted a barrier, increases Combat Readiness of the caster by 10%."
+                "name": "野性本能",
+                "description": "攻击力提升30%。攻击时无法造成暴击。敌人回合结束时，若目标拥有屏障，使施放者的行动值提升10%。"
             },
             "S3": {
-                "name": "A Thrashing In The Prairie",
-                "description": "Runs up to the enemy to attack. When the enemy is defeated, inflicts extinction and resets cooldown of this skill. Penetrates the target's Defense by 70% and when the target is granted a barrier, increases damage dealt."
+                "name": "草原痛击",
+                "description": "冲向敌人发动攻击。击败敌人时施加湮灭，并重置此技能的冷却时间。穿透目标70%的防御力，目标拥有屏障时，提升造成的伤害。"
             }
         }
     },
@@ -616,17 +616,17 @@
         "_name": "Assassin Cidd",
         "skills": {
             "S1": {
-                "name": "Slice",
-                "description": "Attacks with an axe, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "斩击",
+                "description": "以斧头攻击，有50%的几率降低防御力2回合。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "Swift Action",
-                "description": "When somebody dies, caster is granted increased Attack for 1 turn and Combat Readiness increases by 30%."
+                "name": "迅速行动",
+                "description": "有人阵亡时，施放者获得1回合攻击力提升，且行动值提升30%。"
             },
             "S3": {
-                "name": "Execution",
-                "description": "Attacks the enemy with a powerful ground pound, inflicting silence for 1 turn and decreasing Combat Readiness by 50%, before granting increased Evasion to the caster for 2 turns. Damage dealt increases proportional to the caster and enemy's Speed. Inflicts 20 Soul Removal on the enemy.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "处决",
+                "description": "以强力的地面重击攻击敌人，施加1回合沉默并降低50%行动值，然后为施放者施加2回合闪避提升。造成的伤害按施放者与敌人的速度比例提升。移除敌人20魂。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },

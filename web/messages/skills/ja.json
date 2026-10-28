@@ -472,17 +472,17 @@
         "_name": "Archdemon's Shadow",
         "skills": {
             "S1": {
-                "name": "Touch of Chaos",
-                "description": "Has a 100% chance to seal the enemy for 2 turns, before attacking with lightning.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "混沌の手",
+                "description": "100%の確率で2ターンの間敵に封印を付与した後、雷で攻撃する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S2": {
-                "name": "Twisted Power",
-                "description": "Damage suffered from a critical hit decreases by 30%. When more than one damage reduction effect is granted, only the strongest effect is applied. After using a basic skill, when the target is sealed, increases Attack of the caster for 1 turn before activating Burst. Burst: Attacks all enemies, and increases Combat Readiness of the caster by 25% before gaining 1 Focus. A successful attack deals additional damage proportional to the caster's Attack."
+                "name": "歪んだ力",
+                "description": "クリティカルで受けるダメージが30%減少する。ダメージ減少効果が複数付与された場合、最も強い効果のみ適用される。通常スキル使用後、対象が封印状態なら、1ターンの間発動者の攻撃力をアップさせた後、爆発を発動する。爆発：敵全体を攻撃し、発動者の行動ゲージを25%増加させた後、集中を1獲得する。攻撃が成功すると、発動者の攻撃力に比例した追加ダメージを与える。"
             },
             "S3": {
-                "name": "Dissolution",
-                "description": "Attacks all enemies with the power of Ilryos, with a 80% chance to decrease Defense for 2 turns, and a 100% chance each to inflict two burn effects for 2 turns. Grants the caster an extra turn. This skill cannot trigger a counterattack."
+                "name": "溶解",
+                "description": "イリオスの力で敵全体を攻撃し、80%の確率で2ターンの間防御力をダウンさせ、それぞれ100%の確率で2ターンの間火傷を二つ付与する。発動者は追加ターンを得る。このスキルでは反撃を誘発できない。"
             }
         }
     },
@@ -490,17 +490,17 @@
         "_name": "Architect Laika",
         "skills": {
             "S1": {
-                "name": "Removing Variables.",
-                "description": "Attacks the enemy, and increases Combat Readiness of the caster by 20%. Damage dealt increases proportional to the caster's Speed."
+                "name": "変数の除去。",
+                "description": "敵を攻撃し、発動者の行動ゲージを20%増加させる。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Laying the Groundwork",
-                "description": "Confirms the target, with a 100% chance each to dispel two buffs from the enemy and inflict target for 2 turns, before granting increased Attack and immunity to the caster for 2 turns. After using this skill, when the enemy is inflicted with target, grants an extra turn to the caster.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "下準備",
+                "description": "目標を確認し、それぞれ100%の確率で敵の強化効果を二つ解除し、2ターンの間標的を付与した後、発動者に2ターンの間攻撃力アップと免疫を付与する。このスキルの使用後、敵に標的があれば、発動者は追加ターンを得る。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Eliminating the Target.",
-                "description": "With everything going as planned, attacks all enemies, and when the enemy is defeated, inflicts extinction. When the target is not an Elite or Boss monster, ignores damage sharing. When the enemy is inflicted with target, penetrates Defense by 80%. Damage dealt increases proportional to the caster's Speed."
+                "name": "目標の排除。",
+                "description": "すべてが計画通りに進み、敵全体を攻撃し、敵を倒すと消滅を付与する。対象がエリートまたはボスモンスターでない場合、ダメージ分散を無視する。敵に標的があれば防御力を80%貫通する。発動者のスピードに比例して与ダメージがアップする。"
             }
         }
     },
@@ -508,17 +508,17 @@
         "_name": "Argent Waves Hwayoung",
         "skills": {
             "S1": {
-                "name": "Lightning Kicks",
-                "description": "Attacks the enemy with kicks and dispels one buff."
+                "name": "稲妻蹴り",
+                "description": "蹴りで敵を攻撃し、強化効果を一つ解除する。"
             },
             "S2": {
-                "name": "Advent of the Sura",
-                "description": "After an ally uses a non-attack skill, activates Swallow Kick on the enemy with the highest Defense. Swallow Kick: After granting increased Attack to the caster for 2 turns, attacks the enemy by leaping forward, and increases Combat Readiness of the caster by 20%. Penetrates the target's Defense by 50%. When the caster is granted vigor, grants an extra turn."
+                "name": "修羅降臨",
+                "description": "味方が攻撃以外のスキルを使用した後、防御力が最も高い敵に燕蹴りを発動する。燕蹴り：発動者に2ターンの間攻撃力アップを付与した後、前方に跳躍して敵を攻撃し、発動者の行動ゲージを20%増加させる。対象の防御力を50%貫通する。発動者に闘志があれば追加ターンを得る。"
             },
             "S3": {
-                "name": "Argent Flash",
-                "description": "Attacks all enemies with a water scooter, and increases Combat Readiness of the ally in the back row by 50%. Grants vigor to the caster for 2 turns.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "銀色の閃光",
+                "description": "水上スクーターで敵全体を攻撃し、後列の味方の行動ゲージを50%増加させる。発動者に2ターンの間闘志を付与する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -526,17 +526,17 @@
         "_name": "Aria",
         "skills": {
             "S1": {
-                "name": "Shadow Call",
-                "description": "Attacks two enemies with shadows, with a 50% chance to decrease Hit Chance for 1 turn. When it is not the caster's turn, increases effect chance by 20%. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "影の呼び声",
+                "description": "影で敵二体を攻撃し、50%の確率で1ターンの間命中率をダウンさせる。発動者のターンでない場合、効果発動確率が20%アップする。発動者の防御力に比例して与ダメージがアップする。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Guide of Darkness",
-                "description": "Increases Critical Hit Chance by 30%. After using a skill, when Focus is full, consumes all Focus to activate Dark Shadow Phantom. Dark Shadow Phantom: Attacks all enemies, dispelling two buffs and decreasing Combat Readiness by 30%. Damage dealt increases proportional to the caster's Defense."
+                "name": "闇の導き手",
+                "description": "クリティカル率が30%アップする。スキル使用後、集中が満タンなら、集中をすべて消費して闇の幻影を発動する。闇の幻影：敵全体を攻撃し、強化効果を二つ解除し、行動ゲージを30%減少させる。発動者の防御力に比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "The Umbral Hour",
-                "description": "Using the power of the shadows, increases Defense of the caster and adopts a counterattacking stance for 2 turns. Grants stealth and a barrier to all allies except for the caster for 2 turns. Barrier strength increases proportional to the caster's Defense."
+                "name": "影の刻",
+                "description": "影の力で、2ターンの間発動者の防御力をアップさせ、反撃態勢をとる。発動者を除く味方全員に2ターンの間隠密とバリアを付与する。発動者の防御力に比例してバリアの強度がアップする。"
             }
         }
     },
@@ -544,17 +544,17 @@
         "_name": "Armin",
         "skills": {
             "S1": {
-                "name": "Takedown",
-                "description": "Attacks the enemy with a shield, with a 35% chance to stun for 1 turn. Damage dealt increases proportional to the caster's Defense. When it is not the caster's turn, this attack changes into an attack that targets all enemies."
+                "name": "制圧",
+                "description": "盾で敵を攻撃し、35%の確率で1ターンの間気絶させる。発動者の防御力に比例して与ダメージがアップする。発動者のターンでない場合、この攻撃は敵全体を対象とする攻撃に変わる。"
             },
             "S2": {
-                "name": "Protect",
-                "description": "When attacked, has a 25% chance to counterattack. When an ally is attacked by a Single Attack, grants 30% damage reduction."
+                "name": "保護",
+                "description": "攻撃されると、25%の確率で反撃する。味方が単体攻撃を受けると、ダメージを30%軽減する。"
             },
             "S3": {
-                "name": "Shield Wall",
-                "description": "With the Shield of Light, dispels one debuff from all allies, and grants increased Defense to the caster for 2 turns, and grants a barrier (proportional to the caster's Defense) to all allies for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "盾の壁",
+                "description": "光の盾で味方全員の弱体効果を一つ解除し、発動者に2ターンの間防御力アップを、味方全員に2ターンの間バリア（発動者の防御力に比例）を付与する。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },
@@ -562,17 +562,17 @@
         "_name": "Arowell",
         "skills": {
             "S1": {
-                "name": "Shield Thrust",
-                "description": "Attacks the enemy with a sword and shield, with a 75% chance each to dispel one buff twice. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "盾突き",
+                "description": "剣と盾で敵を攻撃し、それぞれ75%の確率で強化効果を一つずつ二回解除する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "効果発動確率が100%にアップする。"
             },
             "S2": {
-                "name": "Escort",
-                "description": "At the start of battle and at the end of the caster's turn, grants escort to the caster for 1 turn. After an ally except for the caster is attacked by a Single Attack, increases Combat Readiness of the caster by 20%."
+                "name": "護衛",
+                "description": "バトル開始時と発動者のターン終了時、発動者に1ターンの間護衛を付与する。発動者を除く味方が単体攻撃を受けた後、発動者の行動ゲージを20%増加させる。"
             },
             "S3": {
-                "name": "Defensive Position",
-                "description": "Attacks the enemy, with a 100% chance to stun for 1 turn, and grants a barrier and increased Defense to all allies for 2 turns. Damage dealt and barrier strength increase proportional to the caster's max Health."
+                "name": "防御陣形",
+                "description": "敵を攻撃し、100%の確率で1ターンの間気絶させ、味方全員に2ターンの間バリアと防御力アップを付与する。発動者の最大HPに比例して与ダメージとバリアの強度がアップする。"
             }
         }
     },
@@ -580,17 +580,17 @@
         "_name": "Arunka",
         "skills": {
             "S1": {
-                "name": "Dagger Throw",
-                "description": "Throws daggers at the enemy, with a 50% chance each to inflict two bleeding effects for 2 turns. A successful attack has a 50% chance to activate Expose as an extra attack. Expose can only be activated once per turn, during the caster's turn. Expose: Attacks the enemy, and recovers Health of the caster. Amount recovered increases proportional to the caster's Attack.",
-                "soulburn_effect": "Has a 100% chance to activate Expose."
+                "name": "短剣投げ",
+                "description": "敵に短剣を投げ、それぞれ50%の確率で2ターンの間出血を二つ付与する。攻撃が成功すると、50%の確率で追加攻撃として暴露を発動する。暴露は発動者のターン中、ターンごとに一度のみ発動できる。暴露：敵を攻撃し、発動者のHPを回復する。発動者の攻撃力に比例して回復量がアップする。",
+                "soulburn_effect": "100%の確率で暴露を発動する。"
             },
             "S2": {
-                "name": "Wild Instinct",
-                "description": "Attack increases by 30%. When attacking, cannot trigger a critical hit. At the end of an enemy's turn, when the target is granted a barrier, increases Combat Readiness of the caster by 10%."
+                "name": "野生の本能",
+                "description": "攻撃力が30%アップする。攻撃時、クリティカルが発生しない。敵のターン終了時、対象にバリアがあれば発動者の行動ゲージを10%増加させる。"
             },
             "S3": {
-                "name": "A Thrashing In The Prairie",
-                "description": "Runs up to the enemy to attack. When the enemy is defeated, inflicts extinction and resets cooldown of this skill. Penetrates the target's Defense by 70% and when the target is granted a barrier, increases damage dealt."
+                "name": "草原の乱打",
+                "description": "敵に駆け寄って攻撃する。敵を倒すと消滅を付与し、このスキルのクールタイムをリセットする。対象の防御力を70%貫通し、対象にバリアがあれば与ダメージがアップする。"
             }
         }
     },
@@ -616,17 +616,17 @@
         "_name": "Assassin Cidd",
         "skills": {
             "S1": {
-                "name": "Slice",
-                "description": "Attacks with an axe, with a 50% chance to decrease Defense for 2 turns. Damage dealt increases proportional to the caster's Speed."
+                "name": "斬撃",
+                "description": "斧で攻撃し、50%の確率で2ターンの間防御力をダウンさせる。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Swift Action",
-                "description": "When somebody dies, caster is granted increased Attack for 1 turn and Combat Readiness increases by 30%."
+                "name": "迅速な行動",
+                "description": "誰かが死亡すると、発動者は1ターンの間攻撃力アップを得て、行動ゲージが30%増加する。"
             },
             "S3": {
-                "name": "Execution",
-                "description": "Attacks the enemy with a powerful ground pound, inflicting silence for 1 turn and decreasing Combat Readiness by 50%, before granting increased Evasion to the caster for 2 turns. Damage dealt increases proportional to the caster and enemy's Speed. Inflicts 20 Soul Removal on the enemy.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "処刑",
+                "description": "強力に地面を叩きつけて敵を攻撃し、1ターンの間沈黙を付与し、行動ゲージを50%減少させた後、発動者に2ターンの間回避アップを付与する。発動者と敵のスピードに比例して与ダメージがアップする。敵のソウルを20除去する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
