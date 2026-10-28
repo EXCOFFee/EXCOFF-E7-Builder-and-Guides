@@ -6644,17 +6644,17 @@
         "_name": "Watcher Schuri",
         "skills": {
             "S1": {
-                "name": "Sniper",
-                "description": "Shoots the enemy with a rifle, with a 50% chance to target them for 2 turns."
+                "name": "Atirador",
+                "description": "Atira no inimigo com um rifle, com 50% de chance de aplicar alvo por 2 turnos."
             },
             "S2": {
-                "name": "Quickfire",
-                "description": "Shoots all enemies with a rifle, with a 100% chance to dispel one buff, and increases Speed of the caster for 2 turns."
+                "name": "Fogo rápido",
+                "description": "Atira em todos os inimigos com um rifle, com 100% de chance de dissipar um efeito positivo, e aumenta a Velocidade do conjurador por 2 turnos."
             },
             "S3": {
-                "name": "Finishing Shot",
-                "description": "Attacks the enemy with a mana bullet. Penetrates the target's Defense. Increases Hit Chance by 50% when using this skill.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Tiro final",
+                "description": "Ataca o inimigo com uma bala de mana. Penetra a Defesa do alvo. Aumenta a Precisão em 50% ao usar esta habilidade.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -6662,17 +6662,17 @@
         "_name": "Westwind Executioner Schuri",
         "skills": {
             "S1": {
-                "name": "Overpower",
-                "description": "Attacks the enemy, with a 100% chance to inflict burn for 1 turn. When Merciless Execution is on cooldown, activates Annihilate instead of Overpower. Annihilate: Attacks the enemy, inflicting burn for 1 turn, and at the end of the turn, detonates burn effects inflicted on the target.",
-                "soulburn_effect": "Inflicts an additional burn effect for 1 turn."
+                "name": "Dominar",
+                "description": "Ataca o inimigo, com 100% de chance de aplicar queimadura por 1 turno. Quando Execução impiedosa está em recarga, ativa Aniquilar em vez de Dominar. Aniquilar: ataca o inimigo, aplicando queimadura por 1 turno e, no fim do turno, detona as queimaduras aplicadas ao alvo.",
+                "soulburn_effect": "Aplica uma queimadura adicional por 1 turno."
             },
             "S2": {
-                "name": "Operational Readiness",
-                "description": "Increases Effectiveness by 30%. When attacking, cannot trigger a critical hit or a heavy blow. At the start of the first battle, grants explosives to the ally in the back row except for the caster."
+                "name": "Prontidão operacional",
+                "description": "Aumenta a Eficácia em 30%. Ao atacar, não pode causar acerto crítico nem golpe pesado. No início da primeira batalha, concede explosivos ao aliado na fileira de trás, exceto o conjurador."
             },
             "S3": {
-                "name": "Merciless Execution",
-                "description": "Attacks all enemies, with a 100% chance each to inflict two burn effects for 2 turns, and at the end of the turn, detonates burn effects and bombs inflicted on the target."
+                "name": "Execução impiedosa",
+                "description": "Ataca todos os inimigos, com 100% de chance cada de aplicar dois efeitos de queimadura por 2 turnos e, no fim do turno, detona as queimaduras e bombas aplicadas ao alvo."
             }
         }
     },
@@ -6680,17 +6680,17 @@
         "_name": "Witch of the Mere Tenebria",
         "skills": {
             "S1": {
-                "name": "Mirror Fragment",
-                "description": "Attacks the enemy with a mirror, with a 100% chance to inflict a random debuff for 1 turn. When Mirror of the Abyss is on cooldown, triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Fragmento de espelho",
+                "description": "Ataca o inimigo com um espelho, com 100% de chance de aplicar um efeito negativo aleatório por 1 turno. Quando Espelho do abismo está em recarga, o aliado com maior Ataque realiza um Ataque duplo.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Consuming Grasp",
-                "description": "After inflicting rupture on all enemies for 2 turns, attacks all enemies and has a 100% chance to inflict restrict for 2 turns. Grants stealth and a barrier (proportional to the Level) to the caster for 2 turns."
+                "name": "Garras devoradoras",
+                "description": "Após aplicar ruptura a todos os inimigos por 2 turnos, ataca todos os inimigos e tem 100% de chance de aplicar restrição por 2 turnos. Concede furtividade e uma barreira (proporcional ao nível) ao conjurador por 2 turnos."
             },
             "S3": {
-                "name": "Mirror of the Abyss",
-                "description": "Traps all enemies in a timeless space beyond the mirror, dispelling two buffs before inflicting block for 2 turns and a random debuff for 1 turn. Increases Combat Readiness of the caster by 50%."
+                "name": "Espelho do abismo",
+                "description": "Prende todos os inimigos num espaço atemporal além do espelho, dissipando dois efeitos positivos antes de aplicar bloqueio por 2 turnos e um efeito negativo aleatório por 1 turno. Aumenta a Prontidão de Combate do conjurador em 50%."
             }
         }
     },
@@ -6698,17 +6698,17 @@
         "_name": "Wretched Rose",
         "skills": {
             "S1": {
-                "name": "Hide in the Shadows",
-                "description": "Attacks the enemy by swinging a sword, and has a 100% chance to grant stealth to the caster for 1 turn.",
-                "soulburn_effect": "Grant an extra turn."
+                "name": "Esconder-se nas sombras",
+                "description": "Ataca o inimigo brandindo uma espada e tem 100% de chance de conceder furtividade ao conjurador por 1 turno.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Aegis of Time",
-                "description": "At the start of battle, grants increased Critical Hit Resistance to all allies for 2 turns. Upon dying, revives with 50% Health."
+                "name": "Égide do tempo",
+                "description": "No início da batalha, concede Aumentar Resistência a Crítico a todos os aliados por 2 turnos. Ao morrer, revive com 50% de Vida."
             },
             "S3": {
-                "name": "Once-in-a-Life Research",
-                "description": "(Before Enhancement) Dispels all debuffs from all allies except for the caster and recovers Health before granting barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health. Grants solution to the caster and decreases skill cooldowns by 2 turns. (After Enhancement) Grants time reversal to all allies except for the caster and grants a barrier proportional to the caster's max Health to all allies except for the caster for 2 turns."
+                "name": "Pesquisa de uma vida",
+                "description": "(Antes do aprimoramento) Dissipa todos os efeitos negativos de todos os aliados, exceto o conjurador, e recupera Vida, depois concede uma barreira por 2 turnos. A quantidade recuperada e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador. Concede solução ao conjurador e diminui as recargas de habilidades em 2 turnos. (Após o aprimoramento) Concede reversão do tempo a todos os aliados, exceto o conjurador, e concede uma barreira proporcional à Vida máxima do conjurador a todos os aliados, exceto o conjurador, por 2 turnos."
             }
         }
     },
@@ -6716,17 +6716,17 @@
         "_name": "Yoonryoung",
         "skills": {
             "S1": {
-                "name": "Lunging Slash",
-                "description": "Attacks the enemy, with a 75% chance to decrease Defense for 1 turn. When used on the caster's turn, activate Dazzling Slash as an extra attack if the caster is buffed. Dazzling Slash: Swiftly attacks the enemy, inflicting restrict for 1 turn."
+                "name": "Corte em investida",
+                "description": "Ataca o inimigo, com 75% de chance de diminuir a Defesa por 1 turno. Quando usada no turno do conjurador, se ele tiver efeitos positivos, ativa Corte deslumbrante como ataque extra. Corte deslumbrante: ataca o inimigo rapidamente, aplicando restrição por 1 turno."
             },
             "S2": {
-                "name": "Assault Coordination",
-                "description": "After attacking four times, grants a barrier to all allies for 2 turns and increases Combat Readiness by 15%. Barrier strength increases proportional to the target's max Health."
+                "name": "Coordenação de ataque",
+                "description": "Após atacar quatro vezes, concede uma barreira a todos os aliados por 2 turnos e aumenta a Prontidão de Combate em 15%. A força da barreira aumenta proporcionalmente à Vida máxima do alvo."
             },
             "S3": {
-                "name": "Battle Cry",
-                "description": "Raises the morale of all allies, granting increased Attack and immunity for 2 turns and decreasing debuff durations by 1 turn.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Grito de batalha",
+                "description": "Eleva o moral de todos os aliados, concedendo Aumentar Ataque e imunidade por 2 turnos e diminuindo a duração dos efeitos negativos em 1 turno.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -6734,17 +6734,17 @@
         "_name": "Young Senya",
         "skills": {
             "S1": {
-                "name": "Oopsie!",
-                "description": "Accidentally spills bread to attack the enemy, and triggers a Dual Attack from a random ally, and increases Combat Readiness of the caster by 15%.",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "Opa!",
+                "description": "Derruba pão sem querer para atacar o inimigo, um aliado aleatório realiza um Ataque duplo, e aumenta a Prontidão de Combate do conjurador em 15%.",
+                "soulburn_effect": "O aumento de Prontidão de Combate é aplicado a todos os aliados."
             },
             "S2": {
-                "name": "No Bullying!",
-                "description": "At the start of the first battle, gains 40 Fighting Spirit, and when the foremost ally except for the caster is an Earth elemental Hero, gains 40 additional Fighting Spirit, before granting Special Friendship to the target. After being attacked, gains 20 Fighting Spirit and when Fighting Spirit is full, consumes all to dispel all debuffs from the caster before activating Help! Help!: Attacks all enemies, and grants an extra turn to the caster. A successful attack deals additional damage equivalent to 15% of max Health of the caster and the foremost ally except for the caster."
+                "name": "Sem bullying!",
+                "description": "No início da primeira batalha, ganha 40 de Espírito de luta e, quando o aliado mais à frente, exceto o conjurador, é um herói do elemento Terra, ganha mais 40 de Espírito de luta, depois concede Amizade especial ao alvo. Após ser atacado, ganha 20 de Espírito de luta e, quando o Espírito de luta está cheio, consome tudo para dissipar todos os efeitos negativos do conjurador antes de ativar Socorro!. Socorro!: ataca todos os inimigos e concede um turno extra ao conjurador. Um ataque bem-sucedido causa dano adicional equivalente a 15% da Vida máxima do conjurador e do aliado mais à frente, exceto o conjurador."
             },
             "S3": {
-                "name": "Snack Time!",
-                "description": "Stops fighting and takes a break, dispelling all debuffs from all allies and granting continuous healing for 2 turns before increasing Combat Readiness by 20%."
+                "name": "Hora do lanche!",
+                "description": "Para de lutar e faz uma pausa, dissipando todos os efeitos negativos de todos os aliados e concedendo cura contínua por 2 turnos, depois aumenta a Prontidão de Combate em 20%."
             }
         }
     },
@@ -6752,17 +6752,17 @@
         "_name": "Yufine",
         "skills": {
             "S1": {
-                "name": "Double Slash",
-                "description": "Attacks by swinging their weapon, with a 50% chance to decrease Defense for 2 turns."
+                "name": "Corte duplo",
+                "description": "Ataca brandindo a arma, com 50% de chance de diminuir a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Dragon's Roar",
-                "description": "Attacks all enemies with a dragon howl, dispelling one buff, before a 70% chance to decrease Defense for 2 turns and a 85% chance to silence for 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Rugido do dragão",
+                "description": "Ataca todos os inimigos com um uivo de dragão, dissipando um efeito positivo, depois com 70% de chance diminui a Defesa por 2 turnos e com 85% de chance silencia por 1 turno.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Dragon Charge",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks the enemy with a massive blade. When the enemy is defeated, grants an extra turn. When the target has a debuff, increases damage dealt. When this skill is not on cooldown, after an ally except for the caster uses a skill, if the enemy has a debuff, increases Combat Readiness of the caster by 20%."
+                "name": "Investida do dragão",
+                "description": "Após conceder Aumentar Ataque ao conjurador por 2 turnos, ataca o inimigo com uma lâmina enorme. Ao derrotar o inimigo, concede um turno extra. Quando o alvo tem um efeito negativo, o dano causado aumenta. Quando esta habilidade não está em recarga, após um aliado, exceto o conjurador, usar uma habilidade, se o inimigo tiver um efeito negativo, aumenta a Prontidão de Combate do conjurador em 20%."
             }
         }
     },
@@ -6788,17 +6788,17 @@
         "_name": "Yuna",
         "skills": {
             "S1": {
-                "name": "Homing Laser",
-                "description": "Attacks all enemies with a drone, before increasing Combat Readiness of the caster by 15%, and increasing Combat Readiness of all allies except for the caster by 5%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Laser teleguiado",
+                "description": "Ataca todos os inimigos com um drone, depois aumenta a Prontidão de Combate do conjurador em 15% e a de todos os aliados, exceto o conjurador, em 5%.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Upgrade",
-                "description": "Enhances all allies with a drone, granting increased Attack and increased Speed for 3 turns. Grants an extra turn."
+                "name": "Aprimoramento",
+                "description": "Aprimora todos os aliados com um drone, concedendo Aumentar Ataque e Aumentar Velocidade por 3 turnos. Concede um turno extra."
             },
             "S3": {
-                "name": "Meteor Cannon",
-                "description": "Attacks all enemies with a cannon. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "Canhão meteoro",
+                "description": "Ataca todos os inimigos com um canhão. Quando há três inimigos ou menos, o dano causado aumenta quanto menos inimigos houver."
             }
         }
     },

@@ -6644,17 +6644,17 @@
         "_name": "Watcher Schuri",
         "skills": {
             "S1": {
-                "name": "Sniper",
-                "description": "Shoots the enemy with a rifle, with a 50% chance to target them for 2 turns."
+                "name": "狙撃",
+                "description": "ライフルで敵を撃ち、50%の確率で2ターンの間標的を付与する。"
             },
             "S2": {
-                "name": "Quickfire",
-                "description": "Shoots all enemies with a rifle, with a 100% chance to dispel one buff, and increases Speed of the caster for 2 turns."
+                "name": "速射",
+                "description": "ライフルで敵全体を撃ち、100%の確率で強化効果を一つ解除し、2ターンの間発動者のスピードをアップさせる。"
             },
             "S3": {
-                "name": "Finishing Shot",
-                "description": "Attacks the enemy with a mana bullet. Penetrates the target's Defense. Increases Hit Chance by 50% when using this skill.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "とどめの一発",
+                "description": "マナの弾丸で敵を攻撃する。対象の防御力を貫通する。このスキルの使用時、命中率が50%アップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -6662,17 +6662,17 @@
         "_name": "Westwind Executioner Schuri",
         "skills": {
             "S1": {
-                "name": "Overpower",
-                "description": "Attacks the enemy, with a 100% chance to inflict burn for 1 turn. When Merciless Execution is on cooldown, activates Annihilate instead of Overpower. Annihilate: Attacks the enemy, inflicting burn for 1 turn, and at the end of the turn, detonates burn effects inflicted on the target.",
-                "soulburn_effect": "Inflicts an additional burn effect for 1 turn."
+                "name": "制圧",
+                "description": "敵を攻撃し、100%の確率で1ターンの間火傷を付与する。無慈悲な処刑がクールタイム中なら、制圧の代わりに殲滅を発動する。殲滅：敵を攻撃し、1ターンの間火傷を付与し、ターン終了時に対象の火傷を爆発させる。",
+                "soulburn_effect": "1ターンの間火傷を一つ追加で付与する。"
             },
             "S2": {
-                "name": "Operational Readiness",
-                "description": "Increases Effectiveness by 30%. When attacking, cannot trigger a critical hit or a heavy blow. At the start of the first battle, grants explosives to the ally in the back row except for the caster."
+                "name": "作戦準備",
+                "description": "効果命中が30%アップする。攻撃時、クリティカルや強打は発生しない。最初のバトル開始時、発動者を除く後列の味方に爆薬を付与する。"
             },
             "S3": {
-                "name": "Merciless Execution",
-                "description": "Attacks all enemies, with a 100% chance each to inflict two burn effects for 2 turns, and at the end of the turn, detonates burn effects and bombs inflicted on the target."
+                "name": "無慈悲な処刑",
+                "description": "敵全体を攻撃し、それぞれ100%の確率で2ターンの間火傷を二つ付与し、ターン終了時に対象の火傷と爆弾を爆発させる。"
             }
         }
     },
@@ -6680,17 +6680,17 @@
         "_name": "Witch of the Mere Tenebria",
         "skills": {
             "S1": {
-                "name": "Mirror Fragment",
-                "description": "Attacks the enemy with a mirror, with a 100% chance to inflict a random debuff for 1 turn. When Mirror of the Abyss is on cooldown, triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "鏡の欠片",
+                "description": "鏡で敵を攻撃し、100%の確率で1ターンの間ランダムな弱体効果を付与する。深淵の鏡がクールタイム中なら、攻撃力が最も高い味方が協攻する。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Consuming Grasp",
-                "description": "After inflicting rupture on all enemies for 2 turns, attacks all enemies and has a 100% chance to inflict restrict for 2 turns. Grants stealth and a barrier (proportional to the Level) to the caster for 2 turns."
+                "name": "呑み込む掌",
+                "description": "敵全体に2ターンの間破裂を付与した後、敵全体を攻撃し、100%の確率で2ターンの間制約を付与する。発動者に2ターンの間隠密とバリア（レベルに比例）を付与する。"
             },
             "S3": {
-                "name": "Mirror of the Abyss",
-                "description": "Traps all enemies in a timeless space beyond the mirror, dispelling two buffs before inflicting block for 2 turns and a random debuff for 1 turn. Increases Combat Readiness of the caster by 50%."
+                "name": "深淵の鏡",
+                "description": "敵全体を鏡の向こうの時の止まった空間に閉じ込め、強化効果を二つ解除した後、2ターンの間遮断を、1ターンの間ランダムな弱体効果を付与する。発動者の行動ゲージを50%増加させる。"
             }
         }
     },
@@ -6698,17 +6698,17 @@
         "_name": "Wretched Rose",
         "skills": {
             "S1": {
-                "name": "Hide in the Shadows",
-                "description": "Attacks the enemy by swinging a sword, and has a 100% chance to grant stealth to the caster for 1 turn.",
-                "soulburn_effect": "Grant an extra turn."
+                "name": "影に潜む",
+                "description": "剣を振るって敵を攻撃し、100%の確率で発動者に1ターンの間隠密を付与する。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Aegis of Time",
-                "description": "At the start of battle, grants increased Critical Hit Resistance to all allies for 2 turns. Upon dying, revives with 50% Health."
+                "name": "時のイージス",
+                "description": "バトル開始時、味方全員に2ターンの間クリティカル抵抗アップを付与する。死亡するとHP50%で復活する。"
             },
             "S3": {
-                "name": "Once-in-a-Life Research",
-                "description": "(Before Enhancement) Dispels all debuffs from all allies except for the caster and recovers Health before granting barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health. Grants solution to the caster and decreases skill cooldowns by 2 turns. (After Enhancement) Grants time reversal to all allies except for the caster and grants a barrier proportional to the caster's max Health to all allies except for the caster for 2 turns."
+                "name": "一世一代の研究",
+                "description": "（強化前）発動者を除く味方全員の弱体効果をすべて解除し、HPを回復した後、2ターンの間バリアを付与する。発動者の最大HPに比例して回復量とバリアの強度がアップする。発動者に解答を付与し、スキルのクールタイムを2ターン短縮する。（強化後）発動者を除く味方全員に時間逆行を付与し、発動者を除く味方全員に2ターンの間発動者の最大HPに比例したバリアを付与する。"
             }
         }
     },
@@ -6716,17 +6716,17 @@
         "_name": "Yoonryoung",
         "skills": {
             "S1": {
-                "name": "Lunging Slash",
-                "description": "Attacks the enemy, with a 75% chance to decrease Defense for 1 turn. When used on the caster's turn, activate Dazzling Slash as an extra attack if the caster is buffed. Dazzling Slash: Swiftly attacks the enemy, inflicting restrict for 1 turn."
+                "name": "突進斬り",
+                "description": "敵を攻撃し、75%の確率で1ターンの間防御力をダウンさせる。発動者のターンに使用したとき、発動者に強化効果があれば、追加攻撃として華麗な斬撃を発動する。華麗な斬撃：素早く敵を攻撃し、1ターンの間制約を付与する。"
             },
             "S2": {
-                "name": "Assault Coordination",
-                "description": "After attacking four times, grants a barrier to all allies for 2 turns and increases Combat Readiness by 15%. Barrier strength increases proportional to the target's max Health."
+                "name": "攻勢の連携",
+                "description": "四回攻撃した後、味方全員に2ターンの間バリアを付与し、行動ゲージを15%増加させる。対象の最大HPに比例してバリアの強度がアップする。"
             },
             "S3": {
-                "name": "Battle Cry",
-                "description": "Raises the morale of all allies, granting increased Attack and immunity for 2 turns and decreasing debuff durations by 1 turn.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "鬨の声",
+                "description": "味方全員の士気を高め、2ターンの間攻撃力アップと免疫を付与し、弱体効果の持続時間を1ターン減少させる。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },
@@ -6734,17 +6734,17 @@
         "_name": "Young Senya",
         "skills": {
             "S1": {
-                "name": "Oopsie!",
-                "description": "Accidentally spills bread to attack the enemy, and triggers a Dual Attack from a random ally, and increases Combat Readiness of the caster by 15%.",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "あっ！",
+                "description": "うっかりパンをこぼして敵を攻撃し、ランダムな味方が協攻し、発動者の行動ゲージを15%増加させる。",
+                "soulburn_effect": "行動ゲージ増加効果が味方全員に適用される。"
             },
             "S2": {
-                "name": "No Bullying!",
-                "description": "At the start of the first battle, gains 40 Fighting Spirit, and when the foremost ally except for the caster is an Earth elemental Hero, gains 40 additional Fighting Spirit, before granting Special Friendship to the target. After being attacked, gains 20 Fighting Spirit and when Fighting Spirit is full, consumes all to dispel all debuffs from the caster before activating Help! Help!: Attacks all enemies, and grants an extra turn to the caster. A successful attack deals additional damage equivalent to 15% of max Health of the caster and the foremost ally except for the caster."
+                "name": "いじめちゃダメ！",
+                "description": "最初のバトル開始時、闘志を40獲得し、発動者を除く最も前にいる味方が地属性の英雄なら、さらに闘志を40獲得した後、その対象に特別な友情を付与する。攻撃された後、闘志を20獲得し、闘志が満タンになると、すべて消費して発動者の弱体効果をすべて解除した後、助けて！を発動する。助けて！：敵全体を攻撃し、発動者は追加ターンを得る。攻撃が成功すると、発動者と、発動者を除く最も前にいる味方の最大HPの15%に相当する追加ダメージを与える。"
             },
             "S3": {
-                "name": "Snack Time!",
-                "description": "Stops fighting and takes a break, dispelling all debuffs from all allies and granting continuous healing for 2 turns before increasing Combat Readiness by 20%."
+                "name": "おやつの時間！",
+                "description": "戦いをやめて休憩し、味方全員の弱体効果をすべて解除し、2ターンの間持続回復を付与した後、行動ゲージを20%増加させる。"
             }
         }
     },
@@ -6752,17 +6752,17 @@
         "_name": "Yufine",
         "skills": {
             "S1": {
-                "name": "Double Slash",
-                "description": "Attacks by swinging their weapon, with a 50% chance to decrease Defense for 2 turns."
+                "name": "二段斬り",
+                "description": "武器を振るって攻撃し、50%の確率で2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Dragon's Roar",
-                "description": "Attacks all enemies with a dragon howl, dispelling one buff, before a 70% chance to decrease Defense for 2 turns and a 85% chance to silence for 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "竜の咆哮",
+                "description": "竜の咆哮で敵全体を攻撃し、強化効果を一つ解除した後、70%の確率で2ターンの間防御力をダウンさせ、85%の確率で1ターンの間沈黙を付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Dragon Charge",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks the enemy with a massive blade. When the enemy is defeated, grants an extra turn. When the target has a debuff, increases damage dealt. When this skill is not on cooldown, after an ally except for the caster uses a skill, if the enemy has a debuff, increases Combat Readiness of the caster by 20%."
+                "name": "竜の突撃",
+                "description": "発動者に2ターンの間攻撃力アップを付与した後、巨大な刃で敵を攻撃する。敵を倒すと追加ターンを得る。対象に弱体効果があれば与ダメージがアップする。このスキルがクールタイム中でなければ、発動者を除く味方がスキルを使用した後、敵に弱体効果があれば発動者の行動ゲージを20%増加させる。"
             }
         }
     },
@@ -6788,17 +6788,17 @@
         "_name": "Yuna",
         "skills": {
             "S1": {
-                "name": "Homing Laser",
-                "description": "Attacks all enemies with a drone, before increasing Combat Readiness of the caster by 15%, and increasing Combat Readiness of all allies except for the caster by 5%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "ホーミングレーザー",
+                "description": "ドローンで敵全体を攻撃した後、発動者の行動ゲージを15%、発動者を除く味方全員の行動ゲージを5%増加させる。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Upgrade",
-                "description": "Enhances all allies with a drone, granting increased Attack and increased Speed for 3 turns. Grants an extra turn."
+                "name": "アップグレード",
+                "description": "ドローンで味方全員を強化し、3ターンの間攻撃力アップとスピードアップを付与する。追加ターンを得る。"
             },
             "S3": {
-                "name": "Meteor Cannon",
-                "description": "Attacks all enemies with a cannon. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "メテオキャノン",
+                "description": "キャノンで敵全体を攻撃する。敵が三体以下の場合、敵が少ないほど与ダメージがアップする。"
             }
         }
     },

@@ -6644,17 +6644,17 @@
         "_name": "Watcher Schuri",
         "skills": {
             "S1": {
-                "name": "Sniper",
-                "description": "Shoots the enemy with a rifle, with a 50% chance to target them for 2 turns."
+                "name": "狙击",
+                "description": "以步枪射击敌人，有50%的几率施加2回合标记。"
             },
             "S2": {
-                "name": "Quickfire",
-                "description": "Shoots all enemies with a rifle, with a 100% chance to dispel one buff, and increases Speed of the caster for 2 turns."
+                "name": "速射",
+                "description": "以步枪射击所有敌人，有100%的几率解除一个强化效果，并提升施放者的速度2回合。"
             },
             "S3": {
-                "name": "Finishing Shot",
-                "description": "Attacks the enemy with a mana bullet. Penetrates the target's Defense. Increases Hit Chance by 50% when using this skill.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "终结射击",
+                "description": "以魔力子弹攻击敌人。穿透目标的防御力。使用此技能时，命中率提升50%。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -6662,17 +6662,17 @@
         "_name": "Westwind Executioner Schuri",
         "skills": {
             "S1": {
-                "name": "Overpower",
-                "description": "Attacks the enemy, with a 100% chance to inflict burn for 1 turn. When Merciless Execution is on cooldown, activates Annihilate instead of Overpower. Annihilate: Attacks the enemy, inflicting burn for 1 turn, and at the end of the turn, detonates burn effects inflicted on the target.",
-                "soulburn_effect": "Inflicts an additional burn effect for 1 turn."
+                "name": "压制",
+                "description": "攻击敌人，有100%的几率施加1回合灼伤。无情处决处于冷却中时，发动歼灭代替压制。歼灭：攻击敌人，施加1回合灼伤，并在回合结束时引爆目标身上的灼伤。",
+                "soulburn_effect": "额外施加一层1回合灼伤。"
             },
             "S2": {
-                "name": "Operational Readiness",
-                "description": "Increases Effectiveness by 30%. When attacking, cannot trigger a critical hit or a heavy blow. At the start of the first battle, grants explosives to the ally in the back row except for the caster."
+                "name": "作战准备",
+                "description": "效果命中提升30%。攻击时无法造成暴击或重击。首场战斗开始时，为除施放者外的后排友军施加炸药。"
             },
             "S3": {
-                "name": "Merciless Execution",
-                "description": "Attacks all enemies, with a 100% chance each to inflict two burn effects for 2 turns, and at the end of the turn, detonates burn effects and bombs inflicted on the target."
+                "name": "无情处决",
+                "description": "攻击所有敌人，各有100%的几率施加两层2回合灼伤，并在回合结束时引爆目标身上的灼伤与炸弹。"
             }
         }
     },
@@ -6680,17 +6680,17 @@
         "_name": "Witch of the Mere Tenebria",
         "skills": {
             "S1": {
-                "name": "Mirror Fragment",
-                "description": "Attacks the enemy with a mirror, with a 100% chance to inflict a random debuff for 1 turn. When Mirror of the Abyss is on cooldown, triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "镜之碎片",
+                "description": "以镜子攻击敌人，有100%的几率施加1回合随机弱化效果。深渊之镜处于冷却中时，攻击力最高的友军发动协攻。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Consuming Grasp",
-                "description": "After inflicting rupture on all enemies for 2 turns, attacks all enemies and has a 100% chance to inflict restrict for 2 turns. Grants stealth and a barrier (proportional to the Level) to the caster for 2 turns."
+                "name": "吞噬之握",
+                "description": "对所有敌人施加2回合破裂后，攻击所有敌人，并有100%的几率施加2回合限制。为施放者施加2回合隐身与屏障（与等级成比例）。"
             },
             "S3": {
-                "name": "Mirror of the Abyss",
-                "description": "Traps all enemies in a timeless space beyond the mirror, dispelling two buffs before inflicting block for 2 turns and a random debuff for 1 turn. Increases Combat Readiness of the caster by 50%."
+                "name": "深渊之镜",
+                "description": "将所有敌人困在镜子另一侧的永恒空间中，解除两个强化效果，然后施加2回合封锁与1回合随机弱化效果。使施放者的行动值提升50%。"
             }
         }
     },
@@ -6698,17 +6698,17 @@
         "_name": "Wretched Rose",
         "skills": {
             "S1": {
-                "name": "Hide in the Shadows",
-                "description": "Attacks the enemy by swinging a sword, and has a 100% chance to grant stealth to the caster for 1 turn.",
-                "soulburn_effect": "Grant an extra turn."
+                "name": "藏身暗影",
+                "description": "挥剑攻击敌人，有100%的几率为施放者施加1回合隐身。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Aegis of Time",
-                "description": "At the start of battle, grants increased Critical Hit Resistance to all allies for 2 turns. Upon dying, revives with 50% Health."
+                "name": "时间之盾",
+                "description": "战斗开始时，为所有友军施加2回合暴击抵抗提升。阵亡时，以50%生命值复活。"
             },
             "S3": {
-                "name": "Once-in-a-Life Research",
-                "description": "(Before Enhancement) Dispels all debuffs from all allies except for the caster and recovers Health before granting barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health. Grants solution to the caster and decreases skill cooldowns by 2 turns. (After Enhancement) Grants time reversal to all allies except for the caster and grants a barrier proportional to the caster's max Health to all allies except for the caster for 2 turns."
+                "name": "毕生研究",
+                "description": "（强化前）解除除施放者外所有友军的所有弱化效果并恢复生命值，然后施加2回合屏障。恢复量与屏障强度按施放者的最大生命值比例提升。为施放者施加解答，并使技能冷却时间减少2回合。（强化后）为除施放者外的所有友军施加时间逆转，并为除施放者外的所有友军施加2回合与施放者最大生命值成比例的屏障。"
             }
         }
     },
@@ -6716,17 +6716,17 @@
         "_name": "Yoonryoung",
         "skills": {
             "S1": {
-                "name": "Lunging Slash",
-                "description": "Attacks the enemy, with a 75% chance to decrease Defense for 1 turn. When used on the caster's turn, activate Dazzling Slash as an extra attack if the caster is buffed. Dazzling Slash: Swiftly attacks the enemy, inflicting restrict for 1 turn."
+                "name": "突进斩",
+                "description": "攻击敌人，有75%的几率降低防御力1回合。在施放者的回合使用时，若施放者拥有强化效果，以追加攻击发动华丽斩击。华丽斩击：迅速攻击敌人，施加1回合限制。"
             },
             "S2": {
-                "name": "Assault Coordination",
-                "description": "After attacking four times, grants a barrier to all allies for 2 turns and increases Combat Readiness by 15%. Barrier strength increases proportional to the target's max Health."
+                "name": "攻势协调",
+                "description": "攻击四次后，为所有友军施加2回合屏障，并提升15%行动值。屏障强度按目标的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Battle Cry",
-                "description": "Raises the morale of all allies, granting increased Attack and immunity for 2 turns and decreasing debuff durations by 1 turn.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "战吼",
+                "description": "鼓舞所有友军的士气，施加2回合攻击力提升与免疫，并使弱化效果持续时间减少1回合。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             }
         }
     },
@@ -6734,17 +6734,17 @@
         "_name": "Young Senya",
         "skills": {
             "S1": {
-                "name": "Oopsie!",
-                "description": "Accidentally spills bread to attack the enemy, and triggers a Dual Attack from a random ally, and increases Combat Readiness of the caster by 15%.",
-                "soulburn_effect": "Combat Readiness increase effect will be applied to all allies."
+                "name": "哎呀！",
+                "description": "不小心洒出面包攻击敌人，随机一名友军发动协攻，并使施放者的行动值提升15%。",
+                "soulburn_effect": "行动值提升效果适用于所有友军。"
             },
             "S2": {
-                "name": "No Bullying!",
-                "description": "At the start of the first battle, gains 40 Fighting Spirit, and when the foremost ally except for the caster is an Earth elemental Hero, gains 40 additional Fighting Spirit, before granting Special Friendship to the target. After being attacked, gains 20 Fighting Spirit and when Fighting Spirit is full, consumes all to dispel all debuffs from the caster before activating Help! Help!: Attacks all enemies, and grants an extra turn to the caster. A successful attack deals additional damage equivalent to 15% of max Health of the caster and the foremost ally except for the caster."
+                "name": "不许欺负人！",
+                "description": "首场战斗开始时，获得40斗志；若除施放者外最前方的友军为地属性英雄，额外获得40斗志，然后为该目标施加特别友谊。受到攻击后，获得20斗志；斗志已满时，消耗全部斗志解除施放者的所有弱化效果，然后发动救命！。救命！：攻击所有敌人，施放者获得额外回合。攻击成功时，追加造成相当于施放者与除施放者外最前方友军最大生命值15%的伤害。"
             },
             "S3": {
-                "name": "Snack Time!",
-                "description": "Stops fighting and takes a break, dispelling all debuffs from all allies and granting continuous healing for 2 turns before increasing Combat Readiness by 20%."
+                "name": "点心时间！",
+                "description": "停止战斗休息一下，解除所有友军的所有弱化效果，并施加2回合持续恢复，然后提升20%行动值。"
             }
         }
     },
@@ -6752,17 +6752,17 @@
         "_name": "Yufine",
         "skills": {
             "S1": {
-                "name": "Double Slash",
-                "description": "Attacks by swinging their weapon, with a 50% chance to decrease Defense for 2 turns."
+                "name": "双重斩",
+                "description": "挥舞武器攻击，有50%的几率降低防御力2回合。"
             },
             "S2": {
-                "name": "Dragon's Roar",
-                "description": "Attacks all enemies with a dragon howl, dispelling one buff, before a 70% chance to decrease Defense for 2 turns and a 85% chance to silence for 1 turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "龙之咆哮",
+                "description": "以龙之咆哮攻击所有敌人，解除一个强化效果，然后有70%的几率降低防御力2回合，并有85%的几率施加1回合沉默。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Dragon Charge",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks the enemy with a massive blade. When the enemy is defeated, grants an extra turn. When the target has a debuff, increases damage dealt. When this skill is not on cooldown, after an ally except for the caster uses a skill, if the enemy has a debuff, increases Combat Readiness of the caster by 20%."
+                "name": "龙之冲锋",
+                "description": "为施放者施加2回合攻击力提升后，以巨大的刀刃攻击敌人。击败敌人时获得额外回合。目标有弱化效果时，提升造成的伤害。此技能不在冷却中时，除施放者外的友军使用技能后，若敌人有弱化效果，使施放者的行动值提升20%。"
             }
         }
     },
@@ -6788,17 +6788,17 @@
         "_name": "Yuna",
         "skills": {
             "S1": {
-                "name": "Homing Laser",
-                "description": "Attacks all enemies with a drone, before increasing Combat Readiness of the caster by 15%, and increasing Combat Readiness of all allies except for the caster by 5%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "追踪激光",
+                "description": "以无人机攻击所有敌人，然后使施放者的行动值提升15%，并使除施放者外所有友军的行动值提升5%。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "Upgrade",
-                "description": "Enhances all allies with a drone, granting increased Attack and increased Speed for 3 turns. Grants an extra turn."
+                "name": "升级",
+                "description": "以无人机强化所有友军，施加3回合攻击力提升与速度提升。获得额外回合。"
             },
             "S3": {
-                "name": "Meteor Cannon",
-                "description": "Attacks all enemies with a cannon. When there are three or fewer enemies, damage dealt increases with fewer enemies."
+                "name": "流星炮",
+                "description": "以加农炮攻击所有敌人。敌人在三名以下时，敌人越少，造成的伤害越高。"
             }
         }
     },
