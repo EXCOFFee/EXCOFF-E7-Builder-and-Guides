@@ -3154,17 +3154,17 @@
         "_name": "Januta",
         "skills": {
             "S1": {
-                "name": "Rabid Strike",
-                "description": "Dashes towards the enemy to attack. When the caster is enraged, damage dealt is increased."
+                "name": "狂暴な一撃",
+                "description": "敵に突進して攻撃する。発動者が激怒状態なら与ダメージがアップする。"
             },
             "S2": {
-                "name": "Ruler of the Prairie",
-                "description": "After any ally is attacked, the caster gains 10 Fighting Spirit per ally attacked, and has a 35% chance to activate Hour of the Hunt. Hour of the Hunt: Increases Speed of all allies for 2 turns, and the caster becomes enraged for 2 turns."
+                "name": "草原の支配者",
+                "description": "味方が攻撃された後、攻撃された味方一人につき発動者が闘志を10獲得し、35%の確率で狩りの時間を発動する。狩りの時間：2ターンの間味方全員のスピードをアップさせ、発動者は2ターンの間激怒状態になる。"
             },
             "S3": {
-                "name": "Shatter",
-                "description": "Attacks the enemy, decreasing Speed for 2 turns before increasing Attack of the caster for 2 turns. When the caster is enraged, ignores Effect Resistance.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "粉砕",
+                "description": "敵を攻撃し、2ターンの間スピードをダウンさせた後、2ターンの間発動者の攻撃力をアップさせる。発動者が激怒状態なら効果抵抗を無視する。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -3172,17 +3172,17 @@
         "_name": "Jecht",
         "skills": {
             "S1": {
-                "name": "Staff Assault",
-                "description": "Attacks with a staff, with a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "杖の強襲",
+                "description": "杖で攻撃し、75%の確率で1ターンの間命中率をダウンさせる。"
             },
             "S2": {
-                "name": "Tailind",
-                "description": "100% chance to dispel one debuff inflicted on an ally at the beginning of each turn."
+                "name": "追い風",
+                "description": "毎ターン開始時、100%の確率で味方の弱体効果を一つ解除する。"
             },
             "S3": {
-                "name": "Gale",
-                "description": "Attacks all enemies with wind magic, granting continuous healing and increased Speed to all allies for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "疾風",
+                "description": "風の魔法で敵全体を攻撃し、味方全員に2ターンの間持続回復とスピードアップを付与する。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },
@@ -3190,17 +3190,17 @@
         "_name": "Jena",
         "skills": {
             "S1": {
-                "name": "Cold Blow",
-                "description": "Attacks with a staff, with a 35% chance to stun for 1 turn."
+                "name": "冷気の一撃",
+                "description": "杖で攻撃し、35%の確率で1ターンの間気絶させる。"
             },
             "S2": {
-                "name": "Coerce",
-                "description": "Casts weakening magic, with a 100% chance each to decrease buff durations of all enemies by 1 turn and inflict frostbite for 2 turns. Grants immunity to all allies for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "強要",
+                "description": "弱体化の魔法を唱え、それぞれ100%の確率で敵全体の強化効果の持続時間を1ターン減少させ、2ターンの間凍傷を付与する。味方全員に2ターンの間免疫を付与する。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S3": {
-                "name": "Cold Snap",
-                "description": "Attacks all enemies with frost magic, with a 75% chance to decrease Defense for 2 turns before a 100% chance to decrease Combat Readiness by 20%."
+                "name": "寒波",
+                "description": "霜の魔法で敵全体を攻撃し、75%の確率で2ターンの間防御力をダウンさせた後、100%の確率で行動ゲージを20%減少させる。"
             }
         }
     },
@@ -3208,17 +3208,17 @@
         "_name": "Jenua",
         "skills": {
             "S1": {
-                "name": "Taste Test",
-                "description": "After granting increased Attack to the caster for 1 turn, attacks the enemy. When the caster is already granted rage, activates Bite as an extra attack. Bite can only be activated once per turn, during the caster's turn.",
-                "soulburn_effect": "Grants increased Attack (Greater) for 1 turn."
+                "name": "味見",
+                "description": "発動者に1ターンの間攻撃力アップを付与した後、敵を攻撃する。発動者にすでに激怒があれば、追加攻撃として噛みつきを発動する。噛みつきは発動者のターン中、ターンごとに一度のみ発動できる。",
+                "soulburn_effect": "1ターンの間攻撃力アップ（大）を付与する。"
             },
             "S2": {
-                "name": "Wild Dog Company Captain",
-                "description": "Upon receiving lethal damage, grants immortality to the caster for 1 turn. Immortality can only be activated once per battle. After being attacked, when Health is 50% or less, activates Plan A. Plan A can only be activated once every 4 turns. Plan A: Dispels all debuffs from the caster and becomes enraged for 2 turns, before increasing Combat Readiness by 50%."
+                "name": "野犬部隊の隊長",
+                "description": "致命的なダメージを受けると、発動者に1ターンの間不死を付与する。不死はバトルごとに一度のみ発動できる。攻撃された後HPが50%以下なら、プランAを発動する。プランAは4ターンごとに一度のみ発動できる。プランA：発動者の弱体効果をすべて解除し、2ターンの間激怒状態になった後、行動ゲージを50%増加させる。"
             },
             "S3": {
-                "name": "Bite",
-                "description": "Attacks the enemy with a sword, absorbing some of the damage dealt as Health, and deals additional damage proportional to the caster's Attack to all enemies except for the target. When the enemy is defeated, inflicts extinction. Penetrates the target's Defense."
+                "name": "噛みつき",
+                "description": "剣で敵を攻撃し、与ダメージの一部をHPとして吸収し、対象を除く敵全体に発動者の攻撃力に比例した追加ダメージを与える。敵を倒すと消滅を付与する。対象の防御力を貫通する。"
             }
         }
     },
@@ -3226,17 +3226,17 @@
         "_name": "Judge Kise",
         "skills": {
             "S1": {
-                "name": "Sever",
-                "description": "Attacks the enemy with a scythe. Penetrates the target's Defense by 20%."
+                "name": "切断",
+                "description": "鎌で敵を攻撃する。対象の防御力を20%貫通する。"
             },
             "S2": {
-                "name": "End of Evil",
-                "description": "Attacks all enemies with a scythe, dispelling all buffs before a 100% chance to inflict decreased Hit Chance for 2 turns and a 85% chance to inflict decreased Defense for 2 turns, and increases Combat Readiness of the caster by 25% per target. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "悪の終焉",
+                "description": "鎌で敵全体を攻撃し、強化効果をすべて解除した後、100%の確率で2ターンの間命中率ダウンを、85%の確率で2ターンの間防御力ダウンを付与し、対象一体につき発動者の行動ゲージを25%増加させる。このスキルでは反撃を誘発できない。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Wave of Light",
-                "description": "Attacks all enemies by distorting space and time before increasing skill cooldowns by 1 turn. Grants invincibility to the caster for 1 turn."
+                "name": "光の波動",
+                "description": "時空を歪めて敵全体を攻撃した後、スキルのクールタイムを1ターン増加させる。発動者に1ターンの間無敵を付与する。"
             }
         }
     },
@@ -3244,17 +3244,17 @@
         "_name": "Judith",
         "skills": {
             "S1": {
-                "name": "Vulnerability Exposed",
-                "description": "Attacks with dual-wielded swords. When the caster is stealthed, has a 100% chance to stun the enemy for 1 turn."
+                "name": "弱点露呈",
+                "description": "双剣で攻撃する。発動者が隠密状態なら、100%の確率で敵を1ターンの間気絶させる。"
             },
             "S2": {
-                "name": "Urgent Evasion",
-                "description": "At the moment the caster is attacked, has a 100% chance to become stealthed for 1 turn."
+                "name": "緊急回避",
+                "description": "発動者が攻撃された瞬間、100%の確率で1ターンの間隠密状態になる。"
             },
             "S3": {
-                "name": "Mark of Acceleration",
-                "description": "Increases the Combat Readiness of all allies by 30%, and grants stealth to the caster for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "加速の印",
+                "description": "味方全員の行動ゲージを30%増加させ、発動者に1ターンの間隠密を付与する。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -3262,17 +3262,17 @@
         "_name": "Juni",
         "skills": {
             "S1": {
-                "name": "Violent Beating",
-                "description": "Attacks the enemy with a club and has a 75% chance to dispel one buff. When the caster has perception, increases effect chance to 100%.",
-                "soulburn_effect": "Increases effect chance to 100% and dispels two buffs from the target."
+                "name": "乱暴な殴打",
+                "description": "棍棒で敵を攻撃し、75%の確率で強化効果を一つ解除する。発動者に看破があれば、効果発動確率が100%にアップする。",
+                "soulburn_effect": "効果発動確率が100%にアップし、対象の強化効果を二つ解除する。"
             },
             "S2": {
-                "name": "Wicked Instinct",
-                "description": "At the start of the first battle, gains 20 Fighting Spirit. The caster receives 30% of the damage suffered by the ally in the back row in their place. When more than one damage sharing effect is granted, only the strongest effect is applied. When an enemy revives, gains 40 Fighting Spirit and grants perception to the caster for 2 turns. The effect upon an enemy's revival can only be activated once every 2 turns."
+                "name": "邪悪な本能",
+                "description": "最初のバトル開始時、闘志を20獲得する。後列の味方が受けるダメージの30%を発動者が代わりに受ける。ダメージ分散効果が複数付与された場合、最も強い効果のみ適用される。敵が復活すると、闘志を40獲得し、発動者に2ターンの間看破を付与する。敵の復活による効果は2ターンごとに一度のみ発動できる。"
             },
             "S3": {
-                "name": "Club Swing",
-                "description": "Attacks all enemies by swinging a club and has a 100% chance each to decrease Defense and make then unable to be buffed for 2 turns. Decreases debuff duration of all allies by 2 turns."
+                "name": "棍棒振り",
+                "description": "棍棒を振り回して敵全体を攻撃し、それぞれ100%の確率で2ターンの間防御力ダウンと強化不可を付与する。味方全員の弱体効果の持続時間を2ターン減少させる。"
             }
         }
     },
@@ -3280,17 +3280,17 @@
         "_name": "Kane",
         "skills": {
             "S1": {
-                "name": "Hammer Time",
-                "description": "Attacks the enemy with a hammer, and increases Combat Readiness of the caster by 15%. When the caster is enraged, activates Rock Smash as an extra attack. Rock Smash can only be activated once per turn, during the caster's turn. Rock Smash: Attacks all enemies by slamming the ground, and inflicts bleeding for 2 turns. Ignores Effect Resistance."
+                "name": "ハンマータイム",
+                "description": "ハンマーで敵を攻撃し、発動者の行動ゲージを15%増加させる。発動者が激怒状態なら、追加攻撃として岩砕きを発動する。岩砕きは発動者のターン中、ターンごとに一度のみ発動できる。岩砕き：地面を叩きつけて敵全体を攻撃し、2ターンの間出血を付与する。効果抵抗を無視する。"
             },
             "S2": {
-                "name": "Force Awakening",
-                "description": "Upon receiving lethal damage, grants immortality and vampirism for 1 turn and resets skill cooldown of Feast of Predation. Can be only activated once every 6 turns. After an ally attacks, if the target has a debuff, gains 10 Fighting Spirit and when Fighting Spirit is full, consumes all Fighting Spirit to make the caster enraged for 2 turns."
+                "name": "力の覚醒",
+                "description": "致命的なダメージを受けると、1ターンの間不死と吸血を付与し、捕食の宴のクールタイムをリセットする。6ターンごとに一度のみ発動できる。味方が攻撃した後、対象に弱体効果があれば闘志を10獲得し、闘志が満タンになると、闘志をすべて消費して発動者を2ターンの間激怒状態にする。"
             },
             "S3": {
-                "name": "Feast of Predation",
-                "description": "Attacks the enemy by unleashing their power, and grants increased Attack (Greater) to the caster for 2 turns. Damage dealt increases proportional to the number of debuffs inflicted on the target.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "捕食の宴",
+                "description": "力を解き放って敵を攻撃し、発動者に2ターンの間攻撃力アップ（大）を付与する。対象に付与された弱体効果の数に比例して与ダメージがアップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },

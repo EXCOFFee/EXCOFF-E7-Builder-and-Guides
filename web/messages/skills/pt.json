@@ -3154,17 +3154,17 @@
         "_name": "Januta",
         "skills": {
             "S1": {
-                "name": "Rabid Strike",
-                "description": "Dashes towards the enemy to attack. When the caster is enraged, damage dealt is increased."
+                "name": "Golpe raivoso",
+                "description": "Avança contra o inimigo para atacar. Quando o conjurador está enfurecido, o dano causado aumenta."
             },
             "S2": {
-                "name": "Ruler of the Prairie",
-                "description": "After any ally is attacked, the caster gains 10 Fighting Spirit per ally attacked, and has a 35% chance to activate Hour of the Hunt. Hour of the Hunt: Increases Speed of all allies for 2 turns, and the caster becomes enraged for 2 turns."
+                "name": "Soberano da pradaria",
+                "description": "Após qualquer aliado ser atacado, o conjurador ganha 10 de Espírito de luta por aliado atacado e tem 35% de chance de ativar Hora da caçada. Hora da caçada: aumenta a Velocidade de todos os aliados por 2 turnos e o conjurador fica enfurecido por 2 turnos."
             },
             "S3": {
-                "name": "Shatter",
-                "description": "Attacks the enemy, decreasing Speed for 2 turns before increasing Attack of the caster for 2 turns. When the caster is enraged, ignores Effect Resistance.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Despedaçar",
+                "description": "Ataca o inimigo, diminuindo a Velocidade por 2 turnos, depois aumenta o Ataque do conjurador por 2 turnos. Quando o conjurador está enfurecido, ignora a Resistência a Efeitos.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -3172,17 +3172,17 @@
         "_name": "Jecht",
         "skills": {
             "S1": {
-                "name": "Staff Assault",
-                "description": "Attacks with a staff, with a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "Ataque de cajado",
+                "description": "Ataca com um cajado, com 75% de chance de diminuir a Precisão por 1 turno."
             },
             "S2": {
-                "name": "Tailind",
-                "description": "100% chance to dispel one debuff inflicted on an ally at the beginning of each turn."
+                "name": "Vento de cauda",
+                "description": "No início de cada turno, tem 100% de chance de dissipar um efeito negativo aplicado a um aliado."
             },
             "S3": {
-                "name": "Gale",
-                "description": "Attacks all enemies with wind magic, granting continuous healing and increased Speed to all allies for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Ventania",
+                "description": "Ataca todos os inimigos com magia de vento, concedendo cura contínua e Aumentar Velocidade a todos os aliados por 2 turnos.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -3190,17 +3190,17 @@
         "_name": "Jena",
         "skills": {
             "S1": {
-                "name": "Cold Blow",
-                "description": "Attacks with a staff, with a 35% chance to stun for 1 turn."
+                "name": "Golpe gélido",
+                "description": "Ataca com um cajado, com 35% de chance de atordoar por 1 turno."
             },
             "S2": {
-                "name": "Coerce",
-                "description": "Casts weakening magic, with a 100% chance each to decrease buff durations of all enemies by 1 turn and inflict frostbite for 2 turns. Grants immunity to all allies for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Coagir",
+                "description": "Lança magia de enfraquecimento, com 100% de chance cada de diminuir a duração dos efeitos positivos de todos os inimigos em 1 turno e aplicar congelamento por 2 turnos. Concede imunidade a todos os aliados por 2 turnos.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S3": {
-                "name": "Cold Snap",
-                "description": "Attacks all enemies with frost magic, with a 75% chance to decrease Defense for 2 turns before a 100% chance to decrease Combat Readiness by 20%."
+                "name": "Onda de frio",
+                "description": "Ataca todos os inimigos com magia de gelo, com 75% de chance de diminuir a Defesa por 2 turnos, depois com 100% de chance diminui a Prontidão de Combate em 20%."
             }
         }
     },
@@ -3208,17 +3208,17 @@
         "_name": "Jenua",
         "skills": {
             "S1": {
-                "name": "Taste Test",
-                "description": "After granting increased Attack to the caster for 1 turn, attacks the enemy. When the caster is already granted rage, activates Bite as an extra attack. Bite can only be activated once per turn, during the caster's turn.",
-                "soulburn_effect": "Grants increased Attack (Greater) for 1 turn."
+                "name": "Prova de sabor",
+                "description": "Após conceder Aumentar Ataque ao conjurador por 1 turno, ataca o inimigo. Quando o conjurador já tem fúria, ativa Mordida como ataque extra. Mordida só pode ser ativada uma vez por turno, durante o turno do conjurador.",
+                "soulburn_effect": "Concede Aumentar Ataque (maior) por 1 turno."
             },
             "S2": {
-                "name": "Wild Dog Company Captain",
-                "description": "Upon receiving lethal damage, grants immortality to the caster for 1 turn. Immortality can only be activated once per battle. After being attacked, when Health is 50% or less, activates Plan A. Plan A can only be activated once every 4 turns. Plan A: Dispels all debuffs from the caster and becomes enraged for 2 turns, before increasing Combat Readiness by 50%."
+                "name": "Capitão da Companhia Cão Selvagem",
+                "description": "Ao receber dano letal, concede imortalidade ao conjurador por 1 turno. A imortalidade só pode ser ativada uma vez por batalha. Após ser atacado, quando a Vida é 50% ou menos, ativa Plano A. Plano A só pode ser ativado uma vez a cada 4 turnos. Plano A: dissipa todos os efeitos negativos do conjurador e fica enfurecido por 2 turnos, depois aumenta a Prontidão de Combate em 50%."
             },
             "S3": {
-                "name": "Bite",
-                "description": "Attacks the enemy with a sword, absorbing some of the damage dealt as Health, and deals additional damage proportional to the caster's Attack to all enemies except for the target. When the enemy is defeated, inflicts extinction. Penetrates the target's Defense."
+                "name": "Mordida",
+                "description": "Ataca o inimigo com uma espada, absorvendo parte do dano causado como Vida, e causa a todos os inimigos, exceto o alvo, dano adicional proporcional ao Ataque do conjurador. Ao derrotar o inimigo, aplica extinção. Penetra a Defesa do alvo."
             }
         }
     },
@@ -3226,17 +3226,17 @@
         "_name": "Judge Kise",
         "skills": {
             "S1": {
-                "name": "Sever",
-                "description": "Attacks the enemy with a scythe. Penetrates the target's Defense by 20%."
+                "name": "Cortar",
+                "description": "Ataca o inimigo com uma foice. Penetra 20% da Defesa do alvo."
             },
             "S2": {
-                "name": "End of Evil",
-                "description": "Attacks all enemies with a scythe, dispelling all buffs before a 100% chance to inflict decreased Hit Chance for 2 turns and a 85% chance to inflict decreased Defense for 2 turns, and increases Combat Readiness of the caster by 25% per target. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Fim do mal",
+                "description": "Ataca todos os inimigos com uma foice, dissipando todos os efeitos positivos, depois com 100% de chance aplica Diminuir Precisão por 2 turnos e com 85% de chance aplica Diminuir Defesa por 2 turnos, e aumenta a Prontidão de Combate do conjurador em 25% por alvo. Esta habilidade não pode ativar contra-ataques.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Wave of Light",
-                "description": "Attacks all enemies by distorting space and time before increasing skill cooldowns by 1 turn. Grants invincibility to the caster for 1 turn."
+                "name": "Onda de luz",
+                "description": "Ataca todos os inimigos distorcendo o espaço e o tempo, depois aumenta as recargas de habilidades em 1 turno. Concede invencibilidade ao conjurador por 1 turno."
             }
         }
     },
@@ -3244,17 +3244,17 @@
         "_name": "Judith",
         "skills": {
             "S1": {
-                "name": "Vulnerability Exposed",
-                "description": "Attacks with dual-wielded swords. When the caster is stealthed, has a 100% chance to stun the enemy for 1 turn."
+                "name": "Vulnerabilidade exposta",
+                "description": "Ataca com duas espadas. Quando o conjurador está furtivo, tem 100% de chance de atordoar o inimigo por 1 turno."
             },
             "S2": {
-                "name": "Urgent Evasion",
-                "description": "At the moment the caster is attacked, has a 100% chance to become stealthed for 1 turn."
+                "name": "Evasão urgente",
+                "description": "No momento em que o conjurador é atacado, tem 100% de chance de ficar furtivo por 1 turno."
             },
             "S3": {
-                "name": "Mark of Acceleration",
-                "description": "Increases the Combat Readiness of all allies by 30%, and grants stealth to the caster for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Marca da aceleração",
+                "description": "Aumenta a Prontidão de Combate de todos os aliados em 30% e concede furtividade ao conjurador por 1 turno.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -3262,17 +3262,17 @@
         "_name": "Juni",
         "skills": {
             "S1": {
-                "name": "Violent Beating",
-                "description": "Attacks the enemy with a club and has a 75% chance to dispel one buff. When the caster has perception, increases effect chance to 100%.",
-                "soulburn_effect": "Increases effect chance to 100% and dispels two buffs from the target."
+                "name": "Surra violenta",
+                "description": "Ataca o inimigo com um porrete e tem 75% de chance de dissipar um efeito positivo. Quando o conjurador tem percepção, a chance do efeito aumenta para 100%.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100% e dissipa dois efeitos positivos do alvo."
             },
             "S2": {
-                "name": "Wicked Instinct",
-                "description": "At the start of the first battle, gains 20 Fighting Spirit. The caster receives 30% of the damage suffered by the ally in the back row in their place. When more than one damage sharing effect is granted, only the strongest effect is applied. When an enemy revives, gains 40 Fighting Spirit and grants perception to the caster for 2 turns. The effect upon an enemy's revival can only be activated once every 2 turns."
+                "name": "Instinto perverso",
+                "description": "No início da primeira batalha, ganha 20 de Espírito de luta. O conjurador recebe 30% do dano sofrido pelo aliado na fileira de trás no lugar dele. Quando mais de um efeito de divisão de dano é concedido, só o mais forte é aplicado. Quando um inimigo revive, ganha 40 de Espírito de luta e concede percepção ao conjurador por 2 turnos. O efeito após a revivência de um inimigo só pode ser ativado uma vez a cada 2 turnos."
             },
             "S3": {
-                "name": "Club Swing",
-                "description": "Attacks all enemies by swinging a club and has a 100% chance each to decrease Defense and make then unable to be buffed for 2 turns. Decreases debuff duration of all allies by 2 turns."
+                "name": "Golpe de porrete",
+                "description": "Ataca todos os inimigos girando um porrete e tem 100% de chance cada de diminuir a Defesa e impedir que recebam efeitos positivos por 2 turnos. Diminui a duração dos efeitos negativos de todos os aliados em 2 turnos."
             }
         }
     },
@@ -3280,17 +3280,17 @@
         "_name": "Kane",
         "skills": {
             "S1": {
-                "name": "Hammer Time",
-                "description": "Attacks the enemy with a hammer, and increases Combat Readiness of the caster by 15%. When the caster is enraged, activates Rock Smash as an extra attack. Rock Smash can only be activated once per turn, during the caster's turn. Rock Smash: Attacks all enemies by slamming the ground, and inflicts bleeding for 2 turns. Ignores Effect Resistance."
+                "name": "Hora do martelo",
+                "description": "Ataca o inimigo com um martelo e aumenta a Prontidão de Combate do conjurador em 15%. Quando o conjurador está enfurecido, ativa Esmaga-rocha como ataque extra. Esmaga-rocha só pode ser ativado uma vez por turno, durante o turno do conjurador. Esmaga-rocha: ataca todos os inimigos golpeando o chão e aplica sangramento por 2 turnos. Ignora a Resistência a Efeitos."
             },
             "S2": {
-                "name": "Force Awakening",
-                "description": "Upon receiving lethal damage, grants immortality and vampirism for 1 turn and resets skill cooldown of Feast of Predation. Can be only activated once every 6 turns. After an ally attacks, if the target has a debuff, gains 10 Fighting Spirit and when Fighting Spirit is full, consumes all Fighting Spirit to make the caster enraged for 2 turns."
+                "name": "Despertar da força",
+                "description": "Ao receber dano letal, concede imortalidade e vampirismo por 1 turno e reinicia a recarga de Banquete da predação. Só pode ser ativado uma vez a cada 6 turnos. Após um aliado atacar, se o alvo tiver um efeito negativo, ganha 10 de Espírito de luta e, quando o Espírito de luta está cheio, consome todo o Espírito de luta para enfurecer o conjurador por 2 turnos."
             },
             "S3": {
-                "name": "Feast of Predation",
-                "description": "Attacks the enemy by unleashing their power, and grants increased Attack (Greater) to the caster for 2 turns. Damage dealt increases proportional to the number of debuffs inflicted on the target.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Banquete da predação",
+                "description": "Ataca o inimigo liberando seu poder e concede Aumentar Ataque (maior) ao conjurador por 2 turnos. O dano causado aumenta proporcionalmente ao número de efeitos negativos aplicados ao alvo.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },

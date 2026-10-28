@@ -3154,17 +3154,17 @@
         "_name": "Januta",
         "skills": {
             "S1": {
-                "name": "Rabid Strike",
-                "description": "Dashes towards the enemy to attack. When the caster is enraged, damage dealt is increased."
+                "name": "狂暴一击",
+                "description": "冲向敌人发动攻击。施放者处于激怒状态时，提升造成的伤害。"
             },
             "S2": {
-                "name": "Ruler of the Prairie",
-                "description": "After any ally is attacked, the caster gains 10 Fighting Spirit per ally attacked, and has a 35% chance to activate Hour of the Hunt. Hour of the Hunt: Increases Speed of all allies for 2 turns, and the caster becomes enraged for 2 turns."
+                "name": "草原支配者",
+                "description": "任意友军受到攻击后，每有一名友军受到攻击，施放者获得10斗志，并有35%的几率发动狩猎时刻。狩猎时刻：提升所有友军的速度2回合，施放者进入2回合激怒状态。"
             },
             "S3": {
-                "name": "Shatter",
-                "description": "Attacks the enemy, decreasing Speed for 2 turns before increasing Attack of the caster for 2 turns. When the caster is enraged, ignores Effect Resistance.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "粉碎",
+                "description": "攻击敌人，降低其速度2回合，然后提升施放者的攻击力2回合。施放者处于激怒状态时，无视效果抵抗。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -3172,17 +3172,17 @@
         "_name": "Jecht",
         "skills": {
             "S1": {
-                "name": "Staff Assault",
-                "description": "Attacks with a staff, with a 75% chance to decrease Hit Chance for 1 turn."
+                "name": "杖之突袭",
+                "description": "以法杖攻击，有75%的几率降低命中率1回合。"
             },
             "S2": {
-                "name": "Tailind",
-                "description": "100% chance to dispel one debuff inflicted on an ally at the beginning of each turn."
+                "name": "顺风",
+                "description": "每回合开始时，有100%的几率解除友军身上的一个弱化效果。"
             },
             "S3": {
-                "name": "Gale",
-                "description": "Attacks all enemies with wind magic, granting continuous healing and increased Speed to all allies for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "疾风",
+                "description": "以风魔法攻击所有敌人，并为所有友军施加2回合持续恢复与速度提升。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             }
         }
     },
@@ -3190,17 +3190,17 @@
         "_name": "Jena",
         "skills": {
             "S1": {
-                "name": "Cold Blow",
-                "description": "Attacks with a staff, with a 35% chance to stun for 1 turn."
+                "name": "寒气一击",
+                "description": "以法杖攻击，有35%的几率使其眩晕1回合。"
             },
             "S2": {
-                "name": "Coerce",
-                "description": "Casts weakening magic, with a 100% chance each to decrease buff durations of all enemies by 1 turn and inflict frostbite for 2 turns. Grants immunity to all allies for 2 turns.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "强迫",
+                "description": "施放削弱魔法，各有100%的几率使所有敌人的强化效果持续时间减少1回合，并施加2回合冻伤。为所有友军施加2回合免疫。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S3": {
-                "name": "Cold Snap",
-                "description": "Attacks all enemies with frost magic, with a 75% chance to decrease Defense for 2 turns before a 100% chance to decrease Combat Readiness by 20%."
+                "name": "寒潮",
+                "description": "以冰霜魔法攻击所有敌人，有75%的几率降低防御力2回合，然后有100%的几率降低20%行动值。"
             }
         }
     },
@@ -3208,17 +3208,17 @@
         "_name": "Jenua",
         "skills": {
             "S1": {
-                "name": "Taste Test",
-                "description": "After granting increased Attack to the caster for 1 turn, attacks the enemy. When the caster is already granted rage, activates Bite as an extra attack. Bite can only be activated once per turn, during the caster's turn.",
-                "soulburn_effect": "Grants increased Attack (Greater) for 1 turn."
+                "name": "试吃",
+                "description": "为施放者施加1回合攻击力提升后，攻击敌人。施放者已拥有激怒时，以追加攻击发动撕咬。撕咬在施放者的回合中每回合只能发动一次。",
+                "soulburn_effect": "施加1回合攻击力提升（大）。"
             },
             "S2": {
-                "name": "Wild Dog Company Captain",
-                "description": "Upon receiving lethal damage, grants immortality to the caster for 1 turn. Immortality can only be activated once per battle. After being attacked, when Health is 50% or less, activates Plan A. Plan A can only be activated once every 4 turns. Plan A: Dispels all debuffs from the caster and becomes enraged for 2 turns, before increasing Combat Readiness by 50%."
+                "name": "野犬部队队长",
+                "description": "受到致命伤害时，为施放者施加1回合不死。不死每场战斗只能发动一次。受到攻击后若生命值在50%以下，发动A计划。A计划每4回合只能发动一次。A计划：解除施放者的所有弱化效果，进入2回合激怒状态，然后提升50%行动值。"
             },
             "S3": {
-                "name": "Bite",
-                "description": "Attacks the enemy with a sword, absorbing some of the damage dealt as Health, and deals additional damage proportional to the caster's Attack to all enemies except for the target. When the enemy is defeated, inflicts extinction. Penetrates the target's Defense."
+                "name": "撕咬",
+                "description": "以剑攻击敌人，将部分造成的伤害吸收为生命值，并对除目标外的所有敌人追加造成与施放者攻击力成比例的伤害。击败敌人时施加湮灭。穿透目标的防御力。"
             }
         }
     },
@@ -3226,17 +3226,17 @@
         "_name": "Judge Kise",
         "skills": {
             "S1": {
-                "name": "Sever",
-                "description": "Attacks the enemy with a scythe. Penetrates the target's Defense by 20%."
+                "name": "切断",
+                "description": "以镰刀攻击敌人。穿透目标20%的防御力。"
             },
             "S2": {
-                "name": "End of Evil",
-                "description": "Attacks all enemies with a scythe, dispelling all buffs before a 100% chance to inflict decreased Hit Chance for 2 turns and a 85% chance to inflict decreased Defense for 2 turns, and increases Combat Readiness of the caster by 25% per target. This skill cannot trigger a counterattack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "邪恶终结",
+                "description": "以镰刀攻击所有敌人，解除所有强化效果，然后有100%的几率施加2回合命中率降低，并有85%的几率施加2回合防御力降低，每有一个目标，使施放者的行动值提升25%。此技能无法触发反击。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Wave of Light",
-                "description": "Attacks all enemies by distorting space and time before increasing skill cooldowns by 1 turn. Grants invincibility to the caster for 1 turn."
+                "name": "光之波动",
+                "description": "扭曲时空攻击所有敌人，然后使技能冷却时间增加1回合。为施放者施加1回合无敌。"
             }
         }
     },
@@ -3244,17 +3244,17 @@
         "_name": "Judith",
         "skills": {
             "S1": {
-                "name": "Vulnerability Exposed",
-                "description": "Attacks with dual-wielded swords. When the caster is stealthed, has a 100% chance to stun the enemy for 1 turn."
+                "name": "暴露弱点",
+                "description": "以双剑攻击。施放者处于隐身状态时，有100%的几率使敌人眩晕1回合。"
             },
             "S2": {
-                "name": "Urgent Evasion",
-                "description": "At the moment the caster is attacked, has a 100% chance to become stealthed for 1 turn."
+                "name": "紧急回避",
+                "description": "施放者受到攻击的瞬间，有100%的几率进入1回合隐身状态。"
             },
             "S3": {
-                "name": "Mark of Acceleration",
-                "description": "Increases the Combat Readiness of all allies by 30%, and grants stealth to the caster for 1 turn.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "加速印记",
+                "description": "使所有友军的行动值提升30%，并为施放者施加1回合隐身。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -3262,17 +3262,17 @@
         "_name": "Juni",
         "skills": {
             "S1": {
-                "name": "Violent Beating",
-                "description": "Attacks the enemy with a club and has a 75% chance to dispel one buff. When the caster has perception, increases effect chance to 100%.",
-                "soulburn_effect": "Increases effect chance to 100% and dispels two buffs from the target."
+                "name": "暴力殴打",
+                "description": "以棍棒攻击敌人，有75%的几率解除一个强化效果。施放者拥有洞察时，效果几率提升至100%。",
+                "soulburn_effect": "效果几率提升至100%，并解除目标的两个强化效果。"
             },
             "S2": {
-                "name": "Wicked Instinct",
-                "description": "At the start of the first battle, gains 20 Fighting Spirit. The caster receives 30% of the damage suffered by the ally in the back row in their place. When more than one damage sharing effect is granted, only the strongest effect is applied. When an enemy revives, gains 40 Fighting Spirit and grants perception to the caster for 2 turns. The effect upon an enemy's revival can only be activated once every 2 turns."
+                "name": "邪恶本能",
+                "description": "首场战斗开始时，获得20斗志。施放者代替后排友军承受其受到伤害的30%。获得多个伤害分担效果时，仅适用最强的效果。敌人复活时，获得40斗志，并为施放者施加2回合洞察。敌人复活所触发的效果每2回合只能发动一次。"
             },
             "S3": {
-                "name": "Club Swing",
-                "description": "Attacks all enemies by swinging a club and has a 100% chance each to decrease Defense and make then unable to be buffed for 2 turns. Decreases debuff duration of all allies by 2 turns."
+                "name": "挥舞棍棒",
+                "description": "挥舞棍棒攻击所有敌人，各有100%的几率施加2回合防御力降低与无法强化。使所有友军的弱化效果持续时间减少2回合。"
             }
         }
     },
@@ -3280,17 +3280,17 @@
         "_name": "Kane",
         "skills": {
             "S1": {
-                "name": "Hammer Time",
-                "description": "Attacks the enemy with a hammer, and increases Combat Readiness of the caster by 15%. When the caster is enraged, activates Rock Smash as an extra attack. Rock Smash can only be activated once per turn, during the caster's turn. Rock Smash: Attacks all enemies by slamming the ground, and inflicts bleeding for 2 turns. Ignores Effect Resistance."
+                "name": "锤击时刻",
+                "description": "以锤子攻击敌人，并使施放者的行动值提升15%。施放者处于激怒状态时，以追加攻击发动碎岩。碎岩在施放者的回合中每回合只能发动一次。碎岩：猛击地面攻击所有敌人，并施加2回合出血。无视效果抵抗。"
             },
             "S2": {
-                "name": "Force Awakening",
-                "description": "Upon receiving lethal damage, grants immortality and vampirism for 1 turn and resets skill cooldown of Feast of Predation. Can be only activated once every 6 turns. After an ally attacks, if the target has a debuff, gains 10 Fighting Spirit and when Fighting Spirit is full, consumes all Fighting Spirit to make the caster enraged for 2 turns."
+                "name": "力量觉醒",
+                "description": "受到致命伤害时，施加1回合不死与吸血，并重置捕食盛宴的冷却时间。每6回合只能发动一次。友军攻击后，若目标有弱化效果，获得10斗志；斗志已满时，消耗全部斗志使施放者进入2回合激怒状态。"
             },
             "S3": {
-                "name": "Feast of Predation",
-                "description": "Attacks the enemy by unleashing their power, and grants increased Attack (Greater) to the caster for 2 turns. Damage dealt increases proportional to the number of debuffs inflicted on the target.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "捕食盛宴",
+                "description": "释放力量攻击敌人，并为施放者施加2回合攻击力提升（大）。造成的伤害按目标身上弱化效果的数量比例提升。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
