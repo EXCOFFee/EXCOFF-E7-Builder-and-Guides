@@ -5708,17 +5708,17 @@
         "_name": "Shuna",
         "skills": {
             "S1": {
-                "name": "Magicule Explosion",
-                "description": "Attacks the enemy by manipulating magicules and recovers Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra attack with the same skill."
+                "name": "마소 폭발",
+                "description": "마소를 조종해 적을 공격하고 모든 아군의 생명력을 회복한다. 시전자의 최대 생명력에 비례해 주는 피해와 회복량이 증가한다.",
+                "soulburn_effect": "같은 스킬로 추가 공격한다."
             },
             "S2": {
-                "name": "Blooming Lotus",
-                "description": "Dispels two debuffs from all allies and redistributes Health so that each ally has an equal Health ratio before granting a barrier (proportional to the caster's max Health) for 2 turns."
+                "name": "피어나는 연꽃",
+                "description": "모든 아군의 약화 효과를 두 개 해제하고 모든 아군의 생명력 비율이 같아지도록 생명력을 재분배한 뒤 2턴 동안 보호막(시전자 최대 생명력 비례)을 부여한다."
             },
             "S3": {
-                "name": "Sleeping Spell",
-                "description": "With scattering petals, dispels two buffs from all enemies before a 85% chance to inflict sleep for 1 turn and a 100% chance to inflict decreased Attack for 2 turns."
+                "name": "수면 주문",
+                "description": "흩날리는 꽃잎으로 모든 적의 강화 효과를 두 개 해제한 뒤 85% 확률로 1턴 동안 수면을, 100% 확률로 2턴 동안 공격력 감소를 건다."
             }
         }
     },
@@ -5726,17 +5726,17 @@
         "_name": "Sigret",
         "skills": {
             "S1": {
-                "name": "Sever",
-                "description": "Attacks the enemy with a scythe, with a 50% chance each to inflict two bleeding effects for 2 turns."
+                "name": "절단",
+                "description": "낫으로 적을 공격하며, 각각 50% 확률로 2턴 동안 출혈을 두 개 건다."
             },
             "S2": {
-                "name": "Smash",
-                "description": "Attacks the enemy by swiping consecutively with a scythe, with a 100% chance each to inflict unhealable and bleeding for 2 turns. After attacking, when the target's Health is 50% or less, activates Sever as an extra attack. When attacking with an extra attack, Sever has a 100% chance to inflict bleeding.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "분쇄",
+                "description": "낫을 연속으로 휘둘러 적을 공격하며, 각각 100% 확률로 2턴 동안 회복 불가와 출혈을 건다. 공격 후 대상의 생명력이 50% 이하이면 추가 공격으로 절단을 발동한다. 추가 공격으로 사용할 때 절단은 100% 확률로 출혈을 건다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S3": {
-                "name": "Guillotine",
-                "description": "Inflicts lethal damage to the enemy, piercing their Weakness. Penetrates Defense by 30%, with an additional 10% for each debuff inflicted on the enemy. Inflicts extinction when the enemy is defeated."
+                "name": "단두대",
+                "description": "적의 약점을 꿰뚫어 치명적인 피해를 준다. 방어력을 30% 관통하며, 적에게 걸린 약화 효과 하나당 10%씩 추가로 관통한다. 적을 처치하면 소멸을 건다."
             }
         }
     },
@@ -5744,17 +5744,17 @@
         "_name": "Silk",
         "skills": {
             "S1": {
-                "name": "Single Shot",
-                "description": "Shoots arrows at the enemy, decreasing their Combat Readiness by 10%. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "단발 사격",
+                "description": "적에게 화살을 쏴 행동 게이지를 10% 감소시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Concentration",
-                "description": "At the start of the turn, gains 1 Focus. When attacked, consumes 1 Focus, dispelling one debuff from the caster and increasing Combat Readiness by 15%. When the caster's Focus is 2 or more, uses Automatic Fire instead of Single Shot. Automatic Fire: Attacks the enemy with arrows, decreasing Combat Readiness by 10%. Damage dealt increases proportional to the caster's Speed, and penetrates the target's Defense by 20%. This attack receives effects that are applied to the basic skill."
+                "name": "집중",
+                "description": "턴 시작 시 집중을 1 얻는다. 공격받으면 집중을 1 소모해 시전자의 약화 효과를 한 개 해제하고 행동 게이지를 15% 증가시킨다. 시전자의 집중이 2 이상이면 단발 사격 대신 연속 사격을 사용한다. 연속 사격: 화살로 적을 공격해 행동 게이지를 10% 감소시킨다. 시전자의 속도에 비례해 주는 피해가 증가하며 대상의 방어력을 20% 관통한다. 이 공격은 기본 스킬에 적용되는 효과를 받는다."
             },
             "S3": {
-                "name": "Storm Arrow",
-                "description": "Attacks all enemies with wind, with a 100% chance to decrease Speed for 2 turns, and granting increased Speed to all allies for 2 turns."
+                "name": "폭풍의 화살",
+                "description": "바람으로 모든 적을 공격하며, 100% 확률로 2턴 동안 속도를 감소시키고 모든 아군에게 2턴 동안 속도 증가를 부여한다."
             }
         }
     },
@@ -5762,17 +5762,17 @@
         "_name": "Silver Blade Aramintha",
         "skills": {
             "S1": {
-                "name": "Flame Friction",
-                "description": "Attacks an enemy with an explosion of flames, with a 75% chance to burn for 1 turn. After attacking, when an enemy is burned, activates Flame Release as an extra attack. Flame Release: Attacks all enemies with fire energy, with a 60% chance to burn for 1 turn, before detonating burn effects inflicted on the target at the end of the turn.",
-                "soulburn_effect": "Effect Chance of Flame Friction increases to 100%, and ignores Effect Resistance."
+                "name": "화염 마찰",
+                "description": "화염 폭발로 적을 공격하며, 75% 확률로 1턴 동안 화상을 건다. 공격 후 적에게 화상이 걸려 있으면 추가 공격으로 화염 해방을 발동한다. 화염 해방: 불의 기운으로 모든 적을 공격하며, 60% 확률로 1턴 동안 화상을 건 뒤 턴 종료 시 대상에게 걸린 화상을 폭발시킨다.",
+                "soulburn_effect": "화염 마찰의 효과 발동 확률이 100%로 증가하고 효과 저항을 무시한다."
             },
             "S2": {
-                "name": "Flame of Savara",
-                "description": "At the start of the first battle, increases Attack proportional to Effectiveness. The rate of the increase Attack effect does not change after it is activated. At the end of an ally except for the caster's turn, increases Combat Readiness of the caster by 15%."
+                "name": "사바라의 불꽃",
+                "description": "첫 번째 전투 시작 시 효과 적중에 비례해 공격력이 증가한다. 공격력 증가 효과의 수치는 발동 후 변하지 않는다. 시전자를 제외한 아군의 턴 종료 시 시전자의 행동 게이지를 15% 증가시킨다."
             },
             "S3": {
-                "name": "Meteor Fall",
-                "description": "Attacks all enemies with a giant meteor, inflicting two burn effects for 2 turns and stunning for 1 turn. Decreases Combat Readiness of the enemy with the highest Combat Readiness by 30%."
+                "name": "메테오 폴",
+                "description": "거대한 운석으로 모든 적을 공격해 2턴 동안 화상을 두 개 걸고 1턴 동안 기절시킨다. 행동 게이지가 가장 높은 적의 행동 게이지를 30% 감소시킨다."
             }
         }
     },
@@ -5798,17 +5798,17 @@
         "_name": "Sinful Angelica",
         "skills": {
             "S1": {
-                "name": "Debilitating Strike",
-                "description": "Attacks the target with a staff, with a 75% chance to decrease Defense for 1 turn. When the caster is immortal, triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Increases effect chance to 100%, and decreases Defense of the target for 2 turns."
+                "name": "약화의 일격",
+                "description": "지팡이로 대상을 공격하며, 75% 확률로 1턴 동안 방어력을 감소시킨다. 시전자가 불사 상태이면 공격력이 가장 높은 아군이 협공한다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가하고 2턴 동안 대상의 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Soul Harvest",
-                "description": "Enemies cannot revive. Every time an enemy dies, recovers Health of all allies proportional to the target's max Health."
+                "name": "영혼 수확",
+                "description": "적은 부활할 수 없다. 적이 사망할 때마다 대상의 최대 생명력에 비례해 모든 아군의 생명력을 회복한다."
             },
             "S3": {
-                "name": "Dark Salvation",
-                "description": "Whips up a vortex of darkness and loathing, dispelling two debuffs from all allies, before granting immortality to the caster for 2 turns, and increases Attack and Speed of all allies except for the caster for 2 turns."
+                "name": "어둠의 구원",
+                "description": "어둠과 증오의 소용돌이를 일으켜 모든 아군의 약화 효과를 두 개 해제한 뒤 시전자에게 2턴 동안 불사를 부여하고, 2턴 동안 시전자를 제외한 모든 아군의 공격력과 속도를 증가시킨다."
             }
         }
     },
@@ -5816,17 +5816,17 @@
         "_name": "Sol",
         "skills": {
             "S1": {
-                "name": "Gunflame",
-                "description": "Attacks an enemy with pillars of fire. When the target does not have a buff, increases damage dealt. After attacking, when the caster's Fighting Spirit is 100, activates Roman Cancel. Does not activate when counterattacking. Roman Cancel: Consumes all Fighting Spirit and extends buff durations of the caster by 1 turn before granting an extra turn."
+                "name": "건 플레임",
+                "description": "불기둥으로 적을 공격한다. 대상에게 강화 효과가 없으면 주는 피해가 증가한다. 공격 후 시전자의 투지가 100이면 로망 캔슬을 발동한다. 반격 시에는 발동하지 않는다. 로망 캔슬: 투지를 모두 소모하고 시전자의 강화 효과 지속 시간을 1턴 연장한 뒤 추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Volcanic Viper",
-                "description": "When an enemy uses a non-attack skill, increases Combat Readiness of the caster by 20% and gains 20 Fighting Spirit. When suffering an attack that targets all allies, activates Volcanic Viper against the attacker. This effect is not activated by a counterattack, Dual Attack, or extra attack. Each effect can only be activated once every 2 turns. Volcanic Viper (gains 2 Soul): Launches the enemy into the air and attacks repeatedly, inflicting silence for 2 turns. Damage dealt increases proportional to the target's max Health."
+                "name": "볼캐닉 바이퍼",
+                "description": "적이 공격이 아닌 스킬을 사용하면 시전자의 행동 게이지를 20% 증가시키고 투지를 20 얻는다. 모든 아군을 대상으로 하는 공격을 받으면 공격자에게 볼캐닉 바이퍼를 발동한다. 이 효과는 반격, 협공, 추가 공격으로는 발동하지 않는다. 각 효과는 2턴마다 한 번만 발동할 수 있다. 볼캐닉 바이퍼(소울 2 획득): 적을 공중으로 띄워 연속 공격하고 2턴 동안 침묵을 건다. 대상의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Tyrant Rave ver. Beta",
-                "description": "Attacks the target with a strong punch, dispelling all buffs and inflicts cannot buff for 2 turns. Damage dealt increases proportional to the target's max Health. After attacking, deals additional damage proportional to the caster's Attack regardless of whether the attack hits.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "타이런트 레이브 ver.β",
+                "description": "강력한 주먹으로 대상을 공격해 강화 효과를 모두 해제하고 2턴 동안 강화 불가를 건다. 대상의 최대 생명력에 비례해 주는 피해가 증가한다. 공격 후 공격의 적중 여부와 관계없이 시전자의 공격력에 비례한 추가 피해를 준다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -5834,17 +5834,17 @@
         "_name": "Solitaria of the Snow",
         "skills": {
             "S1": {
-                "name": "Pew, Pew, Pew!",
-                "description": "Attacks the enemy with a staff, with a 75% chance to dispel one buff. When the caster is granted daydream, activates Fwooooosh— Ha! as an extra attack. Fwooooosh— Ha!: Attacks all enemies with mana, with a 25% chance to inflict stun for 1 turn."
+                "name": "퓽, 퓽, 퓽!",
+                "description": "지팡이로 적을 공격하며, 75% 확률로 강화 효과를 한 개 해제한다. 시전자에게 공상이 있으면 추가 공격으로 휘이익— 하!를 발동한다. 휘이익— 하!: 마나로 모든 적을 공격하며, 25% 확률로 1턴 동안 기절시킨다."
             },
             "S2": {
-                "name": "I Wanna Go Home...",
-                "description": "Decreases the amount of Focus gained by the enemy by 100%. At the start of the turn, has a 100% chance to grant daydream for 1 turn, and at the end of the turn, has a 100% chance to grant stealth for 1 turn."
+                "name": "집에 가고 싶어...",
+                "description": "적이 얻는 집중이 100% 감소한다. 턴 시작 시 100% 확률로 1턴 동안 공상을 부여하고, 턴 종료 시 100% 확률로 1턴 동안 은신을 부여한다."
             },
             "S3": {
-                "name": "Boom! Starlight Fall!",
-                "description": "Decreases buff durations of the enemy by 1 turn and attacks with starlight, inflicting stun for 1 turn before decreasing Combat Readiness by 30%. Grants a barrier (proportional to the caster's max Health) to the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn and grants an extra turn."
+                "name": "쾅! 별빛 낙하!",
+                "description": "적의 강화 효과 지속 시간을 1턴 감소시키고 별빛으로 공격해 1턴 동안 기절시킨 뒤 행동 게이지를 30% 감소시킨다. 시전자에게 2턴 동안 보호막(시전자 최대 생명력 비례)을 부여한다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장되고 추가 턴을 얻는다."
             }
         }
     },
@@ -5852,17 +5852,17 @@
         "_name": "Sonia",
         "skills": {
             "S1": {
-                "name": "Surpressing Fire",
-                "description": "Attacks the enemy with cover fire, before granting a barrier to the ally except for the caster with the lowest Health for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "제압 사격",
+                "description": "엄호 사격으로 적을 공격한 뒤 시전자를 제외하고 생명력이 가장 낮은 아군에게 2턴 동안 보호막을 부여한다. 시전자의 최대 생명력에 비례해 보호막 강도가 증가한다."
             },
             "S2": {
-                "name": "Recovery",
-                "description": "Recovers the target's Health using a recovery cube and dispels two debuffs. Amount recovered increases proportional to the caster's max Health.",
-                "soulburn_effect": "Effect is granted to all allies."
+                "name": "회복",
+                "description": "회복 큐브로 대상의 생명력을 회복하고 약화 효과를 두 개 해제한다. 시전자의 최대 생명력에 비례해 회복량이 증가한다.",
+                "soulburn_effect": "모든 아군에게 효과가 부여된다."
             },
             "S3": {
-                "name": "Cube Aura",
-                "description": "Uses a recovery cube to grant all allies immunity for 2 turns, before recovering Health. Amount recovered increases proportional to the caster's max Health."
+                "name": "큐브 오라",
+                "description": "회복 큐브로 모든 아군에게 2턴 동안 면역을 부여한 뒤 생명력을 회복한다. 시전자의 최대 생명력에 비례해 회복량이 증가한다."
             }
         }
     },

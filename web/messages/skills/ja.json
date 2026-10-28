@@ -5708,17 +5708,17 @@
         "_name": "Shuna",
         "skills": {
             "S1": {
-                "name": "Magicule Explosion",
-                "description": "Attacks the enemy by manipulating magicules and recovers Health of all allies. Damage dealt and amount recovered increase proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra attack with the same skill."
+                "name": "魔素爆発",
+                "description": "魔素を操って敵を攻撃し、味方全員のHPを回復する。発動者の最大HPに比例して与ダメージと回復量がアップする。",
+                "soulburn_effect": "同じスキルで追加攻撃する。"
             },
             "S2": {
-                "name": "Blooming Lotus",
-                "description": "Dispels two debuffs from all allies and redistributes Health so that each ally has an equal Health ratio before granting a barrier (proportional to the caster's max Health) for 2 turns."
+                "name": "咲き誇る蓮",
+                "description": "味方全員の弱体効果を二つ解除し、各味方のHPの割合が等しくなるようにHPを再分配した後、2ターンの間バリア（発動者の最大HPに比例）を付与する。"
             },
             "S3": {
-                "name": "Sleeping Spell",
-                "description": "With scattering petals, dispels two buffs from all enemies before a 85% chance to inflict sleep for 1 turn and a 100% chance to inflict decreased Attack for 2 turns."
+                "name": "眠りの呪文",
+                "description": "舞い散る花びらで敵全体の強化効果を二つ解除した後、85%の確率で1ターンの間睡眠を、100%の確率で2ターンの間攻撃力ダウンを付与する。"
             }
         }
     },
@@ -5726,17 +5726,17 @@
         "_name": "Sigret",
         "skills": {
             "S1": {
-                "name": "Sever",
-                "description": "Attacks the enemy with a scythe, with a 50% chance each to inflict two bleeding effects for 2 turns."
+                "name": "切断",
+                "description": "鎌で敵を攻撃し、それぞれ50%の確率で2ターンの間出血を二つ付与する。"
             },
             "S2": {
-                "name": "Smash",
-                "description": "Attacks the enemy by swiping consecutively with a scythe, with a 100% chance each to inflict unhealable and bleeding for 2 turns. After attacking, when the target's Health is 50% or less, activates Sever as an extra attack. When attacking with an extra attack, Sever has a 100% chance to inflict bleeding.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "粉砕",
+                "description": "鎌を連続で振るって敵を攻撃し、それぞれ100%の確率で2ターンの間回復不可と出血を付与する。攻撃後、対象のHPが50%以下なら、追加攻撃として切断を発動する。追加攻撃で使用したとき、切断は100%の確率で出血を付与する。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S3": {
-                "name": "Guillotine",
-                "description": "Inflicts lethal damage to the enemy, piercing their Weakness. Penetrates Defense by 30%, with an additional 10% for each debuff inflicted on the enemy. Inflicts extinction when the enemy is defeated."
+                "name": "ギロチン",
+                "description": "敵の弱点を貫き、致命的なダメージを与える。防御力を30%貫通し、敵に付与された弱体効果一つにつき、さらに10%貫通する。敵を倒すと消滅を付与する。"
             }
         }
     },
@@ -5744,17 +5744,17 @@
         "_name": "Silk",
         "skills": {
             "S1": {
-                "name": "Single Shot",
-                "description": "Shoots arrows at the enemy, decreasing their Combat Readiness by 10%. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "単発射撃",
+                "description": "敵に矢を放ち、行動ゲージを10%減少させる。発動者のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Concentration",
-                "description": "At the start of the turn, gains 1 Focus. When attacked, consumes 1 Focus, dispelling one debuff from the caster and increasing Combat Readiness by 15%. When the caster's Focus is 2 or more, uses Automatic Fire instead of Single Shot. Automatic Fire: Attacks the enemy with arrows, decreasing Combat Readiness by 10%. Damage dealt increases proportional to the caster's Speed, and penetrates the target's Defense by 20%. This attack receives effects that are applied to the basic skill."
+                "name": "集中",
+                "description": "ターン開始時、集中を1獲得する。攻撃されると、集中を1消費し、発動者の弱体効果を一つ解除し、行動ゲージを15%増加させる。発動者の集中が2以上なら、単発射撃の代わりに連続射撃を使用する。連続射撃：矢で敵を攻撃し、行動ゲージを10%減少させる。発動者のスピードに比例して与ダメージがアップし、対象の防御力を20%貫通する。この攻撃は通常スキルに適用される効果を受ける。"
             },
             "S3": {
-                "name": "Storm Arrow",
-                "description": "Attacks all enemies with wind, with a 100% chance to decrease Speed for 2 turns, and granting increased Speed to all allies for 2 turns."
+                "name": "嵐の矢",
+                "description": "風で敵全体を攻撃し、100%の確率で2ターンの間スピードをダウンさせ、味方全員に2ターンの間スピードアップを付与する。"
             }
         }
     },
@@ -5762,17 +5762,17 @@
         "_name": "Silver Blade Aramintha",
         "skills": {
             "S1": {
-                "name": "Flame Friction",
-                "description": "Attacks an enemy with an explosion of flames, with a 75% chance to burn for 1 turn. After attacking, when an enemy is burned, activates Flame Release as an extra attack. Flame Release: Attacks all enemies with fire energy, with a 60% chance to burn for 1 turn, before detonating burn effects inflicted on the target at the end of the turn.",
-                "soulburn_effect": "Effect Chance of Flame Friction increases to 100%, and ignores Effect Resistance."
+                "name": "炎の摩擦",
+                "description": "炎の爆発で敵を攻撃し、75%の確率で1ターンの間火傷を付与する。攻撃後、敵が火傷状態なら、追加攻撃として炎の解放を発動する。炎の解放：火の気で敵全体を攻撃し、60%の確率で1ターンの間火傷を付与した後、ターン終了時に対象の火傷を爆発させる。",
+                "soulburn_effect": "炎の摩擦の効果発動確率が100%にアップし、効果抵抗を無視する。"
             },
             "S2": {
-                "name": "Flame of Savara",
-                "description": "At the start of the first battle, increases Attack proportional to Effectiveness. The rate of the increase Attack effect does not change after it is activated. At the end of an ally except for the caster's turn, increases Combat Readiness of the caster by 15%."
+                "name": "サバラの炎",
+                "description": "最初のバトル開始時、効果命中に比例して攻撃力がアップする。攻撃力アップ効果の数値は発動後に変化しない。発動者を除く味方のターン終了時、発動者の行動ゲージを15%増加させる。"
             },
             "S3": {
-                "name": "Meteor Fall",
-                "description": "Attacks all enemies with a giant meteor, inflicting two burn effects for 2 turns and stunning for 1 turn. Decreases Combat Readiness of the enemy with the highest Combat Readiness by 30%."
+                "name": "メテオフォール",
+                "description": "巨大な隕石で敵全体を攻撃し、2ターンの間火傷を二つ付与し、1ターンの間気絶させる。行動ゲージが最も高い敵の行動ゲージを30%減少させる。"
             }
         }
     },
@@ -5798,17 +5798,17 @@
         "_name": "Sinful Angelica",
         "skills": {
             "S1": {
-                "name": "Debilitating Strike",
-                "description": "Attacks the target with a staff, with a 75% chance to decrease Defense for 1 turn. When the caster is immortal, triggers a Dual Attack from the ally with the highest Attack.",
-                "soulburn_effect": "Increases effect chance to 100%, and decreases Defense of the target for 2 turns."
+                "name": "衰弱の一撃",
+                "description": "杖で対象を攻撃し、75%の確率で1ターンの間防御力をダウンさせる。発動者が不死状態なら、攻撃力が最も高い味方が協攻する。",
+                "soulburn_effect": "効果発動確率が100%にアップし、2ターンの間対象の防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Soul Harvest",
-                "description": "Enemies cannot revive. Every time an enemy dies, recovers Health of all allies proportional to the target's max Health."
+                "name": "魂の収穫",
+                "description": "敵は復活できない。敵が死亡するたびに、対象の最大HPに比例して味方全員のHPを回復する。"
             },
             "S3": {
-                "name": "Dark Salvation",
-                "description": "Whips up a vortex of darkness and loathing, dispelling two debuffs from all allies, before granting immortality to the caster for 2 turns, and increases Attack and Speed of all allies except for the caster for 2 turns."
+                "name": "闇の救済",
+                "description": "闇と憎悪の渦を巻き起こし、味方全員の弱体効果を二つ解除した後、発動者に2ターンの間不死を付与し、2ターンの間発動者を除く味方全員の攻撃力とスピードをアップさせる。"
             }
         }
     },
@@ -5816,17 +5816,17 @@
         "_name": "Sol",
         "skills": {
             "S1": {
-                "name": "Gunflame",
-                "description": "Attacks an enemy with pillars of fire. When the target does not have a buff, increases damage dealt. After attacking, when the caster's Fighting Spirit is 100, activates Roman Cancel. Does not activate when counterattacking. Roman Cancel: Consumes all Fighting Spirit and extends buff durations of the caster by 1 turn before granting an extra turn."
+                "name": "ガンフレイム",
+                "description": "火柱で敵を攻撃する。対象に強化効果がなければ与ダメージがアップする。攻撃後、発動者の闘志が100なら、ロマンキャンセルを発動する。反撃時は発動しない。ロマンキャンセル：闘志をすべて消費し、発動者の強化効果の持続時間を1ターン延長した後、追加ターンを得る。"
             },
             "S2": {
-                "name": "Volcanic Viper",
-                "description": "When an enemy uses a non-attack skill, increases Combat Readiness of the caster by 20% and gains 20 Fighting Spirit. When suffering an attack that targets all allies, activates Volcanic Viper against the attacker. This effect is not activated by a counterattack, Dual Attack, or extra attack. Each effect can only be activated once every 2 turns. Volcanic Viper (gains 2 Soul): Launches the enemy into the air and attacks repeatedly, inflicting silence for 2 turns. Damage dealt increases proportional to the target's max Health."
+                "name": "ヴォルカニックヴァイパー",
+                "description": "敵が攻撃以外のスキルを使用すると、発動者の行動ゲージを20%増加させ、闘志を20獲得する。味方全体を対象とする攻撃を受けると、攻撃者にヴォルカニックヴァイパーを発動する。この効果は反撃、協攻、追加攻撃では発動しない。各効果は2ターンごとに一度のみ発動できる。ヴォルカニックヴァイパー（ソウル2獲得）：敵を宙に打ち上げて連続で攻撃し、2ターンの間沈黙を付与する。対象の最大HPに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Tyrant Rave ver. Beta",
-                "description": "Attacks the target with a strong punch, dispelling all buffs and inflicts cannot buff for 2 turns. Damage dealt increases proportional to the target's max Health. After attacking, deals additional damage proportional to the caster's Attack regardless of whether the attack hits.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "タイランレイブver.β",
+                "description": "強力な拳で対象を攻撃し、強化効果をすべて解除し、2ターンの間強化不可を付与する。対象の最大HPに比例して与ダメージがアップする。攻撃後、攻撃の命中に関係なく、発動者の攻撃力に比例した追加ダメージを与える。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -5834,17 +5834,17 @@
         "_name": "Solitaria of the Snow",
         "skills": {
             "S1": {
-                "name": "Pew, Pew, Pew!",
-                "description": "Attacks the enemy with a staff, with a 75% chance to dispel one buff. When the caster is granted daydream, activates Fwooooosh— Ha! as an extra attack. Fwooooosh— Ha!: Attacks all enemies with mana, with a 25% chance to inflict stun for 1 turn."
+                "name": "ピュン、ピュン、ピュン！",
+                "description": "杖で敵を攻撃し、75%の確率で強化効果を一つ解除する。発動者に白昼夢があれば、追加攻撃としてヒューーン— ハッ！を発動する。ヒューーン— ハッ！：マナで敵全体を攻撃し、25%の確率で1ターンの間気絶させる。"
             },
             "S2": {
-                "name": "I Wanna Go Home...",
-                "description": "Decreases the amount of Focus gained by the enemy by 100%. At the start of the turn, has a 100% chance to grant daydream for 1 turn, and at the end of the turn, has a 100% chance to grant stealth for 1 turn."
+                "name": "おうちに帰りたい…",
+                "description": "敵が獲得する集中が100%減少する。ターン開始時、100%の確率で1ターンの間白昼夢を付与し、ターン終了時、100%の確率で1ターンの間隠密を付与する。"
             },
             "S3": {
-                "name": "Boom! Starlight Fall!",
-                "description": "Decreases buff durations of the enemy by 1 turn and attacks with starlight, inflicting stun for 1 turn before decreasing Combat Readiness by 30%. Grants a barrier (proportional to the caster's max Health) to the caster for 2 turns.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn and grants an extra turn."
+                "name": "ドーン！星明かりの落下！",
+                "description": "敵の強化効果の持続時間を1ターン減少させ、星明かりで攻撃し、1ターンの間気絶させた後、行動ゲージを30%減少させる。発動者に2ターンの間バリア（発動者の最大HPに比例）を付与する。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長され、追加ターンを得る。"
             }
         }
     },
@@ -5852,17 +5852,17 @@
         "_name": "Sonia",
         "skills": {
             "S1": {
-                "name": "Surpressing Fire",
-                "description": "Attacks the enemy with cover fire, before granting a barrier to the ally except for the caster with the lowest Health for 2 turns. Barrier strength increases proportional to the caster's max Health."
+                "name": "制圧射撃",
+                "description": "援護射撃で敵を攻撃した後、発動者を除いてHPが最も低い味方に2ターンの間バリアを付与する。発動者の最大HPに比例してバリアの強度がアップする。"
             },
             "S2": {
-                "name": "Recovery",
-                "description": "Recovers the target's Health using a recovery cube and dispels two debuffs. Amount recovered increases proportional to the caster's max Health.",
-                "soulburn_effect": "Effect is granted to all allies."
+                "name": "回復",
+                "description": "回復キューブで対象のHPを回復し、弱体効果を二つ解除する。発動者の最大HPに比例して回復量がアップする。",
+                "soulburn_effect": "味方全員に効果が付与される。"
             },
             "S3": {
-                "name": "Cube Aura",
-                "description": "Uses a recovery cube to grant all allies immunity for 2 turns, before recovering Health. Amount recovered increases proportional to the caster's max Health."
+                "name": "キューブオーラ",
+                "description": "回復キューブで味方全員に2ターンの間免疫を付与した後、HPを回復する。発動者の最大HPに比例して回復量がアップする。"
             }
         }
     },
