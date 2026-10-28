@@ -4035,17 +4035,17 @@
         "_name": "Mascot Hazel",
         "skills": {
             "S1": {
-                "name": "Book of Fire",
-                "description": "Attacks with fire magic, with a 50% chance to make unhealable for 2 turns."
+                "name": "炎の書",
+                "description": "火の魔法で攻撃し、50%の確率で2ターンの間回復不可を付与する。"
             },
             "S2": {
-                "name": "Urgent Regen",
-                "description": "Heals the target proportional to the caster's Attack and the target's max Health, before increasing Combat Readiness of the caster by 15%. Amount recovered is doubled when the target's Health is 50% or less."
+                "name": "緊急再生",
+                "description": "発動者の攻撃力と対象の最大HPに比例して対象を回復した後、発動者の行動ゲージを15%増加させる。対象のHPが50%以下なら回復量が倍になる。"
             },
             "S3": {
-                "name": "A Girl in Uniform",
-                "description": "Encourages allies by increasing Attack of the target and all other allies for 2 turns before recovering Health of all allies and dispelling one debuff. When the target is a Fire elemental hero, grants the target increased Attack (Greater) instead. Amount recovered is proportional to the target's max Health and the caster's Attack.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "制服の少女",
+                "description": "味方を激励し、2ターンの間対象と他の味方全員の攻撃力をアップさせた後、味方全員のHPを回復し、弱体効果を一つ解除する。対象が火属性の英雄なら、代わりに対象に攻撃力アップ（大）を付与する。回復量は対象の最大HPと発動者の攻撃力に比例する。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },
@@ -4053,17 +4053,17 @@
         "_name": "Maya",
         "skills": {
             "S1": {
-                "name": "Weakening Blow",
-                "description": "Attacks with a blunt weapon, with a 35% chance to stun for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "弱体化の一撃",
+                "description": "鈍器で攻撃し、35%の確率で1ターンの間気絶させる。発動者の防御力に比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Concuss",
-                "description": "Attacks with a shield, with a 100% chance each to stun for 1 turn before decreasing Combat Readiness by 30%. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "脳震盪",
+                "description": "盾で攻撃し、100%の確率で1ターンの間気絶させた後、行動ゲージを30%減少させる。発動者の防御力に比例して与ダメージがアップする。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             },
             "S3": {
-                "name": "Morale Boost",
-                "description": "Has a 75% chance to inflict provoke for 1 turn and a 100% chance to inflict decreased Attack for 2 turns on all enemies. Grants increased Defense to all allies for 2 turns."
+                "name": "士気高揚",
+                "description": "敵全体に75%の確率で1ターンの間挑発を、100%の確率で2ターンの間攻撃力ダウンを付与する。味方全員に2ターンの間防御力アップを付与する。"
             }
         }
     },
@@ -4071,17 +4071,17 @@
         "_name": "Mediator Kawerik",
         "skills": {
             "S1": {
-                "name": "Retribution",
-                "description": "Dashes toward the enemy to attack, increasing Combat Readiness of the caster by 15% and the ally except for the caster with the highest Combat Readiness by 15%. Damage dealt increases proportional to the caster's max Health."
+                "name": "応報",
+                "description": "敵に突進して攻撃し、発動者の行動ゲージを15%、発動者を除いて行動ゲージが最も高い味方の行動ゲージを15%増加させる。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Balance of Power",
-                "description": "Attacks the enemy with the mediator's power, dispelling all buffs before inflicting decreased Attack for 2 turns, and grants a barrier (proportional to the target's max Health) to all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "力の均衡",
+                "description": "調停者の力で敵を攻撃し、強化効果をすべて解除した後、2ターンの間攻撃力ダウンを付与し、味方全員に2ターンの間バリア（対象の最大HPに比例）を付与する。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Nature Restoration",
-                "description": "By restoring balance that has been destroyed, dispels all debuffs from all allies and grants increased Attack and immunity for 2 turns. Increases Combat Readiness of the caster by 50%. When this skill is not on cooldown, at the start of the turn, decreases debuff durations of the caster by 1 turn.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "自然回復",
+                "description": "崩れた均衡を取り戻し、味方全員の弱体効果をすべて解除し、2ターンの間攻撃力アップと免疫を付与する。発動者の行動ゲージを50%増加させる。このスキルがクールタイム中でなければ、ターン開始時、発動者の弱体効果の持続時間を1ターン減少させる。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },
@@ -4089,16 +4089,16 @@
         "_name": "Mei Lin",
         "skills": {
             "S1": {
-                "name": "Strike",
-                "description": "Attacks the enemy with a fist, before increasing Combat Readiness of the caster by 25% and decreasing skill cooldowns by 1 turn. A successful attack always results in a critical hit."
+                "name": "打撃",
+                "description": "拳で敵を攻撃した後、発動者の行動ゲージを25%増加させ、スキルのクールタイムを1ターン短縮する。攻撃が成功すると必ずクリティカルが発生する。"
             },
             "S2": {
-                "name": "Rising Dragon Spire",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks the enemy with a kick, and when the enemy is defeated, inflicts extinction. A successful attack always results in a critical hit. When a Fire elemental ally uses a skill, grants zeal, which enhances Rising Dragon Spire."
+                "name": "昇竜脚",
+                "description": "発動者に2ターンの間攻撃力アップを付与した後、蹴りで敵を攻撃し、敵を倒すと消滅を付与する。攻撃が成功すると必ずクリティカルが発生する。火属性の味方がスキルを使用すると、熱意を付与し、昇竜脚を強化する。"
             },
             "S3": {
-                "name": "Heavenly Flame Dragon",
-                "description": "Fully recovers Health of the caster and grants an extra turn. On the next attack, grants an extra attack with the same skill. Begins the first battle with full skill cooldown count, and the lower stat between Attack and Defense becomes equal to the higher stat."
+                "name": "天炎竜",
+                "description": "発動者のHPを全回復し、追加ターンを得る。次の攻撃時、同じスキルで追加攻撃する。最初のバトルはスキルのクールタイムが満タンの状態で始まり、攻撃力と防御力のうち低い方の能力値が高い方と同じになる。"
             }
         }
     },
@@ -4106,17 +4106,17 @@
         "_name": "Melany",
         "skills": {
             "S1": {
-                "name": "Freeze!",
-                "description": "Attacks the enemy, with a 40% chance to stun for 1 turn.",
-                "soulburn_effect": "Effect chance increases by 60% and a successful attack always results in a critical hit."
+                "name": "動くな！",
+                "description": "敵を攻撃し、40%の確率で1ターンの間気絶させる。",
+                "soulburn_effect": "効果発動確率が60%アップし、攻撃が成功すると必ずクリティカルが発生する。"
             },
             "S2": {
-                "name": "Agility",
-                "description": "When attacked, has a 25% chance to decrease damage suffered by 50%. When more than one damage reduction effect is granted, only the strongest effect is applied. At the end of the turn, increases Combat Readiness of the caster by 15%."
+                "name": "敏捷",
+                "description": "攻撃されたとき、25%の確率で受けるダメージが50%減少する。ダメージ減少効果が複数付与された場合、最も強い効果のみ適用される。ターン終了時、発動者の行動ゲージを15%増加させる。"
             },
             "S3": {
-                "name": "I'll Blow You Up!",
-                "description": "Attacks all enemies, decreasing Speed and inflicting stigma for 2 turns. A successful attack always results in a critical hit."
+                "name": "吹き飛ばしてやる！",
+                "description": "敵全体を攻撃し、2ターンの間スピードダウンと烙印を付与する。攻撃が成功すると必ずクリティカルが発生する。"
             }
         }
     },
@@ -4124,17 +4124,17 @@
         "_name": "Melissa",
         "skills": {
             "S1": {
-                "name": "Might",
-                "description": "Overpowers the enemy, with a 75% chance to make them unhealable for 1 turn. Damage dealt increases proportional to the caster's lost Health."
+                "name": "威力",
+                "description": "敵を圧倒し、75%の確率で1ターンの間回復不可を付与する。発動者の失ったHPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Manifestation",
-                "description": "Attacks the enemy by unleashing their inner rage, before granting immortality and immunity to the caster for 1 turn. When the enemy is defeated, resets cooldown of this skill."
+                "name": "発現",
+                "description": "内なる怒りを解き放って敵を攻撃した後、発動者に1ターンの間不死と免疫を付与する。敵を倒すと、このスキルのクールタイムをリセットする。"
             },
             "S3": {
-                "name": "Blood Bloom",
-                "description": "After dispelling all buffs from the target, attacks the enemy by releasing pent-up aggression. Unaffected by elemental disadvantage and grants an extra turn. When the target is not an Elite or Boss monster, regardless of whether the attack hits, inflicts curse for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "血の開花",
+                "description": "対象の強化効果をすべて解除した後、抑え込んだ攻撃性を解き放って敵を攻撃する。属性の不利の影響を受けず、追加ターンを得る。対象がエリートまたはボスモンスターでない場合、攻撃の命中に関係なく、2ターンの間呪いを付与する。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -4142,17 +4142,17 @@
         "_name": "Mercedes",
         "skills": {
             "S1": {
-                "name": "Divine Bolt",
-                "description": "Attacks two enemies with shock magic, before increasing Combat Readiness of the caster by 15%."
+                "name": "神聖な雷",
+                "description": "衝撃魔法で敵二体を攻撃した後、発動者の行動ゲージを15%増加させる。"
             },
             "S2": {
-                "name": "Dimensional Rupture",
-                "description": "Attacks all enemies with a light sphere, with a 70% chance to dispel one buff. When the caster is granted increased Attack, grants an extra attack with the same skill."
+                "name": "次元崩壊",
+                "description": "光の球体で敵全体を攻撃し、70%の確率で強化効果を一つ解除する。発動者に攻撃力アップがあれば、同じスキルで追加攻撃する。"
             },
             "S3": {
-                "name": "Blazing Eye of Kal",
-                "description": "Releases the power of the Ancient Book to attack all enemies before increasing Attack of all allies for 2 turns. After completing Eureka - 10. East Politia - 10-10. Central Control Room: Volatility will remain throughout the battle. After completing Eureka - 10. East Politia - The Final Destination: Volatility debuff is replaced by Immense Power.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "カルの燃える瞳",
+                "description": "古代書の力を解き放って敵全体を攻撃した後、2ターンの間味方全員の攻撃力をアップさせる。ユリーカ - 10. 東部ポリティア - 10-10. 中央制御室クリア後：揮発性がバトル中ずっと維持される。ユリーカ - 10. 東部ポリティア - 最終目的地クリア後：揮発性の弱体効果が絶大な力に置き換わる。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },
@@ -4160,17 +4160,17 @@
         "_name": "Mercenary Helga",
         "skills": {
             "S1": {
-                "name": "Armor Rend",
-                "description": "Attacks with an axe, with a 50% chance to decrease Defense for 2 turns."
+                "name": "鎧裂き",
+                "description": "斧で攻撃し、50%の確率で2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Attack Chain",
-                "description": "Strongly slams the enemy with an axe, with a 75% chance to decrease Defense for 2 turns. A critical hit will extend any buffs granted to the caster by 1 turn."
+                "name": "連鎖攻撃",
+                "description": "斧で敵を強く叩きつけ、75%の確率で2ターンの間防御力をダウンさせる。クリティカルが発生すると、発動者の強化効果の持続時間が1ターン延長される。"
             },
             "S3": {
-                "name": "Cry of Victory",
-                "description": "Encourages all allies, increasing Attack and Effectiveness for 2 turns before increasing Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "勝利の雄叫び",
+                "description": "味方全員を激励し、2ターンの間攻撃力と効果命中をアップさせた後、発動者の行動ゲージを50%増加させる。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },

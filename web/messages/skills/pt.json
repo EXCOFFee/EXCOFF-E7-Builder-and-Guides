@@ -4035,17 +4035,17 @@
         "_name": "Mascot Hazel",
         "skills": {
             "S1": {
-                "name": "Book of Fire",
-                "description": "Attacks with fire magic, with a 50% chance to make unhealable for 2 turns."
+                "name": "Livro do fogo",
+                "description": "Ataca com magia de fogo, com 50% de chance de aplicar impedimento de cura por 2 turnos."
             },
             "S2": {
-                "name": "Urgent Regen",
-                "description": "Heals the target proportional to the caster's Attack and the target's max Health, before increasing Combat Readiness of the caster by 15%. Amount recovered is doubled when the target's Health is 50% or less."
+                "name": "Regeneração urgente",
+                "description": "Cura o alvo proporcionalmente ao Ataque do conjurador e à Vida máxima do alvo, depois aumenta a Prontidão de Combate do conjurador em 15%. A quantidade recuperada dobra quando a Vida do alvo é 50% ou menos."
             },
             "S3": {
-                "name": "A Girl in Uniform",
-                "description": "Encourages allies by increasing Attack of the target and all other allies for 2 turns before recovering Health of all allies and dispelling one debuff. When the target is a Fire elemental hero, grants the target increased Attack (Greater) instead. Amount recovered is proportional to the target's max Health and the caster's Attack.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Uma garota de uniforme",
+                "description": "Encoraja os aliados aumentando o Ataque do alvo e de todos os outros aliados por 2 turnos, depois recupera a Vida de todos os aliados e dissipa um efeito negativo. Quando o alvo é um herói do elemento Fogo, concede ao alvo Aumentar Ataque (maior) no lugar. A quantidade recuperada é proporcional à Vida máxima do alvo e ao Ataque do conjurador.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -4053,17 +4053,17 @@
         "_name": "Maya",
         "skills": {
             "S1": {
-                "name": "Weakening Blow",
-                "description": "Attacks with a blunt weapon, with a 35% chance to stun for 1 turn. Damage dealt increases proportional to the caster's Defense."
+                "name": "Golpe enfraquecedor",
+                "description": "Ataca com uma arma contundente, com 35% de chance de atordoar por 1 turno. O dano causado aumenta proporcionalmente à Defesa do conjurador."
             },
             "S2": {
-                "name": "Concuss",
-                "description": "Attacks with a shield, with a 100% chance each to stun for 1 turn before decreasing Combat Readiness by 30%. Damage dealt increases proportional to the caster's Defense.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Concussão",
+                "description": "Ataca com um escudo, com 100% de chance de atordoar por 1 turno, depois diminui a Prontidão de Combate em 30%. O dano causado aumenta proporcionalmente à Defesa do conjurador.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             },
             "S3": {
-                "name": "Morale Boost",
-                "description": "Has a 75% chance to inflict provoke for 1 turn and a 100% chance to inflict decreased Attack for 2 turns on all enemies. Grants increased Defense to all allies for 2 turns."
+                "name": "Moral elevada",
+                "description": "Tem 75% de chance de aplicar provocação por 1 turno e 100% de chance de aplicar Diminuir Ataque por 2 turnos a todos os inimigos. Concede Aumentar Defesa a todos os aliados por 2 turnos."
             }
         }
     },
@@ -4071,17 +4071,17 @@
         "_name": "Mediator Kawerik",
         "skills": {
             "S1": {
-                "name": "Retribution",
-                "description": "Dashes toward the enemy to attack, increasing Combat Readiness of the caster by 15% and the ally except for the caster with the highest Combat Readiness by 15%. Damage dealt increases proportional to the caster's max Health."
+                "name": "Retribuição",
+                "description": "Avança contra o inimigo para atacar, aumentando em 15% a Prontidão de Combate do conjurador e em 15% a do aliado com maior Prontidão de Combate, exceto o conjurador. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Balance of Power",
-                "description": "Attacks the enemy with the mediator's power, dispelling all buffs before inflicting decreased Attack for 2 turns, and grants a barrier (proportional to the target's max Health) to all allies for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "Equilíbrio de poder",
+                "description": "Ataca o inimigo com o poder do mediador, dissipando todos os efeitos positivos antes de aplicar Diminuir Ataque por 2 turnos, e concede uma barreira (proporcional à Vida máxima do alvo) a todos os aliados por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Nature Restoration",
-                "description": "By restoring balance that has been destroyed, dispels all debuffs from all allies and grants increased Attack and immunity for 2 turns. Increases Combat Readiness of the caster by 50%. When this skill is not on cooldown, at the start of the turn, decreases debuff durations of the caster by 1 turn.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Restauração da natureza",
+                "description": "Restaurando o equilíbrio que foi destruído, dissipa todos os efeitos negativos de todos os aliados e concede Aumentar Ataque e imunidade por 2 turnos. Aumenta a Prontidão de Combate do conjurador em 50%. Quando esta habilidade não está em recarga, no início do turno, diminui a duração dos efeitos negativos do conjurador em 1 turno.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -4089,16 +4089,16 @@
         "_name": "Mei Lin",
         "skills": {
             "S1": {
-                "name": "Strike",
-                "description": "Attacks the enemy with a fist, before increasing Combat Readiness of the caster by 25% and decreasing skill cooldowns by 1 turn. A successful attack always results in a critical hit."
+                "name": "Golpe",
+                "description": "Ataca o inimigo com um soco, depois aumenta a Prontidão de Combate do conjurador em 25% e diminui as recargas de habilidades em 1 turno. Um ataque bem-sucedido sempre resulta em acerto crítico."
             },
             "S2": {
-                "name": "Rising Dragon Spire",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks the enemy with a kick, and when the enemy is defeated, inflicts extinction. A successful attack always results in a critical hit. When a Fire elemental ally uses a skill, grants zeal, which enhances Rising Dragon Spire."
+                "name": "Ascensão do dragão",
+                "description": "Após conceder Aumentar Ataque ao conjurador por 2 turnos, ataca o inimigo com um chute e, ao derrotá-lo, aplica extinção. Um ataque bem-sucedido sempre resulta em acerto crítico. Quando um aliado do elemento Fogo usa uma habilidade, concede fervor, que aprimora Ascensão do dragão."
             },
             "S3": {
-                "name": "Heavenly Flame Dragon",
-                "description": "Fully recovers Health of the caster and grants an extra turn. On the next attack, grants an extra attack with the same skill. Begins the first battle with full skill cooldown count, and the lower stat between Attack and Defense becomes equal to the higher stat."
+                "name": "Dragão da chama celestial",
+                "description": "Recupera totalmente a Vida do conjurador e concede um turno extra. No próximo ataque, concede um ataque extra com a mesma habilidade. Começa a primeira batalha com a recarga da habilidade completa, e o menor atributo entre Ataque e Defesa passa a ser igual ao maior."
             }
         }
     },
@@ -4106,17 +4106,17 @@
         "_name": "Melany",
         "skills": {
             "S1": {
-                "name": "Freeze!",
-                "description": "Attacks the enemy, with a 40% chance to stun for 1 turn.",
-                "soulburn_effect": "Effect chance increases by 60% and a successful attack always results in a critical hit."
+                "name": "Parado!",
+                "description": "Ataca o inimigo, com 40% de chance de atordoar por 1 turno.",
+                "soulburn_effect": "A chance do efeito aumenta 60% e um ataque bem-sucedido sempre resulta em acerto crítico."
             },
             "S2": {
-                "name": "Agility",
-                "description": "When attacked, has a 25% chance to decrease damage suffered by 50%. When more than one damage reduction effect is granted, only the strongest effect is applied. At the end of the turn, increases Combat Readiness of the caster by 15%."
+                "name": "Agilidade",
+                "description": "Ao ser atacado, tem 25% de chance de diminuir o dano sofrido em 50%. Quando mais de um efeito de redução de dano é concedido, só o mais forte é aplicado. No fim do turno, aumenta a Prontidão de Combate do conjurador em 15%."
             },
             "S3": {
-                "name": "I'll Blow You Up!",
-                "description": "Attacks all enemies, decreasing Speed and inflicting stigma for 2 turns. A successful attack always results in a critical hit."
+                "name": "Vou explodir você!",
+                "description": "Ataca todos os inimigos, diminuindo a Velocidade e aplicando estigma por 2 turnos. Um ataque bem-sucedido sempre resulta em acerto crítico."
             }
         }
     },
@@ -4124,17 +4124,17 @@
         "_name": "Melissa",
         "skills": {
             "S1": {
-                "name": "Might",
-                "description": "Overpowers the enemy, with a 75% chance to make them unhealable for 1 turn. Damage dealt increases proportional to the caster's lost Health."
+                "name": "Poder",
+                "description": "Domina o inimigo, com 75% de chance de aplicar impedimento de cura por 1 turno. O dano causado aumenta proporcionalmente à Vida perdida do conjurador."
             },
             "S2": {
-                "name": "Manifestation",
-                "description": "Attacks the enemy by unleashing their inner rage, before granting immortality and immunity to the caster for 1 turn. When the enemy is defeated, resets cooldown of this skill."
+                "name": "Manifestação",
+                "description": "Ataca o inimigo liberando sua fúria interior, depois concede imortalidade e imunidade ao conjurador por 1 turno. Ao derrotar o inimigo, reinicia a recarga desta habilidade."
             },
             "S3": {
-                "name": "Blood Bloom",
-                "description": "After dispelling all buffs from the target, attacks the enemy by releasing pent-up aggression. Unaffected by elemental disadvantage and grants an extra turn. When the target is not an Elite or Boss monster, regardless of whether the attack hits, inflicts curse for 2 turns.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Florescer de sangue",
+                "description": "Após dissipar todos os efeitos positivos do alvo, ataca o inimigo liberando a agressividade reprimida. Não é afetado por desvantagem elemental e concede um turno extra. Quando o alvo não é um monstro Elite ou Chefe, independentemente de o ataque acertar, aplica maldição por 2 turnos.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -4142,17 +4142,17 @@
         "_name": "Mercedes",
         "skills": {
             "S1": {
-                "name": "Divine Bolt",
-                "description": "Attacks two enemies with shock magic, before increasing Combat Readiness of the caster by 15%."
+                "name": "Raio divino",
+                "description": "Ataca dois inimigos com magia de choque, depois aumenta a Prontidão de Combate do conjurador em 15%."
             },
             "S2": {
-                "name": "Dimensional Rupture",
-                "description": "Attacks all enemies with a light sphere, with a 70% chance to dispel one buff. When the caster is granted increased Attack, grants an extra attack with the same skill."
+                "name": "Ruptura dimensional",
+                "description": "Ataca todos os inimigos com uma esfera de luz, com 70% de chance de dissipar um efeito positivo. Quando o conjurador tem Aumentar Ataque, concede um ataque extra com a mesma habilidade."
             },
             "S3": {
-                "name": "Blazing Eye of Kal",
-                "description": "Releases the power of the Ancient Book to attack all enemies before increasing Attack of all allies for 2 turns. After completing Eureka - 10. East Politia - 10-10. Central Control Room: Volatility will remain throughout the battle. After completing Eureka - 10. East Politia - The Final Destination: Volatility debuff is replaced by Immense Power.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Olho flamejante de Kal",
+                "description": "Libera o poder do Livro Antigo para atacar todos os inimigos, depois aumenta o Ataque de todos os aliados por 2 turnos. Após concluir Eureka - 10. Politia Leste - 10-10. Sala de controle central: Volatilidade permanece durante toda a batalha. Após concluir Eureka - 10. Politia Leste - O destino final: o efeito negativo Volatilidade é substituído por Poder imenso.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -4160,17 +4160,17 @@
         "_name": "Mercenary Helga",
         "skills": {
             "S1": {
-                "name": "Armor Rend",
-                "description": "Attacks with an axe, with a 50% chance to decrease Defense for 2 turns."
+                "name": "Rasgar armadura",
+                "description": "Ataca com um machado, com 50% de chance de diminuir a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Attack Chain",
-                "description": "Strongly slams the enemy with an axe, with a 75% chance to decrease Defense for 2 turns. A critical hit will extend any buffs granted to the caster by 1 turn."
+                "name": "Ataque em cadeia",
+                "description": "Golpeia o inimigo com força com um machado, com 75% de chance de diminuir a Defesa por 2 turnos. Um acerto crítico estende em 1 turno os efeitos positivos concedidos ao conjurador."
             },
             "S3": {
-                "name": "Cry of Victory",
-                "description": "Encourages all allies, increasing Attack and Effectiveness for 2 turns before increasing Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Grito de vitória",
+                "description": "Encoraja todos os aliados, aumentando o Ataque e a Eficácia por 2 turnos, depois aumenta a Prontidão de Combate do conjurador em 50%.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
