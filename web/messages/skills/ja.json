@@ -3586,17 +3586,17 @@
         "_name": "Last Piece Karin",
         "skills": {
             "S1": {
-                "name": "Vacuum Strike",
-                "description": "Attacks the enemy with a sword, and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "真空斬り",
+                "description": "剣で敵を攻撃し、発動者の行動ゲージを15%増加させる。発動者のスピードに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S2": {
-                "name": "Phantom Strike",
-                "description": "Attacks the enemy, decreasing Combat Readiness by 30%, before granting stealth and a barrier (proportional to the caster's Attack) to the caster for 3 turns. Increases Hit Chance of this skill by 50%. Damage dealt increases proportional to the caster's Speed."
+                "name": "幻影撃",
+                "description": "敵を攻撃し、行動ゲージを30%減少させた後、発動者に3ターンの間隠密とバリア（発動者の攻撃力に比例）を付与する。このスキルの命中率が50%アップする。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Blade Art: Infinite Sword",
-                "description": "Becomes one with the sword, granting increased Attack and Phantom Sword to the caster for 3 turns. Grants an extra turn."
+                "name": "剣術：無限剣",
+                "description": "剣と一体となり、発動者に3ターンの間攻撃力アップと幻影剣を付与する。追加ターンを得る。"
             }
         }
     },
@@ -3604,17 +3604,17 @@
         "_name": "Last Rider Krau",
         "skills": {
             "S1": {
-                "name": "Punishment",
-                "description": "Attacks the enemy with a swordstorm, before increasing Speed of the caster for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "懲罰",
+                "description": "剣嵐で敵を攻撃した後、1ターンの間発動者のスピードをアップさせる。発動者の最大HPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Code Number 00",
-                "description": "After being attacked, decreases skill cooldowns by 1 turn. After suffering an attack that targets all allies, decreases skill cooldowns by an additional 1 turn, and grants a barrier (proportional to the caster's max Health) to all allies for 2 turns."
+                "name": "コードナンバー00",
+                "description": "攻撃された後、スキルのクールタイムを1ターン短縮する。味方全体を対象とする攻撃を受けた後、スキルのクールタイムをさらに1ターン短縮し、味方全員に2ターンの間バリア（発動者の最大HPに比例）を付与する。"
             },
             "S3": {
-                "name": "Mobile Weapon Ziegfried",
-                "description": "Summons Ziegfried to attack all enemies, before granting immunity to all allies for 2 turns and decreasing skill cooldowns by 1 turn. Penetrates Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health and Speed. Damage dealt increases every time this skill is used and can stack up to 3 times.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "機動兵器ジークフリード",
+                "description": "ジークフリードを召喚して敵全体を攻撃した後、味方全員に2ターンの間免疫を付与し、スキルのクールタイムを1ターン短縮する。防御力を貫通するが、クリティカルや強打は発生しない。発動者の最大HPとスピードに比例して与ダメージがアップする。このスキルを使用するたびに与ダメージがアップし、最大3回まで重複する。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             }
         }
     },
@@ -3622,17 +3622,17 @@
         "_name": "Leah",
         "skills": {
             "S1": {
-                "name": "Swift Fire",
-                "description": "Attacks the enemy with a pistol, decreasing Combat Readiness by 15%. When the caster is granted exploiting weak points, uses Explosive Fire instead of Swift Fire. Explosive Fire: Attacks the enemy, decreasing buff durations by 1 turn and silencing for 1 turn before decreasing Combat Readiness by 30%. Damage dealt increases proportional to the caster's Speed. This attack does not trigger a Dual Attack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "迅速射撃",
+                "description": "拳銃で敵を攻撃し、行動ゲージを15%減少させる。発動者に弱点把握があれば、迅速射撃の代わりに爆発射撃を使用する。爆発射撃：敵を攻撃し、強化効果の持続時間を1ターン減少させ、1ターンの間沈黙を付与した後、行動ゲージを30%減少させる。発動者のスピードに比例して与ダメージがアップする。この攻撃では協攻が発動しない。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S2": {
-                "name": "Power of Harmony",
-                "description": "At the start of the first battle, when all allies are of different elements, acquires 10 Soul and has a 100% chance to increase Attack of all allies for 2 turns."
+                "name": "調和の力",
+                "description": "最初のバトル開始時、味方全員の属性が異なる場合、ソウルを10獲得し、100%の確率で2ターンの間味方全員の攻撃力をアップさせる。"
             },
             "S3": {
-                "name": "Battle Preparation",
-                "description": "Increases Critical Hit Damage of all allies for 2 turns, and grants exploiting weak points to the caster. Grants an extra turn to the caster."
+                "name": "戦闘準備",
+                "description": "2ターンの間味方全員のクリティカルダメージをアップさせ、発動者に弱点把握を付与する。発動者は追加ターンを得る。"
             }
         }
     },
@@ -3640,17 +3640,17 @@
         "_name": "Lena",
         "skills": {
             "S1": {
-                "name": "You're Soft",
-                "description": "Attacks with a strong fist, increasing the caster's Combat Readiness by 20%."
+                "name": "ヤワだね",
+                "description": "強い拳で攻撃し、発動者の行動ゲージを20%増加させる。"
             },
             "S2": {
-                "name": "Power Strike",
-                "description": "Increases Critical Hit Chance by 50%."
+                "name": "パワーストライク",
+                "description": "クリティカル率が50%アップする。"
             },
             "S3": {
-                "name": "Exposed!",
-                "description": "Attacks all enemies with a powerful storm, decreasing Combat Readiness by 20%, before increasing Attack of the caster for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "丸見え！",
+                "description": "強力な嵐で敵全体を攻撃し、行動ゲージを20%減少させた後、2ターンの間発動者の攻撃力をアップさせる。敵の失ったHPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップする。"
             }
         }
     },
@@ -3658,17 +3658,17 @@
         "_name": "Leo",
         "skills": {
             "S1": {
-                "name": "Sparrow Dive",
-                "description": "Attacks the enemy with a slingshot, with a 35% chance to inflict stun for 1 turn."
+                "name": "スズメダイブ",
+                "description": "パチンコで敵を攻撃し、35%の確率で1ターンの間気絶させる。"
             },
             "S2": {
-                "name": "Fox Hunt",
-                "description": "Attacks with a slingshot, with a 100% chance to decrease Defense for 2 turns, and a 50% chance to use Sparrow Dive.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "狐狩り",
+                "description": "パチンコで攻撃し、100%の確率で2ターンの間防御力をダウンさせ、50%の確率でスズメダイブを使用する。",
+                "soulburn_effect": "スキルのクールタイムが2ターン短縮される。"
             },
             "S3": {
-                "name": "Flying Racoo",
-                "description": "Racoo attacks all enemies by firing bullets, inflicting decreased Speed for 2 turns and a 75% chance to inflict stun for 1 turn."
+                "name": "空飛ぶラクー",
+                "description": "ラクーが弾を発射して敵全体を攻撃し、2ターンの間スピードダウンを付与し、75%の確率で1ターンの間気絶させる。"
             }
         }
     },
@@ -3676,17 +3676,17 @@
         "_name": "Lethe",
         "skills": {
             "S1": {
-                "name": "Wave Slash",
-                "description": "Attacks the enemy with a sword, before granting increased Speed to the caster for 1 turn. After attacking, when the target's omen is 3, consumes all, activating Call of the Abyss. Call of the Abyss: Calls forth a deep sea creature to attack the enemy, and when the enemy is defeated, inflicts extinction and recovers Health of all allies, before increasing Combat Readiness of the caster by 50%. Cannot trigger a critical hit, and penetrates the target's Defense. Amount recovered and damage dealt increase proportional to the caster's max Health."
+                "name": "波斬り",
+                "description": "剣で敵を攻撃した後、発動者に1ターンの間スピードアップを付与する。攻撃後、対象の兆しが3なら、すべて消費して深淵の呼び声を発動する。深淵の呼び声：深海の生物を呼び出して敵を攻撃し、敵を倒すと消滅を付与し、味方全員のHPを回復した後、発動者の行動ゲージを50%増加させる。クリティカルが発生せず、対象の防御力を貫通する。発動者の最大HPに比例して回復量と与ダメージがアップする。"
             },
             "S2": {
-                "name": "Dreamer in the Deep",
-                "description": "Increases Health by 10%. Does not cost any Soul to activate the caster's first Soulburn. When attacking has a 100% chance to inflict one omen on the target."
+                "name": "深海の夢想家",
+                "description": "HPが10%アップする。発動者の最初のソウルバーンはソウルを消費しない。攻撃時、100%の確率で対象に兆しを一つ付与する。"
             },
             "S3": {
-                "name": "Freeze Over",
-                "description": "Attacks all enemies with a frozen mass, decreasing buff durations by 2 turns before a 100% chance each to inflict frostbite and restrict for 2 turns. Ignores Effect Resistance of any targets with max Health lower than the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "氷結",
+                "description": "凍りついた塊で敵全体を攻撃し、強化効果の持続時間を2ターン減少させた後、それぞれ100%の確率で2ターンの間凍傷と制約を付与する。最大HPが発動者より低い対象の効果抵抗を無視する。",
+                "soulburn_effect": "追加ターンを得る。"
             }
         }
     },
@@ -3694,17 +3694,17 @@
         "_name": "Lidica",
         "skills": {
             "S1": {
-                "name": "Wild Rose",
-                "description": "Attacks the enemy with a sword and has a 80% chance each to inflict two bleeding effects for 2 turns. At the end of the turn, detonates bleeding effects inflicted on the target."
+                "name": "野ばら",
+                "description": "剣で敵を攻撃し、それぞれ80%の確率で2ターンの間出血を二つ付与する。ターン終了時、対象の出血を爆発させる。"
             },
             "S2": {
-                "name": "Thornbush",
-                "description": "Inflicts resource reduction on all enemies by 60% before attacking, dispelling all buffs and inflicting bind for 2 turns. For every target, increases Combat Readiness of the caster by 25%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "茨の茂み",
+                "description": "敵全体に60%の資源減少を付与した後に攻撃し、強化効果をすべて解除し、2ターンの間拘束を付与する。対象一体につき、発動者の行動ゲージを25%増加させる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             },
             "S3": {
-                "name": "Public Execution",
-                "description": "Attacks the enemy with a whip sword, inflicting decreased Defense for 2 turns before decreasing Combat Readiness by 100%. Grants skill nullifier once to all allies. When the target is inflicted with bind, ignores Effect Resistance."
+                "name": "公開処刑",
+                "description": "鞭剣で敵を攻撃し、2ターンの間防御力ダウンを付与した後、行動ゲージを100%減少させる。味方全員にスキルダメージ無効を一度付与する。対象が拘束状態なら効果抵抗を無視する。"
             }
         }
     },
@@ -3712,17 +3712,17 @@
         "_name": "Lilias",
         "skills": {
             "S1": {
-                "name": "Follow Me! Charge!",
-                "description": "Takes the lead to attack the enemy, and triggers a Dual Attack from a random ally. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "続け！突撃！",
+                "description": "先頭に立って敵を攻撃し、ランダムな味方が協攻する。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "That's Far Enough!",
-                "description": "Increases Critical Hit Chance by 50%. After an enemy uses a non-attack skill, dispels all debuffs from the caster, and activates Suppression against the enemy caster. Suppression: Inflicts provoke on the target for 1 turn, and grants a barrier (proportional to the caster's max Health) to the caster for 2 turns."
+                "name": "そこまでだ！",
+                "description": "クリティカル率が50%アップする。敵が攻撃以外のスキルを使用した後、発動者の弱体効果をすべて解除し、その敵に制圧を発動する。制圧：対象に1ターンの間挑発を付与し、発動者に2ターンの間バリア（発動者の最大HPに比例）を付与する。"
             },
             "S3": {
-                "name": "Ready, Load, Fire!",
-                "description": "Dispels all debuffs from all allies and commands the Perland Army to attack by firing on all enemies, before decreasing Combat Readiness by 25%. Inflicts damage according to the Attack of the ally with the highest Attack. When the target is provoked, damage dealt increases."
+                "name": "構え、装填、撃て！",
+                "description": "味方全員の弱体効果をすべて解除し、パーランド軍に命じて敵全体を射撃で攻撃した後、行動ゲージを25%減少させる。攻撃力が最も高い味方の攻撃力に応じてダメージを与える。対象が挑発状態なら与ダメージがアップする。"
             }
         }
     },

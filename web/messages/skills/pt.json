@@ -3586,17 +3586,17 @@
         "_name": "Last Piece Karin",
         "skills": {
             "S1": {
-                "name": "Vacuum Strike",
-                "description": "Attacks the enemy with a sword, and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Golpe do vácuo",
+                "description": "Ataca o inimigo com uma espada e aumenta a Prontidão de Combate do conjurador em 15%. O dano causado aumenta proporcionalmente à Velocidade do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "Phantom Strike",
-                "description": "Attacks the enemy, decreasing Combat Readiness by 30%, before granting stealth and a barrier (proportional to the caster's Attack) to the caster for 3 turns. Increases Hit Chance of this skill by 50%. Damage dealt increases proportional to the caster's Speed."
+                "name": "Golpe fantasma",
+                "description": "Ataca o inimigo, diminuindo a Prontidão de Combate em 30%, depois concede furtividade e uma barreira (proporcional ao Ataque do conjurador) ao conjurador por 3 turnos. Aumenta a Precisão desta habilidade em 50%. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S3": {
-                "name": "Blade Art: Infinite Sword",
-                "description": "Becomes one with the sword, granting increased Attack and Phantom Sword to the caster for 3 turns. Grants an extra turn."
+                "name": "Arte da lâmina: espada infinita",
+                "description": "Torna-se uma só com a espada, concedendo Aumentar Ataque e Espada fantasma ao conjurador por 3 turnos. Concede um turno extra."
             }
         }
     },
@@ -3604,17 +3604,17 @@
         "_name": "Last Rider Krau",
         "skills": {
             "S1": {
-                "name": "Punishment",
-                "description": "Attacks the enemy with a swordstorm, before increasing Speed of the caster for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "Punição",
+                "description": "Ataca o inimigo com uma tempestade de espadas, depois aumenta a Velocidade do conjurador por 1 turno. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Code Number 00",
-                "description": "After being attacked, decreases skill cooldowns by 1 turn. After suffering an attack that targets all allies, decreases skill cooldowns by an additional 1 turn, and grants a barrier (proportional to the caster's max Health) to all allies for 2 turns."
+                "name": "Código número 00",
+                "description": "Após ser atacado, diminui as recargas de habilidades em 1 turno. Após sofrer um ataque que mira todos os aliados, diminui as recargas de habilidades em mais 1 turno e concede uma barreira (proporcional à Vida máxima do conjurador) a todos os aliados por 2 turnos."
             },
             "S3": {
-                "name": "Mobile Weapon Ziegfried",
-                "description": "Summons Ziegfried to attack all enemies, before granting immunity to all allies for 2 turns and decreasing skill cooldowns by 1 turn. Penetrates Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health and Speed. Damage dealt increases every time this skill is used and can stack up to 3 times.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Arma móvel Ziegfried",
+                "description": "Invoca Ziegfried para atacar todos os inimigos, depois concede imunidade a todos os aliados por 2 turnos e diminui as recargas de habilidades em 1 turno. Penetra a Defesa, mas não pode causar acerto crítico nem golpe pesado. O dano causado aumenta proporcionalmente à Vida máxima e à Velocidade do conjurador. O dano causado aumenta cada vez que esta habilidade é usada e acumula até 3 vezes.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -3622,17 +3622,17 @@
         "_name": "Leah",
         "skills": {
             "S1": {
-                "name": "Swift Fire",
-                "description": "Attacks the enemy with a pistol, decreasing Combat Readiness by 15%. When the caster is granted exploiting weak points, uses Explosive Fire instead of Swift Fire. Explosive Fire: Attacks the enemy, decreasing buff durations by 1 turn and silencing for 1 turn before decreasing Combat Readiness by 30%. Damage dealt increases proportional to the caster's Speed. This attack does not trigger a Dual Attack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Disparo veloz",
+                "description": "Ataca o inimigo com uma pistola, diminuindo a Prontidão de Combate em 15%. Quando o conjurador tem Exploração de pontos fracos, usa Disparo explosivo em vez de Disparo veloz. Disparo explosivo: ataca o inimigo, diminuindo a duração dos efeitos positivos em 1 turno e silenciando por 1 turno, depois diminui a Prontidão de Combate em 30%. O dano causado aumenta proporcionalmente à Velocidade do conjurador. Este ataque não ativa Ataque duplo.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S2": {
-                "name": "Power of Harmony",
-                "description": "At the start of the first battle, when all allies are of different elements, acquires 10 Soul and has a 100% chance to increase Attack of all allies for 2 turns."
+                "name": "Poder da harmonia",
+                "description": "No início da primeira batalha, quando todos os aliados são de elementos diferentes, adquire 10 de Alma e tem 100% de chance de aumentar o Ataque de todos os aliados por 2 turnos."
             },
             "S3": {
-                "name": "Battle Preparation",
-                "description": "Increases Critical Hit Damage of all allies for 2 turns, and grants exploiting weak points to the caster. Grants an extra turn to the caster."
+                "name": "Preparação para a batalha",
+                "description": "Aumenta o Dano Crítico de todos os aliados por 2 turnos e concede Exploração de pontos fracos ao conjurador. Concede um turno extra ao conjurador."
             }
         }
     },
@@ -3640,17 +3640,17 @@
         "_name": "Lena",
         "skills": {
             "S1": {
-                "name": "You're Soft",
-                "description": "Attacks with a strong fist, increasing the caster's Combat Readiness by 20%."
+                "name": "Você é fraco",
+                "description": "Ataca com um punho forte, aumentando a Prontidão de Combate do conjurador em 20%."
             },
             "S2": {
-                "name": "Power Strike",
-                "description": "Increases Critical Hit Chance by 50%."
+                "name": "Golpe poderoso",
+                "description": "Aumenta a Chance de Crítico em 50%."
             },
             "S3": {
-                "name": "Exposed!",
-                "description": "Attacks all enemies with a powerful storm, decreasing Combat Readiness by 20%, before increasing Attack of the caster for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Exposto!",
+                "description": "Ataca todos os inimigos com uma tempestade poderosa, diminuindo a Prontidão de Combate em 20%, depois aumenta o Ataque do conjurador por 2 turnos. O dano causado aumenta proporcionalmente à Vida perdida do inimigo.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -3658,17 +3658,17 @@
         "_name": "Leo",
         "skills": {
             "S1": {
-                "name": "Sparrow Dive",
-                "description": "Attacks the enemy with a slingshot, with a 35% chance to inflict stun for 1 turn."
+                "name": "Mergulho do pardal",
+                "description": "Ataca o inimigo com um estilingue, com 35% de chance de atordoar por 1 turno."
             },
             "S2": {
-                "name": "Fox Hunt",
-                "description": "Attacks with a slingshot, with a 100% chance to decrease Defense for 2 turns, and a 50% chance to use Sparrow Dive.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Caça à raposa",
+                "description": "Ataca com um estilingue, com 100% de chance de diminuir a Defesa por 2 turnos e 50% de chance de usar Mergulho do pardal.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             },
             "S3": {
-                "name": "Flying Racoo",
-                "description": "Racoo attacks all enemies by firing bullets, inflicting decreased Speed for 2 turns and a 75% chance to inflict stun for 1 turn."
+                "name": "Racoo voador",
+                "description": "Racoo ataca todos os inimigos disparando projéteis, aplicando Diminuir Velocidade por 2 turnos e com 75% de chance de atordoar por 1 turno."
             }
         }
     },
@@ -3676,17 +3676,17 @@
         "_name": "Lethe",
         "skills": {
             "S1": {
-                "name": "Wave Slash",
-                "description": "Attacks the enemy with a sword, before granting increased Speed to the caster for 1 turn. After attacking, when the target's omen is 3, consumes all, activating Call of the Abyss. Call of the Abyss: Calls forth a deep sea creature to attack the enemy, and when the enemy is defeated, inflicts extinction and recovers Health of all allies, before increasing Combat Readiness of the caster by 50%. Cannot trigger a critical hit, and penetrates the target's Defense. Amount recovered and damage dealt increase proportional to the caster's max Health."
+                "name": "Corte da onda",
+                "description": "Ataca o inimigo com uma espada, depois concede Aumentar Velocidade ao conjurador por 1 turno. Após atacar, quando o presságio do alvo é 3, consome todos, ativando Chamado do abismo. Chamado do abismo: invoca uma criatura do mar profundo para atacar o inimigo e, ao derrotá-lo, aplica extinção e recupera a Vida de todos os aliados, depois aumenta a Prontidão de Combate do conjurador em 50%. Não pode causar acerto crítico e penetra a Defesa do alvo. A quantidade recuperada e o dano causado aumentam proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Dreamer in the Deep",
-                "description": "Increases Health by 10%. Does not cost any Soul to activate the caster's first Soulburn. When attacking has a 100% chance to inflict one omen on the target."
+                "name": "Sonhadora das profundezas",
+                "description": "Aumenta a Vida em 10%. A primeira Queima de Alma do conjurador não custa Alma. Ao atacar, tem 100% de chance de aplicar um presságio ao alvo."
             },
             "S3": {
-                "name": "Freeze Over",
-                "description": "Attacks all enemies with a frozen mass, decreasing buff durations by 2 turns before a 100% chance each to inflict frostbite and restrict for 2 turns. Ignores Effect Resistance of any targets with max Health lower than the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Congelamento total",
+                "description": "Ataca todos os inimigos com uma massa congelada, diminuindo a duração dos efeitos positivos em 2 turnos, depois com 100% de chance cada aplica congelamento e restrição por 2 turnos. Ignora a Resistência a Efeitos dos alvos com Vida máxima menor que a do conjurador.",
+                "soulburn_effect": "Concede um turno extra."
             }
         }
     },
@@ -3694,17 +3694,17 @@
         "_name": "Lidica",
         "skills": {
             "S1": {
-                "name": "Wild Rose",
-                "description": "Attacks the enemy with a sword and has a 80% chance each to inflict two bleeding effects for 2 turns. At the end of the turn, detonates bleeding effects inflicted on the target."
+                "name": "Rosa selvagem",
+                "description": "Ataca o inimigo com uma espada e tem 80% de chance cada de aplicar dois efeitos de sangramento por 2 turnos. No fim do turno, detona os sangramentos aplicados ao alvo."
             },
             "S2": {
-                "name": "Thornbush",
-                "description": "Inflicts resource reduction on all enemies by 60% before attacking, dispelling all buffs and inflicting bind for 2 turns. For every target, increases Combat Readiness of the caster by 25%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Espinheiro",
+                "description": "Aplica redução de recursos de 60% a todos os inimigos antes de atacar, dissipando todos os efeitos positivos e aplicando amarra por 2 turnos. Para cada alvo, aumenta a Prontidão de Combate do conjurador em 25%.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             },
             "S3": {
-                "name": "Public Execution",
-                "description": "Attacks the enemy with a whip sword, inflicting decreased Defense for 2 turns before decreasing Combat Readiness by 100%. Grants skill nullifier once to all allies. When the target is inflicted with bind, ignores Effect Resistance."
+                "name": "Execução pública",
+                "description": "Ataca o inimigo com uma espada-chicote, aplicando Diminuir Defesa por 2 turnos, depois diminui a Prontidão de Combate em 100%. Concede Anulação de habilidade uma vez a todos os aliados. Quando o alvo tem amarra, ignora a Resistência a Efeitos."
             }
         }
     },
@@ -3712,17 +3712,17 @@
         "_name": "Lilias",
         "skills": {
             "S1": {
-                "name": "Follow Me! Charge!",
-                "description": "Takes the lead to attack the enemy, and triggers a Dual Attack from a random ally. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Sigam-me! Ataquem!",
+                "description": "Toma a dianteira para atacar o inimigo, e um aliado aleatório realiza um Ataque duplo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "That's Far Enough!",
-                "description": "Increases Critical Hit Chance by 50%. After an enemy uses a non-attack skill, dispels all debuffs from the caster, and activates Suppression against the enemy caster. Suppression: Inflicts provoke on the target for 1 turn, and grants a barrier (proportional to the caster's max Health) to the caster for 2 turns."
+                "name": "Já chega!",
+                "description": "Aumenta a Chance de Crítico em 50%. Após um inimigo usar uma habilidade que não é de ataque, dissipa todos os efeitos negativos do conjurador e ativa Supressão contra o inimigo que a usou. Supressão: aplica provocação ao alvo por 1 turno e concede uma barreira (proporcional à Vida máxima do conjurador) ao conjurador por 2 turnos."
             },
             "S3": {
-                "name": "Ready, Load, Fire!",
-                "description": "Dispels all debuffs from all allies and commands the Perland Army to attack by firing on all enemies, before decreasing Combat Readiness by 25%. Inflicts damage according to the Attack of the ally with the highest Attack. When the target is provoked, damage dealt increases."
+                "name": "Preparar, carregar, fogo!",
+                "description": "Dissipa todos os efeitos negativos de todos os aliados e ordena ao Exército de Perland que ataque disparando contra todos os inimigos, depois diminui a Prontidão de Combate em 25%. Causa dano conforme o Ataque do aliado com maior Ataque. Quando o alvo está provocado, o dano causado aumenta."
             }
         }
     },

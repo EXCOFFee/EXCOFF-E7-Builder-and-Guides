@@ -3586,17 +3586,17 @@
         "_name": "Last Piece Karin",
         "skills": {
             "S1": {
-                "name": "Vacuum Strike",
-                "description": "Attacks the enemy with a sword, and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "진공 베기",
+                "description": "검으로 적을 공격하고 시전자의 행동 게이지를 15% 증가시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Phantom Strike",
-                "description": "Attacks the enemy, decreasing Combat Readiness by 30%, before granting stealth and a barrier (proportional to the caster's Attack) to the caster for 3 turns. Increases Hit Chance of this skill by 50%. Damage dealt increases proportional to the caster's Speed."
+                "name": "환영 일격",
+                "description": "적을 공격해 행동 게이지를 30% 감소시킨 뒤 시전자에게 3턴 동안 은신과 보호막(시전자 공격력 비례)을 부여한다. 이 스킬의 명중률이 50% 증가한다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Blade Art: Infinite Sword",
-                "description": "Becomes one with the sword, granting increased Attack and Phantom Sword to the caster for 3 turns. Grants an extra turn."
+                "name": "검술: 무한검",
+                "description": "검과 하나가 되어 시전자에게 3턴 동안 공격력 증가와 환영검을 부여한다. 추가 턴을 얻는다."
             }
         }
     },
@@ -3604,17 +3604,17 @@
         "_name": "Last Rider Krau",
         "skills": {
             "S1": {
-                "name": "Punishment",
-                "description": "Attacks the enemy with a swordstorm, before increasing Speed of the caster for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "징벌",
+                "description": "검풍으로 적을 공격한 뒤 1턴 동안 시전자의 속도를 증가시킨다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Code Number 00",
-                "description": "After being attacked, decreases skill cooldowns by 1 turn. After suffering an attack that targets all allies, decreases skill cooldowns by an additional 1 turn, and grants a barrier (proportional to the caster's max Health) to all allies for 2 turns."
+                "name": "코드 넘버 00",
+                "description": "공격받은 후 스킬 재사용 대기 시간을 1턴 감소시킨다. 모든 아군을 대상으로 하는 공격을 받은 후 스킬 재사용 대기 시간을 추가로 1턴 감소시키고, 모든 아군에게 2턴 동안 보호막(시전자 최대 생명력 비례)을 부여한다."
             },
             "S3": {
-                "name": "Mobile Weapon Ziegfried",
-                "description": "Summons Ziegfried to attack all enemies, before granting immunity to all allies for 2 turns and decreasing skill cooldowns by 1 turn. Penetrates Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health and Speed. Damage dealt increases every time this skill is used and can stack up to 3 times.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "기동 병기 지크프리트",
+                "description": "지크프리트를 소환해 모든 적을 공격한 뒤 모든 아군에게 2턴 동안 면역을 부여하고 스킬 재사용 대기 시간을 1턴 감소시킨다. 방어력을 관통하지만 치명타나 강타가 발생하지 않는다. 시전자의 최대 생명력과 속도에 비례해 주는 피해가 증가한다. 이 스킬을 사용할 때마다 주는 피해가 증가하며, 최대 3회까지 중첩된다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -3622,17 +3622,17 @@
         "_name": "Leah",
         "skills": {
             "S1": {
-                "name": "Swift Fire",
-                "description": "Attacks the enemy with a pistol, decreasing Combat Readiness by 15%. When the caster is granted exploiting weak points, uses Explosive Fire instead of Swift Fire. Explosive Fire: Attacks the enemy, decreasing buff durations by 1 turn and silencing for 1 turn before decreasing Combat Readiness by 30%. Damage dealt increases proportional to the caster's Speed. This attack does not trigger a Dual Attack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "신속 사격",
+                "description": "권총으로 적을 공격해 행동 게이지를 15% 감소시킨다. 시전자에게 약점 파악이 있으면 신속 사격 대신 폭발 사격을 사용한다. 폭발 사격: 적을 공격해 강화 효과의 지속 시간을 1턴 감소시키고 1턴 동안 침묵을 건 뒤 행동 게이지를 30% 감소시킨다. 시전자의 속도에 비례해 주는 피해가 증가한다. 이 공격으로는 협공이 발동하지 않는다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S2": {
-                "name": "Power of Harmony",
-                "description": "At the start of the first battle, when all allies are of different elements, acquires 10 Soul and has a 100% chance to increase Attack of all allies for 2 turns."
+                "name": "조화의 힘",
+                "description": "첫 번째 전투 시작 시 모든 아군의 속성이 다르면 소울을 10 획득하고, 100% 확률로 2턴 동안 모든 아군의 공격력을 증가시킨다."
             },
             "S3": {
-                "name": "Battle Preparation",
-                "description": "Increases Critical Hit Damage of all allies for 2 turns, and grants exploiting weak points to the caster. Grants an extra turn to the caster."
+                "name": "전투 준비",
+                "description": "2턴 동안 모든 아군의 치명 피해를 증가시키고 시전자에게 약점 파악을 부여한다. 시전자는 추가 턴을 얻는다."
             }
         }
     },
@@ -3640,17 +3640,17 @@
         "_name": "Lena",
         "skills": {
             "S1": {
-                "name": "You're Soft",
-                "description": "Attacks with a strong fist, increasing the caster's Combat Readiness by 20%."
+                "name": "약하네",
+                "description": "강한 주먹으로 공격하고 시전자의 행동 게이지를 20% 증가시킨다."
             },
             "S2": {
-                "name": "Power Strike",
-                "description": "Increases Critical Hit Chance by 50%."
+                "name": "파워 스트라이크",
+                "description": "치명타 확률이 50% 증가한다."
             },
             "S3": {
-                "name": "Exposed!",
-                "description": "Attacks all enemies with a powerful storm, decreasing Combat Readiness by 20%, before increasing Attack of the caster for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "드러났다!",
+                "description": "강력한 폭풍으로 모든 적을 공격해 행동 게이지를 20% 감소시킨 뒤 2턴 동안 시전자의 공격력을 증가시킨다. 적이 잃은 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -3658,17 +3658,17 @@
         "_name": "Leo",
         "skills": {
             "S1": {
-                "name": "Sparrow Dive",
-                "description": "Attacks the enemy with a slingshot, with a 35% chance to inflict stun for 1 turn."
+                "name": "참새 강하",
+                "description": "새총으로 적을 공격하며, 35% 확률로 1턴 동안 기절시킨다."
             },
             "S2": {
-                "name": "Fox Hunt",
-                "description": "Attacks with a slingshot, with a 100% chance to decrease Defense for 2 turns, and a 50% chance to use Sparrow Dive.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "여우 사냥",
+                "description": "새총으로 공격하며, 100% 확률로 2턴 동안 방어력을 감소시키고 50% 확률로 참새 강하를 사용한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             },
             "S3": {
-                "name": "Flying Racoo",
-                "description": "Racoo attacks all enemies by firing bullets, inflicting decreased Speed for 2 turns and a 75% chance to inflict stun for 1 turn."
+                "name": "날아라 라쿠",
+                "description": "라쿠가 탄환을 발사해 모든 적을 공격하고 2턴 동안 속도 감소를 걸며, 75% 확률로 1턴 동안 기절시킨다."
             }
         }
     },
@@ -3676,17 +3676,17 @@
         "_name": "Lethe",
         "skills": {
             "S1": {
-                "name": "Wave Slash",
-                "description": "Attacks the enemy with a sword, before granting increased Speed to the caster for 1 turn. After attacking, when the target's omen is 3, consumes all, activating Call of the Abyss. Call of the Abyss: Calls forth a deep sea creature to attack the enemy, and when the enemy is defeated, inflicts extinction and recovers Health of all allies, before increasing Combat Readiness of the caster by 50%. Cannot trigger a critical hit, and penetrates the target's Defense. Amount recovered and damage dealt increase proportional to the caster's max Health."
+                "name": "파도 베기",
+                "description": "검으로 적을 공격한 뒤 시전자에게 1턴 동안 속도 증가를 부여한다. 공격 후 대상의 징조가 3이면 모두 소모해 심연의 부름을 발동한다. 심연의 부름: 심해의 생물을 불러 적을 공격하며, 적을 처치하면 소멸을 걸고 모든 아군의 생명력을 회복한 뒤 시전자의 행동 게이지를 50% 증가시킨다. 치명타가 발생하지 않으며 대상의 방어력을 관통한다. 시전자의 최대 생명력에 비례해 회복량과 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Dreamer in the Deep",
-                "description": "Increases Health by 10%. Does not cost any Soul to activate the caster's first Soulburn. When attacking has a 100% chance to inflict one omen on the target."
+                "name": "심해의 몽상가",
+                "description": "생명력이 10% 증가한다. 시전자의 첫 번째 소울번은 소울을 소모하지 않는다. 공격 시 100% 확률로 대상에게 징조를 한 개 건다."
             },
             "S3": {
-                "name": "Freeze Over",
-                "description": "Attacks all enemies with a frozen mass, decreasing buff durations by 2 turns before a 100% chance each to inflict frostbite and restrict for 2 turns. Ignores Effect Resistance of any targets with max Health lower than the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "빙결",
+                "description": "얼어붙은 덩어리로 모든 적을 공격해 강화 효과의 지속 시간을 2턴 감소시킨 뒤 각각 100% 확률로 2턴 동안 동상과 제약을 건다. 최대 생명력이 시전자보다 낮은 대상의 효과 저항을 무시한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             }
         }
     },
@@ -3694,17 +3694,17 @@
         "_name": "Lidica",
         "skills": {
             "S1": {
-                "name": "Wild Rose",
-                "description": "Attacks the enemy with a sword and has a 80% chance each to inflict two bleeding effects for 2 turns. At the end of the turn, detonates bleeding effects inflicted on the target."
+                "name": "들장미",
+                "description": "검으로 적을 공격하며, 각각 80% 확률로 2턴 동안 출혈을 두 개 건다. 턴 종료 시 대상에게 걸린 출혈을 폭발시킨다."
             },
             "S2": {
-                "name": "Thornbush",
-                "description": "Inflicts resource reduction on all enemies by 60% before attacking, dispelling all buffs and inflicting bind for 2 turns. For every target, increases Combat Readiness of the caster by 25%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "가시덤불",
+                "description": "모든 적에게 60%의 자원 감소를 건 뒤 공격해 강화 효과를 모두 해제하고 2턴 동안 구속을 건다. 대상 하나당 시전자의 행동 게이지를 25% 증가시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             },
             "S3": {
-                "name": "Public Execution",
-                "description": "Attacks the enemy with a whip sword, inflicting decreased Defense for 2 turns before decreasing Combat Readiness by 100%. Grants skill nullifier once to all allies. When the target is inflicted with bind, ignores Effect Resistance."
+                "name": "공개 처형",
+                "description": "채찍검으로 적을 공격해 2턴 동안 방어력 감소를 건 뒤 행동 게이지를 100% 감소시킨다. 모든 아군에게 스킬 피해 무효를 한 번 부여한다. 대상에게 구속이 걸려 있으면 효과 저항을 무시한다."
             }
         }
     },
@@ -3712,17 +3712,17 @@
         "_name": "Lilias",
         "skills": {
             "S1": {
-                "name": "Follow Me! Charge!",
-                "description": "Takes the lead to attack the enemy, and triggers a Dual Attack from a random ally. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "날 따르라! 돌격!",
+                "description": "선두에 서서 적을 공격하고 무작위 아군이 협공한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "That's Far Enough!",
-                "description": "Increases Critical Hit Chance by 50%. After an enemy uses a non-attack skill, dispels all debuffs from the caster, and activates Suppression against the enemy caster. Suppression: Inflicts provoke on the target for 1 turn, and grants a barrier (proportional to the caster's max Health) to the caster for 2 turns."
+                "name": "거기까지다!",
+                "description": "치명타 확률이 50% 증가한다. 적이 공격이 아닌 스킬을 사용한 후 시전자의 약화 효과를 모두 해제하고 그 적에게 제압을 발동한다. 제압: 대상에게 1턴 동안 도발을 걸고 시전자에게 2턴 동안 보호막(시전자 최대 생명력 비례)을 부여한다."
             },
             "S3": {
-                "name": "Ready, Load, Fire!",
-                "description": "Dispels all debuffs from all allies and commands the Perland Army to attack by firing on all enemies, before decreasing Combat Readiness by 25%. Inflicts damage according to the Attack of the ally with the highest Attack. When the target is provoked, damage dealt increases."
+                "name": "준비, 장전, 발사!",
+                "description": "모든 아군의 약화 효과를 모두 해제하고 펄랜드군에게 명령해 모든 적에게 사격으로 공격한 뒤 행동 게이지를 25% 감소시킨다. 공격력이 가장 높은 아군의 공격력에 따라 피해를 준다. 대상이 도발 상태이면 주는 피해가 증가한다."
             }
         }
     },

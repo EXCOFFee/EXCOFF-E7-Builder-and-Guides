@@ -3586,17 +3586,17 @@
         "_name": "Last Piece Karin",
         "skills": {
             "S1": {
-                "name": "Vacuum Strike",
-                "description": "Attacks the enemy with a sword, and increases Combat Readiness of the caster by 15%. Damage dealt increases proportional to the caster's Speed.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "真空斩",
+                "description": "以剑攻击敌人，并使施放者的行动值提升15%。造成的伤害按施放者的速度比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S2": {
-                "name": "Phantom Strike",
-                "description": "Attacks the enemy, decreasing Combat Readiness by 30%, before granting stealth and a barrier (proportional to the caster's Attack) to the caster for 3 turns. Increases Hit Chance of this skill by 50%. Damage dealt increases proportional to the caster's Speed."
+                "name": "幻影一击",
+                "description": "攻击敌人，降低30%行动值，然后为施放者施加3回合隐身与屏障（与施放者的攻击力成比例）。此技能的命中率提升50%。造成的伤害按施放者的速度比例提升。"
             },
             "S3": {
-                "name": "Blade Art: Infinite Sword",
-                "description": "Becomes one with the sword, granting increased Attack and Phantom Sword to the caster for 3 turns. Grants an extra turn."
+                "name": "剑术：无限剑",
+                "description": "与剑合而为一，为施放者施加3回合攻击力提升与幻影剑。获得额外回合。"
             }
         }
     },
@@ -3604,17 +3604,17 @@
         "_name": "Last Rider Krau",
         "skills": {
             "S1": {
-                "name": "Punishment",
-                "description": "Attacks the enemy with a swordstorm, before increasing Speed of the caster for 1 turn. Damage dealt increases proportional to the caster's max Health."
+                "name": "惩罚",
+                "description": "以剑暴攻击敌人，然后提升施放者的速度1回合。造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Code Number 00",
-                "description": "After being attacked, decreases skill cooldowns by 1 turn. After suffering an attack that targets all allies, decreases skill cooldowns by an additional 1 turn, and grants a barrier (proportional to the caster's max Health) to all allies for 2 turns."
+                "name": "代号00",
+                "description": "受到攻击后，使技能冷却时间减少1回合。受到以所有友军为目标的攻击后，使技能冷却时间额外减少1回合，并为所有友军施加2回合屏障（与施放者的最大生命值成比例）。"
             },
             "S3": {
-                "name": "Mobile Weapon Ziegfried",
-                "description": "Summons Ziegfried to attack all enemies, before granting immunity to all allies for 2 turns and decreasing skill cooldowns by 1 turn. Penetrates Defense, but cannot trigger a critical hit or a heavy blow. Damage dealt increases proportional to the caster's max Health and Speed. Damage dealt increases every time this skill is used and can stack up to 3 times.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "机动兵器齐格弗里德",
+                "description": "召唤齐格弗里德攻击所有敌人，然后为所有友军施加2回合免疫，并使技能冷却时间减少1回合。穿透防御力，但无法造成暴击或重击。造成的伤害按施放者的最大生命值与速度比例提升。每次使用此技能，造成的伤害提升，最多叠加3次。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             }
         }
     },
@@ -3622,17 +3622,17 @@
         "_name": "Leah",
         "skills": {
             "S1": {
-                "name": "Swift Fire",
-                "description": "Attacks the enemy with a pistol, decreasing Combat Readiness by 15%. When the caster is granted exploiting weak points, uses Explosive Fire instead of Swift Fire. Explosive Fire: Attacks the enemy, decreasing buff durations by 1 turn and silencing for 1 turn before decreasing Combat Readiness by 30%. Damage dealt increases proportional to the caster's Speed. This attack does not trigger a Dual Attack.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "迅捷射击",
+                "description": "以手枪攻击敌人，降低15%行动值。施放者拥有弱点洞察时，使用爆裂射击代替迅捷射击。爆裂射击：攻击敌人，使强化效果持续时间减少1回合，并施加1回合沉默，然后降低30%行动值。造成的伤害按施放者的速度比例提升。此攻击不会触发协攻。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S2": {
-                "name": "Power of Harmony",
-                "description": "At the start of the first battle, when all allies are of different elements, acquires 10 Soul and has a 100% chance to increase Attack of all allies for 2 turns."
+                "name": "和谐之力",
+                "description": "首场战斗开始时，若所有友军的属性各不相同，获得10魂，并有100%的几率提升所有友军的攻击力2回合。"
             },
             "S3": {
-                "name": "Battle Preparation",
-                "description": "Increases Critical Hit Damage of all allies for 2 turns, and grants exploiting weak points to the caster. Grants an extra turn to the caster."
+                "name": "战斗准备",
+                "description": "提升所有友军的暴击伤害2回合，并为施放者施加弱点洞察。施放者获得额外回合。"
             }
         }
     },
@@ -3640,17 +3640,17 @@
         "_name": "Lena",
         "skills": {
             "S1": {
-                "name": "You're Soft",
-                "description": "Attacks with a strong fist, increasing the caster's Combat Readiness by 20%."
+                "name": "真弱",
+                "description": "以强力拳头攻击，并使施放者的行动值提升20%。"
             },
             "S2": {
-                "name": "Power Strike",
-                "description": "Increases Critical Hit Chance by 50%."
+                "name": "强力打击",
+                "description": "暴击率提升50%。"
             },
             "S3": {
-                "name": "Exposed!",
-                "description": "Attacks all enemies with a powerful storm, decreasing Combat Readiness by 20%, before increasing Attack of the caster for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "暴露了！",
+                "description": "以强力风暴攻击所有敌人，降低20%行动值，然后提升施放者的攻击力2回合。造成的伤害按敌人已损失的生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害。"
             }
         }
     },
@@ -3658,17 +3658,17 @@
         "_name": "Leo",
         "skills": {
             "S1": {
-                "name": "Sparrow Dive",
-                "description": "Attacks the enemy with a slingshot, with a 35% chance to inflict stun for 1 turn."
+                "name": "麻雀俯冲",
+                "description": "以弹弓攻击敌人，有35%的几率使其眩晕1回合。"
             },
             "S2": {
-                "name": "Fox Hunt",
-                "description": "Attacks with a slingshot, with a 100% chance to decrease Defense for 2 turns, and a 50% chance to use Sparrow Dive.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "猎狐",
+                "description": "以弹弓攻击，有100%的几率降低防御力2回合，并有50%的几率使用麻雀俯冲。",
+                "soulburn_effect": "技能冷却时间减少2回合。"
             },
             "S3": {
-                "name": "Flying Racoo",
-                "description": "Racoo attacks all enemies by firing bullets, inflicting decreased Speed for 2 turns and a 75% chance to inflict stun for 1 turn."
+                "name": "飞翔的拉酷",
+                "description": "拉酷发射子弹攻击所有敌人，施加2回合速度降低，并有75%的几率使其眩晕1回合。"
             }
         }
     },
@@ -3676,17 +3676,17 @@
         "_name": "Lethe",
         "skills": {
             "S1": {
-                "name": "Wave Slash",
-                "description": "Attacks the enemy with a sword, before granting increased Speed to the caster for 1 turn. After attacking, when the target's omen is 3, consumes all, activating Call of the Abyss. Call of the Abyss: Calls forth a deep sea creature to attack the enemy, and when the enemy is defeated, inflicts extinction and recovers Health of all allies, before increasing Combat Readiness of the caster by 50%. Cannot trigger a critical hit, and penetrates the target's Defense. Amount recovered and damage dealt increase proportional to the caster's max Health."
+                "name": "浪斩",
+                "description": "以剑攻击敌人，然后为施放者施加1回合速度提升。攻击后若目标的征兆达到3，消耗全部征兆发动深渊的召唤。深渊的召唤：召唤深海生物攻击敌人，击败敌人时施加湮灭并恢复所有友军的生命值，然后使施放者的行动值提升50%。无法造成暴击，并穿透目标的防御力。恢复量与造成的伤害按施放者的最大生命值比例提升。"
             },
             "S2": {
-                "name": "Dreamer in the Deep",
-                "description": "Increases Health by 10%. Does not cost any Soul to activate the caster's first Soulburn. When attacking has a 100% chance to inflict one omen on the target."
+                "name": "深海梦想家",
+                "description": "生命值提升10%。施放者的首次灵魂燃烧不消耗魂。攻击时，有100%的几率对目标施加一个征兆。"
             },
             "S3": {
-                "name": "Freeze Over",
-                "description": "Attacks all enemies with a frozen mass, decreasing buff durations by 2 turns before a 100% chance each to inflict frostbite and restrict for 2 turns. Ignores Effect Resistance of any targets with max Health lower than the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "冰封",
+                "description": "以冰冻团块攻击所有敌人，使强化效果持续时间减少2回合，然后各有100%的几率施加2回合冻伤与限制。无视最大生命值低于施放者的目标的效果抵抗。",
+                "soulburn_effect": "获得额外回合。"
             }
         }
     },
@@ -3694,17 +3694,17 @@
         "_name": "Lidica",
         "skills": {
             "S1": {
-                "name": "Wild Rose",
-                "description": "Attacks the enemy with a sword and has a 80% chance each to inflict two bleeding effects for 2 turns. At the end of the turn, detonates bleeding effects inflicted on the target."
+                "name": "野蔷薇",
+                "description": "以剑攻击敌人，各有80%的几率施加两层2回合出血。回合结束时，引爆目标身上的出血。"
             },
             "S2": {
-                "name": "Thornbush",
-                "description": "Inflicts resource reduction on all enemies by 60% before attacking, dispelling all buffs and inflicting bind for 2 turns. For every target, increases Combat Readiness of the caster by 25%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "荆棘丛",
+                "description": "对所有敌人施加60%的资源削减后发动攻击，解除所有强化效果，并施加2回合拘束。每有一个目标，使施放者的行动值提升25%。",
+                "soulburn_effect": "无视效果抵抗。"
             },
             "S3": {
-                "name": "Public Execution",
-                "description": "Attacks the enemy with a whip sword, inflicting decreased Defense for 2 turns before decreasing Combat Readiness by 100%. Grants skill nullifier once to all allies. When the target is inflicted with bind, ignores Effect Resistance."
+                "name": "公开处刑",
+                "description": "以鞭剑攻击敌人，施加2回合防御力降低，然后降低100%行动值。为所有友军施加一次技能伤害无效。目标处于拘束状态时，无视效果抵抗。"
             }
         }
     },
@@ -3712,17 +3712,17 @@
         "_name": "Lilias",
         "skills": {
             "S1": {
-                "name": "Follow Me! Charge!",
-                "description": "Takes the lead to attack the enemy, and triggers a Dual Attack from a random ally. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "跟我来！冲锋！",
+                "description": "身先士卒攻击敌人，随机一名友军发动协攻。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "That's Far Enough!",
-                "description": "Increases Critical Hit Chance by 50%. After an enemy uses a non-attack skill, dispels all debuffs from the caster, and activates Suppression against the enemy caster. Suppression: Inflicts provoke on the target for 1 turn, and grants a barrier (proportional to the caster's max Health) to the caster for 2 turns."
+                "name": "到此为止！",
+                "description": "暴击率提升50%。敌人使用非攻击技能后，解除施放者的所有弱化效果，并对该敌人发动压制。压制：对目标施加1回合挑衅，并为施放者施加2回合屏障（与施放者的最大生命值成比例）。"
             },
             "S3": {
-                "name": "Ready, Load, Fire!",
-                "description": "Dispels all debuffs from all allies and commands the Perland Army to attack by firing on all enemies, before decreasing Combat Readiness by 25%. Inflicts damage according to the Attack of the ally with the highest Attack. When the target is provoked, damage dealt increases."
+                "name": "准备、装填、开火！",
+                "description": "解除所有友军的所有弱化效果，命令珀兰德军向所有敌人开火攻击，然后降低25%行动值。按攻击力最高的友军的攻击力造成伤害。目标处于挑衅状态时，提升造成的伤害。"
             }
         }
     },
