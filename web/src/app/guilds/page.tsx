@@ -42,15 +42,6 @@ const LANGUAGE_NAMES: Record<string, string> = {
     pt: 'Português',
 };
 
-const LANGUAGE_FLAGS: Record<string, string> = {
-    en: '🇺🇸',
-    es: '🇪🇸',
-    ko: '🇰🇷',
-    ja: '🇯🇵',
-    zh: '🇨🇳',
-    pt: '🇧🇷',
-};
-
 const SERVER_FLAGS: Record<string, string> = {
     global: '🌍',
     europe: '🇪🇺',
@@ -174,7 +165,7 @@ export default function GuildsPage() {
                                 className={selectedLanguage === lang ? 'bg-e7-purple text-white font-semibold' : 'border-e7-gold/30 text-slate-400 hover:text-e7-gold hover:border-e7-gold/50'}
                                 size="sm"
                             >
-                                {LANGUAGE_FLAGS[lang]} {LANGUAGE_NAMES[lang]}
+                                <span lang={lang}>{LANGUAGE_NAMES[lang]}</span>
                             </Button>
                         ))}
                     </div>
@@ -235,7 +226,7 @@ export default function GuildsPage() {
                                             <span className="text-lg">{SERVER_FLAGS[post.server]}</span>
                                             <span className="text-xs text-slate-400 uppercase">{post.server}</span>
                                             <span className="text-xs text-slate-400">•</span>
-                                            <span className="text-xs text-slate-400">{LANGUAGE_FLAGS[post.language]} {LANGUAGE_NAMES[post.language] || post.language}</span>
+                                            <span className="text-xs text-slate-400" lang={post.language}>{LANGUAGE_NAMES[post.language] || post.language}</span>
                                         </div>
                                         <h2 className="text-lg font-semibold text-slate-100 mb-2 line-clamp-2 group-hover:text-e7-gold transition-colors">
                                             {post.title}
