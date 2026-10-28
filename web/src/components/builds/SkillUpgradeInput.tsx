@@ -1,28 +1,24 @@
-import Image from 'next/image';
 import { useTranslations } from '@/hooks/useTranslations';
-
-interface HeroSkill {
-    name: string;
-    icon: string;
-    description?: string;
-}
+import { SkillIcon } from '@/components/heroes/SkillEffects';
 
 interface SkillUpgradeInputProps {
     skillNumber: 1 | 2 | 3;
-    skillData: HeroSkill | undefined;
+    /** Nombre de la skill (traducido); la API la devuelve como objeto S1/S2/S3 */
+    name: string;
+    /** Código numérico del héroe para el ícono (mismo origen que el detalle de héroe) */
+    heroCode?: string | null;
     value: number;
     onChange: (value: number) => void;
 }
 
 export function SkillUpgradeInput({
     skillNumber,
-    skillData,
+    name,
+    heroCode,
     value,
     onChange
 }: SkillUpgradeInputProps) {
     const { t } = useTranslations();
-
-    if (!skillData) return null;
 
     return (
         <div className={`
@@ -36,26 +32,18 @@ export function SkillUpgradeInput({
             <div className="flex items-center gap-4 mb-4">
                 <div className="relative w-14 h-14 shrink-0">
                     <div className={`absolute inset-0 rounded-lg blur-md transition-opacity duration-300 ${value > 0 ? 'bg-e7-gold/30 opacity-100' : 'opacity-0'}`}></div>
-                    <Image
-                        src={skillData.icon}
-                        alt={skillData.name}
-                        width={56}
-                        height={56}
-                        className={`
-                            relative z-10 w-full h-full rounded-lg border-2 transition-colors duration-300
-                            ${value > 0 ? 'border-e7-gold' : 'border-white/20'}
-                        `}
-                        unoptimized
-                    />
+                    <div className={`relative z-10 w-full h-full rounded-lg border-2 overflow-hidden bg-e7-void transition-colors duration-300 ${value > 0 ? 'border-e7-gold' : 'border-white/20'}`}>
+                        {heroCode && <SkillIcon heroCode={heroCode} skillKey={`S${skillNumber}`} />}
+                    </div>
                     <div className="absolute -bottom-2 -right-2 z-20 bg-e7-void border border-white/10 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold text-gray-400">
                         S{skillNumber}
                     </div>
                 </div>
 
                 <div className="min-w-0">
-                    <h4 className={`font-bold truncate transition-colors ${value > 0 ? 'text-e7-gold' : 'text-gray-300'}`}>
-                        {skillData.name}
-                    </h4>
+                    <h3 title={name} className={`font-bold truncate transition-colors ${value > 0 ? 'text-e7-gold' : 'text-gray-300'}`}>
+                        {name}
+                    </h3>
                     <p className="text-xs text-gray-400 mt-0.5">
                         {t('builds.upgradeLevel', 'Upgrade Level')}
                     </p>
@@ -65,7 +53,7 @@ export function SkillUpgradeInput({
             {/* Level Selector */}
             <div className="relative">
                 <select
-                    aria-label={`${skillData.name} - ${t('builds.upgradeLevel', 'Upgrade Level')}`}
+                    aria-label={`${name} - ${t('builds.upgradeLevel', 'Upgrade Level')}`}
                     value={value}
                     onChange={(e) => onChange(Number(e.target.value))}
                     className={`

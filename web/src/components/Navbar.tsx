@@ -124,9 +124,10 @@ export function Navbar() {
                         <Image src="/images/icon_menu_orbis.png" alt="ORBIS" width={36} height={36} className="object-cover" unoptimized />
                     </div>
                     <div className="hidden sm:block">
-                        <h1 className="text-base font-semibold text-e7-gold tracking-wide">
+                        {/* No es h1: cada página tiene su propio título principal */}
+                        <span className="block text-base font-semibold text-e7-gold tracking-wide">
                             EXCOFF E7 HUB
-                        </h1>
+                        </span>
                     </div>
                 </Link>
 
