@@ -107,6 +107,8 @@
         "popularArtifacts": "Artefatos Populares",
         "averageStats": "Status Médios de Build",
         "fromBuilds": "de {count} builds",
+        "analyzedBuilds": "{count} builds analisados",
+        "analyzedBuildsHint": "Dados da comunidade do Fribbels Epic 7 Optimizer",
         "communityBuilds": "Builds da Comunidade",
         "noBuildsYet": "Ainda não há builds para este herói",
         "beFirst": "Seja o primeiro a compartilhar sua build!",

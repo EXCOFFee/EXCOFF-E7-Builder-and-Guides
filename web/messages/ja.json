@@ -107,6 +107,8 @@
         "popularArtifacts": "人気アーティファクト",
         "averageStats": "平均ビルドステータス",
         "fromBuilds": "{count}件のビルドから",
+        "analyzedBuilds": "{count}件のビルドを分析",
+        "analyzedBuildsHint": "Fribbels Epic 7 Optimizer のコミュニティデータ",
         "communityBuilds": "コミュニティビルド",
         "noBuildsYet": "このヒーローのビルドはまだありません",
         "beFirst": "最初にビルドを共有しましょう！",

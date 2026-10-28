@@ -8,6 +8,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { ImageCarousel } from '@/components/ui/image-carousel';
 import { useTranslations } from '@/hooks/useTranslations';
+import { formatDate } from '@/lib/utils';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -79,7 +80,7 @@ export default function GuildPostDetailPage() {
     const params = useParams();
     const router = useRouter();
     const queryClient = useQueryClient();
-    const { t } = useTranslations();
+    const { t, locale } = useTranslations();
     const slug = params.slug as string;
 
     const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
@@ -224,7 +225,7 @@ export default function GuildPostDetailPage() {
                                 <div>
                                     <p className="text-white font-medium">{post.user.name}</p>
                                     <p className="text-xs text-gray-400">
-                                        {new Date(post.created_at).toLocaleDateString()}
+                                        {formatDate(post.created_at, locale)}
                                     </p>
                                 </div>
                             </div>

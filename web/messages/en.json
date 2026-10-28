@@ -111,6 +111,8 @@
         "popularArtifacts": "Popular Artifacts",
         "averageStats": "Average Build Stats",
         "fromBuilds": "from {count} builds",
+        "analyzedBuilds": "{count} builds analyzed",
+        "analyzedBuildsHint": "Community data from Fribbels Epic 7 Optimizer",
         "communityBuilds": "Community Builds",
         "noBuildsYet": "No builds for this hero yet",
         "beFirst": "Be the first to share your build!",

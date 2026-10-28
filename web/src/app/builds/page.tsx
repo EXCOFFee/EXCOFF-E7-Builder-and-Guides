@@ -52,6 +52,7 @@ const CLASS_IMAGES: Record<string, string> = {
 };
 
 import { SET_IMAGES, formatSetName } from '@/lib/sets';
+import { formatNumber } from '@/lib/utils';
 
 const CLASS_NAMES: Record<string, string> = {
     knight: 'Knight',
@@ -494,7 +495,7 @@ export default function BuildsPage() {
                                                         <div key={stat} className="bg-e7-void/60 rounded-lg p-2 text-center border border-e7-gold/10">
                                                             <p className="text-[10px] text-slate-500 uppercase tracking-wide">{config.label}</p>
                                                             <p className={`text-sm font-bold ${config.color}`}>
-                                                                {typeof value === 'number' ? value.toLocaleString() : value}{isPercent ? '%' : ''}
+                                                                {typeof value === 'number' ? formatNumber(value) : value}{isPercent ? '%' : ''}
                                                             </p>
                                                         </div>
                                                     );

@@ -12,6 +12,7 @@ import { useTranslations } from '@/hooks/useTranslations';
 import { TeamCompositionDisplay, Team } from '@/components/guides/TeamCompositionDisplay';
 import { ShareButton } from '@/components/ui/ShareButton';
 import { appendImageVersion } from '@/lib/heroImages';
+import { formatDate } from '@/lib/utils';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -112,7 +113,7 @@ export function GuideDetailClient() {
     const params = useParams();
     const router = useRouter();
     const queryClient = useQueryClient();
-    const { t } = useTranslations();
+    const { t, locale } = useTranslations();
     const slug = params.slug as string;
 
     const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
@@ -404,7 +405,7 @@ export function GuideDetailClient() {
                                 <div>
                                     <p className="text-white font-medium">{guide.user?.name || t('common.anonymous', 'Anonymous')}</p>
                                     <p className="text-xs text-gray-400">
-                                        {new Date(guide.created_at).toLocaleDateString()}
+                                        {formatDate(guide.created_at, locale)}
                                     </p>
                                 </div>
                             </div>
@@ -624,7 +625,7 @@ export function GuideDetailClient() {
                                             </span>
                                             <div className="flex items-center gap-2">
                                                 <span className="text-xs text-gray-500">
-                                                    {new Date(comment.created_at).toLocaleDateString()}
+                                                    {formatDate(comment.created_at, locale)}
                                                 </span>
                                                 {canDeleteComment(comment) && (
                                                     <button

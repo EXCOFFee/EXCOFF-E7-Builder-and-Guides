@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { formatDate } from '@/lib/utils';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -181,7 +182,7 @@ export default function AdminReportsPage() {
                                                     </div>
                                                     <p className="text-white text-sm mb-1">{report.reason}</p>
                                                     <p className="text-xs text-gray-500">
-                                                        Reportado por: {report.reporter.name} • {new Date(report.created_at).toLocaleDateString()}
+                                                        Reportado por: {report.reporter.name} • {formatDate(report.created_at, "es")}
                                                     </p>
                                                 </div>
                                             </div>

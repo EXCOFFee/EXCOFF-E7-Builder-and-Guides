@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslations } from '@/hooks/useTranslations';
+import { formatDate } from '@/lib/utils';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -28,7 +29,7 @@ interface NewsResponse {
 }
 
 export default function NewsPage() {
-    const { t } = useTranslations();
+    const { t, locale } = useTranslations();
     const [sourceFilter, setSourceFilter] = useState<'all' | 'youtube' | 'stove'>('all');
     const [categoryFilter, setCategoryFilter] = useState<string>('all');
     const [searchQuery, setSearchQuery] = useState('');
@@ -328,7 +329,7 @@ export default function NewsPage() {
                                             )}
                                             <div className="flex items-center justify-between text-xs text-gray-500">
                                                 <span>
-                                                    {new Date(item.published_at).toLocaleDateString()}
+                                                    {formatDate(item.published_at, locale)}
                                                 </span>
                                                 <span className="text-e7-gold group-hover:translate-x-1 transition-transform flex items-center gap-1">
                                                     {t('news.readMore', 'Read more')}

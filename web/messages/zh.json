@@ -107,6 +107,8 @@
         "popularArtifacts": "热门神器",
         "averageStats": "平均构建属性",
         "fromBuilds": "来自{count}个构建",
+        "analyzedBuilds": "已分析 {count} 个构建",
+        "analyzedBuildsHint": "来自 Fribbels Epic 7 Optimizer 的社区数据",
         "communityBuilds": "社区构建",
         "noBuildsYet": "该英雄暂无构建",
         "beFirst": "成为第一个分享构建的人！",

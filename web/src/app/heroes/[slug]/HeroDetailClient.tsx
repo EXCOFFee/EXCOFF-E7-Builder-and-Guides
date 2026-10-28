@@ -11,8 +11,9 @@ import { Badge } from '@/components/ui/badge';
 import { useTranslations } from '@/hooks/useTranslations';
 import type { HeroSkillMessages } from '@/i18n/config';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
-import { PopularBuildStats } from '@/components/heroes/PopularBuildStats';
+import { PopularBuildStats, type HeroBuildStats } from '@/components/heroes/PopularBuildStats';
 import { appendImageVersion } from '@/lib/heroImages';
+import { formatDate, formatNumber } from '@/lib/utils';
 import { formatSkillText } from '@/utils/skillFormatter';
 import { SkillEffects, SkillIcon, useHeroEffects } from '@/components/heroes/SkillEffects';
 
@@ -53,7 +54,7 @@ interface SelfDevotion {
     };
 }
 
-interface Hero {
+export interface Hero {
     id: number;
     code: string;
     hero_code?: string; // Numeric code for skill icons (e.g., 'c1144')
@@ -178,11 +179,19 @@ const StatItem = ({ label, value, suffix = '', color = 'text-gray-300', large = 
     <div className={`text-center p-3 bg-e7-void/50 rounded-lg border border-e7-gold/10 ${large ? 'py-4' : ''}`}>
         <p className="text-gray-500 text-sm mb-1">{label}</p>
         <p className={`${color} font-bold ${large ? 'text-xl' : 'text-lg'}`}>
-            {value?.toLocaleString() || '0'}{suffix}
+            {formatNumber(value)}{suffix}
         </p>
     </div>
 );
-export function HeroDetailClient({ skillMessages }: { skillMessages: HeroSkillMessages | null }) {
+export function HeroDetailClient({
+    initialHero,
+    initialStats,
+    skillMessages,
+}: {
+    initialHero: Hero | null;
+    initialStats: HeroBuildStats | null;
+    skillMessages: HeroSkillMessages | null;
+}) {
     const params = useParams();
     const slug = params.slug as string;
     const { t, locale } = useTranslations();
@@ -196,6 +205,8 @@ export function HeroDetailClient({ skillMessages }: { skillMessages: HeroSkillMe
             return response.data;
         },
         enabled: !!slug,
+        // Renderizado en el servidor con el mismo idioma: sin pantalla de carga ni salto de layout
+        initialData: initialHero ? { data: initialHero } : undefined,
     });
 
     const hero: Hero | null = data?.data || data;
@@ -366,8 +377,12 @@ export function HeroDetailClient({ skillMessages }: { skillMessages: HeroSkillMe
                                     <span className="capitalize">{hero.class.replace('_', ' ')}</span>
                                 </Badge>
                                 {hasUsageStats && (
-                                    <Badge className="glass-panel text-e7-gold border border-e7-gold/30 px-4 py-2">
-                                        {hero.guides_count.toLocaleString()} builds
+                                    // Muestra de Fribbels, no las builds publicadas en la web
+                                    <Badge
+                                        className="glass-panel text-e7-gold border border-e7-gold/30 px-4 py-2"
+                                        title={t('heroes.analyzedBuildsHint', 'Community data from Fribbels Epic 7 Optimizer')}
+                                    >
+                                        {t('heroes.analyzedBuilds', '{count} builds analyzed').replace('{count}', formatNumber(hero.guides_count))}
                                     </Badge>
                                 )}
                             </div>
@@ -407,7 +422,7 @@ export function HeroDetailClient({ skillMessages }: { skillMessages: HeroSkillMe
 
                 {/* Popular Build Stats from API */}
                 <div className="mb-8">
-                    <PopularBuildStats heroSlug={slug} />
+                    <PopularBuildStats heroSlug={slug} initialStats={initialStats} />
                 </div>
 
                 {/* Average Stats Recommendation */}
@@ -417,7 +432,7 @@ export function HeroDetailClient({ skillMessages }: { skillMessages: HeroSkillMe
                             <CardTitle className="text-e7-gold flex items-center gap-2">
                                 <span>{t('heroes.averageStats', 'Average Build Stats')}</span>
                                 <span className="text-slate-500 text-sm font-normal ml-2">
-                                    (from {hero.guides_count.toLocaleString()} builds)
+                                    ({t('heroes.fromBuilds', 'from {count} builds').replace('{count}', formatNumber(hero.guides_count))})
                                 </span>
                             </CardTitle>
                         </CardHeader>
@@ -617,7 +632,7 @@ export function HeroDetailClient({ skillMessages }: { skillMessages: HeroSkillMe
                 {/* Last Updated */}
                 {hero.stats_updated_at && (
                     <p className="text-center text-slate-600 text-xs mt-8">
-                        Stats last updated: {new Date(hero.stats_updated_at).toLocaleDateString()}
+                        Stats last updated: {formatDate(hero.stats_updated_at, locale)}
                     </p>
                 )}
 

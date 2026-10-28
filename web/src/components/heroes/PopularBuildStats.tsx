@@ -55,7 +55,7 @@ interface TagStats {
     percentage: number;
 }
 
-interface HeroBuildStats {
+export interface HeroBuildStats {
     total_builds: number;
     primary_sets: SetStats[];
     secondary_sets: SetStats[];
@@ -70,6 +70,8 @@ interface HeroBuildStats {
 
 interface PopularBuildStatsProps {
     heroSlug: string;
+    /** Datos ya pedidos en el servidor: evitan el placeholder y el salto de layout al cargar */
+    initialStats?: HeroBuildStats | null;
 }
 
 /**
@@ -95,7 +97,7 @@ function getTierColor(tier: number): string {
  * PopularBuildStats - Displays set frequencies, artifact popularity, and tier ratings
  * Used on hero detail pages to show aggregated build data.
  */
-export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
+export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsProps) {
     const { t, locale } = useTranslations();
 
     const { data: stats, isLoading, error } = useQuery<HeroBuildStats>({
@@ -107,6 +109,7 @@ export function PopularBuildStats({ heroSlug }: PopularBuildStatsProps) {
             return data.data;
         },
         staleTime: 5 * 60 * 1000, // 5 minute cache
+        initialData: initialStats ?? undefined,
     });
 
     if (isLoading) {

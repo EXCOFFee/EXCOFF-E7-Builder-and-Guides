@@ -19,6 +19,7 @@ import { appendImageVersion } from '@/lib/heroImages';
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 import { SET_IMAGES } from '@/lib/sets';
+import { formatDate } from '@/lib/utils';
 
 const ELEMENT_COLORS: Record<string, string> = {
     fire: 'bg-red-500',
@@ -505,7 +506,7 @@ export function BuildDetailClient() {
                                         {build.is_anonymous ? 'Anonymous' : build.user?.name}
                                     </p>
                                     <p className="text-xs text-gray-400">
-                                        {new Date(build.created_at).toLocaleDateString()} • 👁️ {build.views}
+                                        {formatDate(build.created_at, locale)} • 👁️ {build.views}
                                     </p>
                                 </div>
                             </div>
@@ -812,7 +813,7 @@ export function BuildDetailClient() {
                                                             {comment.is_anonymous ? t('common.anonymous', 'Anonymous') : comment.user?.name}
                                                         </span>
                                                         <span className="text-xs text-gray-500">
-                                                            {new Date(comment.created_at).toLocaleDateString()}
+                                                            {formatDate(comment.created_at, locale)}
                                                         </span>
                                                     </div>
                                                     <div className="flex gap-2 text-xs">
@@ -927,7 +928,7 @@ export function BuildDetailClient() {
                                                                     {reply.is_anonymous ? t('common.anonymous', 'Anonymous') : reply.user?.name}
                                                                 </span>
                                                                 <span className="text-xs text-gray-500">
-                                                                    {new Date(reply.created_at).toLocaleDateString()}
+                                                                    {formatDate(reply.created_at, locale)}
                                                                 </span>
                                                             </div>
                                                             <p className="text-gray-300 text-sm">{reply.content}</p>
