@@ -3010,17 +3010,17 @@
         "_name": "Ian",
         "skills": {
             "S1": {
-                "name": "Enhanced Fire",
-                "description": "Fires an enhanced pistol, with a 75% chance to dispel one buff from the enemy."
+                "name": "Disparo aprimorado",
+                "description": "Dispara uma pistola aprimorada, com 75% de chance de dissipar um efeito positivo do inimigo."
             },
             "S2": {
-                "name": "Combat Support",
-                "description": "Supports all allies using an enhancement cube, granting increased Attack for 2 turns. Grants an extra turn to the caster."
+                "name": "Apoio de combate",
+                "description": "Apoia todos os aliados usando um cubo de aprimoramento, concedendo Aumentar Ataque por 2 turnos. Concede um turno extra ao conjurador."
             },
             "S3": {
-                "name": "High-Density Explosive Cube",
-                "description": "Attacks all enemies with powerful explosives, with a 100% chance to dispel one buff, before a 75% chance to decrease hit Chance for 2 turns. Grants the caster skill nullifier once.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Cubo explosivo de alta densidade",
+                "description": "Ataca todos os inimigos com explosivos poderosos, com 100% de chance de dissipar um efeito positivo, depois com 75% de chance diminui a Precisão por 2 turnos. Concede Anulação de habilidade uma vez ao conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             }
         }
     },
@@ -3028,17 +3028,17 @@
         "_name": "Ilynav",
         "skills": {
             "S1": {
-                "name": "Rush",
-                "description": "Attacks the enemy with a spear. Damage dealt increases proportional to the caster's max Health. When this skill is used, if it was not triggered by a Dual Attack, has a 50% chance to use Punish instead of Rush. This skill does not trigger a Dual Attack."
+                "name": "Investida",
+                "description": "Ataca o inimigo com uma lança. O dano causado aumenta proporcionalmente à Vida máxima do conjurador. Ao usar esta habilidade, se não tiver sido ativada por Ataque duplo, tem 50% de chance de usar Punir em vez de Investida. Esta habilidade não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Punish",
-                "description": "Attacks the enemy by stabbing them, inflicting up to 20% injuries. A successful attack inflicts additional damage equivalent to 50% of injuries inflicted on the target. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Punir",
+                "description": "Ataca o inimigo perfurando-o, causando até 20% de ferimentos. Um ataque bem-sucedido causa dano adicional equivalente a 50% dos ferimentos aplicados ao alvo. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Repel",
-                "description": "Attacks all enemies mercilessly, inflicting up to 20% injuries. Grants increased Critical Hit Damage to all allies for 2 turns, and grants immunity to the caster for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "Repelir",
+                "description": "Ataca todos os inimigos sem piedade, causando até 20% de ferimentos. Concede Aumentar Dano Crítico a todos os aliados por 2 turnos e imunidade ao conjurador por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -3046,17 +3046,17 @@
         "_name": "Immortal Wukong",
         "skills": {
             "S1": {
-                "name": "Swing",
-                "description": "Attacks the enemy with Ruyi Bang, and grants a barrier to the caster for 1 turn. Barrier strength increases proportional to the caster's Attack. When used on the caster's turn, attacks all enemies. The changed attack does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Golpe giratório",
+                "description": "Ataca o inimigo com o Ruyi Bang e concede uma barreira ao conjurador por 1 turno. A força da barreira aumenta proporcionalmente ao Ataque do conjurador. Quando usada no turno do conjurador, ataca todos os inimigos. O ataque alterado não ativa Ataque duplo.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S2": {
-                "name": "The Immortal One",
-                "description": "Increases Critical Hit Resistance and Penetration Resistance by 50%. When attacked, if the caster suffers a non-critical hit, increases Attack and Speed by 20%. Can stack up to 3 times."
+                "name": "O imortal",
+                "description": "Aumenta a Resistência a Crítico e a Resistência a Penetração em 50%. Ao ser atacado, se o conjurador sofrer um acerto não crítico, aumenta o Ataque e a Velocidade em 20%. Acumula até 3 vezes."
             },
             "S3": {
-                "name": "Heavenly Fighter's Strike",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks the enemy and inflicts stun for 1 turn. When the caster's Attack is greater than the target's Attack, damage dealt increases proportionally, up to 70%. Unaffected by elemental disadvantage."
+                "name": "Golpe do lutador celestial",
+                "description": "Após conceder Aumentar Ataque ao conjurador por 2 turnos, ataca o inimigo e o atordoa por 1 turno. Quando o Ataque do conjurador é maior que o do alvo, o dano causado aumenta proporcionalmente, até 70%. Não é afetado por desvantagem elemental."
             }
         }
     },
@@ -3064,17 +3064,17 @@
         "_name": "Inferno Khawazu",
         "skills": {
             "S1": {
-                "name": "Jealous Strike",
-                "description": "Attacks the enemy with flames, with a 100% chance to burn for 1 turn. When the caster is granted vigor, ignores Effect Resistance"
+                "name": "Golpe invejoso",
+                "description": "Ataca o inimigo com chamas, com 100% de chance de aplicar queimadura por 1 turno. Quando o conjurador tem vigor, ignora a Resistência a Efeitos."
             },
             "S2": {
-                "name": "Malicus's Power",
-                "description": "When attacked, damage suffered in one attack does not exceed 51% of max Health. After suffering an attack that targets all allies, dispels all debuffs from the caster and activates Blazing Fury. Blazing Fury: With an outraged cry, grants vigor to the caster for 2 turns, before recovering Health proportional to Attack and increasing Combat Readiness by 30%."
+                "name": "Poder de Malicus",
+                "description": "Ao ser atacado, o dano sofrido em um único ataque não ultrapassa 51% da Vida máxima. Após sofrer um ataque que mira todos os aliados, dissipa todos os efeitos negativos do conjurador e ativa Fúria ardente. Fúria ardente: com um grito indignado, concede vigor ao conjurador por 2 turnos, depois recupera Vida proporcionalmente ao Ataque e aumenta a Prontidão de Combate em 30%."
             },
             "S3": {
-                "name": "Flames of Destruction",
-                "description": "Attacks the enemy with an inferno, dispelling all buffs before a 100% chance each to inflict two burn effects for 2 turns, and at the end of the turn, detonates burn effects. When the caster is granted vigor, ignores Effect Resistance.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "Chamas da destruição",
+                "description": "Ataca o inimigo com um inferno, dissipando todos os efeitos positivos, depois com 100% de chance cada aplica dois efeitos de queimadura por 2 turnos e, no fim do turno, detona as queimaduras. Quando o conjurador tem vigor, ignora a Resistência a Efeitos.",
+                "soulburn_effect": "A recarga da habilidade é reduzida em 2 turnos."
             }
         }
     },
@@ -3082,17 +3082,17 @@
         "_name": "Infinite Horizon Achates",
         "skills": {
             "S1": {
-                "name": "Mysterious Design",
-                "description": "Attacks the enemy with a staff, with a 40% chance to stun for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "Desenho misterioso",
+                "description": "Ataca o inimigo com um cajado, com 40% de chance de atordoar por 1 turno.",
+                "soulburn_effect": "Aumenta a chance do efeito para 100%."
             },
             "S2": {
-                "name": "Unbridled Potential",
-                "description": "With a mysterious power, dispels two debuffs from an ally except for the caster and grants a barrier (proportional to the caster's max Health) for 2 turns before increasing Combat Readiness by 40%."
+                "name": "Potencial ilimitado",
+                "description": "Com um poder misterioso, dissipa dois efeitos negativos de um aliado, exceto o conjurador, e concede uma barreira (proporcional à Vida máxima do conjurador) por 2 turnos, depois aumenta a Prontidão de Combate em 40%."
             },
             "S3": {
-                "name": "Matter Reconstruction",
-                "description": "Dispels all debuffs from all allies before granting a random buff for 2 turns for each debuff dispelled and recovers Health proportional to the caster's max Health. When this skill is not on cooldown, at the end of an enemy's turn, increases Combat Readiness of the caster by 20%."
+                "name": "Reconstrução da matéria",
+                "description": "Dissipa todos os efeitos negativos de todos os aliados, depois concede um efeito positivo aleatório por 2 turnos para cada efeito negativo dissipado e recupera Vida proporcionalmente à Vida máxima do conjurador. Quando esta habilidade não está em recarga, no fim do turno de um inimigo, aumenta a Prontidão de Combate do conjurador em 20%."
             }
         }
     },
@@ -3100,17 +3100,17 @@
         "_name": "Inheritor Amiki",
         "skills": {
             "S1": {
-                "name": "Divine Punishment",
-                "description": "Attacks the enemy with a sword, and has a 75% chance to provoke for 1 turn. Cannot trigger a critical hit, and penetrates the target's Defense by 30%. After attacking, when the caster's Health is 30% or less, grants an extra attack with the same skill."
+                "name": "Punição divina",
+                "description": "Ataca o inimigo com uma espada e tem 75% de chance de provocá-lo por 1 turno. Não pode causar acerto crítico e penetra 30% da Defesa do alvo. Após atacar, quando a Vida do conjurador é 30% ou menos, concede um ataque extra com a mesma habilidade."
             },
             "S2": {
-                "name": "Desperate Resolve",
-                "description": "Grants immortality for 1 turn and increased Attack for 2 turns to the caster. Upon receiving lethal damage when the skill is available according to cooldown count, grants the same effects to the caster and fully increases cooldown of this skill."
+                "name": "Determinação desesperada",
+                "description": "Concede imortalidade por 1 turno e Aumentar Ataque por 2 turnos ao conjurador. Ao receber dano letal quando a habilidade estiver disponível pela contagem de recarga, concede os mesmos efeitos ao conjurador e enche completamente a recarga desta habilidade."
             },
             "S3": {
-                "name": "Strike of Vengeance",
-                "description": "Attacks the enemy with a sword. Cannot trigger a critical hit. A successful attack deals additional damage proportional to the caster's Attack to all enemies. Penetrates the target's Defense by 30%, and when the caster's Health is 30% or less, penetrates by 70%. When the caster is immortal, grants an extra turn.",
-                "soulburn_effect": "Increases damage dealt and additional damage."
+                "name": "Golpe da vingança",
+                "description": "Ataca o inimigo com uma espada. Não pode causar acerto crítico. Um ataque bem-sucedido causa a todos os inimigos dano adicional proporcional ao Ataque do conjurador. Penetra 30% da Defesa do alvo e, quando a Vida do conjurador é 30% ou menos, penetra 70%. Quando o conjurador está imortal, concede um turno extra.",
+                "soulburn_effect": "Aumenta o dano causado e o dano adicional."
             }
         }
     },
@@ -3118,17 +3118,17 @@
         "_name": "Iseria",
         "skills": {
             "S1": {
-                "name": "Refined Flower",
-                "description": "Throws swords at the enemy, with a 50% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increases effect chance by 50% and increases damage dealt. Does not trigger a Dual Attack."
+                "name": "Flor refinada",
+                "description": "Arremessa espadas no inimigo, com 50% de chance de diminuir a Defesa por 2 turnos.",
+                "soulburn_effect": "Aumenta a chance do efeito em 50% e aumenta o dano causado. Não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Oathkeeper",
-                "description": "Resets skill cooldown of an ally except for the caster and grants increased Attack (Greater) for 2 turns with light energy. Grants an extra turn. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "Guardiã do juramento",
+                "description": "Com energia da luz, reinicia a recarga das habilidades de um aliado, exceto o conjurador, e concede Aumentar Ataque (maior) por 2 turnos. Concede um turno extra. Esta habilidade não é afetada por efeitos de aumento ou redução de recarga."
             },
             "S3": {
-                "name": "Full Bloom",
-                "description": "Attacks the enemy with a giant Magic Sword, dispelling all buffs, before making them unable to be buffed and decreasing Defense for 2 turns."
+                "name": "Florescer pleno",
+                "description": "Ataca o inimigo com uma Espada Mágica gigante, dissipando todos os efeitos positivos, depois impede que receba efeitos positivos e diminui a Defesa por 2 turnos."
             }
         }
     },
@@ -3136,17 +3136,17 @@
         "_name": "Ivana",
         "skills": {
             "S1": {
-                "name": "Holy Light",
-                "description": "Attacks the enemy with holy light, and recovers Health of allies proportional to the target's max Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "Luz sagrada",
+                "description": "Ataca o inimigo com luz sagrada e recupera a Vida dos aliados proporcionalmente à Vida máxima do alvo.",
+                "soulburn_effect": "Aumenta a quantidade recuperada."
             },
             "S2": {
-                "name": "Light of Repose",
-                "description": "Unaffected by decreases to Combat Readiness. At the start of the turn, dispels immortality from all enemies. Ignores Effect Resistance. At the end of someone's turn, when the enemy is granted immortality, spreads the censer's light to dispel all debuffs from all allies and grants radiance for 2 turns, before increasing Combat Readiness of the caster by 50%"
+                "name": "Luz do repouso",
+                "description": "Não é afetada por reduções de Prontidão de Combate. No início do turno, dissipa a imortalidade de todos os inimigos. Ignora a Resistência a Efeitos. No fim do turno de qualquer um, quando o inimigo tem imortalidade, espalha a luz do incensário para dissipar todos os efeitos negativos de todos os aliados e concede radiância por 2 turnos, depois aumenta a Prontidão de Combate do conjurador em 50%."
             },
             "S3": {
-                "name": "Requiem Prayer",
-                "description": "Dispels two debuffs from all allies by offering a prayer to banish evil, and grants ignore sharing for 3 turns and immunity for 2 turns before increasing Combat Readiness by 20%."
+                "name": "Prece de réquiem",
+                "description": "Dissipa dois efeitos negativos de todos os aliados oferecendo uma prece para banir o mal e concede ignorar divisão por 3 turnos e imunidade por 2 turnos, depois aumenta a Prontidão de Combate em 20%."
             }
         }
     },

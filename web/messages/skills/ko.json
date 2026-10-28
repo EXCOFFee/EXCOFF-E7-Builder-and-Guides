@@ -3010,17 +3010,17 @@
         "_name": "Ian",
         "skills": {
             "S1": {
-                "name": "Enhanced Fire",
-                "description": "Fires an enhanced pistol, with a 75% chance to dispel one buff from the enemy."
+                "name": "강화 사격",
+                "description": "강화된 권총을 쏘며, 75% 확률로 적의 강화 효과를 한 개 해제한다."
             },
             "S2": {
-                "name": "Combat Support",
-                "description": "Supports all allies using an enhancement cube, granting increased Attack for 2 turns. Grants an extra turn to the caster."
+                "name": "전투 지원",
+                "description": "강화 큐브로 모든 아군을 지원해 2턴 동안 공격력 증가를 부여한다. 시전자는 추가 턴을 얻는다."
             },
             "S3": {
-                "name": "High-Density Explosive Cube",
-                "description": "Attacks all enemies with powerful explosives, with a 100% chance to dispel one buff, before a 75% chance to decrease hit Chance for 2 turns. Grants the caster skill nullifier once.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "고밀도 폭약 큐브",
+                "description": "강력한 폭약으로 모든 적을 공격하며, 100% 확률로 강화 효과를 한 개 해제한 뒤 75% 확률로 2턴 동안 명중률을 감소시킨다. 시전자에게 스킬 피해 무효를 한 번 부여한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             }
         }
     },
@@ -3028,17 +3028,17 @@
         "_name": "Ilynav",
         "skills": {
             "S1": {
-                "name": "Rush",
-                "description": "Attacks the enemy with a spear. Damage dealt increases proportional to the caster's max Health. When this skill is used, if it was not triggered by a Dual Attack, has a 50% chance to use Punish instead of Rush. This skill does not trigger a Dual Attack."
+                "name": "돌진",
+                "description": "창으로 적을 공격한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다. 이 스킬 사용 시 협공으로 발동한 것이 아니면 50% 확률로 돌진 대신 응징을 사용한다. 이 스킬로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Punish",
-                "description": "Attacks the enemy by stabbing them, inflicting up to 20% injuries. A successful attack inflicts additional damage equivalent to 50% of injuries inflicted on the target. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "응징",
+                "description": "적을 찔러 공격해 최대 20%의 부상을 입힌다. 공격에 성공하면 대상에게 입힌 부상의 50%에 해당하는 추가 피해를 준다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Repel",
-                "description": "Attacks all enemies mercilessly, inflicting up to 20% injuries. Grants increased Critical Hit Damage to all allies for 2 turns, and grants immunity to the caster for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "격퇴",
+                "description": "모든 적을 무자비하게 공격해 최대 20%의 부상을 입힌다. 모든 아군에게 2턴 동안 치명 피해 증가를, 시전자에게 2턴 동안 면역을 부여한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -3046,17 +3046,17 @@
         "_name": "Immortal Wukong",
         "skills": {
             "S1": {
-                "name": "Swing",
-                "description": "Attacks the enemy with Ruyi Bang, and grants a barrier to the caster for 1 turn. Barrier strength increases proportional to the caster's Attack. When used on the caster's turn, attacks all enemies. The changed attack does not trigger a Dual Attack.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "휘두르기",
+                "description": "여의봉으로 적을 공격하고 시전자에게 1턴 동안 보호막을 부여한다. 시전자의 공격력에 비례해 보호막 강도가 증가한다. 시전자의 턴에 사용하면 모든 적을 공격한다. 바뀐 공격으로는 협공이 발동하지 않는다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S2": {
-                "name": "The Immortal One",
-                "description": "Increases Critical Hit Resistance and Penetration Resistance by 50%. When attacked, if the caster suffers a non-critical hit, increases Attack and Speed by 20%. Can stack up to 3 times."
+                "name": "불멸의 존재",
+                "description": "치명타 저항과 관통 저항이 50% 증가한다. 공격받을 때 시전자가 치명타가 아닌 공격을 받으면 공격력과 속도가 20% 증가한다. 최대 3회까지 중첩된다."
             },
             "S3": {
-                "name": "Heavenly Fighter's Strike",
-                "description": "After granting increased Attack to the caster for 2 turns, attacks the enemy and inflicts stun for 1 turn. When the caster's Attack is greater than the target's Attack, damage dealt increases proportionally, up to 70%. Unaffected by elemental disadvantage."
+                "name": "천상 투사의 일격",
+                "description": "시전자에게 2턴 동안 공격력 증가를 부여한 뒤 적을 공격하고 1턴 동안 기절시킨다. 시전자의 공격력이 대상보다 높으면 그에 비례해 주는 피해가 최대 70%까지 증가한다. 속성 상성의 불리함에 영향을 받지 않는다."
             }
         }
     },
@@ -3064,17 +3064,17 @@
         "_name": "Inferno Khawazu",
         "skills": {
             "S1": {
-                "name": "Jealous Strike",
-                "description": "Attacks the enemy with flames, with a 100% chance to burn for 1 turn. When the caster is granted vigor, ignores Effect Resistance"
+                "name": "질투의 일격",
+                "description": "불꽃으로 적을 공격하며, 100% 확률로 1턴 동안 화상을 건다. 시전자에게 투지가 있으면 효과 저항을 무시한다."
             },
             "S2": {
-                "name": "Malicus's Power",
-                "description": "When attacked, damage suffered in one attack does not exceed 51% of max Health. After suffering an attack that targets all allies, dispels all debuffs from the caster and activates Blazing Fury. Blazing Fury: With an outraged cry, grants vigor to the caster for 2 turns, before recovering Health proportional to Attack and increasing Combat Readiness by 30%."
+                "name": "말리쿠스의 힘",
+                "description": "공격받을 때 한 번의 공격으로 받는 피해가 최대 생명력의 51%를 넘지 않는다. 모든 아군을 대상으로 하는 공격을 받은 후 시전자의 약화 효과를 모두 해제하고 타오르는 분노를 발동한다. 타오르는 분노: 분노의 외침으로 시전자에게 2턴 동안 투지를 부여한 뒤 공격력에 비례해 생명력을 회복하고 행동 게이지를 30% 증가시킨다."
             },
             "S3": {
-                "name": "Flames of Destruction",
-                "description": "Attacks the enemy with an inferno, dispelling all buffs before a 100% chance each to inflict two burn effects for 2 turns, and at the end of the turn, detonates burn effects. When the caster is granted vigor, ignores Effect Resistance.",
-                "soulburn_effect": "Skill cooldown is decreased by 2 turns."
+                "name": "파멸의 불꽃",
+                "description": "업화로 적을 공격해 강화 효과를 모두 해제한 뒤 각각 100% 확률로 2턴 동안 화상을 두 개 걸고, 턴 종료 시 화상을 폭발시킨다. 시전자에게 투지가 있으면 효과 저항을 무시한다.",
+                "soulburn_effect": "스킬 재사용 대기 시간이 2턴 감소한다."
             }
         }
     },
@@ -3082,17 +3082,17 @@
         "_name": "Infinite Horizon Achates",
         "skills": {
             "S1": {
-                "name": "Mysterious Design",
-                "description": "Attacks the enemy with a staff, with a 40% chance to stun for 1 turn.",
-                "soulburn_effect": "Increases effect chance to 100%."
+                "name": "신비한 설계",
+                "description": "지팡이로 적을 공격하며, 40% 확률로 1턴 동안 기절시킨다.",
+                "soulburn_effect": "효과 발동 확률이 100%로 증가한다."
             },
             "S2": {
-                "name": "Unbridled Potential",
-                "description": "With a mysterious power, dispels two debuffs from an ally except for the caster and grants a barrier (proportional to the caster's max Health) for 2 turns before increasing Combat Readiness by 40%."
+                "name": "무한한 잠재력",
+                "description": "신비한 힘으로 시전자를 제외한 아군 한 명의 약화 효과를 두 개 해제하고 2턴 동안 보호막(시전자 최대 생명력 비례)을 부여한 뒤 행동 게이지를 40% 증가시킨다."
             },
             "S3": {
-                "name": "Matter Reconstruction",
-                "description": "Dispels all debuffs from all allies before granting a random buff for 2 turns for each debuff dispelled and recovers Health proportional to the caster's max Health. When this skill is not on cooldown, at the end of an enemy's turn, increases Combat Readiness of the caster by 20%."
+                "name": "물질 재구성",
+                "description": "모든 아군의 약화 효과를 모두 해제한 뒤 해제한 약화 효과 하나당 2턴 동안 무작위 강화 효과를 부여하고, 시전자의 최대 생명력에 비례해 생명력을 회복한다. 이 스킬이 재사용 대기 중이 아니면 적의 턴 종료 시 시전자의 행동 게이지를 20% 증가시킨다."
             }
         }
     },
@@ -3100,17 +3100,17 @@
         "_name": "Inheritor Amiki",
         "skills": {
             "S1": {
-                "name": "Divine Punishment",
-                "description": "Attacks the enemy with a sword, and has a 75% chance to provoke for 1 turn. Cannot trigger a critical hit, and penetrates the target's Defense by 30%. After attacking, when the caster's Health is 30% or less, grants an extra attack with the same skill."
+                "name": "신벌",
+                "description": "검으로 적을 공격하며, 75% 확률로 1턴 동안 도발을 건다. 치명타가 발생하지 않으며 대상의 방어력을 30% 관통한다. 공격 후 시전자의 생명력이 30% 이하이면 같은 스킬로 추가 공격한다."
             },
             "S2": {
-                "name": "Desperate Resolve",
-                "description": "Grants immortality for 1 turn and increased Attack for 2 turns to the caster. Upon receiving lethal damage when the skill is available according to cooldown count, grants the same effects to the caster and fully increases cooldown of this skill."
+                "name": "필사의 각오",
+                "description": "시전자에게 1턴 동안 불사를, 2턴 동안 공격력 증가를 부여한다. 재사용 대기 시간상 스킬을 사용할 수 있을 때 치명적인 피해를 받으면 시전자에게 같은 효과를 부여하고 이 스킬의 재사용 대기 시간을 가득 채운다."
             },
             "S3": {
-                "name": "Strike of Vengeance",
-                "description": "Attacks the enemy with a sword. Cannot trigger a critical hit. A successful attack deals additional damage proportional to the caster's Attack to all enemies. Penetrates the target's Defense by 30%, and when the caster's Health is 30% or less, penetrates by 70%. When the caster is immortal, grants an extra turn.",
-                "soulburn_effect": "Increases damage dealt and additional damage."
+                "name": "복수의 일격",
+                "description": "검으로 적을 공격한다. 치명타가 발생하지 않는다. 공격에 성공하면 모든 적에게 시전자의 공격력에 비례한 추가 피해를 준다. 대상의 방어력을 30% 관통하며, 시전자의 생명력이 30% 이하이면 70% 관통한다. 시전자가 불사 상태이면 추가 턴을 얻는다.",
+                "soulburn_effect": "주는 피해와 추가 피해가 증가한다."
             }
         }
     },
@@ -3118,17 +3118,17 @@
         "_name": "Iseria",
         "skills": {
             "S1": {
-                "name": "Refined Flower",
-                "description": "Throws swords at the enemy, with a 50% chance to decrease Defense for 2 turns.",
-                "soulburn_effect": "Increases effect chance by 50% and increases damage dealt. Does not trigger a Dual Attack."
+                "name": "정제된 꽃",
+                "description": "적에게 검을 던지며, 50% 확률로 2턴 동안 방어력을 감소시킨다.",
+                "soulburn_effect": "효과 발동 확률이 50% 증가하고 주는 피해가 증가한다. 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Oathkeeper",
-                "description": "Resets skill cooldown of an ally except for the caster and grants increased Attack (Greater) for 2 turns with light energy. Grants an extra turn. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "맹세의 수호자",
+                "description": "빛의 기운으로 시전자를 제외한 아군 한 명의 스킬 재사용 대기 시간을 초기화하고 2턴 동안 공격력 증가(대)를 부여한다. 추가 턴을 얻는다. 이 스킬은 재사용 대기 시간 증가·감소 효과의 영향을 받지 않는다."
             },
             "S3": {
-                "name": "Full Bloom",
-                "description": "Attacks the enemy with a giant Magic Sword, dispelling all buffs, before making them unable to be buffed and decreasing Defense for 2 turns."
+                "name": "만개",
+                "description": "거대한 마검으로 적을 공격해 강화 효과를 모두 해제한 뒤 2턴 동안 강화 불가와 방어력 감소를 건다."
             }
         }
     },
@@ -3136,17 +3136,17 @@
         "_name": "Ivana",
         "skills": {
             "S1": {
-                "name": "Holy Light",
-                "description": "Attacks the enemy with holy light, and recovers Health of allies proportional to the target's max Health.",
-                "soulburn_effect": "Increases the amount recovered."
+                "name": "성스러운 빛",
+                "description": "성스러운 빛으로 적을 공격하고 대상의 최대 생명력에 비례해 아군의 생명력을 회복한다.",
+                "soulburn_effect": "회복량이 증가한다."
             },
             "S2": {
-                "name": "Light of Repose",
-                "description": "Unaffected by decreases to Combat Readiness. At the start of the turn, dispels immortality from all enemies. Ignores Effect Resistance. At the end of someone's turn, when the enemy is granted immortality, spreads the censer's light to dispel all debuffs from all allies and grants radiance for 2 turns, before increasing Combat Readiness of the caster by 50%"
+                "name": "안식의 빛",
+                "description": "행동 게이지 감소의 영향을 받지 않는다. 턴 시작 시 모든 적의 불사를 해제한다. 효과 저항을 무시한다. 누군가의 턴 종료 시 적에게 불사가 있으면 향로의 빛을 퍼뜨려 모든 아군의 약화 효과를 모두 해제하고 2턴 동안 광휘를 부여한 뒤 시전자의 행동 게이지를 50% 증가시킨다."
             },
             "S3": {
-                "name": "Requiem Prayer",
-                "description": "Dispels two debuffs from all allies by offering a prayer to banish evil, and grants ignore sharing for 3 turns and immunity for 2 turns before increasing Combat Readiness by 20%."
+                "name": "진혼의 기도",
+                "description": "악을 물리치는 기도를 올려 모든 아군의 약화 효과를 두 개 해제하고 3턴 동안 분산 무시를, 2턴 동안 면역을 부여한 뒤 행동 게이지를 20% 증가시킨다."
             }
         }
     },
