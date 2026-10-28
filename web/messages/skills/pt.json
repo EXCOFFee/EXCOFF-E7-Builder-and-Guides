@@ -2110,17 +2110,17 @@
         "_name": "Eligos",
         "skills": {
             "S1": {
-                "name": "Point-Blank Shot",
-                "description": "Attacks the enemy by dashing towards them. When the caster is granted increased Attack (Greater), triggers a Dual Attack from the ally with the highest Attack. Damage deait increases proportional to the caster's Speed."
+                "name": "Tiro à queima-roupa",
+                "description": "Ataca o inimigo avançando contra ele. Quando o conjurador tem Aumentar Ataque (maior), o aliado com maior Ataque realiza um Ataque duplo. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S2": {
-                "name": "The Cleaner",
-                "description": "Hit Chance and Critical Hit Damage increases by 50%. When an ally except for the caster defeats an enemy, activates Time Bomb against the enemy with the lowest Health. Can only be activated once every 2 turns. Time Bomb: After granting increased Attack (Greater) to the caster for 2 turns, attacks the enemy with a bomb. Damage dealt increases proportional to the caster's Speed."
+                "name": "O limpador",
+                "description": "A Precisão e o Dano Crítico aumentam 50%. Quando um aliado, exceto o conjurador, derrota um inimigo, ativa Bomba-relógio contra o inimigo com menor Vida. Só pode ser ativado uma vez a cada 2 turnos. Bomba-relógio: após conceder Aumentar Ataque (maior) ao conjurador por 2 turnos, ataca o inimigo com uma bomba. O dano causado aumenta proporcionalmente à Velocidade do conjurador."
             },
             "S3": {
-                "name": "Cloak and Trigger",
-                "description": "Inflicts resource reduction on the target by 60%, before attacking the enemy with a pistol, dispelling two buffs before inflicting target and decreased Defense for 2 turns and decreasing Combat Readiness by 50%. Increases Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "Capa e gatilho",
+                "description": "Aplica redução de recursos de 60% ao alvo, depois ataca o inimigo com uma pistola, dissipando dois efeitos positivos antes de aplicar alvo e Diminuir Defesa por 2 turnos e diminuir a Prontidão de Combate em 50%. Aumenta a Prontidão de Combate do conjurador em 50%.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -2128,17 +2128,17 @@
         "_name": "Elphelt",
         "skills": {
             "S1": {
-                "name": "Barrage",
-                "description": "Fires a barrage of bullets at the enemy, with a 75% chance to make them unable to be buffed for 1 turn."
+                "name": "Saraivada",
+                "description": "Dispara uma saraivada de balas no inimigo, com 75% de chance de impedir que receba efeitos positivos por 1 turno."
             },
             "S2": {
                 "name": "Judge Better Half",
-                "description": "After trapping the target in a cake, attacks the enemy with a cutting knife, and grants increased Attack to all allies for 2 turns. When the target is inflicted with sleep, inflicts decreased Defense on all enemies for 2 turns. Damage dealt increases proportional to the number of debuffs inflicted on the target."
+                "description": "Após prender o alvo em um bolo, ataca o inimigo com uma faca de corte e concede Aumentar Ataque a todos os aliados por 2 turnos. Quando o alvo está dormindo, aplica Diminuir Defesa a todos os inimigos por 2 turnos. O dano causado aumenta proporcionalmente ao número de efeitos negativos aplicados ao alvo."
             },
             "S3": {
                 "name": "Magnum Wedding",
-                "description": "Dispels two buffs from the enemy before shooting a bullet of love, with a 100% chance each to inflict sleep and decreased Defense for 2 turns. Grants an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "description": "Dissipa dois efeitos positivos do inimigo antes de disparar uma bala do amor, com 100% de chance cada de aplicar sono e Diminuir Defesa por 2 turnos. Concede um turno extra.",
+                "soulburn_effect": "Ignora a Resistência a Efeitos."
             }
         }
     },
@@ -2146,17 +2146,17 @@
         "_name": "Elson",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Attacks the enemy, with a 75% chance to decrease Attack for 1 turn."
+                "name": "Golpe pesado",
+                "description": "Ataca o inimigo, com 75% de chance de diminuir o Ataque por 1 turno."
             },
             "S2": {
-                "name": "Meteor Shower",
-                "description": "Attacks all enemies with Meteor Shower of Light and recovers the Health of all allies. Healing increases proportional to the ally's max Health."
+                "name": "Chuva de meteoros",
+                "description": "Ataca todos os inimigos com a Chuva de meteoros da Luz e recupera a Vida de todos os aliados. A cura aumenta proporcionalmente à Vida máxima do aliado."
             },
             "S3": {
-                "name": "Light's Protection",
-                "description": "Recovers Health and increases Attack and Defense of all allies for 2 turns with strengthening magic. Amount recovered is proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Proteção da luz",
+                "description": "Com magia de fortalecimento, recupera a Vida e aumenta o Ataque e a Defesa de todos os aliados por 2 turnos. A quantidade recuperada é proporcional à Vida máxima do alvo.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -2164,17 +2164,17 @@
         "_name": "Elvira",
         "skills": {
             "S1": {
-                "name": "Hit and Run",
-                "description": "Swiftly attacks the enemy and has a 75% chance to provoke for 1 turn. When the caster is immortal, increases effect chance by 25%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "Bater e correr",
+                "description": "Ataca o inimigo rapidamente e tem 75% de chance de provocá-lo por 1 turno. Quando o conjurador está imortal, aumenta a chance do efeito em 25%.",
+                "soulburn_effect": "Concede um turno extra."
             },
             "S2": {
-                "name": "Blood Mana",
-                "description": "Increases Effect Resistance by 50%, and when attacking, cannot trigger a critical hit. Decreases the amount of Fighting Spirit gained by the enemy by 100%. After using a basic skill on the caster's turn, when the caster is immortal, activates Exterminate as an extra attack. Exterminate can only be activated once every 2 turns. Exterminate: Attacks all enemies, dispelling one buff before inflicting beguile."
+                "name": "Mana de sangue",
+                "description": "Aumenta a Resistência a Efeitos em 50% e, ao atacar, não pode causar acerto crítico. Diminui em 100% o Espírito de luta obtido pelo inimigo. Após usar a habilidade básica no turno do conjurador, quando o conjurador está imortal, ativa Exterminar como ataque extra. Exterminar só pode ser ativado uma vez a cada 2 turnos. Exterminar: ataca todos os inimigos, dissipando um efeito positivo antes de aplicar sedução."
             },
             "S3": {
-                "name": "Capturing Sacrifice",
-                "description": "Attacks the enemy, dispelling all buffs before making them unhealable amd decreasing Defense for 2 turns, and grants immortality to the caster for 3 turns. Penetrates the target's Defense. When the target is a Hero, damage dealt increases proportional to the target's current Health. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "Sacrifício cativante",
+                "description": "Ataca o inimigo, dissipando todos os efeitos positivos antes de aplicar impedimento de cura e Diminuir Defesa por 2 turnos, e concede imortalidade ao conjurador por 3 turnos. Penetra a Defesa do alvo. Quando o alvo é um herói, o dano causado aumenta proporcionalmente à Vida atual do alvo. Esta habilidade não é afetada por efeitos de aumento ou redução de recarga."
             }
         }
     },
@@ -2183,16 +2183,16 @@
         "skills": {
             "S1": {
                 "name": "Huma",
-                "description": "Attacks the enemy with ice, before recovering Health of the ally with the lowest Health proportional to the caster's max Health."
+                "description": "Ataca o inimigo com gelo, depois recupera a Vida do aliado com menor Vida proporcionalmente à Vida máxima do conjurador."
             },
             "S2": {
-                "name": "Spirit's Blessing",
-                "description": "Grants a blessing to an ally except for the caster, dispelling two debuffs and increasing Attack for 2 turns before increasing Combat Readiness by 50%. Increases Combat Readiness of the caster by 25%.",
-                "soulburn_effect": "Recovers Health of an ally proportional to the caster's max Health."
+                "name": "Bênção espiritual",
+                "description": "Abençoa um aliado, exceto o conjurador, dissipando dois efeitos negativos e aumentando o Ataque por 2 turnos, depois aumenta a Prontidão de Combate em 50%. Aumenta a Prontidão de Combate do conjurador em 25%.",
+                "soulburn_effect": "Recupera a Vida de um aliado proporcionalmente à Vida máxima do conjurador."
             },
             "S3": {
-                "name": "Divine Protection of the Great Spirit",
-                "description": "Uses spiritual arts to dispel two debuffs from all allies, before recovering Health and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "Proteção divina do Grande Espírito",
+                "description": "Usa artes espirituais para dissipar dois efeitos negativos de todos os aliados, depois recupera Vida e concede uma barreira por 2 turnos. A quantidade recuperada e a força da barreira aumentam proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -2200,17 +2200,17 @@
         "_name": "Empyrean Ilynav",
         "skills": {
             "S1": {
-                "name": "Sword of Punishment",
-                "description": "Attacks the enemy with a sword, absorbing some of the damage dealt as Health, and inflicts up to 10% injuries. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt and a successful attack deals additional damage equivalent to 50% of injuries inflicted on the target. This attack does not trigger a Dual Attack."
+                "name": "Espada da punição",
+                "description": "Ataca o inimigo com uma espada, absorvendo parte do dano causado como Vida, e causa até 10% de ferimentos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador.",
+                "soulburn_effect": "Aumenta o dano causado e um ataque bem-sucedido causa dano adicional equivalente a 50% dos ferimentos aplicados ao alvo. Este ataque não ativa Ataque duplo."
             },
             "S2": {
-                "name": "Dragon's Pride",
-                "description": "Increases Penetration Resistance of all allies by 30%. After every attack suffered by an ally, increases Combat Readiness of the caster by 10%."
+                "name": "Orgulho do dragão",
+                "description": "Aumenta a Resistência a Penetração de todos os aliados em 30%. Após cada ataque sofrido por um aliado, aumenta a Prontidão de Combate do conjurador em 10%."
             },
             "S3": {
-                "name": "Unyielding Blow",
-                "description": "Attacks the enemy with a spear, inflicting up to 20% injuries, before dispelling two debuffs from all allies and granting indomitable for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "Golpe inabalável",
+                "description": "Ataca o inimigo com uma lança, causando até 20% de ferimentos, depois dissipa dois efeitos negativos de todos os aliados e concede indomável por 2 turnos. O dano causado aumenta proporcionalmente à Vida máxima do conjurador."
             }
         }
     },
@@ -2218,17 +2218,17 @@
         "_name": "Enott",
         "skills": {
             "S1": {
-                "name": "Smash",
-                "description": "Attacks with an axe, with a 50% chance to cause bleeding for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health."
+                "name": "Esmagar",
+                "description": "Ataca com um machado, com 50% de chance de causar sangramento por 2 turnos. O dano causado aumenta proporcionalmente à Vida perdida do inimigo."
             },
             "S2": {
-                "name": "Judgement",
-                "description": "Attacks with a sharp blow, with a 75% chance each to decrease Defense and make them unable to be buffed for 2 turns."
+                "name": "Julgamento",
+                "description": "Ataca com um golpe afiado, com 75% de chance cada de diminuir a Defesa e impedir que receba efeitos positivos por 2 turnos."
             },
             "S3": {
-                "name": "Prepare Judgement",
-                "description": "Corrects stance, increasing Attack and Critical Hit Chance of the caster for 2 turns and Combat Readiness by 50%.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "Preparar o julgamento",
+                "description": "Corrige a postura, aumentando o Ataque e a Chance de Crítico do conjurador por 2 turnos e a Prontidão de Combate em 50%.",
+                "soulburn_effect": "Estende em 1 turno a duração dos efeitos positivos concedidos por esta habilidade."
             }
         }
     },
@@ -2236,17 +2236,17 @@
         "_name": "Ervalen",
         "skills": {
             "S1": {
-                "name": "Vengeance",
-                "description": "Rapidly attacks the enemy, with a 50% chance to decrease Defense for 2 turns."
+                "name": "Vingança",
+                "description": "Ataca o inimigo rapidamente, com 50% de chance de diminuir a Defesa por 2 turnos."
             },
             "S2": {
-                "name": "Sword of Hatred",
-                "description": "Attacks the enemy repeatedly, and grants immunity to the caster for 1 turn. When the enemy's max Health is greater than the caster's max Health, increases Combat Readiness of the caster proportionally, up to 30%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "Espada do ódio",
+                "description": "Ataca o inimigo repetidamente e concede imunidade ao conjurador por 1 turno. Quando a Vida máxima do inimigo é maior que a do conjurador, aumenta a Prontidão de Combate do conjurador proporcionalmente, até 30%.",
+                "soulburn_effect": "Aumenta o dano causado."
             },
             "S3": {
-                "name": "Heir to the Throne",
-                "description": "Attacks the enemy with a sword, and grants counterattack and a barrier (proportional to Attack) to the caster for 2 turns. When the enemy is defeated, extends buff durations of the caster by 1 turn and grants an extra turn. When the enemy's max Health is greater than the caster's max Health, damage dealt increases proportionally, up to 70%."
+                "name": "Herdeiro do trono",
+                "description": "Ataca o inimigo com uma espada e concede contra-ataque e uma barreira (proporcional ao Ataque) ao conjurador por 2 turnos. Ao derrotar o inimigo, estende em 1 turno a duração dos efeitos positivos do conjurador e concede um turno extra. Quando a Vida máxima do inimigo é maior que a do conjurador, o dano causado aumenta proporcionalmente, até 70%."
             }
         }
     },

@@ -2110,17 +2110,17 @@
         "_name": "Eligos",
         "skills": {
             "S1": {
-                "name": "Point-Blank Shot",
-                "description": "Attacks the enemy by dashing towards them. When the caster is granted increased Attack (Greater), triggers a Dual Attack from the ally with the highest Attack. Damage deait increases proportional to the caster's Speed."
+                "name": "근접 사격",
+                "description": "적에게 돌진해 공격한다. 시전자에게 공격력 증가(대)가 있으면 공격력이 가장 높은 아군이 협공한다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "The Cleaner",
-                "description": "Hit Chance and Critical Hit Damage increases by 50%. When an ally except for the caster defeats an enemy, activates Time Bomb against the enemy with the lowest Health. Can only be activated once every 2 turns. Time Bomb: After granting increased Attack (Greater) to the caster for 2 turns, attacks the enemy with a bomb. Damage dealt increases proportional to the caster's Speed."
+                "name": "청소부",
+                "description": "명중률과 치명 피해가 50% 증가한다. 시전자를 제외한 아군이 적을 처치하면 생명력이 가장 낮은 적에게 시한폭탄을 발동한다. 2턴마다 한 번만 발동할 수 있다. 시한폭탄: 시전자에게 2턴 동안 공격력 증가(대)를 부여한 뒤 폭탄으로 적을 공격한다. 시전자의 속도에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Cloak and Trigger",
-                "description": "Inflicts resource reduction on the target by 60%, before attacking the enemy with a pistol, dispelling two buffs before inflicting target and decreased Defense for 2 turns and decreasing Combat Readiness by 50%. Increases Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "망토와 방아쇠",
+                "description": "대상에게 60%의 자원 감소를 건 뒤 권총으로 적을 공격해 강화 효과를 두 개 해제하고 2턴 동안 표적과 방어력 감소를 걸며 행동 게이지를 50% 감소시킨다. 시전자의 행동 게이지를 50% 증가시킨다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -2128,17 +2128,17 @@
         "_name": "Elphelt",
         "skills": {
             "S1": {
-                "name": "Barrage",
-                "description": "Fires a barrage of bullets at the enemy, with a 75% chance to make them unable to be buffed for 1 turn."
+                "name": "탄막",
+                "description": "적에게 탄막을 퍼부으며, 75% 확률로 1턴 동안 강화 불가를 건다."
             },
             "S2": {
-                "name": "Judge Better Half",
-                "description": "After trapping the target in a cake, attacks the enemy with a cutting knife, and grants increased Attack to all allies for 2 turns. When the target is inflicted with sleep, inflicts decreased Defense on all enemies for 2 turns. Damage dealt increases proportional to the number of debuffs inflicted on the target."
+                "name": "저지 베터 하프",
+                "description": "대상을 케이크에 가둔 뒤 케이크 칼로 적을 공격하고 모든 아군에게 2턴 동안 공격력 증가를 부여한다. 대상이 수면 상태이면 모든 적에게 2턴 동안 방어력 감소를 건다. 대상에게 걸린 약화 효과의 수에 비례해 주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Magnum Wedding",
-                "description": "Dispels two buffs from the enemy before shooting a bullet of love, with a 100% chance each to inflict sleep and decreased Defense for 2 turns. Grants an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "매그넘 웨딩",
+                "description": "적의 강화 효과를 두 개 해제한 뒤 사랑의 탄환을 쏘며, 각각 100% 확률로 2턴 동안 수면과 방어력 감소를 건다. 추가 턴을 얻는다.",
+                "soulburn_effect": "효과 저항을 무시한다."
             }
         }
     },
@@ -2146,17 +2146,17 @@
         "_name": "Elson",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Attacks the enemy, with a 75% chance to decrease Attack for 1 turn."
+                "name": "강타",
+                "description": "적을 공격하며, 75% 확률로 1턴 동안 공격력을 감소시킨다."
             },
             "S2": {
-                "name": "Meteor Shower",
-                "description": "Attacks all enemies with Meteor Shower of Light and recovers the Health of all allies. Healing increases proportional to the ally's max Health."
+                "name": "유성우",
+                "description": "빛의 유성우로 모든 적을 공격하고 모든 아군의 생명력을 회복한다. 아군의 최대 생명력에 비례해 회복량이 증가한다."
             },
             "S3": {
-                "name": "Light's Protection",
-                "description": "Recovers Health and increases Attack and Defense of all allies for 2 turns with strengthening magic. Amount recovered is proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "빛의 가호",
+                "description": "강화 마법으로 모든 아군의 생명력을 회복하고 2턴 동안 공격력과 방어력을 증가시킨다. 회복량은 대상의 최대 생명력에 비례한다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장된다."
             }
         }
     },
@@ -2164,17 +2164,17 @@
         "_name": "Elvira",
         "skills": {
             "S1": {
-                "name": "Hit and Run",
-                "description": "Swiftly attacks the enemy and has a 75% chance to provoke for 1 turn. When the caster is immortal, increases effect chance by 25%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "치고 빠지기",
+                "description": "재빠르게 적을 공격하며, 75% 확률로 1턴 동안 도발을 건다. 시전자가 불사 상태이면 효과 발동 확률이 25% 증가한다.",
+                "soulburn_effect": "추가 턴을 얻는다."
             },
             "S2": {
-                "name": "Blood Mana",
-                "description": "Increases Effect Resistance by 50%, and when attacking, cannot trigger a critical hit. Decreases the amount of Fighting Spirit gained by the enemy by 100%. After using a basic skill on the caster's turn, when the caster is immortal, activates Exterminate as an extra attack. Exterminate can only be activated once every 2 turns. Exterminate: Attacks all enemies, dispelling one buff before inflicting beguile."
+                "name": "피의 마나",
+                "description": "효과 저항이 50% 증가하며, 공격 시 치명타가 발생하지 않는다. 적이 얻는 투지가 100% 감소한다. 시전자의 턴에 기본 스킬을 사용한 후 시전자가 불사 상태이면 추가 공격으로 섬멸을 발동한다. 섬멸은 2턴마다 한 번만 발동할 수 있다. 섬멸: 모든 적을 공격해 강화 효과를 한 개 해제한 뒤 현혹을 건다."
             },
             "S3": {
-                "name": "Capturing Sacrifice",
-                "description": "Attacks the enemy, dispelling all buffs before making them unhealable amd decreasing Defense for 2 turns, and grants immortality to the caster for 3 turns. Penetrates the target's Defense. When the target is a Hero, damage dealt increases proportional to the target's current Health. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "포획의 제물",
+                "description": "적을 공격해 강화 효과를 모두 해제한 뒤 2턴 동안 회복 불가와 방어력 감소를 걸고, 시전자에게 3턴 동안 불사를 부여한다. 대상의 방어력을 관통한다. 대상이 영웅이면 대상의 현재 생명력에 비례해 주는 피해가 증가한다. 이 스킬은 재사용 대기 시간 증가·감소 효과의 영향을 받지 않는다."
             }
         }
     },
@@ -2182,17 +2182,17 @@
         "_name": "Emilia",
         "skills": {
             "S1": {
-                "name": "Huma",
-                "description": "Attacks the enemy with ice, before recovering Health of the ally with the lowest Health proportional to the caster's max Health."
+                "name": "후마",
+                "description": "얼음으로 적을 공격한 뒤 시전자의 최대 생명력에 비례해 생명력이 가장 낮은 아군의 생명력을 회복한다."
             },
             "S2": {
-                "name": "Spirit's Blessing",
-                "description": "Grants a blessing to an ally except for the caster, dispelling two debuffs and increasing Attack for 2 turns before increasing Combat Readiness by 50%. Increases Combat Readiness of the caster by 25%.",
-                "soulburn_effect": "Recovers Health of an ally proportional to the caster's max Health."
+                "name": "정령의 축복",
+                "description": "시전자를 제외한 아군 한 명을 축복해 약화 효과를 두 개 해제하고 2턴 동안 공격력을 증가시킨 뒤 행동 게이지를 50% 증가시킨다. 시전자의 행동 게이지를 25% 증가시킨다.",
+                "soulburn_effect": "시전자의 최대 생명력에 비례해 아군의 생명력을 회복한다."
             },
             "S3": {
-                "name": "Divine Protection of the Great Spirit",
-                "description": "Uses spiritual arts to dispel two debuffs from all allies, before recovering Health and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "대정령의 가호",
+                "description": "정령술로 모든 아군의 약화 효과를 두 개 해제한 뒤 생명력을 회복하고 2턴 동안 보호막을 부여한다. 시전자의 최대 생명력에 비례해 회복량과 보호막 강도가 증가한다."
             }
         }
     },
@@ -2200,17 +2200,17 @@
         "_name": "Empyrean Ilynav",
         "skills": {
             "S1": {
-                "name": "Sword of Punishment",
-                "description": "Attacks the enemy with a sword, absorbing some of the damage dealt as Health, and inflicts up to 10% injuries. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt and a successful attack deals additional damage equivalent to 50% of injuries inflicted on the target. This attack does not trigger a Dual Attack."
+                "name": "징벌의 검",
+                "description": "검으로 적을 공격해 준 피해의 일부를 생명력으로 흡수하고 최대 10%의 부상을 입힌다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다.",
+                "soulburn_effect": "주는 피해가 증가하고, 공격에 성공하면 대상에게 입힌 부상의 50%에 해당하는 추가 피해를 준다. 이 공격으로는 협공이 발동하지 않는다."
             },
             "S2": {
-                "name": "Dragon's Pride",
-                "description": "Increases Penetration Resistance of all allies by 30%. After every attack suffered by an ally, increases Combat Readiness of the caster by 10%."
+                "name": "용의 긍지",
+                "description": "모든 아군의 관통 저항이 30% 증가한다. 아군이 공격받을 때마다 시전자의 행동 게이지를 10% 증가시킨다."
             },
             "S3": {
-                "name": "Unyielding Blow",
-                "description": "Attacks the enemy with a spear, inflicting up to 20% injuries, before dispelling two debuffs from all allies and granting indomitable for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "굴하지 않는 일격",
+                "description": "창으로 적을 공격해 최대 20%의 부상을 입힌 뒤 모든 아군의 약화 효과를 두 개 해제하고 2턴 동안 불굴을 부여한다. 시전자의 최대 생명력에 비례해 주는 피해가 증가한다."
             }
         }
     },
@@ -2218,17 +2218,17 @@
         "_name": "Enott",
         "skills": {
             "S1": {
-                "name": "Smash",
-                "description": "Attacks with an axe, with a 50% chance to cause bleeding for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health."
+                "name": "강타",
+                "description": "도끼로 공격하며, 50% 확률로 2턴 동안 출혈을 건다. 적이 잃은 생명력에 비례해 주는 피해가 증가한다."
             },
             "S2": {
-                "name": "Judgement",
-                "description": "Attacks with a sharp blow, with a 75% chance each to decrease Defense and make them unable to be buffed for 2 turns."
+                "name": "심판",
+                "description": "날카로운 일격으로 공격하며, 각각 75% 확률로 2턴 동안 방어력 감소와 강화 불가를 건다."
             },
             "S3": {
-                "name": "Prepare Judgement",
-                "description": "Corrects stance, increasing Attack and Critical Hit Chance of the caster for 2 turns and Combat Readiness by 50%.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "심판 준비",
+                "description": "자세를 바로잡아 2턴 동안 시전자의 공격력과 치명타 확률을 증가시키고 행동 게이지를 50% 증가시킨다.",
+                "soulburn_effect": "이 스킬로 부여하는 강화 효과의 지속 시간이 1턴 연장된다."
             }
         }
     },
@@ -2236,17 +2236,17 @@
         "_name": "Ervalen",
         "skills": {
             "S1": {
-                "name": "Vengeance",
-                "description": "Rapidly attacks the enemy, with a 50% chance to decrease Defense for 2 turns."
+                "name": "복수",
+                "description": "적을 빠르게 공격하며, 50% 확률로 2턴 동안 방어력을 감소시킨다."
             },
             "S2": {
-                "name": "Sword of Hatred",
-                "description": "Attacks the enemy repeatedly, and grants immunity to the caster for 1 turn. When the enemy's max Health is greater than the caster's max Health, increases Combat Readiness of the caster proportionally, up to 30%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "증오의 검",
+                "description": "적을 연속으로 공격하고 시전자에게 1턴 동안 면역을 부여한다. 적의 최대 생명력이 시전자보다 높으면 그에 비례해 시전자의 행동 게이지를 최대 30%까지 증가시킨다.",
+                "soulburn_effect": "주는 피해가 증가한다."
             },
             "S3": {
-                "name": "Heir to the Throne",
-                "description": "Attacks the enemy with a sword, and grants counterattack and a barrier (proportional to Attack) to the caster for 2 turns. When the enemy is defeated, extends buff durations of the caster by 1 turn and grants an extra turn. When the enemy's max Health is greater than the caster's max Health, damage dealt increases proportionally, up to 70%."
+                "name": "왕위 계승자",
+                "description": "검으로 적을 공격하고 시전자에게 2턴 동안 반격과 보호막(공격력 비례)을 부여한다. 적을 처치하면 시전자의 강화 효과 지속 시간을 1턴 연장하고 추가 턴을 얻는다. 적의 최대 생명력이 시전자보다 높으면 그에 비례해 주는 피해가 최대 70%까지 증가한다."
             }
         }
     },

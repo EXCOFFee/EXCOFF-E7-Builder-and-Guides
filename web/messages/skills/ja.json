@@ -2110,17 +2110,17 @@
         "_name": "Eligos",
         "skills": {
             "S1": {
-                "name": "Point-Blank Shot",
-                "description": "Attacks the enemy by dashing towards them. When the caster is granted increased Attack (Greater), triggers a Dual Attack from the ally with the highest Attack. Damage deait increases proportional to the caster's Speed."
+                "name": "至近距離射撃",
+                "description": "敵に向かって突進して攻撃する。発動者に攻撃力アップ（大）があれば、攻撃力が最も高い味方が協攻する。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "The Cleaner",
-                "description": "Hit Chance and Critical Hit Damage increases by 50%. When an ally except for the caster defeats an enemy, activates Time Bomb against the enemy with the lowest Health. Can only be activated once every 2 turns. Time Bomb: After granting increased Attack (Greater) to the caster for 2 turns, attacks the enemy with a bomb. Damage dealt increases proportional to the caster's Speed."
+                "name": "掃除屋",
+                "description": "命中率とクリティカルダメージが50%アップする。発動者を除く味方が敵を倒すと、HPが最も低い敵に時限爆弾を発動する。2ターンごとに一度のみ発動できる。時限爆弾：発動者に2ターンの間攻撃力アップ（大）を付与した後、爆弾で敵を攻撃する。発動者のスピードに比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Cloak and Trigger",
-                "description": "Inflicts resource reduction on the target by 60%, before attacking the enemy with a pistol, dispelling two buffs before inflicting target and decreased Defense for 2 turns and decreasing Combat Readiness by 50%. Increases Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "外套と引き金",
+                "description": "対象に60%の資源減少を付与した後、拳銃で敵を攻撃し、強化効果を二つ解除した後、2ターンの間標的と防御力ダウンを付与し、行動ゲージを50%減少させる。発動者の行動ゲージを50%増加させる。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -2128,17 +2128,17 @@
         "_name": "Elphelt",
         "skills": {
             "S1": {
-                "name": "Barrage",
-                "description": "Fires a barrage of bullets at the enemy, with a 75% chance to make them unable to be buffed for 1 turn."
+                "name": "弾幕",
+                "description": "敵に弾幕を浴びせ、75%の確率で1ターンの間強化不可を付与する。"
             },
             "S2": {
-                "name": "Judge Better Half",
-                "description": "After trapping the target in a cake, attacks the enemy with a cutting knife, and grants increased Attack to all allies for 2 turns. When the target is inflicted with sleep, inflicts decreased Defense on all enemies for 2 turns. Damage dealt increases proportional to the number of debuffs inflicted on the target."
+                "name": "ジャッジ・ベターハーフ",
+                "description": "対象をケーキに閉じ込めた後、ケーキナイフで敵を攻撃し、味方全員に2ターンの間攻撃力アップを付与する。対象が睡眠状態なら、敵全体に2ターンの間防御力ダウンを付与する。対象に付与された弱体効果の数に比例して与ダメージがアップする。"
             },
             "S3": {
-                "name": "Magnum Wedding",
-                "description": "Dispels two buffs from the enemy before shooting a bullet of love, with a 100% chance each to inflict sleep and decreased Defense for 2 turns. Grants an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "マグナムウェディング",
+                "description": "敵の強化効果を二つ解除した後、愛の弾丸を撃ち、それぞれ100%の確率で2ターンの間睡眠と防御力ダウンを付与する。追加ターンを得る。",
+                "soulburn_effect": "効果抵抗を無視する。"
             }
         }
     },
@@ -2146,17 +2146,17 @@
         "_name": "Elson",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Attacks the enemy, with a 75% chance to decrease Attack for 1 turn."
+                "name": "強打",
+                "description": "敵を攻撃し、75%の確率で1ターンの間攻撃力をダウンさせる。"
             },
             "S2": {
-                "name": "Meteor Shower",
-                "description": "Attacks all enemies with Meteor Shower of Light and recovers the Health of all allies. Healing increases proportional to the ally's max Health."
+                "name": "流星群",
+                "description": "光の流星群で敵全体を攻撃し、味方全員のHPを回復する。味方の最大HPに比例して回復量がアップする。"
             },
             "S3": {
-                "name": "Light's Protection",
-                "description": "Recovers Health and increases Attack and Defense of all allies for 2 turns with strengthening magic. Amount recovered is proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "光の加護",
+                "description": "強化魔法で味方全員のHPを回復し、2ターンの間攻撃力と防御力をアップさせる。回復量は対象の最大HPに比例する。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },
@@ -2164,17 +2164,17 @@
         "_name": "Elvira",
         "skills": {
             "S1": {
-                "name": "Hit and Run",
-                "description": "Swiftly attacks the enemy and has a 75% chance to provoke for 1 turn. When the caster is immortal, increases effect chance by 25%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "ヒット＆アウェイ",
+                "description": "素早く敵を攻撃し、75%の確率で1ターンの間挑発を付与する。発動者が不死状態なら効果発動確率が25%アップする。",
+                "soulburn_effect": "追加ターンを得る。"
             },
             "S2": {
-                "name": "Blood Mana",
-                "description": "Increases Effect Resistance by 50%, and when attacking, cannot trigger a critical hit. Decreases the amount of Fighting Spirit gained by the enemy by 100%. After using a basic skill on the caster's turn, when the caster is immortal, activates Exterminate as an extra attack. Exterminate can only be activated once every 2 turns. Exterminate: Attacks all enemies, dispelling one buff before inflicting beguile."
+                "name": "血のマナ",
+                "description": "効果抵抗が50%アップし、攻撃時にクリティカルが発生しない。敵が獲得する闘志が100%減少する。発動者のターンに通常スキルを使用した後、発動者が不死状態なら、追加攻撃として殲滅を発動する。殲滅は2ターンごとに一度のみ発動できる。殲滅：敵全体を攻撃し、強化効果を一つ解除した後、魅惑を付与する。"
             },
             "S3": {
-                "name": "Capturing Sacrifice",
-                "description": "Attacks the enemy, dispelling all buffs before making them unhealable amd decreasing Defense for 2 turns, and grants immortality to the caster for 3 turns. Penetrates the target's Defense. When the target is a Hero, damage dealt increases proportional to the target's current Health. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "捕獲の生贄",
+                "description": "敵を攻撃し、強化効果をすべて解除した後、2ターンの間回復不可と防御力ダウンを付与し、発動者に3ターンの間不死を付与する。対象の防御力を貫通する。対象が英雄なら、対象の現在HPに比例して与ダメージがアップする。このスキルはクールタイムの増減効果を受けない。"
             }
         }
     },
@@ -2182,17 +2182,17 @@
         "_name": "Emilia",
         "skills": {
             "S1": {
-                "name": "Huma",
-                "description": "Attacks the enemy with ice, before recovering Health of the ally with the lowest Health proportional to the caster's max Health."
+                "name": "ヒューマ",
+                "description": "氷で敵を攻撃した後、発動者の最大HPに比例してHPが最も低い味方のHPを回復する。"
             },
             "S2": {
-                "name": "Spirit's Blessing",
-                "description": "Grants a blessing to an ally except for the caster, dispelling two debuffs and increasing Attack for 2 turns before increasing Combat Readiness by 50%. Increases Combat Readiness of the caster by 25%.",
-                "soulburn_effect": "Recovers Health of an ally proportional to the caster's max Health."
+                "name": "精霊の祝福",
+                "description": "発動者を除く味方一人を祝福し、弱体効果を二つ解除し、2ターンの間攻撃力をアップさせた後、行動ゲージを50%増加させる。発動者の行動ゲージを25%増加させる。",
+                "soulburn_effect": "発動者の最大HPに比例して味方のHPを回復する。"
             },
             "S3": {
-                "name": "Divine Protection of the Great Spirit",
-                "description": "Uses spiritual arts to dispel two debuffs from all allies, before recovering Health and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "大精霊の加護",
+                "description": "精霊術で味方全員の弱体効果を二つ解除した後、HPを回復し、2ターンの間バリアを付与する。発動者の最大HPに比例して回復量とバリアの強度がアップする。"
             }
         }
     },
@@ -2200,17 +2200,17 @@
         "_name": "Empyrean Ilynav",
         "skills": {
             "S1": {
-                "name": "Sword of Punishment",
-                "description": "Attacks the enemy with a sword, absorbing some of the damage dealt as Health, and inflicts up to 10% injuries. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt and a successful attack deals additional damage equivalent to 50% of injuries inflicted on the target. This attack does not trigger a Dual Attack."
+                "name": "懲罰の剣",
+                "description": "剣で敵を攻撃し、与ダメージの一部をHPとして吸収し、最大10%の負傷を与える。発動者の最大HPに比例して与ダメージがアップする。",
+                "soulburn_effect": "与ダメージがアップし、攻撃が成功すると対象に与えた負傷の50%に相当する追加ダメージを与える。この攻撃では協攻が発動しない。"
             },
             "S2": {
-                "name": "Dragon's Pride",
-                "description": "Increases Penetration Resistance of all allies by 30%. After every attack suffered by an ally, increases Combat Readiness of the caster by 10%."
+                "name": "竜の誇り",
+                "description": "味方全員の貫通抵抗が30%アップする。味方が攻撃されるたびに、発動者の行動ゲージを10%増加させる。"
             },
             "S3": {
-                "name": "Unyielding Blow",
-                "description": "Attacks the enemy with a spear, inflicting up to 20% injuries, before dispelling two debuffs from all allies and granting indomitable for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "屈しない一撃",
+                "description": "槍で敵を攻撃し、最大20%の負傷を与えた後、味方全員の弱体効果を二つ解除し、2ターンの間不屈を付与する。発動者の最大HPに比例して与ダメージがアップする。"
             }
         }
     },
@@ -2218,17 +2218,17 @@
         "_name": "Enott",
         "skills": {
             "S1": {
-                "name": "Smash",
-                "description": "Attacks with an axe, with a 50% chance to cause bleeding for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health."
+                "name": "粉砕",
+                "description": "斧で攻撃し、50%の確率で2ターンの間出血を付与する。敵の失ったHPに比例して与ダメージがアップする。"
             },
             "S2": {
-                "name": "Judgement",
-                "description": "Attacks with a sharp blow, with a 75% chance each to decrease Defense and make them unable to be buffed for 2 turns."
+                "name": "審判",
+                "description": "鋭い一撃で攻撃し、それぞれ75%の確率で2ターンの間防御力ダウンと強化不可を付与する。"
             },
             "S3": {
-                "name": "Prepare Judgement",
-                "description": "Corrects stance, increasing Attack and Critical Hit Chance of the caster for 2 turns and Combat Readiness by 50%.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "審判の準備",
+                "description": "構えを正し、2ターンの間発動者の攻撃力とクリティカル率をアップさせ、行動ゲージを50%増加させる。",
+                "soulburn_effect": "このスキルで付与する強化効果の持続時間が1ターン延長される。"
             }
         }
     },
@@ -2236,17 +2236,17 @@
         "_name": "Ervalen",
         "skills": {
             "S1": {
-                "name": "Vengeance",
-                "description": "Rapidly attacks the enemy, with a 50% chance to decrease Defense for 2 turns."
+                "name": "復讐",
+                "description": "素早く敵を攻撃し、50%の確率で2ターンの間防御力をダウンさせる。"
             },
             "S2": {
-                "name": "Sword of Hatred",
-                "description": "Attacks the enemy repeatedly, and grants immunity to the caster for 1 turn. When the enemy's max Health is greater than the caster's max Health, increases Combat Readiness of the caster proportionally, up to 30%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "憎悪の剣",
+                "description": "敵を連続で攻撃し、発動者に1ターンの間免疫を付与する。敵の最大HPが発動者より高い場合、それに比例して発動者の行動ゲージを最大30%まで増加させる。",
+                "soulburn_effect": "与ダメージがアップする。"
             },
             "S3": {
-                "name": "Heir to the Throne",
-                "description": "Attacks the enemy with a sword, and grants counterattack and a barrier (proportional to Attack) to the caster for 2 turns. When the enemy is defeated, extends buff durations of the caster by 1 turn and grants an extra turn. When the enemy's max Health is greater than the caster's max Health, damage dealt increases proportionally, up to 70%."
+                "name": "王位継承者",
+                "description": "剣で敵を攻撃し、発動者に2ターンの間反撃とバリア（攻撃力に比例）を付与する。敵を倒すと、発動者の強化効果の持続時間を1ターン延長し、追加ターンを得る。敵の最大HPが発動者より高い場合、それに比例して与ダメージが最大70%までアップする。"
             }
         }
     },

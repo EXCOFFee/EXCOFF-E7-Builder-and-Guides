@@ -2110,17 +2110,17 @@
         "_name": "Eligos",
         "skills": {
             "S1": {
-                "name": "Point-Blank Shot",
-                "description": "Attacks the enemy by dashing towards them. When the caster is granted increased Attack (Greater), triggers a Dual Attack from the ally with the highest Attack. Damage deait increases proportional to the caster's Speed."
+                "name": "近距离射击",
+                "description": "冲向敌人发动攻击。施放者拥有攻击力提升（大）时，攻击力最高的友军发动协攻。造成的伤害按施放者的速度比例提升。"
             },
             "S2": {
-                "name": "The Cleaner",
-                "description": "Hit Chance and Critical Hit Damage increases by 50%. When an ally except for the caster defeats an enemy, activates Time Bomb against the enemy with the lowest Health. Can only be activated once every 2 turns. Time Bomb: After granting increased Attack (Greater) to the caster for 2 turns, attacks the enemy with a bomb. Damage dealt increases proportional to the caster's Speed."
+                "name": "清道夫",
+                "description": "命中率与暴击伤害提升50%。除施放者外的友军击败敌人时，对生命值最低的敌人发动定时炸弹。每2回合只能发动一次。定时炸弹：为施放者施加2回合攻击力提升（大）后，以炸弹攻击敌人。造成的伤害按施放者的速度比例提升。"
             },
             "S3": {
-                "name": "Cloak and Trigger",
-                "description": "Inflicts resource reduction on the target by 60%, before attacking the enemy with a pistol, dispelling two buffs before inflicting target and decreased Defense for 2 turns and decreasing Combat Readiness by 50%. Increases Combat Readiness of the caster by 50%.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "斗篷与扳机",
+                "description": "对目标施加60%的资源削减，然后以手枪攻击敌人，解除两个强化效果后施加2回合标记与防御力降低，并降低50%行动值。使施放者的行动值提升50%。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -2128,17 +2128,17 @@
         "_name": "Elphelt",
         "skills": {
             "S1": {
-                "name": "Barrage",
-                "description": "Fires a barrage of bullets at the enemy, with a 75% chance to make them unable to be buffed for 1 turn."
+                "name": "弹幕",
+                "description": "向敌人倾泻弹幕，有75%的几率施加1回合无法强化。"
             },
             "S2": {
-                "name": "Judge Better Half",
-                "description": "After trapping the target in a cake, attacks the enemy with a cutting knife, and grants increased Attack to all allies for 2 turns. When the target is inflicted with sleep, inflicts decreased Defense on all enemies for 2 turns. Damage dealt increases proportional to the number of debuffs inflicted on the target."
+                "name": "审判·另一半",
+                "description": "将目标困在蛋糕中，然后以切刀攻击敌人，并为所有友军施加2回合攻击力提升。目标处于睡眠状态时，对所有敌人施加2回合防御力降低。造成的伤害按目标身上弱化效果的数量比例提升。"
             },
             "S3": {
-                "name": "Magnum Wedding",
-                "description": "Dispels two buffs from the enemy before shooting a bullet of love, with a 100% chance each to inflict sleep and decreased Defense for 2 turns. Grants an extra turn.",
-                "soulburn_effect": "Ignores Effect Resistance."
+                "name": "麦格农婚礼",
+                "description": "解除敌人的两个强化效果后，射出爱之子弹，各有100%的几率施加2回合睡眠与防御力降低。获得额外回合。",
+                "soulburn_effect": "无视效果抵抗。"
             }
         }
     },
@@ -2146,17 +2146,17 @@
         "_name": "Elson",
         "skills": {
             "S1": {
-                "name": "Heavy Strike",
-                "description": "Attacks the enemy, with a 75% chance to decrease Attack for 1 turn."
+                "name": "重击",
+                "description": "攻击敌人，有75%的几率降低攻击力1回合。"
             },
             "S2": {
-                "name": "Meteor Shower",
-                "description": "Attacks all enemies with Meteor Shower of Light and recovers the Health of all allies. Healing increases proportional to the ally's max Health."
+                "name": "流星雨",
+                "description": "以光之流星雨攻击所有敌人，并恢复所有友军的生命值。治疗量按友军的最大生命值比例提升。"
             },
             "S3": {
-                "name": "Light's Protection",
-                "description": "Recovers Health and increases Attack and Defense of all allies for 2 turns with strengthening magic. Amount recovered is proportional to the target's max Health.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "光之守护",
+                "description": "以强化魔法恢复所有友军的生命值，并提升攻击力与防御力2回合。恢复量与目标的最大生命值成比例。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             }
         }
     },
@@ -2164,17 +2164,17 @@
         "_name": "Elvira",
         "skills": {
             "S1": {
-                "name": "Hit and Run",
-                "description": "Swiftly attacks the enemy and has a 75% chance to provoke for 1 turn. When the caster is immortal, increases effect chance by 25%.",
-                "soulburn_effect": "Grants an extra turn."
+                "name": "打了就跑",
+                "description": "迅速攻击敌人，有75%的几率施加1回合挑衅。施放者处于不死状态时，效果几率提升25%。",
+                "soulburn_effect": "获得额外回合。"
             },
             "S2": {
-                "name": "Blood Mana",
-                "description": "Increases Effect Resistance by 50%, and when attacking, cannot trigger a critical hit. Decreases the amount of Fighting Spirit gained by the enemy by 100%. After using a basic skill on the caster's turn, when the caster is immortal, activates Exterminate as an extra attack. Exterminate can only be activated once every 2 turns. Exterminate: Attacks all enemies, dispelling one buff before inflicting beguile."
+                "name": "血之魔力",
+                "description": "效果抵抗提升50%，攻击时无法造成暴击。敌人获得的斗志降低100%。在施放者的回合使用普通技能后，若施放者处于不死状态，以追加攻击发动歼灭。歼灭每2回合只能发动一次。歼灭：攻击所有敌人，解除一个强化效果，然后施加魅惑。"
             },
             "S3": {
-                "name": "Capturing Sacrifice",
-                "description": "Attacks the enemy, dispelling all buffs before making them unhealable amd decreasing Defense for 2 turns, and grants immortality to the caster for 3 turns. Penetrates the target's Defense. When the target is a Hero, damage dealt increases proportional to the target's current Health. This skill is unaffected by cooldown increase and decrease effects."
+                "name": "捕获之祭",
+                "description": "攻击敌人，解除所有强化效果后施加2回合无法恢复与防御力降低，并为施放者施加3回合不死。穿透目标的防御力。目标为英雄时，造成的伤害按目标当前生命值比例提升。此技能不受冷却时间增减效果影响。"
             }
         }
     },
@@ -2182,17 +2182,17 @@
         "_name": "Emilia",
         "skills": {
             "S1": {
-                "name": "Huma",
-                "description": "Attacks the enemy with ice, before recovering Health of the ally with the lowest Health proportional to the caster's max Health."
+                "name": "休玛",
+                "description": "以冰攻击敌人，然后按施放者的最大生命值比例恢复生命值最低的友军的生命值。"
             },
             "S2": {
-                "name": "Spirit's Blessing",
-                "description": "Grants a blessing to an ally except for the caster, dispelling two debuffs and increasing Attack for 2 turns before increasing Combat Readiness by 50%. Increases Combat Readiness of the caster by 25%.",
-                "soulburn_effect": "Recovers Health of an ally proportional to the caster's max Health."
+                "name": "精灵祝福",
+                "description": "祝福除施放者外的一名友军，解除两个弱化效果并提升攻击力2回合，然后提升50%行动值。使施放者的行动值提升25%。",
+                "soulburn_effect": "按施放者的最大生命值比例恢复友军的生命值。"
             },
             "S3": {
-                "name": "Divine Protection of the Great Spirit",
-                "description": "Uses spiritual arts to dispel two debuffs from all allies, before recovering Health and granting a barrier for 2 turns. Amount recovered and barrier strength increase proportional to the caster's max Health."
+                "name": "大精灵的庇护",
+                "description": "使用精灵术解除所有友军的两个弱化效果，然后恢复生命值并施加2回合屏障。恢复量与屏障强度按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -2200,17 +2200,17 @@
         "_name": "Empyrean Ilynav",
         "skills": {
             "S1": {
-                "name": "Sword of Punishment",
-                "description": "Attacks the enemy with a sword, absorbing some of the damage dealt as Health, and inflicts up to 10% injuries. Damage dealt increases proportional to the caster's max Health.",
-                "soulburn_effect": "Increases damage dealt and a successful attack deals additional damage equivalent to 50% of injuries inflicted on the target. This attack does not trigger a Dual Attack."
+                "name": "惩戒之剑",
+                "description": "以剑攻击敌人，将部分造成的伤害吸收为生命值，并造成最多10%的负伤。造成的伤害按施放者的最大生命值比例提升。",
+                "soulburn_effect": "提升造成的伤害，攻击成功时追加造成相当于目标负伤50%的伤害。此攻击不会触发协攻。"
             },
             "S2": {
-                "name": "Dragon's Pride",
-                "description": "Increases Penetration Resistance of all allies by 30%. After every attack suffered by an ally, increases Combat Readiness of the caster by 10%."
+                "name": "龙之骄傲",
+                "description": "所有友军的穿透抵抗提升30%。友军每次受到攻击后，使施放者的行动值提升10%。"
             },
             "S3": {
-                "name": "Unyielding Blow",
-                "description": "Attacks the enemy with a spear, inflicting up to 20% injuries, before dispelling two debuffs from all allies and granting indomitable for 2 turns. Damage dealt increases proportional to the caster's max Health."
+                "name": "不屈一击",
+                "description": "以长枪攻击敌人，造成最多20%的负伤，然后解除所有友军的两个弱化效果，并施加2回合不屈。造成的伤害按施放者的最大生命值比例提升。"
             }
         }
     },
@@ -2218,17 +2218,17 @@
         "_name": "Enott",
         "skills": {
             "S1": {
-                "name": "Smash",
-                "description": "Attacks with an axe, with a 50% chance to cause bleeding for 2 turns. Damage dealt increases proportional to the amount of the enemy's lost Health."
+                "name": "猛击",
+                "description": "以斧头攻击，有50%的几率施加2回合出血。造成的伤害按敌人已损失的生命值比例提升。"
             },
             "S2": {
-                "name": "Judgement",
-                "description": "Attacks with a sharp blow, with a 75% chance each to decrease Defense and make them unable to be buffed for 2 turns."
+                "name": "审判",
+                "description": "以锐利一击攻击，各有75%的几率施加2回合防御力降低与无法强化。"
             },
             "S3": {
-                "name": "Prepare Judgement",
-                "description": "Corrects stance, increasing Attack and Critical Hit Chance of the caster for 2 turns and Combat Readiness by 50%.",
-                "soulburn_effect": "Extends duration of buffs granted by this skill by 1 turn."
+                "name": "准备审判",
+                "description": "调整姿态，提升施放者的攻击力与暴击率2回合，并提升50%行动值。",
+                "soulburn_effect": "此技能施加的强化效果持续时间延长1回合。"
             }
         }
     },
@@ -2236,17 +2236,17 @@
         "_name": "Ervalen",
         "skills": {
             "S1": {
-                "name": "Vengeance",
-                "description": "Rapidly attacks the enemy, with a 50% chance to decrease Defense for 2 turns."
+                "name": "复仇",
+                "description": "迅速攻击敌人，有50%的几率降低防御力2回合。"
             },
             "S2": {
-                "name": "Sword of Hatred",
-                "description": "Attacks the enemy repeatedly, and grants immunity to the caster for 1 turn. When the enemy's max Health is greater than the caster's max Health, increases Combat Readiness of the caster proportionally, up to 30%.",
-                "soulburn_effect": "Increases damage dealt."
+                "name": "憎恨之剑",
+                "description": "连续攻击敌人，并为施放者施加1回合免疫。敌人的最大生命值高于施放者时，按比例提升施放者的行动值，最多30%。",
+                "soulburn_effect": "提升造成的伤害。"
             },
             "S3": {
-                "name": "Heir to the Throne",
-                "description": "Attacks the enemy with a sword, and grants counterattack and a barrier (proportional to Attack) to the caster for 2 turns. When the enemy is defeated, extends buff durations of the caster by 1 turn and grants an extra turn. When the enemy's max Health is greater than the caster's max Health, damage dealt increases proportionally, up to 70%."
+                "name": "王位继承人",
+                "description": "以剑攻击敌人，并为施放者施加2回合反击与屏障（与攻击力成比例）。击败敌人时，使施放者的强化效果持续时间延长1回合，并获得额外回合。敌人的最大生命值高于施放者时，造成的伤害按比例提升，最多70%。"
             }
         }
     },
