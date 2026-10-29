@@ -360,8 +360,13 @@ class UserBuildController extends Controller
             }
 
             $tags = $request->input($field);
-            if (is_string($tags)) {
-                $tags = json_decode($tags, true);
+            if (is_string($tags) && $tags !== '') {
+                $decoded = json_decode($tags, true);
+                // JSON roto: queda el texto y la regla "array" responde 422 (antes borraba los tags)
+                if (!is_array($decoded)) {
+                    continue;
+                }
+                $tags = $decoded;
             }
 
             $request->merge([$field => is_array($tags)
@@ -379,11 +384,11 @@ class UserBuildController extends Controller
         return [
             'pro_tags' => "nullable|array|max:{$max}",
             'pro_tags.*' => 'array',
-            'pro_tags.*.id' => ['required', 'string', Rule::in(config('build_tags.pro'))],
+            'pro_tags.*.id' => ['required', 'string', 'distinct', Rule::in(config('build_tags.pro'))],
             'pro_tags.*.note' => "nullable|string|max:{$noteMax}",
             'con_tags' => "nullable|array|max:{$max}",
             'con_tags.*' => 'array',
-            'con_tags.*.id' => ['required', 'string', Rule::in(config('build_tags.con'))],
+            'con_tags.*.id' => ['required', 'string', 'distinct', Rule::in(config('build_tags.con'))],
             'con_tags.*.note' => "nullable|string|max:{$noteMax}",
         ];
     }

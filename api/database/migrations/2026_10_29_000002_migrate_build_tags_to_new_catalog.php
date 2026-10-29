@@ -19,7 +19,9 @@ return new class extends Migration
     public function up(): void
     {
         $map = json_decode((string) file_get_contents(database_path('data/tag_migration_2026_10.json')), true);
-        $valid = ['pro' => config('build_tags.pro'), 'con' => config('build_tags.con')];
+        // El archivo y no config(): durante el deploy el caché de config puede ser el anterior
+        $catalog = require config_path('build_tags.php');
+        $valid = ['pro' => $catalog['pro'], 'con' => $catalog['con']];
         $heroIds = DB::table('heroes')->whereIn('slug', array_values($map['con_to_counter_hero']))->pluck('id', 'slug');
 
         DB::table('user_builds')->lazyById()->each(function ($build) use ($map, $valid, $heroIds) {
@@ -45,6 +47,8 @@ return new class extends Migration
                         $heroId = $heroIds[$map['con_to_counter_hero'][$id]] ?? null;
                         if ($heroId) {
                             $counters = $this->addCounter($counters, $heroId, $note);
+                        } else {
+                            Log::info("migración de tags: build {$build->id} descarta con '{$id}' (no está el héroe {$map['con_to_counter_hero'][$id]})");
                         }
                         continue;
                     }

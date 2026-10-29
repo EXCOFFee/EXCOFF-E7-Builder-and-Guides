@@ -4,18 +4,15 @@ import { useId, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useTranslations } from '@/hooks/useTranslations';
 import {
-    PROS_TAGS,
-    CONS_TAGS,
     TAG_GROUPS,
     TAG_CATEGORIES,
     getTagById,
     getTagLabel,
     getGroupLabel,
     getCategoryLabel,
-    tagMatches,
+    groupTagsByCategory,
     MAX_PROS,
     MAX_CONS,
-    type Tag,
     type TagType,
 } from '@/lib/pros-cons-tags';
 
@@ -156,17 +153,7 @@ function TagSide({ type, selected, disabled, onChange, onEditNote }: TagSideProp
     const groups = TAG_GROUPS.filter((g) => g.type === type);
     const categories = TAG_CATEGORIES.filter((c) => c.type === type && (group === 'all' || c.group === group));
 
-    // Tags visibles agrupados por categoría, en el orden del catálogo
-    const sections = useMemo(() => {
-        const all = type === 'pro' ? PROS_TAGS : CONS_TAGS;
-        const visible = all.filter((tag) =>
-            (group === 'all' || tag.group === group) &&
-            (category === 'all' || tag.category === category) &&
-            tagMatches(tag, search));
-        const byCategory = new Map<string, Tag[]>();
-        for (const tag of visible) byCategory.set(tag.category, [...(byCategory.get(tag.category) ?? []), tag]);
-        return [...byCategory.entries()];
-    }, [type, group, category, search]);
+    const sections = useMemo(() => groupTagsByCategory(type, { group, category, search }), [type, group, category, search]);
 
     const isSelected = (id: string) => selected.some((tag) => tag.id === id);
     const toggle = (id: string) => {
@@ -315,9 +302,11 @@ export function normalizeTagsWithNotes(tags: TagWithNote[] | string[] | null | u
     return (tags as (TagWithNote | string)[]).map((tag) => (typeof tag === 'string' ? { id: tag } : tag));
 }
 
-/** Link a /builds filtrado por el tag */
-export function tagHref(id: string): string {
-    return `/builds?tags=${encodeURIComponent(id)}`;
+/** Link a /builds filtrado por el tag (y por el héroe, si se pasa: desde su ficha) */
+export function tagHref(id: string, heroSlug?: string): string {
+    const params = new URLSearchParams({ tags: id });
+    if (heroSlug) params.set('hero', heroSlug);
+    return `/builds?${params}`;
 }
 
 export function ProConsDisplay({ pros, cons, compact = false }: ProConsDisplayProps) {

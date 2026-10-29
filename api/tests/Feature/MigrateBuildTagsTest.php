@@ -59,6 +59,17 @@ class MigrateBuildTagsTest extends TestCase
         ], $build->counter_heroes);
     }
 
+    /** En el deploy el caché de config puede ser de antes de que existiera build_tags.php */
+    public function test_works_without_the_catalog_in_config(): void
+    {
+        config(['build_tags' => null]);
+        $build = UserBuild::factory()->create(['pro_tags' => [['id' => 'cr_pusher']]]);
+
+        $this->runMigration();
+
+        $this->assertSame([['id' => 'team_cr_push']], $build->fresh()->pro_tags);
+    }
+
     public function test_counter_hero_already_listed_is_not_duplicated(): void
     {
         $belian = Hero::factory()->create(['slug' => 'belian', 'name' => 'Belian']);

@@ -141,6 +141,10 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
         );
     }
 
+    // Solo tags del catálogo (un caché de antes de la migración puede traer IDs viejos)
+    const proTags = (stats?.pro_tags ?? []).filter((tag) => getTagById(tag.tag));
+    const conTags = (stats?.con_tags ?? []).filter((tag) => getTagById(tag.tag));
+
     if (error || !stats || stats.total_builds === 0) {
         return (
             <div className="hero-sheet__panel p-4 sm:p-5">
@@ -342,13 +346,13 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                             <h3 className="text-lg font-sans font-semibold text-green-400 flex items-center gap-2">
                                 <span>✓</span> {t('builds.pros', 'Pros')}
                             </h3>
-                            {stats.pro_tags?.length > 0 ? (
-                                stats.pro_tags.filter((tag) => getTagById(tag.tag)).map((tag) => (
+                            {proTags.length > 0 ? (
+                                proTags.map((tag) => (
                                     <div
                                         key={tag.tag}
                                         className="flex items-center justify-between px-4 py-3 rounded-lg bg-emerald-950/40 border border-emerald-500/25 transition-colors"
                                     >
-                                        <Link href={tagHref(tag.tag)} className="text-green-200 font-medium hover:underline">
+                                        <Link href={tagHref(tag.tag, heroSlug)} className="text-green-200 font-medium hover:underline">
                                             {getTagLabel(getTagById(tag.tag)!, locale)}
                                         </Link>
                                         <span className="text-green-400 font-semibold">{tag.percentage}%</span>
@@ -364,13 +368,13 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                             <h3 className="text-lg font-sans font-semibold text-red-400 flex items-center gap-2">
                                 <span>✗</span> {t('builds.cons', 'Cons')}
                             </h3>
-                            {stats.con_tags?.length > 0 ? (
-                                stats.con_tags.filter((tag) => getTagById(tag.tag)).map((tag) => (
+                            {conTags.length > 0 ? (
+                                conTags.map((tag) => (
                                     <div
                                         key={tag.tag}
                                         className="flex items-center justify-between px-4 py-3 rounded-lg bg-rose-950/40 border border-rose-500/25 transition-colors"
                                     >
-                                        <Link href={tagHref(tag.tag)} className="text-red-200 font-medium hover:underline">
+                                        <Link href={tagHref(tag.tag, heroSlug)} className="text-red-200 font-medium hover:underline">
                                             {getTagLabel(getTagById(tag.tag)!, locale)}
                                         </Link>
                                         <span className="text-red-400 font-semibold">{tag.percentage}%</span>

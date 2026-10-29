@@ -3,15 +3,12 @@
 import { useId, useMemo, useState } from 'react';
 import { useTranslations } from '@/hooks/useTranslations';
 import {
-    PROS_TAGS,
-    CONS_TAGS,
     TAG_GROUPS,
     getTagById,
     getTagLabel,
     getGroupLabel,
     getCategoryLabel,
-    tagMatches,
-    type Tag,
+    groupTagsByCategory,
     type TagType,
 } from '@/lib/pros-cons-tags';
 
@@ -42,13 +39,7 @@ export function TagFilter({ included, excluded, onChange }: TagFilterProps) {
         else onChange(inc, exc);
     };
 
-    const sections = useMemo(() => {
-        const visible = (type === 'pro' ? PROS_TAGS : CONS_TAGS).filter((tag) =>
-            (group === 'all' || tag.group === group) && tagMatches(tag, search));
-        const byCategory = new Map<string, Tag[]>();
-        for (const tag of visible) byCategory.set(tag.category, [...(byCategory.get(tag.category) ?? []), tag]);
-        return [...byCategory.entries()];
-    }, [type, group, search]);
+    const sections = useMemo(() => groupTagsByCategory(type, { group, search }), [type, group, search]);
 
     const active = [...included.map((id) => ({ id, mode: 'in' as const })), ...excluded.map((id) => ({ id, mode: 'out' as const }))]
         .filter(({ id }) => getTagById(id));

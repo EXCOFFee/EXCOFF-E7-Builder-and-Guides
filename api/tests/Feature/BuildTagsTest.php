@@ -61,6 +61,24 @@ class BuildTagsTest extends TestCase
             ->assertJsonValidationErrors('pro_tags.0.note');
     }
 
+    public function test_same_tag_twice_is_rejected(): void
+    {
+        $this->create(['pro_tags' => json_encode([['id' => 'stun'], ['id' => 'stun']])])
+            ->assertStatus(422);
+    }
+
+    public function test_broken_json_is_rejected_instead_of_clearing_tags(): void
+    {
+        $owner = User::factory()->create();
+        $build = UserBuild::factory()->create(['user_id' => $owner->id, 'con_tags' => [['id' => 'weak_to_cc']]]);
+
+        $this->actingAs($owner)
+            ->putJson("/api/builds/{$build->id}", ['con_tags' => '[{"id":"weak_to_cc"'])
+            ->assertStatus(422);
+
+        $this->assertSame([['id' => 'weak_to_cc']], $build->fresh()->con_tags);
+    }
+
     public function test_update_validates_tags_too(): void
     {
         $owner = User::factory()->create();

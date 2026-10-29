@@ -391,5 +391,16 @@ function normalize(text: string): string {
     return text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 }
 
+/** Tags de un tipo filtrados por grupo, categoría y búsqueda, agrupados por categoría (orden del catálogo) */
+export function groupTagsByCategory(type: TagType, filters: { group?: string; category?: string; search?: string }): [string, Tag[]][] {
+    const { group = 'all', category = 'all', search = '' } = filters;
+    const byCategory = new Map<string, Tag[]>();
+    for (const tag of type === 'pro' ? PROS_TAGS : CONS_TAGS) {
+        if ((group !== 'all' && tag.group !== group) || (category !== 'all' && tag.category !== category) || !tagMatches(tag, search)) continue;
+        byCategory.set(tag.category, [...(byCategory.get(tag.category) ?? []), tag]);
+    }
+    return [...byCategory.entries()];
+}
+
 export const MAX_PROS = 5;
 export const MAX_CONS = 5;

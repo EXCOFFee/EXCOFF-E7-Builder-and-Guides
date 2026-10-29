@@ -111,7 +111,7 @@ export default function BuildsPage() {
     const heroSlug = searchParams.get('hero');
     // ?tags=a,b&exclude_tags=c: los tags de las builds y de la ficha llevan acá; quedan en la URL
     const includedTags = parseTagList(searchParams.get('tags'));
-    const excludedTags = parseTagList(searchParams.get('exclude_tags'));
+    const excludedTags = parseTagList(searchParams.get('exclude_tags')).filter((id) => !includedTags.includes(id));
     const setTagFilters = (included: string[], excluded: string[]) => {
         const next = new URLSearchParams(searchParams.toString());
         for (const [key, list] of [['tags', included], ['exclude_tags', excluded]] as const) {
@@ -129,7 +129,14 @@ export default function BuildsPage() {
     const [selectedLanguage, setSelectedLanguage] = useState<string>('all');
 
     // Advanced filters
-    const [showAdvancedFilters, setShowAdvancedFilters] = useState(() => includedTags.length + excludedTags.length > 0);
+    const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
+    // Llegar con otros tags en la URL (link de una build, sin remontar la página) abre el panel
+    const tagKey = [...includedTags, '|', ...excludedTags].join(',');
+    const [openedFor, setOpenedFor] = useState('');
+    if (tagKey !== openedFor) {
+        setOpenedFor(tagKey);
+        if (includedTags.length + excludedTags.length > 0) setShowAdvancedFilters(true);
+    }
     const [primarySet, setPrimarySet] = useState<string | null>(null);
     const [minSpeed, setMinSpeed] = useState<string>('');
 
