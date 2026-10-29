@@ -25,6 +25,8 @@ class HeroController extends Controller
      */
     private const CACHE_TTL = 3600;
 
+    private const LOCALES = ['en', 'es', 'pt', 'ko', 'ja', 'zh'];
+
     /**
      * List all heroes with optional filters.
      * 
@@ -119,7 +121,8 @@ class HeroController extends Controller
             ], 404);
         }
 
-        $lang = (string) $request->query('lang', 'en');
+        // Solo idiomas de la web: un lang libre crearía una entrada de caché por valor
+        $lang = in_array($request->query('lang'), self::LOCALES, true) ? $request->query('lang') : 'en';
 
         // 5 min; la clave cambia sola cuando se guarda o borra una build (BuildCache)
         $stats = Cache::remember(

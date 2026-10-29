@@ -17,7 +17,8 @@ return new class extends Migration
         $baseStats = DB::table('heroes')->pluck('base_stats', 'id')
             ->map(fn ($json) => json_decode((string) $json, true) ?: []);
 
-        DB::table('user_builds')->whereNotNull('min_stats')->orderBy('id')
+        // lazyById: pagina por id, así poner min_stats en null no corre las páginas siguientes
+        DB::table('user_builds')->whereNotNull('min_stats')->lazyById()
             ->each(function ($build) use ($baseStats) {
                 $stats = json_decode((string) $build->min_stats, true);
                 if (!is_array($stats)) {

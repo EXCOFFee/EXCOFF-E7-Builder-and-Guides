@@ -21,7 +21,10 @@ export default function EditBuildPage() {
     const { data: build, isLoading, isError } = useQuery<ApiBuild>({
         queryKey: ['build', buildId, locale],
         queryFn: async () => {
-            const response = await fetch(`${API_URL}/builds/${buildId}?lang=${locale}`);
+            // Mismo queryKey que el detalle: con el token, para que is_owner quede bien en el caché
+            const response = await fetch(`${API_URL}/builds/${buildId}?lang=${locale}`, {
+                headers: { Authorization: `Bearer ${localStorage.getItem('auth_token')}` },
+            });
             if (!response.ok) throw new Error('Build not found');
             return response.json();
         },

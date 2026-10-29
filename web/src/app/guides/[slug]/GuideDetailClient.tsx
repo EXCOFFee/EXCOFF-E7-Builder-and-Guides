@@ -165,8 +165,7 @@ export function GuideDetailClient() {
 
     // Fetch comments
     const { data: commentsData } = useQuery({
-        // Con el usuario en la clave: is_owner cambia al iniciar sesión
-        queryKey: ['guide-comments', slug, currentUser?.id ?? null],
+        queryKey: ['guide-comments', slug],
         queryFn: async () => {
             const token = localStorage.getItem('auth_token');
             const response = await fetch(`${API_URL}/guides/${guide?.id}/comments`, {

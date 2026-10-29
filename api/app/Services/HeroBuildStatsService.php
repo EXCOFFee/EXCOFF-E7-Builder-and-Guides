@@ -170,7 +170,7 @@ class HeroBuildStatsService
             ->all();
     }
 
-    /** Promedio de cada stat mínimo entre las builds que lo indican (las 8, aunque no haya datos) */
+    /** Promedio de cada stat mínimo entre las builds que lo indican; los stats sin datos no van */
     private function priorityStats(Collection $builds): array
     {
         $stats = [];
@@ -178,7 +178,10 @@ class HeroBuildStatsService
         foreach (self::STAT_LABELS as $stat => $label) {
             $values = $builds->map(fn (UserBuild $b) => $b->min_stats[$stat] ?? null)
                 ->filter(fn ($v) => is_numeric($v) && $v > 0);
-            $avg = $values->isNotEmpty() ? (float) $values->avg() : 0.0;
+            if ($values->isEmpty()) {
+                continue;
+            }
+            $avg = (float) $values->avg();
 
             $stats[] = [
                 'stat' => $stat,

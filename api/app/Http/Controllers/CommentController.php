@@ -115,7 +115,7 @@ class CommentController extends Controller
         $user = $request->user();
 
         // Check if user is owner or admin
-        if ($comment->user_id !== $user->id && !$user->is_admin) {
+        if ((int) $comment->user_id !== (int) $user->id && !$user->is_admin) {
             return response()->json(['error' => 'Unauthorized'], 403);
         }
 
@@ -132,7 +132,7 @@ class CommentController extends Controller
         $user = $request->user();
 
         // Check if user is owner
-        if ($comment->user_id !== $user->id) {
+        if ((int) $comment->user_id !== (int) $user->id) {
             return response()->json(['error' => 'Unauthorized'], 403);
         }
 

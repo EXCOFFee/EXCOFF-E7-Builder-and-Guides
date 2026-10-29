@@ -192,8 +192,7 @@ export function BuildDetailClient() {
 
     // Fetch comments
     const { data: commentsData } = useQuery({
-        // Con el usuario en la clave: is_owner cambia al iniciar sesión
-        queryKey: ['build-comments', buildId, currentUser?.id ?? null],
+        queryKey: ['build-comments', buildId],
         queryFn: async () => {
             const token = localStorage.getItem('auth_token');
             const response = await fetch(`${API_URL}/builds/${buildId}/comments`, {

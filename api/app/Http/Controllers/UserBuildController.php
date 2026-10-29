@@ -273,7 +273,7 @@ class UserBuildController extends Controller
     public function update(Request $request, UserBuild $build): JsonResponse
     {
         // Check ownership
-        if ($build->user_id !== $request->user()->id && !$request->user()->is_admin) {
+        if ((int) $build->user_id !== (int) $request->user()->id && !$request->user()->is_admin) {
             return response()->json(['error' => 'Unauthorized'], 403);
         }
 
@@ -361,7 +361,7 @@ class UserBuildController extends Controller
     public function destroy(Request $request, UserBuild $build): JsonResponse
     {
         // Check ownership
-        if ($build->user_id !== $request->user()->id && !$request->user()->is_admin) {
+        if ((int) $build->user_id !== (int) $request->user()->id && !$request->user()->is_admin) {
             return response()->json(['error' => 'Unauthorized'], 403);
         }
 

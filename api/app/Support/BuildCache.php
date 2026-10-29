@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Cache;
  * Claves de caché de todo lo que se calcula a partir de las builds (lista de builds y
  * stats por héroe). Llevan un número de versión que sube cada vez que se guarda o borra
  * una build: las claves viejas dejan de usarse y vencen solas. El store de producción es
- * por archivo y no tiene tags, por eso la versión en lugar de Cache::tags().
+ * "database" y no tiene tags, por eso la versión en lugar de Cache::tags().
  */
 final class BuildCache
 {
@@ -21,13 +21,19 @@ final class BuildCache
         return 'builds:v' . self::version() . ':' . $suffix;
     }
 
+    /**
+     * increment es atómico (dos guardados a la vez no quedan con el mismo número). En el store
+     * "database" no crea la clave si no existe: devuelve false y se crea acá.
+     */
     public static function bump(): void
     {
-        Cache::forever(self::VERSION_KEY, self::version() + 1);
+        if (Cache::increment(self::VERSION_KEY) === false) {
+            Cache::forever(self::VERSION_KEY, self::version() + 1);
+        }
     }
 
     private static function version(): int
     {
-        return (int) Cache::get(self::VERSION_KEY, 1);
+        return (int) Cache::get(self::VERSION_KEY, 0);
     }
 }

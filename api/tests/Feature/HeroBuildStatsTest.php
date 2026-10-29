@@ -82,4 +82,25 @@ class HeroBuildStatsTest extends TestCase
         $build->delete();
         $this->assertSame(1, $this->stats($hero)['total_builds']);
     }
+
+    /** Producción usa el store "database", donde increment no crea la clave de versión */
+    public function test_cache_renews_with_the_database_store(): void
+    {
+        config(['cache.default' => 'database']);
+        $hero = Hero::factory()->create();
+
+        UserBuild::factory()->create(['hero_id' => $hero->id]);
+        $this->assertSame(1, $this->stats($hero)['total_builds']);
+
+        UserBuild::factory()->create(['hero_id' => $hero->id]);
+        $this->assertSame(2, $this->stats($hero)['total_builds']);
+    }
+
+    public function test_stats_without_data_are_left_out(): void
+    {
+        $hero = Hero::factory()->create();
+        UserBuild::factory()->create(['hero_id' => $hero->id, 'min_stats' => ['spd' => 200]]);
+
+        $this->assertSame(['spd'], array_column($this->stats($hero)['priority_stats'], 'stat'));
+    }
 }
