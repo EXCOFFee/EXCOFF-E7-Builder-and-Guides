@@ -106,10 +106,10 @@ export default function GuildsPage() {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
                     <div className="text-center md:text-left">
-                        <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">
+                        <h1 className="font-hero font-normal text-4xl md:text-5xl text-slate-50 tracking-normal mb-2">
                             {t('guilds.title', 'Guild Recruitment')}
                         </h1>
-                        <p className="font-display text-slate-400">
+                        <p className="font-sans text-slate-400">
                             {t('guilds.subtitle', 'Find your perfect guild or recruit new members')}
                         </p>
                     </div>

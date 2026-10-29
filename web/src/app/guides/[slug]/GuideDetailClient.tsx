@@ -367,7 +367,7 @@ export function GuideDetailClient() {
                                 />
                             </div>
                             <div>
-                                <p className="font-display text-sm text-gray-400 mb-1">{t('guides.relatedHero', 'Related Hero')}</p>
+                                <p className="font-sans text-sm text-gray-400 mb-1">{t('guides.relatedHero', 'Related Hero')}</p>
                                 <Link href={`/heroes/${guide.hero.slug}`} className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold hover:from-e7-gold hover:to-e7-text-gold font-bold text-xl transition-all duration-300">
                                     {guide.hero.name}
                                 </Link>
@@ -382,7 +382,7 @@ export function GuideDetailClient() {
                         </span>
 
                         {/* Title */}
-                        <h1 className="font-display text-3xl md:text-4xl font-bold text-white mt-4 mb-4">
+                        <h1 className="font-hero text-3xl md:text-4xl font-normal text-white mt-4 mb-4">
                             {guide.title}
                         </h1>
 

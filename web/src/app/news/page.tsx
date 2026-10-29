@@ -82,7 +82,7 @@ export default function NewsPage() {
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="mb-8 text-center">
-                    <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">
+                    <h1 className="font-hero font-normal text-4xl md:text-5xl text-slate-50 tracking-normal mb-2">
                         {t('news.title', 'Epic Seven News')}
                     </h1>
                     <p className="text-slate-400 max-w-xl mx-auto">

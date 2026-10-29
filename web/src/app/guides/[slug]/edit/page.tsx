@@ -229,7 +229,7 @@ export default function EditGuidePage() {
                     <Link href={`/guides/${slug}`} className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
                         <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('guides.backToGuides', 'Back to Guide')}
                     </Link>
-                    <h1 className="font-display text-4xl text-gold-gradient tracking-wide mb-2">{t('guides.editGuide', 'Edit Guide')}</h1>
+                    <h1 className="font-hero font-normal text-4xl text-slate-50 tracking-normal mb-2">{t('guides.editGuide', 'Edit Guide')}</h1>
                     <p className="text-slate-400">{t('guides.editSubtitle', 'Update your guide content')}</p>
                 </div>
 

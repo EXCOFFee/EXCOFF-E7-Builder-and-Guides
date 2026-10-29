@@ -11,7 +11,7 @@ export default function CreditsPage() {
         <div className="min-h-screen bg-e7-void py-8 px-4">
             <div className="max-w-4xl mx-auto">
                 <div className="mb-12 text-center">
-                    <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">
+                    <h1 className="font-hero font-normal text-4xl md:text-5xl text-slate-50 tracking-normal mb-2">
                         {t('credits.title', 'Credits & Acknowledgements')}
                     </h1>
                     <p className="text-slate-400 max-w-2xl mx-auto">

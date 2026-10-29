@@ -440,16 +440,16 @@ export function BuildDetailClient() {
                             />
                         </div>
                         <div className="flex-1 text-center md:text-left">
-                            <Link href={`/heroes/${build.hero.slug}`} className="font-display inline-block text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold hover:from-e7-gold hover:to-e7-text-gold font-bold text-4xl md:text-5xl transition-all duration-300 transform hover:scale-105">
+                            <Link href={`/heroes/${build.hero.slug}`} className="font-hero inline-block font-normal text-4xl md:text-5xl text-slate-50 transition-colors hover:text-e7-text-gold">
                                 {build.hero.name}
                             </Link>
-                            <p className="font-display text-2xl text-gray-400 capitalize mt-2 font-medium">{build.hero.class.replace('_', ' ')}</p>
+                            <p className="text-lg text-night-muted capitalize mt-2">{build.hero.class.replace('_', ' ')}</p>
                         </div>
                     </div>
 
                     <div className="p-6">
                         {/* Title */}
-                        <h1 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+                        <h1 className="font-hero text-2xl md:text-3xl font-normal text-white mb-4">
                             {build.title}
                         </h1>
 

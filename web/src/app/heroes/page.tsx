@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { heroApi } from '@/lib/api';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
 import { useTranslations } from '@/hooks/useTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
@@ -233,8 +234,10 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
 export default function HeroesPage() {
     const { t } = useTranslations();
     const { translateHeroName } = useHeroTranslations();
-    const [search, setSearch] = useState('');
-    const [elementFilter, setElementFilter] = useState('');
+    // Filtros iniciales desde la URL (los usan los accesos por elemento y el buscador de la home)
+    const searchParams = useSearchParams();
+    const [search, setSearch] = useState(() => searchParams.get('search') ?? '');
+    const [elementFilter, setElementFilter] = useState(() => searchParams.get('element') ?? '');
     const [classFilter, setClassFilter] = useState('');
     const [rarityFilter, setRarityFilter] = useState<number | null>(null);
 
@@ -259,7 +262,7 @@ export default function HeroesPage() {
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-10 text-center">
-                    <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">{t('heroes.title', 'Hero Database')}</h1>
+                    <h1 className="font-hero font-normal text-4xl md:text-5xl text-slate-50 tracking-normal mb-2">{t('heroes.title', 'Hero Database')}</h1>
                     <p className="text-slate-400 max-w-xl mx-auto">{t('heroes.description', 'Explore all Epic Seven heroes, their stats and builds')}</p>
                 </div>
 

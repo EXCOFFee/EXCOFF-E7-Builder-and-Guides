@@ -128,7 +128,7 @@ export default function AdminReportsPage() {
             <div className="max-w-6xl mx-auto">
                 {/* Header */}
                 <div className="mb-8">
-                    <h1 className="text-3xl font-display text-gold-gradient tracking-wide">Panel de Administración</h1>
+                    <h1 className="text-3xl font-hero font-normal text-slate-50 tracking-normal">Panel de Administración</h1>
                     <p className="text-slate-400 mt-1">Gestionar reportes de contenido</p>
                 </div>
 

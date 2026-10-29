@@ -431,7 +431,7 @@ export function ProConsDisplay({ pros, cons, compact = false }: ProConsDisplayPr
             {/* Pros */}
             {normalizedPros.length > 0 && (
                 <div className="p-6 rounded-xl bg-gradient-to-br from-green-900/30 to-emerald-900/20 border border-green-500/40 shadow-lg shadow-green-500/5">
-                    <h4 className="text-xl font-display text-green-400 font-semibold mb-5 flex items-center gap-2">
+                    <h4 className="text-xl font-sans text-green-400 font-semibold mb-5 flex items-center gap-2">
                         ✓ {t('builds.pros', 'Pros')}
                     </h4>
                     <div className="space-y-4">
@@ -440,7 +440,7 @@ export function ProConsDisplay({ pros, cons, compact = false }: ProConsDisplayPr
                             if (!tag) return null;
                             return (
                                 <div key={tagWithNote.id} className="bg-gradient-to-r from-green-900/30 to-green-800/10 rounded-lg p-4 border border-green-500/30 hover:border-green-400/50 transition-colors">
-                                    <span className="text-lg font-display font-medium text-green-300">
+                                    <span className="text-lg font-sans font-medium text-green-300">
                                         {getTagLabel(tag, locale)}
                                     </span>
                                     {tagWithNote.note && (
@@ -458,7 +458,7 @@ export function ProConsDisplay({ pros, cons, compact = false }: ProConsDisplayPr
             {/* Cons */}
             {normalizedCons.length > 0 && (
                 <div className="p-6 rounded-xl bg-gradient-to-br from-red-900/30 to-rose-900/20 border border-red-500/40 shadow-lg shadow-red-500/5">
-                    <h4 className="text-xl font-display text-red-400 font-semibold mb-5 flex items-center gap-2">
+                    <h4 className="text-xl font-sans text-red-400 font-semibold mb-5 flex items-center gap-2">
                         ✗ {t('builds.cons', 'Cons')}
                     </h4>
                     <div className="space-y-4">
@@ -467,7 +467,7 @@ export function ProConsDisplay({ pros, cons, compact = false }: ProConsDisplayPr
                             if (!tag) return null;
                             return (
                                 <div key={tagWithNote.id} className="bg-gradient-to-r from-red-900/30 to-red-800/10 rounded-lg p-4 border border-red-500/30 hover:border-red-400/50 transition-colors">
-                                    <span className="text-lg font-display font-medium text-red-300">
+                                    <span className="text-lg font-sans font-medium text-red-300">
                                         {getTagLabel(tag, locale)}
                                     </span>
                                     {tagWithNote.note && (

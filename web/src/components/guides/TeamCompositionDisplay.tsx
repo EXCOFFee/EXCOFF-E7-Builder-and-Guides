@@ -78,7 +78,7 @@ export function TeamCompositionDisplay({ teams }: TeamCompositionDisplayProps) {
 
     return (
         <div className="space-y-6">
-            <h3 className="text-xl font-display font-semibold text-cyan-300">
+            <h3 className="text-xl font-sans font-semibold text-cyan-300">
                 {t('guides.teamCompositions', 'Team Compositions')}
             </h3>
 
@@ -88,7 +88,7 @@ export function TeamCompositionDisplay({ teams }: TeamCompositionDisplayProps) {
                         key={teamIndex}
                         className="p-5 rounded-xl bg-gradient-to-br from-cyan-900/30 to-teal-900/20 border border-cyan-500/30"
                     >
-                        <h4 className="text-lg font-display font-semibold text-cyan-200 mb-5">
+                        <h4 className="text-lg font-sans font-semibold text-cyan-200 mb-5">
                             {team.name || `${t('guides.team', 'Team')} ${teamIndex + 1}`}
                         </h4>
 
@@ -114,7 +114,7 @@ export function TeamCompositionDisplay({ teams }: TeamCompositionDisplayProps) {
                                                     unoptimized
                                                 />
                                             </div>
-                                            <p className="text-base font-display text-cyan-300 mt-3 font-medium">
+                                            <p className="text-base font-sans text-cyan-300 mt-3 font-medium">
                                                 {heroData.name}
                                             </p>
                                         </div>

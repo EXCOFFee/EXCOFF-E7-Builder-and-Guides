@@ -101,8 +101,8 @@ export default function GuidesPage() {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
                     <div className="text-center md:text-left">
-                        <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">{t('guides.title', 'Game Guides')}</h1>
-                        <p className="font-display text-slate-400">{t('guides.description', 'Learn strategies and tips from the community')}</p>
+                        <h1 className="font-hero font-normal text-4xl md:text-5xl text-slate-50 tracking-normal mb-2">{t('guides.title', 'Game Guides')}</h1>
+                        <p className="font-sans text-slate-400">{t('guides.description', 'Learn strategies and tips from the community')}</p>
                     </div>
                     <Link href="/guides/create">
                         <Button className="btn-gold px-4 py-2 rounded-md">
@@ -234,7 +234,7 @@ export default function GuidesPage() {
                                                     {CATEGORIES.find(c => c.id === guide.category)?.label || guide.category}
                                                 </span>
                                                 {guide.video_platform === 'youtube' && (
-                                                    <span className="text-red-500 text-xs">▶ YouTube</span>
+                                                    <span className="text-red-400 text-xs">▶ YouTube</span>
                                                 )}
                                                 {guide.language && guide.language !== 'en' && (
                                                     <span className="text-xs text-e7-gold bg-e7-gold/10 px-2 py-0.5 rounded">

@@ -13,7 +13,7 @@ export default function Loading() {
             >
                 <source src="/videos/RasRun.mp4" type="video/mp4" />
             </video>
-            <p className="mt-4 text-e7-gold text-xl font-display animate-pulse">
+            <p className="mt-4 text-e7-gold text-xl font-sans animate-pulse">
                 Loading...
             </p>
         </div>

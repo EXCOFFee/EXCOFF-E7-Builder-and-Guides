@@ -24,9 +24,9 @@ export default function LoginPage() {
             <Card className="w-full max-w-md glass-panel border-e7-gold/20 rounded-2xl overflow-hidden">
                 <CardHeader className="text-center pt-8">
                     <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-e7-gold via-amber-500 to-purple-600 flex items-center justify-center shadow-lg shadow-e7-gold/30 animate-border-glow">
-                        <span className="text-white font-bold text-3xl font-display">E7</span>
+                        <span className="text-white font-normal text-3xl font-hero">E7</span>
                     </div>
-                    <h1 className="leading-none font-semibold text-3xl font-display text-gold-gradient tracking-wide">
+                    <h1 className="leading-none text-3xl font-hero font-normal text-slate-50 tracking-normal">
                         {t('login.title', 'Sign in')}
                     </h1>
                     <p className="text-slate-400 text-sm mt-2">

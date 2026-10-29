@@ -284,7 +284,7 @@ export function HeroSelectorWithNotes({
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <div className="flex items-center gap-2">
-                                            <span className={`font-display font-semibold text-lg ${colors.text}`}>{hero.name}</span>
+                                            <span className={`font-sans font-semibold text-lg ${colors.text}`}>{hero.name}</span>
                                             {heroWithNote.note && <span className="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded">+{t('builds.note', 'Note')}</span>}
                                         </div>
                                         {heroWithNote.note ? (

@@ -225,7 +225,7 @@ export default function EditGuildPostPage() {
                     <Link href={`/guilds/${slug}`} className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
                         <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('common.back', 'Back')}
                     </Link>
-                    <h1 className="text-3xl font-display text-gold-gradient tracking-wide">
+                    <h1 className="text-3xl font-hero font-normal text-slate-50 tracking-normal">
                         {t('guilds.editPost', 'Edit Guild Post')}
                     </h1>
                 </div>

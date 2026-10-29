@@ -189,7 +189,7 @@ export default function CreateGuildPostPage() {
                     <Link href="/guilds" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
                         <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('guilds.backToList', 'Back to Guild Posts')}
                     </Link>
-                    <h1 className="text-3xl font-display text-gold-gradient tracking-wide">
+                    <h1 className="text-3xl font-hero font-normal text-slate-50 tracking-normal">
                         {t('guilds.createPost', 'Create Guild Post')}
                     </h1>
                     <p className="text-slate-400 mt-1">

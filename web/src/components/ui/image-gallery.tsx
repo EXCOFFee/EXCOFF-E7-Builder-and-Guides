@@ -26,7 +26,7 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
 
     return (
         <div className="mb-6">
-            <h2 className="text-xl font-display font-semibold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-3">
+            <h2 className="text-xl font-sans font-semibold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-3">
                 {displayTitle}
             </h2>
             <p className="text-sm text-gray-400 mb-4">

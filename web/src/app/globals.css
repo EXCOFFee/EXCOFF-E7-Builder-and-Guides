@@ -20,10 +20,10 @@
   /* Versión más clara del color del elemento para texto chico (contraste 4.5:1 sobre los paneles) */
   --color-el-ink: color-mix(in srgb, var(--el, #d4a853) 70%, #ffffff);
 
-  /* Minimalist Dark Theme - Refined & Clean */
-  --color-e7-void: #0c0e14;
-  --color-e7-panel: #14171f;
-  --color-e7-dark: #0a0b10;
+  /* Base azul noche en todo el sitio (antes casi negro); mismos valores que --color-night* */
+  --color-e7-void: #141a2b;
+  --color-e7-panel: #1b2338;
+  --color-e7-dark: #0f1422;
   --color-e7-gold: #d4a853;
   --color-e7-text-gold: #e8c06a;
   --color-e7-gold-dim: #9a7b4f;
@@ -104,11 +104,11 @@
 }
 
 .dark {
-  --background: #0c0e14;
+  --background: #141a2b;
   --foreground: #e5e5e5;
-  --card: #14171f;
+  --card: #1b2338;
   --card-foreground: #e5e5e5;
-  --popover: #14171f;
+  --popover: #1b2338;
   --popover-foreground: #e5e5e5;
   --primary: #e5e5e5;
   --primary-foreground: #171717;
@@ -127,7 +127,7 @@
   --chart-3: #f59e0b;
   --chart-4: #8b5cf6;
   --chart-5: #ef4444;
-  --sidebar: #14171f;
+  --sidebar: #1b2338;
   --sidebar-foreground: #e5e5e5;
   --sidebar-primary: #6366f1;
   --sidebar-primary-foreground: #e5e5e5;
@@ -152,29 +152,29 @@
     font-feature-settings: "kern" 1, "liga" 1;
   }
 
-  /* Clean typography scale */
+  /* Títulos en la fuente general; Marcellus (font-hero) queda para nombres de héroe */
   h1 {
-    @apply text-4xl font-semibold tracking-tight font-display;
+    @apply text-4xl font-semibold tracking-tight;
   }
 
   h2 {
-    @apply text-3xl font-semibold tracking-tight font-display;
+    @apply text-3xl font-semibold tracking-tight;
   }
 
   h3 {
-    @apply text-2xl font-medium font-display;
+    @apply text-2xl font-semibold;
   }
 
   h4 {
-    @apply text-xl font-medium font-display;
+    @apply text-xl font-semibold;
   }
 
   h5 {
-    @apply text-lg font-medium font-display;
+    @apply text-lg font-semibold;
   }
 
   h6 {
-    @apply text-base font-medium font-display;
+    @apply text-base font-semibold;
   }
 
   p,
@@ -235,7 +235,7 @@
 /* Clean button styles */
 .btn-gold {
   background: var(--color-e7-gold);
-  color: #0c0e14;
+  color: #141a2b;
   font-weight: 500;
   transition: background 0.2s ease, transform 0.15s ease;
   border-radius: 0.5rem;
@@ -455,21 +455,21 @@ select {
 }
 
 select option {
-  background-color: #14171f;
+  background-color: #1b2338;
   color: #e5e5e5;
   padding: 0.5rem;
 }
 
 select option:hover,
 select option:checked {
-  background-color: #1e2330;
+  background-color: #2a3450;
   color: #d4a853;
 }
 
 /* Firefox specific */
 @-moz-document url-prefix() {
   select option {
-    background-color: #14171f;
+    background-color: #1b2338;
     color: #e5e5e5;
   }
 }
