@@ -88,6 +88,11 @@ with sync_playwright() as p:
     page.get_by_role('heading', name='Create New Build').click()  # fuera del selector (la lista abierta tapa los campos de abajo)
     check(page.get_by_placeholder('Search artifact...').count() == 0, 'crear: el selector se cierra al hacer clic afuera')
     page.get_by_role('button', name='Speed').first.click()
+    # Tags: buscar por un término de la comunidad (alias) y por el nombre en otro idioma
+    page.get_by_label('Pros: Search tags...').fill('행게증')
+    page.get_by_role('button', name='Team CR Push', exact=True).click()
+    page.get_by_label('Cons: Search tags...').fill('duplicados')
+    page.get_by_role('button', name='Needs dupes (imprint)', exact=True).click()
     page.get_by_label('Publish anonymously').check()
     page.get_by_role('button', name='Publish Build').click()
     page.wait_for_url('**/heroes/adventurer-ras/**', timeout=10000)
@@ -96,6 +101,8 @@ with sync_playwright() as p:
     check(sent.get('hero_id') == '6' and sent.get('title') == 'Prueba QA', 'crear: envía hero_id y título')
     check(stats == {'atk': 4100}, f'crear: min_stats solo con lo que escribió el usuario {stats}')
     check(sent.get('skill_1') == '5' and sent.get('is_anonymous') == '1', 'crear: nivel de skill y anónimo')
+    check(json.loads(sent.get('pro_tags', '[]')) == [{'id': 'team_cr_push'}] and json.loads(sent.get('con_tags', '[]')) == [{'id': 'needs_dupes'}],
+          f"crear: tags elegidos con la búsqueda ({sent.get('pro_tags')}, {sent.get('con_tags')})")
     check(sent.get('artifact_id') and sent.get('primary_set') == 'speed', f"crear: artefacto y set ({sent.get('artifact_id')}, {sent.get('primary_set')})")
     check(not errors, f'crear: sin errores de JS {errors[:1]}')
     context.close()

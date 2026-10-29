@@ -34,7 +34,7 @@
         "backToHome": "ホームに戻る",
         "previous": "前へ",
         "close": "閉じる",
-        "allCategories": "すべてのカテゴリー",
+        "allCategories": "すべてのカテゴリ",
         "images": "画像",
         "image": "画像",
         "clickImage": "クリックで画像を拡大表示",
@@ -46,7 +46,12 @@
         "confirmDelete": "本当に削除しますか？",
         "retry": "再試行",
         "connectionError": "接続なし",
-        "networkErrorMsg": "接続できませんでした。インターネット接続を確認してください。"
+        "networkErrorMsg": "接続できませんでした。インターネット接続を確認してください。",
+        "remove": "削除",
+        "noResults": "該当なし",
+        "none": "なし (+0)",
+        "stars": "星",
+        "clear": "クリア"
     },
     "share": {
         "title": "共有",
@@ -62,7 +67,8 @@
         "news": "ニュース",
         "login": "ログイン",
         "register": "登録",
-        "credits": "クレジット"
+        "credits": "クレジット",
+        "logout": "ログアウト"
     },
     "home": {
         "tagline": "E7 ビルド、ガイド & ヒーローウィキ",
@@ -134,7 +140,8 @@
         "notFound": "英雄が見つかりません",
         "statsUpdated": "統計の更新日：{date}",
         "classMedian": "{class}の中央値：{value}",
-        "classRangeHint": "目印：{class} {rarity}★の中央値（英雄{count}体）。バー：そのグループの最低値から最高値まで。"
+        "classRangeHint": "目印：{class} {rarity}★の中央値（英雄{count}体）。バー：そのグループの最低値から最高値まで。",
+        "filterRarity": "レアリティ"
     },
     "elements": {
         "fire": "火",
@@ -204,7 +211,29 @@
         "imagesOptional": "画像 (任意)",
         "uploadFromDevice": "端末からアップロード",
         "pasteImageUrl": "画像URLを貼り付け...",
-        "maxImages": "最大5枚"
+        "maxImages": "最大5枚",
+        "publishAnonymous": "匿名で公開",
+        "anonymousDescription": "このガイドにユーザー名は表示されません",
+        "recommendedHeroes": "おすすめヒーロー",
+        "recommendedArtifacts": "おすすめアーティファクト",
+        "teamCompositions": "チーム編成",
+        "team": "チーム",
+        "heroBuild": "ビルド:",
+        "sets": "セット",
+        "artifact": "アーティファクト",
+        "searchArtifact": "アーティファクトを検索...",
+        "stats": "ステータス",
+        "statsExample": "(例: 速度250以上、HP2万)",
+        "note": "メモ",
+        "heroNotePlaceholder": "役割や配置などのメモ...",
+        "teamCompositionsDesc": "(任意)このガイドのおすすめ編成を追加",
+        "addTeam": "チームを追加",
+        "noTeamsYet": "まだチームがありません。「チームを追加」で作成できます。",
+        "teamName": "チーム名",
+        "searchHeroToAdd": "追加するヒーローを検索...",
+        "hasBuild": "ビルドあり",
+        "clickToAddBuild": "クリックしてビルドを追加",
+        "noHeroesInTeam": "このチームにヒーローを追加してください"
     },
     "guidesCreate": {
         "createGuide": "新しいガイドを作成",
@@ -317,7 +346,9 @@
             "telegramOptional": "Telegram（任意）",
             "youtubeOptional": "YouTube/TikTok（任意）",
             "contactLinks": "連絡先リンク"
-        }
+        },
+        "contactLinks": "連絡先リンク",
+        "contactLinksDesc": "メンバーが連絡できるようにリンクを追加してください"
     },
     "builds": {
         "title": "コミュニティビルド",
@@ -325,7 +356,7 @@
         "searchPlaceholder": "ビルドを検索...",
         "createBuild": "ビルド作成",
         "noBuilds": "まだビルドがありません。",
-        "backToBuilds": "ビルドに戻る",
+        "backToBuilds": "ビルド一覧に戻る",
         "stats": "ステータス",
         "sets": "セット",
         "artifact": "アーティファクト",
@@ -453,7 +484,33 @@
         "goToImage": "画像へ移動",
         "filteredByHero": "{hero}のビルド",
         "allHeroes": "すべてのヒーロー",
-        "minStatsHint": "このビルドで重要なステータスだけ入力してください。灰色の数値はヒーローの基本ステータスです。"
+        "minStatsHint": "このビルドで重要なステータスだけ入力してください。灰色の数値はヒーローの基本ステータスです。",
+        "tagGroup": "グループ",
+        "allTagGroups": "すべてのグループ",
+        "selectedTags": "選択中のタグ",
+        "hasNote": "メモあり",
+        "seeBuildsWithTag": "このタグのビルドを見る",
+        "filterByTags": "長所と短所",
+        "activeTagFilters": "適用中のタグ",
+        "tagType": "タグの種類",
+        "tagFilterHint": "1回で含める、2回で除外、3回で解除します。",
+        "tagIncluded": "含める",
+        "tagExcluded": "除外",
+        "tagNotFiltered": "未指定",
+        "addTagNote": "タグにメモを追加",
+        "tagNoteDescription": "このタグを選んだ理由(任意)",
+        "tagNotePlaceholder": "なぜこのタグ?(最大200文字)",
+        "clickTagForNote": "選択したタグをクリックするとメモを追加できます",
+        "note": "メモ",
+        "comparatorDesc": "2つのビルドを並べて違いを比べられます",
+        "chooseBuild": "ビルドを選択...",
+        "viewBuild": "ビルドを見る",
+        "selectBothBuilds": "上で2つのビルドを選ぶと並べて比較できます",
+        "statsSummary": "ステータス概要",
+        "filterSet": "セット",
+        "prosAndCons": "長所と短所",
+        "noProTags": "まだ長所がありません",
+        "noConTags": "まだ短所がありません"
     },
     "news": {
         "title": "エピックセブンニュース",

@@ -2,6 +2,7 @@
 import { TIER_CATEGORIES, type TierCategory } from '@/components/ui/tier-rating-selector';
 import type { TagWithNote } from '@/components/ui/pro-cons-selector';
 import type { HeroWithNote } from '@/components/builds/HeroSelectorWithNotes';
+import { getTagById } from '@/lib/pros-cons-tags';
 
 export const MAX_BUILD_IMAGES = 5;
 
@@ -115,8 +116,11 @@ function toHeroesWithNote(list: ApiBuild['synergy_heroes']): HeroWithNote[] {
     return (list ?? []).map((item) => (typeof item === 'number' ? { id: item } : item));
 }
 
+/** Solo tags del catálogo: uno viejo no se ve en el selector y la API lo rechazaría al guardar */
 function toTags(list: ApiBuild['pro_tags']): TagWithNote[] {
-    return (list ?? []).map((item) => (typeof item === 'string' ? { id: item } : item));
+    return (list ?? [])
+        .map((item) => (typeof item === 'string' ? { id: item } : item))
+        .filter((item) => getTagById(item.id));
 }
 
 /** Valores del formulario a partir de una build existente (normaliza formatos viejos) */

@@ -11,6 +11,7 @@ use App\Support\BuildCache;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Validation\Rule;
 
 class UserBuildController extends Controller
 {
@@ -96,6 +97,14 @@ class UserBuildController extends Controller
                     $minValue = (int) $request->$minKey;
                     // Filter builds where min_stats->jsonKey >= minValue
                     $query->whereRaw("JSON_EXTRACT(min_stats, '$.{$jsonKey}') >= ?", [$minValue]);
+                }
+            }
+
+            // Tags (pros o contras): ?tags[]=a&tags[]=b exige todos; ?exclude_tags[]=c descarta.
+            // Se ignoran los IDs que no están en el catálogo.
+            foreach (['tags' => false, 'exclude_tags' => true] as $param => $without) {
+                foreach ($this->tagFilter($request, $param) as $tagId => $field) {
+                    $query->withTag($field, $tagId, $without);
                 }
             }
 
@@ -204,6 +213,8 @@ class UserBuildController extends Controller
      */
     public function store(Request $request): JsonResponse
     {
+        $this->normalizeTags($request);
+
         $validated = $request->validate([
             'hero_id' => 'required|exists:heroes,id',
             'title' => 'required|string|max:255',
@@ -228,10 +239,7 @@ class UserBuildController extends Controller
             'reason_arena' => 'nullable|string|max:255',
             'reason_gw' => 'nullable|string|max:255',
             'reason_rta' => 'nullable|string|max:255',
-            // Pros/Cons tags (JSON string or array)
-            'pro_tags' => 'nullable',
-            'con_tags' => 'nullable',
-        ] + ImageService::rules());
+        ] + $this->tagRules() + ImageService::rules());
         unset($validated['images']);
 
         // Parse min_stats if JSON string
@@ -239,13 +247,6 @@ class UserBuildController extends Controller
             $validated['min_stats'] = json_decode($validated['min_stats'], true);
         }
 
-        // Parse tags if JSON string
-        if (isset($validated['pro_tags']) && is_string($validated['pro_tags'])) {
-            $validated['pro_tags'] = json_decode($validated['pro_tags'], true);
-        }
-        if (isset($validated['con_tags']) && is_string($validated['con_tags'])) {
-            $validated['con_tags'] = json_decode($validated['con_tags'], true);
-        }
 
         // Parse synergy/counter heroes if JSON string
         if (isset($validated['synergy_heroes']) && is_string($validated['synergy_heroes'])) {
@@ -283,6 +284,8 @@ class UserBuildController extends Controller
             $minStats = json_decode($minStats, true);
         }
 
+        $this->normalizeTags($request);
+
         $validated = $request->validate([
             'title' => 'sometimes|string|max:255',
             'description' => 'nullable|string',
@@ -307,19 +310,9 @@ class UserBuildController extends Controller
             'reason_arena' => 'nullable|string|max:255',
             'reason_gw' => 'nullable|string|max:255',
             'reason_rta' => 'nullable|string|max:255',
-            // Pros/Cons tags (JSON string or array)
-            'pro_tags' => 'nullable',
-            'con_tags' => 'nullable',
-        ] + ImageService::rules());
+        ] + $this->tagRules() + ImageService::rules());
         unset($validated['images']);
 
-        // Parse tags if JSON string
-        if (isset($validated['pro_tags']) && is_string($validated['pro_tags'])) {
-            $validated['pro_tags'] = json_decode($validated['pro_tags'], true);
-        }
-        if (isset($validated['con_tags']) && is_string($validated['con_tags'])) {
-            $validated['con_tags'] = json_decode($validated['con_tags'], true);
-        }
 
         // Parse synergy/counter heroes if JSON string
         if (isset($validated['synergy_heroes']) && is_string($validated['synergy_heroes'])) {
@@ -353,6 +346,74 @@ class UserBuildController extends Controller
         $build->update($validated);
 
         return response()->json($build);
+    }
+
+    /**
+     * Pros/contras llegan como JSON (FormData) o como array, con objetos {id, note} o IDs sueltos
+     * (formato viejo). Se dejan como lista de {id, note?} antes de validar.
+     */
+    private function normalizeTags(Request $request): void
+    {
+        foreach (['pro_tags', 'con_tags'] as $field) {
+            if (!$request->has($field)) {
+                continue;
+            }
+
+            $tags = $request->input($field);
+            if (is_string($tags) && $tags !== '') {
+                $decoded = json_decode($tags, true);
+                // JSON roto: queda el texto y la regla "array" responde 422 (antes borraba los tags)
+                if (!is_array($decoded)) {
+                    continue;
+                }
+                $tags = $decoded;
+            }
+
+            $request->merge([$field => is_array($tags)
+                ? array_values(array_map(fn ($tag) => is_string($tag) ? ['id' => $tag] : $tag, $tags))
+                : null]);
+        }
+    }
+
+    /** Solo IDs del catálogo (config/build_tags.php, generado desde el de la web) */
+    private function tagRules(): array
+    {
+        $max = config('build_tags.max_per_side');
+        $noteMax = config('build_tags.max_note_length');
+
+        return [
+            'pro_tags' => "nullable|array|max:{$max}",
+            'pro_tags.*' => 'array',
+            'pro_tags.*.id' => ['required', 'string', 'distinct', Rule::in(config('build_tags.pro'))],
+            'pro_tags.*.note' => "nullable|string|max:{$noteMax}",
+            'con_tags' => "nullable|array|max:{$max}",
+            'con_tags.*' => 'array',
+            'con_tags.*.id' => ['required', 'string', 'distinct', Rule::in(config('build_tags.con'))],
+            'con_tags.*.note' => "nullable|string|max:{$noteMax}",
+        ];
+    }
+
+    /**
+     * IDs de tags de un parámetro de la lista (array o separados por coma) => campo donde buscarlos.
+     *
+     * @return array<string, string>
+     */
+    private function tagFilter(Request $request, string $param): array
+    {
+        $ids = $request->input($param, []);
+        $ids = is_array($ids) ? $ids : explode(',', (string) $ids);
+        $fields = [];
+
+        foreach (array_slice(array_filter($ids, 'is_string'), 0, 10) as $id) {
+            $id = trim($id);
+            if (in_array($id, config('build_tags.pro'), true)) {
+                $fields[$id] = 'pro_tags';
+            } elseif (in_array($id, config('build_tags.con'), true)) {
+                $fields[$id] = 'con_tags';
+            }
+        }
+
+        return $fields;
     }
 
     /**

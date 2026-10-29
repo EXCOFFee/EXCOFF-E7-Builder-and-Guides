@@ -46,7 +46,12 @@
         "confirmDelete": "确定要删除吗？",
         "retry": "重试",
         "connectionError": "无网络连接",
-        "networkErrorMsg": "无法连接。请检查网络连接。"
+        "networkErrorMsg": "无法连接。请检查网络连接。",
+        "remove": "移除",
+        "noResults": "没有结果",
+        "none": "无 (+0)",
+        "stars": "星",
+        "clear": "清除"
     },
     "share": {
         "title": "分享",
@@ -62,7 +67,8 @@
         "news": "新闻",
         "login": "登录",
         "register": "注册",
-        "credits": "鸣谢"
+        "credits": "鸣谢",
+        "logout": "退出登录"
     },
     "home": {
         "tagline": "E7 构建、攻略 & 英雄图鉴",
@@ -134,7 +140,8 @@
         "notFound": "未找到英雄",
         "statsUpdated": "统计数据更新于：{date}",
         "classMedian": "{class}中位数：{value}",
-        "classRangeHint": "标记：{class} {rarity}★的中位数（{count}名英雄）。条形：从该组最低值到最高值。"
+        "classRangeHint": "标记：{class} {rarity}★的中位数（{count}名英雄）。条形：从该组最低值到最高值。",
+        "filterRarity": "稀有度"
     },
     "elements": {
         "fire": "火",
@@ -204,7 +211,29 @@
         "imagesOptional": "图片（可选）",
         "uploadFromDevice": "从设备上传",
         "pasteImageUrl": "粘贴图片链接...",
-        "maxImages": "最多5张图片"
+        "maxImages": "最多5张图片",
+        "publishAnonymous": "匿名发布",
+        "anonymousDescription": "此攻略不会显示你的用户名",
+        "recommendedHeroes": "推荐英雄",
+        "recommendedArtifacts": "推荐神器",
+        "teamCompositions": "队伍配置",
+        "team": "队伍",
+        "heroBuild": "配装:",
+        "sets": "套装",
+        "artifact": "神器",
+        "searchArtifact": "搜索神器...",
+        "stats": "属性",
+        "statsExample": "(例如:速度250+、生命2万)",
+        "note": "备注",
+        "heroNotePlaceholder": "定位、站位或其他备注...",
+        "teamCompositionsDesc": "(可选)为此攻略添加推荐队伍",
+        "addTeam": "添加队伍",
+        "noTeamsYet": "还没有队伍。点击“添加队伍”创建。",
+        "teamName": "队伍名称",
+        "searchHeroToAdd": "搜索要添加的英雄...",
+        "hasBuild": "已有配装",
+        "clickToAddBuild": "点击添加配装",
+        "noHeroesInTeam": "为这个队伍添加英雄"
     },
     "guidesCreate": {
         "createGuide": "创建新攻略",
@@ -317,7 +346,9 @@
             "telegramOptional": "Telegram（可选）",
             "youtubeOptional": "YouTube/TikTok（可选）",
             "contactLinks": "联系方式链接"
-        }
+        },
+        "contactLinks": "联系方式",
+        "contactLinksDesc": "添加联系方式方便成员联系你"
     },
     "builds": {
         "title": "社区构建",
@@ -325,7 +356,7 @@
         "searchPlaceholder": "搜索构建...",
         "createBuild": "创建构建",
         "noBuilds": "暂无构建。",
-        "backToBuilds": "返回构建",
+        "backToBuilds": "返回配装",
         "stats": "属性",
         "sets": "套装",
         "artifact": "神器",
@@ -453,7 +484,33 @@
         "goToImage": "跳转到图片",
         "filteredByHero": "{hero}的配装",
         "allHeroes": "所有英雄",
-        "minStatsHint": "只填写这套配装重要的属性。灰色数字是英雄的基础属性。"
+        "minStatsHint": "只填写这套配装重要的属性。灰色数字是英雄的基础属性。",
+        "tagGroup": "分组",
+        "allTagGroups": "所有分组",
+        "selectedTags": "已选标签",
+        "hasNote": "有备注",
+        "seeBuildsWithTag": "查看带此标签的配装",
+        "filterByTags": "优缺点",
+        "activeTagFilters": "已启用的标签筛选",
+        "tagType": "标签类型",
+        "tagFilterHint": "点一次包含，两次排除，三次取消。",
+        "tagIncluded": "包含",
+        "tagExcluded": "排除",
+        "tagNotFiltered": "未筛选",
+        "addTagNote": "为标签添加备注",
+        "tagNoteDescription": "说明选择此标签的原因(可选)",
+        "tagNotePlaceholder": "为什么选这个标签?(最多200字)",
+        "clickTagForNote": "点击已选标签可添加备注",
+        "note": "备注",
+        "comparatorDesc": "并排比较两套配装的差异",
+        "chooseBuild": "选择配装...",
+        "viewBuild": "查看配装",
+        "selectBothBuilds": "在上方选择两套配装进行对比",
+        "statsSummary": "属性概览",
+        "filterSet": "套装",
+        "prosAndCons": "优缺点",
+        "noProTags": "暂无优点",
+        "noConTags": "暂无缺点"
     },
     "news": {
         "title": "第七史诗新闻",

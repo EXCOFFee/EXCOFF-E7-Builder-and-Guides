@@ -34,7 +34,7 @@
         "backToHome": "Voltar ao Início",
         "previous": "Anterior",
         "close": "Fechar",
-        "allCategories": "Todas as Categorias",
+        "allCategories": "Todas as categorias",
         "images": "Imagens",
         "image": "Imagem",
         "clickImage": "Clique em uma imagem para ver em tamanho completo",
@@ -46,7 +46,12 @@
         "confirmDelete": "Tem certeza de que deseja excluir isto?",
         "retry": "Tentar novamente",
         "connectionError": "Sem conexão",
-        "networkErrorMsg": "Não foi possível conectar. Verifique sua conexão com a internet."
+        "networkErrorMsg": "Não foi possível conectar. Verifique sua conexão com a internet.",
+        "remove": "Remover",
+        "noResults": "Nenhum resultado",
+        "none": "Nenhuma (+0)",
+        "stars": "Estrelas",
+        "clear": "limpar"
     },
     "share": {
         "title": "Compartilhar",
@@ -62,7 +67,8 @@
         "news": "Notícias",
         "login": "Entrar",
         "register": "Registrar",
-        "credits": "Créditos"
+        "credits": "Créditos",
+        "logout": "Sair"
     },
     "home": {
         "tagline": "Builds, Guias & Wiki de Heróis de E7",
@@ -134,7 +140,8 @@
         "notFound": "Herói não encontrado",
         "statsUpdated": "Estatísticas atualizadas em {date}",
         "classMedian": "Mediana de {class}: {value}",
-        "classRangeHint": "Marca: mediana de {class} {rarity}★ ({count} heróis). Barra: do menor ao maior desse grupo."
+        "classRangeHint": "Marca: mediana de {class} {rarity}★ ({count} heróis). Barra: do menor ao maior desse grupo.",
+        "filterRarity": "Raridade"
     },
     "elements": {
         "fire": "Fogo",
@@ -204,7 +211,29 @@
         "imagesOptional": "Imagens (opcional)",
         "uploadFromDevice": "Carregar do dispositivo",
         "pasteImageUrl": "Colar URL da imagem...",
-        "maxImages": "Máximo 5 imagens"
+        "maxImages": "Máximo 5 imagens",
+        "publishAnonymous": "Publicar anonimamente",
+        "anonymousDescription": "Seu nome de usuário não vai aparecer neste guia",
+        "recommendedHeroes": "Heróis recomendados",
+        "recommendedArtifacts": "Artefatos recomendados",
+        "teamCompositions": "Composições de time",
+        "team": "Time",
+        "heroBuild": "Build para",
+        "sets": "Sets",
+        "artifact": "Artefato",
+        "searchArtifact": "Buscar artefato...",
+        "stats": "Stats",
+        "statsExample": "(ex.: 250+ de velocidade, 20k de HP)",
+        "note": "Nota",
+        "heroNotePlaceholder": "Função, posição ou outras notas...",
+        "teamCompositionsDesc": "(Opcional) Adicione times recomendados para este guia",
+        "addTeam": "Adicionar time",
+        "noTeamsYet": "Ainda não há times. Clique em “Adicionar time” para criar um.",
+        "teamName": "Nome do time",
+        "searchHeroToAdd": "Buscar um herói para adicionar...",
+        "hasBuild": "Tem build",
+        "clickToAddBuild": "Clique para adicionar uma build",
+        "noHeroesInTeam": "Adicione heróis a este time"
     },
     "guidesCreate": {
         "createGuide": "Criar Novo Guia",
@@ -317,7 +346,9 @@
             "telegramOptional": "Telegram (opcional)",
             "youtubeOptional": "YouTube/TikTok (opcional)",
             "contactLinks": "Links de contato"
-        }
+        },
+        "contactLinks": "Links de contato",
+        "contactLinksDesc": "Adicione links de contato para que os membros falem com você"
     },
     "builds": {
         "title": "Builds da Comunidade",
@@ -325,7 +356,7 @@
         "searchPlaceholder": "Buscar builds...",
         "createBuild": "Criar Build",
         "noBuilds": "Ainda não há builds.",
-        "backToBuilds": "Voltar para Builds",
+        "backToBuilds": "Voltar para builds",
         "stats": "Status",
         "sets": "Conjuntos",
         "artifact": "Artefato",
@@ -453,7 +484,33 @@
         "goToImage": "Ir para a imagem",
         "filteredByHero": "Builds de {hero}",
         "allHeroes": "Todos os heróis",
-        "minStatsHint": "Preencha só os stats que importam nesta build. Os números em cinza são os stats base do herói."
+        "minStatsHint": "Preencha só os stats que importam nesta build. Os números em cinza são os stats base do herói.",
+        "tagGroup": "Grupo",
+        "allTagGroups": "Todos os grupos",
+        "selectedTags": "Tags escolhidas",
+        "hasNote": "tem nota",
+        "seeBuildsWithTag": "Ver builds com esta tag",
+        "filterByTags": "Prós e contras",
+        "activeTagFilters": "Filtros de tags ativos",
+        "tagType": "Tipo de tag",
+        "tagFilterHint": "Um clique inclui, dois excluem, três removem.",
+        "tagIncluded": "incluída",
+        "tagExcluded": "excluída",
+        "tagNotFiltered": "sem filtro",
+        "addTagNote": "Adicionar nota à tag",
+        "tagNoteDescription": "Explique por que escolheu esta tag (opcional)",
+        "tagNotePlaceholder": "Por que esta tag? (máx. 200 caracteres)",
+        "clickTagForNote": "Clique numa tag escolhida para adicionar uma nota",
+        "note": "Nota",
+        "comparatorDesc": "Compare duas builds lado a lado para ver as diferenças",
+        "chooseBuild": "Escolha uma build...",
+        "viewBuild": "Ver build",
+        "selectBothBuilds": "Escolha duas builds acima para compará-las lado a lado",
+        "statsSummary": "Resumo de stats",
+        "filterSet": "Set",
+        "prosAndCons": "Prós e contras",
+        "noProTags": "Ainda não há prós",
+        "noConTags": "Ainda não há contras"
     },
     "news": {
         "title": "Notícias de Epic Seven",

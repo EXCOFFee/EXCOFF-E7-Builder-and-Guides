@@ -236,6 +236,24 @@ class UserBuild extends Model
     }
 
     /**
+     * Builds que tienen (o, con $without, que no tienen) el tag en pro_tags / con_tags.
+     * Los tags se guardan como [{id, note}]: whereJsonContains no sirve en SQLite con objetos,
+     * así que se compara el id con SQL propio de cada motor.
+     */
+    public function scopeWithTag($query, string $field, string $tagId, bool $without = false)
+    {
+        abort_unless(in_array($field, ['pro_tags', 'con_tags'], true), 500);
+
+        $sql = $query->getConnection()->getDriverName() === 'sqlite'
+            ? "exists (select 1 from json_each({$field}) where json_extract(json_each.value, '$.id') = ?)"
+            : "coalesce(json_contains(json_extract({$field}, '$[*].id'), json_quote(?)), 0) = 1";
+
+        return $without
+            ? $query->where(fn ($q) => $q->whereNull($field)->orWhereRaw("not ({$sql})", [$tagId]))
+            : $query->whereRaw($sql, [$tagId]);
+    }
+
+    /**
      * Scope for published builds
      */
     public function scopePublished($query)

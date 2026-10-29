@@ -10,6 +10,12 @@ import { Input } from '@/components/ui/input';
 import { useTranslations } from '@/hooks/useTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { appendImageVersion } from '@/lib/heroImages';
+import { TagFilter } from '@/components/builds/TagFilter';
+
+/** Lista de IDs separados por coma (parámetros tags / exclude_tags) */
+function parseTagList(value: string | null): string[] {
+    return value ? value.split(',').map((id) => id.trim()).filter(Boolean) : [];
+}
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -100,8 +106,21 @@ export default function BuildsPage() {
     const { t, locale } = useTranslations();
     const { translateHeroName } = useHeroTranslations();
     const router = useRouter();
+    const searchParams = useSearchParams();
     // ?hero=<slug>: el link "ver todas las builds" de la ficha del héroe
-    const heroSlug = useSearchParams().get('hero');
+    const heroSlug = searchParams.get('hero');
+    // ?tags=a,b&exclude_tags=c: los tags de las builds y de la ficha llevan acá; quedan en la URL
+    const includedTags = parseTagList(searchParams.get('tags'));
+    const excludedTags = parseTagList(searchParams.get('exclude_tags')).filter((id) => !includedTags.includes(id));
+    const setTagFilters = (included: string[], excluded: string[]) => {
+        const next = new URLSearchParams(searchParams.toString());
+        for (const [key, list] of [['tags', included], ['exclude_tags', excluded]] as const) {
+            if (list.length) next.set(key, list.join(','));
+            else next.delete(key);
+        }
+        const query = next.toString();
+        router.replace(query ? `/builds?${query}` : '/builds', { scroll: false });
+    };
     const [search, setSearch] = useState('');
     const [selectedElement, setSelectedElement] = useState<string | null>(null);
     const [selectedClass, setSelectedClass] = useState<string | null>(null);
@@ -111,14 +130,23 @@ export default function BuildsPage() {
 
     // Advanced filters
     const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
+    // Llegar con otros tags en la URL (link de una build, sin remontar la página) abre el panel
+    const tagKey = [...includedTags, '|', ...excludedTags].join(',');
+    const [openedFor, setOpenedFor] = useState('');
+    if (tagKey !== openedFor) {
+        setOpenedFor(tagKey);
+        if (includedTags.length + excludedTags.length > 0) setShowAdvancedFilters(true);
+    }
     const [primarySet, setPrimarySet] = useState<string | null>(null);
     const [minSpeed, setMinSpeed] = useState<string>('');
 
     const { data, isLoading } = useQuery({
-        queryKey: ['builds', heroSlug, search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, selectedLanguage, sortBy, locale],
+        queryKey: ['builds', heroSlug, includedTags.join(','), excludedTags.join(','), search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, selectedLanguage, sortBy, locale],
         queryFn: async () => {
             const params = new URLSearchParams();
             if (heroSlug) params.append('hero', heroSlug);
+            if (includedTags.length) params.append('tags', includedTags.join(','));
+            if (excludedTags.length) params.append('exclude_tags', excludedTags.join(','));
             if (search) params.append('search', search);
             if (selectedElement) params.append('element', selectedElement);
             if (selectedClass) params.append('class', selectedClass);
@@ -309,6 +337,12 @@ export default function BuildsPage() {
                     {/* Advanced Filters Panel */}
                     {showAdvancedFilters && (
                         <div className="mt-4 p-4 bg-e7-void/50 rounded-lg border border-e7-gold/20 space-y-4">
+                            <section aria-labelledby="tag-filter-title">
+                                <h2 id="tag-filter-title" className="mb-2 text-sm text-slate-300">
+                                    {t('builds.filterByTags', 'Pros & cons')}
+                                </h2>
+                                <TagFilter included={includedTags} excluded={excludedTags} onChange={setTagFilters} />
+                            </section>
                             {/* Set Filter */}
                             <div className="flex items-center gap-2 flex-wrap">
                                 <span className="text-slate-400 text-sm mr-2">{t('builds.filterSet', 'Set')}:</span>
