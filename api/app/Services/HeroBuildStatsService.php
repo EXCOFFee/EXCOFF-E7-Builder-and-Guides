@@ -198,7 +198,10 @@ class HeroBuildStatsService
             ->all();
     }
 
-    /** Promedio de cada stat mínimo entre las builds que lo indican; los stats sin datos no van */
+    /**
+     * Cada stat mínimo entre las builds que lo indican: promedio, mediana, mínimo y máximo.
+     * Los stats que ninguna build indica no van.
+     */
     private function priorityStats(Collection $builds): array
     {
         $stats = [];
@@ -210,12 +213,16 @@ class HeroBuildStatsService
                 continue;
             }
             $avg = (float) $values->avg();
+            $sorted = $values->map(fn ($v) => (float) $v)->sort()->values();
 
             $stats[] = [
                 'stat' => $stat,
                 'label' => $label,
                 'count' => $values->count(),
                 'average_value' => round($avg, 1),
+                'median' => round((float) $sorted->median(), 1),
+                'min' => $sorted->first(),
+                'max' => $sorted->last(),
                 'formatted_value' => match (true) {
                     in_array($stat, self::PERCENT_STATS, true) => round($avg, 1) . '%',
                     $stat === 'spd' => (string) round($avg),

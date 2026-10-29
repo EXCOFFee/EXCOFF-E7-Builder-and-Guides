@@ -81,8 +81,7 @@ Con datos reales de Fribbels y CeciliaBot (nunca inventados): una migración de 
 | `php artisan heroes:import {slug}` | Trae un héroe nuevo desde CeciliaBot |
 | `php artisan heroes:sync-skill-descriptions` | Actualiza textos de skills desde CeciliaBot |
 | `php artisan skills:import-translations` | Carga en la base las traducciones de `web/messages/skills` |
-| `php artisan app:sync-news` | Trae noticias de STOVE y YouTube |
-| `php artisan stats:sync` | Trae sets y artefactos más usados por héroe (Fribbels Hero Library) |
+| `php artisan app:sync-news` | Trae noticias de STOVE y YouTube (lo corre el cron cada hora) |
 
 ## Créditos y licencia
 
