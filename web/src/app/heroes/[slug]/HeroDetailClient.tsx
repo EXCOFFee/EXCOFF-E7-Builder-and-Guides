@@ -6,8 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { heroApi, buildApi } from '@/lib/api';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { useTranslations } from '@/hooks/useTranslations';
 import type { HeroSkillMessages } from '@/i18n/config';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
@@ -16,6 +15,7 @@ import { appendImageVersion } from '@/lib/heroImages';
 import { formatDate, formatNumber } from '@/lib/utils';
 import { formatSkillText } from '@/utils/skillFormatter';
 import { SkillEffects, SkillIcon, useHeroEffects } from '@/components/heroes/SkillEffects';
+import { StatLedger, type ClassStatRange } from '@/components/heroes/StatLedger';
 
 
 
@@ -87,14 +87,6 @@ export interface Hero {
     stats_updated_at: string | null;
 }
 
-const ELEMENT_COLORS: Record<string, string> = {
-    fire: 'bg-gradient-to-r from-red-700 to-red-500 text-white',
-    ice: 'bg-gradient-to-r from-blue-700 to-blue-500 text-white',
-    earth: 'bg-gradient-to-r from-green-700 to-green-500 text-white',
-    light: 'bg-gradient-to-r from-amber-600 to-yellow-500 text-white',
-    dark: 'bg-gradient-to-r from-purple-800 to-violet-600 text-white',
-};
-
 // Element to image mapping
 const ELEMENT_IMAGES: Record<string, string> = {
     fire: '/images/elements/ElementFire.png',
@@ -145,29 +137,28 @@ const IMPRINT_TYPES: Record<string, { name: string; color: string }> = {
 
 const IMPRINT_GRADES = ['B', 'A', 'S', 'SS', 'SSS'] as const;
 
-// StatItem component for displaying stats
-const StatItem = ({ label, value, suffix = '', color = 'text-gray-300', large = false }: {
-    label: string;
-    value: number | undefined;
-    suffix?: string;
-    color?: string;
-    large?: boolean;
-}) => (
-    <div className={`text-center p-3 bg-e7-void/50 rounded-lg border border-e7-gold/10 ${large ? 'py-4' : ''}`}>
-        <p className="text-gray-400 text-sm mb-1">{label}</p>
-        <p className={`${color} font-bold ${large ? 'text-xl' : 'text-lg'}`}>
-            {formatNumber(value)}{suffix}
-        </p>
-    </div>
-);
+/** Stats promedio de Fribbels: clave, etiqueta y sufijo */
+const AVG_STATS: [keyof HeroStats, string, string][] = [
+    ['atk', 'ATK', ''],
+    ['hp', 'HP', ''],
+    ['def', 'DEF', ''],
+    ['spd', 'SPD', ''],
+    ['crit_chance', 'CRIT', '%'],
+    ['crit_dmg', 'C.DMG', '%'],
+    ['eff', 'EFF', '%'],
+    ['res', 'RES', '%'],
+];
+
 export function HeroDetailClient({
     initialHero,
     initialStats,
     skillMessages,
+    classRange,
 }: {
     initialHero: Hero | null;
     initialStats: HeroBuildStats | null;
     skillMessages: HeroSkillMessages | null;
+    classRange: ClassStatRange | null;
 }) {
     const params = useParams();
     const slug = params.slug as string;
@@ -296,337 +287,286 @@ export function HeroDetailClient({
 
     const hasUsageStats = hero.guides_count > 0;
 
+    const className = t(`classes.${hero.class}`, hero.class.replace('_', ' '));
+    const elementName = t(`elements.${hero.element}`, hero.element);
+
     return (
-        <div className="min-h-screen bg-e7-void py-8 px-4">
-            <div className="max-w-6xl mx-auto">
-                {/* Breadcrumb */}
-                <div className="mb-6">
-                    <Link href="/heroes" className="text-e7-gold hover:text-e7-text-gold text-sm transition-colors inline-flex items-center gap-2">
-                        <span>←</span> {t('heroes.backToHeroes', 'Back to Heroes')}
+        <div className="hero-sheet min-h-screen pb-12" data-element={hero.element}>
+            {/* Cabecera: retrato, nombre y stats base contra su clase */}
+            <section className="hero-sheet__halo border-b border-night-line/60">
+                <div className="max-w-6xl mx-auto px-4 pt-6 pb-8">
+                    <Link
+                        href="/heroes"
+                        className="inline-flex items-center gap-2 text-sm text-night-muted transition-colors hover:text-slate-100"
+                    >
+                        <span aria-hidden>←</span> {t('heroes.backToHeroes', 'Back to Heroes')}
                     </Link>
-                </div>
 
-                {/* Hero Header */}
-                <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 mb-8">
-                    {/* Portrait */}
-                    <div className="w-full max-w-xs mx-auto lg:mx-0 lg:w-80 flex-shrink-0">
-                        <div className="relative">
-                            <div className="aspect-square bg-e7-panel rounded-lg overflow-hidden border border-e7-gold/30">
-                                {hero.image_url ? (
-                                    <Image
-                                        src={appendImageVersion(hero.image_url)}
-                                        alt={hero.name}
-                                        width={320}
-                                        height={320}
-                                        className="w-full h-full object-cover"
-                                        priority
-                                    />
-                                ) : (
-                                    <div className="w-full h-full flex items-center justify-center bg-e7-void">
-                                        <span className="text-8xl opacity-50">{CLASS_ICONS[hero.class] || '⚔️'}</span>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                        {/* Rarity Stars */}
-                        <div className="mt-4 text-center">
-                            <span className="text-xl tracking-widest text-e7-gold">
-                                {'★'.repeat(hero.rarity)}
-                            </span>
-                        </div>
-                    </div>
-
-                    {/* Info */}
-                    <div className="flex-1 space-y-6">
-                        <div>
-                            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-gold-gradient mb-4 tracking-wide text-center lg:text-left">{translatedHeroName}</h1>
-                            <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
-                                <Badge className={`${ELEMENT_COLORS[hero.element]} px-4 py-2 text-sm font-semibold flex items-center gap-2 shadow-lg`}>
-                                    {ELEMENT_IMAGES[hero.element] && (
-                                        <Image src={ELEMENT_IMAGES[hero.element]} alt={hero.element} width={20} height={20} className="w-5 h-5" />
+                    <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:items-center">
+                        <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center">
+                            <div className="relative w-44 shrink-0 sm:w-52">
+                                <div className="aspect-square overflow-hidden rounded-2xl border border-el/40 bg-night-panel shadow-[0_0_60px_-12px_var(--el)]">
+                                    {hero.image_url ? (
+                                        <Image
+                                            src={appendImageVersion(hero.image_url)}
+                                            alt={hero.name}
+                                            width={208}
+                                            height={208}
+                                            className="h-full w-full object-cover"
+                                            priority
+                                        />
+                                    ) : (
+                                        <div className="flex h-full w-full items-center justify-center">
+                                            <span className="text-7xl opacity-50">{CLASS_ICONS[hero.class] || '⚔️'}</span>
+                                        </div>
                                     )}
-                                    <span className="capitalize">{hero.element}</span>
-                                </Badge>
-                                <Badge variant="outline" className="glass-panel border-e7-gold/30 text-slate-200 px-4 py-2 flex items-center gap-2">
-                                    {CLASS_IMAGES[hero.class] && (
-                                        <Image src={CLASS_IMAGES[hero.class]} alt={hero.class} width={20} height={20} className="w-5 h-5" />
-                                    )}
-                                    <span className="capitalize">{hero.class.replace('_', ' ')}</span>
-                                </Badge>
-                                {hasUsageStats && (
-                                    // Muestra de Fribbels, no las builds publicadas en la web
-                                    <Badge
-                                        className="glass-panel text-e7-gold border border-e7-gold/30 px-4 py-2"
-                                        title={t('heroes.analyzedBuildsHint', 'Community data from Fribbels Epic 7 Optimizer')}
-                                    >
-                                        {t('heroes.analyzedBuilds', '{count} builds analyzed').replace('{count}', formatNumber(hero.guides_count))}
-                                    </Badge>
-                                )}
+                                </div>
                             </div>
 
-                            {/* Create Build Button */}
-                            <div className="flex flex-wrap gap-3 mt-6 justify-center lg:justify-start">
-                                <Link href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}>
-                                    <button className="btn-gold px-6 py-2.5 rounded-lg flex items-center gap-2 shadow-lg shadow-e7-gold/20 hover:shadow-e7-gold/40 transition-all">
-                                        {t('heroes.createBuild', 'Create Build')}
-                                    </button>
+                            <div className="min-w-0 text-center sm:text-left">
+                                <p className="text-lg tracking-[0.3em] text-e7-gold" aria-label={`${hero.rarity}★`}>
+                                    {'★'.repeat(hero.rarity)}
+                                </p>
+                                <h1 className="mt-1 font-hero text-4xl font-normal leading-tight tracking-normal text-slate-50 sm:text-5xl lg:text-6xl">
+                                    {translatedHeroName}
+                                </h1>
+                                <p className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-slate-300 sm:justify-start">
+                                    <span className="inline-flex items-center gap-1.5">
+                                        {ELEMENT_IMAGES[hero.element] && (
+                                            <Image src={ELEMENT_IMAGES[hero.element]} alt="" width={20} height={20} className="h-5 w-5" />
+                                        )}
+                                        <span className="text-el-ink font-medium">{elementName}</span>
+                                    </span>
+                                    <span className="inline-flex items-center gap-1.5">
+                                        {CLASS_IMAGES[hero.class] && (
+                                            <Image src={CLASS_IMAGES[hero.class]} alt="" width={20} height={20} className="h-5 w-5" />
+                                        )}
+                                        {className}
+                                    </span>
+                                    {hasUsageStats && (
+                                        // Muestra de Fribbels, no las builds publicadas en la web
+                                        <span className="font-mono text-xs text-night-muted" title={t('heroes.analyzedBuildsHint', 'Community data from Fribbels Epic 7 Optimizer')}>
+                                            {t('heroes.analyzedBuilds', '{count} builds analyzed').replace('{count}', formatNumber(hero.guides_count))}
+                                        </span>
+                                    )}
+                                </p>
+                                <Link
+                                    href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}
+                                    className="btn-gold mt-5 inline-flex items-center gap-2 px-5 py-2.5 text-sm"
+                                >
+                                    {t('heroes.createBuild', 'Create Build')}
                                 </Link>
                             </div>
                         </div>
 
-                        {/* Base Stats */}
-                        <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
-                            <CardHeader className="pb-2 border-b border-e7-gold/10">
-                                <CardTitle className="text-e7-gold text-lg flex items-center gap-2">
-                                    <span>{t('heroes.baseStats', 'Base Stats (Lv.60 Fully Awakened)')}</span>
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent className="pt-4">
-                                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 sm:gap-3">
-                                    <StatItem label="ATK" value={hero.base_stats?.atk || 0} color="text-red-400" />
-                                    <StatItem label="DEF" value={hero.base_stats?.def || 0} color="text-blue-400" />
-                                    <StatItem label="HP" value={hero.base_stats?.hp || 0} color="text-green-400" />
-                                    <StatItem label="SPD" value={hero.base_stats?.spd || 0} color="text-yellow-400" />
-                                    <StatItem label="Crit" value={hero.base_stats?.crit_chance || 15} suffix="%" color="text-orange-400" />
-                                    <StatItem label="C.Dmg" value={hero.base_stats?.crit_dmg || 150} suffix="%" color="text-purple-400" />
-                                    <StatItem label="EFF" value={hero.base_stats?.eff || 0} suffix="%" color="text-cyan-400" />
-                                    <StatItem label="RES" value={hero.base_stats?.res || 0} suffix="%" color="text-pink-400" />
-                                </div>
-                            </CardContent>
-                        </Card>
+                        <div className="hero-sheet__panel p-4 sm:p-5">
+                            <h2 className="hero-sheet__label font-sans">{t('heroes.baseStats', 'Base Stats (Lv.60 Fully Awakened)')}</h2>
+                            <StatLedger stats={hero.base_stats} range={classRange} className={className} t={t} />
+                            {classRange && (
+                                <p className="mt-3 flex items-center gap-2 text-xs text-night-muted">
+                                    <span className="inline-block h-3 w-0.5 rounded bg-slate-100/80" aria-hidden />
+                                    {t('heroes.classRangeHint', 'Mark: median of {class} {rarity}★ ({count} heroes). Bar: from the lowest to the highest in that group.')
+                                        .replace('{count}', String(classRange.atk?.count ?? ''))
+                                        .replace('{rarity}', String(hero.rarity))
+                                        .replace('{class}', className)}
+                                </p>
+                            )}
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                {/* Popular Build Stats from API */}
-                <div className="mb-8">
-                    <PopularBuildStats heroSlug={slug} initialStats={initialStats} />
-                </div>
-
-                {/* Average Stats Recommendation */}
-                {hasUsageStats && hero.avg_stats && (
-                    <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-8">
-                        <CardHeader className="border-b border-e7-gold/10">
-                            <CardTitle className="text-e7-gold flex items-center gap-2">
-                                <span>{t('heroes.averageStats', 'Average Build Stats')}</span>
-                                <span className="text-slate-400 text-sm font-normal ml-2">
-                                    ({t('heroes.fromBuilds', 'from {count} builds').replace('{count}', formatNumber(hero.guides_count))})
-                                </span>
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 sm:gap-4">
-                                <StatItem label="ATK" value={hero.avg_stats.atk} color="text-red-400" large />
-                                <StatItem label="DEF" value={hero.avg_stats.def} color="text-blue-400" large />
-                                <StatItem label="HP" value={hero.avg_stats.hp} color="text-green-400" large />
-                                <StatItem label="SPD" value={hero.avg_stats.spd} color="text-yellow-400" large />
-                                <StatItem label="Crit" value={hero.avg_stats.crit_chance} suffix="%" color="text-orange-400" large />
-                                <StatItem label="C.Dmg" value={hero.avg_stats.crit_dmg} suffix="%" color="text-purple-400" large />
-                                <StatItem label="EFF" value={hero.avg_stats.eff} suffix="%" color="text-cyan-400" large />
-                                <StatItem label="RES" value={hero.avg_stats.res} suffix="%" color="text-pink-400" large />
-                            </div>
-                        </CardContent>
-                    </Card>
-                )}
-
-                {/* Memory Imprint Section */}
-                {hero.self_devotion && (
-                    <Card className="bg-gradient-to-br from-e7-panel to-e7-void border-e7-gold/30 mb-8">
-                        <CardHeader>
-                            <CardTitle className="text-e7-gold flex items-center gap-2">
-                                <span>{t('heroes.memoryImprint', 'Memory Imprint')}</span>
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="space-y-4">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <span className="text-gray-400 text-lg">{t('heroes.type', 'Type')}:</span>
-                                    <Badge className={`${IMPRINT_TYPES[hero.self_devotion.type]?.color || 'text-white'} bg-e7-void border border-e7-gold/30 text-base px-4 py-2`}>
-                                        {IMPRINT_TYPES[hero.self_devotion.type]?.name || hero.self_devotion.type}
-                                    </Badge>
-                                </div>
-                                <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3">
-                                    {IMPRINT_GRADES.map((grade) => {
-                                        const value = hero.self_devotion?.grades?.[grade];
-                                        const isPercentage = hero.self_devotion?.type?.includes('rate') ||
-                                            ['cri', 'cri_damage', 'acc', 'res'].includes(hero.self_devotion?.type || '');
-
-                                        return (
-                                            <div key={grade} className="text-center p-4 bg-e7-void/50 rounded-lg border border-e7-gold/10">
-                                                <div className="flex justify-center items-center h-12 mb-3">
-                                                    <Image
-                                                        src={`${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/imprints/hero_dedi_a_${grade.toLowerCase()}.png`}
-                                                        alt={grade}
-                                                        width={40}
-                                                        height={40}
-                                                        className="object-contain"
-                                                        unoptimized
-                                                    />
-                                                </div>
-                                                <p className={`${IMPRINT_TYPES[hero.self_devotion?.type || '']?.color || 'text-gray-300'} font-bold text-lg`}>
-                                                    {value !== undefined
-                                                        ? isPercentage
-                                                            ? `${(value * 100).toFixed(1)}%`
-                                                            : `+${Math.round(value)}`
-                                                        : '-'
-                                                    }
-                                                </p>
-                                            </div>
-                                        );
-                                    })}
-                                </div>
-                            </div>
-                        </CardContent>
-                    </Card>
-                )}
-
-                {/* Skills Section */}
+            <div className="max-w-6xl mx-auto px-4 pt-8 space-y-8">
+                {/* Skills */}
                 {hero.skills && Object.keys(hero.skills).length > 0 && (
-                    <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden">
-                        <CardHeader className="border-b border-e7-gold/10">
-                            <CardTitle className="text-e7-gold flex items-center gap-2">
-                                <span>{t('heroes.skills', 'Skills & Damage Scaling')}</span>
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-y-4 pt-4">
-                            {Object.entries(hero.skills).map(([skillKey, skill]: [string, unknown]) => {
+                    <section>
+                        <h2 className="hero-sheet__label font-sans mb-4">{t('heroes.skills', 'Skills & Damage Scaling')}</h2>
+                        <ol className="space-y-3">
+                            {Object.entries(hero.skills).map(([skillKey, skill]) => {
                                 const s = skill as {
                                     name?: string;
-                                    name_es?: string;
-                                    name_ko?: string;
-                                    name_ja?: string;
-                                    name_zh?: string;
-                                    name_pt?: string;
                                     description?: string;
-                                    description_es?: string;
-                                    description_ko?: string;
-                                    description_ja?: string;
-                                    description_zh?: string;
-                                    description_pt?: string;
                                     rate?: number;
                                     pow?: number;
                                     targets?: number;
                                     cooldown?: number;
                                     soulburn?: boolean;
                                     soulburn_effect?: string;
-                                    soulburn_effect_es?: string;
-                                    soulburn_effect_ko?: string;
-                                    soulburn_effect_ja?: string;
-                                    soulburn_effect_zh?: string;
-                                    soulburn_effect_pt?: string;
                                     soulburn_souls?: number;
-                                    selfHpScaling?: number;
-                                    selfAtkScaling?: number;
-                                    selfDefScaling?: number;
-                                    selfSpdScaling?: number;
                                     penetration?: number;
-                                    hitTypes?: string[];
                                 };
 
-                                // Get localized text based on current locale
                                 // Traducción enviada por el servidor; si falta, texto de la API
                                 const translated = skillMessages?.[skillKey];
                                 const skillName = translated?.name || s.name || `Skill ${skillKey}`;
                                 const skillDesc = translated?.description || s.description || '';
-                                const skillSoulburn = s.soulburn
-                                    ? translated?.soulburn_effect || s.soulburn_effect || ''
-                                    : null;
-
-                                const hasScaling = s.rate || s.pow || s.selfHpScaling || s.selfAtkScaling || s.selfDefScaling || s.selfSpdScaling || s.penetration;
+                                const skillSoulburn = s.soulburn ? translated?.soulburn_effect || s.soulburn_effect || '' : null;
 
                                 return (
-                                    <div key={skillKey} className="bg-e7-void/50 rounded-lg p-4 border border-e7-gold/10">
-                                        <div className="flex items-center gap-3 mb-3 flex-wrap">
-                                            {/* Skill Icon from datamine (fallback a CeciliaBot) */}
-                                            {hero.hero_code && <SkillIcon heroCode={hero.hero_code} skillKey={skillKey} />}
-                                            <Badge className="bg-e7-gold text-black font-bold px-3">{skillKey}</Badge>
-                                            <h3 className="text-white font-semibold">{skillName || `Skill ${skillKey}`}</h3>
-                                            {s.targets && (
-                                                <Badge variant="outline" className="border-gray-500 text-gray-400">
-                                                    {s.targets === 1 ? 'Single Target' : `${s.targets} Targets`}
-                                                </Badge>
-                                            )}
-                                            {s.cooldown && (
-                                                <Badge className="bg-blue-600 text-white">
-                                                    {s.cooldown} Turns
-                                                </Badge>
-                                            )}
-                                            {s.soulburn && (
-                                                <Badge className="bg-purple-600 text-white">
-                                                    {s.soulburn_souls || 10} Souls
-                                                </Badge>
-                                            )}
+                                    <li key={skillKey} className="hero-sheet__panel p-4 sm:p-5">
+                                        <div className="flex gap-4">
+                                            <div className="shrink-0">
+                                                {hero.hero_code ? (
+                                                    <SkillIcon heroCode={hero.hero_code} skillKey={skillKey} />
+                                                ) : (
+                                                    <div className="h-12 w-12 rounded-lg bg-night-line" aria-hidden />
+                                                )}
+                                            </div>
+                                            <div className="min-w-0 flex-1">
+                                                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                                                    <span className="font-mono text-xs font-semibold text-el-ink">{skillKey}</span>
+                                                    <h3 className="font-sans text-base font-semibold text-slate-50">{skillName}</h3>
+                                                    <span className="flex flex-wrap gap-2 font-mono text-[11px] text-night-muted">
+                                                        {s.targets && (
+                                                            <span>
+                                                                {s.targets === 1
+                                                                    ? t('heroes.singleTarget', 'Single Target')
+                                                                    : t('heroes.targets', '{count} Targets').replace('{count}', String(s.targets))}
+                                                            </span>
+                                                        )}
+                                                        {s.cooldown && (
+                                                            <span className="rounded bg-night-line/70 px-1.5 py-0.5 text-slate-200">
+                                                                {t('heroes.turns', '{count} Turns').replace('{count}', String(s.cooldown))}
+                                                            </span>
+                                                        )}
+                                                        {s.rate !== undefined && s.rate > 0 && (
+                                                            <span>
+                                                                {t('heroes.atkRate', 'ATK Rate')} {(s.rate * 100).toFixed(0)}%
+                                                            </span>
+                                                        )}
+                                                        {s.penetration !== undefined && s.penetration > 0 && (
+                                                            <span>
+                                                                {t('heroes.penetration', 'Penetration')} {(s.penetration * 100).toFixed(0)}%
+                                                            </span>
+                                                        )}
+                                                    </span>
+                                                </div>
+
+                                                {/* Íconos de buffs/debuffs de la skill */}
+                                                <div className="mt-2">
+                                                    <SkillEffects
+                                                        heroName={hero.name}
+                                                        skillKey={skillKey}
+                                                        fallbackText={`${skillDesc || ''} ${skillSoulburn || ''}`}
+                                                        data={effectsData}
+                                                    />
+                                                </div>
+
+                                                {skillDesc ? (
+                                                    <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-slate-300">
+                                                        {formatSkillText(skillDesc)}
+                                                    </p>
+                                                ) : (
+                                                    <p className="mt-2 text-sm italic text-night-muted">
+                                                        {t('heroes.passiveSkill', 'Passive or support skill')}
+                                                    </p>
+                                                )}
+
+                                                {s.soulburn && skillSoulburn && (
+                                                    <p className="mt-3 border-l-2 border-violet-400/60 pl-3 text-sm text-violet-100/90">
+                                                        <span className="mr-2 font-mono text-[11px] font-semibold uppercase tracking-wider text-violet-300">
+                                                            {t('heroes.soulburn', 'Soulburn')} ·{' '}
+                                                            {t('heroes.souls', '{count} Souls').replace('{count}', String(s.soulburn_souls || 10))}
+                                                        </span>
+                                                        {formatSkillText(skillSoulburn)}
+                                                    </p>
+                                                )}
+                                            </div>
                                         </div>
-
-                                        {/* Soulburn Effect */}
-                                        {s.soulburn && skillSoulburn && (
-                                            <div className="bg-purple-900/30 rounded px-3 py-2 mb-3 text-sm">
-                                                <span className="text-purple-300 font-semibold">Soulburn:</span>{' '}
-                                                <span className="text-purple-200">{formatSkillText(skillSoulburn)}</span>
-                                            </div>
-                                        )}
-
-                                        {hasScaling && (
-                                            <div className="flex flex-wrap gap-2 mb-3">
-                                                {s.rate !== undefined && s.rate > 0 && (
-                                                    <div className="bg-red-900/30 rounded px-2 py-1 text-xs text-red-300">
-                                                        ATK Rate: <span className="font-bold">{(s.rate * 100).toFixed(0)}%</span>
-                                                    </div>
-                                                )}
-                                                {/* ... other scaling items ... */}
-                                                {s.penetration !== undefined && s.penetration > 0 && (
-                                                    <div className="bg-pink-900/30 rounded px-2 py-1 text-xs text-pink-300">
-                                                        Penetration: <span className="font-bold">{(s.penetration * 100).toFixed(0)}%</span>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        )}
-
-                                        {/* Íconos de buffs/debuffs de la skill */}
-                                        <SkillEffects
-                                            heroName={hero.name}
-                                            skillKey={skillKey}
-                                            fallbackText={`${skillDesc || ''} ${skillSoulburn || ''}`}
-                                            data={effectsData}
-                                        />
-
-
-                                        {skillDesc && (
-                                            <div className="text-gray-300 text-sm leading-relaxed whitespace-pre-line">
-                                                {formatSkillText(skillDesc)}
-                                            </div>
-                                        )}
-
-                                        {!hasScaling && !skillDesc && (
-                                            <p className="text-gray-400 text-sm italic">Passive or support skill</p>
-                                        )}
-                                    </div>
+                                    </li>
                                 );
                             })}
-                        </CardContent>
-                    </Card>
+                        </ol>
+                    </section>
                 )}
 
-                {/* Last Updated */}
+                {/* Impronta de memoria */}
+                {hero.self_devotion && (
+                    <section className="hero-sheet__panel p-4 sm:p-5">
+                        <h2 className="hero-sheet__label font-sans">
+                            {t('heroes.memoryImprint', 'Memory Imprint')}
+                            <span className={`normal-case tracking-normal font-semibold ${IMPRINT_TYPES[hero.self_devotion.type]?.color || 'text-slate-200'}`}>
+                                {IMPRINT_TYPES[hero.self_devotion.type]?.name || hero.self_devotion.type}
+                            </span>
+                        </h2>
+                        <ol className="mt-4 grid grid-cols-5 gap-2 sm:gap-3">
+                            {IMPRINT_GRADES.map((grade) => {
+                                const value = hero.self_devotion?.grades?.[grade];
+                                const isPercentage =
+                                    hero.self_devotion?.type?.includes('rate') ||
+                                    ['cri', 'cri_damage', 'acc', 'res'].includes(hero.self_devotion?.type || '');
+
+                                return (
+                                    <li key={grade} className="flex flex-col items-center gap-2 rounded-lg bg-night/60 py-3">
+                                        <Image
+                                            src={`${(process.env.NEXT_PUBLIC_API_URL || '').replace('/api', '')}/images/imprints/hero_dedi_a_${grade.toLowerCase()}.png`}
+                                            alt={grade}
+                                            width={32}
+                                            height={32}
+                                            className="h-8 w-8 object-contain"
+                                            unoptimized
+                                        />
+                                        <span className="font-mono text-sm font-semibold tabular-nums text-slate-100">
+                                            {value !== undefined
+                                                ? isPercentage
+                                                    ? `${(value * 100).toFixed(1)}%`
+                                                    : `+${Math.round(value)}`
+                                                : '-'}
+                                        </span>
+                                    </li>
+                                );
+                            })}
+                        </ol>
+                    </section>
+                )}
+
+                {/* Sets y artefactos más usados */}
+                <PopularBuildStats heroSlug={slug} initialStats={initialStats} />
+
+                {/* Stats promedio de las builds analizadas */}
+                {hasUsageStats && hero.avg_stats && (
+                    <section className="hero-sheet__panel p-4 sm:p-5">
+                        <h2 className="hero-sheet__label font-sans">
+                            {t('heroes.averageStats', 'Average Build Stats')}
+                            <span className="normal-case tracking-normal font-normal">
+                                {t('heroes.fromBuilds', 'from {count} builds').replace('{count}', formatNumber(hero.guides_count))}
+                            </span>
+                        </h2>
+                        <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-4 lg:grid-cols-8">
+                            {AVG_STATS.map(([key, label, suffix]) => (
+                                <div key={key} className="border-l-2 border-el/50 pl-3">
+                                    <dt className="font-mono text-[11px] font-semibold tracking-wider text-night-muted">{label}</dt>
+                                    <dd className="font-mono text-lg font-semibold tabular-nums text-slate-100">
+                                        {formatNumber(hero.avg_stats?.[key])}
+                                        {suffix}
+                                    </dd>
+                                </div>
+                            ))}
+                        </dl>
+                    </section>
+                )}
+
                 {hero.stats_updated_at && (
-                    <p className="text-center text-slate-400 text-xs mt-8">
+                    <p className="text-center font-mono text-xs text-night-muted">
                         {t('heroes.statsUpdated', 'Stats last updated: {date}').replace('{date}', formatDate(hero.stats_updated_at, locale))}
                     </p>
                 )}
 
                 {/* Community Builds Section */}
-                <Card className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-8 mt-8">
-                    <CardHeader className="border-b border-e7-gold/10">
+                <Card className="hero-sheet__panel overflow-hidden">
+                    <CardHeader className="border-b border-night-line/60">
                         <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
-                            <CardTitle className="text-e7-gold flex items-center gap-2">
+                            <h2 className="hero-sheet__label font-sans flex-1 w-full">
                                 <span>{t('heroes.communityBuilds', 'Community Builds')}</span>
                                 {builds.length > 0 && (
-                                    <span className="text-sm text-neutral-400 font-normal">({builds.length})</span>
+                                    <span className="font-mono normal-case tracking-normal font-normal">{builds.length}</span>
                                 )}
-                            </CardTitle>
-                            <Link href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}>
-                                <button className="btn-gold px-4 py-1.5 text-sm rounded-lg shadow-lg shadow-e7-gold/10 hover:shadow-e7-gold/30 transition-all">
-                                    + {t('heroes.createBuild', 'Create Build')}
-                                </button>
+                            </h2>
+                            <Link
+                                href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}
+                                className="btn-gold shrink-0 px-4 py-1.5 text-sm"
+                            >
+                                + {t('heroes.createBuild', 'Create Build')}
                             </Link>
                         </div>
 
@@ -640,7 +580,7 @@ export function HeroDetailClient({
                                         value={buildSearch}
                                         onChange={(e) => setBuildSearch(e.target.value)}
                                         placeholder={t('heroes.searchBuilds', 'Search builds...')}
-                                        className="w-full px-3 py-2 pl-9 text-sm rounded-lg bg-e7-void border border-e7-gold/20 text-white placeholder-neutral-400 focus:border-e7-gold focus:outline-none"
+                                        className="w-full px-3 py-2 pl-9 text-sm rounded-lg bg-night border border-night-line text-white placeholder-neutral-400 focus:border-e7-gold focus:outline-none"
                                     />
                                     <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -653,7 +593,7 @@ export function HeroDetailClient({
                                         aria-label={t('heroes.filterBySet', 'Filter by set')}
                                         value={buildSetFilter}
                                         onChange={(e) => setBuildSetFilter(e.target.value)}
-                                        className="px-3 py-2 text-sm rounded-lg bg-e7-void border border-e7-gold/20 text-slate-200 focus:border-e7-gold focus:outline-none cursor-pointer min-w-[140px]"
+                                        className="px-3 py-2 text-sm rounded-lg bg-night border border-night-line text-slate-200 focus:border-e7-gold focus:outline-none cursor-pointer min-w-[140px]"
                                     >
                                         <option value="">{t('heroes.allSets', 'All Sets')}</option>
                                         {availableSets.map(set => (
@@ -667,7 +607,7 @@ export function HeroDetailClient({
                                     aria-label={t('common.sortBy', 'Sort by')}
                                     value={buildSortBy}
                                     onChange={(e) => setBuildSortBy(e.target.value as typeof buildSortBy)}
-                                    className="px-3 py-2 text-sm rounded-lg bg-e7-void border border-e7-gold/20 text-slate-200 focus:border-e7-gold focus:outline-none cursor-pointer min-w-[160px]"
+                                    className="px-3 py-2 text-sm rounded-lg bg-night border border-night-line text-slate-200 focus:border-e7-gold focus:outline-none cursor-pointer min-w-[160px]"
                                 >
                                     <option value="newest">{t('common.newest', 'Newest')}</option>
                                     <option value="views_desc">{t('common.viewsHigh', 'Views (High)')}</option>
@@ -698,10 +638,10 @@ export function HeroDetailClient({
                             <div className="space-y-4">
                                 {filteredBuilds.slice(0, 5).map((build) => (
                                     <Link key={build.id} href={`/builds/${build.id}`}>
-                                        <div className="bg-e7-void/50 rounded-lg p-4 border border-e7-gold/10 hover:border-e7-gold/40 transition-all cursor-pointer">
+                                        <div className="bg-night/60 rounded-lg p-4 border border-night-line hover:border-el/60 transition-all cursor-pointer">
                                             <div className="flex justify-between items-start">
                                                 <div>
-                                                    <h4 className="text-white font-medium">{build.title}</h4>
+                                                    <h3 className="font-sans text-base font-semibold text-slate-50">{build.title}</h3>
                                                     <p className="text-gray-400 text-sm mt-1 line-clamp-2">{build.description}</p>
                                                     <div className="flex flex-wrap gap-2 mt-2">
                                                         {build.primary_set && (

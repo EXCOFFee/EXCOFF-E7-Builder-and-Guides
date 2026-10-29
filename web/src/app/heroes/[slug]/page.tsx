@@ -2,6 +2,7 @@ import { cache } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { HeroDetailClient, type Hero } from './HeroDetailClient';
+import { STAT_KEYS, type ClassStatRange, type StatKey } from '@/components/heroes/StatLedger';
 import { getHeroSkillMessages, getLocale } from '@/i18n/server';
 import type { Locale } from '@/i18n/config';
 import type { HeroBuildStats } from '@/components/heroes/PopularBuildStats';
@@ -43,7 +44,35 @@ async function fetchBuildStats(slug: string, locale: Locale): Promise<HeroBuildS
     }
 }
 
-const capitalize = (value: string) =>
+/**
+ * Mínimo, mediana y máximo de cada stat base entre los héroes de la misma clase (y rareza),
+ * para dibujar dónde cae el héroe dentro de su clase. Cambia solo con héroes nuevos: 1 día.
+ */
+async function fetchClassRange(heroClass: string, rarity: number): Promise<ClassStatRange | null> {
+    try {
+        const response = await fetch(`${API_URL}/heroes?class=${encodeURIComponent(heroClass)}&rarity=${rarity}`, {
+            next: { revalidate: 86400 },
+        });
+        if (!response.ok) return null;
+        const heroes: { base_stats?: Partial<Record<StatKey, number>> }[] = (await response.json()).data || [];
+        const range = {} as ClassStatRange;
+        for (const key of STAT_KEYS) {
+            const values = heroes
+                .map((h) => Number(h.base_stats?.[key]))
+                .filter((v) => Number.isFinite(v) && v > 0)
+                .sort((a, b) => a - b);
+            if (values.length < 3) continue;
+            const mid = Math.floor(values.length / 2);
+            const median = values.length % 2 ? values[mid] : (values[mid - 1] + values[mid]) / 2;
+            range[key] = { min: values[0], median, max: values[values.length - 1], count: values.length };
+        }
+        return Object.keys(range).length ? range : null;
+    } catch {
+        return null;
+    }
+}
+
+const capitalize =(value: string) =>
     value.replace('_', ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -89,7 +118,17 @@ export default async function HeroDetailPage({ params }: PageProps) {
     const locale = await getLocale();
     const [{ hero, missing }, stats] = await Promise.all([fetchHero(slug, locale), fetchBuildStats(slug, locale)]);
     if (missing) notFound();
-    const skillMessages = hero?.name ? await getHeroSkillMessages(locale, hero.name) : null;
+    const [skillMessages, classRange] = await Promise.all([
+        hero?.name ? getHeroSkillMessages(locale, hero.name) : null,
+        hero ? fetchClassRange(hero.class, hero.rarity) : null,
+    ]);
 
-    return <HeroDetailClient initialHero={hero} initialStats={stats} skillMessages={skillMessages} />;
+    return (
+        <HeroDetailClient
+            initialHero={hero}
+            initialStats={stats}
+            skillMessages={skillMessages}
+            classRange={classRange}
+        />
+    );
 }

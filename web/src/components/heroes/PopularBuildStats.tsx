@@ -133,7 +133,7 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
 
     if (isLoading) {
         return (
-            <div className="p-6 rounded-xl bg-e7-dark-light/50 border border-e7-gold/20 animate-pulse">
+            <div className="hero-sheet__panel p-4 sm:p-5 animate-pulse">
                 <div className="h-6 bg-gray-700 rounded w-1/3 mb-4"></div>
                 <div className="h-20 bg-gray-700 rounded"></div>
             </div>
@@ -142,9 +142,9 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
 
     if (error || !stats || stats.total_builds === 0) {
         return (
-            <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/50 to-e7-dark/30 border border-e7-gold/20">
+            <div className="hero-sheet__panel p-4 sm:p-5">
                 <div className="text-center py-4">
-                    <h2 className="text-lg font-display font-semibold text-gray-300 mb-2">
+                    <h2 className="hero-sheet__label font-sans mb-2">
                         {t('heroes.noBuildsYet', 'No builds for this hero yet')}
                     </h2>
                     <p className="text-sm text-gray-400">
@@ -158,8 +158,8 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
     return (
         <div className="space-y-6">
             {/* Popular Sets Section */}
-            <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-e7-gold/30 backdrop-blur-sm">
-                <h2 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-4 flex items-center gap-2">
+            <div className="hero-sheet__panel p-4 sm:p-5">
+                <h2 className="hero-sheet__label font-sans mb-4">
                     {t('heroes.popularSets', 'Popular Set Combinations')}
                     <span className="text-sm font-normal text-gray-400">
                         ({t('heroes.fromBuilds', 'from {count} builds').replace('{count}', stats.total_builds.toString())})
@@ -169,13 +169,13 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Primary Sets */}
                     <div>
-                        <h3 className="text-sm font-display font-semibold text-gray-400 mb-3 uppercase tracking-wide">
+                        <h3 className="text-sm font-sans font-semibold text-gray-400 mb-3 uppercase tracking-wide">
                             {t('builds.primarySet', 'Primary Set')}
                         </h3>
                         <div className="space-y-3">
                             {stats.primary_sets.slice(0, 5).map((setData) => (
                                 <div key={setData.set} className="flex items-center gap-4">
-                                    <div className="w-10 h-10 rounded-lg bg-e7-dark/60 flex items-center justify-center border border-e7-gold/20">
+                                    <div className="w-10 h-10 rounded-lg bg-night flex items-center justify-center border border-night-line">
                                         {SET_IMAGES[setData.set.toLowerCase()] ? (
                                             <Image
                                                 src={SET_IMAGES[setData.set.toLowerCase()]}
@@ -192,11 +192,11 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                     <div className="flex-1">
                                         <div className="flex items-center justify-between">
                                             <span className="text-base text-gray-200">{setData.set}</span>
-                                            <span className="text-base font-semibold text-e7-gold">{setData.percentage}%</span>
+                                            <span className="font-mono text-sm font-semibold tabular-nums text-slate-100">{setData.percentage}%</span>
                                         </div>
                                         <div className="h-2 bg-e7-dark/60 rounded-full overflow-hidden mt-1">
                                             <div
-                                                className="h-full bg-gradient-to-r from-e7-gold to-yellow-400 rounded-full transition-all"
+                                                className="h-full bg-el rounded-full transition-all"
                                                 style={{ width: `${setData.percentage}%` }}
                                             />
                                         </div>
@@ -208,13 +208,13 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
 
                     {/* Secondary Sets */}
                     <div>
-                        <h3 className="text-sm font-display font-semibold text-gray-400 mb-3 uppercase tracking-wide">
+                        <h3 className="text-sm font-sans font-semibold text-gray-400 mb-3 uppercase tracking-wide">
                             {t('builds.secondarySet', 'Secondary Set')}
                         </h3>
                         <div className="space-y-3">
                             {stats.secondary_sets.slice(0, 5).map((setData) => (
                                 <div key={setData.set} className="flex items-center gap-4">
-                                    <div className="w-10 h-10 rounded-lg bg-e7-dark/60 flex items-center justify-center border border-e7-gold/20">
+                                    <div className="w-10 h-10 rounded-lg bg-night flex items-center justify-center border border-night-line">
                                         {SET_IMAGES[setData.set.toLowerCase()] ? (
                                             <Image
                                                 src={SET_IMAGES[setData.set.toLowerCase()]}
@@ -231,11 +231,11 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                     <div className="flex-1">
                                         <div className="flex items-center justify-between">
                                             <span className="text-base text-gray-200">{setData.set}</span>
-                                            <span className="text-base font-semibold text-cyan-400">{setData.percentage}%</span>
+                                            <span className="font-mono text-sm font-semibold tabular-nums text-slate-300">{setData.percentage}%</span>
                                         </div>
                                         <div className="h-2 bg-e7-dark/60 rounded-full overflow-hidden mt-1">
                                             <div
-                                                className="h-full bg-gradient-to-r from-cyan-500 to-blue-400 rounded-full transition-all"
+                                                className="h-full bg-el/50 rounded-full transition-all"
                                                 style={{ width: `${setData.percentage}%` }}
                                             />
                                         </div>
@@ -249,8 +249,8 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
 
             {/* Statistics Section */}
             {stats.priority_stats && stats.priority_stats.length > 0 && (
-                <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-cyan-500/30 backdrop-blur-sm">
-                    <h2 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-sky-400 mb-5">
+                <div className="hero-sheet__panel p-4 sm:p-5">
+                    <h2 className="hero-sheet__label font-sans mb-4">
                         {t('heroes.statistics', 'Statistics')}
                     </h2>
 
@@ -258,12 +258,12 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                         {stats.priority_stats.map((stat, index) => (
                             <div
                                 key={stat.stat}
-                                className={`flex flex-col items-center px-8 py-5 rounded-xl bg-gradient-to-br from-cyan-900/30 to-sky-800/20 border ${index === 0 ? 'border-2 border-cyan-400/60' : 'border-cyan-500/40'} hover:border-cyan-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-cyan-500/20 min-w-[140px]`}
+                                className={`flex flex-col items-center px-8 py-5 rounded-xl bg-night/60 border ${index === 0 ? 'border-el/70' : 'border-night-line'} min-w-[140px]`}
                             >
-                                <div className={`text-3xl font-display font-bold ${index === 0 ? 'text-cyan-300' : 'text-cyan-400'}`}>
+                                <div className="text-2xl font-mono font-semibold tabular-nums text-slate-50">
                                     {stat.formatted_value}
                                 </div>
-                                <div className="text-base font-display text-gray-200 mt-2">{stat.label}</div>
+                                <div className="text-xs font-sans text-night-muted mt-1">{stat.label}</div>
                             </div>
                         ))}
                     </div>
@@ -272,53 +272,53 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
 
             {/* Tier Ratings Section */}
             {stats.average_ratings && (
-                <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-e7-gold/30 backdrop-blur-sm">
-                    <h2 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-5">
+                <div className="hero-sheet__panel p-4 sm:p-5">
+                    <h2 className="hero-sheet__label font-sans mb-4">
                         {t('builds.tierRatings', 'Tier Ratings')}
                     </h2>
 
                     <div className="flex flex-wrap gap-6 justify-center">
                         {/* General Rating */}
                         {stats.average_ratings.general && (
-                            <div className="text-center px-10 py-6 rounded-xl bg-gradient-to-br from-yellow-900/40 to-amber-900/30 border-2 border-yellow-500/50 shadow-lg shadow-yellow-500/10">
-                                <div className={`text-5xl font-display font-bold ${getTierColor(stats.average_ratings.general)}`}>
+                            <div className="text-center px-10 py-6 rounded-xl bg-night/60 border-2 border-el/70">
+                                <div className={`text-5xl font-sans font-bold ${getTierColor(stats.average_ratings.general)}`}>
                                     {tierToLetter(stats.average_ratings.general)}
                                 </div>
-                                <div className="text-base font-display text-gray-300 mt-3">{t('builds.general', 'General')}</div>
+                                <div className="text-base font-sans text-gray-300 mt-3">{t('builds.general', 'General')}</div>
                             </div>
                         )}
 
                         {/* Individual Ratings */}
                         {stats.average_ratings.pve !== undefined && (
-                            <div className="text-center px-8 py-5 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
-                                <div className={`text-4xl font-display font-bold ${getTierColor(stats.average_ratings.pve)}`}>
+                            <div className="text-center px-8 py-5 rounded-xl bg-night/60 border border-night-line">
+                                <div className={`text-4xl font-sans font-bold ${getTierColor(stats.average_ratings.pve)}`}>
                                     {tierToLetter(stats.average_ratings.pve)}
                                 </div>
-                                <div className="text-base font-display text-gray-400 mt-2">{t('builds.tier_pve', 'PVE')}</div>
+                                <div className="text-base font-sans text-gray-400 mt-2">{t('builds.tier_pve', 'PVE')}</div>
                             </div>
                         )}
                         {stats.average_ratings.arena !== undefined && (
-                            <div className="text-center px-8 py-5 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
-                                <div className={`text-4xl font-display font-bold ${getTierColor(stats.average_ratings.arena)}`}>
+                            <div className="text-center px-8 py-5 rounded-xl bg-night/60 border border-night-line">
+                                <div className={`text-4xl font-sans font-bold ${getTierColor(stats.average_ratings.arena)}`}>
                                     {tierToLetter(stats.average_ratings.arena)}
                                 </div>
-                                <div className="text-base font-display text-gray-400 mt-2">{t('builds.tier_arena', 'Arena')}</div>
+                                <div className="text-base font-sans text-gray-400 mt-2">{t('builds.tier_arena', 'Arena')}</div>
                             </div>
                         )}
                         {stats.average_ratings.gw !== undefined && (
-                            <div className="text-center px-8 py-5 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
-                                <div className={`text-4xl font-display font-bold ${getTierColor(stats.average_ratings.gw)}`}>
+                            <div className="text-center px-8 py-5 rounded-xl bg-night/60 border border-night-line">
+                                <div className={`text-4xl font-sans font-bold ${getTierColor(stats.average_ratings.gw)}`}>
                                     {tierToLetter(stats.average_ratings.gw)}
                                 </div>
-                                <div className="text-base font-display text-gray-400 mt-2">{t('builds.tier_gw', 'Guild War')}</div>
+                                <div className="text-base font-sans text-gray-400 mt-2">{t('builds.tier_gw', 'Guild War')}</div>
                             </div>
                         )}
                         {stats.average_ratings.rta !== undefined && (
-                            <div className="text-center px-8 py-5 rounded-xl bg-gradient-to-br from-e7-dark/60 to-e7-panel/40 border border-gray-600/40 hover:border-gray-500/50 transition-colors">
-                                <div className={`text-4xl font-display font-bold ${getTierColor(stats.average_ratings.rta)}`}>
+                            <div className="text-center px-8 py-5 rounded-xl bg-night/60 border border-night-line">
+                                <div className={`text-4xl font-sans font-bold ${getTierColor(stats.average_ratings.rta)}`}>
                                     {tierToLetter(stats.average_ratings.rta)}
                                 </div>
-                                <div className="text-base font-display text-gray-400 mt-2">{t('builds.tier_rta', 'RTA')}</div>
+                                <div className="text-base font-sans text-gray-400 mt-2">{t('builds.tier_rta', 'RTA')}</div>
                             </div>
                         )}
                     </div>
@@ -327,8 +327,8 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
 
             {/* Pros & Cons Section */}
             {(stats.pro_tags?.length > 0 || stats.con_tags?.length > 0) && (
-                <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-e7-gold/30 backdrop-blur-sm">
-                    <h2 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-5">
+                <div className="hero-sheet__panel p-4 sm:p-5">
+                    <h2 className="hero-sheet__label font-sans mb-4">
                         {t('builds.prosAndCons', 'Pros & Cons')}
                         <span className="text-sm font-normal text-gray-400 ml-2">
                             ({t('heroes.fromBuilds', 'from {count} builds').replace('{count}', stats.total_builds.toString())})
@@ -338,14 +338,14 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Pros */}
                         <div className="space-y-3">
-                            <h3 className="text-lg font-display font-semibold text-green-400 flex items-center gap-2">
+                            <h3 className="text-lg font-sans font-semibold text-green-400 flex items-center gap-2">
                                 <span>✓</span> {t('builds.pros', 'Pros')}
                             </h3>
                             {stats.pro_tags?.length > 0 ? (
                                 stats.pro_tags.map((tag) => (
                                     <div
                                         key={tag.tag}
-                                        className="flex items-center justify-between px-4 py-3 rounded-lg bg-gradient-to-r from-green-900/40 to-green-800/20 border border-green-500/30 hover:border-green-400/50 transition-colors"
+                                        className="flex items-center justify-between px-4 py-3 rounded-lg bg-emerald-950/40 border border-emerald-500/25 transition-colors"
                                     >
                                         <span className="text-green-200 font-medium">
                                             {(() => {
@@ -363,14 +363,14 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
 
                         {/* Cons */}
                         <div className="space-y-3">
-                            <h3 className="text-lg font-display font-semibold text-red-400 flex items-center gap-2">
+                            <h3 className="text-lg font-sans font-semibold text-red-400 flex items-center gap-2">
                                 <span>✗</span> {t('builds.cons', 'Cons')}
                             </h3>
                             {stats.con_tags?.length > 0 ? (
                                 stats.con_tags.map((tag) => (
                                     <div
                                         key={tag.tag}
-                                        className="flex items-center justify-between px-4 py-3 rounded-lg bg-gradient-to-r from-red-900/40 to-red-800/20 border border-red-500/30 hover:border-red-400/50 transition-colors"
+                                        className="flex items-center justify-between px-4 py-3 rounded-lg bg-rose-950/40 border border-rose-500/25 transition-colors"
                                     >
                                         <span className="text-red-200 font-medium">
                                             {(() => {
@@ -391,8 +391,8 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
 
             {/* Popular Artifacts */}
             {stats.artifacts.length > 0 && (
-                <div className="p-6 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-e7-gold/30 backdrop-blur-sm">
-                    <h2 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-5">
+                <div className="hero-sheet__panel p-4 sm:p-5">
+                    <h2 className="hero-sheet__label font-sans mb-4">
                         {t('heroes.popularArtifacts', 'Popular Artifacts')}
                     </h2>
 
@@ -400,13 +400,13 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                         {stats.artifacts.map((artifact) => (
                             <div
                                 key={artifact.artifact_id}
-                                className="flex items-center gap-5 px-8 py-5 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-800/20 border border-purple-500/40 hover:border-purple-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-purple-500/20 min-w-[280px]"
+                                className="flex items-center gap-5 px-8 py-5 rounded-xl bg-night/60 border border-night-line hover:border-el/60 transition-colors min-w-[280px]"
                             >
                                 <div className="relative w-20 h-28 rounded-lg ring-2 ring-purple-500/40 overflow-hidden bg-purple-900/50 flex-shrink-0">
                                     <ArtifactThumb src={artifact.icon} alt={artifact.name} />
                                 </div>
                                 <div>
-                                    <div className="text-xl font-display text-gray-200">{artifact.name}</div>
+                                    <div className="text-xl font-sans text-gray-200">{artifact.name}</div>
                                     <div className="text-lg text-purple-400 font-semibold">{artifact.percentage}%</div>
                                 </div>
                             </div>
@@ -417,8 +417,8 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
 
             {/* Popular Synergy Heroes */}
             {stats.synergy_heroes && stats.synergy_heroes.length > 0 && (
-                <div className="p-8 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-green-500/30 backdrop-blur-sm">
-                    <h2 className="text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400 mb-6">
+                <div className="hero-sheet__panel p-4 sm:p-5">
+                    <h2 className="hero-sheet__label font-sans mb-4">
                         {t('heroes.popularSynergies', 'Popular Synergy Heroes')}
                     </h2>
 
@@ -427,7 +427,7 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                             <Link
                                 key={hero.hero_id}
                                 href={`/heroes/${hero.slug}`}
-                                className="flex items-center gap-6 px-8 py-6 rounded-xl bg-gradient-to-br from-green-900/30 to-emerald-800/20 border border-green-500/40 hover:border-green-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-green-500/20 min-w-[280px]"
+                                className="flex items-center gap-6 px-8 py-6 rounded-xl bg-night/60 border border-night-line hover:border-el/60 transition-colors min-w-[280px]"
                             >
                                 <Image
                                     src={hero.image_url || `/images/hero/${hero.slug}_su.png`}
@@ -437,7 +437,7 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                     className="rounded-xl ring-2 ring-green-500/40 w-[120px] h-[120px] object-cover"
                                 />
                                 <div>
-                                    <div className="text-lg font-display text-gray-200">{hero.name}</div>
+                                    <div className="text-lg font-sans text-gray-200">{hero.name}</div>
                                     <div className="text-base text-green-400 font-semibold">{hero.percentage}%</div>
                                 </div>
                             </Link>
@@ -448,8 +448,8 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
 
             {/* Popular Counter Heroes */}
             {stats.counter_heroes && stats.counter_heroes.length > 0 && (
-                <div className="p-8 rounded-xl bg-gradient-to-br from-e7-dark-light/80 to-e7-dark/60 border border-red-500/30 backdrop-blur-sm">
-                    <h2 className="text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-300 to-rose-400 mb-6">
+                <div className="hero-sheet__panel p-4 sm:p-5">
+                    <h2 className="hero-sheet__label font-sans mb-4">
                         {t('heroes.popularCounters', 'Popular Counter Heroes')}
                     </h2>
 
@@ -458,7 +458,7 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                             <Link
                                 key={hero.hero_id}
                                 href={`/heroes/${hero.slug}`}
-                                className="flex items-center gap-6 px-8 py-6 rounded-xl bg-gradient-to-br from-red-900/30 to-rose-800/20 border border-red-500/40 hover:border-red-400/60 hover:scale-105 transition-all shadow-lg hover:shadow-red-500/20 min-w-[280px]"
+                                className="flex items-center gap-6 px-8 py-6 rounded-xl bg-night/60 border border-night-line hover:border-el/60 transition-colors min-w-[280px]"
                             >
                                 <Image
                                     src={hero.image_url || `/images/hero/${hero.slug}_su.png`}
@@ -468,7 +468,7 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                     className="rounded-xl ring-2 ring-red-500/40 w-[120px] h-[120px] object-cover"
                                 />
                                 <div>
-                                    <div className="text-lg font-display text-gray-200">{hero.name}</div>
+                                    <div className="text-lg font-sans text-gray-200">{hero.name}</div>
                                     <div className="text-base text-red-400 font-semibold">{hero.percentage}%</div>
                                 </div>
                             </Link>

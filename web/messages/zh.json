@@ -143,7 +143,9 @@
         "builds": "配装",
         "loadingHero": "正在加载英雄数据...",
         "notFound": "未找到英雄",
-        "statsUpdated": "统计数据更新于：{date}"
+        "statsUpdated": "统计数据更新于：{date}",
+        "classMedian": "{class}中位数：{value}",
+        "classRangeHint": "标记：{class} {rarity}★的中位数（{count}名英雄）。条形：从该组最低值到最高值。"
     },
     "elements": {
         "fire": "火",

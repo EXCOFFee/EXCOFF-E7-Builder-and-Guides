@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cinzel } from "next/font/google";
+import { Inter, Cinzel, Marcellus, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Navbar } from "@/components/Navbar";
@@ -17,6 +17,23 @@ const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   display: "swap", // Prevent FOIT (Flash of Invisible Text)
+});
+
+// Nombre del héroe en su ficha (solo ahí: el resto de títulos sigue en la fuente general)
+const marcellus = Marcellus({
+  variable: "--font-marcellus",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
+
+// Números de stats: cifras de ancho fijo para que las columnas se alineen
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains",
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -131,7 +148,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${cinzel.variable} font-sans antialiased bg-e7-void text-slate-200 min-h-screen`}
+        className={`${inter.variable} ${cinzel.variable} ${marcellus.variable} ${jetbrainsMono.variable} font-sans antialiased bg-e7-void text-slate-200 min-h-screen`}
         suppressHydrationWarning
       >
         <Providers locale={locale} messages={messages}>

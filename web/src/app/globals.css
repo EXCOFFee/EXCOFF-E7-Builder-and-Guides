@@ -7,8 +7,18 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
   --font-display: var(--font-cinzel);
+  --font-hero: var(--font-marcellus), Georgia, serif;
+
+  /* Ficha de héroe: base azul noche y acento por elemento (ver .hero-sheet) */
+  --color-night: #141a2b;
+  --color-night-panel: #1b2338;
+  --color-night-line: #2a3450;
+  --color-night-muted: #9aa3b8;
+  --color-el: var(--el, #d4a853);
+  /* Versión más clara del color del elemento para texto chico (contraste 4.5:1 sobre los paneles) */
+  --color-el-ink: color-mix(in srgb, var(--el, #d4a853) 70%, #ffffff);
 
   /* Minimalist Dark Theme - Refined & Clean */
   --color-e7-void: #0c0e14;
@@ -331,6 +341,49 @@ select:focus {
 
 .element-dark {
   color: #a78bfa;
+}
+
+/* Ficha de héroe: --el es el color del elemento y tiñe halo, líneas y barras */
+.hero-sheet {
+  --el: #d4a853;
+  background: var(--color-night);
+}
+
+.hero-sheet[data-element="fire"] { --el: #e5533d; }
+.hero-sheet[data-element="ice"] { --el: #4fa3e8; }
+.hero-sheet[data-element="earth"] { --el: #5dbb63; }
+.hero-sheet[data-element="light"] { --el: #e8c35a; }
+.hero-sheet[data-element="dark"] { --el: #9a6be0; }
+
+.hero-sheet__halo {
+  background:
+    radial-gradient(60% 70% at 22% 35%, color-mix(in srgb, var(--el) 28%, transparent) 0%, transparent 70%),
+    linear-gradient(180deg, color-mix(in srgb, var(--el) 10%, transparent) 0%, transparent 100%);
+}
+
+.hero-sheet__panel {
+  background: var(--color-night-panel);
+  border: 1px solid var(--color-night-line);
+  border-radius: 0.75rem;
+}
+
+/* Título de sección: texto chico en mayúsculas con una línea del color del elemento */
+.hero-sheet__label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-night-muted);
+}
+
+.hero-sheet__label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--el) 60%, transparent), transparent);
 }
 
 /* Scrollbar - minimal */

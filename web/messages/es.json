@@ -142,7 +142,9 @@
         "builds": "builds",
         "loadingHero": "Cargando datos del héroe...",
         "notFound": "Héroe no encontrado",
-        "statsUpdated": "Estadísticas actualizadas el {date}"
+        "statsUpdated": "Estadísticas actualizadas el {date}",
+        "classMedian": "Mediana de {class}: {value}",
+        "classRangeHint": "Marca: mediana de {class} {rarity}★ ({count} héroes). Barra: del más bajo al más alto de ese grupo."
     },
     "elements": {
         "fire": "Fuego",
