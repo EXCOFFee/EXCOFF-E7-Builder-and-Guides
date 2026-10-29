@@ -21,7 +21,7 @@ class CommentController extends Controller
      */
     public function getBuildComments(UserBuild $build): JsonResponse
     {
-        $comments = Comment::with(['user', 'replies.user'])
+        $comments = Comment::with(['user:id,name,avatar', 'replies.user:id,name,avatar'])
             ->where('build_id', $build->id)
             ->whereNull('parent_id')
             ->orderBy('created_at', 'desc')
@@ -37,7 +37,7 @@ class CommentController extends Controller
      */
     public function getGuideComments(Guide $guide): JsonResponse
     {
-        $comments = Comment::with(['user', 'replies.user'])
+        $comments = Comment::with(['user:id,name,avatar', 'replies.user:id,name,avatar'])
             ->where('guide_id', $guide->id)
             ->whereNull('parent_id')
             ->orderBy('created_at', 'desc')
@@ -70,6 +70,23 @@ class CommentController extends Controller
             return response()->json(['error' => 'Comment content cannot be empty'], 422);
         }
 
+        // El build/guide destino debe existir (si no, la FK revienta con un 500)
+        $targetColumn = $type === 'build' ? 'build_id' : 'guide_id';
+        $targetExists = $type === 'build'
+            ? UserBuild::whereKey($id)->exists()
+            : Guide::whereKey($id)->exists();
+
+        if (!$targetExists) {
+            return response()->json(['error' => 'Target not found'], 422);
+        }
+
+        // Una respuesta solo puede colgar de un comentario del mismo build/guide
+        $parentId = $request->input('parent_id');
+        if ($parentId !== null
+            && !Comment::whereKey($parentId)->where($targetColumn, $id)->exists()) {
+            return response()->json(['error' => 'Invalid parent comment'], 422);
+        }
+
         // Validate content is text only (strip HTML)
         $cleanContent = strip_tags($content);
 
@@ -79,10 +96,10 @@ class CommentController extends Controller
             'guide_id' => $type === 'guide' ? $id : null,
             'content' => $cleanContent,
             'is_anonymous' => $request->boolean('is_anonymous', false),
-            'parent_id' => $request->input('parent_id'),
+            'parent_id' => $parentId,
         ]);
 
-        $comment->load('user');
+        $comment->load('user:id,name,avatar');
 
         return response()->json($this->formatComment($comment), 201);
     }
@@ -131,7 +148,7 @@ class CommentController extends Controller
             'content' => strip_tags($content),
         ]);
 
-        $comment->load('user');
+        $comment->load('user:id,name,avatar');
 
         return response()->json($this->formatComment($comment));
     }

@@ -1,4 +1,4 @@
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata } from 'next';
 import { BuildDetailClient } from './BuildDetailClient';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
@@ -7,10 +7,7 @@ interface PageProps {
     params: Promise<{ id: string }>;
 }
 
-export async function generateMetadata(
-    { params }: PageProps,
-    parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const resolvedParams = await params;
     const id = resolvedParams.id;
 
@@ -40,14 +37,14 @@ export async function generateMetadata(
             title,
             description,
             alternates: {
-                canonical: `https://excoffe7.com/builds/${id}`,
+                canonical: './',
             },
             openGraph: {
                 title: `${heroName} Build | EXCOFF E7 HUB`,
                 description,
                 type: 'article',
                 images: build.hero?.portrait ? [build.hero.portrait] : [],
-                url: `https://excoffe7.com/builds/${id}`,
+                url: `https://excoffe7.com/builds/${id}/`,
             },
             twitter: {
                 card: 'summary_large_image',

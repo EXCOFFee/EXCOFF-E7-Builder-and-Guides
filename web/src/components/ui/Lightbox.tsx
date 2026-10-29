@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
-import Image from 'next/image';
+
+const noopSubscribe = () => () => {};
 
 interface LightboxProps {
     images: string[];
@@ -12,10 +13,10 @@ interface LightboxProps {
 
 export function Lightbox({ images, initialIndex = 0, onClose }: LightboxProps) {
     const [currentIndex, setCurrentIndex] = useState(initialIndex);
-    const [mounted, setMounted] = useState(false);
+    // createPortal necesita document: false en el servidor/hidratación, true en el navegador
+    const mounted = useSyncExternalStore(noopSubscribe, () => true, () => false);
 
     useEffect(() => {
-        setMounted(true);
         // Prevent scrolling when lightbox is open
         document.body.style.overflow = 'hidden';
         return () => {
@@ -23,13 +24,10 @@ export function Lightbox({ images, initialIndex = 0, onClose }: LightboxProps) {
         };
     }, []);
 
-    const next = () => {
-        setCurrentIndex((currentIndex + 1) % images.length);
-    };
-
-    const prev = () => {
-        setCurrentIndex((currentIndex - 1 + images.length) % images.length);
-    };
+    // Actualización funcional: no dependen del índice actual, el listener no se re-registra
+    const count = images.length;
+    const next = useCallback(() => setCurrentIndex((i) => (i + 1) % count), [count]);
+    const prev = useCallback(() => setCurrentIndex((i) => (i - 1 + count) % count), [count]);
 
     // Keyboard navigation
     useEffect(() => {
@@ -41,7 +39,7 @@ export function Lightbox({ images, initialIndex = 0, onClose }: LightboxProps) {
 
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [currentIndex, onClose]);
+    }, [next, prev, onClose]);
 
     if (!mounted) return null;
 
@@ -66,6 +64,7 @@ export function Lightbox({ images, initialIndex = 0, onClose }: LightboxProps) {
                 className="relative w-full h-full flex items-center justify-center p-4 md:p-8"
                 onClick={(e) => e.stopPropagation()}
             >
+                {/* eslint-disable-next-line @next/next/no-img-element -- "ver a tamaño completo": muestra el original sin redimensionar */}
                 <img
                     src={images[currentIndex]}
                     alt={`Image ${currentIndex + 1} of ${images.length}`}

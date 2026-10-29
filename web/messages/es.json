@@ -1,5 +1,6 @@
 {
     "common": {
+        "skipToContent": "Saltar al contenido",
         "appName": "EpicSevenHub",
         "appSubtitle": "Builds y Guías de E7",
         "loading": "Cargando...",
@@ -63,31 +64,22 @@
         "credits": "Créditos"
     },
     "home": {
-        "title": "E7 EXCOFF",
         "tagline": "Builds, Guías y Wiki de Héroes de E7",
-        "subtitle": "Descubre y publica tus builds de personajes y crea guías del juego para la comunidad",
-        "exploreHeroes": "Explorar Héroes",
-        "viewGuides": "Ver Guías",
-        "whatYouFind": "¿Qué encontrarás?",
-        "heroWiki": "Wiki de Héroes",
-        "heroWikiDesc": "Explora todos los héroes del juego, su información y builds de la comunidad.",
-        "heroWikiDetails": "Base de datos completa con estadísticas, habilidades, multiplicadores y builds populares.",
-        "communityBuilds": "Builds de la Comunidad",
-        "communityBuildsDesc": "Crea y comparte tus builds con estadísticas, sets y artefactos recomendados.",
-        "communityBuildsDetails": "Sistema de builds con sinergias, counters y descripciones detalladas.",
-        "gameGuides": "Guías del Juego",
-        "gameGuidesDesc": "Guías para PVE, RTA, Arena, Guerra de Gremios y más contenido del juego.",
-        "gameGuidesDetails": "Videos, imágenes y estrategias para dominar cada modo de juego.",
-        "readyToShare": "¿Listo para compartir tu conocimiento?",
-        "createAccount": "Crea tu cuenta y empieza a contribuir guías y builds para tus héroes favoritos.",
-        "joinCommunity": "Únete a la Comunidad",
-        "everythingYouNeed": "Todo lo que necesitas para dominar Epic Seven",
-        "languages": "Idiomas"
+        "headline": "Builds, habilidades y estadísticas de los {count} héroes de Epic Seven",
+        "searchLabel": "Buscar un héroe",
+        "heroesByElement": "Héroes por elemento",
+        "newHeroes": "Héroes más nuevos",
+        "recentBuilds": "Builds recientes",
+        "latestNews": "Últimas noticias",
+        "viewAll": "Ver todo",
+        "likes": "Me gusta"
     },
     "footer": {
         "dataPoweredBy": "Datos de héroes y artefactos proporcionados por",
         "credits": "Créditos",
-        "disclaimer": "Epic Seven © Smilegate & Super Creative. Este sitio no está afiliado con los desarrolladores del juego."
+        "disclaimer": "Epic Seven © Smilegate & Super Creative. Este sitio no está afiliado con los desarrolladores del juego.",
+        "copyright": "Epic Seven (E7) y todo su contenido son propiedad de sus respectivos dueños.",
+        "notAffiliated": "EpicSevenHub no está afiliado a Smilegate ni a Super Creative."
     },
     "heroes": {
         "title": "Base de Datos de Héroes",
@@ -97,7 +89,7 @@
         "filterClass": "Clase",
         "noResults": "No se encontraron héroes.",
         "loadingHeroes": "Cargando héroes...",
-        "loadError": "Error al cargar héroes. Asegúrate de que la API esté corriendo.",
+        "loadError": "No se pudieron cargar los héroes. Inténtalo de nuevo más tarde.",
         "baseStats": "Estadísticas Base (Nv.60 Despertado)",
         "skills": "Habilidades y Escalado de Daño",
         "createBuild": "Crear Build",
@@ -109,6 +101,8 @@
         "popularArtifacts": "Artefactos Populares",
         "averageStats": "Estadísticas Promedio",
         "fromBuilds": "de {count} builds",
+        "analyzedBuilds": "{count} builds analizados",
+        "analyzedBuildsHint": "Datos de la comunidad de Fribbels Epic 7 Optimizer",
         "communityBuilds": "Builds de la Comunidad",
         "noBuildsYet": "Aún no hay builds para este héroe",
         "beFirst": "¡Sé el primero en compartir tu build!",
@@ -128,12 +122,18 @@
         "passiveSkill": "Habilidad pasiva o de soporte",
         "searchBuilds": "Buscar builds...",
         "allSets": "Todos los Sets",
+        "filterBySet": "Filtrar por set",
         "noBuildsMatch": "Ninguna build coincide con tus filtros",
         "popularSynergies": "Héroes Sinergia Populares",
         "popularCounters": "Héroes Counter Populares",
         "priorityStats": "Stats Prioritarias",
         "statistics": "Estadísticas",
-        "builds": "builds"
+        "builds": "builds",
+        "loadingHero": "Cargando datos del héroe...",
+        "notFound": "Héroe no encontrado",
+        "statsUpdated": "Estadísticas actualizadas el {date}",
+        "classMedian": "Mediana de {class}: {value}",
+        "classRangeHint": "Marca: mediana de {class} {rarity}★ ({count} héroes). Barra: del más bajo al más alto de ese grupo."
     },
     "elements": {
         "fire": "Fuego",
@@ -194,7 +194,16 @@
         "imagesOptional": "Imágenes (opcional)",
         "uploadFromDevice": "Subir desde dispositivo",
         "pasteImageUrl": "Pega URL de imagen...",
-        "maxImages": "Máximo 5 imágenes"
+        "maxImages": "Máximo 5 imágenes",
+        "searchPlaceholder": "Buscar guías...",
+        "loadingGuides": "Cargando guías...",
+        "loadError": "No se pudieron cargar las guías. Inténtalo de nuevo más tarde.",
+        "allCategories": "Todas",
+        "general": "General",
+        "guildWar": "Guerra de Gremios",
+        "arena": "Arena",
+        "for": "Para",
+        "beFirstToCreate": "¡Sé el primero en crear una guía!"
     },
     "guidesCreate": {
         "createGuide": "Crear Nueva Guía",
@@ -338,6 +347,10 @@
         "creatingFor": "Creando build para",
         "shareConfig": "Comparte tu configuración de equipo con la comunidad",
         "buildInfo": "Información de la Build",
+        "removeImage": "Quitar imagen",
+        "createError": "Error al crear la build",
+        "updateError": "Error al actualizar la build",
+        "notFound": "Build no encontrada",
         "hero": "Héroe",
         "searchHero": "Buscar héroe...",
         "titleLabel": "Título",
@@ -482,5 +495,11 @@
         "pt": "Português",
         "selectLanguage": "Idioma",
         "filterByLanguage": "Filtrar por Idioma"
+    },
+    "login": {
+        "title": "Iniciar sesión",
+        "subtitle": "Accede para crear builds y guías",
+        "continueWithGoogle": "Continuar con Google",
+        "continueWithDiscord": "Continuar con Discord"
     }
 }

@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EXCOFF E7 HUB — Web
 
-## Getting Started
+Frontend Next.js 16 (App Router) + React 19 + Tailwind 4, publicado en Vercel. Ver el
+[README principal](../README.md) para la arquitectura completa.
 
-First, run the development server:
+## Puesta en marcha
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+echo "NEXT_PUBLIC_API_URL=http://localhost:8000/api" > .env.local
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Usar pnpm 10 (el del CI y Vercel): otras versiones regeneran el lockfile distinto.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Script | |
+|---|---|
+| `pnpm dev` / `pnpm build` / `pnpm start` | Desarrollo, build de producción, servirlo |
+| `pnpm typecheck` | TypeScript |
+| `pnpm lint` | ESLint con `--max-warnings 0` (bloquea el CI) |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Convenciones
 
-## Learn More
+- **Idiomas:** la interfaz está en `messages/{en,es,pt,ko,ja,zh}.json`, más `skills/`, `artifacts/`
+  y `glossary/`. El servidor lee la cookie `locale` (`src/i18n/server.ts`). En los
+  componentes cliente se usa `useTranslations()`. Toda clave nueva va en los 6 idiomas.
+- **Números y fechas:** `formatNumber` / `formatDate` de `@/lib/utils`. Un `toLocaleString()`
+  sin idioma escribe distinto en el servidor y en el navegador, y rompe la hidratación.
+- **Imágenes:** `next/image` optimiza solo las pesadas (retratos, artefactos, imágenes subidas).
+  Los íconos chicos usan `unoptimized`, porque la cuota de optimización de Vercel Hobby la
+  comparte todo el equipo. Ver los comentarios en `next.config.ts`.
+- **Accesibilidad:** el texto secundario usa gray/slate-400 (no 500/600 sobre fondo oscuro), y
+  cada página tiene un solo `h1`. `scripts/qa/axe_check.py` tiene que dar 0 violaciones.
+- **Sesión:** `useRequireAuth()` en páginas que la necesitan, `useNavigateFresh()` para navegar
+  después de crear o editar algo.
 
-To learn more about Next.js, take a look at the following resources:
+## Chequeos con Playwright
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`scripts/qa/` (instrucciones en `_shared.py`). Corren contra `next start` local con la API de
+producción: `cls_check.py`, `img_weight.py`, `axe_check.py`, `build_form_check.py`,
+`language_selector_check.py`, `behavior_check.py`.

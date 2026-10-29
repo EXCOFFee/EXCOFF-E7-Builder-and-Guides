@@ -40,6 +40,8 @@ api.interceptors.response.use(
     if (!config || (error.response && error.response.status >= 400 && error.response.status < 500)) {
       if (error.response?.status === 401 && typeof window !== 'undefined') {
         localStorage.removeItem('auth_token');
+        // Sesión vencida: el Navbar y useRequireAuth se enteran sin esperar otro render
+        window.dispatchEvent(new Event('authChange'));
       }
       return Promise.reject(error);
     }
@@ -55,7 +57,9 @@ api.interceptors.response.use(
       // Wait before retrying
       await new Promise(resolve => setTimeout(resolve, RETRY_DELAY * retryCount));
 
-      console.log(`Retrying request (${retryCount}/${MAX_RETRIES}):`, config.url);
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn(`Retrying request (${retryCount}/${MAX_RETRIES}):`, config.url);
+      }
       return api(config);
     }
 
@@ -170,5 +174,8 @@ export const authApi = {
     api.post('/logout'),
   getOAuthUrl: (provider: string) =>
     api.get(`/auth/${provider}`),
+  /** Exchanges the one-time code from the OAuth redirect for an API token (each code works once). */
+  exchangeCode: (code: string) =>
+    api.post<{ token: string }>('/auth/exchange', { code }),
 };
 

@@ -49,12 +49,16 @@ class Artifact extends Model
         'Veritas' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0234_fu.png',
         "Excommunicant's Censer" => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0238_fu.png',
         'With a Little Friend' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0237_fu.png',
-        'Audabe Orb' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0243_fu.png',
+        'Aubade Orb' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0243_fu.png',
+        'Unleashed Axe of Heavenly Mandate' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0239_fu.png',
         "Butterfly's Baptism" => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0244_fu.png',
         'Refracted Desire' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0241_fu.png',
         'Intoxicating Indulgence' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0245_fu.png',
         'Light and Darkness' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0249_fu.png',
         'Land of Lingering Light' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0250_fu.png',
+        "Flame Dragon's Jewel" => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0247_fu.png',
+        'Sorrow of the Rose' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0248_fu.png',
+        'Custom-Made Power Anchor' => 'https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0246_fu.png',
         // Add more new artifacts here as needed
     ];
 

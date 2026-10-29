@@ -1,5 +1,6 @@
 {
     "common": {
+        "skipToContent": "本文へスキップ",
         "appName": "EpicSevenHub",
         "appSubtitle": "E7 ビルド＆ガイド",
         "loading": "読み込み中...",
@@ -40,7 +41,12 @@
         "viewFull": "フルサイズで表示",
         "optional": "任意",
         "showMore": "もっと見る",
-        "showLess": "表示を減らす"
+        "showLess": "表示を減らす",
+        "clearFilters": "クリア",
+        "confirmDelete": "本当に削除しますか？",
+        "retry": "再試行",
+        "connectionError": "接続なし",
+        "networkErrorMsg": "接続できませんでした。インターネット接続を確認してください。"
     },
     "share": {
         "title": "共有",
@@ -59,26 +65,15 @@
         "credits": "クレジット"
     },
     "home": {
-        "title": "E7 EXCOFF",
         "tagline": "E7 ビルド、ガイド & ヒーローウィキ",
-        "subtitle": "キャラクタービルドを発見・共有し、コミュニティのためのゲームガイドを作成しましょう",
-        "exploreHeroes": "ヒーローを探索",
-        "viewGuides": "ガイドを見る",
-        "whatYouFind": "何が見つかりますか？",
-        "heroWiki": "ヒーローウィキ",
-        "heroWikiDesc": "ゲームのすべてのヒーロー、情報、コミュニティビルドを探索しましょう。",
-        "heroWikiDetails": "ステータス、スキル、倍率、人気ビルドの完全なデータベース。",
-        "communityBuilds": "コミュニティビルド",
-        "communityBuildsDesc": "推奨ステータス、セット、アーティファクトでビルドを作成・共有しましょう。",
-        "communityBuildsDetails": "シナジー、カウンター、詳細な説明のあるビルドシステム。",
-        "gameGuides": "ゲームガイド",
-        "gameGuidesDesc": "PVE、RTA、アリーナ、ギルド戦などのゲームコンテンツガイド。",
-        "gameGuidesDetails": "各ゲームモードをマスターするための動画、画像、戦略。",
-        "readyToShare": "知識を共有する準備はできましたか？",
-        "createAccount": "アカウントを作成して、お気に入りのヒーローのガイドとビルドに貢献しましょう。",
-        "joinCommunity": "コミュニティに参加",
-        "everythingYouNeed": "エピックセブンをマスターするために必要なすべて",
-        "languages": "言語"
+        "headline": "エピックセブンの全{count}英雄のビルド、スキル、ステータス",
+        "searchLabel": "英雄を検索",
+        "heroesByElement": "属性別の英雄",
+        "newHeroes": "最新の英雄",
+        "recentBuilds": "最近のビルド",
+        "latestNews": "最新ニュース",
+        "viewAll": "すべて見る",
+        "likes": "いいね"
     },
     "footer": {
         "dataPoweredBy": "ヒーローとアーティファクトデータ提供",
@@ -95,7 +90,7 @@
         "filterClass": "クラス",
         "noResults": "ヒーローが見つかりません。",
         "loadingHeroes": "ヒーローを読み込み中...",
-        "loadError": "ヒーローの読み込みエラー。APIが実行中か確認してください。",
+        "loadError": "英雄を読み込めませんでした。しばらくしてから再度お試しください。",
         "baseStats": "基本ステータス（Lv.60完全覚醒）",
         "skills": "スキルと倍率",
         "createBuild": "ビルド作成",
@@ -107,6 +102,8 @@
         "popularArtifacts": "人気アーティファクト",
         "averageStats": "平均ビルドステータス",
         "fromBuilds": "{count}件のビルドから",
+        "analyzedBuilds": "{count}件のビルドを分析",
+        "analyzedBuildsHint": "Fribbels Epic 7 Optimizer のコミュニティデータ",
         "communityBuilds": "コミュニティビルド",
         "noBuildsYet": "このヒーローのビルドはまだありません",
         "beFirst": "最初にビルドを共有しましょう！",
@@ -126,12 +123,18 @@
         "passiveSkill": "パッシブまたはサポートスキル",
         "searchBuilds": "ビルドを検索...",
         "allSets": "全セット",
+        "filterBySet": "セットで絞り込み",
         "noBuildsMatch": "フィルターに一致するビルドがありません",
         "popularSynergies": "人気シナジーヒーロー",
         "popularCounters": "人気カウンターヒーロー",
         "priorityStats": "優先ステータス",
         "statistics": "ステータス",
-        "builds": "ビルド"
+        "builds": "ビルド",
+        "loadingHero": "英雄データを読み込み中...",
+        "notFound": "英雄が見つかりません",
+        "statsUpdated": "統計の更新日：{date}",
+        "classMedian": "{class}の中央値：{value}",
+        "classRangeHint": "目印：{class} {rarity}★の中央値（英雄{count}体）。バー：そのグループの最低値から最高値まで。"
     },
     "elements": {
         "fire": "火",
@@ -153,7 +156,7 @@
         "description": "コミュニティの戦略とヒントを学ぶ",
         "searchPlaceholder": "ガイドを検索...",
         "loadingGuides": "ガイドを読み込み中...",
-        "loadError": "ガイドの読み込みエラー。APIが実行中か確認してください。",
+        "loadError": "ガイドを読み込めませんでした。しばらくしてから再度お試しください。",
         "allCategories": "すべて",
         "general": "一般",
         "guildWar": "ギルド戦",
@@ -237,7 +240,18 @@
         "note": "メモ",
         "heroNotePlaceholder": "役割、配置、その他のメモ...",
         "hasBuild": "ビルドあり",
-        "clickToAddBuild": "クリックしてビルドを追加"
+        "clickToAddBuild": "クリックしてビルドを追加",
+        "title": "タイトル",
+        "titlePlaceholder": "ガイドのタイトル...",
+        "category": "カテゴリー",
+        "relatedHero": "関連する英雄（任意）",
+        "noSpecificHero": "特定の英雄なし",
+        "videoUrl": "動画URL（任意）",
+        "images": "画像（任意）",
+        "description": "簡単な説明",
+        "descriptionPlaceholder": "このガイドの内容を簡単に説明してください...",
+        "content": "ガイドの内容",
+        "contentPlaceholder": "ここにガイドの内容を書いてください。Markdown形式が使えます..."
     },
     "guilds": {
         "title": "ギルド募集",
@@ -276,7 +290,8 @@
             "mystic_x3": "x3 ミスティック",
             "mystic_x4": "x4 ミスティック",
             "mystic_x5": "x5 ミスティック",
-            "guild_buffs_24_7": "24/7 ギルドバフ"
+            "guild_buffs_24_7": "24/7 ギルドバフ",
+            "telegram": "Telegram"
         },
         "servers": {
             "global": "グローバル",
@@ -285,6 +300,23 @@
             "japan": "日本",
             "korea": "韓国",
             "china": "中国"
+        },
+        "postDetails": "投稿の詳細",
+        "titleLabel": "タイトル",
+        "titlePlaceholder": "例：アクティブなギルドがメンバー募集中！",
+        "imageUrlPlaceholder": "または画像URLを貼り付け...",
+        "createError": "投稿の作成中にエラー",
+        "createSubtitle": "ギルドのメンバーを募集しよう",
+        "publishAnonymously": "匿名で投稿",
+        "anonymousDesc": "この投稿にユーザー名は表示されません",
+        "editPost": "ギルド投稿を編集",
+        "updateError": "投稿の更新中にエラー",
+        "contacts": {
+            "discordOptional": "Discordサーバー（任意）",
+            "whatsappOptional": "WhatsApp（任意）",
+            "telegramOptional": "Telegram（任意）",
+            "youtubeOptional": "YouTube/TikTok（任意）",
+            "contactLinks": "連絡先リンク"
         }
     },
     "builds": {
@@ -317,6 +349,10 @@
         "creatingFor": "ビルド作成対象",
         "shareConfig": "装備構成をコミュニティと共有しましょう",
         "buildInfo": "ビルド情報",
+        "removeImage": "画像を削除",
+        "createError": "ビルドの作成中にエラー",
+        "updateError": "ビルドの更新中にエラー",
+        "notFound": "ビルドが見つかりません",
         "hero": "ヒーロー",
         "searchHero": "ヒーロー検索...",
         "titleLabel": "タイトル",
@@ -408,7 +444,13 @@
         "searchTags": "タグを検索...",
         "exportImage": "画像をエクスポート",
         "exporting": "エクスポート中...",
-        "exportError": "画像のエクスポートに失敗しました。もう一度お試しください。"
+        "exportError": "画像のエクスポートに失敗しました。もう一度お試しください。",
+        "clickToViewFull": "画像をクリックすると原寸で表示します",
+        "image": "画像",
+        "viewFull": "原寸で表示",
+        "previous": "前へ",
+        "next": "次へ",
+        "goToImage": "画像へ移動"
     },
     "news": {
         "title": "エピックセブンニュース",
@@ -458,5 +500,11 @@
         "pt": "Português",
         "selectLanguage": "言語",
         "filterByLanguage": "言語でフィルター"
+    },
+    "login": {
+        "title": "ログイン",
+        "subtitle": "ログインしてビルドやガイドを作成しよう",
+        "continueWithGoogle": "Googleで続ける",
+        "continueWithDiscord": "Discordで続ける"
     }
 }

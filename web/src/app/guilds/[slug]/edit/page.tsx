@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslations } from '@/hooks/useTranslations';
+import { useNavigateFresh } from '@/hooks/useNavigateFresh';
+import { previewUrl } from '@/lib/objectUrl';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -50,6 +52,7 @@ const LANGUAGE_LABELS: Record<string, string> = {
 export default function EditGuildPostPage() {
     const params = useParams();
     const router = useRouter();
+    const navigateFresh = useNavigateFresh();
     const { t } = useTranslations();
     const slug = params.slug as string;
 
@@ -198,8 +201,7 @@ export default function EditGuildPostPage() {
             }
 
             const result = await response.json();
-            // Use window.location for full page refresh
-            window.location.href = `/guilds/${result.data.slug}`;
+            navigateFresh(`/guilds/${result.data.slug}`);
         } catch (err) {
             setError(err instanceof Error ? err.message : t('common.unknownError', 'Unknown error'));
         } finally {
@@ -223,7 +225,7 @@ export default function EditGuildPostPage() {
                     <Link href={`/guilds/${slug}`} className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
                         <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('common.back', 'Back')}
                     </Link>
-                    <h1 className="text-3xl font-display text-gold-gradient tracking-wide">
+                    <h1 className="text-3xl font-hero font-normal text-slate-50 tracking-normal">
                         {t('guilds.editPost', 'Edit Guild Post')}
                     </h1>
                 </div>
@@ -257,6 +259,7 @@ export default function EditGuildPostPage() {
                                         {t('guilds.server', 'Server')} *
                                     </label>
                                     <select
+                                        aria-label={t('guilds.server', 'Server')}
                                         value={server}
                                         onChange={(e) => setServer(e.target.value)}
                                         className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
@@ -275,6 +278,7 @@ export default function EditGuildPostPage() {
                                         {t('guilds.language', 'Language')} *
                                     </label>
                                     <select
+                                        aria-label={t('language.selectLanguage', 'Language')}
                                         value={language}
                                         onChange={(e) => setLanguage(e.target.value)}
                                         className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
@@ -378,7 +382,7 @@ export default function EditGuildPostPage() {
                                         {t('common.add', 'Add')}
                                     </Button>
                                 </div>
-                                <p className="text-xs text-gray-500 mb-2">
+                                <p className="text-xs text-gray-400 mb-2">
                                     {t('guilds.maxImages', 'Maximum 5 images total')}
                                 </p>
 
@@ -387,8 +391,9 @@ export default function EditGuildPostPage() {
                                     <div className="flex flex-wrap gap-2 mb-2">
                                         {imageFiles.map((file, index) => (
                                             <div key={`file-${index}`} className="relative">
+                                                {/* eslint-disable-next-line @next/next/no-img-element -- previsualización en el formulario (blob: o imagen ya subida), no pasa por next/image */}
                                                 <img
-                                                    src={URL.createObjectURL(file)}
+                                                    src={previewUrl(file)}
                                                     alt=""
                                                     className="w-16 h-16 object-cover rounded border border-e7-gold/30"
                                                 />
@@ -440,14 +445,14 @@ export default function EditGuildPostPage() {
                                 />
                                 <label htmlFor="isAnonymous" className="text-slate-300 cursor-pointer">
                                     <div className="font-medium">{t('guilds.publishAnonymously', 'Publish anonymously')}</div>
-                                    <div className="text-xs text-gray-500">{t('guilds.anonymousDesc', 'Your username will not appear in this post')}</div>
+                                    <div className="text-xs text-gray-400">{t('guilds.anonymousDesc', 'Your username will not appear in this post')}</div>
                                 </label>
                             </div>
 
                             {/* Contact Links */}
                             <div>
                                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                                    {t('guilds.contactLinks', 'Contact Links')} <span className="text-gray-500">({t('common.optional', 'optional')})</span>
+                                    {t('guilds.contactLinks', 'Contact Links')} <span className="text-gray-400">({t('common.optional', 'optional')})</span>
                                 </label>
                                 <div className="space-y-3">
                                     <div className="flex items-center gap-3">
@@ -478,7 +483,7 @@ export default function EditGuildPostPage() {
                                         />
                                     </div>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-2">{t('guilds.contactLinksDesc', 'Add contact links so members can reach you')}</p>
+                                <p className="text-xs text-gray-400 mt-2">{t('guilds.contactLinksDesc', 'Add contact links so members can reach you')}</p>
                             </div>
 
                             {/* Error message */}

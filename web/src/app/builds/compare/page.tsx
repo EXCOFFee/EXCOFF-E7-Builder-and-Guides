@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { useTranslations } from '@/hooks/useTranslations';
-import { SET_IMAGES, formatSetName } from '@/lib/sets';
+import { SET_IMAGES } from '@/lib/sets';
 import { appendImageVersion } from '@/lib/heroImages';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
@@ -131,7 +131,7 @@ export default function ComparePage() {
                     <Link href="/builds" className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
                         <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('builds.backToBuilds', 'Back to Builds')}
                     </Link>
-                    <h1 className="font-display text-4xl text-gold-gradient tracking-wide mb-2">
+                    <h1 className="font-hero font-normal text-4xl text-slate-50 tracking-normal mb-2">
                         {t('builds.comparator', 'Build Comparator')}
                     </h1>
                     <p className="text-slate-400">
@@ -157,6 +157,7 @@ export default function ComparePage() {
                         <div>
                             <label className="block text-sm text-e7-gold mb-2">{t('builds.selectBuild1', 'Select Build 1')}</label>
                             <select
+                                aria-label={t('builds.selectBuild1', 'Select first build')}
                                 value={selectedBuild1}
                                 onChange={(e) => setSelectedBuild1(e.target.value)}
                                 className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
@@ -174,6 +175,7 @@ export default function ComparePage() {
                         <div>
                             <label className="block text-sm text-e7-gold mb-2">{t('builds.selectBuild2', 'Select Build 2')}</label>
                             <select
+                                aria-label={t('builds.selectBuild2', 'Select second build')}
                                 value={selectedBuild2}
                                 onChange={(e) => setSelectedBuild2(e.target.value)}
                                 className="w-full px-4 py-2 rounded-lg bg-e7-void border border-e7-gold/30 text-white focus:border-e7-gold outline-none"
@@ -369,7 +371,7 @@ export default function ComparePage() {
                                                 <td className={`text-center font-bold ${comparison.winner === 1 ? 'text-green-400' : 'text-white'}`}>
                                                     {comparison.val1}
                                                 </td>
-                                                <td className={`text-center ${comparison.diff > 0 ? 'text-green-400' : comparison.diff < 0 ? 'text-red-400' : 'text-gray-500'}`}>
+                                                <td className={`text-center ${comparison.diff > 0 ? 'text-green-400' : comparison.diff < 0 ? 'text-red-400' : 'text-gray-400'}`}>
                                                     {comparison.diff > 0 ? '+' : ''}{comparison.diff}
                                                 </td>
                                                 <td className={`text-center font-bold ${comparison.winner === 2 ? 'text-green-400' : 'text-white'}`}>

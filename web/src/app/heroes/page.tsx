@@ -4,9 +4,9 @@ import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 import Image from 'next/image';
 import { heroApi } from '@/lib/api';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { LoadingSpinner } from '@/components/ui/loading-spinner';
 import { useTranslations } from '@/hooks/useTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
@@ -234,8 +234,10 @@ const HERO_POSITION_OVERRIDE: Record<string, string> = {
 export default function HeroesPage() {
     const { t } = useTranslations();
     const { translateHeroName } = useHeroTranslations();
-    const [search, setSearch] = useState('');
-    const [elementFilter, setElementFilter] = useState('');
+    // Filtros iniciales desde la URL (los usan los accesos por elemento y el buscador de la home)
+    const searchParams = useSearchParams();
+    const [search, setSearch] = useState(() => searchParams.get('search') ?? '');
+    const [elementFilter, setElementFilter] = useState(() => searchParams.get('element') ?? '');
     const [classFilter, setClassFilter] = useState('');
     const [rarityFilter, setRarityFilter] = useState<number | null>(null);
 
@@ -260,7 +262,7 @@ export default function HeroesPage() {
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-10 text-center">
-                    <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">{t('heroes.title', 'Hero Database')}</h1>
+                    <h1 className="font-hero font-normal text-4xl md:text-5xl text-slate-50 tracking-normal mb-2">{t('heroes.title', 'Hero Database')}</h1>
                     <p className="text-slate-400 max-w-xl mx-auto">{t('heroes.description', 'Explore all Epic Seven heroes, their stats and builds')}</p>
                 </div>
 
@@ -270,7 +272,7 @@ export default function HeroesPage() {
                         placeholder={t('heroes.searchPlaceholder', 'Search heroes...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-md bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-500 focus:border-e7-gold"
+                        className="max-w-md bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-400 focus:border-e7-gold"
                     />
 
                     {/* Element Filter */}
@@ -352,9 +354,9 @@ export default function HeroesPage() {
                     <div className="flex flex-col items-center justify-center py-20 px-4">
                         <div className="text-center max-w-md">
                             <div className="text-6xl mb-4">😔</div>
-                            <h3 className="text-xl font-bold text-red-400 mb-2">
+                            <h2 className="text-xl font-bold text-red-400 mb-2">
                                 {t('common.connectionError', 'No connection')}
-                            </h3>
+                            </h2>
                             <p className="text-gray-400 mb-6">
                                 {t('common.networkErrorMsg', 'Could not connect. Check your internet connection.')}
                             </p>
@@ -376,7 +378,7 @@ export default function HeroesPage() {
                                 {t('heroes.noResults', 'No heroes found.')}
                             </p>
                         ) : (
-                            heroes.map((hero) => (
+                            heroes.map((hero, index) => (
                                 <Link key={hero.id} href={`/heroes/${hero.slug}`}>
                                     <div className="bg-e7-panel rounded-lg overflow-hidden border border-white/6 hover:border-e7-gold/30 transition-colors h-full group">
                                         {/* Hero Image Container */}
@@ -385,14 +387,15 @@ export default function HeroesPage() {
                                                 <Image
                                                     src={hero.image_url}
                                                     alt={hero.name}
-                                                    width={256}
-                                                    height={256}
+                                                    // Ancho fijo sin `sizes`: dos variantes por héroe (256/384 px), cuota acotada
+                                                    width={192}
+                                                    height={192}
                                                     className="w-full h-full object-cover"
                                                     style={{
                                                         objectPosition: HERO_POSITION_OVERRIDE[hero.slug] || 'center',
                                                     }}
-                                                    unoptimized
-                                                    priority={false}
+                                                    // La primera fila (hasta 5 columnas en xl) es el LCP de la página
+                                                    priority={index < 5}
                                                 />
                                             ) : (
                                                 <div className="w-full h-full flex items-center justify-center">
@@ -441,9 +444,9 @@ export default function HeroesPage() {
 
                                         {/* Hero Name Footer */}
                                         <div className="p-3 bg-gradient-to-t from-e7-dark/80 to-transparent -mt-8 relative z-10 pt-10">
-                                            <h3 className="text-slate-100 text-sm font-semibold truncate group-hover:text-e7-gold transition-colors duration-300 text-center">
+                                            <h2 className="text-slate-100 text-sm font-semibold truncate group-hover:text-e7-gold transition-colors duration-300 text-center">
                                                 {translateHeroName(hero.name)}
-                                            </h3>
+                                            </h2>
                                         </div>
                                     </div>
                                 </Link>

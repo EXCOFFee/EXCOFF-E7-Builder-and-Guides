@@ -45,30 +45,13 @@ Route::middleware('throttle:60,1')->group(function () {
     // News
     Route::get('/news', [\App\Http\Controllers\NewsController::class, 'index']);
     Route::get('/news/{news}', [\App\Http\Controllers\NewsController::class, 'show']);
-
-    // Admin Helper to run Migrations on Production (Temporary)
-    Route::get('/admin/run-migration-translations', function () {
-        if (request()->query('key') !== 'excoff_secret_migration_key_2026') {
-            abort(403);
-        }
-        
-        \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
-        $migrationOutput = \Illuminate\Support\Facades\Artisan::output();
-        
-        \Illuminate\Support\Facades\Artisan::call('import:artifact-translations');
-        $importOutput = \Illuminate\Support\Facades\Artisan::output();
-        
-        return response()->json([
-            'migration' => $migrationOutput,
-            'import' => $importOutput
-        ]);
-    });
 });
 
 // OAuth routes (30 requests per minute - increased to prevent 429 during login flow)
 Route::middleware('throttle:30,1')->group(function () {
     Route::get('/auth/{provider}', [AuthController::class, 'redirectToProvider']);
     Route::get('/auth/{provider}/callback', [AuthController::class, 'handleProviderCallback']);
+    Route::post('/auth/exchange', [AuthController::class, 'exchangeCode']);
 });
 
 // Protected routes with rate limiting (30 requests per minute for authenticated users)

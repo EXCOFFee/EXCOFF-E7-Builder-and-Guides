@@ -15,6 +15,8 @@ class ArtifactApiTest extends TestCase
     {
         parent::setUp();
         Cache::flush();
+        // Las migraciones de seed insertan artefactos reales; los tests cuentan solo los de factory
+        Artifact::query()->delete();
     }
 
     /**

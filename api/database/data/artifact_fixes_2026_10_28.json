@@ -1,0 +1,83 @@
+{
+    "_meta": {
+        "description": "Snapshot used by 2026_10_28_000000_fix_custom_artifacts_from_audit. Texts from CeciliaBot (+30 values), do not edit.",
+        "generated_at": "2026-10-28"
+    },
+    "artifacts": [
+        {
+            "code": "a0245",
+            "old_slug": "intoxicating-indulgence",
+            "name": "Intoxicating Indulgence",
+            "slug": "intoxicating-indulgence",
+            "class": "ranger",
+            "rarity": 5,
+            "description": "After using a non-attack skill, has a 100% chance each to grant swift attack and, for 2 turns, grant increased Speed to the ally with the highest Attack. Can only be activated once every 3 turns.",
+            "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0245_fu.png"
+        },
+        {
+            "code": "a0241",
+            "old_slug": "refracted-desire",
+            "name": "Refracted Desire",
+            "slug": "refracted-desire",
+            "class": "mage",
+            "rarity": 5,
+            "description": "When the caster takes the first turn, has a 100% chance to grant increased Effectiveness to the caster for 3 turns. When an ally except for the caster takes the first turn, has a 100% chance to increase Combat Readiness of the caster by 20%. Can only apply to one Hero within a team.",
+            "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0241_fu.png"
+        },
+        {
+            "code": "a0244",
+            "old_slug": "butterflys-baptism",
+            "name": "Butterfly's Baptism",
+            "slug": "butterflys-baptism",
+            "class": "thief",
+            "rarity": 5,
+            "description": "Increase Evasion by 20%. At the start of an extra turn, increases Attack and Speed by 5% each, Can stack up to 3 times.",
+            "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0244_fu.png"
+        },
+        {
+            "code": "a0243",
+            "old_slug": "audabe-orb",
+            "name": "Aubade Orb",
+            "slug": "aubade-orb",
+            "class": "ranger",
+            "rarity": 5,
+            "description": "At the start of the first battle, acquires 10 Soul. At the end of the turn, has a 100% chance to acquire 5 Soul. Can only be activated three times.",
+            "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0243_fu.png"
+        },
+        {
+            "code": "a0238",
+            "old_slug": "excommunicants-censer",
+            "name": "Excommunicant's Censer",
+            "slug": "excommunicants-censer",
+            "class": "soul_weaver",
+            "rarity": 5,
+            "description": "Increases Effect Resistance by 30%. At the end of an enemy's turn, when the caster does not have a debuff, increases Combat Readiness of the caster by 20%. Can only be activated once per turn.",
+            "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0238_fu.png"
+        },
+        {
+            "code": "a0151",
+            "old_slug": "glorious-flag",
+            "name": "Glorious Flag",
+            "slug": "glorious-flag",
+            "class": "thief",
+            "rarity": 5,
+            "description": "Increases Evasion by 20%. After an ally uses a basic skill, has a 100% chance to increase Combat Readiness of the caster by 10%. This Artifact's effect can only apply to one Hero within a team.",
+            "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0233_fu.png"
+        },
+        {
+            "code": "a0239",
+            "old_slug": "unleashed-axe-of-heavenly-mandate",
+            "name": "Unleashed Axe of Heavenly Mandate",
+            "slug": "unleashed-axe-of-heavenly-mandate",
+            "class": "warrior",
+            "rarity": 5,
+            "description": "Increases Critical Hit Chance by 12%, and Hit Chance by 20%.",
+            "image_url": "https://raw.githubusercontent.com/CeciliaBot/E7Assets-Temp/main/assets/item_arti/art0239_fu.png"
+        },
+        {
+            "code": "a0250",
+            "old_slug": "land-of-lingering-light",
+            "class": "warrior"
+        }
+    ]
+}

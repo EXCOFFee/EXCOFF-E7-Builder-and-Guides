@@ -33,9 +33,14 @@ class HeroFactory extends Factory
             'element' => $this->faker->randomElement($elements),
             'class' => $this->faker->randomElement($classes),
             'rarity' => $this->faker->randomElement($rarities),
-            'zodiac' => $this->faker->randomElement(['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo']),
-            'portrait' => '/images/heroes/default.png',
-            'description' => $this->faker->paragraph(),
+            'base_stats' => [
+                'atk' => $this->faker->numberBetween(500, 1500),
+                'def' => $this->faker->numberBetween(400, 900),
+                'hp' => $this->faker->numberBetween(4000, 7000),
+                'spd' => $this->faker->numberBetween(90, 130),
+            ],
+            'image_url' => '/images/heroes/default.png',
+            'data_hash' => hash('sha256', $name),
         ];
     }
 

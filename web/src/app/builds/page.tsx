@@ -12,9 +12,6 @@ import { appendImageVersion } from '@/lib/heroImages';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
-const ELEMENTS = ['fire', 'ice', 'earth', 'light', 'dark'];
-const CLASSES = ['knight', 'warrior', 'thief', 'ranger', 'mage', 'soul_weaver'];
-
 // Element to image mapping
 const ELEMENT_IMAGES: Record<string, string> = {
     fire: '/images/elements/ElementFire.png',
@@ -32,15 +29,6 @@ const ELEMENT_NAMES: Record<string, string> = {
     dark: 'Dark',
 };
 
-// Element colors for indicator dots
-const ELEMENT_COLORS: Record<string, string> = {
-    fire: 'bg-red-500',
-    ice: 'bg-blue-500',
-    earth: 'bg-green-500',
-    light: 'bg-yellow-400',
-    dark: 'bg-purple-600',
-};
-
 // Class to image mapping
 const CLASS_IMAGES: Record<string, string> = {
     knight: '/images/classes/ClassKnight.png',
@@ -52,6 +40,7 @@ const CLASS_IMAGES: Record<string, string> = {
 };
 
 import { SET_IMAGES, formatSetName } from '@/lib/sets';
+import { formatNumber } from '@/lib/utils';
 
 const CLASS_NAMES: Record<string, string> = {
     knight: 'Knight',
@@ -165,10 +154,10 @@ export default function BuildsPage() {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
                     <div className="text-center md:text-left">
-                        <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">
+                        <h1 className="font-hero font-normal text-4xl md:text-5xl text-slate-50 tracking-normal mb-2">
                             {t('builds.title', 'Community Builds')}
                         </h1>
-                        <p className="font-display text-slate-400">
+                        <p className="font-sans text-slate-400">
                             {t('builds.description', 'Explore and share hero builds created by the community')}
                         </p>
                     </div>
@@ -192,7 +181,7 @@ export default function BuildsPage() {
                         placeholder={t('builds.searchPlaceholder', 'Search builds...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-md bg-e7-void/50 border-e7-gold/20 text-slate-200 placeholder:text-slate-500 focus:border-e7-gold focus:ring-e7-gold/30 transition-all"
+                        className="max-w-md bg-e7-void/50 border-e7-gold/20 text-slate-200 placeholder:text-slate-400 focus:border-e7-gold focus:ring-e7-gold/30 transition-all"
                     />
 
                     {/* Element Filter */}
@@ -265,6 +254,7 @@ export default function BuildsPage() {
                     <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-slate-400 text-sm mr-2">{t('common.sortBy', 'Sort by')}:</span>
                         <select
+                            aria-label={t('common.sortBy', 'Sort by')}
                             value={sortBy}
                             onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
                             className="bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg pl-3 pr-10 py-2 text-sm focus:border-e7-gold focus:ring-e7-gold/30 cursor-pointer"
@@ -278,6 +268,7 @@ export default function BuildsPage() {
 
                         {/* Language Filter */}
                         <select
+                            aria-label={t('language.filterByLanguage', 'Filter by Language')}
                             value={selectedLanguage}
                             onChange={(e) => setSelectedLanguage(e.target.value)}
                             className="bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg pl-3 pr-10 py-2 text-sm focus:border-e7-gold focus:ring-e7-gold/30 cursor-pointer"
@@ -339,7 +330,7 @@ export default function BuildsPage() {
                                         setPrimarySet(null);
                                         setMinSpeed('');
                                     }}
-                                    className="ml-4 text-sm text-gray-500 hover:text-e7-gold"
+                                    className="ml-4 text-sm text-gray-400 hover:text-e7-gold"
                                 >
                                     {t('common.clearFilters', 'Clear filters')}
                                 </button>
@@ -400,7 +391,6 @@ export default function BuildsPage() {
                                                     width={80}
                                                     height={80}
                                                     className="w-full h-full object-cover object-top"
-                                                    unoptimized
                                                 />
                                             </div>
                                             <Image
@@ -412,11 +402,11 @@ export default function BuildsPage() {
                                             />
                                         </div>
                                         <div>
-                                            <h3 className="text-lg text-slate-100 font-semibold group-hover:text-e7-gold transition-colors">{translateHeroName(build.hero.name)}</h3>
+                                            <h2 className="text-lg text-slate-100 font-semibold group-hover:text-e7-gold transition-colors">{translateHeroName(build.hero.name)}</h2>
                                             <div className="flex items-center gap-2">
-                                                <p className="text-sm text-slate-500">{CLASS_NAMES[build.hero.class] || build.hero.class}</p>
+                                                <p className="text-sm text-slate-400">{CLASS_NAMES[build.hero.class] || build.hero.class}</p>
                                                 {build.language && build.language !== 'en' && (
-                                                    <span className="text-xs text-e7-gold/70 bg-e7-gold/10 px-2 py-0.5 rounded">
+                                                    <span className="text-xs text-e7-gold bg-e7-gold/10 px-2 py-0.5 rounded">
                                                         {LANGUAGE_LABELS[build.language] || build.language}
                                                     </span>
                                                 )}
@@ -425,9 +415,9 @@ export default function BuildsPage() {
                                     </div>
 
                                     <div className="p-4">
-                                        <h4 className="text-lg font-medium text-e7-gold mb-3 line-clamp-1">
+                                        <h3 className="text-lg font-medium text-e7-gold mb-3 line-clamp-1">
                                             {build.title}
-                                        </h4>
+                                        </h3>
 
                                         {/* Sets */}
                                         <div className="flex gap-2 mb-3 flex-wrap">
@@ -468,7 +458,6 @@ export default function BuildsPage() {
                                                     width={72}
                                                     height={72}
                                                     className="rounded-xl ring-2 ring-e7-gold/30"
-                                                    unoptimized
                                                 />
                                                 <span className="text-lg text-slate-300 font-medium">{build.artifact.name}</span>
                                             </div>
@@ -492,9 +481,9 @@ export default function BuildsPage() {
                                                     const isPercent = ['crit_chance', 'crit_dmg', 'eff', 'res'].includes(stat);
                                                     return (
                                                         <div key={stat} className="bg-e7-void/60 rounded-lg p-2 text-center border border-e7-gold/10">
-                                                            <p className="text-[10px] text-slate-500 uppercase tracking-wide">{config.label}</p>
+                                                            <p className="text-[10px] text-slate-400 uppercase tracking-wide">{config.label}</p>
                                                             <p className={`text-sm font-bold ${config.color}`}>
-                                                                {typeof value === 'number' ? value.toLocaleString() : value}{isPercent ? '%' : ''}
+                                                                {typeof value === 'number' ? formatNumber(value) : value}{isPercent ? '%' : ''}
                                                             </p>
                                                         </div>
                                                     );
@@ -504,7 +493,7 @@ export default function BuildsPage() {
 
                                         {/* Footer */}
                                         <div className="flex items-center justify-between pt-3 border-t border-e7-gold/10">
-                                            <div className="flex items-center gap-2 text-xs text-slate-500">
+                                            <div className="flex items-center gap-2 text-xs text-slate-400">
                                                 {!build.is_anonymous && build.user?.avatar && (
                                                     <Image
                                                         src={build.user.avatar}
@@ -517,7 +506,7 @@ export default function BuildsPage() {
                                                 )}
                                                 <span>{build.is_anonymous ? 'Anonymous' : build.user?.name}</span>
                                             </div>
-                                            <div className="flex items-center gap-3 text-xs text-slate-500">
+                                            <div className="flex items-center gap-3 text-xs text-slate-400">
                                                 <span className="flex items-center gap-1"><Image src="/images/ras-like.gif" alt="likes" width={16} height={16} unoptimized /> {build.likes}</span>
                                                 <span>👁️ {build.views}</span>
                                             </div>

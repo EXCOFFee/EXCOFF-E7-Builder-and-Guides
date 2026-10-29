@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Cinzel } from "next/font/google";
+import { Inter, Cinzel, Marcellus, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { getLocale, getMessages } from "@/i18n/server";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,6 +17,23 @@ const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   display: "swap", // Prevent FOIT (Flash of Invisible Text)
+});
+
+// Nombre del héroe en su ficha (solo ahí: el resto de títulos sigue en la fuente general)
+const marcellus = Marcellus({
+  variable: "--font-marcellus",
+  subsets: ["latin"],
+  weight: "400",
+  display: "swap",
+});
+
+// Números de stats: cifras de ancho fijo para que las columnas se alineen
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains",
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -70,24 +88,23 @@ export const metadata: Metadata = {
   verification: {
     google: 'jBF7oUiQLe02TBiM6W4lxblmG0pop_nWYfV03yKDvRI',
   },
+  // './' se resuelve contra la ruta de cada página: cada una es su propio canonical.
+  // Sin hreflang: el idioma se elige en el cliente y todas las versiones comparten URL.
   alternates: {
-    canonical: '/',
-    languages: {
-      'en': '/en',
-      'es': '/es',
-      'ko': '/ko',
-      'ja': '/ja',
-      'zh': '/zh',
-      'pt': '/pt',
-    },
+    canonical: './',
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // El idioma sale de la cookie: el HTML inicial ya viene traducido (antes se renderizaba vacío
+  // hasta que el cliente cargaba los mensajes). Leer la cookie hace dinámicas las páginas.
+  const locale = await getLocale();
+  const messages = await getMessages(locale);
+
   // JSON-LD Structured Data for SEO
   const websiteSchema = {
     '@context': 'https://schema.org',
@@ -113,7 +130,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang={locale} className="dark" suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/images/icon_menu_orbis.png" />
@@ -131,12 +148,19 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${cinzel.variable} font-sans antialiased bg-e7-void text-slate-200 min-h-screen`}
+        className={`${inter.variable} ${cinzel.variable} ${marcellus.variable} ${jetbrainsMono.variable} font-sans antialiased bg-e7-void text-slate-200 min-h-screen`}
         suppressHydrationWarning
       >
-        <Providers>
+        <Providers locale={locale} messages={messages}>
+          {/* Visible solo con foco de teclado: permite saltear la navegación (WCAG 2.4.1) */}
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-lg focus:bg-e7-gold focus:px-4 focus:py-2 focus:font-semibold focus:text-black"
+          >
+            {messages.common?.skipToContent ?? 'Skip to content'}
+          </a>
           <Navbar />
-          <main className="min-h-[calc(100vh-4rem)]">
+          <main id="main" tabIndex={-1} className="min-h-[calc(100vh-4rem)] outline-none">
             {children}
           </main>
           <Footer />

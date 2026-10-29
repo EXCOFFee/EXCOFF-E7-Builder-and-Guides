@@ -316,7 +316,7 @@ export function TeamCompositionSelector({
                         <div className="mb-4">
                             <label className="block text-sm font-medium text-gray-300 mb-2">
                                 {t('guides.stats', 'Stats')}
-                                <span className="text-gray-500 text-xs ml-2">{t('guides.statsExample', '(e.g., 250+ Speed, 20k HP)')}</span>
+                                <span className="text-gray-400 text-xs ml-2">{t('guides.statsExample', '(e.g., 250+ Speed, 20k HP)')}</span>
                             </label>
                             <Input
                                 type="text"
@@ -342,10 +342,10 @@ export function TeamCompositionSelector({
                                     hero: { ...buildModal.hero, note: e.target.value.slice(0, 200) },
                                 })}
                                 placeholder={t('guides.heroNotePlaceholder', 'Role, positioning, or other notes...')}
-                                className="w-full h-20 px-4 py-3 rounded-lg bg-e7-dark/50 border border-e7-gold/20 text-white placeholder-gray-500 resize-none focus:border-e7-gold/50 focus:outline-none"
+                                className="w-full h-20 px-4 py-3 rounded-lg bg-e7-dark/50 border border-e7-gold/20 text-white placeholder-gray-400 resize-none focus:border-e7-gold/50 focus:outline-none"
                                 maxLength={200}
                             />
-                            <div className="text-xs text-gray-500 text-right">
+                            <div className="text-xs text-gray-400 text-right">
                                 {(buildModal.hero.note || '').length}/200
                             </div>
                         </div>
@@ -377,7 +377,7 @@ export function TeamCompositionSelector({
                     <h3 className="text-lg font-semibold text-cyan-300">
                         {t('guides.teamCompositions', 'Team Compositions')}
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-400">
                         {t('guides.teamCompositionsDesc', '(Optional) Add recommended teams for this guide')}
                     </p>
                 </div>
@@ -393,7 +393,7 @@ export function TeamCompositionSelector({
 
             {/* Teams */}
             {teams.length === 0 ? (
-                <div className="text-center py-8 text-gray-500 border border-dashed border-e7-gold/20 rounded-lg">
+                <div className="text-center py-8 text-gray-400 border border-dashed border-e7-gold/20 rounded-lg">
                     {t('guides.noTeamsYet', 'No teams added yet. Click "Add Team" to create one.')}
                 </div>
             ) : (
@@ -413,7 +413,7 @@ export function TeamCompositionSelector({
                                     className="bg-e7-dark/50 border-cyan-500/30 text-cyan-300 font-semibold flex-1"
                                     disabled={disabled}
                                 />
-                                <span className="text-sm text-gray-500">
+                                <span className="text-sm text-gray-400">
                                     {team.heroes.length}/4
                                 </span>
                                 <button
@@ -521,7 +521,7 @@ export function TeamCompositionSelector({
                                                         <span className="text-yellow-400 text-sm mt-1 inline-block">📝 {t('guides.hasBuild', 'Has build')}</span>
                                                     )}
                                                     {!hasInfo && (
-                                                        <span className="text-gray-500 text-sm mt-1 inline-block">{t('guides.clickToAddBuild', 'Click to add build')}</span>
+                                                        <span className="text-gray-400 text-sm mt-1 inline-block">{t('guides.clickToAddBuild', 'Click to add build')}</span>
                                                     )}
                                                 </button>
                                             </div>
@@ -529,7 +529,7 @@ export function TeamCompositionSelector({
                                     })}
                                 </div>
                             ) : (
-                                <div className="text-center py-4 text-gray-500 text-sm">
+                                <div className="text-center py-4 text-gray-400 text-sm">
                                     {t('guides.noHeroesInTeam', 'Add heroes to this team')}
                                 </div>
                             )}

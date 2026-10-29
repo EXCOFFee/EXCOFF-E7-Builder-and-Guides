@@ -102,7 +102,7 @@ export function EmptyState({
         <div className="flex flex-col items-center justify-center p-8 text-center">
             <div className="text-5xl mb-3">{icon}</div>
             <h3 className="text-lg font-semibold text-slate-300 mb-1">{title}</h3>
-            <p className="text-slate-500">{description}</p>
+            <p className="text-slate-400">{description}</p>
         </div>
     );
 }

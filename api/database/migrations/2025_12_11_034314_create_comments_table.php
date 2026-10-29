@@ -1,32 +1,20 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 
+/**
+ * Reemplazada por 2025_12_14_025000_create_comments_table (agrega build_id, is_anonymous
+ * y guide_id nullable). Se deja vacía en vez de borrarla porque prod ya la tiene registrada;
+ * si creara la tabla, la migración del 12/14 fallaría en instalaciones nuevas.
+ */
 return new class extends Migration {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('comments', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('guide_id')->constrained()->onDelete('cascade');
-            $table->foreignId('parent_id')->nullable()->constrained('comments')->onDelete('cascade');
-            $table->text('content');
-            $table->timestamps();
-
-            $table->index('guide_id');
-        });
+        //
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('comments');
+        //
     }
 };

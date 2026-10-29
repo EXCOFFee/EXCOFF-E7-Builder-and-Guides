@@ -15,6 +15,8 @@ class HeroApiTest extends TestCase
     {
         parent::setUp();
         Cache::flush();
+        // Las migraciones de seed insertan héroes reales; los tests cuentan solo los de factory
+        Hero::query()->delete();
     }
 
     /**
@@ -32,6 +34,41 @@ class HeroApiTest extends TestCase
                     '*' => ['id', 'name', 'slug', 'element', 'class', 'rarity']
                 ]
             ]);
+    }
+
+    /**
+     * The list feeds grids and selectors only: skills and usage stats stay in the detail endpoint.
+     */
+    public function test_heroes_index_returns_summary_without_skills(): void
+    {
+        Hero::factory()->create([
+            'name' => 'Aravi',
+            'name_ko' => '아라비',
+            'base_stats' => ['atk' => 1000],
+            'skills' => ['S1' => ['name' => 'Strike', 'description' => str_repeat('x', 500)]],
+        ]);
+
+        $hero = $this->getJson('/api/heroes?lang=ko')->assertOk()->json('data.0');
+
+        $this->assertSame(
+            ['id', 'code', 'hero_code', 'name', 'display_name', 'name_ko', 'name_ja', 'name_zh',
+                'slug', 'element', 'class', 'rarity', 'base_stats', 'image_url'],
+            array_keys($hero)
+        );
+        $this->assertSame('아라비', $hero['display_name']);
+        $this->assertSame(['atk' => 1000], $hero['base_stats']);
+    }
+
+    public function test_hero_show_still_includes_skills(): void
+    {
+        $hero = Hero::factory()->create([
+            'slug' => 'aravi',
+            'skills' => ['S1' => ['name' => 'Strike', 'description' => 'Hits']],
+        ]);
+
+        $this->getJson("/api/heroes/{$hero->slug}")
+            ->assertOk()
+            ->assertJsonPath('data.skills.S1.name', 'Strike');
     }
 
     /**
@@ -78,7 +115,8 @@ class HeroApiTest extends TestCase
     {
         Hero::factory()->create(['name' => 'Aravi']);
         Hero::factory()->create(['name' => 'Arbiter Vildred']);
-        Hero::factory()->create(['name' => 'Charlotte']);
+        // La búsqueda es "contiene" (LIKE %Ar%): el tercer nombre no debe contener "ar"
+        Hero::factory()->create(['name' => 'Celine']);
 
         $response = $this->getJson('/api/heroes?search=Ar');
 

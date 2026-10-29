@@ -6,12 +6,17 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\GuildPost;
+use App\Services\ImageService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class GuildPostController extends Controller
 {
+    public function __construct(
+        private readonly ImageService $imageService
+    ) {}
+
     /**
      * List all guild posts with filters.
      */
@@ -91,43 +96,19 @@ class GuildPostController extends Controller
             $tags = json_decode($tags, true) ?? [];
         }
 
-        // Handle image URLs from form
-        $imageUrls = $request->input('image_urls');
-        if (is_string($imageUrls)) {
-            $imageUrls = json_decode($imageUrls, true) ?? [];
-        }
-
-        // Validate first (without images, we'll handle them separately)
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string|max:5000',
             'server' => 'required|in:' . implode(',', GuildPost::SERVERS),
             'language' => 'required|in:' . implode(',', GuildPost::LANGUAGES),
             'tags' => 'nullable',
-        ]);
+        ] + ImageService::rules());
 
-        // Process images - handle file uploads
-        $imagePaths = [];
-        $baseUrl = rtrim(config('app.url'), '/');
-        
-        // Handle uploaded files
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                if ($image->isValid()) {
-                    $path = $image->store('guilds', 'public');
-                    // Use absolute URL so images work from Vercel frontend
-                    $imagePaths[] = $baseUrl . '/storage/' . $path;
-                }
-            }
-        }
-        
-        // Also add any image URLs provided
-        if (!empty($imageUrls) && is_array($imageUrls)) {
-            $imagePaths = array_merge($imagePaths, array_slice($imageUrls, 0, 5 - count($imagePaths)));
-        }
-
-        // Limit to 5 images max
-        $imagePaths = array_slice($imagePaths, 0, 5);
+        // New uploads (validated by content) + images already on this server; external URLs are dropped
+        $imagePaths = array_slice(array_merge(
+            $this->imageService->storeUploads($request->file('images'), 'guilds'),
+            $this->imageService->filterOwnedUrls($request->input('image_urls'))
+        ), 0, ImageService::MAX_IMAGES);
 
         // Handle contacts from form
         $contacts = $request->input('contacts');
@@ -179,40 +160,18 @@ class GuildPostController extends Controller
             $tags = json_decode($tags, true) ?? [];
         }
 
-        // Handle image URLs from form
-        $imageUrls = $request->input('image_urls');
-        if (is_string($imageUrls)) {
-            $imageUrls = json_decode($imageUrls, true) ?? [];
-        }
-
         $request->validate([
             'title' => 'sometimes|string|max:255',
             'description' => 'sometimes|string|max:5000',
             'server' => 'sometimes|in:' . implode(',', GuildPost::SERVERS),
             'language' => 'sometimes|in:' . implode(',', GuildPost::LANGUAGES),
-        ]);
+        ] + ImageService::rules());
 
-        // Process images - handle file uploads
-        $imagePaths = [];
-        $baseUrl = rtrim(config('app.url'), '/');
-        
-        // Handle uploaded files
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                if ($image->isValid()) {
-                    $path = $image->store('guilds', 'public');
-                    $imagePaths[] = $baseUrl . '/storage/' . $path;
-                }
-            }
-        }
-        
-        // Also add any image URLs provided
-        if (!empty($imageUrls) && is_array($imageUrls)) {
-            $imagePaths = array_merge($imagePaths, array_slice($imageUrls, 0, 5 - count($imagePaths)));
-        }
-
-        // Limit to 5 images max
-        $imagePaths = array_slice($imagePaths, 0, 5);
+        // New uploads (validated by content) + images already on this server; external URLs are dropped
+        $imagePaths = array_slice(array_merge(
+            $this->imageService->storeUploads($request->file('images'), 'guilds'),
+            $this->imageService->filterOwnedUrls($request->input('image_urls'))
+        ), 0, ImageService::MAX_IMAGES);
 
         // Handle contacts from form
         $contacts = $request->input('contacts');

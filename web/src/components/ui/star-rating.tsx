@@ -51,7 +51,7 @@ export function StarRating({
                                 : 'cursor-default'
                             } ${star <= displayRating
                                 ? 'text-yellow-400'
-                                : 'text-gray-600'
+                                : 'text-gray-400'
                             }`}
                     >
                         ★

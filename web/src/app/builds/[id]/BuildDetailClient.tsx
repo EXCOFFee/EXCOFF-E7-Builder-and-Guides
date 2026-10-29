@@ -1,14 +1,13 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { ImageCarousel } from '@/components/ui/image-carousel';
-import { StarRating } from '@/components/ui/star-rating';
-import { TierRatingDisplay, TierCategory } from '@/components/ui/tier-rating-selector';
+import { TierRatingDisplay } from '@/components/ui/tier-rating-selector';
 import { ProConsDisplay } from '@/components/ui/pro-cons-selector';
 import { SynergyCounterSection, HeroWithNote } from '@/components/builds/SynergyCounterCard';
 import { ExportBuildImage } from '@/components/builds/ExportBuildImage';
@@ -19,14 +18,8 @@ import { appendImageVersion } from '@/lib/heroImages';
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 import { SET_IMAGES } from '@/lib/sets';
-
-const ELEMENT_COLORS: Record<string, string> = {
-    fire: 'bg-red-500',
-    ice: 'bg-blue-500',
-    earth: 'bg-green-500',
-    light: 'bg-yellow-400',
-    dark: 'bg-purple-600',
-};
+import { formatDate } from '@/lib/utils';
+import { useNavigateFresh } from '@/hooks/useNavigateFresh';
 
 // Element to image mapping
 const ELEMENT_IMAGES: Record<string, string> = {
@@ -117,7 +110,7 @@ interface CurrentUser {
 
 export function BuildDetailClient() {
     const params = useParams();
-    const router = useRouter();
+    const navigateFresh = useNavigateFresh();
     const queryClient = useQueryClient();
     const { t, locale } = useTranslations();
     const buildId = params.id as string;
@@ -127,7 +120,6 @@ export function BuildDetailClient() {
     const [hasLiked, setHasLiked] = useState(false);
     const [likeCount, setLikeCount] = useState(0);
     const [isAnonymous, setIsAnonymous] = useState(false);
-    const [userRating, setUserRating] = useState<number | null>(null);
     // Reply and edit state
     const [replyingTo, setReplyingTo] = useState<number | null>(null);
     const [replyContent, setReplyContent] = useState('');
@@ -167,12 +159,12 @@ export function BuildDetailClient() {
         },
     });
 
-    // Sync likeCount when build loads
-    useEffect(() => {
-        if (build?.likes !== undefined) {
-            setLikeCount(build.likes);
-        }
-    }, [build?.likes]);
+    // Cuando el servidor trae otro número de likes, se adopta (ajuste en render, sin efecto)
+    const [syncedLikes, setSyncedLikes] = useState<number | undefined>(undefined);
+    if (build?.likes !== undefined && build.likes !== syncedLikes) {
+        setSyncedLikes(build.likes);
+        setLikeCount(build.likes);
+    }
 
     // Check if user liked this build
     useEffect(() => {
@@ -258,30 +250,6 @@ export function BuildDetailClient() {
             if (context?.previousBuild) {
                 setLikeCount(context.previousBuild.likes);
             }
-        },
-    });
-
-    // Rating mutation
-    const rateMutation = useMutation({
-        mutationFn: async (rating: number) => {
-            const token = localStorage.getItem('auth_token');
-            const response = await fetch(`${API_URL}/builds/${buildId}/rate`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`,
-                },
-                body: JSON.stringify({ rating }),
-            });
-            return response.json();
-        },
-        onSuccess: (data) => {
-            setUserRating(data.user_rating);
-            // Update rating locally
-            queryClient.setQueryData(['build', buildId], (oldData: Build | undefined) => {
-                if (!oldData) return oldData;
-                return { ...oldData, avg_rating: data.avg_rating, rating_count: data.rating_count };
-            });
         },
     });
 
@@ -406,8 +374,7 @@ export function BuildDetailClient() {
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['builds'] });
-            // Use window.location for full page refresh
-            window.location.href = '/builds';
+            navigateFresh('/builds');
         },
         onError: (error: Error) => {
             alert(`Error al eliminar: ${error.message}`);
@@ -463,7 +430,6 @@ export function BuildDetailClient() {
                                 width={200}
                                 height={200}
                                 className="rounded-2xl ring-2 ring-e7-gold/60 relative z-10 shadow-2xl transform group-hover:scale-105 transition-transform duration-300"
-                                unoptimized
                             />
                             <Image
                                 src={ELEMENT_IMAGES[build.hero.element] || '/images/elements/ElementFire.png'}
@@ -474,16 +440,16 @@ export function BuildDetailClient() {
                             />
                         </div>
                         <div className="flex-1 text-center md:text-left">
-                            <Link href={`/heroes/${build.hero.slug}`} className="font-display inline-block text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold hover:from-e7-gold hover:to-e7-text-gold font-bold text-4xl md:text-5xl transition-all duration-300 transform hover:scale-105">
+                            <Link href={`/heroes/${build.hero.slug}`} className="font-hero inline-block font-normal text-4xl md:text-5xl text-slate-50 transition-colors hover:text-e7-text-gold">
                                 {build.hero.name}
                             </Link>
-                            <p className="font-display text-2xl text-gray-400 capitalize mt-2 font-medium">{build.hero.class.replace('_', ' ')}</p>
+                            <p className="text-lg text-night-muted capitalize mt-2">{build.hero.class.replace('_', ' ')}</p>
                         </div>
                     </div>
 
                     <div className="p-6">
                         {/* Title */}
-                        <h1 className="font-display text-2xl md:text-3xl font-bold text-white mb-4">
+                        <h1 className="font-hero text-2xl md:text-3xl font-normal text-white mb-4">
                             {build.title}
                         </h1>
 
@@ -505,7 +471,7 @@ export function BuildDetailClient() {
                                         {build.is_anonymous ? 'Anonymous' : build.user?.name}
                                     </p>
                                     <p className="text-xs text-gray-400">
-                                        {new Date(build.created_at).toLocaleDateString()} • 👁️ {build.views}
+                                        {formatDate(build.created_at, locale)} • 👁️ {build.views}
                                     </p>
                                 </div>
                             </div>
@@ -602,7 +568,6 @@ export function BuildDetailClient() {
                                         width={96}
                                         height={96}
                                         className="rounded-xl ring-2 ring-e7-gold/40 relative z-10 shadow-xl group-hover:scale-110 transition-transform duration-300"
-                                        unoptimized
                                     />
                                 </div>
                                 <span className="text-2xl text-white font-semibold group-hover:text-e7-text-gold transition-colors duration-300">{build.artifact.name}</span>
@@ -615,9 +580,9 @@ export function BuildDetailClient() {
                         {build.hero.skills && build.hero.skills.length >= 3 &&
                             (build.skill_1 || build.skill_2 || build.skill_3) ? (
                             <div className="mb-6">
-                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4">
+                                <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4">
                                     {t('builds.skillRecommendations', 'Skill Recommendations')}
-                                </h3>
+                                </h2>
                                 <div className="flex flex-wrap gap-6">
                                     {[0, 1, 2].map(idx => {
                                         const skillLevel = build[`skill_${idx + 1}` as keyof Build] as number || 0;
@@ -658,7 +623,7 @@ export function BuildDetailClient() {
                                                 {/* Tooltip */}
                                                 <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-black/90 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 border border-white/10">
                                                     {skill.name}
-                                                    {skillLevel === 0 && <span className="block text-gray-500 text-[10px]">{t('common.noUpgrade', 'No upgrade')}</span>}
+                                                    {skillLevel === 0 && <span className="block text-gray-400 text-[10px]">{t('common.noUpgrade', 'No upgrade')}</span>}
                                                 </div>
                                             </div>
                                         );
@@ -670,7 +635,7 @@ export function BuildDetailClient() {
                         {/* Min Stats */}
                         {build.min_stats && Object.keys(build.min_stats).length > 0 && (
                             <div className="mb-6">
-                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4">{t('builds.minStats', 'Min Stats')}</h3>
+                                <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-4">{t('builds.minStats', 'Min Stats')}</h2>
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                     {Object.entries(build.min_stats).map(([stat, value]) => (
                                         <div key={stat} className="group bg-gradient-to-br from-e7-void/70 to-e7-panel/50 p-4 rounded-xl border border-e7-gold/20 backdrop-blur-sm hover:border-e7-gold/40 hover:shadow-lg hover:shadow-e7-gold/10 transition-all duration-300 hover:-translate-y-1">
@@ -685,7 +650,7 @@ export function BuildDetailClient() {
                         {/* Description */}
                         {build.description && (
                             <div className="mb-6 p-5 bg-gradient-to-br from-e7-void/50 to-e7-panel/30 rounded-xl border border-e7-gold/10 backdrop-blur-sm">
-                                <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-3">Description</h3>
+                                <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold font-bold text-xl mb-3">Description</h2>
                                 <p className="text-gray-300 whitespace-pre-wrap leading-relaxed">{build.description}</p>
                             </div>
                         )}
@@ -785,7 +750,7 @@ export function BuildDetailClient() {
                     {/* Comments List */}
                     <div className="space-y-4">
                         {comments.length === 0 ? (
-                            <p className="text-gray-500">{t('guides.noComments', 'No comments yet.')}</p>
+                            <p className="text-gray-400">{t('guides.noComments', 'No comments yet.')}</p>
                         ) : (
                             comments.map((comment) => {
                                 const canEdit = currentUser && comment.user_id === currentUser.id &&
@@ -811,8 +776,8 @@ export function BuildDetailClient() {
                                                         <span className="text-white font-medium text-sm">
                                                             {comment.is_anonymous ? t('common.anonymous', 'Anonymous') : comment.user?.name}
                                                         </span>
-                                                        <span className="text-xs text-gray-500">
-                                                            {new Date(comment.created_at).toLocaleDateString()}
+                                                        <span className="text-xs text-gray-400">
+                                                            {formatDate(comment.created_at, locale)}
                                                         </span>
                                                     </div>
                                                     <div className="flex gap-2 text-xs">
@@ -926,8 +891,8 @@ export function BuildDetailClient() {
                                                                 <span className="text-white font-medium text-xs">
                                                                     {reply.is_anonymous ? t('common.anonymous', 'Anonymous') : reply.user?.name}
                                                                 </span>
-                                                                <span className="text-xs text-gray-500">
-                                                                    {new Date(reply.created_at).toLocaleDateString()}
+                                                                <span className="text-xs text-gray-400">
+                                                                    {formatDate(reply.created_at, locale)}
                                                                 </span>
                                                             </div>
                                                             <p className="text-gray-300 text-sm">{reply.content}</p>

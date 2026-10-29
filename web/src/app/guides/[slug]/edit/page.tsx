@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -11,6 +10,9 @@ import { useQuery } from '@tanstack/react-query';
 import { heroApi, guideApi, artifactApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
 import { TeamCompositionSelector, Team } from '@/components/guides/TeamCompositionSelector';
+import { useRequireAuth } from '@/hooks/useAuth';
+import { useNavigateFresh } from '@/hooks/useNavigateFresh';
+import { previewUrl } from '@/lib/objectUrl';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -55,6 +57,7 @@ interface Guide {
 
 export default function EditGuidePage() {
     const router = useRouter();
+    const navigateFresh = useNavigateFresh();
     const params = useParams();
     const slug = params.slug as string;
     const { t } = useTranslations();
@@ -62,7 +65,7 @@ export default function EditGuidePage() {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const isAuthenticated = useRequireAuth();
 
     // Form state
     const [title, setTitle] = useState('');
@@ -90,17 +93,6 @@ export default function EditGuidePage() {
         pt: 'Português',
     };
 
-    // Check authentication
-    useEffect(() => {
-        const token = localStorage.getItem('auth_token');
-        if (!token) {
-            localStorage.setItem('return_url', window.location.pathname);
-            router.push('/login');
-        } else {
-            setIsAuthenticated(true);
-        }
-    }, [router]);
-
     // Fetch existing guide data
     const { data: guideData, isLoading: loadingGuide } = useQuery({
         queryKey: ['guide', slug],
@@ -111,20 +103,21 @@ export default function EditGuidePage() {
         enabled: isAuthenticated && !!slug,
     });
 
-    // Pre-fill form when guide loads
-    useEffect(() => {
-        if (guideData) {
-            const guide = guideData as Guide;
-            setTitle(guide.title || '');
-            setCategory(guide.category || 'general');
-            setDescription(guide.description || '');
-            setContent(guide.gameplay_content || '');
-            setVideoUrl(guide.video_url || '');
-            setImages(guide.images || []);
-            setTeams(guide.teams || []);
-            setLanguage(guide.language || 'en');
-        }
-    }, [guideData]);
+    // Rellenar el formulario una sola vez, cuando llegan los datos (ajuste en render, sin efecto).
+    // Como efecto se repetía con cada recarga de la consulta y pisaba lo que el usuario editaba.
+    const [prefilled, setPrefilled] = useState(false);
+    if (guideData && !prefilled) {
+        setPrefilled(true);
+        const guide = guideData as Guide;
+        setTitle(guide.title || '');
+        setCategory(guide.category || 'general');
+        setDescription(guide.description || '');
+        setContent(guide.gameplay_content || '');
+        setVideoUrl(guide.video_url || '');
+        setImages(guide.images || []);
+        setTeams(guide.teams || []);
+        setLanguage(guide.language || 'en');
+    }
 
     // Fetch heroes for selector
     const { data: heroesData } = useQuery({
@@ -208,8 +201,7 @@ export default function EditGuidePage() {
             }
 
             const updated = await response.json();
-            // Use window.location for full page refresh
-            window.location.href = `/guides/${updated.slug || slug}`;
+            navigateFresh(`/guides/${updated.slug || slug}`);
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Error desconocido');
         } finally {
@@ -237,7 +229,7 @@ export default function EditGuidePage() {
                     <Link href={`/guides/${slug}`} className="text-e7-gold hover:text-e7-text-gold text-sm mb-2 inline-flex items-center gap-2 group transition-colors">
                         <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('guides.backToGuides', 'Back to Guide')}
                     </Link>
-                    <h1 className="font-display text-4xl text-gold-gradient tracking-wide mb-2">{t('guides.editGuide', 'Edit Guide')}</h1>
+                    <h1 className="font-hero font-normal text-4xl text-slate-50 tracking-normal mb-2">{t('guides.editGuide', 'Edit Guide')}</h1>
                     <p className="text-slate-400">{t('guides.editSubtitle', 'Update your guide content')}</p>
                 </div>
 
@@ -343,6 +335,7 @@ export default function EditGuidePage() {
                                     <div className="grid grid-cols-3 gap-2 mb-4">
                                         {images.map((img, idx) => (
                                             <div key={idx} className="relative group">
+                                                {/* eslint-disable-next-line @next/next/no-img-element -- previsualización en el formulario (blob: o imagen ya subida), no pasa por next/image */}
                                                 <img
                                                     src={img}
                                                     alt={`Image ${idx + 1}`}
@@ -390,8 +383,9 @@ export default function EditGuidePage() {
                                     <div className="grid grid-cols-3 gap-2 mb-4">
                                         {imageFiles.map((file, idx) => (
                                             <div key={`new-${idx}`} className="relative group">
+                                                {/* eslint-disable-next-line @next/next/no-img-element -- previsualización en el formulario (blob: o imagen ya subida), no pasa por next/image */}
                                                 <img
-                                                    src={URL.createObjectURL(file)}
+                                                    src={previewUrl(file)}
                                                     alt=""
                                                     className="w-full h-24 object-cover rounded border border-green-500/50"
                                                 />
@@ -402,7 +396,7 @@ export default function EditGuidePage() {
                                                 >
                                                     ×
                                                 </button>
-                                                <span className="absolute bottom-1 left-1 text-xs bg-green-600 text-white px-1 rounded">New</span>
+                                                <span className="absolute bottom-1 left-1 text-xs bg-green-700 text-white px-1 rounded">New</span>
                                             </div>
                                         ))}
                                     </div>
@@ -431,13 +425,14 @@ export default function EditGuidePage() {
                                         {t('common.add', 'Add')}
                                     </Button>
                                 </div>
-                                <p className="text-xs text-gray-500 mt-1">{t('guides.maxImages', 'Maximum 5 images')}</p>
+                                <p className="text-xs text-gray-400 mt-1">{t('guides.maxImages', 'Maximum 5 images')}</p>
                             </div>
 
                             {/* Language selector */}
                             <div className="space-y-2">
                                 <label className="text-slate-300 text-sm font-medium">{t('language.selectLanguage', 'Language')}</label>
                                 <select
+                                    aria-label={t('language.selectLanguage', 'Language')}
                                     value={language}
                                     onChange={(e) => setLanguage(e.target.value)}
                                     className="w-full bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg px-4 py-3 focus:border-e7-gold focus:ring-e7-gold/30"

@@ -31,13 +31,13 @@ interface Guide {
 }
 
 const CATEGORY_COLORS: Record<string, string> = {
-    general: 'bg-gray-600',
-    pve: 'bg-green-600',
-    rta: 'bg-red-600',
-    guild_war: 'bg-blue-600',
-    arena: 'bg-purple-600',
-    tier_list: 'bg-yellow-600',
-    character_guide: 'bg-teal-600',
+    general: 'bg-gray-700',
+    pve: 'bg-green-700',
+    rta: 'bg-red-700',
+    guild_war: 'bg-blue-700',
+    arena: 'bg-purple-700',
+    tier_list: 'bg-yellow-700',
+    character_guide: 'bg-teal-700',
 };
 
 export default function GuidesPage() {
@@ -101,8 +101,8 @@ export default function GuidesPage() {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
                     <div className="text-center md:text-left">
-                        <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">{t('guides.title', 'Game Guides')}</h1>
-                        <p className="font-display text-slate-400">{t('guides.description', 'Learn strategies and tips from the community')}</p>
+                        <h1 className="font-hero font-normal text-4xl md:text-5xl text-slate-50 tracking-normal mb-2">{t('guides.title', 'Game Guides')}</h1>
+                        <p className="font-sans text-slate-400">{t('guides.description', 'Learn strategies and tips from the community')}</p>
                     </div>
                     <Link href="/guides/create">
                         <Button className="btn-gold px-4 py-2 rounded-md">
@@ -133,11 +133,12 @@ export default function GuidesPage() {
                         placeholder={t('guides.searchPlaceholder', 'Search guides...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-md bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-500 focus:border-e7-gold"
+                        className="max-w-md bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-400 focus:border-e7-gold"
                     />
                     <div className="flex items-center gap-2">
-                        <span className="text-sm text-neutral-500">{t('common.sortBy', 'Sort by')}:</span>
+                        <span className="text-sm text-neutral-400">{t('common.sortBy', 'Sort by')}:</span>
                         <select
+                            aria-label={t('common.sortBy', 'Sort by')}
                             value={sortBy}
                             onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
                             className="bg-white/4 border border-white/8 text-neutral-200 rounded-md pl-3 pr-10 py-1.5 text-sm focus:border-e7-gold cursor-pointer"
@@ -150,6 +151,7 @@ export default function GuidesPage() {
                         </select>
                         {/* Language Filter */}
                         <select
+                            aria-label={t('language.filterByLanguage', 'Filter by Language')}
                             value={selectedLanguage}
                             onChange={(e) => setSelectedLanguage(e.target.value)}
                             className="bg-white/4 border border-white/8 text-neutral-200 rounded-md pl-3 pr-10 py-1.5 text-sm focus:border-e7-gold cursor-pointer"
@@ -171,7 +173,7 @@ export default function GuidesPage() {
                 {/* Error */}
                 {error && (
                     <div className="text-center text-red-400 py-20">
-                        <p>{t('guides.loadError', 'Error loading guides. Make sure the API is running.')}</p>
+                        <p>{t('guides.loadError', 'Could not load guides. Please try again later.')}</p>
                     </div>
                 )}
 
@@ -216,8 +218,8 @@ export default function GuidesPage() {
                                                     src={guide.images[0]}
                                                     alt={guide.title}
                                                     fill
+                                                    sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw"
                                                     className="object-cover group-hover:scale-105 transition-transform"
-                                                    unoptimized
                                                 />
                                             </div>
                                         ) : (
@@ -232,18 +234,18 @@ export default function GuidesPage() {
                                                     {CATEGORIES.find(c => c.id === guide.category)?.label || guide.category}
                                                 </span>
                                                 {guide.video_platform === 'youtube' && (
-                                                    <span className="text-red-500 text-xs">▶ YouTube</span>
+                                                    <span className="text-red-400 text-xs">▶ YouTube</span>
                                                 )}
                                                 {guide.language && guide.language !== 'en' && (
-                                                    <span className="text-xs text-e7-gold/70 bg-e7-gold/10 px-2 py-0.5 rounded">
+                                                    <span className="text-xs text-e7-gold bg-e7-gold/10 px-2 py-0.5 rounded">
                                                         {LANGUAGE_LABELS[guide.language] || guide.language}
                                                     </span>
                                                 )}
                                             </div>
 
-                                            <h3 className="text-slate-100 font-medium group-hover:text-e7-gold transition-colors line-clamp-2">
+                                            <h2 className="text-slate-100 font-medium group-hover:text-e7-gold transition-colors line-clamp-2">
                                                 {guide.title}
-                                            </h3>
+                                            </h2>
 
                                             {guide.hero && (
                                                 <p className="text-sm text-slate-400 mt-1">
@@ -251,7 +253,7 @@ export default function GuidesPage() {
                                                 </p>
                                             )}
 
-                                            <div className="flex justify-between items-center mt-3 pt-3 border-t border-e7-gold/10 text-xs text-slate-500">
+                                            <div className="flex justify-between items-center mt-3 pt-3 border-t border-e7-gold/10 text-xs text-slate-400">
                                                 <div className="flex items-center gap-2">
                                                     {guide.user?.avatar ? (
                                                         <Image

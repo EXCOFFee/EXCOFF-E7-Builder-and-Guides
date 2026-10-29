@@ -5,12 +5,19 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
 use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
+    /**
+     * One-time login codes live this long; the frontend exchanges them right after the redirect.
+     */
+    private const LOGIN_CODE_TTL_SECONDS = 60;
+
     /**
      * Redirect to OAuth provider
      */
@@ -88,12 +95,39 @@ class AuthController extends Controller
             ]);
         }
 
-        // Create API token
-        $token = $user->createToken('auth_token')->plainTextToken;
+        // The token never travels in the URL (browser history, proxy logs, Referer):
+        // redirect with a short-lived one-time code that the frontend exchanges via POST.
+        $code = Str::random(64);
+        Cache::put($this->loginCodeKey($code), $user->id, now()->addSeconds(self::LOGIN_CODE_TTL_SECONDS));
 
-        // Redirect to frontend with token
         $frontendUrl = config('app.frontend_url', 'http://localhost:3000');
-        return redirect("{$frontendUrl}/auth/callback?token={$token}");
+        return redirect("{$frontendUrl}/auth/callback?code={$code}");
+    }
+
+    /**
+     * Exchange a one-time login code for an API token. Each code works once.
+     */
+    public function exchangeCode(Request $request): JsonResponse
+    {
+        $request->validate(['code' => 'required|string|size:64']);
+
+        $userId = Cache::pull($this->loginCodeKey($request->input('code')));
+        $user = $userId ? User::find($userId) : null;
+
+        if (!$user) {
+            return response()->json(['error' => 'Login code is invalid or expired. Sign in again.'], 422);
+        }
+
+        return response()->json([
+            'token' => $user->createToken('auth_token')->plainTextToken,
+            'user' => $user,
+        ]);
+    }
+
+    private function loginCodeKey(string $code): string
+    {
+        // Only the hash is stored, so a cache dump does not expose usable codes
+        return 'login_code:' . hash('sha256', $code);
     }
 
     /**

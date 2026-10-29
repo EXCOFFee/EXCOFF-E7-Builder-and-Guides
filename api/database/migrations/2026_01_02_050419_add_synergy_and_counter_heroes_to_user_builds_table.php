@@ -11,6 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // create_user_builds_table ya define estas columnas en instalaciones nuevas
+        if (Schema::hasColumn('user_builds', 'synergy_heroes')) {
+            return;
+        }
+
         Schema::table('user_builds', function (Blueprint $table) {
             $table->json('synergy_heroes')->nullable();
             $table->json('counter_heroes')->nullable();

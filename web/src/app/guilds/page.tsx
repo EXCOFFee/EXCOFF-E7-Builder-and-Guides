@@ -42,15 +42,6 @@ const LANGUAGE_NAMES: Record<string, string> = {
     pt: 'Português',
 };
 
-const LANGUAGE_FLAGS: Record<string, string> = {
-    en: '🇺🇸',
-    es: '🇪🇸',
-    ko: '🇰🇷',
-    ja: '🇯🇵',
-    zh: '🇨🇳',
-    pt: '🇧🇷',
-};
-
 const SERVER_FLAGS: Record<string, string> = {
     global: '🌍',
     europe: '🇪🇺',
@@ -115,10 +106,10 @@ export default function GuildsPage() {
                 {/* Header */}
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
                     <div className="text-center md:text-left">
-                        <h1 className="font-display text-4xl md:text-5xl text-gold-gradient tracking-wide mb-2">
+                        <h1 className="font-hero font-normal text-4xl md:text-5xl text-slate-50 tracking-normal mb-2">
                             {t('guilds.title', 'Guild Recruitment')}
                         </h1>
-                        <p className="font-display text-slate-400">
+                        <p className="font-sans text-slate-400">
                             {t('guilds.subtitle', 'Find your perfect guild or recruit new members')}
                         </p>
                     </div>
@@ -135,7 +126,7 @@ export default function GuildsPage() {
                         placeholder={t('guilds.searchPlaceholder', 'Search guilds...')}
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-md bg-e7-void/50 border-e7-gold/20 text-slate-200 placeholder:text-slate-500 focus:border-e7-gold focus:ring-e7-gold/30 transition-all"
+                        className="max-w-md bg-e7-void/50 border-e7-gold/20 text-slate-200 placeholder:text-slate-400 focus:border-e7-gold focus:ring-e7-gold/30 transition-all"
                     />
                     <div className="flex gap-2 flex-wrap">
                         <Button
@@ -174,7 +165,7 @@ export default function GuildsPage() {
                                 className={selectedLanguage === lang ? 'bg-e7-purple text-white font-semibold' : 'border-e7-gold/30 text-slate-400 hover:text-e7-gold hover:border-e7-gold/50'}
                                 size="sm"
                             >
-                                {LANGUAGE_FLAGS[lang]} {LANGUAGE_NAMES[lang]}
+                                <span lang={lang}>{LANGUAGE_NAMES[lang]}</span>
                             </Button>
                         ))}
                     </div>
@@ -186,7 +177,7 @@ export default function GuildsPage() {
                                 key={tag.id}
                                 variant={selectedTags.includes(tag.id) ? 'default' : 'outline'}
                                 onClick={() => toggleTag(tag.id)}
-                                className={selectedTags.includes(tag.id) ? 'bg-green-600 text-white' : 'border-e7-gold/30 text-slate-400 hover:text-e7-gold hover:border-e7-gold/50'}
+                                className={selectedTags.includes(tag.id) ? 'bg-green-700 text-white' : 'border-e7-gold/30 text-slate-400 hover:text-e7-gold hover:border-e7-gold/50'}
                                 size="sm"
                             >
                                 {t(`guilds.tags.${tag.id}`, tag.id.replace('_', ' '))}
@@ -234,12 +225,12 @@ export default function GuildsPage() {
                                         <div className="flex items-center gap-2 mb-2">
                                             <span className="text-lg">{SERVER_FLAGS[post.server]}</span>
                                             <span className="text-xs text-slate-400 uppercase">{post.server}</span>
-                                            <span className="text-xs text-slate-600">•</span>
-                                            <span className="text-xs text-slate-400">{LANGUAGE_FLAGS[post.language]} {LANGUAGE_NAMES[post.language] || post.language}</span>
+                                            <span className="text-xs text-slate-400">•</span>
+                                            <span className="text-xs text-slate-400" lang={post.language}>{LANGUAGE_NAMES[post.language] || post.language}</span>
                                         </div>
-                                        <h3 className="text-lg font-semibold text-slate-100 mb-2 line-clamp-2 group-hover:text-e7-gold transition-colors">
+                                        <h2 className="text-lg font-semibold text-slate-100 mb-2 line-clamp-2 group-hover:text-e7-gold transition-colors">
                                             {post.title}
-                                        </h3>
+                                        </h2>
                                         <p className="text-sm text-slate-400 line-clamp-2 mb-3">
                                             {post.description}
                                         </p>
@@ -262,7 +253,7 @@ export default function GuildsPage() {
                                                 );
                                             })}
                                         </div>
-                                        <div className="flex items-center gap-2 text-xs text-slate-500 pt-3 border-t border-e7-gold/10">
+                                        <div className="flex items-center gap-2 text-xs text-slate-400 pt-3 border-t border-e7-gold/10">
                                             {post.user.avatar && (
                                                 <Image
                                                     src={post.user.avatar}

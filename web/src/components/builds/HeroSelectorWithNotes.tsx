@@ -28,7 +28,6 @@ interface HeroSelectorWithNotesProps {
     availableHeroes: HeroData[];
     onChange: (heroes: HeroWithNote[]) => void;
     type: 'synergy' | 'counter';
-    maxHeroes?: number;
     disabled?: boolean;
 }
 
@@ -54,7 +53,6 @@ export function HeroSelectorWithNotes({
     availableHeroes,
     onChange,
     type,
-    maxHeroes,
     disabled = false,
 }: HeroSelectorWithNotesProps) {
     const { t } = useTranslations();
@@ -147,11 +145,11 @@ export function HeroSelectorWithNotes({
                             value={noteModal.currentNote}
                             onChange={(e) => setNoteModal({ ...noteModal, currentNote: e.target.value.slice(0, 200) })}
                             placeholder={t('builds.heroNotePlaceholder', 'Why this hero? (max 200 characters)')}
-                            className="w-full h-24 px-4 py-3 rounded-lg bg-e7-dark/50 border border-e7-gold/20 text-white placeholder-gray-500 resize-none focus:border-e7-gold/50 focus:outline-none"
+                            className="w-full h-24 px-4 py-3 rounded-lg bg-e7-dark/50 border border-e7-gold/20 text-white placeholder-gray-400 resize-none focus:border-e7-gold/50 focus:outline-none"
                             maxLength={200}
                         />
                         <div className="flex justify-between items-center mt-2">
-                            <span className="text-xs text-gray-500">
+                            <span className="text-xs text-gray-400">
                                 {noteModal.currentNote.length}/200
                             </span>
                             <div className="flex gap-2">
@@ -179,12 +177,12 @@ export function HeroSelectorWithNotes({
             <div className="mb-4">
                 <label className={`block text-lg font-semibold ${colors.text} mb-1`}>
                     {label}
-                    <span className="text-sm font-normal text-gray-500 ml-2">
+                    <span className="text-sm font-normal text-gray-400 ml-2">
                         ({selectedHeroes.length})
                     </span>
                 </label>
                 {description && (
-                    <p className="text-sm text-gray-500">{description}</p>
+                    <p className="text-sm text-gray-400">{description}</p>
                 )}
             </div>
 
@@ -238,7 +236,7 @@ export function HeroSelectorWithNotes({
                         <button
                             type="button"
                             onClick={() => setShowDropdown(false)}
-                            className="w-full px-4 py-2 text-gray-500 text-sm border-t border-e7-gold/10"
+                            className="w-full px-4 py-2 text-gray-400 text-sm border-t border-e7-gold/10"
                         >
                             {t('common.close', 'Close')}
                         </button>
@@ -286,7 +284,7 @@ export function HeroSelectorWithNotes({
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <div className="flex items-center gap-2">
-                                            <span className={`font-display font-semibold text-lg ${colors.text}`}>{hero.name}</span>
+                                            <span className={`font-sans font-semibold text-lg ${colors.text}`}>{hero.name}</span>
                                             {heroWithNote.note && <span className="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-0.5 rounded">+{t('builds.note', 'Note')}</span>}
                                         </div>
                                         {heroWithNote.note ? (
@@ -312,7 +310,7 @@ export function HeroSelectorWithNotes({
 
             {/* Empty state */}
             {selectedHeroes.length === 0 && (
-                <div className="text-center py-4 text-gray-500 text-sm">
+                <div className="text-center py-4 text-gray-400 text-sm">
                     {t('builds.noHeroesSelected', 'No heroes selected yet')}
                 </div>
             )}

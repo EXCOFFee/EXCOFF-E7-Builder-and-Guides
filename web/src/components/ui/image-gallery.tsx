@@ -26,9 +26,9 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
 
     return (
         <div className="mb-6">
-            <h3 className="text-xl font-display font-semibold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-3">
+            <h2 className="text-xl font-sans font-semibold text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold mb-3">
                 {displayTitle}
-            </h3>
+            </h2>
             <p className="text-sm text-gray-400 mb-4">
                 {t('common.clickImage', 'Click on an image to view full size')}
             </p>
@@ -44,8 +44,9 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
                             src={img}
                             alt={`${t('common.image', 'Image')} ${idx + 1}`}
                             fill
+                            // El Lightbox muestra el original; acá alcanza con el ancho de la columna
+                            sizes="(min-width: 1152px) 576px, (min-width: 768px) 50vw, 100vw"
                             className="object-contain group-hover:scale-105 transition-transform"
-                            unoptimized
                         />
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                             <span className="opacity-0 group-hover:opacity-100 text-white text-base font-medium bg-black/60 px-4 py-2 rounded-full transition-opacity">

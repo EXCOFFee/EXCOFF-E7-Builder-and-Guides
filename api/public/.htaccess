@@ -5,10 +5,6 @@
 
     RewriteEngine On
 
-    # Handle CORS preflight (OPTIONS) requests - MUST be before any redirects
-    RewriteCond %{REQUEST_METHOD} OPTIONS
-    RewriteRule ^(.*)$ $1 [R=200,L]
-
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -28,16 +24,18 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 
-# CORS Headers for ALL API requests
+# El CORS de la API lo maneja Laravel (config/cors.php, orígenes en el .env), incluidos los
+# preflight OPTIONS. No poner Access-Control-Allow-Origin "*" para todo acá: con credenciales
+# el navegador rechaza "*" y duplica la cabecera que ya manda Laravel.
+
+# No anunciar la versión de PHP (también se quita en public/index.php)
 <IfModule mod_headers.c>
-    # Always set CORS headers for API
-    Header always set Access-Control-Allow-Origin "*"
-    Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS, PATCH"
-    Header always set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization, X-XSRF-Token"
-    Header always set Access-Control-Max-Age "86400"
+    Header always unset X-Powered-By
+    Header unset X-Powered-By
 </IfModule>
 
-# CORS Headers for images (required for html-to-image export)
+# Imágenes estáticas (las sirve Apache sin pasar por Laravel): públicas, las usa la exportación
+# de builds a imagen (html-to-image) desde el frontend.
 <IfModule mod_headers.c>
     <FilesMatch "\.(png|jpg|jpeg|gif|webp|svg)$">
         Header set Access-Control-Allow-Origin "*"

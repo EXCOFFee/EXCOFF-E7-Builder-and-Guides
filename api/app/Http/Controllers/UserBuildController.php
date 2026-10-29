@@ -31,7 +31,7 @@ class UserBuildController extends Controller
         
         // Cache the paginated results for 5 minutes
         $builds = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($request) {
-            $query = UserBuild::with(['user', 'artifact', 'hero'])
+            $query = UserBuild::with(['user:id,name,avatar', 'artifact', 'hero'])
                 ->where('status', 'published');
 
             // Search by title or hero name
@@ -82,7 +82,8 @@ class UserBuildController extends Controller
             }
 
             // Filter by minimum stats (supports: min_speed, min_atk, min_hp, min_crit, min_cdmg, min_eff)
-            $statFilters = ['speed' => 'spd', 'atk' => 'atk', 'hp' => 'hp', 'crit' => 'crit', 'cdmg' => 'cdmg', 'eff' => 'eff'];
+            // Claves tal como las guarda el formulario de builds en min_stats
+            $statFilters = ['speed' => 'spd', 'atk' => 'atk', 'hp' => 'hp', 'crit' => 'crit_chance', 'cdmg' => 'crit_dmg', 'eff' => 'eff'];
             foreach ($statFilters as $param => $jsonKey) {
                 $minKey = "min_{$param}";
                 if ($request->has($minKey) && is_numeric($request->$minKey)) {
@@ -129,7 +130,7 @@ class UserBuildController extends Controller
      */
     public function indexByHero(Request $request, Hero $hero): JsonResponse
     {
-        $query = UserBuild::with(['user', 'artifact'])
+        $query = UserBuild::with(['user:id,name,avatar', 'artifact'])
             ->where('hero_id', $hero->id)
             ->where('status', 'published');
 
@@ -161,7 +162,7 @@ class UserBuildController extends Controller
      */
     public function show(Request $request, UserBuild $build): JsonResponse
     {
-        $build->load(['user', 'hero', 'artifact']);
+        $build->load(['user:id,name,avatar', 'hero', 'artifact']);
         $build->increment('views');
 
         // Localize artifact
@@ -205,8 +206,6 @@ class UserBuildController extends Controller
             'artifact_id' => 'nullable|exists:artifacts,id',
             'synergy_heroes' => 'nullable',
             'counter_heroes' => 'nullable',
-            'images' => 'nullable|array',
-            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:5120',
             'language' => 'nullable|string|max:5',
             'is_anonymous' => 'nullable|boolean',
             'skill_1' => 'nullable|integer|min:0|max:7',
@@ -224,7 +223,8 @@ class UserBuildController extends Controller
             // Pros/Cons tags (JSON string or array)
             'pro_tags' => 'nullable',
             'con_tags' => 'nullable',
-        ]);
+        ] + ImageService::rules());
+        unset($validated['images']);
 
         // Parse min_stats if JSON string
         if (isset($validated['min_stats']) && is_string($validated['min_stats'])) {
@@ -251,17 +251,8 @@ class UserBuildController extends Controller
         // Convert '1'/'0' string to boolean (FormData sends as string)
         $validated['is_anonymous'] = filter_var($validated['is_anonymous'] ?? false, FILTER_VALIDATE_BOOLEAN);
 
-        // Handle image uploads using ImageService (SOLID: dependency injection)
-        $imagePaths = [];
-        if ($request->hasFile('images')) {
-            $result = $this->imageService->processMultiple(
-                $request->file('images'),
-                'builds',
-                5
-            );
-            $imagePaths = $result['urls'];
-        }
-        $validated['images'] = $imagePaths;
+        // Handle image uploads using ImageService (422 if any image is rejected)
+        $validated['images'] = $this->imageService->storeUploads($request->file('images'), 'builds');
 
         $build = $request->user()->builds()->create($validated);
 
@@ -311,7 +302,8 @@ class UserBuildController extends Controller
             // Pros/Cons tags (JSON string or array)
             'pro_tags' => 'nullable',
             'con_tags' => 'nullable',
-        ]);
+        ] + ImageService::rules());
+        unset($validated['images']);
 
         // Parse tags if JSON string
         if (isset($validated['pro_tags']) && is_string($validated['pro_tags'])) {
@@ -334,31 +326,18 @@ class UserBuildController extends Controller
             $validated['is_anonymous'] = filter_var($validated['is_anonymous'], FILTER_VALIDATE_BOOLEAN);
         }
 
-        // Handle new image uploads using ImageService
-        $imagePaths = [];
-        if ($request->hasFile('images')) {
-            $result = $this->imageService->processMultiple(
-                $request->file('images'),
-                'builds',
-                5
-            );
-            $imagePaths = $result['urls'];
+        // New uploads (validated by content) + images already on this server; external URLs are dropped
+        $imagePaths = array_merge(
+            $this->imageService->storeUploads($request->file('images'), 'builds'),
+            $this->imageService->filterOwnedUrls($request->input('image_urls'))
+        );
+
+        // Si el cliente manda las imágenes (image_urls y/o archivos), esa lista reemplaza a la anterior,
+        // aunque quede vacía: así el formulario puede quitar todas. Sin esos campos, no se tocan.
+        if ($request->has('image_urls') || $request->hasFile('images')) {
+            $validated['images'] = array_slice($imagePaths, 0, ImageService::MAX_IMAGES);
         }
-        
-        // Add existing image URLs
-        $imageUrls = $request->input('image_urls');
-        if (is_string($imageUrls)) {
-            $imageUrls = json_decode($imageUrls, true) ?? [];
-        }
-        if (!empty($imageUrls) && is_array($imageUrls)) {
-            $imagePaths = array_merge($imagePaths, $imageUrls);
-        }
-        
-        // Limit to 5 and update if any images
-        if (!empty($imagePaths)) {
-            $validated['images'] = array_slice($imagePaths, 0, 5);
-        }
-        
+
         if ($minStats !== null) {
             $validated['min_stats'] = $minStats;
         }

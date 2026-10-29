@@ -89,10 +89,12 @@ export function Navbar() {
         };
     }, []);
 
-    // Close mobile menu on route change
-    useEffect(() => {
+    // Cerrar el menú móvil al cambiar de ruta (ajuste en render, sin efecto)
+    const [menuPathname, setMenuPathname] = useState(pathname);
+    if (pathname !== menuPathname) {
+        setMenuPathname(pathname);
         setMobileMenuOpen(false);
-    }, [pathname]);
+    }
 
     const handleLogout = async () => {
         const token = localStorage.getItem('auth_token');
@@ -122,9 +124,10 @@ export function Navbar() {
                         <Image src="/images/icon_menu_orbis.png" alt="ORBIS" width={36} height={36} className="object-cover" unoptimized />
                     </div>
                     <div className="hidden sm:block">
-                        <h1 className="text-base font-semibold text-e7-gold tracking-wide">
+                        {/* No es h1: cada página tiene su propio título principal */}
+                        <span className="block text-base font-semibold text-e7-gold tracking-wide">
                             EXCOFF E7 HUB
-                        </h1>
+                        </span>
                     </div>
                 </Link>
 
@@ -198,7 +201,7 @@ export function Navbar() {
                                 </div>
                                 <button
                                     onClick={handleLogout}
-                                    className="text-xs text-slate-500 hover:text-red-400 transition-colors px-2 py-1 rounded hover:bg-red-500/10"
+                                    className="text-xs text-slate-400 hover:text-red-400 transition-colors px-2 py-1 rounded hover:bg-red-500/10"
                                     title={t('nav.logout', 'Logout')}
                                 >
                                     {t('nav.logout', 'Logout')}

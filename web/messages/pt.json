@@ -1,5 +1,6 @@
 {
     "common": {
+        "skipToContent": "Pular para o conteúdo",
         "appName": "EpicSevenHub",
         "appSubtitle": "E7 Builds & Guias",
         "loading": "Carregando...",
@@ -40,7 +41,12 @@
         "viewFull": "Ver em tamanho completo",
         "optional": "opcional",
         "showMore": "Mostrar mais",
-        "showLess": "Mostrar menos"
+        "showLess": "Mostrar menos",
+        "clearFilters": "Limpar",
+        "confirmDelete": "Tem certeza de que deseja excluir isto?",
+        "retry": "Tentar novamente",
+        "connectionError": "Sem conexão",
+        "networkErrorMsg": "Não foi possível conectar. Verifique sua conexão com a internet."
     },
     "share": {
         "title": "Compartilhar",
@@ -59,26 +65,15 @@
         "credits": "Créditos"
     },
     "home": {
-        "title": "E7 EXCOFF",
         "tagline": "Builds, Guias & Wiki de Heróis de E7",
-        "subtitle": "Descubra e publique builds de personagens e crie guias do jogo para a comunidade",
-        "exploreHeroes": "Explorar Heróis",
-        "viewGuides": "Ver Guias",
-        "whatYouFind": "O que você vai encontrar?",
-        "heroWiki": "Wiki de Heróis",
-        "heroWikiDesc": "Explore todos os heróis do jogo, informações e builds da comunidade.",
-        "heroWikiDetails": "Banco de dados completo com status, habilidades, multiplicadores e builds populares.",
-        "communityBuilds": "Builds da Comunidade",
-        "communityBuildsDesc": "Crie e compartilhe builds com status, conjuntos e artefatos recomendados.",
-        "communityBuildsDetails": "Sistema de builds com sinergias, counters e descrições detalhadas.",
-        "gameGuides": "Guias do Jogo",
-        "gameGuidesDesc": "Guias para PVE, RTA, Arena, Guerra de Guilda e mais conteúdo do jogo.",
-        "gameGuidesDetails": "Vídeos, imagens e estratégias para dominar cada modo de jogo.",
-        "readyToShare": "Pronto para compartilhar seu conhecimento?",
-        "createAccount": "Crie sua conta e comece a contribuir com guias e builds para seus heróis favoritos.",
-        "joinCommunity": "Junte-se à Comunidade",
-        "everythingYouNeed": "Tudo o que você precisa para dominar Epic Seven",
-        "languages": "Idiomas"
+        "headline": "Builds, habilidades e atributos dos {count} heróis de Epic Seven",
+        "searchLabel": "Buscar um herói",
+        "heroesByElement": "Heróis por elemento",
+        "newHeroes": "Heróis mais recentes",
+        "recentBuilds": "Builds recentes",
+        "latestNews": "Últimas notícias",
+        "viewAll": "Ver tudo",
+        "likes": "Curtidas"
     },
     "footer": {
         "dataPoweredBy": "Dados de heróis e artefatos fornecidos por",
@@ -95,7 +90,7 @@
         "filterClass": "Classe",
         "noResults": "Nenhum herói encontrado.",
         "loadingHeroes": "Carregando heróis...",
-        "loadError": "Erro ao carregar heróis. Certifique-se de que a API está rodando.",
+        "loadError": "Não foi possível carregar os heróis. Tente novamente mais tarde.",
         "baseStats": "Status Base (Nv.60 Totalmente Desperto)",
         "skills": "Habilidades e Multiplicadores",
         "createBuild": "Criar Build",
@@ -107,6 +102,8 @@
         "popularArtifacts": "Artefatos Populares",
         "averageStats": "Status Médios de Build",
         "fromBuilds": "de {count} builds",
+        "analyzedBuilds": "{count} builds analisados",
+        "analyzedBuildsHint": "Dados da comunidade do Fribbels Epic 7 Optimizer",
         "communityBuilds": "Builds da Comunidade",
         "noBuildsYet": "Ainda não há builds para este herói",
         "beFirst": "Seja o primeiro a compartilhar sua build!",
@@ -126,12 +123,18 @@
         "passiveSkill": "Habilidade passiva ou de suporte",
         "searchBuilds": "Pesquisar builds...",
         "allSets": "Todos os Sets",
+        "filterBySet": "Filtrar por set",
         "noBuildsMatch": "Nenhuma build corresponde aos filtros",
         "popularSynergies": "Heróis de Sinergia Populares",
         "popularCounters": "Heróis Counter Populares",
         "priorityStats": "Stats Prioritárias",
         "statistics": "Estatísticas",
-        "builds": "builds"
+        "builds": "builds",
+        "loadingHero": "Carregando dados do herói...",
+        "notFound": "Herói não encontrado",
+        "statsUpdated": "Estatísticas atualizadas em {date}",
+        "classMedian": "Mediana de {class}: {value}",
+        "classRangeHint": "Marca: mediana de {class} {rarity}★ ({count} heróis). Barra: do menor ao maior desse grupo."
     },
     "elements": {
         "fire": "Fogo",
@@ -153,7 +156,7 @@
         "description": "Aprenda estratégias e dicas da comunidade",
         "searchPlaceholder": "Buscar guias...",
         "loadingGuides": "Carregando guias...",
-        "loadError": "Erro ao carregar guias. Certifique-se de que a API está rodando.",
+        "loadError": "Não foi possível carregar os guias. Tente novamente mais tarde.",
         "allCategories": "Todos",
         "general": "Geral",
         "guildWar": "Guerra de Guilda",
@@ -237,7 +240,18 @@
         "note": "Nota",
         "heroNotePlaceholder": "Papel, posicionamento ou outras notas...",
         "hasBuild": "Tem build",
-        "clickToAddBuild": "Clique para adicionar build"
+        "clickToAddBuild": "Clique para adicionar build",
+        "title": "Título",
+        "titlePlaceholder": "Título do seu guia...",
+        "category": "Categoria",
+        "relatedHero": "Herói relacionado (opcional)",
+        "noSpecificHero": "Nenhum herói específico",
+        "videoUrl": "URL do vídeo (opcional)",
+        "images": "Imagens (opcional)",
+        "description": "Breve descrição",
+        "descriptionPlaceholder": "Uma breve descrição do que este guia aborda...",
+        "content": "Conteúdo do guia",
+        "contentPlaceholder": "Escreva o conteúdo do seu guia aqui. Você pode usar formatação Markdown..."
     },
     "guilds": {
         "title": "Recrutamento de Guildas",
@@ -276,7 +290,8 @@
             "mystic_x3": "x3 Mystic",
             "mystic_x4": "x4 Mystic",
             "mystic_x5": "x5 Mystic",
-            "guild_buffs_24_7": "Buffs de Guilda 24/7"
+            "guild_buffs_24_7": "Buffs de Guilda 24/7",
+            "telegram": "Telegram"
         },
         "servers": {
             "global": "Global",
@@ -285,6 +300,23 @@
             "japan": "Japão",
             "korea": "Coreia",
             "china": "China"
+        },
+        "postDetails": "Detalhes da publicação",
+        "titleLabel": "Título",
+        "titlePlaceholder": "ex.: Guilda ativa procurando membros!",
+        "imageUrlPlaceholder": "Ou cole a URL da imagem...",
+        "createError": "Erro ao criar a publicação",
+        "createSubtitle": "Recrute membros para sua guilda",
+        "publishAnonymously": "Publicar anonimamente",
+        "anonymousDesc": "Seu nome de usuário não aparecerá nesta publicação",
+        "editPost": "Editar publicação da guilda",
+        "updateError": "Erro ao atualizar a publicação",
+        "contacts": {
+            "discordOptional": "Servidor do Discord (opcional)",
+            "whatsappOptional": "WhatsApp (opcional)",
+            "telegramOptional": "Telegram (opcional)",
+            "youtubeOptional": "YouTube/TikTok (opcional)",
+            "contactLinks": "Links de contato"
         }
     },
     "builds": {
@@ -317,6 +349,10 @@
         "creatingFor": "Criando build para",
         "shareConfig": "Compartilhe sua configuração de equipamento com a comunidade",
         "buildInfo": "Informações da Build",
+        "removeImage": "Remover imagem",
+        "createError": "Erro ao criar a build",
+        "updateError": "Erro ao atualizar a build",
+        "notFound": "Build não encontrada",
         "hero": "Herói",
         "searchHero": "Buscar herói...",
         "titleLabel": "Título",
@@ -408,7 +444,13 @@
         "searchTags": "Buscar tags...",
         "exportImage": "Exportar Imagem",
         "exporting": "Exportando...",
-        "exportError": "Erro ao exportar a imagem. Por favor tente novamente."
+        "exportError": "Erro ao exportar a imagem. Por favor tente novamente.",
+        "clickToViewFull": "Clique na imagem para ver em tamanho real",
+        "image": "Imagem",
+        "viewFull": "Ver em tamanho real",
+        "previous": "Anterior",
+        "next": "Próxima",
+        "goToImage": "Ir para a imagem"
     },
     "news": {
         "title": "Notícias de Epic Seven",
@@ -458,5 +500,11 @@
         "pt": "Português",
         "selectLanguage": "Idioma",
         "filterByLanguage": "Filtrar por Idioma"
+    },
+    "login": {
+        "title": "Entrar",
+        "subtitle": "Entre para criar builds e guias",
+        "continueWithGoogle": "Continuar com o Google",
+        "continueWithDiscord": "Continuar com o Discord"
     }
 }

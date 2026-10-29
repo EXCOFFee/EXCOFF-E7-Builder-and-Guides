@@ -9,10 +9,9 @@ interface ShareModalProps {
     onClose: () => void;
     title: string;
     url: string;
-    description?: string;
 }
 
-export function ShareModal({ isOpen, onClose, title, url, description }: ShareModalProps) {
+export function ShareModal({ isOpen, onClose, title, url }: ShareModalProps) {
     const { t } = useTranslations();
     const [copied, setCopied] = useState(false);
 
@@ -42,7 +41,6 @@ export function ShareModal({ isOpen, onClose, title, url, description }: ShareMo
     const fullUrl = url.startsWith('http') ? url : `${window.location.origin}${url}`;
     const encodedUrl = encodeURIComponent(fullUrl);
     const encodedTitle = encodeURIComponent(title);
-    const encodedDesc = encodeURIComponent(description || title);
 
     const handleCopyLink = async () => {
         try {
@@ -177,7 +175,7 @@ export function ShareModal({ isOpen, onClose, title, url, description }: ShareMo
                         ))}
                     </div>
 
-                    <p className="mt-4 text-center text-gray-500 text-sm truncate" title={fullUrl}>
+                    <p className="mt-4 text-center text-gray-400 text-sm truncate" title={fullUrl}>
                         {fullUrl}
                     </p>
                 </div>

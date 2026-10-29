@@ -24,7 +24,7 @@ export function LoadingSpinner({ size = 'md', text }: LoadingSpinnerProps) {
                 <source src="/videos/RasRun.mp4" type="video/mp4" />
             </video>
             {text && (
-                <p className="text-e7-gold font-display animate-pulse">
+                <p className="text-e7-gold font-sans animate-pulse">
                     {text}
                 </p>
             )}

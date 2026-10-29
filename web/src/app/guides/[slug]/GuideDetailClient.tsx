@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
@@ -12,6 +12,8 @@ import { useTranslations } from '@/hooks/useTranslations';
 import { TeamCompositionDisplay, Team } from '@/components/guides/TeamCompositionDisplay';
 import { ShareButton } from '@/components/ui/ShareButton';
 import { appendImageVersion } from '@/lib/heroImages';
+import { formatDate } from '@/lib/utils';
+import { useNavigateFresh } from '@/hooks/useNavigateFresh';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -110,9 +112,9 @@ const CATEGORY_LABELS: Record<string, string> = {
 
 export function GuideDetailClient() {
     const params = useParams();
-    const router = useRouter();
+    const navigateFresh = useNavigateFresh();
     const queryClient = useQueryClient();
-    const { t } = useTranslations();
+    const { t, locale } = useTranslations();
     const slug = params.slug as string;
 
     const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
@@ -152,12 +154,12 @@ export function GuideDetailClient() {
         },
     });
 
-    // Sync likeCount when guide loads
-    useEffect(() => {
-        if (guide?.likes !== undefined) {
-            setLikeCount(guide.likes);
-        }
-    }, [guide?.likes]);
+    // Cuando el servidor trae otro número de likes, se adopta (ajuste en render, sin efecto)
+    const [syncedLikes, setSyncedLikes] = useState<number | undefined>(undefined);
+    if (guide?.likes !== undefined && guide.likes !== syncedLikes) {
+        setSyncedLikes(guide.likes);
+        setLikeCount(guide.likes);
+    }
 
     // Fetch comments
     const { data: commentsData } = useQuery({
@@ -279,7 +281,7 @@ export function GuideDetailClient() {
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['guides'] });
-            window.location.href = '/guides';
+            navigateFresh('/guides');
         },
         onError: (error: Error) => {
             alert(`Error al eliminar: ${error.message}`);
@@ -362,11 +364,10 @@ export function GuideDetailClient() {
                                     width={80}
                                     height={80}
                                     className="rounded-xl ring-2 ring-e7-gold/50 relative z-10 shadow-xl transform group-hover:scale-105 transition-transform duration-300"
-                                    unoptimized
                                 />
                             </div>
                             <div>
-                                <p className="font-display text-sm text-gray-400 mb-1">{t('guides.relatedHero', 'Related Hero')}</p>
+                                <p className="font-sans text-sm text-gray-400 mb-1">{t('guides.relatedHero', 'Related Hero')}</p>
                                 <Link href={`/heroes/${guide.hero.slug}`} className="text-transparent bg-clip-text bg-gradient-to-r from-e7-text-gold to-e7-gold hover:from-e7-gold hover:to-e7-text-gold font-bold text-xl transition-all duration-300">
                                     {guide.hero.name}
                                 </Link>
@@ -381,7 +382,7 @@ export function GuideDetailClient() {
                         </span>
 
                         {/* Title */}
-                        <h1 className="font-display text-3xl md:text-4xl font-bold text-white mt-4 mb-4">
+                        <h1 className="font-hero text-3xl md:text-4xl font-normal text-white mt-4 mb-4">
                             {guide.title}
                         </h1>
 
@@ -404,7 +405,7 @@ export function GuideDetailClient() {
                                 <div>
                                     <p className="text-white font-medium">{guide.user?.name || t('common.anonymous', 'Anonymous')}</p>
                                     <p className="text-xs text-gray-400">
-                                        {new Date(guide.created_at).toLocaleDateString()}
+                                        {formatDate(guide.created_at, locale)}
                                     </p>
                                 </div>
                             </div>
@@ -512,7 +513,6 @@ export function GuideDetailClient() {
                                             width={64}
                                             height={64}
                                             className="rounded-2xl ring-2 ring-purple-500/60 relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300"
-                                            unoptimized
                                         />
                                     </div>
                                     <span className="text-purple-200 font-semibold text-lg group-hover:text-purple-100 transition-colors duration-300">{hero.name}</span>
@@ -543,7 +543,6 @@ export function GuideDetailClient() {
                                             width={64}
                                             height={64}
                                             className="rounded-lg ring-2 ring-amber-500/60 relative z-10 shadow-lg group-hover:scale-110 transition-transform duration-300"
-                                            unoptimized
                                         />
                                     </div>
                                     <span className="text-amber-200 font-semibold text-lg group-hover:text-amber-100 transition-colors duration-300">{artifact.name}</span>
@@ -603,7 +602,7 @@ export function GuideDetailClient() {
                     {/* Comments List */}
                     <div className="space-y-4">
                         {comments.length === 0 ? (
-                            <p className="text-gray-500">{t('guides.noComments', 'No comments yet.')}</p>
+                            <p className="text-gray-400">{t('guides.noComments', 'No comments yet.')}</p>
                         ) : (
                             comments.map((comment) => (
                                 <div key={comment.id} className="flex gap-3 p-4 bg-e7-void/50 rounded-lg">
@@ -623,8 +622,8 @@ export function GuideDetailClient() {
                                                 {comment.is_anonymous ? t('common.anonymous', 'Anonymous') : comment.user?.name}
                                             </span>
                                             <div className="flex items-center gap-2">
-                                                <span className="text-xs text-gray-500">
-                                                    {new Date(comment.created_at).toLocaleDateString()}
+                                                <span className="text-xs text-gray-400">
+                                                    {formatDate(comment.created_at, locale)}
                                                 </span>
                                                 {canDeleteComment(comment) && (
                                                     <button
