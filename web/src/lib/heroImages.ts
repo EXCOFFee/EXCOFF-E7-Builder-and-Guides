@@ -1,16 +1,13 @@
-'use client';
-
 /**
  * Hero Image URL utility with cache-busting
  * Uses hour-based timestamp to ensure images refresh every hour
  * This helps with stale cached images after updates
  */
 
-// Generate version based on current hour (refreshes cache hourly)
+// Versión por hora (YYYYMMDDHH) en UTC: el servidor y el navegador generan la misma URL,
+// así la imagen renderizada en el servidor no cambia al hidratar ni se descarga dos veces
 function getHourlyVersion(): string {
-    const now = new Date();
-    // Format: YYYYMMDDHH
-    return `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}${String(now.getHours()).padStart(2, '0')}`;
+    return new Date().toISOString().slice(0, 13).replace(/[-T]/g, '');
 }
 
 /**
