@@ -31,3 +31,11 @@ Schedule::command('data:sync')->dailyAt('03:00')
     ->onFailure(function () {
         error_log('Data sync failed');
     });
+
+// Noticias (YouTube oficial + boards de Stove) cada hora a los :15. Cada corrida usa 2 unidades
+// de la cuota diaria de YouTube (10.000) y 4 pedidos a Stove; actualiza o crea, nunca borra.
+// El log guarda solo la última corrida (se reescribe) para no crecer sin límite.
+Schedule::command('app:sync-news')->hourlyAt(15)
+    ->environments(['production'])
+    ->withoutOverlapping(30)
+    ->sendOutputTo(storage_path('logs/news-sync.log'));

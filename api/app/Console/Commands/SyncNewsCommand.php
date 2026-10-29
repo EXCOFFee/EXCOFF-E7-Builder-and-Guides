@@ -22,6 +22,9 @@ class SyncNewsCommand extends Command
     private const STOVE_URL = 'https://page.onstove.com/epicseven/global';
     private const STOVE_DOMINIEL_ID = '79157751'; // Official Epic Seven Stove account (Dominiel)
 
+    // Los recortes usan mb_substr: substr corta bytes y puede partir un carácter UTF-8 (—, ’, …),
+    // y MySQL rechaza la noticia completa ("Incorrect string value").
+
     public function handle(): int
     {
         $source = $this->option('source');
@@ -126,7 +129,7 @@ class SyncNewsCommand extends Command
                     ['external_id' => $videoId],
                     [
                         'title' => $item['snippet']['title'],
-                        'description' => substr($item['snippet']['description'] ?? '', 0, 500),
+                        'description' => mb_substr($item['snippet']['description'] ?? '', 0, 500),
                         'thumbnail' => $item['snippet']['thumbnails']['high']['url'] ?? $item['snippet']['thumbnails']['default']['url'] ?? null,
                         'url' => "https://www.youtube.com/watch?v={$videoId}",
                         'source' => 'youtube',
@@ -173,7 +176,7 @@ class SyncNewsCommand extends Command
                 ['external_id' => $videoId],
                 [
                     'title' => $item['snippet']['title'],
-                    'description' => substr($item['snippet']['description'] ?? '', 0, 500),
+                    'description' => mb_substr($item['snippet']['description'] ?? '', 0, 500),
                     'thumbnail' => $item['snippet']['thumbnails']['high']['url'] ?? $item['snippet']['thumbnails']['default']['url'] ?? null,
                     'url' => "https://www.youtube.com/watch?v={$videoId}",
                     'source' => 'youtube',
@@ -267,8 +270,8 @@ class SyncNewsCommand extends Command
                     News::updateOrCreate(
                         ['external_id' => 'stove_' . $articleId],
                         [
-                            'title' => substr($title, 0, 255),
-                            'description' => substr($article['summary'] ?? '', 0, 500) ?: null,
+                            'title' => mb_substr($title, 0, 255),
+                            'description' => mb_substr($article['summary'] ?? '', 0, 500) ?: null,
                             'thumbnail' => $thumbnail,
                             'url' => "https://page.onstove.com/epicseven/global/view/{$articleId}",
                             'source' => 'stove',
@@ -317,8 +320,8 @@ class SyncNewsCommand extends Command
             News::updateOrCreate(
                 ['external_id' => $externalId],
                 [
-                    'title' => substr($title, 0, 255),
-                    'description' => substr($article['content'] ?? $article['description'] ?? '', 0, 500) ?: null,
+                    'title' => mb_substr($title, 0, 255),
+                    'description' => mb_substr($article['content'] ?? $article['description'] ?? '', 0, 500) ?: null,
                     'thumbnail' => $thumbnail,
                     'url' => $url,
                     'source' => 'stove',
@@ -361,8 +364,8 @@ class SyncNewsCommand extends Command
             News::updateOrCreate(
                 ['external_id' => $externalId],
                 [
-                    'title' => substr($title, 0, 255),
-                    'description' => substr($activity['content'] ?? '', 0, 500) ?: null,
+                    'title' => mb_substr($title, 0, 255),
+                    'description' => mb_substr($activity['content'] ?? '', 0, 500) ?: null,
                     'thumbnail' => $thumbnail,
                     'url' => $url,
                     'source' => 'stove',
@@ -450,8 +453,8 @@ class SyncNewsCommand extends Command
             News::updateOrCreate(
                 ['external_id' => $externalId],
                 [
-                    'title' => substr(trim($title), 0, 255),
-                    'description' => $description ? substr($description, 0, 500) : null,
+                    'title' => mb_substr(trim($title), 0, 255),
+                    'description' => $description ? mb_substr($description, 0, 500) : null,
                     'thumbnail' => $thumbnail,
                     'url' => $url,
                     'source' => 'stove',
@@ -488,7 +491,7 @@ class SyncNewsCommand extends Command
                 News::updateOrCreate(
                     ['external_id' => $externalId],
                     [
-                        'title' => substr($title, 0, 255),
+                        'title' => mb_substr($title, 0, 255),
                         'description' => null,
                         'thumbnail' => null,
                         'url' => $href,
