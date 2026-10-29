@@ -21,14 +21,19 @@ return new class extends Migration
         }
     }
 
+    /** Mismo esquema que 2025_12_11_184840_add_usage_stats_to_heroes_table */
     public function down(): void
     {
+        if (Schema::hasColumn('heroes', 'popular_sets')) {
+            return;
+        }
+
         Schema::table('heroes', function (Blueprint $table) {
-            $table->json('popular_sets')->nullable();
-            $table->json('popular_artifacts')->nullable();
-            $table->json('avg_stats')->nullable();
-            $table->unsignedInteger('guides_count')->default(0);
-            $table->timestamp('stats_updated_at')->nullable();
+            $table->json('popular_sets')->nullable()->after('skills');
+            $table->json('popular_artifacts')->nullable()->after('popular_sets');
+            $table->json('avg_stats')->nullable()->after('popular_artifacts');
+            $table->integer('guides_count')->default(0)->after('avg_stats');
+            $table->timestamp('stats_updated_at')->nullable()->after('guides_count');
         });
     }
 };

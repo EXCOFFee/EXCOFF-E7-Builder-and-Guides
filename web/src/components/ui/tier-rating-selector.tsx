@@ -51,6 +51,11 @@ export function calculateGeneralTier(ratings: Partial<Record<TierCategory, numbe
     return tierToLetter(Math.round(avg));
 }
 
+/** Letra de un promedio de notas (misma regla que calculateGeneralTier y el backend: redondeo) */
+export function averageToLetter(average: number | null | undefined): TierLetter | null {
+    return average == null ? null : tierToLetter(Math.round(average));
+}
+
 /**
  * Color mapping for each tier - single responsibility
  */

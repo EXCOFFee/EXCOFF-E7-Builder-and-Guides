@@ -8,7 +8,8 @@ import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { SET_IMAGES, SET_NAMES } from '@/lib/sets';
 import { getTagById, getTagLabel } from '@/lib/pros-cons-tags';
 import { tagHref } from '@/components/ui/pro-cons-selector';
-import { TIER_CATEGORIES, TIER_COLORS, tierToLetter, type TierCategory } from '@/components/ui/tier-rating-selector';
+import { TIER_CATEGORIES, TIER_COLORS, averageToLetter, type TierCategory } from '@/components/ui/tier-rating-selector';
+import { STAT_LABELS, PERCENT_STATS } from '@/components/heroes/StatLedger';
 import { appendImageVersion } from '@/lib/heroImages';
 
 /** GET /api/heroes/{slug}/stats: lo que dicen las builds publicadas de un héroe */
@@ -52,10 +53,6 @@ type T = (key: string, fallback: string) => string;
 /** Como los nombra la comunidad; el nombre completo va en el <abbr> */
 const MODE_SHORT: Record<TierCategory, string> = { pve: 'PvE', arena: 'Arena', gw: 'GW', rta: 'RTA' };
 
-const STAT_LABELS: Record<string, string> = {
-    atk: 'ATK', def: 'DEF', hp: 'HP', spd: 'SPD', crit_chance: 'CRIT', crit_dmg: 'C.DMG', eff: 'EFF', res: 'RES',
-};
-const PERCENT_STATS = new Set(['crit_chance', 'crit_dmg', 'eff', 'res']);
 
 function formatStat(stat: string, value: number): string {
     return PERCENT_STATS.has(stat) ? `${Math.round(value)}%` : Math.round(value).toLocaleString('en-US');
@@ -106,7 +103,7 @@ export function HeroVerdict({ stats }: { stats: HeroBuildStats | null }) {
                     const community = stats?.community_ratings?.[mode] ?? null;
                     const author = stats?.average_ratings?.[mode];
                     const value = community?.avg ?? author ?? null;
-                    const letter = value != null ? tierToLetter(Math.round(value)) : null;
+                    const letter = averageToLetter(value);
 
                     return (
                         <div key={mode} className="rounded-xl bg-night/60 px-3 py-3 text-center">
@@ -245,7 +242,7 @@ export function BuildRecipe({ stats }: { stats: HeroBuildStats }) {
                         <dl className="space-y-1.5">
                             {statRows.map((row) => (
                                 <div key={row.stat} className="flex items-baseline justify-between gap-3 border-b border-night-line/50 pb-1.5">
-                                    <dt className="font-mono text-xs text-night-muted">{STAT_LABELS[row.stat] ?? row.stat}</dt>
+                                    <dt className="font-mono text-xs text-night-muted">{STAT_LABELS[row.stat as keyof typeof STAT_LABELS] ?? row.stat}</dt>
                                     <dd className="text-right">
                                         <span className="font-mono text-sm font-semibold tabular-nums text-slate-100">{formatStat(row.stat, row.median ?? row.average_value)}</span>
                                         {row.count > 1 && row.min != null && row.max != null && (

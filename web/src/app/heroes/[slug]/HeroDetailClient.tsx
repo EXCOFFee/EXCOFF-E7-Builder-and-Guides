@@ -68,7 +68,6 @@ export interface Hero {
     image_url: string;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 const BEST_BUILDS = 5;
 
 // Element to image mapping
@@ -149,20 +148,17 @@ export function HeroDetailClient({
     // Lo que dicen las builds publicadas (sets, tags, counters, notas por modo)
     const { data: stats } = useQuery<HeroBuildStats | null>({
         queryKey: ['hero-stats', slug, locale],
-        queryFn: async () => {
-            const response = await fetch(`${API_URL}/heroes/${slug}/stats?lang=${locale}`);
-            return response.ok ? (await response.json()).data : null;
-        },
+        queryFn: async () => (await heroApi.stats(slug, locale)).data?.data ?? null,
         enabled: !!slug,
         staleTime: 5 * 60 * 1000,
         initialData: initialStats ?? undefined,
     });
 
-    // Mejores builds: la API las devuelve ordenadas por likes
+    // Mejores builds: la API las devuelve ordenadas por likes (con el artefacto traducido)
     const { data: buildsData } = useQuery({
-        queryKey: ['hero-builds', slug],
-        queryFn: async () => (await buildApi.getByHero(slug)).data,
-        enabled: !!hero?.id,
+        queryKey: ['hero-builds', slug, locale],
+        queryFn: async () => (await buildApi.getByHero(slug, { lang: locale, per_page: BEST_BUILDS })).data,
+        enabled: !!slug,
     });
     const builds = useMemo<HeroBuildSummary[]>(() => buildsData?.data || [], [buildsData]);
 
@@ -203,7 +199,8 @@ export function HeroDetailClient({
 
     const className = t(`classes.${hero.class}`, hero.class.replace('_', ' '));
     const elementName = t(`elements.${hero.element}`, hero.element);
-    const totalBuilds = stats?.total_builds ?? 0;
+    // Si /stats falló, el total sale de la lista de builds (así no dice "nadie compartió" con builds abajo)
+    const totalBuilds = stats?.total_builds ?? buildsData?.total ?? builds.length;
     const createHref = `/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`;
 
     return (
@@ -301,9 +298,9 @@ export function HeroDetailClient({
                     <section aria-labelledby="best-builds-title" className="hero-sheet__panel p-4 sm:p-5">
                         <div className="flex items-baseline justify-between gap-3">
                             <h2 id="best-builds-title" className="hero-sheet__label font-sans">{t('heroes.bestBuilds', 'Best builds')}</h2>
-                            {builds.length > BEST_BUILDS && (
+                            {totalBuilds > BEST_BUILDS && (
                                 <Link href={`/builds?hero=${hero.slug}`} className="text-sm text-e7-gold hover:underline">
-                                    {t('heroes.viewAllBuildsCount', 'See all {count}').replace('{count}', String(totalBuilds || builds.length))} →
+                                    {t('heroes.viewAllBuildsCount', 'See all {count}').replace('{count}', String(totalBuilds))} →
                                 </Link>
                             )}
                         </div>
@@ -337,7 +334,8 @@ export function HeroDetailClient({
                 )}
 
                 {/* Ficha del juego: stats base, skills e impronta (CeciliaBot ya lo muestra; acá va plegado) */}
-                <details className="group hero-sheet__panel">
+                {/* Sin builds no hay nada arriba: la ficha del juego se abre sola */}
+                <details className="group hero-sheet__panel" open={totalBuilds === 0}>
                     <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-4 sm:p-5 [&::-webkit-details-marker]:hidden">
                         <span>
                             <span className="hero-sheet__label font-sans">{t('heroes.gameData', 'Game data')}</span>

@@ -4,7 +4,7 @@ export const STAT_KEYS = ['atk', 'hp', 'def', 'spd', 'crit_chance', 'crit_dmg', 
 export type StatKey = (typeof STAT_KEYS)[number];
 export type ClassStatRange = Partial<Record<StatKey, { min: number; median: number; max: number; count: number }>>;
 
-const LABELS: Record<StatKey, string> = {
+export const STAT_LABELS: Record<StatKey, string> = {
     atk: 'ATK',
     hp: 'HP',
     def: 'DEF',
@@ -15,7 +15,7 @@ const LABELS: Record<StatKey, string> = {
     res: 'RES',
 };
 
-const PERCENT: ReadonlySet<StatKey> = new Set(['crit_chance', 'crit_dmg', 'eff', 'res']);
+export const PERCENT_STATS: ReadonlySet<string> = new Set(['crit_chance', 'crit_dmg', 'eff', 'res']);
 
 /** Valores por defecto del juego cuando la API no trae el dato */
 const DEFAULTS: Partial<Record<StatKey, number>> = { crit_chance: 15, crit_dmg: 150 };
@@ -42,10 +42,10 @@ export function StatLedger({
                 const value = stats?.[key] || DEFAULTS[key] || 0;
                 const r = range?.[key];
                 const spread = r ? r.max - r.min : 0;
-                const suffix = PERCENT.has(key) ? '%' : '';
+                const suffix = PERCENT_STATS.has(key) ? '%' : '';
                 const position = (v: number) => (spread ? ((v - r!.min) / spread) * 100 : 0);
                 // En stats de porcentaje la diferencia va en puntos (23% vs 15% = +8), no relativa
-                const delta = !r ? 0 : PERCENT.has(key)
+                const delta = !r ? 0 : PERCENT_STATS.has(key)
                     ? Math.round(value - r.median)
                     : r.median ? Math.round(((value - r.median) / r.median) * 100) : 0;
                 const medianText = r
@@ -56,7 +56,7 @@ export function StatLedger({
 
                 return (
                     <div key={key} className="grid grid-cols-[3.25rem_1fr_4.75rem] items-center gap-3 py-2.5 sm:grid-cols-[3.75rem_1fr_5.5rem_4.5rem]">
-                        <dt className="font-mono text-xs font-semibold tracking-wider text-night-muted">{LABELS[key]}</dt>
+                        <dt className="font-mono text-xs font-semibold tracking-wider text-night-muted">{STAT_LABELS[key]}</dt>
                         <dd className="col-start-3 row-start-1 text-right font-mono text-base font-semibold tabular-nums text-slate-100">
                             {formatNumber(value)}
                             {suffix}
@@ -66,7 +66,7 @@ export function StatLedger({
                                 <div
                                     className="relative h-2 rounded-full bg-night-line/70"
                                     role="img"
-                                    aria-label={`${LABELS[key]} ${formatNumber(value)}${suffix}. ${medianText}`}
+                                    aria-label={`${STAT_LABELS[key]} ${formatNumber(value)}${suffix}. ${medianText}`}
                                 >
                                     <div
                                         className="absolute inset-y-0 left-0 rounded-full bg-el"

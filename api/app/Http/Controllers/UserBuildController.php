@@ -154,8 +154,9 @@ class UserBuildController extends Controller
             $query->where('language', $request->input('language'));
         }
 
+        // per_page: la ficha del héroe pide solo las que muestra (máximo 20, como la lista)
         $builds = $query->orderBy('likes', 'desc')
-            ->paginate(20);
+            ->paginate(min(max((int) $request->input('per_page', 20), 1), 20));
 
         // Localize artifacts
         $lang = $request->query('lang', 'en');

@@ -71,6 +71,9 @@ export default api;
 
 // API function helpers
 export const heroApi = {
+  /** Lo que dicen las builds publicadas del héroe (sets, tags, counters, notas por modo) */
+  stats: (slug: string, lang?: string) =>
+    api.get(`/heroes/${encodeURIComponent(slug)}/stats`, { params: { lang } }),
   list: (params?: Record<string, string>) =>
     api.get('/heroes', { params }),
   get: (slug: string, lang?: string) =>
@@ -89,8 +92,8 @@ export const artifactApi = {
 export const buildApi = {
   list: (params?: Record<string, string>) =>
     api.get('/builds', { params }),
-  getByHero: (heroSlug: string) =>
-    api.get(`/heroes/${heroSlug}/builds`),
+  getByHero: (heroSlug: string, params?: { lang?: string; per_page?: number }) =>
+    api.get(`/heroes/${encodeURIComponent(heroSlug)}/builds`, { params }),
   get: (id: number) =>
     api.get(`/builds/${id}`),
   create: (data: FormData) =>
