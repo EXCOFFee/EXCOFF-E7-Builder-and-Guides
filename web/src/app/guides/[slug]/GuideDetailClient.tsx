@@ -87,6 +87,8 @@ interface Guide {
 
 interface Comment {
     id: number;
+    /** Calculado por la API con el token (no llega user_id: delataría a los anónimos) */
+    is_owner: boolean;
     content: string;
     is_anonymous?: boolean;
     user: {
@@ -165,13 +167,36 @@ export function GuideDetailClient() {
     const { data: commentsData } = useQuery({
         queryKey: ['guide-comments', slug],
         queryFn: async () => {
-            const response = await fetch(`${API_URL}/guides/${guide?.id}/comments`);
+            const token = localStorage.getItem('auth_token');
+            const response = await fetch(`${API_URL}/guides/${guide?.id}/comments`, {
+                headers: token ? { Authorization: `Bearer ${token}` } : {},
+            });
             if (!response.ok) return [];
             return response.json();
         },
         enabled: !!guide?.id,
     });
     const comments: Comment[] = Array.isArray(commentsData) ? commentsData : (commentsData?.data || []);
+
+    // Si el usuario ya le dio like (antes no se consultaba y el botón siempre aparecía sin marcar)
+    const guideId = guide?.id;
+    useEffect(() => {
+        if (!currentUser || !guideId) return;
+        let cancelled = false;
+        fetch(`${API_URL}/guides/${guideId}/like-status`, {
+            headers: { Authorization: `Bearer ${localStorage.getItem('auth_token')}` },
+        })
+            .then((response) => (response.ok ? response.json() : null))
+            .then((data) => {
+                if (!cancelled && data) setHasLiked(Boolean(data.liked));
+            })
+            .catch(() => {
+                // Sin estado de like: el botón queda sin marcar
+            });
+        return () => {
+            cancelled = true;
+        };
+    }, [currentUser, guideId]);
 
     // Like mutation
     const likeMutation = useMutation({
@@ -315,10 +340,7 @@ export function GuideDetailClient() {
         }
     };
 
-    const canDeleteComment = (comment: Comment) => {
-        if (!currentUser) return false;
-        return currentUser.is_admin || comment.user?.id === currentUser.id;
-    };
+    const canDeleteComment = (comment: Comment) => comment.is_owner || Boolean(currentUser?.is_admin);
 
     const canModify = currentUser && guide && (currentUser.id === guide.user?.id || currentUser.is_admin);
 

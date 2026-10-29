@@ -450,7 +450,10 @@
         "viewFull": "Ver em tamanho real",
         "previous": "Anterior",
         "next": "Próxima",
-        "goToImage": "Ir para a imagem"
+        "goToImage": "Ir para a imagem",
+        "filteredByHero": "Builds de {hero}",
+        "allHeroes": "Todos os heróis",
+        "minStatsHint": "Preencha só os stats que importam nesta build. Os números em cinza são os stats base do herói."
     },
     "news": {
         "title": "Notícias de Epic Seven",

@@ -21,8 +21,6 @@ interface Build {
     secondary_set: string;
     likes: number;
     views: number;
-    avg_rating?: number;
-    rating_count?: number;
     user: {
         id: number;
         name: string;

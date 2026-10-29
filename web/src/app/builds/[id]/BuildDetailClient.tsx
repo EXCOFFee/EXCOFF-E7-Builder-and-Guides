@@ -72,8 +72,8 @@ interface Build {
         icon: string;
     } | null;
     created_at: string;
-    avg_rating?: number;
-    rating_count?: number;
+    /** La API lo calcula con el token: en una build anónima no llega el autor */
+    is_owner?: boolean;
     // Tier Ratings (D-S system)
     rating_pve?: number | null;
     rating_arena?: number | null;
@@ -90,7 +90,8 @@ interface Build {
 
 interface Comment {
     id: number;
-    user_id: number;
+    /** Calculado por la API con el token (no llega user_id: delataría a los anónimos) */
+    is_owner: boolean;
     parent_id?: number | null;
     content: string;
     is_anonymous: boolean;
@@ -153,7 +154,11 @@ export function BuildDetailClient() {
     const { data: build, isLoading, error } = useQuery<Build>({
         queryKey: ['build', buildId, locale],
         queryFn: async () => {
-            const response = await fetch(`${API_URL}/builds/${buildId}?lang=${locale}`);
+            // Con el token, la API dice si la build es del usuario (is_owner)
+            const token = localStorage.getItem('auth_token');
+            const response = await fetch(`${API_URL}/builds/${buildId}?lang=${locale}`, {
+                headers: token ? { Authorization: `Bearer ${token}` } : {},
+            });
             if (!response.ok) throw new Error('Build not found');
             return response.json();
         },
@@ -189,7 +194,10 @@ export function BuildDetailClient() {
     const { data: commentsData } = useQuery({
         queryKey: ['build-comments', buildId],
         queryFn: async () => {
-            const response = await fetch(`${API_URL}/builds/${buildId}/comments`);
+            const token = localStorage.getItem('auth_token');
+            const response = await fetch(`${API_URL}/builds/${buildId}/comments`, {
+                headers: token ? { Authorization: `Bearer ${token}` } : {},
+            });
             if (!response.ok) return [];
             return response.json();
         },
@@ -387,7 +395,7 @@ export function BuildDetailClient() {
         }
     };
 
-    const canModify = currentUser && build && build.user && (currentUser.id === build.user.id || currentUser.is_admin);
+    const canModify = Boolean(currentUser && build && (build.is_owner || currentUser.is_admin));
 
     if (isLoading) {
         return (
@@ -753,9 +761,9 @@ export function BuildDetailClient() {
                             <p className="text-gray-400">{t('guides.noComments', 'No comments yet.')}</p>
                         ) : (
                             comments.map((comment) => {
-                                const canEdit = currentUser && comment.user_id === currentUser.id &&
+                                const canEdit = comment.is_owner &&
                                     (new Date().getTime() - new Date(comment.created_at).getTime()) < 24 * 60 * 60 * 1000;
-                                const canDelete = currentUser && (currentUser.is_admin || comment.user_id === currentUser.id);
+                                const canDelete = comment.is_owner || Boolean(currentUser?.is_admin);
 
                                 return (
                                     <div key={comment.id} className="space-y-2">

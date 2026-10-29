@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -72,8 +73,6 @@ interface Build {
     secondary_set: string;
     likes: number;
     views: number;
-    avg_rating: number;
-    rating_count: number;
     is_anonymous: boolean;
     user: {
         id: number;
@@ -100,6 +99,9 @@ interface Build {
 export default function BuildsPage() {
     const { t, locale } = useTranslations();
     const { translateHeroName } = useHeroTranslations();
+    const router = useRouter();
+    // ?hero=<slug>: el link "ver todas las builds" de la ficha del héroe
+    const heroSlug = useSearchParams().get('hero');
     const [search, setSearch] = useState('');
     const [selectedElement, setSelectedElement] = useState<string | null>(null);
     const [selectedClass, setSelectedClass] = useState<string | null>(null);
@@ -113,9 +115,10 @@ export default function BuildsPage() {
     const [minSpeed, setMinSpeed] = useState<string>('');
 
     const { data, isLoading } = useQuery({
-        queryKey: ['builds', search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, selectedLanguage, sortBy, locale],
+        queryKey: ['builds', heroSlug, search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, selectedLanguage, sortBy, locale],
         queryFn: async () => {
             const params = new URLSearchParams();
+            if (heroSlug) params.append('hero', heroSlug);
             if (search) params.append('search', search);
             if (selectedElement) params.append('element', selectedElement);
             if (selectedClass) params.append('class', selectedClass);
@@ -177,6 +180,23 @@ export default function BuildsPage() {
 
                 {/* Search & Filters */}
                 <div className="mb-8 space-y-4 glass-panel p-4 rounded-xl">
+                    {heroSlug && (
+                        <div className="flex items-center gap-2 text-sm text-slate-300">
+                            <span>
+                                {t('builds.filteredByHero', 'Builds for {hero}').replace(
+                                    '{hero}',
+                                    data?.data?.[0]?.hero?.name ? translateHeroName(data.data[0].hero.name) : heroSlug
+                                )}
+                            </span>
+                            <button
+                                type="button"
+                                onClick={() => router.replace('/builds')}
+                                className="rounded-full border border-e7-gold/30 px-3 py-0.5 text-xs text-e7-gold hover:bg-e7-gold/10"
+                            >
+                                {t('builds.allHeroes', 'All heroes')}
+                            </button>
+                        </div>
+                    )}
                     <Input
                         placeholder={t('builds.searchPlaceholder', 'Search builds...')}
                         value={search}

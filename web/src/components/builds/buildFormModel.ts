@@ -7,14 +7,14 @@ export const MAX_BUILD_IMAGES = 5;
 
 /** Claves de min_stats tal como las guarda la API (y filtra GET /api/builds) */
 export const STAT_FIELDS = [
-    { key: 'atk', label: 'ATK', placeholder: '4000' },
-    { key: 'def', label: 'DEF', placeholder: '1200' },
-    { key: 'hp', label: 'HP', placeholder: '15000' },
-    { key: 'spd', label: 'SPD', placeholder: '250' },
-    { key: 'crit_chance', label: 'Crit %', placeholder: '100' },
-    { key: 'crit_dmg', label: 'C.Dmg %', placeholder: '300' },
-    { key: 'eff', label: 'EFF %', placeholder: '0' },
-    { key: 'res', label: 'RES %', placeholder: '0' },
+    { key: 'atk', label: 'ATK' },
+    { key: 'def', label: 'DEF' },
+    { key: 'hp', label: 'HP' },
+    { key: 'spd', label: 'SPD' },
+    { key: 'crit_chance', label: 'Crit %' },
+    { key: 'crit_dmg', label: 'C.Dmg %' },
+    { key: 'eff', label: 'EFF %' },
+    { key: 'res', label: 'RES %' },
 ] as const;
 
 export type StatKey = (typeof STAT_FIELDS)[number]['key'];
@@ -101,14 +101,14 @@ export function emptyBuildForm(heroId: number | null = null): BuildFormValues {
     };
 }
 
-/** Stats base del héroe como valores iniciales de los mínimos recomendados */
-export function statsFromBaseStats(base: Partial<Record<StatKey, number | null>> | null | undefined): StatValues {
-    const stats = emptyStats();
+/** Placeholder de cada stat mínimo: el stat base del héroe (vacío si no se conoce) */
+export function baseStatPlaceholders(base: Partial<Record<StatKey, number | null>> | null | undefined): StatValues {
+    const placeholders = emptyStats();
     for (const { key } of STAT_FIELDS) {
         const value = base?.[key];
-        if (value !== undefined && value !== null) stats[key] = String(value);
+        if (value !== undefined && value !== null) placeholders[key] = String(value);
     }
-    return stats;
+    return placeholders;
 }
 
 function toHeroesWithNote(list: ApiBuild['synergy_heroes']): HeroWithNote[] {

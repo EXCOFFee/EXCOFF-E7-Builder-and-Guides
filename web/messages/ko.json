@@ -450,7 +450,10 @@
         "viewFull": "원본 크기로 보기",
         "previous": "이전",
         "next": "다음",
-        "goToImage": "이미지로 이동"
+        "goToImage": "이미지로 이동",
+        "filteredByHero": "{hero} 빌드",
+        "allHeroes": "모든 영웅",
+        "minStatsHint": "이 빌드에서 중요한 스탯만 입력하세요. 회색 숫자는 영웅의 기본 스탯입니다."
     },
     "news": {
         "title": "에픽세븐 뉴스",

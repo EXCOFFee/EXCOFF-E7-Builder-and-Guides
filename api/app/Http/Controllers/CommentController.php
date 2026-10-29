@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Models\Comment;
+use App\Models\User;
 use App\Models\UserBuild;
 use App\Models\Guide;
 use Illuminate\Http\Request;
@@ -19,15 +20,16 @@ class CommentController extends Controller
     /**
      * Get comments for a build
      */
-    public function getBuildComments(UserBuild $build): JsonResponse
+    public function getBuildComments(Request $request, UserBuild $build): JsonResponse
     {
+        $viewer = $this->optionalUser($request);
         $comments = Comment::with(['user:id,name,avatar', 'replies.user:id,name,avatar'])
             ->where('build_id', $build->id)
             ->whereNull('parent_id')
             ->orderBy('created_at', 'desc')
             ->take(self::MAX_COMMENTS)
             ->get()
-            ->map(fn ($comment) => $this->formatComment($comment));
+            ->map(fn ($comment) => $this->formatComment($comment, $viewer));
 
         return response()->json($comments);
     }
@@ -35,15 +37,16 @@ class CommentController extends Controller
     /**
      * Get comments for a guide
      */
-    public function getGuideComments(Guide $guide): JsonResponse
+    public function getGuideComments(Request $request, Guide $guide): JsonResponse
     {
+        $viewer = $this->optionalUser($request);
         $comments = Comment::with(['user:id,name,avatar', 'replies.user:id,name,avatar'])
             ->where('guide_id', $guide->id)
             ->whereNull('parent_id')
             ->orderBy('created_at', 'desc')
             ->take(self::MAX_COMMENTS)
             ->get()
-            ->map(fn ($comment) => $this->formatComment($comment));
+            ->map(fn ($comment) => $this->formatComment($comment, $viewer));
 
         return response()->json($comments);
     }
@@ -101,7 +104,7 @@ class CommentController extends Controller
 
         $comment->load('user:id,name,avatar');
 
-        return response()->json($this->formatComment($comment), 201);
+        return response()->json($this->formatComment($comment, $request->user()), 201);
     }
 
     /**
@@ -112,7 +115,7 @@ class CommentController extends Controller
         $user = $request->user();
 
         // Check if user is owner or admin
-        if ($comment->user_id !== $user->id && !$user->is_admin) {
+        if ((int) $comment->user_id !== (int) $user->id && !$user->is_admin) {
             return response()->json(['error' => 'Unauthorized'], 403);
         }
 
@@ -129,7 +132,7 @@ class CommentController extends Controller
         $user = $request->user();
 
         // Check if user is owner
-        if ($comment->user_id !== $user->id) {
+        if ((int) $comment->user_id !== (int) $user->id) {
             return response()->json(['error' => 'Unauthorized'], 403);
         }
 
@@ -150,17 +153,18 @@ class CommentController extends Controller
 
         $comment->load('user:id,name,avatar');
 
-        return response()->json($this->formatComment($comment));
+        return response()->json($this->formatComment($comment, $user));
     }
 
     /**
-     * Format comment for API response
+     * Format comment for API response. No incluye user_id: en un comentario anónimo delataría
+     * al autor. is_owner le dice al que mira si el comentario es suyo (editar/borrar).
      */
-    private function formatComment(Comment $comment): array
+    private function formatComment(Comment $comment, ?User $viewer): array
     {
         return [
             'id' => $comment->id,
-            'user_id' => $comment->user_id, // For edit permission check
+            'is_owner' => $viewer !== null && (int) $comment->user_id === (int) $viewer->id,
             'parent_id' => $comment->parent_id, // For reply structure
             'content' => $comment->content,
             'is_anonymous' => $comment->is_anonymous,
@@ -170,9 +174,7 @@ class CommentController extends Controller
                 'avatar' => $comment->user->avatar,
             ],
             'created_at' => $comment->created_at,
-            'replies' => $comment->replies->map(function ($reply) {
-                return $this->formatComment($reply);
-            }),
+            'replies' => $comment->replies->map(fn (Comment $reply) => $this->formatComment($reply, $viewer)),
         ];
     }
 }

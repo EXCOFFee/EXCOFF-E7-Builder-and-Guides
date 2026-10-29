@@ -445,7 +445,10 @@
         "tierReasonPlaceholder": "Why this rating? (optional)",
         "exportImage": "Export Image",
         "exporting": "Exporting...",
-        "exportError": "Failed to export image. Please try again."
+        "exportError": "Failed to export image. Please try again.",
+        "filteredByHero": "Builds for {hero}",
+        "allHeroes": "All heroes",
+        "minStatsHint": "Fill in only the stats that matter for this build. The grey numbers are the hero’s base stats."
     },
     "news": {
         "title": "Epic Seven News",
