@@ -14,22 +14,14 @@ import { SynergyCounterSection, HeroWithNote } from '@/components/builds/Synergy
 import { ExportBuildImage } from '@/components/builds/ExportBuildImage';
 import { ShareButton } from '@/components/ui/ShareButton';
 import { useTranslations } from '@/hooks/useTranslations';
-import { appendImageVersion } from '@/lib/heroImages';
+import { HeroBanner } from '@/components/heroes/HeroBanner';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 import { SET_IMAGES } from '@/lib/sets';
 import { formatDate } from '@/lib/utils';
 import { useNavigateFresh } from '@/hooks/useNavigateFresh';
-
-// Element to image mapping
-const ELEMENT_IMAGES: Record<string, string> = {
-    fire: '/images/elements/ElementFire.png',
-    ice: '/images/elements/ElementWater.png',
-    earth: '/images/elements/ElementEarth.png',
-    light: '/images/elements/ElementLight.png',
-    dark: '/images/elements/ElementDark.png',
-};
+import { ELEMENT_IMAGES } from '@/lib/heroAssets';
 
 interface Build {
     id: number;
@@ -431,14 +423,14 @@ export function BuildDetailClient() {
                 <div ref={buildCardRef} className="glass-panel border-e7-gold/20 rounded-2xl overflow-hidden mb-6 backdrop-blur-xl bg-gradient-to-br from-e7-panel/90 to-e7-dark/90 shadow-2xl">
                     {/* Hero Section */}
                     <div className="flex flex-col md:flex-row items-center gap-8 p-8 border-b border-e7-gold/20 bg-gradient-to-r from-transparent via-e7-gold/5 to-transparent">
-                        <div className="relative group">
-                            <div className="absolute inset-0 bg-gradient-to-br from-e7-gold/30 to-e7-purple/30 rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-                            <Image
-                                src={appendImageVersion(build.hero.portrait)}
+                        <div className="relative w-full max-w-[436px] md:w-80">
+                            <HeroBanner
+                                src={build.hero.portrait}
                                 alt={build.hero.name}
-                                width={200}
-                                height={200}
-                                className="rounded-2xl ring-2 ring-e7-gold/60 relative z-10 shadow-2xl transform group-hover:scale-105 transition-transform duration-300"
+                                element={build.hero.element}
+                                sizes="(min-width: 768px) 320px, 100vw"
+                                priority
+                                className="rounded-2xl ring-2 ring-e7-gold/60 shadow-2xl"
                             />
                             <Image
                                 src={ELEMENT_IMAGES[build.hero.element] || '/images/elements/ElementFire.png'}

@@ -19,15 +19,6 @@ function parseTagList(value: string | null): string[] {
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
-// Element to image mapping
-const ELEMENT_IMAGES: Record<string, string> = {
-    fire: '/images/elements/ElementFire.png',
-    ice: '/images/elements/ElementWater.png',
-    earth: '/images/elements/ElementEarth.png',
-    light: '/images/elements/ElementLight.png',
-    dark: '/images/elements/ElementDark.png',
-};
-
 const ELEMENT_NAMES: Record<string, string> = {
     fire: 'Fire',
     ice: 'Ice',
@@ -36,18 +27,9 @@ const ELEMENT_NAMES: Record<string, string> = {
     dark: 'Dark',
 };
 
-// Class to image mapping
-const CLASS_IMAGES: Record<string, string> = {
-    knight: '/images/classes/ClassKnight.png',
-    warrior: '/images/classes/ClassWarrior.png',
-    thief: '/images/classes/ClassThief.png',
-    ranger: '/images/classes/ClassRanger.png',
-    mage: '/images/classes/ClassMage.png',
-    soul_weaver: '/images/classes/ClassSoul_Waver.png',
-};
-
 import { SET_IMAGES, formatSetName } from '@/lib/sets';
 import { formatNumber } from '@/lib/utils';
+import { ELEMENT_IMAGES, CLASS_IMAGES } from '@/lib/heroAssets';
 
 const CLASS_NAMES: Record<string, string> = {
     knight: 'Knight',

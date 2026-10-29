@@ -35,11 +35,12 @@ class HeroController extends Controller
      */
     public function index(Request $request): AnonymousResourceCollection
     {
-        // Build cache key from query parameters (v2: summary columns only)
-        $cacheKey = 'heroes:index:v2:' . md5(json_encode($request->query()));
+        // Con builds_count la lista depende de las builds: la clave lleva la versión de BuildCache
+        $cacheKey = BuildCache::key('heroes-index:' . md5(json_encode($request->query())));
 
         $heroes = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($request) {
-            $query = Hero::query()->select(HeroSummaryResource::COLUMNS);
+            $query = Hero::query()->select(HeroSummaryResource::COLUMNS)
+                ->withCount(['builds as builds_count' => fn ($q) => $q->where('status', 'published')]);
 
             // Filter by element
             if ($request->has('element')) {

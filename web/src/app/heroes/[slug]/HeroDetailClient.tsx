@@ -10,11 +10,12 @@ import { useTranslations } from '@/hooks/useTranslations';
 import type { HeroSkillMessages } from '@/i18n/config';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { HeroVerdict, CommunityTags, BuildRecipe, HeroMatchups, type HeroBuildStats } from '@/components/heroes/HeroCommunity';
-import { appendImageVersion } from '@/lib/heroImages';
+import { HeroBanner } from '@/components/heroes/HeroBanner';
 import { formatSkillText } from '@/utils/skillFormatter';
 import { SkillEffects, SkillIcon, useHeroEffects } from '@/components/heroes/SkillEffects';
 import { StatLedger, type ClassStatRange } from '@/components/heroes/StatLedger';
 import { SET_IMAGES, SET_NAMES } from '@/lib/sets';
+import { ELEMENT_IMAGES, CLASS_IMAGES } from '@/lib/heroAssets';
 
 
 
@@ -69,34 +70,6 @@ export interface Hero {
 }
 
 const BEST_BUILDS = 5;
-
-// Element to image mapping
-const ELEMENT_IMAGES: Record<string, string> = {
-    fire: '/images/elements/ElementFire.png',
-    ice: '/images/elements/ElementWater.png',
-    earth: '/images/elements/ElementEarth.png',
-    light: '/images/elements/ElementLight.png',
-    dark: '/images/elements/ElementDark.png',
-};
-
-const CLASS_ICONS: Record<string, string> = {
-    knight: '🛡️',
-    warrior: '⚔️',
-    thief: '🗡️',
-    ranger: '🏹',
-    mage: '🔮',
-    soul_weaver: '💚',
-};
-
-// Class to image mapping
-const CLASS_IMAGES: Record<string, string> = {
-    knight: '/images/classes/ClassKnight.png',
-    warrior: '/images/classes/ClassWarrior.png',
-    thief: '/images/classes/ClassThief.png',
-    ranger: '/images/classes/ClassRanger.png',
-    mage: '/images/classes/ClassMage.png',
-    soul_weaver: '/images/classes/ClassSoul_Waver.png',
-};
 
 // Memory Imprint type names mapping
 const IMPRINT_TYPES: Record<string, { name: string; color: string }> = {
@@ -216,34 +189,24 @@ export function HeroDetailClient({
                     </Link>
 
                     <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-center">
-                        <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center">
-                            <div className="relative w-44 shrink-0 sm:w-52">
-                                <div className="aspect-square overflow-hidden rounded-2xl border border-el/40 bg-night-panel shadow-[0_0_60px_-12px_var(--el)]">
-                                    {hero.image_url ? (
-                                        <Image
-                                            src={appendImageVersion(hero.image_url)}
-                                            alt={hero.name}
-                                            width={208}
-                                            height={208}
-                                            className="h-full w-full object-cover"
-                                            priority
-                                        />
-                                    ) : (
-                                        <div className="flex h-full w-full items-center justify-center">
-                                            <span className="text-7xl opacity-50">{CLASS_ICONS[hero.class] || '⚔️'}</span>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
+                        <div className="flex flex-col items-center gap-5 lg:items-start">
+                            <HeroBanner
+                                src={hero.image_url}
+                                alt={hero.name}
+                                element={hero.element}
+                                sizes="(min-width: 640px) 436px, 100vw"
+                                priority
+                                className="rounded-2xl border border-el/40 shadow-[0_0_60px_-12px_var(--el)]"
+                            />
 
-                            <div className="min-w-0 text-center sm:text-left">
+                            <div className="min-w-0 text-center lg:text-left">
                                 <p className="text-lg tracking-[0.3em] text-e7-gold" aria-label={`${hero.rarity}★`}>
                                     {'★'.repeat(hero.rarity)}
                                 </p>
                                 <h1 className="mt-1 font-hero text-4xl font-normal leading-tight tracking-normal text-slate-50 sm:text-5xl lg:text-6xl">
                                     {translatedHeroName}
                                 </h1>
-                                <p className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-slate-300 sm:justify-start">
+                                <p className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-slate-300 lg:justify-start">
                                     <span className="inline-flex items-center gap-1.5">
                                         {ELEMENT_IMAGES[hero.element] && (
                                             <Image src={ELEMENT_IMAGES[hero.element]} alt="" width={20} height={20} className="h-5 w-5" />

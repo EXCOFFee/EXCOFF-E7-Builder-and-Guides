@@ -150,7 +150,8 @@
         "counteredBy": "Countered by",
         "worksWith": "Works well with",
         "verdictSource": "With votes, the letter is the community’s; without them, the average the authors give.",
-        "noBuildsYet": "No builds for this hero yet"
+        "noBuildsYet": "No builds for this hero yet",
+        "buildsShort": "{count} builds"
     },
     "elements": {
         "fire": "Fire",
