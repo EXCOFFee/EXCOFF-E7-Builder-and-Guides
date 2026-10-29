@@ -45,7 +45,13 @@
         "viewFull": "View full size",
         "optional": "optional",
         "showMore": "Show More",
-        "showLess": "Show Less"
+        "showLess": "Show Less",
+        "remove": "Remove",
+        "allCategories": "All categories",
+        "noResults": "No results found",
+        "none": "None (+0)",
+        "stars": "Stars",
+        "clear": "clear"
     },
     "share": {
         "title": "Share",
@@ -61,7 +67,8 @@
         "news": "News",
         "login": "Login",
         "register": "Register",
-        "credits": "Credits"
+        "credits": "Credits",
+        "logout": "Log out"
     },
     "home": {
         "tagline": "E7 Builds, Guides & Hero Wiki",
@@ -133,7 +140,8 @@
         "notFound": "Hero not found",
         "statsUpdated": "Stats last updated: {date}",
         "classMedian": "Median for {class}: {value}",
-        "classRangeHint": "Mark: median of {class} {rarity}★ ({count} heroes). Bar: from the lowest to the highest in that group."
+        "classRangeHint": "Mark: median of {class} {rarity}★ ({count} heroes). Bar: from the lowest to the highest in that group.",
+        "filterRarity": "Rarity"
     },
     "elements": {
         "fire": "Fire",
@@ -203,7 +211,29 @@
         "imagesOptional": "Images (optional)",
         "uploadFromDevice": "Upload from device",
         "pasteImageUrl": "Paste image URL...",
-        "maxImages": "Maximum 5 images"
+        "maxImages": "Maximum 5 images",
+        "publishAnonymous": "Publish anonymously",
+        "anonymousDescription": "Your username won’t appear on this guide",
+        "recommendedHeroes": "Recommended heroes",
+        "recommendedArtifacts": "Recommended artifacts",
+        "teamCompositions": "Team compositions",
+        "team": "Team",
+        "heroBuild": "Build for",
+        "sets": "Sets",
+        "artifact": "Artifact",
+        "searchArtifact": "Search artifact...",
+        "stats": "Stats",
+        "statsExample": "(e.g. 250+ Speed, 20k HP)",
+        "note": "Note",
+        "heroNotePlaceholder": "Role, positioning or other notes...",
+        "teamCompositionsDesc": "(Optional) Add recommended teams for this guide",
+        "addTeam": "Add team",
+        "noTeamsYet": "No teams yet. Click “Add team” to create one.",
+        "teamName": "Team name",
+        "searchHeroToAdd": "Search a hero to add...",
+        "hasBuild": "Has build",
+        "clickToAddBuild": "Click to add a build",
+        "noHeroesInTeam": "Add heroes to this team"
     },
     "guidesCreate": {
         "createGuide": "Create New Guide",
@@ -316,7 +346,9 @@
             "japan": "Japan",
             "korea": "Korea",
             "china": "China"
-        }
+        },
+        "contactLinks": "Contact links",
+        "contactLinksDesc": "Add contact links so members can reach you"
     },
     "builds": {
         "title": "Community Builds",
@@ -448,7 +480,37 @@
         "exportError": "Failed to export image. Please try again.",
         "filteredByHero": "Builds for {hero}",
         "allHeroes": "All heroes",
-        "minStatsHint": "Fill in only the stats that matter for this build. The grey numbers are the hero’s base stats."
+        "minStatsHint": "Fill in only the stats that matter for this build. The grey numbers are the hero’s base stats.",
+        "searchTags": "Search tags...",
+        "tagGroup": "Group",
+        "allTagGroups": "All groups",
+        "selectedTags": "Selected tags",
+        "hasNote": "has a note",
+        "seeBuildsWithTag": "See builds with this tag",
+        "filterByTags": "Pros & cons",
+        "activeTagFilters": "Active tag filters",
+        "tagType": "Tag type",
+        "tagFilterHint": "Click once to include, twice to exclude, three times to remove.",
+        "tagIncluded": "included",
+        "tagExcluded": "excluded",
+        "tagNotFiltered": "not filtered",
+        "pros": "Pros",
+        "cons": "Cons",
+        "addTagNote": "Add a note to this tag",
+        "tagNoteDescription": "Explain why you chose this tag (optional)",
+        "tagNotePlaceholder": "Why this tag? (max. 200 characters)",
+        "clickTagForNote": "Click a selected tag to add a note",
+        "note": "Note",
+        "backToBuilds": "Back to builds",
+        "comparatorDesc": "Compare two builds side by side to see the differences",
+        "chooseBuild": "Choose a build...",
+        "viewBuild": "View build",
+        "selectBothBuilds": "Choose two builds above to compare them side by side",
+        "statsSummary": "Stats summary",
+        "filterSet": "Set",
+        "prosAndCons": "Pros & cons",
+        "noProTags": "No pros yet",
+        "noConTags": "No cons yet"
     },
     "news": {
         "title": "Epic Seven News",

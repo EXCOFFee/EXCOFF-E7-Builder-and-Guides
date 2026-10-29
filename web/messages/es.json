@@ -45,7 +45,13 @@
         "viewFull": "Ver en tamaño completo",
         "optional": "opcional",
         "showMore": "Ver más",
-        "showLess": "Ver menos"
+        "showLess": "Ver menos",
+        "remove": "Quitar",
+        "allCategories": "Todas las categorías",
+        "noResults": "Sin resultados",
+        "none": "Ninguna (+0)",
+        "stars": "Estrellas",
+        "clear": "quitar"
     },
     "share": {
         "title": "Compartir",
@@ -61,7 +67,8 @@
         "news": "Noticias",
         "login": "Iniciar Sesión",
         "register": "Registrarse",
-        "credits": "Créditos"
+        "credits": "Créditos",
+        "logout": "Cerrar sesión"
     },
     "home": {
         "tagline": "Builds, Guías y Wiki de Héroes de E7",
@@ -133,7 +140,8 @@
         "notFound": "Héroe no encontrado",
         "statsUpdated": "Estadísticas actualizadas el {date}",
         "classMedian": "Mediana de {class}: {value}",
-        "classRangeHint": "Marca: mediana de {class} {rarity}★ ({count} héroes). Barra: del más bajo al más alto de ese grupo."
+        "classRangeHint": "Marca: mediana de {class} {rarity}★ ({count} héroes). Barra: del más bajo al más alto de ese grupo.",
+        "filterRarity": "Rareza"
     },
     "elements": {
         "fire": "Fuego",
@@ -203,7 +211,29 @@
         "guildWar": "Guerra de Gremios",
         "arena": "Arena",
         "for": "Para",
-        "beFirstToCreate": "¡Sé el primero en crear una guía!"
+        "beFirstToCreate": "¡Sé el primero en crear una guía!",
+        "publishAnonymous": "Publicar de forma anónima",
+        "anonymousDescription": "Tu nombre de usuario no aparecerá en esta guía",
+        "recommendedHeroes": "Héroes recomendados",
+        "recommendedArtifacts": "Artefactos recomendados",
+        "teamCompositions": "Composiciones de equipo",
+        "team": "Equipo",
+        "heroBuild": "Build para",
+        "sets": "Sets",
+        "artifact": "Artefacto",
+        "searchArtifact": "Buscar artefacto...",
+        "stats": "Stats",
+        "statsExample": "(p. ej. 250+ de velocidad, 20k de HP)",
+        "note": "Nota",
+        "heroNotePlaceholder": "Rol, posición u otras notas...",
+        "teamCompositionsDesc": "(Opcional) Agrega equipos recomendados para esta guía",
+        "addTeam": "Agregar equipo",
+        "noTeamsYet": "Todavía no hay equipos. Haz clic en “Agregar equipo” para crear uno.",
+        "teamName": "Nombre del equipo",
+        "searchHeroToAdd": "Buscar un héroe para agregar...",
+        "hasBuild": "Tiene build",
+        "clickToAddBuild": "Haz clic para agregar una build",
+        "noHeroesInTeam": "Agrega héroes a este equipo"
     },
     "guidesCreate": {
         "createGuide": "Crear Nueva Guía",
@@ -316,7 +346,9 @@
             "japan": "Japón",
             "korea": "Corea",
             "china": "China"
-        }
+        },
+        "contactLinks": "Enlaces de contacto",
+        "contactLinksDesc": "Agrega enlaces de contacto para que los miembros puedan escribirte"
     },
     "builds": {
         "title": "Builds de la Comunidad",
@@ -448,7 +480,37 @@
         "exportError": "Error al exportar la imagen. Por favor intenta de nuevo.",
         "filteredByHero": "Builds de {hero}",
         "allHeroes": "Todos los héroes",
-        "minStatsHint": "Completa solo los stats que importan en esta build. Los números en gris son los stats base del héroe."
+        "minStatsHint": "Completa solo los stats que importan en esta build. Los números en gris son los stats base del héroe.",
+        "searchTags": "Buscar tags...",
+        "tagGroup": "Grupo",
+        "allTagGroups": "Todos los grupos",
+        "selectedTags": "Tags elegidos",
+        "hasNote": "tiene nota",
+        "seeBuildsWithTag": "Ver builds con este tag",
+        "filterByTags": "Pros y contras",
+        "activeTagFilters": "Filtros de tags activos",
+        "tagType": "Tipo de tag",
+        "tagFilterHint": "Un clic incluye, dos excluyen, tres lo quitan.",
+        "tagIncluded": "incluido",
+        "tagExcluded": "excluido",
+        "tagNotFiltered": "sin filtrar",
+        "pros": "Pros",
+        "cons": "Contras",
+        "addTagNote": "Agregar nota al tag",
+        "tagNoteDescription": "Explica por qué elegiste este tag (opcional)",
+        "tagNotePlaceholder": "¿Por qué este tag? (máx. 200 caracteres)",
+        "clickTagForNote": "Haz clic en un tag elegido para agregarle una nota",
+        "note": "Nota",
+        "backToBuilds": "Volver a builds",
+        "comparatorDesc": "Compara dos builds lado a lado para ver las diferencias",
+        "chooseBuild": "Elige una build...",
+        "viewBuild": "Ver build",
+        "selectBothBuilds": "Elige dos builds arriba para compararlas lado a lado",
+        "statsSummary": "Resumen de stats",
+        "filterSet": "Set",
+        "prosAndCons": "Pros y contras",
+        "noProTags": "Todavía no hay pros",
+        "noConTags": "Todavía no hay contras"
     },
     "news": {
         "title": "Noticias de Epic Seven",

@@ -34,7 +34,7 @@
         "backToHome": "홈으로 돌아가기",
         "previous": "이전",
         "close": "닫기",
-        "allCategories": "모든 카테고리",
+        "allCategories": "모든 분류",
         "images": "이미지",
         "image": "이미지",
         "clickImage": "이미지를 클릭하여 전체 크기로 보기",
@@ -46,7 +46,12 @@
         "confirmDelete": "정말 삭제하시겠습니까?",
         "retry": "다시 시도",
         "connectionError": "연결 없음",
-        "networkErrorMsg": "연결할 수 없습니다. 인터넷 연결을 확인하세요."
+        "networkErrorMsg": "연결할 수 없습니다. 인터넷 연결을 확인하세요.",
+        "remove": "제거",
+        "noResults": "결과 없음",
+        "none": "없음 (+0)",
+        "stars": "성",
+        "clear": "지우기"
     },
     "share": {
         "title": "공유",
@@ -62,7 +67,8 @@
         "news": "뉴스",
         "login": "로그인",
         "register": "회원가입",
-        "credits": "크레딧"
+        "credits": "크레딧",
+        "logout": "로그아웃"
     },
     "home": {
         "tagline": "E7 빌드, 가이드 & 영웅 위키",
@@ -134,7 +140,8 @@
         "notFound": "영웅을 찾을 수 없습니다",
         "statsUpdated": "통계 업데이트: {date}",
         "classMedian": "{class} 중앙값: {value}",
-        "classRangeHint": "표시: {class} {rarity}★ 중앙값 (영웅 {count}명). 막대: 그 그룹의 최저치부터 최고치까지."
+        "classRangeHint": "표시: {class} {rarity}★ 중앙값 (영웅 {count}명). 막대: 그 그룹의 최저치부터 최고치까지.",
+        "filterRarity": "등급"
     },
     "elements": {
         "fire": "화염",
@@ -204,7 +211,29 @@
         "imagesOptional": "이미지 (선택사항)",
         "uploadFromDevice": "기기에서 업로드",
         "pasteImageUrl": "이미지 URL 붙여넣기...",
-        "maxImages": "최대 5장"
+        "maxImages": "최대 5장",
+        "publishAnonymous": "익명으로 게시",
+        "anonymousDescription": "이 공략에 사용자 이름이 표시되지 않습니다",
+        "recommendedHeroes": "추천 영웅",
+        "recommendedArtifacts": "추천 아티팩트",
+        "teamCompositions": "팀 조합",
+        "team": "팀",
+        "heroBuild": "빌드:",
+        "sets": "세트",
+        "artifact": "아티팩트",
+        "searchArtifact": "아티팩트 검색...",
+        "stats": "스탯",
+        "statsExample": "(예: 속도 250+, HP 2만)",
+        "note": "메모",
+        "heroNotePlaceholder": "역할, 배치 등 메모...",
+        "teamCompositionsDesc": "(선택) 이 공략의 추천 팀을 추가하세요",
+        "addTeam": "팀 추가",
+        "noTeamsYet": "아직 팀이 없습니다. “팀 추가”를 눌러 만드세요.",
+        "teamName": "팀 이름",
+        "searchHeroToAdd": "추가할 영웅 검색...",
+        "hasBuild": "빌드 있음",
+        "clickToAddBuild": "클릭해서 빌드 추가",
+        "noHeroesInTeam": "이 팀에 영웅을 추가하세요"
     },
     "guidesCreate": {
         "createGuide": "새 가이드 만들기",
@@ -317,7 +346,9 @@
             "telegramOptional": "텔레그램 (선택)",
             "youtubeOptional": "유튜브/틱톡 (선택)",
             "contactLinks": "연락처 링크"
-        }
+        },
+        "contactLinks": "연락처 링크",
+        "contactLinksDesc": "멤버가 연락할 수 있도록 링크를 추가하세요"
     },
     "builds": {
         "title": "커뮤니티 빌드",
@@ -453,7 +484,33 @@
         "goToImage": "이미지로 이동",
         "filteredByHero": "{hero} 빌드",
         "allHeroes": "모든 영웅",
-        "minStatsHint": "이 빌드에서 중요한 스탯만 입력하세요. 회색 숫자는 영웅의 기본 스탯입니다."
+        "minStatsHint": "이 빌드에서 중요한 스탯만 입력하세요. 회색 숫자는 영웅의 기본 스탯입니다.",
+        "tagGroup": "그룹",
+        "allTagGroups": "모든 그룹",
+        "selectedTags": "선택한 태그",
+        "hasNote": "메모 있음",
+        "seeBuildsWithTag": "이 태그가 있는 빌드 보기",
+        "filterByTags": "장단점",
+        "activeTagFilters": "적용된 태그 필터",
+        "tagType": "태그 종류",
+        "tagFilterHint": "한 번 클릭하면 포함, 두 번은 제외, 세 번은 해제됩니다.",
+        "tagIncluded": "포함",
+        "tagExcluded": "제외",
+        "tagNotFiltered": "필터 없음",
+        "addTagNote": "태그에 메모 추가",
+        "tagNoteDescription": "이 태그를 고른 이유를 적어 주세요 (선택)",
+        "tagNotePlaceholder": "왜 이 태그인가요? (최대 200자)",
+        "clickTagForNote": "선택한 태그를 클릭하면 메모를 추가할 수 있습니다",
+        "note": "메모",
+        "comparatorDesc": "두 빌드를 나란히 비교해 차이를 확인하세요",
+        "chooseBuild": "빌드 선택...",
+        "viewBuild": "빌드 보기",
+        "selectBothBuilds": "위에서 빌드 두 개를 골라 나란히 비교하세요",
+        "statsSummary": "스탯 요약",
+        "filterSet": "세트",
+        "prosAndCons": "장단점",
+        "noProTags": "아직 장점이 없습니다",
+        "noConTags": "아직 단점이 없습니다"
     },
     "news": {
         "title": "에픽세븐 뉴스",

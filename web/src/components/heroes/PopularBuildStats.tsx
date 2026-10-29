@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useTranslations } from '@/hooks/useTranslations';
 import { SET_IMAGES } from '@/lib/sets';
 import { getTagById, getTagLabel } from '@/lib/pros-cons-tags';
+import { tagHref } from '@/components/ui/pro-cons-selector';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -342,17 +343,14 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                 <span>✓</span> {t('builds.pros', 'Pros')}
                             </h3>
                             {stats.pro_tags?.length > 0 ? (
-                                stats.pro_tags.map((tag) => (
+                                stats.pro_tags.filter((tag) => getTagById(tag.tag)).map((tag) => (
                                     <div
                                         key={tag.tag}
                                         className="flex items-center justify-between px-4 py-3 rounded-lg bg-emerald-950/40 border border-emerald-500/25 transition-colors"
                                     >
-                                        <span className="text-green-200 font-medium">
-                                            {(() => {
-                                                const tagData = getTagById(tag.tag);
-                                                return tagData ? getTagLabel(tagData, locale) : tag.tag;
-                                            })()}
-                                        </span>
+                                        <Link href={tagHref(tag.tag)} className="text-green-200 font-medium hover:underline">
+                                            {getTagLabel(getTagById(tag.tag)!, locale)}
+                                        </Link>
                                         <span className="text-green-400 font-semibold">{tag.percentage}%</span>
                                     </div>
                                 ))
@@ -367,17 +365,14 @@ export function PopularBuildStats({ heroSlug, initialStats }: PopularBuildStatsP
                                 <span>✗</span> {t('builds.cons', 'Cons')}
                             </h3>
                             {stats.con_tags?.length > 0 ? (
-                                stats.con_tags.map((tag) => (
+                                stats.con_tags.filter((tag) => getTagById(tag.tag)).map((tag) => (
                                     <div
                                         key={tag.tag}
                                         className="flex items-center justify-between px-4 py-3 rounded-lg bg-rose-950/40 border border-rose-500/25 transition-colors"
                                     >
-                                        <span className="text-red-200 font-medium">
-                                            {(() => {
-                                                const tagData = getTagById(tag.tag);
-                                                return tagData ? getTagLabel(tagData, locale) : tag.tag;
-                                            })()}
-                                        </span>
+                                        <Link href={tagHref(tag.tag)} className="text-red-200 font-medium hover:underline">
+                                            {getTagLabel(getTagById(tag.tag)!, locale)}
+                                        </Link>
                                         <span className="text-red-400 font-semibold">{tag.percentage}%</span>
                                     </div>
                                 ))
