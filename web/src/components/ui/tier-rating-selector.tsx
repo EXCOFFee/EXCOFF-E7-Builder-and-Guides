@@ -54,7 +54,7 @@ export function calculateGeneralTier(ratings: Partial<Record<TierCategory, numbe
 /**
  * Color mapping for each tier - single responsibility
  */
-const TIER_COLORS: Record<TierLetter, { bg: string; text: string; border: string; hover: string }> = {
+export const TIER_COLORS: Record<TierLetter, { bg: string; text: string; border: string; hover: string }> = {
     S: { bg: 'bg-gradient-to-br from-yellow-500/30 to-amber-500/20', text: 'text-yellow-300', border: 'border-yellow-500/60', hover: 'hover:border-yellow-400' },
     A: { bg: 'bg-gradient-to-br from-purple-500/30 to-violet-500/20', text: 'text-purple-300', border: 'border-purple-500/60', hover: 'hover:border-purple-400' },
     B: { bg: 'bg-gradient-to-br from-blue-500/30 to-cyan-500/20', text: 'text-blue-300', border: 'border-blue-500/60', hover: 'hover:border-blue-400' },

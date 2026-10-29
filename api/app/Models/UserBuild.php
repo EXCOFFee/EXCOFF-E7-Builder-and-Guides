@@ -62,6 +62,15 @@ class UserBuild extends Model
         'rating_rta' => 'integer',
         'pro_tags' => 'array',
         'con_tags' => 'array',
+        // Nota por modo de la comunidad (las escribe BuildModeVoteController, no el formulario)
+        'community_pve_avg' => 'float',
+        'community_arena_avg' => 'float',
+        'community_gw_avg' => 'float',
+        'community_rta_avg' => 'float',
+        'community_pve_count' => 'integer',
+        'community_arena_count' => 'integer',
+        'community_gw_count' => 'integer',
+        'community_rta_count' => 'integer',
     ];
 
     /**
@@ -107,6 +116,22 @@ class UserBuild extends Model
         }
 
         return (int) round(array_sum($ratings) / count($ratings));
+    }
+
+    /**
+     * Nota de la comunidad por modo: ['rta' => ['avg' => 4.5, 'count' => 2], ...]; avg null sin votos.
+     */
+    public function getCommunityRatingsAttribute(): array
+    {
+        return collect(BuildModeVote::MODES)->mapWithKeys(fn (string $mode) => [$mode => [
+            'avg' => $this->{"community_{$mode}_count"} > 0 ? (float) $this->{"community_{$mode}_avg"} : null,
+            'count' => (int) $this->{"community_{$mode}_count"},
+        ]])->all();
+    }
+
+    public function modeVotes()
+    {
+        return $this->hasMany(BuildModeVote::class, 'build_id');
     }
 
     /**

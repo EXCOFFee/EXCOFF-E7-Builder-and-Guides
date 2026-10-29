@@ -510,7 +510,16 @@
         "filterSet": "Set",
         "prosAndCons": "Pros & cons",
         "noProTags": "No pros yet",
-        "noConTags": "No cons yet"
+        "noConTags": "No cons yet",
+        "communityRating": "Community rating",
+        "communityRatingHint": "How good is this build in each mode? Vote from D to S.",
+        "cannotVoteOwn": "Other players rate your build here.",
+        "authorRating": "Author",
+        "votesCount": "{count} votes",
+        "noVotesYet": "No votes yet",
+        "yourVote": "Your vote",
+        "loginToVote": "Log in to vote",
+        "voteError": "Your vote could not be saved. Try again."
     },
     "news": {
         "title": "Epic Seven News",

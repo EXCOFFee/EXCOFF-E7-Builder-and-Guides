@@ -510,7 +510,16 @@
         "filterSet": "套装",
         "prosAndCons": "优缺点",
         "noProTags": "暂无优点",
-        "noConTags": "暂无缺点"
+        "noConTags": "暂无缺点",
+        "communityRating": "社区评分",
+        "communityRatingHint": "这套配装在各模式表现如何?从D到S投票。",
+        "cannotVoteOwn": "其他玩家会在这里为你的配装评分。",
+        "authorRating": "作者",
+        "votesCount": "{count}票",
+        "noVotesYet": "暂无投票",
+        "yourVote": "你的投票",
+        "loginToVote": "登录后投票",
+        "voteError": "投票未能保存,请重试。"
     },
     "news": {
         "title": "第七史诗新闻",

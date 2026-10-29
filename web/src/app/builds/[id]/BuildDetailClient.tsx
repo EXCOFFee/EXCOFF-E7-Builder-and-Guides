@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { ImageCarousel } from '@/components/ui/image-carousel';
 import { TierRatingDisplay } from '@/components/ui/tier-rating-selector';
 import { ProConsDisplay } from '@/components/ui/pro-cons-selector';
+import { CommunityTierVote } from '@/components/builds/CommunityTierVote';
 import { SynergyCounterSection, HeroWithNote } from '@/components/builds/SynergyCounterCard';
 import { ExportBuildImage } from '@/components/builds/ExportBuildImage';
 import { ShareButton } from '@/components/ui/ShareButton';
@@ -678,6 +679,17 @@ export function BuildDetailClient() {
                                     gw: build.reason_gw,
                                     rta: build.reason_rta,
                                 }}
+                            />
+                            <CommunityTierVote
+                                buildId={buildId}
+                                authorRatings={{
+                                    pve: build.rating_pve ?? null,
+                                    arena: build.rating_arena ?? null,
+                                    gw: build.rating_gw ?? null,
+                                    rta: build.rating_rta ?? null,
+                                }}
+                                isLoggedIn={Boolean(currentUser)}
+                                isOwner={Boolean(build.is_owner)}
                             />
                         </div>
 

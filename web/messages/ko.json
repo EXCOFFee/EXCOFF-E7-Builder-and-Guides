@@ -510,7 +510,16 @@
         "filterSet": "세트",
         "prosAndCons": "장단점",
         "noProTags": "아직 장점이 없습니다",
-        "noConTags": "아직 단점이 없습니다"
+        "noConTags": "아직 단점이 없습니다",
+        "communityRating": "커뮤니티 평가",
+        "communityRatingHint": "이 빌드는 모드별로 얼마나 좋은가요? D~S로 투표하세요.",
+        "cannotVoteOwn": "다른 플레이어들이 여기에서 이 빌드를 평가합니다.",
+        "authorRating": "작성자",
+        "votesCount": "{count}표",
+        "noVotesYet": "아직 투표 없음",
+        "yourVote": "내 투표",
+        "loginToVote": "로그인하고 투표하기",
+        "voteError": "투표를 저장하지 못했습니다. 다시 시도해 주세요."
     },
     "news": {
         "title": "에픽세븐 뉴스",

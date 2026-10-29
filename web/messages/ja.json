@@ -510,7 +510,16 @@
         "filterSet": "セット",
         "prosAndCons": "長所と短所",
         "noProTags": "まだ長所がありません",
-        "noConTags": "まだ短所がありません"
+        "noConTags": "まだ短所がありません",
+        "communityRating": "コミュニティ評価",
+        "communityRatingHint": "このビルドは各モードでどれくらい強い?DからSで投票してください。",
+        "cannotVoteOwn": "ここでは他のプレイヤーがあなたのビルドを評価します。",
+        "authorRating": "作成者",
+        "votesCount": "{count}票",
+        "noVotesYet": "まだ投票がありません",
+        "yourVote": "あなたの投票",
+        "loginToVote": "ログインして投票",
+        "voteError": "投票を保存できませんでした。もう一度お試しください。"
     },
     "news": {
         "title": "エピックセブンニュース",

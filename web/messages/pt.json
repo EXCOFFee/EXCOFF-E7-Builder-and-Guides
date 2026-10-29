@@ -510,7 +510,16 @@
         "filterSet": "Set",
         "prosAndCons": "Prós e contras",
         "noProTags": "Ainda não há prós",
-        "noConTags": "Ainda não há contras"
+        "noConTags": "Ainda não há contras",
+        "communityRating": "Nota da comunidade",
+        "communityRatingHint": "Quão boa é esta build em cada modo? Vote de D a S.",
+        "cannotVoteOwn": "Aqui os outros jogadores avaliam sua build.",
+        "authorRating": "Autor",
+        "votesCount": "{count} votos",
+        "noVotesYet": "Ainda sem votos",
+        "yourVote": "Seu voto",
+        "loginToVote": "Entre para votar",
+        "voteError": "Não foi possível salvar seu voto. Tente de novo."
     },
     "news": {
         "title": "Notícias de Epic Seven",

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Models\Artifact;
+use App\Models\BuildModeVote;
 use App\Models\Hero;
 use App\Models\UserBuild;
 use Illuminate\Support\Collection;
@@ -60,6 +61,7 @@ class HeroBuildStatsService
             'secondary_sets' => $this->countSets($builds, 'secondary_set', $total),
             'artifacts' => $this->countArtifacts($builds, $total, $lang),
             'average_ratings' => $this->averageRatings($builds),
+            'community_ratings' => $this->communityRatings($builds),
             'synergy_heroes' => $this->countHeroes($builds, 'synergy_heroes', $heroes, $total),
             'counter_heroes' => $this->countHeroes($builds, 'counter_heroes', $heroes, $total),
             'priority_stats' => $this->priorityStats($builds),
@@ -134,6 +136,20 @@ class HeroBuildStatsService
         }
 
         return $averages ?: null;
+    }
+
+    /**
+     * Nota de la comunidad por modo sumando todas las builds del héroe: promedio ponderado por
+     * la cantidad de votos de cada build. null en los modos sin votos.
+     */
+    private function communityRatings(Collection $builds): array
+    {
+        return collect(BuildModeVote::MODES)->mapWithKeys(function (string $mode) use ($builds) {
+            $count = (int) $builds->sum("community_{$mode}_count");
+            $weighted = $builds->sum(fn (UserBuild $b) => (float) $b->{"community_{$mode}_avg"} * $b->{"community_{$mode}_count"});
+
+            return [$mode => $count > 0 ? ['avg' => round($weighted / $count, 1), 'count' => $count] : null];
+        })->all();
     }
 
     /** IDs de héroes de synergy_heroes / counter_heroes (formato viejo int[] o nuevo {id, note}[]) */
