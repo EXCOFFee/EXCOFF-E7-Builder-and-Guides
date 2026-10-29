@@ -120,6 +120,21 @@ class UserBuild extends Model
     }
 
     /**
+     * Una build anónima no expone a su autor en la API (antes llegaba el usuario completo y
+     * solo el frontend lo ocultaba). user_id queda: el frontend lo usa para el botón de editar.
+     */
+    public function toArray(): array
+    {
+        $data = parent::toArray();
+
+        if ($this->is_anonymous && array_key_exists('user', $data)) {
+            $data['user'] = null;
+        }
+
+        return $data;
+    }
+
+    /**
      * Get the hero for this build
      */
     public function hero()

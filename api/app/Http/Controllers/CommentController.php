@@ -21,7 +21,7 @@ class CommentController extends Controller
      */
     public function getBuildComments(UserBuild $build): JsonResponse
     {
-        $comments = Comment::with(['user', 'replies.user'])
+        $comments = Comment::with(['user:id,name,avatar', 'replies.user:id,name,avatar'])
             ->where('build_id', $build->id)
             ->whereNull('parent_id')
             ->orderBy('created_at', 'desc')
@@ -37,7 +37,7 @@ class CommentController extends Controller
      */
     public function getGuideComments(Guide $guide): JsonResponse
     {
-        $comments = Comment::with(['user', 'replies.user'])
+        $comments = Comment::with(['user:id,name,avatar', 'replies.user:id,name,avatar'])
             ->where('guide_id', $guide->id)
             ->whereNull('parent_id')
             ->orderBy('created_at', 'desc')
@@ -99,7 +99,7 @@ class CommentController extends Controller
             'parent_id' => $parentId,
         ]);
 
-        $comment->load('user');
+        $comment->load('user:id,name,avatar');
 
         return response()->json($this->formatComment($comment), 201);
     }
@@ -148,7 +148,7 @@ class CommentController extends Controller
             'content' => strip_tags($content),
         ]);
 
-        $comment->load('user');
+        $comment->load('user:id,name,avatar');
 
         return response()->json($this->formatComment($comment));
     }

@@ -31,7 +31,7 @@ class UserBuildController extends Controller
         
         // Cache the paginated results for 5 minutes
         $builds = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($request) {
-            $query = UserBuild::with(['user', 'artifact', 'hero'])
+            $query = UserBuild::with(['user:id,name,avatar', 'artifact', 'hero'])
                 ->where('status', 'published');
 
             // Search by title or hero name
@@ -130,7 +130,7 @@ class UserBuildController extends Controller
      */
     public function indexByHero(Request $request, Hero $hero): JsonResponse
     {
-        $query = UserBuild::with(['user', 'artifact'])
+        $query = UserBuild::with(['user:id,name,avatar', 'artifact'])
             ->where('hero_id', $hero->id)
             ->where('status', 'published');
 
@@ -162,7 +162,7 @@ class UserBuildController extends Controller
      */
     public function show(Request $request, UserBuild $build): JsonResponse
     {
-        $build->load(['user', 'hero', 'artifact']);
+        $build->load(['user:id,name,avatar', 'hero', 'artifact']);
         $build->increment('views');
 
         // Localize artifact

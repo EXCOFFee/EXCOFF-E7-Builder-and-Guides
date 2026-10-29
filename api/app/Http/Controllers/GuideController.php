@@ -21,7 +21,7 @@ class GuideController extends Controller
      */
     public function index(Request $request): JsonResponse
     {
-        $query = Guide::with(['user'])
+        $query = Guide::with(['user:id,name,avatar'])
             ->where('is_published', true);
 
         // Filter by category
@@ -56,7 +56,7 @@ class GuideController extends Controller
      */
     public function show(Guide $guide): JsonResponse
     {
-        $guide->load(['user']);
+        $guide->load(['user:id,name,avatar']);
         $guide->increment('views');
 
         // Add recommended heroes and artifacts data (legacy) + teams
