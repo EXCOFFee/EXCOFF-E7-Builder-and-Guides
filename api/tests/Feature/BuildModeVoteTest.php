@@ -68,6 +68,27 @@ class BuildModeVoteTest extends TestCase
         $this->assertDatabaseCount('build_mode_votes', 0);
     }
 
+    public function test_a_vote_is_not_an_edit_of_the_build(): void
+    {
+        $build = UserBuild::factory()->create(['updated_at' => now()->subWeek()]);
+        $before = $build->fresh()->updated_at;
+
+        $this->vote(User::factory()->create(), $build, 'rta', 5)->assertOk();
+
+        $this->assertEquals($before, $build->fresh()->updated_at);
+    }
+
+    public function test_hero_without_builds_has_the_same_stats_shape(): void
+    {
+        $hero = Hero::factory()->create();
+
+        $this->getJson("/api/heroes/{$hero->slug}/stats")
+            ->assertOk()
+            ->assertJsonPath('data.total_builds', 0)
+            ->assertJsonPath('data.community_ratings.rta', null)
+            ->assertJsonPath('data.pro_tags', []);
+    }
+
     public function test_author_cannot_vote_own_build(): void
     {
         $author = User::factory()->create();

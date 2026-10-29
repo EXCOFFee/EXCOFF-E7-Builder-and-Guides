@@ -42,6 +42,11 @@ class BuildModeVoteController extends Controller
         $mode = $validated['mode'];
 
         DB::transaction(function () use ($build, $user, $mode, $validated) {
+            // Bloquea la fila de la build: los votos simultáneos (de varios usuarios, o del mismo en
+            // dos pestañas) se hacen de a uno, así el conteo no se pisa y updateOrCreate no choca
+            // con el índice único
+            UserBuild::whereKey($build->id)->lockForUpdate()->first();
+
             $match = ['user_id' => $user->id, 'build_id' => $build->id, 'mode' => $mode];
 
             if ($validated['tier'] === null) {
@@ -55,11 +60,12 @@ class BuildModeVoteController extends Controller
                 ->selectRaw('avg(tier) as avg_tier, count(*) as total')
                 ->first();
 
-            // forceFill: las columnas community_* no son asignables desde el formulario de builds
-            $build->forceFill([
+            // Por query builder: un voto no es una edición del autor (no toca updated_at) ni vacía el
+            // caché de toda la lista de builds (no dispara los eventos del modelo)
+            DB::table('user_builds')->where('id', $build->id)->update([
                 "community_{$mode}_avg" => $stats->total > 0 ? round((float) $stats->avg_tier, 2) : null,
                 "community_{$mode}_count" => (int) $stats->total,
-            ])->save();
+            ]);
         });
 
         return response()->json($this->payload($build->fresh(), $user));

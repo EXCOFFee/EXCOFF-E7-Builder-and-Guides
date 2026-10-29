@@ -46,6 +46,12 @@ class HeroBuildStatsService
                 'secondary_sets' => [],
                 'artifacts' => [],
                 'average_ratings' => null,
+                'community_ratings' => $this->communityRatings($hero),
+                'synergy_heroes' => [],
+                'counter_heroes' => [],
+                'priority_stats' => [],
+                'pro_tags' => [],
+                'con_tags' => [],
             ];
         }
 
@@ -61,7 +67,7 @@ class HeroBuildStatsService
             'secondary_sets' => $this->countSets($builds, 'secondary_set', $total),
             'artifacts' => $this->countArtifacts($builds, $total, $lang),
             'average_ratings' => $this->averageRatings($builds),
-            'community_ratings' => $this->communityRatings($builds),
+            'community_ratings' => $this->communityRatings($hero),
             'synergy_heroes' => $this->countHeroes($builds, 'synergy_heroes', $heroes, $total),
             'counter_heroes' => $this->countHeroes($builds, 'counter_heroes', $heroes, $total),
             'priority_stats' => $this->priorityStats($builds),
@@ -139,17 +145,23 @@ class HeroBuildStatsService
     }
 
     /**
-     * Nota de la comunidad por modo sumando todas las builds del héroe: promedio ponderado por
-     * la cantidad de votos de cada build. null en los modos sin votos.
+     * Nota de la comunidad por modo con todos los votos de las builds publicadas del héroe
+     * (promedio exacto de los votos, no de los promedios redondeados). null sin votos.
      */
-    private function communityRatings(Collection $builds): array
+    private function communityRatings(Hero $hero): array
     {
-        return collect(BuildModeVote::MODES)->mapWithKeys(function (string $mode) use ($builds) {
-            $count = (int) $builds->sum("community_{$mode}_count");
-            $weighted = $builds->sum(fn (UserBuild $b) => (float) $b->{"community_{$mode}_avg"} * $b->{"community_{$mode}_count"});
+        $rows = BuildModeVote::query()
+            ->join('user_builds', 'user_builds.id', '=', 'build_mode_votes.build_id')
+            ->where('user_builds.hero_id', $hero->id)
+            ->where('user_builds.status', 'published')
+            ->groupBy('build_mode_votes.mode')
+            ->selectRaw('build_mode_votes.mode as mode, avg(build_mode_votes.tier) as avg_tier, count(*) as total')
+            ->get()
+            ->keyBy('mode');
 
-            return [$mode => $count > 0 ? ['avg' => round($weighted / $count, 1), 'count' => $count] : null];
-        })->all();
+        return collect(BuildModeVote::MODES)->mapWithKeys(fn (string $mode) => [$mode => isset($rows[$mode])
+            ? ['avg' => round((float) $rows[$mode]->avg_tier, 1), 'count' => (int) $rows[$mode]->total]
+            : null])->all();
     }
 
     /** IDs de héroes de synergy_heroes / counter_heroes (formato viejo int[] o nuevo {id, note}[]) */

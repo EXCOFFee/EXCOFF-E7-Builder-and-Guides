@@ -109,6 +109,10 @@ export const buildApi = {
     api.get(`/builds/${id}/like-status`),
   getComments: (id: number) =>
     api.get(`/builds/${id}/comments`),
+  modeVotes: (id: number | string) =>
+    api.get(`/builds/${id}/mode-votes`),
+  voteMode: (id: number | string, mode: string, tier: number | null) =>
+    api.post(`/builds/${id}/mode-votes`, { mode, tier }),
 };
 
 export const guideApi = {

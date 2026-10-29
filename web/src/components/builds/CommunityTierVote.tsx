@@ -4,8 +4,7 @@ import Link from 'next/link';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useTranslations } from '@/hooks/useTranslations';
 import { TIER_CATEGORIES, TIER_COLORS, TIER_VALUES, tierToLetter, type TierCategory, type TierLetter } from '@/components/ui/tier-rating-selector';
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
+import { buildApi } from '@/lib/api';
 
 interface ModeVotes {
     community: Record<TierCategory, { avg: number | null; count: number }>;
@@ -22,11 +21,6 @@ interface CommunityTierVoteProps {
 
 const LETTERS = (Object.keys(TIER_VALUES) as TierLetter[]); // D, C, B, A, S
 
-function authHeaders(): Record<string, string> {
-    const token = typeof window !== 'undefined' ? localStorage.getItem('auth_token') : null;
-    return token ? { Authorization: `Bearer ${token}` } : {};
-}
-
 /**
  * Nota por modo que vota la comunidad, al lado de la del autor. Un voto por modo; volver a
  * tocar la letra elegida lo quita. El autor no vota su propia build.
@@ -34,31 +28,22 @@ function authHeaders(): Record<string, string> {
 export function CommunityTierVote({ buildId, authorRatings, isLoggedIn, isOwner }: CommunityTierVoteProps) {
     const { t } = useTranslations();
     const queryClient = useQueryClient();
-    const key = ['build-mode-votes', String(buildId), isLoggedIn];
+    // El cliente de API manda el token si hay sesión: una sola consulta trae también los votos propios
+    const key = ['build-mode-votes', String(buildId)];
 
     const { data } = useQuery<ModeVotes>({
         queryKey: key,
-        queryFn: async () => {
-            const response = await fetch(`${API_URL}/builds/${buildId}/mode-votes`, { headers: authHeaders() });
-            if (!response.ok) throw new Error('mode votes');
-            return response.json();
-        },
+        queryFn: async () => (await buildApi.modeVotes(buildId)).data,
     });
 
     const vote = useMutation({
-        mutationFn: async ({ mode, tier }: { mode: TierCategory; tier: number | null }) => {
-            const response = await fetch(`${API_URL}/builds/${buildId}/mode-votes`, {
-                method: 'POST',
-                headers: { ...authHeaders(), 'Content-Type': 'application/json', Accept: 'application/json' },
-                body: JSON.stringify({ mode, tier }),
-            });
-            if (!response.ok) throw new Error('vote');
-            return (await response.json()) as ModeVotes;
-        },
+        mutationFn: async ({ mode, tier }: { mode: TierCategory; tier: number | null }) =>
+            (await buildApi.voteMode(buildId, mode, tier)).data as ModeVotes,
         onSuccess: (result) => queryClient.setQueryData(key, result),
     });
 
-    const canVote = isLoggedIn && !isOwner && (data?.can_vote ?? true);
+    // Los botones aparecen solo cuando el servidor confirma que este usuario puede votar
+    const canVote = isLoggedIn && !isOwner && data?.can_vote === true;
 
     return (
         <section aria-labelledby="community-tier-title" className="mt-6 border-t border-e7-gold/10 pt-5">
