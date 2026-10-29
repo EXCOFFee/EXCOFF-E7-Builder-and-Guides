@@ -101,14 +101,14 @@ export function emptyBuildForm(heroId: number | null = null): BuildFormValues {
     };
 }
 
-/** Stats base del héroe como valores iniciales de los mínimos recomendados */
-export function statsFromBaseStats(base: Partial<Record<StatKey, number | null>> | null | undefined): StatValues {
-    const stats = emptyStats();
-    for (const { key } of STAT_FIELDS) {
+/** Placeholder de cada stat mínimo: el stat base del héroe si se conoce, si no un ejemplo */
+export function baseStatPlaceholders(base: Partial<Record<StatKey, number | null>> | null | undefined): StatValues {
+    const placeholders = emptyStats();
+    for (const { key, placeholder } of STAT_FIELDS) {
         const value = base?.[key];
-        if (value !== undefined && value !== null) stats[key] = String(value);
+        placeholders[key] = value !== undefined && value !== null ? String(value) : placeholder;
     }
-    return stats;
+    return placeholders;
 }
 
 function toHeroesWithNote(list: ApiBuild['synergy_heroes']): HeroWithNote[] {

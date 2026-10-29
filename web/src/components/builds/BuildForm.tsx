@@ -18,7 +18,7 @@ import { SETS, SET_IMAGES, SET_NAMES } from '@/lib/sets';
 import {
     MAX_BUILD_IMAGES,
     STAT_FIELDS,
-    statsFromBaseStats,
+    baseStatPlaceholders,
     toFormData,
     type BuildFormValues,
     type StatKey,
@@ -102,13 +102,9 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
     const skillNames = SKILL_KEYS.map((key) => skills?.[key]?.name);
     const heroCode = lockedHero?.hero_code ?? selectedHero?.hero_code ?? (heroDetail?.data ?? heroDetail)?.hero_code;
 
-    // Al crear, los stats base del héroe elegido son el punto de partida. Solo cuando cambia
-    // el héroe (ajuste en render), así no pisa lo que el usuario ya escribió.
-    const [statsFilledFor, setStatsFilledFor] = useState<number | null>(mode === 'edit' ? initialValues.heroId : null);
-    if (mode === 'create' && selectedHero?.base_stats && selectedHero.id !== statsFilledFor) {
-        setStatsFilledFor(selectedHero.id);
-        setValues((current) => ({ ...current, stats: statsFromBaseStats(selectedHero.base_stats) }));
-    }
+    // Los stats base del héroe se muestran como placeholder: antes se copiaban como valores y
+    // terminaban guardados como "stats mínimos" de la build
+    const statPlaceholders = baseStatPlaceholders(selectedHero?.base_stats);
 
     const imageCount = values.existingImages.length + values.newImages.length;
 
@@ -240,6 +236,9 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
                         <legend className="block text-sm font-medium text-gray-300 mb-3">
                             {t('builds.minStats', 'Minimum Recommended Stats')}
                         </legend>
+                        <p className="-mt-2 mb-3 text-xs text-gray-400">
+                            {t('builds.minStatsHint', 'Fill in only the stats that matter for this build. The grey numbers are the hero’s base stats.')}
+                        </p>
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                             {STAT_FIELDS.map((stat) => (
                                 <div key={stat.key}>
@@ -253,7 +252,7 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
                                         min={0}
                                         value={values.stats[stat.key]}
                                         onChange={(e) => update('stats', { ...values.stats, [stat.key]: e.target.value })}
-                                        placeholder={stat.placeholder}
+                                        placeholder={statPlaceholders[stat.key]}
                                         className="bg-e7-void border-e7-gold/30 text-white text-sm"
                                     />
                                 </div>

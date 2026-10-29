@@ -450,7 +450,10 @@
         "viewFull": "原寸で表示",
         "previous": "前へ",
         "next": "次へ",
-        "goToImage": "画像へ移動"
+        "goToImage": "画像へ移動",
+        "filteredByHero": "{hero}のビルド",
+        "allHeroes": "すべてのヒーロー",
+        "minStatsHint": "このビルドで重要なステータスだけ入力してください。灰色の数値はヒーローの基本ステータスです。"
     },
     "news": {
         "title": "エピックセブンニュース",

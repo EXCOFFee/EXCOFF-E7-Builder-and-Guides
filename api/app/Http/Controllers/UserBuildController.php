@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Models\UserBuild;
 use App\Models\Hero;
 use App\Services\ImageService;
+use App\Support\BuildCache;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Cache;
@@ -26,9 +27,9 @@ class UserBuildController extends Controller
      */
     public function index(Request $request): JsonResponse
     {
-        // Build cache key from all query parameters
-        $cacheKey = 'builds:list:' . md5(json_encode($request->query()));
-        
+        // Clave por parámetros; BuildCache la renueva cuando se guarda o borra una build
+        $cacheKey = BuildCache::key('list:' . md5(json_encode($request->query())));
+
         // Cache the paginated results for 5 minutes
         $builds = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($request) {
             $query = UserBuild::with(['user:id,name,avatar', 'artifact', 'hero'])
@@ -43,6 +44,11 @@ class UserBuildController extends Controller
                             $q->where('name', 'like', '%' . $search . '%');
                         });
                 });
+            }
+
+            // Filter by hero (slug): el link "ver todas las builds" de la ficha del héroe
+            if ($request->filled('hero')) {
+                $query->whereHas('hero', fn ($q) => $q->where('slug', $request->input('hero')));
             }
 
             // Filter by hero element
@@ -95,7 +101,7 @@ class UserBuildController extends Controller
 
             // Extended sorting options: newest, likes, views
             $sortBy = $request->input('sort', 'newest');
-            $sortOrder = $request->input('order', 'desc');
+            $sortOrder = $request->input('order') === 'asc' ? 'asc' : 'desc';
             
             switch ($sortBy) {
                 case 'likes':
@@ -173,6 +179,8 @@ class UserBuildController extends Controller
 
         // Add synergy and counter heroes data
         $response = $build->toArray();
+        $viewer = $this->optionalUser($request);
+        $response['is_owner'] = $viewer !== null && (int) $build->user_id === (int) $viewer->id;
         $response['synergy_heroes_list'] = $build->synergy_heroes_list;
         $response['counter_heroes_list'] = $build->counter_heroes_list;
 

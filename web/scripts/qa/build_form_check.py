@@ -70,7 +70,9 @@ with sync_playwright() as p:
     page.wait_for_timeout(1500)
 
     check(page.get_by_role('button', name=re.compile(r'Hero \*: Adventurer Ras')).count() == 1, 'crear: héroe preseleccionado desde la URL')
-    check(page.locator('#stat-atk').input_value() == '758', f"crear: ATK autocompletado con el stat base ({page.locator('#stat-atk').input_value()!r})")
+    atk = page.locator('#stat-atk')
+    check(atk.input_value() == '' and atk.get_attribute('placeholder') == '758',
+          f"crear: ATK vacío con el stat base como placeholder ({atk.input_value()!r}, {atk.get_attribute('placeholder')!r})")
     skill_selects = page.locator('select[aria-label$="Upgrade Level"]')
     check(skill_selects.count() == 3, f'crear: se muestran las 3 skills ({skill_selects.count()}) — antes nunca aparecían')
 
@@ -92,7 +94,7 @@ with sync_playwright() as p:
 
     stats = json.loads(sent.get('min_stats', '{}'))
     check(sent.get('hero_id') == '6' and sent.get('title') == 'Prueba QA', 'crear: envía hero_id y título')
-    check(stats.get('atk') == 4100 and 'crit_chance' in stats and 'chc' not in stats, f'crear: min_stats con las claves de la API {stats}')
+    check(stats == {'atk': 4100}, f'crear: min_stats solo con lo que escribió el usuario {stats}')
     check(sent.get('skill_1') == '5' and sent.get('is_anonymous') == '1', 'crear: nivel de skill y anónimo')
     check(sent.get('artifact_id') and sent.get('primary_set') == 'speed', f"crear: artefacto y set ({sent.get('artifact_id')}, {sent.get('primary_set')})")
     check(not errors, f'crear: sin errores de JS {errors[:1]}')

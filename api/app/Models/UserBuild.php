@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Support\BuildCache;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -32,8 +33,6 @@ class UserBuild extends Model
         'status',
         'language',
         'is_anonymous',
-        'avg_rating',
-        'rating_count',
         // Tier ratings (D=1 to S=5)
         'rating_pve',
         'rating_arena',
@@ -54,7 +53,6 @@ class UserBuild extends Model
         'counter_heroes' => 'array',
         'images' => 'array',
         'is_anonymous' => 'boolean',
-        'avg_rating' => 'decimal:2',
         'skill_1' => 'integer',
         'skill_2' => 'integer',
         'skill_3' => 'integer',
@@ -120,15 +118,28 @@ class UserBuild extends Model
     }
 
     /**
-     * Una build anónima no expone a su autor en la API (antes llegaba el usuario completo y
-     * solo el frontend lo ocultaba). user_id queda: el frontend lo usa para el botón de editar.
+     * Cualquier cambio en una build renueva las claves de caché de la lista y de los stats
+     * por héroe. increment() de likes/views no dispara "saved": esos contadores esperan al TTL.
+     */
+    protected static function booted(): void
+    {
+        static::saved(fn () => BuildCache::bump());
+        static::deleted(fn () => BuildCache::bump());
+    }
+
+    /**
+     * Una build anónima no expone a su autor en la API: ni el usuario ni su id. Para el botón
+     * de editar, el controlador agrega is_owner comparando con el usuario del token.
      */
     public function toArray(): array
     {
         $data = parent::toArray();
 
-        if ($this->is_anonymous && array_key_exists('user', $data)) {
-            $data['user'] = null;
+        if ($this->is_anonymous) {
+            unset($data['user_id']);
+            if (array_key_exists('user', $data)) {
+                $data['user'] = null;
+            }
         }
 
         return $data;
@@ -148,14 +159,6 @@ class UserBuild extends Model
     public function artifact()
     {
         return $this->belongsTo(Artifact::class);
-    }
-
-    /**
-     * Get all ratings for this build
-     */
-    public function ratings()
-    {
-        return $this->hasMany(BuildRating::class, 'build_id');
     }
 
     /**

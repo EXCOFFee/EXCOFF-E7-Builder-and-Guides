@@ -445,7 +445,10 @@
         "tierReasonPlaceholder": "¿Por qué esta calificación? (opcional)",
         "exportImage": "Exportar Imagen",
         "exporting": "Exportando...",
-        "exportError": "Error al exportar la imagen. Por favor intenta de nuevo."
+        "exportError": "Error al exportar la imagen. Por favor intenta de nuevo.",
+        "filteredByHero": "Builds de {hero}",
+        "allHeroes": "Todos los héroes",
+        "minStatsHint": "Completa solo los stats que importan en esta build. Los números en gris son los stats base del héroe."
     },
     "news": {
         "title": "Noticias de Epic Seven",
