@@ -151,7 +151,8 @@
         "worksWith": "Funciona bem com",
         "verdictSource": "Com votos, a letra é a da comunidade; sem votos, a média que os autores dão.",
         "noBuildsYet": "Ainda não há builds para este herói",
-        "buildsShort": "{count} builds"
+        "buildsShort": "{count} builds",
+        "buildsShortOne": "1 build"
     },
     "elements": {
         "fire": "Fogo",

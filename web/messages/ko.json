@@ -151,7 +151,8 @@
         "worksWith": "함께 쓰기 좋은 영웅",
         "verdictSource": "투표가 있으면 커뮤니티 평가, 없으면 작성자 평가 평균입니다.",
         "noBuildsYet": "아직 이 영웅의 빌드가 없습니다",
-        "buildsShort": "빌드 {count}"
+        "buildsShort": "빌드 {count}",
+        "buildsShortOne": "빌드 1"
     },
     "elements": {
         "fire": "화염",

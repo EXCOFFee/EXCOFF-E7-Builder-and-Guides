@@ -147,7 +147,6 @@ export function NewestHeroes({ heroes }: { heroes: HeroListItem[] }) {
                             src={hero.image_url}
                             alt=""
                             element={hero.element}
-                            sizes="(min-width: 640px) 33vw, 50vw"
                             className="mx-auto border-b-2 border-el"
                         />
                         <p className="truncate px-2 py-2 text-center text-sm text-slate-100">{translateHeroName(hero.name)}</p>

@@ -60,12 +60,4 @@ class Hero extends Model
     {
         return $this->hasMany(Guide::class);
     }
-
-    /**
-     * Builds de la comunidad para este héroe.
-     */
-    public function builds(): HasMany
-    {
-        return $this->hasMany(UserBuild::class);
-    }
 }

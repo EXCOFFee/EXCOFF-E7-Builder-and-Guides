@@ -151,7 +151,8 @@
         "worksWith": "相性の良いヒーロー",
         "verdictSource": "投票があればコミュニティの評価、なければ作成者の評価の平均です。",
         "noBuildsYet": "このヒーローのビルドはまだありません",
-        "buildsShort": "ビルド{count}"
+        "buildsShort": "ビルド{count}",
+        "buildsShortOne": "ビルド1"
     },
     "elements": {
         "fire": "火",

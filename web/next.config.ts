@@ -45,9 +45,9 @@ const nextConfig: NextConfig = {
     formats: ['image/webp'],
     qualities: [75],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
-    // Pocos anchos: cada ancho distinto es una transformación más por imagen. Así un retrato
-    // tiene como máximo 64/128/256/384/640 y un artefacto 64/128/256 (~2.800/mes en el peor caso).
-    imageSizes: [64, 128, 256, 384],
+    // Pocos anchos: cada ancho distinto es una transformación más por imagen. 436 es el ancho
+    // real de los banners de héroe (HeroBanner): 1x pide 436 y 2x 1080, dos variantes por héroe.
+    imageSizes: [64, 128, 256, 384, 436],
     // Rutas acotadas: un dominio abierto permitiría gastar la cuota con imágenes ajenas
     remotePatterns: [
       {

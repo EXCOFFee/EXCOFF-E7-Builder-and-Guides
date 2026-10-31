@@ -194,7 +194,7 @@ export function HeroDetailClient({
                                 src={hero.image_url}
                                 alt={hero.name}
                                 element={hero.element}
-                                sizes="(min-width: 640px) 436px, 100vw"
+                                heroClass={hero.class}
                                 priority
                                 className="rounded-2xl border border-el/40 shadow-[0_0_60px_-12px_var(--el)]"
                             />

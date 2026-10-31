@@ -187,7 +187,7 @@ export default function HeroesPage() {
                                             src={hero.image_url}
                                             alt=""
                                             element={hero.element}
-                                            sizes="(min-width: 1024px) 290px, (min-width: 640px) 33vw, 50vw"
+                                            heroClass={hero.class}
                                             // La primera fila es el LCP de la página
                                             priority={index < 4}
                                             className="mx-auto"
@@ -214,7 +214,9 @@ export default function HeroesPage() {
                                             </div>
                                             {(hero.builds_count ?? 0) > 0 && (
                                                 <span className="shrink-0 rounded-full bg-night/70 px-2 py-0.5 font-mono text-[11px] tabular-nums text-slate-200">
-                                                    {t('heroes.buildsShort', '{count} builds').replace('{count}', String(hero.builds_count))}
+                                                    {hero.builds_count === 1
+                                                        ? t('heroes.buildsShortOne', '1 build')
+                                                        : t('heroes.buildsShort', '{count} builds').replace('{count}', String(hero.builds_count))}
                                                 </span>
                                             )}
                                         </div>

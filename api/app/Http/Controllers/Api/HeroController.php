@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\HeroResource;
 use App\Http\Resources\HeroSummaryResource;
 use App\Models\Hero;
+use App\Models\UserBuild;
 use App\Services\HeroBuildStatsService;
 use App\Support\BuildCache;
 use Illuminate\Http\JsonResponse;
@@ -35,12 +36,11 @@ class HeroController extends Controller
      */
     public function index(Request $request): AnonymousResourceCollection
     {
-        // Con builds_count la lista depende de las builds: la clave lleva la versión de BuildCache
-        $cacheKey = BuildCache::key('heroes-index:' . md5(json_encode($request->query())));
+        // Build cache key from query parameters (v2: summary columns only)
+        $cacheKey = 'heroes:index:v2:' . md5(json_encode($request->query()));
 
         $heroes = Cache::remember($cacheKey, self::CACHE_TTL, function () use ($request) {
-            $query = Hero::query()->select(HeroSummaryResource::COLUMNS)
-                ->withCount(['builds as builds_count' => fn ($q) => $q->where('status', 'published')]);
+            $query = Hero::query()->select(HeroSummaryResource::COLUMNS);
 
             // Filter by element
             if ($request->has('element')) {
@@ -65,7 +65,21 @@ class HeroController extends Controller
             return $query->orderBy('name')->paginate(500);
         });
 
-        return HeroSummaryResource::collection($heroes);
+        // Builds publicadas por héroe: consulta chica aparte, así la lista (500 héroes, 1 h de caché)
+        // no se recalcula cada vez que se guarda una build
+        $counts = Cache::remember(BuildCache::key('hero-build-counts'), 300, fn () => UserBuild::published()
+            ->selectRaw('hero_id, count(*) as total')
+            ->groupBy('hero_id')
+            ->pluck('total', 'hero_id')
+            ->all());
+
+        // Copia: con el store "array" el paginador cacheado es el mismo objeto en cada pedido
+        $page = clone $heroes;
+        $page->setCollection($heroes->getCollection()->map(
+            fn (Hero $hero) => (clone $hero)->setAttribute('builds_count', (int) ($counts[$hero->id] ?? 0))
+        ));
+
+        return HeroSummaryResource::collection($page);
     }
 
     /**

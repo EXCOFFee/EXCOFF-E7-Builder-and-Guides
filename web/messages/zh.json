@@ -151,7 +151,8 @@
         "worksWith": "搭配良好",
         "verdictSource": "有投票时显示社区评分,没有时显示作者评分的平均。",
         "noBuildsYet": "该英雄暂无构建",
-        "buildsShort": "{count} 套配装"
+        "buildsShort": "{count} 套配装",
+        "buildsShortOne": "1 套配装"
     },
     "elements": {
         "fire": "火",

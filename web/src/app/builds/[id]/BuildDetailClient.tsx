@@ -428,7 +428,6 @@ export function BuildDetailClient() {
                                 src={build.hero.portrait}
                                 alt={build.hero.name}
                                 element={build.hero.element}
-                                sizes="(min-width: 768px) 320px, 100vw"
                                 priority
                                 className="rounded-2xl ring-2 ring-e7-gold/60 shadow-2xl"
                             />
