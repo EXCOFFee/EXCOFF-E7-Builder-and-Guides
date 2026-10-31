@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Models\Artifact;
+use App\Models\BuildModeVote;
 use App\Models\Hero;
 use App\Models\UserBuild;
 use Illuminate\Support\Collection;
@@ -45,6 +46,12 @@ class HeroBuildStatsService
                 'secondary_sets' => [],
                 'artifacts' => [],
                 'average_ratings' => null,
+                'community_ratings' => $this->communityRatings($hero),
+                'synergy_heroes' => [],
+                'counter_heroes' => [],
+                'priority_stats' => [],
+                'pro_tags' => [],
+                'con_tags' => [],
             ];
         }
 
@@ -60,12 +67,44 @@ class HeroBuildStatsService
             'secondary_sets' => $this->countSets($builds, 'secondary_set', $total),
             'artifacts' => $this->countArtifacts($builds, $total, $lang),
             'average_ratings' => $this->averageRatings($builds),
+            'community_ratings' => $this->communityRatings($hero),
             'synergy_heroes' => $this->countHeroes($builds, 'synergy_heroes', $heroes, $total),
             'counter_heroes' => $this->countHeroes($builds, 'counter_heroes', $heroes, $total),
             'priority_stats' => $this->priorityStats($builds),
             'pro_tags' => $this->countTags($builds, 'pro_tags', $total),
             'con_tags' => $this->countTags($builds, 'con_tags', $total),
         ];
+    }
+
+    /**
+     * Stats mínimos de cada build publicada, ordenados por stat ("¿Mi build llega?" calcula el
+     * percentil en el navegador). Solo valores > 0; los stats sin datos no van.
+     *
+     * @return array<string, int[]>
+     */
+    public function statDistribution(Hero $hero): array
+    {
+        $builds = UserBuild::published()->where('hero_id', $hero->id)->whereNotNull('min_stats')->get(['min_stats']);
+        $distribution = [];
+
+        foreach (array_keys(self::STAT_LABELS) as $stat) {
+            $values = $this->statValues($builds, $stat)->map(fn (float $v) => (int) round($v))->values()->all();
+            if ($values) {
+                $distribution[$stat] = $values;
+            }
+        }
+
+        return $distribution;
+    }
+
+    /** Valores > 0 de un stat mínimo entre las builds, ordenados */
+    private function statValues(Collection $builds, string $stat): Collection
+    {
+        return $builds->map(fn (UserBuild $b) => $b->min_stats[$stat] ?? null)
+            ->filter(fn ($v) => is_numeric($v) && $v > 0)
+            ->map(fn ($v) => (float) $v)
+            ->sort()
+            ->values();
     }
 
     private function percentage(int $count, int $total): float
@@ -136,6 +175,26 @@ class HeroBuildStatsService
         return $averages ?: null;
     }
 
+    /**
+     * Nota de la comunidad por modo con todos los votos de las builds publicadas del héroe
+     * (promedio exacto de los votos, no de los promedios redondeados). null sin votos.
+     */
+    private function communityRatings(Hero $hero): array
+    {
+        $rows = BuildModeVote::query()
+            ->join('user_builds', 'user_builds.id', '=', 'build_mode_votes.build_id')
+            ->where('user_builds.hero_id', $hero->id)
+            ->where('user_builds.status', 'published')
+            ->groupBy('build_mode_votes.mode')
+            ->selectRaw('build_mode_votes.mode as mode, avg(build_mode_votes.tier) as avg_tier, count(*) as total')
+            ->get()
+            ->keyBy('mode');
+
+        return collect(BuildModeVote::MODES)->mapWithKeys(fn (string $mode) => [$mode => isset($rows[$mode])
+            ? ['avg' => round((float) $rows[$mode]->avg_tier, 1), 'count' => (int) $rows[$mode]->total]
+            : null])->all();
+    }
+
     /** IDs de héroes de synergy_heroes / counter_heroes (formato viejo int[] o nuevo {id, note}[]) */
     private function heroIds(?array $list): array
     {
@@ -170,24 +229,30 @@ class HeroBuildStatsService
             ->all();
     }
 
-    /** Promedio de cada stat mínimo entre las builds que lo indican; los stats sin datos no van */
+    /**
+     * Cada stat mínimo entre las builds que lo indican: promedio, mediana, mínimo y máximo.
+     * Los stats que ninguna build indica no van.
+     */
     private function priorityStats(Collection $builds): array
     {
         $stats = [];
 
         foreach (self::STAT_LABELS as $stat => $label) {
-            $values = $builds->map(fn (UserBuild $b) => $b->min_stats[$stat] ?? null)
-                ->filter(fn ($v) => is_numeric($v) && $v > 0);
-            if ($values->isEmpty()) {
+            $sorted = $this->statValues($builds, $stat);
+            if ($sorted->isEmpty()) {
                 continue;
             }
-            $avg = (float) $values->avg();
+            $avg = (float) $sorted->avg();
+            $values = $sorted;
 
             $stats[] = [
                 'stat' => $stat,
                 'label' => $label,
                 'count' => $values->count(),
                 'average_value' => round($avg, 1),
+                'median' => round((float) $sorted->median(), 1),
+                'min' => $sorted->first(),
+                'max' => $sorted->last(),
                 'formatted_value' => match (true) {
                     in_array($stat, self::PERCENT_STATS, true) => round($avg, 1) . '%',
                     $stat === 'spd' => (string) round($avg),

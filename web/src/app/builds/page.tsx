@@ -11,6 +11,9 @@ import { useTranslations } from '@/hooks/useTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { appendImageVersion } from '@/lib/heroImages';
 import { TagFilter } from '@/components/builds/TagFilter';
+import { VerifiedBadge } from '@/components/builds/VerifiedBadge';
+import { CONTENT_LANGUAGES, languageLabel } from '@/lib/languages';
+import { OutdatedBadge } from '@/components/builds/OutdatedBadge';
 
 /** Lista de IDs separados por coma (parámetros tags / exclude_tags) */
 function parseTagList(value: string | null): string[] {
@@ -18,15 +21,6 @@ function parseTagList(value: string | null): string[] {
 }
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
-
-// Element to image mapping
-const ELEMENT_IMAGES: Record<string, string> = {
-    fire: '/images/elements/ElementFire.png',
-    ice: '/images/elements/ElementWater.png',
-    earth: '/images/elements/ElementEarth.png',
-    light: '/images/elements/ElementLight.png',
-    dark: '/images/elements/ElementDark.png',
-};
 
 const ELEMENT_NAMES: Record<string, string> = {
     fire: 'Fire',
@@ -36,18 +30,9 @@ const ELEMENT_NAMES: Record<string, string> = {
     dark: 'Dark',
 };
 
-// Class to image mapping
-const CLASS_IMAGES: Record<string, string> = {
-    knight: '/images/classes/ClassKnight.png',
-    warrior: '/images/classes/ClassWarrior.png',
-    thief: '/images/classes/ClassThief.png',
-    ranger: '/images/classes/ClassRanger.png',
-    mage: '/images/classes/ClassMage.png',
-    soul_weaver: '/images/classes/ClassSoul_Waver.png',
-};
-
 import { SET_IMAGES, formatSetName } from '@/lib/sets';
 import { formatNumber } from '@/lib/utils';
+import { ELEMENT_IMAGES, CLASS_IMAGES } from '@/lib/heroAssets';
 
 const CLASS_NAMES: Record<string, string> = {
     knight: 'Knight',
@@ -58,16 +43,6 @@ const CLASS_NAMES: Record<string, string> = {
     soul_weaver: 'Soul Weaver',
 };
 
-const LANGUAGES = ['all', 'en', 'es', 'ko', 'ja', 'zh', 'pt'];
-const LANGUAGE_LABELS: Record<string, string> = {
-    all: 'All Languages',
-    en: 'English',
-    es: 'Español',
-    ko: '한국어',
-    ja: '日本語',
-    zh: '中文',
-    pt: 'Português',
-};
 
 
 interface Build {
@@ -80,6 +55,7 @@ interface Build {
     likes: number;
     views: number;
     is_anonymous: boolean;
+    verification_status?: string | null;
     user: {
         id: number;
         name: string;
@@ -92,6 +68,7 @@ interface Build {
         portrait: string;
         element: string;
         class: string;
+        game_data_changed_at?: string | null;
     };
     artifact: {
         id: number;
@@ -99,6 +76,7 @@ interface Build {
         icon: string;
     } | null;
     created_at: string;
+    updated_at?: string;
     language?: string;
 }
 
@@ -139,9 +117,10 @@ export default function BuildsPage() {
     }
     const [primarySet, setPrimarySet] = useState<string | null>(null);
     const [minSpeed, setMinSpeed] = useState<string>('');
+    const [verifiedOnly, setVerifiedOnly] = useState(false);
 
     const { data, isLoading } = useQuery({
-        queryKey: ['builds', heroSlug, includedTags.join(','), excludedTags.join(','), search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, selectedLanguage, sortBy, locale],
+        queryKey: ['builds', heroSlug, includedTags.join(','), excludedTags.join(','), search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, verifiedOnly, selectedLanguage, sortBy, locale],
         queryFn: async () => {
             const params = new URLSearchParams();
             if (heroSlug) params.append('hero', heroSlug);
@@ -153,6 +132,7 @@ export default function BuildsPage() {
             if (selectedRarity) params.append('rarity', selectedRarity.toString());
             if (primarySet) params.append('primary_set', primarySet);
             if (minSpeed && parseInt(minSpeed) > 0) params.append('min_speed', minSpeed);
+            if (verifiedOnly) params.append('verified', '1');
             if (selectedLanguage && selectedLanguage !== 'all') params.append('language', selectedLanguage);
 
             // Server-side sorting - map frontend values to backend params
@@ -321,8 +301,8 @@ export default function BuildsPage() {
                             onChange={(e) => setSelectedLanguage(e.target.value)}
                             className="bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg pl-3 pr-10 py-2 text-sm focus:border-e7-gold focus:ring-e7-gold/30 cursor-pointer"
                         >
-                            {LANGUAGES.map((lang) => (
-                                <option key={lang} value={lang}>{LANGUAGE_LABELS[lang]}</option>
+                            {CONTENT_LANGUAGES.map((lang) => (
+                                <option key={lang} value={lang}>{languageLabel(lang, t)}</option>
                             ))}
                         </select>
 
@@ -378,11 +358,17 @@ export default function BuildsPage() {
                                     className="w-24 bg-e7-void border-e7-gold/30 text-white"
                                 />
 
+                                <label className="ml-4 flex items-center gap-2 text-sm text-slate-300">
+                                    <input type="checkbox" checked={verifiedOnly} onChange={(e) => setVerifiedOnly(e.target.checked)} className="accent-emerald-400" />
+                                    {t('builds.verifiedOnly', 'Verified only')}
+                                </label>
+
                                 {/* Clear filters */}
                                 <button
                                     onClick={() => {
                                         setPrimarySet(null);
                                         setMinSpeed('');
+                                        setVerifiedOnly(false);
                                     }}
                                     className="ml-4 text-sm text-gray-400 hover:text-e7-gold"
                                 >
@@ -461,7 +447,7 @@ export default function BuildsPage() {
                                                 <p className="text-sm text-slate-400">{CLASS_NAMES[build.hero.class] || build.hero.class}</p>
                                                 {build.language && build.language !== 'en' && (
                                                     <span className="text-xs text-e7-gold bg-e7-gold/10 px-2 py-0.5 rounded">
-                                                        {LANGUAGE_LABELS[build.language] || build.language}
+                                                        {languageLabel(build.language, t)}
                                                     </span>
                                                 )}
                                             </div>
@@ -472,6 +458,8 @@ export default function BuildsPage() {
                                         <h3 className="text-lg font-medium text-e7-gold mb-3 line-clamp-1">
                                             {build.title}
                                         </h3>
+                                        <OutdatedBadge buildUpdatedAt={build.updated_at} heroChangedAt={build.hero.game_data_changed_at} className="mb-3" />
+                                        <VerifiedBadge status={build.verification_status} className="mb-3" />
 
                                         {/* Sets */}
                                         <div className="flex gap-2 mb-3 flex-wrap">

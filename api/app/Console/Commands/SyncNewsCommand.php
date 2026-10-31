@@ -36,7 +36,8 @@ class SyncNewsCommand extends Command
         if ($clear) {
             $this->info('Clearing existing news...');
             if ($source === 'all') {
-                $deleted = News::query()->delete();
+                // Las noticias de balance de la web (source "site") no vienen de afuera: no se borran
+                $deleted = News::whereIn('source', ['youtube', 'stove'])->delete();
             } elseif ($source === 'youtube') {
                 $deleted = News::where('source', 'youtube')->delete();
             } elseif ($source === 'stove') {

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslations } from '@/hooks/useTranslations';
 import { formatDate } from '@/lib/utils';
+import { isSiteNews, newsText } from '@/lib/news';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -15,7 +16,7 @@ interface NewsItem {
     description: string | null;
     thumbnail: string | null;
     url: string;
-    source: 'youtube' | 'stove';
+    source: 'youtube' | 'stove' | 'site';
     category: string | null;
     published_at: string;
 }
@@ -30,7 +31,7 @@ interface NewsResponse {
 
 export default function NewsPage() {
     const { t, locale } = useTranslations();
-    const [sourceFilter, setSourceFilter] = useState<'all' | 'youtube' | 'stove'>('all');
+    const [sourceFilter, setSourceFilter] = useState<'all' | 'youtube' | 'stove' | 'site'>('all');
     const [categoryFilter, setCategoryFilter] = useState<string>('all');
     const [searchQuery, setSearchQuery] = useState('');
     const [searchInput, setSearchInput] = useState('');
@@ -73,6 +74,7 @@ export default function NewsPage() {
             events: t('news.categories.events', 'Events'),
             patch_notes: t('news.categories.patchNotes', 'Patch Notes'),
             dev_notes: t('news.categories.devNotes', 'Dev Notes'),
+            balance: t('news.categories.balance', 'Balance'),
         };
         return labels[cat] || cat;
     };
@@ -181,6 +183,17 @@ export default function NewsPage() {
                         />
                         Stove
                     </button>
+
+                    {/* Noticias de la web (cambios de balance detectados en los datos del juego) */}
+                    <button
+                        onClick={() => { setSourceFilter('site'); setCategoryFilter('all'); setPage(1); }}
+                        className={`px-4 py-2 rounded-lg text-sm transition-colors flex items-center gap-2 ${sourceFilter === 'site'
+                            ? 'bg-e7-gold/20 text-e7-gold ring-1 ring-e7-gold'
+                            : 'bg-white/4 text-neutral-400 hover:bg-white/6'
+                            }`}
+                    >
+                        {t('news.siteSource', 'On this site')}
+                    </button>
                 </div>
 
                 {/* Category Filter (only show for stove or when categories exist) */}
@@ -245,12 +258,15 @@ export default function NewsPage() {
                             </div>
                         ) : (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {news.map((item) => (
+                                {news.map((item) => {
+                                    const text = newsText(item, t);
+                                    const internal = isSiteNews(item);
+                                    return (
                                     <a
                                         key={item.id}
                                         href={item.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                        target={internal ? undefined : '_blank'}
+                                        rel={internal ? undefined : 'noopener noreferrer'}
                                         className="group block glass-panel border border-e7-gold/20 rounded-xl overflow-hidden hover:border-e7-gold/50 transition-all hover:scale-[1.02] hover:shadow-lg hover:shadow-e7-gold/10"
                                     >
                                         {/* Thumbnail */}
@@ -258,7 +274,7 @@ export default function NewsPage() {
                                             {item.thumbnail ? (
                                                 <Image
                                                     src={item.thumbnail}
-                                                    alt={item.title}
+                                                    alt={text.title}
                                                     fill
                                                     className="object-cover"
                                                     unoptimized
@@ -285,9 +301,11 @@ export default function NewsPage() {
                                             {/* Source Badge */}
                                             <div className={`absolute top-2 right-2 px-2 py-1 rounded text-xs font-semibold flex items-center gap-1.5 ${item.source === 'youtube'
                                                 ? 'bg-red-600 text-white'
-                                                : 'bg-orange-700 text-white'
+                                                : internal ? 'bg-e7-gold text-black' : 'bg-orange-700 text-white'
                                                 }`}>
-                                                {item.source === 'youtube' ? (
+                                                {internal ? (
+                                                    t('news.siteSource', 'On this site')
+                                                ) : item.source === 'youtube' ? (
                                                     <>
                                                         <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
                                                             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
@@ -320,11 +338,11 @@ export default function NewsPage() {
                                         {/* Content */}
                                         <div className="p-4">
                                             <h2 className="font-medium text-white group-hover:text-e7-gold transition-colors line-clamp-2 mb-2">
-                                                {item.title}
+                                                {text.title}
                                             </h2>
-                                            {item.description && (
+                                            {text.description && (
                                                 <p className="text-sm text-slate-400 line-clamp-2 mb-3">
-                                                    {item.description}
+                                                    {text.description}
                                                 </p>
                                             )}
                                             <div className="flex items-center justify-between text-xs text-gray-400">
@@ -340,7 +358,8 @@ export default function NewsPage() {
                                             </div>
                                         </div>
                                     </a>
-                                ))}
+                                    );
+                                })}
                             </div>
                         )}
 

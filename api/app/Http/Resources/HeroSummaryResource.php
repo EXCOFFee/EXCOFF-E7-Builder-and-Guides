@@ -48,6 +48,8 @@ class HeroSummaryResource extends JsonResource
             'rarity' => $this->rarity,
             'base_stats' => $this->base_stats,
             'image_url' => $this->image_url,
+            // Builds publicadas en la web (solo en la lista, con withCount)
+            'builds_count' => (int) ($this->builds_count ?? 0),
         ];
     }
 }

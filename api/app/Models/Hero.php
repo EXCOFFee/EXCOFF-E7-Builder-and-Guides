@@ -31,12 +31,7 @@ class Hero extends Model
         'self_devotion', // Memory Imprint data
         'image_url',
         'data_hash',
-        // Usage stats (calculated from community guides)
-        'popular_sets',
-        'popular_artifacts',
-        'avg_stats',
-        'guides_count',
-        'stats_updated_at',
+        'game_data_changed_at',
     ];
 
     protected $casts = [
@@ -44,11 +39,7 @@ class Hero extends Model
         'skills' => 'array',
         'self_devotion' => 'array',
         'rarity' => 'integer',
-        'popular_sets' => 'array',
-        'popular_artifacts' => 'array',
-        'avg_stats' => 'array',
-        'guides_count' => 'integer',
-        'stats_updated_at' => 'datetime',
+        'game_data_changed_at' => 'datetime',
     ];
 
     /**

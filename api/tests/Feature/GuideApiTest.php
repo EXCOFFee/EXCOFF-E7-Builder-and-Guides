@@ -51,6 +51,33 @@ class GuideApiTest extends TestCase
             ->assertJsonPath('data.0.title', 'Arena speed tuning');
     }
 
+    public function test_index_filters_by_hero_slug_and_mode(): void
+    {
+        $hero = \App\Models\Hero::factory()->create();
+        Guide::factory()->create(['title' => 'Hero RTA', 'hero_id' => $hero->id, 'type' => 'pvp']);
+        Guide::factory()->create(['title' => 'Hero PvE', 'hero_id' => $hero->id, 'type' => 'pve']);
+        Guide::factory()->create(['title' => 'Otro']);
+
+        $titles = fn (string $q) => collect($this->getJson("/api/guides?{$q}")->assertOk()->json('data'))->pluck('title')->sort()->values()->all();
+
+        $this->assertSame(['Hero PvE', 'Hero RTA'], $titles("hero={$hero->slug}"));
+        $this->assertSame(['Hero RTA'], $titles("hero={$hero->slug}&type=pvp"));
+    }
+
+    public function test_index_sorts_on_the_server(): void
+    {
+        Guide::factory()->create(['title' => 'Vieja popular', 'likes' => 9, 'views' => 1, 'created_at' => now()->subDays(5)]);
+        Guide::factory()->create(['title' => 'Nueva', 'likes' => 1, 'views' => 50, 'created_at' => now()]);
+
+        $first = fn (string $q) => $this->getJson("/api/guides?{$q}")->json('data.0.title');
+
+        $this->assertSame('Nueva', $first('sort=newest'));
+        $this->assertSame('Vieja popular', $first('sort=likes'));
+        $this->assertSame('Nueva', $first('sort=views'));
+        $this->assertSame('Vieja popular', $first('sort=views&order=asc'));
+        $this->assertSame('Nueva', $first('sort=newest&order=drop'));
+    }
+
     public function test_index_with_no_matches_returns_empty_page(): void
     {
         $this->makeGuide();

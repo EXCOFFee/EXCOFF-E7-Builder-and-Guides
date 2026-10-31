@@ -5,7 +5,7 @@ import { HeroDetailClient, type Hero } from './HeroDetailClient';
 import { STAT_KEYS, type ClassStatRange, type StatKey } from '@/components/heroes/StatLedger';
 import { getHeroSkillMessages, getLocale } from '@/i18n/server';
 import type { Locale } from '@/i18n/config';
-import type { HeroBuildStats } from '@/components/heroes/PopularBuildStats';
+import type { HeroBuildStats } from '@/components/heroes/HeroCommunity';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -33,7 +33,7 @@ const fetchHero = cache(async (slug: string, locale: Locale): Promise<{ hero: He
 });
 
 /** Estadísticas de builds publicadas en la web: cambian más seguido, 5 min como en el cliente. */
-async function fetchBuildStats(slug: string, locale: Locale): Promise<HeroBuildStats | null> {
+const fetchBuildStats = cache(async (slug: string, locale: Locale): Promise<HeroBuildStats | null> => {
     try {
         const response = await fetch(`${API_URL}/heroes/${encodeURIComponent(slug)}/stats?lang=${locale}`, {
             next: { revalidate: 300 },
@@ -42,7 +42,7 @@ async function fetchBuildStats(slug: string, locale: Locale): Promise<HeroBuildS
     } catch {
         return null;
     }
-}
+});
 
 /**
  * Mínimo, mediana y máximo de cada stat base entre los héroes de la misma clase (y rareza),
@@ -77,7 +77,8 @@ const capitalize =(value: string) =>
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const { slug } = await params;
-    const { hero } = await fetchHero(slug, await getLocale());
+    const locale = await getLocale();
+    const [{ hero }, stats] = await Promise.all([fetchHero(slug, locale), fetchBuildStats(slug, locale)]);
 
     if (!hero) {
         return {
@@ -88,10 +89,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
 
     const role = `${hero.rarity}★ ${capitalize(hero.element)} ${capitalize(hero.class)}`;
-    const title = `${hero.name} Build, Skills & Stats`;
-    const description =
-        `${hero.name} (${role}) in Epic Seven: base stats, skill details, ` +
-        `most used sets and artifacts, and community builds.`;
+    const builds = stats?.total_builds ?? 0;
+    const title = `${hero.name} Builds: Sets, Artifacts & Counters`;
+    // La página trata de las builds de la comunidad: la descripción dice cuántas hay y qué se ve
+    const description = builds > 0
+        ? `${builds} community ${builds === 1 ? 'build' : 'builds'} for ${hero.name} (${role}) in Epic Seven: ` +
+          `sets, artifacts, stats, counters, pros and cons, and ratings for PvE, Arena, Guild War and RTA.`
+        : `${hero.name} (${role}) in Epic Seven: share the first community build with sets, artifacts, ` +
+          `counters and ratings by mode.`;
 
     return {
         title,

@@ -7,6 +7,8 @@ import { useRouter } from 'next/navigation';
 import { useTranslations } from '@/hooks/useTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { appendImageVersion } from '@/lib/heroImages';
+import { HeroBanner } from '@/components/heroes/HeroBanner';
+import { ELEMENT_IMAGES } from '@/lib/heroAssets';
 
 export interface HeroListItem {
     id: number;
@@ -16,14 +18,6 @@ export interface HeroListItem {
     rarity: number;
     image_url: string | null;
 }
-
-const ELEMENT_IMAGES: Record<string, string> = {
-    fire: '/images/elements/ElementFire.png',
-    ice: '/images/elements/ElementWater.png',
-    earth: '/images/elements/ElementEarth.png',
-    light: '/images/elements/ElementLight.png',
-    dark: '/images/elements/ElementDark.png',
-};
 
 const MAX_RESULTS = 6;
 
@@ -141,7 +135,7 @@ export function NewestHeroes({ heroes }: { heroes: HeroListItem[] }) {
     const { translateHeroName } = useHeroTranslations();
 
     return (
-        <ul className="grid grid-cols-3 gap-3 sm:grid-cols-6">
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
             {heroes.map((hero) => (
                 <li key={hero.id}>
                     <Link
@@ -149,17 +143,12 @@ export function NewestHeroes({ heroes }: { heroes: HeroListItem[] }) {
                         data-element={hero.element}
                         className="hero-sheet group block overflow-hidden rounded-xl border border-night-line bg-night-panel transition-colors hover:border-el/70"
                     >
-                        <div className="aspect-square overflow-hidden border-b-2 border-el">
-                            {hero.image_url && (
-                                <Image
-                                    src={appendImageVersion(hero.image_url)}
-                                    alt=""
-                                    width={160}
-                                    height={160}
-                                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none"
-                                />
-                            )}
-                        </div>
+                        <HeroBanner
+                            src={hero.image_url}
+                            alt=""
+                            element={hero.element}
+                            className="mx-auto border-b-2 border-el"
+                        />
                         <p className="truncate px-2 py-2 text-center text-sm text-slate-100">{translateHeroName(hero.name)}</p>
                     </Link>
                 </li>

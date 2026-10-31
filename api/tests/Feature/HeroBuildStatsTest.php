@@ -96,6 +96,47 @@ class HeroBuildStatsTest extends TestCase
         $this->assertSame(2, $this->stats($hero)['total_builds']);
     }
 
+    public function test_priority_stats_include_median_and_range(): void
+    {
+        $hero = Hero::factory()->create();
+        foreach ([180, 200, 260] as $spd) {
+            UserBuild::factory()->create(['hero_id' => $hero->id, 'min_stats' => ['spd' => $spd]]);
+        }
+
+        $spd = collect($this->stats($hero)['priority_stats'])->firstWhere('stat', 'spd');
+
+        $this->assertSame(3, $spd['count']);
+        $this->assertEquals(200, $spd['median']);
+        $this->assertEquals(180, $spd['min']);
+        $this->assertEquals(260, $spd['max']);
+    }
+
+    public function test_hero_page_no_longer_carries_external_usage_stats(): void
+    {
+        $hero = Hero::factory()->create();
+
+        $data = $this->getJson("/api/heroes/{$hero->slug}")->assertOk()->json('data');
+
+        foreach (['popular_sets', 'popular_artifacts', 'avg_stats', 'guides_count', 'stats_updated_at'] as $key) {
+            $this->assertArrayNotHasKey($key, $data);
+        }
+    }
+
+    public function test_stat_distribution_lists_sorted_values_of_published_builds(): void
+    {
+        $hero = Hero::factory()->create();
+        foreach ([[250, 100], [210, 80], [230, null]] as [$spd, $crit]) {
+            UserBuild::factory()->create(['hero_id' => $hero->id, 'min_stats' => array_filter(['spd' => $spd, 'crit_chance' => $crit])]);
+        }
+        UserBuild::factory()->draft()->create(['hero_id' => $hero->id, 'min_stats' => ['spd' => 999]]);
+
+        $data = $this->getJson("/api/heroes/{$hero->slug}/build-stat-distribution")->assertOk()->json('data');
+
+        $this->assertSame([210, 230, 250], $data['spd']);
+        $this->assertSame([80, 100], $data['crit_chance']);
+        $this->assertArrayNotHasKey('hp', $data);
+    }
+
     public function test_stats_without_data_are_left_out(): void
     {
         $hero = Hero::factory()->create();

@@ -72,7 +72,8 @@ class VoteController extends Controller
             DB::table('votes')
                 ->where('id', $existingLike->id)
                 ->delete();
-            $build->decrement('likes');
+            // Query builder: un like no es una edición de la build (no cambia updated_at)
+            DB::table('user_builds')->where('id', $build->id)->decrement('likes');
             $liked = false;
         } else {
             // Add like
@@ -84,7 +85,7 @@ class VoteController extends Controller
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
-            $build->increment('likes');
+            DB::table('user_builds')->where('id', $build->id)->increment('likes');
             $liked = true;
         }
 

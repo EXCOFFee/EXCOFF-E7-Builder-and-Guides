@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Models\Concerns\HidesAnonymousAuthor;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Guide extends Model
 {
-    use HasFactory;
+    use HasFactory, HidesAnonymousAuthor;
 
     protected $fillable = [
         'user_id',
@@ -40,6 +41,7 @@ class Guide extends Model
         'views',
         'likes',
         'language',
+        'is_anonymous',
     ];
 
     protected $casts = [
@@ -54,6 +56,7 @@ class Guide extends Model
         'teams' => 'array',
         'images' => 'array',
         'is_published' => 'boolean',
+        'is_anonymous' => 'boolean',
     ];
 
     /**

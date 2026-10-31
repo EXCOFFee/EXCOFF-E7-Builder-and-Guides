@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\HeroResource;
 use App\Http\Resources\HeroSummaryResource;
 use App\Models\Hero;
+use App\Models\UserBuild;
 use App\Services\HeroBuildStatsService;
 use App\Support\BuildCache;
 use Illuminate\Http\JsonResponse;
@@ -64,7 +65,21 @@ class HeroController extends Controller
             return $query->orderBy('name')->paginate(500);
         });
 
-        return HeroSummaryResource::collection($heroes);
+        // Builds publicadas por héroe: consulta chica aparte, así la lista (500 héroes, 1 h de caché)
+        // no se recalcula cada vez que se guarda una build
+        $counts = Cache::remember(BuildCache::key('hero-build-counts'), 300, fn () => UserBuild::published()
+            ->selectRaw('hero_id, count(*) as total')
+            ->groupBy('hero_id')
+            ->pluck('total', 'hero_id')
+            ->all());
+
+        // Copia: con el store "array" el paginador cacheado es el mismo objeto en cada pedido
+        $page = clone $heroes;
+        $page->setCollection($heroes->getCollection()->map(
+            fn (Hero $hero) => (clone $hero)->setAttribute('builds_count', (int) ($counts[$hero->id] ?? 0))
+        ));
+
+        return HeroSummaryResource::collection($page);
     }
 
     /**
@@ -99,6 +114,20 @@ class HeroController extends Controller
         }
 
         return new HeroResource($hero);
+    }
+
+    /**
+     * Stats mínimos de las builds publicadas del héroe, ordenados por stat.
+     *
+     * GET /api/heroes/{slug}/build-stat-distribution
+     */
+    public function buildStatDistribution(string $slug, HeroBuildStatsService $service): JsonResponse
+    {
+        $hero = Hero::where('slug', $slug)->firstOrFail();
+
+        $data = Cache::remember(BuildCache::key("stat-distribution:{$slug}"), 300, fn () => $service->statDistribution($hero));
+
+        return response()->json(['success' => true, 'data' => (object) $data]);
     }
 
     /**

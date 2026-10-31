@@ -52,11 +52,28 @@ class HeroApiTest extends TestCase
 
         $this->assertSame(
             ['id', 'code', 'hero_code', 'name', 'display_name', 'name_ko', 'name_ja', 'name_zh',
-                'slug', 'element', 'class', 'rarity', 'base_stats', 'image_url'],
+                'slug', 'element', 'class', 'rarity', 'base_stats', 'image_url', 'builds_count'],
             array_keys($hero)
         );
         $this->assertSame('아라비', $hero['display_name']);
         $this->assertSame(['atk' => 1000], $hero['base_stats']);
+    }
+
+    public function test_heroes_index_counts_published_builds(): void
+    {
+        $withBuilds = Hero::factory()->create();
+        Hero::factory()->create();
+        \App\Models\UserBuild::factory()->count(2)->create(['hero_id' => $withBuilds->id]);
+        \App\Models\UserBuild::factory()->draft()->create(['hero_id' => $withBuilds->id]);
+
+        $counts = collect($this->getJson('/api/heroes')->assertOk()->json('data'))->pluck('builds_count', 'slug');
+
+        $this->assertSame(2, $counts[$withBuilds->slug]);
+        $this->assertSame(1, $counts->filter(fn ($n) => $n === 0)->count());
+
+        // Una build nueva se ve sin esperar la hora del caché de la lista
+        \App\Models\UserBuild::factory()->create(['hero_id' => $withBuilds->id]);
+        $this->assertSame(3, collect($this->getJson('/api/heroes')->json('data'))->firstWhere('slug', $withBuilds->slug)['builds_count']);
     }
 
     public function test_hero_show_still_includes_skills(): void

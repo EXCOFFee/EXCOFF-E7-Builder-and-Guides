@@ -51,7 +51,19 @@ class User extends Authenticatable
      */
     public function guides()
     {
-        return $this->hasMany(Guide::class, 'author_id');
+        return $this->hasMany(Guide::class);
+    }
+
+    /** A quiénes sigue */
+    public function following()
+    {
+        return $this->belongsToMany(User::class, 'follows', 'follower_id', 'followed_id')->withTimestamps();
+    }
+
+    /** Quiénes lo siguen */
+    public function followers()
+    {
+        return $this->belongsToMany(User::class, 'follows', 'followed_id', 'follower_id')->withTimestamps();
     }
 
     /**

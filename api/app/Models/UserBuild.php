@@ -5,12 +5,13 @@ declare(strict_types=1);
 namespace App\Models;
 
 use App\Support\BuildCache;
+use App\Models\Concerns\HidesAnonymousAuthor;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class UserBuild extends Model
 {
-    use HasFactory;
+    use HasFactory, HidesAnonymousAuthor;
 
     protected $fillable = [
         'user_id',
@@ -27,6 +28,7 @@ class UserBuild extends Model
         'skill_2',
         'skill_3',
         'images',
+        'proof_image',
         'views',
         'likes',
         'dislikes',
@@ -47,8 +49,13 @@ class UserBuild extends Model
         'con_tags',
     ];
 
+    /** Lo que leyó el OCR y quién verificó: solo para el admin (la cola de verificación) */
+    protected $hidden = ['proof_ocr', 'verified_by'];
+
     protected $casts = [
         'min_stats' => 'array',
+        'proof_ocr' => 'array',
+        'verified_at' => 'datetime',
         'synergy_heroes' => 'array',
         'counter_heroes' => 'array',
         'images' => 'array',
@@ -62,6 +69,15 @@ class UserBuild extends Model
         'rating_rta' => 'integer',
         'pro_tags' => 'array',
         'con_tags' => 'array',
+        // Nota por modo de la comunidad (las escribe BuildModeVoteController, no el formulario)
+        'community_pve_avg' => 'float',
+        'community_arena_avg' => 'float',
+        'community_gw_avg' => 'float',
+        'community_rta_avg' => 'float',
+        'community_pve_count' => 'integer',
+        'community_arena_count' => 'integer',
+        'community_gw_count' => 'integer',
+        'community_rta_count' => 'integer',
     ];
 
     /**
@@ -110,6 +126,22 @@ class UserBuild extends Model
     }
 
     /**
+     * Nota de la comunidad por modo: ['rta' => ['avg' => 4.5, 'count' => 2], ...]; avg null sin votos.
+     */
+    public function getCommunityRatingsAttribute(): array
+    {
+        return collect(BuildModeVote::MODES)->mapWithKeys(fn (string $mode) => [$mode => [
+            'avg' => $this->{"community_{$mode}_count"} > 0 ? (float) $this->{"community_{$mode}_avg"} : null,
+            'count' => (int) $this->{"community_{$mode}_count"},
+        ]])->all();
+    }
+
+    public function modeVotes()
+    {
+        return $this->hasMany(BuildModeVote::class, 'build_id');
+    }
+
+    /**
      * Get the user who created this build
      */
     public function user()
@@ -125,24 +157,6 @@ class UserBuild extends Model
     {
         static::saved(fn () => BuildCache::bump());
         static::deleted(fn () => BuildCache::bump());
-    }
-
-    /**
-     * Una build anónima no expone a su autor en la API: ni el usuario ni su id. Para el botón
-     * de editar, el controlador agrega is_owner comparando con el usuario del token.
-     */
-    public function toArray(): array
-    {
-        $data = parent::toArray();
-
-        if ($this->is_anonymous) {
-            unset($data['user_id']);
-            if (array_key_exists('user', $data)) {
-                $data['user'] = null;
-            }
-        }
-
-        return $data;
     }
 
     /**

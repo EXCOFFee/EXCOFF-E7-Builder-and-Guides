@@ -5,9 +5,12 @@ use App\Http\Controllers\Api\HeroController;
 use App\Http\Controllers\Api\ArtifactController;
 use App\Http\Controllers\Api\GuildPostController;
 use App\Http\Controllers\GuideController;
+use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\VerificationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserBuildController;
 use App\Http\Controllers\VoteController;
+use App\Http\Controllers\BuildModeVoteController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ReportController;
 
@@ -17,6 +20,7 @@ Route::middleware('throttle:60,1')->group(function () {
     Route::get('/heroes', [HeroController::class, 'index']);
     Route::get('/heroes/{hero:slug}', [HeroController::class, 'show']);
     Route::get('/heroes/{slug}/stats', [HeroController::class, 'buildStats']);
+    Route::get('/heroes/{slug}/build-stat-distribution', [HeroController::class, 'buildStatDistribution']);
     Route::get('/artifacts', [ArtifactController::class, 'index']);
     Route::get('/artifacts/{artifact}', [ArtifactController::class, 'show']);
     
@@ -29,6 +33,9 @@ Route::middleware('throttle:60,1')->group(function () {
     Route::get('/builds', [UserBuildController::class, 'index']);
     Route::get('/builds/{build}', [UserBuildController::class, 'show']);
 
+    // Perfil público de un usuario
+    Route::get('/users/{user}', [UserProfileController::class, 'show']);
+
     // Public guild posts
     Route::get('/guilds', [GuildPostController::class, 'index']);
     Route::get('/guilds/options', [GuildPostController::class, 'options']);
@@ -37,6 +44,9 @@ Route::middleware('throttle:60,1')->group(function () {
     // Public comments
     Route::get('/builds/{build}/comments', [CommentController::class, 'getBuildComments']);
     Route::get('/guides/{guide}/comments', [CommentController::class, 'getGuideComments']);
+
+    // Nota por modo de la comunidad (con token, también los votos propios)
+    Route::get('/builds/{build}/mode-votes', [BuildModeVoteController::class, 'show']);
 
     // Like status
     Route::get('/guides/{guide}/like-status', [VoteController::class, 'checkGuideLike']);
@@ -79,6 +89,9 @@ Route::middleware(['auth:sanctum', 'throttle:30,1'])->group(function () {
     Route::post('/guides/{guide}/vote', [VoteController::class, 'voteGuide']);
     Route::post('/builds/{build}/vote', [VoteController::class, 'voteBuild']);
 
+    // Nota por modo: un voto por usuario, build y modo (tier null lo quita)
+    Route::post('/builds/{build}/mode-votes', [BuildModeVoteController::class, 'store']);
+
     // Comments
     Route::post('/comments', [CommentController::class, 'store']);
     Route::put('/comments/{comment}', [CommentController::class, 'update']);
@@ -87,9 +100,17 @@ Route::middleware(['auth:sanctum', 'throttle:30,1'])->group(function () {
     // Reports
     Route::post('/reports', [ReportController::class, 'store']);
 
+    // Seguir usuarios y lo nuevo de la gente que sigue el usuario
+    Route::post('/users/{user}/follow', [UserProfileController::class, 'follow']);
+    Route::delete('/users/{user}/follow', [UserProfileController::class, 'unfollow']);
+    Route::get('/feed', [UserProfileController::class, 'feed']);
+
     // Admin routes
     Route::middleware('admin')->group(function () {
         Route::get('/admin/reports', [ReportController::class, 'index']);
+        // Builds con captura para verificar
+        Route::get('/admin/verifications', [VerificationController::class, 'index']);
+        Route::put('/admin/verifications', [VerificationController::class, 'update']);
         Route::put('/admin/reports/{report}', [ReportController::class, 'update']);
         
         // Data sync routes

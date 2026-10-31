@@ -3,7 +3,9 @@
 import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 import Image from 'next/image';
-import { guideApi } from '@/lib/api';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { guideApi, heroApi } from '@/lib/api';
+import { CONTENT_LANGUAGES, languageLabel } from '@/lib/languages';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -23,6 +25,7 @@ interface Guide {
     video_platform: string | null;
     images: string[];
     vote_score: number;
+    likes?: number;
     views: number;
     hero: { name: string; slug: string } | null;
     user: { name: string; avatar?: string } | null;
@@ -41,22 +44,44 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 export default function GuidesPage() {
-    const { t } = useTranslations();
-    const [search, setSearch] = useState('');
-    const [categoryFilter, setCategoryFilter] = useState('all');
-    const [sortBy, setSortBy] = useState<'newest' | 'views_desc' | 'views_asc' | 'likes_desc' | 'likes_asc'>('newest');
-    const [selectedLanguage, setSelectedLanguage] = useState<string>('all');
+    const { t, locale } = useTranslations();
+    const router = useRouter();
+    const searchParams = useSearchParams();
 
-    const LANGUAGES = ['all', 'en', 'es', 'ko', 'ja', 'zh', 'pt'];
-    const LANGUAGE_LABELS: Record<string, string> = {
-        all: 'All Languages',
-        en: 'English',
-        es: 'Español',
-        ko: '한국어',
-        ja: '日本語',
-        zh: '中文',
-        pt: 'Português',
+    // Categoría, héroe y orden en la URL: un link a /guides?hero=straze&category=rta se puede compartir
+    const categoryFilter = searchParams.get('category') ?? 'all';
+    const heroFilter = searchParams.get('hero') ?? '';
+    // Guías cuyos equipos usan una build (link "usada en N guías" de la build)
+    const buildFilter = searchParams.get('build') ?? '';
+    const sortBy = searchParams.get('sort') ?? 'newest';
+    const setParam = (key: string, value: string, empty: string) => {
+        const next = new URLSearchParams(searchParams.toString());
+        if (value && value !== empty) next.set(key, value);
+        else next.delete(key);
+        const query = next.toString();
+        router.replace(query ? `/guides?${query}` : '/guides', { scroll: false });
     };
+    const setCategoryFilter = (value: string) => setParam('category', value, 'all');
+    const setSortBy = (value: string) => setParam('sort', value, 'newest');
+    const search = searchParams.get('search') ?? '';
+    const setSearch = (value: string) => setParam('search', value, '');
+    const selectedLanguage = searchParams.get('language') ?? 'all';
+    const setSelectedLanguage = (value: string) => setParam('language', value, 'all');
+
+    // Héroes para el filtro (misma consulta que el formulario de builds)
+    const { data: heroesData } = useQuery({
+        queryKey: ['heroes-list', locale],
+        queryFn: async () => (await heroApi.list({ lang: locale })).data,
+    });
+    const heroOptions: { name: string; slug: string }[] = heroesData?.data ?? [];
+    const heroName = heroOptions.find((h) => h.slug === heroFilter)?.name ?? '';
+    const [heroInput, setHeroInput] = useState<string | null>(null);
+    // Si la URL cambia (link compartido, atrás/adelante), el campo muestra el héroe de la URL
+    const [inputFor, setInputFor] = useState(heroFilter);
+    if (inputFor !== heroFilter) {
+        setInputFor(heroFilter);
+        setHeroInput(null);
+    }
 
     const CATEGORIES = [
         { id: 'all', label: t('guides.allCategories', 'All'), emoji: '📚' },
@@ -70,10 +95,14 @@ export default function GuidesPage() {
     ];
 
     const { data, isLoading, error } = useQuery({
-        queryKey: ['guides', search, categoryFilter, selectedLanguage],
+        queryKey: ['guides', search, categoryFilter, selectedLanguage, heroFilter, buildFilter, sortBy],
         queryFn: async () => {
-            const params: Record<string, string> = {};
+            // Orden en el servidor: antes se ordenaba solo la página de 20 ya cargada
+            const [sort, order] = sortBy.split('_');
+            const params: Record<string, string> = { sort, order: order ?? 'desc' };
             if (categoryFilter && categoryFilter !== 'all') params.category = categoryFilter;
+            if (heroFilter) params.hero = heroFilter;
+            if (buildFilter) params.build = buildFilter;
             if (search) params.search = search;
             if (selectedLanguage && selectedLanguage !== 'all') params.language = selectedLanguage;
 
@@ -82,18 +111,7 @@ export default function GuidesPage() {
         },
     });
 
-    const guidesRaw: Guide[] = data?.data || [];
-
-    // Sort guides based on selected option
-    const guides = [...guidesRaw].sort((a, b) => {
-        switch (sortBy) {
-            case 'views_desc': return (b.views || 0) - (a.views || 0);
-            case 'views_asc': return (a.views || 0) - (b.views || 0);
-            case 'likes_desc': return (b.vote_score || 0) - (a.vote_score || 0);
-            case 'likes_asc': return (a.vote_score || 0) - (b.vote_score || 0);
-            default: return 0; // newest, keep API order
-        }
-    });
+    const guides: Guide[] = data?.data || [];
 
     return (
         <div className="min-h-screen bg-e7-void py-8 px-4">
@@ -136,11 +154,50 @@ export default function GuidesPage() {
                         className="max-w-md bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-400 focus:border-e7-gold"
                     />
                     <div className="flex items-center gap-2">
+                        <Input
+                            list="guide-hero-options"
+                            aria-label={t('guides.filterByHero', 'Filter by hero')}
+                            placeholder={t('guides.filterByHero', 'Filter by hero')}
+                            value={heroInput ?? heroName}
+                            onChange={(e) => {
+                                const value = e.target.value;
+                                setHeroInput(value);
+                                const match = heroOptions.find((h) => h.name.toLowerCase() === value.trim().toLowerCase());
+                                // Sin un héroe exacto no se filtra (antes quedaba el anterior)
+                                setParam('hero', match?.slug ?? '', '');
+                            }}
+                            className="w-56 bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-400 focus:border-e7-gold"
+                        />
+                        <datalist id="guide-hero-options">
+                            {heroOptions.map((h) => <option key={h.slug} value={h.name} />)}
+                        </datalist>
+                        {heroFilter && (
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    setHeroInput(null);
+                                    setParam('hero', '', '');
+                                }}
+                                className="text-xs text-neutral-400 hover:text-e7-gold"
+                            >
+                                {t('builds.allHeroes', 'All heroes')}
+                            </button>
+                        )}
+                    </div>
+                    {buildFilter && (
+                        <div className="flex items-center gap-2 text-sm text-cyan-300">
+                            {t('guides.filteredByBuild', 'Guides whose teams use build #{id}').replace('{id}', buildFilter)}
+                            <button type="button" onClick={() => setParam('build', '', '')} className="text-xs text-neutral-400 hover:text-e7-gold">
+                                {t('guides.clearBuildFilter', 'Show all')}
+                            </button>
+                        </div>
+                    )}
+                    <div className="flex items-center gap-2">
                         <span className="text-sm text-neutral-400">{t('common.sortBy', 'Sort by')}:</span>
                         <select
                             aria-label={t('common.sortBy', 'Sort by')}
                             value={sortBy}
-                            onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
+                            onChange={(e) => setSortBy(e.target.value)}
                             className="bg-white/4 border border-white/8 text-neutral-200 rounded-md pl-3 pr-10 py-1.5 text-sm focus:border-e7-gold cursor-pointer"
                         >
                             <option value="newest">{t('common.newest', 'Newest')}</option>
@@ -156,8 +213,8 @@ export default function GuidesPage() {
                             onChange={(e) => setSelectedLanguage(e.target.value)}
                             className="bg-white/4 border border-white/8 text-neutral-200 rounded-md pl-3 pr-10 py-1.5 text-sm focus:border-e7-gold cursor-pointer"
                         >
-                            {LANGUAGES.map((lang) => (
-                                <option key={lang} value={lang}>{LANGUAGE_LABELS[lang]}</option>
+                            {CONTENT_LANGUAGES.map((lang) => (
+                                <option key={lang} value={lang}>{languageLabel(lang, t)}</option>
                             ))}
                         </select>
                     </div>
@@ -238,7 +295,7 @@ export default function GuidesPage() {
                                                 )}
                                                 {guide.language && guide.language !== 'en' && (
                                                     <span className="text-xs text-e7-gold bg-e7-gold/10 px-2 py-0.5 rounded">
-                                                        {LANGUAGE_LABELS[guide.language] || guide.language}
+                                                        {languageLabel(guide.language, t)}
                                                     </span>
                                                 )}
                                             </div>
@@ -272,7 +329,7 @@ export default function GuidesPage() {
                                                     <span>{guide.user?.name || t('common.anonymous', 'Anonymous')}</span>
                                                 </div>
                                                 <div className="flex items-center gap-3">
-                                                    <span className="flex items-center gap-1"><Image src="/images/ras-like.gif" alt="likes" width={16} height={16} unoptimized /> {guide.vote_score || 0}</span>
+                                                    <span className="flex items-center gap-1"><Image src="/images/ras-like.gif" alt="likes" width={16} height={16} unoptimized /> {guide.likes || 0}</span>
                                                     <span>👁 {guide.views || 0}</span>
                                                 </div>
                                             </div>

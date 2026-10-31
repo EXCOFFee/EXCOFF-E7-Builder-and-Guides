@@ -7,9 +7,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useQuery } from '@tanstack/react-query';
-import { heroApi, artifactApi } from '@/lib/api';
+import { heroApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
 import { TeamCompositionSelector, Team } from '@/components/guides/TeamCompositionSelector';
+import { teamsProblem } from '@/components/guides/teamTypes';
 import { useRequireAuth } from '@/hooks/useAuth';
 import { useNavigateFresh } from '@/hooks/useNavigateFresh';
 import { previewUrl } from '@/lib/objectUrl';
@@ -34,12 +35,6 @@ interface Hero {
     image_url?: string;
 }
 
-interface Artifact {
-    id: number;
-    name: string;
-    code: string;
-    icon: string;
-}
 
 export default function CreateGuidePage() {
     const router = useRouter();
@@ -91,21 +86,18 @@ export default function CreateGuidePage() {
 
     const heroes: Hero[] = heroesData?.data || [];
 
-    // Fetch artifacts for selector
-    const { data: artifactsData } = useQuery({
-        queryKey: ['artifacts-list'],
-        queryFn: async () => {
-            const response = await artifactApi.list();
-            return response.data;
-        },
-        enabled: isAuthenticated,
-    });
-
-    const artifacts: Artifact[] = artifactsData?.data || [];
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setError(null);
+        // Cada héroe de un equipo va con su build (la API también lo exige)
+        const problem = teamsProblem(teams);
+        if (problem) {
+            setError(problem === 'empty'
+                ? t('guides.teamEmptyError', 'Add at least one hero to each team, or remove the empty team.')
+                : t('guides.teamBuildError', 'Pick a build for every hero in your teams.'));
+            return;
+        }
         setIsSubmitting(true);
 
         const token = localStorage.getItem('auth_token');
@@ -328,7 +320,6 @@ export default function CreateGuidePage() {
                                 teams={teams}
                                 onChange={setTeams}
                                 availableHeroes={heroes}
-                                availableArtifacts={artifacts}
                             />
 
                             {/* Error message */}

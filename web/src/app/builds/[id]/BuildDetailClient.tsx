@@ -9,26 +9,21 @@ import { Button } from '@/components/ui/button';
 import { ImageCarousel } from '@/components/ui/image-carousel';
 import { TierRatingDisplay } from '@/components/ui/tier-rating-selector';
 import { ProConsDisplay } from '@/components/ui/pro-cons-selector';
+import { CommunityTierVote } from '@/components/builds/CommunityTierVote';
+import { OutdatedBadge } from '@/components/builds/OutdatedBadge';
+import { VerifiedBadge } from '@/components/builds/VerifiedBadge';
 import { SynergyCounterSection, HeroWithNote } from '@/components/builds/SynergyCounterCard';
 import { ExportBuildImage } from '@/components/builds/ExportBuildImage';
 import { ShareButton } from '@/components/ui/ShareButton';
 import { useTranslations } from '@/hooks/useTranslations';
-import { appendImageVersion } from '@/lib/heroImages';
+import { HeroBanner } from '@/components/heroes/HeroBanner';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
 import { SET_IMAGES } from '@/lib/sets';
 import { formatDate } from '@/lib/utils';
 import { useNavigateFresh } from '@/hooks/useNavigateFresh';
-
-// Element to image mapping
-const ELEMENT_IMAGES: Record<string, string> = {
-    fire: '/images/elements/ElementFire.png',
-    ice: '/images/elements/ElementWater.png',
-    earth: '/images/elements/ElementEarth.png',
-    light: '/images/elements/ElementLight.png',
-    dark: '/images/elements/ElementDark.png',
-};
+import { ELEMENT_IMAGES } from '@/lib/heroAssets';
 
 interface Build {
     id: number;
@@ -60,6 +55,7 @@ interface Build {
         portrait: string;
         element: string;
         class: string;
+        game_data_changed_at?: string | null;
         skills?: {
             name: string;
             icon: string;
@@ -72,8 +68,15 @@ interface Build {
         icon: string;
     } | null;
     created_at: string;
+    updated_at?: string;
+    /** Captura del juego que subió el autor como prueba */
+    proof_image?: string | null;
     /** La API lo calcula con el token: en una build anónima no llega el autor */
     is_owner?: boolean;
+    /** En cuántas guías publicadas la usa un equipo */
+    guides_count?: number;
+    /** null sin captura; pending / verified / rejected */
+    verification_status?: string | null;
     // Tier Ratings (D-S system)
     rating_pve?: number | null;
     rating_arena?: number | null;
@@ -430,14 +433,13 @@ export function BuildDetailClient() {
                 <div ref={buildCardRef} className="glass-panel border-e7-gold/20 rounded-2xl overflow-hidden mb-6 backdrop-blur-xl bg-gradient-to-br from-e7-panel/90 to-e7-dark/90 shadow-2xl">
                     {/* Hero Section */}
                     <div className="flex flex-col md:flex-row items-center gap-8 p-8 border-b border-e7-gold/20 bg-gradient-to-r from-transparent via-e7-gold/5 to-transparent">
-                        <div className="relative group">
-                            <div className="absolute inset-0 bg-gradient-to-br from-e7-gold/30 to-e7-purple/30 rounded-2xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-                            <Image
-                                src={appendImageVersion(build.hero.portrait)}
+                        <div className="relative w-full max-w-[436px] md:w-80">
+                            <HeroBanner
+                                src={build.hero.portrait}
                                 alt={build.hero.name}
-                                width={200}
-                                height={200}
-                                className="rounded-2xl ring-2 ring-e7-gold/60 relative z-10 shadow-2xl transform group-hover:scale-105 transition-transform duration-300"
+                                element={build.hero.element}
+                                priority
+                                className="rounded-2xl ring-2 ring-e7-gold/60 shadow-2xl"
                             />
                             <Image
                                 src={ELEMENT_IMAGES[build.hero.element] || '/images/elements/ElementFire.png'}
@@ -460,6 +462,8 @@ export function BuildDetailClient() {
                         <h1 className="font-hero text-2xl md:text-3xl font-normal text-white mb-4">
                             {build.title}
                         </h1>
+                        <OutdatedBadge buildUpdatedAt={build.updated_at} heroChangedAt={build.hero.game_data_changed_at} className="-mt-2 mb-4" />
+                        <VerifiedBadge status={build.verification_status} showPending={Boolean(build.is_owner)} className="-mt-2 mb-4" />
 
                         {/* Author & Actions - moved to top */}
                         <div className="flex items-center justify-between pb-4 mb-4 border-b border-e7-gold/20">
@@ -476,7 +480,9 @@ export function BuildDetailClient() {
                                 )}
                                 <div>
                                     <p className="text-white font-medium">
-                                        {build.is_anonymous ? 'Anonymous' : build.user?.name}
+                                        {build.is_anonymous || !build.user ? t('common.anonymous', 'Anonymous') : (
+                                            <Link href={`/users/${build.user.id}`} className="hover:text-e7-gold hover:underline">{build.user.name}</Link>
+                                        )}
                                     </p>
                                     <p className="text-xs text-gray-400">
                                         {formatDate(build.created_at, locale)} • 👁️ {build.views}
@@ -516,6 +522,11 @@ export function BuildDetailClient() {
                                         <Link href={`/builds/${build.id}/edit`}>
                                             <Button variant="outline" className="border-e7-gold/30 text-e7-gold">
                                                 {t('common.edit', 'Edit')}
+                                            </Button>
+                                        </Link>
+                                        <Link href={`/builds/create?from=${build.id}`}>
+                                            <Button variant="outline" className="border-e7-gold/30 text-e7-gold">
+                                                {t('builds.duplicate', 'Duplicate')}
                                             </Button>
                                         </Link>
                                         <Button
@@ -679,7 +690,27 @@ export function BuildDetailClient() {
                                     rta: build.reason_rta,
                                 }}
                             />
+                            <CommunityTierVote
+                                buildId={buildId}
+                                authorRatings={{
+                                    pve: build.rating_pve ?? null,
+                                    arena: build.rating_arena ?? null,
+                                    gw: build.rating_gw ?? null,
+                                    rta: build.rating_rta ?? null,
+                                }}
+                                isLoggedIn={Boolean(currentUser)}
+                                isOwner={Boolean(build.is_owner)}
+                            />
                         </div>
+
+                        {(build.guides_count ?? 0) > 0 && (
+                            <Link href={`/guides?build=${build.id}`} className="mb-6 inline-block text-sm text-cyan-300 hover:text-cyan-200 hover:underline">
+                                {(build.guides_count === 1
+                                    ? t('builds.usedInOneGuide', 'Used in a team in 1 guide')
+                                    : t('builds.usedInGuides', 'Used in teams in {count} guides')
+                                ).replace('{count}', String(build.guides_count))} →
+                            </Link>
+                        )}
 
                         {/* Pros/Cons Tags */}
                         <div className="mb-6">
@@ -688,6 +719,19 @@ export function BuildDetailClient() {
                                 cons={build.con_tags || []}
                             />
                         </div>
+
+                        {/* Captura del juego que subió el autor como prueba */}
+                        {build.proof_image && (
+                            <figure className="mb-6">
+                                <figcaption className="mb-2 text-sm font-semibold text-e7-gold">
+                                    {t('builds.proofImage', 'In-game screenshot (proof)')}
+                                </figcaption>
+                                <a href={build.proof_image} target="_blank" rel="noopener noreferrer" className="inline-block">
+                                    {/* eslint-disable-next-line @next/next/no-img-element -- imagen del servidor de la API, tamaño libre */}
+                                    <img src={build.proof_image} alt={t('builds.proofImageAlt', 'In-game screenshot of the build')} className="max-h-96 w-auto rounded-lg border border-e7-gold/30" loading="lazy" />
+                                </a>
+                            </figure>
+                        )}
 
                         {/* Images */}
                         <ImageCarousel images={build.images || []} title={t('builds.images', 'Images')} />

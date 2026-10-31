@@ -8,10 +8,13 @@ use App\Models\UserBuild;
 use App\Models\Hero;
 use App\Services\ImageService;
 use App\Support\BuildCache;
+use App\Support\BuildVerification;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\ValidationException;
 
 class UserBuildController extends Controller
 {
@@ -50,6 +53,16 @@ class UserBuildController extends Controller
             // Filter by hero (slug): el link "ver todas las builds" de la ficha del héroe
             if ($request->filled('hero')) {
                 $query->whereHas('hero', fn ($q) => $q->where('slug', $request->input('hero')));
+            }
+
+            // Builds de un autor (su perfil): las anónimas no se muestran ahí
+            if ($request->filled('user')) {
+                $query->where('user_id', (int) $request->input('user'))->where('is_anonymous', false);
+            }
+
+            // Solo verificadas (captura del juego revisada por un admin)
+            if ($request->boolean('verified')) {
+                $query->where('verification_status', 'verified');
             }
 
             // Filter by hero element
@@ -113,6 +126,21 @@ class UserBuildController extends Controller
             $sortOrder = $request->input('order') === 'asc' ? 'asc' : 'desc';
             
             switch ($sortBy) {
+                case 'trending':
+                    // En tendencia: solo builds con likes o votos de nota en los últimos 14 días,
+                    // ordenadas por cuántos recibieron (sin actividad, la lista queda vacía)
+                    $since = now()->subDays(14);
+                    $query->where(fn ($q) => $q
+                        ->whereExists(fn ($s) => $s->from('votes')->whereColumn('votes.votable_id', 'user_builds.id')
+                            ->where('votes.votable_type', UserBuild::class)->where('votes.created_at', '>=', $since))
+                        ->orWhereExists(fn ($s) => $s->from('build_mode_votes')->whereColumn('build_mode_votes.build_id', 'user_builds.id')
+                            ->where('build_mode_votes.created_at', '>=', $since)));
+                    $query->orderByRaw(
+                        '((select count(*) from votes where votes.votable_id = user_builds.id and votes.votable_type = ? and votes.created_at >= ?)'
+                        . ' + (select count(*) from build_mode_votes where build_mode_votes.build_id = user_builds.id and build_mode_votes.created_at >= ?)) desc',
+                        [UserBuild::class, $since, $since]
+                    )->orderBy('likes', 'desc')->orderBy('created_at', 'desc');
+                    break;
                 case 'likes':
                     $query->orderBy('likes', $sortOrder);
                     break;
@@ -154,8 +182,9 @@ class UserBuildController extends Controller
             $query->where('language', $request->input('language'));
         }
 
+        // per_page: la ficha del héroe pide solo las que muestra (máximo 20, como la lista)
         $builds = $query->orderBy('likes', 'desc')
-            ->paginate(20);
+            ->paginate(min(max((int) $request->input('per_page', 20), 1), 20));
 
         // Localize artifacts
         $lang = $request->query('lang', 'en');
@@ -178,7 +207,15 @@ class UserBuildController extends Controller
     public function show(Request $request, UserBuild $build): JsonResponse
     {
         $build->load(['user:id,name,avatar', 'hero', 'artifact']);
-        $build->increment('views');
+        $viewer = $this->optionalUser($request);
+        $isOwner = $viewer !== null && (int) $build->user_id === (int) $viewer->id;
+        // El autor mirando o duplicando su build no suma vistas
+        if (!$isOwner) {
+            // Por query builder: una vista no es una edición (no cambia updated_at, que marca si la
+            // build es de antes de un cambio del héroe)
+            DB::table('user_builds')->where('id', $build->id)->increment('views');
+            $build->views++;
+        }
 
         // Localize artifact
         $lang = $request->query('lang', 'en');
@@ -188,10 +225,15 @@ class UserBuildController extends Controller
 
         // Add synergy and counter heroes data
         $response = $build->toArray();
-        $viewer = $this->optionalUser($request);
-        $response['is_owner'] = $viewer !== null && (int) $build->user_id === (int) $viewer->id;
+        $response['is_owner'] = $isOwner;
         $response['synergy_heroes_list'] = $build->synergy_heroes_list;
         $response['counter_heroes_list'] = $build->counter_heroes_list;
+        // En cuántas guías publicadas la usa un equipo
+        $response['guides_count'] = DB::table('guide_team_builds')
+            ->join('guides', 'guides.id', '=', 'guide_team_builds.guide_id')
+            ->where('guide_team_builds.build_id', $build->id)
+            ->where('guides.is_published', true)
+            ->count();
 
         return response()->json($response);
     }
@@ -239,8 +281,11 @@ class UserBuildController extends Controller
             'reason_arena' => 'nullable|string|max:255',
             'reason_gw' => 'nullable|string|max:255',
             'reason_rta' => 'nullable|string|max:255',
-        ] + $this->tagRules() + ImageService::rules());
-        unset($validated['images']);
+        ] + $this->tagRules() + ImageService::rules() + [
+            // Captura del juego como prueba: misma validación por contenido que las imágenes
+            'proof_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:5120',
+        ]);
+        unset($validated['images'], $validated['proof_image']);
 
         // Parse min_stats if JSON string
         if (isset($validated['min_stats']) && is_string($validated['min_stats'])) {
@@ -262,8 +307,14 @@ class UserBuildController extends Controller
 
         // Handle image uploads using ImageService (422 if any image is rejected)
         $validated['images'] = $this->imageService->storeUploads($request->file('images'), 'builds');
+        if ($request->hasFile('proof_image')) {
+            $validated['proof_image'] = $this->storeProof($request);
+        }
 
-        $build = $request->user()->builds()->create($validated);
+        $build = $request->user()->builds()->make($validated);
+        // Con captura queda para revisar; la lectura del OCR (si vino) ordena la cola del admin
+        BuildVerification::apply($build, BuildVerification::readFromInput($request->input('proof_ocr')), isset($validated['proof_image']));
+        $build->save();
 
         return response()->json($build, 201);
     }
@@ -310,8 +361,11 @@ class UserBuildController extends Controller
             'reason_arena' => 'nullable|string|max:255',
             'reason_gw' => 'nullable|string|max:255',
             'reason_rta' => 'nullable|string|max:255',
-        ] + $this->tagRules() + ImageService::rules());
-        unset($validated['images']);
+        ] + $this->tagRules() + ImageService::rules() + [
+            // Captura del juego como prueba: misma validación por contenido que las imágenes
+            'proof_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:5120',
+        ]);
+        unset($validated['images'], $validated['proof_image']);
 
 
         // Parse synergy/counter heroes if JSON string
@@ -343,7 +397,26 @@ class UserBuildController extends Controller
             $validated['min_stats'] = $minStats;
         }
 
-        $build->update($validated);
+        // Captura de prueba: una nueva la reemplaza; remove_proof_image la quita; si no, queda.
+        // El archivo anterior se borra (si no, cada reemplazo dejaba hasta 5 MB en el servidor)
+        $oldProof = $build->proof_image;
+        if ($request->hasFile('proof_image')) {
+            $validated['proof_image'] = $this->storeProof($request);
+        } elseif ($request->boolean('remove_proof_image')) {
+            $validated['proof_image'] = null;
+        }
+
+        $build->fill($validated);
+        BuildVerification::apply(
+            $build,
+            BuildVerification::readFromInput($request->input('proof_ocr')),
+            array_key_exists('proof_image', $validated) && $validated['proof_image'] !== $oldProof,
+        );
+        $build->save();
+
+        if (array_key_exists('proof_image', $validated) && $oldProof !== $build->proof_image) {
+            $this->imageService->deleteOwned($oldProof);
+        }
 
         return response()->json($build);
     }
@@ -372,6 +445,16 @@ class UserBuildController extends Controller
             $request->merge([$field => is_array($tags)
                 ? array_values(array_map(fn ($tag) => is_string($tag) ? ['id' => $tag] : $tag, $tags))
                 : null]);
+        }
+    }
+
+    /** Guarda la captura de prueba; un rechazo se informa en el campo proof_image (no en images) */
+    private function storeProof(Request $request): string
+    {
+        try {
+            return $this->imageService->storeUploads([$request->file('proof_image')], 'builds/proof')[0];
+        } catch (ValidationException $e) {
+            throw ValidationException::withMessages(['proof_image' => $e->errors()['images'] ?? $e->errors()]);
         }
     }
 
@@ -426,7 +509,9 @@ class UserBuildController extends Controller
             return response()->json(['error' => 'Unauthorized'], 403);
         }
 
+        $proof = $build->proof_image;
         $build->delete();
+        $this->imageService->deleteOwned($proof);
 
         return response()->json(['message' => 'Build deleted successfully']);
     }

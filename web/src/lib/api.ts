@@ -71,6 +71,12 @@ export default api;
 
 // API function helpers
 export const heroApi = {
+  /** Lo que dicen las builds publicadas del héroe (sets, tags, counters, notas por modo) */
+  stats: (slug: string, lang?: string) =>
+    api.get(`/heroes/${encodeURIComponent(slug)}/stats`, { params: { lang } }),
+  /** Stats mínimos de las builds publicadas, ordenados por stat ("¿Mi build llega?") */
+  statDistribution: (slug: string) =>
+    api.get(`/heroes/${encodeURIComponent(slug)}/build-stat-distribution`),
   list: (params?: Record<string, string>) =>
     api.get('/heroes', { params }),
   get: (slug: string, lang?: string) =>
@@ -89,8 +95,8 @@ export const artifactApi = {
 export const buildApi = {
   list: (params?: Record<string, string>) =>
     api.get('/builds', { params }),
-  getByHero: (heroSlug: string) =>
-    api.get(`/heroes/${heroSlug}/builds`),
+  getByHero: (heroSlug: string, params?: { lang?: string; per_page?: number }) =>
+    api.get(`/heroes/${encodeURIComponent(heroSlug)}/builds`, { params }),
   get: (id: number) =>
     api.get(`/builds/${id}`),
   create: (data: FormData) =>
@@ -109,6 +115,10 @@ export const buildApi = {
     api.get(`/builds/${id}/like-status`),
   getComments: (id: number) =>
     api.get(`/builds/${id}/comments`),
+  modeVotes: (id: number | string) =>
+    api.get(`/builds/${id}/mode-votes`),
+  voteMode: (id: number | string, mode: string, tier: number | null) =>
+    api.post(`/builds/${id}/mode-votes`, { mode, tier }),
 };
 
 export const guideApi = {
@@ -179,3 +189,25 @@ export const authApi = {
     api.post<{ token: string }>('/auth/exchange', { code }),
 };
 
+
+export const userApi = {
+  /** Perfil público: sin email y sin nada anónimo */
+  get: (id: number | string) =>
+    api.get(`/users/${id}`),
+  follow: (id: number | string) =>
+    api.post(`/users/${id}/follow`),
+  unfollow: (id: number | string) =>
+    api.delete(`/users/${id}/follow`),
+  /** Builds y guías nuevas de la gente que sigue el usuario */
+  feed: () =>
+    api.get('/feed'),
+};
+
+export const verificationApi = {
+  /** Builds con captura esperando revisión (solo admin) */
+  queue: () =>
+    api.get('/admin/verifications'),
+  /** loaded_at: cuándo se cargó la cola (lo editado después no se toca) */
+  set: (ids: number[], status: 'verified' | 'rejected', loadedAt: string) =>
+    api.put('/admin/verifications', { ids, status, loaded_at: loadedAt }),
+};

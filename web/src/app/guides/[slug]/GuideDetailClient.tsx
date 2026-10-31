@@ -10,6 +10,7 @@ import { ImageCarousel } from '@/components/ui/image-carousel';
 import { guideApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
 import { TeamCompositionDisplay, Team } from '@/components/guides/TeamCompositionDisplay';
+import type { TeamBuild, TeamHeroInfo } from '@/components/guides/teamTypes';
 import { ShareButton } from '@/components/ui/ShareButton';
 import { appendImageVersion } from '@/lib/heroImages';
 import { formatDate } from '@/lib/utils';
@@ -83,6 +84,10 @@ interface Guide {
         icon?: string;
     }[];
     teams?: Team[];
+    team_builds?: Record<string, TeamBuild>;
+    team_heroes?: Record<string, TeamHeroInfo>;
+    /** La API lo calcula con el token: en una guía anónima no llega el autor */
+    is_owner?: boolean;
 }
 
 interface Comment {
@@ -342,7 +347,7 @@ export function GuideDetailClient() {
 
     const canDeleteComment = (comment: Comment) => comment.is_owner || Boolean(currentUser?.is_admin);
 
-    const canModify = currentUser && guide && (currentUser.id === guide.user?.id || currentUser.is_admin);
+    const canModify = currentUser && guide && (guide.is_owner || currentUser.is_admin);
 
     if (isLoading) {
         return (
@@ -425,7 +430,11 @@ export function GuideDetailClient() {
                                     />
                                 )}
                                 <div>
-                                    <p className="text-white font-medium">{guide.user?.name || t('common.anonymous', 'Anonymous')}</p>
+                                    <p className="text-white font-medium">
+                                        {guide.user ? (
+                                            <Link href={`/users/${guide.user.id}`} className="hover:text-e7-gold hover:underline">{guide.user.name}</Link>
+                                        ) : t('common.anonymous', 'Anonymous')}
+                                    </p>
                                     <p className="text-xs text-gray-400">
                                         {formatDate(guide.created_at, locale)}
                                     </p>
@@ -510,7 +519,7 @@ export function GuideDetailClient() {
                 {/* Team Compositions (new feature) */}
                 {guide.teams && guide.teams.length > 0 && (
                     <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
-                        <TeamCompositionDisplay teams={guide.teams} />
+                        <TeamCompositionDisplay teams={guide.teams} teamBuilds={guide.team_builds} teamHeroes={guide.team_heroes} />
                     </div>
                 )}
 

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Services;
 
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
@@ -24,8 +25,9 @@ class ImageService
     /**
      * Maximum image dimensions
      */
-    private const MAX_WIDTH = 2048;
-    private const MAX_HEIGHT = 2048;
+    // Capturas de celular del juego miden 2400x1080 o más: el límite de 5 MB ya acota el tamaño
+    private const MAX_WIDTH = 4096;
+    private const MAX_HEIGHT = 4096;
 
     /**
      * Allowed MIME types (verified by actual file content, not extension)
@@ -106,6 +108,19 @@ class ImageService
     }
 
     /**
+     * Borra del almacenamiento público una imagen subida a este servidor (las URLs ajenas se ignoran).
+     */
+    public function deleteOwned(?string $url): void
+    {
+        if ($url === null || $this->filterOwnedUrls([$url]) === []) {
+            return;
+        }
+
+        $prefix = rtrim(config('app.url'), '/') . '/storage/';
+        Storage::disk('public')->delete(substr($url, strlen($prefix)));
+    }
+
+    /**
      * Validate and store an uploaded image.
      * 
      * @param UploadedFile $file The uploaded file
@@ -137,7 +152,7 @@ class ImageService
         }
 
         if ($dimensions['width'] > self::MAX_WIDTH || $dimensions['height'] > self::MAX_HEIGHT) {
-            return ['success' => false, 'error' => 'Image too large (max 2048x2048)'];
+            return ['success' => false, 'error' => 'Image too large (max 4096x4096)'];
         }
 
         // Generate safe filename

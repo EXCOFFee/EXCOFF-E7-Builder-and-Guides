@@ -1,21 +1,23 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import { heroApi, buildApi } from '@/lib/api';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { heroApi, buildApi, guideApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
 import type { HeroSkillMessages } from '@/i18n/config';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
-import { PopularBuildStats, type HeroBuildStats } from '@/components/heroes/PopularBuildStats';
-import { appendImageVersion } from '@/lib/heroImages';
-import { formatDate, formatNumber } from '@/lib/utils';
+import { HeroVerdict, CommunityTags, BuildRecipe, HeroMatchups, type HeroBuildStats } from '@/components/heroes/HeroCommunity';
+import { MyBuildCheck } from '@/components/heroes/MyBuildCheck';
+import { HeroBanner } from '@/components/heroes/HeroBanner';
+import { OutdatedBadge } from '@/components/builds/OutdatedBadge';
 import { formatSkillText } from '@/utils/skillFormatter';
 import { SkillEffects, SkillIcon, useHeroEffects } from '@/components/heroes/SkillEffects';
 import { StatLedger, type ClassStatRange } from '@/components/heroes/StatLedger';
+import { SET_IMAGES, SET_NAMES } from '@/lib/sets';
+import { ELEMENT_IMAGES, CLASS_IMAGES } from '@/lib/heroAssets';
 
 
 
@@ -30,19 +32,6 @@ interface HeroStats {
     res: number;
 }
 
-interface PopularSet {
-    sets: string[];
-    set_codes: string[];
-    count: number;
-    percentage: number;
-}
-
-interface PopularArtifact {
-    code: string;
-    count: number;
-    percentage: number;
-}
-
 interface SelfDevotion {
     type: string;
     grades: {
@@ -54,17 +43,18 @@ interface SelfDevotion {
     };
 }
 
-/** Build publicada en la web, tal como la devuelve GET /api/heroes/{slug}/builds */
+/** Build publicada en la web, tal como la devuelve GET /api/heroes/{slug}/builds (ordenadas por likes) */
 interface HeroBuildSummary {
     id: number;
     title: string;
-    description?: string | null;
     primary_set?: string | null;
     secondary_set?: string | null;
     views?: number;
     likes?: number;
-    created_at?: string;
+    is_anonymous?: boolean;
     user?: { name?: string } | null;
+    artifact?: { name: string; icon: string | null } | null;
+    updated_at?: string;
 }
 
 export interface Hero {
@@ -80,45 +70,13 @@ export interface Hero {
     skills: Record<string, unknown>;
     self_devotion?: SelfDevotion;
     image_url: string;
-    popular_sets: PopularSet[];
-    popular_artifacts: PopularArtifact[];
-    avg_stats: HeroStats | null;
-    guides_count: number;
-    stats_updated_at: string | null;
+    /** Último cambio de stats/skills/impronta en el juego */
+    game_data_changed_at?: string | null;
 }
 
-// Element to image mapping
-const ELEMENT_IMAGES: Record<string, string> = {
-    fire: '/images/elements/ElementFire.png',
-    ice: '/images/elements/ElementWater.png',
-    earth: '/images/elements/ElementEarth.png',
-    light: '/images/elements/ElementLight.png',
-    dark: '/images/elements/ElementDark.png',
-};
-
-const CLASS_ICONS: Record<string, string> = {
-    knight: '🛡️',
-    warrior: '⚔️',
-    thief: '🗡️',
-    ranger: '🏹',
-    mage: '🔮',
-    soul_weaver: '💚',
-};
-
-// Class to image mapping
-const CLASS_IMAGES: Record<string, string> = {
-    knight: '/images/classes/ClassKnight.png',
-    warrior: '/images/classes/ClassWarrior.png',
-    thief: '/images/classes/ClassThief.png',
-    ranger: '/images/classes/ClassRanger.png',
-    mage: '/images/classes/ClassMage.png',
-    soul_weaver: '/images/classes/ClassSoul_Waver.png',
-};
-
-// Set code to local image URL mapping (for Fribbels data)
-import { SET_IMAGES as SET_IMAGES_LOWERCASE } from '@/lib/sets';
-
-
+const BEST_BUILDS = 5;
+/** Guías que se listan en la ficha (la API devuelve 20 por página: si hay más, "ver todas") */
+const HERO_GUIDES = 3;
 
 // Memory Imprint type names mapping
 const IMPRINT_TYPES: Record<string, { name: string; color: string }> = {
@@ -136,18 +94,6 @@ const IMPRINT_TYPES: Record<string, { name: string; color: string }> = {
 };
 
 const IMPRINT_GRADES = ['B', 'A', 'S', 'SS', 'SSS'] as const;
-
-/** Stats promedio de Fribbels: clave, etiqueta y sufijo */
-const AVG_STATS: [keyof HeroStats, string, string][] = [
-    ['atk', 'ATK', ''],
-    ['hp', 'HP', ''],
-    ['def', 'DEF', ''],
-    ['spd', 'SPD', ''],
-    ['crit_chance', 'CRIT', '%'],
-    ['crit_dmg', 'C.DMG', '%'],
-    ['eff', 'EFF', '%'],
-    ['res', 'RES', '%'],
-];
 
 export function HeroDetailClient({
     initialHero,
@@ -179,79 +125,33 @@ export function HeroDetailClient({
 
     const hero: Hero | null = data?.data || data;
 
-    // Get translated hero name for Asian locales
-    const translatedHeroName = hero ? translateHeroName(hero.name) : '';
-
-    // Fetch builds for this hero
-    const { data: buildsData } = useQuery({
-        queryKey: ['hero-builds', slug],
-        queryFn: async () => {
-            const response = await buildApi.getByHero(slug);
-            return response.data;
-        },
-        enabled: !!hero?.id,
+    // Lo que dicen las builds publicadas (sets, tags, counters, notas por modo)
+    const { data: stats } = useQuery<HeroBuildStats | null>({
+        queryKey: ['hero-stats', slug, locale],
+        queryFn: async () => (await heroApi.stats(slug, locale)).data?.data ?? null,
+        enabled: !!slug,
+        staleTime: 5 * 60 * 1000,
+        initialData: initialStats ?? undefined,
     });
 
+    // Mejores builds: la API las devuelve ordenadas por likes (con el artefacto traducido)
+    const { data: buildsData } = useQuery({
+        queryKey: ['hero-builds', slug, locale],
+        queryFn: async () => (await buildApi.getByHero(slug, { lang: locale, per_page: BEST_BUILDS })).data,
+        enabled: !!slug,
+    });
     const builds = useMemo<HeroBuildSummary[]>(() => buildsData?.data || [], [buildsData]);
 
-    // Builds filter states
-    const [buildSearch, setBuildSearch] = useState('');
-    const [buildSetFilter, setBuildSetFilter] = useState('');
-    const [buildSortBy, setBuildSortBy] = useState<'newest' | 'views_desc' | 'views_asc' | 'likes_desc' | 'likes_asc'>('newest');
+    // Guías del héroe o con el héroe en uno de sus equipos (las más nuevas)
+    const { data: guidesData } = useQuery({
+        queryKey: ['hero-guides', slug],
+        queryFn: async () => (await guideApi.list({ hero: slug })).data,
+        enabled: !!slug,
+    });
+    const heroGuides: { id: number; slug: string; title: string; likes?: number; teams?: unknown[] | null }[] = guidesData?.data ?? [];
 
-    // Get unique sets from builds
-    const availableSets = useMemo(() => {
-        const sets = new Set<string>();
-        builds.forEach((build) => {
-            if (build.primary_set) sets.add(build.primary_set);
-            if (build.secondary_set) sets.add(build.secondary_set);
-        });
-        return Array.from(sets).sort();
-    }, [builds]);
-
-    // Filter and sort builds
-    const filteredBuilds = useMemo(() => {
-        let result = [...builds];
-
-        // Search filter
-        if (buildSearch.trim()) {
-            const search = buildSearch.toLowerCase();
-            result = result.filter((build) =>
-                build.title?.toLowerCase().includes(search) ||
-                build.description?.toLowerCase().includes(search) ||
-                build.user?.name?.toLowerCase().includes(search)
-            );
-        }
-
-        // Set filter
-        if (buildSetFilter) {
-            result = result.filter((build) =>
-                build.primary_set === buildSetFilter || build.secondary_set === buildSetFilter
-            );
-        }
-
-        // Sort
-        switch (buildSortBy) {
-            case 'views_desc':
-                result.sort((a, b) => (b.views || 0) - (a.views || 0));
-                break;
-            case 'views_asc':
-                result.sort((a, b) => (a.views || 0) - (b.views || 0));
-                break;
-            case 'likes_desc':
-                result.sort((a, b) => (b.likes || 0) - (a.likes || 0));
-                break;
-            case 'likes_asc':
-                result.sort((a, b) => (a.likes || 0) - (b.likes || 0));
-                break;
-            case 'newest':
-            default:
-                result.sort((a, b) => new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime());
-                break;
-        }
-
-        return result;
-    }, [builds, buildSearch, buildSetFilter, buildSortBy]);
+    // Get translated hero name for Asian locales
+    const translatedHeroName = hero ? translateHeroName(hero.name) : '';
 
     if (isLoading) {
         return (
@@ -285,14 +185,15 @@ export function HeroDetailClient({
         );
     }
 
-    const hasUsageStats = hero.guides_count > 0;
-
     const className = t(`classes.${hero.class}`, hero.class.replace('_', ' '));
     const elementName = t(`elements.${hero.element}`, hero.element);
+    // Si /stats falló, el total sale de la lista de builds (así no dice "nadie compartió" con builds abajo)
+    const totalBuilds = stats?.total_builds ?? buildsData?.total ?? builds.length;
+    const createHref = `/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`;
 
     return (
         <div className="hero-sheet min-h-screen pb-12" data-element={hero.element}>
-            {/* Cabecera: retrato, nombre y stats base contra su clase */}
+            {/* Cabecera: retrato, nombre y el veredicto de las builds por modo */}
             <section className="hero-sheet__halo border-b border-night-line/60">
                 <div className="max-w-6xl mx-auto px-4 pt-6 pb-8">
                     <Link
@@ -302,35 +203,25 @@ export function HeroDetailClient({
                         <span aria-hidden>←</span> {t('heroes.backToHeroes', 'Back to Heroes')}
                     </Link>
 
-                    <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:items-center">
-                        <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center">
-                            <div className="relative w-44 shrink-0 sm:w-52">
-                                <div className="aspect-square overflow-hidden rounded-2xl border border-el/40 bg-night-panel shadow-[0_0_60px_-12px_var(--el)]">
-                                    {hero.image_url ? (
-                                        <Image
-                                            src={appendImageVersion(hero.image_url)}
-                                            alt={hero.name}
-                                            width={208}
-                                            height={208}
-                                            className="h-full w-full object-cover"
-                                            priority
-                                        />
-                                    ) : (
-                                        <div className="flex h-full w-full items-center justify-center">
-                                            <span className="text-7xl opacity-50">{CLASS_ICONS[hero.class] || '⚔️'}</span>
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
+                    <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,28rem)] lg:items-center">
+                        <div className="flex flex-col items-center gap-5 lg:items-start">
+                            <HeroBanner
+                                src={hero.image_url}
+                                alt={hero.name}
+                                element={hero.element}
+                                heroClass={hero.class}
+                                priority
+                                className="rounded-2xl border border-el/40 shadow-[0_0_60px_-12px_var(--el)]"
+                            />
 
-                            <div className="min-w-0 text-center sm:text-left">
+                            <div className="min-w-0 text-center lg:text-left">
                                 <p className="text-lg tracking-[0.3em] text-e7-gold" aria-label={`${hero.rarity}★`}>
                                     {'★'.repeat(hero.rarity)}
                                 </p>
                                 <h1 className="mt-1 font-hero text-4xl font-normal leading-tight tracking-normal text-slate-50 sm:text-5xl lg:text-6xl">
                                     {translatedHeroName}
                                 </h1>
-                                <p className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-slate-300 sm:justify-start">
+                                <p className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-slate-300 lg:justify-start">
                                     <span className="inline-flex items-center gap-1.5">
                                         {ELEMENT_IMAGES[hero.element] && (
                                             <Image src={ELEMENT_IMAGES[hero.element]} alt="" width={20} height={20} className="h-5 w-5" />
@@ -343,23 +234,126 @@ export function HeroDetailClient({
                                         )}
                                         {className}
                                     </span>
-                                    {hasUsageStats && (
-                                        // Muestra de Fribbels, no las builds publicadas en la web
-                                        <span className="font-mono text-xs text-night-muted" title={t('heroes.analyzedBuildsHint', 'Community data from Fribbels Epic 7 Optimizer')}>
-                                            {t('heroes.analyzedBuilds', '{count} builds analyzed').replace('{count}', formatNumber(hero.guides_count))}
-                                        </span>
-                                    )}
+                                    <Link href={`/builds?hero=${hero.slug}`} className="font-mono text-xs text-night-muted hover:text-slate-100 hover:underline">
+                                        {t('heroes.buildsOnSite', '{count} builds on this site').replace('{count}', String(totalBuilds))}
+                                    </Link>
                                 </p>
-                                <Link
-                                    href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}
-                                    className="btn-gold mt-5 inline-flex items-center gap-2 px-5 py-2.5 text-sm"
-                                >
+                                <Link href={createHref} className="btn-gold mt-5 inline-flex items-center gap-2 px-5 py-2.5 text-sm">
                                     {t('heroes.createBuild', 'Create Build')}
                                 </Link>
                             </div>
                         </div>
 
-                        <div className="hero-sheet__panel p-4 sm:p-5">
+                        <HeroVerdict stats={stats ?? null} />
+                    </div>
+                </div>
+            </section>
+
+            <div className="max-w-6xl mx-auto px-4 pt-8 space-y-8">
+                {totalBuilds < 3 && (
+                    <p className="hero-sheet__panel flex flex-col gap-3 p-4 text-sm text-slate-300 sm:flex-row sm:items-center sm:justify-between">
+                        <span>
+                            {totalBuilds === 0
+                                ? t('heroes.noBuildsInvite', 'Nobody has shared a build for this hero yet. Yours would be the first.')
+                                : t('heroes.fewBuildsInvite', 'Only {count} builds so far: every new one makes this page more reliable.').replace('{count}', String(totalBuilds))}
+                        </span>
+                        <Link href={createHref} className="shrink-0 font-semibold text-e7-gold hover:underline">
+                            {t('heroes.shareYourBuild', 'Share your build')} →
+                        </Link>
+                    </p>
+                )}
+
+                {stats && totalBuilds > 0 && (
+                    <>
+                        <CommunityTags stats={stats} heroSlug={hero.slug} />
+                        <BuildRecipe stats={stats} />
+                        <MyBuildCheck heroSlug={hero.slug} />
+                        <HeroMatchups stats={stats} />
+                    </>
+                )}
+
+                {/* Mejores builds */}
+                {builds.length > 0 && (
+                    <section aria-labelledby="best-builds-title" className="hero-sheet__panel p-4 sm:p-5">
+                        <div className="flex items-baseline justify-between gap-3">
+                            <h2 id="best-builds-title" className="hero-sheet__label font-sans">{t('heroes.bestBuilds', 'Best builds')}</h2>
+                            {totalBuilds > BEST_BUILDS && (
+                                <Link href={`/builds?hero=${hero.slug}`} className="text-sm text-e7-gold hover:underline">
+                                    {t('heroes.viewAllBuildsCount', 'See all {count}').replace('{count}', String(totalBuilds))} →
+                                </Link>
+                            )}
+                        </div>
+                        <ol className="mt-3 divide-y divide-night-line/60">
+                            {builds.slice(0, BEST_BUILDS).map((build) => (
+                                <li key={build.id}>
+                                    <Link href={`/builds/${build.id}`} className="flex items-center gap-4 py-3 hover:bg-night/40">
+                                        <span className="flex shrink-0 gap-1">
+                                            {[build.primary_set, build.secondary_set].filter(Boolean).map((set) => (
+                                                SET_IMAGES[set!.toLowerCase()] ? (
+                                                    <Image key={set} src={SET_IMAGES[set!.toLowerCase()]} alt={SET_NAMES[set!.toLowerCase()] ?? set!} width={24} height={24} unoptimized className="h-6 w-6" />
+                                                ) : null
+                                            ))}
+                                        </span>
+                                        <span className="min-w-0 flex-1">
+                                            <span className="block truncate font-semibold text-slate-50">{build.title}</span>
+                                            <OutdatedBadge buildUpdatedAt={build.updated_at} heroChangedAt={hero.game_data_changed_at} className="my-1" />
+                                            <span className="block truncate text-xs text-night-muted">
+                                                {build.artifact?.name ? `${build.artifact.name} · ` : ''}
+                                                {build.is_anonymous || !build.user?.name ? t('common.anonymous', 'Anonymous') : build.user.name}
+                                            </span>
+                                        </span>
+                                        <span className="shrink-0 text-right font-mono text-xs tabular-nums text-night-muted">
+                                            <span className="block text-e7-gold">♥ {build.likes || 0}</span>
+                                            <span className="block">{t('heroes.viewsCount', '{count} views').replace('{count}', String(build.views || 0))}</span>
+                                        </span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ol>
+                    </section>
+                )}
+
+                {/* Guías con el héroe (la suya o con él en un equipo) */}
+                {heroGuides.length > 0 && (
+                    <section aria-labelledby="hero-guides-title" className="hero-sheet__panel p-4 sm:p-5">
+                        <div className="flex items-baseline justify-between gap-3">
+                            <h2 id="hero-guides-title" className="hero-sheet__label font-sans">{t('heroes.guidesWithHero', 'Guides and teams')}</h2>
+                            {heroGuides.length > HERO_GUIDES && (
+                                <Link href={`/guides?hero=${hero.slug}`} className="text-sm text-e7-gold hover:underline">
+                                    {t('heroes.viewAllGuides', 'See all')} →
+                                </Link>
+                            )}
+                        </div>
+                        <ul className="mt-3 divide-y divide-night-line/60">
+                            {heroGuides.slice(0, HERO_GUIDES).map((guide) => (
+                                <li key={guide.id}>
+                                    <Link href={`/guides/${guide.slug}`} className="flex items-center gap-4 py-3 hover:bg-night/40">
+                                        <span className="min-w-0 flex-1 truncate font-semibold text-slate-50">{guide.title}</span>
+                                        {Array.isArray(guide.teams) && guide.teams.length > 0 && (
+                                            <span className="shrink-0 rounded-full border border-cyan-400/40 px-2 py-0.5 text-xs text-cyan-200">
+                                                {t('heroes.guideTeamsCount', '{count} teams').replace('{count}', String(guide.teams.length))}
+                                            </span>
+                                        )}
+                                        <span className="shrink-0 font-mono text-xs text-e7-gold">♥ {guide.likes || 0}</span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </section>
+                )}
+
+                {/* Ficha del juego: stats base, skills e impronta (CeciliaBot ya lo muestra; acá va plegado) */}
+                {/* Sin builds no hay nada arriba: la ficha del juego se abre sola */}
+                <details className="group hero-sheet__panel" open={totalBuilds === 0}>
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-4 sm:p-5 [&::-webkit-details-marker]:hidden">
+                        <span>
+                            <span className="hero-sheet__label font-sans">{t('heroes.gameData', 'Game data')}</span>
+                            <span className="mt-1 block text-sm text-night-muted">{t('heroes.gameDataHint', 'Base stats, skills and memory imprint')}</span>
+                        </span>
+                        <span className="text-night-muted transition-transform group-open:rotate-180 motion-reduce:transition-none" aria-hidden>▾</span>
+                    </summary>
+                    <div className="space-y-8 border-t border-night-line/60 p-4 sm:p-5">
+                        <section>
                             <h2 className="hero-sheet__label font-sans">{t('heroes.baseStats', 'Base Stats (Lv.60 Fully Awakened)')}</h2>
                             <StatLedger stats={hero.base_stats} range={classRange} className={className} t={t} />
                             {classRange && (
@@ -371,12 +365,8 @@ export function HeroDetailClient({
                                         .replace('{class}', className)}
                                 </p>
                             )}
-                        </div>
-                    </div>
-                </div>
-            </section>
+                        </section>
 
-            <div className="max-w-6xl mx-auto px-4 pt-8 space-y-8">
                 {/* Skills */}
                 {hero.skills && Object.keys(hero.skills).length > 0 && (
                     <section>
@@ -520,189 +510,9 @@ export function HeroDetailClient({
                     </section>
                 )}
 
-                {/* Sets y artefactos más usados */}
-                <PopularBuildStats heroSlug={slug} initialStats={initialStats} />
-
-                {/* Stats promedio de las builds analizadas */}
-                {hasUsageStats && hero.avg_stats && (
-                    <section className="hero-sheet__panel p-4 sm:p-5">
-                        <h2 className="hero-sheet__label font-sans">
-                            {t('heroes.averageStats', 'Average Build Stats')}
-                            <span className="normal-case tracking-normal font-normal">
-                                {t('heroes.fromBuilds', 'from {count} builds').replace('{count}', formatNumber(hero.guides_count))}
-                            </span>
-                        </h2>
-                        <dl className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-4 lg:grid-cols-8">
-                            {AVG_STATS.map(([key, label, suffix]) => (
-                                <div key={key} className="border-l-2 border-el/50 pl-3">
-                                    <dt className="font-mono text-[11px] font-semibold tracking-wider text-night-muted">{label}</dt>
-                                    <dd className="font-mono text-lg font-semibold tabular-nums text-slate-100">
-                                        {formatNumber(hero.avg_stats?.[key])}
-                                        {suffix}
-                                    </dd>
-                                </div>
-                            ))}
-                        </dl>
-                    </section>
-                )}
-
-                {hero.stats_updated_at && (
-                    <p className="text-center font-mono text-xs text-night-muted">
-                        {t('heroes.statsUpdated', 'Stats last updated: {date}').replace('{date}', formatDate(hero.stats_updated_at, locale))}
-                    </p>
-                )}
-
-                {/* Community Builds Section */}
-                <Card className="hero-sheet__panel overflow-hidden">
-                    <CardHeader className="border-b border-night-line/60">
-                        <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
-                            <h2 className="hero-sheet__label font-sans flex-1 w-full">
-                                <span>{t('heroes.communityBuilds', 'Community Builds')}</span>
-                                {builds.length > 0 && (
-                                    <span className="font-mono normal-case tracking-normal font-normal">{builds.length}</span>
-                                )}
-                            </h2>
-                            <Link
-                                href={`/builds/create?hero_id=${hero.id}&hero_name=${encodeURIComponent(hero.name)}`}
-                                className="btn-gold shrink-0 px-4 py-1.5 text-sm"
-                            >
-                                + {t('heroes.createBuild', 'Create Build')}
-                            </Link>
-                        </div>
-
-                        {/* Filters Row */}
-                        {builds.length > 0 && (
-                            <div className="mt-4 flex flex-col sm:flex-row gap-3 items-center">
-                                {/* Search */}
-                                <div className="relative flex-1 min-w-0 w-full sm:w-auto">
-                                    <input
-                                        type="text"
-                                        value={buildSearch}
-                                        onChange={(e) => setBuildSearch(e.target.value)}
-                                        placeholder={t('heroes.searchBuilds', 'Search builds...')}
-                                        className="w-full px-3 py-2 pl-9 text-sm rounded-lg bg-night border border-night-line text-white placeholder-neutral-400 focus:border-e7-gold focus:outline-none"
-                                    />
-                                    <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                    </svg>
-                                </div>
-
-                                {/* Set Filter */}
-                                {availableSets.length > 0 && (
-                                    <select
-                                        aria-label={t('heroes.filterBySet', 'Filter by set')}
-                                        value={buildSetFilter}
-                                        onChange={(e) => setBuildSetFilter(e.target.value)}
-                                        className="px-3 py-2 text-sm rounded-lg bg-night border border-night-line text-slate-200 focus:border-e7-gold focus:outline-none cursor-pointer min-w-[140px]"
-                                    >
-                                        <option value="">{t('heroes.allSets', 'All Sets')}</option>
-                                        {availableSets.map(set => (
-                                            <option key={set} value={set}>{set}</option>
-                                        ))}
-                                    </select>
-                                )}
-
-                                {/* Sort */}
-                                <select
-                                    aria-label={t('common.sortBy', 'Sort by')}
-                                    value={buildSortBy}
-                                    onChange={(e) => setBuildSortBy(e.target.value as typeof buildSortBy)}
-                                    className="px-3 py-2 text-sm rounded-lg bg-night border border-night-line text-slate-200 focus:border-e7-gold focus:outline-none cursor-pointer min-w-[160px]"
-                                >
-                                    <option value="newest">{t('common.newest', 'Newest')}</option>
-                                    <option value="views_desc">{t('common.viewsHigh', 'Views (High)')}</option>
-                                    <option value="views_asc">{t('common.viewsLow', 'Views (Low)')}</option>
-                                    <option value="likes_desc">{t('common.likesHigh', 'Likes (High)')}</option>
-                                    <option value="likes_asc">{t('common.likesLow', 'Likes (Low)')}</option>
-                                </select>
-                            </div>
-                        )}
-                    </CardHeader>
-                    <CardContent className="pt-4">
-                        {builds.length === 0 ? (
-                            <div className="text-center py-8 text-slate-400">
-                                <p className="text-lg mb-2">{t('heroes.noBuildsYet', 'No builds for this hero yet')}</p>
-                                <p className="text-sm">{t('heroes.beFirst', 'Be the first to share your build!')}</p>
-                            </div>
-                        ) : filteredBuilds.length === 0 ? (
-                            <div className="text-center py-8 text-slate-400">
-                                <p className="text-lg mb-2">{t('heroes.noBuildsMatch', 'No builds match your filters')}</p>
-                                <button
-                                    onClick={() => { setBuildSearch(''); setBuildSetFilter(''); }}
-                                    className="text-e7-gold hover:text-e7-text-gold text-sm"
-                                >
-                                    {t('common.clearFilters', 'Clear filters')}
-                                </button>
-                            </div>
-                        ) : (
-                            <div className="space-y-4">
-                                {filteredBuilds.slice(0, 5).map((build) => (
-                                    <Link key={build.id} href={`/builds/${build.id}`}>
-                                        <div className="bg-night/60 rounded-lg p-4 border border-night-line hover:border-el/60 transition-all cursor-pointer">
-                                            <div className="flex justify-between items-start">
-                                                <div>
-                                                    <h3 className="font-sans text-base font-semibold text-slate-50">{build.title}</h3>
-                                                    <p className="text-gray-400 text-sm mt-1 line-clamp-2">{build.description}</p>
-                                                    <div className="flex flex-wrap gap-2 mt-2">
-                                                        {build.primary_set && (
-                                                            <span className="px-2 py-0.5 rounded bg-e7-panel text-xs text-gray-300 flex items-center gap-1">
-                                                                {SET_IMAGES_LOWERCASE[build.primary_set] && (
-                                                                    <Image
-                                                                        src={SET_IMAGES_LOWERCASE[build.primary_set]}
-                                                                        alt={build.primary_set}
-                                                                        width={14}
-                                                                        height={14}
-                                                                        unoptimized
-                                                                    />
-                                                                )}
-                                                                {build.primary_set}
-                                                            </span>
-                                                        )}
-                                                        {build.secondary_set && (
-                                                            <span className="px-2 py-0.5 rounded bg-e7-panel text-xs text-gray-300 flex items-center gap-1">
-                                                                {SET_IMAGES_LOWERCASE[build.secondary_set] && (
-                                                                    <Image
-                                                                        src={SET_IMAGES_LOWERCASE[build.secondary_set]}
-                                                                        alt={build.secondary_set}
-                                                                        width={14}
-                                                                        height={14}
-                                                                        unoptimized
-                                                                    />
-                                                                )}
-                                                                {build.secondary_set}
-                                                            </span>
-                                                        )}
-                                                    </div>
-                                                </div>
-                                                <div className="text-right">
-                                                    <div className="text-e7-gold font-bold flex items-center gap-1 justify-end">
-                                                        <Image src="/images/ras-like.gif" alt="like" width={18} height={18} unoptimized />
-                                                        {build.likes || 0}
-                                                    </div>
-                                                    <div className="text-neutral-400 text-xs flex items-center gap-1 justify-end">
-                                                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                                        </svg>
-                                                        {build.views || 0}
-                                                    </div>
-                                                    <div className="text-gray-400 text-xs">{build.user?.name || t('common.anonymous', 'Anonymous')}</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                ))}
-                                {filteredBuilds.length > 5 && (
-                                    <Link href={`/builds?hero=${hero.slug}`} className="block text-center text-e7-gold hover:text-e7-text-gold text-sm">
-                                        {t('heroes.viewAllBuilds', `View all ${filteredBuilds.length} builds`)} →
-                                    </Link>
-                                )}
-                            </div>
-                        )}
-                    </CardContent>
-                </Card>
+                    </div>
+                </details>
             </div>
         </div>
     );
 }
-

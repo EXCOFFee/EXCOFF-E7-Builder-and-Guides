@@ -27,6 +27,41 @@ class BuildListTest extends TestCase
         $this->assertSame(['Mine'], $titles->all());
     }
 
+    public function test_hero_builds_accept_a_small_page_size(): void
+    {
+        $hero = Hero::factory()->create();
+        UserBuild::factory()->count(7)->create(['hero_id' => $hero->id]);
+
+        $this->getJson("/api/heroes/{$hero->slug}/builds?per_page=5")
+            ->assertOk()
+            ->assertJsonCount(5, 'data')
+            ->assertJsonPath('total', 7);
+
+        $this->getJson("/api/heroes/{$hero->slug}/builds?per_page=500")->assertJsonPath('per_page', 20);
+    }
+
+    public function test_trending_sorts_by_recent_likes_and_votes(): void
+    {
+        $old = UserBuild::factory()->create(['title' => 'Old favourite', 'likes' => 50]);
+        $hot = UserBuild::factory()->create(['title' => 'Hot now']);
+        $quiet = UserBuild::factory()->create(['title' => 'Quiet']);
+        $fans = User::factory()->count(3)->create();
+
+        // Likes viejos no cuentan; los de esta semana sí, y también los votos de nota por modo
+        foreach ($fans as $fan) {
+            \Illuminate\Support\Facades\DB::table('votes')->insert([
+                ['user_id' => $fan->id, 'votable_type' => UserBuild::class, 'votable_id' => $old->id, 'value' => 1, 'created_at' => now()->subMonths(2), 'updated_at' => now()],
+                ['user_id' => $fan->id, 'votable_type' => UserBuild::class, 'votable_id' => $hot->id, 'value' => 1, 'created_at' => now()->subDay(), 'updated_at' => now()],
+            ]);
+        }
+        \App\Models\BuildModeVote::create(['user_id' => $fans[0]->id, 'build_id' => $quiet->id, 'mode' => 'rta', 'tier' => 5]);
+
+        $titles = collect($this->getJson('/api/builds?sort=trending')->assertOk()->json('data'))->pluck('title');
+
+        // "Old favourite" tiene likes, pero de hace dos meses: no está en tendencia
+        $this->assertSame(['Hot now', 'Quiet'], $titles->all());
+    }
+
     public function test_invalid_order_falls_back_to_desc(): void
     {
         UserBuild::factory()->create(['title' => 'Old', 'created_at' => now()->subDay()]);

@@ -40,12 +40,9 @@ class HeroResource extends JsonResource
             'skills' => $this->getLocalizedSkills($lang),
             'self_devotion' => $this->self_devotion,
             'image_url' => $this->image_url,
-            // Usage statistics (from community guides)
-            'popular_sets' => $this->popular_sets,
-            'popular_artifacts' => $this->popular_artifacts,
-            'avg_stats' => $this->avg_stats,
-            'guides_count' => $this->guides_count ?? 0,
-            'stats_updated_at' => $this->stats_updated_at?->toISOString(),
+            // Último cambio de stats/skills/impronta en el juego (builds anteriores: desactualizadas)
+            'game_data_changed_at' => $this->game_data_changed_at?->toISOString(),
+            // Lo que dicen las builds de la web está en GET /api/heroes/{slug}/stats
             // Relationships
             'guides' => GuideResource::collection($this->whenLoaded('guides')),
         ];
