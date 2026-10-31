@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Guide;
 use App\Services\ImageService;
+use App\Support\GuideTeams;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Str;
@@ -29,12 +30,24 @@ class GuideController extends Controller
             $query->where('category', $request->input('category'));
         }
 
-        // Filter by hero (id o slug)
+        // Filter by hero (id o slug): la guía del héroe o una con el héroe en un equipo
         if ($request->has('hero_id')) {
             $query->where('hero_id', $request->input('hero_id'));
         }
         if ($request->filled('hero')) {
-            $query->whereHas('hero', fn ($q) => $q->where('slug', $request->input('hero')));
+            $slug = (string) $request->input('hero');
+            $query->where(fn ($q) => $q
+                ->whereHas('hero', fn ($h) => $h->where('slug', $slug))
+                ->orWhereExists(fn ($s) => $s->from('guide_team_builds')
+                    ->join('heroes', 'heroes.id', '=', 'guide_team_builds.hero_id')
+                    ->whereColumn('guide_team_builds.guide_id', 'guides.id')
+                    ->where('heroes.slug', $slug)));
+        }
+        // Guías cuyos equipos usan una build ("usada en N guías")
+        if ($request->filled('build')) {
+            $query->whereExists(fn ($s) => $s->from('guide_team_builds')
+                ->whereColumn('guide_team_builds.guide_id', 'guides.id')
+                ->where('guide_team_builds.build_id', (int) $request->input('build')));
         }
 
         // Modo de juego de la guía (pve, pvp, guild, oneshot)
@@ -77,7 +90,9 @@ class GuideController extends Controller
         $response = $guide->toArray();
         $response['recommended_heroes_list'] = $guide->recommended_heroes_list;
         $response['recommended_artifacts_list'] = $guide->recommended_artifacts_list;
-        // Teams is already cast to array automatically
+        // Las builds de los equipos, por id (objeto: así la web no baja listas enteras)
+        $response['team_builds'] = (object) GuideTeams::builds($guide);
+        $response['team_heroes'] = (object) GuideTeams::heroes($guide);
 
         return response()->json($response);
     }
@@ -97,14 +112,10 @@ class GuideController extends Controller
             'language' => 'nullable|string|max:5',
             'recommended_heroes' => 'nullable|array',
             'recommended_artifacts' => 'nullable|array',
-            'teams' => 'nullable|string', // JSON string
+            'teams' => 'nullable', // JSON en texto (FormData) o array; lo valida GuideTeams
         ] + ImageService::rules());
         unset($validated['images']);
-
-        // Parse teams JSON if provided
-        if (!empty($validated['teams'])) {
-            $validated['teams'] = json_decode($validated['teams'], true);
-        }
+        $validated['teams'] = GuideTeams::validate($request->input('teams'));
 
         $validated['slug'] = Str::slug($validated['title']) . '-' . Str::random(6);
         $validated['user_id'] = $request->user()->id;
@@ -121,6 +132,7 @@ class GuideController extends Controller
         }
 
         $guide = Guide::create($validated);
+        GuideTeams::sync($guide);
 
         return response()->json($guide, 201);
     }
@@ -144,13 +156,12 @@ class GuideController extends Controller
             'is_published' => 'sometimes|boolean',
             'recommended_heroes' => 'nullable|array',
             'recommended_artifacts' => 'nullable|array',
-            'teams' => 'nullable|string', // JSON string
+            'teams' => 'nullable', // JSON en texto (FormData) o array; lo valida GuideTeams
         ] + ImageService::rules());
         unset($validated['images']);
-
-        // Parse teams JSON if provided
-        if (!empty($validated['teams'])) {
-            $validated['teams'] = json_decode($validated['teams'], true);
+        // Sin el campo, los equipos quedan como estaban; "[]" los borra
+        if ($request->has('teams')) {
+            $validated['teams'] = GuideTeams::validate($request->input('teams'));
         }
 
         if (isset($validated['title']) && $validated['title'] !== $guide->title) {
@@ -174,6 +185,9 @@ class GuideController extends Controller
         }
 
         $guide->update($validated);
+        if (array_key_exists('teams', $validated)) {
+            GuideTeams::sync($guide);
+        }
 
         return response()->json($guide);
     }

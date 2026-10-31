@@ -72,6 +72,8 @@ interface Build {
     proof_image?: string | null;
     /** La API lo calcula con el token: en una build anónima no llega el autor */
     is_owner?: boolean;
+    /** En cuántas guías publicadas la usa un equipo */
+    guides_count?: number;
     // Tier Ratings (D-S system)
     rating_pve?: number | null;
     rating_arena?: number | null;
@@ -694,6 +696,15 @@ export function BuildDetailClient() {
                                 isOwner={Boolean(build.is_owner)}
                             />
                         </div>
+
+                        {(build.guides_count ?? 0) > 0 && (
+                            <Link href={`/guides?build=${build.id}`} className="mb-6 inline-block text-sm text-cyan-300 hover:text-cyan-200 hover:underline">
+                                {(build.guides_count === 1
+                                    ? t('builds.usedInOneGuide', 'Used in a team in 1 guide')
+                                    : t('builds.usedInGuides', 'Used in teams in {count} guides')
+                                ).replace('{count}', String(build.guides_count))} →
+                            </Link>
+                        )}
 
                         {/* Pros/Cons Tags */}
                         <div className="mb-6">

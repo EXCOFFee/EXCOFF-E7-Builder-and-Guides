@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import { heroApi, buildApi } from '@/lib/api';
+import { heroApi, buildApi, guideApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
 import type { HeroSkillMessages } from '@/i18n/config';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
@@ -75,6 +75,8 @@ export interface Hero {
 }
 
 const BEST_BUILDS = 5;
+/** Guías que se listan en la ficha (la API devuelve 20 por página: si hay más, "ver todas") */
+const HERO_GUIDES = 3;
 
 // Memory Imprint type names mapping
 const IMPRINT_TYPES: Record<string, { name: string; color: string }> = {
@@ -139,6 +141,14 @@ export function HeroDetailClient({
         enabled: !!slug,
     });
     const builds = useMemo<HeroBuildSummary[]>(() => buildsData?.data || [], [buildsData]);
+
+    // Guías del héroe o con el héroe en uno de sus equipos (las más nuevas)
+    const { data: guidesData } = useQuery({
+        queryKey: ['hero-guides', slug],
+        queryFn: async () => (await guideApi.list({ hero: slug })).data,
+        enabled: !!slug,
+    });
+    const heroGuides: { id: number; slug: string; title: string; likes?: number; teams?: unknown[] | null }[] = guidesData?.data ?? [];
 
     // Get translated hero name for Asian locales
     const translatedHeroName = hero ? translateHeroName(hero.name) : '';
@@ -300,6 +310,35 @@ export function HeroDetailClient({
                                 </li>
                             ))}
                         </ol>
+                    </section>
+                )}
+
+                {/* Guías con el héroe (la suya o con él en un equipo) */}
+                {heroGuides.length > 0 && (
+                    <section aria-labelledby="hero-guides-title" className="hero-sheet__panel p-4 sm:p-5">
+                        <div className="flex items-baseline justify-between gap-3">
+                            <h2 id="hero-guides-title" className="hero-sheet__label font-sans">{t('heroes.guidesWithHero', 'Guides and teams')}</h2>
+                            {heroGuides.length > HERO_GUIDES && (
+                                <Link href={`/guides?hero=${hero.slug}`} className="text-sm text-e7-gold hover:underline">
+                                    {t('heroes.viewAllGuides', 'See all')} →
+                                </Link>
+                            )}
+                        </div>
+                        <ul className="mt-3 divide-y divide-night-line/60">
+                            {heroGuides.slice(0, HERO_GUIDES).map((guide) => (
+                                <li key={guide.id}>
+                                    <Link href={`/guides/${guide.slug}`} className="flex items-center gap-4 py-3 hover:bg-night/40">
+                                        <span className="min-w-0 flex-1 truncate font-semibold text-slate-50">{guide.title}</span>
+                                        {Array.isArray(guide.teams) && guide.teams.length > 0 && (
+                                            <span className="shrink-0 rounded-full border border-cyan-400/40 px-2 py-0.5 text-xs text-cyan-200">
+                                                {t('heroes.guideTeamsCount', '{count} teams').replace('{count}', String(guide.teams.length))}
+                                            </span>
+                                        )}
+                                        <span className="shrink-0 font-mono text-xs text-e7-gold">♥ {guide.likes || 0}</span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
                     </section>
                 )}
 

@@ -217,6 +217,12 @@ class UserBuildController extends Controller
         $response['is_owner'] = $isOwner;
         $response['synergy_heroes_list'] = $build->synergy_heroes_list;
         $response['counter_heroes_list'] = $build->counter_heroes_list;
+        // En cuántas guías publicadas la usa un equipo
+        $response['guides_count'] = DB::table('guide_team_builds')
+            ->join('guides', 'guides.id', '=', 'guide_team_builds.guide_id')
+            ->where('guide_team_builds.build_id', $build->id)
+            ->where('guides.is_published', true)
+            ->count();
 
         return response()->json($response);
     }

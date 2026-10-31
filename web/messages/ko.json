@@ -160,7 +160,10 @@
         "myBuildCheckFew": "비교할 최소 스탯이 있는 빌드가 아직 부족합니다 (스탯당 {count}개 이상).",
         "myBuildCheckHint": "내 영웅의 스탯을 입력하면 몇 개 빌드의 최소 조건을 이미 충족하는지 보여 줍니다.",
         "meetsShare": "빌드의 {share}% 충족",
-        "furthestStat": "가장 부족한 스탯: {stat} (보통 {median} 요구)."
+        "furthestStat": "가장 부족한 스탯: {stat} (보통 {median} 요구).",
+        "guidesWithHero": "가이드와 팀",
+        "viewAllGuides": "전체 보기",
+        "guideTeamsCount": "팀 {count}개"
     },
     "elements": {
         "fire": "화염",
@@ -253,7 +256,33 @@
         "hasBuild": "빌드 있음",
         "clickToAddBuild": "클릭해서 빌드 추가",
         "noHeroesInTeam": "이 팀에 영웅을 추가하세요",
-        "filterByHero": "영웅으로 필터"
+        "filterByHero": "영웅으로 필터",
+        "teamNoBuilds": "이 영웅은 아직 빌드가 없습니다. 빌드를 만든 뒤 새로고침하세요.",
+        "teamCreateBuild": "빌드 만들기",
+        "teamReloadBuilds": "새로고침",
+        "teamBuildFor": "{hero} 빌드",
+        "teamPickBuild": "빌드 선택…",
+        "teamModes": {
+            "arena": "아레나",
+            "gw_attack": "길드전 공격",
+            "gw_defense": "길드전 방어",
+            "rta": "실시간 아레나",
+            "pve": "PvE"
+        },
+        "teamCompositionsBuildsDesc": "(선택) 이 가이드에서 쓰는 팀을 추가하세요. 각 영웅은 사이트의 빌드와 연결됩니다.",
+        "removeTeam": "팀 삭제",
+        "teamOldFormat": "이 팀은 이전 형식(모드·빌드 없음)입니다. 가이드에는 계속 표시됩니다.",
+        "teamConvert": "업데이트: 모드와 빌드 선택",
+        "teamMode": "모드",
+        "teamNote": "팀 운영법",
+        "teamNotePlaceholder": "운영법, 턴 순서, 상대하기 좋은 조합… (선택)",
+        "removeHeroFromTeam": "{hero} 제외",
+        "teamHeroNote": "팀 내 역할",
+        "teamBuildUnavailable": "더 이상 볼 수 없는 빌드입니다",
+        "teamEmptyError": "각 팀에 영웅을 한 명 이상 추가하거나 빈 팀을 삭제하세요.",
+        "teamBuildError": "팀의 모든 영웅에게 빌드를 선택하세요.",
+        "filteredByBuild": "빌드 #{id}를 쓰는 팀이 있는 가이드",
+        "clearBuildFilter": "전체 보기"
     },
     "guidesCreate": {
         "createGuide": "새 가이드 만들기",
@@ -559,7 +588,9 @@
         "ocrApply": "이 값 사용",
         "duplicateFailed": "복제할 빌드를 불러오지 못했습니다(삭제되었을 수 있습니다). 여기서 새로 만들 수 있습니다.",
         "outdated": "이 빌드 이후 영웅이 변경됨",
-        "outdatedHint": "이 빌드를 마지막으로 수정한 뒤 게임에서 영웅의 스탯이나 스킬이 바뀌었습니다."
+        "outdatedHint": "이 빌드를 마지막으로 수정한 뒤 게임에서 영웅의 스탯이나 스킬이 바뀌었습니다.",
+        "usedInOneGuide": "가이드 1개의 팀에서 사용 중",
+        "usedInGuides": "가이드 {count}개의 팀에서 사용 중"
     },
     "news": {
         "title": "에픽세븐 뉴스",

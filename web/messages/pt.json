@@ -160,7 +160,10 @@
         "myBuildCheckFew": "Ainda não há builds suficientes com stats mínimos para comparar (pelo menos {count} por stat).",
         "myBuildCheckHint": "Digite os stats do seu herói para ver quantos mínimos das builds você já cumpre.",
         "meetsShare": "Cumpre {share}% das builds",
-        "furthestStat": "O que mais falta: {stat} (as builds costumam pedir {median})."
+        "furthestStat": "O que mais falta: {stat} (as builds costumam pedir {median}).",
+        "guidesWithHero": "Guias e equipes",
+        "viewAllGuides": "Ver todos",
+        "guideTeamsCount": "{count} equipes"
     },
     "elements": {
         "fire": "Fogo",
@@ -253,7 +256,33 @@
         "hasBuild": "Tem build",
         "clickToAddBuild": "Clique para adicionar uma build",
         "noHeroesInTeam": "Adicione heróis a este time",
-        "filterByHero": "Filtrar por herói"
+        "filterByHero": "Filtrar por herói",
+        "teamNoBuilds": "Este herói ainda não tem builds. Crie uma e depois recarregue.",
+        "teamCreateBuild": "Criar build",
+        "teamReloadBuilds": "Recarregar",
+        "teamBuildFor": "Build de {hero}",
+        "teamPickBuild": "Escolha uma build…",
+        "teamModes": {
+            "arena": "Arena",
+            "gw_attack": "Guerra de Guildas (ataque)",
+            "gw_defense": "Guerra de Guildas (defesa)",
+            "rta": "RTA",
+            "pve": "PvE"
+        },
+        "teamCompositionsBuildsDesc": "(Opcional) Adicione as equipes que o guia usa. Cada herói vai com uma build do site.",
+        "removeTeam": "Remover equipe",
+        "teamOldFormat": "Esta equipe usa o formato antigo (sem modo nem builds). Ela continua aparecendo no guia.",
+        "teamConvert": "Atualizar: escolher modo e builds",
+        "teamMode": "Modo",
+        "teamNote": "Como a equipe joga",
+        "teamNotePlaceholder": "Como joga, ordem dos turnos, contra o que funciona… (opcional)",
+        "removeHeroFromTeam": "Remover {hero}",
+        "teamHeroNote": "Função na equipe",
+        "teamBuildUnavailable": "A build não está mais disponível",
+        "teamEmptyError": "Adicione pelo menos um herói a cada equipe ou remova a equipe vazia.",
+        "teamBuildError": "Escolha uma build para cada herói das suas equipes.",
+        "filteredByBuild": "Guias com equipes que usam a build #{id}",
+        "clearBuildFilter": "Ver todos"
     },
     "guidesCreate": {
         "createGuide": "Criar Novo Guia",
@@ -559,7 +588,9 @@
         "ocrApply": "Usar estes valores",
         "duplicateFailed": "Não foi possível carregar a build a duplicar (talvez tenha sido apagada). Você pode começar uma nova aqui.",
         "outdated": "O herói mudou depois desta build",
-        "outdatedHint": "Os stats ou habilidades do herói mudaram no jogo depois da última atualização desta build."
+        "outdatedHint": "Os stats ou habilidades do herói mudaram no jogo depois da última atualização desta build.",
+        "usedInOneGuide": "Usada em uma equipe de 1 guia",
+        "usedInGuides": "Usada em equipes de {count} guias"
     },
     "news": {
         "title": "Notícias de Epic Seven",

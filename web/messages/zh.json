@@ -160,7 +160,10 @@
         "myBuildCheckFew": "填写最低属性的配装还不够,无法比较(每项至少 {count} 套)。",
         "myBuildCheckHint": "输入你英雄的属性,看看已满足多少配装的最低要求。",
         "meetsShare": "满足 {share}% 的配装",
-        "furthestStat": "最欠缺的是 {stat}(配装通常要求 {median})。"
+        "furthestStat": "最欠缺的是 {stat}(配装通常要求 {median})。",
+        "guidesWithHero": "攻略与队伍",
+        "viewAllGuides": "查看全部",
+        "guideTeamsCount": "{count} 支队伍"
     },
     "elements": {
         "fire": "火",
@@ -253,7 +256,33 @@
         "hasBuild": "已有配装",
         "clickToAddBuild": "点击添加配装",
         "noHeroesInTeam": "为这个队伍添加英雄",
-        "filterByHero": "按英雄筛选"
+        "filterByHero": "按英雄筛选",
+        "teamNoBuilds": "该英雄还没有配装。请先创建一个，然后重新加载。",
+        "teamCreateBuild": "创建配装",
+        "teamReloadBuilds": "重新加载",
+        "teamBuildFor": "{hero} 的配装",
+        "teamPickBuild": "选择配装…",
+        "teamModes": {
+            "arena": "竞技场",
+            "gw_attack": "公会战 进攻",
+            "gw_defense": "公会战 防守",
+            "rta": "实时竞技场",
+            "pve": "PvE"
+        },
+        "teamCompositionsBuildsDesc": "（可选）添加本攻略使用的队伍。每个英雄都关联站内的一个配装。",
+        "removeTeam": "移除队伍",
+        "teamOldFormat": "此队伍使用旧格式（没有模式和配装），仍会显示在攻略中。",
+        "teamConvert": "更新：选择模式和配装",
+        "teamMode": "模式",
+        "teamNote": "队伍打法",
+        "teamNotePlaceholder": "打法、出手顺序、克制什么…（可选）",
+        "removeHeroFromTeam": "移除 {hero}",
+        "teamHeroNote": "队伍中的定位",
+        "teamBuildUnavailable": "该配装已不可用",
+        "teamEmptyError": "请为每个队伍至少添加一名英雄，或移除空队伍。",
+        "teamBuildError": "请为队伍中的每个英雄选择配装。",
+        "filteredByBuild": "队伍中使用配装 #{id} 的攻略",
+        "clearBuildFilter": "显示全部"
     },
     "guidesCreate": {
         "createGuide": "创建新攻略",
@@ -559,7 +588,9 @@
         "ocrApply": "使用这些数值",
         "duplicateFailed": "无法加载要复制的配装(可能已被删除)。你可以在这里新建一个。",
         "outdated": "此配装后英雄有调整",
-        "outdatedHint": "此配装最后更新后,英雄的属性或技能在游戏中有变动。"
+        "outdatedHint": "此配装最后更新后,英雄的属性或技能在游戏中有变动。",
+        "usedInOneGuide": "被 1 篇攻略的队伍使用",
+        "usedInGuides": "被 {count} 篇攻略的队伍使用"
     },
     "news": {
         "title": "第七史诗新闻",

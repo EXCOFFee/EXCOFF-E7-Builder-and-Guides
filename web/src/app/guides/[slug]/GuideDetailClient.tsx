@@ -10,6 +10,7 @@ import { ImageCarousel } from '@/components/ui/image-carousel';
 import { guideApi } from '@/lib/api';
 import { useTranslations } from '@/hooks/useTranslations';
 import { TeamCompositionDisplay, Team } from '@/components/guides/TeamCompositionDisplay';
+import type { TeamBuild, TeamHeroInfo } from '@/components/guides/teamTypes';
 import { ShareButton } from '@/components/ui/ShareButton';
 import { appendImageVersion } from '@/lib/heroImages';
 import { formatDate } from '@/lib/utils';
@@ -83,6 +84,8 @@ interface Guide {
         icon?: string;
     }[];
     teams?: Team[];
+    team_builds?: Record<string, TeamBuild>;
+    team_heroes?: Record<string, TeamHeroInfo>;
 }
 
 interface Comment {
@@ -510,7 +513,7 @@ export function GuideDetailClient() {
                 {/* Team Compositions (new feature) */}
                 {guide.teams && guide.teams.length > 0 && (
                     <div className="glass-panel border-e7-gold/20 rounded-xl overflow-hidden mb-6 p-6">
-                        <TeamCompositionDisplay teams={guide.teams} />
+                        <TeamCompositionDisplay teams={guide.teams} teamBuilds={guide.team_builds} teamHeroes={guide.team_heroes} />
                     </div>
                 )}
 

@@ -51,6 +51,8 @@ export default function GuidesPage() {
     // Categoría, héroe y orden en la URL: un link a /guides?hero=straze&category=rta se puede compartir
     const categoryFilter = searchParams.get('category') ?? 'all';
     const heroFilter = searchParams.get('hero') ?? '';
+    // Guías cuyos equipos usan una build (link "usada en N guías" de la build)
+    const buildFilter = searchParams.get('build') ?? '';
     const sortBy = searchParams.get('sort') ?? 'newest';
     const setParam = (key: string, value: string, empty: string) => {
         const next = new URLSearchParams(searchParams.toString());
@@ -93,13 +95,14 @@ export default function GuidesPage() {
     ];
 
     const { data, isLoading, error } = useQuery({
-        queryKey: ['guides', search, categoryFilter, selectedLanguage, heroFilter, sortBy],
+        queryKey: ['guides', search, categoryFilter, selectedLanguage, heroFilter, buildFilter, sortBy],
         queryFn: async () => {
             // Orden en el servidor: antes se ordenaba solo la página de 20 ya cargada
             const [sort, order] = sortBy.split('_');
             const params: Record<string, string> = { sort, order: order ?? 'desc' };
             if (categoryFilter && categoryFilter !== 'all') params.category = categoryFilter;
             if (heroFilter) params.hero = heroFilter;
+            if (buildFilter) params.build = buildFilter;
             if (search) params.search = search;
             if (selectedLanguage && selectedLanguage !== 'all') params.language = selectedLanguage;
 
@@ -181,6 +184,14 @@ export default function GuidesPage() {
                             </button>
                         )}
                     </div>
+                    {buildFilter && (
+                        <div className="flex items-center gap-2 text-sm text-cyan-300">
+                            {t('guides.filteredByBuild', 'Guides whose teams use build #{id}').replace('{id}', buildFilter)}
+                            <button type="button" onClick={() => setParam('build', '', '')} className="text-xs text-neutral-400 hover:text-e7-gold">
+                                {t('guides.clearBuildFilter', 'Show all')}
+                            </button>
+                        </div>
+                    )}
                     <div className="flex items-center gap-2">
                         <span className="text-sm text-neutral-400">{t('common.sortBy', 'Sort by')}:</span>
                         <select

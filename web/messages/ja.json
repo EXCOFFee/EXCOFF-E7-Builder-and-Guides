@@ -160,7 +160,10 @@
         "myBuildCheckFew": "比較できる最低ステータス付きのビルドがまだ足りません(各ステータス{count}件以上)。",
         "myBuildCheckHint": "ヒーローのステータスを入力すると、何件のビルドの最低値を満たしているか分かります。",
         "meetsShare": "ビルドの{share}%を満たす",
-        "furthestStat": "一番足りないのは{stat}(ビルドの目安は{median})。"
+        "furthestStat": "一番足りないのは{stat}(ビルドの目安は{median})。",
+        "guidesWithHero": "ガイドと編成",
+        "viewAllGuides": "すべて見る",
+        "guideTeamsCount": "編成 {count}"
     },
     "elements": {
         "fire": "火",
@@ -253,7 +256,33 @@
         "hasBuild": "ビルドあり",
         "clickToAddBuild": "クリックしてビルドを追加",
         "noHeroesInTeam": "このチームにヒーローを追加してください",
-        "filterByHero": "ヒーローで絞り込む"
+        "filterByHero": "ヒーローで絞り込む",
+        "teamNoBuilds": "このヒーローにはまだビルドがありません。作成してから再読み込みしてください。",
+        "teamCreateBuild": "ビルドを作成",
+        "teamReloadBuilds": "再読み込み",
+        "teamBuildFor": "{hero}のビルド",
+        "teamPickBuild": "ビルドを選択…",
+        "teamModes": {
+            "arena": "アリーナ",
+            "gw_attack": "ギルド戦 攻撃",
+            "gw_defense": "ギルド戦 防衛",
+            "rta": "リアルタイムアリーナ",
+            "pve": "PvE"
+        },
+        "teamCompositionsBuildsDesc": "（任意）このガイドで使う編成を追加します。各ヒーローはサイトのビルドに紐づきます。",
+        "removeTeam": "編成を削除",
+        "teamOldFormat": "この編成は旧形式（モード・ビルドなし）です。ガイドには引き続き表示されます。",
+        "teamConvert": "更新する：モードとビルドを選択",
+        "teamMode": "モード",
+        "teamNote": "編成の動かし方",
+        "teamNotePlaceholder": "動かし方、行動順、何に強いか…（任意）",
+        "removeHeroFromTeam": "{hero}を外す",
+        "teamHeroNote": "編成での役割",
+        "teamBuildUnavailable": "このビルドは公開されていません",
+        "teamEmptyError": "各編成にヒーローを1人以上追加するか、空の編成を削除してください。",
+        "teamBuildError": "編成のすべてのヒーローにビルドを選んでください。",
+        "filteredByBuild": "ビルド #{id} を使う編成のあるガイド",
+        "clearBuildFilter": "すべて表示"
     },
     "guidesCreate": {
         "createGuide": "新しいガイドを作成",
@@ -559,7 +588,9 @@
         "ocrApply": "この値を使う",
         "duplicateFailed": "複製するビルドを読み込めませんでした(削除された可能性があります)。ここで新しく作成できます。",
         "outdated": "このビルド後にヒーローが変更",
-        "outdatedHint": "このビルドの最終更新後に、ゲーム内でヒーローのステータスやスキルが変わりました。"
+        "outdatedHint": "このビルドの最終更新後に、ゲーム内でヒーローのステータスやスキルが変わりました。",
+        "usedInOneGuide": "1件のガイドの編成で使用中",
+        "usedInGuides": "{count}件のガイドの編成で使用中"
     },
     "news": {
         "title": "エピックセブンニュース",

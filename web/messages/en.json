@@ -160,7 +160,10 @@
         "myBuildCheckFew": "Not enough builds with minimum stats to compare yet (at least {count} per stat).",
         "myBuildCheckHint": "Type your hero’s stats to see how many builds’ minimums you already meet.",
         "meetsShare": "Meets {share}% of builds",
-        "furthestStat": "Furthest behind: {stat} (builds usually ask for {median})."
+        "furthestStat": "Furthest behind: {stat} (builds usually ask for {median}).",
+        "guidesWithHero": "Guides and teams",
+        "viewAllGuides": "See all",
+        "guideTeamsCount": "{count} teams"
     },
     "elements": {
         "fire": "Fire",
@@ -253,7 +256,33 @@
         "hasBuild": "Has build",
         "clickToAddBuild": "Click to add a build",
         "noHeroesInTeam": "Add heroes to this team",
-        "filterByHero": "Filter by hero"
+        "filterByHero": "Filter by hero",
+        "teamNoBuilds": "This hero has no builds yet. Create one, then reload.",
+        "teamCreateBuild": "Create build",
+        "teamReloadBuilds": "Reload",
+        "teamBuildFor": "Build for {hero}",
+        "teamPickBuild": "Pick a build…",
+        "teamModes": {
+            "arena": "Arena",
+            "gw_attack": "Guild War attack",
+            "gw_defense": "Guild War defense",
+            "rta": "RTA",
+            "pve": "PvE"
+        },
+        "teamCompositionsBuildsDesc": "(Optional) Add the teams this guide uses. Each hero is linked to a build from the site.",
+        "removeTeam": "Remove team",
+        "teamOldFormat": "This team uses the old format (no mode or builds). It still shows in the guide.",
+        "teamConvert": "Update it: pick a mode and builds",
+        "teamMode": "Mode",
+        "teamNote": "How the team plays",
+        "teamNotePlaceholder": "How the team plays, turn order, what it beats… (optional)",
+        "removeHeroFromTeam": "Remove {hero}",
+        "teamHeroNote": "Role in the team",
+        "teamBuildUnavailable": "Build no longer available",
+        "teamEmptyError": "Add at least one hero to each team, or remove the empty team.",
+        "teamBuildError": "Pick a build for every hero in your teams.",
+        "filteredByBuild": "Guides whose teams use build #{id}",
+        "clearBuildFilter": "Show all"
     },
     "guidesCreate": {
         "createGuide": "Create New Guide",
@@ -559,7 +588,9 @@
         "ocrApply": "Use these values",
         "duplicateFailed": "The build to duplicate couldn’t be loaded (it may have been deleted). You can start a new one here.",
         "outdated": "Hero changed since this build",
-        "outdatedHint": "The hero’s stats or skills changed in the game after this build was last updated."
+        "outdatedHint": "The hero’s stats or skills changed in the game after this build was last updated.",
+        "usedInOneGuide": "Used in a team in 1 guide",
+        "usedInGuides": "Used in teams in {count} guides"
     },
     "news": {
         "title": "Epic Seven News",
