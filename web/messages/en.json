@@ -547,7 +547,8 @@
         "ocrError": "No stats could be read. Try a sharper screenshot of the stat screen, or type them in.",
         "ocrReview": "Check the values before using them:",
         "ocrDoubtful": "Check this one",
-        "ocrApply": "Use these values"
+        "ocrApply": "Use these values",
+        "duplicateFailed": "The build to duplicate couldn’t be loaded (it may have been deleted). You can start a new one here."
     },
     "news": {
         "title": "Epic Seven News",

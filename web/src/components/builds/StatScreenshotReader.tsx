@@ -1,6 +1,7 @@
 'use client';
 
-import { useId, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
+import type { Worker } from 'tesseract.js';
 import { useTranslations } from '@/hooks/useTranslations';
 import { STAT_FIELDS, type StatKey } from './buildFormModel';
 
@@ -31,9 +32,12 @@ type Status = 'idle' | 'reading' | 'review' | 'error';
 export function parseStatScreen(text: string): Partial<Record<StatKey, string>> {
     const numbers: number[] = [];
     for (const line of text.split('\n')) {
+        // "Lv. 60" u otros números arriba de los stats correrían todo un lugar
+        if (/\blv\.?\s*\d/i.test(line)) continue;
         const tokens = [...line.matchAll(/\d[\d.,]*/g)].filter((m) => !/[+(]\s*$/.test(line.slice(0, m.index)));
         if (tokens.length === 0) continue;
-        let raw = tokens[tokens.length - 1][0];
+        // Sin signos sueltos al final ("3,868." o "18,013,")
+        let raw = tokens[tokens.length - 1][0].replace(/[.,]+$/, '');
         // "1,234" o "1.234" (separador de miles según el idioma) -> 1234
         if (/^\d{1,3}([.,]\d{3})+$/.test(raw)) raw = raw.replace(/[.,]/g, '');
         const value = Math.round(parseFloat(raw.replace(',', '.')));
@@ -82,24 +86,33 @@ export function StatScreenshotReader({ onApply }: StatScreenshotReaderProps) {
     const [status, setStatus] = useState<Status>('idle');
     const [progress, setProgress] = useState(0);
     const [read, setRead] = useState<Partial<Record<StatKey, string>>>({});
+    // Un solo worker para todas las capturas (crearlo carga el motor y el idioma: segundos)
+    const workerRef = useRef<Worker | null>(null);
+
+    useEffect(() => () => {
+        workerRef.current?.terminate();
+        workerRef.current = null;
+    }, []);
 
     const readFile = async (file: File) => {
         setStatus('reading');
         setProgress(0);
         try {
             const [{ createWorker }, canvas] = await Promise.all([import('tesseract.js'), preprocess(file)]);
-            const worker = await createWorker('eng', 1, {
+            workerRef.current ??= await createWorker('eng', 1, {
                 logger: (m: { status: string; progress: number }) => {
                     if (m.status === 'recognizing text') setProgress(Math.round(m.progress * 100));
                 },
             });
-            const { data } = await worker.recognize(canvas);
-            await worker.terminate();
+            const { data } = await workerRef.current.recognize(canvas);
             const values = parseStatScreen(data.text);
             if (Object.keys(values).length === 0) throw new Error('no numbers');
             setRead(values);
             setStatus('review');
         } catch {
+            // Un worker que falló no se reutiliza: se cierra para no dejar la memoria ocupada
+            await workerRef.current?.terminate().catch(() => undefined);
+            workerRef.current = null;
             setStatus('error');
         }
     };
@@ -162,6 +175,10 @@ export function StatScreenshotReader({ onApply }: StatScreenshotReaderProps) {
                                     inputMode="numeric"
                                     value={read[key] ?? ''}
                                     onChange={(e) => setRead({ ...read, [key]: e.target.value })}
+                                    // Están dentro del formulario de la build: Enter lo enviaría
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter') e.preventDefault();
+                                    }}
                                     aria-invalid={doubtful(key)}
                                     className={`mt-1 w-full rounded-md border bg-e7-void px-2 py-1 text-sm text-white ${doubtful(key) ? 'border-amber-400' : 'border-e7-gold/30'}`}
                                 />

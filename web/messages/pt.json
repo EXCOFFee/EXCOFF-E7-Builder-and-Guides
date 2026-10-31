@@ -547,7 +547,8 @@
         "ocrError": "Não foi possível ler os stats. Tente uma captura mais nítida da tela de stats, ou digite-os.",
         "ocrReview": "Confira os valores antes de usá-los:",
         "ocrDoubtful": "Confira este",
-        "ocrApply": "Usar estes valores"
+        "ocrApply": "Usar estes valores",
+        "duplicateFailed": "Não foi possível carregar a build a duplicar (talvez tenha sido apagada). Você pode começar uma nova aqui."
     },
     "news": {
         "title": "Notícias de Epic Seven",

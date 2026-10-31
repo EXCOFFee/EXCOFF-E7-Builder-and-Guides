@@ -22,7 +22,7 @@ export default function CreateBuildPage() {
     // ?from=<id>: variante de una build (botón "Duplicar"): mismos datos, sin imágenes
     const fromId = Number(searchParams.get('from')) || null;
 
-    const { data: source, isLoading: loadingSource } = useQuery<ApiBuild>({
+    const { data: source, isLoading: loadingSource, isError: sourceFailed } = useQuery<ApiBuild>({
         queryKey: ['build', String(fromId), 'duplicate'],
         queryFn: async () => {
             const response = await fetch(`${API_URL}/builds/${fromId}`, {
@@ -61,6 +61,11 @@ export default function CreateBuildPage() {
                         <span className="group-hover:-translate-x-1 transition-transform">←</span> {t('builds.backToHeroes', 'Back to Heroes')}
                     </Link>
                     <h1 className="font-hero font-normal text-4xl text-slate-50 tracking-normal mb-2">{t('builds.createNewBuild', 'Create New Build')}</h1>
+                    {sourceFailed && (
+                        <p role="alert" className="mb-2 text-sm text-amber-300">
+                            {t('builds.duplicateFailed', 'The build to duplicate couldn’t be loaded (it may have been deleted). You can start a new one here.')}
+                        </p>
+                    )}
                     <p className="text-slate-400">
                         {source
                             ? t('builds.duplicatingFrom', 'Variant of “{title}”: change what you need and publish it as a new build.').replace('{title}', source.title)

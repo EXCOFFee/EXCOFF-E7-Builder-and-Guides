@@ -547,7 +547,8 @@
         "ocrError": "无法读取属性。请换一张更清晰的属性界面截图,或手动输入。",
         "ocrReview": "使用前请核对数值:",
         "ocrDoubtful": "请核对",
-        "ocrApply": "使用这些数值"
+        "ocrApply": "使用这些数值",
+        "duplicateFailed": "无法加载要复制的配装(可能已被删除)。你可以在这里新建一个。"
     },
     "news": {
         "title": "第七史诗新闻",

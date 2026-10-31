@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\ValidationException;
 
 class UserBuildController extends Controller
 {
@@ -179,7 +180,12 @@ class UserBuildController extends Controller
     public function show(Request $request, UserBuild $build): JsonResponse
     {
         $build->load(['user:id,name,avatar', 'hero', 'artifact']);
-        $build->increment('views');
+        $viewer = $this->optionalUser($request);
+        $isOwner = $viewer !== null && (int) $build->user_id === (int) $viewer->id;
+        // El autor mirando o duplicando su build no suma vistas
+        if (!$isOwner) {
+            $build->increment('views');
+        }
 
         // Localize artifact
         $lang = $request->query('lang', 'en');
@@ -189,8 +195,7 @@ class UserBuildController extends Controller
 
         // Add synergy and counter heroes data
         $response = $build->toArray();
-        $viewer = $this->optionalUser($request);
-        $response['is_owner'] = $viewer !== null && (int) $build->user_id === (int) $viewer->id;
+        $response['is_owner'] = $isOwner;
         $response['synergy_heroes_list'] = $build->synergy_heroes_list;
         $response['counter_heroes_list'] = $build->counter_heroes_list;
 
@@ -267,7 +272,7 @@ class UserBuildController extends Controller
         // Handle image uploads using ImageService (422 if any image is rejected)
         $validated['images'] = $this->imageService->storeUploads($request->file('images'), 'builds');
         if ($request->hasFile('proof_image')) {
-            $validated['proof_image'] = $this->imageService->storeUploads([$request->file('proof_image')], 'builds/proof')[0];
+            $validated['proof_image'] = $this->storeProof($request);
         }
 
         $build = $request->user()->builds()->create($validated);
@@ -353,14 +358,20 @@ class UserBuildController extends Controller
             $validated['min_stats'] = $minStats;
         }
 
-        // Captura de prueba: una nueva la reemplaza; remove_proof_image la quita; si no, queda
+        // Captura de prueba: una nueva la reemplaza; remove_proof_image la quita; si no, queda.
+        // El archivo anterior se borra (si no, cada reemplazo dejaba hasta 5 MB en el servidor)
+        $oldProof = $build->proof_image;
         if ($request->hasFile('proof_image')) {
-            $validated['proof_image'] = $this->imageService->storeUploads([$request->file('proof_image')], 'builds/proof')[0];
+            $validated['proof_image'] = $this->storeProof($request);
         } elseif ($request->boolean('remove_proof_image')) {
             $validated['proof_image'] = null;
         }
 
         $build->update($validated);
+
+        if (array_key_exists('proof_image', $validated) && $oldProof !== $build->proof_image) {
+            $this->imageService->deleteOwned($oldProof);
+        }
 
         return response()->json($build);
     }
@@ -389,6 +400,16 @@ class UserBuildController extends Controller
             $request->merge([$field => is_array($tags)
                 ? array_values(array_map(fn ($tag) => is_string($tag) ? ['id' => $tag] : $tag, $tags))
                 : null]);
+        }
+    }
+
+    /** Guarda la captura de prueba; un rechazo se informa en el campo proof_image (no en images) */
+    private function storeProof(Request $request): string
+    {
+        try {
+            return $this->imageService->storeUploads([$request->file('proof_image')], 'builds/proof')[0];
+        } catch (ValidationException $e) {
+            throw ValidationException::withMessages(['proof_image' => $e->errors()['images'] ?? $e->errors()]);
         }
     }
 
@@ -443,7 +464,9 @@ class UserBuildController extends Controller
             return response()->json(['error' => 'Unauthorized'], 403);
         }
 
+        $proof = $build->proof_image;
         $build->delete();
+        $this->imageService->deleteOwned($proof);
 
         return response()->json(['message' => 'Build deleted successfully']);
     }

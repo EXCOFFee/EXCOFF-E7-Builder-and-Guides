@@ -80,6 +80,64 @@ class BuildProofImageTest extends TestCase
         $this->assertNull($build->fresh()->proof_image);
     }
 
+    public function test_replaced_removed_and_deleted_proofs_leave_no_files(): void
+    {
+        $owner = User::factory()->create();
+        $this->actingAs($owner)->post('/api/builds', [
+            'hero_id' => Hero::factory()->create()->id,
+            'title' => 'Con prueba',
+            'proof_image' => $this->png('a.png'),
+        ], ['Accept' => 'application/json'])->assertCreated();
+        $build = UserBuild::first();
+
+        $this->actingAs($owner)->post("/api/builds/{$build->id}", ['_method' => 'PUT', 'proof_image' => $this->png('b.png')], ['Accept' => 'application/json'])->assertOk();
+        $this->assertCount(1, Storage::disk('public')->files('builds/proof'));
+
+        $this->actingAs($owner)->deleteJson("/api/builds/{$build->id}")->assertOk();
+        $this->assertCount(0, Storage::disk('public')->files('builds/proof'));
+    }
+
+    public function test_rejected_proof_is_reported_on_its_own_field(): void
+    {
+        // Pasa la regla "image" de Laravel (es un PNG) pero ImageService lo rechaza por medidas
+        config(['app.url' => 'http://localhost']);
+        $huge = UploadedFile::fake()->createWithContent('big.png', $this->pngOfSize(5000, 10));
+
+        $this->actingAs(User::factory()->create())->post('/api/builds', [
+            'hero_id' => Hero::factory()->create()->id,
+            'title' => 'Grande',
+            'proof_image' => $huge,
+        ], ['Accept' => 'application/json'])
+            ->assertStatus(422)
+            ->assertJsonValidationErrors('proof_image')
+            ->assertJsonMissingValidationErrors('images');
+    }
+
+    public function test_owner_viewing_their_build_does_not_add_views(): void
+    {
+        $owner = User::factory()->create();
+        $build = UserBuild::factory()->create(['user_id' => $owner->id, 'views' => 0]);
+
+        $this->withHeaders(['Authorization' => 'Bearer ' . $owner->createToken('t')->plainTextToken])
+            ->getJson("/api/builds/{$build->id}")->assertOk();
+        $this->assertSame(0, $build->fresh()->views);
+
+        $this->flushHeaders();
+        $this->app['auth']->forgetGuards();
+        $this->getJson("/api/builds/{$build->id}")->assertOk();
+        $this->assertSame(1, $build->fresh()->views);
+    }
+
+    /** PNG válido de ancho x alto sin GD: cabecera IHDR con las medidas (el contenido no importa) */
+    private function pngOfSize(int $width, int $height): string
+    {
+        $ihdr = pack('NNCCCCC', $width, $height, 8, 2, 0, 0, 0);
+        $chunk = fn (string $type, string $data) => pack('N', strlen($data)) . $type . $data . pack('N', crc32($type . $data));
+        $raw = str_repeat("\0" . str_repeat("\0\0\0", $width), $height);
+
+        return "\x89PNG\r\n\x1a\n" . $chunk('IHDR', $ihdr) . $chunk('IDAT', gzcompress($raw)) . $chunk('IEND', '');
+    }
+
     public function test_update_without_proof_fields_keeps_it(): void
     {
         $owner = User::factory()->create();
