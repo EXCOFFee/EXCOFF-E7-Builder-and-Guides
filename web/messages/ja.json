@@ -82,7 +82,10 @@
         "sublineBuilds": "セット・アーティファクト・苦手・長所短所・モード別評価つきのビルド{count}件。",
         "trendingBuilds": "話題のビルド",
         "noTrending": "この2週間に話題のビルドはありません。",
-        "topGuides": "おすすめガイド"
+        "topGuides": "おすすめガイド",
+        "followingFeed": "フォロー中のユーザーの新着",
+        "feedBuild": "ビルド",
+        "feedGuide": "ガイド"
     },
     "footer": {
         "dataPoweredBy": "ヒーローとアーティファクトデータ提供",
@@ -590,7 +593,13 @@
         "outdated": "このビルド後にヒーローが変更",
         "outdatedHint": "このビルドの最終更新後に、ゲーム内でヒーローのステータスやスキルが変わりました。",
         "usedInOneGuide": "1件のガイドの編成で使用中",
-        "usedInGuides": "{count}件のガイドの編成で使用中"
+        "usedInGuides": "{count}件のガイドの編成で使用中",
+        "verifiedOnly": "認証済みのみ",
+        "proofImageVerifyHint": "この装備でのヒーローのステータス画面のスクリーンショット。入力したステータスと照合し、モデレーターがビルドを認証します。",
+        "verifiedHint": "モデレーターがゲーム内のスクリーンショットとこのステータスを照合しました。",
+        "verified": "認証済み",
+        "verificationPending": "スクリーンショット確認中",
+        "verificationRejected": "スクリーンショットが承認されませんでした：このステータスが写っているか確認してください"
     },
     "news": {
         "title": "エピックセブンニュース",
@@ -651,5 +660,40 @@
         "subtitle": "ログインしてビルドやガイドを作成しよう",
         "continueWithGoogle": "Googleで続ける",
         "continueWithDiscord": "Discordで続ける"
+    },
+    "admin": {
+        "onlyAdmins": "このページは管理者のみ閲覧できます。",
+        "verifications": "ビルド認証",
+        "verificationsHint": "OCRの読み取りは投稿者のブラウザで行われ、改ざんできます。必ずスクリーンショットを確認してください。",
+        "selectFullMatches": "完全一致を選択（{count}）",
+        "approveSelected": "選択を承認（{count}）",
+        "noVerifications": "確認するものはありません。",
+        "proofOf": "{title}のスクリーンショット",
+        "ocrMatched": "OCR：{total}項目中{matched}項目が一致",
+        "noOcr": "OCRの読み取りなし：目視で比較してください",
+        "stat": "ステータス",
+        "buildValue": "ビルド",
+        "ocrValue": "スクリーンショット",
+        "approve": "承認",
+        "reject": "却下"
+    },
+    "profile": {
+        "notFound": "このプレイヤーは存在しません。",
+        "backToBuilds": "ビルド一覧に戻る",
+        "builds": "ビルド",
+        "guides": "ガイド",
+        "likesReceived": "獲得いいね",
+        "verifiedBuilds": "認証済みビルド",
+        "followers": "フォロワー",
+        "memberSince": "{date}から参加",
+        "badges": "バッジ",
+        "badge": {
+            "verified_builder": "認証ビルダー",
+            "popular": "人気"
+        },
+        "following": "フォロー中",
+        "follow": "フォロー",
+        "noBuilds": "この名前で公開されたビルドはまだありません。",
+        "noGuides": "この名前で公開されたガイドはまだありません。"
     }
 }

@@ -48,8 +48,13 @@ class UserBuild extends Model
         'con_tags',
     ];
 
+    /** Lo que leyó el OCR y quién verificó: solo para el admin (la cola de verificación) */
+    protected $hidden = ['proof_ocr', 'verified_by'];
+
     protected $casts = [
         'min_stats' => 'array',
+        'proof_ocr' => 'array',
+        'verified_at' => 'datetime',
         'synergy_heroes' => 'array',
         'counter_heroes' => 'array',
         'images' => 'array',

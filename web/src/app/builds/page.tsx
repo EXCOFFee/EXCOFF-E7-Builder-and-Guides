@@ -11,6 +11,7 @@ import { useTranslations } from '@/hooks/useTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { appendImageVersion } from '@/lib/heroImages';
 import { TagFilter } from '@/components/builds/TagFilter';
+import { VerifiedBadge } from '@/components/builds/VerifiedBadge';
 import { CONTENT_LANGUAGES, languageLabel } from '@/lib/languages';
 import { OutdatedBadge } from '@/components/builds/OutdatedBadge';
 
@@ -54,6 +55,7 @@ interface Build {
     likes: number;
     views: number;
     is_anonymous: boolean;
+    verification_status?: string | null;
     user: {
         id: number;
         name: string;
@@ -115,9 +117,10 @@ export default function BuildsPage() {
     }
     const [primarySet, setPrimarySet] = useState<string | null>(null);
     const [minSpeed, setMinSpeed] = useState<string>('');
+    const [verifiedOnly, setVerifiedOnly] = useState(false);
 
     const { data, isLoading } = useQuery({
-        queryKey: ['builds', heroSlug, includedTags.join(','), excludedTags.join(','), search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, selectedLanguage, sortBy, locale],
+        queryKey: ['builds', heroSlug, includedTags.join(','), excludedTags.join(','), search, selectedElement, selectedClass, selectedRarity, primarySet, minSpeed, verifiedOnly, selectedLanguage, sortBy, locale],
         queryFn: async () => {
             const params = new URLSearchParams();
             if (heroSlug) params.append('hero', heroSlug);
@@ -129,6 +132,7 @@ export default function BuildsPage() {
             if (selectedRarity) params.append('rarity', selectedRarity.toString());
             if (primarySet) params.append('primary_set', primarySet);
             if (minSpeed && parseInt(minSpeed) > 0) params.append('min_speed', minSpeed);
+            if (verifiedOnly) params.append('verified', '1');
             if (selectedLanguage && selectedLanguage !== 'all') params.append('language', selectedLanguage);
 
             // Server-side sorting - map frontend values to backend params
@@ -354,11 +358,17 @@ export default function BuildsPage() {
                                     className="w-24 bg-e7-void border-e7-gold/30 text-white"
                                 />
 
+                                <label className="ml-4 flex items-center gap-2 text-sm text-slate-300">
+                                    <input type="checkbox" checked={verifiedOnly} onChange={(e) => setVerifiedOnly(e.target.checked)} className="accent-emerald-400" />
+                                    {t('builds.verifiedOnly', 'Verified only')}
+                                </label>
+
                                 {/* Clear filters */}
                                 <button
                                     onClick={() => {
                                         setPrimarySet(null);
                                         setMinSpeed('');
+                                        setVerifiedOnly(false);
                                     }}
                                     className="ml-4 text-sm text-gray-400 hover:text-e7-gold"
                                 >
@@ -449,6 +459,7 @@ export default function BuildsPage() {
                                             {build.title}
                                         </h3>
                                         <OutdatedBadge buildUpdatedAt={build.updated_at} heroChangedAt={build.hero.game_data_changed_at} className="mb-3" />
+                                        <VerifiedBadge status={build.verification_status} className="mb-3" />
 
                                         {/* Sets */}
                                         <div className="flex gap-2 mb-3 flex-wrap">

@@ -249,6 +249,58 @@ function cropCell(source: HTMLCanvasElement, box: Box, threshold: number): HTMLC
     return cell;
 }
 
+/**
+ * Los stats de una captura con un worker de Tesseract ya creado. `onCells` avisa cuando termina
+ * la lectura de toda la captura y empieza la de cada valor (la que tiene % de avance es la primera).
+ */
+async function readStats(worker: Worker, file: File, onCells?: () => void): Promise<Partial<Record<StatKey, string>>> {
+    const { binary, gray } = await preprocess(file);
+    const { data } = await worker.recognize(binary, {}, { text: true, blocks: true });
+    const lines = (data.blocks ?? []).flatMap((b) => b.paragraphs.flatMap((p) => p.lines));
+    const rows = findStatRows(lines);
+    if (!rows) return parseStatScreen(data.text);
+
+    // Segunda pasada: cada valor solo, con solo dígitos permitidos (el dibujo del héroe al lado
+    // mete letras y puntos que cambian el número)
+    onCells?.();
+    const numbers = rows.map((row) => row.value);
+    const decimals = /\d[.,]\d\s*%/.test(data.text);
+    await worker.setParameters({ tessedit_char_whitelist: '0123456789.,%' });
+    try {
+        for (const [i, { box }] of rows.entries()) {
+            const key = STAT_FIELDS[i].key;
+            // Tres lecturas (grises con dos umbrales y blanco y negro) y gana la mayoría: cada una
+            // falla en casos distintos (un 8 que pierde trazo, un 9 sobre el escudo)
+            const readings: number[] = [];
+            for (const [source, threshold] of [[gray, 0.4], [gray, 0.25], [binary, 0.5]] as const) {
+                readings.push(cellValue((await worker.recognize(cropCell(source, box, threshold))).data.text, key, decimals));
+            }
+            const best = pickReading(readings, key);
+            if (Number.isFinite(best)) numbers[i] = best;
+        }
+    } finally {
+        await worker.setParameters({ tessedit_char_whitelist: '' });
+    }
+    return toStats(numbers);
+}
+
+/**
+ * Lee los stats de la captura de prueba de una build, sin interfaz: lo que lee se manda con la
+ * build para comparar con sus stats y ordenar la cola de verificación. Null si no pudo.
+ */
+export async function readStatScreenshot(file: File): Promise<Partial<Record<StatKey, string>> | null> {
+    const { createWorker } = await import('tesseract.js');
+    const worker = await createWorker('eng', 1);
+    try {
+        const values = await readStats(worker, file);
+        return Object.keys(values).length > 0 ? values : null;
+    } catch {
+        return null;
+    } finally {
+        await worker.terminate().catch(() => undefined);
+    }
+}
+
 interface StatScreenshotReaderProps {
     onApply: (stats: Partial<Record<StatKey, string>>) => void;
 }
@@ -279,41 +331,15 @@ export function StatScreenshotReader({ onApply }: StatScreenshotReaderProps) {
         setProgress(0);
         trackProgressRef.current = true;
         try {
-            const [{ createWorker }, { binary, gray }] = await Promise.all([import('tesseract.js'), preprocess(file)]);
+            const { createWorker } = await import('tesseract.js');
             workerRef.current ??= await createWorker('eng', 1, {
                 logger: (m: { status: string; progress: number }) => {
                     if (trackProgressRef.current && m.status === 'recognizing text') setProgress(Math.round(m.progress * 100));
                 },
             });
-            const worker = workerRef.current;
-            const { data } = await worker.recognize(binary, {}, { text: true, blocks: true });
-            const lines = (data.blocks ?? []).flatMap((b) => b.paragraphs.flatMap((p) => p.lines));
-            const rows = findStatRows(lines);
-            let values = parseStatScreen(data.text);
-            if (rows) {
-                // Segunda pasada: cada valor solo, con solo dígitos permitidos (el dibujo del
-                // héroe al lado mete letras y puntos que cambian el número)
+            const values = await readStats(workerRef.current, file, () => {
                 trackProgressRef.current = false;
-                const numbers = rows.map((row) => row.value);
-                const decimals = /\d[.,]\d\s*%/.test(data.text);
-                await worker.setParameters({ tessedit_char_whitelist: '0123456789.,%' });
-                try {
-                    for (const [i, { box }] of rows.entries()) {
-                        const key = STAT_FIELDS[i].key;
-                        // Tres lecturas (grises con dos umbrales y blanco y negro) y gana la mayoría:
-                        // cada una falla en casos distintos (un 8 que pierde trazo, un 9 sobre el escudo)
-                        const readings: number[] = [];
-                        for (const [source, threshold] of [[gray, 0.4], [gray, 0.25], [binary, 0.5]] as const) {
-                            readings.push(cellValue((await worker.recognize(cropCell(source, box, threshold))).data.text, key, decimals));
-                        }
-                        const best = pickReading(readings, key);
-                        if (Number.isFinite(best)) numbers[i] = best;
-                    }
-                } finally {
-                    await worker.setParameters({ tessedit_char_whitelist: '' });
-                }
-                values = toStats(numbers);
-            }
+            });
             if (Object.keys(values).length === 0) throw new Error('no numbers');
             setRead(values);
             setStatus('review');

@@ -55,6 +55,11 @@ class GuideController extends Controller
             $query->where('type', $request->input('type'));
         }
 
+        // Guías de un autor (su perfil): las anónimas no cuentan
+        if ($request->filled('user')) {
+            $query->where('user_id', (int) $request->input('user'))->where('is_anonymous', false);
+        }
+
         // Filter by language
         if ($request->has('language') && $request->input('language') !== 'all') {
             $query->where('language', $request->input('language'));
@@ -113,9 +118,12 @@ class GuideController extends Controller
             'recommended_heroes' => 'nullable|array',
             'recommended_artifacts' => 'nullable|array',
             'teams' => 'nullable', // JSON en texto (FormData) o array; lo valida GuideTeams
+            'is_anonymous' => 'nullable',
         ] + ImageService::rules());
         unset($validated['images']);
         $validated['teams'] = GuideTeams::validate($request->input('teams'));
+        // El formulario manda "1"/"0" (antes se ignoraba y la guía "anónima" mostraba al autor)
+        $validated['is_anonymous'] = filter_var($validated['is_anonymous'] ?? false, FILTER_VALIDATE_BOOLEAN);
 
         $validated['slug'] = Str::slug($validated['title']) . '-' . Str::random(6);
         $validated['user_id'] = $request->user()->id;
@@ -157,8 +165,12 @@ class GuideController extends Controller
             'recommended_heroes' => 'nullable|array',
             'recommended_artifacts' => 'nullable|array',
             'teams' => 'nullable', // JSON en texto (FormData) o array; lo valida GuideTeams
+            'is_anonymous' => 'nullable',
         ] + ImageService::rules());
         unset($validated['images']);
+        if (array_key_exists('is_anonymous', $validated)) {
+            $validated['is_anonymous'] = filter_var($validated['is_anonymous'], FILTER_VALIDATE_BOOLEAN);
+        }
         // Sin el campo, los equipos quedan como estaban; "[]" los borra
         if ($request->has('teams')) {
             $validated['teams'] = GuideTeams::validate($request->input('teams'));

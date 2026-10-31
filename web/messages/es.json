@@ -82,7 +82,10 @@
         "sublineBuilds": "{count} builds con sets, artefactos, counters, pros y contras, y notas por modo.",
         "trendingBuilds": "Builds en tendencia",
         "noTrending": "Nada en tendencia en las últimas dos semanas.",
-        "topGuides": "Guías destacadas"
+        "topGuides": "Guías destacadas",
+        "followingFeed": "De la gente que sigues",
+        "feedBuild": "Build",
+        "feedGuide": "Guía"
     },
     "footer": {
         "dataPoweredBy": "Datos de héroes y artefactos proporcionados por",
@@ -590,7 +593,13 @@
         "outdated": "El héroe cambió después de esta build",
         "outdatedHint": "Los stats o las habilidades del héroe cambiaron en el juego después de la última actualización de esta build.",
         "usedInOneGuide": "Usada en un equipo de 1 guía",
-        "usedInGuides": "Usada en equipos de {count} guías"
+        "usedInGuides": "Usada en equipos de {count} guías",
+        "verifiedOnly": "Solo verificadas",
+        "proofImageVerifyHint": "Una captura de la pantalla de stats del héroe con este equipo. La comparamos con tus stats y un moderador marca la build como verificada.",
+        "verifiedHint": "Un moderador comparó la captura del juego con estos stats.",
+        "verified": "Verificada",
+        "verificationPending": "Captura en revisión",
+        "verificationRejected": "Captura no aceptada: revisa que muestre estos stats"
     },
     "news": {
         "title": "Noticias de Epic Seven",
@@ -651,5 +660,40 @@
         "subtitle": "Accede para crear builds y guías",
         "continueWithGoogle": "Continuar con Google",
         "continueWithDiscord": "Continuar con Discord"
+    },
+    "admin": {
+        "onlyAdmins": "Solo los administradores pueden ver esta página.",
+        "verifications": "Verificación de builds",
+        "verificationsHint": "La lectura del OCR viene del navegador del autor y se puede falsear: revisa siempre la captura.",
+        "selectFullMatches": "Seleccionar coincidencias completas ({count})",
+        "approveSelected": "Aprobar seleccionadas ({count})",
+        "noVerifications": "No hay nada para revisar.",
+        "proofOf": "Captura de {title}",
+        "ocrMatched": "OCR: coinciden {matched} de {total} stats",
+        "noOcr": "Sin lectura del OCR: compara a ojo",
+        "stat": "Stat",
+        "buildValue": "Build",
+        "ocrValue": "Captura",
+        "approve": "Aprobar",
+        "reject": "Rechazar"
+    },
+    "profile": {
+        "notFound": "Este jugador no existe.",
+        "backToBuilds": "Volver a las builds",
+        "builds": "Builds",
+        "guides": "Guías",
+        "likesReceived": "Likes recibidos",
+        "verifiedBuilds": "Builds verificadas",
+        "followers": "Seguidores",
+        "memberSince": "Miembro desde {date}",
+        "badges": "Insignias",
+        "badge": {
+            "verified_builder": "Builder verificado",
+            "popular": "Popular"
+        },
+        "following": "Siguiendo",
+        "follow": "Seguir",
+        "noBuilds": "Todavía no hay builds publicadas con este nombre.",
+        "noGuides": "Todavía no hay guías publicadas con este nombre."
     }
 }

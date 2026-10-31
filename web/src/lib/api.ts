@@ -189,3 +189,24 @@ export const authApi = {
     api.post<{ token: string }>('/auth/exchange', { code }),
 };
 
+
+export const userApi = {
+  /** Perfil público: sin email y sin nada anónimo */
+  get: (id: number | string) =>
+    api.get(`/users/${id}`),
+  follow: (id: number | string) =>
+    api.post(`/users/${id}/follow`),
+  unfollow: (id: number | string) =>
+    api.delete(`/users/${id}/follow`),
+  /** Builds y guías nuevas de la gente que sigue el usuario */
+  feed: () =>
+    api.get('/feed'),
+};
+
+export const verificationApi = {
+  /** Builds con captura esperando revisión (solo admin) */
+  queue: () =>
+    api.get('/admin/verifications'),
+  set: (ids: number[], status: 'verified' | 'rejected') =>
+    api.put('/admin/verifications', { ids, status }),
+};

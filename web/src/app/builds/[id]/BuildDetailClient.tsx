@@ -11,6 +11,7 @@ import { TierRatingDisplay } from '@/components/ui/tier-rating-selector';
 import { ProConsDisplay } from '@/components/ui/pro-cons-selector';
 import { CommunityTierVote } from '@/components/builds/CommunityTierVote';
 import { OutdatedBadge } from '@/components/builds/OutdatedBadge';
+import { VerifiedBadge } from '@/components/builds/VerifiedBadge';
 import { SynergyCounterSection, HeroWithNote } from '@/components/builds/SynergyCounterCard';
 import { ExportBuildImage } from '@/components/builds/ExportBuildImage';
 import { ShareButton } from '@/components/ui/ShareButton';
@@ -74,6 +75,8 @@ interface Build {
     is_owner?: boolean;
     /** En cuántas guías publicadas la usa un equipo */
     guides_count?: number;
+    /** null sin captura; pending / verified / rejected */
+    verification_status?: string | null;
     // Tier Ratings (D-S system)
     rating_pve?: number | null;
     rating_arena?: number | null;
@@ -460,6 +463,7 @@ export function BuildDetailClient() {
                             {build.title}
                         </h1>
                         <OutdatedBadge buildUpdatedAt={build.updated_at} heroChangedAt={build.hero.game_data_changed_at} className="-mt-2 mb-4" />
+                        <VerifiedBadge status={build.verification_status} showPending={Boolean(build.is_owner)} className="-mt-2 mb-4" />
 
                         {/* Author & Actions - moved to top */}
                         <div className="flex items-center justify-between pb-4 mb-4 border-b border-e7-gold/20">
@@ -476,7 +480,9 @@ export function BuildDetailClient() {
                                 )}
                                 <div>
                                     <p className="text-white font-medium">
-                                        {build.is_anonymous ? 'Anonymous' : build.user?.name}
+                                        {build.is_anonymous || !build.user ? t('common.anonymous', 'Anonymous') : (
+                                            <Link href={`/users/${build.user.id}`} className="hover:text-e7-gold hover:underline">{build.user.name}</Link>
+                                        )}
                                     </p>
                                     <p className="text-xs text-gray-400">
                                         {formatDate(build.created_at, locale)} • 👁️ {build.views}

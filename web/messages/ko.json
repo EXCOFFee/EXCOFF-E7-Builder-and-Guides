@@ -82,7 +82,10 @@
         "sublineBuilds": "세트, 아티팩트, 카운터, 장단점, 모드별 평가가 담긴 빌드 {count}개.",
         "trendingBuilds": "인기 급상승 빌드",
         "noTrending": "최근 2주 동안 인기 빌드가 없습니다.",
-        "topGuides": "추천 공략"
+        "topGuides": "추천 공략",
+        "followingFeed": "팔로우한 사람들의 새 글",
+        "feedBuild": "빌드",
+        "feedGuide": "가이드"
     },
     "footer": {
         "dataPoweredBy": "영웅 및 아티팩트 데이터 제공",
@@ -590,7 +593,13 @@
         "outdated": "이 빌드 이후 영웅이 변경됨",
         "outdatedHint": "이 빌드를 마지막으로 수정한 뒤 게임에서 영웅의 스탯이나 스킬이 바뀌었습니다.",
         "usedInOneGuide": "가이드 1개의 팀에서 사용 중",
-        "usedInGuides": "가이드 {count}개의 팀에서 사용 중"
+        "usedInGuides": "가이드 {count}개의 팀에서 사용 중",
+        "verifiedOnly": "인증된 빌드만",
+        "proofImageVerifyHint": "이 장비를 낀 영웅의 스탯 화면 스크린샷입니다. 입력한 스탯과 비교한 뒤 관리자가 빌드를 인증합니다.",
+        "verifiedHint": "관리자가 게임 스크린샷과 이 스탯을 대조했습니다.",
+        "verified": "인증됨",
+        "verificationPending": "스크린샷 검토 중",
+        "verificationRejected": "스크린샷이 거절되었습니다: 이 스탯이 보이는지 확인하세요"
     },
     "news": {
         "title": "에픽세븐 뉴스",
@@ -651,5 +660,40 @@
         "subtitle": "로그인하고 빌드와 가이드를 만들어 보세요",
         "continueWithGoogle": "Google로 계속하기",
         "continueWithDiscord": "Discord로 계속하기"
+    },
+    "admin": {
+        "onlyAdmins": "관리자만 볼 수 있는 페이지입니다.",
+        "verifications": "빌드 인증",
+        "verificationsHint": "OCR 결과는 작성자의 브라우저에서 오므로 조작될 수 있습니다. 항상 스크린샷을 확인하세요.",
+        "selectFullMatches": "전부 일치 선택 ({count})",
+        "approveSelected": "선택 승인 ({count})",
+        "noVerifications": "검토할 항목이 없습니다.",
+        "proofOf": "{title} 스크린샷",
+        "ocrMatched": "OCR: 스탯 {total}개 중 {matched}개 일치",
+        "noOcr": "OCR 결과 없음: 직접 비교하세요",
+        "stat": "스탯",
+        "buildValue": "빌드",
+        "ocrValue": "스크린샷",
+        "approve": "승인",
+        "reject": "거절"
+    },
+    "profile": {
+        "notFound": "존재하지 않는 플레이어입니다.",
+        "backToBuilds": "빌드로 돌아가기",
+        "builds": "빌드",
+        "guides": "가이드",
+        "likesReceived": "받은 좋아요",
+        "verifiedBuilds": "인증된 빌드",
+        "followers": "팔로워",
+        "memberSince": "{date} 가입",
+        "badges": "배지",
+        "badge": {
+            "verified_builder": "인증 빌더",
+            "popular": "인기"
+        },
+        "following": "팔로잉",
+        "follow": "팔로우",
+        "noBuilds": "이 이름으로 공개된 빌드가 아직 없습니다.",
+        "noGuides": "이 이름으로 공개된 가이드가 아직 없습니다."
     }
 }

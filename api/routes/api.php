@@ -5,6 +5,8 @@ use App\Http\Controllers\Api\HeroController;
 use App\Http\Controllers\Api\ArtifactController;
 use App\Http\Controllers\Api\GuildPostController;
 use App\Http\Controllers\GuideController;
+use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\VerificationController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserBuildController;
 use App\Http\Controllers\VoteController;
@@ -30,6 +32,9 @@ Route::middleware('throttle:60,1')->group(function () {
     Route::get('/heroes/{hero:slug}/builds', [UserBuildController::class, 'indexByHero']);
     Route::get('/builds', [UserBuildController::class, 'index']);
     Route::get('/builds/{build}', [UserBuildController::class, 'show']);
+
+    // Perfil público de un usuario
+    Route::get('/users/{user}', [UserProfileController::class, 'show']);
 
     // Public guild posts
     Route::get('/guilds', [GuildPostController::class, 'index']);
@@ -95,9 +100,17 @@ Route::middleware(['auth:sanctum', 'throttle:30,1'])->group(function () {
     // Reports
     Route::post('/reports', [ReportController::class, 'store']);
 
+    // Seguir usuarios y lo nuevo de la gente que sigue el usuario
+    Route::post('/users/{user}/follow', [UserProfileController::class, 'follow']);
+    Route::delete('/users/{user}/follow', [UserProfileController::class, 'unfollow']);
+    Route::get('/feed', [UserProfileController::class, 'feed']);
+
     // Admin routes
     Route::middleware('admin')->group(function () {
         Route::get('/admin/reports', [ReportController::class, 'index']);
+        // Builds con captura para verificar
+        Route::get('/admin/verifications', [VerificationController::class, 'index']);
+        Route::put('/admin/verifications', [VerificationController::class, 'update']);
         Route::put('/admin/reports/{report}', [ReportController::class, 'update']);
         
         // Data sync routes

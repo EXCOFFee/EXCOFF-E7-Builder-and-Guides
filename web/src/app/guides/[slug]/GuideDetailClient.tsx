@@ -428,7 +428,11 @@ export function GuideDetailClient() {
                                     />
                                 )}
                                 <div>
-                                    <p className="text-white font-medium">{guide.user?.name || t('common.anonymous', 'Anonymous')}</p>
+                                    <p className="text-white font-medium">
+                                        {guide.user ? (
+                                            <Link href={`/users/${guide.user.id}`} className="hover:text-e7-gold hover:underline">{guide.user.name}</Link>
+                                        ) : t('common.anonymous', 'Anonymous')}
+                                    </p>
                                     <p className="text-xs text-gray-400">
                                         {formatDate(guide.created_at, locale)}
                                     </p>

@@ -82,7 +82,10 @@
         "sublineBuilds": "{count} 套配装,含套装、神器、克制、优缺点和各模式评分。",
         "trendingBuilds": "热门配装",
         "noTrending": "最近两周没有热门配装。",
-        "topGuides": "精选攻略"
+        "topGuides": "精选攻略",
+        "followingFeed": "你关注的人的新内容",
+        "feedBuild": "配装",
+        "feedGuide": "攻略"
     },
     "footer": {
         "dataPoweredBy": "英雄和神器数据提供",
@@ -590,7 +593,13 @@
         "outdated": "此配装后英雄有调整",
         "outdatedHint": "此配装最后更新后,英雄的属性或技能在游戏中有变动。",
         "usedInOneGuide": "被 1 篇攻略的队伍使用",
-        "usedInGuides": "被 {count} 篇攻略的队伍使用"
+        "usedInGuides": "被 {count} 篇攻略的队伍使用",
+        "verifiedOnly": "仅显示已认证",
+        "proofImageVerifyHint": "该英雄穿着这套装备时的属性界面截图。我们会与你填写的属性比对，并由管理员认证配装。",
+        "verifiedHint": "管理员已将游戏截图与这些属性核对。",
+        "verified": "已认证",
+        "verificationPending": "截图审核中",
+        "verificationRejected": "截图未通过：请确认截图显示的是这些属性"
     },
     "news": {
         "title": "第七史诗新闻",
@@ -651,5 +660,40 @@
         "subtitle": "登录后即可创建构建和攻略",
         "continueWithGoogle": "使用 Google 继续",
         "continueWithDiscord": "使用 Discord 继续"
+    },
+    "admin": {
+        "onlyAdmins": "仅管理员可查看此页面。",
+        "verifications": "配装认证",
+        "verificationsHint": "OCR 结果来自作者的浏览器，可能被伪造：请务必核对截图。",
+        "selectFullMatches": "选择完全匹配（{count}）",
+        "approveSelected": "批准所选（{count}）",
+        "noVerifications": "没有待审核的内容。",
+        "proofOf": "{title} 的截图",
+        "ocrMatched": "OCR：{total} 项属性中 {matched} 项一致",
+        "noOcr": "无 OCR 结果：请人工比对",
+        "stat": "属性",
+        "buildValue": "配装",
+        "ocrValue": "截图",
+        "approve": "批准",
+        "reject": "拒绝"
+    },
+    "profile": {
+        "notFound": "该玩家不存在。",
+        "backToBuilds": "返回配装",
+        "builds": "配装",
+        "guides": "攻略",
+        "likesReceived": "获得的赞",
+        "verifiedBuilds": "已认证配装",
+        "followers": "关注者",
+        "memberSince": "{date} 加入",
+        "badges": "徽章",
+        "badge": {
+            "verified_builder": "认证配装师",
+            "popular": "人气"
+        },
+        "following": "已关注",
+        "follow": "关注",
+        "noBuilds": "该用户名下还没有公开的配装。",
+        "noGuides": "该用户名下还没有公开的攻略。"
     }
 }

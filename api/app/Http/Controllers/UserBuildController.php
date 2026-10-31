@@ -8,6 +8,7 @@ use App\Models\UserBuild;
 use App\Models\Hero;
 use App\Services\ImageService;
 use App\Support\BuildCache;
+use App\Support\BuildVerification;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Cache;
@@ -52,6 +53,16 @@ class UserBuildController extends Controller
             // Filter by hero (slug): el link "ver todas las builds" de la ficha del héroe
             if ($request->filled('hero')) {
                 $query->whereHas('hero', fn ($q) => $q->where('slug', $request->input('hero')));
+            }
+
+            // Builds de un autor (su perfil): las anónimas no se muestran ahí
+            if ($request->filled('user')) {
+                $query->where('user_id', (int) $request->input('user'))->where('is_anonymous', false);
+            }
+
+            // Solo verificadas (captura del juego revisada por un admin)
+            if ($request->boolean('verified')) {
+                $query->where('verification_status', 'verified');
             }
 
             // Filter by hero element
@@ -300,7 +311,10 @@ class UserBuildController extends Controller
             $validated['proof_image'] = $this->storeProof($request);
         }
 
-        $build = $request->user()->builds()->create($validated);
+        $build = $request->user()->builds()->make($validated);
+        // Con captura queda para revisar; la lectura del OCR (si vino) ordena la cola del admin
+        BuildVerification::apply($build, BuildVerification::readFromInput($request->input('proof_ocr')), isset($validated['proof_image']));
+        $build->save();
 
         return response()->json($build, 201);
     }
@@ -392,7 +406,13 @@ class UserBuildController extends Controller
             $validated['proof_image'] = null;
         }
 
-        $build->update($validated);
+        $build->fill($validated);
+        BuildVerification::apply(
+            $build,
+            BuildVerification::readFromInput($request->input('proof_ocr')),
+            array_key_exists('proof_image', $validated) && $validated['proof_image'] !== $oldProof,
+        );
+        $build->save();
 
         if (array_key_exists('proof_image', $validated) && $oldProof !== $build->proof_image) {
             $this->imageService->deleteOwned($oldProof);

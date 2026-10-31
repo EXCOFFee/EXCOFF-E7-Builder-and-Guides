@@ -82,7 +82,10 @@
         "sublineBuilds": "{count} builds with sets, artifacts, counters, pros and cons, and ratings by mode.",
         "trendingBuilds": "Trending builds",
         "noTrending": "Nothing trending in the last two weeks.",
-        "topGuides": "Featured guides"
+        "topGuides": "Featured guides",
+        "followingFeed": "From people you follow",
+        "feedBuild": "Build",
+        "feedGuide": "Guide"
     },
     "footer": {
         "dataPoweredBy": "Hero & Artifact data powered by",
@@ -590,7 +593,13 @@
         "outdated": "Hero changed since this build",
         "outdatedHint": "The hero’s stats or skills changed in the game after this build was last updated.",
         "usedInOneGuide": "Used in a team in 1 guide",
-        "usedInGuides": "Used in teams in {count} guides"
+        "usedInGuides": "Used in teams in {count} guides",
+        "verifiedOnly": "Verified only",
+        "proofImageVerifyHint": "A screenshot of the hero’s stat screen with this gear. We compare it with your stats and a moderator marks the build as verified.",
+        "verifiedHint": "A moderator checked the in-game screenshot against these stats.",
+        "verified": "Verified",
+        "verificationPending": "Screenshot under review",
+        "verificationRejected": "Screenshot not accepted: check that it shows these stats"
     },
     "news": {
         "title": "Epic Seven News",
@@ -651,5 +660,40 @@
         "subtitle": "Sign in to create builds and guides",
         "continueWithGoogle": "Continue with Google",
         "continueWithDiscord": "Continue with Discord"
+    },
+    "admin": {
+        "onlyAdmins": "Only admins can see this page.",
+        "verifications": "Build verification",
+        "verificationsHint": "The OCR reading comes from the author’s browser and can be faked: always check the screenshot.",
+        "selectFullMatches": "Select full matches ({count})",
+        "approveSelected": "Approve selected ({count})",
+        "noVerifications": "Nothing to review.",
+        "proofOf": "Screenshot of {title}",
+        "ocrMatched": "OCR: {matched} of {total} stats match",
+        "noOcr": "No OCR reading: compare by eye",
+        "stat": "Stat",
+        "buildValue": "Build",
+        "ocrValue": "Screenshot",
+        "approve": "Approve",
+        "reject": "Reject"
+    },
+    "profile": {
+        "notFound": "This player doesn’t exist.",
+        "backToBuilds": "Back to builds",
+        "builds": "Builds",
+        "guides": "Guides",
+        "likesReceived": "Likes received",
+        "verifiedBuilds": "Verified builds",
+        "followers": "Followers",
+        "memberSince": "Member since {date}",
+        "badges": "Badges",
+        "badge": {
+            "verified_builder": "Verified builder",
+            "popular": "Popular"
+        },
+        "following": "Following",
+        "follow": "Follow",
+        "noBuilds": "No builds published under this name yet.",
+        "noGuides": "No guides published under this name yet."
     }
 }

@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SkillUpgradeInput } from '@/components/builds/SkillUpgradeInput';
-import { StatScreenshotReader } from '@/components/builds/StatScreenshotReader';
+import { StatScreenshotReader, readStatScreenshot } from '@/components/builds/StatScreenshotReader';
 import type { HeroBuildStats } from '@/components/heroes/HeroCommunity';
 import { TierRatingSelector } from '@/components/ui/tier-rating-selector';
 import { ProConsSelector } from '@/components/ui/pro-cons-selector';
@@ -128,13 +128,24 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
         update('newImages', [...values.newImages, ...files]);
     };
 
+    // La captura de prueba se lee apenas se elige (mientras se completa el resto): lo leído viaja
+    // con la build para compararlo con sus stats en la cola de verificación
+    const proofReadRef = useRef<ReturnType<typeof readStatScreenshot> | null>(null);
+    const setProof = (file: File | null) => {
+        setValues((current) => ({ ...current, proofImage: file }));
+        proofReadRef.current = file ? readStatScreenshot(file) : null;
+    };
+
     const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
         if (!values.heroId || !values.title.trim()) return;
         setError(null);
         setIsSubmitting(true);
         try {
-            await onSubmit(toFormData(values, mode), { heroSlug: selectedHero?.slug });
+            const data = toFormData(values, mode);
+            const proofRead = values.proofImage && proofReadRef.current ? await proofReadRef.current : null;
+            if (proofRead) data.append('proof_ocr', JSON.stringify(proofRead));
+            await onSubmit(data, { heroSlug: selectedHero?.slug });
         } catch (err) {
             setError(err instanceof Error ? err.message : t('common.error', 'Error'));
         } finally {
@@ -303,8 +314,11 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
                     <ProofImageField
                         existing={values.existingProof}
                         file={values.proofImage}
-                        onChange={(file) => setValues((current) => ({ ...current, proofImage: file }))}
-                        onRemove={() => setValues((current) => ({ ...current, proofImage: null, existingProof: null }))}
+                        onChange={setProof}
+                        onRemove={() => {
+                            proofReadRef.current = null;
+                            setValues((current) => ({ ...current, proofImage: null, existingProof: null }));
+                        }}
                     />
 
                     <div>
@@ -658,7 +672,7 @@ function ProofImageField({ existing, file, onChange, onRemove }: {
         <div>
             <span className="block text-sm font-medium text-gray-300 mb-1">{t('builds.proofImage', 'In-game screenshot (proof)')}</span>
             <p className="mb-2 text-xs text-gray-400">
-                {t('builds.proofImageHint', 'A screenshot of the hero with this gear. Shows other players the build is real.')}
+                {t('builds.proofImageVerifyHint', 'A screenshot of the hero’s stat screen with this gear. We compare it with your stats and a moderator marks the build as verified.')}
             </p>
             {src ? (
                 <div className="flex items-start gap-3">

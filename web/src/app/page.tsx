@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { getLocale, getMessages } from '@/i18n/server';
 import type { Messages } from '@/i18n/config';
 import { HeroFinder, NewestHeroes, type HeroListItem } from '@/components/home/HeroFinder';
+import { FollowingFeed } from '@/components/home/FollowingFeed';
 import { SET_IMAGES } from '@/lib/sets';
 import { appendImageVersion } from '@/lib/heroImages';
 import { formatDate, formatNumber } from '@/lib/utils';
@@ -212,6 +213,7 @@ export default async function Home() {
             </section>
 
             <div className="mx-auto max-w-6xl space-y-12 px-4 py-12">
+                <FollowingFeed />
                 <div className="grid gap-12 lg:grid-cols-2">
                     <HomeSection title={t('home.trendingBuilds', 'Trending builds')} href="/builds" t={t}>
                         {trendingBuilds.length ? (
