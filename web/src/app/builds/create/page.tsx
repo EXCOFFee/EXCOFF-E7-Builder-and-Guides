@@ -2,8 +2,9 @@
 
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { useQuery } from '@tanstack/react-query';
 import { BuildForm } from '@/components/builds/BuildForm';
-import { emptyBuildForm, readApiError } from '@/components/builds/buildFormModel';
+import { duplicateBuildValues, emptyBuildForm, readApiError, type ApiBuild } from '@/components/builds/buildFormModel';
 import { useTranslations } from '@/hooks/useTranslations';
 import { useRequireAuth } from '@/hooks/useAuth';
 import { useNavigateFresh } from '@/hooks/useNavigateFresh';
@@ -18,6 +19,20 @@ export default function CreateBuildPage() {
 
     const preselectedHeroId = Number(searchParams.get('hero_id')) || null;
     const preselectedHeroName = searchParams.get('hero_name');
+    // ?from=<id>: variante de una build (botón "Duplicar"): mismos datos, sin imágenes
+    const fromId = Number(searchParams.get('from')) || null;
+
+    const { data: source, isLoading: loadingSource } = useQuery<ApiBuild>({
+        queryKey: ['build', String(fromId), 'duplicate'],
+        queryFn: async () => {
+            const response = await fetch(`${API_URL}/builds/${fromId}`, {
+                headers: { Authorization: `Bearer ${localStorage.getItem('auth_token')}` },
+            });
+            if (!response.ok) throw new Error('Build not found');
+            return response.json();
+        },
+        enabled: isAuthenticated && Boolean(fromId),
+    });
 
     const createBuild = async (data: FormData, { heroSlug }: { heroSlug?: string }) => {
         const response = await fetch(`${API_URL}/builds`, {
@@ -30,6 +45,13 @@ export default function CreateBuildPage() {
     };
 
     if (!isAuthenticated) return null;
+    if (fromId && loadingSource) {
+        return <div className="min-h-screen bg-e7-void" aria-busy="true" />;
+    }
+
+    const initialValues = source
+        ? duplicateBuildValues(source, t('builds.copySuffix', '(copy)'))
+        : emptyBuildForm(preselectedHeroId);
 
     return (
         <div className="min-h-screen bg-e7-void py-8 px-4">
@@ -40,15 +62,17 @@ export default function CreateBuildPage() {
                     </Link>
                     <h1 className="font-hero font-normal text-4xl text-slate-50 tracking-normal mb-2">{t('builds.createNewBuild', 'Create New Build')}</h1>
                     <p className="text-slate-400">
-                        {preselectedHeroName
-                            ? `${t('builds.creatingFor', 'Creating build for')} ${preselectedHeroName}`
-                            : t('builds.shareConfig', 'Share your equipment configuration with the community')}
+                        {source
+                            ? t('builds.duplicatingFrom', 'Variant of “{title}”: change what you need and publish it as a new build.').replace('{title}', source.title)
+                            : preselectedHeroName
+                                ? `${t('builds.creatingFor', 'Creating build for')} ${preselectedHeroName}`
+                                : t('builds.shareConfig', 'Share your equipment configuration with the community')}
                     </p>
                 </div>
 
                 <BuildForm
                     mode="create"
-                    initialValues={emptyBuildForm(preselectedHeroId)}
+                    initialValues={initialValues}
                     cancelHref="/heroes"
                     onSubmit={createBuild}
                 />

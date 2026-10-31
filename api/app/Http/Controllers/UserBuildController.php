@@ -240,8 +240,11 @@ class UserBuildController extends Controller
             'reason_arena' => 'nullable|string|max:255',
             'reason_gw' => 'nullable|string|max:255',
             'reason_rta' => 'nullable|string|max:255',
-        ] + $this->tagRules() + ImageService::rules());
-        unset($validated['images']);
+        ] + $this->tagRules() + ImageService::rules() + [
+            // Captura del juego como prueba: misma validación por contenido que las imágenes
+            'proof_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:5120',
+        ]);
+        unset($validated['images'], $validated['proof_image']);
 
         // Parse min_stats if JSON string
         if (isset($validated['min_stats']) && is_string($validated['min_stats'])) {
@@ -263,6 +266,9 @@ class UserBuildController extends Controller
 
         // Handle image uploads using ImageService (422 if any image is rejected)
         $validated['images'] = $this->imageService->storeUploads($request->file('images'), 'builds');
+        if ($request->hasFile('proof_image')) {
+            $validated['proof_image'] = $this->imageService->storeUploads([$request->file('proof_image')], 'builds/proof')[0];
+        }
 
         $build = $request->user()->builds()->create($validated);
 
@@ -311,8 +317,11 @@ class UserBuildController extends Controller
             'reason_arena' => 'nullable|string|max:255',
             'reason_gw' => 'nullable|string|max:255',
             'reason_rta' => 'nullable|string|max:255',
-        ] + $this->tagRules() + ImageService::rules());
-        unset($validated['images']);
+        ] + $this->tagRules() + ImageService::rules() + [
+            // Captura del juego como prueba: misma validación por contenido que las imágenes
+            'proof_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:5120',
+        ]);
+        unset($validated['images'], $validated['proof_image']);
 
 
         // Parse synergy/counter heroes if JSON string
@@ -342,6 +351,13 @@ class UserBuildController extends Controller
 
         if ($minStats !== null) {
             $validated['min_stats'] = $minStats;
+        }
+
+        // Captura de prueba: una nueva la reemplaza; remove_proof_image la quita; si no, queda
+        if ($request->hasFile('proof_image')) {
+            $validated['proof_image'] = $this->imageService->storeUploads([$request->file('proof_image')], 'builds/proof')[0];
+        } elseif ($request->boolean('remove_proof_image')) {
+            $validated['proof_image'] = null;
         }
 
         $build->update($validated);

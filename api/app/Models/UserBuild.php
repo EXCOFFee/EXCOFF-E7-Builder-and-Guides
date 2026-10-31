@@ -27,6 +27,7 @@ class UserBuild extends Model
         'skill_2',
         'skill_3',
         'images',
+        'proof_image',
         'views',
         'likes',
         'dislikes',

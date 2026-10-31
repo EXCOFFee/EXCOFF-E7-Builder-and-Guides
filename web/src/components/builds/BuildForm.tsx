@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SkillUpgradeInput } from '@/components/builds/SkillUpgradeInput';
+import { StatScreenshotReader } from '@/components/builds/StatScreenshotReader';
+import type { HeroBuildStats } from '@/components/heroes/HeroCommunity';
 import { TierRatingSelector } from '@/components/ui/tier-rating-selector';
 import { ProConsSelector } from '@/components/ui/pro-cons-selector';
 import { HeroSelectorWithNotes } from '@/components/builds/HeroSelectorWithNotes';
@@ -102,6 +104,15 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
     const skillNames = SKILL_KEYS.map((key) => skills?.[key]?.name);
     const heroCode = lockedHero?.hero_code ?? selectedHero?.hero_code ?? (heroDetail?.data ?? heroDetail)?.hero_code;
 
+    // Lo que más usan las builds de este héroe: sugerencias de un clic para sets y artefacto
+    const { data: heroStats } = useQuery<HeroBuildStats | null>({
+        queryKey: ['hero-stats', selectedHero?.slug, locale],
+        queryFn: async () => (await heroApi.stats(selectedHero!.slug, locale)).data?.data ?? null,
+        enabled: Boolean(selectedHero?.slug),
+        staleTime: 5 * 60 * 1000,
+    });
+    const hasSuggestions = (heroStats?.total_builds ?? 0) > 0;
+
     // Los stats base del héroe se muestran como placeholder: antes se copiaban como valores y
     // terminaban guardados como "stats mínimos" de la build
     const statPlaceholders = baseStatPlaceholders(selectedHero?.base_stats);
@@ -158,6 +169,14 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
                         />
                     )}
 
+                    {hasSuggestions && heroStats!.artifacts.length > 0 && (
+                        <Suggestions
+                            label={t('builds.mostUsedArtifacts', 'Most used for this hero:')}
+                            items={heroStats!.artifacts.slice(0, 3).map((a) => ({ id: String(a.artifact_id), label: a.name, count: a.count }))}
+                            selected={values.artifactId ? String(values.artifactId) : ''}
+                            onPick={(id) => update('artifactId', Number(id))}
+                        />
+                    )}
                     <SearchPicker
                         label={`${t('builds.artifact', 'Artifact')} (${t('common.optional', 'optional')})`}
                         placeholder={t('builds.searchArtifact', 'Search artifact...')}
@@ -220,16 +239,36 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
                     </Field>
 
                     <div className="grid md:grid-cols-2 gap-4">
-                        <SetPicker
-                            label={t('builds.primarySet', 'Primary Set')}
-                            value={values.primarySet}
-                            onChange={(set) => update('primarySet', set)}
-                        />
-                        <SetPicker
-                            label={t('builds.secondarySet', 'Secondary Set')}
-                            value={values.secondarySet}
-                            onChange={(set) => update('secondarySet', set)}
-                        />
+                        <div>
+                            {hasSuggestions && heroStats!.primary_sets.length > 0 && (
+                                <Suggestions
+                                    label={t('builds.mostUsed', 'Most used:')}
+                                    items={heroStats!.primary_sets.slice(0, 3).map((s) => ({ id: s.set, label: SET_NAMES[s.set] ?? s.set, count: s.count }))}
+                                    selected={values.primarySet}
+                                    onPick={(set) => update('primarySet', set)}
+                                />
+                            )}
+                            <SetPicker
+                                label={t('builds.primarySet', 'Primary Set')}
+                                value={values.primarySet}
+                                onChange={(set) => update('primarySet', set)}
+                            />
+                        </div>
+                        <div>
+                            {hasSuggestions && heroStats!.secondary_sets.length > 0 && (
+                                <Suggestions
+                                    label={t('builds.mostUsed', 'Most used:')}
+                                    items={heroStats!.secondary_sets.slice(0, 3).map((s) => ({ id: s.set, label: SET_NAMES[s.set] ?? s.set, count: s.count }))}
+                                    selected={values.secondarySet}
+                                    onPick={(set) => update('secondarySet', set)}
+                                />
+                            )}
+                            <SetPicker
+                                label={t('builds.secondarySet', 'Secondary Set')}
+                                value={values.secondarySet}
+                                onChange={(set) => update('secondarySet', set)}
+                            />
+                        </div>
                     </div>
 
                     <fieldset>
@@ -239,6 +278,7 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
                         <p className="-mt-2 mb-3 text-xs text-gray-400">
                             {t('builds.minStatsHint', 'Fill in only the stats that matter for this build. The grey numbers are the hero’s base stats.')}
                         </p>
+                        <StatScreenshotReader onApply={(read) => update('stats', { ...values.stats, ...read })} />
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                             {STAT_FIELDS.map((stat) => (
                                 <div key={stat.key}>
@@ -259,6 +299,13 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
                             ))}
                         </div>
                     </fieldset>
+
+                    <ProofImageField
+                        existing={values.existingProof}
+                        file={values.proofImage}
+                        onChange={(file) => setValues((current) => ({ ...current, proofImage: file }))}
+                        onRemove={() => setValues((current) => ({ ...current, proofImage: null, existingProof: null }))}
+                    />
 
                     <div>
                         <span className="block text-sm font-medium text-gray-300 mb-2">
@@ -564,6 +611,76 @@ function SearchPicker<T extends PickerItem>({
                     </ul>
                     {matches.length === 0 && <p className="px-4 py-2 text-gray-400">{emptyText}</p>}
                 </div>
+            )}
+        </div>
+    );
+}
+
+interface SuggestionItem {
+    id: string;
+    label: string;
+    count: number;
+}
+
+/** Lo más usado para el héroe en las builds de la web: un clic lo elige */
+function Suggestions({ label, items, selected, onPick }: { label: string; items: SuggestionItem[]; selected: string; onPick: (id: string) => void }) {
+    return (
+        <div className="mb-2 flex flex-wrap items-center gap-2 text-xs">
+            <span className="text-gray-400">{label}</span>
+            {items.map((item) => (
+                <button
+                    key={item.id}
+                    type="button"
+                    aria-pressed={selected === item.id}
+                    onClick={() => onPick(item.id)}
+                    className={`rounded-full border px-2.5 py-1 transition-colors ${selected === item.id
+                        ? 'border-e7-gold bg-e7-gold/20 text-e7-gold'
+                        : 'border-e7-gold/30 text-slate-200 hover:border-e7-gold/60'}`}
+                >
+                    {item.label} <span className="font-mono text-gray-400">×{item.count}</span>
+                </button>
+            ))}
+        </div>
+    );
+}
+
+/** Captura del juego como prueba de la build (una sola, aparte de las imágenes) */
+function ProofImageField({ existing, file, onChange, onRemove }: {
+    existing: string | null;
+    file: File | null;
+    onChange: (file: File | null) => void;
+    onRemove: () => void;
+}) {
+    const { t } = useTranslations();
+    const src = file ? previewUrl(file) : existing;
+
+    return (
+        <div>
+            <span className="block text-sm font-medium text-gray-300 mb-1">{t('builds.proofImage', 'In-game screenshot (proof)')}</span>
+            <p className="mb-2 text-xs text-gray-400">
+                {t('builds.proofImageHint', 'A screenshot of the hero with this gear. Shows other players the build is real.')}
+            </p>
+            {src ? (
+                <div className="flex items-start gap-3">
+                    {/* eslint-disable-next-line @next/next/no-img-element -- vista previa local (blob:) */}
+                    <img src={src} alt="" className="h-24 w-auto rounded-lg border border-e7-gold/30 object-contain" />
+                    <button type="button" onClick={onRemove} className="text-sm text-red-400 hover:underline">
+                        {t('builds.removeProof', 'Remove screenshot')}
+                    </button>
+                </div>
+            ) : (
+                <label className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-dashed border-e7-gold/30 px-4 py-2 text-sm text-gray-300 hover:border-e7-gold/50">
+                    📷 {t('builds.addProof', 'Add screenshot')}
+                    <input
+                        type="file"
+                        accept="image/jpeg,image/png,image/gif,image/webp"
+                        className="sr-only"
+                        onChange={(e) => {
+                            onChange(e.target.files?.[0] ?? null);
+                            e.target.value = '';
+                        }}
+                    />
+                </label>
             )}
         </div>
     );

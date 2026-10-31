@@ -65,6 +65,8 @@ interface Build {
         icon: string;
     } | null;
     created_at: string;
+    /** Captura del juego que subió el autor como prueba */
+    proof_image?: string | null;
     /** La API lo calcula con el token: en una build anónima no llega el autor */
     is_owner?: boolean;
     // Tier Ratings (D-S system)
@@ -510,6 +512,11 @@ export function BuildDetailClient() {
                                                 {t('common.edit', 'Edit')}
                                             </Button>
                                         </Link>
+                                        <Link href={`/builds/create?from=${build.id}`}>
+                                            <Button variant="outline" className="border-e7-gold/30 text-e7-gold">
+                                                {t('builds.duplicate', 'Duplicate')}
+                                            </Button>
+                                        </Link>
                                         <Button
                                             variant="outline"
                                             className="border-red-500/30 text-red-400 hover:bg-red-500/20"
@@ -691,6 +698,19 @@ export function BuildDetailClient() {
                                 cons={build.con_tags || []}
                             />
                         </div>
+
+                        {/* Captura del juego que subió el autor como prueba */}
+                        {build.proof_image && (
+                            <figure className="mb-6">
+                                <figcaption className="mb-2 text-sm font-semibold text-e7-gold">
+                                    {t('builds.proofImage', 'In-game screenshot (proof)')}
+                                </figcaption>
+                                <a href={build.proof_image} target="_blank" rel="noopener noreferrer" className="inline-block">
+                                    {/* eslint-disable-next-line @next/next/no-img-element -- imagen del servidor de la API, tamaño libre */}
+                                    <img src={build.proof_image} alt={t('builds.proofImageAlt', 'In-game screenshot of the build')} className="max-h-96 w-auto rounded-lg border border-e7-gold/30" loading="lazy" />
+                                </a>
+                            </figure>
+                        )}
 
                         {/* Images */}
                         <ImageCarousel images={build.images || []} title={t('builds.images', 'Images')} />

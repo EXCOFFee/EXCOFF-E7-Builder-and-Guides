@@ -36,6 +36,9 @@ export interface BuildFormValues {
     /** URLs de imágenes ya subidas (solo al editar) */
     existingImages: string[];
     newImages: File[];
+    /** Captura del juego como prueba: la ya subida (al editar) o una nueva */
+    existingProof: string | null;
+    proofImage: File | null;
     synergyHeroes: HeroWithNote[];
     counterHeroes: HeroWithNote[];
     isAnonymous: boolean;
@@ -62,6 +65,7 @@ export interface ApiBuild {
     skill_2?: number | null;
     skill_3?: number | null;
     images?: string[] | null;
+    proof_image?: string | null;
     is_anonymous?: boolean | null;
     language?: string | null;
     pro_tags?: (string | TagWithNote)[] | null;
@@ -91,6 +95,8 @@ export function emptyBuildForm(heroId: number | null = null): BuildFormValues {
         skillLevels: [0, 0, 0],
         existingImages: [],
         newImages: [],
+        existingProof: null,
+        proofImage: null,
         synergyHeroes: [],
         counterHeroes: [],
         isAnonymous: false,
@@ -151,6 +157,8 @@ export function buildToFormValues(build: ApiBuild): BuildFormValues {
         skillLevels: [build.skill_1 ?? 0, build.skill_2 ?? 0, build.skill_3 ?? 0],
         existingImages: build.images ?? [],
         newImages: [],
+        existingProof: build.proof_image ?? null,
+        proofImage: null,
         synergyHeroes: toHeroesWithNote(build.synergy_heroes),
         counterHeroes: toHeroesWithNote(build.counter_heroes),
         isAnonymous: Boolean(build.is_anonymous),
@@ -159,6 +167,17 @@ export function buildToFormValues(build: ApiBuild): BuildFormValues {
         tierReasons,
         proTags: toTags(build.pro_tags),
         conTags: toTags(build.con_tags),
+    };
+}
+
+/** Valores para crear una variante de una build: mismos datos, sin imágenes ni captura */
+export function duplicateBuildValues(build: ApiBuild, copySuffix: string): BuildFormValues {
+    const values = buildToFormValues(build);
+    return {
+        ...values,
+        title: `${values.title} ${copySuffix}`.slice(0, 255),
+        existingImages: [],
+        existingProof: null,
     };
 }
 
@@ -203,6 +222,10 @@ export function toFormData(values: BuildFormValues, mode: 'create' | 'edit'): Fo
 
     if (mode === 'edit') data.append('image_urls', JSON.stringify(values.existingImages));
     values.newImages.forEach((file, i) => data.append(`images[${i}]`, file));
+
+    // Captura de prueba: una nueva la reemplaza; al editar, si se quitó la que había, se borra
+    if (values.proofImage) data.append('proof_image', values.proofImage);
+    else if (mode === 'edit' && !values.existingProof) data.append('remove_proof_image', '1');
 
     return data;
 }
