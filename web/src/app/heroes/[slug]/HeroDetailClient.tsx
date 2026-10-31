@@ -10,7 +10,9 @@ import { useTranslations } from '@/hooks/useTranslations';
 import type { HeroSkillMessages } from '@/i18n/config';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { HeroVerdict, CommunityTags, BuildRecipe, HeroMatchups, type HeroBuildStats } from '@/components/heroes/HeroCommunity';
+import { MyBuildCheck } from '@/components/heroes/MyBuildCheck';
 import { HeroBanner } from '@/components/heroes/HeroBanner';
+import { OutdatedBadge } from '@/components/builds/OutdatedBadge';
 import { formatSkillText } from '@/utils/skillFormatter';
 import { SkillEffects, SkillIcon, useHeroEffects } from '@/components/heroes/SkillEffects';
 import { StatLedger, type ClassStatRange } from '@/components/heroes/StatLedger';
@@ -52,6 +54,7 @@ interface HeroBuildSummary {
     is_anonymous?: boolean;
     user?: { name?: string } | null;
     artifact?: { name: string; icon: string | null } | null;
+    updated_at?: string;
 }
 
 export interface Hero {
@@ -67,6 +70,8 @@ export interface Hero {
     skills: Record<string, unknown>;
     self_devotion?: SelfDevotion;
     image_url: string;
+    /** Último cambio de stats/skills/impronta en el juego */
+    game_data_changed_at?: string | null;
 }
 
 const BEST_BUILDS = 5;
@@ -252,6 +257,7 @@ export function HeroDetailClient({
                     <>
                         <CommunityTags stats={stats} heroSlug={hero.slug} />
                         <BuildRecipe stats={stats} />
+                        <MyBuildCheck heroSlug={hero.slug} />
                         <HeroMatchups stats={stats} />
                     </>
                 )}
@@ -280,6 +286,7 @@ export function HeroDetailClient({
                                         </span>
                                         <span className="min-w-0 flex-1">
                                             <span className="block truncate font-semibold text-slate-50">{build.title}</span>
+                                            <OutdatedBadge buildUpdatedAt={build.updated_at} heroChangedAt={hero.game_data_changed_at} className="my-1" />
                                             <span className="block truncate text-xs text-night-muted">
                                                 {build.artifact?.name ? `${build.artifact.name} · ` : ''}
                                                 {build.is_anonymous || !build.user?.name ? t('common.anonymous', 'Anonymous') : build.user.name}

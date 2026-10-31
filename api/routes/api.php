@@ -18,6 +18,7 @@ Route::middleware('throttle:60,1')->group(function () {
     Route::get('/heroes', [HeroController::class, 'index']);
     Route::get('/heroes/{hero:slug}', [HeroController::class, 'show']);
     Route::get('/heroes/{slug}/stats', [HeroController::class, 'buildStats']);
+    Route::get('/heroes/{slug}/build-stat-distribution', [HeroController::class, 'buildStatDistribution']);
     Route::get('/artifacts', [ArtifactController::class, 'index']);
     Route::get('/artifacts/{artifact}', [ArtifactController::class, 'show']);
     

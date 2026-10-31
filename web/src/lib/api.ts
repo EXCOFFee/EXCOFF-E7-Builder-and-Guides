@@ -74,6 +74,9 @@ export const heroApi = {
   /** Lo que dicen las builds publicadas del héroe (sets, tags, counters, notas por modo) */
   stats: (slug: string, lang?: string) =>
     api.get(`/heroes/${encodeURIComponent(slug)}/stats`, { params: { lang } }),
+  /** Stats mínimos de las builds publicadas, ordenados por stat ("¿Mi build llega?") */
+  statDistribution: (slug: string) =>
+    api.get(`/heroes/${encodeURIComponent(slug)}/build-stat-distribution`),
   list: (params?: Record<string, string>) =>
     api.get('/heroes', { params }),
   get: (slug: string, lang?: string) =>

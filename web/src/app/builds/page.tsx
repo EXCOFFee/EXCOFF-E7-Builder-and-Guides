@@ -11,6 +11,7 @@ import { useTranslations } from '@/hooks/useTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { appendImageVersion } from '@/lib/heroImages';
 import { TagFilter } from '@/components/builds/TagFilter';
+import { OutdatedBadge } from '@/components/builds/OutdatedBadge';
 
 /** Lista de IDs separados por coma (parámetros tags / exclude_tags) */
 function parseTagList(value: string | null): string[] {
@@ -74,6 +75,7 @@ interface Build {
         portrait: string;
         element: string;
         class: string;
+        game_data_changed_at?: string | null;
     };
     artifact: {
         id: number;
@@ -81,6 +83,7 @@ interface Build {
         icon: string;
     } | null;
     created_at: string;
+    updated_at?: string;
     language?: string;
 }
 
@@ -454,6 +457,7 @@ export default function BuildsPage() {
                                         <h3 className="text-lg font-medium text-e7-gold mb-3 line-clamp-1">
                                             {build.title}
                                         </h3>
+                                        <OutdatedBadge buildUpdatedAt={build.updated_at} heroChangedAt={build.hero.game_data_changed_at} className="mb-3" />
 
                                         {/* Sets */}
                                         <div className="flex gap-2 mb-3 flex-wrap">

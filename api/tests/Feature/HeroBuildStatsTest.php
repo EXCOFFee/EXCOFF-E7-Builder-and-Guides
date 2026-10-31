@@ -122,6 +122,21 @@ class HeroBuildStatsTest extends TestCase
         }
     }
 
+    public function test_stat_distribution_lists_sorted_values_of_published_builds(): void
+    {
+        $hero = Hero::factory()->create();
+        foreach ([[250, 100], [210, 80], [230, null]] as [$spd, $crit]) {
+            UserBuild::factory()->create(['hero_id' => $hero->id, 'min_stats' => array_filter(['spd' => $spd, 'crit_chance' => $crit])]);
+        }
+        UserBuild::factory()->draft()->create(['hero_id' => $hero->id, 'min_stats' => ['spd' => 999]]);
+
+        $data = $this->getJson("/api/heroes/{$hero->slug}/build-stat-distribution")->assertOk()->json('data');
+
+        $this->assertSame([210, 230, 250], $data['spd']);
+        $this->assertSame([80, 100], $data['crit_chance']);
+        $this->assertArrayNotHasKey('hp', $data);
+    }
+
     public function test_stats_without_data_are_left_out(): void
     {
         $hero = Hero::factory()->create();

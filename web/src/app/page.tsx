@@ -6,6 +6,7 @@ import { HeroFinder, NewestHeroes, type HeroListItem } from '@/components/home/H
 import { SET_IMAGES } from '@/lib/sets';
 import { appendImageVersion } from '@/lib/heroImages';
 import { formatDate, formatNumber } from '@/lib/utils';
+import { isSiteNews, newsText } from '@/lib/news';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
 
@@ -33,6 +34,9 @@ interface RecentBuild {
 interface NewsItem {
     id: number;
     title: string;
+    description?: string | null;
+    source?: string;
+    category?: string | null;
     thumbnail?: string | null;
     url?: string | null;
     published_at?: string | null;
@@ -212,8 +216,8 @@ export default async function Home() {
                                     <li key={item.id}>
                                         <a
                                             href={item.url || '/news'}
-                                            target={item.url ? '_blank' : undefined}
-                                            rel={item.url ? 'noopener noreferrer' : undefined}
+                                            target={item.url && !isSiteNews(item) ? '_blank' : undefined}
+                                            rel={item.url && !isSiteNews(item) ? 'noopener noreferrer' : undefined}
                                             className="flex gap-3 rounded-xl border border-night-line bg-night-panel p-3 hover:border-e7-gold/40"
                                         >
                                             {item.thumbnail && (
@@ -227,7 +231,7 @@ export default async function Home() {
                                                 />
                                             )}
                                             <div className="min-w-0">
-                                                <p className="line-clamp-2 text-sm font-medium text-slate-100">{item.title}</p>
+                                                <p className="line-clamp-2 text-sm font-medium text-slate-100">{newsText(item, t).title}</p>
                                                 {item.published_at && (
                                                     <p className="mt-1 font-mono text-xs text-night-muted">{formatDate(item.published_at, locale)}</p>
                                                 )}

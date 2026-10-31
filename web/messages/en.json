@@ -152,7 +152,12 @@
         "verdictSource": "With votes, the letter is the community’s; without them, the average the authors give.",
         "noBuildsYet": "No builds for this hero yet",
         "buildsShort": "{count} builds",
-        "buildsShortOne": "1 build"
+        "buildsShortOne": "1 build",
+        "myBuildCheck": "Does your build make it?",
+        "myBuildCheckFew": "Not enough builds with minimum stats to compare yet (at least {count} per stat).",
+        "myBuildCheckHint": "Type your hero’s stats to see how many builds’ minimums you already meet.",
+        "meetsShare": "Meets {share}% of builds",
+        "furthestStat": "Furthest behind: {stat} (builds usually ask for {median})."
     },
     "elements": {
         "fire": "Fire",
@@ -548,7 +553,9 @@
         "ocrReview": "Check the values before using them:",
         "ocrDoubtful": "Check this one",
         "ocrApply": "Use these values",
-        "duplicateFailed": "The build to duplicate couldn’t be loaded (it may have been deleted). You can start a new one here."
+        "duplicateFailed": "The build to duplicate couldn’t be loaded (it may have been deleted). You can start a new one here.",
+        "outdated": "Hero changed since this build",
+        "outdatedHint": "The hero’s stats or skills changed in the game after this build was last updated."
     },
     "news": {
         "title": "Epic Seven News",
@@ -565,8 +572,13 @@
             "news": "News",
             "events": "Events",
             "patchNotes": "Patch Notes",
-            "devNotes": "Dev Notes"
-        }
+            "devNotes": "Dev Notes",
+            "balance": "Balance"
+        },
+        "siteSource": "On this site",
+        "balanceTitle": "Balance changes: {heroes}",
+        "balanceAffected": "{count} builds were made before this change and may need updating.",
+        "balanceNoBuilds": "Detected by the site in the game data."
     },
     "credits": {
         "title": "Credits & Acknowledgements",

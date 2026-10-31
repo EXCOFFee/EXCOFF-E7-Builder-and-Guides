@@ -152,7 +152,12 @@
         "verdictSource": "Com votos, a letra é a da comunidade; sem votos, a média que os autores dão.",
         "noBuildsYet": "Ainda não há builds para este herói",
         "buildsShort": "{count} builds",
-        "buildsShortOne": "1 build"
+        "buildsShortOne": "1 build",
+        "myBuildCheck": "Sua build chega lá?",
+        "myBuildCheckFew": "Ainda não há builds suficientes com stats mínimos para comparar (pelo menos {count} por stat).",
+        "myBuildCheckHint": "Digite os stats do seu herói para ver quantos mínimos das builds você já cumpre.",
+        "meetsShare": "Cumpre {share}% das builds",
+        "furthestStat": "O que mais falta: {stat} (as builds costumam pedir {median})."
     },
     "elements": {
         "fire": "Fogo",
@@ -548,7 +553,9 @@
         "ocrReview": "Confira os valores antes de usá-los:",
         "ocrDoubtful": "Confira este",
         "ocrApply": "Usar estes valores",
-        "duplicateFailed": "Não foi possível carregar a build a duplicar (talvez tenha sido apagada). Você pode começar uma nova aqui."
+        "duplicateFailed": "Não foi possível carregar a build a duplicar (talvez tenha sido apagada). Você pode começar uma nova aqui.",
+        "outdated": "O herói mudou depois desta build",
+        "outdatedHint": "Os stats ou habilidades do herói mudaram no jogo depois da última atualização desta build."
     },
     "news": {
         "title": "Notícias de Epic Seven",
@@ -565,8 +572,13 @@
             "news": "Notícias",
             "events": "Eventos",
             "patchNotes": "Notas de Atualização",
-            "devNotes": "Notas do Desenvolvedor"
-        }
+            "devNotes": "Notas do Desenvolvedor",
+            "balance": "Balanceamento"
+        },
+        "siteSource": "No site",
+        "balanceTitle": "Mudanças de balanceamento: {heroes}",
+        "balanceAffected": "{count} builds são de antes desta mudança e talvez precisem ser atualizadas.",
+        "balanceNoBuilds": "Detectado pelo site nos dados do jogo."
     },
     "credits": {
         "title": "Créditos e Agradecimentos",

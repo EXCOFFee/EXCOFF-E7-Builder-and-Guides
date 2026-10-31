@@ -152,7 +152,12 @@
         "verdictSource": "투표가 있으면 커뮤니티 평가, 없으면 작성자 평가 평균입니다.",
         "noBuildsYet": "아직 이 영웅의 빌드가 없습니다",
         "buildsShort": "빌드 {count}",
-        "buildsShortOne": "빌드 1"
+        "buildsShortOne": "빌드 1",
+        "myBuildCheck": "내 빌드는 충분할까?",
+        "myBuildCheckFew": "비교할 최소 스탯이 있는 빌드가 아직 부족합니다 (스탯당 {count}개 이상).",
+        "myBuildCheckHint": "내 영웅의 스탯을 입력하면 몇 개 빌드의 최소 조건을 이미 충족하는지 보여 줍니다.",
+        "meetsShare": "빌드의 {share}% 충족",
+        "furthestStat": "가장 부족한 스탯: {stat} (보통 {median} 요구)."
     },
     "elements": {
         "fire": "화염",
@@ -548,7 +553,9 @@
         "ocrReview": "사용하기 전에 값을 확인하세요:",
         "ocrDoubtful": "확인 필요",
         "ocrApply": "이 값 사용",
-        "duplicateFailed": "복제할 빌드를 불러오지 못했습니다(삭제되었을 수 있습니다). 여기서 새로 만들 수 있습니다."
+        "duplicateFailed": "복제할 빌드를 불러오지 못했습니다(삭제되었을 수 있습니다). 여기서 새로 만들 수 있습니다.",
+        "outdated": "이 빌드 이후 영웅이 변경됨",
+        "outdatedHint": "이 빌드를 마지막으로 수정한 뒤 게임에서 영웅의 스탯이나 스킬이 바뀌었습니다."
     },
     "news": {
         "title": "에픽세븐 뉴스",
@@ -565,8 +572,13 @@
             "news": "뉴스",
             "events": "이벤트",
             "patchNotes": "패치 노트",
-            "devNotes": "개발자 노트"
-        }
+            "devNotes": "개발자 노트",
+            "balance": "밸런스"
+        },
+        "siteSource": "사이트 소식",
+        "balanceTitle": "밸런스 변경: {heroes}",
+        "balanceAffected": "빌드 {count}개가 이 변경 전에 만들어져 수정이 필요할 수 있습니다.",
+        "balanceNoBuilds": "사이트가 게임 데이터에서 감지했습니다."
     },
     "credits": {
         "title": "크레딧 및 감사의 말",

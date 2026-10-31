@@ -152,7 +152,12 @@
         "verdictSource": "有投票时显示社区评分,没有时显示作者评分的平均。",
         "noBuildsYet": "该英雄暂无构建",
         "buildsShort": "{count} 套配装",
-        "buildsShortOne": "1 套配装"
+        "buildsShortOne": "1 套配装",
+        "myBuildCheck": "你的配装达标吗?",
+        "myBuildCheckFew": "填写最低属性的配装还不够,无法比较(每项至少 {count} 套)。",
+        "myBuildCheckHint": "输入你英雄的属性,看看已满足多少配装的最低要求。",
+        "meetsShare": "满足 {share}% 的配装",
+        "furthestStat": "最欠缺的是 {stat}(配装通常要求 {median})。"
     },
     "elements": {
         "fire": "火",
@@ -548,7 +553,9 @@
         "ocrReview": "使用前请核对数值:",
         "ocrDoubtful": "请核对",
         "ocrApply": "使用这些数值",
-        "duplicateFailed": "无法加载要复制的配装(可能已被删除)。你可以在这里新建一个。"
+        "duplicateFailed": "无法加载要复制的配装(可能已被删除)。你可以在这里新建一个。",
+        "outdated": "此配装后英雄有调整",
+        "outdatedHint": "此配装最后更新后,英雄的属性或技能在游戏中有变动。"
     },
     "news": {
         "title": "第七史诗新闻",
@@ -565,8 +572,13 @@
             "news": "新闻",
             "events": "活动",
             "patchNotes": "补丁说明",
-            "devNotes": "开发者说明"
-        }
+            "devNotes": "开发者说明",
+            "balance": "平衡"
+        },
+        "siteSource": "本站",
+        "balanceTitle": "平衡调整:{heroes}",
+        "balanceAffected": "有 {count} 套配装早于此次调整,可能需要更新。",
+        "balanceNoBuilds": "本站从游戏数据中检测到。"
     },
     "credits": {
         "title": "鸣谢与致谢",

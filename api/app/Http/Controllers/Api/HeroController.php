@@ -117,6 +117,20 @@ class HeroController extends Controller
     }
 
     /**
+     * Stats mínimos de las builds publicadas del héroe, ordenados por stat.
+     *
+     * GET /api/heroes/{slug}/build-stat-distribution
+     */
+    public function buildStatDistribution(string $slug, HeroBuildStatsService $service): JsonResponse
+    {
+        $hero = Hero::where('slug', $slug)->firstOrFail();
+
+        $data = Cache::remember(BuildCache::key("stat-distribution:{$slug}"), 300, fn () => $service->statDistribution($hero));
+
+        return response()->json(['success' => true, 'data' => (object) $data]);
+    }
+
+    /**
      * Get aggregated build statistics for a hero.
      *
      * GET /api/v1/heroes/{slug}/stats

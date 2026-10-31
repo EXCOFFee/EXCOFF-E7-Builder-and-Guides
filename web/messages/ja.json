@@ -152,7 +152,12 @@
         "verdictSource": "投票があればコミュニティの評価、なければ作成者の評価の平均です。",
         "noBuildsYet": "このヒーローのビルドはまだありません",
         "buildsShort": "ビルド{count}",
-        "buildsShortOne": "ビルド1"
+        "buildsShortOne": "ビルド1",
+        "myBuildCheck": "あなたのビルドは届いてる?",
+        "myBuildCheckFew": "比較できる最低ステータス付きのビルドがまだ足りません(各ステータス{count}件以上)。",
+        "myBuildCheckHint": "ヒーローのステータスを入力すると、何件のビルドの最低値を満たしているか分かります。",
+        "meetsShare": "ビルドの{share}%を満たす",
+        "furthestStat": "一番足りないのは{stat}(ビルドの目安は{median})。"
     },
     "elements": {
         "fire": "火",
@@ -548,7 +553,9 @@
         "ocrReview": "使う前に値を確認してください:",
         "ocrDoubtful": "要確認",
         "ocrApply": "この値を使う",
-        "duplicateFailed": "複製するビルドを読み込めませんでした(削除された可能性があります)。ここで新しく作成できます。"
+        "duplicateFailed": "複製するビルドを読み込めませんでした(削除された可能性があります)。ここで新しく作成できます。",
+        "outdated": "このビルド後にヒーローが変更",
+        "outdatedHint": "このビルドの最終更新後に、ゲーム内でヒーローのステータスやスキルが変わりました。"
     },
     "news": {
         "title": "エピックセブンニュース",
@@ -565,8 +572,13 @@
             "news": "ニュース",
             "events": "イベント",
             "patchNotes": "パッチノート",
-            "devNotes": "開発者ノート"
-        }
+            "devNotes": "開発者ノート",
+            "balance": "バランス"
+        },
+        "siteSource": "サイトから",
+        "balanceTitle": "バランス調整: {heroes}",
+        "balanceAffected": "{count}件のビルドがこの変更より前のもので、更新が必要かもしれません。",
+        "balanceNoBuilds": "サイトがゲームデータから検出しました。"
     },
     "credits": {
         "title": "クレジット＆謝辞",

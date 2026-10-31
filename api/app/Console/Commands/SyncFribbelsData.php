@@ -6,8 +6,11 @@ namespace App\Console\Commands;
 
 use App\Models\Artifact;
 use App\Models\Hero;
+use App\Models\UserBuild;
+use App\Models\News;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 /**
@@ -67,6 +70,15 @@ class SyncFribbelsData extends Command
      */
     private const SKIP_FRIBBELS_STATS = ['diene'];
 
+    /** Héroes cuyos datos de juego cambiaron en esta corrida: id => [name, slug, image_url] */
+    private array $changedHeroes = [];
+
+    /**
+     * Un parche real cambia unos pocos héroes. Si "cambian" más que esto en una corrida es casi
+     * seguro un cambio de formato en Fribbels: no se marca nada ni se publica (queda en el log).
+     */
+    private const MAX_BALANCE_CHANGES = 40;
+
     public function handle(): int
     {
         $this->info('🔄 Starting E7-Hub data synchronization...');
@@ -79,6 +91,7 @@ class SyncFribbelsData extends Command
         if ($syncHeroes) {
             $this->syncHeroes($force);
             $this->syncCustomHeroes($force);
+            $this->publishBalanceNews();
         }
 
         if ($syncArtifacts) {
@@ -243,12 +256,109 @@ class SyncFribbelsData extends Command
             if (!$authoritative) {
                 $heroData = $this->preserveCuratedHeroFields($existingHero, $heroData, $code);
             }
+            // Se marca al final de la corrida (publishBalanceNews), si no son demasiados
+            if ($this->gameDataChanged($existingHero, $heroData)) {
+                $this->changedHeroes[$existingHero->id] = [
+                    'name' => $existingHero->name,
+                    'slug' => $existingHero->slug,
+                    'image_url' => $existingHero->image_url,
+                ];
+            }
             $existingHero->update($heroData);
             return 'updated';
         }
 
         Hero::create($heroData);
         return 'created';
+    }
+
+    /**
+     * ¿Cambió lo que define al héroe en el juego? Stats base, multiplicadores de skills (solo
+     * las claves de escalado) e impronta. Los textos y los campos vacíos no cuentan: un hash
+     * nuevo porque Fribbels agregó un campo no es un cambio de balance.
+     */
+    private function gameDataChanged(Hero $existing, array $heroData): bool
+    {
+        $before = [
+            'base_stats' => $existing->base_stats,
+            'skills' => $existing->skills,
+            'self_devotion' => $existing->self_devotion,
+        ];
+        $after = array_merge($before, array_intersect_key($heroData, $before));
+
+        return $this->gameDataFingerprint($before) !== $this->gameDataFingerprint($after);
+    }
+
+    private function gameDataFingerprint(array $data): string
+    {
+        $skills = [];
+        foreach ((array) ($data['skills'] ?? []) as $key => $skill) {
+            $skills[$key] = array_intersect_key((array) $skill, array_flip(self::SCALING_KEYS));
+        }
+
+        $normalize = function ($value) use (&$normalize) {
+            if (is_array($value)) {
+                $value = array_filter(array_map($normalize, $value), fn ($v) => $v !== null && $v !== [] && $v !== 0.0);
+                ksort($value);
+                return $value;
+            }
+            return is_numeric($value) ? round((float) $value, 6) : ($value === '' ? null : $value);
+        };
+
+        return json_encode($normalize([
+            'base_stats' => $data['base_stats'] ?? [],
+            'skills' => $skills,
+            'self_devotion' => $data['self_devotion'] ?? [],
+        ]));
+    }
+
+    /**
+     * Noticia de la web con los héroes que cambiaron hoy y cuántas builds publicadas quedaron de
+     * antes del cambio. Una por día: si hay más corridas, suma héroes a la misma.
+     */
+    private function publishBalanceNews(): void
+    {
+        if (!$this->changedHeroes) {
+            return;
+        }
+
+        if (count($this->changedHeroes) > self::MAX_BALANCE_CHANGES) {
+            $message = 'data:sync: ' . count($this->changedHeroes) . ' heroes changed at once; not marked as balance changes (check the Fribbels format)';
+            $this->warn($message);
+            Log::warning($message, ['heroes' => array_column($this->changedHeroes, 'slug')]);
+            return;
+        }
+
+        Hero::whereIn('id', array_keys($this->changedHeroes))->update(['game_data_changed_at' => now()]);
+
+        $externalId = 'site-balance-' . now()->toDateString();
+        $previous = News::firstWhere('external_id', $externalId);
+        $heroes = collect(json_decode((string) $previous?->description, true)['heroes'] ?? [])
+            ->keyBy('slug')
+            ->merge(collect($this->changedHeroes)->map(fn ($h) => ['name' => $h['name'], 'slug' => $h['slug']])->keyBy('slug'))
+            ->values();
+
+        $affected = UserBuild::published()
+            ->join('heroes', 'heroes.id', '=', 'user_builds.hero_id')
+            ->whereIn('heroes.slug', $heroes->pluck('slug'))
+            ->whereColumn('user_builds.updated_at', '<', 'heroes.game_data_changed_at')
+            ->count();
+
+        $frontend = rtrim((string) config('app.frontend_url'), '/');
+        $first = collect($this->changedHeroes)->first();
+
+        News::updateOrCreate(['external_id' => $externalId], [
+            'title' => mb_substr($heroes->pluck('name')->join(', '), 0, 255),
+            // La web arma el texto en cada idioma con estos datos
+            'description' => json_encode(['heroes' => $heroes->all(), 'affected_builds' => $affected]),
+            'thumbnail' => $first['image_url'] ?? null,
+            'url' => $heroes->count() === 1 ? "{$frontend}/heroes/{$heroes->first()['slug']}" : "{$frontend}/heroes",
+            'source' => 'site',
+            'category' => 'balance',
+            'published_at' => now(),
+        ]);
+
+        $this->info("📰 Balance news: {$heroes->count()} heroes, {$affected} builds made before the change");
     }
 
     /**

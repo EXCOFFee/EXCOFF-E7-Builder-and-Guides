@@ -31,6 +31,7 @@ class Hero extends Model
         'self_devotion', // Memory Imprint data
         'image_url',
         'data_hash',
+        'game_data_changed_at',
     ];
 
     protected $casts = [
@@ -38,6 +39,7 @@ class Hero extends Model
         'skills' => 'array',
         'self_devotion' => 'array',
         'rarity' => 'integer',
+        'game_data_changed_at' => 'datetime',
     ];
 
     /**

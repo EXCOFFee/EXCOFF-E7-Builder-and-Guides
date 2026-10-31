@@ -10,6 +10,7 @@ import { ImageCarousel } from '@/components/ui/image-carousel';
 import { TierRatingDisplay } from '@/components/ui/tier-rating-selector';
 import { ProConsDisplay } from '@/components/ui/pro-cons-selector';
 import { CommunityTierVote } from '@/components/builds/CommunityTierVote';
+import { OutdatedBadge } from '@/components/builds/OutdatedBadge';
 import { SynergyCounterSection, HeroWithNote } from '@/components/builds/SynergyCounterCard';
 import { ExportBuildImage } from '@/components/builds/ExportBuildImage';
 import { ShareButton } from '@/components/ui/ShareButton';
@@ -53,6 +54,7 @@ interface Build {
         portrait: string;
         element: string;
         class: string;
+        game_data_changed_at?: string | null;
         skills?: {
             name: string;
             icon: string;
@@ -65,6 +67,7 @@ interface Build {
         icon: string;
     } | null;
     created_at: string;
+    updated_at?: string;
     /** Captura del juego que subió el autor como prueba */
     proof_image?: string | null;
     /** La API lo calcula con el token: en una build anónima no llega el autor */
@@ -454,6 +457,7 @@ export function BuildDetailClient() {
                         <h1 className="font-hero text-2xl md:text-3xl font-normal text-white mb-4">
                             {build.title}
                         </h1>
+                        <OutdatedBadge buildUpdatedAt={build.updated_at} heroChangedAt={build.hero.game_data_changed_at} className="-mt-2 mb-4" />
 
                         {/* Author & Actions - moved to top */}
                         <div className="flex items-center justify-between pb-4 mb-4 border-b border-e7-gold/20">

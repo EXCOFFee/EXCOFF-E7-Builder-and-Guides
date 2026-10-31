@@ -152,7 +152,12 @@
         "verdictSource": "Con votos, la letra es la de la comunidad; sin votos, el promedio que ponen los autores.",
         "noBuildsYet": "Aún no hay builds para este héroe",
         "buildsShort": "{count} builds",
-        "buildsShortOne": "1 build"
+        "buildsShortOne": "1 build",
+        "myBuildCheck": "¿Tu build llega?",
+        "myBuildCheckFew": "Todavía no hay suficientes builds con stats mínimos para comparar (al menos {count} por stat).",
+        "myBuildCheckHint": "Escribe los stats de tu héroe para ver cuántos mínimos de las builds ya cumples.",
+        "meetsShare": "Cumple el {share}% de las builds",
+        "furthestStat": "Lo que más te falta: {stat} (las builds suelen pedir {median})."
     },
     "elements": {
         "fire": "Fuego",
@@ -548,7 +553,9 @@
         "ocrReview": "Revisa los valores antes de usarlos:",
         "ocrDoubtful": "Revisa este",
         "ocrApply": "Usar estos valores",
-        "duplicateFailed": "No se pudo cargar la build a duplicar (puede que se haya borrado). Puedes empezar una nueva aquí."
+        "duplicateFailed": "No se pudo cargar la build a duplicar (puede que se haya borrado). Puedes empezar una nueva aquí.",
+        "outdated": "El héroe cambió después de esta build",
+        "outdatedHint": "Los stats o las habilidades del héroe cambiaron en el juego después de la última actualización de esta build."
     },
     "news": {
         "title": "Noticias de Epic Seven",
@@ -565,8 +572,13 @@
             "news": "Noticias",
             "events": "Eventos",
             "patchNotes": "Notas de Parche",
-            "devNotes": "Notas del Desarrollador"
-        }
+            "devNotes": "Notas del Desarrollador",
+            "balance": "Balance"
+        },
+        "siteSource": "En la web",
+        "balanceTitle": "Cambios de balance: {heroes}",
+        "balanceAffected": "{count} builds son de antes de este cambio y quizá haya que actualizarlas.",
+        "balanceNoBuilds": "Detectado por la web en los datos del juego."
     },
     "credits": {
         "title": "Créditos y Agradecimientos",

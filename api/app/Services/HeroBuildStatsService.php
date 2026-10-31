@@ -76,6 +76,32 @@ class HeroBuildStatsService
         ];
     }
 
+    /**
+     * Stats mínimos de cada build publicada, ordenados por stat ("¿Mi build llega?" calcula el
+     * percentil en el navegador). Solo valores > 0; los stats sin datos no van.
+     *
+     * @return array<string, int[]>
+     */
+    public function statDistribution(Hero $hero): array
+    {
+        $builds = UserBuild::published()->where('hero_id', $hero->id)->whereNotNull('min_stats')->get(['min_stats']);
+        $distribution = [];
+
+        foreach (array_keys(self::STAT_LABELS) as $stat) {
+            $values = $builds->map(fn (UserBuild $b) => $b->min_stats[$stat] ?? null)
+                ->filter(fn ($v) => is_numeric($v) && $v > 0)
+                ->map(fn ($v) => (int) round((float) $v))
+                ->sort()
+                ->values()
+                ->all();
+            if ($values) {
+                $distribution[$stat] = $values;
+            }
+        }
+
+        return $distribution;
+    }
+
     private function percentage(int $count, int $total): float
     {
         return round(($count / $total) * 100, 1);
