@@ -79,7 +79,12 @@
         "recentBuilds": "Builds recentes",
         "latestNews": "Últimas notícias",
         "viewAll": "Ver tudo",
-        "likes": "Curtidas"
+        "likes": "Curtidas",
+        "headlineBuilds": "Como a comunidade monta cada herói de Epic Seven",
+        "sublineBuilds": "{count} builds com sets, artefatos, counters, prós e contras, e notas por modo.",
+        "trendingBuilds": "Builds em alta",
+        "noTrending": "Ainda nada em alta nesta semana.",
+        "topGuides": "Guias em destaque"
     },
     "footer": {
         "dataPoweredBy": "Dados de heróis e artefatos fornecidos por",
@@ -249,7 +254,8 @@
         "searchHeroToAdd": "Buscar um herói para adicionar...",
         "hasBuild": "Tem build",
         "clickToAddBuild": "Clique para adicionar uma build",
-        "noHeroesInTeam": "Adicione heróis a este time"
+        "noHeroesInTeam": "Adicione heróis a este time",
+        "filterByHero": "Filtrar por herói"
     },
     "guidesCreate": {
         "createGuide": "Criar Novo Guia",

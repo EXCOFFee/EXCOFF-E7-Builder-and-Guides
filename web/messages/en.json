@@ -79,7 +79,12 @@
         "recentBuilds": "Recent builds",
         "latestNews": "Latest news",
         "viewAll": "View all",
-        "likes": "Likes"
+        "likes": "Likes",
+        "headlineBuilds": "How the community builds every Epic Seven hero",
+        "sublineBuilds": "{count} builds with sets, artifacts, counters, pros and cons, and ratings by mode.",
+        "trendingBuilds": "Trending builds",
+        "noTrending": "Nothing trending this week yet.",
+        "topGuides": "Featured guides"
     },
     "footer": {
         "dataPoweredBy": "Hero & Artifact data powered by",
@@ -249,7 +254,8 @@
         "searchHeroToAdd": "Search a hero to add...",
         "hasBuild": "Has build",
         "clickToAddBuild": "Click to add a build",
-        "noHeroesInTeam": "Add heroes to this team"
+        "noHeroesInTeam": "Add heroes to this team",
+        "filterByHero": "Filter by hero"
     },
     "guidesCreate": {
         "createGuide": "Create New Guide",

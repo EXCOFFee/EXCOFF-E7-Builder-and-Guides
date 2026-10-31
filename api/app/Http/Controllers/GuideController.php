@@ -21,7 +21,7 @@ class GuideController extends Controller
      */
     public function index(Request $request): JsonResponse
     {
-        $query = Guide::with(['user:id,name,avatar'])
+        $query = Guide::with(['user:id,name,avatar', 'hero:id,name,slug'])
             ->where('is_published', true);
 
         // Filter by category
@@ -29,9 +29,17 @@ class GuideController extends Controller
             $query->where('category', $request->input('category'));
         }
 
-        // Filter by hero
+        // Filter by hero (id o slug)
         if ($request->has('hero_id')) {
             $query->where('hero_id', $request->input('hero_id'));
+        }
+        if ($request->filled('hero')) {
+            $query->whereHas('hero', fn ($q) => $q->where('slug', $request->input('hero')));
+        }
+
+        // Modo de juego de la guía (pve, pvp, guild, oneshot)
+        if ($request->filled('type') && $request->input('type') !== 'all') {
+            $query->where('type', $request->input('type'));
         }
 
         // Filter by language
@@ -44,9 +52,15 @@ class GuideController extends Controller
             $query->where('title', 'like', "%{$request->input('search')}%");
         }
 
-        $guides = $query->orderBy('vote_score', 'desc')
-            ->orderBy('created_at', 'desc')
-            ->paginate(20);
+        // Orden en el servidor (antes la web ordenaba solo la página de 20 que tenía cargada)
+        $order = $request->input('order') === 'asc' ? 'asc' : 'desc';
+        match ($request->input('sort', 'newest')) {
+            'likes' => $query->orderBy('likes', $order),
+            'views' => $query->orderBy('views', $order),
+            default => $query->orderBy('created_at', $order),
+        };
+
+        $guides = $query->orderBy('id', 'desc')->paginate(20);
 
         return response()->json($guides);
     }

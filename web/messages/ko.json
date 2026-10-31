@@ -79,7 +79,12 @@
         "recentBuilds": "최근 빌드",
         "latestNews": "최신 소식",
         "viewAll": "전체 보기",
-        "likes": "좋아요"
+        "likes": "좋아요",
+        "headlineBuilds": "커뮤니티가 에픽세븐 영웅을 키우는 방법",
+        "sublineBuilds": "세트, 아티팩트, 카운터, 장단점, 모드별 평가가 담긴 빌드 {count}개.",
+        "trendingBuilds": "인기 급상승 빌드",
+        "noTrending": "이번 주 인기 빌드가 아직 없습니다.",
+        "topGuides": "추천 공략"
     },
     "footer": {
         "dataPoweredBy": "영웅 및 아티팩트 데이터 제공",
@@ -249,7 +254,8 @@
         "searchHeroToAdd": "추가할 영웅 검색...",
         "hasBuild": "빌드 있음",
         "clickToAddBuild": "클릭해서 빌드 추가",
-        "noHeroesInTeam": "이 팀에 영웅을 추가하세요"
+        "noHeroesInTeam": "이 팀에 영웅을 추가하세요",
+        "filterByHero": "영웅으로 필터"
     },
     "guidesCreate": {
         "createGuide": "새 가이드 만들기",

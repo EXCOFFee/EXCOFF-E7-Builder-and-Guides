@@ -79,7 +79,12 @@
         "recentBuilds": "最近のビルド",
         "latestNews": "最新ニュース",
         "viewAll": "すべて見る",
-        "likes": "いいね"
+        "likes": "いいね",
+        "headlineBuilds": "コミュニティによるエピックセブン全ヒーローのビルド",
+        "sublineBuilds": "セット・アーティファクト・苦手・長所短所・モード別評価つきのビルド{count}件。",
+        "trendingBuilds": "話題のビルド",
+        "noTrending": "今週はまだ話題のビルドがありません。",
+        "topGuides": "おすすめガイド"
     },
     "footer": {
         "dataPoweredBy": "ヒーローとアーティファクトデータ提供",
@@ -249,7 +254,8 @@
         "searchHeroToAdd": "追加するヒーローを検索...",
         "hasBuild": "ビルドあり",
         "clickToAddBuild": "クリックしてビルドを追加",
-        "noHeroesInTeam": "このチームにヒーローを追加してください"
+        "noHeroesInTeam": "このチームにヒーローを追加してください",
+        "filterByHero": "ヒーローで絞り込む"
     },
     "guidesCreate": {
         "createGuide": "新しいガイドを作成",

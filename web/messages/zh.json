@@ -79,7 +79,12 @@
         "recentBuilds": "最新配装",
         "latestNews": "最新资讯",
         "viewAll": "查看全部",
-        "likes": "点赞"
+        "likes": "点赞",
+        "headlineBuilds": "社区如何为每位第七史诗英雄配装",
+        "sublineBuilds": "{count} 套配装,含套装、神器、克制、优缺点和各模式评分。",
+        "trendingBuilds": "热门配装",
+        "noTrending": "本周暂无热门配装。",
+        "topGuides": "精选攻略"
     },
     "footer": {
         "dataPoweredBy": "英雄和神器数据提供",
@@ -249,7 +254,8 @@
         "searchHeroToAdd": "搜索要添加的英雄...",
         "hasBuild": "已有配装",
         "clickToAddBuild": "点击添加配装",
-        "noHeroesInTeam": "为这个队伍添加英雄"
+        "noHeroesInTeam": "为这个队伍添加英雄",
+        "filterByHero": "按英雄筛选"
     },
     "guidesCreate": {
         "createGuide": "创建新攻略",

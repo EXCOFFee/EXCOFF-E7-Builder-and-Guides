@@ -115,6 +115,15 @@ class UserBuildController extends Controller
             $sortOrder = $request->input('order') === 'asc' ? 'asc' : 'desc';
             
             switch ($sortBy) {
+                case 'trending':
+                    // En tendencia: likes y votos de nota recibidos en los últimos 14 días
+                    $since = now()->subDays(14);
+                    $query->orderByRaw(
+                        '((select count(*) from votes where votes.votable_id = user_builds.id and votes.votable_type = ? and votes.created_at >= ?)'
+                        . ' + (select count(*) from build_mode_votes where build_mode_votes.build_id = user_builds.id and build_mode_votes.created_at >= ?)) desc',
+                        [UserBuild::class, $since, $since]
+                    )->orderBy('likes', 'desc')->orderBy('created_at', 'desc');
+                    break;
                 case 'likes':
                     $query->orderBy('likes', $sortOrder);
                     break;

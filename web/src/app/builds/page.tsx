@@ -11,6 +11,7 @@ import { useTranslations } from '@/hooks/useTranslations';
 import { useHeroTranslations } from '@/hooks/useNameTranslations';
 import { appendImageVersion } from '@/lib/heroImages';
 import { TagFilter } from '@/components/builds/TagFilter';
+import { CONTENT_LANGUAGES, languageLabel } from '@/lib/languages';
 import { OutdatedBadge } from '@/components/builds/OutdatedBadge';
 
 /** Lista de IDs separados por coma (parámetros tags / exclude_tags) */
@@ -41,16 +42,6 @@ const CLASS_NAMES: Record<string, string> = {
     soul_weaver: 'Soul Weaver',
 };
 
-const LANGUAGES = ['all', 'en', 'es', 'ko', 'ja', 'zh', 'pt'];
-const LANGUAGE_LABELS: Record<string, string> = {
-    all: 'All Languages',
-    en: 'English',
-    es: 'Español',
-    ko: '한국어',
-    ja: '日本語',
-    zh: '中文',
-    pt: 'Português',
-};
 
 
 interface Build {
@@ -306,8 +297,8 @@ export default function BuildsPage() {
                             onChange={(e) => setSelectedLanguage(e.target.value)}
                             className="bg-e7-void/50 border border-e7-gold/20 text-slate-200 rounded-lg pl-3 pr-10 py-2 text-sm focus:border-e7-gold focus:ring-e7-gold/30 cursor-pointer"
                         >
-                            {LANGUAGES.map((lang) => (
-                                <option key={lang} value={lang}>{LANGUAGE_LABELS[lang]}</option>
+                            {CONTENT_LANGUAGES.map((lang) => (
+                                <option key={lang} value={lang}>{languageLabel(lang, t)}</option>
                             ))}
                         </select>
 
@@ -446,7 +437,7 @@ export default function BuildsPage() {
                                                 <p className="text-sm text-slate-400">{CLASS_NAMES[build.hero.class] || build.hero.class}</p>
                                                 {build.language && build.language !== 'en' && (
                                                     <span className="text-xs text-e7-gold bg-e7-gold/10 px-2 py-0.5 rounded">
-                                                        {LANGUAGE_LABELS[build.language] || build.language}
+                                                        {languageLabel(build.language, t)}
                                                     </span>
                                                 )}
                                             </div>
