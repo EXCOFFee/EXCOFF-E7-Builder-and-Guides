@@ -86,6 +86,8 @@ interface Guide {
     teams?: Team[];
     team_builds?: Record<string, TeamBuild>;
     team_heroes?: Record<string, TeamHeroInfo>;
+    /** La API lo calcula con el token: en una guía anónima no llega el autor */
+    is_owner?: boolean;
 }
 
 interface Comment {
@@ -345,7 +347,7 @@ export function GuideDetailClient() {
 
     const canDeleteComment = (comment: Comment) => comment.is_owner || Boolean(currentUser?.is_admin);
 
-    const canModify = currentUser && guide && (currentUser.id === guide.user?.id || currentUser.is_admin);
+    const canModify = currentUser && guide && (guide.is_owner || currentUser.is_admin);
 
     if (isLoading) {
         return (

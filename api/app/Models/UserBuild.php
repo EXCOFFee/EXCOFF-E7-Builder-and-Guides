@@ -5,12 +5,13 @@ declare(strict_types=1);
 namespace App\Models;
 
 use App\Support\BuildCache;
+use App\Models\Concerns\HidesAnonymousAuthor;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class UserBuild extends Model
 {
-    use HasFactory;
+    use HasFactory, HidesAnonymousAuthor;
 
     protected $fillable = [
         'user_id',
@@ -156,24 +157,6 @@ class UserBuild extends Model
     {
         static::saved(fn () => BuildCache::bump());
         static::deleted(fn () => BuildCache::bump());
-    }
-
-    /**
-     * Una build anónima no expone a su autor en la API: ni el usuario ni su id. Para el botón
-     * de editar, el controlador agrega is_owner comparando con el usuario del token.
-     */
-    public function toArray(): array
-    {
-        $data = parent::toArray();
-
-        if ($this->is_anonymous) {
-            unset($data['user_id']);
-            if (array_key_exists('user', $data)) {
-                $data['user'] = null;
-            }
-        }
-
-        return $data;
     }
 
     /**

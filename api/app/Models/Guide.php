@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Models\Concerns\HidesAnonymousAuthor;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Guide extends Model
 {
-    use HasFactory;
+    use HasFactory, HidesAnonymousAuthor;
 
     protected $fillable = [
         'user_id',
@@ -57,21 +58,6 @@ class Guide extends Model
         'is_published' => 'boolean',
         'is_anonymous' => 'boolean',
     ];
-
-    /** Una guía anónima no dice de quién es (igual que las builds) */
-    public function toArray(): array
-    {
-        $data = parent::toArray();
-
-        if ($this->is_anonymous) {
-            unset($data['user_id']);
-            if (array_key_exists('user', $data)) {
-                $data['user'] = null;
-            }
-        }
-
-        return $data;
-    }
 
     /**
      * Get the author of this guide

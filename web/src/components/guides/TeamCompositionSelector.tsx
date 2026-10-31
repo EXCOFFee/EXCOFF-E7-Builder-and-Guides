@@ -41,9 +41,22 @@ interface PickerBuild {
 /** Elegir la build de un héroe del equipo: cualquiera publicada de ese héroe */
 function BuildPicker({ hero, value, onChange, disabled }: { hero: HeroData; value?: number; onChange: (id?: number) => void; disabled?: boolean }) {
     const { t } = useTranslations();
+    // Las 20 con más likes y las 20 más nuevas (una recién creada no tiene likes), más la que ya
+    // estaba elegida aunque no esté en ninguna de las dos
     const { data: builds = [], isLoading, refetch, isFetching } = useQuery({
-        queryKey: ['team-build-picker', hero.slug],
-        queryFn: async () => (await buildApi.getByHero(hero.slug, { per_page: 20 })).data.data as PickerBuild[],
+        queryKey: ['team-build-picker', hero.slug, value ?? null],
+        queryFn: async () => {
+            const [top, newest] = await Promise.all([
+                buildApi.getByHero(hero.slug, { per_page: 20 }),
+                buildApi.list({ hero: hero.slug, sort: 'newest' }),
+            ]);
+            const list: PickerBuild[] = [...top.data.data, ...newest.data.data];
+            if (value && !list.some((b) => b.id === value)) {
+                const current = await buildApi.get(value).catch(() => null);
+                if (current) list.unshift(current.data);
+            }
+            return list.filter((build, i) => list.findIndex((b) => b.id === build.id) === i);
+        },
         staleTime: 60_000,
     });
 

@@ -66,7 +66,9 @@ final class BuildVerification
             return;
         }
 
-        $statsChanged = $build->isDirty('min_stats') && $build->getOriginal('min_stats') != $build->min_stats;
+        // Los stats, los sets o el artefacto distintos ya no son lo que mostró la captura
+        $statsChanged = ($build->isDirty('min_stats') && $build->getOriginal('min_stats') != $build->min_stats)
+            || $build->isDirty(['primary_set', 'secondary_set', 'artifact_id']);
         if (!$proofChanged && !$statsChanged && $read === null) {
             return;
         }

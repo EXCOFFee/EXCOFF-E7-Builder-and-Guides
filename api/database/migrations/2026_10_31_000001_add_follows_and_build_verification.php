@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 /**
@@ -28,6 +29,9 @@ return new class extends Migration
             $table->json('proof_ocr')->nullable()->after('verified_by');
             $table->index('verification_status');
         });
+
+        // Las que ya tenían captura quedan para revisar
+        DB::table('user_builds')->whereNotNull('proof_image')->update(['verification_status' => 'pending']);
     }
 
     public function down(): void

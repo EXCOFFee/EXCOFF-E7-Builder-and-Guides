@@ -207,6 +207,7 @@ export const verificationApi = {
   /** Builds con captura esperando revisión (solo admin) */
   queue: () =>
     api.get('/admin/verifications'),
-  set: (ids: number[], status: 'verified' | 'rejected') =>
-    api.put('/admin/verifications', { ids, status }),
+  /** loaded_at: cuándo se cargó la cola (lo editado después no se toca) */
+  set: (ids: number[], status: 'verified' | 'rejected', loadedAt: string) =>
+    api.put('/admin/verifications', { ids, status, loaded_at: loadedAt }),
 };

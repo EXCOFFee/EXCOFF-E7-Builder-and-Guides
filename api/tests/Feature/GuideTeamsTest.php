@@ -91,6 +91,17 @@ class GuideTeamsTest extends TestCase
         $this->assertSame(0, Guide::count(), 'ninguna guía inválida se guardó');
     }
 
+    public function test_old_guides_with_many_teams_or_removed_heroes_still_save(): void
+    {
+        $hero = Hero::factory()->create();
+        $old = array_fill(0, 7, ['name' => 'Old', 'heroes' => [['hero_id' => $hero->id], ['hero_id' => 999999]]]);
+
+        $guide = $this->postGuide($old)->assertCreated()->json();
+
+        $this->assertCount(7, $guide['teams']);
+        $this->assertSame([['hero_id' => $hero->id]], $guide['teams'][0]['heroes']);
+    }
+
     public function test_old_teams_without_mode_are_kept(): void
     {
         $hero = Hero::factory()->create();

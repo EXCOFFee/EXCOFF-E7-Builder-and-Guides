@@ -70,6 +70,9 @@ interface BuildFormProps {
  * Antes eran dos copias de ~800 líneas que habían divergido (claves de stats distintas,
  * campos que no se podían vaciar, la opción anónima que se perdía al editar).
  */
+/** Cuánto se espera la lectura de la captura de prueba al guardar */
+const PROOF_READ_WAIT_MS = 8000;
+
 export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmit }: BuildFormProps) {
     const { t, locale } = useTranslations();
     const [values, setValues] = useState(initialValues);
@@ -143,7 +146,10 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
         setIsSubmitting(true);
         try {
             const data = toFormData(values, mode);
-            const proofRead = values.proofImage && proofReadRef.current ? await proofReadRef.current : null;
+            // La lectura es opcional: si todavía no terminó, se espera poco y se guarda sin ella
+            const proofRead = values.proofImage && proofReadRef.current
+                ? await Promise.race([proofReadRef.current, new Promise<null>((resolve) => setTimeout(() => resolve(null), PROOF_READ_WAIT_MS))])
+                : null;
             if (proofRead) data.append('proof_ocr', JSON.stringify(proofRead));
             await onSubmit(data, { heroSlug: selectedHero?.slug });
         } catch (err) {

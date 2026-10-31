@@ -37,7 +37,10 @@ class GuideTeams
         if (!is_array($teams) || !array_is_list($teams)) {
             self::fail('Teams are not valid.');
         }
-        if (count($teams) > self::MAX_TEAMS) {
+        // El límite es para los equipos nuevos: las guías viejas pueden tener más, y editar el
+        // texto de la guía no tiene que obligar a borrarlos
+        $newTeams = array_filter($teams, fn ($team) => is_array($team) && array_key_exists('mode', $team));
+        if (count($newTeams) > self::MAX_TEAMS) {
             self::fail('A guide can have up to ' . self::MAX_TEAMS . ' teams.');
         }
 
@@ -57,6 +60,27 @@ class GuideTeams
         }
         $name = self::text($team['name'] ?? '', 60);
         $heroes = $team['heroes'];
+
+        // Equipo viejo (sin modo): se guarda como estaba, con los campos limpios. Sin errores: los
+        // héroes que ya no existen (o repetidos) se dejan afuera en lugar de frenar el guardado
+        if (!array_key_exists('mode', $team)) {
+            $kept = [];
+            foreach ($heroes as $h) {
+                $id = is_array($h) ? ($h['hero_id'] ?? null) : null;
+                if (is_int($id) && isset($knownHeroes[$id]) && !isset($kept[$id]) && count($kept) < 4) {
+                    $kept[$id] = array_filter([
+                        'hero_id' => $id,
+                        'sets' => is_array($h['sets'] ?? null) ? array_values(array_filter($h['sets'], 'is_string')) : null,
+                        'artifact_id' => is_int($h['artifact_id'] ?? null) ? $h['artifact_id'] : null,
+                        'stats' => self::text($h['stats'] ?? '', 100) ?: null,
+                        'note' => self::text($h['note'] ?? '', 200) ?: null,
+                    ], fn ($v) => $v !== null);
+                }
+            }
+
+            return ['name' => $name, 'heroes' => array_values($kept)];
+        }
+
         $heroIds = array_map(fn ($h) => is_array($h) ? ($h['hero_id'] ?? null) : null, $heroes);
         foreach ($heroIds as $heroId) {
             if (!is_int($heroId) || !isset($knownHeroes[$heroId])) {
@@ -65,21 +89,6 @@ class GuideTeams
         }
         if (count($heroIds) !== count(array_unique($heroIds))) {
             self::fail('A hero can only be once in a team.');
-        }
-
-        // Equipo viejo (sin modo): se guarda como estaba, con los campos limpios
-        if (!array_key_exists('mode', $team)) {
-            if (count($heroes) > 4) {
-                self::fail('A team can have up to 4 heroes.');
-            }
-
-            return ['name' => $name, 'heroes' => array_map(fn ($h) => array_filter([
-                'hero_id' => $h['hero_id'],
-                'sets' => is_array($h['sets'] ?? null) ? array_values(array_filter($h['sets'], 'is_string')) : null,
-                'artifact_id' => is_int($h['artifact_id'] ?? null) ? $h['artifact_id'] : null,
-                'stats' => self::text($h['stats'] ?? '', 100) ?: null,
-                'note' => self::text($h['note'] ?? '', 200) ?: null,
-            ], fn ($v) => $v !== null), $heroes)];
         }
 
         $mode = $team['mode'];

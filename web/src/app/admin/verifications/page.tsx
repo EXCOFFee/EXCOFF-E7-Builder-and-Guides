@@ -33,13 +33,15 @@ export default function AdminVerificationsPage() {
         queryFn: async () => (await authApi.getUser()).data as { is_admin?: boolean },
         enabled: loggedIn,
     });
-    const { data: queue = [], isLoading } = useQuery<QueueBuild[]>({
+    const { data, isLoading } = useQuery<{ data: QueueBuild[]; loaded_at: string }>({
         queryKey: ['admin-verifications'],
-        queryFn: async () => (await verificationApi.queue()).data.data,
+        queryFn: async () => (await verificationApi.queue()).data,
         enabled: Boolean(me?.is_admin),
     });
+    const queue = data?.data ?? [];
+    // Lo editado después de cargar la cola no se aprueba: vuelve a aparecer para revisarlo
     const decide = useMutation({
-        mutationFn: ({ ids, status }: { ids: number[]; status: 'verified' | 'rejected' }) => verificationApi.set(ids, status),
+        mutationFn: ({ ids, status }: { ids: number[]; status: 'verified' | 'rejected' }) => verificationApi.set(ids, status, data?.loaded_at ?? ''),
         onSuccess: () => {
             setSelected([]);
             queryClient.invalidateQueries({ queryKey: ['admin-verifications'] });

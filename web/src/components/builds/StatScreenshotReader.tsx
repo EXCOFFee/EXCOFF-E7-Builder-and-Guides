@@ -289,15 +289,17 @@ async function readStats(worker: Worker, file: File, onCells?: () => void): Prom
  * build para comparar con sus stats y ordenar la cola de verificación. Null si no pudo.
  */
 export async function readStatScreenshot(file: File): Promise<Partial<Record<StatKey, string>> | null> {
-    const { createWorker } = await import('tesseract.js');
-    const worker = await createWorker('eng', 1);
+    let worker: Worker | null = null;
     try {
+        // Sin conexión o con el motor bloqueado no hay lectura: la build se guarda igual
+        const { createWorker } = await import('tesseract.js');
+        worker = await createWorker('eng', 1);
         const values = await readStats(worker, file);
         return Object.keys(values).length > 0 ? values : null;
     } catch {
         return null;
     } finally {
-        await worker.terminate().catch(() => undefined);
+        await worker?.terminate().catch(() => undefined);
     }
 }
 

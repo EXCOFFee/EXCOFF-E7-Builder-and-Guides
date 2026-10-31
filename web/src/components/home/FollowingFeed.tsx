@@ -27,7 +27,7 @@ export function FollowingFeed() {
     const { t } = useTranslations();
     const token = useAuthToken();
     const { data: items = [] } = useQuery<FeedItem[]>({
-        queryKey: ['feed'],
+        queryKey: ['feed', token],
         queryFn: async () => (await userApi.feed()).data.items,
         enabled: Boolean(token),
         staleTime: 60_000,

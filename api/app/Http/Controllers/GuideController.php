@@ -86,10 +86,11 @@ class GuideController extends Controller
     /**
      * Show a guide
      */
-    public function show(Guide $guide): JsonResponse
+    public function show(Request $request, Guide $guide): JsonResponse
     {
         $guide->load(['user:id,name,avatar']);
         $guide->increment('views');
+        $viewer = $this->optionalUser($request);
 
         // Add recommended heroes and artifacts data (legacy) + teams
         $response = $guide->toArray();
@@ -98,6 +99,8 @@ class GuideController extends Controller
         // Las builds de los equipos, por id (objeto: así la web no baja listas enteras)
         $response['team_builds'] = (object) GuideTeams::builds($guide);
         $response['team_heroes'] = (object) GuideTeams::heroes($guide);
+        // En una guía anónima no llega el autor: el dueño se reconoce por esto (editar/borrar)
+        $response['is_owner'] = $viewer !== null && (int) $guide->user_id === (int) $viewer->id;
 
         return response()->json($response);
     }

@@ -124,7 +124,8 @@ class ReputationTest extends TestCase
         $queue = $this->actingAs($admin, 'sanctum')->getJson('/api/admin/verifications')->assertOk()->json('data');
         $this->assertSame($build['id'], $queue[0]['id']);
 
-        $this->actingAs($admin, 'sanctum')->putJson('/api/admin/verifications', ['ids' => [$build['id']], 'status' => 'verified'])->assertOk();
+        $loadedAt = $this->actingAs($admin, 'sanctum')->getJson('/api/admin/verifications')->json('loaded_at');
+        $this->actingAs($admin, 'sanctum')->putJson('/api/admin/verifications', ['ids' => [$build['id']], 'status' => 'verified', 'loaded_at' => $loadedAt])->assertOk();
         $this->assertSame('verified', UserBuild::find($build['id'])->verification_status);
         $this->assertCount(1, $this->getJson('/api/builds?verified=1')->json('data'));
     }
@@ -157,6 +158,37 @@ class ReputationTest extends TestCase
 
         $this->actingAs($owner, 'sanctum')->putJson("/api/builds/{$build->id}", ['remove_proof_image' => true])->assertOk();
         $this->assertNull($build->fresh()->verification_status);
+    }
+
+    public function test_admin_cannot_approve_what_changed_after_loading_the_queue(): void
+    {
+        $build = UserBuild::factory()->create(['proof_image' => 'p.png']);
+        DB::table('user_builds')->where('id', $build->id)->update(['verification_status' => 'pending', 'updated_at' => now()->addMinute()]);
+        $verified = UserBuild::factory()->create(['proof_image' => 'q.png']);
+        DB::table('user_builds')->where('id', $verified->id)->update(['verification_status' => 'verified']);
+
+        $this->actingAs($this->admin(), 'sanctum')
+            ->putJson('/api/admin/verifications', ['ids' => [$build->id, $verified->id], 'status' => 'rejected', 'loaded_at' => now()->toIso8601String()])
+            ->assertJsonPath('updated', 0);
+    }
+
+    public function test_changing_sets_sends_a_verified_build_back_to_review(): void
+    {
+        $owner = User::factory()->create();
+        $build = UserBuild::factory()->create(['user_id' => $owner->id, 'proof_image' => 'p.png']);
+        DB::table('user_builds')->where('id', $build->id)->update(['verification_status' => 'verified']);
+
+        $this->actingAs($owner, 'sanctum')->putJson("/api/builds/{$build->id}", ['primary_set' => 'set_att'])->assertOk();
+        $this->assertSame('pending', $build->fresh()->verification_status);
+    }
+
+    public function test_owner_of_an_anonymous_guide_is_told_so(): void
+    {
+        $owner = User::factory()->create();
+        $guide = Guide::factory()->create(['user_id' => $owner->id, 'is_anonymous' => true]);
+
+        $this->getJson("/api/guides/{$guide->slug}")->assertJsonPath('is_owner', false);
+        $this->actingAs($owner, 'sanctum')->getJson("/api/guides/{$guide->slug}")->assertJsonPath('is_owner', true)->assertJsonPath('user', null);
     }
 
     public function test_badges(): void
