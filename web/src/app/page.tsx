@@ -217,7 +217,7 @@ export default async function Home() {
                         {trendingBuilds.length ? (
                             <BuildRows builds={trendingBuilds} t={t} />
                         ) : (
-                            <p className="text-sm text-night-muted">{t('home.noTrending', 'Nothing trending this week yet.')}</p>
+                            <p className="text-sm text-night-muted">{t('home.noTrending', 'Nothing trending in the last two weeks.')}</p>
                         )}
                     </HomeSection>
                     <HomeSection title={t('home.recentBuilds', 'Recent builds')} href="/builds" t={t}>

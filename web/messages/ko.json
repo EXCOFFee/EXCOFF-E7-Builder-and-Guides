@@ -71,8 +71,6 @@
         "logout": "로그아웃"
     },
     "home": {
-        "tagline": "E7 빌드, 가이드 & 영웅 위키",
-        "headline": "에픽세븐 영웅 {count}명의 빌드, 스킬, 스탯",
         "searchLabel": "영웅 검색",
         "heroesByElement": "속성별 영웅",
         "newHeroes": "최신 영웅",
@@ -83,7 +81,7 @@
         "headlineBuilds": "커뮤니티가 에픽세븐 영웅을 키우는 방법",
         "sublineBuilds": "세트, 아티팩트, 카운터, 장단점, 모드별 평가가 담긴 빌드 {count}개.",
         "trendingBuilds": "인기 급상승 빌드",
-        "noTrending": "이번 주 인기 빌드가 아직 없습니다.",
+        "noTrending": "최근 2주 동안 인기 빌드가 없습니다.",
         "topGuides": "추천 공략"
     },
     "footer": {

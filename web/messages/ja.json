@@ -71,8 +71,6 @@
         "logout": "ログアウト"
     },
     "home": {
-        "tagline": "E7 ビルド、ガイド & ヒーローウィキ",
-        "headline": "エピックセブンの全{count}英雄のビルド、スキル、ステータス",
         "searchLabel": "英雄を検索",
         "heroesByElement": "属性別の英雄",
         "newHeroes": "最新の英雄",
@@ -83,7 +81,7 @@
         "headlineBuilds": "コミュニティによるエピックセブン全ヒーローのビルド",
         "sublineBuilds": "セット・アーティファクト・苦手・長所短所・モード別評価つきのビルド{count}件。",
         "trendingBuilds": "話題のビルド",
-        "noTrending": "今週はまだ話題のビルドがありません。",
+        "noTrending": "この2週間に話題のビルドはありません。",
         "topGuides": "おすすめガイド"
     },
     "footer": {

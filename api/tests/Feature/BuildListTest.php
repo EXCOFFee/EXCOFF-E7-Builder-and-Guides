@@ -58,7 +58,8 @@ class BuildListTest extends TestCase
 
         $titles = collect($this->getJson('/api/builds?sort=trending')->assertOk()->json('data'))->pluck('title');
 
-        $this->assertSame(['Hot now', 'Quiet', 'Old favourite'], $titles->all());
+        // "Old favourite" tiene likes, pero de hace dos meses: no está en tendencia
+        $this->assertSame(['Hot now', 'Quiet'], $titles->all());
     }
 
     public function test_invalid_order_falls_back_to_desc(): void

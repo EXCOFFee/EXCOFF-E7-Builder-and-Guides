@@ -116,8 +116,14 @@ class UserBuildController extends Controller
             
             switch ($sortBy) {
                 case 'trending':
-                    // En tendencia: likes y votos de nota recibidos en los últimos 14 días
+                    // En tendencia: solo builds con likes o votos de nota en los últimos 14 días,
+                    // ordenadas por cuántos recibieron (sin actividad, la lista queda vacía)
                     $since = now()->subDays(14);
+                    $query->where(fn ($q) => $q
+                        ->whereExists(fn ($s) => $s->from('votes')->whereColumn('votes.votable_id', 'user_builds.id')
+                            ->where('votes.votable_type', UserBuild::class)->where('votes.created_at', '>=', $since))
+                        ->orWhereExists(fn ($s) => $s->from('build_mode_votes')->whereColumn('build_mode_votes.build_id', 'user_builds.id')
+                            ->where('build_mode_votes.created_at', '>=', $since)));
                     $query->orderByRaw(
                         '((select count(*) from votes where votes.votable_id = user_builds.id and votes.votable_type = ? and votes.created_at >= ?)'
                         . ' + (select count(*) from build_mode_votes where build_mode_votes.build_id = user_builds.id and build_mode_votes.created_at >= ?)) desc',

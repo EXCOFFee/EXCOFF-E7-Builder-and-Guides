@@ -71,8 +71,6 @@
         "logout": "Log out"
     },
     "home": {
-        "tagline": "E7 Builds, Guides & Hero Wiki",
-        "headline": "Builds, skills and stats for all {count} Epic Seven heroes",
         "searchLabel": "Search a hero",
         "heroesByElement": "Heroes by element",
         "newHeroes": "Newest heroes",
@@ -83,7 +81,7 @@
         "headlineBuilds": "How the community builds every Epic Seven hero",
         "sublineBuilds": "{count} builds with sets, artifacts, counters, pros and cons, and ratings by mode.",
         "trendingBuilds": "Trending builds",
-        "noTrending": "Nothing trending this week yet.",
+        "noTrending": "Nothing trending in the last two weeks.",
         "topGuides": "Featured guides"
     },
     "footer": {

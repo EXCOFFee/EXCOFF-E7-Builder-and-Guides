@@ -71,8 +71,6 @@
         "logout": "退出登录"
     },
     "home": {
-        "tagline": "E7 构建、攻略 & 英雄图鉴",
-        "headline": "第七史诗全部{count}名英雄的配装、技能与属性",
         "searchLabel": "搜索英雄",
         "heroesByElement": "按属性浏览英雄",
         "newHeroes": "最新英雄",
@@ -83,7 +81,7 @@
         "headlineBuilds": "社区如何为每位第七史诗英雄配装",
         "sublineBuilds": "{count} 套配装,含套装、神器、克制、优缺点和各模式评分。",
         "trendingBuilds": "热门配装",
-        "noTrending": "本周暂无热门配装。",
+        "noTrending": "最近两周没有热门配装。",
         "topGuides": "精选攻略"
     },
     "footer": {

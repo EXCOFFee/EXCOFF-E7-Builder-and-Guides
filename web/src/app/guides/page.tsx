@@ -25,6 +25,7 @@ interface Guide {
     video_platform: string | null;
     images: string[];
     vote_score: number;
+    likes?: number;
     views: number;
     hero: { name: string; slug: string } | null;
     user: { name: string; avatar?: string } | null;
@@ -46,8 +47,6 @@ export default function GuidesPage() {
     const { t, locale } = useTranslations();
     const router = useRouter();
     const searchParams = useSearchParams();
-    const [search, setSearch] = useState('');
-    const [selectedLanguage, setSelectedLanguage] = useState<string>('all');
 
     // Categoría, héroe y orden en la URL: un link a /guides?hero=straze&category=rta se puede compartir
     const categoryFilter = searchParams.get('category') ?? 'all';
@@ -62,6 +61,10 @@ export default function GuidesPage() {
     };
     const setCategoryFilter = (value: string) => setParam('category', value, 'all');
     const setSortBy = (value: string) => setParam('sort', value, 'newest');
+    const search = searchParams.get('search') ?? '';
+    const setSearch = (value: string) => setParam('search', value, '');
+    const selectedLanguage = searchParams.get('language') ?? 'all';
+    const setSelectedLanguage = (value: string) => setParam('language', value, 'all');
 
     // Héroes para el filtro (misma consulta que el formulario de builds)
     const { data: heroesData } = useQuery({
@@ -71,6 +74,12 @@ export default function GuidesPage() {
     const heroOptions: { name: string; slug: string }[] = heroesData?.data ?? [];
     const heroName = heroOptions.find((h) => h.slug === heroFilter)?.name ?? '';
     const [heroInput, setHeroInput] = useState<string | null>(null);
+    // Si la URL cambia (link compartido, atrás/adelante), el campo muestra el héroe de la URL
+    const [inputFor, setInputFor] = useState(heroFilter);
+    if (inputFor !== heroFilter) {
+        setInputFor(heroFilter);
+        setHeroInput(null);
+    }
 
     const CATEGORIES = [
         { id: 'all', label: t('guides.allCategories', 'All'), emoji: '📚' },
@@ -151,8 +160,8 @@ export default function GuidesPage() {
                                 const value = e.target.value;
                                 setHeroInput(value);
                                 const match = heroOptions.find((h) => h.name.toLowerCase() === value.trim().toLowerCase());
-                                if (match) setParam('hero', match.slug, '');
-                                else if (!value) setParam('hero', '', '');
+                                // Sin un héroe exacto no se filtra (antes quedaba el anterior)
+                                setParam('hero', match?.slug ?? '', '');
                             }}
                             className="w-56 bg-white/4 border-white/8 text-neutral-200 placeholder:text-neutral-400 focus:border-e7-gold"
                         />
@@ -309,7 +318,7 @@ export default function GuidesPage() {
                                                     <span>{guide.user?.name || t('common.anonymous', 'Anonymous')}</span>
                                                 </div>
                                                 <div className="flex items-center gap-3">
-                                                    <span className="flex items-center gap-1"><Image src="/images/ras-like.gif" alt="likes" width={16} height={16} unoptimized /> {guide.vote_score || 0}</span>
+                                                    <span className="flex items-center gap-1"><Image src="/images/ras-like.gif" alt="likes" width={16} height={16} unoptimized /> {guide.likes || 0}</span>
                                                     <span>👁 {guide.views || 0}</span>
                                                 </div>
                                             </div>
