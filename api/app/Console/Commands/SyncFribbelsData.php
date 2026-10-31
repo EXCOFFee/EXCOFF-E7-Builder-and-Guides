@@ -8,6 +8,7 @@ use App\Models\Artifact;
 use App\Models\Hero;
 use App\Models\UserBuild;
 use App\Models\News;
+use App\Support\BuildCache;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
@@ -330,6 +331,7 @@ class SyncFribbelsData extends Command
         }
 
         Hero::whereIn('id', array_keys($this->changedHeroes))->update(['game_data_changed_at' => now()]);
+        BuildCache::bump();
 
         $externalId = 'site-balance-' . now()->toDateString();
         $previous = News::firstWhere('external_id', $externalId);

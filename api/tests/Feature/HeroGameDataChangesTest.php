@@ -114,6 +114,43 @@ class HeroGameDataChangesTest extends TestCase
         $this->assertSame(0, News::count());
     }
 
+    /** updated_at es la última edición: si una vista o un like lo cambiaran, el aviso se perdería */
+    public function test_views_and_likes_do_not_count_as_edits(): void
+    {
+        $build = UserBuild::factory()->create(['updated_at' => now()->subWeek()]);
+        $before = $build->fresh()->updated_at;
+        $fan = \App\Models\User::factory()->create();
+
+        $this->getJson("/api/builds/{$build->id}")->assertOk()->assertJsonPath('views', 1);
+        $this->withHeaders(['Authorization' => 'Bearer ' . $fan->createToken('t')->plainTextToken])
+            ->postJson("/api/builds/{$build->id}/vote")->assertOk()->assertJsonPath('likes', 1);
+
+        $this->assertEquals($before, $build->fresh()->updated_at);
+        $this->assertSame(1, $build->fresh()->views);
+    }
+
+    public function test_marking_a_change_refreshes_the_cached_build_list(): void
+    {
+        $this->sync($this->fribbelsHero());
+        $hero = Hero::firstWhere('code', 'test-hero');
+        UserBuild::factory()->create(['hero_id' => $hero->id]);
+        $this->assertNull($this->getJson('/api/builds')->json('data.0.hero.game_data_changed_at'));
+
+        $this->sync($this->fribbelsHero(['calculatedStatus' => ['lv60SixStarFullyAwakened' => ['atk' => 1400]]]));
+
+        $this->assertNotNull($this->getJson('/api/builds')->json('data.0.hero.game_data_changed_at'));
+    }
+
+    public function test_clearing_news_keeps_the_site_balance_news(): void
+    {
+        News::create(['title' => 'X', 'url' => 'https://x.test', 'source' => 'site', 'category' => 'balance', 'external_id' => 'site-balance-2026-10-30']);
+        News::create(['title' => 'Y', 'url' => 'https://y.test', 'source' => 'youtube', 'external_id' => 'yt-1']);
+
+        $this->artisan('app:sync-news', ['--clear' => true])->assertSuccessful();
+
+        $this->assertSame(['site'], News::pluck('source')->all());
+    }
+
     public function test_build_payload_carries_when_its_hero_changed(): void
     {
         $this->sync($this->fribbelsHero());

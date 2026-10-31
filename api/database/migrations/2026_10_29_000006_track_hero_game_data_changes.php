@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 /**
@@ -28,6 +29,11 @@ return new class extends Migration
     {
         Schema::table('heroes', function (Blueprint $table) {
             $table->dropColumn('game_data_changed_at');
+        });
+
+        DB::table('news')->whereNotIn('source', ['youtube', 'stove'])->delete();
+        Schema::table('news', function (Blueprint $table) {
+            $table->enum('source', ['youtube', 'stove'])->change();
         });
     }
 };

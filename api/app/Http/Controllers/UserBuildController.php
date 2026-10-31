@@ -11,6 +11,7 @@ use App\Support\BuildCache;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
 
@@ -184,7 +185,10 @@ class UserBuildController extends Controller
         $isOwner = $viewer !== null && (int) $build->user_id === (int) $viewer->id;
         // El autor mirando o duplicando su build no suma vistas
         if (!$isOwner) {
-            $build->increment('views');
+            // Por query builder: una vista no es una edición (no cambia updated_at, que marca si la
+            // build es de antes de un cambio del héroe)
+            DB::table('user_builds')->where('id', $build->id)->increment('views');
+            $build->views++;
         }
 
         // Localize artifact

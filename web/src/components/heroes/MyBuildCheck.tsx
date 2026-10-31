@@ -37,7 +37,10 @@ export function MyBuildCheck({ heroSlug }: { heroSlug: string }) {
         staleTime: 5 * 60 * 1000,
     });
 
-    const comparable = STAT_FIELDS.filter(({ key }) => (distribution?.[key]?.length ?? 0) >= MIN_BUILDS);
+    const comparable = useMemo(
+        () => STAT_FIELDS.filter(({ key }) => (distribution?.[key]?.length ?? 0) >= MIN_BUILDS),
+        [distribution],
+    );
 
     const results = useMemo(() => comparable
         .map(({ key, label }) => {

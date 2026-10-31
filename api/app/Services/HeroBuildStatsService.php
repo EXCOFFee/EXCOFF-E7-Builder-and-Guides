@@ -88,18 +88,23 @@ class HeroBuildStatsService
         $distribution = [];
 
         foreach (array_keys(self::STAT_LABELS) as $stat) {
-            $values = $builds->map(fn (UserBuild $b) => $b->min_stats[$stat] ?? null)
-                ->filter(fn ($v) => is_numeric($v) && $v > 0)
-                ->map(fn ($v) => (int) round((float) $v))
-                ->sort()
-                ->values()
-                ->all();
+            $values = $this->statValues($builds, $stat)->map(fn (float $v) => (int) round($v))->values()->all();
             if ($values) {
                 $distribution[$stat] = $values;
             }
         }
 
         return $distribution;
+    }
+
+    /** Valores > 0 de un stat mínimo entre las builds, ordenados */
+    private function statValues(Collection $builds, string $stat): Collection
+    {
+        return $builds->map(fn (UserBuild $b) => $b->min_stats[$stat] ?? null)
+            ->filter(fn ($v) => is_numeric($v) && $v > 0)
+            ->map(fn ($v) => (float) $v)
+            ->sort()
+            ->values();
     }
 
     private function percentage(int $count, int $total): float
@@ -233,13 +238,12 @@ class HeroBuildStatsService
         $stats = [];
 
         foreach (self::STAT_LABELS as $stat => $label) {
-            $values = $builds->map(fn (UserBuild $b) => $b->min_stats[$stat] ?? null)
-                ->filter(fn ($v) => is_numeric($v) && $v > 0);
-            if ($values->isEmpty()) {
+            $sorted = $this->statValues($builds, $stat);
+            if ($sorted->isEmpty()) {
                 continue;
             }
-            $avg = (float) $values->avg();
-            $sorted = $values->map(fn ($v) => (float) $v)->sort()->values();
+            $avg = (float) $sorted->avg();
+            $values = $sorted;
 
             $stats[] = [
                 'stat' => $stat,
