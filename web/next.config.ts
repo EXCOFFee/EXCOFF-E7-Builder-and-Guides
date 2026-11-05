@@ -38,9 +38,11 @@ const nextConfig: NextConfig = {
   // - solo se optimizan las imágenes pesadas (retratos, artefactos, imágenes de guías);
   //   los íconos chicos usan `unoptimized`
   // - cada transformación se cachea 31 días, un solo formato y una sola calidad
-  // - DISABLE_IMAGE_OPTIMIZATION=1 en Vercel la apaga sin tocar código si se agota la cuota
+  // - 2026-11: la cuota se agotó (/_next/image devolvía 402 y las imágenes no cacheadas se
+  //   veían rotas), así que la optimización queda apagada: las imágenes salen directo de su
+  //   origen. Para volver a prenderla, ENABLE_IMAGE_OPTIMIZATION=1 en Vercel.
   images: {
-    unoptimized: process.env.DISABLE_IMAGE_OPTIMIZATION === '1',
+    unoptimized: process.env.ENABLE_IMAGE_OPTIMIZATION !== '1',
     minimumCacheTTL: 2678400,
     formats: ['image/webp'],
     qualities: [75],
