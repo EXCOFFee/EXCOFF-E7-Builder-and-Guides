@@ -178,9 +178,11 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
                             selected={selectedHero}
                             onSelect={(hero) => update('heroId', hero.id)}
                             limit={20}
+                            // Íconos chicos y cientos por lista: directo del origen (por el optimizador de
+                            // Vercel cada uno gastaba cuota, y sin cuota no se ven)
                             renderItem={(hero, size) =>
                                 hero.image_url ? (
-                                    <Image src={hero.image_url} alt="" width={size} height={size} className="rounded-full" />
+                                    <Image src={hero.image_url} alt="" width={size} height={size} className="rounded-full" unoptimized />
                                 ) : null
                             }
                         />
@@ -203,7 +205,7 @@ export function BuildForm({ mode, initialValues, lockedHero, cancelHref, onSubmi
                         onSelect={(artifact) => update('artifactId', artifact.id)}
                         onClear={() => update('artifactId', null)}
                         renderItem={(artifact, size) => (
-                            <Image src={artifact.icon} alt="" width={size} height={size} className="rounded-lg" />
+                            <Image src={artifact.icon} alt="" width={size} height={size} className="rounded-lg" unoptimized />
                         )}
                     />
 
